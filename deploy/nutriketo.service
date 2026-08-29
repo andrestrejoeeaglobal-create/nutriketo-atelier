@@ -1,0 +1,17 @@
+[Unit]
+Description=NutriKeto RESTful API Service (FastAPI + Uvicorn + SQLite + Gemini Flash)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/var/www/nutriketo
+EnvironmentFile=/var/www/nutriketo/.env
+ExecStart=/usr/local/bin/uvicorn app.main:app --host 127.0.0.1 --port 8000 --workers 4
+Restart=always
+RestartSec=5
+StandardOutput=append:/var/log/nutriapp/app.log
+StandardError=append:/var/log/nutriapp/app.log
+
+[Install]
+WantedBy=multi-user.target
