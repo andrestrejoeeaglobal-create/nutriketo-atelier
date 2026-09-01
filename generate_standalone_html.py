@@ -617,6 +617,47 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", ac
         }
 
     # -------------------------------------------------------------------------
+    # 8. HUEVOS REVUELTOS CON MACHACA DE PAVO, JITOMATE BOLA Y CEBOLLA SALTEADA
+    # -------------------------------------------------------------------------
+    if "machaca" in clean_lower:
+        return {
+            "title": clean_title,
+            "cooking_technique": "pan_fry_egg",
+            "sensory_description": "Platillo proteico de huevos de pastoreo revueltos con machaca de pavo desmenuzada, sofrita con jitomate bola jugoso y cebolla picada a fuego medio.",
+            "ingredient_groups": [
+                {
+                    "category": "🍗 Proteína de Machaca de Pavo y Huevo",
+                    "items": [
+                        {"name": "Machaca de pavo artesanal desmenuzada", "base_qty_per_person": 90.0, "unit": "g", "source": "Mercado", "unit_cost": 28.0},
+                        {"name": "Huevos frescos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🍅 Sofrito de Hortalizas y Aromáticos",
+                    "items": [
+                        {"name": "Jitomate bola maduro troceado en cubos", "base_qty_per_person": 120.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Cebolla blanca picada en cuadrícula salteada", "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Cilantro fresco picado y epazote", "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧈 Grasa Saludable de Cocción y Sazón",
+                    "items": [
+                        {"name": "Mantequilla clarificada / Ghee de pastoreo", "base_qty_per_person": 12.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral y pimienta negra molida", "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Sofrito de Hortalizas (3 min a 160°C): Calentar 6g de mantequilla clarificada en sartén a fuego medio (160°C); añadir la cebolla picada y sofréir durante 2 minutos hasta transparente. Agregar el jitomate bola en cubos y cocinar 1 minuto más hasta soltar sus jugos aromáticos.",
+                "2. Integración y Dorado de la Machaca (2 min a 160°C): Incorporar los 90g de machaca de pavo artesanal al sofrito de cebolla y jitomate; saltear durante 2 minutos a fuego medio para integrar los aromas y atemperar la proteína.",
+                "3. Cocción de Huevos Revueltos (3 min a 140°C): Reducir el fuego a medio-bajo (140°C), añadir los 6g restantes de mantequilla y verter los 2 huevos frescos previamente batidos con sal de mar. Mover suavemente con espátula durante 3 minutos hasta obtener un revuelto jugoso e impregnado del sofrito de machaca, jitomate y cebolla.",
+                "4. Montaje y Servicio: Decorar con cilantro fresco picado y servir caliente a 68°C de inmediato."
+            ]
+        }
+
+
+    # -------------------------------------------------------------------------
     # 10. CONSOMÉS DE RES Y FONDOS CLAROS
     # -------------------------------------------------------------------------
     if "consomé" in clean_lower or "consome" in clean_lower or "puchero" in clean_lower:

@@ -485,3 +485,68 @@ def test_terminal_state_raises_http_502():
 
     assert exc_info.value.status_code == 502, f"Se esperaba status_code 502, obtenido {exc_info.value.status_code}"
     assert "Fallo de coherencia gastronómica" in exc_info.value.detail
+
+
+def test_validate_entity_coverage_and_bom_usage():
+    """Valida que validate_entity_coverage y validate_bom_usage_in_steps funcionen según SSOT V23.0.0."""
+    from app.schemas import TypedRecipeSchema, CulinaryTechniqueEnum, IngredientGroupSchema, IngredientItemSchema
+    from app.services.recipe_validator import validate_entity_coverage, validate_bom_usage_in_steps, validate_recipe_compliance
+
+    # 1. Receta válida con Machaca de Pavo, Jitomate y Cebolla
+    valid_recipe = TypedRecipeSchema(
+        title="Huevos Revueltos con Machaca de Pavo, Jitomate Bola y Cebolla Salteada",
+        cooking_technique=CulinaryTechniqueEnum.PAN_FRY_EGG,
+        sensory_description="Revuelto proteico.",
+        ingredient_groups=[
+            IngredientGroupSchema(
+                category="🍗 Proteína",
+                items=[
+                    IngredientItemSchema(name="Machaca de pavo artesanal", base_qty_per_person=90.0, unit="g"),
+                    IngredientItemSchema(name="Huevos frescos orgánicos", base_qty_per_person=2.0, unit="piezas")
+                ]
+            ),
+            IngredientGroupSchema(
+                category="🍅 Sofrito",
+                items=[
+                    IngredientItemSchema(name="Jitomate bola maduro troceado", base_qty_per_person=120.0, unit="g"),
+                    IngredientItemSchema(name="Cebolla blanca picada", base_qty_per_person=60.0, unit="g")
+                ]
+            ),
+            IngredientGroupSchema(
+                category="🧈 Grasa",
+                items=[
+                    IngredientItemSchema(name="Mantequilla clarificada", base_qty_per_person=12.0, unit="g")
+                ]
+            )
+        ],
+        steps=[
+            "1. Sofrito (3 min a 160°C): Calentar mantequilla en sartén a 160°C; añadir cebolla picada y sofréir 2 min. Agregar jitomate bola y cocinar 1 min.",
+            "2. Integración de Machaca (2 min a 160°C): Incorporar machaca de pavo artesanal al sofrito de cebolla y jitomate; saltear 2 min.",
+            "3. Cocción de Huevos (3 min a 140°C): Verter 2 huevos frescos batidos y mover durante 3 min a 140°C.",
+            "4. Servir de inmediato caliente a 68°C."
+        ]
+    )
+
+    is_valid, reason = validate_recipe_compliance(valid_recipe)
+    assert is_valid, f"Receta válida fue rechazada incorrectamente: {reason}"
+
+    # 2. Receta inválida que omite 'machaca' en BOM
+    invalid_recipe = TypedRecipeSchema(
+        title="Huevos Revueltos con Machaca de Pavo, Jitomate Bola y Cebolla Salteada",
+        cooking_technique=CulinaryTechniqueEnum.PAN_FRY_EGG,
+        sensory_description="Omelette genérico sin machaca.",
+        ingredient_groups=[
+            IngredientGroupSchema(
+                category="Base",
+                items=[
+                    IngredientItemSchema(name="Jamón de pavo", base_qty_per_person=50.0, unit="g"),
+                    IngredientItemSchema(name="Huevos frescos", base_qty_per_person=2.0, unit="piezas")
+                ]
+            )
+        ],
+        steps=["Batir huevos.", "Cocinar omelette en sartén."]
+    )
+
+    is_cov_valid, cov_reason = validate_entity_coverage(invalid_recipe)
+    assert not is_cov_valid, "El validador debió rechazar la falta de machaca en el BOM"
+    assert "omite ingredientes clave" in cov_reason or "machaca" in cov_reason
