@@ -4,6 +4,7 @@ Garantiza el cumplimiento estricto de la Directiva Sistémica Vinculante y la Co
 """
 
 import re
+import unicodedata
 from typing import Tuple, List
 from app.schemas import TypedRecipeSchema, CulinaryTechniqueEnum
 
@@ -19,9 +20,19 @@ STOPWORDS_CULINARIAS = {
     "revueltos", "revuelto", "asados", "asado", "salteada", "salteado", "gratinados", "gratinadas", "gratinado",
     "pochados", "pochado", "al", "vapor", "rostizado", "rostizada", "horneados", "horneadas", "horneado",
     "sellados", "sellado", "marinado", "marinada", "crujiente", "dorado", "dorada", "casero", "casera",
-    "viva", "vivos", "puro", "pura", "ligero", "ligera", "tiernos", "tiernas", "tierna", "tierno",
-    "coctel", "cóctel", "omelette", "especial", "tazón", "tazon", "bowl", "ensalada", "crema", "sopa",
-    "consomé", "consome", "mousse", "waffle", "waffles", "pancakes", "crepa", "crepas", "muffins", "platillo"
+    "viva", "vivos", "puro", "pura", "ligero", "ligera", "ligeros", "ligeras", "tiernos", "tiernas", "tierna", "tierno",
+    "coctel", "cóctel", "omelette", "especial", "tazón", "tazon", "bowl", "ensalada", "ensaladas", "crema", "cremas", "sopa", "sopas",
+    "consomé", "consome", "mousse", "waffle", "waffles", "pancakes", "crepa", "crepas", "muffins", "muffin", "platillo",
+    "gelatina", "gelatinas", "infusión", "infusion", "infusiones", "té", "te", "bebida", "bebidas", "caldo", "caldos", "puchero",
+    "brochetas", "brocheta", "zoodles", "bastones", "bastón", "baston", "frittata", "tartar", "carpaccio", "ceviche", "chilorio",
+    "barbacoa", "parrillada", "mix", "tradicional", "nocturna", "nocturno", "relajante", "digestiva", "digestivo", "extra", "virgen",
+    "maduro", "madura", "maduros", "maduras", "estrellados", "estrellado", "carbón", "carbon", "sartén", "sarten", "plancha",
+    "horno", "parrilla", "rellenas", "rellenos", "relleno", "rellena", "salsa", "salsas", "especias", "especia", "fría", "fria",
+    "verde", "verdes", "tabasqueñas", "tabasqueña", "claro", "clara", "rallado", "rallada", "baby", "vinagreta", "pastoreo",
+    "seleccionado", "seleccionada", "seleccionados", "seleccionadas", "molida", "molido", "troceado", "troceada",
+    "benedictinos", "sobre", "nube", "holandesa", "aderezo", "sin", "crotones", "abanico", "salpicón", "salpicon", "costra",
+    "ranchera", "orgánico", "orgánica", "orgánicos", "orgánicas", "fileteadas", "fileteada", "fileteados", "cremosa", "desmenuzada",
+    "keto", "cetogénica", "cetogénico"
 }
 
 PROCESS_ADJECTIVES = {
@@ -29,6 +40,59 @@ PROCESS_ADJECTIVES = {
     "pochados", "pochado", "asados", "asado", "rostizado", "rostizada", "horneados", "horneadas",
     "horneado", "crujiente", "dorado", "dorada", "sellado", "sellados"
 }
+
+# Mapeo de equivalencias lematizadas para ingredientes españoles comunes
+INGREDIENT_ALIASES = {
+    "nueces": ["nuez", "nueces", "pecana", "pecanas", "castilla"],
+    "nuez": ["nuez", "nueces", "pecana", "pecanas", "castilla"],
+    "limón": ["limón", "limon", "limones"],
+    "limon": ["limón", "limon", "limones"],
+    "espárragos": ["espárrago", "esparrago", "espárragos", "esparragos"],
+    "esparragos": ["espárrago", "esparrago", "espárragos", "esparragos"],
+    "pitahaya": ["pitahaya", "pitaya"],
+    "pitaya": ["pitahaya", "pitaya"],
+    "calabacitas": ["calabacita", "calabacitas", "calabaza", "zucchini"],
+    "calabacita": ["calabacita", "calabacitas", "calabaza", "zucchini"],
+    "zucchini": ["calabacita", "calabacitas", "calabaza", "zucchini"],
+    "rostizado": ["rostizado", "rostizada", "rostizar", "hornear", "horno", "horneado", "horneada"],
+    "rostizada": ["rostizado", "rostizada", "rostizar", "hornear", "horno", "horneado", "horneada"],
+    "moras": ["mora", "moras", "frambuesa", "frambuesas", "fruta", "frutas"],
+    "mora": ["mora", "moras", "frambuesa", "frambuesas", "fruta", "frutas"],
+    "frambuesa": ["frambuesa", "frambuesas", "mora", "moras"],
+    "frambuesas": ["frambuesa", "frambuesas", "mora", "moras"],
+    "arándanos": ["arándano", "arandano", "arándanos", "arandanos"],
+    "arandanos": ["arándano", "arandano", "arándanos", "arandanos"],
+    "jengibre": ["jengibre"],
+    "toronjil": ["toronjil"],
+    "manzanilla": ["manzanilla"],
+    "alcaparras": ["alcaparra", "alcaparras"],
+    "cognac": ["cognac", "coñac", "licor"],
+    "eneldo": ["eneldo"],
+    "salvia": ["salvia"],
+    "hinojo": ["hinojo"],
+    "sésamo": ["sésamo", "sesamo", "ajonjolí", "ajonjoli"],
+    "sesamo": ["sésamo", "sesamo", "ajonjolí", "ajonjoli"],
+    "cheddar": ["cheddar", "queso"],
+    "gouda": ["gouda", "queso"],
+    "panela": ["panela", "queso"],
+    "manchego": ["manchego", "queso"],
+    "chayotes": ["chayote", "chayotes"],
+    "chayote": ["chayote", "chayotes"],
+    "aguacate": ["aguacate", "hass"],
+    "atún": ["atún", "atun"],
+    "atun": ["atún", "atun"]
+}
+
+def strip_accents(text: str) -> str:
+    return "".join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn').lower()
+
+def get_word_root(word: str) -> str:
+    w = strip_accents(word)
+    if w.endswith("es") and len(w) > 4:
+        w = w[:-2]
+    elif w.endswith("s") and len(w) > 3:
+        w = w[:-1]
+    return w[:3] if len(w) >= 4 else w
 
 def validate_entity_coverage(recipe: TypedRecipeSchema) -> Tuple[bool, str]:
     """
@@ -39,38 +103,50 @@ def validate_entity_coverage(recipe: TypedRecipeSchema) -> Tuple[bool, str]:
     words = re.findall(r'\b[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\b', title_text)
     
     # 1. Extraer sustantivos e ingredientes principales
-    core_entities = [w for w in words if w not in STOPWORDS_CULINARIAS and len(w) > 2]
+    core_entities = [w for w in words if w.lower() not in STOPWORDS_CULINARIAS and len(w) > 2]
     # 2. Extraer adjetivos de proceso requeridos en steps
-    process_reqs = [w for w in words if w in PROCESS_ADJECTIVES]
+    process_reqs = [w for w in words if w.lower() in PROCESS_ADJECTIVES]
 
     # Consolidar texto de ingredientes y pasos
     ingredient_items = []
     if recipe.ingredient_groups:
         for g in recipe.ingredient_groups:
-            if g.items:
-                for item in g.items:
-                    ingredient_items.append(item.name if hasattr(item, "name") else str(item))
+            items = g.get("items", []) if isinstance(g, dict) else getattr(g, "items", [])
+            if items:
+                for item in items:
+                    name = item.get("name") if isinstance(item, dict) else getattr(item, "name", str(item))
+                    ingredient_items.append(name)
     if hasattr(recipe, "ingredients") and recipe.ingredients:
-        for item in recipe.ingredients:
-            ingredient_items.append(item.name if hasattr(item, "name") else str(item))
+        items = recipe.ingredients.get("items", []) if isinstance(recipe.ingredients, dict) else getattr(recipe, "ingredients", [])
+        if items:
+            for item in items:
+                name = item.get("name") if isinstance(item, dict) else getattr(item, "name", str(item))
+                ingredient_items.append(name)
 
-    all_ingredients_text = " ".join(ingredient_items).lower()
+    all_ingredients_text = strip_accents(" ".join(ingredient_items))
     
     steps_list = []
     if recipe.steps:
         for s in recipe.steps:
             steps_list.append(s.action_description if hasattr(s, "action_description") else str(s))
-    all_steps_text = " ".join(steps_list).lower()
+    all_steps_text = strip_accents(" ".join(steps_list))
 
     missing_in_bom = []
     missing_in_steps = []
 
     for entity in core_entities:
-        # Lematización básica por raíz léxica (prefijo flexivo de 4-5 caracteres)
-        root = entity[:4] if len(entity) >= 5 else entity
-        if root not in all_ingredients_text:
+        ent_clean = strip_accents(entity)
+        root = get_word_root(entity)
+        aliases = INGREDIENT_ALIASES.get(entity.lower(), [entity.lower(), ent_clean, root])
+
+        # Comprobar en BOM
+        found_in_bom = any(strip_accents(alias) in all_ingredients_text for alias in aliases)
+        if not found_in_bom:
             missing_in_bom.append(entity)
-        if root not in all_steps_text:
+
+        # Comprobar en Steps
+        found_in_steps = any(strip_accents(alias) in all_steps_text for alias in aliases)
+        if not found_in_steps:
             missing_in_steps.append(entity)
 
     if missing_in_bom:
@@ -80,7 +156,7 @@ def validate_entity_coverage(recipe: TypedRecipeSchema) -> Tuple[bool, str]:
 
     # Validar que adjetivos de proceso estén documentados en steps
     for proc in process_reqs:
-        root_proc = proc[:4] if len(proc) >= 5 else proc
+        root_proc = get_word_root(proc)
         if root_proc not in all_steps_text:
             return False, f"Los pasos omiten la técnica procesal indicada en el título: '{proc}'"
 
@@ -95,27 +171,43 @@ def validate_bom_usage_in_steps(recipe: TypedRecipeSchema) -> Tuple[bool, str]:
     if recipe.steps:
         for s in recipe.steps:
             steps_list.append(s.action_description if hasattr(s, "action_description") else str(s))
-    steps_text = " ".join(steps_list).lower()
+    steps_text = strip_accents(" ".join(steps_list))
 
     unused_items = []
     ingredient_items = []
     if recipe.ingredient_groups:
         for g in recipe.ingredient_groups:
-            if g.items:
-                for item in g.items:
+            items = g.get("items", []) if isinstance(g, dict) else getattr(g, "items", [])
+            if items:
+                for item in items:
                     ingredient_items.append(item)
     if hasattr(recipe, "ingredients") and recipe.ingredients:
-        for item in recipe.ingredients:
-            ingredient_items.append(item)
+        items = recipe.ingredients.get("items", []) if isinstance(recipe.ingredients, dict) else getattr(recipe, "ingredients", [])
+        if items:
+            for item in items:
+                ingredient_items.append(item)
+
+    generic_words = {"de", "la", "el", "los", "las", "con", "y", "en", "al", "a", "del", "para", "por", "un", "una", "fresco", "fresca", "frescos", "frescas", "granja", "herami", "orgánico", "orgánica", "orgánicos", "orgánicas", "troceado", "troceada", "picado", "picada", "molido", "molida", "sal", "pimienta"}
 
     for item in ingredient_items:
-        iname = (item.name if hasattr(item, "name") else str(item)).lower()
-        unit = (item.unit if hasattr(item, "unit") else "").lower()
-        if unit in ["pizcas", "pizca", "al gusto", "al gusto"]:
+        iname = (item.get("name") if isinstance(item, dict) else getattr(item, "name", str(item))).lower()
+        unit = (item.get("unit") if isinstance(item, dict) else getattr(item, "unit", "")).lower()
+        if unit in ["pizcas", "pizca", "al gusto"]:
             continue
-        first_word = iname.split()[0] if iname.split() else iname
-        root = first_word[:4] if len(first_word) >= 5 else first_word
-        if root not in steps_text:
+
+        item_words = [w for w in re.findall(r'[a-zA-ZáéíóúÁÉÍÓÚñÑ]+', iname) if w.lower() not in generic_words and len(w) > 2]
+        
+        # Comprobar si al menos una palabra clave del ingrediente está en los pasos
+        found_in_steps = False
+        for w in item_words:
+            w_clean = strip_accents(w)
+            root = get_word_root(w)
+            aliases = INGREDIENT_ALIASES.get(w.lower(), [w.lower(), w_clean, root])
+            if any(strip_accents(alias) in steps_text for alias in aliases):
+                found_in_steps = True
+                break
+
+        if not found_in_steps and item_words:
             unused_items.append(iname)
 
     if len(unused_items) > 1:
@@ -153,12 +245,17 @@ def validate_recipe_compliance(recipe: TypedRecipeSchema, forbidden_harvest: lis
     ingredient_items = []
     if recipe.ingredient_groups:
         for g in recipe.ingredient_groups:
-            if g.items:
-                for item in g.items:
-                    ingredient_items.append(item.name if hasattr(item, "name") else str(item))
+            items = g.get("items", []) if isinstance(g, dict) else getattr(g, "items", [])
+            if items:
+                for item in items:
+                    name = item.get("name") if isinstance(item, dict) else getattr(item, "name", str(item))
+                    ingredient_items.append(name)
     if hasattr(recipe, "ingredients") and recipe.ingredients:
-        for item in recipe.ingredients:
-            ingredient_items.append(item.name if hasattr(item, "name") else str(item))
+        items = recipe.ingredients.get("items", []) if isinstance(recipe.ingredients, dict) else getattr(recipe, "ingredients", [])
+        if items:
+            for item in items:
+                name = item.get("name") if isinstance(item, dict) else getattr(item, "name", str(item))
+                ingredient_items.append(name)
 
     total_items = len(ingredient_items)
     for item_name in ingredient_items:

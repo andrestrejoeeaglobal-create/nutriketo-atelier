@@ -1538,7 +1538,7 @@ def get_canonical_benedictine_recipe(dish_name: str) -> dict:
                     {"name": "Mantequilla sin sal derretida tibia", "base_qty_per_person": 37.5, "unit": "g", "source": "Mercado", "unit_cost": 15.0},
                     {"name": "Jugo de limón recién exprimido", "base_qty_per_person": 2.5, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
                     {"name": "Agua tibia", "base_qty_per_person": 2.5, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                    {"name": "Pimienta de cayena y sal marina", "base_qty_per_person": 0.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    {"name": "Pimienta negra molida y sal marina", "base_qty_per_person": 0.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
                 ]
             },
             {
@@ -1552,7 +1552,7 @@ def get_canonical_benedictine_recipe(dish_name: str) -> dict:
         "steps": [
             "1. Hornear los Huevos Nube: Precalentar horno a 180°C. Batir las claras con sal y crémor tártaro a velocidad alta hasta picos firmes. Integrar suavemente el parmesano rallado con espátula. Formar nidos sobre papel encerado y horneado por 10-12 minutos hasta dorar ligero.",
             "2. Cocinar el Tocino de Pavo: Dorar las tiras de tocino de pavo en sartén seca a fuego medio hasta que queden crujientes por ambos lados; escurrir sobre papel absorbente.",
-            "3. Elaborar la Salsa Holandesa a Baño María: En un tazón sobre agua hirviendo suave (sin tocar el agua), batir las yemas con agua y jugo de limón hasta espesar. Verter la mantequilla derretida tibia en hilo fino sin parar de batir hasta emulsionar terso y cremoso. Sazonar con cayena y reservar tibio.",
+            "3. Elaborar la Salsa Holandesa a Baño María: En un tazón sobre agua hirviendo suave (sin tocar el agua), batir las yemas con agua y jugo de limón hasta espesar. Verter la mantequilla derretida tibia en hilo fino sin parar de batir hasta emulsionar terso y cremoso. Sazonar con pimienta negra y reservar tibio.",
             "4. Pochar los Huevos: Calentar agua con vinagre a 85°C–90°C (burbujeo suave). Crear un remolino con cuchara, verter el huevo deslizado suavemente y pochar durante 3 minutos exactos para mantener la yema fluida.",
             "5. Armado y Montaje: Colocar la base de huevo nube caliente, disponer dos tiras de tocino de pavo cruzadas, asentar el huevo pochado en el centro, cubrir con salsa holandesa tibia y coronar con cebollín picado y pimienta negra."
         ]

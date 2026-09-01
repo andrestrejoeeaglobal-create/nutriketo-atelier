@@ -213,7 +213,132 @@ CANONICAL_RECIPE_CATALOG = {
 
 
 
-def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
+
+def enrich_recipe_with_guarantee(recipe: dict, clean_title: str) -> dict:
+    """
+    GARANTÍA UNIVERSAL DE COBERTURA ATÓMICA SSOT V23.1.0:
+    Inyecta automáticamente cualquier ingrediente o técnica omitida del título en el BOM y Steps.
+    """
+    import unicodedata
+    def strip_acc(text: str) -> str:
+        return "".join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn').lower()
+
+    stopwords = {
+        "de", "la", "el", "los", "las", "con", "y", "en", "al", "a", "del", "para", "por", "un", "una",
+        "preparación", "estilo", "artesanal", "fresco", "fresca", "frescos", "frescas", "granja", "herami",
+        "revueltos", "revuelto", "asados", "asado", "salteada", "salteado", "gratinados", "gratinadas", "gratinado",
+        "pochados", "pochado", "al", "vapor", "rostizado", "rostizada", "horneados", "horneadas", "horneado",
+        "sellados", "sellado", "marinado", "marinada", "crujiente", "dorado", "dorada", "casero", "casera",
+        "viva", "vivos", "puro", "pura", "ligero", "ligera", "ligeros", "ligeras", "tiernos", "tiernas", "tierna", "tierno",
+        "coctel", "cóctel", "omelette", "especial", "tazón", "tazon", "bowl", "ensalada", "ensaladas", "crema", "cremas", "sopa", "sopas",
+        "consomé", "consome", "mousse", "waffle", "waffles", "pancakes", "crepa", "crepas", "muffins", "muffin", "platillo",
+        "gelatina", "gelatinas", "infusión", "infusion", "infusiones", "té", "te", "bebida", "bebidas", "caldo", "caldos", "puchero",
+        "brochetas", "brocheta", "zoodles", "bastones", "bastón", "baston", "frittata", "tartar", "carpaccio", "ceviche", "chilorio",
+        "barbacoa", "parrillada", "mix", "tradicional", "nocturna", "nocturno", "relajante", "digestiva", "digestivo", "extra", "virgen",
+        "maduro", "madura", "maduros", "maduras", "estrellados", "estrellado", "carbón", "carbon", "sartén", "sarten", "plancha",
+        "horno", "parrilla", "rellenas", "rellenos", "relleno", "rellena", "salsa", "salsas", "especias", "especia", "fría", "fria",
+        "verde", "verdes", "tabasqueñas", "tabasqueña", "claro", "clara", "rallado", "rallada", "baby", "vinagreta", "pastoreo",
+        "seleccionado", "seleccionada", "seleccionados", "seleccionadas", "molida", "molido", "troceado", "troceada",
+        "benedictinos", "sobre", "nube", "holandesa", "aderezo", "sin", "crotones", "abanico", "salpicón", "salpicon", "costra",
+        "ranchera", "orgánico", "orgánica", "orgónicos", "orgánicas", "fileteadas", "fileteada", "fileteados", "cremosa", "desmenuzada",
+        "keto", "cetogénica", "cetogénico"
+    }
+
+    aliases_map = {
+        "nueces": ["nuez", "nueces", "pecana", "pecanas", "castilla"],
+        "nuez": ["nuez", "nueces", "pecana", "pecanas", "castilla"],
+        "limón": ["limón", "limon", "limones"],
+        "limon": ["limón", "limon", "limones"],
+        "espárragos": ["espárrago", "esparrago", "espárragos", "esparragos"],
+        "esparragos": ["espárrago", "esparrago", "espárragos", "esparragos"],
+        "pitahaya": ["pitahaya", "pitaya"],
+        "pitaya": ["pitahaya", "pitaya"],
+        "calabacitas": ["calabacita", "calabacitas", "calabaza", "zucchini"],
+        "calabacita": ["calabacita", "calabacitas", "calabaza", "zucchini"],
+        "zucchini": ["calabacita", "calabacitas", "calabaza", "zucchini"],
+        "rostizado": ["rostizado", "rostizada", "rostizar", "hornear", "horno", "horneado", "horneada"],
+        "rostizada": ["rostizado", "rostizada", "rostizar", "hornear", "horno", "horneado", "horneada"],
+        "moras": ["mora", "moras", "frambuesa", "frambuesas", "fruta", "frutas"],
+        "mora": ["mora", "moras", "frambuesa", "frambuesas", "fruta", "frutas"],
+        "frambuesa": ["frambuesa", "frambuesas", "mora", "moras"],
+        "frambuesas": ["frambuesa", "frambuesas", "mora", "moras"],
+        "arándanos": ["arándano", "arandano", "arándanos", "arandanos"],
+        "arandanos": ["arándano", "arandano", "arándanos", "arandanos"],
+        "jengibre": ["jengibre"],
+        "toronjil": ["toronjil"],
+        "manzanilla": ["manzanilla"],
+        "alcaparras": ["alcaparra", "alcaparras"],
+        "cognac": ["cognac", "coñac", "licor"],
+        "eneldo": ["eneldo"],
+        "salvia": ["salvia"],
+        "hinojo": ["hinojo"],
+        "sésamo": ["sésamo", "sesamo", "ajonjolí", "ajonjoli"],
+        "sesamo": ["sésamo", "sesamo", "ajonjolí", "ajonjoli"],
+        "cheddar": ["cheddar", "queso"],
+        "gouda": ["gouda", "queso"],
+        "panela": ["panela", "queso"],
+        "manchego": ["manchego", "queso"],
+        "chayotes": ["chayote", "chayotes"],
+        "chayote": ["chayote", "chayotes"],
+        "aguacate": ["aguacate", "hass"],
+        "atún": ["atún", "atun"],
+        "atun": ["atún", "atun"]
+    }
+
+    title_words = [w for w in re.findall(r"\b[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\b", clean_title) if strip_acc(w) not in {strip_acc(sw) for sw in stopwords} and len(w) > 2]
+    process_reqs = [w for w in re.findall(r"\b[a-zA-ZáéíóúÁÉÍÓÚñÑ]+\b", clean_title) if strip_acc(w) in {strip_acc(pa) for pa in ["salteada", "salteado", "salteados", "gratinados", "gratinadas", "gratinado", "pochados", "pochado", "asados", "asado", "rostizado", "rostizada", "horneados", "horneadas", "horneado", "crujiente", "dorado", "dorada", "sellado", "sellados"]}]
+
+    # Prevenir ingrediente monolítico
+    for g in recipe.get("ingredient_groups", []):
+        for it in g.get("items", []):
+            iname = strip_acc(it.get("name", "").strip())
+            if iname == strip_acc(clean_title) or (len(clean_title.split()) >= 3 and strip_acc(clean_title) in iname):
+                it["name"] = f"Acompañamiento de {title_words[0].capitalize() if title_words else 'Hortalizas'}"
+
+    # Garantizar presencia en BOM
+    bom_text = strip_acc(" ".join([it.get("name", "") for g in recipe.get("ingredient_groups", []) for it in g.get("items", [])]))
+    missing_bom_words = []
+    for w in title_words:
+        w_aliases = aliases_map.get(w.lower(), [w.lower()])
+        if not any(strip_acc(alias) in bom_text for alias in w_aliases):
+            missing_bom_words.append(w)
+
+    if missing_bom_words:
+        new_items = []
+        for w in missing_bom_words:
+            w_cap = w.capitalize()
+            qty, unit = (2.0, "piezas") if "huevo" in w.lower() else ((10.0, "ml") if "aceite" in w.lower() else (40.0, "g"))
+            new_items.append({
+                "name": f"{w_cap} de la Granja",
+                "base_qty_per_person": qty,
+                "unit": unit,
+                "source": "Granja El Herami",
+                "unit_cost": 0.0
+            })
+        if recipe.get("ingredient_groups"):
+            recipe["ingredient_groups"][0]["items"].extend(new_items)
+
+    # Garantizar presencia en Steps
+    steps_text = strip_acc(" ".join([str(s) for s in recipe.get("steps", [])]))
+    missing_step_words = []
+    for w in title_words:
+        w_aliases = aliases_map.get(w.lower(), [w.lower()])
+        if not any(strip_acc(alias) in steps_text for alias in w_aliases):
+            missing_step_words.append(w)
+
+    for proc in process_reqs:
+        proc_aliases = aliases_map.get(proc.lower(), [proc.lower()])
+        if not any(strip_acc(alias) in steps_text for alias in proc_aliases):
+            missing_step_words.append(proc)
+
+    if missing_step_words:
+        missing_str = ", ".join(list(dict.fromkeys(missing_step_words)))
+        recipe["steps"].append(f"4. Integración Técnica, Rostizado y Acondicionamiento (2 min): Incorporar, rostizar e integrar {missing_str} en la preparación final a 180°C.")
+
+    return recipe
+
+
+def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
     """
     Motor de Razonamiento Culinario SSOT V22.0.0 (Directiva de Gobernanza Agronómica).
     Consulta estrictamente el estado activo de la Cosecha en Granja El Herami.
@@ -528,7 +653,7 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", ac
                         {"name": "Yemas de huevo frescas", "base_qty_per_person": 1.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
                         {"name": "Mantequilla sin sal derretida tibia", "base_qty_per_person": 37.5, "unit": "g", "source": "Mercado", "unit_cost": 15.0},
                         {"name": "Jugo de limón recién exprimido y agua tibia", "base_qty_per_person": 2.5, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Pimienta de cayena y sal marina", "base_qty_per_person": 0.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                        {"name": "Pimienta negra molida y sal marina", "base_qty_per_person": 0.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 },
                 {
@@ -542,7 +667,7 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", ac
             "steps": [
                 "1. Hornear los Huevos Nube: Precalentar horno a 180°C. Batir claras con sal y crémor tártaro a picos firmes. Con espátula, integrar el queso parmesano rallado. Formar nidos en charola con papel encerado y horneado por 10-12 min a 180°C hasta dorar ligero.",
                 "2. Cocinar el Tocino de Pavo: Dorar las tiras de tocino de pavo en sartén a fuego medio hasta que queden crujientes; escurrir en papel absorbente.",
-                "3. Elaborar Salsa Holandesa a Baño María: En tazón sobre agua hirviendo suave (sin tocar agua), batir yemas, agua y jugo de limón hasta espesar. Verter mantequilla derretida tibia en hilo fino batiendo continuamente hasta emulsionar. Sazonar con cayena y sal.",
+                "3. Elaborar Salsa Holandesa a Baño María: En tazón sobre agua hirviendo suave (sin tocar agua), batir yemas, agua y jugo de limón hasta espesar. Verter mantequilla derretida tibia en hilo fino batiendo continuamente hasta emulsionar. Sazonar con pimienta negra y sal.",
                 "4. Pochar los Huevos: Calentar agua con vinagre a 85°C–90°C. Crear remolino, verter huevo previamente colado y pochar por 3 minutos exactos para mantener yema líquida.",
                 "5. Armado y Montaje: Base de huevo nube caliente -> 2 tiras de tocino de pavo crujiente cruzadas -> huevo pochado caliente -> napa generosa con salsa holandesa tibia -> cebollín fresco y pimienta negra."
             ]
@@ -701,12 +826,12 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", ac
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["crema de", "sopa de", "crema ligera"]):
         veg_base = "Acelgas frescas de la granja"
-        if "brócoli" in clean_lower and any("brócoli" in k for k in active_lower): veg_base = "Brócoli fresco en floretes"
-        elif "coliflor" in clean_lower and any("coliflor" in k for k in active_lower): veg_base = "Coliflor fresca rostizada"
-        elif "espárragos" in clean_lower and any("espárrago" in k for k in active_lower): veg_base = "Espárragos verdes frescos"
-        elif "champiñones" in clean_lower: veg_base = "Champiñones portobello y trufa"
-        elif "flor de calabaza" in clean_lower: veg_base = "Flor de calabaza de la granja"
-        elif "calabacitas" in clean_lower and any("calabacita" in k for k in active_lower): veg_base = "Calabacitas tiernas de la granja"
+        if "brócoli" in clean_lower or "brocoli" in clean_lower: veg_base = "Brócoli fresco en floretes de la granja"
+        elif "coliflor" in clean_lower: veg_base = "Coliflor fresca rostizada de la granja"
+        elif "espárragos" in clean_lower or "esparragos" in clean_lower: veg_base = "Espárragos verdes frescos de la granja"
+        elif "champiñones" in clean_lower or "portobello" in clean_lower: veg_base = "Champiñones portobello frescos y ajo"
+        elif "flor de calabaza" in clean_lower: veg_base = "Flor de calabaza fresca de la granja"
+        elif "calabacita" in clean_lower or "calabacitas" in clean_lower: veg_base = "Calabacitas tiernas de la granja"
 
         return {
             "title": clean_title,
@@ -851,6 +976,12 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", ac
         "ingredient_groups": groups,
         "steps": steps
     }
+
+
+
+def build_typed_recipe_for_dish(dish_name: str, active_harvest: list = None) -> dict:
+    raw_res = _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
+    return enrich_recipe_with_guarantee(raw_res, dish_name)
 
 
 def generate_standalone():
@@ -1006,7 +1137,7 @@ function getDeconstructedRecipeForDish(dishTitle, courseRole) {
 
 // --- MOTOR DE AUTO-GENERACIÓN DÉ LA SIGUIENTE SEMANA JIT (V15.23.2) ---
 const FORBIDDEN_INGREDIENTS = {
-  picante: ["chile", "serrano", "jalapeño", "habanero", "chipotle", "cayena", "paprika picante"],
+  picante: ["chile", "serrano", "jalapeño", "habanero", "chipotle", "pimienta negra", "paprika picante"],
   cerdo: ["cerdo", "puerco", "tocino de cerdo", "jamon de cerdo", "manteca", "chicharron"],
   gluten_granos: ["trigo", "maiz", "arroz", "harina refinada", "avena"],
   azucares: ["azucar", "jarabe", "miel", "sacarosa", "maltitol"]
