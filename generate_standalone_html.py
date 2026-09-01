@@ -212,6 +212,7 @@ CANONICAL_RECIPE_CATALOG = {
 
 
 
+
 def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
     """
     Motor de Razonamiento Culinario SSOT V22.0.0 (Directiva de Gobernanza Agronómica).
