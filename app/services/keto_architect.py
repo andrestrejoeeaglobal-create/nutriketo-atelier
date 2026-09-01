@@ -730,7 +730,7 @@ class KetoAIArchitect:
                         key_ingredients=["Grenetina natural", "Granada viva", "Agua purificada"]
                     ),
                     SuggestionItem(
-                        title="Gelatina Artesanal de Higos Frescos de la Granja",
+                        title="Gelatina Artesanal de Granada Viva Frescos de la Granja",
                         description="Postre cuajado a 4°C con grenetina sin sabor y pulpa natural de higos.",
                         key_ingredients=["Grenetina natural", "Higos frescos", "Agua purificada"]
                     )
