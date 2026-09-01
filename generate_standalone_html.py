@@ -857,7 +857,7 @@ def generate_standalone():
     new_meals_35 = [
         # Domingo 23 AGO
         [
-            {"meal_type": "Desayuno", "starter_name": "Pitahaya Fresca de la Granja con Semillas de Chía y Nueces Pecana", "main_dish_name": "Shakshuka Tradicional (Huevos Estrellados en Salsa de Jitomate Bola y Especias)", "side_dish_name": "Gelatina Artesanal de Granada Viva Frescos de la Granja", "fat_g": 28.0, "protein_g": 24.0, "net_carbs_g": 3.2},
+            {"meal_type": "Desayuno", "starter_name": "Pitahaya Fresca de la Granja con Semillas de Chía y Nueces Pecana", "main_dish_name": "Shakshuka Tradicional (Huevos Estrellados en Salsa de Jitomate Bola y Especias)", "side_dish_name": "Gelatina Artesanal de Higos Frescos de la Granja", "fat_g": 28.0, "protein_g": 24.0, "net_carbs_g": 3.2},
             {"meal_type": "Comida", "starter_name": "Crema Ligera de Espárragos Verdes al Ajo", "main_dish_name": "Ribeye de Res a la Sartén con Mantequilla de Tomillo y Romero", "side_dish_name": "Bastones de Zucchini y Pepino al Limón y Sal de Mar", "fat_g": 38.0, "protein_g": 42.0, "net_carbs_g": 3.8},
             {"meal_type": "Cena", "starter_name": "Ensalada de Arúgula, Hinojo y Aceite de Oliva Extra Virgen", "main_dish_name": "Brochetas de Pechuga de Pavo y Calabacitas al Carbón", "side_dish_name": "Infusión Fría de Té Verde con Menta", "fat_g": 24.0, "protein_g": 32.0, "net_carbs_g": 2.5}
         ],
@@ -887,7 +887,7 @@ def generate_standalone():
         ],
         # Viernes 28 AGO
         [
-            {"meal_type": "Desayuno", "starter_name": "Arilos de Granada Fresca con Almendras Fileteadas", "main_dish_name": "Omelette de Queso de Cabra, Hierbas Secas y Tocino de Pavo", "side_dish_name": "Gelatina Artesanal de Granada Viva Frescos de la Granja", "fat_g": 31.0, "protein_g": 24.0, "net_carbs_g": 3.3},
+            {"meal_type": "Desayuno", "starter_name": "Arilos de Granada Fresca con Almendras Fileteadas", "main_dish_name": "Omelette de Queso de Cabra, Hierbas Secas y Tocino de Pavo", "side_dish_name": "Gelatina Artesanal de Higos Frescos de la Granja", "fat_g": 31.0, "protein_g": 24.0, "net_carbs_g": 3.3},
             {"meal_type": "Comida", "starter_name": "Crema de Brócoli al Queso Parmesano", "main_dish_name": "Pechuga de Pollo en Salsa Alfredo Tradicional (Crema Entera, Mantequilla y Parmesano)", "side_dish_name": "Zoodles de Calabacita al Salvia y Mantequilla", "fat_g": 36.0, "protein_g": 39.0, "net_carbs_g": 3.9},
             {"meal_type": "Cena", "starter_name": "Calabacitas al Vapor en Aceite de Coco", "main_dish_name": "Tacos en Envuelto de Lechuga Viva con Carne Molida de Sirloin y Guacamole", "side_dish_name": "Té de Hierbas Digestivo", "fat_g": 25.0, "protein_g": 29.0, "net_carbs_g": 2.6}
         ],
@@ -1573,7 +1573,7 @@ function generateNextWeekMenu() {
 
     let activeWeek = "Semana 36 (30 de Agosto al 05 de Septiembre de 2026)";
     let activeDiners = 6;
-    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", ];
+    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
     let pantryStock = {
       "Huevos enteros": 2.0,
       "Pechuga de pollo": 1.0,
@@ -2775,9 +2775,9 @@ function compileFullMealRecipes(meal, diners) {
   const activeDiners = parseInt(diners) || 6;
 
   // Extraer las recetas de cada tiempo del objeto meal (Starter, Main, Side)
-  const starterData = sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.starter))_recipe || sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.starter)) || { title: sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.starter))_name };
-  const mainData = sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.main))_recipe || sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.main)) || { title: sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.main))_dish_name || meal.dish_name };
-  const sideData = sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.side))_recipe || sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.side)) || { title: sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.side))_dish_name };
+  const starterData = meal.starter_recipe || meal.starter || { title: meal.starter_name };
+  const mainData = meal.main_recipe || meal.main || { title: meal.main_dish_name || meal.dish_name };
+  const sideData = meal.side_recipe || meal.side || { title: meal.side_dish_name };
 
   const starter = renderCourseCard(starterData, activeDiners, "🥗 ENTRADA");
   const main = renderCourseCard(mainData, activeDiners, "🥩 PLATILLO PRINCIPAL");
@@ -2898,21 +2898,7 @@ function renderRecipes(day, activeDiners) {
 }
 
 
-    
-    function sanitizeAgronomicTitle(title) {
-      if (!title) return title;
-      const isHigoActive = typeof selectedHarvest !== 'undefined' && Array.isArray(selectedHarvest) && selectedHarvest.includes();
-      if (!isHigoActive && /higo/i.test(title)) {
-        if (typeof selectedHarvest !== 'undefined' && Array.isArray(selectedHarvest) && selectedHarvest.includes("Granada fresca")) {
-          return title.replace(/higos\s+frescos|higos|higo/gi, "Arilos de Granada Fresca");
-        } else {
-          return title.replace(/higos\s+frescos|higos|higo/gi, "Moras Frescas");
-        }
-      }
-      return title;
-    }
-
-function renderDay(idx) {
+    function renderDay(idx) {
       const plan = getPlanForWeek(activeWeek);
       if (!plan || !plan.days || plan.days.length === 0) return;
 
@@ -3170,7 +3156,7 @@ function renderDay(idx) {
         if (resp.ok) {
           const data = await resp.json();
           if (data.is_approved && data.revised_meal) {
-            const newVal = targetField === 'starter' ? data.revised_sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.starter))_name : (targetField === 'side' ? data.revised_sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.side))_dish_name : data.revised_sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.main))_dish_name);
+            const newVal = targetField === 'starter' ? data.revised_meal.starter_name : (targetField === 'side' ? data.revised_meal.side_dish_name : data.revised_meal.main_dish_name);
             document.getElementById(targetInputId).value = newVal || promptVal;
             fb.style.color = '#059669';
             fb.innerText = `¡Aprobado por el Cortex Gatekeeper! Ejecutando Sincronización en Cascada (Fichas & Compras 3D)...`;
@@ -3182,9 +3168,9 @@ function renderDay(idx) {
 
             const key = `${activeWeek}_day_${dayIdx}_${mealType}`;
             customDishesState[key] = {
-              starter_name: data.revised_sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.starter))_name,
-              main_dish_name: data.revised_sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.main))_dish_name,
-              side_dish_name: data.revised_sanitizeAgronomicTitle(sanitizeAgronomicTitle(meal.side))_dish_name
+              starter_name: data.revised_meal.starter_name,
+              main_dish_name: data.revised_meal.main_dish_name,
+              side_dish_name: data.revised_meal.side_dish_name
             };
 
             // PRIORIDAD 1: Renderizado Inmediato de la Vista Activa (Menú)
