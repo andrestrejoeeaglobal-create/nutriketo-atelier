@@ -1573,7 +1573,7 @@ function generateNextWeekMenu() {
 
     let activeWeek = "Semana 36 (30 de Agosto al 05 de Septiembre de 2026)";
     let activeDiners = 6;
-    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
+    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", ];
     let pantryStock = {
       "Huevos enteros": 2.0,
       "Pechuga de pollo": 1.0,
@@ -2901,7 +2901,7 @@ function renderRecipes(day, activeDiners) {
     
     function sanitizeAgronomicTitle(title) {
       if (!title) return title;
-      const isHigoActive = typeof selectedHarvest !== 'undefined' && Array.isArray(selectedHarvest) && selectedHarvest.includes("Higos frescos");
+      const isHigoActive = typeof selectedHarvest !== 'undefined' && Array.isArray(selectedHarvest) && selectedHarvest.includes();
       if (!isHigoActive && /higo/i.test(title)) {
         if (typeof selectedHarvest !== 'undefined' && Array.isArray(selectedHarvest) && selectedHarvest.includes("Granada fresca")) {
           return title.replace(/higos\s+frescos|higos|higo/gi, "Arilos de Granada Fresca");
