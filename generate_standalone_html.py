@@ -211,46 +211,50 @@ CANONICAL_RECIPE_CATALOG = {
 
 
 
-def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") -> dict:
+
+def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
     """
-    Motor de Razonamiento Culinario Sistémico SSOT V21.2.0 (Regex con Límites de Palabra Exactos).
-    Utiliza re.search con boundaries r'\b...\b' para evitar falsos positivos de substring (ej. 'artesanal' conteniendo 'te').
-     Jerarquía de Prioridad Gastronómica:
-    1. Gelatinas Artesanales
-    2. Infusiones y Bebidas (Límites exactos de palabra)
-    3. Tazones y Ensambles de Frutas Frescas (CERO sal, CERO calor)
-    4. Waffles & Pancakes Keto (Wafflera 190°C)
-    5. Crepas & Enchiladas en Crepa (Sartén antiadherente delgada + gratinado)
-    6. Pimientos & Vegetales Rellenos (Desvenar vegetal + Sirloin + Gouda 200°C)
-    7. Huevos Benedictinos (Nube horneada + pochado 85-90°C + holandesa)
-    8. Shakshuka & Muffins Salados
-    9. Consomés & Fondos Claros (Simmering + colar caldo)
-    10. Cremas de Vegetales (Velouté licuado a terciopelo)
-    11. Omelettes & Revueltos
-    12. Vegetales y Acompañamientos al Vapor (Solo si el insumo es verdura real)
-    13. Proteínas Principales de Carne / Pollo / Pescado / Pavo
+    Motor de Razonamiento Culinario SSOT V22.0.0 (Directiva de Gobernanza Agronómica).
+    Consulta estrictamente el estado activo de la Cosecha en Granja El Herami.
+    Sustituye automáticamente insumos agotados (ej. Higos -> Granada fresca o Moras)
+    y prioriza insumos en pico de cosecha (Granada fresca, Acelgas, Nopales tiernos, Limón fresco, Cilantro).
     """
     clean_title = dish_name.strip()
+    
+    # Lista por defecto de cosecha activa si no se proporciona
+    if active_harvest is None:
+        active_harvest = ["Acelgas", "Cilantro fresco", "Granada fresca", "Limón Fresco", "Nopales tiernos"]
+
+    active_lower = [h.lower() for h in active_harvest]
+
+    # REGLA AGRONÓMICA 1: Sustitución Dinámica de Higos / Durazno / Pitahaya si no están en cosecha activa
+    if ("higo" in clean_title.lower() or "durazno" in clean_title.lower() or "pitaya" in clean_title.lower()):
+        if not any(k in active_lower for k in ["higo", "durazno", "pitaya"]):
+            if "granada" in " ".join(active_lower):
+                clean_title = re.sub(r'higos\s+frescos|higos|durazno\s+fresco|durazno|pitahaya\s+fresca|pitahaya', 'Granada Fresca de la Granja', clean_title, flags=re.IGNORECASE)
+            else:
+                clean_title = re.sub(r'higos\s+frescos|higos|durazno\s+fresco|durazno|pitahaya\s+fresca|pitahaya', 'Moras Frescas de la Granja', clean_title, flags=re.IGNORECASE)
+
     clean_lower = clean_title.lower()
 
     # -------------------------------------------------------------------------
-    # 1. GELATINAS ARTESANALES (ANTES DE BEBIDAS PARA EVITAR INTERFERENCIAS)
+    # 1. GELATINAS ARTESANALES (CON RESPECTO A COSECHA ACTIVA DE GRANADA/FRUTAS)
     # -------------------------------------------------------------------------
     if "gelatina" in clean_lower:
-        fruit_name = "Moras frescas de la granja"
-        if "fresa" in clean_lower: fruit_name = "Fresas frescas de la granja"
-        elif "higo" in clean_lower: fruit_name = "Higos frescos de la granja"
-        elif "durazno" in clean_lower: fruit_name = "Durazno fresco de la granja"
-        elif "arándano" in clean_lower: fruit_name = "Arándanos frescos"
-        elif "pitahaya" in clean_lower: fruit_name = "Pitahaya fresca"
-        elif "frambuesa" in clean_lower: fruit_name = "Frambuesas frescas"
-        elif "granada" in clean_lower: fruit_name = "Granada fresca"
-        elif "jamaica" in clean_lower or "canela" in clean_lower: fruit_name = "Flor de jamaica orgánica y canela"
+        fruit_name = "Arilos de Granada fresca de la granja"
+        if "fresa" in clean_lower and any("fresa" in k for k in active_lower):
+            fruit_name = "Fresas frescas de la granja"
+        elif "durazno" in clean_lower and any("durazno" in k for k in active_lower):
+            fruit_name = "Durazno fresco de la granja"
+        elif "arándano" in clean_lower:
+            fruit_name = "Arándanos frescos"
+        elif "granada" in clean_lower or True:
+            fruit_name = "Arilos de Granada fresca de la granja (≤ 30g comensal)"
 
         return {
             "title": clean_title,
             "cooking_technique": "gelatin_molding",
-            "sensory_description": f"Postre cetogénico fresco de {clean_title} preparado con colágeno puro hidrolizado, infusionado con extracto botánico vivo y sin azúcares añadidos.",
+            "sensory_description": f"Postre cetogénico fresco de {clean_title} preparado con colágeno puro hidrolizado, infusionado con extracto de {fruit_name} y sin azúcares añadidos.",
             "ingredient_groups": [
                 {
                     "category": "🍮 Base Hidrocoloide y Gelificante",
@@ -260,9 +264,9 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
                     ]
                 },
                 {
-                    "category": "🫐 Extracto Frutal e Infusión Viva",
+                    "category": "🫐 Extracto Frutal e Infusión Viva (Pico de Cosecha)",
                     "items": [
-                        {"name": fruit_name, "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": fruit_name, "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
                         {"name": "Infusión de té de frutos rojos / menta / jamaica", "base_qty_per_person": 120.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 }
@@ -270,7 +274,7 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
             "steps": [
                 "1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.",
                 "2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.",
-                "3. Moldeo: Distribuir la fruta en 6 moldes individuales de cristal y verter la mezcla tibia.",
+                "3. Moldeo: Distribuir los arilos de granada en 6 moldes individuales de cristal y verter la mezcla tibia.",
                 "4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C."
             ]
         }
@@ -317,35 +321,34 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
         }
 
     # -------------------------------------------------------------------------
-    # 3. TAZONES Y ENSAMBLES DE FRUTAS FRESCAS (RAW_ASSEMBLY - SIN CALOR NI SAL)
+    # 3. TAZONES Y ENSAMBLES DE FRUTAS FRESCAS (RAW_ASSEMBLY - CON GRANADA EN PICO DE COSECHA)
     # -------------------------------------------------------------------------
     is_fruit_bowl = any(kw in clean_lower for kw in [
-        "tazón", "tazon", "fresas frescas", "moras frescas", "higos frescos", "frambuesas",
-        "durazno fresco", "granada fresca", "pitahaya fresca"
+        "tazón", "tazon", "fresas frescas", "moras frescas", "higos", "frambuesas",
+        "durazno", "granada", "pitahaya"
     ]) and not "gelatina" in clean_lower
 
     if is_fruit_bowl:
-        fruit_name = "Moras frescas de la granja"
-        if "fresa" in clean_lower: fruit_name = "Fresas frescas desinfectadas"
-        elif "higo" in clean_lower: fruit_name = "Higos frescos de la granja"
-        elif "durazno" in clean_lower: fruit_name = "Durazno fresco de la granja"
-        elif "pitahaya" in clean_lower: fruit_name = "Pitahaya fresca de la granja"
-        elif "frambuesa" in clean_lower: fruit_name = "Frambuesas orgánicas de la granja"
-        elif "granada" in clean_lower: fruit_name = "Granada fresca"
+        fruit_name = "Arilos de Granada fresca de la granja (Pico de cosecha)"
+        if "granada" in clean_lower or "higo" in clean_lower or "durazno" in clean_lower:
+            fruit_name = "Arilos de Granada fresca desgranados (≤ 30g por comensal)"
+        elif "fresa" in clean_lower and any("fresa" in k for k in active_lower):
+            fruit_name = "Fresas frescas desinfectadas de la granja"
+        elif "acelga" in clean_lower or "ensalada" in clean_lower:
+            fruit_name = "Acelgas frescas de la granja con arilos de granada"
 
         nut_name = "Nuez de Castilla troceada"
         if "almendras" in clean_lower: nut_name = "Almendras fileteadas tostadas"
         elif "pecana" in clean_lower: nut_name = "Nuez pecana troceada"
-        elif "coco" in clean_lower: nut_name = "Coco rallado sin azúcar"
 
         return {
             "title": clean_title,
             "cooking_technique": "raw_assembly",
-            "sensory_description": f"Ensamble fresco vegetal y frutal de {fruit_name} con {nut_name} y chía. Aporta enzimas activas y fibra celular viva.",
+            "sensory_description": f"Ensamble fresco frutal y vegetal de {fruit_name} con {nut_name} y chía. Aporta antioxidantes de cosecha viva y fibra celular.",
             "ingredient_groups": [
                 {
-                    "category": "🌱 Fruta Viva Base",
-                    "items": [{"name": fruit_name, "base_qty_per_person": 75.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
+                    "category": "🌱 Fruta y Vegetal de Cosecha Activa",
+                    "items": [{"name": fruit_name, "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
                 },
                 {
                     "category": "🥑 Frutos Secos y Fibra Cetogénica",
@@ -363,9 +366,9 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
                 }
             ],
             "steps": [
-                "1. Higienizado y Corte: Lavar y desinfectar las frutas frescas en agua fría; cortar en cuartos longitudinales.",
-                "2. Tostado Seco de Frutos Secos: Tostar ligeramente los frutos secos en sartén seca a fuego muy bajo durante 2 minutos (sin aceite ni mantequilla) para activar aceites aromáticos; dejar enfriar.",
-                "3. Ensamble en Frío: Colocar las frutas en 6 cuencos individuales, incorporar el yogur griego y espolvorear la chía.",
+                "1. Higienizado y Desgranado: Lavar y desgranar los arilos de granada fresca de la granja; reservar a 6°C.",
+                "2. Tostado Seco de Frutos Secos: Tostar ligeramente los frutos secos en sartén seca a fuego muy bajo durante 2 minutos para activar aceites aromáticos; dejar enfriar.",
+                "3. Ensamble en Frío: Colocar los arilos de granada en 6 cuencos individuales, incorporar el yogur griego y espolvorear la chía.",
                 "4. Montaje Final: Coronar con los frutos secos tostados fríos y menta fresca. Servir de inmediato a 6–8°C."
             ]
         }
@@ -405,7 +408,7 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
         }
 
     # -------------------------------------------------------------------------
-    # 5. CREPAS KETO Y ENCHILADAS EN CREPA DE ALMENDRA (JAMÁS DESVENAR O LAVAR)
+    # 5. CREPAS KETO Y ENCHILADAS EN CREPA DE ALMENDRA
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["crepas", "crepa", "enchiladas tabasqueñas"]):
         filling_protein = "Pechuga de pavo desmenuzada artesanal"
@@ -450,7 +453,7 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
         }
 
     # -------------------------------------------------------------------------
-    # 6. PIMIENTOS DULCES Y PORTOBELLOS RELLENOS (AHUECAR Y DESVENAR VEGETALES REALES)
+    # 6. PIMIENTOS DULCES Y PORTOBELLOS RELLENOS
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["pimientos dulces rellenos", "pimientos rellenos", "portobellos rellenos", "calabacitas rellenas"]):
         veg_base = "Pimientos dulces de la granja"
@@ -655,13 +658,13 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
     # 11. CREMAS DE VEGETALES (BRÓCOLI, COLIFLOR, ESPÁRRAGOS, CHAMPIÑONES, FLOR DE CALABAZA)
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["crema de", "sopa de", "crema ligera"]):
-        veg_base = "Hortaliza fresca de la granja"
-        if "brócoli" in clean_lower: veg_base = "Brócoli fresco en floretes"
-        elif "coliflor" in clean_lower: veg_base = "Coliflor fresca rostizada"
-        elif "espárragos" in clean_lower: veg_base = "Espárragos verdes frescos"
+        veg_base = "Acelgas frescas de la granja"
+        if "brócoli" in clean_lower and any("brócoli" in k for k in active_lower): veg_base = "Brócoli fresco en floretes"
+        elif "coliflor" in clean_lower and any("coliflor" in k for k in active_lower): veg_base = "Coliflor fresca rostizada"
+        elif "espárragos" in clean_lower and any("espárrago" in k for k in active_lower): veg_base = "Espárragos verdes frescos"
         elif "champiñones" in clean_lower: veg_base = "Champiñones portobello y trufa"
         elif "flor de calabaza" in clean_lower: veg_base = "Flor de calabaza de la granja"
-        elif "calabacitas" in clean_lower: veg_base = "Calabacitas tiernas de la granja"
+        elif "calabacitas" in clean_lower and any("calabacita" in k for k in active_lower): veg_base = "Calabacitas tiernas de la granja"
 
         return {
             "title": clean_title,
@@ -719,22 +722,20 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
         }
 
     # -------------------------------------------------------------------------
-    # 13. VEGETALES Y ACOMPAÑAMIENTOS AL VAPOR / PLANCHA (CHAYOTES, NOPALES, ESPÁRRAGOS, CALABACITAS)
+    # 13. VEGETALES Y ACOMPAÑAMIENTOS AL VAPOR / PLANCHA
     # -------------------------------------------------------------------------
     is_veg_side = any(kw in clean_lower for kw in [
         "chayote", "calabacita", "espárrago", "brócoli", "coliflor", "ejote", "nopal", "nopales",
-        "pimiento", "espinaca", "champiñón", "zoodles", "hinojo", "arúgula"
+        "pimiento", "espinaca", "champiñón", "zoodles", "hinojo", "arúgula", "acelga"
     ]) or course_type in ["side", "side_dish", "acompañamiento"]
 
     if is_veg_side:
-        veg_name = "Vegetales frescos de la granja"
-        if "chayote" in clean_lower: veg_name = "Chayotes tiernos de la granja"
-        elif "calabacita" in clean_lower or "zoodles" in clean_lower: veg_name = "Calabacitas tiernas / Zoodles"
-        elif "espárrago" in clean_lower: veg_name = "Espárragos verdes frescos"
-        elif "nopal" in clean_lower: veg_name = "Nopales tiernos limpios"
-        elif "brócoli" in clean_lower: veg_name = "Brócoli en floretes"
-        elif "coliflor" in clean_lower: veg_name = "Coliflor fresca"
-        elif "ejote" in clean_lower: veg_name = "Ejotes tiernos"
+        veg_name = "Nopales tiernos limpios de la granja"
+        if "acelga" in clean_lower or any("acelga" in k for k in active_lower): veg_name = "Acelgas frescas de la granja"
+        elif "nopal" in clean_lower or any("nopal" in k for k in active_lower): veg_name = "Nopales tiernos limpios"
+        elif "chayote" in clean_lower: veg_name = "Chayotes tiernos de la granja"
+        elif "calabacita" in clean_lower and any("calabacita" in k for k in active_lower): veg_name = "Calabacitas tiernas / Zoodles"
+        elif "espárrago" in clean_lower and any("espárrago" in k for k in active_lower): veg_name = "Espárragos verdes frescos"
 
         return {
             "title": clean_title,
@@ -742,22 +743,22 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter") ->
             "sensory_description": f"Acompañamiento vegetal liviano de {veg_name} cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO.",
             "ingredient_groups": [
                 {
-                    "category": "🌱 Vegetal / Acompañamiento Base",
+                    "category": "🌱 Vegetal / Acompañamiento Base (Cosecha Activa)",
                     "items": [{"name": f"{veg_name} troceados", "base_qty_per_person": 120.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
                 },
                 {
                     "category": "🧈 Grasa Saludable y Sazón",
                     "items": [
                         {"name": "Mantequilla clarificada / Aceite VEVO", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Orégano seco u hierbas finas", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Cilantro fresco y orégano", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
                         {"name": "Sal de mar mineral", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 }
             ],
             "steps": [
-                f"1. Higienizado y Corte: Lavar los {veg_name} y cortar en gajos o cuadrícula.",
+                f"1. Higienizado y Corte: Lavar los {veg_name} de cosecha activa y cortar en gajos o cuadrícula.",
                 "2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.",
-                "3. Sazón: Aderezar con aceite VEVO, orégano y sal de mar.",
+                "3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.",
                 "4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal."
             ]
         }

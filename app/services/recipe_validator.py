@@ -12,9 +12,9 @@ FORBIDDEN_KEYWORDS = [
     "trigo", "maiz", "arroz", "harina refinada", "azucar"
 ]
 
-def validate_recipe_compliance(recipe: TypedRecipeSchema) -> Tuple[bool, str]:
+def validate_recipe_compliance(recipe: TypedRecipeSchema, forbidden_harvest: list = None) -> Tuple[bool, str]:
     """
-    Valida la receta generada contra la Directiva Sistémica Vinculante.
+    Valida la receta generada contra la Directiva Sistémica Vinculante y la Gobernanza Agronómica.
     Retorna (True, "OK") si cumple con todos los criterios o (False, motivo) si debe ser rechazada.
     """
     if not recipe or not (recipe.title or recipe.name):
@@ -22,6 +22,21 @@ def validate_recipe_compliance(recipe: TypedRecipeSchema) -> Tuple[bool, str]:
 
     title_lower = (recipe.title or recipe.name or "").lower().strip()
     
+    # REGLA DE GOBERNANZA AGRONÓMICA: Rechazo de Insumos de Cosecha Agotados / Prohibidos
+    if forbidden_harvest:
+        for bad_h in forbidden_harvest:
+            clean_bad = bad_h.lower().replace("fresca", "").replace("frescos", "").replace("tiernos", "").replace("tiernas", "").strip()
+            if len(clean_bad) >= 3:
+                if clean_bad in title_lower:
+                    return False, f"Insumo de cosecha prohibido/agotado en título: '{bad_h}'."
+                if recipe.ingredient_groups:
+                    for g in recipe.ingredient_groups:
+                        if g.items:
+                            for item in g.items:
+                                iname = (item.name if hasattr(item, "name") else str(item)).lower()
+                                if clean_bad in iname:
+                                    return False, f"Insumo de cosecha prohibido/agotado en ingrediente: '{iname}' contiene '{bad_h}'."
+
     # REGLA 1: Erradicación de Ingrediente Monolítico (Sin Falsos Positivos)
     ingredient_items = []
     if recipe.ingredient_groups:
