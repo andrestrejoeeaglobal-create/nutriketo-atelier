@@ -501,7 +501,7 @@ function generateNextWeekMenu() {
 
           <!-- Añadir Nuevo Insumo a Cosecha -->
           <div class="add-custom-box">
-            <input type="text" id="new-harvest-name" class="add-input" placeholder="Ej. Higos frescos, Vinagre de manzana...">
+            <input type="text" id="new-harvest-name" class="add-input" placeholder="Ej. Higos frescos, Vinagre de manzana..." onkeypress="if(event.key==='Enter') addNewHarvestItem()">
             <button class="btn-add-item" onclick="addNewHarvestItem()">➕ Añadir Insumo a Cosecha</button>
           </div>
         </div>
@@ -514,9 +514,9 @@ function generateNextWeekMenu() {
 
           <!-- Añadir Nuevo Insumo a Alacena -->
           <div class="add-custom-box">
-            <input type="text" id="new-pantry-name" class="add-input" placeholder="Nombre (ej. Café en grano, Vinagre...)">
-            <input type="number" step="0.1" id="new-pantry-qty" style="width: 75px;" class="add-input" placeholder="Cant.">
-            <input type="text" id="new-pantry-unit" style="width: 85px;" class="add-input" placeholder="Unidad">
+            <input type="text" id="new-pantry-name" class="add-input" placeholder="Nombre (ej. Café en grano, Vinagre...)" onkeypress="if(event.key==='Enter') addNewPantryItem()">
+            <input type="number" step="0.1" id="new-pantry-qty" style="width: 75px;" class="add-input" placeholder="Cant." onkeypress="if(event.key==='Enter') addNewPantryItem()">
+            <input type="text" id="new-pantry-unit" style="width: 85px;" class="add-input" placeholder="Unidad" onkeypress="if(event.key==='Enter') addNewPantryItem()">
             <button class="btn-add-item" onclick="addNewPantryItem()">➕ Añadir Insumo a Alacena</button>
           </div>
         </div>
@@ -647,6 +647,29 @@ function generateNextWeekMenu() {
       "aceite-vegetal-mixto": { name: "Aceite vegetal mixto comercial", stock: 800, unit: "ml", status: "prohibited", reason: "Pro-inflamatorio / Omega 6 oxidado" }
     };
 
+    const FARM_MASTER_CATALOG = [
+      "Espinacas frescas",
+      "Calabacitas verdes tiernas",
+      "Brócoli fresco",
+      "Espárragos verdes",
+      "Nopales tiernos",
+      "Ejotes frescos",
+      "Cilantro fresco",
+      "Arúgula fresca",
+      "Coliflor fresca",
+      "Higos frescos",
+      "Pitayas frescas",
+      "Duraznos frescos",
+      "Granadas frescas",
+      "Miel pura de la granja El Herami",
+      "Hojas de menta fresca",
+      "Toronjil fresco",
+      "Manzanilla fresca",
+      "Jamaica fresca",
+      "Agua purificada de manantial"
+    ];
+    let customFarmItems = [];
+
     let activeWeek = "Semana 38 (13 al 19 de Septiembre de 2026)";
     let activeDiners = 6;
     let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
@@ -730,7 +753,12 @@ function generateNextWeekMenu() {
           const state = JSON.parse(saved);
           if (state.activeWeek && datasets[state.activeWeek]) activeWeek = state.activeWeek;
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
-          if (Array.isArray(state.selectedHarvest)) selectedHarvest = state.selectedHarvest;
+          if (Array.isArray(state.customFarmItems)) customFarmItems = state.customFarmItems;
+          if (Array.isArray(state.selectedHarvest) && state.selectedHarvest.length > 0) {
+            selectedHarvest = state.selectedHarvest;
+          } else {
+            selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
+          }
           if (state.pantryStock) {
             pantryStock = state.pantryStock;
             Object.keys(pantryStock).forEach(itemName => {
@@ -795,6 +823,7 @@ function generateNextWeekMenu() {
           activeWeek,
           activeDiners,
           selectedHarvest,
+          customFarmItems,
           pantryStock,
           checkedRows,
           customShopItems,
@@ -1169,25 +1198,32 @@ function generateNextWeekMenu() {
     }
 
     function initSetupPanel() {
-      // 1. Cosecha Grid (sección editable ordenada A-Z)
+      // 1. Cosecha Grid (sección editable ordenada A-Z de catálogo maestro + personalizados)
       const hGrid = document.getElementById('harvest-checklist-grid');
       if (hGrid) {
         hGrid.innerHTML = '';
-        const farmItems = rawShopBase.filter(i => i.category.includes('Cosecha'));
-        farmItems.sort((a, b) => a.item_name.localeCompare(b.item_name));
-        farmItems.forEach(i => {
-          const isChecked = selectedHarvest.includes(i.item_name);
+        const allFarmNames = [...new Set([...FARM_MASTER_CATALOG, ...customFarmItems])];
+        allFarmNames.sort((a, b) => a.localeCompare(b));
+
+        allFarmNames.forEach((itemName, idx) => {
+          const isCanonical = FARM_MASTER_CATALOG.includes(itemName);
+          const slug = normalizeToCanonicalSlug(itemName);
+          const isChecked = selectedHarvest.some(h => {
+            const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+            return normalizeToCanonicalSlug(hStr) === slug || hStr.toLowerCase() === itemName.toLowerCase();
+          });
+
           const div = document.createElement('div');
           div.className = 'option-row';
           div.style.color = 'var(--text-main)';
-          const safeName = i.item_name.replace(/'/g, "\'");
+          const safeName = itemName.replace(/'/g, "\'");
           div.style.cssText = 'display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.5rem 0.75rem; border-radius: 10px; background: var(--surface-card); border: 1px solid var(--border-clinical); box-shadow: var(--shadow-clinical-sm);';
           div.innerHTML = `
             <div style="display: flex; align-items: center; gap: 0.5rem; flex: 1; min-width: 0;">
-              <input type="checkbox" id="h-item-${i.id}" value="${i.item_name}" ${isChecked ? 'checked' : ''} onchange="updateHarvestSelection('${i.item_name}', this.checked)">
-              <label for="h-item-${i.id}" style="cursor:pointer; flex: 1; color: var(--text-main); font-weight: 700; font-size: 0.85rem; word-break: break-word;">${i.item_name}</label>
+              <input type="checkbox" id="h-item-${idx}" value="${safeName}" ${isChecked ? 'checked' : ''} onchange="updateHarvestSelection('${safeName}', this.checked)">
+              <label for="h-item-${idx}" style="cursor:pointer; flex: 1; color: var(--text-main); font-weight: 700; font-size: 0.85rem; word-break: break-word;">${itemName}</label>
             </div>
-            <button type="button" onclick="deleteHarvestItem('${safeName}')" style="background: none; border: none; color: #ef4444; font-size: 0.95rem; cursor: pointer; padding: 0.1rem 0.3rem; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" title="Eliminar ${safeName}">🗑️</button>
+            <button type="button" onclick="deleteHarvestItem('${safeName}')" style="background: none; border: none; color: #ef4444; font-size: 0.95rem; cursor: pointer; padding: 0.1rem 0.3rem; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" title="${isCanonical ? 'Desmarcar de Cosecha' : 'Eliminar ' + safeName}">🗑️</button>
           `;
           hGrid.appendChild(div);
         });
@@ -1277,6 +1313,14 @@ function generateNextWeekMenu() {
       if (!val) return;
 
       const slug = normalizeToCanonicalSlug(val);
+      const existsInMaster = FARM_MASTER_CATALOG.some(m => normalizeToCanonicalSlug(m) === slug || m.toLowerCase() === val.toLowerCase());
+      if (!existsInMaster) {
+        const existsInCustom = customFarmItems.some(c => normalizeToCanonicalSlug(c) === slug || c.toLowerCase() === val.toLowerCase());
+        if (!existsInCustom) {
+          customFarmItems.push(val);
+        }
+      }
+
       const existsInSelected = selectedHarvest.some(h => {
         const hName = typeof h === 'string' ? h : (h.item_name || h.name || '');
         return normalizeToCanonicalSlug(hName) === slug || hName.toLowerCase() === val.toLowerCase();
@@ -1305,6 +1349,7 @@ function generateNextWeekMenu() {
       if (typeof render3DShoppingList === 'function') {
         render3DShoppingList();
       }
+      if (typeof showToast === 'function') showToast(`🌿 '${val}' añadido a Cosecha Activa.`);
     }
 
     function addNewPantryItem() {
@@ -1390,11 +1435,30 @@ function generateNextWeekMenu() {
     }
 
     function deleteHarvestItem(itemName) {
-      if (confirm(`¿Deseas eliminar el insumo "${itemName}" de la Cosecha?`)) {
-        rawShopBase = rawShopBase.filter(i => i.item_name !== itemName);
-        selectedHarvest = selectedHarvest.filter(n => n !== itemName);
-        saveAppState();
-        initSetupPanel();
+      const isCanonical = FARM_MASTER_CATALOG.includes(itemName);
+      const slug = normalizeToCanonicalSlug(itemName);
+
+      if (isCanonical) {
+        selectedHarvest = selectedHarvest.filter(h => {
+          const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+          return normalizeToCanonicalSlug(hStr) !== slug && hStr.toLowerCase() !== itemName.toLowerCase();
+        });
+        if (typeof showToast === 'function') showToast(`🌿 '${itemName}' desmarcado de Cosecha (pasa a Mercado Neto).`);
+      } else {
+        if (confirm(`¿Deseas eliminar el insumo personalizado "${itemName}" de la Cosecha?`)) {
+          customFarmItems = customFarmItems.filter(n => normalizeToCanonicalSlug(n) !== slug && n.toLowerCase() !== itemName.toLowerCase());
+          selectedHarvest = selectedHarvest.filter(h => {
+            const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+            return normalizeToCanonicalSlug(hStr) !== slug && hStr.toLowerCase() !== itemName.toLowerCase();
+          });
+          rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
+          if (typeof showToast === 'function') showToast(`🗑️ Insumo personalizado '${itemName}' eliminado.`);
+        }
+      }
+      saveAppState();
+      initSetupPanel();
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
       }
     }
 
@@ -1406,8 +1470,6 @@ function generateNextWeekMenu() {
         initSetupPanel();
       }
     }
-
-
 
     function saveAndUnlockApp() {
       activeWeek = document.getElementById('setup-week').value;
@@ -1431,6 +1493,9 @@ function generateNextWeekMenu() {
       }
       if (typeof render3DShoppingList === 'function') {
         render3DShoppingList();
+      }
+      if (typeof showToast === 'function') {
+        showToast("🏛️ Arquitectura Semanal Compilada y Sincronizada.");
       }
     }
 
