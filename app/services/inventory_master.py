@@ -241,30 +241,29 @@ class InventorySyncMaster:
 
             with get_db() as conn:
                 cursor = conn.cursor()
-                cursor.execute("SELECT id, item_name FROM shopping_list_items")
-                existing = {row["item_name"]: row["id"] for row in cursor.fetchall()}
+                cursor.execute("SELECT id, item_name, is_checked FROM shopping_list_items")
+                existing_rows = cursor.fetchall()
+                existing = {row["item_name"]: (row["id"], row["is_checked"]) for row in existing_rows}
+                
+                valid_names = set(item["item_name"] for item in items_to_sync)
+                
+                for old_name in existing:
+                    if old_name not in valid_names:
+                        cursor.execute("DELETE FROM shopping_list_items WHERE item_name = ?", (old_name,))
 
-                if not existing:
-                    for item in items_to_sync:
-                        qty_str = InventorySyncMaster.format_scaled_qty(item["base_qty"], item["unit"], diners_count)
+                for item in items_to_sync:
+                    qty_str = InventorySyncMaster.format_scaled_qty(item["base_qty"], item["unit"], diners_count)
+                    scaled_qty = item["base_qty"] * (diners_count / 6.0)
+                    if item["item_name"] in existing:
+                        cursor.execute(
+                            "UPDATE shopping_list_items SET category = ?, day = ?, quantity = ?, unit = ? WHERE item_name = ?",
+                            (item["category"], f"Semana 33 ({diners_count} comensales)", scaled_qty, qty_str, item["item_name"])
+                        )
+                    else:
                         cursor.execute(
                             "INSERT INTO shopping_list_items (category, day, item_name, quantity, unit, is_checked) VALUES (?, ?, ?, ?, ?, 0)",
-                            (item["category"], f"Semana 33 ({diners_count} comensales)", item["item_name"], item["base_qty"] * (diners_count / 6.0), qty_str)
+                            (item["category"], f"Semana 33 ({diners_count} comensales)", item["item_name"], scaled_qty, qty_str)
                         )
-                else:
-                    for item in items_to_sync:
-                        qty_str = InventorySyncMaster.format_scaled_qty(item["base_qty"], item["unit"], diners_count)
-                        scaled_qty = item["base_qty"] * (diners_count / 6.0)
-                        if item["item_name"] in existing:
-                            cursor.execute(
-                                "UPDATE shopping_list_items SET day = ?, quantity = ?, unit = ? WHERE item_name = ?",
-                                (f"Semana 33 ({diners_count} comensales)", scaled_qty, qty_str, item["item_name"])
-                            )
-                        else:
-                            cursor.execute(
-                                "INSERT INTO shopping_list_items (category, day, item_name, quantity, unit, is_checked) VALUES (?, ?, ?, ?, ?, 0)",
-                                (item["category"], f"Semana 33 ({diners_count} comensales)", item["item_name"], scaled_qty, qty_str)
-                            )
             logger.info(f"InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente ({diners_count} comensales).")
         except Exception as e:
             logger.error(f"Error al sembrar/actualizar lista de compras Semana 33: {e}")

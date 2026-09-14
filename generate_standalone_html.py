@@ -2023,7 +2023,7 @@ function generateNextWeekMenu() {
     const currentDayNum = (new Date().getDay() >= 0 && new Date().getDay() <= 6) ? new Date().getDay() : 0;
     let selectedIdx = currentDayNum;
 
-    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v34_granular';
+    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v38_canonical';
 
     function toggleTheme() {
       const html = document.documentElement;
@@ -2086,12 +2086,31 @@ function generateNextWeekMenu() {
 
     function loadAppState() {
       try {
-        const saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+        let saved = localStorage.getItem(LOCAL_STORAGE_KEY);
+        if (!saved) {
+          const legacyKeys = ['nutriketo_app_state_v34_granular', 'nutriketo_app_state_v33', 'nutriketo_app_state'];
+          for (const lKey of legacyKeys) {
+            const oldData = localStorage.getItem(lKey);
+            if (oldData) {
+              saved = oldData;
+              localStorage.removeItem(lKey);
+              break;
+            }
+          }
+        }
+
         if (saved) {
           const state = JSON.parse(saved);
           if (state.activeWeek && datasets[state.activeWeek]) activeWeek = state.activeWeek;
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
-          if (Array.isArray(state.customFarmItems)) customFarmItems = state.customFarmItems;
+
+          if (Array.isArray(state.customFarmItems)) {
+            customFarmItems = state.customFarmItems.filter(f => {
+              const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
+              return !/miel|durazno/i.test(fStr);
+            });
+          }
+
           if (Array.isArray(state.selectedHarvest) && state.selectedHarvest.length > 0) {
             selectedHarvest = state.selectedHarvest.filter(h => {
               const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
@@ -2100,26 +2119,15 @@ function generateNextWeekMenu() {
           } else {
             selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
           }
-          if (state.pantryStock) {
-            pantryStock = state.pantryStock;
-            Object.keys(pantryStock).forEach(itemName => {
-              const smartCat = getSmartItemCategory(itemName, "🛒 Abarrotes, Aceites y Grasas");
-              const kSlug = normalizeToCanonicalSlug(itemName);
-              const existing = rawShopBase.find(r => normalizeToCanonicalSlug(r.item_name) === kSlug);
-              if (existing) {
-                existing.category = smartCat;
-              } else {
-                rawShopBase.push({
-                  id: 300 + rawShopBase.length + 1,
-                  category: smartCat,
-                  item_name: itemName,
-                  quantity: pantryStock[itemName] || 1.0,
-                  unit: "unidad — frasco",
-                  quantity_str: `${pantryStock[itemName] || 1.0} unidad — frasco`
-                });
-              }
+
+          if (state.pantryStock && typeof state.pantryStock === 'object') {
+            pantryStock = {};
+            Object.keys(state.pantryStock).forEach(itemName => {
+              if (/miel|durazno/i.test(itemName)) return;
+              pantryStock[itemName] = state.pantryStock[itemName];
             });
           }
+
           if (state.checkedRows) checkedRows = state.checkedRows;
           if (state.mealDinersState) mealDinersState = state.mealDinersState;
           if (state.customDishesState) customDishesState = state.customDishesState;
@@ -2131,6 +2139,7 @@ function generateNextWeekMenu() {
 
           if (Array.isArray(state.customShopItems)) {
             state.customShopItems.forEach(cItem => {
+              if (!cItem || !cItem.item_name || /miel|durazno/i.test(cItem.item_name)) return;
               const smartCat = getSmartItemCategory(cItem.item_name, cItem.category);
               const cSlug = normalizeToCanonicalSlug(cItem.item_name);
               const existing = rawShopBase.find(r => normalizeToCanonicalSlug(r.item_name) === cSlug);
@@ -2143,10 +2152,29 @@ function generateNextWeekMenu() {
             });
           }
 
-          rawShopBase.forEach(item => {
-            item.category = getSmartItemCategory(item.item_name, item.category);
-          });
+          // Sanitizar y deduplicar rawShopBase por slug canónico
+          const cleanedShopBase = [];
+          const seenShopSlugs = new Set();
 
+          rawShopBase.forEach(item => {
+            if (!item || !item.item_name) return;
+            const cleanName = item.item_name.replace(/\\s*\\/\\s*/g, ' \u2014 ').replace(/\\//g, ' \u2014 ').trim();
+            if (!cleanName || (/miel|durazno/i.test(cleanName) && !item.category.includes('Cosecha'))) return;
+            const slug = normalizeToCanonicalSlug(cleanName);
+            const smartCat = getSmartItemCategory(cleanName, item.category);
+
+            if (!seenShopSlugs.has(slug)) {
+              seenShopSlugs.add(slug);
+              cleanedShopBase.push({
+                ...item,
+                item_name: cleanName,
+                category: smartCat
+              });
+            }
+          });
+          rawShopBase = cleanedShopBase;
+
+          saveAppState();
           return true;
         }
       } catch(e) {
