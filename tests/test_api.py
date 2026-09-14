@@ -550,3 +550,197 @@ def test_validate_entity_coverage_and_bom_usage():
     is_cov_valid, cov_reason = validate_entity_coverage(invalid_recipe)
     assert not is_cov_valid, "El validador debió rechazar la falta de machaca en el BOM"
     assert "omite ingredientes clave" in cov_reason or "machaca" in cov_reason
+
+
+def test_ssot_v36_2_0_inventory_canonical_integrity():
+    from app.services.inventory_master import InventorySyncMaster, normalize_to_canonical_slug
+
+    # 1. Ningún ingrediente botánico/vegetal/frutal debe clasificarse como carne
+    botanical_items = [
+        "Fresas frescas de la granja",
+        "Moras frescas de la granja",
+        "Pitahaya fresca de la granja",
+        "Flor de calabaza fresca",
+        "Coliflor fresca en floretes",
+        "Infusión de té de frutos rojos y menta fresca",
+        "Limón fresco recién exprimido",
+        "Hojas de romero fresco"
+    ]
+    for item in botanical_items:
+        cat = InventorySyncMaster.categorize_ingredient_name(item)
+        assert cat != "🥩 Carnes, Pescados y Proteínas", f"{item} fue incorrectamente clasificado como carne: {cat}"
+
+    # 2. Insumos cárnicos reales sí deben caer en Carnes
+    meat_items = [
+        "Huevos frescos orgánicos de pastoreo",
+        "Filete Mignon de Res de pastoreo",
+        "Pechuga de pavo artesanal",
+        "Filete de Salmón fresco con piel",
+        "Filete de Huachinango fresco",
+        "Filete de Róbalo fresco"
+    ]
+    for meat in meat_items:
+        cat = InventorySyncMaster.categorize_ingredient_name(meat)
+        assert cat == "🥩 Carnes, Pescados y Proteínas", f"{meat} debió clasificarse en Carnes y Proteínas: {cat}"
+
+    # 3. Unificación por slug canónico de distintas variantes de corte
+    slug1 = normalize_to_canonical_slug("Calabacitas tiernas de la granja")
+    slug2 = normalize_to_canonical_slug("Zoodles de calabacita a la mantequilla")
+    slug3 = normalize_to_canonical_slug("Bastones de zucchini al limón")
+    
+    assert "calabacita" in slug1 or "zucchini" in slug1
+    assert "calabacita" in slug2 or "zucchini" in slug2
+    assert "calabacita" in slug3 or "zucchini" in slug3
+
+
+def test_physical_state_invariant_and_thermal_safety():
+    from app.services.inventory_master import validate_physical_state_invariant, format_cooking_step
+
+    # 1. Invariante de estado físico
+    existing = {'almendras-fileteadas': {'physical_state': 'solid', 'unit': 'g'}}
+    
+    # Debe lanzar ValueError si se intenta agregar un líquido con la misma clave
+    with pytest.raises(ValueError) as excinfo:
+        validate_physical_state_invariant('almendras-fileteadas', 'liquid', 'ml', existing)
+    assert "INVARIANTE VIOLADA" in str(excinfo.value)
+
+    # 2. Inyección algorítmica de inocuidad térmica por proteína
+    poultry_step = format_cooking_step("Sellar la pechuga de pavo al sartén.", protein_family="poultry")
+    assert "74°C" in poultry_step
+    assert "centro térmico" in poultry_step
+
+    bovine_step = format_cooking_step("Asar lomo de res a la parrilla.", protein_family="bovine")
+    assert "68°C" in bovine_step or "72°C" in bovine_step
+
+    fish_step = format_cooking_step("Hornear filete de huachinango.", protein_family="fish")
+    assert "63°C" in fish_step or "68°C" in fish_step
+
+
+def test_canonical_v36_shopping_list_no_ghost_items():
+    import json
+    import os
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    import re
+    match = re.search(r'const ACTIVE_WEEK_CANONICAL_BOM = (\{.*?\});', content, re.DOTALL)
+    assert match, "ACTIVE_WEEK_CANONICAL_BOM JSON debe estar presente en HTML"
+    canonical_bom_str = match.group(1).lower()
+
+    # Verificar ausencia total de insumos fantasma en el BOM Canónico activo
+    ghost_terms = ["waffle", "waffles", "licores", "cobertura de chocolate", "leche de vaca", "cafe legal"]
+    for ghost in ghost_terms:
+        assert ghost not in canonical_bom_str, f"Se encontró insumo fantasma '{ghost}' en ACTIVE_WEEK_CANONICAL_BOM"
+
+    json_path = os.path.join(os.path.dirname(__file__), "..", "scratch_s38_canonical.json")
+    if os.path.exists(json_path):
+        with open(json_path, "r", encoding="utf-8") as f:
+            bdata = json.load(f)
+        assert bdata.get("unique_count") == 69, f"El recuento canónico debe ser exactamente 69 insumos y no 87. Actual: {bdata.get('unique_count')}"
+        assert len(bdata.get("bom", {})) == 7, f"Las categorías comerciales canónicas deben ser 7. Actual: {len(bdata.get('bom', {}))}"
+
+
+def test_no_forced_rounding_to_multiples_of_five():
+    import os
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # Verificar que las funciones JS normalizeQuantity y formatBaseQuantity NO tengan Math.ceil(num / 5) * 5
+    assert "Math.ceil(num / 5) * 5" not in content, "Se encontró Math.ceil(num / 5) * 5 en normalizeQuantity"
+    assert "Math.ceil(val / 5) * 5" not in content, "Se encontró Math.ceil(val / 5) * 5 en formatBaseQuantity"
+
+
+def test_v_nutri_qualitative_and_quantitative_headers():
+    import os
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    assert "kcal / comensal" in content, "Debe etiquetarse explícitamente kcal / comensal"
+    assert "Cantidad por Comensal" in content, "Encabezado debe ser Cantidad por Comensal"
+    assert "Completa (3 Tiempos)" in content, "El título de la comida debe indicar Completa (3 Tiempos)"
+    assert "Aporte de polifenoles vivos" in content, "Debe incluir justificante específico de polifenoles"
+
+
+def test_v_nutri_fiber_and_gender_concordance():
+    import os
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    assert "Completo (3 Tiempos)" in content, "Concordancia gramatical de género: Completo (3 Tiempos)"
+    assert "getMealFiberG" in content, "La fibra debe ser calculada dinámicamente mediante getMealFiberG"
+    assert "* % VD calculado sobre Dieta Cetogénica de Referencia" in content, "Nota al pie aclaratoria del % VD debe estar presente"
+
+
+def test_granular_diners_stepper_and_bom_scaling():
+    import os
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    assert "meal-diners-stepper" in content, "El componente stepper interactivo meal-diners-stepper debe estar en el HTML"
+    assert "btn-step-diners" in content, "Los botones +/- btn-step-diners deben estar presentes en las tarjetas de servicio"
+    assert "updateMealDiners" in content, "La función de actualización updateMealDiners debe estar definida en JS"
+
+
+def test_dish_negotiation_reactivity_and_bom_update():
+    import os
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    assert "modal-negotiate-dish" in content, "El modal de negociación #modal-negotiate-dish debe estar presente en el HTML"
+    assert "btn-negotiate-dish" in content, "Los botones de acción btn-negotiate-dish deben estar presentes en las tarjetas"
+    assert "openNegotiateModal" in content, "La función openNegotiateModal debe estar definida en JS"
+    assert "confirmDishNegotiation" in content, "La función confirmDishNegotiation debe estar definida en JS"
+    assert "DISH_EXCHANGE_POOL" in content, "El catálogo canónico DISH_EXCHANGE_POOL debe estar inyectado en el script"
+    assert "atelier_dish_overrides_" in content, "La clave de almacenamiento local atelier_dish_overrides_ debe estar configurada"
+    assert "btn-surprise-me" in content, "El botón btn-surprise-me debe estar presente en el modal de negociación"
+    assert "surpriseMeDishNegotiation" in content, "La función surpriseMeDishNegotiation debe estar definida en JS"
+
+
+def test_pantry_net_shopping_discount_and_trophology():
+    import os
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    assert "PANTRY_STOCK_INVENTORY" in content, "PANTRY_STOCK_INVENTORY debe estar inyectado en el script"
+    assert "Inventario de Alacena y Despensa" in content, "La sección dedicada de Alacena debe estar en el HTML"
+    assert "1. Total Canónicos" in content, "Matriz de 4 cuadrantes debe tener Total Canónicos"
+    assert "3. Alacena Activa" in content, "Matriz de 4 cuadrantes debe incorporar Alacena Activa"
+    assert "4. Mercado Neto" in content, "Matriz de 4 cuadrantes debe incorporar Mercado Neto"
+    assert "status: \"prohibited\"" in content or "prohibited" in content, "Insumos en cuarentena no sugeridos deben estar declarados"
+
+
+
+
+
+
+
+
+

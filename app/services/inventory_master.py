@@ -78,26 +78,109 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Té de hierbas", "base_qty": 1.0, "unit": "paquete"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Café en grano / molido", "base_qty": 1.0, "unit": "paquete"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Hierbas secas (Orégano/Tomillo)", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Sal de mar", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "Alcaparras", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "Aceitunas", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "Vinagre balsámico", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "Mostaza Dijon", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "Salsa Tamari", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "Achiote", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "Aderezo Italiano", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "BBQ Keto", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🌶️ Chiles, Condimentos y Especias", "item_name": "Rajas de Jalapeño", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Queso Manchego con Chile", "base_qty": 1.0, "unit": "unidad/frasco"},
-    {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Queso Manchego Rebanado", "base_qty": 1.0, "unit": "unidad/frasco"},
-    {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Queso Mascarpone", "base_qty": 1.0, "unit": "unidad/frasco"},
-    {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Queso Oaxaca", "base_qty": 1.0, "unit": "unidad/frasco"},
-    {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Leche de vaca", "base_qty": 1.0, "unit": "litro"},
-    {"category": "🛒 Abarrotes, Aceites y Grasas", "item_name": "Cafe Legal", "base_qty": 1.0, "unit": "paquete"},
-    {"category": "🛒 Abarrotes, Aceites y Grasas", "item_name": "Cereza en Almibar", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🛒 Abarrotes, Aceites y Grasas", "item_name": "Cobertura de Chocolate", "base_qty": 1.0, "unit": "unidad/frasco"},
-    {"category": "🌻 Granos, Semillas y Harinas", "item_name": "Quinoa", "base_qty": 1.0, "unit": "unidad/frasco"}
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Sal de mar", "base_qty": 1.0, "unit": "frasco"}
 ]
+
+import unicodedata
+
+INGREDIENT_CANONICAL_MAP = {
+    "calabacita-fresca": ["calabacita", "calabacitas", "zucchini", "zoodles", "zoodles de calabacita", "bastones de zucchini"],
+    "coliflor-fresca": ["coliflor", "floretes de coliflor", "coliflor rostizada"],
+    "espinaca-fresca": ["espinaca", "espinacas", "espinaca baby", "espinacas baby"],
+    "esparrago-fresco": ["espárrago", "esparrago", "espárragos", "esparragos"],
+    "aceite-oliva": ["aceite de oliva", "aceite de oliva extra virgen", "aceite vevo", "aceite de oliva extra virgen vevo", "aceite de oliva virgen extra"],
+    "te-verde": ["té verde", "te verde", "té verde orgánico", "matcha"],
+    "huevo-organico": ["huevo", "huevos", "huevos frescos", "huevos orgánicos", "huevos frescos orgánicos", "huevos frescos orgánicos de pastoreo", "huevos enteros"],
+    "pechuga-pavo": ["pechuga de pavo", "pavo artesanal", "pechuga de pavo artesanal", "jamón de pavo", "tocino de pavo"],
+    "pechuga-pollo": ["pechuga de pollo", "pollo fresco", "pechuga de pollo fresca", "muslos de pollo"],
+    "sirloin-magro": ["carne molida de sirloin", "sirloin magro", "carne molida de sirloin magra"],
+    "filete-res": ["filete de res", "filete de res magro", "ribeye", "sirloin", "medallones de mignon"],
+    "huachinango-fresco": ["huachinango", "filete de huachinango", "filete de huachinango fresco", "filete de huachinango al horno"],
+    "robalo-fresco": ["róbalo", "robalo", "filete de róbalo", "filete de robalo fresco", "filete de róbalo a la plancha"],
+    "salmon-salvaje": ["salmón", "salmon", "salmón salvaje", "filete de salmón fresco", "filete de salmón salvaje", "filete de salmón fresco con piel"],
+    "pescado-blanco": ["pescado blanco", "filete de pescado blanco", "filete de pescado blanco fresco"],
+    "atun-fresco": ["atún", "atun", "filete de atún fresco"],
+    "queso-parmesano": ["queso parmesano", "parmesano maduro", "queso parmesano maduro"],
+    "queso-manchego": ["queso manchego", "manchego maduro", "queso manchego maduro"],
+    "queso-gouda": ["queso gouda", "gouda maduro", "queso gouda maduro"],
+    "queso-panela": ["queso panela", "panela fresco", "queso panela fresco"],
+    "queso-cabra": ["queso de cabra", "cabra artesanal", "queso de cabra artesanal"],
+    "queso-crema": ["queso crema", "queso crema artesanal"],
+    "mantequilla-pastoreo": ["mantequilla", "mantequilla de vaca", "mantequilla de pastoreo", "mantequilla sin sal"],
+    "jitomate-bola": ["jitomate", "jitomates", "jitomate bola", "jitomate bola jugoso"],
+    "33plus": ["33plus", "33 plus", "fórmula 33plus", "elixir 33plus"],
+    "34plus": ["34plus", "34 plus", "fórmula 34plus", "tisana 34plus"]
+}
+
+def strip_accents(text: str) -> str:
+    if not text:
+        return ""
+    return ''.join(c for c in unicodedata.normalize('NFD', text) if unicodedata.category(c) != 'Mn')
+
+def validate_physical_state_invariant(canonical_id: str, physical_state: str, unit: str, existing_items: dict) -> None:
+    """
+    INVARIANTE DE ESTADO FÍSICO:
+    Garantiza que ningún canonical_id mezcle estados físicos (solid vs liquid vs unit) o unidades incompatibles.
+    """
+    if canonical_id in existing_items:
+        existing = existing_items[canonical_id]
+        if existing['physical_state'] != physical_state:
+            raise ValueError(
+                f"🚨 INVARIANTE VIOLADA: Ingrediente '{canonical_id}' declara estado físico '{physical_state}' "
+                f"pero ya existe como '{existing['physical_state']}'."
+            )
+        # Unit dimension compatibility check
+        solid_units = {'g', 'kg', 'mg'}
+        liquid_units = {'ml', 'l', 'lt', 'litro', 'litros'}
+        unit_clean = unit.strip().lower()
+        exist_unit_clean = existing['unit'].strip().lower()
+        
+        if (unit_clean in solid_units and exist_unit_clean in liquid_units) or \
+           (unit_clean in liquid_units and exist_unit_clean in solid_units):
+            raise ValueError(
+                f"🚨 INVARIANTE VIOLADA: Unidades incompatibles para '{canonical_id}': '{unit}' vs '{existing['unit']}'."
+            )
+
+def format_cooking_step(step_text: str, protein_family: Optional[str] = None) -> str:
+    """
+    INYECCIÓN ALGORÍTMICA DETERMINISTA DE TEMPERATURA DE INOCUIDAD:
+    Deduce la temperatura objetivo según la familia de proteína.
+    """
+    if not protein_family or protein_family == 'none':
+        return step_text
+
+    pf = protein_family.lower()
+    if pf in ['poultry', 'turkey', 'chicken', 'pavo', 'pollo']:
+        target_clause = " Cocinar hasta alcanzar una temperatura interna crítica mínima de 74°C en el centro térmico de la pieza antes del reposo y servicio."
+        if "74°C" not in step_text and "74 °C" not in step_text:
+            return step_text + target_clause
+    elif pf in ['bovine', 'res', 'sirloin', 'mignon', 'ribeye']:
+        target_clause = " Asegurar una temperatura interna de servicio de 68°C a 72°C en el centro térmico."
+        if "68°C" not in step_text and "72°C" not in step_text:
+            return step_text + target_clause
+    elif pf in ['fish', 'pescado', 'huachinango', 'robalo', 'salmon', 'salmón']:
+        target_clause = " Mantener una temperatura interna de cocción de 63°C a 68°C."
+        if "63°C" not in step_text and "68°C" not in step_text:
+            return step_text + target_clause
+
+    return step_text
+
+def normalize_to_canonical_slug(raw_name: str) -> str:
+    if not raw_name:
+        return ""
+    clean = raw_name.strip().lower()
+    clean_no_acc = strip_accents(clean)
+    
+    for slug, aliases in INGREDIENT_CANONICAL_MAP.items():
+        for alias in aliases:
+            alias_clean = strip_accents(alias.strip().lower())
+            if alias_clean in clean_no_acc or clean_no_acc in alias_clean:
+                return slug
+                
+    sanitized = re.sub(r'[^a-z0-9\s-]', '', clean_no_acc)
+    sanitized = re.sub(r'\s+', '-', sanitized).strip('-')
+    return sanitized
+
 
 class InventorySyncMaster:
 
@@ -114,14 +197,19 @@ class InventorySyncMaster:
 
     @staticmethod
     def categorize_ingredient_name(name: str) -> str:
+        slug = normalize_to_canonical_slug(name)
         name_lower = name.lower()
-        if any(k in name_lower for k in ["miel", "espinaca", "calabacita", "brócoli", "brocoli", "espárrago", "esparrago", "nopal", "ejote", "cilantro", "arúgula", "arugula", "higo", "pitaya", "durazno", "granada"]):
-            return "🌾 Cosecha Directa de la Granja / Huerto"
-        if any(k in name_lower for k in ["huevo", "clara", "pollo", "sirloin", "res", "pescado", "salmón", "salmon", "pavo", "jamón", "jamon", "tocino", "atún", "atun"]):
+        if slug in ["33plus", "34plus"] or any(k in name_lower for k in ["33plus", "34plus", "grenetina", "colágeno", "colageno"]):
+            return "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA"
+        if re.search(r'\b(huevo|huevos|clara|claras|pollo|sirloin|res|mignon|ribeye|pescado|salmón|salmon|pavo|machaca|jamón|jamon|tocino|atún|atun|huachinango|robalo|róbalo)\b', name_lower):
             return "🥩 Carnes, Pescados y Proteínas"
-        if any(k in name_lower for k in ["queso", "mantequilla", "crema"]):
+        if any(k in name_lower for k in ["fresa", "frambuesa", "mora", "arándano", "arandano", "pitahaya", "pitaya", "higo", "granada", "arilos", "durazno"]):
+            return "🍓 Frutas de Bajo Índice Glucémico"
+        if any(k in name_lower for k in ["queso", "mantequilla", "ghee", "crema"]):
             return "🧀 Lácteos y Quesos (Sin Gluten / Keto)"
-        if any(k in name_lower for k in ["aguacate", "jitomate", "cebolla", "limón", "limon", "champiñón", "champinon", "ajo", "apio", "fresa"]):
+        if any(k in name_lower for k in ["romero", "orégano", "oregano", "tomillo", "pimienta", "sal", "vinagre", "adobo", "tajín", "tajin", "hierbas", "especias", "condimento", "albahaca", "laurel", "epazote", "mostaza", "comino", "pimentón", "pimenton", "eneldo", "salvia", "canela", "cúrcuma", "curcuma", "té", "te", "matcha", "jamaica", "toronjil", "manzanilla", "menta", "infusión", "infusion", "tisana", "elixir", "caldo", "azahar"]):
+            return "🌶️ Chiles, Condimentos e Infusiones"
+        if any(k in name_lower for k in ["calabacita", "zoodles", "zucchini", "espárrago", "esparrago", "nopal", "chayote", "coliflor", "espinaca", "arúgula", "arugula", "flor de calabaza", "champiñón", "champinon", "portobello", "jitomate", "cebolla", "ajo", "pepino", "apio", "hinojo", "pimiento", "aguacate", "limón", "limon", "ejote"]):
             return "🥬 Verduras, Hortalizas y Frescos"
         return "🛒 Abarrotes, Semillas y Grasas"
 
@@ -136,20 +224,20 @@ class InventorySyncMaster:
     @staticmethod
     def seed_consolidated_shopping_list(diners_count: int = 6, plan: Optional[WeeklyMenuPlan] = None) -> None:
         try:
-            items_to_sync = list(RAW_SHOPPING_ITEMS_BASE)
+            items_to_sync = [it for it in RAW_SHOPPING_ITEMS_BASE if "california" not in it["item_name"].lower()]
             if plan and hasattr(plan, 'days'):
                 extracted_names = set(item["item_name"].lower() for item in items_to_sync)
                 for day in plan.days:
                     for meal in day.meals:
                         for ing in getattr(meal, 'ingredients', []):
                             ing_name = ing.name.strip()
-                            if ing_name.lower() not in extracted_names:
+                            if ing_name.lower() not in extracted_names and "california" not in ing_name.lower():
                                 cat = InventorySyncMaster.categorize_ingredient_name(ing_name)
                                 items_to_sync.append({
                                     "category": cat,
                                     "item_name": ing_name,
-                                    "base_qty": ing.quantity,
-                                    "unit": ing.unit
+                                    "base_qty": getattr(ing, 'quantity', 1.0),
+                                    "unit": getattr(ing, 'unit', 'g')
                                 })
                                 extracted_names.add(ing_name.lower())
 

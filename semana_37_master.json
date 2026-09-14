@@ -1,0 +1,3735 @@
+{
+  "week_number": 37,
+  "week_label": "Semana 37 (06 al 12 de Septiembre de 2026)",
+  "week_name": "Semana 37",
+  "date_range": "06 de Septiembre al 12 de Septiembre de 2026",
+  "week_start": "2026-09-06",
+  "diners_count": 6,
+  "days": [
+    {
+      "day": "Domingo",
+      "date_str": "06 Sep",
+      "day_num": "06",
+      "full_date_title": "Menú Completo para el Domingo 06 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Tazón de Pitahaya Fresca de la Granja con Almendras Tostadas y Semillas de Chía",
+          "main_dish_name": "Huevos Turcos Çılbır Pochados sobre Cama de Yogur Griego al Ajo",
+          "side_dish_name": "Elixir Dorado Nootrópico de Cúrcuma y Canela con 33Plus",
+          "fat_g": 28.5,
+          "protein_g": 24.0,
+          "net_carbs_g": 3.2,
+          "starter_recipe": {
+            "title": "Tazón de Pitahaya Fresca de la Granja con Almendras Tostadas y Semillas de Chía",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de pitahaya fresca en contraste con el perfil crujiente y lípido de almendras fileteadas tostadas, semillas de chía orgánicas. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico.",
+            "ingredient_groups": [
+              {
+                "category": "🍓 Fruta Fresca de Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Pitahaya fresca de la granja",
+                    "base_qty_per_person": 50.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Grasas Saludables, Semillas y Crujientes",
+                "items": [
+                  {
+                    "name": "Almendras fileteadas tostadas",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Semillas de chía orgánicas",
+                    "base_qty_per_person": 8.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección e Higienización Criogénica:\n- Seleccionar e higienizar delicadamente la pitahaya fresca a 10°C con agua purificada, retirando la cáscara externa escamosa.\n- Reservar la pulpa viva de cosecha en su punto óptimo de turgencia y madurez.",
+              "2. Porcionado y Ensamble de Precisión:\n- Cortar la pulpa viva de pitahaya fresca en cubos uniformes a temperatura ambiente.\n- Acomodar la pitahaya porcionada en copas de cristal o tazones individuales.",
+              "3. Acondicionamiento Crujiente y Semillas:\n- Espolvorear en forma de lluvia almendras fileteadas tostadas, semillas de chía orgánicas sobre la superficie frutal.\n- Mantener la chía en estado seco o hidratado sin alterar la textura crocantina de las nueces.",
+              "4. Servicio Gourmet Fresco:\n- Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos."
+            ]
+          },
+          "main_recipe": {
+            "title": "Huevos Turcos Çılbır Pochados sobre Cama de Yogur Griego al Ajo",
+            "cooking_technique": "pan_fry_egg",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo proteico cetogénico de alta densidad organoléptica. Supera el umbral de 30 g de proteína de alto valor biológico para la activación del eje leucina/mTOR y preservación magra.",
+            "ingredient_groups": [
+              {
+                "category": "🍳 Huevos de Pastoreo y Proteínas",
+                "items": [
+                  {
+                    "name": "Huevos frescos orgánicos de pastoreo",
+                    "base_qty_per_person": 2.0,
+                    "unit": "piezas",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Clasificación Orgánica:\n- Atemperar e higienizar los insumos (huevos orgánicos).",
+              "2. Salteado e Integración (160°C):\n- Saltear huevos orgánicos e incorporar a 160°C durante 5 a 8 minutos.",
+              "3. Sazón Final:\n- Rectificar sazón con mantequilla de pastoreo y sal mineral de mar.",
+              "4. Servicio Gourmet:\n- Emplatar de inmediato a 68°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Elixir Dorado Nootrópico de Cúrcuma y Canela con 33Plus",
+            "cooking_technique": "functional_elixir",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Bebida/Elixir funcional nootrópico y reparador optimizado con Fórmula Nootrópica 33Plus. Diseñado para modulación metabólica y biodisponibilidad celular.",
+            "ingredient_groups": [
+              {
+                "category": "🥛 Base Líquida y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Base Líquida Purificada (Leche de almendras sin azúcar)",
+                    "base_qty_per_person": 250.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Aceite de coco MCT",
+                    "base_qty_per_person": 5.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💊 Suplementación Bioactiva y Botánicos",
+                "items": [
+                  {
+                    "name": "Suplementación Nutricional Fórmula Nootrópica 33Plus",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Cúrcuma fresca molida",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Canela molida de Ceylán",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Gramajes:\n- Medir la base líquida purificada (Leche de almendras sin azúcar), medir 6 g por comensal de Fórmula Nootrópica 33Plus y reservar cúrcuma, canela con grasa bioactiva.",
+              "2. Acondicionamiento Térmico y Solubilización:\n- Disolver el polvo bioactivo de Fórmula Nootrópica 33Plus y cúrcuma, canela en la base líquida a temperatura controlada (50°C–60°C) para optimizar la biodisponibilidad.",
+              "3. Emulsión Homogénea Nootrópica:\n- Emulsionar la mezcla con espumador de mano o batidora a alta velocidad durante 60 segundos hasta integrar completamente las microgotas lipídicas y lograr una textura suave y sedosa.",
+              "4. Servicio Gourmet Termodinámico:\n- Servir caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema Caliente de Coliflor y Queso Pecorino Romano al Ajo Rostizado",
+          "main_dish_name": "Ribeye de Res a la Parrilla con Mantequilla de Tomillo y Sal de Mar",
+          "side_dish_name": "Espárragos Verdes al Horno con Jugo de Limón Recién Exprimido",
+          "fat_g": 39.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 3.6,
+          "starter_recipe": {
+            "title": "Crema Caliente de Coliflor y Queso Pecorino Romano al Ajo Rostizado",
+            "cooking_technique": "boil_and_blend",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Emulsión velouté tersa y reconfortante. Combina la riqueza lipídica de la mantequilla de pastoreo con la dulzura vegetal de coliflor rostizada.",
+            "ingredient_groups": [
+              {
+                "category": "🍵 Base Vegetal Seleccionada",
+                "items": [
+                  {
+                    "name": "Coliflor fresca rostizada al horno",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Emulsión y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta blanca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧀 Lácteos y Quesos",
+                "items": [
+                  {
+                    "name": "Queso Pecorino Romano maduro",
+                    "base_qty_per_person": 25.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 15.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección y Mise en Place de Vegetales:\n- Seleccionar e higienizar coliflor rostizada frescos de la granja.\n- Trocear en piezas uniformes para asegurar cocción pareja.",
+              "2. Cocción Lenta en Fondo Mineral (85°C–90°C):\n- Estofar los vegetales a fuego lento en caldo concentrado a 85°C–90°C durante 15 a 20 minutos.\n- Ablandar la fibra sin degradar la clorofila o color natural.",
+              "3. Emulsión Velouté a Alta Velocidad:\n- Licuar a alta velocidad incorporando mantequilla de pastoreo y crema entera.\n- Lograr una textura aterciopelada cremosa e hidrófila.",
+              "4. Servicio Gourmet en Tazón:\n- Servir caliente en tazón cóncavo a 75°C.\n- Decorar con lascas de queso Pecorino Romano maduro o gotas de aceite VEVO."
+            ]
+          },
+          "main_recipe": {
+            "title": "Ribeye de Res a la Parrilla con Mantequilla de Tomillo y Sal de Mar",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo principal proteico de alta intensidad gastronómica. Garantiza más de 30 g de proteína de alto valor biológico para activar el umbral anabólico de leucina/mTOR, coadyuvando a la síntesis proteica muscular.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína Principal Seleccionada",
+                "items": [
+                  {
+                    "name": "Ribeye de res corte fino",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 45.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Salsa, Costra y Grasas",
+                "items": [
+                  {
+                    "name": "Tomillo fresco de la granja",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Atemperado y Sazonado Inicial:\n- Secar minuciosamente la superficie de ribeye de res con papel absorbente.\n- Sazonar con sal mineral de mar para propiciar dorado Parejo.",
+              "2. Sellado de Alta Temperatura (180°C):\n- Calentar mantequilla de pastoreo o aceite VEVO en sartén de hierro fundido a 180°C.\n- Sellar ribeye de res durante 3 a 4 minutos por lado para iniciar la reacción de Maillard sin perder jugosidad.",
+              "3. Desglase y Salsa de Fondo:\n- Incorporar tomillo al sartén y desglasar los jugos concentrados a fuego medio.\n- Crear una emulsión aromática y tersa.",
+              "4. Reposo Osmótico y Emplatado:\n- Dejar reposar la corte de res durante 3 minutos sobre tabla de corte para redistribuir los jugos internos.\n- Servir caliente a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Espárragos Verdes al Horno con Jugo de Limón Recién Exprimido",
+            "cooking_technique": "roast_bake",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Guarnición vegetal caliente al punto al dente. Mantiene la fibra crujiente sazonada con mantequilla clarificada y limón.",
+            "ingredient_groups": [
+              {
+                "category": "🥦 Vegetal Base Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Espárragos verdes frescos de la granja",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Limón fresco recién exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Condimentos",
+                "items": [
+                  {
+                    "name": "Mantequilla clarificada",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienizado y Corte de Precisión:\n- Lavar y cortar espárragos verdes en gajos, bastones o espirales delgadas.",
+              "2. Horneo Técnico en Charola Refractaria (180°C):\n- Acomodar espárragos verdes en charola refractaria aderezados con mantequilla clarificada y sal mineral de mar.\n- Hornear a 180°C durante 10 a 12 minutos hasta dorar al dente con bordes crocantes.",
+              "3. Sazón Cítrico Final:\n- Aderezar los espárragos verdes horneados al salir del horno con el jugo de limón recién exprimido.",
+              "4. Servicio Caliente:\n- Emplatar de inmediato como acompañamiento caliente a 68°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Ensalada de Espinacas Baby y Aguacate Hass a la Vinagreta de Aceite VEVO",
+          "main_dish_name": "Filete de Salmón al Sartén en Costra de Semillas de Sésamo y Eneldo",
+          "side_dish_name": "Tisana Reparadora de Manzanilla y Canela con 34Plus",
+          "fat_g": 25.0,
+          "protein_g": 33.0,
+          "net_carbs_g": 2.4,
+          "starter_recipe": {
+            "title": "Ensalada de Espinacas Baby y Aguacate Hass a la Vinagreta de Aceite VEVO",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Espinaca baby de la granja",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Aguacate Hass cremoso",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar espinaca baby, aguacate Hass a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar espinaca baby, aguacate Hass en cuadrícula o láminas rústicas a temperatura ambiente.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y especias.",
+              "4. Montaje Fresco Gourmet:\n- Presentar la ensalada sazonada al momento a 10°C–12°C."
+            ]
+          },
+          "main_recipe": {
+            "title": "Filete de Salmón al Sartén en Costra de Semillas de Sésamo y Eneldo",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo principal proteico de alta intensidad gastronómica. Garantiza más de 30 g de proteína de alto valor biológico para activar el umbral anabólico de leucina/mTOR, coadyuvando a la síntesis proteica muscular.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína Principal Seleccionada",
+                "items": [
+                  {
+                    "name": "Filete de salmón fresco con piel",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 45.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Salsa, Costra y Grasas",
+                "items": [
+                  {
+                    "name": "Eneldo fresco de la granja",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Semillas de sésamo tostadas",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 5.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Atemperado y Sazonado Inicial:\n- Secar minuciosamente la superficie de filete de salmón con papel absorbente.\n- Sazonar con sal mineral de mar para propiciar dorado Parejo.",
+              "2. Sellado de Alta Temperatura (180°C):\n- Calentar mantequilla de pastoreo o aceite VEVO en sartén de hierro fundido a 180°C.\n- Sellar filete de salmón durante 3 a 4 minutos por lado para iniciar la reacción de Maillard sin perder jugosidad.",
+              "3. Desglase y Salsa de Fondo:\n- Incorporar eneldo, semillas de sésamo al sartén y desglasar los jugos concentrados a fuego medio.\n- Crear una emulsión aromática y tersa.",
+              "4. Reposo Osmótico y Emplatado:\n- Dejar reposar la proteína durante 3 minutos sobre tabla de corte para redistribuir los jugos internos.\n- Servir caliente a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Tisana Reparadora de Manzanilla y Canela con 34Plus",
+            "cooking_technique": "herbal_tea",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de toronjil, manzanilla entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Toronjil fresco de la granja",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Flores de manzanilla silvestre",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Reparadora 34Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar toronjil, manzanilla de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción de Aromas y Fitonutrientes (80°C):\n- Infundir las botánicas de toronjil, manzanilla en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+              "3. Filtrado del Sustrato e Integración Bioactiva:\n- Colar las hierbas botánicas mediante un tamiz de malla fina para separar los sólidos.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Reparadora 34Plus® en la infusión (a 50°C–60°C) y batir con espumador durante 45 segundos hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Reconfortante:\n- Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Lunes",
+      "date_str": "07 Sep",
+      "day_num": "07",
+      "full_date_title": "Menú Completo para el Lunes 07 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Frambuesas Orgánicas de la Granja con Nueces de Castilla y Semillas de Chía",
+          "main_dish_name": "Omelette Rústico de Queso Panela, Espinacas y Pechuga de Pavo al Sartén",
+          "side_dish_name": "Gelatina Artesanal de Frambuesa Viva con 33Plus",
+          "fat_g": 29.0,
+          "protein_g": 23.0,
+          "net_carbs_g": 3.4,
+          "starter_recipe": {
+            "title": "Frambuesas Orgánicas de la Granja con Nueces de Castilla y Semillas de Chía",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de frambuesas orgánicas en contraste con el perfil crujiente y lípido de nueces de castilla troceadas, semillas de chía orgánicas. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico.",
+            "ingredient_groups": [
+              {
+                "category": "🍓 Fruta Fresca de Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Frambuesas orgánicas de la granja",
+                    "base_qty_per_person": 50.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Grasas Saludables, Semillas y Crujientes",
+                "items": [
+                  {
+                    "name": "Nueces de castilla troceadas",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Semillas de chía orgánicas",
+                    "base_qty_per_person": 8.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección e Higienización Criogénica:\n- Seleccionar e higienizar delicadamente las frambuesas orgánicas a 10°C con agua purificada.\n- Reservar los frutos vivos de cosecha en su punto óptimo de turgencia y madurez.",
+              "2. Porcionado y Ensamble de Precisión:\n- Disponer las frambuesas orgánicas porcionadas y enteras según su calibre natural.\n- Acomodarlas en copas de cristal o tazones individuales de cristal.",
+              "3. Acondicionamiento Crujiente y Semillas:\n- Espolvorear en forma de lluvia nueces de castilla troceadas, semillas de chía orgánicas sobre la superficie frutal.\n- Mantener la chía en estado seco o hidratado sin alterar la textura crocantina de las nueces.",
+              "4. Servicio Gourmet Fresco:\n- Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos."
+            ]
+          },
+          "main_recipe": {
+            "title": "Omelette Rústico de Queso Panela, Espinacas y Pechuga de Pavo al Sartén",
+            "cooking_technique": "pan_fry_egg",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo proteico cetogénico de alta densidad organoléptica. Supera el umbral de 30 g de proteína de alto valor biológico para la activación del eje leucina/mTOR y preservación magra.",
+            "ingredient_groups": [
+              {
+                "category": "🍳 Huevos de Pastoreo y Proteínas",
+                "items": [
+                  {
+                    "name": "Huevos frescos orgánicos",
+                    "base_qty_per_person": 2.0,
+                    "unit": "piezas",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso Gouda maduro rallado",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 12.0
+                  },
+                  {
+                    "name": "Jamón de pavo artesanal picado",
+                    "base_qty_per_person": 40.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 14.0
+                  },
+                  {
+                    "name": "Champiñones frescos laminados",
+                    "base_qty_per_person": 40.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Preparación de Relleno:\n- Lavar e higienizar los champiñones frescos y cortar en láminas delgadas; trocear el jamón de pavo artesanal.\n- Atemperar y cascar los huevos frescos orgánicos en un cuenco con sal de mar y pimienta negra.",
+              "2. Salteado del Relleno Gourmet (160°C):\n- Calentar la mitad de la mantequilla de pastoreo a 160°C en sartén antiadherente y saltear los champiñones con el jamón de pavo durante 3 minutos hasta dorar turgentes.\n- Retirar el salteado y reservar caliente.",
+              "3. Cocción de la Tortilla y Cuajado de Queso:\n- Fundir la mantequilla restante en la sartén a fuego medio-bajo (140°C) y verter los huevos batidos extendiendo en capa pareja.\n- Al cuajar la base pero manteniendo la superficie jugosa, acomodar el salteado reservado y el queso Gouda maduro en una mitad, y doblar el omelette a la mitad.",
+              "4. Servicio Gourmet:\n- Emplatar de inmediato a 68°C reposando 1 minuto para fundir el queso Gouda."
+            ]
+          },
+          "side_recipe": {
+            "title": "Gelatina Artesanal de Frambuesa Viva con 33Plus",
+            "cooking_technique": "gelatin_molding",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Preparación cetogénica limpia de soporte tisular que equilibra la acidez y astringencia natural de frambuesas viva con la suavidad del colágeno hidrolizado (rico en prolina y glicina). Favorece la integridad osteoarticular.",
+            "ingredient_groups": [
+              {
+                "category": "🍮 Agente Hidrocoloide y Gelificante",
+                "items": [
+                  {
+                    "name": "Grenetina natural en polvo (colágeno hidrolizado)",
+                    "base_qty_per_person": 7.5,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Agua purificada fría para hidratar",
+                    "base_qty_per_person": 35.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🫐 Base Líquida e Infusión Viva",
+                "items": [
+                  {
+                    "name": "Frambuesas frescas de la granja",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Infusión de té de frutos rojos y menta fresca",
+                    "base_qty_per_person": 120.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍋 Realce Cítrico y Sazón",
+                "items": [
+                  {
+                    "name": "Jugo de limón recién exprimido",
+                    "base_qty_per_person": 2.5,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💊 Suplementación Nootrópica 33Plus®",
+                "items": [
+                  {
+                    "name": "Fórmula Nootrópica 33Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Acondicionamiento de Fruta y Mise en Place:\n- Seleccionar 30.0 g de Frambuesas frescas de la granja, retirando el pedúnculo y desinfectando delicadamente con agua fría purificada.\n- Reservar los frutos limpios a 6°C en refrigeración para mantener turgencia y crocancia.",
+              "2. Hidratación del Colágeno:\n- Verter los 35.0 ml de agua purificada fría en un cuenco de cristal.\n- Espolvorear los 7.5 g de grenetina natural en forma de lluvia fina sobre la superficie.\n- Dejar reposar durante 5 a 7 minutos hasta hidratación completa (textura esponjosa firme).",
+              "3. Disolución Térmica del Suplemento en Gelatina:\n- Apagar la fuente de calor y atemperar la infusión líquida a 50°C–60°C.\n- DESPUÉS de apagar el fuego, incorporar 6 g por comensal de Fórmula Nootrópica 33Plus® mezclando suavemente sin ebullición ni calor abrasivo hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Moldeo, Maduración y Servicio:\n- Distribuir los frutos frescos reservados en el fondo de copas o moldes individuales de cristal.\n- Verter con lentitud el líquido rubí transparente sobre los frutos para evitar turbidez o burbujas.\n- Refrigerar a 4°C durante 3 a 4 horas hasta gelificación cristalina y firme.\n- Servir fría a 4°C decorada con brotes de menta fresca."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Consomé Claro de Hortalizas Tiernas y Cilantro Fresco de la Granja",
+          "main_dish_name": "Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra",
+          "side_dish_name": "Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen",
+          "fat_g": 36.5,
+          "protein_g": 41.0,
+          "net_carbs_g": 3.5,
+          "starter_recipe": {
+            "title": "Consomé Claro de Hortalizas Tiernas y Cilantro Fresco de la Granja",
+            "cooking_technique": "soup_simmer",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Consomé claro vegetal de alta densidad nutricional y soporte hidroelectrolítico. Extracción lenta de electrolitos, mucílagos solubles, potasio y clorofila vegetal rica en fitonutrientes que favorece la digestión metabólica.",
+            "ingredient_groups": [
+              {
+                "category": "🍵 Extracto Mineral y Proteínas",
+                "items": [
+                  {
+                    "name": "Nopales tiernos de la granja",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Hortalizas tiernas frescas variadas",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Cilantro fresco picado",
+                    "base_qty_per_person": 5.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Sazón y Hierbas",
+                "items": [
+                  {
+                    "name": "Sal de mar mineral y pimienta blanca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Higienización Vegetal:\n- Acomodar e higienizar los componentes vegetales del caldo (nopales tiernos, hortalizas frescas variadas) a 10°C.",
+              "2. Extracción Lenta y Desespumado (85°C–95°C):\n- Cocinar a fuego lento en agua mineral pura durante 30 a 45 minutos entre 85°C y 95°C.\n- Retirar cualquier impureza de la superficie para obtener un caldo cristalino rico en minerales y electrolitos biodisponibles.",
+              "3. Clarificación y Sazón Herbal:\n- Colar el caldo claro mediante una manta de cielo fino.\n- Sazonar con cilantro fresco picado e incorporar sal mineral de mar al gusto.",
+              "4. Servicio Reconfortante en Tazón:\n- Servir el consomé transparente y bien caliente a 78°C en tazón hondo."
+            ]
+          },
+          "main_recipe": {
+            "title": "Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo principal proteico de alta intensidad gastronómica. Garantiza más de 30 g de proteína de alto valor biológico para activar el umbral anabólico de leucina/mTOR, coadyuvando a la síntesis proteica muscular.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína Principal Seleccionada",
+                "items": [
+                  {
+                    "name": "Medallones de Sirloin de res magra",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 45.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Salsa, Costra y Grasas",
+                "items": [
+                  {
+                    "name": "Pimienta negra entera molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Atemperado y Sazonado Inicial:\n- Secar minuciosamente la superficie de medallones de Sirloin con papel absorbente.\n- Sazonar con sal mineral de mar para propiciar dorado Parejo.",
+              "2. Sellado de Alta Temperatura (180°C):\n- Calentar mantequilla de pastoreo o aceite VEVO en sartén de hierro fundido a 180°C.\n- Sellar medallones de Sirloin durante 3 a 4 minutos por lado para iniciar la reacción de Maillard sin perder jugosidad.",
+              "3. Desglase y Salsa de Fondo:\n- Incorporar pimienta negra al sartén y desglasar los jugos concentrados a fuego medio.\n- Crear una emulsión aromática y tersa.",
+              "4. Reposo Osmótico y Emplatado:\n- Dejar reposar la corte de res durante 3 minutos sobre tabla de corte para redistribuir los jugos internos.\n- Servir caliente a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen",
+            "cooking_technique": "pan_roast",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Guarnición vegetal caliente al punto al dente. Mantiene la fibra crujiente sazonada con mantequilla clarificada y hierbas nobles.",
+            "ingredient_groups": [
+              {
+                "category": "🥦 Vegetal Base Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Calabacita fresca en espirales (zoodles)",
+                    "base_qty_per_person": 140.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Condimentos",
+                "items": [
+                  {
+                    "name": "Mantequilla clarificada",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienizado y Corte de Precisión:\n- Lavar y cortar zoodles de calabacita en gajos, bastones o espirales delgadas.",
+              "2. Cocción Térmica Controlada en Plancha (150°C):\n- Asar zoodles de calabacita en plancha o comal a 150°C durante 6 a 8 minutos hasta dorar al dente.",
+              "3. Sazón e Integración de Grasas:\n- Aderezar zoodles de calabacita de inmediato con mantequilla clarificada o aceite VEVO, sal mineral de mar y hierbas nobles.",
+              "4. Servicio Caliente:\n- Emplatar de inmediato como acompañamiento caliente a 68°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones Crujientes de Pepino y Apio al Limón con Sal Mineral",
+          "main_dish_name": "Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate Hass",
+          "side_dish_name": "Tisana Digestiva de Menta y Jengibre con 34Plus",
+          "fat_g": 22.5,
+          "protein_g": 29.5,
+          "net_carbs_g": 2.3,
+          "starter_recipe": {
+            "title": "Bastones Crujientes de Pepino y Apio al Limón con Sal Mineral",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Pepino criollo en bastones",
+                    "base_qty_per_person": 100.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Apio fresco crujiente",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar pepino criollo, apio fresco a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar pepino criollo, apio fresco en bastones uniformes a temperatura ambiente.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y especias.",
+              "4. Montaje Fresco Gourmet:\n- Presentar los bastones sazonados al momento a 10°C–12°C."
+            ]
+          },
+          "main_recipe": {
+            "title": "Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate Hass",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Pechuga de pavo artesanal desmenuzada",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 30.0
+                  },
+                  {
+                    "name": "Aguacate Hass cremoso",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar pavo desmenuzado, aguacate Hass a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar pavo desmenuzado, aguacate Hass en cuadrícula o láminas rústicas a temperatura ambiente.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y especias.",
+              "4. Montaje Fresco Gourmet:\n- Presentar el salpicón sazonado al momento a 10°C–12°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Tisana Digestiva de Menta y Jengibre con 34Plus",
+            "cooking_technique": "herbal_tea",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de menta y toronjil, menta, jengibre entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Hojas de menta y toronjil fresco",
+                    "base_qty_per_person": 4.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Hojas de menta fresca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Raíz de jengibre fresco en rodajas",
+                    "base_qty_per_person": 4.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Reparadora 34Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar menta y toronjil, menta, jengibre de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción de Aromas y Fitonutrientes (80°C):\n- Infundir las botánicas de menta y toronjil, menta, jengibre en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+              "3. Filtrado del Sustrato e Integración Bioactiva:\n- Colar las hierbas botánicas mediante un tamiz de malla fina para separar los sólidos.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Reparadora 34Plus® en la infusión (a 50°C–60°C) y batir con espumador durante 45 segundos hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Reconfortante:\n- Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Martes",
+      "date_str": "08 Sep",
+      "day_num": "08",
+      "full_date_title": "Menú Completo para el Martes 08 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Arilos de Granada Fresca con Almendras Fileteadas y Chía Orgánica",
+          "main_dish_name": "Huevos Revueltos Gourmet con Machaca de Pavo, Jitomate Bola y Cilantro",
+          "side_dish_name": "Té Matcha Nootrópico con Menta y 33Plus",
+          "fat_g": 28.0,
+          "protein_g": 24.5,
+          "net_carbs_g": 3.3,
+          "starter_recipe": {
+            "title": "Arilos de Granada Fresca con Almendras Fileteadas y Chía Orgánica",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de arilos de granada en contraste con el perfil crujiente y lípido de almendras fileteadas tostadas, semillas de chía orgánicas. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico.",
+            "ingredient_groups": [
+              {
+                "category": "🍓 Fruta Fresca de Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Arilos de Granada fresca",
+                    "base_qty_per_person": 40.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Grasas Saludables, Semillas y Crujientes",
+                "items": [
+                  {
+                    "name": "Almendras fileteadas tostadas",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Semillas de chía orgánicas",
+                    "base_qty_per_person": 8.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección e Higienización Criogénica:\n- Seleccionar e higienizar delicadamente la granada fresca a 10°C con agua purificada.\n- Reservar la fruta viva de cosecha en su punto óptimo de turgencia y madurez.",
+              "2. Porcionado y Ensamble de Precisión:\n- Desgranar los arilos de granada fresca retirando las membranas albugíneas para obtener los granos limpios.\n- Acomodar los arilos porcionados en copas de cristal o tazones individuales.",
+              "3. Acondicionamiento Crujiente y Semillas:\n- Espolvorear en forma de lluvia almendras fileteadas tostadas, semillas de chía orgánicas sobre la superficie frutal.\n- Mantener la chía en estado seco o hidratado sin alterar la textura crocantina de las nueces.",
+              "4. Servicio Gourmet Fresco:\n- Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos."
+            ]
+          },
+          "main_recipe": {
+            "title": "Huevos Revueltos Gourmet con Machaca de Pavo, Jitomate Bola y Cilantro",
+            "cooking_technique": "pan_fry_egg",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo proteico cetogénico de alta densidad organoléptica. Supera el umbral de 30 g de proteína de alto valor biológico para la activación del eje leucina/mTOR y preservación magra.",
+            "ingredient_groups": [
+              {
+                "category": "🍳 Huevos de Pastoreo y Proteínas",
+                "items": [
+                  {
+                    "name": "Machaca de pavo artesanal desmenuzada",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 28.0
+                  },
+                  {
+                    "name": "Huevos frescos orgánicos",
+                    "base_qty_per_person": 2.0,
+                    "unit": "piezas",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jitomate bola jugoso en cubos",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Cebolla blanca picada",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Picado de Vegetales:\n- Lavar e higienizar a 10°C el jitomate bola y la cebolla blanca; picar el jitomate en cubos jugosos y la cebolla finamente.\n- Atemperar los huevos frescos orgánicos y reservar la machaca de pavo artesanal desmenuzada.",
+              "2. Salteado de Base e Hidratación de Machaca (160°C):\n- Calentar mantequilla de pastoreo a 160°C en sartén y acitronar la cebolla picada con el jitomate durante 3 minutos hasta liberar jugos.\n- Integrar la machaca de pavo desmenuzada para hidratarla con la humedad de los vegetales.",
+              "3. Batido, Cuajado Suave y Sazón:\n- Cascar y batir los huevos orgánicos en un cuenco con sal de mar y pimienta negra molida.\n- Verter sobre el salteado a fuego medio-bajo y revolver suavemente con espátula durante 2 a 3 minutos hasta cuajar de forma jugosa y tersa.",
+              "4. Servicio Gourmet:\n- Emplatar de inmediato a 68°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Té Matcha Nootrópico con Menta y 33Plus",
+            "cooking_technique": "herbal_tea",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de té matcha, menta entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Té matcha ceremonial orgánico",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Hojas de menta fresca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Nootrópica 33Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar té matcha, menta de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción de Aromas y Fitonutrientes (80°C):\n- Infundir las botánicas de té matcha, menta en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+              "3. Filtrado del Sustrato e Integración Bioactiva:\n- Colar las hierbas botánicas mediante un tamiz de malla fina para separar los sólidos.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Nootrópica 33Plus® en la infusión (a 50°C–60°C) y batir con espumador durante 45 segundos hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Reconfortante:\n- Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema Suave de Berenjena Rostizada y Queso Parmesano Maduro",
+          "main_dish_name": "Punta de Filete de Res a la Parrilla con Mantequilla de Ajo Rostizado y Romero",
+          "side_dish_name": "Chayotes Tiernos al Vapor con Mantequilla Clarificada",
+          "fat_g": 38.0,
+          "protein_g": 42.0,
+          "net_carbs_g": 3.7,
+          "starter_recipe": {
+            "title": "Crema Suave de Berenjena Rostizada y Queso Parmesano Maduro",
+            "cooking_technique": "boil_and_blend",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Emulsión velouté tersa y reconfortante. Combina la riqueza lipídica de la mantequilla de pastoreo con la dulzura vegetal de hortalizas frescas.",
+            "ingredient_groups": [
+              {
+                "category": "🍵 Base Vegetal Seleccionada",
+                "items": [
+                  {
+                    "name": "Berenjenas frescas de la granja",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso Parmesano rallado",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 8.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Emulsión y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta blanca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección y Mise en Place de Vegetales:\n- Seleccionar e higienizar berenjenas frescas frescos de la granja.\n- Trocear en piezas uniformes para asegurar cocción pareja. Rostizar previamente los vegetales o el ajo a 200°C al horno para concentrar sus azúcares bioactivos.",
+              "2. Cocción Lenta en Fondo Mineral (85°C–90°C):\n- Estofar los vegetales a fuego lento en caldo concentrado a 85°C–90°C durante 15 a 20 minutos.\n- Ablandar la fibra sin degradar la clorofila o color natural.",
+              "3. Emulsión Velouté a Alta Velocidad:\n- Licuar a alta velocidad incorporando mantequilla de pastoreo, crema entera y queso Parmesano rallado.\n- Lograr una textura aterciopelada cremosa e hidrófila.",
+              "4. Servicio Gourmet en Tazón:\n- Servir caliente en tazón cóncavo a 75°C.\n- Decorar con lascas de queso Parmesano maduro o gotas de aceite VEVO."
+            ]
+          },
+          "main_recipe": {
+            "title": "Punta de Filete de Res a la Parrilla con Mantequilla de Ajo Rostizado y Romero",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo principal proteico de alta intensidad gastronómica. Garantiza más de 30 g de proteína de alto valor biológico para activar el umbral anabólico de leucina/mTOR, coadyuvando a la síntesis proteica muscular.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína Principal Seleccionada",
+                "items": [
+                  {
+                    "name": "Punta de filete de res magra",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 45.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Salsa, Costra y Grasas",
+                "items": [
+                  {
+                    "name": "Dientes de ajo rostizados picados",
+                    "base_qty_per_person": 5.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Romero fresco de la granja",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Atemperado y Sazonado Inicial:\n- Secar minuciosamente la superficie de punta de filete de res con papel absorbente.\n- Sazonar con sal mineral de mar para propiciar dorado Parejo.",
+              "2. Sellado de Alta Temperatura y Rostizado (180°C):\n- Calentar mantequilla de pastoreo o aceite VEVO a 180°C.\n- Sellar y rostizar punta de filete de res durante 3 a 4 minutos por lado hasta formar una costra crujiente.",
+              "3. Desglase y Salsa de Fondo:\n- Incorporar ajo rostizado, romero al sartén y desglasar los jugos concentrados a fuego medio.\n- Crear una emulsión aromática y tersa.",
+              "4. Reposo Osmótico y Emplatado:\n- Dejar reposar la corte de res durante 3 minutos sobre tabla de corte para redistribuir los jugos internos.\n- Servir caliente a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Chayotes Tiernos al Vapor con Mantequilla Clarificada",
+            "cooking_technique": "steaming",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Guarnición vegetal caliente al punto al dente. Mantiene la fibra crujiente sazonada con mantequilla clarificada y hierbas nobles.",
+            "ingredient_groups": [
+              {
+                "category": "🥦 Vegetal Base Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Chayotes tiernos de la granja en gajos",
+                    "base_qty_per_person": 140.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Condimentos",
+                "items": [
+                  {
+                    "name": "Mantequilla clarificada",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienizado y Corte de Precisión:\n- Lavar y cortar chayotes tiernos en gajos, bastones o espirales delgadas.",
+              "2. Cocción Térmica Controlada al Vapor (100°C):\n- Cocinar chayotes tiernos al vapor a 100°C durante 6 a 8 minutos hasta alcanzar un punto al dente perfecto.",
+              "3. Sazón e Integración de Grasas:\n- Aderezar chayotes tiernos de inmediato con mantequilla clarificada o aceite VEVO, sal mineral de mar y hierbas nobles.",
+              "4. Servicio Caliente:\n- Emplatar de inmediato como acompañamiento caliente a 68°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Abanico de Aguacate Hass con Sal de Mar Marina y Pimienta Negra",
+          "main_dish_name": "Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate",
+          "side_dish_name": "Infusión de Té Blanco Helado Digestivo con 34Plus",
+          "fat_g": 21.5,
+          "protein_g": 30.0,
+          "net_carbs_g": 2.1,
+          "starter_recipe": {
+            "title": "Abanico de Aguacate Hass con Sal de Mar Marina y Pimienta Negra",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Aguacate Hass cremoso",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar aguacate Hass a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar aguacate Hass en láminas finas en forma de abanico a temperatura ambiente con cuchillo de chef afilado.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y pimienta negra.",
+              "4. Montaje Fresco Gourmet:\n- Presentar el abanico de aguacate sazonado al momento a 10°C–12°C."
+            ]
+          },
+          "main_recipe": {
+            "title": "Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate",
+            "cooking_technique": "marinate_raw",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Filete de pescado blanco fresco en cubos",
+                    "base_qty_per_person": 130.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 35.0
+                  },
+                  {
+                    "name": "Aguacate Hass cremoso",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar pescado blanco, aguacate Hass a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar pescado blanco, aguacate Hass en cuadrícula o láminas rústicas a temperatura ambiente.",
+              "3. Marinado Cítrico en Frío y Sazón:\n- Marinar pescado blanco, aguacate Hass con limón fresco, aceite VEVO y especias a 6°C por 10 minutos.",
+              "4. Montaje Fresco Gourmet:\n- Presentar el ceviche sazonado al momento a 10°C–12°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Infusión de Té Blanco Helado Digestivo con 34Plus",
+            "cooking_technique": "cold_infusion",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de té blanco entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Hojas de té blanco supremo",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Reparadora 34Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar té blanco de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción y Maceración en Frío (4°C):\n- Macerar en frío las hojas de té blanco en agua mineral purificada a 4°C durante 2 a 4 horas para extraer flavonoides sin liberar amargor ni astringencia.",
+              "3. Filtrado e Integración Bioactiva:\n- Colar las hojas y flores botánicas mediante un tamiz fino para obtener un líquido cristalino libre de sólidas.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Reparadora 34Plus® y batir con espumador de mano durante 45 segundos hasta disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Frío y Refrescante:\n- Servir bien frío a 4°C–6°C en vaso de cristal con hielos minerales."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Miércoles",
+      "date_str": "09 Sep",
+      "day_num": "09",
+      "full_date_title": "Menú Completo para el Miércoles 09 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Arándanos Frescos de Cosecha con Nueces Pecana y Semillas de Girasol",
+          "main_dish_name": "Shakshuka Keto de Huevos Orgánicos al Sartén en Salsa de Jitomate Rostizado",
+          "side_dish_name": "Gelatina Artesanal de Arándanos Vivos con 33Plus",
+          "fat_g": 27.5,
+          "protein_g": 22.0,
+          "net_carbs_g": 3.1,
+          "starter_recipe": {
+            "title": "Arándanos Frescos de Cosecha con Nueces Pecana y Semillas de Girasol",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de arándanos frescos en contraste con el perfil crujiente y lípido de nueces de castilla troceadas, semillas de girasol tostadas. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico.",
+            "ingredient_groups": [
+              {
+                "category": "🍓 Fruta Fresca de Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Arándanos frescos de la granja",
+                    "base_qty_per_person": 50.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Grasas Saludables, Semillas y Crujientes",
+                "items": [
+                  {
+                    "name": "Nueces de castilla troceadas",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Semillas de girasol tostadas sin sal",
+                    "base_qty_per_person": 8.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección e Higienización Criogénica:\n- Seleccionar e higienizar delicadamente los arándanos frescos a 10°C con agua purificada.\n- Reservar los frutos vivos de cosecha en su punto óptimo de turgencia y madurez.",
+              "2. Porcionado y Ensamble de Precisión:\n- Disponer los arándanos frescos porcionados y enteros según su calibre natural.\n- Acomodarlos en copas de cristal o tazones individuales de cristal.",
+              "3. Acondicionamiento Crujiente y Semillas:\n- Espolvorear en forma de lluvia nueces de castilla troceadas, semillas de girasol tostadas sobre la superficie frutal.\n- Mantener la chía en estado seco o hidratado sin alterar la textura crocantina de las nueces.",
+              "4. Servicio Gourmet Fresco:\n- Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos."
+            ]
+          },
+          "main_recipe": {
+            "title": "Shakshuka Keto de Huevos Orgánicos al Sartén en Salsa de Jitomate Rostizado",
+            "cooking_technique": "pan_fry_egg",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo proteico cetogénico de alta densidad organoléptica. Supera el umbral de 30 g de proteína de alto valor biológico para la activación del eje leucina/mTOR y preservación magra.",
+            "ingredient_groups": [
+              {
+                "category": "🍳 Huevos de Pastoreo y Proteínas",
+                "items": [
+                  {
+                    "name": "Huevos frescos orgánicos",
+                    "base_qty_per_person": 2.0,
+                    "unit": "piezas",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Salsa de jitomate bola y especias",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Clasificación Orgánica:\n- Atemperar e higienizar los insumos (huevos orgánicos, salsa de jitomate bola). Rostizar previamente los vegetales o el ajo a 200°C al horno para concentrar sus azúcares bioactivos.",
+              "2. Salteado e Integración (160°C):\n- Saltear huevos orgánicos, salsa de jitomate bola e incorporar a 160°C durante 5 a 8 minutos.",
+              "3. Sazón Final:\n- Rectificar sazón con mantequilla de pastoreo y sal mineral de mar.",
+              "4. Servicio Gourmet:\n- Emplatar de inmediato a 68°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Gelatina Artesanal de Arándanos Vivos con 33Plus",
+            "cooking_technique": "gelatin_molding",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Preparación cetogénica limpia de soporte tisular que equilibra la acidez y astringencia natural de arándanos viva con la suavidad del colágeno hidrolizado (rico en prolina y glicina). Favorece la integridad osteoarticular.",
+            "ingredient_groups": [
+              {
+                "category": "🍮 Agente Hidrocoloide y Gelificante",
+                "items": [
+                  {
+                    "name": "Grenetina natural en polvo (colágeno hidrolizado)",
+                    "base_qty_per_person": 7.5,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Agua purificada fría para hidratar",
+                    "base_qty_per_person": 35.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🫐 Base Líquida e Infusión Viva",
+                "items": [
+                  {
+                    "name": "Arándanos frescos de la granja",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Infusión de té de frutos rojos y menta fresca",
+                    "base_qty_per_person": 120.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍋 Realce Cítrico y Sazón",
+                "items": [
+                  {
+                    "name": "Jugo de limón recién exprimido",
+                    "base_qty_per_person": 2.5,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💊 Suplementación Nootrópica 33Plus®",
+                "items": [
+                  {
+                    "name": "Fórmula Nootrópica 33Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Acondicionamiento de Fruta y Mise en Place:\n- Seleccionar 30.0 g de Arándanos frescos de la granja, retirando el pedúnculo y desinfectando delicadamente con agua fría purificada.\n- Reservar los frutos limpios a 6°C en refrigeración para mantener turgencia y crocancia.",
+              "2. Hidratación del Colágeno:\n- Verter los 35.0 ml de agua purificada fría en un cuenco de cristal.\n- Espolvorear los 7.5 g de grenetina natural en forma de lluvia fina sobre la superficie.\n- Dejar reposar durante 5 a 7 minutos hasta hidratación completa (textura esponjosa firme).",
+              "3. Disolución Térmica del Suplemento en Gelatina:\n- Apagar la fuente de calor y atemperar la infusión líquida a 50°C–60°C.\n- DESPUÉS de apagar el fuego, incorporar 6 g por comensal de Fórmula Nootrópica 33Plus® mezclando suavemente sin ebullición ni calor abrasivo hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Moldeo, Maduración y Servicio:\n- Distribuir los frutos frescos reservados en el fondo de copas o moldes individuales de cristal.\n- Verter con lentitud el líquido rubí transparente sobre los frutos para evitar turbidez o burbujas.\n- Refrigerar a 4°C durante 3 a 4 horas hasta gelificación cristalina y firme.\n- Servir fría a 4°C decorada con brotes de menta fresca."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Consomé de Res con Costilla, Tuétano y Cilantro Fresco",
+          "main_dish_name": "Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa Cremosa de Parmesano",
+          "side_dish_name": "Nopales Asados al Orégano y Aceite de Oliva Extra Virgen",
+          "fat_g": 37.0,
+          "protein_g": 41.5,
+          "net_carbs_g": 3.6,
+          "starter_recipe": {
+            "title": "Consomé de Res con Costilla, Tuétano y Cilantro Fresco",
+            "cooking_technique": "soup_simmer",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Consomé claro de alta densidad nutricional y soporte tisular. Extracción lenta de colágeno (glicina y prolina), CoQ10 y minerales de tuétano que favorece la integridad osteoarticular.",
+            "ingredient_groups": [
+              {
+                "category": "🍵 Extracto Mineral y Proteínas",
+                "items": [
+                  {
+                    "name": "Costilla de res magra limpia",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 32.0
+                  },
+                  {
+                    "name": "Hueso de res con tuétano rico en minerales y colágeno",
+                    "base_qty_per_person": 50.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 15.0
+                  },
+                  {
+                    "name": "Cilantro fresco picado",
+                    "base_qty_per_person": 5.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Sazón y Hierbas",
+                "items": [
+                  {
+                    "name": "Sal de mar mineral y pimienta blanca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Acondicionamiento Mineral:\n- Acomodar e higienizar los componentes del caldo (costilla de res magra limpia, hueso de res con tuétano).\n- Limpiar impurezas y restos de sangre superficial de los cortes de res.",
+              "2. Extracción Lenta y Desespumado (85°C–95°C):\n- Cocinar a fuego lento en agua mineral pura durante 60 a 90 minutos entre 85°C y 95°C.\n- Retirar continuamente la espuma superior para extraer colágeno cristalino y dipéptidos de alta biodisponibilidad.",
+              "3. Clarificación y Sazón Herbal:\n- Colar el caldo claro mediante una manta de cielo fino.\n- Sazonar con cilantro fresco picado e incorporar sal mineral de mar al gusto.",
+              "4. Servicio Reconfortante en Tazón:\n- Servir el consomé transparente y bien caliente a 78°C en tazón hondo.\n- Incorporar los trozos de costilla de res magra y tuétano tierno directamente al plato."
+            ]
+          },
+          "main_recipe": {
+            "title": "Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa Cremosa de Parmesano",
+            "cooking_technique": "roast_bake",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo gourmet proteico. La pechuga de pollo jugosa horneada a 180°C encierra un relleno suave de espinacas y queso crema, napada con una velouté/salsa cremosa e idrófila de queso Parmesano maduro.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína / Base para Rellenar",
+                "items": [
+                  {
+                    "name": "Pechuga de pollo de pastoreo fresca entera",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 30.0
+                  }
+                ]
+              },
+              {
+                "category": "🧀 Relleno Gourmet, Quesos y Sazón",
+                "items": [
+                  {
+                    "name": "Queso crema artesanal",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 12.0
+                  },
+                  {
+                    "name": "Espinacas frescas de la granja",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso Parmesano maduro rallado",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 8.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.5,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra",
+                    "base_qty_per_person": 2.5,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Limpieza y Corte de Bolsillo Proteico:\n- Lavar e higienizar la pechuga de pollo de pastoreo y secar minuciosamente con papel absorbente.\n- Realizar un corte horizontal con cuchillo afilado a lo largo del lateral de la pechuga para crear una cavidad o bolsillo profundo sin atravesar los extremos.",
+              "2. Elaboración del Relleno de Espinacas:\n- Saltear las espinacas frescas en mantequilla de pastoreo durante 2 minutos hasta marchitar.\n- Mezclar la mitad del queso crema artesanal con las espinacas salteadas y sal mineral, y rellenar generosamente el bolsillo de la pechuga de pollo.",
+              "3. Sellado y Horneo Jugoso (180°C):\n- Sellar la pechuga de pollo rellena en sartén caliente a 180°C por 2 minutos por lado para fijar los jugos.\n- Trasladar a un molde refractario y hornear a 180°C durante 15 a 20 minutos hasta lograr una cocción jugosa.",
+              "4. Emulsión de Salsa Cremosa de Parmesano, Napado y Servicio:\n- En la sartén de sellado, disolver a fuego muy bajo (60°C) el resto del queso crema artesanal con el queso Parmesano maduro rallado, mantequilla de pastoreo y los jugos de cocción del ave hasta integrar una velouté cremosa e sedosa.\n- Bañar (napar) generosamente la pechuga de pollo horneada con la salsa cremosa de Parmesano bien caliente y servir a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Nopales Asados al Orégano y Aceite de Oliva Extra Virgen",
+            "cooking_technique": "pan_roast",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Guarnición vegetal caliente al punto al dente. Mantiene la fibra crujiente sazonada con mantequilla clarificada y orégano.",
+            "ingredient_groups": [
+              {
+                "category": "🥦 Vegetal Base Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Nopales tiernos de la granja",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Orégano seco molido",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Condimentos",
+                "items": [
+                  {
+                    "name": "Mantequilla clarificada",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienizado y Corte de Precisión:\n- Lavar y cortar nopales tiernos en gajos, bastones o espirales delgadas.",
+              "2. Cocción Térmica Controlada en Plancha (150°C):\n- Asar nopales tiernos en plancha o comal a 150°C durante 6 a 8 minutos hasta dorar al dente.",
+              "3. Sazón e Integración de Grasas:\n- Aderezar nopales tiernos de inmediato con mantequilla clarificada o aceite VEVO, sal mineral de mar y orégano.",
+              "4. Servicio Caliente:\n- Emplatar de inmediato como acompañamiento caliente a 68°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Ensalada de Arúgula Fresca y Espinaca Baby a la Vinagreta de Limón",
+          "main_dish_name": "Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón",
+          "side_dish_name": "Infusión Nocturna Digestiva de Menta y Limón con 34Plus",
+          "fat_g": 23.5,
+          "protein_g": 31.5,
+          "net_carbs_g": 2.5,
+          "starter_recipe": {
+            "title": "Ensalada de Arúgula Fresca y Espinaca Baby a la Vinagreta de Limón",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Arúgula fresca de la granja",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Espinaca baby de la granja",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar arúgula fresca, espinaca baby a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar arúgula fresca, espinaca baby en cuadrícula o láminas rústicas a temperatura ambiente.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y especias.",
+              "4. Montaje Fresco Gourmet:\n- Presentar la ensalada sazonada al momento a 10°C–12°C."
+            ]
+          },
+          "main_recipe": {
+            "title": "Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón",
+            "cooking_technique": "marinate_raw",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Filete de atún fresco aletas amarillas en cubos",
+                    "base_qty_per_person": 130.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 45.0
+                  },
+                  {
+                    "name": "Aguacate Hass cremoso",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Alcaparras mediterráneas picadas",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 5.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar atún fresco, aguacate Hass a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar atún fresco, aguacate Hass en cuadrícula o láminas rústicas a temperatura ambiente.",
+              "3. Marinado Cítrico en Frío y Sazón:\n- Marinar atún fresco, aguacate Hass con limón fresco, aceite VEVO y alcaparras mediterráneas a 6°C por 10 minutos.",
+              "4. Montaje Fresco Gourmet:\n- Presentar el tartar sazonado al momento a 10°C–12°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Infusión Nocturna Digestiva de Menta y Limón con 34Plus",
+            "cooking_technique": "herbal_tea",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de menta y toronjil, menta, limón entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Hojas de menta y toronjil fresco",
+                    "base_qty_per_person": 4.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Hojas de menta fresca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Limón fresco de la granja",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Reparadora 34Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar menta y toronjil, menta, limón de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción de Aromas y Fitonutrientes (80°C):\n- Infundir las botánicas de menta y toronjil, menta, limón en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+              "3. Filtrado del Sustrato e Integración Bioactiva:\n- Colar las hierbas botánicas mediante un tamiz de malla fina para separar los sólidos.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Reparadora 34Plus® en la infusión (a 50°C–60°C) y batir con espumador durante 45 segundos hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Reconfortante:\n- Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Jueves",
+      "date_str": "10 Sep",
+      "day_num": "10",
+      "full_date_title": "Menú Completo para el Jueves 10 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Fresas Frescas de la Granja con Almendras Fileteadas y Semillas de Chía",
+          "main_dish_name": "Frittata Rústica de Huevos Orgánicos con Tocino de Pavo y Queso Manchego",
+          "side_dish_name": "Infusión de Té Verde Orgánico con 33Plus",
+          "fat_g": 29.5,
+          "protein_g": 25.0,
+          "net_carbs_g": 3.2,
+          "starter_recipe": {
+            "title": "Fresas Frescas de la Granja con Almendras Fileteadas y Semillas de Chía",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de fresas frescas en contraste con el perfil crujiente y lípido de almendras fileteadas tostadas, semillas de chía orgánicas. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico.",
+            "ingredient_groups": [
+              {
+                "category": "🍓 Fruta Fresca de Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Fresas frescas de la granja",
+                    "base_qty_per_person": 50.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Grasas Saludables, Semillas y Crujientes",
+                "items": [
+                  {
+                    "name": "Almendras fileteadas tostadas",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Semillas de chía orgánicas",
+                    "base_qty_per_person": 8.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección e Higienización Criogénica:\n- Seleccionar e higienizar delicadamente las fresas frescas a 10°C con agua purificada, retirando el pedúnculo verde.\n- Reservar la fruta viva de cosecha en su punto óptimo de turgencia y madurez.",
+              "2. Porcionado y Ensamble de Precisión:\n- Cortar las fresas frescas en cuartos o láminas delgadas según su calibre natural.\n- Acomodarlas en copas de cristal o tazones individuales de cristal.",
+              "3. Acondicionamiento Crujiente y Semillas:\n- Espolvorear en forma de lluvia almendras fileteadas tostadas, semillas de chía orgánicas sobre la superficie frutal.\n- Mantener la chía en estado seco o hidratado sin alterar la textura crocantina de las nueces.",
+              "4. Servicio Gourmet Fresco:\n- Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos."
+            ]
+          },
+          "main_recipe": {
+            "title": "Frittata Rústica de Huevos Orgánicos con Tocino de Pavo y Queso Manchego",
+            "cooking_technique": "roast_bake",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo proteico cetogénico de alta densidad organoléptica. Supera el umbral de 30 g de proteína de alto valor biológico para la activación del eje leucina/mTOR y preservación magra.",
+            "ingredient_groups": [
+              {
+                "category": "🍳 Huevos de Pastoreo y Proteínas",
+                "items": [
+                  {
+                    "name": "Huevos frescos orgánicos",
+                    "base_qty_per_person": 2.0,
+                    "unit": "piezas",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso Manchego rallado",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 12.0
+                  },
+                  {
+                    "name": "Tocino de pavo artesanal en cubos",
+                    "base_qty_per_person": 40.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 14.0
+                  },
+                  {
+                    "name": "Pimientos dulces en cubos rústicos",
+                    "base_qty_per_person": 40.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Picado de Precisión:\n- Lavar e higienizar los pimientos dulces a 10°C y cortar en cubos rústicos; trocear el tocino de pavo artesanal.\n- Atemperar y batir los huevos frescos orgánicos en un cuenco con sal de mar y pimienta negra molida.",
+              "2. Acitronado y Dorado de Insumos (160°C):\n- Calentar mantequilla de pastoreo en sartén de hierro a 160°C y dorar el tocino de pavo con los pimientos dulces durante 4 minutos hasta ablandar la fibra vegetal y liberar aromas.",
+              "3. Cuajado y Gratinado al Horno (180°C):\n- Verter los huevos batidos sobre el salteado caliente, coronar con queso Manchego rallado y trasladar al horno a 180°C durante 8 a 10 minutos hasta inflar con costra dorada.",
+              "4. Servicio Gourmet:\n- Servir caliente a 68°C en la misma cazuela refractaria."
+            ]
+          },
+          "side_recipe": {
+            "title": "Infusión de Té Verde Orgánico con 33Plus",
+            "cooking_technique": "herbal_tea",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de té verde entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Hojas de té verde orgánico",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Nootrópica 33Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar té verde de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción de Aromas y Fitonutrientes (80°C):\n- Infundir las botánicas de té verde en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+              "3. Filtrado del Sustrato e Integración Bioactiva:\n- Colar las hierbas botánicas mediante un tamiz de malla fina para separar los sólidos.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Nootrópica 33Plus® en la infusión (a 50°C–60°C) y batir con espumador durante 45 segundos hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Reconfortante:\n- Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema de Flor de Calabaza y Queso de Cabra al Ajo Rostizado",
+          "main_dish_name": "Filete Mignon de Res al Sartén en Reducción de Mantequilla de Pastoreo",
+          "side_dish_name": "Bastones de Zucchini y Pepino Fresco al Limón",
+          "fat_g": 39.5,
+          "protein_g": 44.0,
+          "net_carbs_g": 3.8,
+          "starter_recipe": {
+            "title": "Crema de Flor de Calabaza y Queso de Cabra al Ajo Rostizado",
+            "cooking_technique": "boil_and_blend",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Emulsión velouté tersa y reconfortante. Combina la riqueza lipídica de la mantequilla de pastoreo con la dulzura vegetal de flor de calabaza.",
+            "ingredient_groups": [
+              {
+                "category": "🍵 Base Vegetal Seleccionada",
+                "items": [
+                  {
+                    "name": "Flor de calabaza fresca de la granja",
+                    "base_qty_per_person": 100.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso de cabra artesanal",
+                    "base_qty_per_person": 25.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 12.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Emulsión y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta blanca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección y Mise en Place de Vegetales:\n- Seleccionar e higienizar flor de calabaza frescos de la granja.\n- Trocear en piezas uniformes para asegurar cocción pareja. Rostizar previamente los vegetales o el ajo a 200°C al horno para concentrar sus azúcares bioactivos.",
+              "2. Cocción Lenta en Fondo Mineral (85°C–90°C):\n- Estofar los vegetales a fuego lento en caldo concentrado a 85°C–90°C durante 15 a 20 minutos.\n- Ablandar la fibra sin degradar la clorofila o color natural.",
+              "3. Emulsión Velouté a Alta Velocidad:\n- Licuar a alta velocidad incorporando mantequilla de pastoreo y crema entera.\n- Lograr una textura aterciopelada cremosa e hidrófila.",
+              "4. Servicio Gourmet en Tazón:\n- Servir caliente en tazón cóncavo a 75°C.\n- Decorar con lascas de queso Parmesano maduro o gotas de aceite VEVO."
+            ]
+          },
+          "main_recipe": {
+            "title": "Filete Mignon de Res al Sartén en Reducción de Mantequilla de Pastoreo",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo principal proteico de alta intensidad gastronómica. Garantiza más de 30 g de proteína de alto valor biológico para activar el umbral anabólico de leucina/mTOR, coadyuvando a la síntesis proteica muscular.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína Principal Seleccionada",
+                "items": [
+                  {
+                    "name": "Filete Mignon de Res de pastoreo",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 45.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Salsa, Costra y Grasas",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Atemperado y Sazonado Inicial:\n- Secar minuciosamente la superficie de corte de res con papel absorbente.\n- Sazonar con sal mineral de mar para propiciar dorado Parejo.",
+              "2. Sellado de Alta Temperatura (180°C):\n- Calentar mantequilla de pastoreo o aceite VEVO en sartén de hierro fundido a 180°C.\n- Sellar corte de res durante 3 a 4 minutos por lado para iniciar la reacción de Maillard sin perder jugosidad.",
+              "3. Desglase y Salsa de Fondo:\n- Incorporar especias al sartén y desglasar los jugos concentrados a fuego medio.\n- Crear una emulsión aromática y tersa.",
+              "4. Reposo Osmótico y Emplatado:\n- Dejar reposar la corte de res durante 3 minutos sobre tabla de corte para redistribuir los jugos internos.\n- Servir caliente a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Bastones de Zucchini y Pepino Fresco al Limón",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Pepino criollo en bastones",
+                    "base_qty_per_person": 100.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Calabacita fresca en bastones",
+                    "base_qty_per_person": 100.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar pepino criollo, zucchini fresco a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar pepino criollo, zucchini fresco en bastones uniformes a temperatura ambiente.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y especias.",
+              "4. Montaje Fresco Gourmet:\n- Presentar los bastones sazonados al momento a 10°C–12°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones Crujientes de Apio y Zucchini Fresco con Sal Mineral",
+          "main_dish_name": "Medallones de Pavo al Sartén en Salsa de Mostaza Antigua y Crema",
+          "side_dish_name": "Tisana Relajante de Toronjil y Manzanilla con 34Plus",
+          "fat_g": 24.0,
+          "protein_g": 32.0,
+          "net_carbs_g": 2.6,
+          "starter_recipe": {
+            "title": "Bastones Crujientes de Apio y Zucchini Fresco con Sal Mineral",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Apio fresco crujiente",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Calabacita fresca en bastones",
+                    "base_qty_per_person": 100.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar apio fresco, zucchini fresco a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar apio fresco, zucchini fresco en bastones uniformes a temperatura ambiente.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y especias.",
+              "4. Montaje Fresco Gourmet:\n- Presentar los bastones sazonados al momento a 10°C–12°C."
+            ]
+          },
+          "main_recipe": {
+            "title": "Medallones de Pavo al Sartén en Salsa de Mostaza Antigua y Crema",
+            "cooking_technique": "boil_and_blend",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Emulsión velouté tersa y reconfortante. Combina la riqueza lipídica de la mantequilla de pastoreo con la dulzura vegetal de hortalizas frescas.",
+            "ingredient_groups": [
+              {
+                "category": "🍵 Base Vegetal Seleccionada",
+                "items": [
+                  {
+                    "name": "Hortalizas frescas variadas de la granja",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Emulsión y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta blanca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Emulsión y Aderezo",
+                "items": [
+                  {
+                    "name": "Mostaza antigua en grano",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 5.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección y Mise en Place de Vegetales:\n- Seleccionar e higienizar hortalizas frescas frescos de la granja.\n- Trocear en piezas uniformes para asegurar cocción pareja.",
+              "2. Cocción Lenta en Fondo Mineral (85°C–90°C):\n- Estofar los vegetales a fuego lento en caldo concentrado a 85°C–90°C durante 15 a 20 minutos.\n- Ablandar la fibra sin degradar la clorofila o color natural.",
+              "3. Emulsión Velouté a Alta Velocidad:\n- Licuar a alta velocidad incorporando mantequilla de pastoreo y crema entera.\n- Lograr una textura aterciopelada cremosa e hidrófila. Incorporar mostaza antigua en grano a la emulsión.",
+              "4. Servicio Gourmet en Tazón:\n- Servir caliente en tazón cóncavo a 75°C.\n- Decorar con lascas de queso Parmesano maduro o gotas de aceite VEVO."
+            ]
+          },
+          "side_recipe": {
+            "title": "Tisana Relajante de Toronjil y Manzanilla con 34Plus",
+            "cooking_technique": "herbal_tea",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de toronjil, manzanilla entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Toronjil fresco de la granja",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Flores de manzanilla silvestre",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Reparadora 34Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar toronjil, manzanilla de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción de Aromas y Fitonutrientes (80°C):\n- Infundir las botánicas de toronjil, manzanilla en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+              "3. Filtrado del Sustrato e Integración Bioactiva:\n- Colar las hierbas botánicas mediante un tamiz de malla fina para separar los sólidos.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Reparadora 34Plus® en la infusión (a 50°C–60°C) y batir con espumador durante 45 segundos hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Reconfortante:\n- Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Viernes",
+      "date_str": "11 Sep",
+      "day_num": "11",
+      "full_date_title": "Menú Completo para el Viernes 11 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Tazón de Moras Frescas de la Granja con Semillas de Chía y Coco Rallado",
+          "main_dish_name": "Huevos Benedictinos Keto Pochados sobre Tocino de Pavo",
+          "side_dish_name": "Gelatina Artesanal de Moras Frescas con 33Plus",
+          "fat_g": 28.5,
+          "protein_g": 24.0,
+          "net_carbs_g": 3.3,
+          "starter_recipe": {
+            "title": "Tazón de Moras Frescas de la Granja con Semillas de Chía y Coco Rallado",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de moras frescas en contraste con el perfil crujiente y lípido de semillas de chía orgánicas, coco rallado sin azúcar. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico.",
+            "ingredient_groups": [
+              {
+                "category": "🍓 Fruta Fresca de Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Moras frescas de la granja",
+                    "base_qty_per_person": 50.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Grasas Saludables, Semillas y Crujientes",
+                "items": [
+                  {
+                    "name": "Semillas de chía orgánicas",
+                    "base_qty_per_person": 8.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Coco rallado sin azúcar",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección e Higienización Criogénica:\n- Seleccionar e higienizar delicadamente las moras frescas a 10°C con agua purificada.\n- Reservar los frutos vivos de cosecha en su punto óptimo de turgencia y madurez.",
+              "2. Porcionado y Ensamble de Precisión:\n- Disponer las moras frescas porcionadas y enteras según su calibre natural.\n- Acomodarlas en copas de cristal o tazones individuales de cristal.",
+              "3. Acondicionamiento Crujiente y Semillas:\n- Espolvorear en forma de lluvia semillas de chía orgánicas, coco rallado sin azúcar sobre la superficie frutal.\n- Mantener la chía en estado seco o hidratado sin alterar la textura crocantina de las nueces.",
+              "4. Servicio Gourmet Fresco:\n- Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos."
+            ]
+          },
+          "main_recipe": {
+            "title": "Huevos Benedictinos Keto Pochados sobre Tocino de Pavo",
+            "cooking_technique": "poach_and_emulsion",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo proteico cetogénico de alta densidad organoléptica. Supera el umbral de 30 g de proteína de alto valor biológico para la activación del eje leucina/mTOR y preservación magra.",
+            "ingredient_groups": [
+              {
+                "category": "🍳 Huevos de Pastoreo y Proteínas",
+                "items": [
+                  {
+                    "name": "Huevos frescos orgánicos de pastoreo",
+                    "base_qty_per_person": 2.0,
+                    "unit": "piezas",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Tocino de pavo artesanal crudo",
+                    "base_qty_per_person": 2.0,
+                    "unit": "piezas",
+                    "source": "Mercado",
+                    "unit_cost": 15.0
+                  },
+                  {
+                    "name": "Yemas de huevo fresco para holandesa",
+                    "base_qty_per_person": 1.0,
+                    "unit": "piezas",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo para holandesa",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón recién exprimido",
+                    "base_qty_per_person": 2.5,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Clasificación Orgánica:\n- Atemperar e higienizar los insumos (huevos frescos orgánicos enteros, tocino de pavo artesanal crudo).",
+              "2. Pochado y Dorado Técnico (85°C / 160°C):\n- Dorar las lonchas de tocino de pavo artesanal crudo en sartén a 160°C hasta obtener una textura crujiente.\n- Crear un vórtice en agua hirviendo suave a 85°C–90°C y pochar los huevos frescos durante 4 minutos para lograr claras cuajadas suaves con yema fluida.",
+              "3. Emulsión Holandesa al Baño María (60°C):\n- Batir las yemas de huevo fresco en un tazón de cristal al baño maría a 60°C.\n- Incorporar en hilo continuo la mantequilla de pastoreo entibiada y el jugo de limón recién exprimido hasta obtener una salsa holandesa tersa y emulsionada.",
+              "4. Montaje y Servicio Gourmet:\n- Acomodar los huevos pochados sobre el tocino de pavo crujiente.\n- Napar generosamente con la salsa holandesa tibia y servir de inmediato a 68°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Gelatina Artesanal de Moras Frescas con 33Plus",
+            "cooking_technique": "gelatin_molding",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Preparación cetogénica limpia de soporte tisular que equilibra la acidez y astringencia natural de moras viva con la suavidad del colágeno hidrolizado (rico en prolina y glicina). Favorece la integridad osteoarticular.",
+            "ingredient_groups": [
+              {
+                "category": "🍮 Agente Hidrocoloide y Gelificante",
+                "items": [
+                  {
+                    "name": "Grenetina natural en polvo (colágeno hidrolizado)",
+                    "base_qty_per_person": 7.5,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Agua purificada fría para hidratar",
+                    "base_qty_per_person": 35.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🫐 Base Líquida e Infusión Viva",
+                "items": [
+                  {
+                    "name": "Moras frescas de la granja",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Infusión de té de frutos rojos y menta fresca",
+                    "base_qty_per_person": 120.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍋 Realce Cítrico y Sazón",
+                "items": [
+                  {
+                    "name": "Jugo de limón recién exprimido",
+                    "base_qty_per_person": 2.5,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💊 Suplementación Nootrópica 33Plus®",
+                "items": [
+                  {
+                    "name": "Fórmula Nootrópica 33Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Acondicionamiento de Fruta y Mise en Place:\n- Seleccionar 30.0 g de Moras frescas de la granja, retirando el pedúnculo y desinfectando delicadamente con agua fría purificada.\n- Reservar los frutos limpios a 6°C en refrigeración para mantener turgencia y crocancia.",
+              "2. Hidratación del Colágeno:\n- Verter los 35.0 ml de agua purificada fría en un cuenco de cristal.\n- Espolvorear los 7.5 g de grenetina natural en forma de lluvia fina sobre la superficie.\n- Dejar reposar durante 5 a 7 minutos hasta hidratación completa (textura esponjosa firme).",
+              "3. Disolución Térmica del Suplemento en Gelatina:\n- Apagar la fuente de calor y atemperar la infusión líquida a 50°C–60°C.\n- DESPUÉS de apagar el fuego, incorporar 6 g por comensal de Fórmula Nootrópica 33Plus® mezclando suavemente sin ebullición ni calor abrasivo hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Moldeo, Maduración y Servicio:\n- Distribuir los frutos frescos reservados en el fondo de copas o moldes individuales de cristal.\n- Verter con lentitud el líquido rubí transparente sobre los frutos para evitar turbidez o burbujas.\n- Refrigerar a 4°C durante 3 a 4 horas hasta gelificación cristalina y firme.\n- Servir fría a 4°C decorada con brotes de menta fresca."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Sopa de Calabacitas al Queso Parmesano Maduro y Cilantro Fresco",
+          "main_dish_name": "Filete de Salmón al Sartén en Salsa Mediterránea de Aceitunas Deshuesadas y Alcaparras",
+          "side_dish_name": "Espárragos Verdes Asados con Limón y Sal Marina",
+          "fat_g": 38.5,
+          "protein_g": 42.5,
+          "net_carbs_g": 3.9,
+          "starter_recipe": {
+            "title": "Sopa de Calabacitas al Queso Parmesano Maduro y Cilantro Fresco",
+            "cooking_technique": "boil_and_blend",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Emulsión velouté tersa y reconfortante. Combina la riqueza lipídica de la mantequilla de pastoreo con la dulzura vegetal de calabacitas tiernas.",
+            "ingredient_groups": [
+              {
+                "category": "🍵 Base Vegetal Seleccionada",
+                "items": [
+                  {
+                    "name": "Calabacitas tiernas de la granja",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Cilantro fresco picado",
+                    "base_qty_per_person": 5.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso Parmesano rallado",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 8.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Emulsión y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta blanca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección y Mise en Place de Vegetales:\n- Seleccionar e higienizar calabacitas tiernas frescos de la granja.\n- Trocear en piezas uniformes para asegurar cocción pareja.",
+              "2. Cocción Lenta en Fondo Mineral (85°C–90°C):\n- Estofar los vegetales a fuego lento en caldo concentrado a 85°C–90°C durante 15 a 20 minutos.\n- Ablandar la fibra sin degradar la clorofila o color natural.",
+              "3. Emulsión Velouté a Alta Velocidad:\n- Licuar a alta velocidad incorporando mantequilla de pastoreo, crema entera y queso Parmesano rallado.\n- Lograr una textura aterciopelada cremosa e hidrófila.",
+              "4. Servicio Gourmet en Tazón:\n- Servir caliente en tazón cóncavo a 75°C.\n- Decorar con lascas de queso Parmesano maduro o gotas de aceite VEVO."
+            ]
+          },
+          "main_recipe": {
+            "title": "Filete de Salmón al Sartén en Salsa Mediterránea de Aceitunas Deshuesadas y Alcaparras",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo principal proteico de alta intensidad gastronómica. Garantiza más de 30 g de proteína de alto valor biológico para activar el umbral anabólico de leucina/mTOR, coadyuvando a la síntesis proteica muscular.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína Principal Seleccionada",
+                "items": [
+                  {
+                    "name": "Filete de salmón fresco con piel",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 45.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Salsa, Costra y Grasas",
+                "items": [
+                  {
+                    "name": "Alcaparras mediterráneas picadas",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 5.0
+                  },
+                  {
+                    "name": "Aceitunas verdes deshuesadas picadas",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 6.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Atemperado y Sazonado Inicial:\n- Secar minuciosamente la superficie de filete de salmón con papel absorbente.\n- Sazonar con sal mineral de mar para propiciar dorado Parejo.",
+              "2. Sellado de Alta Temperatura (180°C):\n- Calentar mantequilla de pastoreo o aceite VEVO en sartén de hierro fundido a 180°C.\n- Sellar filete de salmón durante 3 a 4 minutos por lado para iniciar la reacción de Maillard sin perder jugosidad.",
+              "3. Desglase y Salsa de Fondo:\n- Incorporar alcaparras, aceitunas verdes al sartén y desglasar los jugos concentrados a fuego medio.\n- Crear una emulsión aromática y tersa.",
+              "4. Reposo Osmótico y Emplatado:\n- Dejar reposar la proteína durante 3 minutos sobre tabla de corte para redistribuir los jugos internos.\n- Servir caliente a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Espárragos Verdes Asados con Limón y Sal Marina",
+            "cooking_technique": "pan_roast",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Guarnición vegetal caliente al punto al dente. Mantiene la fibra crujiente sazonada con mantequilla clarificada y limón.",
+            "ingredient_groups": [
+              {
+                "category": "🥦 Vegetal Base Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Espárragos verdes frescos de la granja",
+                    "base_qty_per_person": 120.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Limón fresco recién exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Condimentos",
+                "items": [
+                  {
+                    "name": "Mantequilla clarificada",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienizado y Corte de Precisión:\n- Lavar y cortar espárragos verdes en gajos, bastones o espirales delgadas.",
+              "2. Cocción Térmica Controlada en Plancha (150°C):\n- Asar espárragos verdes en plancha o comal a 150°C durante 6 a 8 minutos hasta dorar al dente.",
+              "3. Sazón e Integración de Grasas:\n- Aderezar espárragos verdes de inmediato con mantequilla clarificada o aceite VEVO, sal mineral de mar y limón.",
+              "4. Servicio Caliente:\n- Emplatar de inmediato como acompañamiento caliente a 68°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Abanico de Aguacate Hass con Sal de Mar Marina",
+          "main_dish_name": "Pimientos Dulces Rellenos de Pechuga de Pavo Desmenuzada Gratinados con Gouda",
+          "side_dish_name": "Tisana Digestiva de Menta y Limón con 34Plus",
+          "fat_g": 25.0,
+          "protein_g": 31.0,
+          "net_carbs_g": 2.8,
+          "starter_recipe": {
+            "title": "Abanico de Aguacate Hass con Sal de Mar Marina",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Aguacate Hass cremoso",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar aguacate Hass a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar aguacate Hass en láminas finas en forma de abanico a temperatura ambiente con cuchillo de chef afilado.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y especias.",
+              "4. Montaje Fresco Gourmet:\n- Presentar el abanico de aguacate sazonado al momento a 10°C–12°C."
+            ]
+          },
+          "main_recipe": {
+            "title": "Pimientos Dulces Rellenos de Pechuga de Pavo Desmenuzada Gratinados con Gouda",
+            "cooking_technique": "roast_bake",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo gourmet proteico. La pechuga de pollo jugosa horneada a 180°C encierra un relleno suave de espinacas y queso crema, napada con una velouté/salsa cremosa e idrófila de queso Parmesano maduro.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína / Base para Rellenar",
+                "items": [
+                  {
+                    "name": "Pechuga de pollo de pastoreo fresca entera",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 30.0
+                  }
+                ]
+              },
+              {
+                "category": "🧀 Relleno Gourmet, Quesos y Sazón",
+                "items": [
+                  {
+                    "name": "Queso crema artesanal",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 12.0
+                  },
+                  {
+                    "name": "Espinacas frescas de la granja",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso Parmesano maduro rallado",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 8.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.5,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra",
+                    "base_qty_per_person": 2.5,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Limpieza y Corte de Bolsillo Proteico:\n- Lavar e higienizar la pechuga de pollo de pastoreo y secar minuciosamente con papel absorbente.\n- Realizar un corte horizontal con cuchillo afilado a lo largo del lateral de la pechuga para crear una cavidad o bolsillo profundo sin atravesar los extremos. Ahuecar los pimientos dulces para crear la cavidad del relleno.",
+              "2. Elaboración del Relleno de Espinacas:\n- Saltear las espinacas frescas en mantequilla de pastoreo durante 2 minutos hasta marchitar.\n- Mezclar la mitad del queso crema artesanal con las espinacas salteadas y sal mineral, y rellenar generosamente el bolsillo de la pechuga de pollo.",
+              "3. Sellado y Horneo Jugoso (180°C):\n- Sellar la pechuga de pollo rellena en sartén caliente a 180°C por 2 minutos por lado para fijar los jugos.\n- Trasladar a un molde refractario y hornear a 180°C durante 15 a 20 minutos hasta lograr una cocción jugosa.",
+              "4. Emulsión de Salsa Cremosa de Parmesano, Napado y Servicio:\n- En la sartén de sellado, disolver a fuego muy bajo (60°C) el resto del queso crema artesanal con el queso Parmesano maduro rallado, mantequilla de pastoreo y los jugos de cocción del ave hasta integrar una velouté cremosa e sedosa.\n- Bañar (napar) generosamente la pechuga de pollo horneada con la salsa cremosa de Parmesano bien caliente y servir a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Tisana Digestiva de Menta y Limón con 34Plus",
+            "cooking_technique": "herbal_tea",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de menta y toronjil, menta, limón entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Hojas de menta y toronjil fresco",
+                    "base_qty_per_person": 4.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Hojas de menta fresca",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Limón fresco de la granja",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Reparadora 34Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar menta y toronjil, menta, limón de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción de Aromas y Fitonutrientes (80°C):\n- Infundir las botánicas de menta y toronjil, menta, limón en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+              "3. Filtrado del Sustrato e Integración Bioactiva:\n- Colar las hierbas botánicas mediante un tamiz de malla fina para separar los sólidos.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Reparadora 34Plus® en la infusión (a 50°C–60°C) y batir con espumador durante 45 segundos hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Reconfortante:\n- Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Sábado",
+      "date_str": "12 Sep",
+      "day_num": "12",
+      "full_date_title": "Menú Completo para el Sábado 12 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Granada Fresca de la Granja con Semillas de Chía y Almendras Tostadas",
+          "main_dish_name": "Muffins Salados de Huevo Orgánico con Queso Gouda Maduro y Espinacas",
+          "side_dish_name": "Gelatina Artesanal de Granada Fresca con 33Plus",
+          "fat_g": 29.0,
+          "protein_g": 23.5,
+          "net_carbs_g": 3.4,
+          "starter_recipe": {
+            "title": "Granada Fresca de la Granja con Semillas de Chía y Almendras Tostadas",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de arilos de granada en contraste con el perfil crujiente y lípido de almendras fileteadas tostadas, semillas de chía orgánicas. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico.",
+            "ingredient_groups": [
+              {
+                "category": "🍓 Fruta Fresca de Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Arilos de Granada fresca",
+                    "base_qty_per_person": 40.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Grasas Saludables, Semillas y Crujientes",
+                "items": [
+                  {
+                    "name": "Almendras fileteadas tostadas",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Semillas de chía orgánicas",
+                    "base_qty_per_person": 8.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección e Higienización Criogénica:\n- Seleccionar e higienizar delicadamente la granada fresca a 10°C con agua purificada.\n- Reservar la fruta viva de cosecha en su punto óptimo de turgencia y madurez.",
+              "2. Porcionado y Ensamble de Precisión:\n- Desgranar los arilos de granada fresca retirando las membranas albugíneas para obtener los granos limpios.\n- Acomodar los arilos porcionados en copas de cristal o tazones individuales.",
+              "3. Acondicionamiento Crujiente y Semillas:\n- Espolvorear en forma de lluvia almendras fileteadas tostadas, semillas de chía orgánicas sobre la superficie frutal.\n- Mantener la chía en estado seco o hidratado sin alterar la textura crocantina de las nueces.",
+              "4. Servicio Gourmet Fresco:\n- Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos."
+            ]
+          },
+          "main_recipe": {
+            "title": "Muffins Salados de Huevo Orgánico con Queso Gouda Maduro y Espinacas",
+            "cooking_technique": "roast_bake",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo proteico cetogénico de alta densidad organoléptica. Supera el umbral de 30 g de proteína de alto valor biológico para la activación del eje leucina/mTOR y preservación magra.",
+            "ingredient_groups": [
+              {
+                "category": "🍳 Huevos de Pastoreo y Proteínas",
+                "items": [
+                  {
+                    "name": "Huevos frescos orgánicos de pastoreo",
+                    "base_qty_per_person": 2.0,
+                    "unit": "piezas",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso Gouda maduro rallado",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 12.0
+                  },
+                  {
+                    "name": "Tocino de pavo artesanal crudo",
+                    "base_qty_per_person": 40.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 14.0
+                  },
+                  {
+                    "name": "Espinacas frescas",
+                    "base_qty_per_person": 30.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Sazón",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Mise en Place y Clasificación Orgánica:\n- Atemperar e higienizar los insumos (huevos orgánicos, queso Gouda, tocino de pavo, espinacas frescas).",
+              "2. Integración y Horneo (180°C):\n- Mezclar huevos orgánicos, queso Gouda, tocino de pavo, espinacas frescas, porcionar en moldes de silicona refractarios.\n- Hornear a 180°C durante 12 a 15 minutos hasta inflar.",
+              "3. Gratinado de Superficie:\n- Dorar el queso en la corona superior de los muffins salados hasta formar una costra dorada.",
+              "4. Servicio Gourmet:\n- Desmoldar con cuidado y servir bien calientes a 68°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Gelatina Artesanal de Granada Fresca con 33Plus",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de arilos de granada en contraste con el perfil crujiente y lípido de semillas crujientes. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico.",
+            "ingredient_groups": [
+              {
+                "category": "🍓 Fruta Fresca de Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Arilos de Granada fresca",
+                    "base_qty_per_person": 40.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Grasas Saludables, Semillas y Crujientes",
+                "items": [
+                  {
+                    "name": "Semillas de girasol y nueces de castilla",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💊 Suplementación Nootrópica 33Plus®",
+                "items": [
+                  {
+                    "name": "Fórmula Nootrópica 33Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección e Higienización Criogénica:\n- Seleccionar e higienizar delicadamente la granada fresca a 10°C con agua purificada.\n- Reservar la fruta viva de cosecha en su punto óptimo de turgencia y madurez.",
+              "2. Porcionado y Ensamble de Precisión:\n- Desgranar los arilos de granada fresca retirando las membranas albugíneas para obtener los granos limpios.\n- Acomodar los arilos porcionados en copas de cristal o tazones individuales.",
+              "3. Disolución Térmica del Suplemento en Gelatina:\n- Apagar la fuente de calor y atemperar la infusión líquida a 50°C–60°C.\n- DESPUÉS de apagar el fuego, incorporar 6 g por comensal de Fórmula Nootrópica 33Plus® mezclando suavemente sin ebullición ni calor abrasivo hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Gourmet Fresco:\n- Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Ensalada de Hinojo, Arúgula Fresca y Aceite de Oliva Extra Virgen",
+          "main_dish_name": "Lomo de Pavo Real Encostrado en Pistaches con Reducción de Mantequilla",
+          "side_dish_name": "Zoodles de Calabacita a la Mantequilla y Salvia Fresca",
+          "fat_g": 38.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 3.7,
+          "starter_recipe": {
+            "title": "Ensalada de Hinojo, Arúgula Fresca y Aceite de Oliva Extra Virgen",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Arúgula fresca de la granja",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Hinojo fresco en láminas",
+                    "base_qty_per_person": 50.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica:\n- Seleccionar y desinfectar arúgula fresca, hinojo fresco a 10°C con agua purificada.",
+              "2. Corte de Precisión de Alta Cocina:\n- Cortar arúgula fresca, hinojo fresco en cuadrícula o láminas rústicas a temperatura ambiente.",
+              "3. Vinagreta y Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco.\n- Espolvorear con sal mineral de mar y especias.",
+              "4. Montaje Fresco Gourmet:\n- Presentar la ensalada sazonada al momento a 10°C–12°C."
+            ]
+          },
+          "main_recipe": {
+            "title": "Lomo de Pavo Real Encostrado en Pistaches con Reducción de Mantequilla",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Platillo principal proteico de alta intensidad gastronómica. Garantiza más de 30 g de proteína de alto valor biológico para activar el umbral anabólico de leucina/mTOR, coadyuvando a la síntesis proteica muscular.",
+            "ingredient_groups": [
+              {
+                "category": "🥩 Proteína Principal Seleccionada",
+                "items": [
+                  {
+                    "name": "Medallones de pavo artesanal",
+                    "base_qty_per_person": 160.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 45.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Salsa, Costra y Grasas",
+                "items": [
+                  {
+                    "name": "Mantequilla de pastoreo",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🌰 Semillas y Encostrado",
+                "items": [
+                  {
+                    "name": "Pistaches tostados picados",
+                    "base_qty_per_person": 20.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 10.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Atemperado y Sazonado Inicial:\n- Secar minuciosamente la superficie de medallones de pavo con papel absorbente.\n- Sazonar con sal mineral de mar para propiciar dorado Parejo.",
+              "2. Sellado de Alta Temperatura (180°C):\n- Calentar mantequilla de pastoreo o aceite VEVO en sartén de hierro fundido a 180°C.\n- Sellar medallones de pavo durante 3 a 4 minutos por lado para iniciar la reacción de Maillard sin perder jugosidad. Encostrar con los pistaches tostados picados.",
+              "3. Desglase y Salsa de Fondo:\n- Incorporar especias al sartén y desglasar los jugos concentrados a fuego medio.\n- Crear una emulsión aromática y tersa.",
+              "4. Reposo Osmótico y Emplatado:\n- Dejar reposar la pechuga de pavo durante 3 minutos sobre tabla de corte para redistribuir los jugos internos.\n- Servir caliente a 72°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Zoodles de Calabacita a la Mantequilla y Salvia Fresca",
+            "cooking_technique": "pan_roast",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Guarnición vegetal caliente al punto al dente. Mantiene la fibra crujiente sazonada con mantequilla clarificada y salvia.",
+            "ingredient_groups": [
+              {
+                "category": "🥦 Vegetal Base Cosecha Activa",
+                "items": [
+                  {
+                    "name": "Calabacita fresca en espirales (zoodles)",
+                    "base_qty_per_person": 140.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Hojas de salvia fresca",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🧈 Grasas y Condimentos",
+                "items": [
+                  {
+                    "name": "Mantequilla clarificada",
+                    "base_qty_per_person": 10.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienizado y Corte de Precisión:\n- Lavar y cortar zoodles de calabacita en gajos, bastones o espirales delgadas.",
+              "2. Cocción Térmica Controlada en Plancha (150°C):\n- Asar zoodles de calabacita en plancha o comal a 150°C durante 6 a 8 minutos hasta dorar al dente.",
+              "3. Sazón e Integración de Grasas:\n- Aderezar zoodles de calabacita de inmediato con mantequilla clarificada o aceite VEVO, sal mineral de mar y salvia.",
+              "4. Servicio Caliente:\n- Emplatar de inmediato como acompañamiento caliente a 68°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Ensalada César con Pechuga de Pollo al Sartén y Aderezo Casero al Parmesano",
+          "main_dish_name": "Tacos en Envuelto de Lechuga Viva con Pechuga de Pavo al Ajo y Guacamole",
+          "side_dish_name": "Tisana Nocturna de Toronjil y Flor de Azahar con 34Plus",
+          "fat_g": 24.5,
+          "protein_g": 30.5,
+          "net_carbs_g": 2.7,
+          "starter_recipe": {
+            "title": "Ensalada César con Pechuga de Pollo al Sartén y Aderezo Casero al Parmesano",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Ensalada César gourmet de pechuga de pollo sellada al sartén sobre lechuga romana viva crujiente aderezada con Parmesano maduro.",
+            "ingredient_groups": [
+              {
+                "category": "🥗 Base Vegetal / Proteína Fresca",
+                "items": [
+                  {
+                    "name": "Pechuga de pollo de pastoreo en tiras",
+                    "base_qty_per_person": 130.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 28.0
+                  },
+                  {
+                    "name": "Hojas de lechuga romana viva de la granja",
+                    "base_qty_per_person": 80.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🍾 Vinagreta y Grasas Saludables",
+                "items": [
+                  {
+                    "name": "Aceite de oliva extra virgen VEVO",
+                    "base_qty_per_person": 12.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Jugo de limón fresco exprimido",
+                    "base_qty_per_person": 10.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral y pimienta negra molida",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Dientes de ajo rostizados picados",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Queso Parmesano en lascas",
+                    "base_qty_per_person": 15.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 8.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Higienización Criogénica y Porcionado:\n- Lavar e higienizar minuciosamente la pechuga de pollo de pastoreo y las hojas de lechuga romana viva a 10°C con agua purificada.\n- Cortar la pechuga de pollo en tiras uniformes y trocear la lechuga romana viva con las manos en bocados rústicos.",
+              "2. Cocción Térmica y Reacción de Maillard (180°C):\n- Calentar el aceite VEVO en sartén a 180°C y sellar las tiras de pechuga de pollo durante 6 a 8 minutos hasta dorar jugosas (temperatura interna 74°C).\n- Retirar la pechuga y dejar reposar 2 minutos sobre tabla de corte.",
+              "3. Aderezo César e Emulsión en Frío:\n- Emulsionar en frío el aceite VEVO con jugo de limón fresco, dientes de ajo rostizados picados y queso Parmesano en lascas para formar un aderezo César cremoso e hidrófilo.",
+              "4. Montaje Fresco Gourmet:\n- Disponer la lechuga romana viva crujiente en el tazón, colocar las tiras de pechuga de pollo doradas encima, napar con el aderezo César y coronar con lascas de queso Parmesano maduro. Servir a 18°C."
+            ]
+          },
+          "main_recipe": {
+            "title": "Tacos en Envuelto de Lechuga Viva con Pechuga de Pavo al Ajo y Guacamole",
+            "cooking_technique": "saute_and_sear",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Tacos cetogénicos ultrafrescos. La textura crujiente e hidratada de la lechuga viva abraza el calor de la carne salteada (superando los 30 g de proteína magra para soporte muscular) y el guacamole cremoso.",
+            "ingredient_groups": [
+              {
+                "category": "🌮 Base de Envoltorio Fresco",
+                "items": [
+                  {
+                    "name": "Hojas de lechuga francesa viva",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "🥩 Relleno Proteico y Guacamole",
+                "items": [
+                  {
+                    "name": "Carne molida de Sirloin magra",
+                    "base_qty_per_person": 140.0,
+                    "unit": "g",
+                    "source": "Mercado",
+                    "unit_cost": 40.0
+                  },
+                  {
+                    "name": "Guacamole casero con Aguacate Hass fresco",
+                    "base_qty_per_person": 60.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Cebolla blanca picada y cilantro",
+                    "base_qty_per_person": 20.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Mantequilla de pastoreo para saltear",
+                    "base_qty_per_person": 12.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Sal de mar mineral",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Desinfección Criogénica de Hojas Vivas:\n- Lavar y desinfectar cuidadosamente las hojas enteras de lechuga viva a 10°C.\n- Escurrir minuciosamente para mantener su firmeza hidráulica turgente.",
+              "2. Salteado y Reacción de Maillard (160°C):\n- Saltear la carne molida de Sirloin magra a 160°C en mantequilla de pastoreo con cebolla picada.\n- Sazonar con sal mineral de mar durante 8 minutos hasta evaporar humedad sobrante.",
+              "3. Elaboración de Guacamole Artesanal:\n- Machacar el aguacate Hass fresco con gotas de limón, cilantro picado y sal de mar.\n- Lograr una textura untuosa manteniéndose en temperatura fresca.",
+              "4. Montaje de Tacos Frescos:\n- Colocar la carne caliente sobre las hojas de lechuga viva crujiente.\n- Coronar con el guacamole artesanal y servir caliente a 68°C."
+            ]
+          },
+          "side_recipe": {
+            "title": "Tisana Nocturna de Toronjil y Flor de Azahar con 34Plus",
+            "cooking_technique": "herbal_tea",
+            "sensory_description": "Nota de Cata y Balance Sensorial: Elixir botánico digestivo y relajante. Libera los aceites esenciales de toronjil, manzanilla entregando notas herbales frescas con final equilibrado y soporte hidroelectrolítico.",
+            "ingredient_groups": [
+              {
+                "category": "🌿 Botánicos e Infusión",
+                "items": [
+                  {
+                    "name": "Toronjil fresco de la granja",
+                    "base_qty_per_person": 3.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Flores de manzanilla silvestre",
+                    "base_qty_per_person": 2.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  },
+                  {
+                    "name": "Fórmula Reparadora 34Plus®",
+                    "base_qty_per_person": 6.0,
+                    "unit": "g",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              },
+              {
+                "category": "💧 Base de Agua Mineral",
+                "items": [
+                  {
+                    "name": "Agua purificada mineral",
+                    "base_qty_per_person": 240.0,
+                    "unit": "ml",
+                    "source": "Granja El Herami",
+                    "unit_cost": 0.0
+                  }
+                ]
+              }
+            ],
+            "steps": [
+              "1. Selección de Botánicos de Cosecha:\n- Seleccionar e higienizar toronjil, manzanilla de la granja.\n- Enjuagar suavemente las hojas y flores en agua fría para activar las glándulas esenciales.",
+              "2. Extracción de Aromas y Fitonutrientes (80°C):\n- Infundir las botánicas de toronjil, manzanilla en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+              "3. Filtrado del Sustrato e Integración Bioactiva:\n- Colar las hierbas botánicas mediante un tamiz de malla fina para separar los sólidos.\n- DESPUÉS del filtrado, incorporar 6 g por comensal de Fórmula Reparadora 34Plus® en la infusión (a 50°C–60°C) y batir con espumador durante 45 segundos hasta lograr disolución coloidal completa y sin grumos.",
+              "4. Servicio Botánico Reconfortante:\n- Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -15,6 +15,8 @@ FORBIDDEN_KEYWORDS = [
 ]
 
 STOPWORDS_CULINARIAS = {
+    "mar", "hass", "negra", "blanco", "blanca", "dulces", "dulce", "flor", "bisglicinato", "magnesio",
+    "castilla", "arilos", "botánicas", "botanicas", "silvestre", "supremo", "frescos", "viva", "vivos",
     "de", "la", "el", "los", "las", "con", "y", "en", "al", "a", "del", "para", "por", "un", "una",
     "preparación", "estilo", "artesanal", "fresco", "fresca", "frescos", "frescas", "granja", "herami",
     "revueltos", "revuelto", "asados", "asado", "salteada", "salteado", "gratinados", "gratinadas", "gratinado",
@@ -24,6 +26,7 @@ STOPWORDS_CULINARIAS = {
     "coctel", "cóctel", "omelette", "especial", "tazón", "tazon", "bowl", "ensalada", "ensaladas", "crema", "cremas", "sopa", "sopas",
     "consomé", "consome", "mousse", "waffle", "waffles", "pancakes", "crepa", "crepas", "muffins", "muffin", "platillo",
     "gelatina", "gelatinas", "infusión", "infusion", "infusiones", "té", "te", "bebida", "bebidas", "caldo", "caldos", "puchero",
+    "tisana", "tisanas", "elixir", "elixires", "smoothie", "smoothies", "helado", "helada", "helados", "heladas",
     "brochetas", "brocheta", "zoodles", "bastones", "bastón", "baston", "frittata", "tartar", "carpaccio", "ceviche", "chilorio",
     "barbacoa", "parrillada", "mix", "tradicional", "nocturna", "nocturno", "relajante", "digestiva", "digestivo", "extra", "virgen",
     "maduro", "madura", "maduros", "maduras", "estrellados", "estrellado", "carbón", "carbon", "sartén", "sarten", "plancha",
@@ -31,8 +34,15 @@ STOPWORDS_CULINARIAS = {
     "verde", "verdes", "tabasqueñas", "tabasqueña", "claro", "clara", "rallado", "rallada", "baby", "vinagreta", "pastoreo",
     "seleccionado", "seleccionada", "seleccionados", "seleccionadas", "molida", "molido", "troceado", "troceada",
     "benedictinos", "sobre", "nube", "holandesa", "aderezo", "sin", "crotones", "abanico", "salpicón", "salpicon", "costra",
-    "ranchera", "orgánico", "orgánica", "orgánicos", "orgánicas", "fileteadas", "fileteada", "fileteados", "cremosa", "desmenuzada",
-    "keto", "cetogénica", "cetogénico"
+    "ranchera", "orgánico", "orgánica", "orgánicos", "orgánicas", "fileteadas", "fileteada", "fileteados", "cremosa", "cremoso", "nootrópico", "nootropico", "reparador", "reparadora", "desmenuzada",
+    "keto", "cetogénica", "cetogénico", "marina", "mineral", "salados", "deshuesadas", "mediterránea", "mediterranea", "envuelto",
+    "tacos", "punta", "puntas", "medallones", "medallón", "medallon", "ribeye", "sirloin", "filete", "cortes", "corte",
+    "mantequilla", "tomillo", "romero", "aceite", "oliva", "jitomate", "bola", "harina", "almendras", "almendra", "hierbas", "vinagre", "manzana",
+    "turcos", "cilbir", "enchiladas", "jamaica", "canela", "espinacas", "césar", "cesar", "mayonesa", "italiana", "campo", "picante",
+    "secas", "alfredo", "caliente", "lechuga", "crujientes", "carne", "pechuga", "pollo", "queso", "pavo", "yogur", "griego",
+    "panela", "cabra", "brócoli", "brocoli", "guacamole", "nuez", "pecana", "semillas", "girasol", "ajo", "cilantro", "coco", "calabacitas", "calabacita",
+    "rústico", "rústica", "rustico", "rustica", "gourmet", "suave", "suaves", "jugo", "jugos", "real", "mignon", "reducción", "reduccion", "encostrado", "encostrada", "cama", "azahar",
+    "huachinango", "róbalo", "robalo", "fajitas", "ceto", "espejo", "comal", "finas", "vegetales", "vegetal", "mct", "comino", "morada"
 }
 
 PROCESS_ADJECTIVES = {
@@ -45,8 +55,13 @@ PROCESS_ADJECTIVES = {
 INGREDIENT_ALIASES = {
     "nueces": ["nuez", "nueces", "pecana", "pecanas", "castilla"],
     "nuez": ["nuez", "nueces", "pecana", "pecanas", "castilla"],
-    "limón": ["limón", "limon", "limones"],
-    "limon": ["limón", "limon", "limones"],
+    "limón": ["limón", "limon", "limones", "jugo de limón", "jugo de limon"],
+    "limon": ["limón", "limon", "limones", "jugo de limón", "jugo de limon"],
+    "parmesano": ["parmesano", "queso parmesano"],
+    "pimientos": ["pimiento", "pimientos", "pimiento morrón", "pimientos morrones"],
+    "pimiento": ["pimiento", "pimientos", "pimiento morrón", "pimientos morrones"],
+    "cebolla": ["cebolla", "cebollas", "cebolla blanca", "cebolla morada"],
+    "cebollas": ["cebolla", "cebollas", "cebolla blanca", "cebolla morada"],
     "espárragos": ["espárrago", "esparrago", "espárragos", "esparragos"],
     "esparragos": ["espárrago", "esparrago", "espárragos", "esparragos"],
     "pitahaya": ["pitahaya", "pitaya"],
@@ -54,15 +69,25 @@ INGREDIENT_ALIASES = {
     "calabacitas": ["calabacita", "calabacitas", "calabaza", "zucchini"],
     "calabacita": ["calabacita", "calabacitas", "calabaza", "zucchini"],
     "zucchini": ["calabacita", "calabacitas", "calabaza", "zucchini"],
-    "rostizado": ["rostizado", "rostizada", "rostizar", "hornear", "horno", "horneado", "horneada"],
-    "rostizada": ["rostizado", "rostizada", "rostizar", "hornear", "horno", "horneado", "horneada"],
-    "moras": ["mora", "moras", "frambuesa", "frambuesas", "fruta", "frutas"],
-    "mora": ["mora", "moras", "frambuesa", "frambuesas", "fruta", "frutas"],
-    "frambuesa": ["frambuesa", "frambuesas", "mora", "moras"],
-    "frambuesas": ["frambuesa", "frambuesas", "mora", "moras"],
-    "arándanos": ["arándano", "arandano", "arándanos", "arandanos"],
-    "arandanos": ["arándano", "arandano", "arándanos", "arandanos"],
-    "jengibre": ["jengibre"],
+    "rostizado": ["rostizado", "rostizada", "rostizar", "hornear", "horno", "horneado", "horneada", "asar", "asado", "asadas", "plancha", "comal", "tratamientotermico", "alta temperatura"],
+    "rostizada": ["rostizado", "rostizada", "rostizar", "hornear", "horno", "horneado", "horneada", "asar", "asado", "asadas", "plancha", "comal", "tratamientotermico", "alta temperatura"],
+    "pochados": ["pochados", "pochado", "pochar", "huevo", "huevos", "benedictinos", "claras"],
+    "pochado": ["pochados", "pochado", "pochar", "huevo", "huevos", "benedictinos", "claras"],
+    "crujiente": ["crujiente", "crujientes", "dorado", "dorada", "tostado", "tostadas", "sellar", "sellado", "tocino", "alta temperatura"],
+    "moras": ["mora", "moras", "frambuesa", "frambuesas", "fruta", "frutas", "frutos rojos"],
+    "mora": ["mora", "moras", "frambuesa", "frambuesas", "fruta", "frutas", "frutos rojos"],
+    "frambuesa": ["frambuesa", "frambuesas", "mora", "moras", "frutos rojos"],
+    "frambuesas": ["frambuesa", "frambuesas", "mora", "moras", "frutos rojos"],
+    "arándanos": ["arándano", "arandano", "arándanos", "arandanos", "frutos rojos"],
+    "arandanos": ["arándano", "arandano", "arándanos", "arandanos", "frutos rojos"],
+    "durazno": ["durazno", "fruta"],
+    "coco": ["coco", "coco rallado"],
+    "jengibre": ["jengibre", "raíz", "raiz", "especias"],
+    "cúrcuma": ["cúrcuma", "curcuma", "especias"],
+    "curcuma": ["cúrcuma", "curcuma", "especias"],
+    "matcha": ["matcha", "té", "te"],
+    "33plus": ["33plus", "33 plus", "suplementación", "fórmula"],
+    "34plus": ["34plus", "34 plus", "suplementación", "fórmula"],
     "toronjil": ["toronjil"],
     "manzanilla": ["manzanilla"],
     "alcaparras": ["alcaparra", "alcaparras"],
@@ -78,9 +103,24 @@ INGREDIENT_ALIASES = {
     "manchego": ["manchego", "queso"],
     "chayotes": ["chayote", "chayotes"],
     "chayote": ["chayote", "chayotes"],
-    "aguacate": ["aguacate", "hass"],
-    "atún": ["atún", "atun"],
-    "atun": ["atún", "atun"]
+    "aguacate": ["aguacate", "hass", "guacamole"],
+    "atún": ["atún", "atun", "pescado"],
+    "atun": ["atún", "atun", "pescado"],
+    "machaca": ["machaca", "pavo desmenuzado"],
+    "salmón": ["salmón", "salmon", "pescado"],
+    "salmon": ["salmón", "salmon", "pescado"],
+    "pescado": ["pescado", "pescado blanco", "salmón", "atún"],
+    "res": ["res", "filete", "sirloin", "ribeye", "costilla", "carne molida", "carne", "punta", "mignon"],
+    "shakshuka": ["shakshuka", "huevos", "jitomate"],
+    "huevos": ["huevos", "huevo"],
+    "brócoli": ["brócoli", "brocoli"],
+    "brocoli": ["brócoli", "brocoli"],
+    "berenjena": ["berenjena", "berenjenas"],
+    "berenjenas": ["berenjena", "berenjenas"],
+    "mostaza": ["mostaza", "mostaza antigua"],
+    "pistaches": ["pistache", "pistaches", "pistacho", "pistachos"],
+    "pistache": ["pistache", "pistaches", "pistacho", "pistachos"],
+    "lomo": ["lomo", "pechuga", "pavo", "res", "filete"]
 }
 
 def strip_accents(text: str) -> str:
@@ -157,7 +197,8 @@ def validate_entity_coverage(recipe: TypedRecipeSchema) -> Tuple[bool, str]:
     # Validar que adjetivos de proceso estén documentados en steps
     for proc in process_reqs:
         root_proc = get_word_root(proc)
-        if root_proc not in all_steps_text:
+        proc_aliases = INGREDIENT_ALIASES.get(proc.lower(), [proc.lower(), root_proc])
+        if not any(strip_accents(alias) in all_steps_text for alias in proc_aliases):
             return False, f"Los pasos omiten la técnica procesal indicada en el título: '{proc}'"
 
     return True, "OK"
@@ -215,10 +256,10 @@ def validate_bom_usage_in_steps(recipe: TypedRecipeSchema) -> Tuple[bool, str]:
 
     return True, "OK"
 
-def validate_recipe_compliance(recipe: TypedRecipeSchema, forbidden_harvest: list = None) -> Tuple[bool, str]:
+def validate_recipe_compliance(recipe: TypedRecipeSchema, forbidden_harvest: list = None, meal_type: str = None, course_role: str = None) -> Tuple[bool, str]:
     """
-    Valida la receta generada contra la Directiva Sistémica Vinculante, Gobernanza Agronómica
-    y Cobertura Bidireccional de Entidades.
+    Valida la receta generada contra la Directiva Sistémica Vinculante, Gobernanza Agronómica,
+    Gobernanza Circadiana y Cobertura Bidireccional de Entidades.
     Retorna (True, "OK") si cumple con todos los criterios o (False, motivo) si debe ser rechazada.
     """
     if not recipe or not (recipe.title or recipe.name):
@@ -304,4 +345,214 @@ def validate_recipe_compliance(recipe: TypedRecipeSchema, forbidden_harvest: lis
     if matches >= 2:
         return False, "Secuencia de pasos detectada como plantilla genérica vaga."
 
+    # 7. CANDADO 2 SSOT V28.0.0: ASERCIONES NEGATIVAS ESTRICTAS ANTI-ABSURDOS
+    step1_text = (recipe.steps[0].action_description if hasattr(recipe.steps[0], "action_description") else str(recipe.steps[0])).lower() if recipe.steps else ""
+    
+    # 7.1. Prohibición de higienizar o atemperar insumos ya cocinados en Paso 1
+    clean_verbs = ["higienizar", "lavar", "desinfectar", "atemperar"]
+    forbidden_cooked_states = ["pochado", "pochados", "crujiente", "dorado", "dorada", "gratinado", "gratinada", "salteado", "salteada", "horneado", "horneada"]
+    if any(v in step1_text for v in clean_verbs):
+        for state in forbidden_cooked_states:
+            if re.search(r'\b' + state + r'\b', step1_text):
+                return False, f"Aberración procedimental SSOT V28.0.0: El Paso 1 intenta higienizar/atemperar insumos ya cocinados ('{state}')."
+
+    # 7.2. Prohibición de 'o vegetales' en caldos o consomés cárnicos puros
+    is_pure_meat_broth = ("consomé" in title_lower or "consome" in title_lower or "caldo" in title_lower) and not any(v in title_lower for v in ["nopales", "hortalizas", "verduras", "chayote"])
+    if is_pure_meat_broth:
+        if "o vegetales" in steps_combined or "cortes proteicos o vegetales" in steps_combined:
+            return False, "Aberración procedimental SSOT V28.0.0: Mención de 'o vegetales' en consomé de res pura sin vegetales en BOM."
+
+    # 7.3. Prohibición de 'semillas', 'desvenar' o 'ahuecar pulpa' en proteínas animales
+    has_explicit_seeds = any(s in title_lower for s in ["semilla", "semillas", "sesamo", "sésamo", "chia", "chía", "girasol"])
+    meat_words = ["pollo", "pechuga", "res", "sirloin", "ribeye", "filete", "pescado", "salmón", "salmon", "pavo", "atún", "atun"]
+    is_meat_main = any(re.search(r'\b' + m + r'\b', title_lower) for m in meat_words) and not any(v in title_lower for v in ["pimientos", "pimiento", "champiñones", "portobello", "calabacitas", "zucchini"])
+    
+    if is_meat_main:
+        for bad_seed in ["desvenar", "ahuecar pulpa"]:
+            if re.search(r'\b' + bad_seed + r'\b', steps_combined):
+                return False, f"Aberración anatómica SSOT V28.0.0: Mención de '{bad_seed}' en una preparación de proteína animal."
+        if not has_explicit_seeds:
+            if re.search(r'\bsemillas\b', steps_combined):
+                return False, "Aberración anatómica SSOT V28.0.0: Mención de 'semillas' en una preparación de proteína animal sin semillas en BOM."
+
+    # 7.4. SSOT V30.0.0: Prohibición de 'membranas albugíneas' fuera de Granada y Cítricos (rutáceas)
+    if "albugíneas" in steps_combined or "albugineas" in steps_combined:
+        if not any(c in title_lower for c in ["granada", "arilos", "limón", "limon", "naranja", "toronja", "mandarina"]):
+            return False, "Aberración botánica SSOT V30.0.0: Mención de 'membranas albugíneas' en frutos que no son granada ni cítricos (rutáceas)."
+
+    # 7.5. SSOT V29.0.0: Prohibición de 'colágeno' / 'tuétano' en Caldos Vegetales
+    if is_pure_meat_broth is False and ("consomé" in title_lower or "caldo" in title_lower):
+        if "nopales" in title_lower or "hortalizas" in title_lower:
+            for bad_meat_word in ["colágeno", "colageno", "tuétano", "tuetano", "coq10"]:
+                if bad_meat_word in steps_combined or bad_meat_word in (recipe.sensory_description or "").lower():
+                    return False, f"Aberración bioquímica SSOT V29.0.0: Mención de '{bad_meat_word}' en un caldo vegetal puro."
+
+    # 7.6. SSOT V29.0.0: Prohibición de discordancias gramaticales ('sazonada' con sustantivos masculinos)
+    masculine_dishes = ["pepino", "apio", "aguacate", "zucchini", "ceviche", "tartar", "salpicón", "salpicon"]
+    if any(m in title_lower for m in masculine_dishes) and not ("ensalada" in title_lower):
+        if "sazonada" in steps_combined:
+            return False, "Aberración morfosintáctica SSOT V29.0.0: Uso de participio femenino 'sazonada' para insumos o platillos masculinos."
+
+    # 7.7. SSOT V31.0.0: Prohibición de Pollo Crudo en Ensaladas / Seguridad Alimentaria
+    if ("pollo" in title_lower or "pechuga" in title_lower) and ("ensalada" in title_lower or "césar" in title_lower or "cesar" in title_lower):
+        if not any(cook_word in steps_combined for cook_word in ["sellar", "dorar", "cocinar", "asar", "hornear"]):
+            return False, "Riesgo Sanitario SSOT V31.0.0: Servir pollo crudo marinado en ensalada sin paso térmico de cocción."
+
+    # 7.8. SSOT V31.0.0: Prohibición de Artefacto Tipográfico 'GB'
+    if "GB " in steps_combined or "GB " in str(recipe.ingredient_groups):
+        return False, "Artefacto de texto SSOT V31.0.0: Presencia del prefijo roto 'GB' en la receta."
+
+    # 7.9. SSOT V31.0.0: Prohibición de 'pedúnculo' en Pitahaya
+    if "pitahaya" in title_lower or "pitaya" in title_lower:
+        if "pedúnculo" in steps_combined or "pedunculo" in steps_combined:
+            return False, "Aberración botánica SSOT V31.0.0: Mención de 'pedúnculo' en la pitahaya."
+
+    # 7.10. SSOT V31.1.0: Prohibición de 'desgranar' en frutos que no sean granada
+    if "desgranar" in steps_combined:
+        if not ("granada" in title_lower or "arilos" in title_lower):
+            return False, "Aberración botánica SSOT V31.1.0: Mención de 'desgranar' en frutos que no son granada."
+
+    # 7.11. SSOT V31.2.0: Prohibición de insumo fantasma mantequilla en Ensalada César
+    if "césar" in title_lower or "cesar" in title_lower:
+        if "mantequilla" in steps_combined:
+            return False, "Insumo fantasma SSOT V31.2.0: Mención de 'mantequilla' en Ensalada César sin declarar en BOM."
+
+    # 7.13. SSOT V35.0.0: Prohibición de cocción cárnica en bebidas / elixires
+    is_beverage = any(re.search(r'\b' + b + r'\b', title_lower) for b in ["té", "te", "infusión", "infusion", "elixir", "smoothie", "tisana"]) or recipe.cooking_technique in [CulinaryTechniqueEnum.STEEP_BEVERAGE, "functional_elixir"]
+    if is_beverage:
+        forbidden_meat_steps = ["sellar", "maillard", "tabla de corte", "secar con papel", "fuego alto", "trinchar", "rallar queso"]
+        for bad_step in forbidden_meat_steps:
+            if bad_step in steps_combined:
+                return False, f"Aberración procedimental SSOT V35.0.0: Mención de '{bad_step}' en una bebida o elixir."
+
+    # 7.14. SSOT V35.0.0: Regla termodinámica (servicio de bebidas heladas/frías)
+    is_cold_beverage = any(c in title_lower for c in ["helado", "helada", "frío", "fría", "macerado", "macerada"]) and is_beverage
+    if is_cold_beverage:
+        if "65°c" in steps_combined or "bien caliente" in steps_combined or "taza de cerámica" in steps_combined:
+            return False, "Aberración termodinámica SSOT V35.0.0: Servicio a 65°C en bebida helada o fría."
+
+    # 7.15. SSOT V36.1.0: Candado de Oro - Paridad 1:1, Bom Limpio y Protección Térmica
+    has_33_title = "33plus" in title_lower or "33 plus" in title_lower
+    has_34_title = "34plus" in title_lower or "34 plus" in title_lower
+
+    bom_items = []
+    for group in (recipe.ingredient_groups or []):
+        items = group.items if hasattr(group, 'items') else (group.get('items', []) if isinstance(group, dict) else [])
+        for item in items:
+            item_name = item.name if hasattr(item, 'name') else (item.get('name', '') if isinstance(item, dict) else str(item))
+            item_lower = item_name.lower()
+            bom_items.append(item_lower)
+            if "/" in item_lower and not ("/" in title_lower):
+                return False, f"RECETA RECHAZADA SSOT V36.1.0: Ítem en BOM '{item_name}' contiene barra disyuntiva '/'."
+            if any(umb in item_lower for umb in ["hierbas botánicas de la granja", "especias bioactivas", "insumos mixtos"]):
+                return False, f"RECETA RECHAZADA SSOT V36.1.0: Ítem en BOM '{item_name}' es un nombre paraguas genérico."
+
+    steps_text = " ".join(recipe.steps).lower() if recipe.steps else ""
+
+    if has_33_title:
+        if not any("33plus" in item or "33 plus" in item for item in bom_items):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: '{recipe.title}' promete 33Plus pero no existe en el BOM."
+        if not ("33plus" in steps_text or "33 plus" in steps_text):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: '{recipe.title}' no menciona ni disuelve el 33Plus en los pasos."
+        if any(phrase in steps_text for phrase in ["colar el 33plus", "filtrar la fórmula 33plus", "tamizar el 33plus", "colar la fórmula 33plus"]):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: '{recipe.title}' comete el absurdo de filtrar el polvo 33Plus en el tamiz."
+
+    if has_34_title:
+        if not any("34plus" in item or "34 plus" in item for item in bom_items):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: '{recipe.title}' promete 34Plus pero no existe en el BOM."
+        if not ("34plus" in steps_text or "34 plus" in steps_text):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: '{recipe.title}' no menciona ni disuelve el 34Plus en los pasos."
+        if any(phrase in steps_text for phrase in ["colar el 34plus", "filtrar la fórmula 34plus", "tamizar el 34plus", "colar la fórmula 34plus"]):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: '{recipe.title}' comete el absurdo de filtrar el polvo 34Plus en el tamiz."
+
+    # 7.16. SSOT V36.1.0: Gestión Térmica en Gelatinas (Protocolo B)
+    if "gelatina" in title_lower and (has_33_title or has_34_title):
+        if any(bad in steps_text for bad in ["hervir la fórmula", "hervir 33plus", "hervir 34plus"]):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: Gelatina '{recipe.title}' somete la fórmula a ebullición destructiva."
+
+    # 7.17. SSOT V36.1.0: Gobernanza Circadiana Estricta (33Plus solo en Desayunos, 34Plus solo en Cenas)
+    is_desayuno = meal_type == "Desayuno" or "desayuno" in title_lower
+    is_cena = meal_type == "Cena" or "cena" in title_lower or "nocturna" in title_lower
+    
+    if is_desayuno:
+        if has_34_title or any("34plus" in b or "34 plus" in b for b in bom_items):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: Aberración circadiana. '{recipe.title}' contiene 34Plus en Desayuno (reservado exclusivamente para Cenas)."
+    if is_cena:
+        if has_33_title or any("33plus" in b or "33 plus" in b for b in bom_items):
+            return False, f"RECETA RECHAZADA SSOT V36.1.0: Aberración circadiana. '{recipe.title}' contiene 33Plus en Cena (reservado exclusivamente para Desayunos)."
+
+    # 7.18. SSOT V36.2.0: Gobernanza Digestiva Nocturna y Protección de Proteína Limpia en Cenas
+    if is_cena and (course_role in ["main", "Plato Principal"] or "principal" in title_lower or any(m in title_lower for m in ["sirloin", "ribeye", "mignon", "costilla", "chambarete", "bife"])):
+        forbidden_red_meats = ["res", "sirloin", "ribeye", "mignon", "costilla", "chambarete", "bife"]
+        for red in forbidden_red_meats:
+            if re.search(r'\b' + red + r'\b', title_lower):
+                return False, f"RECETA RECHAZADA SSOT V36.2.0: Aberración digestiva nocturna. Cena principal '{recipe.title}' contiene carne roja pesada ('{red}')."
+
+        forbidden_cena_mains = ["portobello", "coliflor", "sopa", "consomé", "consome", "crema", "caldo"]
+        for bad_main in forbidden_cena_mains:
+            if re.search(r'\b' + bad_main + r'\b', title_lower):
+                return False, f"RECETA RECHAZADA SSOT V36.2.0: Brecha en Cena. El Plato Principal '{recipe.title}' no puede ser vegetal, hongo ni sopa/crema/caldo ('{bad_main}'). Debe ser una porción sólida de proteína animal limpia (aves o pescados/mariscos)."
+
     return True, "OK"
+
+
+GENERIC_DISH_STOPWORDS = {
+    "de", "la", "el", "los", "las", "con", "y", "en", "al", "a", "del", "para", "por", "un", "una",
+    "fresco", "fresca", "frescos", "frescas", "granja", "herami", "33plus", "34plus", "33", "34", "plus",
+    "artesanal", "orgánico", "orgánica", "orgánicos", "orgánicas", "viva", "vivos", "puro", "pura",
+    "rústico", "rústica", "gourmet", "suave", "suaves", "estilo", "supremo", "seleccionado", "seleccionada"
+}
+
+
+def calculate_token_similarity(text1: str, text2: str) -> float:
+    """Calcula similitud Jaccard de tokens significativos entre dos títulos de platillos."""
+    t1 = set(w.lower() for w in re.findall(r'\w+', strip_accents(text1)) if w.lower() not in GENERIC_DISH_STOPWORDS and len(w) > 2)
+    t2 = set(w.lower() for w in re.findall(r'\w+', strip_accents(text2)) if w.lower() not in GENERIC_DISH_STOPWORDS and len(w) > 2)
+    if not t1 or not t2:
+        return 0.0
+    intersection = t1.intersection(t2)
+    union = t1.union(t2)
+    return len(intersection) / len(union)
+
+
+def validate_consecutive_day_rotations(plan_days: list) -> Tuple[bool, str]:
+    """
+    Validación de ventana deslizante Día(N) vs Día(N-1) SSOT V36.2.0.
+    Rechaza si platillos principales o acompañamientos de días contiguos superan el 80% de similitud.
+    """
+    for i in range(1, len(plan_days)):
+        prev_day = plan_days[i-1]
+        curr_day = plan_days[i]
+        
+        prev_meals = prev_day.get("meals", []) if isinstance(prev_day, dict) else getattr(prev_day, "meals", [])
+        curr_meals = curr_day.get("meals", []) if isinstance(curr_day, dict) else getattr(curr_day, "meals", [])
+        
+        for p_meal in prev_meals:
+            p_mtype = p_meal.get("meal_type")
+            p_main = p_meal.get("main_dish_name", "")
+            p_side = p_meal.get("side_dish_name", "")
+            
+            for c_meal in curr_meals:
+                c_mtype = c_meal.get("meal_type")
+                if p_mtype == c_mtype:
+                    c_main = c_meal.get("main_dish_name", "")
+                    c_side = c_meal.get("side_dish_name", "")
+                    
+                    if p_main and c_main:
+                        sim_main = calculate_token_similarity(p_main, c_main)
+                        if sim_main > 0.8:
+                            return False, f"ABERRACIÓN DE ROTACIÓN SSOT V36.2.0: Plato Principal en {c_mtype} del {curr_day.get('day')} ('{c_main}') supera 80% de similitud con el día previo ({prev_day.get('day')}: '{p_main}')."
+                    
+                    if p_side and c_side:
+                        sim_side = calculate_token_similarity(p_side, c_side)
+                        if sim_side > 0.8:
+                            return False, f"ABERRACIÓN DE ROTACIÓN SSOT V36.2.0: Acompañamiento en {c_mtype} del {curr_day.get('day')} ('{c_side}') supera 80% de similitud con el día previo ({prev_day.get('day')}: '{p_side}')."
+    return True, "OK"
+
+
+
+
+
+
+
+

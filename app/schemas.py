@@ -6,6 +6,13 @@ class Ingredient(BaseModel):
     name: str = Field(..., description="Nombre del ingrediente")
     quantity: float = Field(..., description="Cantidad requerida", ge=0)
     unit: str = Field(..., description="Unidad de medida (ej. g, ml, pza, cda)")
+    canonical_id: Optional[str] = Field(default=None, description="Identificador canónico único")
+    display_name: Optional[str] = Field(default=None, description="Nombre de despliegue en receta")
+    net_qty_person: Optional[float] = Field(default=None, description="Cantidad neta por persona")
+    physical_state: Optional[str] = Field(default="solid", description="Estado físico: solid | liquid | unit")
+    category: Optional[str] = Field(default=None, description="Categoría de taxonomía estricta")
+    protein_family: Optional[str] = Field(default=None, description="Familia de proteína: poultry | bovine | fish | pork | none")
+
 
 class RecipeStep(BaseModel):
     step_number: int = Field(..., description="Número de paso (1, 2, 3...)")
@@ -373,6 +380,12 @@ class CulinaryTechniqueEnum(str, Enum):
     SAUTE_AND_SEAR = "saute_and_sear"      # Proteínas sólidas, filetes
     STEEP_BEVERAGE = "steep_beverage"      # Tés, tisanas e infusiones
     GELATIN_MOLDING = "gelatin_molding"    # Gelatinas y mousses
+    GRILL_SEAR = "grill_sear"              # Asados a la plancha / comal
+    STEAM_COOK = "steam_cook"              # Cocción al vapor
+    PAN_ROAST = "pan_roast"                # Salteado y asado en sartén
+    STEAMING = "steaming"                  # Cocción al vapor
+    FUNCTIONAL_ELIXIR = "functional_elixir" # Elixires funcionales
+    MARINATE_RAW = "marinate_raw"          # Marinados fríos / ceviches
 
 class IngredientItemSchema(BaseModel):
     name: str

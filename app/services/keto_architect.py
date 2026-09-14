@@ -84,9 +84,14 @@ def compile_dynamic_prep_phases(dish_name: str, approved_ingredients: List[Ingre
 def resolve_technique(dish_name: str, category: str = "") -> str:
     name = (dish_name or "").lower()
     
+    # 0. Elixires y Bebidas Funcionales
+    if any(k in name for k in ["elixir", "smoothie", "matcha", "33plus", "34plus"]):
+        return "functional_elixir"
+
     # 1. Bebidas / Infusiones reales
     if any(k in name for k in ["infusión", "infusion", "té ", "te ", "tisana", "café", "cafe"]):
         return "steep_beverage"
+
     
     # 2. Cremas y Sopas
     if any(k in name for k in ["crema", "sopa", "caldo", "consomé", "consome"]):
@@ -128,7 +133,20 @@ def build_dynamic_prep_phases(dish_name: str, diners: int) -> DynamicPrepPhases:
 
     tech = resolve_technique(dish_name)
 
+    # 0. Elixires y Bebidas Funcionales (functional_elixir / steep_beverage)
+    if tech in ["functional_elixir", "steep_beverage"] or any(k in d for k in ["elixir", "smoothie", "matcha", "33plus", "34plus", "té", "te", "infusión", "infusion"]):
+        is_cold = any(c in d for c in ["helado", "helada", "frío", "fría", "macerado", "macerada"])
+        temp_str = "fresco a 4°C-6°C en vaso de cristal con hielos minerales" if is_cold else "caliente a 65°C en taza de cerámica artesanal"
+        sup_name = "Fórmula Nootrópica 33Plus" if ("33plus" in d or "33 plus" in d) else "Fórmula Reparadora 34Plus"
+
+        f1 = f"Fase 1 (Mise en Place y Gramajes): Base líquida purificada ({round(250 * factor)} ml por comensal), {sup_name} ({round(6.0 * n)} g total), especias activas (cúrcuma, canela o menta), grasa saludable (aceite de coco MCT 5 ml)."
+        f2 = f"Fase 2 (Acondicionamiento y Emulsión): Disolver el polvo bioactivo de {sup_name} y las especias en la base líquida entibiada a 50°C-60°C para activar los fitonutrientes."
+        f3 = f"Fase 3 (Emulsión Térmica): Emulsionar con espumador o batidor de mano a baja velocidad durante 60 segundos hasta lograr textura sedosa homogénea."
+        f4 = f"Fase 4 (Servicio Gourmet): Servir {temp_str}."
+        return DynamicPrepPhases(fase_1_mise_en_place=f1, fase_2_acondicionamiento=f2, fase_3_termodinamica=f3, fase_4_servicio=f4)
+
     # 1. Granada Fresca con Semillas de Chía y Nueces Pecana
+
     if "granada fresca con semillas" in d or ("granada" in d and "chía" in d):
         f1 = f"Fase 1 (Mise en Place y Gramajes): Arilos de granada fresca limpia ({round(300 * factor)} g), Nueces pecana troceadas ({round(120 * factor)} g), Semillas de chía ({round(60 * factor)} g), Leche de almendra sin azúcar o yogur natural ({round(360 * factor)} ml), Canela en polvo (1 pizca), Miel pura de la granja (≤ 5 g por comensal)."
         f2 = f"Fase 2 (Hidratación y Tostado): En tazón mediano, mezclar las semillas de chía con la leche o yogur y la canela. Dejar reposar 10-15 min en refrigeración (4°C) hasta formar gel ligero. Tostar ligeramente las nueces pecana en sartén seca a fuego medio-bajo por 2-3 min para liberar aceites aromáticos; retirar y picar toscamente."
@@ -1009,9 +1027,9 @@ class KetoAIArchitect:
                     }
                 ],
                 "meals": [
-                    ("Desayuno", f"{diners_count} Personas", "Pitahaya Fresca con Queso Cottage", "Quesadillas Keto en Crosta de Queso Gouda y Jamón de Pavo", "Café de Grano Recién Molido", 26.0, 22.0, 3.5, [("Queso Gouda", 60*diners_count, "g"), ("Jamón de pavo", 40*diners_count, "g"), ("Queso cottage", 50*diners_count, "g"), ("Café de grano / molido", 1*diners_count, "taza")]),
+                    ("Desayuno", f"{diners_count} Personas", "Pitahaya Fresca con Queso Cottage", "Quesadillas Keto en Crosta de Queso Gouda y Jamón de Pavo", "Infusión Herbolaria Botánica de la Granja", 26.0, 22.0, 3.5, [("Queso Gouda", 60*diners_count, "g"), ("Jamón de pavo", 40*diners_count, "g"), ("Queso cottage", 50*diners_count, "g"), ("Té Verde Orgánico de la Granja", 1*diners_count, "taza")]),
                     ("Comida", f"{diners_count} Personas en el servicio principal", "Calabacitas Asadas al Queso Parmesano", "Albóndigas de Res Rellenas de Huevo Cocido en Salsa Keto", "Gelatina Casera de Jamaica y Canela Sin Azúcar", 34.0, 36.0, 3.5, [("Carne molida de sirloin", 150*diners_count, "g"), ("Huevos enteros cocidos", 1*diners_count, "pza"), ("Jitomate Bola / Saladette", 80*diners_count, "g")]),
-                    ("Cena", f"{diners_count} Personas", "Pico de Gallo Suave (Sin Chile)", "Parrillada de Agujas Norteñas y Carne para Asar al Comal", "Mousse Keto de Frutos Rojos y Crema", 38.0, 40.0, 3.2, [("Carne para asar / Agujas norteñas", 180*diners_count, "g"), ("Nopales tiernos", 2*diners_count, "pza"), ("Jitomate Bola / Saladette", 40*diners_count, "g")])
+                    ("Cena", f"{diners_count} Personas", "Pico de Gallo Suave (Sin Chile)", "Filete Mignon de Res a la Parrilla con Mantequilla de Hierbas", "Mousse Keto de Frutos Rojos y Crema", 38.0, 40.0, 3.2, [("Filete de res magro", 180*diners_count, "g"), ("Nopales tiernos", 2*diners_count, "pza"), ("Jitomate Bola / Saladette", 40*diners_count, "g")])
                 ]
             },
 
@@ -1104,7 +1122,7 @@ class KetoAIArchitect:
                     }
                 ],
                 "meals": [
-                    ("Desayuno", f"{diners_count} Personas", "Fresas Frescas de la Cosecha con Queso Cottage", "Omelette de Huevo de Granja con Jamón de Pavo y Queso Gouda", "Café de Grano Recién Molido", 22.0, 24.0, 3.2, [("Huevos enteros", 3*diners_count, "pza"), ("Queso Gouda", 50*diners_count, "g"), ("Jamón de pavo", 40*diners_count, "g")]),
+                    ("Desayuno", f"{diners_count} Personas", "Fresas Frescas de la Cosecha con Queso Cottage", "Omelette de Huevo de Granja con Jamón de Pavo y Queso Gouda", "Infusión Herbolaria Botánica de la Granja", 22.0, 24.0, 3.2, [("Huevos enteros", 3*diners_count, "pza"), ("Queso Gouda", 50*diners_count, "g"), ("Jamón de pavo", 40*diners_count, "g")]),
                     ("Comida", f"{diners_count} Personas en el servicio principal", "Ensalada de Hojas Verdes Mixtas con Aceite de Oliva", "Filete de Pescado Blanco al Vapor con Mantequilla de Ajo y Cilantro", "Puré de Coliflor con Queso Parmesano", 36.0, 38.0, 3.5, [("Filete de Pescado Blanco", 180*diners_count, "g"), ("Coliflor fresca", 150*diners_count, "g"), ("Mantequilla de vaca (sin sal)", 20*diners_count, "g")]),
                     ("Cena", f"{diners_count} Personas", "Pico de Gallo Suave (Sin Chile)", "Chicharrón de Queso Gouda al Comal", "Mousse Keto de Frutos Rojos y Crema", 24.0, 28.0, 2.5, [("Queso Gouda", 80*diners_count, "g"), ("Crema para batir sin azúcar", 40*diners_count, "g"), ("Fresas frescas", 30*diners_count, "g")])
                 ]
@@ -1431,14 +1449,14 @@ def generate_validated_typed_recipe(dish_name: str, course_type: str = "starter"
                 IngredientGroupSchema(
                     category="🥑 Frutos Secos y Fibra Cetogénica",
                     items=[
-                        IngredientItemSchema(name="Nuez de Castilla troceada / Almendras tostadas", base_qty_per_person=15.0, unit="g", source="Granja El Herami", unit_cost=0.0),
+                        IngredientItemSchema(name="Nuez de Castilla troceada", base_qty_per_person=15.0, unit="g", source="Granja El Herami", unit_cost=0.0),
                         IngredientItemSchema(name="Semillas de chía orgánicas", base_qty_per_person=5.0, unit="g", source="Granja El Herami", unit_cost=0.0)
                     ]
                 ),
                 IngredientGroupSchema(
                     category="🥛 Base Cremosa y Aromáticos",
                     items=[
-                        IngredientItemSchema(name="Yogur griego natural sin azúcar / Crema de coco", base_qty_per_person=30.0, unit="g", source="Mercado", unit_cost=5.0),
+                        IngredientItemSchema(name="Yogur griego natural sin azúcar", base_qty_per_person=30.0, unit="g", source="Mercado", unit_cost=5.0),
                         IngredientItemSchema(name="Hojas de menta fresca y pizca de canela", base_qty_per_person=2.0, unit="g", source="Granja El Herami", unit_cost=0.0)
                     ]
                 )
@@ -1475,7 +1493,7 @@ def generate_validated_typed_recipe(dish_name: str, course_type: str = "starter"
                 IngredientGroupSchema(
                     category="🧈 Grasas Saludables y Sazón",
                     items=[
-                        IngredientItemSchema(name="Mantequilla de pastoreo / Aceite VEVO", base_qty_per_person=10.0, unit="g", source="Granja El Herami", unit_cost=0.0),
+                        IngredientItemSchema(name="Mantequilla de pastoreo", base_qty_per_person=10.0, unit="g", source="Granja El Herami", unit_cost=0.0),
                         IngredientItemSchema(name="Sal de mar, tomillo y ajo rostizado", base_qty_per_person=2.0, unit="g", source="Granja El Herami", unit_cost=0.0)
                     ]
                 )

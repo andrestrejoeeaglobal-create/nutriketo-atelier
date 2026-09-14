@@ -1,0 +1,254 @@
+{
+  "week_name": "Semana 38",
+  "week_label": "Semana 38 (13 al 19 de Septiembre de 2026)",
+  "week_start": "2026-09-13",
+  "date_range": "13 al 19 de Septiembre de 2026",
+  "diners_count": 6,
+  "days": [
+    {
+      "day": "Domingo",
+      "date_str": "13 Sep",
+      "day_num": "13",
+      "full_date_title": "Menú Completo para el Domingo 13 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía",
+          "main_dish_name": "Frittata Gourmet de Huevos Orgánicos con Queso Manchego y Espinacas Baby",
+          "side_dish_name": "Gelatina Artesanal de Granada Viva con 33Plus",
+          "fat_g": 28.5,
+          "protein_g": 24.0,
+          "net_carbs_g": 3.2
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Sopa Suave de Calabacitas al Queso Parmesano y Cilantro Fresco",
+          "main_dish_name": "Lomo de Res a la Parrilla con Mantequilla de Tomillo y Ajo Rostizado",
+          "side_dish_name": "Espárragos Verdes al Horno con Sal Marina y Limón",
+          "fat_g": 38.5,
+          "protein_g": 42.5,
+          "net_carbs_g": 3.6
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Abanico de Aguacate Hass con Sal de Mar Mineral y Aceite de Oliva Extra Virgen",
+          "main_dish_name": "Filete de Huachinango al Horno con Finas Hierbas y Aceite de Oliva Extra Virgen",
+          "side_dish_name": "Tisana Nocturna de Toronjil y Manzanilla con 34Plus",
+          "fat_g": 24.5,
+          "protein_g": 32.5,
+          "net_carbs_g": 2.4
+        }
+      ]
+    },
+    {
+      "day": "Lunes",
+      "date_str": "14 Sep",
+      "day_num": "14",
+      "full_date_title": "Menú Completo para el Lunes 14 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Fresas Frescas de la Granja con Nueces de Castilla y Semillas de Chía",
+          "main_dish_name": "Shakshuka Keto de Huevos Orgánicos en Salsa de Jitomate Rostizado, Ajo y Comino",
+          "side_dish_name": "Elixir Nootrópico de Matcha y Menta con 33Plus",
+          "fat_g": 29.0,
+          "protein_g": 23.5,
+          "net_carbs_g": 3.3
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema Rústica de Flor de Calabaza y Queso de Cabra al Ajo",
+          "main_dish_name": "Medallones de Mignon de Res a la Sartén en Salsa de Pimienta",
+          "side_dish_name": "Nopales Tiernos Asados al Orégano y Aceite de Oliva Extra Virgen",
+          "fat_g": 37.0,
+          "protein_g": 41.5,
+          "net_carbs_g": 3.5
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones Crujientes de Zucchini y Pepino al Limón",
+          "main_dish_name": "Pechuga de Pollo al Sartén con Costra de Semillas de Sésamo y Parmesano",
+          "side_dish_name": "Tisana Relajante de Toronjil y Flor de Azahar con 34Plus",
+          "fat_g": 23.0,
+          "protein_g": 32.0,
+          "net_carbs_g": 2.5
+        }
+      ]
+    },
+    {
+      "day": "Martes",
+      "date_str": "15 Sep",
+      "day_num": "15",
+      "full_date_title": "Menú Completo para el Martes 15 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Pitahaya Fresca de la Granja con Semillas de Chía y Coco Rallado",
+          "main_dish_name": "Omelette Rústico de Queso Gouda Maduro y Champiñones al Sartén",
+          "side_dish_name": "Smoothie Ceto-Nootrópico de Coco y Almendra con 33Plus",
+          "fat_g": 28.0,
+          "protein_g": 23.0,
+          "net_carbs_g": 3.1
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen",
+          "main_dish_name": "Filete de Salmón al Sartén en Salsa de Mantequilla y Eneldo",
+          "side_dish_name": "Espárragos Verdes Asados con Limón y Sal Marina",
+          "fat_g": 38.0,
+          "protein_g": 40.0,
+          "net_carbs_g": 3.7
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Ensalada de Arúgula y Espinaca Baby con Aceite de Oliva Extra Virgen",
+          "main_dish_name": "Brochetas de Pechuga de Pollo con Pimientos y Cebolla Morada al Comal",
+          "side_dish_name": "Tisana Digestiva de Menta y Limón con 34Plus",
+          "fat_g": 24.0,
+          "protein_g": 32.0,
+          "net_carbs_g": 2.5
+        }
+      ]
+    },
+    {
+      "day": "Miércoles",
+      "date_str": "16 Sep",
+      "day_num": "16",
+      "full_date_title": "Menú Completo para el Miércoles 16 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Arilos de Granada Fresca con Nueces Pecana y Semillas de Girasol",
+          "main_dish_name": "Muffins Salados de Huevo, Pechuga de Pavo y Espinacas",
+          "side_dish_name": "Té Verde Nootrópico al Limón con 33Plus",
+          "fat_g": 28.5,
+          "protein_g": 24.0,
+          "net_carbs_g": 3.2
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema Ligera de Coliflor Rostizada y Queso Cheddar",
+          "main_dish_name": "Puntas de Filete de Res a la Parrilla con Mantequilla de Romero",
+          "side_dish_name": "Zoodles de Calabacita a la Mantequilla y Salvia",
+          "fat_g": 38.5,
+          "protein_g": 42.0,
+          "net_carbs_g": 3.8
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones Crujientes de Pepino Criollo al Limón con Sal de Mar",
+          "main_dish_name": "Fajitas de Pechuga de Pavo Salteadas con Pimientos y Cebolla",
+          "side_dish_name": "Gelatina Artesanal de Té Blanco y Frambuesa Viva con 34Plus",
+          "fat_g": 22.5,
+          "protein_g": 31.5,
+          "net_carbs_g": 2.3
+        }
+      ]
+    },
+    {
+      "day": "Jueves",
+      "date_str": "17 Sep",
+      "day_num": "17",
+      "full_date_title": "Menú Completo para el Jueves 17 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Frambuesas Orgánicas de la Granja con Almendras Tostadas y Chía",
+          "main_dish_name": "Huevos Benedictinos Keto Pochados sobre Tocino de Pavo Crujiente con Salsa Holandesa Casera",
+          "side_dish_name": "Elixir Dorado Nootrópico de Cúrcuma, Canela y MCT con 33Plus",
+          "fat_g": 30.0,
+          "protein_g": 24.0,
+          "net_carbs_g": 3.3
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema Suave de Espárragos Verdes al Ajo Rostizado",
+          "main_dish_name": "Medallones de Pechuga de Pavo al Sartén con Mostaza Antigua y Romero",
+          "side_dish_name": "Coliflor Rostizada al Comal con Sal Marina y Aceite de Oliva Extra Virgen",
+          "fat_g": 37.0,
+          "protein_g": 41.0,
+          "net_carbs_g": 3.6
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones Crujientes de Pepino al Limón con Sal Mineral",
+          "main_dish_name": "Filete de Róbalo a la Plancha con Alcaparras y Aceite de Oliva Extra Virgen",
+          "side_dish_name": "Infusión Relajante de Flor de Jamaica y Canela con 34Plus",
+          "fat_g": 22.0,
+          "protein_g": 30.5,
+          "net_carbs_g": 2.2
+        }
+      ]
+    },
+    {
+      "day": "Viernes",
+      "date_str": "18 Sep",
+      "day_num": "18",
+      "full_date_title": "Menú Completo para el Viernes 18 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Arándanos Frescos de Cosecha con Nueces de Castilla y Chía",
+          "main_dish_name": "Huevos Revueltos Gourmet con Machaca de Pavo y Queso Panela",
+          "side_dish_name": "Té Verde Helado Nootrópico con Menta Fresca y 33Plus",
+          "fat_g": 27.5,
+          "protein_g": 23.5,
+          "net_carbs_g": 3.0
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema Caliente de Champiñones al Parmesano",
+          "main_dish_name": "Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado",
+          "side_dish_name": "Chayotes Tiernos al Vapor con Mantequilla Clarificada y Sal Marina",
+          "fat_g": 39.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 3.7
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Ensalada de Espinacas Baby y Aguacate Hass al Limón",
+          "main_dish_name": "Pechuga de Pavo Artesanal al Romero con Espárragos Salteados",
+          "side_dish_name": "Infusión de Té Blanco Helado Digestivo con 34Plus",
+          "fat_g": 23.5,
+          "protein_g": 32.0,
+          "net_carbs_g": 2.4
+        }
+      ]
+    },
+    {
+      "day": "Sábado",
+      "date_str": "19 Sep",
+      "day_num": "19",
+      "full_date_title": "Menú Completo para el Sábado 19 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Higos Frescos de la Granja con Nueces Pecana y Semillas de Girasol",
+          "main_dish_name": "Huevos Nube al Horno sobre Espejo de Jitomate Bola y Parmesano",
+          "side_dish_name": "Smoothie Nootrópico Cremoso de Frambuesa Viva con 33Plus",
+          "fat_g": 27.5,
+          "protein_g": 23.5,
+          "net_carbs_g": 3.1
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Sopa de Calabacitas al Queso Parmesano",
+          "main_dish_name": "Lomo de Pavo al Horno con Costra de Finas Hierbas y Ajo",
+          "side_dish_name": "Nopales Asados al Orégano y Aceite de Oliva Extra Virgen",
+          "fat_g": 36.0,
+          "protein_g": 40.0,
+          "net_carbs_g": 3.5
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones de Apio y Pepino al Limón con Sal Mineral",
+          "main_dish_name": "Filete de Salmón Salvaje al Sartén con Costra de Eneldo y Limón",
+          "side_dish_name": "Tisana Nocturna Digestiva de Menta con 34Plus",
+          "fat_g": 24.5,
+          "protein_g": 33.0,
+          "net_carbs_g": 2.1
+        }
+      ]
+    }
+  ]
+}

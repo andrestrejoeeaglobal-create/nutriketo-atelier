@@ -1,0 +1,803 @@
+{
+  "menu": [
+    {
+      "day_title": "DOMINGO 13 SEP",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía",
+          "main": "Frittata Gourmet de Huevos Orgánicos con Queso Manchego y Espinacas Baby",
+          "side": "Gelatina Artesanal de Granada Viva con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Sopa Suave de Calabacitas al Queso Parmesano y Cilantro Fresco",
+          "main": "Lomo de Res a la Parrilla con Mantequilla de Tomillo y Ajo Rostizado",
+          "side": "Espárragos Verdes al Horno con Sal Marina y Limón"
+        },
+        {
+          "type": "Cena",
+          "starter": "Abanico de Aguacate Hass con Sal de Mar Mineral y Aceite de Oliva Extra Virgen",
+          "main": "Filete de Huachinango al Horno con Finas Hierbas y Aceite de Oliva Extra Virgen",
+          "side": "Tisana Nocturna de Toronjil y Manzanilla con 34Plus"
+        }
+      ]
+    },
+    {
+      "day_title": "LUNES 14 SEP",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Fresas Frescas de la Granja con Nueces de Castilla y Semillas de Chía",
+          "main": "Shakshuka Keto de Huevos Orgánicos en Salsa de Jitomate Rostizado, Ajo y Comino",
+          "side": "Elixir Nootrópico de Matcha y Menta con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Rústica de Flor de Calabaza y Queso de Cabra al Ajo",
+          "main": "Medallones de Mignon de Res a la Sartén en Salsa de Pimienta",
+          "side": "Nopales Tiernos Asados al Orégano y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Zucchini y Pepino al Limón",
+          "main": "Pechuga de Pollo al Sartén con Costra de Semillas de Sésamo y Parmesano",
+          "side": "Tisana Relajante de Toronjil y Flor de Azahar con 34Plus"
+        }
+      ]
+    },
+    {
+      "day_title": "MARTES 15 SEP",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Pitahaya Fresca de la Granja con Semillas de Chía y Coco Rallado",
+          "main": "Omelette Rústico de Queso Gouda Maduro y Champiñones al Sartén",
+          "side": "Smoothie Ceto-Nootrópico de Coco y Almendra con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen",
+          "main": "Filete de Salmón al Sartén en Salsa de Mantequilla y Eneldo",
+          "side": "Espárragos Verdes Asados con Limón y Sal Marina"
+        },
+        {
+          "type": "Cena",
+          "starter": "Ensalada de Arúgula y Espinaca Baby con Aceite de Oliva Extra Virgen",
+          "main": "Brochetas de Pechuga de Pollo con Pimientos y Cebolla Morada al Comal",
+          "side": "Tisana Digestiva de Menta y Limón con 34Plus"
+        }
+      ]
+    },
+    {
+      "day_title": "MIÉRCOLES 16 SEP",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Arilos de Granada Fresca con Nueces Pecana y Semillas de Girasol",
+          "main": "Muffins Salados de Huevo, Pechuga de Pavo y Espinacas",
+          "side": "Té Verde Nootrópico al Limón con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Ligera de Coliflor Rostizada y Queso Cheddar",
+          "main": "Puntas de Filete de Res a la Parrilla con Mantequilla de Romero",
+          "side": "Zoodles de Calabacita a la Mantequilla y Salvia"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Pepino Criollo al Limón con Sal de Mar",
+          "main": "Fajitas de Pechuga de Pavo Salteadas con Pimientos y Cebolla",
+          "side": "Gelatina Artesanal de Té Blanco y Frambuesa Viva con 34Plus"
+        }
+      ]
+    },
+    {
+      "day_title": "JUEVES 17 SEP",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Frambuesas Orgánicas de la Granja con Almendras Tostadas y Chía",
+          "main": "Huevos Benedictinos Keto Pochados sobre Tocino de Pavo Crujiente con Salsa Holandesa Casera",
+          "side": "Elixir Dorado Nootrópico de Cúrcuma, Canela y MCT con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Suave de Espárragos Verdes al Ajo Rostizado",
+          "main": "Medallones de Pechuga de Pavo al Sartén con Mostaza Antigua y Romero",
+          "side": "Coliflor Rostizada al Comal con Sal Marina y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Pepino al Limón con Sal Mineral",
+          "main": "Filete de Róbalo a la Plancha con Alcaparras y Aceite de Oliva Extra Virgen",
+          "side": "Infusión Relajante de Flor de Jamaica y Canela con 34Plus"
+        }
+      ]
+    },
+    {
+      "day_title": "VIERNES 18 SEP",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Arándanos Frescos de Cosecha con Nueces de Castilla y Chía",
+          "main": "Huevos Revueltos Gourmet con Machaca de Pavo y Queso Panela",
+          "side": "Té Verde Helado Nootrópico con Menta Fresca y 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Caliente de Champiñones al Parmesano",
+          "main": "Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado",
+          "side": "Chayotes Tiernos al Vapor con Mantequilla Clarificada y Sal Marina"
+        },
+        {
+          "type": "Cena",
+          "starter": "Ensalada de Espinacas Baby y Aguacate Hass al Limón",
+          "main": "Pechuga de Pavo Artesanal al Romero con Espárragos Salteados",
+          "side": "Infusión de Té Blanco Helado Digestivo con 34Plus"
+        }
+      ]
+    },
+    {
+      "day_title": "SÁBADO 19 SEP",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Higos Frescos de la Granja con Nueces Pecana y Semillas de Girasol",
+          "main": "Huevos Nube al Horno sobre Espejo de Jitomate Bola y Parmesano",
+          "side": "Mousse Cremosa de Frambuesa Viva con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Sopa de Calabacitas al Queso Parmesano",
+          "main": "Lomo de Pavo al Horno con Costra de Finas Hierbas y Ajo",
+          "side": "Nopales Asados al Orégano y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones de Apio y Pepino al Limón con Sal Mineral",
+          "main": "Filete de Salmón Salvaje al Sartén con Costra de Eneldo y Limón",
+          "side": "Tisana Nocturna Digestiva de Menta con 34Plus"
+        }
+      ]
+    }
+  ],
+  "bom": {
+    "🍓 Frutas de Bajo Índice Glucémico": [
+      {
+        "canonical_id": "moras-frescas",
+        "name": "Moras frescas de la granja",
+        "category": "🍓 Frutas de Bajo Índice Glucémico",
+        "qty_1": 50.0,
+        "qty_6": 300.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "granada-fresca",
+        "name": "Arilos de Granada fresca de la granja",
+        "category": "🍓 Frutas de Bajo Índice Glucémico",
+        "qty_1": 70.0,
+        "qty_6": 420.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "limon-fresco",
+        "name": "Jugo de limón fresco exprimido",
+        "category": "🍓 Frutas de Bajo Índice Glucémico",
+        "qty_1": 132.5,
+        "qty_6": 795.0,
+        "unit": "ml",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "fresas-frescas",
+        "name": "Fresas frescas de la granja",
+        "category": "🍓 Frutas de Bajo Índice Glucémico",
+        "qty_1": 50.0,
+        "qty_6": 300.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "pitahaya-fresca",
+        "name": "Pitahaya fresca de la granja",
+        "category": "🍓 Frutas de Bajo Índice Glucémico",
+        "qty_1": 50.0,
+        "qty_6": 300.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "frambuesas-frescas",
+        "name": "Frambuesas frescas de la granja",
+        "category": "🍓 Frutas de Bajo Índice Glucémico",
+        "qty_1": 100.0,
+        "qty_6": 600.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "arandanos-frescos",
+        "name": "Arándanos frescos de la granja",
+        "category": "🍓 Frutas de Bajo Índice Glucémico",
+        "qty_1": 50.0,
+        "qty_6": 300.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "higos-frescos",
+        "name": "Higos frescos de la granja",
+        "category": "🍓 Frutas de Bajo Índice Glucémico",
+        "qty_1": 40.0,
+        "qty_6": 240.0,
+        "unit": "g",
+        "is_farm": true
+      }
+    ],
+    "🌰 Grasas, Aceites y Semillas": [
+      {
+        "canonical_id": "almendras",
+        "name": "Almendras fileteadas tostadas",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 30.0,
+        "qty_6": 180.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "semillas-chia",
+        "name": "Semillas de chía orgánicas",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 40.0,
+        "qty_6": 240.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "aceite-vevo",
+        "name": "Aceite de oliva extra virgen VEVO",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 106.0,
+        "qty_6": 636.0,
+        "unit": "ml",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "nueces-castilla",
+        "name": "Nueces de castilla troceadas",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 30.0,
+        "qty_6": 180.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "aceite-mct",
+        "name": "Aceite de coco MCT",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 20.0,
+        "qty_6": 120.0,
+        "unit": "ml",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "semillas-sesamo",
+        "name": "Semillas de sésamo tostadas",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 10.0,
+        "qty_6": 60.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "coco-rallado",
+        "name": "Coco rallado sin azúcar",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 10.0,
+        "qty_6": 60.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "nueces-pecana",
+        "name": "Nueces pecana troceadas",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 30.0,
+        "qty_6": 180.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "semillas-girasol",
+        "name": "Semillas de girasol tostadas sin sal",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 16.0,
+        "qty_6": 96.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "alcaparras",
+        "name": "Alcaparras mediterráneas picadas",
+        "category": "🌰 Grasas, Aceites y Semillas",
+        "qty_1": 10.0,
+        "qty_6": 60.0,
+        "unit": "g",
+        "is_farm": false
+      }
+    ],
+    "🥩 Carnes, Pescados y Proteínas": [
+      {
+        "canonical_id": "huevo-pastoreo",
+        "name": "Huevos frescos orgánicos de pastoreo",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 14.0,
+        "qty_6": 84.0,
+        "unit": "piezas",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "tocino-pavo",
+        "name": "Tocino de pavo artesanal en cubos",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 120.0,
+        "qty_6": 720.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "filete-mignon",
+        "name": "Filete Mignon de Res de pastoreo",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 320.0,
+        "qty_6": 1920.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "huachinango-fresco",
+        "name": "Filete de Huachinango fresco",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 160.0,
+        "qty_6": 960.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "pechuga-pollo",
+        "name": "Pechuga de pollo de pastoreo",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 320.0,
+        "qty_6": 1920.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "pechuga-pavo",
+        "name": "Pechuga de pavo artesanal",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 280.0,
+        "qty_6": 1680.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "salmon-fresco",
+        "name": "Filete de Salmón fresco con piel",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 320.0,
+        "qty_6": 1920.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "punta-filete",
+        "name": "Punta de filete de res magra",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 160.0,
+        "qty_6": 960.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "lomo-pavo",
+        "name": "Medallones y Lomo de pavo artesanal",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 480.0,
+        "qty_6": 2880.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "robalo-fresco",
+        "name": "Filete de Róbalo fresco",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 160.0,
+        "qty_6": 960.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "ribeye-res",
+        "name": "Ribeye de Res de pastoreo",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_1": 160.0,
+        "qty_6": 960.0,
+        "unit": "g",
+        "is_farm": false
+      }
+    ],
+    "🧀 Lácteos y Quesos (Sin Gluten / Keto)": [
+      {
+        "canonical_id": "queso-manchego",
+        "name": "Queso Manchego rallado",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_1": 30.0,
+        "qty_6": 180.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "mantequilla-pastoreo",
+        "name": "Mantequilla de pastoreo",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_1": 372.0,
+        "qty_6": 2232.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "queso-parmesano",
+        "name": "Queso Parmesano rallado",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_1": 70.0,
+        "qty_6": 420.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "mantequilla-clarificada",
+        "name": "Mantequilla clarificada Ghee",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_1": 70.0,
+        "qty_6": 420.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "queso-cabra",
+        "name": "Queso de cabra artesanal",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_1": 25.0,
+        "qty_6": 150.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "queso-gouda",
+        "name": "Queso Gouda maduro rallado",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_1": 60.0,
+        "qty_6": 360.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "queso-cheddar",
+        "name": "Queso Cheddar maduro rallado",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_1": 25.0,
+        "qty_6": 150.0,
+        "unit": "g",
+        "is_farm": false
+      }
+    ],
+    "🥬 Verduras, Hortalizas y Frescos": [
+      {
+        "canonical_id": "pimientos-dulces",
+        "name": "Pimiento morrón dulce",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 100.0,
+        "qty_6": 600.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "calabacita-entera",
+        "name": "Calabacita tierna de la granja (entera)",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 480.0,
+        "qty_6": 2880.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "ajo-rostizado",
+        "name": "Dientes de ajo rostizados picados",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 20.0,
+        "qty_6": 120.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "esparrago-fresco",
+        "name": "Espárragos verdes frescos de la granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 480.0,
+        "qty_6": 2880.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "aguacate-hass",
+        "name": "Aguacate Hass cremoso",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 160.0,
+        "qty_6": 960.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "jitomate-bola",
+        "name": "Jitomate bola fresco",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 240.0,
+        "qty_6": 1440.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "flor-calabaza",
+        "name": "Flor de calabaza fresca de la granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 100.0,
+        "qty_6": 600.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "nopal-fresco",
+        "name": "Nopales tiernos de la granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 240.0,
+        "qty_6": 1440.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "pepino-criollo",
+        "name": "Pepino criollo en bastones",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 400.0,
+        "qty_6": 2400.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "espinaca-fresca",
+        "name": "Espinacas frescas de la granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 150.0,
+        "qty_6": 900.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "champinones-frescos",
+        "name": "Champiñones frescos Portobello",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 160.0,
+        "qty_6": 960.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "arugula-fresca",
+        "name": "Arúgula fresca de la granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 120.0,
+        "qty_6": 720.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "hinojo-fresco",
+        "name": "Hinojo fresco en láminas",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 50.0,
+        "qty_6": 300.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "cebolla-blanca",
+        "name": "Cebolla blanca fresca",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 70.0,
+        "qty_6": 420.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "coliflor-entera",
+        "name": "Coliflor fresca de la granja (entera)",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 250.0,
+        "qty_6": 1500.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "chayote-fresco",
+        "name": "Chayotes tiernos de la granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 140.0,
+        "qty_6": 840.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "apio-fresco",
+        "name": "Apio fresco crujiente",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_1": 60.0,
+        "qty_6": 360.0,
+        "unit": "g",
+        "is_farm": false
+      }
+    ],
+    "🌶️ Chiles, Condimentos e Infusiones": [
+      {
+        "canonical_id": "sal-mar",
+        "name": "Sal de mar mineral pura",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 87.0,
+        "qty_6": 522.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "infusion-botanica",
+        "name": "Infusiones botánicas y té (Menta, Jamaica, Toronjil, Manzanilla, Matcha, Té blanco, Cilantro)",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 35.0,
+        "qty_6": 210.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "tomillo",
+        "name": "Tomillo fresco de la granja",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 2.0,
+        "qty_6": 12.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "pimienta-negra",
+        "name": "Pimienta negra molida",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 2.0,
+        "qty_6": 12.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "oregano",
+        "name": "Orégano seco molido",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 4.0,
+        "qty_6": 24.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "eneldo",
+        "name": "Eneldo fresco de la granja",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 6.0,
+        "qty_6": 36.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "romero",
+        "name": "Romero fresco de la granja",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 6.0,
+        "qty_6": 36.0,
+        "unit": "g",
+        "is_farm": true
+      },
+      {
+        "canonical_id": "curcuma",
+        "name": "Cúrcuma fresca molida",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 3.0,
+        "qty_6": 18.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "canela",
+        "name": "Canela molida de Ceylán",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 4.0,
+        "qty_6": 24.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "mostaza-antigua",
+        "name": "Mostaza antigua en grano",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 10.0,
+        "qty_6": 60.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "aguapurificadafraparahidratar",
+        "name": "Agua purificada fría para hidratar",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 70.0,
+        "qty_6": 420.0,
+        "unit": "ml",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "aguapurificadamineral",
+        "name": "Agua purificada mineral",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 1920.0,
+        "qty_6": 11520.0,
+        "unit": "ml",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "baselquidapurificadaaguapurificadainfundidafra",
+        "name": "Base Líquida Purificada (Agua purificada infundida fría)",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "qty_1": 250.0,
+        "qty_6": 1500.0,
+        "unit": "ml",
+        "is_farm": false
+      }
+    ],
+    "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA": [
+      {
+        "canonical_id": "grenetina",
+        "name": "Grenetina natural en polvo (colágeno hidrolizado)",
+        "category": "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA",
+        "qty_1": 15.0,
+        "qty_6": 90.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "33plus",
+        "name": "Fórmula Nootrópica 33Plus®",
+        "category": "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA",
+        "qty_1": 42.0,
+        "qty_6": 252.0,
+        "unit": "g",
+        "is_farm": false
+      },
+      {
+        "canonical_id": "34plus",
+        "name": "Fórmula Reparadora 34Plus®",
+        "category": "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA",
+        "qty_1": 42.0,
+        "qty_6": 252.0,
+        "unit": "g",
+        "is_farm": false
+      }
+    ]
+  },
+  "unique_count": 69
+}

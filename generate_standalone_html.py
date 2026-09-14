@@ -297,8 +297,22 @@ def enrich_recipe_with_guarantee(recipe: dict, clean_title: str) -> dict:
 
     # Garantizar presencia en BOM
     bom_text = strip_acc(" ".join([it.get("name", "") for g in recipe.get("ingredient_groups", []) for it in g.get("items", [])]))
+    ignored_words = {
+        "salados", "saladas", "salado", "salada", "salteadas", "salteados", "salteada", "salteado",
+        "gratinados", "gratinadas", "gratinado", "gratinada", "pochados", "pochada", "pochado",
+        "asados", "asadas", "asado", "asada", "rostizado", "rostizada", "horneados", "horneadas",
+        "horneado", "horneada", "crujientes", "crujiente", "dorado", "dorada", "sellado", "sellados",
+        "gourmet", "rústico", "rustico", "rústicos", "rusticos", "tiernos", "tiernas", "tierno",
+        "tierna", "frescas", "frescos", "fresco", "fresca", "baby", "viva", "vivas", "vivo",
+        "maduro", "madura", "artesanal", "artesanales", "orgánicos", "organicos", "orgánica", "organica",
+        "completo", "estilo", "sabor", "con", "del", "las", "los", "una", "uno", "por", "sobre",
+        "espejo", "tazón", "tazon", "abanico", "bastones", "smoothie", "elixir", "tisana", "muffins"
+    }
     missing_bom_words = []
     for w in title_words:
+        w_clean = strip_acc(w.lower())
+        if w_clean in ignored_words:
+            continue
         w_aliases = aliases_map.get(w.lower(), [w.lower()])
         if not any(strip_acc(alias) in bom_text for alias in w_aliases):
             missing_bom_words.append(w)
@@ -339,17 +353,19 @@ def enrich_recipe_with_guarantee(recipe: dict, clean_title: str) -> dict:
 
 
 def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
-    """
-    Motor de Razonamiento Culinario SSOT V22.0.0 (Directiva de Gobernanza Agronómica).
-    Consulta estrictamente el estado activo de la Cosecha en Granja El Herami.
-    Sustituye automáticamente insumos agotados (ej. Higos -> Granada fresca o Moras)
-    y prioriza insumos en pico de cosecha (Granada fresca, Acelgas, Nopales tiernos, Limón fresco, Cilantro).
-    """
     clean_title = dish_name.strip()
     
-    # Lista por defecto de cosecha activa si no se proporciona
+    # Si la receta existe explícitamente en el catálogo canónico, retornar copia íntegra
+    if 'CANONICAL_RECIPE_CATALOG' in globals():
+        if clean_title in CANONICAL_RECIPE_CATALOG:
+            return copy.deepcopy(CANONICAL_RECIPE_CATALOG[clean_title])
+        for k, v in CANONICAL_RECIPE_CATALOG.items():
+            if k.lower() == clean_title.lower() or k.lower() in clean_title.lower() or clean_title.lower() in k.lower():
+                return copy.deepcopy(v)
+    
+    # Lista por defecto de cosecha activa si no se proporciona (Sin Acelgas no requeridas)
     if active_harvest is None:
-        active_harvest = ["Acelgas", "Cilantro fresco", "Granada fresca", "Limón Fresco", "Nopales tiernos"]
+        active_harvest = ["Cilantro fresco", "Granada fresca", "Limón Fresco", "Nopales tiernos"]
 
     active_lower = [h.lower() for h in active_harvest]
 
@@ -898,11 +914,12 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
 
     if is_veg_side:
         veg_name = "Nopales tiernos limpios de la granja"
-        if "acelga" in clean_lower or any("acelga" in k for k in active_lower): veg_name = "Acelgas frescas de la granja"
-        elif "nopal" in clean_lower or any("nopal" in k for k in active_lower): veg_name = "Nopales tiernos limpios"
+        if "acelga" in clean_lower: veg_name = "Acelgas frescas de la granja"
+        elif "nopal" in clean_lower: veg_name = "Nopales tiernos limpios"
         elif "chayote" in clean_lower: veg_name = "Chayotes tiernos de la granja"
-        elif "calabacita" in clean_lower and any("calabacita" in k for k in active_lower): veg_name = "Calabacitas tiernas / Zoodles"
-        elif "espárrago" in clean_lower and any("espárrago" in k for k in active_lower): veg_name = "Espárragos verdes frescos"
+        elif "calabacita" in clean_lower or "zoodles" in clean_lower: veg_name = "Calabacitas tiernas"
+        elif "espárrago" in clean_lower or "esparrago" in clean_lower: veg_name = "Espárragos verdes frescos"
+        else: veg_name = "Vegetales frescos de la granja"
 
         return {
             "title": clean_title,
@@ -979,9 +996,125 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
 
 
 
-def build_typed_recipe_for_dish(dish_name: str, active_harvest: list = None) -> dict:
-    raw_res = _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
-    return enrich_recipe_with_guarantee(raw_res, dish_name)
+def parse_recipes_md(md_path):
+    if not os.path.exists(md_path):
+        return {}
+    with open(md_path, 'r', encoding='utf-8') as f:
+        text = f.read()
+
+    dish_pattern = r'### (Entrada \(Starter\)|Plato Principal \(Main\)|Acompañamiento \(Side\)): ([^\n]+)'
+    parts = re.split(dish_pattern, text)
+    
+    recipes_by_title = {}
+    i = 1
+    while i < len(parts):
+        course_role = parts[i].strip()
+        dish_title = parts[i+1].strip()
+        content = parts[i+2]
+        i += 3
+
+        tech_match = re.search(r'\*\*Técnica Culinaria:\*\*\s*([^\n]+)', content)
+        cooking_technique = tech_match.group(1).strip() if tech_match else "raw_assembly"
+
+        sensory_match = re.search(r'\*\*Nota de Cata:\*\*\s*([^\n]+)', content)
+        sensory_description = sensory_match.group(1).strip() if sensory_match else f"Preparación de {dish_title}."
+
+        bom_block_match = re.search(r'#### 🛒 Lista de Insumos \(BOM\) — 6 Comensales:\n(.*?)\n#### 🍳 Procedimiento', content, re.DOTALL)
+        ingredient_groups = []
+        if bom_block_match:
+            bom_text = bom_block_match.group(1)
+            group_blocks = re.split(r'\n-\s+\*\*([^*]+)\*\*:\n', '\n' + bom_text)
+            j = 1
+            while j < len(group_blocks):
+                grp_cat = group_blocks[j].strip()
+                grp_content = group_blocks[j+1]
+                j += 2
+                items = []
+                item_lines = re.findall(r'-\s+([^:]+):\s+\*\*([0-9\.]+)\s*([^\*]*)\*\*\s*\(([0-9\.]+)\s*([^/]*)/persona\)', grp_content)
+                for iname, tot_qty, tot_unit, pp_qty, pp_unit in item_lines:
+                    clean_name = iname.strip()
+                    clean_name = re.sub(r'^[^\w\s]+\s*', '', clean_name)
+                    clean_name = re.sub(r'\s*/\s*', ' ', clean_name)
+                    unit = tot_unit.strip() or pp_unit.strip()
+                    items.append({
+                        "name": clean_name,
+                        "base_qty_per_person": float(pp_qty),
+                        "total_qty": float(tot_qty),
+                        "unit": unit
+                    })
+                if items:
+                    ingredient_groups.append({
+                        "category": grp_cat,
+                        "items": items
+                    })
+
+        steps_block_match = re.search(r'#### 🍳 Procedimiento de Preparación \(Pasos\):\n(.*?)(?=\n---\n|\n### |\Z)', content, re.DOTALL)
+        steps = []
+        if steps_block_match:
+            steps_text = steps_block_match.group(1)
+            raw_steps = re.split(r'\n(?=[0-9]+\.\s+)', '\n' + steps_text)
+            for rstep in raw_steps:
+                rstep_clean = rstep.strip()
+                if rstep_clean:
+                    rstep_clean = re.sub(r'\s*/\s*', ' ', rstep_clean)
+                    rstep_clean = re.sub(r'licor|cognac|vino blanco|vino tinto|cerveza', 'fondo concentrado', rstep_clean, flags=re.IGNORECASE)
+                    lines = [l.strip() for l in rstep_clean.split('\n') if l.strip()]
+                    step_combined = " ".join(lines)
+                    steps.append(step_combined)
+
+        recipes_by_title[dish_title.strip()] = {
+            "title": dish_title.strip(),
+            "cooking_technique": cooking_technique,
+            "sensory_description": sensory_description,
+            "ingredient_groups": ingredient_groups,
+            "steps": steps
+        }
+
+    return recipes_by_title
+
+
+_REAL_MD_RECIPES_CACHE = None
+
+def get_real_md_recipes():
+    global _REAL_MD_RECIPES_CACHE
+    if _REAL_MD_RECIPES_CACHE is None:
+        md_path = os.path.join(os.path.dirname(__file__), 'recetas_semana_38.md')
+        _REAL_MD_RECIPES_CACHE = parse_recipes_md(md_path)
+    return _REAL_MD_RECIPES_CACHE
+
+
+def norm_title(t):
+    if not t: return ""
+    return re.sub(r'[^a-z0-9]', '', unicodedata.normalize('NFD', t.lower()).encode('ascii', 'ignore').decode('utf-8'))
+
+
+def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
+    if not dish_name:
+        return _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
+
+    if dish_name in CANONICAL_RECIPE_CATALOG:
+        return copy.deepcopy(CANONICAL_RECIPE_CATALOG[dish_name])
+
+    real_map = get_real_md_recipes()
+    
+    # 1. Exact match
+    if dish_name in real_map:
+        return copy.deepcopy(real_map[dish_name])
+
+    # 2. Normalized match
+    target_norm = norm_title(dish_name)
+    for r_title, r_obj in real_map.items():
+        r_norm = norm_title(r_title)
+        if target_norm == r_norm or target_norm in r_norm or r_norm in target_norm:
+            return copy.deepcopy(r_obj)
+
+    # 3. Keyword fallback match
+    keywords = [w for w in re.split(r'\W+', dish_name.lower()) if len(w) > 3 and w not in ['con', 'para', 'del', 'los', 'las', 'sobre', 'fresca', 'fresco']]
+    for r_title, r_obj in real_map.items():
+        if sum(1 for kw in keywords if kw in r_title.lower()) >= 2:
+            return copy.deepcopy(r_obj)
+
+    return _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
 
 
 def generate_standalone():
@@ -1095,27 +1228,111 @@ def generate_standalone():
             plan_36_dict["days"][idx]["meals"] = new_meals_36[idx]
 
 
+    s37_path = os.path.join(os.path.dirname(__file__), 'semana_37_master.json')
+    if os.path.exists(s37_path):
+        with open(s37_path, 'r', encoding='utf-8') as f:
+            plan_37_dict = json.load(f)
+    else:
+        plan_37_dict = copy.deepcopy(plan_36_dict)
+        plan_37_dict["week_name"] = "Semana 37"
+        plan_37_dict["week_label"] = "Semana 37 (06 al 12 de Septiembre de 2026)"
+        plan_37_dict["week_start"] = "2026-09-06"
+
+    s38_path = os.path.join(os.path.dirname(__file__), 'semana_38_master.json')
+    if os.path.exists(s38_path):
+        with open(s38_path, 'r', encoding='utf-8') as f:
+            plan_38_dict = json.load(f)
+    else:
+        plan_38_dict = copy.deepcopy(plan_36_dict)
+        plan_38_dict["week_name"] = "Semana 38"
+        plan_38_dict["week_label"] = "Semana 38 (13 al 19 de Septiembre de 2026)"
+        plan_38_dict["week_start"] = "2026-09-13"
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
         "Semana 35 (23 al 29 de Agosto de 2026)": plan_35_dict,
-        "Semana 36 (30 de Agosto al 05 de Septiembre de 2026)": plan_36_dict
+        "Semana 36 (30 de Agosto al 05 de Septiembre de 2026)": plan_36_dict,
+        "Semana 37 (06 al 12 de Septiembre de 2026)": plan_37_dict,
+        "Semana 38 (13 al 19 de Septiembre de 2026)": plan_38_dict
     }
 
     
     # ENRIQUECIMIENTO PASIVO DE RECETAS ESTRUCTURADAS (V15.22.1)
-    for p_dict in [plan_33_dict, plan_34_dict, plan_35_dict, plan_36_dict]:
-        for day in p_dict["days"]:
-            for meal in day["meals"]:
-                if "starter_name" in meal:
-                    meal["starter_recipe"] = build_typed_recipe_for_dish(meal["starter_name"], "starter")
-                if "main_dish_name" in meal or "dish_name" in meal:
-                    meal["main_recipe"] = build_typed_recipe_for_dish(meal.get("main_dish_name") or meal.get("dish_name"), "main")
-                if "side_dish_name" in meal:
-                    meal["side_recipe"] = build_typed_recipe_for_dish(meal["side_dish_name"], "side")
+    for p_dict in [plan_33_dict, plan_34_dict, plan_35_dict, plan_36_dict, plan_37_dict, plan_38_dict]:
+        for day in p_dict.get("days", []):
+            for meal in day.get("meals", []):
+                s_name = meal.get("starter_name") or meal.get("starter")
+                m_name = meal.get("main_dish_name") or meal.get("dish_name") or meal.get("main")
+                sd_name = meal.get("side_dish_name") or meal.get("side")
+                if s_name and "starter_recipe" not in meal:
+                    meal["starter_recipe"] = build_typed_recipe_for_dish(s_name, "starter")
+                if m_name and "main_recipe" not in meal:
+                    meal["main_recipe"] = build_typed_recipe_for_dish(m_name, "main")
+                if sd_name and "side_recipe" not in meal:
+                    meal["side_recipe"] = build_typed_recipe_for_dish(sd_name, "side")
 
     datasets_json = json.dumps(weekly_datasets, ensure_ascii=False)
     shop_json = json.dumps(GRANULAR_SHOPPING_BASE, ensure_ascii=False)
+    
+    canonical_bom_path = os.path.join(os.path.dirname(__file__), 'scratch_s38_canonical.json')
+    if os.path.exists(canonical_bom_path):
+        with open(canonical_bom_path, 'r', encoding='utf-8') as f:
+            canonical_bom_data = json.load(f)
+    else:
+        canonical_bom_data = {}
+    canonical_bom_json = json.dumps(canonical_bom_data, ensure_ascii=False)
+
+    # CONSTRUCCIÓN DEL CATÁLOGO CANÓNICO DE PLATILLOS (DISH_EXCHANGE_POOL)
+    starters_map = {}
+    mains_map = {}
+    sides_map = {}
+
+    for day in plan_38_dict.get("days", []):
+        for meal in day.get("meals", []):
+            mtype = meal.get("meal_type", "Comida")
+
+            s_name = (meal.get("starter_name") or meal.get("starter") or "").replace("/", " y ")
+            if s_name and s_name not in starters_map:
+                starters_map[s_name] = {
+                    "name": s_name,
+                    "category": "starter",
+                    "meal_type": mtype,
+                    "macros": {"kcal": 65.0, "fat_g": 4.5, "protein_g": 2.0, "net_carbs_g": 1.5},
+                    "recipe": meal.get("starter_recipe")
+                }
+
+            m_name = (meal.get("main_dish_name") or meal.get("dish_name") or meal.get("main") or "").replace("/", " y ")
+            if m_name and m_name not in mains_map:
+                m_recipe = meal.get("main_recipe")
+                if m_recipe and "steps" in m_recipe:
+                    is_poultry = any(k in m_name.lower() for k in ["pollo", "pavo", "machaca"])
+                    target_temp = "74°C" if is_poultry else "68°C"
+                    m_recipe["steps"] = [step.replace("74°C", target_temp).replace("68°C", target_temp) for step in m_recipe["steps"]]
+                mains_map[m_name] = {
+                    "name": m_name,
+                    "category": "main",
+                    "meal_type": mtype,
+                    "macros": {"kcal": 340.0, "fat_g": 24.0, "protein_g": 28.0, "net_carbs_g": 1.8},
+                    "recipe": m_recipe
+                }
+
+            sd_name = (meal.get("side_dish_name") or meal.get("side") or "").replace("/", " y ")
+            if sd_name and sd_name not in sides_map:
+                sides_map[sd_name] = {
+                    "name": sd_name,
+                    "category": "side",
+                    "meal_type": mtype,
+                    "macros": {"kcal": 55.0, "fat_g": 3.0, "protein_g": 1.0, "net_carbs_g": 0.8},
+                    "recipe": meal.get("side_recipe")
+                }
+
+    dish_exchange_pool = {
+        "starters": list(starters_map.values()),
+        "mains": list(mains_map.values()),
+        "sides": list(sides_map.values())
+    }
+    dish_exchange_pool_json = json.dumps(dish_exchange_pool, ensure_ascii=False)
 
     html_content = """<!DOCTYPE html>
 <html lang="es">
@@ -1127,6 +1344,7 @@ def generate_standalone():
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
+    window.MEAL_DISH_OVERRIDES = window.MEAL_DISH_OVERRIDES || {};
 
 function getDeconstructedRecipeForDish(dishTitle, courseRole) {
   // CORTEX SSOT V16.0.0: Renderizado 100% pasivo desde el backend dinámico. Sin overrides hardcodeados por regex.
@@ -1597,7 +1815,9 @@ function generateNextWeekMenu() {
                 <option value="Semana 33 (09 al 15 de Agosto de 2026)">Semana 33 (09 al 15 de Agosto de 2026)</option>
                 <option value="Semana 34 (16 al 22 de Agosto de 2026)">Semana 34 (16 al 22 de Agosto de 2026)</option>
                 <option value="Semana 35 (23 al 29 de Agosto de 2026)">Semana 35 (23 al 29 de Agosto de 2026)</option>
-            <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)" selected>Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
+                <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)">Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
+                <option value="Semana 37 (06 al 12 de Septiembre de 2026)">Semana 37 (06 al 12 de Septiembre de 2026)</option>
+                <option value="Semana 38 (13 al 19 de Septiembre de 2026)" selected>Semana 38 (13 al 19 de Septiembre de 2026)</option>
               </select>
             </div>
             <div>
@@ -1650,7 +1870,9 @@ function generateNextWeekMenu() {
             <option value="Semana 33 (09 al 15 de Agosto de 2026)">Semana 33 (09 al 15 de Agosto de 2026)</option>
             <option value="Semana 34 (16 al 22 de Agosto de 2026)">Semana 34 (16 al 22 de Agosto de 2026)</option>
             <option value="Semana 35 (23 al 29 de Agosto de 2026)">Semana 35 (23 al 29 de Agosto de 2026)</option>
-            <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)" selected>Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
+            <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)">Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
+            <option value="Semana 37 (06 al 12 de Septiembre de 2026)">Semana 37 (06 al 12 de Septiembre de 2026)</option>
+            <option value="Semana 38 (13 al 19 de Septiembre de 2026)" selected>Semana 38 (13 al 19 de Septiembre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
@@ -1742,8 +1964,23 @@ function generateNextWeekMenu() {
   <script>
     const datasets = """ + datasets_json + """;
     let rawShopBase = """ + shop_json + """;
+    const ACTIVE_WEEK_CANONICAL_BOM = """ + canonical_bom_json + """;
+        window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
+    window.PANTRY_STOCK_INVENTORY = {
+      // Insumos Canónicos Aptos (Status: "canonical")
+      "aceite-oliva": { name: "Aceite de oliva extra virgen VEVO", stock: 500, unit: "ml", status: "canonical" },
+      "semillas-chia": { name: "Semillas de chía orgánicas", stock: 100, unit: "g", status: "canonical" },
+      "sal-mar": { name: "Sal de mar mineral pura", stock: 1000, unit: "g", status: "canonical" },
+      "almendras-fileteadas": { name: "Almendras fileteadas tostadas", stock: 100, unit: "g", status: "canonical" },
+      "aceite-coco-mct": { name: "Aceite de coco MCT", stock: 250, unit: "ml", status: "canonical" },
+      "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
+      "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
+      // Insumos No Sugeridos / Cuarentena (Status: "prohibited")
+      "harina-trigo": { name: "Harina de trigo tradicional", stock: 1000, unit: "g", status: "prohibited", reason: "Glucémico / Inflamatorio (Gluten)" },
+      "aceite-vegetal-mixto": { name: "Aceite vegetal mixto comercial", stock: 800, unit: "ml", status: "prohibited", reason: "Pro-inflamatorio / Omega 6 oxidado" }
+    };
 
-    let activeWeek = "Semana 36 (30 de Agosto al 05 de Septiembre de 2026)";
+    let activeWeek = "Semana 38 (13 al 19 de Septiembre de 2026)";
     let activeDiners = 6;
     let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
     let pantryStock = {
@@ -1782,58 +2019,41 @@ function generateNextWeekMenu() {
       }
     }
 
-    function getSmartItemCategory(itemName, explicitCategory) {
-      if (explicitCategory && explicitCategory.includes('Cosecha')) {
-        return '🌾 Cosecha Directa de la Granja / Huerto';
+        function getSmartItemCategory(itemName, explicitCategory) {
+      const name = (itemName || '').toLowerCase().trim();
+
+      // 1. Suplementación Celular / Biotecnología
+      if (/33plus|34plus|sinergix|suplemento|suplementos|vitamina|vitaminas|colágeno|colageno|electrolitos|fórmula nootrópica|fórmula reparadora/i.test(name)) {
+        return '💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA';
       }
 
-      const name = (itemName || '').toLowerCase();
-
-      function hasWord(text, kwList) {
-        return kwList.some(kw => {
-          const regex = new RegExp('(?:^|\\s|[^a-záéíóúñ])' + kw + '(?:$|\\s|[^a-záéíóúñ])', 'i');
-          return regex.test(text);
-        });
+      // 2. Frutas de Bajo Índice Glucémico
+      if (/mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|coco/i.test(name)) {
+        return '🍓 Frutas de Bajo Índice Glucémico';
       }
 
-      // 1. Lácteos y Quesos
-      const dairyKeywords = ['queso', 'quesos', 'leche', 'mantequilla', 'crema', 'cottage', 'gouda', 'panela', 'parmesano', 'manchego', 'mascarpone', 'oaxaca', 'mozzarella', 'requezon', 'requeron', 'requesón', 'ghee', 'suero', 'asadero', 'chihuahua', 'brie', 'camembert', 'feta', 'provolone', 'ricotta', 'chèvre', 'chevre'];
-      if (hasWord(name, dairyKeywords)) {
-        return '🧀 Lácteos y Quesos (Sin Gluten / Keto)';
+      // 3. Lácteos y Quesos (Sin Gluten — Keto)
+      if (/queso|quesos|leche|mantequilla|crema|gouda|panela|parmesano|manchego|cabra|mascarpone|mozzarella|ghee/i.test(name)) {
+        return '🧀 Lácteos y Quesos (Sin Gluten — Keto)';
       }
 
-      // 2. Carnes, Pescados y Proteínas Magras
-      const proteinKeywords = ['carne', 'carnes', 'sirloin', 'ribeye', 'res', 'pollo', 'pollos', 'pechuga', 'pechugas', 'pavo', 'pavos', 'tocino', 'jamón', 'jamon', 'jamones', 'pescado', 'pescados', 'salmón', 'salmon', 'atún', 'atun', 'atunes', 'huevo', 'huevos', 'clara', 'claras', 'lomo', 'lomos', 'medallón', 'medallon', 'medallones', 'albóndiga', 'albondiga', 'albóndigas', 'albondigas', 'costilla', 'costillas', 'tuétano', 'tuetano', 'arrachera', 'arracheras', 'bistec', 'bisteck', 'milanesa', 'milanesas', 'cecina', 'chorizo', 'longaniza'];
-      if (hasWord(name, proteinKeywords)) {
+      // 4. Carnes, Pescados y Proteínas
+      if (/carne|carnes|sirloin|ribeye|res|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca/i.test(name)) {
         return '🥩 Carnes, Pescados y Proteínas';
       }
 
-      // 3. Chiles, Condimentos y Especias (NUEVA CATEGORÍA)
-      const spiceKeywords = ['chile', 'chiles', 'jalapeño', 'jalapeños', 'jalapeno', 'jalapenos', 'rajas', 'habanero', 'habaneros', 'serrano', 'serranos', 'poblano', 'poblanos', 'chipotle', 'chipotles', 'pasilla', 'ancho', 'guajillo', 'tajín', 'tajin', 'chamoy', 'pimienta', 'orégano', 'oregano', 'tomillo', 'laurel', 'canela', 'vainilla', 'clavo', 'clavos', 'comino', 'cúrcuma', 'curcuma', 'paprika', 'pimentón', 'pimenton', 'epazote', 'albahaca', 'romero', 'mostaza', 'alcaparra', 'alcaparras', 'aceituna', 'aceitunas', 'sal', 'salsa', 'tamari', 'soya', 'vinagre', 'balsámico', 'balsamico', 'adobo', 'sazonador', 'hierbas', 'especias', 'condimento', 'condimentos'];
-      if (hasWord(name, spiceKeywords)) {
-        return '🌶️ Chiles, Condimentos y Especias';
+      // 5. Grasas, Aceites y Semillas
+      if (/aceite|mct|nuez|nueces|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli/i.test(name)) {
+        return '🌰 Grasas, Aceites y Semillas';
       }
 
-      // 4. Verduras, Hortalizas y Frescos
-      const veggieKeywords = ['espinaca', 'espinacas', 'calabacita', 'calabacitas', 'brócoli', 'brocoli', 'espárrago', 'esparrago', 'espárragos', 'esparragos', 'nopal', 'nopales', 'ejote', 'ejotes', 'cilantro', 'arúgula', 'arugula', 'higo', 'higos', 'pitaya', 'pitayas', 'durazno', 'duraznos', 'granada', 'granadas', 'aguacate', 'aguacates', 'jitomate', 'jitomates', 'cebolla', 'cebollas', 'limón', 'limon', 'limones', 'champiñón', 'champiñones', 'champiñon', 'portobello', 'portobellos', 'ajo', 'ajos', 'apio', 'apios', 'fresa', 'fresas', 'pepino', 'pepinos', 'chayote', 'chayotes', 'zanahoria', 'zanahorias', 'papa', 'papas', 'lechuga', 'lechugas', 'verdura', 'verduras', 'hortaliza', 'hortalizas', 'coliflor', 'coliflores', 'betabel', 'pimiento', 'pimientos'];
-      if (hasWord(name, veggieKeywords)) {
-        return '🥬 Verduras, Hortalizas y Frescos';
+      // 6. Chiles, Condimentos e Infusiones
+      if (/sal|sal de|sal mineral|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|aceituna|aceitunas|vinagre|balsámico|balsamico|jengibre|agua|infusión|infusion|té|te|base líquida|base liquida/i.test(name)) {
+        return '🌶️ Chiles, Condimentos e Infusiones';
       }
 
-      // 5. Granos, Semillas y Harinas (NUEVA CATEGORÍA)
-      const seedKeywords = ['chía', 'chia', 'nuez', 'nueces', 'almendra', 'almendras', 'macadamia', 'macadamias', 'harina', 'quinoa', 'avena', 'garbanzo', 'garbanzos', 'lenteja', 'lentejas', 'arroz', 'maíz', 'maiz', 'pepita', 'pepitas', 'girasol', 'ajonjolí', 'ajonjoli', 'semilla', 'semillas', 'linaza', 'piñón', 'piñones'];
-      if (hasWord(name, seedKeywords)) {
-        return '🌻 Granos, Semillas y Harinas';
-      }
-
-      // 6. Suplementación y Fórmulas Sinergix
-      const suppKeywords = ['sinergix', 'suplemento', 'suplementos', 'vitamina', 'vitaminas', 'colágeno', 'colageno', 'electrolitos'];
-      if (hasWord(name, suppKeywords)) {
-        return '💊 Suplementación y Fórmulas Sinergix';
-      }
-
-      if (explicitCategory && explicitCategory.trim() !== '') return explicitCategory;
-      return '🛒 Abarrotes, Aceites y Grasas';
+      // 7. Verduras, Hortalizas y Frescos (Fallback)
+      return '🥬 Verduras, Hortalizas y Frescos';
     }
 
     function loadAppState() {
@@ -1927,13 +2147,14 @@ function generateNextWeekMenu() {
     }
 
     function updateMealDiners(dayIdx, mealType, val) {
-      const parsed = parseInt(val) || activeDiners;
+      const parsed = Math.min(12, Math.max(1, parseInt(val) || activeDiners));
       const key = `${activeWeek}_day_${dayIdx}_${mealType}`;
       mealDinersState[key] = parsed;
       saveAppState();
       renderDay(selectedIdx);
-      if (typeof render3DShoppingList === "function") if (typeof render3DShoppingList === "function") renderRecipes(day, activeDiners);
-      render3DShoppingList();
+      if (typeof render3DShoppingList === "function") {
+        render3DShoppingList();
+      }
     }
 
     function validateNoDuplicateBroths(mObj) {
@@ -2004,17 +2225,43 @@ function generateNextWeekMenu() {
       return mObj;
     }
 
+    
+    function getDishRecipeFromPool(dishName, category, mealType) {
+      if (!dishName || !window.DISH_EXCHANGE_POOL) return null;
+      const list = category === 'starter' ? window.DISH_EXCHANGE_POOL.starters : (category === 'side' ? window.DISH_EXCHANGE_POOL.sides : window.DISH_EXCHANGE_POOL.mains);
+      const found = (list || []).find(item => item.name === dishName || item.name.toLowerCase() === dishName.toLowerCase());
+      if (found && found.recipe) return found.recipe;
+      return null;
+    }
+
     function getMealObj(dayIdx, rawMeal) {
-      const key = `${activeWeek}_day_${dayIdx}_${rawMeal.meal_type}`;
-      let mObj = rawMeal;
-      if (customDishesState[key]) {
-        mObj = {
-          ...rawMeal,
-          starter_name: customDishesState[key].starter_name || rawMeal.starter_name,
-          main_dish_name: customDishesState[key].main_dish_name || rawMeal.main_dish_name,
-          side_dish_name: customDishesState[key].side_dish_name || rawMeal.side_dish_name
-        };
+      if (!rawMeal) return {};
+      const weekSlug = typeof activeWeek !== 'undefined' ? (activeWeek === 'Semana 38' ? 'semana_38' : activeWeek.toLowerCase().replace(/ /g, '_')) : 'semana_38';
+      const key1 = `${weekSlug}_${dayIdx}_${rawMeal.meal_type}`;
+      const key2 = `${activeWeek}_day_${dayIdx}_${rawMeal.meal_type}`;
+      
+      const override = (window.MEAL_DISH_OVERRIDES && window.MEAL_DISH_OVERRIDES[key1]) ||
+                       (window.MEAL_DISH_OVERRIDES && window.MEAL_DISH_OVERRIDES[key2]) ||
+                       (typeof customDishesState !== 'undefined' && (customDishesState[key1] || customDishesState[key2]));
+
+      let mObj = { ...rawMeal };
+      if (override) {
+        mObj.starter_name = override.starter_name || rawMeal.starter_name;
+        mObj.main_dish_name = override.main_dish_name || rawMeal.main_dish_name || rawMeal.dish_name;
+        mObj.side_dish_name = override.side_dish_name || rawMeal.side_dish_name;
+        mObj.is_negotiated = true;
+
+        if (override.macros) {
+          mObj.calories_kcal = override.macros.kcal;
+          mObj.fat_g = override.macros.fat_g;
+          mObj.protein_g = override.macros.protein_g;
+          mObj.net_carbs_g = override.macros.net_carbs_g;
+        }
+        if (override.starter_recipe) mObj.starter_recipe = override.starter_recipe;
+        if (override.main_recipe) mObj.main_recipe = override.main_recipe;
+        if (override.side_recipe) mObj.side_recipe = override.side_recipe;
       }
+      
       validateNoDuplicateBroths(mObj);
       enforceFatSourceUniqueness(mObj);
       validateNoFruitDairyMix(mObj);
@@ -2585,51 +2832,183 @@ function normalizeQuantity(qty, unit) {
   if (u.includes("piez") || u.includes("huevo") || u.includes("unidad") || u.includes("hoja")) {
     return Math.ceil(num).toString();
   }
-  if (u.includes("g") || u.includes("gram")) {
-    const rounded = Math.ceil(num / 5) * 5;
-    return rounded.toString();
-  }
-  if (u.includes("ml") || u.includes("cucharad") || u.includes("pizca")) {
-    const rounded = Math.ceil(num / 5) * 5;
-    return rounded.toString();
-  }
-  return (Math.round(num * 10) / 10).toString();
+  const rounded = Math.round(num * 10) / 10;
+  return rounded.toString();
 }
 
-function parseQuantityInBaseUnit(qty, unit) {
-  let num = parseFloat(qty);
-  if (isNaN(num)) num = 1;
-  const u = (unit || "").toLowerCase().trim();
+function stripAccents(str) {
+  if (!str) return "";
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+}
 
-  if (u === "kg" || u === "kilos" || u === "kilogramos") {
-    return { val: num * 1000, type: "mass", baseUnit: "g" };
+const INGREDIENT_CANONICAL_MAP_JS = {
+  "aceite-oliva": ["aceite de oliva", "aceite de oliva extra virgen", "aceite vevo", "aceite de oliva extra virgen vevo", "aceite de oliva virgen extra"],
+  "te-verde": ["té verde", "te verde", "té verde orgánico", "matcha"],
+  "huevo-organico": ["huevo", "huevos", "huevos frescos", "huevos orgánicos", "huevos frescos orgánicos", "huevos frescos orgánicos de pastoreo", "huevos enteros"],
+  "pechuga-pavo": ["pechuga de pavo", "pavo artesanal", "pechuga de pavo artesanal", "jamón de pavo", "tocino de pavo"],
+  "pechuga-pollo": ["pechuga de pollo", "pollo fresco", "pechuga de pollo fresca", "muslos de pollo"],
+  "sirloin-magro": ["carne molida de sirloin", "sirloin magro", "carne molida de sirloin magra"],
+  "filete-res": ["filete de res", "filete de res magro", "ribeye", "sirloin", "medallones de mignon"],
+  "huachinango-fresco": ["huachinango", "filete de huachinango", "filete de huachinango fresco", "filete de huachinango al horno"],
+  "robalo-fresco": ["róbalo", "robalo", "filete de róbalo", "filete de robalo fresco", "filete de róbalo a la plancha"],
+  "salmon-salvaje": ["salmón", "salmon", "salmón salvaje", "filete de salmón fresco", "filete de salmón salvaje", "filete de salmón fresco con piel"],
+  "pescado-blanco": ["pescado blanco", "filete de pescado blanco", "filete de pescado blanco fresco"],
+  "atun-fresco": ["atún", "atun", "filete de atún fresco"],
+  "queso-parmesano": ["queso parmesano", "parmesano maduro", "queso parmesano maduro"],
+  "queso-manchego": ["queso manchego", "manchego maduro", "queso manchego maduro"],
+  "queso-gouda": ["queso gouda", "gouda maduro", "queso gouda maduro"],
+  "queso-panela": ["queso panela", "panela fresco", "queso panela fresco"],
+  "queso-cabra": ["queso de cabra", "cabra artesanal", "queso de cabra artesanal"],
+  "queso-crema": ["queso crema", "queso crema artesanal"],
+  "mantequilla-pastoreo": ["mantequilla", "mantequilla de vaca", "mantequilla de pastoreo", "mantequilla sin sal"],
+  "jitomate-bola": ["jitomate", "jitomates", "jitomate bola", "jitomate bola jugoso"],
+  "33plus": ["33plus", "33 plus", "fórmula 33plus", "elixir 33plus"],
+  "34plus": ["34plus", "34 plus", "fórmula 34plus", "tisana 34plus"]
+};
+
+function normalizeToCanonicalSlug(rawName) {
+  if (!rawName) return "";
+  const clean = rawName.trim().toLowerCase();
+  const cleanNoAcc = stripAccents(clean);
+
+  for (const slug in INGREDIENT_CANONICAL_MAP_JS) {
+    const aliases = INGREDIENT_CANONICAL_MAP_JS[slug];
+    for (const alias of aliases) {
+      const aliasClean = stripAccents(alias.trim().toLowerCase());
+      if (aliasClean.includes(cleanNoAcc) || cleanNoAcc.includes(aliasClean)) {
+        return slug;
+      }
+    }
   }
-  if (u === "g" || u === "gramos") {
+
+  const sanitized = cleanNoAcc.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
+  return sanitized || "insumo-general";
+}
+
+function parseQuantityInBaseUnit(qty, unitRaw) {
+  const num = parseFloat(qty) || 0;
+  const unitStr = (unitRaw || "").toLowerCase().trim();
+
+  if (unitStr.includes("kg") || unitStr.includes("kilo")) {
+    const val = num < 50 ? num * 1000 : num;
+    return { val: val, type: "mass", baseUnit: "g" };
+  }
+  if (unitStr.includes("g") || unitStr.includes("gramo")) {
     return { val: num, type: "mass", baseUnit: "g" };
   }
-  if (u === "l" || u === "litros" || u === "lt") {
-    return { val: num * 1000, type: "vol", baseUnit: "ml" };
+  if (unitStr.includes("l") || unitStr.includes("litro") || unitStr.includes("lt")) {
+    const val = num < 50 ? num * 1000 : num;
+    return { val: val, type: "vol", baseUnit: "ml" };
   }
-  if (u === "ml" || u === "mililitros") {
+  if (unitStr.includes("ml") || unitStr.includes("mililitro")) {
     return { val: num, type: "vol", baseUnit: "ml" };
   }
-  return { val: num, type: "count", baseUnit: u || "piezas" };
+  return { val: num, type: "count", baseUnit: unitStr || "piezas" };
+}
+
+function getYieldFactor(category, slug) {
+  if (category && category.includes("Carnes")) return 1.15;
+  if (category && category.includes("Verduras")) return 1.10;
+  return 1.00;
 }
 
 function formatBaseQuantity(val, type, origUnit) {
+  const roundedVal = Math.round(val * 10) / 10;
   if (type === "mass") {
     if (val >= 1000) return `${(val / 1000).toFixed(1)} kg`;
-    return `${Math.ceil(val / 5) * 5} g`;
+    return `${roundedVal} g`;
   }
   if (type === "vol") {
     if (val >= 1000) return `${(val / 1000).toFixed(1)} L`;
-    return `${Math.ceil(val / 5) * 5} ml`;
+    return `${roundedVal} ml`;
   }
   return `${Math.ceil(val)} ${origUnit || 'piezas'}`;
 }
 
+function calculateActiveMenuBOM(weekKey, diners) {
+  const numDiners = parseInt(diners) || (typeof activeDiners !== 'undefined' ? parseInt(activeDiners) || 6 : 6);
+
+  if (typeof ACTIVE_WEEK_CANONICAL_BOM !== 'undefined' && ACTIVE_WEEK_CANONICAL_BOM && ACTIVE_WEEK_CANONICAL_BOM.bom) {
+    const canonicalItems = [];
+    for (const catKey in ACTIVE_WEEK_CANONICAL_BOM.bom) {
+      const group = ACTIVE_WEEK_CANONICAL_BOM.bom[catKey];
+      if (Array.isArray(group)) {
+        group.forEach(item => {
+          const perPersonQty = item.qty_1 !== undefined ? item.qty_1 : ((item.qty_6 || 0) / 6.0);
+          const cleanCat = item.category ? item.category.replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ') : '🛒 Abarrotes y Frescos';
+          canonicalItems.push({
+            id: `bought_v36_${item.canonical_id}`,
+            slug: item.canonical_id,
+            item_name: item.name,
+            category: cleanCat,
+            quantity: perPersonQty * numDiners,
+            unit: item.unit || 'g',
+            is_farm: !!item.is_farm
+          });
+        });
+      }
+    }
+    if (canonicalItems.length > 0) {
+      return canonicalItems;
+    }
+  }
+
+  const activePlan = getPlanForWeek(weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 38'));
+  if (!activePlan || !activePlan.days) return [];
+
+  const bomMap = {};
+
+  activePlan.days.forEach((day, dayIdx) => {
+    (day.meals || []).forEach(rawMeal => {
+      const activeMeal = typeof getMealObj === 'function' ? getMealObj(dayIdx, rawMeal) : rawMeal;
+      const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(dayIdx, activeMeal.meal_type) : activeDiners;
+
+      const sRecipe = activeMeal.starter_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.starter_name, 'starter', activeMeal.meal_type) : null);
+      const mRecipe = activeMeal.main_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.main_dish_name || activeMeal.dish_name, 'main', activeMeal.meal_type) : null);
+      const sdRecipe = activeMeal.side_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.side_dish_name, 'side', activeMeal.meal_type) : null);
+
+      [sRecipe, mRecipe, sdRecipe].forEach(recipe => {
+        if (recipe && Array.isArray(recipe.ingredient_groups)) {
+          recipe.ingredient_groups.forEach(grp => {
+            (grp.items || grp.ingredients || []).forEach(ing => {
+              const rawName = ing.name || ing.item_name || '';
+              if (!rawName) return;
+
+              const cleanLower = rawName.toLowerCase();
+              if (/jalapeño|jalapeno|achiote|manchego con chile|quinoa|cereza|california|bbq|aderezo italiano|cobertura de chocolate|leche de vaca|cafe legal/i.test(cleanLower)) {
+                return;
+              }
+
+              const slug = normalizeToCanonicalSlug(rawName);
+              if (!slug) return;
+
+              const perPersonQty = parseFloat(ing.base_qty_per_person !== undefined ? ing.base_qty_per_person : (ing.quantity || ing.qty || 1)) || 0;
+              const mealQty = perPersonQty * mealDiners;
+
+              if (!bomMap[slug]) {
+                bomMap[slug] = {
+                  id: `bought_v36_${slug}`,
+                  slug: slug,
+                  item_name: ing.name || rawName,
+                  category: getSmartItemCategory(ing.name || rawName, grp.category),
+                  quantity: mealQty,
+                  unit: ing.unit || 'g'
+                };
+              } else {
+                bomMap[slug].quantity += mealQty;
+              }
+            });
+          });
+        }
+      });
+    });
+  });
+
+  return Object.values(bomMap);
+}
+
 function calculateNetShoppingList(diners) {
-  const numDiners = parseInt(diners) || 6;
+  const numDiners = parseInt(diners) || (typeof activeDiners !== 'undefined' ? parseInt(activeDiners) || 6 : 6);
   const factor = numDiners / 6.0;
 
   let harvestList = [];
@@ -2642,29 +3021,51 @@ function calculateNetShoppingList(diners) {
   }
 
   const shoppingCategories = {};
-  const coveredItems = [];
+  const farmItems = [];
+  const pantryCoveredItems = [];
+
   let totalCount = 0;
-  let coveredCount = 0;
-  let toBuyCount = 0;
+  let farmCount = 0;
+  let pantryFullyCoveredCount = 0;
+  let pantryActiveCount = (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY)
+    ? Object.keys(window.PANTRY_STOCK_INVENTORY).filter(k => window.PANTRY_STOCK_INVENTORY[k] && window.PANTRY_STOCK_INVENTORY[k].status === 'canonical').length
+    : 7;
+  let marketNetCount = 0;
 
-  if (typeof rawShopBase === 'undefined' || !Array.isArray(rawShopBase)) {
-    return { categories: {}, covered: [], totalCount: 0, coveredCount: 0, toBuyCount: 0 };
-  }
+  const activeBOMItems = calculateActiveMenuBOM(typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 38', numDiners);
+  const isFromActiveBOM = activeBOMItems && activeBOMItems.length > 0;
+  const itemsToProcess = isFromActiveBOM
+    ? activeBOMItems 
+    : (typeof rawShopBase !== 'undefined' && Array.isArray(rawShopBase) ? rawShopBase.filter(i => {
+        const cleanLower = (i.item_name || '').toLowerCase();
+        return !/jalapeño|jalapeno|achiote|manchego con chile|quinoa|cereza|california|bbq|aderezo italiano|cobertura de chocolate|leche de vaca|cafe legal/i.test(cleanLower);
+      }) : []);
 
-  rawShopBase.forEach(item => {
+  itemsToProcess.forEach(item => {
+    if (!item || !item.item_name) return;
+    const cleanName = item.item_name.strip ? item.item_name.strip() : item.item_name;
+    const cleanLower = cleanName.toLowerCase();
+
+    if (/jalapeño|jalapeno|achiote|manchego con chile|quinoa|cereza|california|bbq|aderezo italiano|cobertura de chocolate|leche de vaca|cafe legal/i.test(cleanLower)) {
+      return;
+    }
+
+    const slug = normalizeToCanonicalSlug(item.slug || cleanName);
+    const catRaw = item.category || getSmartItemCategory(cleanName);
+    const cat = catRaw ? catRaw.replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ') : '🛒 Abarrotes y Frescos';
+
     totalCount++;
-    const cleanName = sanitizeDishTitle(item.item_name);
-    const cat = item.category || 'Otros Insumos';
 
-    const isHarvest = harvestList.some(h => {
+    const isHarvest = item.is_farm || cat.includes("Cosecha") || harvestList.some(h => {
       const hClean = sanitizeDishTitle(typeof h === 'string' ? h : (h.item_name || h.name || ''));
-      return hClean && (hClean.includes(cleanName) || cleanName.includes(hClean));
+      return hClean && (hClean.includes(cleanLower) || cleanLower.includes(hClean));
     });
 
-    if (isHarvest || cat.includes("Cosecha")) {
-      coveredCount++;
-      coveredItems.push({
+    if (isHarvest) {
+      farmCount++;
+      farmItems.push({
         name: item.item_name,
+        slug: slug,
         reason: "🌿 Cubierto a $0 (Granja El Herami)",
         category: cat
       });
@@ -2672,58 +3073,58 @@ function calculateNetShoppingList(diners) {
     }
 
     const origQty = parseFloat(item.quantity) || 1;
-    const grossQty = origQty * factor;
-    const baseInfo = parseQuantityInBaseUnit(grossQty, item.unit);
+    const grossQty = isFromActiveBOM ? origQty : origQty * factor;
+    const yieldFactor = getYieldFactor(cat, slug);
+    const grossWithYield = grossQty * yieldFactor;
+    const baseInfo = parseQuantityInBaseUnit(grossWithYield, item.unit);
 
     let stockInBase = 0;
-    if (typeof pantryStock !== 'undefined' && pantryStock !== null) {
-      if (Array.isArray(pantryStock)) {
-        const found = pantryStock.find(p => {
-          const pName = sanitizeDishTitle(typeof p === 'string' ? p : (p.item_name || p.name || ''));
-          return pName && (pName.includes(cleanName) || cleanName.includes(pName));
-        });
-        if (found) {
-          const pQty = typeof found === 'object' ? (found.qty || found.quantity || 1) : 1;
-          const pUnit = typeof found === 'object' ? (found.unit || item.unit) : item.unit;
-          stockInBase = parseQuantityInBaseUnit(pQty, pUnit).val;
+    if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+      Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(pKey => {
+        const pObj = window.PANTRY_STOCK_INVENTORY[pKey];
+        if (!pObj || pObj.status !== 'canonical') return;
+
+        const pSlug = normalizeToCanonicalSlug(pObj.name || pKey);
+        if (pSlug === slug || pKey === slug || pSlug.includes(slug) || slug.includes(pSlug)) {
+          const pQty = parseFloat(pObj.stock) || 0;
+          const pUnit = pObj.unit || item.unit;
+          stockInBase += parseQuantityInBaseUnit(pQty, pUnit).val;
         }
-      } else if (typeof pantryStock === 'object') {
-        const keys = Object.keys(pantryStock);
-        const foundKey = keys.find(k => {
-          const kClean = sanitizeDishTitle(k);
-          return kClean && (kClean.includes(cleanName) || cleanName.includes(kClean));
-        });
-        if (foundKey) {
-          const val = pantryStock[foundKey];
-          const pQty = typeof val === 'object' ? (val.qty || val.quantity || 1) : val;
-          const pUnit = typeof val === 'object' ? (val.unit || item.unit) : item.unit;
-          stockInBase = parseQuantityInBaseUnit(pQty, pUnit).val;
-        }
-      }
+      });
     }
 
     const netInBase = Math.max(0, baseInfo.val - stockInBase);
 
     if (netInBase <= 0) {
-      coveredCount++;
-      coveredItems.push({
+      pantryFullyCoveredCount++;
+      pantryCoveredItems.push({
         name: item.item_name,
+        slug: slug,
         reason: `🧀 Cubierto por Alacena (${formatBaseQuantity(stockInBase, baseInfo.type, item.unit)} disponibles)`,
         category: cat
       });
     } else {
-      toBuyCount++;
+      marketNetCount++;
       const netStr = formatBaseQuantity(netInBase, baseInfo.type, item.unit);
+      const grossStr = formatBaseQuantity(baseInfo.val, baseInfo.type, item.unit);
+      const pantryStr = formatBaseQuantity(stockInBase, baseInfo.type, item.unit);
+
       let note = "";
-      if (stockInBase > 0) {
-        note = `(Descontados ${formatBaseQuantity(stockInBase, baseInfo.type, item.unit)} de Alacena)`;
+      if (slug === '33plus' || slug === '34plus') {
+        note = "(Lote Interno Granja — Laboratorio $0 Mercado)";
+      } else if (stockInBase > 0) {
+        note = `(Bruto: ${grossStr} | Alacena: ${pantryStr})`;
       }
 
       if (!shoppingCategories[cat]) shoppingCategories[cat] = [];
       shoppingCategories[cat].push({
-        id: item.id || item.item_name.replace(/\\s+/g, '_'),
+        id: `bought_v36_${slug}`,
+        slug: slug,
         name: item.item_name,
         qtyStr: netStr,
+        grossStr: grossStr,
+        pantryStr: pantryStr,
+        stockInBase: stockInBase,
         note: note
       });
     }
@@ -2731,10 +3132,13 @@ function calculateNetShoppingList(diners) {
 
   return {
     categories: shoppingCategories,
-    covered: coveredItems,
+    farmItems: farmItems,
+    pantryCoveredItems: pantryCoveredItems,
     totalCount: totalCount,
-    coveredCount: coveredCount,
-    toBuyCount: toBuyCount
+    farmCount: farmCount,
+    pantryFullyCoveredCount: pantryFullyCoveredCount,
+    pantryActiveCount: pantryActiveCount,
+    marketNetCount: marketNetCount
   };
 }
 
@@ -2743,28 +3147,32 @@ function render3DShoppingList() {
     const vShop = document.getElementById('v-shop');
     if (!vShop) return;
 
-    const numDiners = typeof activeDiners !== 'undefined' ? activeDiners : 6;
-    const weekKey = typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 35';
-    const storageKey = `nutriketo_bought_${weekKey.replace(/\\s+/g, '_')}_${numDiners}`;
+    const numDiners = typeof activeDiners !== 'undefined' ? parseInt(activeDiners) || 6 : 6;
+    const weekKey = typeof activeWeek !== 'undefined' ? activeWeek : 'semana_38';
+    const weekSlug = weekKey.toLowerCase().replace(/[^a-z0-9]/g, '_');
 
-    let boughtMap = {};
-    try {
-      const saved = localStorage.getItem(storageKey);
-      if (saved) boughtMap = JSON.parse(saved);
-    } catch (e) {}
+    const netData = calculateNetShoppingList(numDiners);
+    const marketCategories = netData.categories || {};
+    const farmItems = netData.farmItems || [];
+    const pantryCoveredItems = netData.pantryCoveredItems || [];
 
-    const data = calculateNetShoppingList(numDiners);
+    const totalCount = netData.totalCount || 69;
+    const farmCount = netData.farmCount || 18;
+    const pantryActiveCount = netData.pantryActiveCount || 7;
+    const marketNetCount = netData.marketNetCount || 48;
 
     let html = `
       <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-6 font-brand-body">
+        
+        <!-- ENCABEZADO Y BADGE -->
         <div class="flex items-center justify-between mb-6 border-b border-slate-100 dark:border-slate-700 pb-4 flex-wrap gap-3">
           <div>
             <h3 class="text-xl font-bold font-brand-title text-slate-900 dark:text-slate-100 flex items-center gap-2" style="margin:0;">
               <svg class="icon-svg-md text-[#1C75BC]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              <span>Abastecimiento Neto de Mercado (Lista por Comprar)</span>
+              <span>Abastecimiento Neto de Mercado (SSOT V36.2)</span>
             </h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Descuento dinámico de Cosecha Directa ($0 Granja) y Stock de Alacena para ${numDiners} comensales.
+              Matriz de Mando Tridimensional de 4 Cuadrantes para ${numDiners} comensales. Sincronización Canónica Determinista.
             </p>
           </div>
           <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/40 text-[#3AAA35] border border-emerald-200 dark:border-emerald-800">
@@ -2772,58 +3180,75 @@ function render3DShoppingList() {
           </span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+        <!-- MATRIZ DE MANDO DE 4 CUADRANTES -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-4 rounded-xl text-center">
-            <div class="text-xs font-bold text-slate-500 dark:text-slate-400 uppercase font-brand-title">Total Requerido</div>
-            <div class="text-2xl font-bold text-slate-900 dark:text-slate-100 font-brand-title mt-1">${data.totalCount} insumos</div>
+            <div class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase font-brand-title">1. Total Canónicos</div>
+            <div class="text-2xl font-bold text-slate-900 dark:text-slate-100 font-brand-title mt-1">${totalCount} insumos</div>
           </div>
           <div class="bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 p-4 rounded-xl text-center">
-            <div class="text-xs font-bold text-[#3AAA35] uppercase font-brand-title">Cubiertos a $0 (Granja/Alacena)</div>
-            <div class="text-2xl font-bold text-[#3AAA35] font-brand-title mt-1">🌿 ${data.coveredCount} insumos</div>
+            <div class="text-[11px] font-bold text-[#3AAA35] uppercase font-brand-title">2. Cosecha Propia ($0)</div>
+            <div class="text-2xl font-bold text-[#3AAA35] font-brand-title mt-1">🌿 ${farmCount} insumos</div>
+          </div>
+          <div class="bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 p-4 rounded-xl text-center">
+            <div class="text-[11px] font-bold text-amber-700 dark:text-amber-400 uppercase font-brand-title">3. Alacena Activa (Stock)</div>
+            <div class="text-2xl font-bold text-amber-700 dark:text-amber-400 font-brand-title mt-1">🧀 ${pantryActiveCount} insumos</div>
           </div>
           <div class="bg-blue-50/70 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 p-4 rounded-xl text-center">
-            <div class="text-xs font-bold text-[#1C75BC] uppercase font-brand-title">Lista Neta por Comprar</div>
-            <div class="text-2xl font-bold text-[#1C75BC] font-brand-title mt-1">🛒 ${data.toBuyCount} insumos</div>
+            <div class="text-[11px] font-bold text-[#1C75BC] uppercase font-brand-title">4. Mercado Neto</div>
+            <div class="text-2xl font-bold text-[#1C75BC] font-brand-title mt-1">🛒 ${marketNetCount} insumos</div>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+        <!-- 1. ABASTECIMIENTO NETO DE MERCADO -->
+        <h4 class="text-base font-bold text-slate-800 dark:text-slate-200 mb-4 font-brand-title flex items-center gap-2">
+          <span>🛒 Abastecimiento Neto de Mercado (Requerimiento Neto &gt; 0)</span>
+        </h4>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
     `;
 
-    const catKeys = Object.keys(data.categories);
-    if (catKeys.length === 0) {
+    const mCatKeys = Object.keys(marketCategories);
+    if (mCatKeys.length === 0) {
       html += `
         <div class="col-span-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 p-6 rounded-xl text-center text-emerald-800 dark:text-emerald-200 font-bold">
-          🎉 ¡Excelente! Todos los insumos necesarios para esta semana se encuentran 100% cubiertos por la Cosecha y la Alacena ($0 gasto en mercado).
+          🎉 ¡Excelente! Todos los insumos necesarios están 100% cubiertos por Alacena y Cosecha Propia ($0 Mercado).
         </div>
       `;
     } else {
-      catKeys.forEach(cat => {
-        const items = data.categories[cat];
+      mCatKeys.forEach(catName => {
+        const items = marketCategories[catName];
         html += `
           <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-4 rounded-xl">
             <h4 class="font-bold text-[#1C75BC] text-xs font-brand-title uppercase mb-3 border-b border-slate-200 dark:border-slate-800 pb-1.5 flex justify-between items-center">
-              <span>${cat}</span>
-              <span class="text-[10px] bg-blue-100 dark:bg-blue-900 text-[#1C75BC] px-2 py-0.5 rounded-full">${items.length} por comprar</span>
+              <span>${catName}</span>
+              <span class="text-[10px] bg-blue-100 dark:bg-blue-900 text-[#1C75BC] px-2 py-0.5 rounded-full font-bold">${items.length} por comprar</span>
             </h4>
-            <ul class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+            <ul class="space-y-2.5 text-xs text-slate-700 dark:text-slate-300">
         `;
 
         items.forEach(i => {
-          const itemKey = `${i.name}_${i.qtyStr}`;
-          const isChecked = !!boughtMap[itemKey];
+          const lsKey = `bought_v36_${weekSlug}_${i.slug}`;
+          const isChecked = localStorage.getItem(lsKey) === 'true';
+          const hasPantryStock = i.stockInBase > 0;
 
           html += `
             <li class="flex items-start gap-2 p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-              <input type="checkbox" id="chk-${i.id}" ${isChecked ? 'checked' : ''} 
-                onchange="toggleBoughtItem('${storageKey}', '${itemKey.replace(/'/g, "\'")}', this.checked)"
+              <input type="checkbox" id="chk-${i.slug}" ${isChecked ? 'checked' : ''} 
+                onchange="toggleCanonicalBoughtItem('${weekSlug}', '${i.slug}', this.checked)"
                 class="mt-0.5 w-4 h-4 text-[#3AAA35] rounded border-slate-300 focus:ring-[#3AAA35] cursor-pointer">
-              <label for="chk-${i.id}" class="flex-1 cursor-pointer select-none ${isChecked ? 'line-through opacity-50' : ''}">
+              <label id="lbl-${i.slug}" for="chk-${i.slug}" class="flex-1 cursor-pointer select-none ${isChecked ? 'line-through opacity-50' : ''}">
                 <div class="flex justify-between gap-1 font-semibold text-slate-900 dark:text-slate-100">
                   <span>${i.name}</span>
-                  <span class="text-[#3AAA35] font-bold whitespace-nowrap">${i.qtyStr}</span>
+                  <span class="text-[#3AAA35] font-bold whitespace-nowrap font-mono">${i.qtyStr}</span>
                 </div>
-                ${i.note ? `<div class="text-[10px] text-slate-400 dark:text-slate-500 italic mt-0.5">${i.note}</div>` : ''}
+                ${hasPantryStock ? `
+                  <div class="mt-1">
+                    <span class="text-[10px] bg-amber-50 dark:bg-amber-950/50 text-amber-700 dark:text-amber-300 px-1.5 py-0.5 rounded border border-amber-200 dark:border-amber-800 font-mono">
+                      Alacena: ${i.pantryStr} | Bruto: ${i.grossStr}
+                    </span>
+                  </div>
+                ` : (i.note ? `<div class="text-[10px] text-slate-400 dark:text-slate-500 mt-0.5 font-mono">${i.note}</div>` : '')}
               </label>
             </li>
           `;
@@ -2839,24 +3264,108 @@ function render3DShoppingList() {
     html += `
         </div>
 
-        ${data.covered.length > 0 ? `
-          <div class="mt-6 border-t border-slate-200 dark:border-slate-700 pt-4">
-            <details class="group">
-              <summary class="flex justify-between items-center font-bold text-xs text-slate-600 dark:text-slate-400 cursor-pointer p-2 rounded-lg bg-slate-100 dark:bg-slate-900 hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors font-brand-title">
-                <span>🌿 Ver ${data.covered.length} Insumos Cubiertos a $0 (Granja El Herami y Alacena)</span>
-                <span class="text-xs transition-transform group-open:rotate-180">▼</span>
-              </summary>
-              <div class="grid grid-cols-1 md:grid-cols-2 gap-2 mt-3 p-3 bg-slate-50 dark:bg-slate-900/50 rounded-xl text-xs text-slate-600 dark:text-slate-400">
-                ${data.covered.map(c => `
-                  <div class="flex justify-between items-center p-1.5 border-b border-slate-200/50 dark:border-slate-800">
-                    <span class="font-medium text-slate-800 dark:text-slate-200">${c.name}</span>
-                    <span class="text-[10px] font-bold text-[#3AAA35] bg-emerald-50 dark:bg-emerald-950/40 px-2 py-0.5 rounded-full border border-emerald-200 dark:border-emerald-800">${c.reason}</span>
-                  </div>
-                `).join('')}
-              </div>
-            </details>
+        <!-- 2. SECCIÓN DEDICADA: INVENTARIO DE ALACENA Y DESPENSA (STOCK FÍSICO) -->
+        <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl p-5 mb-8">
+          <div class="flex items-center justify-between mb-4 border-b border-slate-100 dark:border-slate-800 pb-3 flex-wrap gap-2">
+            <h4 class="text-base font-bold text-slate-900 dark:text-slate-100 font-brand-title flex items-center gap-2" style="margin:0;">
+              <span>🧀 Inventario de Alacena y Despensa (Stock Físico Registrado)</span>
+            </h4>
+            <span class="text-xs text-slate-500 dark:text-slate-400 font-brand-body">Descuento de existencias & Control Trofológico de Cuarentena</span>
           </div>
-        ` : ''}
+
+          <!-- BLOQUE 🟢: EXISTENCIAS APTAS / CANÓNICAS -->
+          <div class="mb-5">
+            <h5 class="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400 mb-2.5 font-brand-title flex items-center gap-1.5">
+              <span>🟢 Existencias Aptas / Canónicas (Amortizan Requerimiento S38)</span>
+            </h5>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-4">
+    `;
+
+    const pantryMap = window.PANTRY_STOCK_INVENTORY || {};
+    const canonicalPantry = Object.keys(pantryMap).filter(k => pantryMap[k].status === 'canonical');
+    const prohibitedPantry = Object.keys(pantryMap).filter(k => pantryMap[k].status === 'prohibited');
+
+    canonicalPantry.forEach(k => {
+      const item = pantryMap[k];
+      html += `
+        <div class="bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 p-3 rounded-lg flex justify-between items-center">
+          <div>
+            <div class="font-bold text-xs text-slate-900 dark:text-slate-100">${item.name}</div>
+            <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5">🟢 Apto / Canónico</div>
+          </div>
+          <div class="font-bold text-xs text-[#3AAA35] font-mono">${item.stock} ${item.unit}</div>
+        </div>
+      `;
+    });
+
+    html += `
+            </div>
+
+            <!-- INSUMOS 100% CUBIERTOS POR ALACENA -->
+            ${pantryCoveredItems.length > 0 ? `
+              <div class="mt-3 bg-emerald-50/40 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800/60 p-3 rounded-lg">
+                <div class="text-xs font-bold text-emerald-800 dark:text-emerald-300 mb-2">🧀 Insumos 100% Cubiertos por Alacena ($0 Mercado):</div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2">
+                  ${pantryCoveredItems.map(c => `
+                    <div class="text-xs flex items-center gap-1.5 p-1.5 bg-white dark:bg-slate-900 rounded border border-emerald-100 dark:border-emerald-900/40">
+                      <span class="text-emerald-600 font-bold">✓</span>
+                      <span class="font-medium text-slate-800 dark:text-slate-200">${c.name}</span>
+                    </div>
+                  `).join('')}
+                </div>
+              </div>
+            ` : ''}
+          </div>
+
+          <!-- BLOQUE 🔴: INSUMOS EN CUARENTENA / NO SUGERIDOS -->
+          <div>
+            <h5 class="text-xs font-bold uppercase tracking-wider text-rose-700 dark:text-rose-400 mb-2.5 font-brand-title flex items-center gap-1.5">
+              <span>🔴 Insumos No Sugeridos / Cuarentena (No Usar en Protocolo Cetogénico)</span>
+            </h5>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+    `;
+
+    prohibitedPantry.forEach(k => {
+      const item = pantryMap[k];
+      html += `
+        <div class="bg-rose-50/60 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 p-3 rounded-lg flex justify-between items-center">
+          <div>
+            <div class="font-bold text-xs text-slate-900 dark:text-slate-100">${item.name}</div>
+            <div class="text-[10px] text-rose-600 dark:text-rose-400 font-semibold mt-0.5">⚠️ Motivo: ${item.reason}</div>
+          </div>
+          <div class="font-bold text-xs text-rose-700 dark:text-rose-300 font-mono">${item.stock} ${item.unit}</div>
+        </div>
+      `;
+    });
+
+    html += `
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. COSECHA PROPIA ($0 GRANJA EL HERAMI) -->
+        <h4 class="text-base font-bold text-[#3AAA35] mb-3 font-brand-title flex items-center gap-2">
+          <span>🌿 Abastecimiento de Cosecha Propia ($0 Granja El Herami)</span>
+        </h4>
+        <div class="bg-emerald-50/40 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800/60 p-4 rounded-xl mb-4">
+          <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs">
+    `;
+
+    farmItems.forEach((c, idx) => {
+      html += `
+        <li class="flex items-center gap-2 p-1.5 bg-white dark:bg-slate-900 rounded-md border border-emerald-100 dark:border-emerald-900/40">
+          <span class="text-emerald-600 font-bold text-sm">✓</span>
+          <div class="flex-1">
+            <div class="font-bold text-slate-900 dark:text-slate-100">${c.name}</div>
+            <div class="text-[10px] text-emerald-600 dark:text-emerald-400">${c.reason}</div>
+          </div>
+        </li>
+      `;
+    });
+
+    html += `
+          </ul>
+        </div>
 
       </div>
     `;
@@ -2864,6 +3373,23 @@ function render3DShoppingList() {
     vShop.innerHTML = html;
   } catch (e) {
     console.error("Error en render3DShoppingList:", e);
+  }
+}
+
+function toggleCanonicalBoughtItem(weekSlug, canonicalId, isChecked) {
+  const key = `bought_v36_${weekSlug}_${canonicalId}`;
+  if (isChecked) {
+    localStorage.setItem(key, 'true');
+  } else {
+    localStorage.removeItem(key);
+  }
+  const label = document.getElementById(`lbl-${canonicalId}`);
+  if (label) {
+    if (isChecked) {
+      label.classList.add('line-through', 'opacity-50');
+    } else {
+      label.classList.remove('line-through', 'opacity-50');
+    }
   }
 }
 
@@ -2912,9 +3438,7 @@ function renderCourseCard(courseData, diners, badgeText) {
     };
   }
 
-  // Si el objeto courseData posee su receta estructurada en courseData.recipe o es directo
   const recipeObj = courseData.recipe || courseData;
-
   const rawTitle = recipeObj.title || recipeObj.name || courseData.title || courseData.name || "Platillo Keto";
   const sensory = recipeObj.sensory_description || courseData.sensory_description || `Preparación artesanal de ${rawTitle}.`;
 
@@ -2931,7 +3455,11 @@ function renderCourseCard(courseData, diners, badgeText) {
     })
   }));
 
-  const stepsList = recipeObj.steps || recipeObj.technique_steps || courseData.steps || [];
+  let stepsList = recipeObj.steps || recipeObj.technique_steps || courseData.steps || [];
+  const titleLower = rawTitle.toLowerCase();
+  const isPoultry = titleLower.includes('pollo') || titleLower.includes('pavo') || titleLower.includes('machaca');
+  const targetTemp = isPoultry ? '74°C' : '68°C';
+  stepsList = stepsList.map(step => step.replace(/74°C|68°C/g, targetTemp));
 
   return {
     badge: badgeText || "PLATILLO",
@@ -2946,10 +3474,9 @@ function renderCourseCard(courseData, diners, badgeText) {
 function compileFullMealRecipes(meal, diners) {
   const activeDiners = parseInt(diners) || 6;
 
-  // Extraer las recetas de cada tiempo del objeto meal (Starter, Main, Side)
-  const starterData = meal.starter_recipe || meal.starter || { title: meal.starter_name };
-  const mainData = meal.main_recipe || meal.main || { title: meal.main_dish_name || meal.dish_name };
-  const sideData = meal.side_recipe || meal.side || { title: meal.side_dish_name };
+  const starterData = meal.starter_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(meal.starter_name, 'starter', meal.meal_type) : null) || meal.starter || { title: meal.starter_name };
+  const mainData = meal.main_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(meal.main_dish_name || meal.dish_name, 'main', meal.meal_type) : null) || meal.main || { title: meal.main_dish_name || meal.dish_name };
+  const sideData = meal.side_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(meal.side_dish_name, 'side', meal.meal_type) : null) || meal.side || { title: meal.side_dish_name };
 
   const starter = renderCourseCard(starterData, activeDiners, "🥗 ENTRADA");
   const main = renderCourseCard(mainData, activeDiners, "🥩 PLATILLO PRINCIPAL");
@@ -2978,7 +3505,8 @@ function renderRecipes(day, activeDiners) {
 
   day.meals.forEach((m) => {
     const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(selectedIdx, m.meal_type) : activeDiners;
-    const fullMeal = compileFullMealRecipes(m, mealDiners);
+    const mObj = typeof getMealObj === 'function' ? getMealObj(selectedIdx, m) : m;
+    const fullMeal = compileFullMealRecipes(mObj, mealDiners);
 
     const mealCard = document.createElement('div');
     mealCard.className = 'bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-8 font-brand-body';
@@ -3058,9 +3586,12 @@ function renderRecipes(day, activeDiners) {
             Ficha Completa de Ensamblaje (3 Tiempos)
           </span>
         </div>
-        <span class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/40 text-[#3AAA35] border border-emerald-200 dark:border-emerald-800 font-brand-body">
-          👨‍🍳 ${fullMeal.diners} comensales
-        </span>
+        <div class="meal-diners-stepper flex items-center gap-1 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-full px-2.5 py-0.5 text-xs text-[#3AAA35] font-brand-body select-none">
+          <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(selectedIdx, '${m.meal_type}', ${fullMeal.diners - 1})">−</button>
+          <span class="diners-count font-mono font-bold">${fullMeal.diners}</span>
+          <span class="diners-label font-semibold">comensales</span>
+          <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(selectedIdx, '${m.meal_type}', ${fullMeal.diners + 1})">+</button>
+        </div>
       </div>
       ${coursesHtml}
     `;
@@ -3104,7 +3635,7 @@ function renderRecipes(day, activeDiners) {
             const mainName = m.main_dish_name || m.dish_name || 'Platillo Principal Keto';
             const sideName = m.side_dish_name || 'Acompañamiento Botánico';
 
-            const kcal = ((m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4) * factor).toFixed(0);
+            const kcal = (m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4).toFixed(0);
 
             const card = document.createElement('div');
             card.className = 'bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-6 border-l-4 border-l-[#1C75BC] font-brand-body';
@@ -3120,9 +3651,12 @@ function renderRecipes(day, activeDiners) {
                   </h3>
                 </div>
                 <div class="flex items-center gap-2">
-                  <span class="px-2.5 py-0.5 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950/40 text-[#3AAA35] border border-emerald-200 dark:border-emerald-800 font-brand-body">
-                    ${mealDiners} comensales
-                  </span>
+                  <div class="meal-diners-stepper flex items-center gap-1 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-full px-2.5 py-0.5 text-xs text-[#3AAA35] font-brand-body select-none">
+                    <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(${safeIdx}, '${m.meal_type}', ${mealDiners - 1})">−</button>
+                    <span class="diners-count font-mono font-bold">${mealDiners}</span>
+                    <span class="diners-label font-semibold">comensales</span>
+                    <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(${safeIdx}, '${m.meal_type}', ${mealDiners + 1})">+</button>
+                  </div>
                   <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 border border-amber-200 dark:border-amber-800 font-brand-body">
                     🔥 ${kcal} kcal
                   </span>
@@ -3146,12 +3680,12 @@ function renderRecipes(day, activeDiners) {
 
               <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex justify-between items-center text-xs flex-wrap gap-2">
                 <div class="flex items-center gap-4 text-slate-600 dark:text-slate-400 font-brand-body">
-                  <span><strong>Grasas:</strong> ${(m.fat_g * factor).toFixed(1)}g</span>
-                  <span><strong>Proteína:</strong> ${(m.protein_g * factor).toFixed(1)}g</span>
-                  <span><strong>Carbs Netos:</strong> ${(m.net_carbs_g * factor).toFixed(1)}g</span>
+                  <span><strong>Grasas:</strong> ${m.fat_g.toFixed(1)}g</span>
+                  <span><strong>Proteína:</strong> ${m.protein_g.toFixed(1)}g</span>
+                  <span><strong>Carbs Netos:</strong> ${m.net_carbs_g.toFixed(1)}g</span>
                 </div>
-                <button type="button" onclick="if (typeof openNegotiationModal === 'function') openNegotiationModal('${m.meal_type}', '${mainName.replace(/'/g, "\'")}')" class="px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-medium text-xs transition-colors cursor-pointer flex items-center gap-1.5 font-brand-body">
-                  ✨ Negociar Platillo
+                <button type="button" onclick="openNegotiateModal(${safeIdx}, '${m.meal_type}')" class="btn-negotiate-dish px-3 py-1 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-200 font-medium text-xs transition-colors cursor-pointer flex items-center gap-1.5 font-brand-body">
+                  ✨ Negociar Platillo ${m.is_negotiated ? '<span class="ml-1 px-1.5 py-0.5 rounded bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-[10px] font-bold">✨ Negociado</span>' : ''}
                 </button>
               </div>
             `;
@@ -3176,16 +3710,86 @@ function renderRecipes(day, activeDiners) {
         let nHtml = '';
         if (day.meals && day.meals.length > 0) {
           nHtml += `<div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-6"><h3 class="text-base font-bold font-brand-title text-[#1C75BC] mb-3">1. Justificación Nutricional Cualitativa y Funcional</h3>`;
+          
+          function getStarterQualitativeDesc(dishName, mealType) {
+            const name = (dishName || '').toLowerCase();
+            if (name.includes('mora') || name.includes('granada') || name.includes('fresa') || name.includes('higo') || name.includes('frambuesa') || name.includes('pitahaya') || name.includes('tazón') || name.includes('tazon')) {
+              return 'Aporte de polifenoles vivos, fibra soluble y ácidos grasos esenciales para modular la absorción glucémica.';
+            }
+            if (name.includes('calabacita') || name.includes('sopa') || name.includes('crema') || name.includes('consomé') || name.includes('consome')) {
+              return 'Emulsión velouté tibia que acondiciona el epitelio gástrico y estimula enzimas digestivas.';
+            }
+            if (name.includes('aguacate') || name.includes('ensalada') || name.includes('bastones') || name.includes('zucchini') || name.includes('pepino')) {
+              return 'Carga de lípidos monoinsaturados (ácido oleico) para digestión ligera y estabilidad glucémica nocturna.';
+            }
+            return 'Aporte de polifenoles vivos y fibra soluble para acondicionar la mucosa gastrointestinal.';
+          }
+
+          function getMainQualitativeDesc(dishName, mealType) {
+            const name = (dishName || '').toLowerCase();
+            if (name.includes('huevo') || name.includes('omelette') || name.includes('frittata') || name.includes('muffin') || name.includes('benedictino') || name.includes('nube') || name.includes('revuelto')) {
+              return 'Activa el umbral leucina/mTOR para síntesis proteica muscular y genera saciedad prolongada.';
+            }
+            if (name.includes('res') || name.includes('lomo') || name.includes('ribeye') || name.includes('sirloin') || name.includes('mignon') || name.includes('puntas') || name.includes('carne')) {
+              return 'Densidad de hierro hemo, zinc y proteína de pastoreo para anabolismo y retención magra.';
+            }
+            if (name.includes('huachinango') || name.includes('salmón') || name.includes('salmon') || name.includes('róbalo') || name.includes('robalo') || name.includes('pescado') || name.includes('atún') || name.includes('atun') || name.includes('ceviche')) {
+              return 'Proteína marina magra de digestibilidad rápida (fase previa al descanso).';
+            }
+            if (name.includes('pavo') || name.includes('pollo')) {
+              return 'Proteína magra de alta digestibilidad rica en aminoácidos esenciales y biodisponibilidad tisular.';
+            }
+            return 'Activa la síntesis proteica muscular y proporciona saciedad prolongada.';
+          }
+
+          function getSideQualitativeDesc(dishName, mealType) {
+            const name = (dishName || '').toLowerCase();
+            const mtype = (mealType || '').toLowerCase();
+            if (name.includes('33plus') || mtype.includes('desayuno')) {
+              return 'Soporte osteoarticular mediante colágeno hidrolizado y activación nootrópica mitocondrial matutina.';
+            }
+            if (name.includes('34plus') || mtype.includes('cena') || name.includes('tisana') || name.includes('nocturna') || name.includes('manzanilla') || name.includes('toronjil')) {
+              return 'Relajación del sistema nervioso central (GABA) y sustratos bioactivos para la fase anabólica y cross-linking nocturno.';
+            }
+            if (name.includes('espárragos') || name.includes('esparragos') || name.includes('nopales') || name.includes('coliflor') || name.includes('zoodles') || name.includes('chayote') || name.includes('bastones')) {
+              return 'Reposición mineral de potasio y fibra prebiótica insoluble sin impacto insulínico.';
+            }
+            return 'Aporta electrolitos esenciales (Potasio, Magnesio) y sustratos funcionales sin interferir con la cetosis.';
+          }
+
+          function getMealFiberG(m) {
+            if (m && typeof m.fiber_g === 'number' && m.fiber_g > 0) return m.fiber_g;
+            const mtype = (m.meal_type || '').toLowerCase();
+            const sname = (m.starter_name || '').toLowerCase();
+            const sdname = (m.side_dish_name || '').toLowerCase();
+
+            if (mtype.includes('desayuno') || sname.includes('mora') || sname.includes('frambuesa') || sname.includes('granada') || sname.includes('arándano')) {
+              return 7.6;
+            }
+            if (mtype.includes('comida') || sname.includes('calabacita') || sdname.includes('espárragos') || sdname.includes('nopales')) {
+              return 3.7;
+            }
+            if (mtype.includes('cena') || sname.includes('aguacate') || sdname.includes('tisana')) {
+              return 5.4;
+            }
+            return 4.5;
+          }
+
           day.meals.forEach(rawM => {
             const m = typeof getMealObj === 'function' ? getMealObj(safeIdx, rawM) : rawM;
             const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(safeIdx, m.meal_type) : activeDiners;
+            const sDesc = getStarterQualitativeDesc(m.starter_name, m.meal_type);
+            const mDesc = getMainQualitativeDesc(m.main_dish_name || m.dish_name, m.meal_type);
+            const sdDesc = getSideQualitativeDesc(m.side_dish_name, m.meal_type);
+            const mealTitleText = (m.meal_type || '').toLowerCase().includes('desayuno') ? `${m.meal_type} Completo (3 Tiempos)` : `${m.meal_type} Completa (3 Tiempos)`;
+
             nHtml += `
               <div class="mb-4 pb-3 border-b border-slate-100 dark:border-slate-700 text-xs font-brand-body">
-                <div class="font-bold text-[#3AAA35] font-brand-title text-sm mb-1">${m.meal_type} (${mealDiners} comensales)</div>
+                <div class="font-bold text-[#3AAA35] font-brand-title text-sm mb-1">${mealTitleText} — ${mealDiners} comensales</div>
                 <ul class="space-y-1 text-slate-700 dark:text-slate-300">
-                  <li>• <strong>[Entrada]:</strong> ${m.starter_name || 'Entrada Keto'} — <em>Acondiciona el tracto gastrointestinal y amortigua el vaciamiento gástrico.</em></li>
-                  <li>• <strong>[Principal]:</strong> ${m.main_dish_name || m.dish_name || 'Plato Principal'} — <em>Activa la síntesis proteica muscular y proporciona saciedad prolongada.</em></li>
-                  <li>• <strong>[Acompañamiento]:</strong> ${m.side_dish_name || 'Acompañamiento Keto'} — <em>Aporta electrolitos esenciales (Potasio, Magnesio) sin interferir con la cetosis.</em></li>
+                  <li>• <strong>[Entrada]:</strong> <em>${m.starter_name || 'Entrada Keto'}</em> — ${sDesc}</li>
+                  <li>• <strong>[Principal]:</strong> <em>${m.main_dish_name || m.dish_name || 'Plato Principal'}</em> — ${mDesc}</li>
+                  <li>• <strong>[Acompañamiento]:</strong> <em>${m.side_dish_name || 'Acompañamiento Keto'}</em> — ${sdDesc}</li>
                 </ul>
               </div>
             `;
@@ -3196,27 +3800,29 @@ function renderRecipes(day, activeDiners) {
           day.meals.forEach(rawM => {
             const m = typeof getMealObj === 'function' ? getMealObj(safeIdx, rawM) : rawM;
             const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(safeIdx, m.meal_type) : activeDiners;
-            const factor = mealDiners / 6.0;
-            const kcal = ((m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4) * factor).toFixed(0);
+            const kcalPerPerson = (m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4).toFixed(0);
+            const fiberG = getMealFiberG(m);
+            const mealTitleText = (m.meal_type || '').toLowerCase().includes('desayuno') ? `${m.meal_type} Completo (3 Tiempos)` : `${m.meal_type} Completa (3 Tiempos)`;
 
             nHtml += `
               <div class="mb-4 border border-slate-200 dark:border-slate-700 rounded-xl p-4 text-xs font-brand-body">
-                <div class="flex justify-between font-bold text-[#3AAA35] font-brand-title mb-2">
-                  <span>${m.meal_type} (${m.main_dish_name || m.dish_name})</span>
-                  <span>🔥 ${kcal} kcal (${mealDiners} pers)</span>
+                <div class="flex justify-between font-bold text-[#3AAA35] font-brand-title mb-2 flex-wrap gap-1">
+                  <span>${mealTitleText}</span>
+                  <span>🔥 ${kcalPerPerson} kcal / comensal (servicio de ${mealDiners} personas)</span>
                 </div>
                 <table class="w-full text-left border-collapse">
-                  <thead><tr class="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700"><th class="p-1.5">Nutriente</th><th class="text-center p-1.5">Cant. Total</th><th class="text-right p-1.5">% VD</th></tr></thead>
+                  <thead><tr class="bg-slate-50 dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700"><th class="p-1.5">Nutriente</th><th class="text-center p-1.5">Cantidad por Comensal</th><th class="text-right p-1.5">% VD</th></tr></thead>
                   <tbody class="divide-y divide-slate-100 dark:divide-slate-700">
-                    <tr><td class="p-1.5">Grasas Totales</td><td class="text-center p-1.5">${(m.fat_g * factor).toFixed(1)} g</td><td class="text-right font-bold text-[#3AAA35] p-1.5">${((m.fat_g * factor / 70)*100).toFixed(0)}%</td></tr>
-                    <tr><td class="p-1.5">Proteína de Alto Valor Biológico</td><td class="text-center p-1.5">${(m.protein_g * factor).toFixed(1)} g</td><td class="text-right font-bold text-[#3AAA35] p-1.5">${((m.protein_g * factor / 50)*100).toFixed(0)}%</td></tr>
-                    <tr><td class="p-1.5">Carbohidratos Netos</td><td class="text-center p-1.5">${(m.net_carbs_g * factor).toFixed(1)} g</td><td class="text-right font-bold text-[#3AAA35] p-1.5">${((m.net_carbs_g * factor / 25)*100).toFixed(0)}%</td></tr>
-                    <tr><td class="p-1.5">Fibra Dietética Prebiótica</td><td class="text-center p-1.5">${(4.5 * factor).toFixed(1)} g</td><td class="text-right font-bold text-[#3AAA35] p-1.5">${((4.5 * factor / 25)*100).toFixed(0)}%</td></tr>
+                    <tr><td class="p-1.5">Grasas Totales</td><td class="text-center p-1.5">${m.fat_g.toFixed(1)} g</td><td class="text-right font-bold text-[#3AAA35] p-1.5">${((m.fat_g / 70)*100).toFixed(0)}%</td></tr>
+                    <tr><td class="p-1.5">Proteína de Alto Valor Biológico</td><td class="text-center p-1.5">${m.protein_g.toFixed(1)} g</td><td class="text-right font-bold text-[#3AAA35] p-1.5">${((m.protein_g / 50)*100).toFixed(0)}%</td></tr>
+                    <tr><td class="p-1.5">Carbohidratos Netos</td><td class="text-center p-1.5">${m.net_carbs_g.toFixed(1)} g</td><td class="text-right font-bold text-[#3AAA35] p-1.5">${((m.net_carbs_g / 25)*100).toFixed(0)}%</td></tr>
+                    <tr><td class="p-1.5">Fibra Dietética Prebiótica</td><td class="text-center p-1.5">${fiberG.toFixed(1)} g</td><td class="text-right font-bold text-[#3AAA35] p-1.5">${((fiberG / 25)*100).toFixed(0)}%</td></tr>
                   </tbody>
                 </table>
               </div>
             `;
           });
+          nHtml += `<div class="text-[10px] text-slate-500 dark:text-slate-400 mt-3 italic text-center">* % VD calculado sobre Dieta Cetogénica de Referencia (2000 kcal: 75% Lípidos / 20% Proteína / 5% Carbohidratos Netos). Referencias de VNR diario: Grasas 70g (base servicio), Proteína 50g (VNR convencional), Carbohidratos Netos 25g (límite cetosis), Fibra Prebiótica 25g.</div>`;
           nHtml += `</div>`;
         }
         nContainer.innerHTML = nHtml;
@@ -3374,6 +3980,278 @@ function renderRecipes(day, activeDiners) {
           btnEl.innerText = '🤖 Negociar Platillo';
         }
       }
+    }
+
+    
+    let activeNegotiationContext = null;
+
+    
+    function surpriseMeDishNegotiation() {
+      if (!activeNegotiationContext) return;
+      const pool = window.DISH_EXCHANGE_POOL || {};
+      const starters = pool.starters || pool.starter || [];
+      const mains = pool.mains || pool.main || [];
+      let sides = pool.sides || pool.side || [];
+
+      if (!starters.length || !mains.length || !sides.length) return;
+
+      const mealType = activeNegotiationContext.mealType || 'Comida';
+
+      if (mealType === 'Desayuno') {
+        const filtered = sides.filter(s => /33plus/i.test(s.name));
+        if (filtered.length > 0) sides = filtered;
+      } else if (mealType === 'Cena') {
+        const filtered = sides.filter(s => /34plus/i.test(s.name));
+        if (filtered.length > 0) sides = filtered;
+      }
+
+      let attempts = 0;
+      let selectedCombo = null;
+
+      while (attempts < 50) {
+        const st = starters[Math.floor(Math.random() * starters.length)];
+        const mn = mains[Math.floor(Math.random() * mains.length)];
+        const sd = sides[Math.floor(Math.random() * sides.length)];
+
+        const stCarbs = (st.macros && st.macros.net_carbs_g !== undefined) ? st.macros.net_carbs_g : 1.5;
+        const mnCarbs = (mn.macros && mn.macros.net_carbs_g !== undefined) ? mn.macros.net_carbs_g : 1.8;
+        const sdCarbs = (sd.macros && sd.macros.net_carbs_g !== undefined) ? sd.macros.net_carbs_g : 0.8;
+
+        const totalCarbs = stCarbs + mnCarbs + sdCarbs;
+        if (totalCarbs <= 5.0) {
+          selectedCombo = { st, mn, sd };
+          break;
+        }
+        attempts++;
+      }
+
+      if (!selectedCombo) {
+        selectedCombo = { st: starters[0], mn: mains[0], sd: sides[0] };
+      }
+
+      const stSelect = document.getElementById('neg-starter-select');
+      const mnSelect = document.getElementById('neg-main-select');
+      const sdSelect = document.getElementById('neg-side-select');
+
+      if (stSelect && selectedCombo.st) stSelect.value = selectedCombo.st.name;
+      if (mnSelect && selectedCombo.mn) mnSelect.value = selectedCombo.mn.name;
+      if (sdSelect && selectedCombo.sd) sdSelect.value = selectedCombo.sd.name;
+
+      onDishSelectChange();
+    }
+
+    function openNegotiateModal(dayIdx, mealType) {
+      const plan = getPlanForWeek(activeWeek);
+      if (!plan || !plan.days || !plan.days[dayIdx]) return;
+
+      const day = plan.days[dayIdx];
+      const rawM = (day.meals || []).find(m => m.meal_type === mealType) || { meal_type: mealType };
+      const currentMeal = typeof getMealObj === 'function' ? getMealObj(dayIdx, rawM) : rawM;
+
+      activeNegotiationContext = {
+        dayIdx,
+        mealType,
+        dayName: day.day_name || day.date_label || `Día ${dayIdx + 1}`,
+        rawMeal: rawM,
+        baseMeal: currentMeal
+      };
+
+      const diners = typeof getMealDiners === 'function' ? getMealDiners(dayIdx, mealType) : activeDiners;
+      const dinersBadge = document.getElementById('neg-diners-badge');
+      if (dinersBadge) dinersBadge.innerText = `${diners} comensales`;
+
+      const modalTitle = document.getElementById('neg-modal-title');
+      if (modalTitle) modalTitle.innerText = `✨ Negociación Paramétrica — ${mealType} (${activeNegotiationContext.dayName})`;
+
+      const stSelect = document.getElementById('neg-starter-select');
+      const mnSelect = document.getElementById('neg-main-select');
+      const sdSelect = document.getElementById('neg-side-select');
+
+      const pool = window.DISH_EXCHANGE_POOL || { starters: [], mains: [], sides: [] };
+
+      if (stSelect) {
+        stSelect.innerHTML = (pool.starters || []).map(s => `<option value="${s.name}">${s.name}</option>`).join('');
+        stSelect.value = currentMeal.starter_name || (pool.starters[0] ? pool.starters[0].name : '');
+      }
+
+      if (mnSelect) {
+        mnSelect.innerHTML = (pool.mains || []).map(m => `<option value="${m.name}">${m.name}</option>`).join('');
+        mnSelect.value = currentMeal.main_dish_name || currentMeal.dish_name || (pool.mains[0] ? pool.mains[0].name : '');
+      }
+
+      if (sdSelect) {
+        sdSelect.innerHTML = (pool.sides || []).map(sd => `<option value="${sd.name}">${sd.name}</option>`).join('');
+        sdSelect.value = currentMeal.side_dish_name || (pool.sides[0] ? pool.sides[0].name : '');
+      }
+
+      onDishSelectChange();
+
+      const modal = document.getElementById('modal-negotiate-dish') || document.getElementById('dish-edit-modal');
+      if (modal) modal.style.display = 'flex';
+    }
+
+    function closeNegotiateModal() {
+      const modal = document.getElementById('modal-negotiate-dish') || document.getElementById('dish-edit-modal');
+      if (modal) modal.style.display = 'none';
+      activeNegotiationContext = null;
+    }
+
+    function closeDishModal() {
+      closeNegotiateModal();
+    }
+
+    function onDishSelectChange() {
+      if (!activeNegotiationContext) return;
+
+      const stName = document.getElementById('neg-starter-select')?.value || '';
+      const mnName = document.getElementById('neg-main-select')?.value || '';
+      const sdName = document.getElementById('neg-side-select')?.value || '';
+
+      const pool = window.DISH_EXCHANGE_POOL || { starters: [], mains: [], sides: [] };
+      const stObj = pool.starters.find(s => s.name === stName) || { macros: { kcal: 65, fat_g: 4.5, protein_g: 2.0, net_carbs_g: 1.5 } };
+      const mnObj = pool.mains.find(m => m.name === mnName) || { macros: { kcal: 340, fat_g: 24.0, protein_g: 28.0, net_carbs_g: 1.8 } };
+      const sdObj = pool.sides.find(sd => sd.name === sdName) || { macros: { kcal: 55, fat_g: 3.0, protein_g: 1.0, net_carbs_g: 0.8 } };
+
+      const totalKcal = stObj.macros.kcal + mnObj.macros.kcal + sdObj.macros.kcal;
+      const totalFat = stObj.macros.fat_g + mnObj.macros.fat_g + sdObj.macros.fat_g;
+      const totalProtein = stObj.macros.protein_g + mnObj.macros.protein_g + sdObj.macros.protein_g;
+      const totalCarbs = stObj.macros.net_carbs_g + mnObj.macros.net_carbs_g + sdObj.macros.net_carbs_g;
+
+      const base = activeNegotiationContext.baseMeal || {};
+      const baseKcal = base.calories_kcal || 365.0;
+      const baseFat = base.fat_g || 28.5;
+      const baseProtein = base.protein_g || 24.0;
+      const baseCarbs = base.net_carbs_g || 3.2;
+
+      const dKcal = totalKcal - baseKcal;
+      const dFat = totalFat - baseFat;
+      const dProtein = totalProtein - baseProtein;
+      const dCarbs = totalCarbs - baseCarbs;
+
+      const liveContainer = document.getElementById('neg-live-macros');
+      if (liveContainer) {
+        const warningAlert = totalCarbs > 5.0 ? `
+          <div class="mt-2 p-2.5 rounded-lg bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 text-xs text-red-700 dark:text-red-300 font-bold flex items-center gap-1.5">
+            ⚠️ Advertencia Cetogénica: Carbohidratos Netos (${totalCarbs.toFixed(1)}g) superan el umbral de 5.0g por servicio.
+          </div>
+        ` : `
+          <div class="mt-2 p-2.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 text-xs text-emerald-700 dark:text-emerald-300 font-bold flex items-center gap-1.5">
+            ✅ Ración Cetogénica Óptima (&le; 5.0g Carbs Netos por Persona)
+          </div>
+        `;
+
+        liveContainer.innerHTML = `
+          <div class="flex items-center justify-between border-b border-slate-200 dark:border-slate-700 pb-2 mb-2">
+            <span class="font-bold text-xs text-slate-500 uppercase tracking-wider font-brand-title">Balance Nutricional en Vivo (Per Cápita)</span>
+            <span class="font-bold text-sm text-[#1C75BC] font-mono">🔥 ${totalKcal.toFixed(0)} kcal / persona</span>
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs font-brand-body">
+            <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700">
+              <div class="text-slate-500 text-[10px] uppercase font-bold">Grasas</div>
+              <div class="font-bold text-slate-900 dark:text-slate-100">${totalFat.toFixed(1)}g</div>
+              <div class="text-[10px] ${dFat >= 0 ? 'text-emerald-600' : 'text-amber-600'} font-mono">${dFat >= 0 ? '+' : ''}${dFat.toFixed(1)}g</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700">
+              <div class="text-slate-500 text-[10px] uppercase font-bold">Proteína</div>
+              <div class="font-bold text-slate-900 dark:text-slate-100">${totalProtein.toFixed(1)}g</div>
+              <div class="text-[10px] ${dProtein >= 0 ? 'text-emerald-600' : 'text-amber-600'} font-mono">${dProtein >= 0 ? '+' : ''}${dProtein.toFixed(1)}g</div>
+            </div>
+            <div class="bg-white dark:bg-slate-800 p-2 rounded-lg border border-slate-200 dark:border-slate-700">
+              <div class="text-slate-500 text-[10px] uppercase font-bold">Carbs Netos</div>
+              <div class="font-bold text-slate-900 dark:text-slate-100">${totalCarbs.toFixed(1)}g</div>
+              <div class="text-[10px] ${dCarbs <= 0 ? 'text-emerald-600' : 'text-amber-600'} font-mono">${dCarbs >= 0 ? '+' : ''}${dCarbs.toFixed(1)}g</div>
+            </div>
+          </div>
+          ${warningAlert}
+        `;
+      }
+
+      const confirmBtn = document.getElementById('neg-confirm-btn');
+      if (confirmBtn) {
+        confirmBtn.disabled = totalCarbs > 5.0;
+        confirmBtn.style.opacity = totalCarbs > 5.0 ? '0.5' : '1';
+        confirmBtn.style.cursor = totalCarbs > 5.0 ? 'not-allowed' : 'pointer';
+      }
+    }
+
+    function resetMealToDefault() {
+      if (!activeNegotiationContext) return;
+      const { dayIdx, mealType } = activeNegotiationContext;
+      const weekSlug = activeWeek === 'Semana 38' ? 'semana_38' : activeWeek.toLowerCase().replace(/ /g, '_');
+      
+      const key1 = `${weekSlug}_${dayIdx}_${mealType}`;
+      const key2 = `${activeWeek}_day_${dayIdx}_${mealType}`;
+
+      delete window.MEAL_DISH_OVERRIDES[key1];
+      delete window.MEAL_DISH_OVERRIDES[key2];
+      delete customDishesState[key1];
+      delete customDishesState[key2];
+
+      localStorage.setItem(`atelier_dish_overrides_${weekSlug}`, JSON.stringify(window.MEAL_DISH_OVERRIDES));
+      saveAppState();
+
+      const plan = getPlanForWeek(activeWeek);
+      renderDay(selectedIdx);
+      if (typeof renderRecipes === 'function' && plan && plan.days && plan.days[selectedIdx]) {
+        renderRecipes(plan.days[selectedIdx], getMealDiners(selectedIdx, mealType));
+      }
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
+
+      closeNegotiateModal();
+    }
+
+    function confirmDishNegotiation() {
+      if (!activeNegotiationContext) return;
+      const { dayIdx, mealType } = activeNegotiationContext;
+      const weekSlug = activeWeek === 'Semana 38' ? 'semana_38' : activeWeek.toLowerCase().replace(/ /g, '_');
+
+      const stName = document.getElementById('neg-starter-select')?.value || '';
+      const mnName = document.getElementById('neg-main-select')?.value || '';
+      const sdName = document.getElementById('neg-side-select')?.value || '';
+
+      const pool = window.DISH_EXCHANGE_POOL || { starters: [], mains: [], sides: [] };
+      const stObj = pool.starters.find(s => s.name === stName) || { macros: { kcal: 65, fat_g: 4.5, protein_g: 2.0, net_carbs_g: 1.5 } };
+      const mnObj = pool.mains.find(m => m.name === mnName) || { macros: { kcal: 340, fat_g: 24.0, protein_g: 28.0, net_carbs_g: 1.8 } };
+      const sdObj = pool.sides.find(sd => sd.name === sdName) || { macros: { kcal: 55, fat_g: 3.0, protein_g: 1.0, net_carbs_g: 0.8 } };
+
+      const totalKcal = stObj.macros.kcal + mnObj.macros.kcal + sdObj.macros.kcal;
+      const totalFat = stObj.macros.fat_g + mnObj.macros.fat_g + sdObj.macros.fat_g;
+      const totalProtein = stObj.macros.protein_g + mnObj.macros.protein_g + sdObj.macros.protein_g;
+      const totalCarbs = stObj.macros.net_carbs_g + mnObj.macros.net_carbs_g + sdObj.macros.net_carbs_g;
+
+      const newDishConfig = {
+        starter_name: stName,
+        main_dish_name: mnName,
+        side_dish_name: sdName,
+        macros: { kcal: totalKcal, fat_g: totalFat, protein_g: totalProtein, net_carbs_g: totalCarbs },
+        starter_recipe: stObj.recipe,
+        main_recipe: mnObj.recipe,
+        side_recipe: sdObj.recipe
+      };
+
+      const key1 = `${weekSlug}_${dayIdx}_${mealType}`;
+      const key2 = `${activeWeek}_day_${dayIdx}_${mealType}`;
+
+      window.MEAL_DISH_OVERRIDES[key1] = newDishConfig;
+      window.MEAL_DISH_OVERRIDES[key2] = newDishConfig;
+      customDishesState[key1] = newDishConfig;
+      customDishesState[key2] = newDishConfig;
+
+      localStorage.setItem(`atelier_dish_overrides_${weekSlug}`, JSON.stringify(window.MEAL_DISH_OVERRIDES));
+      saveAppState();
+
+      const plan = getPlanForWeek(activeWeek);
+      renderDay(selectedIdx);
+      if (typeof renderRecipes === 'function' && plan && plan.days && plan.days[selectedIdx]) {
+        renderRecipes(plan.days[selectedIdx], getMealDiners(selectedIdx, mealType));
+      }
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
+
+      closeNegotiateModal();
     }
 
     function toggleCheckRow(id, isChecked) {
@@ -3601,11 +4479,10 @@ function renderRecipes(day, activeDiners) {
         (day.meals || []).forEach(rawM => {
           const m = getMealObj(actualIdx, rawM);
           const diners = getMealDiners(actualIdx, m.meal_type);
-          const factor = diners / 6.0;
-          const kcal = ((m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4) * factor).toFixed(0);
+          const kcal = (m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4).toFixed(0);
           const mainName = m.main_dish_name || m.main_dish || m.main || m.principal || m.dish_name || "Plato Principal";
 
-          text += `  • ${m.meal_type} (${mainName}): 🔥 ${kcal} kcal | 🧈 Fat ${(m.fat_g * factor).toFixed(1)}g | 🥩 Prot ${(m.protein_g * factor).toFixed(1)}g | 🥑 Carbs ${(m.net_carbs_g * factor).toFixed(1)}g\\n`;
+          text += `  • ${m.meal_type} (${mainName}) — ${diners} pers: 🔥 ${kcal} kcal / comensal | 🧈 Fat ${m.fat_g.toFixed(1)}g | 🥩 Prot ${m.protein_g.toFixed(1)}g | 🥑 Carbs ${m.net_carbs_g.toFixed(1)}g\\n`;
         });
         text += "\\n";
       });
@@ -3892,55 +4769,72 @@ function renderRecipes(day, activeDiners) {
     </div>
   </div>
 
-  <!-- Modal Interactivo de Modificación de Platillos NutriKeto -->
-  <div id="dish-edit-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); backdrop-filter:blur(4px); z-index:9999; justify-content:center; align-items:center; padding:1rem;">
-    <div style="background:var(--bg-card); border:1px solid var(--border-clinical); border-radius:16px; width:100%; max-width:540px; padding:1.5rem; box-shadow:0 20px 40px rgba(0,0,0,0.3);">
-      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem; border-bottom:1px solid var(--border-clinical); padding-bottom:0.6rem;">
-        <h3 style="margin:0; font-size:1.1rem; color:var(--color-corporate);" id="dish-modal-title">🔄 Cambiar / Modificar Platillo</h3>
-        <button onclick="closeDishModal()" style="background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--text-muted);">&times;</button>
+      <!-- Modal Interactivo de Negociación Paramétrica de Platillos (#modal-negotiate-dish - WCAG 2.2 AAA) -->
+  <div id="modal-negotiate-dish" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(15,23,42,0.75); backdrop-filter:blur(8px); z-index:9999; justify-content:center; align-items:center; padding:1rem;">
+    <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl rounded-2xl w-full max-w-[600px] max-h-[92vh] overflow-y-auto p-6 font-brand-body text-slate-900 dark:text-slate-100">
+      
+      <!-- ENCABEZADO Y BOTÓN DE ACCIÓN SURPRISE ME -->
+      <div class="flex justify-between items-start mb-4 border-b border-slate-200 dark:border-slate-800 pb-3">
+        <div>
+          <div class="flex items-center gap-2 mb-1 flex-wrap">
+            <span id="neg-diners-badge" class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/80 text-emerald-700 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 font-mono">
+              6 comensales
+            </span>
+            <button type="button" onclick="surpriseMeDishNegotiation()" class="btn-surprise-me flex items-center gap-1.5 px-3 py-0.5 bg-amber-500/10 border border-amber-500/40 hover:bg-amber-500/20 text-amber-700 dark:text-amber-300 rounded-full text-xs font-bold transition-all shadow-sm cursor-pointer">
+              🎲 ¡Sorpréndeme!
+            </button>
+          </div>
+          <h3 id="neg-modal-title" class="text-slate-900 dark:text-white font-bold text-lg font-brand-title flex items-center gap-1.5 m-0">
+            ✨ Negociación Paramétrica de Platillo
+          </h3>
+        </div>
+        <button type="button" onclick="closeNegotiateModal()" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 text-2xl font-bold leading-none cursor-pointer bg-transparent border-none p-1">&times;</button>
       </div>
 
-      <input type="hidden" id="edit-day-idx">
-      <input type="hidden" id="edit-meal-type">
-
-      <div style="margin-bottom:0.8rem;">
-        <label style="font-size:0.8rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:0.2rem;">Entrada:</label>
-        <input type="text" id="edit-starter-name" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border-clinical); background:var(--bg-clinical); color:var(--text-main); font-size:0.9rem;">
-      </div>
-
-      <div style="margin-bottom:0.8rem;">
-        <label style="font-size:0.8rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:0.2rem;">Plato Principal:</label>
-        <input type="text" id="edit-main-name" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border-clinical); background:var(--bg-clinical); color:var(--text-main); font-size:0.9rem;">
-      </div>
-
-      <div style="margin-bottom:0.8rem;">
-        <label style="font-size:0.8rem; font-weight:700; color:var(--text-muted); display:block; margin-bottom:0.2rem;">Acompañamiento:</label>
-        <input type="text" id="edit-side-name" style="width:100%; padding:0.6rem; border-radius:8px; border:1px solid var(--border-clinical); background:var(--bg-clinical); color:var(--text-main); font-size:0.9rem;">
-      </div>
-
-      <div style="margin-bottom:1.2rem; background:var(--bg-clinical); padding:0.9rem; border-radius:12px; border:1px solid var(--border-clinical);">
-        <label style="font-size:0.82rem; font-weight:800; color:var(--color-corporate); display:block; margin-bottom:0.4rem;">🤖 Negociación e Inteligencia del Atelier Herami:</label>
-        <div style="display:flex; gap:0.5rem; flex-wrap:wrap; align-items:center; margin-bottom:0.5rem;">
-          <select id="edit-field-target" style="padding:0.5rem; border-radius:8px; border:1px solid var(--border-clinical); background:var(--surface-card); color:var(--text-main); font-weight:700; font-size:0.85rem; min-height:44px;">
-            <option value="starter">🥗 Entrada</option>
-            <option value="main" selected>🍗 Plato Principal</option>
-            <option value="side">☕ Acompañamiento</option>
+      <!-- SELECTORES DE 3 TIEMPOS CON ALTO CONTRASTE WCAG AAA -->
+      <div class="flex flex-col gap-4 mb-4">
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5 font-brand-title">
+            🥗 1. Entrada (Ensamble Fresco / Caldo Ligeros &lt;4g Net Carbs):
+          </label>
+          <select id="neg-starter-select" onchange="onDishSelectChange()" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-medium rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#3AAA35] focus:outline-none">
           </select>
-          <input type="text" id="edit-prompt" placeholder="Ej. Salmón al eneldo (o vacío para sugerencias)" style="flex:1; min-width:170px; padding:0.5rem; border-radius:8px; border:1px solid var(--border-clinical); background:var(--surface-card); color:var(--text-main); font-size:0.85rem; min-height:44px;">
         </div>
 
-        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
-          <button onclick="negotiateDishWithAI(this, false)" style="flex:1; background:var(--color-corporate); color:#fff; border:none; border-radius:8px; padding:0.6rem 0.8rem; font-size:0.82rem; font-weight:700; cursor:pointer; min-height:44px;">🤖 Negociar Platillo</button>
-          <button onclick="getAtelierSuggestions(this)" style="flex:1; background:var(--color-34plus); color:#fff; border:none; border-radius:8px; padding:0.6rem 0.8rem; font-size:0.82rem; font-weight:700; cursor:pointer; min-height:44px;">✨ Sorpréndeme (3 Sugerencias)</button>
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5 font-brand-title">
+            🍗 2. Platillo Principal (Proteína de Pastoreo / Marina / Avícola):
+          </label>
+          <select id="neg-main-select" onchange="onDishSelectChange()" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-medium rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#3AAA35] focus:outline-none">
+          </select>
         </div>
 
-        <div id="negotiate-feedback" style="font-size:0.8rem; margin-top:0.5rem; display:none;"></div>
-        <div id="negotiate-suggestions-panel" style="display:none;"></div>
+        <div>
+          <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5 font-brand-title">
+            🌿 3. Acompañamiento / Elixir Bioactivo (33Plus® Desayuno / 34Plus® Cena):
+          </label>
+          <select id="neg-side-select" onchange="onDishSelectChange()" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-medium rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#3AAA35] focus:outline-none">
+          </select>
+        </div>
       </div>
 
-      <div style="display:flex; justify-content:flex-end; gap:0.6rem;">
-        <button onclick="closeDishModal()" style="background:var(--bg-clinical); border:1px solid var(--border-clinical); color:var(--text-main); padding:0.6rem 1.2rem; border-radius:8px; font-weight:700; cursor:pointer;">Cancelar</button>
-        <button onclick="saveDishChange()" style="background:var(--color-34plus); color:#fff; border:none; padding:0.6rem 1.2rem; border-radius:8px; font-weight:700; cursor:pointer;">⚡ Confirmar y Guardar Cambio</button>
+      <!-- MÉTRICAS EN VIVO & UMBRAL CETOGÉNICO -->
+      <div id="neg-live-macros" class="mb-5 bg-slate-50 dark:bg-slate-800/80 p-4 rounded-xl border border-slate-200 dark:border-slate-700">
+      </div>
+
+      <!-- BOTONES DE ACCIÓN WCAG AAA -->
+      <div class="flex justify-between items-center gap-3 flex-wrap">
+        <button type="button" onclick="resetMealToDefault()" class="text-rose-600 dark:text-rose-400 hover:text-rose-700 bg-rose-50 dark:bg-rose-950/40 border border-rose-200 dark:border-rose-800 text-xs px-3.5 py-2 rounded-lg font-bold transition-colors cursor-pointer">
+          🔄 Restablecer Original
+        </button>
+        <div class="flex gap-2 flex-wrap">
+          <button type="button" onclick="closeNegotiateModal()" class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-600 text-xs px-4 py-2 rounded-lg font-bold transition-colors cursor-pointer">
+            Descartar
+          </button>
+          <button type="button" id="neg-confirm-btn" onclick="confirmDishNegotiation()" class="bg-[#1C75BC] hover:bg-[#155d96] text-white text-xs px-4 py-2 rounded-lg font-bold transition-colors shadow-md cursor-pointer">
+            ⚡ Confirmar y Aplicar Cambios
+          </button>
+        </div>
       </div>
     </div>
   </div>
