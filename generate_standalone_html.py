@@ -1976,6 +1976,8 @@ function generateNextWeekMenu() {
       "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
       "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
       // Insumos No Sugeridos / Cuarentena (Status: "prohibited")
+      "miel-pura": { name: "Miel pura de la granja El Herami", stock: 250, unit: "g", status: "prohibited", reason: "Alto Índice Glucémico / Fructosa Pura (Rompe Cetosis)" },
+      "duraznos-frescos": { name: "Duraznos frescos", stock: 1.5, unit: "kg", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Fuera de Protocolo Keto)" },
       "harina-trigo": { name: "Harina de trigo tradicional", stock: 1000, unit: "g", status: "prohibited", reason: "Glucémico / Inflamatorio (Gluten)" },
       "aceite-vegetal-mixto": { name: "Aceite vegetal mixto comercial", stock: 800, unit: "ml", status: "prohibited", reason: "Pro-inflamatorio / Omega 6 oxidado" }
     };
@@ -1992,9 +1994,7 @@ function generateNextWeekMenu() {
       "Coliflor fresca",
       "Higos frescos",
       "Pitayas frescas",
-      "Duraznos frescos",
       "Granadas frescas",
-      "Miel pura de la granja El Herami",
       "Hojas de menta fresca",
       "Toronjil fresco",
       "Manzanilla fresca",
@@ -2012,7 +2012,7 @@ function generateNextWeekMenu() {
       "Aceite de oliva virgen extra": 1.0,
       "Mantequilla de vaca (sin sal)": 400.0,
       "Semillas de chía": 200.0,
-      "Café en grano / molido": 1.0,
+      "Café en grano — molido": 1.0,
       "Sal de mar": 1.0
     };
     let checkedRows = {};
@@ -2042,40 +2042,45 @@ function generateNextWeekMenu() {
       }
     }
 
-        function getSmartItemCategory(itemName, explicitCategory) {
+    function getSmartItemCategory(itemName, explicitCategory) {
       const name = (itemName || '').toLowerCase().trim();
 
-      // 1. Suplementación Celular / Biotecnología
+      // 1. Suplementación Celular — Biotecnología
       if (/33plus|34plus|sinergix|suplemento|suplementos|vitamina|vitaminas|colágeno|colageno|electrolitos|fórmula nootrópica|fórmula reparadora/i.test(name)) {
         return '💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA';
       }
 
       // 2. Frutas de Bajo Índice Glucémico
-      if (/mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|coco/i.test(name)) {
+      if (/mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|pitaya|pitayas|coco/i.test(name)) {
         return '🍓 Frutas de Bajo Índice Glucémico';
       }
 
-      // 3. Lácteos y Quesos (Sin Gluten — Keto)
+      // 3. Verduras, Hortalizas y Frescos (EVALUAR ANTES QUE CARNES PARA EVITAR QUE "FRESCO/FRESCA" ACTIVE "RES")
+      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espinaca|espinacas|hinojo|jitomate|jitomates|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini/i.test(name)) {
+        return '🥬 Verduras, Hortalizas y Frescos';
+      }
+
+      // 4. Lácteos y Quesos (Sin Gluten — Keto)
       if (/queso|quesos|leche|mantequilla|crema|gouda|panela|parmesano|manchego|cabra|mascarpone|mozzarella|ghee/i.test(name)) {
         return '🧀 Lácteos y Quesos (Sin Gluten — Keto)';
       }
 
-      // 4. Carnes, Pescados y Proteínas
-      if (/carne|carnes|sirloin|ribeye|res|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca/i.test(name)) {
+      // 5. Carnes, Pescados y Proteínas (USAR \bres\b PARA QUE "fresco" / "fresca" NO COINCIDA CON "res")
+      if (/carne|carnes|sirloin|ribeye|\bres\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
         return '🥩 Carnes, Pescados y Proteínas';
       }
 
-      // 5. Grasas, Aceites y Semillas
+      // 6. Grasas, Aceites y Semillas
       if (/aceite|mct|nuez|nueces|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli/i.test(name)) {
         return '🌰 Grasas, Aceites y Semillas';
       }
 
-      // 6. Chiles, Condimentos e Infusiones
+      // 7. Chiles, Condimentos e Infusiones
       if (/sal|sal de|sal mineral|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|aceituna|aceitunas|vinagre|balsámico|balsamico|jengibre|agua|infusión|infusion|té|te|base líquida|base liquida/i.test(name)) {
         return '🌶️ Chiles, Condimentos e Infusiones';
       }
 
-      // 7. Verduras, Hortalizas y Frescos (Fallback)
+      // Fallback
       return '🥬 Verduras, Hortalizas y Frescos';
     }
 
@@ -2088,7 +2093,10 @@ function generateNextWeekMenu() {
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
           if (Array.isArray(state.customFarmItems)) customFarmItems = state.customFarmItems;
           if (Array.isArray(state.selectedHarvest) && state.selectedHarvest.length > 0) {
-            selectedHarvest = state.selectedHarvest;
+            selectedHarvest = state.selectedHarvest.filter(h => {
+              const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+              return !/miel|durazno/i.test(hStr);
+            });
           } else {
             selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
           }
@@ -2096,11 +2104,8 @@ function generateNextWeekMenu() {
             pantryStock = state.pantryStock;
             Object.keys(pantryStock).forEach(itemName => {
               const smartCat = getSmartItemCategory(itemName, "🛒 Abarrotes, Aceites y Grasas");
-              const existing = rawShopBase.find(r => {
-                const rName = r.item_name.toLowerCase();
-                const kName = itemName.toLowerCase();
-                return rName === kName || rName.includes(kName) || kName.includes(rName);
-              });
+              const kSlug = normalizeToCanonicalSlug(itemName);
+              const existing = rawShopBase.find(r => normalizeToCanonicalSlug(r.item_name) === kSlug);
               if (existing) {
                 existing.category = smartCat;
               } else {
@@ -2109,8 +2114,8 @@ function generateNextWeekMenu() {
                   category: smartCat,
                   item_name: itemName,
                   quantity: pantryStock[itemName] || 1.0,
-                  unit: "unidad/frasco",
-                  quantity_str: `${pantryStock[itemName] || 1.0} unidad/frasco`
+                  unit: "unidad — frasco",
+                  quantity_str: `${pantryStock[itemName] || 1.0} unidad — frasco`
                 });
               }
             });
@@ -2127,7 +2132,8 @@ function generateNextWeekMenu() {
           if (Array.isArray(state.customShopItems)) {
             state.customShopItems.forEach(cItem => {
               const smartCat = getSmartItemCategory(cItem.item_name, cItem.category);
-              const existing = rawShopBase.find(r => r.item_name === cItem.item_name);
+              const cSlug = normalizeToCanonicalSlug(cItem.item_name);
+              const existing = rawShopBase.find(r => normalizeToCanonicalSlug(r.item_name) === cSlug);
               if (existing) {
                 existing.category = smartCat;
               } else {
@@ -2533,7 +2539,18 @@ function generateNextWeekMenu() {
       const pGrid = document.getElementById('pantry-stock-grid');
       if (pGrid) {
         pGrid.innerHTML = '';
-        const nonFarm = rawShopBase.filter(i => !i.category.includes('Cosecha'));
+        const nonFarm = [];
+        const seenPantrySlugs = new Set();
+        
+        rawShopBase.filter(i => !i.category.includes('Cosecha')).forEach(i => {
+          const cleanName = (i.item_name || '').replace(/\s*\/\s*/g, ' \u2014 ').replace(/\//g, ' \u2014 ').trim();
+          if (!cleanName) return;
+          const slug = normalizeToCanonicalSlug(cleanName);
+          if (!seenPantrySlugs.has(slug)) {
+            seenPantrySlugs.add(slug);
+            nonFarm.push({ ...i, item_name: cleanName });
+          }
+        });
 
         const categoriesMap = {};
         nonFarm.forEach(i => {
@@ -2571,7 +2588,12 @@ function generateNextWeekMenu() {
           items.sort((a, b) => a.item_name.localeCompare(b.item_name));
 
           items.forEach(i => {
-            const val = pantryStock[i.item_name] !== undefined ? pantryStock[i.item_name] : 0;
+            const slug = normalizeToCanonicalSlug(i.item_name);
+            let val = pantryStock[i.item_name];
+            if (val === undefined) {
+              const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+              val = matchedKey !== undefined ? pantryStock[matchedKey] : 0;
+            }
             const div = document.createElement('div');
             div.className = 'option-row';
             div.style.color = 'var(--text-main)';
@@ -2583,7 +2605,7 @@ function generateNextWeekMenu() {
                 <button type="button" onclick="deletePantryItem('${safeName}')" style="background: none; border: none; color: #ef4444; font-size: 0.95rem; cursor: pointer; padding: 0.1rem 0.3rem; border-radius: 4px; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" title="Eliminar ${safeName}">🗑️</button>
               </div>
               <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.4rem; width: 100%; margin-top: 0.2rem;">
-                <input type="number" step="0.1" min="0" value="${val}" style="width: 70px; padding: 0.25rem 0.4rem; font-weight: 800; text-align: center; border: 1px solid var(--border-clinical); border-radius: 6px; background: var(--surface-card); color: var(--text-main); font-size: 0.88rem;" onchange="updatePantryStock('${i.item_name}', this.value)">
+                <input type="number" step="0.1" min="0" value="${val}" style="width: 70px; padding: 0.25rem 0.4rem; font-weight: 800; text-align: center; border: 1px solid var(--border-clinical); border-radius: 6px; background: var(--surface-card); color: var(--text-main); font-size: 0.88rem;" onchange="updatePantryStock('${safeName}', this.value)">
                 <span style="font-size: 0.78rem; font-weight: 600; color: var(--text-muted);">${i.unit}</span>
               </div>
             `;
@@ -2764,10 +2786,31 @@ function generateNextWeekMenu() {
 
     function deletePantryItem(itemName) {
       if (confirm(`¿Deseas eliminar el insumo "${itemName}" del Inventario/Alacena?`)) {
-        rawShopBase = rawShopBase.filter(i => i.item_name !== itemName);
-        delete pantryStock[itemName];
+        const slug = normalizeToCanonicalSlug(itemName);
+        rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
+        
+        Object.keys(pantryStock).forEach(k => {
+          if (normalizeToCanonicalSlug(k) === slug || k.toLowerCase() === itemName.toLowerCase()) {
+            delete pantryStock[k];
+          }
+        });
+
+        if (typeof window.PANTRY_STOCK_INVENTORY === 'object' && window.PANTRY_STOCK_INVENTORY) {
+          Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
+            if (normalizeToCanonicalSlug(k) === slug || k.toLowerCase() === itemName.toLowerCase()) {
+              delete window.PANTRY_STOCK_INVENTORY[k];
+            }
+          });
+        }
+
         saveAppState();
         initSetupPanel();
+        if (typeof render3DShoppingList === 'function') {
+          render3DShoppingList();
+        }
+        if (typeof showToast === 'function') {
+          showToast(`🗑️ Insumo '${itemName}' eliminado del Inventario.`);
+        }
       }
     }
 

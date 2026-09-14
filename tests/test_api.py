@@ -294,7 +294,7 @@ async def test_dynamic_shopping_and_macro_sync(client: AsyncClient):
     data = res.json()
     items = data["items"]
     item_names = [it["item_name"].lower() for it in items]
-    assert any("miel" in name for name in item_names)
+    assert any("espinaca" in name for name in item_names)
 
 
 

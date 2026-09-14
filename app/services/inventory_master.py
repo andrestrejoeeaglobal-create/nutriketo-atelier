@@ -18,9 +18,7 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Arúgula fresca", "base_qty": 3.0, "unit": "manojos"},
     {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Higos frescos", "base_qty": 1.5, "unit": "kg"},
     {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Pitayas frescas", "base_qty": 1.0, "unit": "kg"},
-    {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Duraznos frescos", "base_qty": 1.5, "unit": "kg"},
     {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Granadas frescas", "base_qty": 6.0, "unit": "piezas"},
-    {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Miel pura de la granja El Herami", "base_qty": 250.0, "unit": "g"},
 
     # 🥩 Carnes, Pescados y Proteínas
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Huevos enteros", "base_qty": 8.0, "unit": "casilleros"},
@@ -29,13 +27,13 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Pollo entero para caldo", "base_qty": 2.5, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Carne molida de Sirloin", "base_qty": 2.0, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Filete de res magro", "base_qty": 1.5, "unit": "kg"},
-    {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Carne para caldo rico (costilla / tuétano)", "base_qty": 3.0, "unit": "kg"},
+    {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Carne para caldo rico (costilla — tuétano)", "base_qty": 3.0, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Filete de pescado blanco", "base_qty": 1.2, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Filete de salmón fresco", "base_qty": 1.2, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Pechuga de pavo", "base_qty": 1.2, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Jamón de pavo en cubos", "base_qty": 1.0, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Tocino de pavo crujiente", "base_qty": 1.0, "unit": "kg"},
-    {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Lomo o lata de atún fresco", "base_qty": 1.2, "unit": "kg"},
+    {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Lomo de atún fresco", "base_qty": 1.2, "unit": "kg"},
 
     # 🧀 Lácteos y Quesos (Sin Gluten / Keto)
     {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Queso crema", "base_qty": 1.2, "unit": "kg"},
@@ -43,11 +41,11 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Queso Gouda", "base_qty": 1.5, "unit": "kg"},
     {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Queso Parmesano", "base_qty": 400.0, "unit": "g"},
     {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Mantequilla de vaca (sin sal)", "base_qty": 900.0, "unit": "g"},
-    {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Crema entera / para batir", "base_qty": 1.0, "unit": "litro"},
+    {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Crema entera — para batir", "base_qty": 1.0, "unit": "litro"},
 
     # 🥬 Verduras, Hortalizas y Frescos
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Aguacates Hass medianos", "base_qty": 24.0, "unit": "piezas"},
-    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Jitomate Bola / Saladette", "base_qty": 3.5, "unit": "kg"},
+    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Jitomate Bola — Saladette", "base_qty": 3.5, "unit": "kg"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Cebolla blanca", "base_qty": 2.0, "unit": "kg"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Limones frescos", "base_qty": 2.0, "unit": "kg"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Champiñones Portobello", "base_qty": 12.0, "unit": "piezas"},
@@ -66,18 +64,18 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Aceite de coco (orgánico)", "base_qty": 1.0, "unit": "frasco (1 kg)"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Aceite de oliva virgen extra", "base_qty": 2.0, "unit": "litros"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Vinagre de manzana (orgánico)", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Vinagre balsámico (orgánico / keto)", "base_qty": 1.0, "unit": "frasco"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Vinagre balsámico (orgánico — keto)", "base_qty": 1.0, "unit": "frasco"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Alcaparras en salmuera", "base_qty": 1.0, "unit": "frasco"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Aceitunas deshuesadas", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Mostaza Dijon / Tipo Antigua", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Salsa Tamari / Soya Keto", "base_qty": 1.0, "unit": "frasco"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Mostaza Dijon — Tipo Antigua", "base_qty": 1.0, "unit": "frasco"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Salsa Tamari — Soya Keto", "base_qty": 1.0, "unit": "frasco"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Queso de cabra artesanal", "base_qty": 400.0, "unit": "g"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Nuez de la India / Macadamias", "base_qty": 400.0, "unit": "g"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Mayonesa casera / keto", "base_qty": 1.0, "unit": "frasco"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Nuez de la India — Macadamias", "base_qty": 400.0, "unit": "g"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Mayonesa casera — keto", "base_qty": 1.0, "unit": "frasco"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Té verde", "base_qty": 1.0, "unit": "paquete"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Té de hierbas", "base_qty": 1.0, "unit": "paquete"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Café en grano / molido", "base_qty": 1.0, "unit": "paquete"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Hierbas secas (Orégano/Tomillo)", "base_qty": 1.0, "unit": "frasco"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Café en grano — molido", "base_qty": 1.0, "unit": "paquete"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Hierbas secas (Orégano — Tomillo)", "base_qty": 1.0, "unit": "frasco"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Sal de mar", "base_qty": 1.0, "unit": "frasco"}
 ]
 
