@@ -2573,25 +2573,37 @@ function generateNextWeekMenu() {
 
     function addNewHarvestItem() {
       const nameInput = document.getElementById('new-harvest-name');
-      const val = nameInput.value.trim();
+      const val = nameInput ? nameInput.value.trim() : '';
       if (!val) return;
 
-      const newId = 100 + rawShopBase.length + 1;
-      const newItem = {
-        id: newId,
-        category: "🌾 Cosecha Directa de la Granja / Huerto",
-        item_name: val,
-        quantity: 1.0,
-        unit: "kg/piezas",
-        quantity_str: "1.0 kg/piezas"
-      };
+      const slug = normalizeToCanonicalSlug(val);
+      const existsInSelected = selectedHarvest.some(h => {
+        const hName = typeof h === 'string' ? h : (h.item_name || h.name || '');
+        return normalizeToCanonicalSlug(hName) === slug || hName.toLowerCase() === val.toLowerCase();
+      });
 
-      if (!rawShopBase.find(i => i.item_name.toLowerCase() === val.toLowerCase())) {
-        rawShopBase.push(newItem);
+      if (!existsInSelected) {
         selectedHarvest.push(val);
-        nameInput.value = '';
-        saveAppState();
-        initSetupPanel();
+      }
+
+      const existsInShop = rawShopBase.some(i => normalizeToCanonicalSlug(i.item_name) === slug || i.item_name.toLowerCase() === val.toLowerCase());
+      if (!existsInShop) {
+        const newId = 100 + rawShopBase.length + 1;
+        rawShopBase.push({
+          id: newId,
+          category: "🌾 Cosecha Directa de la Granja / Huerto",
+          item_name: val,
+          quantity: 1.0,
+          unit: "kg/piezas",
+          quantity_str: "1.0 kg/piezas"
+        });
+      }
+
+      if (nameInput) nameInput.value = '';
+      saveAppState();
+      initSetupPanel();
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
       }
     }
 
@@ -2600,46 +2612,81 @@ function generateNextWeekMenu() {
       const qtyInput = document.getElementById('new-pantry-qty');
       const unitInput = document.getElementById('new-pantry-unit');
 
-      const val = nameInput.value.trim();
-      const qty = parseFloat(qtyInput.value) || 1.0;
-      const unit = unitInput.value.trim() || 'unidades';
+      const val = nameInput ? nameInput.value.trim() : '';
+      const qty = parseFloat(qtyInput ? qtyInput.value : 1.0) || 1.0;
+      const unit = (unitInput ? unitInput.value.trim() : '') || 'unidades';
 
       if (!val) return;
 
-      const newId = 200 + rawShopBase.length + 1;
-      const newItem = {
-        id: newId,
-        category: "🛒 Abarrotes, Semillas y Grasas",
-        item_name: val,
-        quantity: qty,
-        unit: unit,
-        quantity_str: `${qty} ${unit}`
-      };
+      const slug = normalizeToCanonicalSlug(val);
+      pantryStock[val] = qty;
 
-      if (!rawShopBase.find(i => i.item_name.toLowerCase() === val.toLowerCase())) {
-        rawShopBase.push(newItem);
-        pantryStock[val] = qty;
-        nameInput.value = '';
-        qtyInput.value = '';
-        unitInput.value = '';
-        saveAppState();
-        initSetupPanel();
+      if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+        window.PANTRY_STOCK_INVENTORY[slug] = {
+          name: val,
+          stock: qty,
+          unit: unit,
+          status: 'canonical'
+        };
+      }
+
+      const existsInShop = rawShopBase.some(i => normalizeToCanonicalSlug(i.item_name) === slug || i.item_name.toLowerCase() === val.toLowerCase());
+      if (!existsInShop) {
+        const newId = 200 + rawShopBase.length + 1;
+        rawShopBase.push({
+          id: newId,
+          category: "🛒 Abarrotes, Semillas y Grasas",
+          item_name: val,
+          quantity: qty,
+          unit: unit,
+          quantity_str: `${qty} ${unit}`
+        });
+      }
+
+      if (nameInput) nameInput.value = '';
+      if (qtyInput) qtyInput.value = '';
+      if (unitInput) unitInput.value = '';
+
+      saveAppState();
+      initSetupPanel();
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
       }
     }
 
     function updateHarvestSelection(itemName, isChecked) {
+      const slug = normalizeToCanonicalSlug(itemName);
       if (isChecked) {
-        if (!selectedHarvest.includes(itemName)) selectedHarvest.push(itemName);
+        const exists = selectedHarvest.some(h => {
+          const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+          return normalizeToCanonicalSlug(hStr) === slug || hStr.toLowerCase() === itemName.toLowerCase();
+        });
+        if (!exists) {
+          selectedHarvest.push(itemName);
+        }
       } else {
-        selectedHarvest = selectedHarvest.filter(n => n !== itemName);
+        selectedHarvest = selectedHarvest.filter(h => {
+          const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+          return normalizeToCanonicalSlug(hStr) !== slug && hStr.toLowerCase() !== itemName.toLowerCase();
+        });
       }
       saveAppState();
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
     }
 
     function updatePantryStock(itemName, val) {
       const parsed = parseFloat(val) || 0;
       pantryStock[itemName] = parsed;
+      const slug = normalizeToCanonicalSlug(itemName);
+      if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[slug]) {
+        window.PANTRY_STOCK_INVENTORY[slug].stock = parsed;
+      }
       saveAppState();
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
     }
 
     function deleteHarvestItem(itemName) {
@@ -2678,8 +2725,13 @@ function generateNextWeekMenu() {
 
       renderDateBar();
       renderDay(selectedIdx);
-      if (typeof render3DShoppingList === "function") if (typeof render3DShoppingList === "function") renderRecipes(day, activeDiners);
-      render3DShoppingList();
+      const curPlan1 = getPlanForWeek(activeWeek);
+      if (typeof renderRecipes === 'function' && curPlan1 && curPlan1.days && curPlan1.days[selectedIdx]) {
+        renderRecipes(curPlan1.days[selectedIdx], getMealDiners(selectedIdx, 'Desayuno'));
+      }
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
     }
 
     function onHeaderWeekChange(newWeek) {
@@ -2696,8 +2748,13 @@ function generateNextWeekMenu() {
 
       renderDateBar();
       renderDay(selectedIdx);
-      if (typeof render3DShoppingList === "function") if (typeof render3DShoppingList === "function") renderRecipes(day, activeDiners);
-      render3DShoppingList();
+      const curPlan2 = getPlanForWeek(activeWeek);
+      if (typeof renderRecipes === 'function' && curPlan2 && curPlan2.days && curPlan2.days[selectedIdx]) {
+        renderRecipes(curPlan2.days[selectedIdx], getMealDiners(selectedIdx, 'Desayuno'));
+      }
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
 
       if (typeof showToast === 'function') {
         showToast("📅 Semana cambiada a: " + activeWeek.split(' (')[0]);
@@ -3056,10 +3113,16 @@ function calculateNetShoppingList(diners) {
 
     totalCount++;
 
-    const isHarvest = item.is_farm || cat.includes("Cosecha") || harvestList.some(h => {
-      const hClean = sanitizeDishTitle(typeof h === 'string' ? h : (h.item_name || h.name || ''));
-      return hClean && (hClean.includes(cleanLower) || cleanLower.includes(hClean));
+    const isHarvestInList = harvestList.some(h => {
+      if (!h) return false;
+      const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+      const hSlug = normalizeToCanonicalSlug(hStr);
+      const hLower = hStr.toLowerCase();
+      return (hSlug && slug && (hSlug === slug || slug.includes(hSlug) || hSlug.includes(slug))) ||
+             (hLower && cleanLower && (hLower === cleanLower || cleanLower.includes(hLower) || hLower.includes(cleanLower)));
     });
+
+    const isHarvest = isHarvestInList || cat.includes("Cosecha");
 
     if (isHarvest) {
       farmCount++;
@@ -4690,8 +4753,9 @@ function renderRecipes(day, activeDiners) {
 
       saveAppState();
       initSetupPanel();
-      if (typeof render3DShoppingList === "function") if (typeof render3DShoppingList === "function") renderRecipes(day, activeDiners);
-      render3DShoppingList();
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
 
       try {
         await fetch('/api/inventory/intake', {
