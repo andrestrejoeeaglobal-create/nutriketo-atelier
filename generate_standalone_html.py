@@ -2002,6 +2002,8 @@ function generateNextWeekMenu() {
       "Agua purificada de manantial"
     ];
     let customFarmItems = [];
+    let deletedFarmItems = [];
+    let deletedPantryItems = [];
 
     let activeWeek = "Semana 38 (13 al 19 de Septiembre de 2026)";
     let activeDiners = 6;
@@ -2104,6 +2106,18 @@ function generateNextWeekMenu() {
           if (state.activeWeek && datasets[state.activeWeek]) activeWeek = state.activeWeek;
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
 
+          if (Array.isArray(state.deletedFarmItems)) {
+            deletedFarmItems = state.deletedFarmItems;
+          } else {
+            deletedFarmItems = [];
+          }
+
+          if (Array.isArray(state.deletedPantryItems)) {
+            deletedPantryItems = state.deletedPantryItems;
+          } else {
+            deletedPantryItems = [];
+          }
+
           if (Array.isArray(state.customFarmItems)) {
             customFarmItems = state.customFarmItems.filter(f => {
               const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
@@ -2111,7 +2125,7 @@ function generateNextWeekMenu() {
             });
           }
 
-          if (Array.isArray(state.selectedHarvest) && state.selectedHarvest.length > 0) {
+          if (Array.isArray(state.selectedHarvest)) {
             selectedHarvest = state.selectedHarvest.filter(h => {
               const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
               return !/miel|durazno/i.test(hStr);
@@ -2161,6 +2175,9 @@ function generateNextWeekMenu() {
             const cleanName = item.item_name.replace(/\\s*\\/\\s*/g, ' \u2014 ').replace(/\\//g, ' \u2014 ').trim();
             if (!cleanName || (/miel|durazno/i.test(cleanName) && !item.category.includes('Cosecha'))) return;
             const slug = normalizeToCanonicalSlug(cleanName);
+            if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === cleanName.toLowerCase())) return;
+            if (deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === cleanName.toLowerCase())) return;
+
             const smartCat = getSmartItemCategory(cleanName, item.category);
 
             if (!seenShopSlugs.has(slug)) {
@@ -2191,6 +2208,8 @@ function generateNextWeekMenu() {
           activeDiners,
           selectedHarvest,
           customFarmItems,
+          deletedFarmItems,
+          deletedPantryItems,
           pantryStock,
           checkedRows,
           customShopItems,
@@ -2536,7 +2555,16 @@ function generateNextWeekMenu() {
       const hGrid = document.getElementById('harvest-checklist-grid');
       if (hGrid) {
         hGrid.innerHTML = '';
-        const allFarmNames = [...new Set([...FARM_MASTER_CATALOG, ...customFarmItems])];
+        const activeFarmMaster = FARM_MASTER_CATALOG.filter(name => {
+          const slug = normalizeToCanonicalSlug(name);
+          return !deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === name.toLowerCase());
+        });
+        const activeCustomFarm = customFarmItems.filter(name => {
+          const slug = normalizeToCanonicalSlug(name);
+          return !deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === name.toLowerCase());
+        });
+
+        const allFarmNames = [...new Set([...activeFarmMaster, ...activeCustomFarm])];
         allFarmNames.sort((a, b) => a.localeCompare(b));
 
         allFarmNames.forEach((itemName, idx) => {
@@ -2574,6 +2602,7 @@ function generateNextWeekMenu() {
           const cleanName = (i.item_name || '').replace(/\s*\/\s*/g, ' \u2014 ').replace(/\//g, ' \u2014 ').trim();
           if (!cleanName) return;
           const slug = normalizeToCanonicalSlug(cleanName);
+          if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === cleanName.toLowerCase())) return;
           if (!seenPantrySlugs.has(slug)) {
             seenPantrySlugs.add(slug);
             nonFarm.push({ ...i, item_name: cleanName });
@@ -2663,6 +2692,8 @@ function generateNextWeekMenu() {
       if (!val) return;
 
       const slug = normalizeToCanonicalSlug(val);
+      deletedFarmItems = deletedFarmItems.filter(d => normalizeToCanonicalSlug(d) !== slug && d.toLowerCase() !== val.toLowerCase());
+
       const existsInMaster = FARM_MASTER_CATALOG.some(m => normalizeToCanonicalSlug(m) === slug || m.toLowerCase() === val.toLowerCase());
       if (!existsInMaster) {
         const existsInCustom = customFarmItems.some(c => normalizeToCanonicalSlug(c) === slug || c.toLowerCase() === val.toLowerCase());
@@ -2714,6 +2745,8 @@ function generateNextWeekMenu() {
       if (!val) return;
 
       const slug = normalizeToCanonicalSlug(val);
+      deletedPantryItems = deletedPantryItems.filter(d => normalizeToCanonicalSlug(d) !== slug && d.toLowerCase() !== val.toLowerCase());
+
       pantryStock[val] = qty;
 
       if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
@@ -2852,12 +2885,15 @@ function generateNextWeekMenu() {
     function deleteHarvestItem(itemName) {
       showClinicalConfirmModal({
         title: 'Eliminar Insumo de Cosecha',
-        message: `¿Estás seguro de que deseas eliminar el insumo <strong>"${itemName}"</strong> de la Cosecha Activa?`,
+        message: `¿Estás seguro de que deseas eliminar definitivamente el insumo <strong>"${itemName}"</strong> de la Cosecha Activa?`,
         icon: '🗑️',
         confirmText: 'Sí, Eliminar Insumo',
         cancelText: 'Cancelar',
         onConfirm: () => {
           const slug = normalizeToCanonicalSlug(itemName);
+          if (!deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === itemName.toLowerCase())) {
+            deletedFarmItems.push(itemName);
+          }
           customFarmItems = customFarmItems.filter(n => normalizeToCanonicalSlug(n) !== slug && n.toLowerCase() !== itemName.toLowerCase());
           selectedHarvest = selectedHarvest.filter(h => {
             const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
@@ -2871,7 +2907,7 @@ function generateNextWeekMenu() {
             render3DShoppingList();
           }
           if (typeof showToast === 'function') {
-            showToast(`Insumo '${itemName}' eliminado de la Cosecha`, 'danger');
+            showToast(`🗑️ Insumo '${itemName}' eliminado definitivamente de la Cosecha.`, 'danger');
           }
         }
       });
@@ -2880,12 +2916,15 @@ function generateNextWeekMenu() {
     function deletePantryItem(itemName) {
       showClinicalConfirmModal({
         title: 'Eliminar Insumo del Inventario',
-        message: `¿Estás seguro de que deseas eliminar el insumo <strong>"${itemName}"</strong> del Inventario/Alacena?`,
+        message: `¿Estás seguro de que deseas eliminar definitivamente el insumo <strong>"${itemName}"</strong> del Inventario/Alacena?`,
         icon: '🗑️',
         confirmText: 'Sí, Eliminar Insumo',
         cancelText: 'Cancelar',
         onConfirm: () => {
           const slug = normalizeToCanonicalSlug(itemName);
+          if (!deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === itemName.toLowerCase())) {
+            deletedPantryItems.push(itemName);
+          }
           rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
           
           Object.keys(pantryStock).forEach(k => {
@@ -2908,7 +2947,7 @@ function generateNextWeekMenu() {
             render3DShoppingList();
           }
           if (typeof showToast === 'function') {
-            showToast(`Insumo '${itemName}' eliminado del Inventario`, 'danger');
+            showToast(`🗑️ Insumo '${itemName}' eliminado definitivamente del Inventario.`, 'danger');
           }
         }
       });
@@ -4887,8 +4926,8 @@ function renderRecipes(day, activeDiners) {
           ${iconHtml}
           <span style="color:var(--text-main, #0f172a); font-size:0.82rem; font-weight:600;">${cleanMsg || msg}</span>
         </div>
-        <button type="button" onclick="dismissToast()" style="margin-left:0.5rem; background:var(--bg-clinical, #f1f5f9); border:1px solid var(--border-clinical, #cbd5e1); color:var(--text-muted, #64748b); font-size:0.75rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:6px; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.background='var(--border-clinical)'" onmouseout="this.style.background='var(--bg-clinical)'">
-          Entendido
+        <button type="button" onclick="dismissToast()" style="margin-left:0.75rem; background:#1C75BC; color:#ffffff; border:none; font-size:0.78rem; font-weight:800; padding:0.35rem 0.75rem; border-radius:8px; cursor:pointer; box-shadow:0 2px 4px rgba(28,117,188,0.25); transition:all 0.2s;" onmouseover="this.style.background='#155d96'" onmouseout="this.style.background='#1C75BC'">
+          Entendido ✓
         </button>
       `;
 
@@ -4896,10 +4935,10 @@ function renderRecipes(day, activeDiners) {
       toast.style.opacity = '1';
       toast.style.transform = 'translateY(0)';
 
-      if (toastTimer) clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => {
-        dismissToast();
-      }, 4000);
+      if (toastTimer) {
+        clearTimeout(toastTimer);
+        toastTimer = null;
+      }
     }
 
     function updateIntakeDatalist() {
