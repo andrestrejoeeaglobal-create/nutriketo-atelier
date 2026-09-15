@@ -2557,7 +2557,7 @@ function generateNextWeekMenu() {
               <input type="checkbox" id="h-item-${idx}" value="${safeName}" ${isChecked ? 'checked' : ''} onchange="updateHarvestSelection('${safeName}', this.checked)">
               <label for="h-item-${idx}" style="cursor:pointer; flex: 1; color: var(--text-main); font-weight: 700; font-size: 0.85rem; word-break: break-word;">${itemName}</label>
             </div>
-            <button type="button" onclick="deleteHarvestItem('${safeName}')" style="background: none; border: none; color: #ef4444; font-size: 0.95rem; cursor: pointer; padding: 0.1rem 0.3rem; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" title="${isCanonical ? 'Desmarcar de Cosecha' : 'Eliminar ' + safeName}">🗑️</button>
+            <button type="button" onclick="deleteHarvestItem('${safeName}')" style="background: none; border: none; color: #ef4444; font-size: 0.95rem; cursor: pointer; padding: 0.1rem 0.3rem; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" title="Eliminar ${safeName} de la Cosecha">🗑️</button>
           `;
           hGrid.appendChild(div);
         });
@@ -2630,7 +2630,7 @@ function generateNextWeekMenu() {
             div.innerHTML = `
               <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 0.4rem; width: 100%;">
                 <span style="font-weight: 700; font-size: 0.88rem; color: var(--text-main); word-break: break-word; line-height: 1.25;">${i.item_name}</span>
-                <button type="button" onclick="deletePantryItem('${safeName}')" style="background: none; border: none; color: #ef4444; font-size: 0.95rem; cursor: pointer; padding: 0.1rem 0.3rem; border-radius: 4px; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" title="Eliminar ${safeName}">🗑️</button>
+                <button type="button" onclick="deletePantryItem('${safeName}')" style="background: none; border: none; color: #ef4444; font-size: 0.95rem; cursor: pointer; padding: 0.1rem 0.3rem; border-radius: 4px; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" title="Eliminar ${safeName} del Inventario">🗑️</button>
               </div>
               <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.4rem; width: 100%; margin-top: 0.2rem;">
                 <input type="number" step="0.1" min="0" value="${val}" style="width: 70px; padding: 0.25rem 0.4rem; font-weight: 800; text-align: center; border: 1px solid var(--border-clinical); border-radius: 6px; background: var(--surface-card); color: var(--text-main); font-size: 0.88rem;" onchange="updatePantryStock('${safeName}', this.value)">
@@ -2784,55 +2784,134 @@ function generateNextWeekMenu() {
       }
     }
 
-    function deleteHarvestItem(itemName) {
-      if (confirm(`¿Deseas eliminar el insumo "${itemName}" de la Cosecha?`)) {
-        const slug = normalizeToCanonicalSlug(itemName);
-        customFarmItems = customFarmItems.filter(n => normalizeToCanonicalSlug(n) !== slug && n.toLowerCase() !== itemName.toLowerCase());
-        selectedHarvest = selectedHarvest.filter(h => {
-          const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
-          return normalizeToCanonicalSlug(hStr) !== slug && hStr.toLowerCase() !== itemName.toLowerCase();
-        });
-        rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
-        
-        saveAppState();
-        initSetupPanel();
-        if (typeof render3DShoppingList === 'function') {
-          render3DShoppingList();
-        }
-        if (typeof showToast === 'function') {
-          showToast(`Insumo '${itemName}' eliminado de la Cosecha`, 'danger');
-        }
+    function showClinicalConfirmModal(options) {
+      const {
+        title = 'Confirmar Acción Clínica',
+        message = '¿Deseas proceder con esta acción?',
+        icon = '🗑️',
+        confirmText = 'Eliminar Insumo',
+        cancelText = 'Cancelar',
+        onConfirm
+      } = options || {};
+
+      let modalOverlay = document.getElementById('clinical-confirm-modal');
+      if (!modalOverlay) {
+        modalOverlay = document.createElement('div');
+        modalOverlay.id = 'clinical-confirm-modal';
+        document.body.appendChild(modalOverlay);
       }
+
+      modalOverlay.style.cssText = 'position: fixed; inset: 0; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(4px); z-index: 99999; display: flex; align-items: center; justify-content: center; padding: 1rem; transition: opacity 0.2s ease-in-out;';
+
+      modalOverlay.innerHTML = `
+        <div style="background: var(--surface-card, #ffffff); border: 1px solid var(--border-clinical, #e2e8f0); box-shadow: var(--shadow-clinical-lg, 0 10px 25px -5px rgba(15, 23, 42, 0.2)); border-radius: 1rem; max-width: 26rem; width: 100%; padding: 1.5rem; text-align: left;" class="dark:bg-slate-900 dark:border-slate-800">
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <div style="width: 2.75rem; height: 2.75rem; border-radius: 0.75rem; background: rgba(183, 14, 12, 0.1); color: #B70E0C; display: flex; align-items: center; justify-content: center; font-size: 1.25rem; flex-shrink: 0;">
+              ${icon}
+            </div>
+            <div>
+              <h3 style="margin: 0; font-weight: 800; font-size: 1.05rem; color: var(--text-main, #0f172a);" class="dark:text-slate-100">${title}</h3>
+              <p style="margin: 0.2rem 0 0 0; font-size: 0.75rem; font-weight: 700; color: var(--color-corporate, #1C75BC);">Gobernanza Clínico-Nutricional T.I.L.O.®</p>
+            </div>
+          </div>
+          
+          <div style="margin: 0 0 1.25rem 0; font-size: 0.88rem; color: var(--text-muted, #475569); line-height: 1.5;" class="dark:text-slate-300">
+            ${message}
+          </div>
+          
+          <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.75rem; margin-top: 1.25rem;">
+            <button type="button" id="clinical-modal-cancel-btn" style="min-height: 44px; min-width: 100px; padding: 0.6rem 1.25rem; border-radius: 0.75rem; border: 1px solid var(--border-clinical, #cbd5e1); background: transparent; color: var(--text-main, #334155); font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s ease;" onmouseover="this.style.background='var(--bg-clinical)'" onmouseout="this.style.background='transparent'">
+              ${cancelText}
+            </button>
+            <button type="button" id="clinical-modal-confirm-btn" style="min-height: 44px; min-width: 130px; padding: 0.6rem 1.25rem; border-radius: 0.75rem; border: none; background: #B70E0C; color: #ffffff; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(183, 14, 12, 0.25);" onmouseover="this.style.background='#960b0a'" onmouseout="this.style.background='#B70E0C'">
+              ${confirmText}
+            </button>
+          </div>
+        </div>
+      `;
+
+      modalOverlay.style.display = 'flex';
+
+      const cancelBtn = document.getElementById('clinical-modal-cancel-btn');
+      const confirmBtn = document.getElementById('clinical-modal-confirm-btn');
+
+      const closeModal = () => {
+        modalOverlay.style.display = 'none';
+      };
+
+      cancelBtn.onclick = () => closeModal();
+      
+      confirmBtn.onclick = () => {
+        closeModal();
+        if (typeof onConfirm === 'function') {
+          onConfirm();
+        }
+      };
+    }
+
+    function deleteHarvestItem(itemName) {
+      showClinicalConfirmModal({
+        title: 'Eliminar Insumo de Cosecha',
+        message: `¿Estás seguro de que deseas eliminar el insumo <strong>"${itemName}"</strong> de la Cosecha Activa?`,
+        icon: '🗑️',
+        confirmText: 'Sí, Eliminar Insumo',
+        cancelText: 'Cancelar',
+        onConfirm: () => {
+          const slug = normalizeToCanonicalSlug(itemName);
+          customFarmItems = customFarmItems.filter(n => normalizeToCanonicalSlug(n) !== slug && n.toLowerCase() !== itemName.toLowerCase());
+          selectedHarvest = selectedHarvest.filter(h => {
+            const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+            return normalizeToCanonicalSlug(hStr) !== slug && hStr.toLowerCase() !== itemName.toLowerCase();
+          });
+          rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
+          
+          saveAppState();
+          initSetupPanel();
+          if (typeof render3DShoppingList === 'function') {
+            render3DShoppingList();
+          }
+          if (typeof showToast === 'function') {
+            showToast(`Insumo '${itemName}' eliminado de la Cosecha`, 'danger');
+          }
+        }
+      });
     }
 
     function deletePantryItem(itemName) {
-      if (confirm(`¿Deseas eliminar el insumo "${itemName}" del Inventario/Alacena?`)) {
-        const slug = normalizeToCanonicalSlug(itemName);
-        rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
-        
-        Object.keys(pantryStock).forEach(k => {
-          if (normalizeToCanonicalSlug(k) === slug || k.toLowerCase() === itemName.toLowerCase()) {
-            delete pantryStock[k];
-          }
-        });
-
-        if (typeof window.PANTRY_STOCK_INVENTORY === 'object' && window.PANTRY_STOCK_INVENTORY) {
-          Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
+      showClinicalConfirmModal({
+        title: 'Eliminar Insumo del Inventario',
+        message: `¿Estás seguro de que deseas eliminar el insumo <strong>"${itemName}"</strong> del Inventario/Alacena?`,
+        icon: '🗑️',
+        confirmText: 'Sí, Eliminar Insumo',
+        cancelText: 'Cancelar',
+        onConfirm: () => {
+          const slug = normalizeToCanonicalSlug(itemName);
+          rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
+          
+          Object.keys(pantryStock).forEach(k => {
             if (normalizeToCanonicalSlug(k) === slug || k.toLowerCase() === itemName.toLowerCase()) {
-              delete window.PANTRY_STOCK_INVENTORY[k];
+              delete pantryStock[k];
             }
           });
-        }
 
-        saveAppState();
-        initSetupPanel();
-        if (typeof render3DShoppingList === 'function') {
-          render3DShoppingList();
+          if (typeof window.PANTRY_STOCK_INVENTORY === 'object' && window.PANTRY_STOCK_INVENTORY) {
+            Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
+              if (normalizeToCanonicalSlug(k) === slug || k.toLowerCase() === itemName.toLowerCase()) {
+                delete window.PANTRY_STOCK_INVENTORY[k];
+              }
+            });
+          }
+
+          saveAppState();
+          initSetupPanel();
+          if (typeof render3DShoppingList === 'function') {
+            render3DShoppingList();
+          }
+          if (typeof showToast === 'function') {
+            showToast(`Insumo '${itemName}' eliminado del Inventario`, 'danger');
+          }
         }
-        if (typeof showToast === 'function') {
-          showToast(`Insumo '${itemName}' eliminado del Inventario`, 'danger');
-        }
-      }
+      });
     }
 
     function saveAndUnlockApp() {
