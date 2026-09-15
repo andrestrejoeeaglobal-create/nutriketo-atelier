@@ -4780,12 +4780,16 @@ function renderRecipes(day, activeDiners) {
       if (!toast) {
         toast = document.createElement('div');
         toast.id = 'app-toast-notif';
-        toast.style.cssText = 'position:fixed; bottom:24px; right:24px; background:var(--color-navy); color:#fff; padding:12px 20px; border-radius:12px; border:1px solid var(--color-34plus); font-weight:700; font-size:0.88rem; z-index:99999; box-shadow:0 10px 25px rgba(0,0,0,0.3); transition:all 0.3s ease;';
+        toast.style.cssText = 'position:fixed; bottom:24px; right:24px; background:#0f172a; color:#ffffff; padding:12px 20px; border-radius:12px; border:2px solid #3AAA35; font-weight:700; font-size:0.88rem; z-index:99999; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition:all 0.3s ease; display:flex; align-items:center; gap:0.5rem;';
         document.body.appendChild(toast);
       }
       toast.innerText = msg;
-      toast.style.display = 'block';
-      setTimeout(() => { toast.style.display = 'none'; }, 3500);
+      toast.style.display = 'flex';
+      toast.style.opacity = '1';
+      setTimeout(() => { 
+        toast.style.opacity = '0';
+        setTimeout(() => { toast.style.display = 'none'; }, 300);
+      }, 3500);
     }
 
     function updateIntakeDatalist() {
