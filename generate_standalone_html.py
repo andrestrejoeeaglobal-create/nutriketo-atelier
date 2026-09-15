@@ -1834,8 +1834,8 @@ function generateNextWeekMenu() {
 
           <!-- Añadir Nuevo Insumo a Cosecha -->
           <div class="add-custom-box">
-            <input type="text" id="new-harvest-name" class="add-input" placeholder="Ej. Higos frescos, Vinagre de manzana..." onkeypress="if(event.key==='Enter') addNewHarvestItem()">
-            <button class="btn-add-item" onclick="addNewHarvestItem()">➕ Añadir Insumo a Cosecha</button>
+            <input type="text" id="new-harvest-name" class="add-input" list="setup-pantry-datalist" placeholder="Ej. Higos frescos, Vinagre de manzana..." onkeypress="if(event.key==='Enter') addNewHarvestItem()">
+            <button type="button" class="btn-add-item" onclick="addNewHarvestItem()">➕ Añadir Insumo a Cosecha</button>
           </div>
         </div>
 
@@ -1847,11 +1847,12 @@ function generateNextWeekMenu() {
 
           <!-- Añadir Nuevo Insumo a Alacena -->
           <div class="add-custom-box">
-            <input type="text" id="new-pantry-name" class="add-input" placeholder="Nombre (ej. Café en grano, Vinagre...)" onkeypress="if(event.key==='Enter') addNewPantryItem()">
+            <input type="text" id="new-pantry-name" class="add-input" list="setup-pantry-datalist" placeholder="Nombre (ej. Café en grano, Vinagre...)" onkeypress="if(event.key==='Enter') addNewPantryItem()">
             <input type="number" step="0.1" id="new-pantry-qty" style="width: 75px;" class="add-input" placeholder="Cant." onkeypress="if(event.key==='Enter') addNewPantryItem()">
             <input type="text" id="new-pantry-unit" style="width: 85px;" class="add-input" placeholder="Unidad" onkeypress="if(event.key==='Enter') addNewPantryItem()">
-            <button class="btn-add-item" onclick="addNewPantryItem()">➕ Añadir Insumo a Alacena</button>
+            <button type="button" class="btn-add-item" onclick="addNewPantryItem()">➕ Añadir Insumo a Alacena</button>
           </div>
+          <datalist id="setup-pantry-datalist"></datalist>
         </div>
 
         <button class="btn-action" onclick="saveAndUnlockApp()">🏛️ Compilar Arquitectura Semanal</button>
@@ -2673,6 +2674,19 @@ function generateNextWeekMenu() {
 
       if (document.getElementById('setup-week')) document.getElementById('setup-week').value = activeWeek;
       if (document.getElementById('setup-diners')) document.getElementById('setup-diners').value = activeDiners;
+
+      const pantryDatalist = document.getElementById('setup-pantry-datalist');
+      if (pantryDatalist) {
+        pantryDatalist.innerHTML = '';
+        const allPossibleItems = new Set();
+        FARM_MASTER_CATALOG.forEach(m => allPossibleItems.add(m));
+        rawShopBase.forEach(i => { if (i && i.item_name) allPossibleItems.add(i.item_name); });
+        allPossibleItems.forEach(name => {
+          const opt = document.createElement('option');
+          opt.value = name;
+          pantryDatalist.appendChild(opt);
+        });
+      }
     }
 
     function toggleEditDetails() {
@@ -2689,7 +2703,13 @@ function generateNextWeekMenu() {
     function addNewHarvestItem() {
       const nameInput = document.getElementById('new-harvest-name');
       const val = nameInput ? nameInput.value.trim() : '';
-      if (!val) return;
+      if (!val) {
+        if (typeof showToast === 'function') {
+          showToast('⚠️ Por favor escribe el nombre del insumo para la Cosecha.', 'warning');
+        }
+        if (nameInput) nameInput.focus();
+        return;
+      }
 
       const slug = normalizeToCanonicalSlug(val);
       deletedFarmItems = deletedFarmItems.filter(d => normalizeToCanonicalSlug(d) !== slug && d.toLowerCase() !== val.toLowerCase());
@@ -2742,28 +2762,37 @@ function generateNextWeekMenu() {
       const qty = parseFloat(qtyInput ? qtyInput.value : 1.0) || 1.0;
       const unit = (unitInput ? unitInput.value.trim() : '') || 'unidades';
 
-      if (!val) return;
+      if (!val) {
+        if (typeof showToast === 'function') {
+          showToast('⚠️ Por favor escribe el nombre del insumo para la Alacena.', 'warning');
+        }
+        if (nameInput) nameInput.focus();
+        return;
+      }
 
       const slug = normalizeToCanonicalSlug(val);
       deletedPantryItems = deletedPantryItems.filter(d => normalizeToCanonicalSlug(d) !== slug && d.toLowerCase() !== val.toLowerCase());
 
-      pantryStock[val] = qty;
+      const existingInShop = rawShopBase.find(i => normalizeToCanonicalSlug(i.item_name) === slug || i.item_name.toLowerCase() === val.toLowerCase());
+      const canonicalName = existingInShop ? existingInShop.item_name : val;
+
+      pantryStock[canonicalName] = qty;
 
       if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
         window.PANTRY_STOCK_INVENTORY[slug] = {
-          name: val,
+          name: canonicalName,
           stock: qty,
           unit: unit,
           status: 'canonical'
         };
       }
 
-      const existsInShop = rawShopBase.some(i => normalizeToCanonicalSlug(i.item_name) === slug || i.item_name.toLowerCase() === val.toLowerCase());
-      if (!existsInShop) {
+      if (!existingInShop) {
         const newId = 200 + rawShopBase.length + 1;
+        const smartCat = getSmartItemCategory(val, '');
         rawShopBase.push({
           id: newId,
-          category: "🛒 Abarrotes, Semillas y Grasas",
+          category: smartCat,
           item_name: val,
           quantity: qty,
           unit: unit,
@@ -2779,6 +2808,9 @@ function generateNextWeekMenu() {
       initSetupPanel();
       if (typeof render3DShoppingList === 'function') {
         render3DShoppingList();
+      }
+      if (typeof showToast === 'function') {
+        showToast(`📦 '${canonicalName}' registrado en Alacena (${qty} ${unit}).`);
       }
     }
 
