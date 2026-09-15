@@ -2056,7 +2056,7 @@ function generateNextWeekMenu() {
       }
 
       // 3. Verduras, Hortalizas y Frescos (EVALUAR ANTES QUE CARNES PARA EVITAR QUE "FRESCO/FRESCA" ACTIVE "RES")
-      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espinaca|espinacas|hinojo|jitomate|jitomates|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini/i.test(name)) {
+      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espinaca|espinacas|hinojo|jitomate|jitomates|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|ajo|dientes de ajo|champiñones|champinon|champinones|portobello|setas/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
@@ -2589,17 +2589,17 @@ function generateNextWeekMenu() {
 
         const catOrder = [
           "🥩 Carnes, Pescados y Proteínas",
-          "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
           "🥬 Verduras, Hortalizas y Frescos",
-          "🌶️ Chiles, Condimentos y Especias",
-          "🌻 Granos, Semillas y Harinas",
-          "🛒 Abarrotes, Aceites y Grasas",
-          "💊 Suplementación y Fórmulas Sinergix"
+          "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+          "🌶️ Chiles, Condimentos e Infusiones",
+          "🌰 Grasas, Aceites y Semillas",
+          "🍓 Frutas de Bajo Índice Glucémico",
+          "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
         ];
 
         const sortedCats = Object.keys(categoriesMap).sort((a, b) => {
-          const idxA = catOrder.findIndex(c => a.includes(c.split(' ')[1] || a));
-          const idxB = catOrder.findIndex(c => b.includes(c.split(' ')[1] || b));
+          const idxA = catOrder.indexOf(a);
+          const idxB = catOrder.indexOf(b);
           if (idxA !== -1 && idxB !== -1) return idxA - idxB;
           if (idxA !== -1) return -1;
           if (idxB !== -1) return 1;
@@ -2785,30 +2785,23 @@ function generateNextWeekMenu() {
     }
 
     function deleteHarvestItem(itemName) {
-      const isCanonical = FARM_MASTER_CATALOG.includes(itemName);
-      const slug = normalizeToCanonicalSlug(itemName);
-
-      if (isCanonical) {
+      if (confirm(`¿Deseas eliminar el insumo "${itemName}" de la Cosecha?`)) {
+        const slug = normalizeToCanonicalSlug(itemName);
+        customFarmItems = customFarmItems.filter(n => normalizeToCanonicalSlug(n) !== slug && n.toLowerCase() !== itemName.toLowerCase());
         selectedHarvest = selectedHarvest.filter(h => {
           const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
           return normalizeToCanonicalSlug(hStr) !== slug && hStr.toLowerCase() !== itemName.toLowerCase();
         });
-        if (typeof showToast === 'function') showToast(`🌿 '${itemName}' desmarcado de Cosecha (pasa a Mercado Neto).`);
-      } else {
-        if (confirm(`¿Deseas eliminar el insumo personalizado "${itemName}" de la Cosecha?`)) {
-          customFarmItems = customFarmItems.filter(n => normalizeToCanonicalSlug(n) !== slug && n.toLowerCase() !== itemName.toLowerCase());
-          selectedHarvest = selectedHarvest.filter(h => {
-            const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
-            return normalizeToCanonicalSlug(hStr) !== slug && hStr.toLowerCase() !== itemName.toLowerCase();
-          });
-          rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
-          if (typeof showToast === 'function') showToast(`🗑️ Insumo personalizado '${itemName}' eliminado.`);
+        rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
+        
+        saveAppState();
+        initSetupPanel();
+        if (typeof render3DShoppingList === 'function') {
+          render3DShoppingList();
         }
-      }
-      saveAppState();
-      initSetupPanel();
-      if (typeof render3DShoppingList === 'function') {
-        render3DShoppingList();
+        if (typeof showToast === 'function') {
+          showToast(`Insumo '${itemName}' eliminado de la Cosecha`, 'danger');
+        }
       }
     }
 
@@ -2837,7 +2830,7 @@ function generateNextWeekMenu() {
           render3DShoppingList();
         }
         if (typeof showToast === 'function') {
-          showToast(`🗑️ Insumo '${itemName}' eliminado del Inventario.`);
+          showToast(`Insumo '${itemName}' eliminado del Inventario`, 'danger');
         }
       }
     }
@@ -4775,21 +4768,59 @@ function renderRecipes(day, activeDiners) {
       document.body.removeChild(textArea);
     }
 
-    function showToast(msg) {
-      let toast = document.getElementById('app-toast-notif');
+    let toastTimer = null;
+
+    function dismissToast() {
+      const toast = document.getElementById('atelier-toast');
+      if (toast) {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+        setTimeout(() => { toast.style.display = 'none'; }, 200);
+      }
+      if (toastTimer) {
+        clearTimeout(toastTimer);
+        toastTimer = null;
+      }
+    }
+
+    function showToast(msg, type = 'info') {
+      let toast = document.getElementById('atelier-toast');
       if (!toast) {
         toast = document.createElement('div');
-        toast.id = 'app-toast-notif';
-        toast.style.cssText = 'position:fixed; bottom:24px; right:24px; background:#0f172a; color:#ffffff; padding:12px 20px; border-radius:12px; border:2px solid #3AAA35; font-weight:700; font-size:0.88rem; z-index:99999; box-shadow:0 10px 25px rgba(0,0,0,0.4); transition:all 0.3s ease; display:flex; align-items:center; gap:0.5rem;';
+        toast.id = 'atelier-toast';
+        toast.style.cssText = 'position:fixed; bottom:24px; right:24px; z-index:99999; display:flex; align-items:center; gap:0.75rem; background:var(--surface-card, #ffffff); color:var(--text-main, #0f172a); border:1px solid var(--border-clinical, #cbd5e1); padding:0.75rem 1rem; border-radius:12px; box-shadow:0 15px 30px rgba(0,0,0,0.15); font-weight:600; font-size:0.82rem; transition:all 0.3s cubic-bezier(0.4, 0, 0.2, 1);';
         document.body.appendChild(toast);
       }
-      toast.innerText = msg;
+
+      let iconHtml = '<span style="color:#10b981; font-weight:800; font-size:0.9rem;">✓</span>';
+      if (type === 'warning' || msg.includes('⚠️')) {
+        iconHtml = '<span style="color:#f59e0b; font-weight:800; font-size:0.9rem;">⚠️</span>';
+      } else if (type === 'danger' || msg.includes('🗑️')) {
+        iconHtml = '<span style="color:#f43f5e; font-weight:800; font-size:0.9rem;">🗑️</span>';
+      } else if (type === 'info' || msg.includes('ℹ️') || msg.includes('📋')) {
+        iconHtml = '<span style="color:#3b82f6; font-weight:800; font-size:0.9rem;">ℹ️</span>';
+      }
+
+      const cleanMsg = msg.replace(/^[✓⚠️🗑️ℹ️📋🌿🌾🥩🧀🥬🌶️💊🛒\s]+/, '');
+
+      toast.innerHTML = `
+        <div style="display:flex; align-items:center; gap:0.5rem; flex:1;">
+          ${iconHtml}
+          <span style="color:var(--text-main, #0f172a); font-size:0.82rem; font-weight:600;">${cleanMsg || msg}</span>
+        </div>
+        <button type="button" onclick="dismissToast()" style="margin-left:0.5rem; background:var(--bg-clinical, #f1f5f9); border:1px solid var(--border-clinical, #cbd5e1); color:var(--text-muted, #64748b); font-size:0.75rem; font-weight:700; padding:0.25rem 0.6rem; border-radius:6px; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.background='var(--border-clinical)'" onmouseout="this.style.background='var(--bg-clinical)'">
+          Entendido
+        </button>
+      `;
+
       toast.style.display = 'flex';
       toast.style.opacity = '1';
-      setTimeout(() => { 
-        toast.style.opacity = '0';
-        setTimeout(() => { toast.style.display = 'none'; }, 300);
-      }, 3500);
+      toast.style.transform = 'translateY(0)';
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        dismissToast();
+      }, 4000);
     }
 
     function updateIntakeDatalist() {
