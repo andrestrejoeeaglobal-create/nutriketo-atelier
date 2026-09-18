@@ -2046,46 +2046,65 @@ function generateNextWeekMenu() {
       }
     }
 
+    
+    function getCanonicalItemName(rawName) {
+      if (!rawName) return '';
+      const lower = rawName.toLowerCase().trim();
+
+      if (/multi sinergix|fórmula nootrópica|formula nootropica/i.test(lower)) return 'Fórmula Nootrópica 33Plus®';
+      if (/amino sinergix|fórmula reparadora|formula reparadora/i.test(lower)) return 'Fórmula Reparadora 34Plus®';
+
+      if (/café|cafe legal|café de grano|café en grano/i.test(lower)) return 'Café en grano — molido';
+
+      if (/achiote/i.test(lower)) return 'Achiote puro';
+      if (/alcaparra/i.test(lower)) return 'Alcaparras en salmuera';
+      if (/mostaza/i.test(lower)) return 'Mostaza Dijon — Tipo Antigua';
+      if (/tamari|soya keto/i.test(lower)) return 'Salsa Tamari — Soya Keto';
+
+      return rawName.trim();
+    }
+
+
     function getSmartItemCategory(itemName, explicitCategory) {
       const name = (itemName || '').toLowerCase().trim();
 
       // 1. Suplementación Celular — Biotecnología
-      if (/33plus|34plus|sinergix|suplemento|suplementos|vitamina|vitaminas|colágeno|colageno|electrolitos|fórmula nootrópica|fórmula reparadora/i.test(name)) {
+      if (/33plus|34plus|sinergix|suplemento|suplementos|vitamina|vitaminas|colágeno|colageno|electrolitos|fórmula nootrópica|formula nootropica|fórmula reparadora|formula reparadora/i.test(name)) {
         return '💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA';
       }
 
-      // 2. Frutas de Bajo Índice Glucémico
-      if (/mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|pitaya|pitayas|coco/i.test(name)) {
+      // 2. Frutas de Bajo Índice Glucémico (Excluyendo aceite/leche de coco)
+      if (!/aceite|leche/i.test(name) && /mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|pitaya|pitayas/i.test(name)) {
         return '🍓 Frutas de Bajo Índice Glucémico';
       }
 
-      // 3. Verduras, Hortalizas y Frescos (EVALUAR ANTES QUE CARNES PARA EVITAR QUE "FRESCO/FRESCA" ACTIVE "RES")
-      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espinaca|espinacas|hinojo|jitomate|jitomates|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|ajo|dientes de ajo|champiñones|champinon|champinones|portobello|setas/i.test(name)) {
-        return '🥬 Verduras, Hortalizas y Frescos';
+      // 3. Grasas, Aceites y Semillas (Aguacates, Aceitunas, Aceites, Leche de coco, Semillas, Mayonesa)
+      if (/aceite|mct|leche de coco|mantequilla|ghee|aguacate|aguacates|aceituna|aceitunas|nuez|nueces|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli|mayonesa/i.test(name)) {
+        return '🌰 Grasas, Aceites y Semillas';
       }
 
       // 4. Lácteos y Quesos (Sin Gluten — Keto)
-      if (/queso|quesos|leche|mantequilla|crema|gouda|panela|parmesano|manchego|cabra|mascarpone|mozzarella|ghee/i.test(name)) {
+      if (/queso|quesos|leche|crema|gouda|panela|parmesano|manchego|mascarpone|mozzarella/i.test(name)) {
         return '🧀 Lácteos y Quesos (Sin Gluten — Keto)';
       }
 
-      // 5. Carnes, Pescados y Proteínas (USAR \bres\b PARA QUE "fresco" / "fresca" NO COINCIDA CON "res")
+      // 5. Carnes, Pescados y Proteínas (USAR \bres\b PARA EVITAR QUE "fresco" ACTIVE "res")
       if (/carne|carnes|sirloin|ribeye|\bres\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
         return '🥩 Carnes, Pescados y Proteínas';
       }
 
-      // 6. Grasas, Aceites y Semillas
-      if (/aceite|mct|nuez|nueces|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli/i.test(name)) {
-        return '🌰 Grasas, Aceites y Semillas';
-      }
-
-      // 7. Chiles, Condimentos e Infusiones
-      if (/sal|sal de|sal mineral|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|aceituna|aceitunas|vinagre|balsámico|balsamico|jengibre|agua|infusión|infusion|té|te|base líquida|base liquida/i.test(name)) {
+      // 6. Chiles, Condimentos e Infusiones (Aderezos, BBQ, Café, Chocolates, Especias, Salsas, Achiote, Alcaparras)
+      if (/sal|sal de|sal mineral|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|vinagre|balsámico|balsamico|jengibre|agua|infusión|infusion|té|te|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
         return '🌶️ Chiles, Condimentos e Infusiones';
       }
 
+      // 7. Verduras, Hortalizas y Frescos
+      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espinaca|espinacas|hinojo|jitomate|jitomates|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|ajo|dientes de ajo|champiñones|champinon|champinones|portobello|setas/i.test(name)) {
+        return '🥬 Verduras, Hortalizas y Frescos';
+      }
+
       // Fallback
-      return '🥬 Verduras, Hortalizas y Frescos';
+      return '🌶️ Chiles, Condimentos e Infusiones';
     }
 
     function loadAppState() {
@@ -3319,7 +3338,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
               if (!rawName) return;
 
               const cleanLower = rawName.toLowerCase();
-              if (/jalapeño|jalapeno|achiote|manchego con chile|quinoa|cereza|california|bbq|aderezo italiano|cobertura de chocolate|leche de vaca|cafe legal/i.test(cleanLower)) {
+              if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno/i.test(cleanLower)) {
                 return;
               }
 
@@ -3382,7 +3401,7 @@ function calculateNetShoppingList(diners) {
     ? activeBOMItems 
     : (typeof rawShopBase !== 'undefined' && Array.isArray(rawShopBase) ? rawShopBase.filter(i => {
         const cleanLower = (i.item_name || '').toLowerCase();
-        return !/jalapeño|jalapeno|achiote|manchego con chile|quinoa|cereza|california|bbq|aderezo italiano|cobertura de chocolate|leche de vaca|cafe legal/i.test(cleanLower);
+        return !/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno/i.test(cleanLower);
       }) : []);
 
   itemsToProcess.forEach(item => {
@@ -3390,7 +3409,7 @@ function calculateNetShoppingList(diners) {
     const cleanName = item.item_name.strip ? item.item_name.strip() : item.item_name;
     const cleanLower = cleanName.toLowerCase();
 
-    if (/jalapeño|jalapeno|achiote|manchego con chile|quinoa|cereza|california|bbq|aderezo italiano|cobertura de chocolate|leche de vaca|cafe legal/i.test(cleanLower)) {
+    if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno/i.test(cleanLower)) {
       return;
     }
 
@@ -5144,10 +5163,10 @@ function renderRecipes(day, activeDiners) {
         : "📊 REPORTE NUTRICIONAL Y CRONOGRAMA SINERGIX - " + (scope === 'day' ? (plan.days[dayIdx]?.day.toUpperCase() + " " + plan.days[dayIdx]?.date_str.toUpperCase()) : activeWeek.toUpperCase()) + "\\n\\n";
 
       text += isWhatsApp ? "💊 *CRONOGRAMA SINERGIX (4 TOMAS)*:\\n" : "💊 CRONOGRAMA DE SUPLEMENTACIÓN SINERGIX (4 TOMAS DIARIAS - 1 DOSIS COMPLETA):\\n";
-      text += "  • ☀️ TOMA 1 (Al Despertar): Multi Sinergix (CoQ10/PQQ ayunas)\\n";
-      text += "  • 🍳 TOMA 2 (Desayuno): Multi Sinergix (Soporte enzimático)\\n";
-      text += "  • 🥗 TOMA 3 (Cena): Amino Sinergix (Péptidos y electrolitos)\\n";
-      text += "  • 🌙 TOMA 4 (Al Dormir): Amino Sinergix (Cross-linking & Mg)\\n\\n";
+      text += "  • ☀️ TOMA 1 (Al Despertar): Fórmula Nootrópica 33Plus® (CoQ10/PQQ ayunas)\\n";
+      text += "  • 🍳 TOMA 2 (Desayuno): Fórmula Nootrópica 33Plus® (Soporte enzimático)\\n";
+      text += "  • 🥗 TOMA 3 (Cena): Fórmula Reparadora 34Plus® (Péptidos y electrolitos)\\n";
+      text += "  • 🌙 TOMA 4 (Al Dormir): Fórmula Reparadora 34Plus® (Cross-linking & Mg)\\n\\n";
 
       const daysToIterate = scope === 'day' ? [plan.days[dayIdx]] : plan.days;
       daysToIterate.forEach((day, dIdx) => {

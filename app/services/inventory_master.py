@@ -59,8 +59,8 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Nueces pecana", "base_qty": 400.0, "unit": "g"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Almendras enteras", "base_qty": 400.0, "unit": "g"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Harina de almendras (Keto)", "base_qty": 1.0, "unit": "kg"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Multi Sinergix (Fórmula Energética & Mitocondrial)", "base_qty": 14.0, "unit": "dosis completas"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Amino Sinergix (Fórmula Nocturna & Péptidos)", "base_qty": 14.0, "unit": "dosis completas"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Fórmula Nootrópica 33Plus®", "base_qty": 14.0, "unit": "dosis completas"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Fórmula Reparadora 34Plus®", "base_qty": 14.0, "unit": "dosis completas"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Aceite de coco (orgánico)", "base_qty": 1.0, "unit": "frasco (1 kg)"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Aceite de oliva virgen extra", "base_qty": 2.0, "unit": "litros"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Vinagre de manzana (orgánico)", "base_qty": 1.0, "unit": "frasco"},
@@ -393,38 +393,39 @@ class InventorySyncMaster:
         if explicit_category and "Cosecha" in explicit_category:
             return "🌾 Cosecha Directa de la Granja / Huerto"
         
-        name = (item_name or "").lower()
+        name = (item_name or "").lower().strip()
 
-        def has_word(text: str, kw_list: List[str]) -> bool:
-            for kw in kw_list:
-                pattern = r"(?:^|\s|[^a-záéíóúñ])" + re.escape(kw) + r"(?:$|\s|[^a-záéíóúñ])"
-                if re.search(pattern, text, re.IGNORECASE):
-                    return True
-            return False
+        # 1. Suplementación Celular
+        if any(k in name for k in ["33plus", "34plus", "sinergix", "suplemento", "suplementos", "vitamina", "vitaminas", "colágeno", "colageno", "electrolitos", "fórmula nootrópica", "formula nootropica", "fórmula reparadora", "formula reparadora"]):
+            return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
 
-        dairy_keywords = ["queso", "quesos", "leche", "mantequilla", "crema", "cottage", "gouda", "panela", "parmesano", "manchego", "mascarpone", "oaxaca", "mozzarella", "requezon", "requeron", "requesón", "ghee", "suero", "asadero", "chihuahua", "brie", "camembert", "feta", "provolone", "ricotta", "chèvre", "chevre"]
-        if has_word(name, dairy_keywords):
-            return "🧀 Lácteos y Quesos (Sin Gluten / Keto)"
+        # 2. Frutas de Bajo Índice Glucémico (Excluyendo aceite/leche de coco)
+        if not any(k in name for k in ["aceite", "leche"]) and any(k in name for k in ["mora", "moras", "frambuesa", "frambuesas", "fresa", "fresas", "arándano", "arandano", "arándanos", "arandanos", "granada", "granadas", "higo", "higos", "pitahaya", "pitahayas", "pitaya", "pitayas"]):
+            return "🍓 Frutas de Bajo Índice Glucémico"
 
-        protein_keywords = ["carne", "carnes", "sirloin", "ribeye", "res", "pollo", "pollos", "pechuga", "pechugas", "pavo", "pavos", "tocino", "jamón", "jamon", "jamones", "pescado", "pescados", "salmón", "salmon", "atún", "atun", "atunes", "huevo", "huevos", "clara", "claras", "lomo", "lomos", "medallón", "medallon", "medallones", "albóndiga", "albondiga", "albóndigas", "albondigas", "costilla", "costillas", "tuétano", "tuetano", "arrachera", "arracheras", "bistec", "bisteck", "milanesa", "milanesas", "cecina", "chorizo", "longaniza"]
-        if has_word(name, protein_keywords):
+        # 3. Grasas, Aceites y Semillas (Aguacates, Aceitunas, Aceites, Leche de coco, Semillas, Mayonesa)
+        if any(k in name for k in ["aceite", "mct", "leche de coco", "mantequilla", "ghee", "aguacate", "aguacates", "aceituna", "aceitunas", "nuez", "nueces", "almendra", "almendras", "chía", "chia", "girasol", "macadamia", "macadamias", "semilla", "semillas", "linaza", "piñón", "piñones", "pepita", "pepitas", "ajonjolí", "ajonjoli", "mayonesa"]):
+            return "🌰 Grasas, Aceites y Semillas"
+
+        # 4. Lácteos y Quesos (Sin Gluten — Keto)
+        if any(k in name for k in ["queso", "quesos", "leche", "crema", "gouda", "panela", "parmesano", "manchego", "mascarpone", "mozzarella"]):
+            return "🧀 Lácteos y Quesos (Sin Gluten — Keto)"
+
+        # 5. Carnes, Pescados y Proteínas
+        if any(k in name for k in ["carne", "carnes", "sirloin", "ribeye", "res", "pollo", "pollos", "pechuga", "pechugas", "pavo", "pavos", "tocino", "jamón", "jamon", "pescado", "pescados", "salmón", "salmon", "atún", "atun", "huevo", "huevos", "clara", "claras", "lomo", "lomos", "medallón", "medallon", "huachinango", "robalo", "róbalo", "filete", "filetes", "machaca", "tuétano", "tuetano", "costilla"]):
             return "🥩 Carnes, Pescados y Proteínas"
 
-        spice_keywords = ["chile", "chiles", "jalapeño", "jalapeños", "jalapeno", "jalapenos", "rajas", "habanero", "habaneros", "serrano", "serranos", "poblano", "poblanos", "chipotle", "chipotles", "pasilla", "ancho", "guajillo", "tajín", "tajin", "chamoy", "pimienta", "orégano", "oregano", "tomillo", "laurel", "canela", "vainilla", "clavo", "clavos", "comino", "cúrcuma", "curcuma", "paprika", "pimentón", "pimenton", "epazote", "albahaca", "romero", "mostaza", "alcaparra", "alcaparras", "aceituna", "aceitunas", "sal", "salsa", "tamari", "soya", "vinagre", "balsámico", "balsamico", "adobo", "sazonador", "hierbas", "especias", "condimento", "condimentos"]
-        if has_word(name, spice_keywords):
-            return "🌶️ Chiles, Condimentos y Especias"
+        # 6. Chiles, Condimentos e Infusiones (Aderezos, BBQ, Café, Chocolates, Especias, Salsas, Achiote, Alcaparras)
+        if any(k in name for k in ["sal", "eneldo", "romero", "tomillo", "comino", "orégano", "oregano", "canela", "menta", "toronjil", "manzanilla", "jamaica", "azahar", "especias", "condimento", "condimentos", "chile", "chiles", "jalapeño", "jalapeno", "pimienta", "epazote", "albahaca", "mostaza", "alcaparra", "alcaparras", "vinagre", "balsámico", "balsamico", "jengibre", "agua", "infusión", "infusion", "té", "te", "base líquida", "base liquida", "aderezo", "bbq", "café", "cafe", "cobertura de chocolate", "salsa", "tamari", "soya", "achiote"]):
+            return "🌶️ Chiles, Condimentos e Infusiones"
 
-        veggie_keywords = ["espinaca", "espinacas", "calabacita", "calabacitas", "brócoli", "brocoli", "espárrago", "esparrago", "espárragos", "esparragos", "nopal", "nopales", "ejote", "ejotes", "cilantro", "arúgula", "arugula", "higo", "higos", "pitaya", "pitayas", "durazno", "duraznos", "granada", "granadas", "aguacate", "aguacates", "jitomate", "jitomates", "cebolla", "cebollas", "limón", "limon", "limones", "champiñón", "champiñones", "champiñon", "portobello", "portobellos", "ajo", "ajos", "apio", "apios", "fresa", "fresas", "pepino", "pepinos", "chayote", "chayotes", "zanahoria", "zanahorias", "papa", "papas", "lechuga", "lechugas", "verdura", "verduras", "hortaliza", "hortalizas", "coliflor", "coliflores", "betabel", "pimiento", "pimientos"]
-        if has_word(name, veggie_keywords):
+        # 7. Verduras, Hortalizas y Frescos
+        if any(k in name for k in ["apio", "arúgula", "arugula", "brócoli", "brocoli", "calabacita", "calabacitas", "chayote", "chayotes", "cilantro", "coliflor", "ejote", "ejotes", "espinaca", "espinacas", "hinojo", "jitomate", "jitomates", "nopal", "nopales", "pepino", "pepinos", "pimiento", "pimientos", "tomate", "zucchini", "lechuga", "col", "cebolla", "ajo", "dientes de ajo", "champiñones", "champinon", "champinones", "portobello", "setas"]):
             return "🥬 Verduras, Hortalizas y Frescos"
-
-        supp_keywords = ["sinergix", "suplemento", "suplementos", "vitamina", "vitaminas", "colágeno", "colageno", "electrolitos"]
-        if has_word(name, supp_keywords):
-            return "💊 Suplementación y Fórmulas Sinergix"
 
         if explicit_category and explicit_category.strip():
             return explicit_category
-        return "🛒 Abarrotes, Semillas y Grasas"
+        return "🌶️ Chiles, Condimentos e Infusiones"
 
 
 

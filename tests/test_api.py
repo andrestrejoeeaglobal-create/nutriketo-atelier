@@ -737,6 +737,32 @@ def test_recipe_dispatch_and_mass_reconciliation():
     assert "recipe-prepared-checkbox" in content, "El selector de UI recipe-prepared-checkbox debe estar presente en el HTML"
 
 
+def test_taxonomy_sanitization_and_supplement_naming():
+    import os
+    from app.services.inventory_master import InventorySyncMaster
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    assert "Fórmula Nootrópica 33Plus®" in content, "Fórmula Nootrópica 33Plus® debe reemplazar nombres genéricos antiguos"
+    assert "Fórmula Reparadora 34Plus®" in content, "Fórmula Reparadora 34Plus® debe reemplazar nombres genéricos antiguos"
+    assert "getCanonicalItemName" in content, "getCanonicalItemName debe estar definido para normalización morfológica"
+
+    # Verificar clasificación inteligente en InventorySyncMaster
+    cat_aguacate = InventorySyncMaster.get_smart_item_category("Aguacates Hass medianos")
+    assert cat_aguacate == "🌰 Grasas, Aceites y Semillas", "Aguacate debe clasificarse en Grasas, Aceites y Semillas"
+
+    cat_aceite_coco = InventorySyncMaster.get_smart_item_category("Aceite de coco (orgánico)")
+    assert cat_aceite_coco == "🌰 Grasas, Aceites y Semillas", "Aceite de coco no debe clasificarse como fruta"
+
+    cat_aderezo = InventorySyncMaster.get_smart_item_category("Aderezo Italiano")
+    assert cat_aderezo == "🌶️ Chiles, Condimentos e Infusiones", "Aderezos deben clasificarse en Condimentos"
+
+
+
 
 
 
