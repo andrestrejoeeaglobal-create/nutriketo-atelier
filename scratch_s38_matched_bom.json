@@ -1,0 +1,209 @@
+{
+  "menu": [
+    {
+      "day": "Domingo",
+      "date_str": "13 Sep",
+      "full_title": "Menú Completo para el Domingo 13 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía",
+          "main": "Frittata Gourmet de Huevos Orgánicos con Queso Manchego y Espinacas Baby",
+          "side": "Gelatina Artesanal de Granada Viva con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Sopa Suave de Calabacitas al Queso Parmesano y Cilantro Fresco",
+          "main": "Lomo de Res a la Parrilla con Mantequilla de Tomillo y Ajo Rostizado",
+          "side": "Espárragos Verdes al Horno con Sal Marina y Limón"
+        },
+        {
+          "type": "Cena",
+          "starter": "Abanico de Aguacate Hass con Sal de Mar Mineral y Aceite de Oliva Extra Virgen",
+          "main": "Filete de Huachinango al Horno con Finas Hierbas y Aceite de Oliva Extra Virgen",
+          "side": "Tisana Nocturna de Toronjil y Manzanilla con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Lunes",
+      "date_str": "14 Sep",
+      "full_title": "Menú Completo para el Lunes 14 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Fresas Frescas de la Granja con Nueces de Castilla y Semillas de Chía",
+          "main": "Shakshuka Keto de Huevos Orgánicos en Salsa de Jitomate Rostizado, Ajo y Comino",
+          "side": "Elixir Nootrópico de Matcha y Menta con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Rústica de Flor de Calabaza y Queso de Cabra al Ajo",
+          "main": "Medallones de Mignon de Res a la Sartén en Salsa de Pimienta",
+          "side": "Nopales Tiernos Asados al Orégano y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Zucchini y Pepino al Limón",
+          "main": "Pechuga de Pollo al Sartén con Costra de Semillas de Sésamo y Parmesano",
+          "side": "Tisana Relajante de Toronjil y Flor de Azahar con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Martes",
+      "date_str": "15 Sep",
+      "full_title": "Menú Completo para el Martes 15 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Pitahaya Fresca de la Granja con Semillas de Chía y Coco Rallado",
+          "main": "Omelette Rústico de Queso Gouda Maduro y Champiñones al Sartén",
+          "side": "Smoothie Ceto-Nootrópico de Coco y Almendra con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen",
+          "main": "Filete de Salmón al Sartén en Salsa de Mantequilla y Eneldo",
+          "side": "Espárragos Verdes Asados con Limón y Sal Marina"
+        },
+        {
+          "type": "Cena",
+          "starter": "Ensalada de Arúgula y Espinaca Baby con Aceite de Oliva Extra Virgen",
+          "main": "Brochetas de Pechuga de Pollo con Pimientos y Cebolla Morada al Comal",
+          "side": "Tisana Digestiva de Menta y Limón con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Miércoles",
+      "date_str": "16 Sep",
+      "full_title": "Menú Completo para el Miércoles 16 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Arilos de Granada Fresca con Nueces Pecana y Semillas de Girasol",
+          "main": "Muffins Salados de Huevo, Pechuga de Pavo y Espinacas",
+          "side": "Té Verde Nootrópico al Limón con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Ligera de Coliflor Rostizada y Queso Cheddar",
+          "main": "Puntas de Filete de Res a la Parrilla con Mantequilla de Romero",
+          "side": "Zoodles de Calabacita a la Mantequilla y Salvia"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Pepino Criollo al Limón con Sal de Mar",
+          "main": "Fajitas de Pechuga de Pavo Salteadas con Pimientos y Cebolla",
+          "side": "Gelatina Artesanal de Té Blanco y Frambuesa Viva con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Jueves",
+      "date_str": "17 Sep",
+      "full_title": "Menú Completo para el Jueves 17 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Frambuesas Orgánicas de la Granja con Almendras Tostadas y Chía",
+          "main": "Huevos Benedictinos Keto Pochados sobre Tocino de Pavo Crujiente con Salsa Holandesa Casera",
+          "side": "Elixir Dorado Nootrópico de Cúrcuma, Canela y MCT con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Suave de Espárragos Verdes al Ajo Rostizado",
+          "main": "Medallones de Pechuga de Pavo al Sartén con Mostaza Antigua y Romero",
+          "side": "Coliflor Rostizada al Comal con Sal Marina y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Pepino al Limón con Sal Mineral",
+          "main": "Filete de Róbalo a la Plancha con Alcaparras y Aceite de Oliva Extra Virgen",
+          "side": "Infusión Relajante de Flor de Jamaica y Canela con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Viernes",
+      "date_str": "18 Sep",
+      "full_title": "Menú Completo para el Viernes 18 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Arándanos Frescos de Cosecha con Nueces de Castilla y Chía",
+          "main": "Huevos Revueltos Gourmet con Machaca de Pavo y Queso Panela",
+          "side": "Té Verde Helado Nootrópico con Menta Fresca y 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Caliente de Champiñones al Parmesano",
+          "main": "Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado",
+          "side": "Chayotes Tiernos al Vapor con Mantequilla Clarificada y Sal Marina"
+        },
+        {
+          "type": "Cena",
+          "starter": "Ensalada de Espinacas Baby y Aguacate Hass al Limón",
+          "main": "Pechuga de Pavo Artesanal al Romero con Espárragos Salteados",
+          "side": "Infusión de Té Blanco Helado Digestivo con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Sábado",
+      "date_str": "19 Sep",
+      "full_title": "Menú Completo para el Sábado 19 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Higos Frescos de la Granja con Nueces Pecana y Semillas de Girasol",
+          "main": "Huevos Nube al Horno sobre Espejo de Jitomate Bola y Parmesano",
+          "side": "Smoothie Nootrópico Cremoso de Frambuesa Viva con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Sopa de Calabacitas al Queso Parmesano",
+          "main": "Lomo de Pavo al Horno con Costra de Finas Hierbas y Ajo",
+          "side": "Nopales Asados al Orégano y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones de Apio y Pepino al Limón con Sal Mineral",
+          "main": "Filete de Salmón Salvaje al Sartén con Costra de Eneldo y Limón",
+          "side": "Tisana Nocturna Digestiva de Menta con 34Plus"
+        }
+      ]
+    }
+  ],
+  "bom": [
+    {
+      "name": "Nopales tiernos limpios sin espinas",
+      "grp_cat": "🌱 Vegetal / Acompañamiento Base",
+      "qty_per_person": 120.0,
+      "qty_for_6": 720.0,
+      "unit": "g"
+    },
+    {
+      "name": "Aceite de oliva extra virgen (VEVO)",
+      "grp_cat": "🧈 Grasas y Especias de Asado",
+      "qty_per_person": 10.0,
+      "qty_for_6": 60.0,
+      "unit": "ml"
+    },
+    {
+      "name": "Orégano seco molido a mano",
+      "grp_cat": "🧈 Grasas y Especias de Asado",
+      "qty_per_person": 1.5,
+      "qty_for_6": 9.0,
+      "unit": "g"
+    },
+    {
+      "name": "Sal de mar mineral",
+      "grp_cat": "🧈 Grasas y Especias de Asado",
+      "qty_per_person": 1.5,
+      "qty_for_6": 9.0,
+      "unit": "g"
+    }
+  ]
+}

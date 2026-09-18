@@ -687,6 +687,7 @@ function generateNextWeekMenu() {
     };
     let checkedRows = {};
     let mealDinersState = {};
+    let dispatchedMeals = {};
     let customDishesState = {};
     
     // Obtener el día actual en transcurso dinámicamente según la fecha del sistema (0 = Domingo, 1 = Lunes, 2 = Martes...)
@@ -812,6 +813,12 @@ function generateNextWeekMenu() {
 
           if (state.checkedRows) checkedRows = state.checkedRows;
           if (state.mealDinersState) mealDinersState = state.mealDinersState;
+          if (state.dispatchedMeals && typeof state.dispatchedMeals === 'object') {
+            dispatchedMeals = state.dispatchedMeals;
+          } else {
+            dispatchedMeals = {};
+          }
+          window.DISPATCHED_MEALS = dispatchedMeals;
           if (state.customDishesState) customDishesState = state.customDishesState;
           if (state.selectedIdx !== undefined && !isNaN(parseInt(state.selectedIdx))) {
             selectedIdx = parseInt(state.selectedIdx);
@@ -883,7 +890,8 @@ function generateNextWeekMenu() {
           customShopItems,
           selectedIdx,
           mealDinersState,
-          customDishesState
+          customDishesState,
+          dispatchedMeals
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
       } catch(e) {
@@ -2531,6 +2539,290 @@ function compileFullMealRecipes(meal, diners) {
   };
 }
 
+
+    function roundTwo(num) {
+      return Math.round((num + Number.EPSILON) * 100) / 100;
+    }
+
+    function openRecipeDispatchModal(dayIdx, mealType, isEdit = false) {
+      const plan = getPlanForWeek(activeWeek);
+      if (!plan || !plan.days || !plan.days[dayIdx]) return;
+      const day = plan.days[dayIdx];
+      const rawM = day.meals.find(m => m.meal_type === mealType) || { meal_type: mealType };
+      const mObj = getMealObj(dayIdx, rawM);
+      const diners = getMealDiners(dayIdx, mealType);
+      const fullMeal = compileFullMealRecipes(mObj, diners);
+
+      const dispatchKey = `${activeWeek}_day_${dayIdx}_${mealType}`;
+      const prevDispatch = dispatchedMeals[dispatchKey];
+
+      const itemsMap = {};
+      fullMeal.courses.forEach(c => {
+        c.ingredient_groups.forEach(grp => {
+          grp.items.forEach(i => {
+            const key = i.name;
+            if (!itemsMap[key]) {
+              itemsMap[key] = {
+                name: i.name,
+                source: i.source || 'Mercado',
+                theoreticalQty: 0,
+                realQty: 0,
+                unit: i.unit || 'g'
+              };
+            }
+            itemsMap[key].theoreticalQty = roundTwo(itemsMap[key].theoreticalQty + (parseFloat(i.qty) || 0));
+          });
+        });
+      });
+
+      const itemsList = Object.values(itemsMap);
+
+      itemsList.forEach(item => {
+        if (prevDispatch && Array.isArray(prevDispatch.itemsDeducted)) {
+          const prevItem = prevDispatch.itemsDeducted.find(p => normalizeToCanonicalSlug(p.name) === normalizeToCanonicalSlug(item.name));
+          if (prevItem && prevItem.realQty !== undefined) {
+            item.realQty = prevItem.realQty;
+          } else {
+            item.realQty = item.theoreticalQty;
+          }
+        } else {
+          item.realQty = item.theoreticalQty;
+        }
+      });
+
+      renderDispatchModalDOM(dayIdx, mealType, itemsList, isEdit);
+    }
+
+    function renderDispatchModalDOM(dayIdx, mealType, itemsList, isEdit) {
+      let modal = document.getElementById('dispatch-reconciliation-modal');
+      if (!modal) {
+        modal = document.createElement('div');
+        modal.id = 'dispatch-reconciliation-modal';
+        document.body.appendChild(modal);
+      }
+
+      modal.className = 'fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4';
+      
+      const plan = getPlanForWeek(activeWeek);
+      const dayName = (plan && plan.days && plan.days[dayIdx]) ? plan.days[dayIdx].day : '';
+      const diners = getMealDiners(dayIdx, mealType);
+
+      let rowsHtml = '';
+      itemsList.forEach((item) => {
+        const isModified = Math.abs(item.realQty - item.theoreticalQty) > 0.01;
+        const inputClass = isModified 
+          ? 'dispatch-qty-input w-28 px-2.5 py-1.5 rounded-lg border text-sm font-bold bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 border-amber-400 focus:ring-2 focus:ring-amber-500 font-mono text-right'
+          : 'dispatch-qty-input w-28 px-2.5 py-1.5 rounded-lg border text-sm font-bold bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 font-mono text-right';
+
+        const safeName = item.name.replace(/"/g, '&quot;');
+        rowsHtml += `
+          <tr class="border-b border-slate-100 dark:border-slate-700/60 hover:bg-slate-50/50 dark:hover:bg-slate-800/50 transition-colors" data-item-name="${safeName}" data-theoretical="${item.theoreticalQty}" data-unit="${item.unit}">
+            <td class="py-3 px-3 text-xs font-semibold text-slate-900 dark:text-slate-100">${item.name}</td>
+            <td class="py-3 px-3 text-[11px] text-slate-500 dark:text-slate-400 font-medium">${item.source}</td>
+            <td class="py-3 px-3 text-xs font-mono font-bold text-slate-600 dark:text-slate-300 text-right">${item.theoreticalQty} ${item.unit}</td>
+            <td class="py-3 px-3 text-right">
+              <div class="flex items-center justify-end gap-1.5">
+                <input type="number" step="any" min="0" value="${item.realQty}" 
+                       oninput="onDispatchQtyInputChange(this, ${item.theoreticalQty})" 
+                       class="${inputClass}">
+                <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 w-8 text-left">${item.unit}</span>
+              </div>
+            </td>
+          </tr>
+        `;
+      });
+
+      modal.innerHTML = `
+        <div class="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col font-brand-body overflow-hidden animate-in fade-in zoom-in duration-200">
+          <div class="px-6 py-4 border-b border-slate-200 dark:border-slate-700 flex items-center justify-between bg-slate-50/80 dark:bg-slate-900/80">
+            <div>
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700 font-brand-title uppercase">
+                  ${isEdit ? '✏️ Ajustar Consumo' : '📦 Conciliación de Insumos'}
+                </span>
+                <span class="text-xs font-bold text-slate-500 dark:text-slate-400 font-brand-title">
+                  ${dayName} — ${mealType} (${diners} comensales)
+                </span>
+              </div>
+              <h3 class="text-base font-bold font-brand-title text-slate-900 dark:text-slate-100 mt-1" style="margin:0;">
+                Ajuste Culinario Real de Cocina
+              </h3>
+            </div>
+            <button type="button" onclick="closeDispatchModal()" class="w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 hover:bg-slate-200/60 dark:hover:bg-slate-700 transition-colors text-base font-bold cursor-pointer">
+              ✕
+            </button>
+          </div>
+
+          <div class="px-6 py-3 bg-blue-50/60 dark:bg-blue-950/20 border-b border-blue-100 dark:border-blue-900/30 text-xs text-[#1C75BC] dark:text-blue-300 font-brand-body">
+            ℹ️ <strong>Invarianza Escalar SSOT V36.3:</strong> Las modificaciones en esta tabla descuentan insumos reales de la Alacena sin alterar la ficha técnica cetogénica per cápita del platillo.
+          </div>
+
+          <div class="p-6 overflow-y-auto flex-1 min-h-0">
+            <table class="w-full text-left border-collapse">
+              <thead>
+                <tr class="bg-slate-100/70 dark:bg-slate-900/70 border-b border-slate-200 dark:border-slate-700 text-[11px] font-bold text-slate-600 dark:text-slate-400 uppercase font-brand-title">
+                  <th class="py-2.5 px-3">Insumo</th>
+                  <th class="py-2.5 px-3">Origen</th>
+                  <th class="py-2.5 px-3 text-right">Teórico</th>
+                  <th class="py-2.5 px-3 text-right">Consumo Real</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rowsHtml}
+              </tbody>
+            </table>
+          </div>
+
+          <div class="px-6 py-4 border-t border-slate-200 dark:border-slate-700 flex items-center justify-end gap-3 bg-slate-50/80 dark:bg-slate-900/80">
+            <button type="button" onclick="closeDispatchModal()" class="px-4 py-2 rounded-xl text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors cursor-pointer">
+              Cancelar
+            </button>
+            <button type="button" onclick="confirmRecipeDispatch(${dayIdx}, '${mealType}')" class="px-5 py-2 rounded-xl text-xs font-bold text-white bg-[#3AAA35] hover:bg-[#32962e] transition-colors shadow-md cursor-pointer flex items-center gap-1.5 font-brand-title">
+              ✓ Descontar y Marcar Preparado
+            </button>
+          </div>
+        </div>
+      `;
+
+      modal.style.display = 'flex';
+    }
+
+    function onDispatchQtyInputChange(inputEl, theoreticalQty) {
+      const val = parseFloat(inputEl.value) || 0;
+      const isModified = Math.abs(val - theoreticalQty) > 0.01;
+      if (isModified) {
+        inputEl.className = 'dispatch-qty-input w-28 px-2.5 py-1.5 rounded-lg border text-sm font-bold bg-amber-50 dark:bg-amber-950/40 text-amber-900 dark:text-amber-200 border-amber-400 focus:ring-2 focus:ring-amber-500 font-mono text-right';
+      } else {
+        inputEl.className = 'dispatch-qty-input w-28 px-2.5 py-1.5 rounded-lg border text-sm font-bold bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 font-mono text-right';
+      }
+    }
+
+    function closeDispatchModal() {
+      const modal = document.getElementById('dispatch-reconciliation-modal');
+      if (modal) {
+        modal.style.display = 'none';
+      }
+    }
+
+    function confirmRecipeDispatch(dayIdx, mealType) {
+      const modal = document.getElementById('dispatch-reconciliation-modal');
+      if (!modal) return;
+
+      const rows = modal.querySelectorAll('tbody tr');
+      const itemsDeducted = [];
+
+      rows.forEach(tr => {
+        const name = tr.getAttribute('data-item-name');
+        const theoreticalQty = parseFloat(tr.getAttribute('data-theoretical')) || 0;
+        const unit = tr.getAttribute('data-unit') || 'g';
+        const input = tr.querySelector('.dispatch-qty-input');
+        const realQty = input ? (parseFloat(input.value) || 0) : theoreticalQty;
+
+        itemsDeducted.push({
+          name: name,
+          theoreticalQty: theoreticalQty,
+          realQty: realQty,
+          unit: unit
+        });
+      });
+
+      const dispatchKey = `${activeWeek}_day_${dayIdx}_${mealType}`;
+
+      if (dispatchedMeals[dispatchKey] && Array.isArray(dispatchedMeals[dispatchKey].itemsDeducted)) {
+        dispatchedMeals[dispatchKey].itemsDeducted.forEach(item => {
+          const slug = normalizeToCanonicalSlug(item.name);
+          const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+          if (matchedKey !== undefined) {
+            pantryStock[matchedKey] = roundTwo((pantryStock[matchedKey] || 0) + item.realQty);
+            if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[slug]) {
+              window.PANTRY_STOCK_INVENTORY[slug].stock = pantryStock[matchedKey];
+            }
+          }
+        });
+      }
+
+      itemsDeducted.forEach(item => {
+        const slug = normalizeToCanonicalSlug(item.name);
+        let matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+        if (matchedKey !== undefined) {
+          const newStock = Math.max(0, roundTwo((pantryStock[matchedKey] || 0) - item.realQty));
+          pantryStock[matchedKey] = newStock;
+          if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[slug]) {
+            window.PANTRY_STOCK_INVENTORY[slug].stock = newStock;
+          }
+        } else {
+          const shopMatch = rawShopBase.find(i => normalizeToCanonicalSlug(i.item_name) === slug);
+          const canonicalName = shopMatch ? shopMatch.item_name : item.name;
+          pantryStock[canonicalName] = 0;
+        }
+      });
+
+      const now = new Date();
+      const timeStr = now.toLocaleDateString('es-MX', { day: '2-digit', month: '2-digit', year: 'numeric' }) + ' ' + now.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
+
+      dispatchedMeals[dispatchKey] = {
+        dispatchedAt: timeStr,
+        dayIdx: dayIdx,
+        mealType: mealType,
+        itemsDeducted: itemsDeducted
+      };
+      window.DISPATCHED_MEALS = dispatchedMeals;
+
+      saveAppState();
+      closeDispatchModal();
+      renderDay(selectedIdx);
+
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
+
+      if (typeof showToast === 'function') {
+        showToast(`✓ Platillo '${mealType}' marcado como Preparado y stock descontado.`);
+      }
+    }
+
+    function confirmRevertDispatch(dayIdx, mealType) {
+      const dispatchKey = `${activeWeek}_day_${dayIdx}_${mealType}`;
+      const dispatchInfo = dispatchedMeals[dispatchKey];
+      if (!dispatchInfo) return;
+
+      if (!confirm(`¿Deseas desmarcar '${mealType}' y reintegrar los insumos consumidos al inventario de Alacena?`)) {
+        return;
+      }
+
+      if (Array.isArray(dispatchInfo.itemsDeducted)) {
+        dispatchInfo.itemsDeducted.forEach(item => {
+          const slug = normalizeToCanonicalSlug(item.name);
+          const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+          if (matchedKey !== undefined) {
+            pantryStock[matchedKey] = roundTwo((pantryStock[matchedKey] || 0) + item.realQty);
+            if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[slug]) {
+              window.PANTRY_STOCK_INVENTORY[slug].stock = pantryStock[matchedKey];
+            }
+          } else {
+            const shopMatch = rawShopBase.find(i => normalizeToCanonicalSlug(i.item_name) === slug);
+            const canonicalName = shopMatch ? shopMatch.item_name : item.name;
+            pantryStock[canonicalName] = roundTwo(item.realQty);
+          }
+        });
+      }
+
+      delete dispatchedMeals[dispatchKey];
+      window.DISPATCHED_MEALS = dispatchedMeals;
+
+      saveAppState();
+      renderDay(selectedIdx);
+
+      if (typeof render3DShoppingList === 'function') {
+        render3DShoppingList();
+      }
+
+      if (typeof showToast === 'function') {
+        showToast(`↩️ Preparación de '${mealType}' deshecha e insumos reintegrados a Alacena.`);
+      }
+    }
+
+
 function renderRecipes(day, activeDiners) {
   const prepContainer = document.getElementById('v-prep');
   if (!prepContainer) return;
@@ -2552,6 +2844,28 @@ function renderRecipes(day, activeDiners) {
 
     const mealCard = document.createElement('div');
     mealCard.className = 'bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-8 font-brand-body';
+
+    const recipeDispatchKey = `${activeWeek}_day_${selectedIdx}_${m.meal_type}`;
+    const recipeDispatchInfo = (typeof dispatchedMeals !== 'undefined' && dispatchedMeals[recipeDispatchKey]) ? dispatchedMeals[recipeDispatchKey] : null;
+
+    let recipeDispatchHtml = '';
+    if (recipeDispatchInfo) {
+      recipeDispatchHtml = `
+        <div class="flex items-center gap-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 rounded-full px-2.5 py-0.5 text-xs text-emerald-700 dark:text-emerald-300 font-brand-body select-none">
+          <span class="font-bold">✓ Preparado</span>
+          <span class="text-[10px] opacity-80">(${recipeDispatchInfo.dispatchedAt.split(' ')[1] || recipeDispatchInfo.dispatchedAt})</span>
+          <button type="button" class="ml-1 text-[11px] font-bold text-amber-600 dark:text-amber-400 hover:underline cursor-pointer" onclick="openRecipeDispatchModal(${selectedIdx}, '${m.meal_type}', true)">✏️ Ajustar</button>
+          <button type="button" class="ml-1 text-[11px] font-bold text-slate-400 hover:text-rose-500 cursor-pointer" onclick="confirmRevertDispatch(${selectedIdx}, '${m.meal_type}')" title="Reintegrar insumos al inventario">↩️</button>
+        </div>
+      `;
+    } else {
+      recipeDispatchHtml = `
+        <label class="flex items-center gap-1.5 cursor-pointer select-none bg-slate-50 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-slate-200 dark:border-slate-700 hover:border-emerald-400 transition-colors">
+          <input type="checkbox" class="recipe-prepared-checkbox w-3.5 h-3.5 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500 cursor-pointer" onchange="openRecipeDispatchModal(${selectedIdx}, '${m.meal_type}', false)">
+          <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Marcar Preparado</span>
+        </label>
+      `;
+    }
 
     let coursesHtml = '';
 
@@ -2678,6 +2992,28 @@ function renderRecipes(day, activeDiners) {
             const sideName = m.side_dish_name || 'Acompañamiento Botánico';
 
             const kcal = (m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4).toFixed(0);
+
+            const menuDispatchKey = `${activeWeek}_day_${safeIdx}_${m.meal_type}`;
+            const menuDispatchInfo = (typeof dispatchedMeals !== 'undefined' && dispatchedMeals[menuDispatchKey]) ? dispatchedMeals[menuDispatchKey] : null;
+
+            let menuDispatchHtml = '';
+            if (menuDispatchInfo) {
+              menuDispatchHtml = `
+                <div class="flex items-center gap-1.5 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 rounded-full px-2.5 py-0.5 text-xs text-emerald-700 dark:text-emerald-300 font-brand-body select-none">
+                  <span class="font-bold">✓ Preparado</span>
+                  <span class="text-[10px] opacity-80">(${menuDispatchInfo.dispatchedAt.split(' ')[1] || menuDispatchInfo.dispatchedAt})</span>
+                  <button type="button" class="ml-1 text-[11px] font-bold text-amber-600 dark:text-amber-400 hover:underline cursor-pointer" onclick="openRecipeDispatchModal(${safeIdx}, '${m.meal_type}', true)">✏️ Ajustar</button>
+                  <button type="button" class="ml-1 text-[11px] font-bold text-slate-400 hover:text-rose-500 cursor-pointer" onclick="confirmRevertDispatch(${safeIdx}, '${m.meal_type}')" title="Reintegrar insumos al inventario">↩️</button>
+                </div>
+              `;
+            } else {
+              menuDispatchHtml = `
+                <label class="flex items-center gap-1.5 cursor-pointer select-none bg-slate-50 dark:bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-slate-200 dark:border-slate-700 hover:border-emerald-400 transition-colors">
+                  <input type="checkbox" class="recipe-prepared-checkbox w-3.5 h-3.5 text-emerald-600 rounded border-slate-300 focus:ring-emerald-500 cursor-pointer" onchange="openRecipeDispatchModal(${safeIdx}, '${m.meal_type}', false)">
+                  <span class="text-xs font-semibold text-slate-700 dark:text-slate-300">Marcar Preparado</span>
+                </label>
+              `;
+            }
 
             const card = document.createElement('div');
             card.className = 'bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-6 border-l-4 border-l-[#1C75BC] font-brand-body';

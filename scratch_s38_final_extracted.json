@@ -1,0 +1,1167 @@
+{
+  "menu": [
+    {
+      "day": "Domingo",
+      "date_str": "13 Sep",
+      "full_title": "Menú Completo para el Domingo 13 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía",
+          "main": "Frittata Gourmet de Huevos Orgánicos con Queso Manchego y Espinacas Baby",
+          "side": "Gelatina Artesanal de Granada Viva con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Sopa Suave de Calabacitas al Queso Parmesano y Cilantro Fresco",
+          "main": "Lomo de Res a la Parrilla con Mantequilla de Tomillo y Ajo Rostizado",
+          "side": "Espárragos Verdes al Horno con Sal Marina y Limón"
+        },
+        {
+          "type": "Cena",
+          "starter": "Abanico de Aguacate Hass con Sal de Mar Mineral y Aceite de Oliva Extra Virgen",
+          "main": "Filete de Huachinango al Horno con Finas Hierbas y Aceite de Oliva Extra Virgen",
+          "side": "Tisana Nocturna de Toronjil y Manzanilla con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Lunes",
+      "date_str": "14 Sep",
+      "full_title": "Menú Completo para el Lunes 14 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Fresas Frescas de la Granja con Nueces de Castilla y Semillas de Chía",
+          "main": "Shakshuka Keto de Huevos Orgánicos en Salsa de Jitomate Rostizado, Ajo y Comino",
+          "side": "Elixir Nootrópico de Matcha y Menta con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Rústica de Flor de Calabaza y Queso de Cabra al Ajo",
+          "main": "Medallones de Mignon de Res a la Sartén en Salsa de Pimienta",
+          "side": "Nopales Tiernos Asados al Orégano y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Zucchini y Pepino al Limón",
+          "main": "Pechuga de Pollo al Sartén con Costra de Semillas de Sésamo y Parmesano",
+          "side": "Tisana Relajante de Toronjil y Flor de Azahar con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Martes",
+      "date_str": "15 Sep",
+      "full_title": "Menú Completo para el Martes 15 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Pitahaya Fresca de la Granja con Semillas de Chía y Coco Rallado",
+          "main": "Omelette Rústico de Queso Gouda Maduro y Champiñones al Sartén",
+          "side": "Smoothie Ceto-Nootrópico de Coco y Almendra con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen",
+          "main": "Filete de Salmón al Sartén en Salsa de Mantequilla y Eneldo",
+          "side": "Espárragos Verdes Asados con Limón y Sal Marina"
+        },
+        {
+          "type": "Cena",
+          "starter": "Ensalada de Arúgula y Espinaca Baby con Aceite de Oliva Extra Virgen",
+          "main": "Brochetas de Pechuga de Pollo con Pimientos y Cebolla Morada al Comal",
+          "side": "Tisana Digestiva de Menta y Limón con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Miércoles",
+      "date_str": "16 Sep",
+      "full_title": "Menú Completo para el Miércoles 16 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Arilos de Granada Fresca con Nueces Pecana y Semillas de Girasol",
+          "main": "Muffins Salados de Huevo, Pechuga de Pavo y Espinacas",
+          "side": "Té Verde Nootrópico al Limón con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Ligera de Coliflor Rostizada y Queso Cheddar",
+          "main": "Puntas de Filete de Res a la Parrilla con Mantequilla de Romero",
+          "side": "Zoodles de Calabacita a la Mantequilla y Salvia"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Pepino Criollo al Limón con Sal de Mar",
+          "main": "Fajitas de Pechuga de Pavo Salteadas con Pimientos y Cebolla",
+          "side": "Gelatina Artesanal de Té Blanco y Frambuesa Viva con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Jueves",
+      "date_str": "17 Sep",
+      "full_title": "Menú Completo para el Jueves 17 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Frambuesas Orgánicas de la Granja con Almendras Tostadas y Chía",
+          "main": "Huevos Benedictinos Keto Pochados sobre Tocino de Pavo Crujiente con Salsa Holandesa Casera",
+          "side": "Elixir Dorado Nootrópico de Cúrcuma, Canela y MCT con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Suave de Espárragos Verdes al Ajo Rostizado",
+          "main": "Medallones de Pechuga de Pavo al Sartén con Mostaza Antigua y Romero",
+          "side": "Coliflor Rostizada al Comal con Sal Marina y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones Crujientes de Pepino al Limón con Sal Mineral",
+          "main": "Filete de Róbalo a la Plancha con Alcaparras y Aceite de Oliva Extra Virgen",
+          "side": "Infusión Relajante de Flor de Jamaica y Canela con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Viernes",
+      "date_str": "18 Sep",
+      "full_title": "Menú Completo para el Viernes 18 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Arándanos Frescos de Cosecha con Nueces de Castilla y Chía",
+          "main": "Huevos Revueltos Gourmet con Machaca de Pavo y Queso Panela",
+          "side": "Té Verde Helado Nootrópico con Menta Fresca y 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Crema Caliente de Champiñones al Parmesano",
+          "main": "Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado",
+          "side": "Chayotes Tiernos al Vapor con Mantequilla Clarificada y Sal Marina"
+        },
+        {
+          "type": "Cena",
+          "starter": "Ensalada de Espinacas Baby y Aguacate Hass al Limón",
+          "main": "Pechuga de Pavo Artesanal al Romero con Espárragos Salteados",
+          "side": "Infusión de Té Blanco Helado Digestivo con 34Plus"
+        }
+      ]
+    },
+    {
+      "day": "Sábado",
+      "date_str": "19 Sep",
+      "full_title": "Menú Completo para el Sábado 19 Sep",
+      "meals": [
+        {
+          "type": "Desayuno",
+          "starter": "Higos Frescos de la Granja con Nueces Pecana y Semillas de Girasol",
+          "main": "Huevos Nube al Horno sobre Espejo de Jitomate Bola y Parmesano",
+          "side": "Smoothie Nootrópico Cremoso de Frambuesa Viva con 33Plus"
+        },
+        {
+          "type": "Comida",
+          "starter": "Sopa de Calabacitas al Queso Parmesano",
+          "main": "Lomo de Pavo al Horno con Costra de Finas Hierbas y Ajo",
+          "side": "Nopales Asados al Orégano y Aceite de Oliva Extra Virgen"
+        },
+        {
+          "type": "Cena",
+          "starter": "Bastones de Apio y Pepino al Limón con Sal Mineral",
+          "main": "Filete de Salmón Salvaje al Sartén con Costra de Eneldo y Limón",
+          "side": "Tisana Nocturna Digestiva de Menta con 34Plus"
+        }
+      ]
+    }
+  ],
+  "bom_categorized": {
+    "🌾 Cosecha Directa de la Granja / Huerto": [
+      {
+        "name": "Arilos de Granada fresca de la granja (Pico de cosecha)",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 120.0,
+        "qty_for_6": 720.0,
+        "unit": "g"
+      },
+      {
+        "name": "Espinacas de la Granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Arilos de Granada fresca de la granja (≤ 30g comensal)",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 60.0,
+        "qty_for_6": 360.0,
+        "unit": "g"
+      },
+      {
+        "name": "Calabacitas de la Granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cilantro fresco y orégano",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 22.5,
+        "qty_for_6": 135.0,
+        "unit": "g"
+      },
+      {
+        "name": "Espárragos de la Granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 160.0,
+        "qty_for_6": 960.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cilantro y perejil fresco picado",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 3.0,
+        "qty_for_6": 18.0,
+        "unit": "g"
+      },
+      {
+        "name": "Nopales de la Granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Arúgula de la Granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Espinaca de la Granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Arilos de Granada fresca desgranados (≤ 30g por comensal)",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 60.0,
+        "qty_for_6": 360.0,
+        "unit": "g"
+      },
+      {
+        "name": "Espinacas baby picadas de la granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 15.0,
+        "qty_for_6": 90.0,
+        "unit": "g"
+      },
+      {
+        "name": "Calabacita de la Granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cilantro fresco picado y epazote",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 5.0,
+        "qty_for_6": 30.0,
+        "unit": "g"
+      },
+      {
+        "name": "Higos de la Granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Calabacitas tiernas de la granja",
+        "category": "🌾 Cosecha Directa de la Granja / Huerto",
+        "qty_per_person": 120.0,
+        "qty_for_6": 720.0,
+        "unit": "g"
+      }
+    ],
+    "🛒 Abarrotes, Semillas y Grasas": [
+      {
+        "name": "Moras de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Almendras fileteadas tostadas",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 30.0,
+        "qty_for_6": 180.0,
+        "unit": "g"
+      },
+      {
+        "name": "Semillas de chía orgánicas",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 30.0,
+        "qty_for_6": 180.0,
+        "unit": "g"
+      },
+      {
+        "name": "Gourmet de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Grenetina natural en polvo (colágeno hidrolizado)",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 14.0,
+        "qty_for_6": 84.0,
+        "unit": "g"
+      },
+      {
+        "name": "Agua fría para hidratar",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 70.0,
+        "qty_for_6": 420.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Infusión de té de frutos rojos / menta / jamaica",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 240.0,
+        "qty_for_6": 1440.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Suave de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Parmesano de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 160.0,
+        "qty_for_6": 960.0,
+        "unit": "g"
+      },
+      {
+        "name": "Marina de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 160.0,
+        "qty_for_6": 960.0,
+        "unit": "g"
+      },
+      {
+        "name": "Hass de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Mineral de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 120.0,
+        "qty_for_6": 720.0,
+        "unit": "g"
+      },
+      {
+        "name": "Oliva de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 320.0,
+        "qty_for_6": 1920.0,
+        "unit": "g"
+      },
+      {
+        "name": "Finas de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Tisana de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 120.0,
+        "qty_for_6": 720.0,
+        "unit": "g"
+      },
+      {
+        "name": "Agua purificada hirviendo (85°C-90°C)",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 1750.0,
+        "qty_for_6": 10500.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Nuez de Castilla troceada",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 30.0,
+        "qty_for_6": 180.0,
+        "unit": "g"
+      },
+      {
+        "name": "Shakshuka de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Orgánicos de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Acompañamiento de Elixir",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 300.0,
+        "qty_for_6": 1800.0,
+        "unit": "g"
+      },
+      {
+        "name": "Nootrópico de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 240.0,
+        "qty_for_6": 1440.0,
+        "unit": "g"
+      },
+      {
+        "name": "Matcha de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 50.0,
+        "qty_for_6": 300.0,
+        "unit": "g"
+      },
+      {
+        "name": "Menta de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Caldo concentrado o fondo oscuro",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 30.0,
+        "qty_for_6": 180.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Bastones Crujientes de Zucchini y Pepino seleccionado",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Semillas de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sésamo de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Flor de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Azahar de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pitahaya de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Rústico de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Champiñones de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Acompañamiento de Smoothie",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 300.0,
+        "qty_for_6": 1800.0,
+        "unit": "g"
+      },
+      {
+        "name": "Ceto de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Coco de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Almendra de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Hinojo de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Eneldo de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pechuga de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 160.0,
+        "qty_for_6": 960.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pimientos de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Morada de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Comal de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Acompañamiento de Tisana",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Girasol de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Nuez pecana troceada",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 30.0,
+        "qty_for_6": 180.0,
+        "unit": "g"
+      },
+      {
+        "name": "Bastones Crujientes de Pepino Criollo seleccionado",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Fajitas de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Blanco de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Frambuesa de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Frambuesas de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cúrcuma de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Canela de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Mct de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Antigua de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Coliflor de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Bastones Crujientes de Pepino seleccionado",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Alcaparras de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Jamaica de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Acompañamiento de Arándanos",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cosecha de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Nueces de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Castilla de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Chía de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Panela de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Helado de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Chayotes de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Espejo de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Bola de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cremoso de la Granja",
+        "category": "🛒 Abarrotes, Semillas y Grasas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      }
+    ],
+    "🧀 Lácteos y Quesos (Sin Gluten / Keto)": [
+      {
+        "name": "Yogur griego natural sin azúcar / Crema de coco",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_per_person": 180.0,
+        "qty_for_6": 1080.0,
+        "unit": "g"
+      },
+      {
+        "name": "Mantequilla clarificada / Ghee",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_per_person": 104.5,
+        "qty_for_6": 627.0,
+        "unit": "g"
+      },
+      {
+        "name": "Queso de la Granja",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Mantequilla clarificada / Aceite VEVO",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_per_person": 460.0,
+        "qty_for_6": 2760.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Crema Rústica de Flor de Calabaza y Queso de Cabra seleccionado",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Queso Gouda o Panela rallado",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_per_person": 25.0,
+        "qty_for_6": 150.0,
+        "unit": "g"
+      },
+      {
+        "name": "Queso Parmesano o de cabra",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_per_person": 30.0,
+        "qty_for_6": 180.0,
+        "unit": "g"
+      },
+      {
+        "name": "Crema Caliente de Champiñones seleccionado",
+        "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      }
+    ],
+    "🥩 Carnes, Pescados y Proteínas": [
+      {
+        "name": "Hojas de menta fresca picada y canela",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 12.0,
+        "qty_for_6": 72.0,
+        "unit": "g"
+      },
+      {
+        "name": "Huevos orgánicos de libre pastoreo",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 163.0,
+        "qty_for_6": 978.0,
+        "unit": "piezas"
+      },
+      {
+        "name": "Queso artesanal / Jamón de pavo",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 332.0,
+        "qty_for_6": 1992.0,
+        "unit": "g"
+      },
+      {
+        "name": "Acelgas frescas de la granja troceados",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 1800.0,
+        "qty_for_6": 10800.0,
+        "unit": "g"
+      },
+      {
+        "name": "Lomo de Res seleccionado",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sal de mar y tomillo fresco",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 50.0,
+        "qty_for_6": 300.0,
+        "unit": "g"
+      },
+      {
+        "name": "Filete de Huachinango seleccionado",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Fresas de la Granja",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Medallones de Mignon de Res seleccionado",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 450.0,
+        "qty_for_6": 2700.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pechuga de Pollo seleccionado",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Filete de Salmón seleccionado",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 300.0,
+        "qty_for_6": 1800.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pollo de la Granja",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Coliflor fresca rostizada de la granja",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 120.0,
+        "qty_for_6": 720.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pavo de la Granja",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cebollín fresco picado / eneldo",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 2.0,
+        "qty_for_6": 12.0,
+        "unit": "g"
+      },
+      {
+        "name": "Filete de Róbalo seleccionado",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Lomo de Pavo seleccionado",
+        "category": "🥩 Carnes, Pescados y Proteínas",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      }
+    ],
+    "🌶️ Chiles, Condimentos y Especias": [
+      {
+        "name": "Sal de mar mineral",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 22.5,
+        "qty_for_6": 135.0,
+        "unit": "g"
+      },
+      {
+        "name": "Hierbas de la Granja",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Hierbas botánicas de la granja (menta, manzanilla, toronjil)",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 20.0,
+        "qty_for_6": 120.0,
+        "unit": "g"
+      },
+      {
+        "name": "Comino molido, pimentón dulce y sal de mar",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 3.0,
+        "qty_for_6": 18.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pimienta negra entera en grano (martajada en mortero)",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 3.0,
+        "qty_for_6": 18.0,
+        "unit": "g"
+      },
+      {
+        "name": "Salados de la Granja",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sal de mar mineral y pimienta blanca",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 1.5,
+        "qty_for_6": 9.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sal de mar y pimienta blanca",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 3.0,
+        "qty_for_6": 18.0,
+        "unit": "g"
+      },
+      {
+        "name": "Romero de la Granja",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 120.0,
+        "qty_for_6": 720.0,
+        "unit": "g"
+      },
+      {
+        "name": "Salvia de la Granja",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Salteadas de la Granja",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sal marina y crémor tártaro / limón",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 0.5,
+        "qty_for_6": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Vinagre blanco (para agua de pochado)",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 7.5,
+        "qty_for_6": 45.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Pimienta negra molida y sal marina",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 0.5,
+        "qty_for_6": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Pimienta negra recién molida",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 0.5,
+        "qty_for_6": 3.0,
+        "unit": "g"
+      },
+      {
+        "name": "Mostaza de la Granja",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cebolla blanca picada en cuadrícula salteada",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 60.0,
+        "qty_for_6": 360.0,
+        "unit": "g"
+      },
+      {
+        "name": "Sal de mar mineral y pimienta negra molida",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 2.0,
+        "qty_for_6": 12.0,
+        "unit": "g"
+      },
+      {
+        "name": "Salteados de la Granja",
+        "category": "🌶️ Chiles, Condimentos y Especias",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      }
+    ],
+    "🥬 Verduras, Hortalizas y Frescos": [
+      {
+        "name": "Ajo de la Granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 200.0,
+        "qty_for_6": 1200.0,
+        "unit": "g"
+      },
+      {
+        "name": "Limón de la Granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 400.0,
+        "qty_for_6": 2400.0,
+        "unit": "g"
+      },
+      {
+        "name": "Acompañamiento de Aguacate",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      },
+      {
+        "name": "Jitomate bola maduro troceado",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 260.0,
+        "qty_for_6": 1560.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cebolla picada, ajo y pimientos dulces",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 30.0,
+        "qty_for_6": 180.0,
+        "unit": "g"
+      },
+      {
+        "name": "Cebolla de la Granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 80.0,
+        "qty_for_6": 480.0,
+        "unit": "g"
+      },
+      {
+        "name": "Jugo de limón recién exprimido y agua tibia",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 2.5,
+        "qty_for_6": 15.0,
+        "unit": "ml"
+      },
+      {
+        "name": "Aguacate de la Granja",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 40.0,
+        "qty_for_6": 240.0,
+        "unit": "g"
+      },
+      {
+        "name": "Hojas de té blanco y cáscara de limón",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 5.0,
+        "qty_for_6": 30.0,
+        "unit": "g"
+      },
+      {
+        "name": "Bastones de Apio y Pepino seleccionado",
+        "category": "🥬 Verduras, Hortalizas y Frescos",
+        "qty_per_person": 150.0,
+        "qty_for_6": 900.0,
+        "unit": "g"
+      }
+    ]
+  },
+  "total_unique_ingredients": 139
+}

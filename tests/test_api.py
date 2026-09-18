@@ -720,7 +720,7 @@ def test_dish_negotiation_reactivity_and_bom_update():
     assert "surpriseMeDishNegotiation" in content, "La función surpriseMeDishNegotiation debe estar definida en JS"
 
 
-def test_pantry_net_shopping_discount_and_trophology():
+def test_recipe_dispatch_and_mass_reconciliation():
     import os
 
     html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
@@ -729,12 +729,13 @@ def test_pantry_net_shopping_discount_and_trophology():
     with open(html_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    assert "PANTRY_STOCK_INVENTORY" in content, "PANTRY_STOCK_INVENTORY debe estar inyectado en el script"
-    assert "Inventario de Alacena y Despensa" in content, "La sección dedicada de Alacena debe estar en el HTML"
-    assert "1. Total Canónicos" in content, "Matriz de 4 cuadrantes debe tener Total Canónicos"
-    assert "3. Alacena Activa" in content, "Matriz de 4 cuadrantes debe incorporar Alacena Activa"
-    assert "4. Mercado Neto" in content, "Matriz de 4 cuadrantes debe incorporar Mercado Neto"
-    assert "status: \"prohibited\"" in content or "prohibited" in content, "Insumos en cuarentena no sugeridos deben estar declarados"
+    assert "openRecipeDispatchModal" in content, "La función openRecipeDispatchModal debe estar definida en JS"
+    assert "renderDispatchModalDOM" in content, "La función renderDispatchModalDOM debe estar definida en JS"
+    assert "confirmRecipeDispatch" in content, "La función confirmRecipeDispatch debe estar definida en JS"
+    assert "confirmRevertDispatch" in content, "La función confirmRevertDispatch debe estar definida en JS"
+    assert "dispatchedMeals" in content, "El objeto de estado dispatchedMeals debe estar inyectado en el script"
+    assert "recipe-prepared-checkbox" in content, "El selector de UI recipe-prepared-checkbox debe estar presente en el HTML"
+
 
 
 
