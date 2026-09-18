@@ -1,0 +1,253 @@
+{
+  "week_name": "Semana 39",
+  "week_label": "Semana 39 (20 al 26 de Septiembre de 2026)",
+  "week_start": "2026-09-20",
+  "diners_count": 6,
+  "days": [
+    {
+      "day": "Domingo",
+      "date_str": "20 Sep",
+      "day_num": 0,
+      "full_date_title": "Menú Completo para el Domingo 20 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía",
+          "main_dish_name": "Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente",
+          "side_dish_name": "Gelatina Artesanal de Moras Frescas con Fórmula Nootrópica 33Plus®",
+          "fat_g": 29.5,
+          "protein_g": 24.0,
+          "net_carbs_g": 3.2
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema Caliente de Champiñones Portobello al Parmesano",
+          "main_dish_name": "Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo",
+          "side_dish_name": "Espárragos Verdes al Horno con Limón y Sal de Mar Mineral",
+          "fat_g": 38.5,
+          "protein_g": 42.0,
+          "net_carbs_g": 3.6
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen",
+          "main_dish_name": "Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano",
+          "side_dish_name": "Tisana Nocturna de Toronjil y Manzanilla con Fórmula Reparadora 34Plus®",
+          "fat_g": 24.0,
+          "protein_g": 32.0,
+          "net_carbs_g": 2.4
+        }
+      ]
+    },
+    {
+      "day": "Lunes",
+      "date_str": "21 Sep",
+      "day_num": 1,
+      "full_date_title": "Menú Completo para el Lunes 21 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía",
+          "main_dish_name": "Omelette de Queso Gouda Maduro, Jamón de Pavo y Champiñones",
+          "side_dish_name": "Gelatina Artesanal de Frambuesa Viva con Fórmula Nootrópica 33Plus®",
+          "fat_g": 30.0,
+          "protein_g": 23.0,
+          "net_carbs_g": 3.4
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón",
+          "main_dish_name": "Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo",
+          "side_dish_name": "Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen",
+          "fat_g": 36.0,
+          "protein_g": 39.0,
+          "net_carbs_g": 3.5
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones de Pepino y Apio al Limón con Sal Mineral",
+          "main_dish_name": "Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón",
+          "side_dish_name": "Tisana Nocturna de Menta e Hinojo con Fórmula Reparadora 34Plus®",
+          "fat_g": 23.0,
+          "protein_g": 30.0,
+          "net_carbs_g": 2.5
+        }
+      ]
+    },
+    {
+      "day": "Martes",
+      "date_str": "22 Sep",
+      "day_num": 2,
+      "full_date_title": "Menú Completo para el Martes 22 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Arilos de Granada Fresca con Almendras Fileteadas y Chía",
+          "main_dish_name": "Huevos Revueltos con Machaca de Pavo, Jitomate Bola y Cebolla Salteada",
+          "side_dish_name": "Gelatina Artesanal de Granada Viva con Fórmula Nootrópica 33Plus®",
+          "fat_g": 28.5,
+          "protein_g": 23.5,
+          "net_carbs_g": 3.3
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema de Coliflor Rostizada al Ajo y Queso de Cabra",
+          "main_dish_name": "Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra",
+          "side_dish_name": "Chayotes Tiernos al Vapor con Mantequilla Clarificada",
+          "fat_g": 37.0,
+          "protein_g": 41.0,
+          "net_carbs_g": 3.6
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones de Zucchini y Apio al Limón con Sal de Mar",
+          "main_dish_name": "Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO",
+          "side_dish_name": "Tisana Nocturna de Toronjil y Manzanilla con Fórmula Reparadora 34Plus®",
+          "fat_g": 21.5,
+          "protein_g": 29.5,
+          "net_carbs_g": 2.1
+        }
+      ]
+    },
+    {
+      "day": "Miércoles",
+      "date_str": "23 Sep",
+      "day_num": 3,
+      "full_date_title": "Menú Completo para el Miércoles 23 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Arándanos Frescos con Nueces Pecana y Semillas de Girasol",
+          "main_dish_name": "Crepas Ligeras de Harina de Almendras Rellenas de Queso Panela y Pavo",
+          "side_dish_name": "Gelatina Artesanal de Arándanos Vivos con Fórmula Nootrópica 33Plus®",
+          "fat_g": 27.5,
+          "protein_g": 21.5,
+          "net_carbs_g": 3.1
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Consomé de Res con Tuétano, Costilla y Cilantro Fresco",
+          "main_dish_name": "Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano",
+          "side_dish_name": "Nopales Asados al Orégano y Aceite de Oliva Extra Virgen",
+          "fat_g": 36.5,
+          "protein_g": 40.0,
+          "net_carbs_g": 3.4
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones de Pepino y Zucchini al Limón con Sal Mineral",
+          "main_dish_name": "Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón",
+          "side_dish_name": "Tisana Nocturna Digestiva con Fórmula Reparadora 34Plus®",
+          "fat_g": 22.0,
+          "protein_g": 28.5,
+          "net_carbs_g": 2.3
+        }
+      ]
+    },
+    {
+      "day": "Jueves",
+      "date_str": "24 Sep",
+      "day_num": 4,
+      "full_date_title": "Menú Completo para el Jueves 24 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Pitayas Frescas con Semillas de Chía y Coco Rallado",
+          "main_dish_name": "Frittata Ranchera de Huevos con Tocino de Pavo y Queso Manchego",
+          "side_dish_name": "Gelatina Artesanal de Pitaya Viva con Fórmula Nootrópica 33Plus®",
+          "fat_g": 28.0,
+          "protein_g": 25.0,
+          "net_carbs_g": 3.1
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen",
+          "main_dish_name": "Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón",
+          "side_dish_name": "Ejotes Frescos Salteados con Aceite de Oliva Extra Virgen",
+          "fat_g": 35.0,
+          "protein_g": 38.0,
+          "net_carbs_g": 3.5
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Abanico de Aguacate Hass con Sal de Mar",
+          "main_dish_name": "Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana",
+          "side_dish_name": "Tisana Nocturna de Toronjil y Manzanilla con Fórmula Reparadora 34Plus®",
+          "fat_g": 24.0,
+          "protein_g": 18.5,
+          "net_carbs_g": 2.8
+        }
+      ]
+    },
+    {
+      "day": "Viernes",
+      "date_str": "25 Sep",
+      "day_num": 5,
+      "full_date_title": "Menú Completo para el Viernes 25 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Fresas Frescas de la Granja con Nueces de Castilla y Chía",
+          "main_dish_name": "Waffles Keto de Harina de Almendras con Huevos y Mantequilla de Pastoreo",
+          "side_dish_name": "Gelatina Artesanal de Fresa Viva con Fórmula Nootrópica 33Plus®",
+          "fat_g": 31.0,
+          "protein_g": 24.0,
+          "net_carbs_g": 3.3
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Sopa de Calabacitas y Cilantro al Queso Parmesano",
+          "main_dish_name": "Pimientos Dulces Rellenos de Carne Molida de Sirloin Gratinados con Gouda",
+          "side_dish_name": "Espárragos Verdes Asados con Limón y Sal Marina",
+          "fat_g": 37.0,
+          "protein_g": 41.0,
+          "net_carbs_g": 4.0
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones de Zucchini y Apio al Limón con Sal Mineral",
+          "main_dish_name": "Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate",
+          "side_dish_name": "Tisana Nocturna de Menta e Hinojo con Fórmula Reparadora 34Plus®",
+          "fat_g": 22.0,
+          "protein_g": 29.0,
+          "net_carbs_g": 2.2
+        }
+      ]
+    },
+    {
+      "day": "Sábado",
+      "date_str": "26 Sep",
+      "day_num": 6,
+      "full_date_title": "Menú Completo para el Sábado 26 Sep",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "starter_name": "Higos Frescos con Semillas de Chía y Nueces Pecana",
+          "main_dish_name": "Muffins Salados de Huevo, Jamón de Pavo, Queso Gouda y Espinacas",
+          "side_dish_name": "Gelatina Artesanal de Higos Frescos con Fórmula Nootrópica 33Plus®",
+          "fat_g": 29.0,
+          "protein_g": 23.0,
+          "net_carbs_g": 3.2
+        },
+        {
+          "meal_type": "Comida",
+          "starter_name": "Crema de Flor de Calabaza y Ajo Rostizado al Queso de Cabra",
+          "main_dish_name": "Filete de Salmón al Sartén en Salsa Mediterránea de Aceitunas y Alcaparras",
+          "side_dish_name": "Zoodles de Calabacita a la Mantequilla y Salvia",
+          "fat_g": 38.0,
+          "protein_g": 42.0,
+          "net_carbs_g": 3.6
+        },
+        {
+          "meal_type": "Cena",
+          "starter_name": "Bastones de Pepino y Apio al Limón con Sal de Mar",
+          "main_dish_name": "Tacos en Envuelto de Lechuga Viva con Carne Molida de Sirloin y Guacamole",
+          "side_dish_name": "Tisana Nocturna de Toronjil y Manzanilla con Fórmula Reparadora 34Plus®",
+          "fat_g": 25.0,
+          "protein_g": 29.0,
+          "net_carbs_g": 2.6
+        }
+      ]
+    }
+  ]
+}

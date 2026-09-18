@@ -1248,18 +1248,29 @@ def generate_standalone():
         plan_38_dict["week_label"] = "Semana 38 (13 al 19 de Septiembre de 2026)"
         plan_38_dict["week_start"] = "2026-09-13"
 
+    s39_path = os.path.join(os.path.dirname(__file__), 'semana_39_master.json')
+    if os.path.exists(s39_path):
+        with open(s39_path, 'r', encoding='utf-8') as f:
+            plan_39_dict = json.load(f)
+    else:
+        plan_39_dict = copy.deepcopy(plan_38_dict)
+        plan_39_dict["week_name"] = "Semana 39"
+        plan_39_dict["week_label"] = "Semana 39 (20 al 26 de Septiembre de 2026)"
+        plan_39_dict["week_start"] = "2026-09-20"
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
         "Semana 35 (23 al 29 de Agosto de 2026)": plan_35_dict,
         "Semana 36 (30 de Agosto al 05 de Septiembre de 2026)": plan_36_dict,
         "Semana 37 (06 al 12 de Septiembre de 2026)": plan_37_dict,
-        "Semana 38 (13 al 19 de Septiembre de 2026)": plan_38_dict
+        "Semana 38 (13 al 19 de Septiembre de 2026)": plan_38_dict,
+        "Semana 39 (20 al 26 de Septiembre de 2026)": plan_39_dict
     }
 
     
     # ENRIQUECIMIENTO PASIVO DE RECETAS ESTRUCTURADAS (V15.22.1)
-    for p_dict in [plan_33_dict, plan_34_dict, plan_35_dict, plan_36_dict, plan_37_dict, plan_38_dict]:
+    for p_dict in [plan_33_dict, plan_34_dict, plan_35_dict, plan_36_dict, plan_37_dict, plan_38_dict, plan_39_dict]:
         for day in p_dict.get("days", []):
             for meal in day.get("meals", []):
                 s_name = meal.get("starter_name") or meal.get("starter")
@@ -2006,7 +2017,7 @@ function generateNextWeekMenu() {
     let deletedFarmItems = [];
     let deletedPantryItems = [];
 
-    let activeWeek = "Semana 38 (13 al 19 de Septiembre de 2026)";
+    let activeWeek = "Semana 39 (20 al 26 de Septiembre de 2026)";
     let activeDiners = 6;
     let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
     let pantryStock = {
