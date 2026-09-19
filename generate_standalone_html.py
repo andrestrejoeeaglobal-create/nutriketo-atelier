@@ -1831,7 +1831,8 @@ function generateNextWeekMenu() {
                 <option value="Semana 35 (23 al 29 de Agosto de 2026)">Semana 35 (23 al 29 de Agosto de 2026)</option>
                 <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)">Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
                 <option value="Semana 37 (06 al 12 de Septiembre de 2026)">Semana 37 (06 al 12 de Septiembre de 2026)</option>
-                <option value="Semana 38 (13 al 19 de Septiembre de 2026)" selected>Semana 38 (13 al 19 de Septiembre de 2026)</option>
+                <option value="Semana 38 (13 al 19 de Septiembre de 2026)">Semana 38 (13 al 19 de Septiembre de 2026)</option>
+                <option value="Semana 39 (20 al 26 de Septiembre de 2026)" selected>Semana 39 (20 al 26 de Septiembre de 2026)</option>
               </select>
             </div>
             <div>
@@ -1887,7 +1888,8 @@ function generateNextWeekMenu() {
             <option value="Semana 35 (23 al 29 de Agosto de 2026)">Semana 35 (23 al 29 de Agosto de 2026)</option>
             <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)">Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
             <option value="Semana 37 (06 al 12 de Septiembre de 2026)">Semana 37 (06 al 12 de Septiembre de 2026)</option>
-            <option value="Semana 38 (13 al 19 de Septiembre de 2026)" selected>Semana 38 (13 al 19 de Septiembre de 2026)</option>
+            <option value="Semana 38 (13 al 19 de Septiembre de 2026)">Semana 38 (13 al 19 de Septiembre de 2026)</option>
+            <option value="Semana 39 (20 al 26 de Septiembre de 2026)" selected>Semana 39 (20 al 26 de Septiembre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
