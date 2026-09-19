@@ -2,6 +2,9 @@ import copy
 import re, unicodedata
 import json
 import os
+os.environ["GEMINI_API_KEY"] = ""
+from app.config import settings
+settings.GEMINI_API_KEY = ""
 from app.services.keto_architect import KetoAIArchitect
 from app.services.inventory_master import InventorySyncMaster
 from app.database import init_db

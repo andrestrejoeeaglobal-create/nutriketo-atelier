@@ -10,6 +10,7 @@ def setup_test_db(tmp_path):
     test_db_path = str(tmp_path / "test_nutriketo_multiview.db")
     settings.DATABASE_PATH = test_db_path
     settings.GEMINI_API_KEY = ""
+    os.environ["GEMINI_API_KEY"] = ""
     init_db()
     yield
     if os.path.exists(test_db_path):

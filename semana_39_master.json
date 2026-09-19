@@ -1,253 +1,558 @@
 {
-  "week_name": "Semana 39",
-  "week_label": "Semana 39 (20 al 26 de Septiembre de 2026)",
-  "week_start": "2026-09-20",
   "diners_count": 6,
   "days": [
     {
       "day": "Domingo",
       "date_str": "20 Sep",
-      "day_num": 0,
+      "day_num": "20",
       "full_date_title": "Menú Completo para el Domingo 20 Sep",
+      "preliminary_preps": [
+        {
+          "base_name": "Base de Nube de Clara y Mantequilla de Ajo Rostizado",
+          "ingredients": [
+            {
+              "name": "Claras de huevo",
+              "quantity": 12.0,
+              "unit": "piezas",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            },
+            {
+              "name": "Mantequilla de pastoreo",
+              "quantity": 120.0,
+              "unit": "g",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            },
+            {
+              "name": "Ajo rostizado",
+              "quantity": 30.0,
+              "unit": "g",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            }
+          ],
+          "cutting_prep": "Montar 12 claras a punto de nieve con pizca de sal marina.",
+          "cooking_process": "Hornear nidos de clara a 180°C por 10 min hasta dorar ligero.",
+          "storage_reserve": "Reservar nidos tibios para montar huevos benedictinos."
+        }
+      ],
+      "meal_prep_blocks": [],
       "meals": [
         {
           "meal_type": "Desayuno",
           "starter_name": "Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía",
           "main_dish_name": "Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente",
           "side_dish_name": "Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®",
+          "dish_name_legacy": null,
           "fat_g": 29.5,
           "protein_g": 32.0,
-          "net_carbs_g": 3.2
+          "net_carbs_g": 3.2,
+          "ingredients": []
         },
         {
           "meal_type": "Comida",
           "starter_name": "Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano",
           "main_dish_name": "Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo",
           "side_dish_name": "Espárragos Verdes al Horno con Limón y Sal de Mar Mineral",
+          "dish_name_legacy": null,
           "fat_g": 38.5,
           "protein_g": 42.0,
-          "net_carbs_g": 3.6
+          "net_carbs_g": 3.6,
+          "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen",
           "main_dish_name": "Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano",
           "side_dish_name": "Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®",
+          "dish_name_legacy": null,
           "fat_g": 24.0,
           "protein_g": 28.0,
-          "net_carbs_g": 2.4
+          "net_carbs_g": 2.4,
+          "ingredients": []
         }
-      ]
+      ],
+      "recipes": [],
+      "clinical_nutrition": null,
+      "nutrition": null
     },
     {
       "day": "Lunes",
       "date_str": "21 Sep",
-      "day_num": 1,
+      "day_num": "21",
       "full_date_title": "Menú Completo para el Lunes 21 Sep",
+      "preliminary_preps": [
+        {
+          "base_name": "Mantequilla de Eneldo y Hierbas Finas",
+          "ingredients": [
+            {
+              "name": "Mantequilla de pastoreo",
+              "quantity": 150.0,
+              "unit": "g",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            },
+            {
+              "name": "Eneldo fresco",
+              "quantity": 20.0,
+              "unit": "g",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            }
+          ],
+          "cutting_prep": "Picar eneldo ultra fino e integrar a mantequilla pomada para 6 personas.",
+          "cooking_process": "Emulsionar a temperatura ambiente y formar rodillo.",
+          "storage_reserve": "Refrigerar a 4°C hasta sellar el salmón."
+        }
+      ],
+      "meal_prep_blocks": [],
       "meals": [
         {
           "meal_type": "Desayuno",
           "starter_name": "Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía",
-          "main_dish_name": "Omelette Gourmet de Queso Gouda Maduro, Jamón de Pavo y Champiñones",
+          "main_dish_name": "Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda",
           "side_dish_name": "Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®",
+          "dish_name_legacy": null,
           "fat_g": 30.0,
           "protein_g": 33.0,
-          "net_carbs_g": 3.4
+          "net_carbs_g": 3.4,
+          "ingredients": []
         },
         {
           "meal_type": "Comida",
           "starter_name": "Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón",
           "main_dish_name": "Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo",
           "side_dish_name": "Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen",
+          "dish_name_legacy": null,
           "fat_g": 36.0,
           "protein_g": 40.0,
-          "net_carbs_g": 3.5
+          "net_carbs_g": 3.5,
+          "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Bastones de Pepino y Apio al Limón con Sal Mineral",
           "main_dish_name": "Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón",
           "side_dish_name": "Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®",
+          "dish_name_legacy": null,
           "fat_g": 23.0,
           "protein_g": 27.0,
-          "net_carbs_g": 2.5
+          "net_carbs_g": 2.5,
+          "ingredients": []
         }
-      ]
+      ],
+      "recipes": [],
+      "clinical_nutrition": null,
+      "nutrition": null
     },
     {
       "day": "Martes",
       "date_str": "22 Sep",
-      "day_num": 2,
+      "day_num": "22",
       "full_date_title": "Menú Completo para el Martes 22 Sep",
+      "preliminary_preps": [
+        {
+          "base_name": "Marinado Tamari y Sésamo para Huevos Mollet",
+          "ingredients": [
+            {
+              "name": "Salsa Tamari — Soya Keto",
+              "quantity": 100.0,
+              "unit": "ml",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            },
+            {
+              "name": "Aceite de sésamo",
+              "quantity": 30.0,
+              "unit": "ml",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            }
+          ],
+          "cutting_prep": "Mezclar salsa Tamari con aceite de sésamo para 6 personas.",
+          "cooking_process": "Cocinar huevos 6 min exactos en agua hirviendo y atemperar en agua helada.",
+          "storage_reserve": "Marinar huevos pelados en baño de Tamari por 2 horas."
+        }
+      ],
+      "meal_prep_blocks": [],
       "meals": [
         {
           "meal_type": "Desayuno",
           "starter_name": "Arilos de Granada Fresca con Almendras Fileteadas y Chía",
-          "main_dish_name": "Huevos Revueltos con Machaca de Pavo, Jitomate Bola y Cebolla Salteada",
+          "main_dish_name": "Huevos Mollet a los 6 Minutos Marinados en Salsa Tamari y Sésamo",
           "side_dish_name": "Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®",
+          "dish_name_legacy": null,
           "fat_g": 28.5,
           "protein_g": 31.5,
-          "net_carbs_g": 3.3
+          "net_carbs_g": 3.3,
+          "ingredients": []
         },
         {
           "meal_type": "Comida",
           "starter_name": "Crema de Coliflor Rostizada al Ajo y Queso de Cabra",
           "main_dish_name": "Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra y Romero",
           "side_dish_name": "Chayotes Tiernos al Vapor con Mantequilla Clarificada",
+          "dish_name_legacy": null,
           "fat_g": 37.0,
           "protein_g": 41.0,
-          "net_carbs_g": 3.6
+          "net_carbs_g": 3.6,
+          "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Bastones de Zucchini y Apio al Limón con Sal de Mar",
           "main_dish_name": "Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO",
           "side_dish_name": "Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®",
+          "dish_name_legacy": null,
           "fat_g": 21.5,
           "protein_g": 26.5,
-          "net_carbs_g": 2.1
+          "net_carbs_g": 2.1,
+          "ingredients": []
         }
-      ]
+      ],
+      "recipes": [],
+      "clinical_nutrition": null,
+      "nutrition": null
     },
     {
       "day": "Miércoles",
       "date_str": "23 Sep",
-      "day_num": 3,
+      "day_num": "23",
       "full_date_title": "Menú Completo para el Miércoles 23 Sep",
+      "preliminary_preps": [
+        {
+          "base_name": "Tamagoyaki Base Culinaria",
+          "ingredients": [
+            {
+              "name": "Huevos frescos",
+              "quantity": 12.0,
+              "unit": "piezas",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            },
+            {
+              "name": "Queso Panela",
+              "quantity": 180.0,
+              "unit": "g",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            }
+          ],
+          "cutting_prep": "Batir 12 huevos con pizca de sal y pimienta blanca para 6 personas.",
+          "cooking_process": "Verter capas delgadas en sartén rectangular a fuego bajo enrollando con queso panela.",
+          "storage_reserve": "Cortar en rollos uniformes para el desayuno."
+        }
+      ],
+      "meal_prep_blocks": [],
       "meals": [
         {
           "meal_type": "Desayuno",
           "starter_name": "Arándanos Frescos con Nueces Pecana y Semillas de Girasol",
           "main_dish_name": "Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela y Pavo",
           "side_dish_name": "Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus®",
+          "dish_name_legacy": null,
           "fat_g": 28.5,
           "protein_g": 32.5,
-          "net_carbs_g": 3.1
+          "net_carbs_g": 3.1,
+          "ingredients": []
         },
         {
           "meal_type": "Comida",
-          "starter_name": "Consomé de Res con Tuétano, Costilla y Cilantro Fresco",
+          "starter_name": "Consomé Claro de Res con Romero y Cilantro Fresco",
           "main_dish_name": "Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano",
           "side_dish_name": "Nopales Asados al Orégano y Aceite de Oliva Extra Virgen",
+          "dish_name_legacy": null,
           "fat_g": 36.5,
           "protein_g": 40.0,
-          "net_carbs_g": 3.4
+          "net_carbs_g": 3.4,
+          "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Bastones de Pepino y Zucchini al Limón con Sal Mineral",
           "main_dish_name": "Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón",
           "side_dish_name": "Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus®",
+          "dish_name_legacy": null,
           "fat_g": 22.0,
           "protein_g": 28.5,
-          "net_carbs_g": 2.3
+          "net_carbs_g": 2.3,
+          "ingredients": []
         }
-      ]
+      ],
+      "recipes": [],
+      "clinical_nutrition": null,
+      "nutrition": null
     },
     {
       "day": "Jueves",
       "date_str": "24 Sep",
-      "day_num": 4,
+      "day_num": "24",
       "full_date_title": "Menú Completo para el Jueves 24 Sep",
+      "preliminary_preps": [
+        {
+          "base_name": "Base de Dashi y Huevo para Chawanmushi",
+          "ingredients": [
+            {
+              "name": "Huevos frescos",
+              "quantity": 12.0,
+              "unit": "piezas",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            },
+            {
+              "name": "Caldo de pollo clarificado",
+              "quantity": 400.0,
+              "unit": "ml",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            }
+          ],
+          "cutting_prep": "Colar batido de huevo con dashi/caldo clarificado para 6 comensales.",
+          "cooking_process": "Cocinar al vapor a 85°C en tazones individuales durante 12 minutos.",
+          "storage_reserve": "Servir caliente decorado con cebollín picado."
+        }
+      ],
+      "meal_prep_blocks": [],
       "meals": [
         {
           "meal_type": "Desayuno",
           "starter_name": "Pitayas Frescas con Semillas de Chía y Coco Rallado",
-          "main_dish_name": "Frittata Gourmet de Huevos Orgánicos con Tocino de Pavo y Queso Manchego",
+          "main_dish_name": "Chawanmushi Culinario de Huevo al Vapor al Sésamo y Cebollín",
           "side_dish_name": "Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®",
+          "dish_name_legacy": null,
           "fat_g": 29.0,
           "protein_g": 33.0,
-          "net_carbs_g": 3.1
+          "net_carbs_g": 3.1,
+          "ingredients": []
         },
         {
           "meal_type": "Comida",
           "starter_name": "Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen",
           "main_dish_name": "Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón",
           "side_dish_name": "Ejotes Frescos Salteados con Aceite de Oliva Extra Virgen",
+          "dish_name_legacy": null,
           "fat_g": 35.0,
           "protein_g": 39.0,
-          "net_carbs_g": 3.5
+          "net_carbs_g": 3.5,
+          "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Abanico de Aguacate Hass con Sal de Mar",
           "main_dish_name": "Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana",
           "side_dish_name": "Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®",
+          "dish_name_legacy": null,
           "fat_g": 24.0,
           "protein_g": 25.5,
-          "net_carbs_g": 2.8
+          "net_carbs_g": 2.8,
+          "ingredients": []
         }
-      ]
+      ],
+      "recipes": [],
+      "clinical_nutrition": null,
+      "nutrition": null
     },
     {
       "day": "Viernes",
       "date_str": "25 Sep",
-      "day_num": 5,
+      "day_num": "25",
       "full_date_title": "Menú Completo para el Viernes 25 Sep",
+      "preliminary_preps": [
+        {
+          "base_name": "Anillos de Pimiento Morrón Dulce para Sartén",
+          "ingredients": [
+            {
+              "name": "Pimientos morrones rojos y amarillos",
+              "quantity": 3.0,
+              "unit": "piezas",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            },
+            {
+              "name": "Mantequilla de pastoreo",
+              "quantity": 60.0,
+              "unit": "g",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            }
+          ],
+          "cutting_prep": "Cortar anillos de 2 cm de grosor limpiando semillas para 6 personas.",
+          "cooking_process": "Acitronar anillos en sartén con mantequilla y romper 1 huevo dentro de cada anillo.",
+          "storage_reserve": "Servir caliente inmediatamente."
+        }
+      ],
+      "meal_prep_blocks": [],
       "meals": [
         {
           "meal_type": "Desayuno",
           "starter_name": "Fresas Frescas de la Granja con Nueces de Castilla y Chía",
           "main_dish_name": "Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla de Pastoreo",
           "side_dish_name": "Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®",
+          "dish_name_legacy": null,
           "fat_g": 28.0,
           "protein_g": 32.0,
-          "net_carbs_g": 3.3
+          "net_carbs_g": 3.3,
+          "ingredients": []
         },
         {
           "meal_type": "Comida",
           "starter_name": "Sopa de Calabacitas y Cilantro al Queso Parmesano",
-          "main_dish_name": "Pimientos Dulces Rellenos de Carne Molida de Sirloin Gratinados con Gouda",
+          "main_dish_name": "Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Aceite de Oliva",
           "side_dish_name": "Espárragos Verdes Asados con Limón y Sal Marina",
+          "dish_name_legacy": null,
           "fat_g": 37.0,
           "protein_g": 41.0,
-          "net_carbs_g": 4.0
+          "net_carbs_g": 4.0,
+          "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Bastones de Zucchini y Apio al Limón con Sal Mineral",
           "main_dish_name": "Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate",
           "side_dish_name": "Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®",
+          "dish_name_legacy": null,
           "fat_g": 22.0,
           "protein_g": 27.0,
-          "net_carbs_g": 2.2
+          "net_carbs_g": 2.2,
+          "ingredients": []
         }
-      ]
+      ],
+      "recipes": [],
+      "clinical_nutrition": null,
+      "nutrition": null
     },
     {
       "day": "Sábado",
       "date_str": "26 Sep",
-      "day_num": 6,
+      "day_num": "26",
       "full_date_title": "Menú Completo para el Sábado 26 Sep",
+      "preliminary_preps": [
+        {
+          "base_name": "Mantequilla Clarificada al Romero",
+          "ingredients": [
+            {
+              "name": "Mantequilla clarificada (Ghee)",
+              "quantity": 100.0,
+              "unit": "g",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            },
+            {
+              "name": "Romero fresco",
+              "quantity": 10.0,
+              "unit": "g",
+              "canonical_id": null,
+              "display_name": null,
+              "net_qty_person": null,
+              "physical_state": "solid",
+              "category": null,
+              "protein_family": null
+            }
+          ],
+          "cutting_prep": "Infundir mantequilla clarificada con rama de romero fresco para 6 personas.",
+          "cooking_process": "Calentar en sartén a 160°C y cuajar huevos bajo campana de acero por 3 min.",
+          "storage_reserve": "Servir con yema cremosa y clara dorada."
+        }
+      ],
+      "meal_prep_blocks": [],
       "meals": [
         {
           "meal_type": "Desayuno",
           "starter_name": "Higos Frescos con Semillas de Chía y Nueces Pecana",
-          "main_dish_name": "Muffins Salados de Huevo, Jamón de Pavo, Queso Gouda y Espinacas Baby",
+          "main_dish_name": "Huevos al Sartén con Campana a la Mantequilla Clarificada",
           "side_dish_name": "Gelatina Artesanal de Higos Frescos (4°C) con Fórmula Nootrópica 33Plus®",
+          "dish_name_legacy": null,
           "fat_g": 29.0,
           "protein_g": 32.0,
-          "net_carbs_g": 3.2
+          "net_carbs_g": 3.2,
+          "ingredients": []
         },
         {
           "meal_type": "Comida",
           "starter_name": "Crema de Flor de Calabaza y Ajo Rostizado al Queso de Cabra",
-          "main_dish_name": "Filete de Salmón al Sartén en Salsa Mediterránea de Aceitunas y Alcaparras",
+          "main_dish_name": "Pechuga de Pavo al Horno Rellena de Queso Gouda y Romero",
           "side_dish_name": "Zoodles de Calabacita a la Mantequilla y Salvia",
+          "dish_name_legacy": null,
           "fat_g": 38.0,
           "protein_g": 42.0,
-          "net_carbs_g": 3.6
+          "net_carbs_g": 3.6,
+          "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Bastones de Pepino y Apio al Limón con Sal de Mar",
           "main_dish_name": "Tacos en Envuelto de Lechuga Viva con Carne Molida de Sirloin y Guacamole",
           "side_dish_name": "Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®",
+          "dish_name_legacy": null,
           "fat_g": 25.0,
           "protein_g": 28.0,
-          "net_carbs_g": 2.6
+          "net_carbs_g": 2.6,
+          "ingredients": []
         }
-      ]
+      ],
+      "recipes": [],
+      "clinical_nutrition": null,
+      "nutrition": null
     }
-  ]
+  ],
+  "week_name": "Semana 39",
+  "week_label": "Semana 39 (20 al 26 de Septiembre de 2026)",
+  "week_start": "2026-09-20"
 }
