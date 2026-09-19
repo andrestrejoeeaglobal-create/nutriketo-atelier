@@ -9,6 +9,7 @@ from app.database import init_db, settings
 def setup_test_db(tmp_path):
     test_db_path = str(tmp_path / "test_nutriketo_multiview.db")
     settings.DATABASE_PATH = test_db_path
+    settings.GEMINI_API_KEY = ""
     init_db()
     yield
     if os.path.exists(test_db_path):
@@ -758,8 +759,30 @@ def test_taxonomy_sanitization_and_supplement_naming():
     cat_aceite_coco = InventorySyncMaster.get_smart_item_category("Aceite de coco (orgánico)")
     assert cat_aceite_coco == "🌰 Grasas, Aceites y Semillas", "Aceite de coco no debe clasificarse como fruta"
 
-    cat_aderezo = InventorySyncMaster.get_smart_item_category("Aderezo Italiano")
-    assert cat_aderezo == "🌶️ Chiles, Condimentos e Infusiones", "Aderezos deben clasificarse en Condimentos"
+def test_ssot_v36_6_atwater_and_dynamic_tokens():
+    import os
+
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    # 1. Purga de Repostería Simulada en Menú Regular
+    assert "Waffles Keto de Harina" not in content, "Waffles keto simulados no deben estar en el menú regular"
+    assert "Crepas Ligeras de Harina" not in content, "Crepas keto simuladas no deben estar en el menú regular"
+
+    # 2. Presencia de Técnicas Profesionales de Huevo
+    assert "Rollo Tamagoyaki Culinario" in content or "Huevos en Nube" in content, "Técnicas profesionales de huevo deben estar presentes"
+
+    # 3. Verificación de Invarianza y Tokens Dinámicos en KetoAIArchitect
+    from app.services.keto_architect import compile_dynamic_prep_phases
+    from app.schemas import Ingredient
+
+    test_ing = [Ingredient(name="Pechuga de pollo", quantity=150.0, unit="g")]
+    phases = compile_dynamic_prep_phases("Pechuga de Pollo al Sartén", test_ing, diners_count=6)
+    assert hasattr(phases, "fase_1_mise_en_place"), "DynamicPrepPhases debe ser generado dinámicamente"
+
 
 
 

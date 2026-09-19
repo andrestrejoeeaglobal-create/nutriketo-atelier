@@ -586,6 +586,13 @@ class KetoAIArchitect:
         
         if any(k in starter for k in ["caldo", "consomé", "consome", "sopa"]) and any(k in main for k in ["caldo", "consomé", "consome", "sopa"]):
             meal_structure["starter"] = "Ensalada de Hojas Verdes de la Granja"
+        
+        # Regla SSOT V36.6: Purga Absoluta de Repostería Simulada (Waffles, Crepas, Panes Keto)
+        for m in ['starter', 'main', 'side']:
+            m_val = (meal_structure.get(m) or '').lower()
+            if any(p in m_val for p in ['waffle', 'waffles', 'crepa', 'crepas', 'pancake', 'pancakes', 'panqueque', 'panqueques', 'pan keto']):
+                raise ValueError(f"Fallo de Inmunidad SSOT V36.6: Se prohíbe repostería simulada '{m_val}' en el menú regular.")
+
         return meal_structure
 
     @staticmethod
