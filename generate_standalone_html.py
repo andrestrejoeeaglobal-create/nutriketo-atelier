@@ -1825,7 +1825,7 @@ function generateNextWeekMenu() {
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
             <div>
               <label for="setup-week" style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Semana a Planificar:</label>
-              <select id="setup-week" style="width: 100%; padding: 0.6rem; border: 1px solid var(--border-clinical); border-radius: 8px; font-weight: 700; background: var(--surface-card); color: var(--text-main); min-height: 44px;">
+              <select id="setup-week" onchange="onHeaderWeekChange(this.value)" style="width: 100%; padding: 0.6rem; border: 1px solid var(--border-clinical); border-radius: 8px; font-weight: 700; background: var(--surface-card); color: var(--text-main); min-height: 44px;">
                 <option value="Semana 33 (09 al 15 de Agosto de 2026)">Semana 33 (09 al 15 de Agosto de 2026)</option>
                 <option value="Semana 34 (16 al 22 de Agosto de 2026)">Semana 34 (16 al 22 de Agosto de 2026)</option>
                 <option value="Semana 35 (23 al 29 de Agosto de 2026)">Semana 35 (23 al 29 de Agosto de 2026)</option>
@@ -3057,22 +3057,30 @@ function generateNextWeekMenu() {
     }
 
     function onHeaderWeekChange(newWeek) {
-      if (!datasets[newWeek]) return;
+      const targetPlan = getPlanForWeek(newWeek);
+      if (!targetPlan) return;
       activeWeek = newWeek;
 
       const setupWeekSelect = document.getElementById('setup-week');
       if (setupWeekSelect) setupWeekSelect.value = newWeek;
 
+      const headerWeekSelect = document.getElementById('header-week-select');
+      if (headerWeekSelect) headerWeekSelect.value = newWeek;
+
       const headerSubtitle = document.getElementById('header-week-subtitle');
       if (headerSubtitle) headerSubtitle.innerText = `${activeWeek} | Ecosistema T.I.L.O.®`;
+
+      if (typeof selectedIdx !== 'number' || isNaN(selectedIdx) || selectedIdx < 0 || (targetPlan.days && selectedIdx >= targetPlan.days.length)) {
+        selectedIdx = 0;
+      }
 
       saveAppState();
 
       renderDateBar();
       renderDay(selectedIdx);
-      const curPlan2 = getPlanForWeek(activeWeek);
-      if (typeof renderRecipes === 'function' && curPlan2 && curPlan2.days && curPlan2.days[selectedIdx]) {
-        renderRecipes(curPlan2.days[selectedIdx], getMealDiners(selectedIdx, 'Desayuno'));
+
+      if (typeof renderRecipes === 'function' && targetPlan && targetPlan.days && targetPlan.days[selectedIdx]) {
+        renderRecipes(targetPlan.days[selectedIdx], getMealDiners(selectedIdx, 'Desayuno'));
       }
       if (typeof render3DShoppingList === 'function') {
         render3DShoppingList();
@@ -5724,9 +5732,17 @@ function renderRecipes(day, activeDiners) {
         if (overlay) overlay.style.display = 'none';
         if (mainContent) mainContent.style.display = 'block';
 
+        const setupWeekSelect = document.getElementById('setup-week');
+        if (setupWeekSelect && activeWeek) setupWeekSelect.value = activeWeek;
+
+        const headerWeekSelect = document.getElementById('header-week-select');
+        if (headerWeekSelect && activeWeek) headerWeekSelect.value = activeWeek;
+
+        const headerSubtitle = document.getElementById('header-week-subtitle');
+        if (headerSubtitle && activeWeek) headerSubtitle.innerText = `${activeWeek} | Ecosistema T.I.L.O.®`;
+
         if (typeof renderDateBar === 'function') renderDateBar();
         const initIdx = (typeof selectedIdx === 'number' && !isNaN(selectedIdx) && selectedIdx >= 0) ? selectedIdx : 0;
-        if (typeof renderDateBar === 'function') renderDateBar();
         if (typeof renderDay === 'function') renderDay(initIdx);
         if (typeof switchTab === 'function') switchTab('design');
       } catch (e) {
