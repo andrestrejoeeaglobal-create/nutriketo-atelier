@@ -81,6 +81,109 @@ def compile_dynamic_prep_phases(dish_name: str, approved_ingredients: List[Ingre
     return build_dynamic_prep_phases(dish_name, diners_count)
 
 
+class CulinaryProceduralEngine:
+    """
+    Motor Heurístico Termodinámico (Zero-Template Engine — SSOT V36.6)
+    Deduce el paradigma físico de cocción y genera pasos dinámicos usando tokens semánticos universales:
+    {primary_protein_qty}, {primary_protein_unit}, {cooking_fat_qty}, {cooking_fat_unit}, {vegetable_base_qty}, {vegetable_base_unit}, {diners_count}.
+    """
+    @staticmethod
+    def infer_culinary_paradigm(dish_name: str, ingredients: list = None) -> str:
+        name = (dish_name or "").lower()
+        if any(k in name for k in ["tisana", "té ", "te ", "infusión", "infusion", "33plus", "34plus"]):
+            return "steep_beverage"
+        if any(k in name for k in ["gelatina", "mousse", "panna cotta"]):
+            return "gelatin_molding"
+        if any(k in name for k in ["shakshuka", "ahogados", "cazuela en salsa"]):
+            return "poached_in_sauce"
+        if any(k in name for k in ["frittata", "soufflé", "souffle", "muffin", "torta de huevo"]):
+            return "baked_egg_matrix"
+        if any(k in name for k in ["chawanmushi", "flan salado"]):
+            return "steam_custard"
+        if any(k in name for k in ["crema", "sopa", "caldo", "consomé", "consome", "velouté"]):
+            return "boil_and_blend"
+        if any(k in name for k in ["tartar", "ceviche", "ensalada", "bastones", "abanico", "tazón", "tazon", "frescas", "higos", "granada", "moras", "frambuesas", "pitaya", "arándanos"]):
+            return "cold_cure_assembly"
+        if any(k in name for k in ["ribeye", "sirloin", "mignon", "salmón", "salmon", "atún", "atun", "huachinango", "pescado", "pechuga", "pavo", "pollo", "medallón", "medallon", "corte", "omelette", "huevo", "tamagoyaki", "revuelto"]):
+            return "sear_and_rest"
+        return "cold_cure_assembly"
+
+    @staticmethod
+    def generate_heuristic_steps(dish_name: str, paradigm: str = None) -> list:
+        if not paradigm:
+            paradigm = CulinaryProceduralEngine.infer_culinary_paradigm(dish_name)
+
+        if paradigm == "poached_in_sauce":
+            return [
+                "1. Rostizado y Molienda Rústica: Asar vegetales base a 200°C; triturar rústicamente preservando pulpa y cuerpo.",
+                "2. Infusión Liposoluble de Especias: Calentar grasa saludable en sartén de hierro hondo; activar especias aromáticas durante 30 segundos.",
+                "3. Reducción de Salsa: Incorporar la pulpa y fondo de caldo; reducir a fuego medio-bajo hasta punto de napa (5–7 minutos).",
+                "4. Pochado Sellado: Formar cavidades individuales en la salsa; verter la proteína principal suavemente en cada nido. Tapar y escalfar a fuego mínimo (85–90°C) por 6–8 minutos hasta clara opaca y centro fluido.",
+                "5. Acabado Fresco: Coronar con queso desmoronado permitido y hierbas de la huerta picadas; servir de inmediato al centro."
+            ]
+        elif paradigm == "baked_egg_matrix":
+            return [
+                "1. Salteado de Sustrato: Dorar vegetales y proteínas de soporte en sartén de hierro colado con grasa saludable a fuego medio.",
+                "2. Ligazón y Aireación: Emulsionar la base proteica de huevo con lácteos permitidos y sal mineral hasta textura homogénea y aireada.",
+                "3. Sellado de Base en Estufa: Verter la emulsión sobre el sofrito caliente. Mantener fuego bajo 3–4 minutos sin remover el fondo hasta tomar consistencia estructural.",
+                "4. Gratinado y Núcleo al Horno: Transferir la sartén a horno precalentado a 180°C durante 10 a 14 minutos hasta inflar con costra dorada sin resecar.",
+                "5. Estabilización y Corte: Reposar 5 minutos para asentar la red de albúmina. Cortar en cuñas y servir caliente a 68°C."
+            ]
+        elif paradigm == "sear_and_rest":
+            title_lower = (dish_name or "").lower()
+            is_poultry = any(k in title_lower for k in ["pollo", "pavo", "machaca"])
+            temp_target = "74°C" if is_poultry else "68°C"
+            return [
+                "1. Mise en Place y Secado: Atemperar la proteína principal 15 minutos; secar la superficie con papel absorbente para garantizar reacción de Maillard óptima.",
+                "2. Aromatización en Grasa: Calentar sartén de hierro o parrilla a 200°C con grasa saludable, integrando ajo machacado y hierbas aromáticas.",
+                "3. Sellado Térmico Controlado: Sellar la proteína sin mover durante 3–4 minutos por lado hasta costra dorada uniforme; verificar centro térmico (" + temp_target + ").",
+                "4. Reposo y Redistribución Osmótica: Retirar a tabla tibia durante 4 a 5 minutos para que la presión de los jugos intramusculares se estabilice antes del trinchado.",
+                "5. Emplaste y Baño: Servir en plato precalentado bañado con el jugo residual de cocción y sal marina en escamas."
+            ]
+        elif paradigm == "steam_custard":
+            return [
+                "1. Filtrado de Proteína: Batir la base proteica y mezclar homogéneamente con fondo clarificado colado por tamiz fino para eliminar burbujas.",
+                "2. Ensamble en Ramekins: Disponer las láminas de proteína o vegetales de soporte en el fondo de moldes refractarios individuales.",
+                "3. Cocción Indirecta Tapada: Cubrir cada molde con tapa o papel y cocer en vaporera sobre agua en ebullición suave (88°C) durante 14–15 minutos.",
+                "4. Servicio Sedoso: Verificar textura de gelatina salada tersa sin porosidades. Servir tibio con gotas de aceite de sésamo y cebollín."
+            ]
+        elif paradigm == "cold_cure_assembly":
+            return [
+                "1. Cadena de Frío e Higienización: Mantener los insumos proteicos y vegetales a 4°C hasta el porcionado.",
+                "2. Corte de Precisión: Cortar en cubos o bastones regulares evitando maltratar la fibra del tejido.",
+                "3. Macerado y Emulsión en Frío: Emulsionar en tazón helado con aceite VEVO, jugo cítrico fresco y sal marina inmediatamente antes de montar.",
+                "4. Moldeado y Presentación: Emplatar de inmediato a 10°C–12°C para preservar polifenoles y antioxidantes vivos."
+            ]
+        elif paradigm == "boil_and_blend":
+            return [
+                "1. Mise en Place y Troceado: Seleccionar e higienizar vegetales y proteínas de soporte; trocear en piezas uniformes para cocción pareja.",
+                "2. Cocción Lenta en Fondo Mineral: Estofar los vegetales a fuego lento en caldo concentrado a 85°C–90°C durante 15 a 20 minutos hasta ablandar fibra sin degradar nutrientes.",
+                "3. Emulsión Velouté a Alta Velocidad: Licuar a alta velocidad incorporando mantequilla de pastoreo o crema entera hasta lograr textura aterciopelada cremosa.",
+                "4. Servicio Gourmet en Tazón: Servir caliente en tazón cóncavo a 75°C decorado con gotas de aceite VEVO o lascas de queso maduro."
+            ]
+        elif paradigm == "steep_beverage":
+            sup_name = "Fórmula Nootrópica 33Plus®" if ("33plus" in (dish_name or "").lower() or "33 plus" in (dish_name or "").lower()) else "Fórmula Reparadora 34Plus®"
+            return [
+                "1. Selección de Botánicos de Cosecha: Seleccionar e higienizar hierbas botánicas de cosecha; enjuagar suavemente en agua fría para activar aceites esenciales.",
+                "2. Extracción de Fitonutrientes (80°C): Infundir las botánicas en agua tibia a 80°C durante 5 minutos para liberar sus aceites esenciales volátiles sin ebullición violenta.",
+                "3. Filtrado e Integración Bioactiva: Colar mediante tamiz de malla fina. DESPUÉS del filtrado, incorporar " + sup_name + " a 50°C–60°C y batir con espumador durante 45 segundos hasta disolución coloidal completa.",
+                "4. Servicio Botánico Reconfortante: Servir bien caliente a 65°C en taza de cerámica artesanal."
+            ]
+        elif paradigm == "gelatin_molding":
+            sup_name = "Fórmula Nootrópica 33Plus®"
+            return [
+                "1. Acondicionamiento de Fruta y Cosecha: Seleccionar fruta fresca viva de la granja; reservar a 6°C en refrigeración para mantener turgencia.",
+                "2. Hidratación del Colágeno: Verter agua purificada fría en un cuenco de cristal y espolvorear grenetina natural en forma de lluvia fina; reposar 5 a 7 minutos.",
+                "3. Disolución Térmica del Suplemento en Gelatina: Apagar la fuente de calor y atemperar a 50°C–60°C; incorporar " + sup_name + " mezclando suavemente sin ebullición hasta disolución coloidal completa.",
+                "4. Moldeo, Maduración y Servicio: Distribuir la fruta en el fondo de moldes refractarios, verter el líquido transparente y refrigerar a 4°C por 3 a 4 horas hasta gelificación cristalina firme."
+            ]
+        return [
+            "1. Preparación de Insumos: Higienizar y porcionar insumos frescos a temperatura adecuada.",
+            "2. Cocción o Ensamble: Aplicar la técnica térmica correspondiente respetando los tiempos y temperaturas óptimas.",
+            "3. Servicio Gourmet: Emplatar y presentar inmediatamente."
+        ]
+
+
 def resolve_technique(dish_name: str, category: str = "") -> str:
     name = (dish_name or "").lower()
     

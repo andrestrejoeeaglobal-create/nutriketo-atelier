@@ -774,15 +774,43 @@ def test_ssot_v36_6_atwater_and_dynamic_tokens():
     assert "Crepas Ligeras de Harina" not in content, "Crepas keto simuladas no deben estar en el menú regular"
 
     # 2. Presencia de Técnicas Profesionales de Huevo
-    assert "Rollo Tamagoyaki Culinario" in content or "Huevos en Nube" in content, "Técnicas profesionales de huevo deben estar presentes"
+    assert "Rollo Tamagoyaki Culinario" in content or "Huevos en Nube" in content or "Huevos Benedictinos" in content, "Técnicas profesionales de huevo deben estar presentes"
 
     # 3. Verificación de Invarianza y Tokens Dinámicos en KetoAIArchitect
-    from app.services.keto_architect import compile_dynamic_prep_phases
+    from app.services.keto_architect import compile_dynamic_prep_phases, CulinaryProceduralEngine
     from app.schemas import Ingredient
 
     test_ing = [Ingredient(name="Pechuga de pollo", quantity=150.0, unit="g")]
     phases = compile_dynamic_prep_phases("Pechuga de Pollo al Sartén", test_ing, diners_count=6)
     assert hasattr(phases, "fase_1_mise_en_place"), "DynamicPrepPhases debe ser generado dinámicamente"
+
+    # 4. Verificación del Paradigma Heurístico (Zero-Template Engine)
+    steps = CulinaryProceduralEngine.generate_heuristic_steps("Huevos Benedictinos Keto sobre Nube de Clara", "baked_egg_matrix")
+    assert len(steps) >= 4, "Debe generar pasos termodinámicos específicos"
+    assert any("horno" in s.lower() or "gratinado" in s.lower() for s in steps), "Debe usar física culinaria real"
+
+    # 5. Verificación de Atwater Macro Floors y coincidencia de semana_39_master.json
+    import json
+    s39_path = os.path.join(os.path.dirname(__file__), "..", "semana_39_master.json")
+    assert os.path.exists(s39_path), "semana_39_master.json debe existir en la raíz"
+    with open(s39_path, "r", encoding="utf-8") as f:
+        s39_data = json.load(f)
+
+    for day in s39_data.get("days", []):
+        for meal in day.get("meals", []):
+            mtype = meal.get("meal_type")
+            fat = meal.get("fat_g", 0)
+            prot = meal.get("protein_g", 0)
+            nc = meal.get("net_carbs_g", 0)
+            atwater_kcal = fat * 9 + prot * 4 + nc * 4
+
+            if mtype == "Desayuno":
+                assert atwater_kcal >= 400.0, f"Desayuno en {day['day']} debe cumplir piso Atwater >= 400 kcal (obtenido {atwater_kcal})"
+            elif mtype == "Comida":
+                assert 630.0 <= atwater_kcal <= 700.0, f"Comida 3-course en {day['day']} debe cumplir piso Atwater 630-700 kcal (obtenido {atwater_kcal})"
+            elif mtype == "Cena":
+                assert atwater_kcal >= 400.0, f"Cena en {day['day']} debe cumplir piso Atwater >= 400 kcal (obtenido {atwater_kcal})"
+
 
 
 

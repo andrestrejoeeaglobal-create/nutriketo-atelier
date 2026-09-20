@@ -1092,32 +1092,45 @@ def norm_title(t):
 
 
 def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
+    recipe = None
     if not dish_name:
-        return _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
+        recipe = _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
+    elif dish_name in CANONICAL_RECIPE_CATALOG:
+        recipe = copy.deepcopy(CANONICAL_RECIPE_CATALOG[dish_name])
+    else:
+        real_map = get_real_md_recipes()
+        if dish_name in real_map:
+            recipe = copy.deepcopy(real_map[dish_name])
+        else:
+            target_norm = norm_title(dish_name)
+            for r_title, r_obj in real_map.items():
+                r_norm = norm_title(r_title)
+                if target_norm == r_norm or target_norm in r_norm or r_norm in target_norm:
+                    recipe = copy.deepcopy(r_obj)
+                    break
 
-    if dish_name in CANONICAL_RECIPE_CATALOG:
-        return copy.deepcopy(CANONICAL_RECIPE_CATALOG[dish_name])
+            if not recipe:
+                keywords = [w for w in re.split(r'\W+', dish_name.lower()) if len(w) > 3 and w not in ['con', 'para', 'del', 'los', 'las', 'sobre', 'fresca', 'fresco']]
+                for r_title, r_obj in real_map.items():
+                    if sum(1 for kw in keywords if kw in r_title.lower()) >= 2:
+                        recipe = copy.deepcopy(r_obj)
+                        break
 
-    real_map = get_real_md_recipes()
-    
-    # 1. Exact match
-    if dish_name in real_map:
-        return copy.deepcopy(real_map[dish_name])
+    if not recipe:
+        recipe = _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
 
-    # 2. Normalized match
-    target_norm = norm_title(dish_name)
-    for r_title, r_obj in real_map.items():
-        r_norm = norm_title(r_title)
-        if target_norm == r_norm or target_norm in r_norm or r_norm in target_norm:
-            return copy.deepcopy(r_obj)
+    if dish_name:
+        recipe["title"] = dish_name
 
-    # 3. Keyword fallback match
-    keywords = [w for w in re.split(r'\W+', dish_name.lower()) if len(w) > 3 and w not in ['con', 'para', 'del', 'los', 'las', 'sobre', 'fresca', 'fresco']]
-    for r_title, r_obj in real_map.items():
-        if sum(1 for kw in keywords if kw in r_title.lower()) >= 2:
-            return copy.deepcopy(r_obj)
+    # Inyectar canonical_slug a cada ingrediente para conciliación BOM 3D limpia
+    for grp in recipe.get("ingredient_groups", []):
+        for item in grp.get("items", []):
+            i_name = item.get("name") or item.get("item_name") or ""
+            if i_name and "canonical_slug" not in item:
+                slug = re.sub(r'[^a-z0-9]+', '_', unicodedata.normalize("NFD", i_name).encode("ascii", "ignore").decode("utf-8").lower()).strip('_')
+                item["canonical_slug"] = slug
 
-    return _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
+    return recipe
 
 
 def generate_standalone():
@@ -1279,11 +1292,11 @@ def generate_standalone():
                 s_name = meal.get("starter_name") or meal.get("starter")
                 m_name = meal.get("main_dish_name") or meal.get("dish_name") or meal.get("main")
                 sd_name = meal.get("side_dish_name") or meal.get("side")
-                if s_name and "starter_recipe" not in meal:
+                if s_name:
                     meal["starter_recipe"] = build_typed_recipe_for_dish(s_name, "starter")
-                if m_name and "main_recipe" not in meal:
+                if m_name:
                     meal["main_recipe"] = build_typed_recipe_for_dish(m_name, "main")
-                if sd_name and "side_recipe" not in meal:
+                if sd_name:
                     meal["side_recipe"] = build_typed_recipe_for_dish(sd_name, "side")
 
     datasets_json = json.dumps(weekly_datasets, ensure_ascii=False)
