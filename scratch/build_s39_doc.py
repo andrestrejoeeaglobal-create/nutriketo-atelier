@@ -5,94 +5,95 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 from generate_standalone_html import build_typed_recipe_for_dish
 
-def normalize_shopping_item(iname: str, category: str):
+def normalize_shopping_item(iname: str, category: str, unit: str):
     name_clean = re.sub(r'^[^\w\s]+\s*', '', iname.lower().strip())
+    clean_unit = unit.strip()
     
     if any(k in name_clean for k in ["granada", "arilos de granada"]):
-        return ("Arilos de Granada fresca de la granja", "🍓 Frutas Keto y Cosecha Viva", "granada_fresca")
+        return ("Arilos de Granada fresca de la granja", "🍓 Frutas Keto y Cosecha Viva", "granada_fresca", clean_unit)
     if any(k in name_clean for k in ["higo", "higos"]):
-        return ("Higos frescos vivos de la granja", "🍓 Frutas Keto y Cosecha Viva", "higos_frescos")
+        return ("Higos frescos vivos de la granja", "🍓 Frutas Keto y Cosecha Viva", "higos_frescos", clean_unit)
     if any(k in name_clean for k in ["pitaya", "pitahaya"]):
-        return ("Pitaya fresca de la granja", "🍓 Frutas Keto y Cosecha Viva", "pitaya_fresca")
+        return ("Pitaya fresca de la granja", "🍓 Frutas Keto y Cosecha Viva", "pitaya_fresca", clean_unit)
     if any(k in name_clean for k in ["frambuesa", "frambuesas"]):
-        return ("Frambuesas frescas orgánicas", "🍓 Frutas Keto y Cosecha Viva", "frambuesas_frescas")
+        return ("Frambuesas frescas orgánicas", "🍓 Frutas Keto y Cosecha Viva", "frambuesas_frescas", clean_unit)
     if any(k in name_clean for k in ["arándano", "arandano", "arándanos", "arandanos"]):
-        return ("Arándanos frescos orgánicos", "🍓 Frutas Keto y Cosecha Viva", "arandanos_frescos")
+        return ("Arándanos frescos orgánicos", "🍓 Frutas Keto y Cosecha Viva", "arandanos_frescos", clean_unit)
     if any(k in name_clean for k in ["fresa", "fresas"]):
-        return ("Fresas frescas de la granja", "🍓 Frutas Keto y Cosecha Viva", "fresas_frescas")
+        return ("Fresas frescas de la granja", "🍓 Frutas Keto y Cosecha Viva", "fresas_frescas", clean_unit)
     if any(k in name_clean for k in ["mora", "moras"]):
-        return ("Moras frescas de la granja", "🍓 Frutas Keto y Cosecha Viva", "moras_frescas")
+        return ("Moras frescas de la granja", "🍓 Frutas Keto y Cosecha Viva", "moras_frescas", clean_unit)
     if "espárrago" in name_clean or "esparrago" in name_clean:
-        return ("Espárragos verdes frescos de la granja", "🥦 Hortalizas y Vegetales Córtex", "esparragos_verdes")
+        return ("Espárragos verdes frescos de la granja", "🥦 Hortalizas y Vegetales Córtex", "esparragos_verdes", clean_unit)
     if "calabacita" in name_clean or "zucchini" in name_clean:
-        return ("Calabacitas tiernas de la granja", "🥦 Hortalizas y Vegetales Córtex", "calabacitas_tiernas")
+        return ("Calabacitas tiernas de la granja", "🥦 Hortalizas y Vegetales Córtex", "calabacitas_tiernas", clean_unit)
     if "aguacate" in name_clean or "guacamole" in name_clean:
-        return ("Aguacate Hass fresco", "🥑 Grasas Saludables y Frutos", "aguacate_hass")
+        return ("Aguacate Hass fresco", "🥑 Grasas Saludables y Frutos", "aguacate_hass", clean_unit)
     if "lechuga" in name_clean:
-        return ("Hojas de lechuga orejona viva", "🥬 Hojas Verdes y Envolturas", "lechuga_orejona_viva")
+        return ("Hojas de lechuga orejona viva", "🥬 Hojas Verdes y Envolturas", "lechuga_orejona_viva", clean_unit)
     if "pepino" in name_clean:
-        return ("Pepino blanco fresco de la granja", "🥦 Hortalizas y Vegetales Córtex", "pepino_blanco")
+        return ("Pepino blanco fresco de la granja", "🥦 Hortalizas y Vegetales Córtex", "pepino_blanco", clean_unit)
     if "apio" in name_clean:
-        return ("Apio fresco de la granja", "🥦 Hortalizas y Vegetales Córtex", "apio_fresco")
+        return ("Apio fresco de la granja", "🥦 Hortalizas y Vegetales Córtex", "apio_fresco", clean_unit)
     if "hinojo" in name_clean:
-        return ("Hinojo fresco de la granja", "🥦 Hortalizas y Vegetales Córtex", "hinojo_fresco")
+        return ("Hinojo fresco de la granja", "🥦 Hortalizas y Vegetales Córtex", "hinojo_fresco", clean_unit)
     if "arúgula" in name_clean or "arugula" in name_clean:
-        return ("Hojas de arúgula fresca", "🥬 Hojas Verdes y Envolturas", "arugula_fresca")
+        return ("Hojas de arúgula fresca", "🥬 Hojas Verdes y Envolturas", "arugula_fresca", clean_unit)
     if "espinaca" in name_clean or "espinacas" in name_clean:
-        return ("Espinacas baby frescas de la granja", "🥬 Hojas Verdes y Envolturas", "espinacas_baby")
+        return ("Espinacas baby frescas de la granja", "🥬 Hojas Verdes y Envolturas", "espinacas_baby", clean_unit)
     if "nopal" in name_clean or "nopales" in name_clean:
-        return ("Nopales tiernos limpios de la granja", "🥦 Hortalizas y Vegetales Córtex", "nopales_tiernos")
+        return ("Nopales tiernos limpios de la granja", "🥦 Hortalizas y Vegetales Córtex", "nopales_tiernos", clean_unit)
     if "chayote" in name_clean or "chayotes" in name_clean:
-        return ("Chayotes tiernos de la granja", "🥦 Hortalizas y Vegetales Córtex", "chayote_tierno")
+        return ("Chayotes tiernos de la granja", "🥦 Hortalizas y Vegetales Córtex", "chayote_tierno", clean_unit)
     if "ejote" in name_clean or "ejotes" in name_clean:
-        return ("Ejotes verdes frescos de la granja", "🥦 Hortalizas y Vegetales Córtex", "ejotes_frescos")
+        return ("Ejotes verdes frescos de la granja", "🥦 Hortalizas y Vegetales Córtex", "ejotes_frescos", clean_unit)
     if "sirloin" in name_clean:
-        return ("Carne molida / Filete de Sirloin magro", "🥩 Proteínas Principales Seleccionadas", "carne_sirloin")
+        return ("Carne molida / Filete de Sirloin magro", "🥩 Proteínas Principales Seleccionadas", "carne_sirloin", clean_unit)
     if "ribeye" in name_clean:
-        return ("Corte de Ribeye de res premium", "🥩 Proteínas Principales Seleccionadas", "ribeye_res")
+        return ("Corte de Ribeye de res premium", "🥩 Proteínas Principales Seleccionadas", "ribeye_res", clean_unit)
     if "salmón" in name_clean or "salmon" in name_clean:
-        return ("Filete de Salmón fresco con piel", "🥩 Proteínas Principales Seleccionadas", "filete_salmon")
+        return ("Filete de Salmón fresco con piel", "🥩 Proteínas Principales Seleccionadas", "filete_salmon", clean_unit)
     if "pescado blanco" in name_clean or "robalo" in name_clean:
-        return ("Filete de Pescado Blanco (Robalo)", "🥩 Proteínas Principales Seleccionadas", "pescado_blanco")
+        return ("Filete de Pescado Blanco (Robalo)", "🥩 Proteínas Principales Seleccionadas", "pescado_blanco", clean_unit)
     if "huachinango" in name_clean:
-        return ("Filete de Huachinango fresco", "🥩 Proteínas Principales Seleccionadas", "huachinango_fresco")
+        return ("Filete de Huachinango fresco", "🥩 Proteínas Principales Seleccionadas", "huachinango_fresco", clean_unit)
     if "atún" in name_clean or "atun" in name_clean:
-        return ("Lomo de Atún fresco corte sashimi", "🥩 Proteínas Principales Seleccionadas", "lomo_atun")
+        return ("Lomo de Atún fresco corte sashimi", "🥩 Proteínas Principales Seleccionadas", "lomo_atun", clean_unit)
     if "pavo" in name_clean:
-        return ("Pechuga de pavo artesanal", "🥩 Proteínas Principales Seleccionadas", "pechuga_pavo")
+        return ("Pechuga de pavo artesanal", "🥩 Proteínas Principales Seleccionadas", "pechuga_pavo", clean_unit)
     if "pollo" in name_clean:
-        return ("Pechuga de pollo orgánica", "🥩 Proteínas Principales Seleccionadas", "pechuga_pollo")
+        return ("Pechuga de pollo orgánica", "🥩 Proteínas Principales Seleccionadas", "pechuga_pollo", clean_unit)
     if "claras de huevo" in name_clean:
-        return ("Claras de huevo frescas orgánicas", "🥚 Huevo y Derivados", "claras_huevo")
+        return ("Claras de huevo frescas orgánicas", "🥚 Huevo y Derivados", "claras_huevo", clean_unit)
     if "huevos" in name_clean or "huevo" in name_clean:
-        return ("Huevos orgánicos de libre pastoreo", "🥚 Huevo y Derivados", "huevos_organicos")
+        return ("Huevos orgánicos de libre pastoreo", "🥚 Huevo y Derivados", "huevos_organicos", clean_unit)
     if "mantequilla" in name_clean or "ghee" in name_clean:
-        return ("Mantequilla de pastoreo / Ghee", "🥑 Grasas Saludables y Frutos", "mantequilla_pastoreo")
+        return ("Mantequilla de pastoreo / Ghee", "🥑 Grasas Saludables y Frutos", "mantequilla_pastoreo", clean_unit)
     if "aceite de oliva" in name_clean or "vevo" in name_clean:
-        return ("Aceite de oliva extra virgen (VEVO)", "🥑 Grasas Saludables y Frutos", "aceite_vevo")
+        return ("Aceite de oliva extra virgen (VEVO)", "🥑 Grasas Saludables y Frutos", "aceite_vevo", clean_unit)
     if "limón" in name_clean or "limon" in name_clean:
-        return ("Jugo de limón fresco recién exprimido", "🍋 Cítricos y Ácidos Naturales", "jugo_limon")
+        return ("Jugo de limón fresco recién exprimido", "🍋 Cítricos y Ácidos Naturales", "jugo_limon", clean_unit)
     if "sal" in name_clean:
-        return ("Sal de mar mineral en escamas", "🧂 Condimentos y Sal Mineral", "sal_marina")
+        return ("Sal de mar mineral en escamas", "🧂 Condimentos y Sal Mineral", "sal_marina", clean_unit)
     if "pimienta" in name_clean:
-        return ("Pimienta negra en grano / molida", "🧂 Condimentos y Sal Mineral", "pimienta_negra")
+        return ("Pimienta negra en grano / molida", "🧂 Condimentos y Sal Mineral", "pimienta_negra", clean_unit)
     if "chía" in name_clean or "chia" in name_clean:
-        return ("Semillas de chía orgánicas", "🌰 Semillas y Nueces", "semillas_chia")
+        return ("Semillas de chía orgánicas", "🌰 Semillas y Nueces", "semillas_chia", clean_unit)
     if "almendras" in name_clean:
-        return ("Almendras fileteadas tostadas", "🌰 Semillas y Nueces", "almendras_fileteadas")
+        return ("Almendras fileteadas tostadas", "🌰 Semillas y Nueces", "almendras_fileteadas", clean_unit)
     if "nuez pecana" in name_clean:
-        return ("Nuez pecana troceada", "🌰 Semillas y Nueces", "nuez_pecana")
+        return ("Nuez pecana troceada", "🌰 Semillas y Nueces", "nuez_pecana", clean_unit)
     if "nuez de castilla" in name_clean:
-        return ("Nuez de Castilla troceada", "🌰 Semillas y Nueces", "nuez_castilla")
+        return ("Nuez de Castilla troceada", "🌰 Semillas y Nueces", "nuez_castilla", clean_unit)
     if "girasol" in name_clean:
-        return ("Semillas de girasol tostadas", "🌰 Semillas y Nueces", "semillas_girasol")
+        return ("Semillas de girasol tostadas", "🌰 Semillas y Nueces", "semillas_girasol", clean_unit)
     if "sésamo" in name_clean or "ajonjolí" in name_clean:
-        return ("Semillas de sésamo tostadas", "🌰 Semillas y Nueces", "semillas_sesamo")
+        return ("Semillas de sésamo tostadas", "🌰 Semillas y Nueces", "semillas_sesamo", clean_unit)
 
     clean_disp = re.sub(r'^[^\w\s]+\s*', '', iname).strip()
     clean_disp = re.sub(r'\s+seleccionado[as]?', '', clean_disp, flags=re.IGNORECASE)
     clean_key = re.sub(r'\W+', '_', clean_disp.lower()).strip('_')
-    return (clean_disp, category, clean_key)
+    return (clean_disp, category, clean_key, clean_unit)
 
 
 with open('semana_39_master.json', 'r', encoding='utf-8') as f:
@@ -173,11 +174,12 @@ for day in s39.get('days', []):
                     unit = item.get('unit', 'g')
                     lines.append(f"  - {iname}: **{total_qty:g} {unit}** ({base_qty:g} {unit}/persona)")
                     
-                    # Accumulate for consolidated shopping list with canonical normalization
-                    c_name, c_cat, c_key = normalize_shopping_item(iname, grp['category'])
-                    if c_key not in shopping_map:
-                        shopping_map[c_key] = {'name': c_name, 'total_qty': 0.0, 'unit': unit, 'category': c_cat}
-                    shopping_map[c_key]['total_qty'] += total_qty
+                    # Accumulate for consolidated shopping list with unit-aware key
+                    c_name, c_cat, c_key, c_unit = normalize_shopping_item(iname, grp['category'], unit)
+                    map_key = (c_key, c_unit.lower().strip())
+                    if map_key not in shopping_map:
+                        shopping_map[map_key] = {'name': c_name, 'total_qty': 0.0, 'unit': c_unit, 'category': c_cat}
+                    shopping_map[map_key]['total_qty'] += total_qty
 
             lines.append('')
             lines.append('**Procedimiento Paso a Paso:**')
@@ -193,7 +195,7 @@ lines.append('')
 lines.append('| Insumo | Cantidad Total (6 Comensales) | Unidad | Categoría |')
 lines.append('|---|---|---|---|')
 
-for k in sorted(shopping_map.keys(), key=lambda x: (shopping_map[x]['category'], shopping_map[x]['name'])):
+for k in sorted(shopping_map.keys(), key=lambda x: (shopping_map[x]['category'], shopping_map[x]['name'], shopping_map[x]['unit'])):
     item = shopping_map[k]
     lines.append(f"| **{item['name']}** | {item['total_qty']:g} | {item['unit']} | {item['category']} |")
 

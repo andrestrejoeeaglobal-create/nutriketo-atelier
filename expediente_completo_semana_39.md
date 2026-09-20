@@ -1237,7 +1237,8 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 | **Hojas de toronjil fresco de la granja** | 120 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Cebollín fresco picado / eneldo** | 12 | g | 🌿 Servicio y Decoración |
 | **Sombreros de champiñón Portobello grandes** | 12 | piezas | 🍄 Sombreros de Portobello Base |
-| **Jugo de limón fresco recién exprimido** | 732 | g | 🍋 Cítricos y Ácidos Naturales |
+| **Jugo de limón fresco recién exprimido** | 3 | g | 🍋 Cítricos y Ácidos Naturales |
+| **Jugo de limón fresco recién exprimido** | 729 | ml | 🍋 Cítricos y Ácidos Naturales |
 | **Arilos de Granada fresca de la granja** | 1080 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Arándanos frescos orgánicos** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Frambuesas frescas orgánicas** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
@@ -1255,8 +1256,10 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 | **Caldo concentrado o fondo oscuro** | 180 | ml | 🍾 Licores y Especias de la Salsa |
 | **Agua purificada (80°C)** | 10500 | ml | 💧 Agua Purificada de Infusión |
 | **Aceite de oliva extra virgen (VEVO)** | 654 | ml | 🥑 Grasas Saludables y Frutos |
-| **Aguacate Hass fresco** | 1272 | piezas | 🥑 Grasas Saludables y Frutos |
-| **Mantequilla de pastoreo / Ghee** | 1935 | g | 🥑 Grasas Saludables y Frutos |
+| **Aguacate Hass fresco** | 1260 | g | 🥑 Grasas Saludables y Frutos |
+| **Aguacate Hass fresco** | 12 | piezas | 🥑 Grasas Saludables y Frutos |
+| **Mantequilla de pastoreo / Ghee** | 1635 | g | 🥑 Grasas Saludables y Frutos |
+| **Mantequilla de pastoreo / Ghee** | 300 | ml | 🥑 Grasas Saludables y Frutos |
 | **Alcaparras finamente picadas** | 60 | g | 🥑 Macerado Cítrico y Grasas |
 | **Vinagre blanco (para agua de pochado)** | 45 | ml | 🥓 Cubierta y Proteína |
 | **Claras de huevo frescas orgánicas** | 6 | piezas | 🥚 Huevo y Derivados |
@@ -1276,7 +1279,8 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 | **Filete de Pescado Blanco (Robalo)** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Salmón fresco con piel** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Lomo de Atún fresco corte sashimi** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Pechuga de pavo artesanal** | 2862 | piezas | 🥩 Proteínas Principales Seleccionadas |
+| **Pechuga de pavo artesanal** | 2850 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Pechuga de pavo artesanal** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pollo orgánica** | 390 | ml | 🥩 Proteínas Principales Seleccionadas |
 | **Costilla de res limpia troceada** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
@@ -1287,7 +1291,8 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 | **Queso crema suave artesanal** | 180 | g | 🧀 Relleno Cetogénico y Nueces |
 | **Queso Panela artesanal** | 180 | g | 🧀 Relleno de Queso y Pavo |
 | **Pimienta negra en grano / molida** | 21 | g | 🧂 Condimentos y Sal Mineral |
-| **Sal de mar mineral en escamas** | 432 | g | 🧂 Condimentos y Sal Mineral |
+| **Sal de mar mineral en escamas** | 342 | g | 🧂 Condimentos y Sal Mineral |
+| **Sal de mar mineral en escamas** | 90 | ml | 🧂 Condimentos y Sal Mineral |
 | **Queso Parmesano o de cabra** | 180 | g | 🧈 Emulsión y Sazón |
 | **Cilantro fresco y orégano** | 45 | g | 🧈 Grasa Saludable y Sazón |
 | **Infusión de té de frutos rojos y menta** | 5040 | ml | 🫐 Extracto Frutal e Infusión Viva |
