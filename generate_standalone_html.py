@@ -1171,13 +1171,13 @@ def generate_standalone():
         ],
         # Lunes 24 AGO
         [
-            {"meal_type": "Desayuno", "starter_name": "Fresas Frescas de la Granja con Nueces Pecana y Chía", "main_dish_name": "Waffles de Harina de Almendras y Huevo con Mantequilla", "side_dish_name": "Gelatina Artesanal de Fresas de la Granja", "fat_g": 30.0, "protein_g": 33.0, "net_carbs_g": 3.5},
-            {"meal_type": "Comida", "starter_name": "Ensalada Verde de Arúgula y Espinaca Baby a la Vinagreta de Manzana", "main_dish_name": "Enchiladas Tabasqueñas en Crepa Ligera de Almendra (Rellenas de Pavo y Queso Gouda)", "side_dish_name": "Consomé Claro de Nopales y Hortalizas Tiernas", "fat_g": 34.0, "protein_g": 38.0, "net_carbs_g": 4.0},
+            {"meal_type": "Desayuno", "starter_name": "Fresas Frescas de la Granja con Nueces Pecana y Chía", "main_dish_name": "Huevos al Sartén en Anillo de Pimiento Morrón", "side_dish_name": "Gelatina Artesanal de Fresas de la Granja", "fat_g": 30.0, "protein_g": 33.0, "net_carbs_g": 3.5},
+            {"meal_type": "Comida", "starter_name": "Ensalada Verde de Arúgula y Espinaca Baby a la Vinagreta de Manzana", "main_dish_name": "Rollos de Pechuga de Pavo Rellenos de Queso Gouda en Salsa de Tomate", "side_dish_name": "Consomé Claro de Nopales y Hortalizas Tiernas", "fat_g": 34.0, "protein_g": 38.0, "net_carbs_g": 4.0},
             {"meal_type": "Cena", "starter_name": "Bastones de Pepino y Apio con Sal de Mar", "main_dish_name": "Ceviche Fresco de Filete de Pescado Blanco al Limón con Aguacate Hass", "side_dish_name": "Infusión de Té de Hierbas Nocturna", "fat_g": 22.0, "protein_g": 30.0, "net_carbs_g": 2.8}
         ],
         # Martes 25 AGO
         [
-            {"meal_type": "Desayuno", "starter_name": "Durazno Fresco con Semillas de Chía y Coco Rallado de la Granja", "main_dish_name": "Crepas Ligeras de Harina de Almendras Rellenas de Queso Crema y Pavo", "side_dish_name": "Gelatina Artesanal de Durazno de la Granja", "fat_g": 29.0, "protein_g": 31.5, "net_carbs_g": 3.4},
+            {"meal_type": "Desayuno", "starter_name": "Durazno Fresco con Semillas de Chía y Coco Rallado de la Granja", "main_dish_name": "Huevos Mollet a los 6 Minutos en Marinado Tamari", "side_dish_name": "Gelatina Artesanal de Durazno de la Granja", "fat_g": 29.0, "protein_g": 31.5, "net_carbs_g": 3.4},
             {"meal_type": "Comida", "starter_name": "Consomé de Res con Costilla, Tuétano y Cilantro Fresco", "main_dish_name": "Puntas de Filete de Res al Ajo y Tomillo con Jitomate Bola", "side_dish_name": "Chayote Tierno al Vapor con Mantequilla de Pastoreo", "fat_g": 36.0, "protein_g": 40.0, "net_carbs_g": 3.6},
             {"meal_type": "Cena", "starter_name": "Ensalada de Espinacas Baby con Vinagre de Manzana y Aceite de Oliva", "main_dish_name": "Salpicón Fresco de Pechuga de Pavo Desmenuzada al Limón y Hierbas", "side_dish_name": "Gelatina Casera de Jamaica y Canela", "fat_g": 20.0, "protein_g": 28.0, "net_carbs_g": 2.0}
         ],
