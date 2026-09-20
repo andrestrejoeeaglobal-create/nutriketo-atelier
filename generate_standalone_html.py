@@ -357,49 +357,29 @@ def enrich_recipe_with_guarantee(recipe: dict, clean_title: str) -> dict:
 
 def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
     clean_title = dish_name.strip()
-    
-    # Si la receta existe explícitamente en el catálogo canónico, retornar copia íntegra
+    clean_lower = clean_title.lower()
+
     if 'CANONICAL_RECIPE_CATALOG' in globals():
         if clean_title in CANONICAL_RECIPE_CATALOG:
             return copy.deepcopy(CANONICAL_RECIPE_CATALOG[clean_title])
         for k, v in CANONICAL_RECIPE_CATALOG.items():
-            if k.lower() == clean_title.lower() or k.lower() in clean_title.lower() or clean_title.lower() in k.lower():
+            if k.lower() == clean_lower:
                 return copy.deepcopy(v)
-    
-    # Lista por defecto de cosecha activa si no se proporciona (Sin Acelgas no requeridas)
-    if active_harvest is None:
-        active_harvest = ["Cilantro fresco", "Granada fresca", "Limón Fresco", "Nopales tiernos"]
 
-    active_lower = [h.lower() for h in active_harvest]
-
-    # REGLA AGRONÓMICA 1: Sustitución Dinámica de Higos / Durazno / Pitahaya si no están en cosecha activa
-    if ("higo" in clean_title.lower() or "durazno" in clean_title.lower() or "pitaya" in clean_title.lower()):
-        if not any(k in active_lower for k in ["higo", "durazno", "pitaya"]):
-            if "granada" in " ".join(active_lower):
-                clean_title = re.sub(r'higos\s+frescos|higos|durazno\s+fresco|durazno|pitahaya\s+fresca|pitahaya', 'Granada Fresca de la Granja', clean_title, flags=re.IGNORECASE)
-            else:
-                clean_title = re.sub(r'higos\s+frescos|higos|durazno\s+fresco|durazno|pitahaya\s+fresca|pitahaya', 'Moras Frescas de la Granja', clean_title, flags=re.IGNORECASE)
-
-    clean_lower = clean_title.lower()
-
-    # -------------------------------------------------------------------------
-    # 1. GELATINAS ARTESANALES (CON RESPECTO A COSECHA ACTIVA DE GRANADA/FRUTAS)
-    # -------------------------------------------------------------------------
+    # 1. GELATINAS ARTESANALES
     if "gelatina" in clean_lower:
         fruit_name = "Arilos de Granada fresca de la granja"
-        if "fresa" in clean_lower and any("fresa" in k for k in active_lower):
-            fruit_name = "Fresas frescas de la granja"
-        elif "durazno" in clean_lower and any("durazno" in k for k in active_lower):
-            fruit_name = "Durazno fresco de la granja"
-        elif "arándano" in clean_lower:
-            fruit_name = "Arándanos frescos"
-        elif "granada" in clean_lower or True:
-            fruit_name = "Arilos de Granada fresca de la granja (≤ 30g comensal)"
+        if "higo" in clean_lower: fruit_name = "Higos frescos vivos de la granja"
+        elif "pitaya" in clean_lower or "pitahaya" in clean_lower: fruit_name = "Pitaya fresca de la granja"
+        elif "frambuesa" in clean_lower: fruit_name = "Frambuesas frescas orgánicas"
+        elif "arándano" in clean_lower or "arandano" in clean_lower: fruit_name = "Arándanos frescos orgánicos"
+        elif "fresa" in clean_lower: fruit_name = "Fresas frescas de la granja"
+        elif "mora" in clean_lower: fruit_name = "Moras frescas de la granja"
 
         return {
             "title": clean_title,
             "cooking_technique": "gelatin_molding",
-            "sensory_description": f"Postre cetogénico fresco de {clean_title} preparado con colágeno puro hidrolizado, infusionado con extracto de {fruit_name} y sin azúcares añadidos.",
+            "sensory_description": f"Postre cetogénico fresco de {clean_title} preparado con colágeno puro hidrolizado, infusionado con extracto natural de {fruit_name} y suplementado con bioelementos.",
             "ingredient_groups": [
                 {
                     "category": "🍮 Base Hidrocoloide y Gelificante",
@@ -409,241 +389,296 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
                     ]
                 },
                 {
-                    "category": "🫐 Extracto Frutal e Infusión Viva (Pico de Cosecha)",
+                    "category": "🫐 Extracto Frutal e Infusión Viva",
                     "items": [
                         {"name": fruit_name, "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Infusión de té de frutos rojos / menta / jamaica", "base_qty_per_person": 120.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                        {"name": "Infusión de té de frutos rojos y menta", "base_qty_per_person": 120.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 }
             ],
             "steps": [
                 "1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.",
                 "2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.",
-                "3. Moldeo: Distribuir los arilos de granada en 6 moldes individuales de cristal y verter la mezcla tibia.",
+                "3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.",
                 "4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 2. INFUSIONES, TÉS Y BEBIDAS ADAPTÓGENAS (REGEX CON WORD BOUNDARIES)
-    # -------------------------------------------------------------------------
-    bev_pattern = r'\b(infusión|infusion|té|magnesio|toronjil|manzanilla|digestivo|nocturna)\b'
-    is_beverage = bool(re.search(bev_pattern, clean_lower))
-
-    if is_beverage:
-        botanical_item = "Hierbas botánicas de la granja (menta, manzanilla, toronjil)"
-        if "magnesio" in clean_lower:
-            botanical_item = "Bisglicinato de magnesio puro en polvo y manzanilla"
-        elif "verde" in clean_lower:
-            botanical_item = "Hojas de té verde orgánico y menta fresca"
-        elif "blanco" in clean_lower:
-            botanical_item = "Hojas de té blanco y cáscara de limón"
+    # 2. INFUSIONES Y BEBIDAS ADAPTÓGENAS
+    bev_pattern = r'\b(infusión|infusion|té|magnesio|toronjil|manzanilla|digestivo|nocturna|hinojo)\b'
+    if bool(re.search(bev_pattern, clean_lower)):
+        botanical_item = "Hojas de toronjil fresco de la granja"
+        if "manzanilla" in clean_lower: botanical_item = "Flores de manzanilla fresca"
+        elif "menta" in clean_lower: botanical_item = "Hojas de menta fresca"
+        elif "hinojo" in clean_lower: botanical_item = "Semillas y hojas de hinojo fresco"
 
         return {
             "title": clean_title,
             "cooking_technique": "steep_beverage",
-            "sensory_description": f"Infusión botánica relajante e hidratante de {clean_title} infusionada a temperatura controlada.",
+            "sensory_description": f"Infusión botánica relajante e hidratante de {clean_title} infusionada a temperatura controlada (máx 60°C).",
             "ingredient_groups": [
                 {
                     "category": "🌿 Botánicos y Minerales Adaptógenos",
-                    "items": [
-                        {"name": botanical_item, "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
+                    "items": [{"name": botanical_item, "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
                 },
                 {
                     "category": "💧 Agua Purificada de Infusión",
-                    "items": [
-                        {"name": "Agua purificada hirviendo (85°C-90°C)", "base_qty_per_person": 250.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
+                    "items": [{"name": "Agua purificada (80°C)", "base_qty_per_person": 250.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}]
                 }
             ],
             "steps": [
-                "1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 85°C–90°C (sin permitir ebullición violenta).",
-                "2. Infusión y Solubilización: Verter el agua caliente sobre las hierbas botánicas en tetera y disolver el bisglicinato de magnesio si corresponde.",
-                "3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales, flavonoides y bioelementos adaptógenos.",
-                "4. Servicio Relajante: Colar con tamiz fino y servir caliente a 65°C en taza de cerámica o copa tibia antes de descansar."
+                "1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).",
+                "2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.",
+                "3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.",
+                "4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 3. TAZONES Y ENSAMBLES DE FRUTAS FRESCAS (RAW_ASSEMBLY - CON GRANADA EN PICO DE COSECHA)
-    # -------------------------------------------------------------------------
-    is_fruit_bowl = any(kw in clean_lower for kw in [
-        "tazón", "tazon", "fresas frescas", "moras frescas", "higos", "frambuesas",
-        "durazno", "granada", "pitahaya"
-    ]) and not "gelatina" in clean_lower
+    # 3. ENSAMBLES FRUTALES / FRUTA FRESCA EN TAZÓN
+    if any(kw in clean_lower for kw in ["tazón", "tazon", "pitayas frescas", "fresas frescas", "moras frescas", "higos frescos", "frambuesas orgánicas", "arándanos frescos"]):
+        fruit_name = "Moras frescas de la granja"
+        if "higo" in clean_lower: fruit_name = "Higos frescos vivos de la granja"
+        elif "pitaya" in clean_lower or "pitahaya" in clean_lower: fruit_name = "Pitaya fresca de la granja"
+        elif "frambuesa" in clean_lower: fruit_name = "Frambuesas frescas orgánicas"
+        elif "arándano" in clean_lower or "arandano" in clean_lower: fruit_name = "Arándanos frescos orgánicos"
+        elif "fresa" in clean_lower: fruit_name = "Fresas frescas de la granja"
 
-    if is_fruit_bowl:
-        fruit_name = "Arilos de Granada fresca de la granja (Pico de cosecha)"
-        if "granada" in clean_lower or "higo" in clean_lower or "durazno" in clean_lower:
-            fruit_name = "Arilos de Granada fresca desgranados (≤ 30g por comensal)"
-        elif "fresa" in clean_lower and any("fresa" in k for k in active_lower):
-            fruit_name = "Fresas frescas desinfectadas de la granja"
-        elif "acelga" in clean_lower or "ensalada" in clean_lower:
-            fruit_name = "Acelgas frescas de la granja con arilos de granada"
-
-        nut_name = "Nuez de Castilla troceada"
-        if "almendras" in clean_lower: nut_name = "Almendras fileteadas tostadas"
-        elif "pecana" in clean_lower: nut_name = "Nuez pecana troceada"
+        nut_name = "Almendras fileteadas tostadas"
+        if "pecana" in clean_lower: nut_name = "Nuez pecana troceada"
+        elif "castilla" in clean_lower: nut_name = "Nuez de Castilla troceada"
+        elif "girasol" in clean_lower: nut_name = "Semillas de girasol tostadas"
 
         return {
             "title": clean_title,
             "cooking_technique": "raw_assembly",
-            "sensory_description": f"Ensamble fresco frutal y vegetal de {fruit_name} con {nut_name} y chía. Aporta antioxidantes de cosecha viva y fibra celular.",
+            "sensory_description": f"Ensamble fresco frutal de {fruit_name} con {nut_name} y semillas de chía. Aporta antioxidantes de cosecha viva.",
             "ingredient_groups": [
                 {
-                    "category": "🌱 Fruta y Vegetal de Cosecha Activa",
-                    "items": [{"name": fruit_name, "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
+                    "category": "🍓 Fruta Fresca de Cosecha Activa",
+                    "items": [{"name": fruit_name, "base_qty_per_person": 50.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
                 },
                 {
-                    "category": "🥑 Frutos Secos y Fibra Cetogénica",
+                    "category": "🌰 Grasas Saludables y Semillas",
                     "items": [
                         {"name": nut_name, "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Semillas de chía orgánicas", "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🥛 Base Cremosa y Aromáticos",
-                    "items": [
-                        {"name": "Yogur griego natural sin azúcar / Crema de coco", "base_qty_per_person": 30.0, "unit": "g", "source": "Mercado", "unit_cost": 5.0},
-                        {"name": "Hojas de menta fresca picada y canela", "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                        {"name": "Semillas de chía orgánicas", "base_qty_per_person": 8.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 }
             ],
             "steps": [
-                "1. Higienizado y Desgranado: Lavar y desgranar los arilos de granada fresca de la granja; reservar a 6°C.",
-                "2. Tostado Seco de Frutos Secos: Tostar ligeramente los frutos secos en sartén seca a fuego muy bajo durante 2 minutos para activar aceites aromáticos; dejar enfriar.",
-                "3. Ensamble en Frío: Colocar los arilos de granada en 6 cuencos individuales, incorporar el yogur griego y espolvorear la chía.",
-                "4. Montaje Final: Coronar con los frutos secos tostados fríos y menta fresca. Servir de inmediato a 6–8°C."
+                f"1. Selección e Higienización: Seleccionar e higienizar delicadamente {fruit_name} a 8°C.",
+                f"2. Porcionado: Cortar la fruta fresca en trozos regulares y acomodar en tazón frío individual.",
+                f"3. Cobertura Crujiente: Espolvorear {nut_name} y semillas de chía orgánicas en la superficie.",
+                "4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 4. WAFFLES KETO Y PANCAKES (WAFFLERA A 190°C)
-    # -------------------------------------------------------------------------
-    if any(kw in clean_lower for kw in ["waffles", "waffle", "pancakes", "panqueques"]):
+    # 4. ABANICO DE AGUACATE HASS (ENTRADA CRUDA)
+    if "abanico de aguacate" in clean_lower or "aguacate hass" in clean_lower and course_type == "starter":
         return {
             "title": clean_title,
-            "cooking_technique": "roast_bake",
-            "sensory_description": "Waffles cetogénicos dorados y crujientes por fuera con interior esponjoso de harina de almendras, servidos calientes con mantequilla de pastoreo.",
+            "cooking_technique": "raw_assembly",
+            "sensory_description": "Entrada botánica fresca de aguacate Hass cremoso cortado en finas láminas dispuestas en abanico, aderezado con aceite de oliva extra virgen y sal marina.",
             "ingredient_groups": [
                 {
-                    "category": "🧇 Masa Cetogénica de Almendras para Waffles",
+                    "category": "🥑 Hortaliza y Grasas Saludables",
                     "items": [
-                        {"name": "Harina de almendras finamente tamizada", "base_qty_per_person": 35.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 1.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Polvo para hornear sin aluminio", "base_qty_per_person": 2.0, "unit": "g", "source": "Mercado", "unit_cost": 1.0},
-                        {"name": "Leche de almendras sin azúcar / Vainilla natural", "base_qty_per_person": 20.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🧈 Mantequilla de Pastoreo y Acompañamiento",
-                    "items": [
-                        {"name": "Mantequilla sin sal de pastoreo derretida", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Canela molida y edulcorante Monk Fruit (opcional)", "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
-            ],
-            "steps": [
-                "1. Elaboración del Batido: En un tazón amplio, batir la harina de almendras con los huevos, polvo para hornear, leche de almendras y una pizca de canela hasta obtener un batido espeso y homogéneo sin grumos.",
-                "2. Precalentado de Wafflera: Precalentar la wafflera a temperatura media-alta (190°C) y pincelar ligeramente las rejillas con mantequilla derretida de pastoreo.",
-                "3. Horneo y Dorado: Verter una porción del batido en el centro de la wafflera, cerrar la tapa y hornear durante 4 a 5 minutos hasta que el vapor disminuya y los waffles queden dorados y crujientes por fuera.",
-                "4. Servicio Gourmet: Servir los waffles calientes de inmediato coronados con una cubada generosa de mantequilla de pastoreo fresca."
-            ]
-        }
-
-    # -------------------------------------------------------------------------
-    # 5. CREPAS KETO Y ENCHILADAS EN CREPA DE ALMENDRA
-    # -------------------------------------------------------------------------
-    if any(kw in clean_lower for kw in ["crepas", "crepa", "enchiladas tabasqueñas"]):
-        filling_protein = "Pechuga de pavo desmenuzada artesanal"
-        if "gouda" in clean_lower: cheese_item = "Queso Gouda maduro rallado"
-        else: cheese_item = "Queso Panela artesanal en cubos"
-
-        return {
-            "title": clean_title,
-            "cooking_technique": "roast_bake",
-            "sensory_description": "Crepas cetogénicas delgadas de harina de almendras rellenas de pechuga de pavo y queso, horneadas al momento hasta gratinar.",
-            "ingredient_groups": [
-                {
-                    "category": "🥞 Base de Crepas Cetogénicas",
-                    "items": [
-                        {"name": "Harina de almendras finamente tamizada", "base_qty_per_person": 35.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 1.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Mantequilla de pastoreo / Leche de almendras", "base_qty_per_person": 20.0, "unit": "ml", "source": "Mercado", "unit_cost": 4.0}
-                    ]
-                },
-                {
-                    "category": "🍗 Relleno Proteico Jugoso",
-                    "items": [
-                        {"name": filling_protein, "base_qty_per_person": 100.0, "unit": "g", "source": "Mercado", "unit_cost": 25.0},
-                        {"name": cheese_item, "base_qty_per_person": 40.0, "unit": "g", "source": "Mercado", "unit_cost": 10.0},
-                        {"name": "Cebolla picada, epazote y sal marina", "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🧀 Cobertura y Gratinado",
-                    "items": [
-                        {"name": "Queso Gouda o Panela rallado (para la cubierta)", "base_qty_per_person": 25.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0}
-                    ]
-                }
-            ],
-            "steps": [
-                "1. Elaboración del Batido de Crepas: Batir la harina de almendras con huevos, sal marina y leche de almendras hasta obtener una mezcla fluida y sin grumos.",
-                "2. Cocción de Crepas Delgadas: Fundir una porción de mantequilla en sartén antiadherente a fuego medio (150°C). Verter un cucharón fino de mezcla, distribuir por la superficie y cocinar 1-2 minutos por lado hasta dorar sutilmente; reservar.",
-                "3. Preparación del Relleno Proteico: Saltear el pavo desmenuzado en sartén con cebolla y una pizca de epazote; incorporar el queso en cubos.",
-                "4. Rellenado y Enrollado: Distribuir el relleno en el centro de cada crepa, enrollar firmemente en forma cilíndrica o triángulo y acomodar en refractario.",
-                "5. Gratinado Ligero: Espolvorear el queso rallado sobre las crepas y horneado a 190°C durante 8 a 10 minutos hasta que el queso esté suavemente derretido y gratinado. Servir caliente."
-            ]
-        }
-
-    # -------------------------------------------------------------------------
-    # 6. PIMIENTOS DULCES Y PORTOBELLOS RELLENOS
-    # -------------------------------------------------------------------------
-    if any(kw in clean_lower for kw in ["pimientos dulces rellenos", "pimientos rellenos", "portobellos rellenos", "calabacitas rellenas"]):
-        veg_base = "Pimientos dulces de la granja"
-        if "portobello" in clean_lower: veg_base = "Champiñones Portobello grandes"
-        elif "calabacita" in clean_lower: veg_base = "Calabacitas tiernas ahuecadas"
-
-        return {
-            "title": clean_title,
-            "cooking_technique": "roast_bake",
-            "sensory_description": f"Platillo principal de {veg_base} desvenados y rellenos de Carne molida de Sirloin sazonada, gratinados al horno con Queso Gouda.",
-            "ingredient_groups": [
-                {
-                    "category": "🫑 Base Vegetal para Rellenar",
-                    "items": [
-                        {"name": f"{veg_base} limpios desvenados", "base_qty_per_person": 120.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🥩 Relleno Proteico de Sirloin",
-                    "items": [
-                        {"name": "Carne molida de Sirloin magra sazonada", "base_qty_per_person": 130.0, "unit": "g", "source": "Mercado", "unit_cost": 38.0},
-                        {"name": "Cebolla picada, ajo y tomillo fresco", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Aguacate Hass fresco", "base_qty_per_person": 1.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
                         {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 },
                 {
-                    "category": "🧀 Gratinado al Horno",
+                    "category": "🧂 Aderezo Mineral y Cítrico",
                     "items": [
-                        {"name": "Queso Gouda artesanal rallado", "base_qty_per_person": 35.0, "unit": "g", "source": "Mercado", "unit_cost": 12.0},
-                        {"name": "Sal de mar mineral y pimienta negra martajada", "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                        {"name": "Jugo de limón fresco", "base_qty_per_person": 3.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral en escamas", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 }
             ],
             "steps": [
-                f"1. Preparación de la Base: Lavar los {veg_base}; retirar el pedúnculo, cortar por la mitad longitudinalmente y desvenar cuidadosamente retirando semillas.",
-                "2. Cocción del Relleno de Sirloin: En sartén a fuego medio (170°C) con aceite VEVO, sofréir la cebolla y el ajo; incorporar la carne molida de Sirloin sazonada con sal de mar y tomillo fresco, cocinando durante 6-8 minutos hasta que esté dorada y suculenta.",
-                "3. Rellenado Abundante: Acomodar los pimientos desvenados en una charola para hornear y rellenar generosamente con la carne de Sirloin cocinada.",
-                "4. Gratinado al Horno: Cubrir la parte superior con abundante queso Gouda rallado. Hornear a 200°C durante 12 a 15 minutos hasta que el queso esté completamente derretido, dorado y burbujeante.",
-                "5. Servir Caliente: Servir de inmediato recién horneado."
+                "1. Corte de Precisión: Cortar el aguacate Hass por la mitad a 4°C, retirar la semilla y pelar delicadamente. Laminar longitudinalmente a 2 mm.",
+                "2. Montaje en Abanico: Abrir las láminas sobre el plato de servicio formando un abanico uniforme.",
+                "3. Emulsión Cítrica: Emulsionar en cuenco pequeño el aceite VEVO con el jugo de limón fresco y la sal de mar mineral.",
+                "4. Napa y Servicio: Pincelar suavemente el abanico con el aderezo sin maltratar la pulpa. Servir de inmediato a 12°C."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 7. HUEVOS BENEDICTINOS KETO SOBRE NUBE DE CLARA
-    # -------------------------------------------------------------------------
+    # 5. BASTONES DE PEPINO Y APIO / ZUCCHINI (ENTRADA CRUDA CROCANTE)
+    if "bastones" in clean_lower or "pepino y apio" in clean_lower or "zucchini y apio" in clean_lower:
+        veg1 = "Pepino blanco fresco en bastones" if "pepino" in clean_lower else "Calabacita Zucchini en bastones"
+        return {
+            "title": clean_title,
+            "cooking_technique": "raw_assembly",
+            "sensory_description": f"Botana crocante e hidratante de {veg1} y apio fresco cortados en bastones fríos al limón con sal mineral.",
+            "ingredient_groups": [
+                {
+                    "category": "🥦 Hortalizas Crocantes de la Granja",
+                    "items": [
+                        {"name": veg1, "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Apio fresco de la granja en bastones", "base_qty_per_person": 50.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧂 Cítrico y Mineral",
+                    "items": [
+                        {"name": "Jugo de limón fresco recién exprimido", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Higienizado y Corte: Lavar y pelar parcialmente las hortalizas. Cortar en bastones uniformes de 8 cm de largo.",
+                "2. Choque Térmico Hidratante: Sumergir los bastones en agua con hielo a 0°C–4°C durante 10 minutos para maximizar la turgencia crujiente.",
+                "3. Escurrido y Sazón: Escurrir perfectamente y aderezar con jugo de limón fresco y sal de mar mineral.",
+                "4. Servicio Frío: Servir de inmediato a 6°C en vaso o plato de cristal."
+            ]
+        }
+
+    # 6. ENSALADAS VERDES (ARÚGULA, ESPINACAS, HINOJO)
+    if "ensalada" in clean_lower:
+        return {
+            "title": clean_title,
+            "cooking_technique": "raw_assembly",
+            "sensory_description": f"Ensalada fresca botánica de {clean_title} aderezada con vinagreta artesanal de aceite VEVO y limón.",
+            "ingredient_groups": [
+                {
+                    "category": "🥬 Hojas Verdes y Hortalizas",
+                    "items": [
+                        {"name": "Hojas de arúgula / espinacas baby / hinojo", "base_qty_per_person": 80.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🥑 Vinagreta Cetogénica",
+                    "items": [
+                        {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 15.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Jugo de limón fresco y sal marina", "base_qty_per_person": 8.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Higienizado y Centrifugado: Lavar y centrifugar las hojas verdes manteniéndolas heladas a 4°C.",
+                "2. Emulsión de Vinagreta: Batir en tazón el aceite VEVO con jugo de limón fresco y sal marina.",
+                "3. Mezclado Suave: Integrar las hojas verdes con la vinagreta justo antes de emplatar.",
+                "4. Servicio Fresco: Servir en tazón frío a 10°C."
+            ]
+        }
+
+    # 7. TARTAR DE ATÚN FRESCO (CRUDO FRÍO)
+    if "tartar" in clean_lower:
+        return {
+            "title": clean_title,
+            "cooking_technique": "cold_cure_assembly",
+            "sensory_description": "Tartar gourmet frío de lomo de atún fresco cortado en cubos de 5 mm, macerado con alcaparras, aceite VEVO, jugo de limón y cubos de aguacate Hass.",
+            "ingredient_groups": [
+                {
+                    "category": "🐟 Pescado Fresco Sashimi",
+                    "items": [{"name": "Lomo de atún fresco corte sashimi", "base_qty_per_person": 130.0, "unit": "g", "source": "Mercado", "unit_cost": 45.0}]
+                },
+                {
+                    "category": "🥑 Macerado Cítrico y Grasas",
+                    "items": [
+                        {"name": "Aguacate Hass en cubos", "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Alcaparras finamente picadas", "base_qty_per_person": 10.0, "unit": "g", "source": "Mercado", "unit_cost": 12.0},
+                        {"name": "Jugo de limón fresco", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 12.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Cadena de Frío y Corte: Mantener el atún fresco a 2°C–4°C. Cortar con cuchillo de filo único en cubos regulares de 5 mm.",
+                "2. Emulsión de Macerado: En tazón de cristal helado, integrar el aceite VEVO, jugo de limón fresco, alcaparras picadas y sal marina.",
+                "3. Ensamble Macerado: Incorporar el atún y los cubos de aguacate mezclando suavemente con espátula fría.",
+                "4. Moldeo y Servicio Frío: Moldear en aro metálico de 8 cm y servir de inmediato a 8°C."
+            ]
+        }
+
+    # 8. CEVICHE FRESCO DE PESCADO BLANCO (CRUDO EN FRÍO)
+    if "ceviche" in clean_lower:
+        return {
+            "title": clean_title,
+            "cooking_technique": "cold_cure_assembly",
+            "sensory_description": "Ceviche frío de pescado blanco curado en frío con jugo de limón fresco recién exprimido, cilantro, cebolla morada y cubos de aguacate Hass.",
+            "ingredient_groups": [
+                {
+                    "category": "🐟 Pescado Blanco de Cosecha",
+                    "items": [{"name": "Filete de pescado blanco (Robalo) en cubos", "base_qty_per_person": 130.0, "unit": "g", "source": "Mercado", "unit_cost": 40.0}]
+                },
+                {
+                    "category": "🍋 Curado Cítrico y Guacamole",
+                    "items": [
+                        {"name": "Jugo de limón fresco recién exprimido", "base_qty_per_person": 25.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Aguacate Hass en cubos", "base_qty_per_person": 50.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Cilantro fresco picado y cebolla morada", "base_qty_per_person": 20.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Corte de Pescado en Frío: Cortar el filete de pescado blanco fresco en cubos de 8 mm manteniendo la proteína a 4°C.",
+                "2. Desnaturalización Cítrica en Frío: Marinar en jugo de limón fresco con sal marina durante 8 a 10 minutos exactos hasta tornar opaco.",
+                "3. Integración de Aromáticos: Escurrir ligeramente e incorporar la cebolla morada picada, cilantro fresco y aceite VEVO.",
+                "4. Servicio con Aguacate: Añadir los cubos de aguacate al final y servir frío a 6°C en copa de cristal."
+            ]
+        }
+
+    # 9. SALPICÓN FRESCO DE PAVO (FRÍO)
+    if "salpicón" in clean_lower or "salpicon" in clean_lower:
+        return {
+            "title": clean_title,
+            "cooking_technique": "cold_cure_assembly",
+            "sensory_description": "Salpicón artesanal frío de pechuga de pavo desmenuzada con aguacate Hass en cubos, jitomate bola, cebolla morada y vinagreta cítrica.",
+            "ingredient_groups": [
+                {
+                    "category": "🍗 Proteína de Pavo Desmenuzada",
+                    "items": [{"name": "Pechuga de pavo artesanal cocida desmenuzada", "base_qty_per_person": 120.0, "unit": "g", "source": "Mercado", "unit_cost": 30.0}]
+                },
+                {
+                    "category": "🥑 Hortalizas y Aderezo Cítrico",
+                    "items": [
+                        {"name": "Aguacate Hass en cubos", "base_qty_per_person": 50.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Jitomate bola en cubos y cebolla morada", "base_qty_per_person": 55.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Jugo de limón fresco y aceite VEVO", "base_qty_per_person": 20.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Desmenuzado en Frío: Atemperar la pechuga de pavo artesanal cocida a 4°C y desmenuzar en tiras delgadas.",
+                "2. Integración Hortaliza: Meclar el pavo con el jitomate bola en cubos, cebolla morada finamente picada y cilantro.",
+                "3. Aderezo Cítrico: Emulsionar el aceite VEVO con jugo de limón fresco y sal marina; incorporar al salpicón.",
+                "4. Montaje con Aguacate: Agregar cubos de aguacate Hass al final y servir frío a 12°C."
+            ]
+        }
+
+    # 10. TACOS EN ENVUELTO DE LECHUGA VIVA CON SIRLOIN Y GUACAMOLE
+    if "tacos en envuelto" in clean_lower or "lechuga viva" in clean_lower:
+        return {
+            "title": clean_title,
+            "cooking_technique": "taco_wrap",
+            "sensory_description": "Tacos cetogénicos servidos en hojas crocantes de lechuga orejona viva rellenas de carne molida de Sirloin sazonada, guacamole fresco y queso Cotija.",
+            "ingredient_groups": [
+                {
+                    "category": "🥬 Envoltura de Lechuga Viva",
+                    "items": [{"name": "Hojas de lechuga orejona viva", "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
+                },
+                {
+                    "category": "🥩 Relleno de Sirloin y Guacamole",
+                    "items": [
+                        {"name": "Carne molida de Sirloin magra", "base_qty_per_person": 140.0, "unit": "g", "source": "Mercado", "unit_cost": 40.0},
+                        {"name": "Aguacate Hass en guacamole", "base_qty_per_person": 50.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Queso Cotija desmoronado", "base_qty_per_person": 15.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0},
+                        {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Salteado de Sirloin: Saltear la carne molida de Sirloin con ajo, comino y sal mineral en sartén a 180°C durante 6 minutos hasta dorar; atemperar a 50°C.",
+                "2. Preparación de Envoltura: Lavar, centrifugar y desinfectar las hojas de lechuga orejona viva manteniéndolas crujientes a 4°C.",
+                "3. Elaboración de Guacamole: Machacar el aguacate Hass fresco con sal marina y jugo de limón.",
+                "4. Ensamble de Tacos: Disponer la carne molida tibia dentro de cada hoja de lechuga fría, coronar con guacamole y queso Cotija desmoronado. Servir de inmediato."
+            ]
+        }
+
+    # 11. HUEVOS BENEDICTINOS
     if any(kw in clean_lower for kw in ["benedictino", "nube de clara"]):
         return {
             "title": clean_title,
@@ -692,289 +727,90 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 8. HUEVOS MOLLET MARINADOS EN TAMARI Y SÉSAMO
-    # -------------------------------------------------------------------------
+    # 12. OTROS PLATILLOS DE HUEVO (MOLLET, TAMAGOYAKI, CHAWANMUSHI, ANILLO, CAMPANA, MACHACA, OMELETTE)
     if any(kw in clean_lower for kw in ["mollet", "tamari"]):
         return {
             "title": clean_title,
             "cooking_technique": "boil_and_marinate",
             "sensory_description": "Huevos orgánicos cocinados a 6 minutos con clara cuajada y yema sedosa, marinados en infusión umami de salsa Tamari keto y aceite de sésamo.",
             "ingredient_groups": [
-                {
-                    "category": "🥚 Proteína de Huevo Mollet",
-                    "items": [
-                        {"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🍶 Marinado Umami Tamari",
-                    "items": [
-                        {"name": "Salsa Tamari (soya keto)", "base_qty_per_person": 15.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Aceite de sésamo tostado", "base_qty_per_person": 5.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Semillas de sésamo blanco y negro", "base_qty_per_person": 3.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🌿 Topping y Aromáticos",
-                    "items": [
-                        {"name": "Cebollín fresco picado", "base_qty_per_person": 3.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
+                {"category": "🥚 Proteína de Huevo Mollet", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}]},
+                {"category": "🍶 Marinado Umami Tamari", "items": [{"name": "Salsa Tamari (soya keto)", "base_qty_per_person": 15.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}, {"name": "Aceite de sésamo tostado", "base_qty_per_person": 5.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}]}
             ],
             "steps": [
-                "1. Cocción de precisión (6 min): Sumergir los huevos frescos en agua hirviendo a 100°C y cocinar durante 6 minutos exactos. Transferir de inmediato a baño de agua helada (0°C–4°C) para detener la cocción.",
-                "2. Pelado e infusión Tamari: Pelar los huevos delicadamente. Sumergir en la mezcla de salsa Tamari y aceite de sésamo durante 2 horas en refrigeración.",
-                "3. Corte y ensamble: Cortar cada huevo por la mitad revelando el núcleo líquido cremoso.",
-                "4. Servicio aromático: Emplatar decorando con semillas de sésamo tostadas y cebollín fresco picado."
+                "1. Cocción de precisión (6 min): Sumergir los huevos en agua hirviendo durante 6 minutos exactos; pasar a choque térmico de hielo.",
+                "2. Marinado: Pelar suavemente y marinar en salsa Tamari y aceite de sésamo durante 2 horas en refrigeración.",
+                "3. Servicio: Cortar por la mitad y servir mostrando el núcleo cremoso."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 9. ROLLO TAMAGOYAKI CULINARIO EN CAPAS
-    # -------------------------------------------------------------------------
     if "tamagoyaki" in clean_lower:
         return {
             "title": clean_title,
             "cooking_technique": "baked_egg_matrix",
             "sensory_description": "Rollo artesanal en capas finas de huevo batido a la mantequilla de pastoreo, enrollado en sartén tamagoyaki con queso Panela y pechuga de pavo.",
             "ingredient_groups": [
-                {
-                    "category": "🥚 Base Proteica de Huevo",
-                    "items": [
-                        {"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Mantequilla de pastoreo", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🧀 Relleno de Queso y Pavo",
-                    "items": [
-                        {"name": "Queso Panela artesanal en bastones", "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Pechuga de pavo artesanal picada", "base_qty_per_person": 25.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0},
-                        {"name": "Sal de mar y pimienta blanca", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
+                {"category": "🥚 Base Proteica de Huevo", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}]},
+                {"category": "🧀 Relleno de Queso y Pavo", "items": [{"name": "Queso Panela artesanal", "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}, {"name": "Pechuga de pavo artesanal picada", "base_qty_per_person": 25.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0}]}
             ],
             "steps": [
-                "1. Emulsión de batido: Batir los huevos frescos con sal marina y pimienta blanca hasta homogenizar sin generar exceso de aire.",
-                "2. Cocción en capas: Fundir mantequilla de pastoreo en sartén rectangular a fuego medio-bajo (140°C). Verter una capa delgada del batido de huevo permitiendo que cuaje ligeramente.",
-                "3. Rellenado y enrollado: Disponer los bastones de queso panela y pavo artesanal en un extremo y enrollar firmemente. Verter una segunda capa de huevo, dejar cuajar y continuar el enrollado.",
-                "4. Trinchado y servicio: Transferir la pieza a tabla tibia, reposar 2 minutos y cortar en medallones de 2 cm. Servir caliente a 68°C."
+                "1. Batido e Integración: Batir huevos con sal marina y pimienta.",
+                "2. Cocción en capas: Verter capas delgadas en sartén rectangular a fuego bajo enrollando con queso panela y pavo.",
+                "3. Servicio: Cortar en medallones de 2 cm y servir caliente."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 10. CHAWANMUSHI CULINARIO DE HUEVO AL VAPOR
-    # -------------------------------------------------------------------------
     if "chawanmushi" in clean_lower:
         return {
             "title": clean_title,
             "cooking_technique": "steam_custard",
-            "sensory_description": "Natilla salada al vapor japonesa de huevo orgánico y caldo clarificado concentrado, de textura suave y tersa tipo sedosa.",
+            "sensory_description": "Natilla salada al vapor japonesa de huevo orgánico y caldo clarificado concentrado.",
             "ingredient_groups": [
-                {
-                    "category": "🥚 Emulsión de Huevo y Fondo",
-                    "items": [
-                        {"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Caldo / dashi de pollo clarificado", "base_qty_per_person": 65.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Sal de mar y salsa Tamari", "base_qty_per_person": 2.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🌿 Acabado Botánico",
-                    "items": [
-                        {"name": "Aceite de sésamo tostado", "base_qty_per_person": 2.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Cebollín fresco picado", "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
+                {"category": "🥚 Emulsión de Huevo y Fondo", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}, {"name": "Caldo / dashi de pollo clarificado", "base_qty_per_person": 65.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}]}
             ],
             "steps": [
-                "1. Filtrado de proteína: Batir los huevos integrando el caldo clarificado frío y sal marina. Colar 2 veces por tamiz fino para eliminar burbujas y albúmina densa.",
-                "2. Porcionado en ramekins: Verter la mezcla purificada en moldes refractarios individuales.",
-                "3. Cocción al vapor indirecta: Cubrir cada molde con tapa o papel y cocer en vaporera a 85°C–88°C durante 12 a 14 minutos hasta que la natilla tome consistencia firme pero temblorosa.",
-                "4. Servicio terso: Retirar con cuidado y servirse tibio con gotas de aceite de sésamo y cebollín fresco."
+                "1. Filtrado: Batir huevos con caldo colando 2 veces por tamiz fino.",
+                "2. Cocción al vapor: Cocinar a 85°C en ramekins tapados durante 12 minutos hasta textura sedosa.",
+                "3. Servicio: Servir tibio decorado con cebollín."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 11. HUEVOS EN ANILLO DE PIMIENTO MORRÓN DULCE
-    # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["anillo de pimiento", "pimiento morrón"]):
         return {
             "title": clean_title,
             "cooking_technique": "pan_fry_egg",
-            "sensory_description": "Huevos orgánicos cocinados al sartén en nido vegetal de anillos de pimiento morrón dulce, salteados con mantequilla de pastoreo.",
+            "sensory_description": "Huevos orgánicos cocinados al sartén en nido vegetal de anillos de pimiento morrón dulce.",
             "ingredient_groups": [
-                {
-                    "category": "🫑 Base Vegetal para Nido",
-                    "items": [
-                        {"name": "Anillos de pimiento morrón dulce (2 cm grosor)", "base_qty_per_person": 0.5, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🥚 Proteína de Huevo y Cocción",
-                    "items": [
-                        {"name": "Huevos frescos orgánicos de libre pastoreo", "base_qty_per_person": 1.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Mantequilla de pastoreo", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Sal de mar mineral y pimienta negra", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
+                {"category": "🫑 Base Vegetal", "items": [{"name": "Pimiento morrón dulce en anillos (2 cm)", "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]},
+                {"category": "🥚 Proteína de Huevo", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}, {"name": "Mantequilla de pastoreo", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]}
             ],
             "steps": [
-                "1. Preparación del nido vegetal: Cortar anillos gruesos de pimiento morrón desvenado.",
-                "2. Sofrito vegetal: Dorar los anillos de pimiento en sartén con mantequilla a fuego medio (160°C) durante 2 minutos por lado.",
-                "3. Cocción de huevos: Cascar un huevo entero en el centro de cada anillo y sazonar con sal mineral.",
-                "4. Cocción tapada: Tapar la sartén y cocinar a fuego bajo 3-4 minutos hasta clara firme y yema fluida. Servir caliente."
+                "1. Dorado vegetal: Dorar anillos de pimiento en sartén con mantequilla.",
+                "2. Cocción de huevos: Cascar huevo dentro de cada anillo y cocinar tapado a fuego bajo por 3 min.",
+                "3. Servicio: Servir caliente."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 12. HUEVOS AL SARTÉN CON CAMPANA A LA MANTEQUILLA CLARIFICADA
-    # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["campana", "sartén con campana"]):
         return {
             "title": clean_title,
             "cooking_technique": "pan_fry_egg",
-            "sensory_description": "Huevos orgánicos fritos con vapor atrapado bajo campana de acero, logrando clara suave de textura nácar y yema cremosa.",
+            "sensory_description": "Huevos orgánicos fritos con vapor atrapado bajo campana de acero a la mantequilla clarificada.",
             "ingredient_groups": [
-                {
-                    "category": "🥚 Proteína de Huevo Orgánico",
-                    "items": [
-                        {"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🧈 Grasa Saludable e Infusión",
-                    "items": [
-                        {"name": "Mantequilla clarificada (Ghee) al romero", "base_qty_per_person": 12.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Sal de mar mineral y pimienta negra", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
+                {"category": "🥚 Proteína de Huevo", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}]},
+                {"category": "🧈 Grasa Clarificada", "items": [{"name": "Mantequilla clarificada (Ghee)", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]}
             ],
             "steps": [
-                "1. Infusión de grasa: Calentar mantequilla clarificada con romero en sartén a fuego medio (160°C).",
-                "2. Cascar huevos: Cascar los huevos frescos en la sartén suavemente.",
-                "3. Trampa de vapor con campana: Cubrir de inmediato con campana de acero para atrapar el vapor de la mantequilla.",
-                "4. Servicio nácar: Cocinar 3 minutos hasta clara blanca brillante y yema cremosa. Servir caliente."
+                "1. Calentar Ghee a fuego medio.",
+                "2. Cascar huevos y cubrir inmediatamente con campana de acero por 3 minutos.",
+                "3. Servir caliente."
             ]
         }
 
-    # -------------------------------------------------------------------------
-    # 13. SHAKSHUKA (HUEVOS ESTRELLADOS EN SALSA DE JITOMATE Y ESPECIAS)
-    # -------------------------------------------------------------------------
-    if "shakshuka" in clean_lower:
-        return {
-            "title": clean_title,
-            "cooking_technique": "pan_fry_egg",
-            "sensory_description": "Huevos poché/estrellados suavemente guisados sobre un espejo espeso de jitomate bola, pimientos dulces, cebolla y comino.",
-            "ingredient_groups": [
-                {
-                    "category": "🍳 Salsa de Jitomate y Especias Base",
-                    "items": [
-                        {"name": "Jitomate bola maduro troceado", "base_qty_per_person": 100.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Cebolla picada, ajo y pimientos dulces", "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Comino molido, pimentón dulce y sal de mar", "base_qty_per_person": 3.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🥚 Proteína de Huevo Orgánico",
-                    "items": [
-                        {"name": "Huevos frescos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Cilantro y perejil fresco picado", "base_qty_per_person": 3.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
-            ],
-            "steps": [
-                "1. Elaboración de la Salsa: En sartén de hierro a fuego medio con aceite VEVO, sofréir la cebolla, ajo y pimientos. Agregar el jitomate troceado, comino y sal mineral, cocinando 10 minutos hasta formar un guiso espeso.",
-                "2. Huevos en la Salsa: Hacer pequeños huecos en la salsa con una cuchara y cascar un huevo en cada espacio.",
-                "3. Cocción Tapada: Tapar la sartén y cocinar a fuego bajo durante 4 a 5 minutos hasta que las claras estén cuajadas y las yemas permanezcan líquidas.",
-                "4. Servicio: Servir directamente en la sartén de hierro decorado con abundante cilantro y perejil fresco."
-            ]
-        }
-
-    # -------------------------------------------------------------------------
-    # 14. MUFFINS SALADOS DE HUEVO (HORNEADOS EN MOLDES A 180°C)
-    # -------------------------------------------------------------------------
-    if "muffins salados" in clean_lower or "muffins de huevo" in clean_lower:
-        return {
-            "title": clean_title,
-            "cooking_technique": "roast_bake",
-            "sensory_description": "Muffins salados cetogénicos de huevo esponjosos horneados en moldes individuales con jamón de pavo, queso Gouda y espinacas.",
-            "ingredient_groups": [
-                {
-                    "category": "🧁 Batido de Huevo y Proteína",
-                    "items": [
-                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Jamón de pavo artesanal picado en cubos", "base_qty_per_person": 30.0, "unit": "g", "source": "Mercado", "unit_cost": 10.0},
-                        {"name": "Espinacas baby picadas de la granja", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🧀 Gratinado y Sazón",
-                    "items": [
-                        {"name": "Queso Gouda o Panela rallado", "base_qty_per_person": 25.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0},
-                        {"name": "Mantequilla para engrasar moldes", "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Sal de mar mineral y pimienta blanca", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
-            ],
-            "steps": [
-                "1. Batido e Integración: Batir los huevos con sal de mar y pimienta; incorporar el jamón de pavo picado, espinacas y queso rallado.",
-                "2. Preparación de Moldes: Engrasar moldes para muffin con mantequilla de pastoreo.",
-                "3. Horneo: Verter la mezcla en los moldes a 3/4 de su capacidad y hornear a 180°C durante 15 minutos hasta que los muffins inflen y doren ligeramente.",
-                "4. Servir Caliente: Desmoldar con espátula fina y servir caliente."
-            ]
-        }
-
-    # -------------------------------------------------------------------------
-    # 15. HUEVOS REVUELTOS CON MACHACA DE PAVO, JITOMATE BOLA Y CEBOLLA SALTEADA
-    # -------------------------------------------------------------------------
     if "machaca" in clean_lower:
         return {
             "title": clean_title,
             "cooking_technique": "pan_fry_egg",
-            "sensory_description": "Platillo proteico de huevos de pastoreo revueltos con machaca de pavo desmenuzada, sofrita con jitomate bola jugoso y cebolla picada a fuego medio.",
-            "ingredient_groups": [
-                {
-                    "category": "🍗 Proteína de Machaca de Pavo y Huevo",
-                    "items": [
-                        {"name": "Machaca de pavo artesanal desmenuzada", "base_qty_per_person": 90.0, "unit": "g", "source": "Mercado", "unit_cost": 28.0},
-                        {"name": "Huevos frescos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🍅 Sofrito de Hortalizas y Aromáticos",
-                    "items": [
-                        {"name": "Jitomate bola maduro troceado en cubos", "base_qty_per_person": 120.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Cebolla blanca picada en cuadrícula salteada", "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Cilantro fresco picado y epazote", "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🧈 Grasa Saludable de Cocción y Sazón",
-                    "items": [
-                        {"name": "Mantequilla clarificada / Ghee de pastoreo", "base_qty_per_person": 12.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Sal de mar mineral y pimienta negra molida", "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                }
-            ],
-            "steps": [
-                "1. Sofrito de Hortalizas: Calentar la mitad de la mantequilla clarificada en sartén a fuego medio (160°C); añadir la cebolla picada y sofréir durante 2 minutos hasta transparente. Agregar el jitomate bola en cubos y cocinar 1 minuto más hasta soltar sus jugos aromáticos.",
-                "2. Integración de la Machaca: Incorporar la machaca de pavo artesanal al sofrito de cebolla y jitomate; saltear durante 2 minutos a fuego medio para integrar los aromas y atemperar la proteína.",
-                "3. Cocción de Huevos Revueltos: Reducir el fuego a medio-bajo (140°C), añadir la mantequilla restante y verter los huevos frescos previamente batidos con sal de mar. Mover suavemente con espátula durante 3 minutos hasta obtener un revuelto jugoso e impregnado del sofrito.",
-                "4. Montaje y Servicio: Decorar con cilantro fresco picado y servir caliente a 68°C de inmediato."
-            ]
-        }
-
-
-    # -------------------------------------------------------------------------
-    # 10. CONSOMÉS DE RES Y FONDOS CLAROS
-    # -------------------------------------------------------------------------
-    if "consomé" in clean_lower or "consome" in clean_lower or "puchero" in clean_lower:
-        return {
-            "title": clean_title,
-            "cooking_technique": "boil_and_blend",
             "sensory_description": f"Fondo profundo y claro de {clean_title} infusionado a fuego lento con cilantro fresco y minerales.",
             "ingredient_groups": [
                 {
