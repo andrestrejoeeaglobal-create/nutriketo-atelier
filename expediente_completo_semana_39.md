@@ -83,9 +83,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Moras frescas de la granja y suplementado con bioelementos."* 
+- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Moras frescas de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *🍮 Base Hidrocoloide y Gelificante*
   - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
   - Agua fría para hidratar: **210 ml** (35 ml/persona)
@@ -95,7 +97,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.
+2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
@@ -103,21 +105,25 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 **Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `44.0g` | Carbs Netos: `3.5g`  
 
 ##### 🥗 ENTRADA: Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Técnica Culinaria:** `boil_and_blend`
+- **Nota Organoléptica:** *"Emulsión reconfortante y suave de champiñones Portobello frescos sofritos con ajo y cúrcuma orgánica en mantequilla de pastoreo, cocinados en caldo vegetal y terciopelados con queso Parmesano."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Crema Caliente de Champiñones Portobello y Cúrcuma: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
+- *🥦 Hortalizas y Vegetales Córtex*
+  - Champiñones Portobello frescos: **720 g** (120 g/persona)
+  - Ajo y cebolla blanca picados: **90 g** (15 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*
+  - Cúrcuma orgánica en polvo: **12 g** (2 g/persona)
+  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten / Keto)*
+  - Mantequilla de pastoreo / Ghee: **90 g** (15 g/persona)
+  - Queso Parmesano o de cabra: **60 g** (10 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Crema Caliente de Champiñones Portobello y Cúrcuma con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
+1. Sofreído Aromático: Sofreír los champiñones Portobello frescos troceados con ajo, cebolla blanca y cúrcuma orgánica en mantequilla de pastoreo durante 4 minutos.
+2. Cocción en Fondo: Verter caldo concentrado caliente y simular a fuego lento (85°C–90°C) durante 10 minutos para extraer sabores.
+3. Licuado y Emulsión: Licuar a alta velocidad hasta obtener una crema de textura terciopelo homogénea.
+4. Servir Caliente: Mantener a fuego bajo sin hervir, incorporar el queso Parmesano rallado y servir caliente a 68°C.
 
 ##### 🥩 PLATILLO PRINCIPAL: Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo
 - **Técnica Culinaria:** `saute_and_sear`
@@ -194,9 +200,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C)."* 
+- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
 - *🌿 Botánicos y Minerales Adaptógenos*
   - Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
 - *💧 Agua Purificada de Infusión*
@@ -204,7 +212,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.
+2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
 3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
 4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
 
@@ -249,9 +257,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Frambuesas frescas orgánicas y suplementado con bioelementos."* 
+- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Frambuesas frescas orgánicas y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *🍮 Base Hidrocoloide y Gelificante*
   - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
   - Agua fría para hidratar: **210 ml** (35 ml/persona)
@@ -261,7 +271,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.
+2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
@@ -362,9 +372,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C)."* 
+- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
 - *🌿 Botánicos y Minerales Adaptógenos*
   - Hojas de menta fresca: **30 g** (5 g/persona)
 - *💧 Agua Purificada de Infusión*
@@ -372,7 +384,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.
+2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
 3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
 4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
 
@@ -382,21 +394,21 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 **Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `33.0g` | Carbs Netos: `3.2g`  
 
 ##### 🥗 ENTRADA: Arilos de Granada Fresca con Almendras Fileteadas y Chía
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Arilos de Granada Fresca con Almendras Fileteadas y Chía sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica:** *"Ensamble fresco frutal de Arilos de Granada fresca de la granja con Almendras fileteadas tostadas y semillas de chía. Aporta antioxidantes de cosecha viva."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Arilos de Granada Fresca con Almendras Fileteadas y Chía: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
+- *🍓 Fruta Fresca de Cosecha Activa*
+  - Arilos de Granada fresca de la granja: **300 g** (50 g/persona)
+- *🌰 Grasas Saludables y Semillas*
+  - Almendras fileteadas tostadas: **90 g** (15 g/persona)
+  - Semillas de chía orgánicas: **48 g** (8 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Arilos de Granada Fresca con Almendras Fileteadas y Chía con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
+1. Selección e Higienización: Seleccionar e higienizar delicadamente Arilos de Granada fresca de la granja a 8°C.
+2. Porcionado: Cortar la fruta fresca en trozos regulares y acomodar en tazón frío individual.
+3. Cobertura Crujiente: Espolvorear Almendras fileteadas tostadas y semillas de chía orgánicas en la superficie.
+4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
 
 ##### 🥩 PLATILLO PRINCIPAL: Huevos Mollet a los 6 Minutos Marinados en Salsa Tamari y Sésamo
 - **Técnica Culinaria:** `boil_and_marinate`
@@ -416,9 +428,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Arilos de Granada fresca de la granja y suplementado con bioelementos."* 
+- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Arilos de Granada fresca de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *🍮 Base Hidrocoloide y Gelificante*
   - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
   - Agua fría para hidratar: **210 ml** (35 ml/persona)
@@ -428,7 +442,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.
+2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
@@ -531,9 +545,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C)."* 
+- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
 - *🌿 Botánicos y Minerales Adaptógenos*
   - Flores de manzanilla fresca: **30 g** (5 g/persona)
 - *💧 Agua Purificada de Infusión*
@@ -541,7 +557,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.
+2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
 3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
 4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
 
@@ -585,9 +601,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Arándanos frescos orgánicos y suplementado con bioelementos."* 
+- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Arándanos frescos orgánicos y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *🍮 Base Hidrocoloide y Gelificante*
   - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
   - Agua fría para hidratar: **210 ml** (35 ml/persona)
@@ -597,7 +615,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.
+2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
@@ -626,22 +644,24 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 4. Servicio Gourmet: Servir hirviendo en tazón hondo a 75°C coronando con abundante cilantro fresco picado.
 
 ##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Vegetales frescos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
+- **Técnica Culinaria:** `stuffed_poultry_bake`
+- **Nota Organoléptica:** *"Pechuga de pollo orgánica rellena de espinacas baby salteadas y queso crema suave artesanal, sellada a la mantequilla y bañada en salsa cremosa de Parmesano."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Vegetales frescos de la granja troceados: **720 g** (120 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
+- *🥩 Proteínas Principales Seleccionadas*
+  - Pechuga de pollo orgánica: **900 g** (150 g/persona)
+- *🥬 Hojas Verdes y Envolturas*
+  - Espinacas baby frescas de la granja: **240 g** (40 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten / Keto)*
+  - Queso crema suave artesanal: **180 g** (30 g/persona)
+  - Queso Parmesano o de cabra: **90 g** (15 g/persona)
+  - Mantequilla de pastoreo / Ghee: **90 g** (15 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Vegetales frescos de la granja de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
+1. Relleno y Mariposa: Abrir la pechuga de pollo orgánica en mariposa. Saltear espinacas baby en mantequilla e integrar con el queso crema suave; rellenar la pechuga y asegurar con palillos.
+2. Dorado en Sartén: Calentar mantequilla en sartén a fuego medio (170°C). Sellar la pechuga rellena durante 5 a 6 minutos por lado hasta dorar.
+3. Emulsión Parmesana: Verter crema y queso Parmesano rallado en la sartén a fuego bajo agitando con batidor hasta obtener una salsa cremoso-sedosa.
+4. Servir Caliente: Bañar la pechuga rellena con la salsa cremosa de Parmesano y servir de inmediato a 74°C interno.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Nopales Asados al Orégano y Aceite de Oliva Extra Virgen
 - **Técnica Culinaria:** `pan_roast`
@@ -702,9 +722,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C)."* 
+- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
 - *🌿 Botánicos y Minerales Adaptógenos*
   - Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
 - *💧 Agua Purificada de Infusión*
@@ -712,7 +734,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.
+2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
 3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
 4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
 
@@ -754,9 +776,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Pitaya fresca de la granja y suplementado con bioelementos."* 
+- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Pitaya fresca de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *🍮 Base Hidrocoloide y Gelificante*
   - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
   - Agua fría para hidratar: **210 ml** (35 ml/persona)
@@ -766,7 +790,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.
+2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
@@ -869,9 +893,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C)."* 
+- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
 - *🌿 Botánicos y Minerales Adaptógenos*
   - Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
 - *💧 Agua Purificada de Infusión*
@@ -879,7 +905,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.
+2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
 3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
 4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
 
@@ -923,9 +949,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Fresas frescas de la granja y suplementado con bioelementos."* 
+- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Fresas frescas de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *🍮 Base Hidrocoloide y Gelificante*
   - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
   - Agua fría para hidratar: **210 ml** (35 ml/persona)
@@ -935,7 +963,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.
+2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
@@ -1037,9 +1065,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C)."* 
+- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
 - *🌿 Botánicos y Minerales Adaptógenos*
   - Semillas y hojas de hinojo fresco: **30 g** (5 g/persona)
 - *💧 Agua Purificada de Infusión*
@@ -1047,7 +1077,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.
+2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
 3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
 4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
 
@@ -1090,9 +1120,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Higos Frescos (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Higos Frescos (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Higos frescos vivos de la granja y suplementado con bioelementos."* 
+- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Higos Frescos (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Higos frescos vivos de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *🍮 Base Hidrocoloide y Gelificante*
   - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
   - Agua fría para hidratar: **210 ml** (35 ml/persona)
@@ -1102,7 +1134,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.
+2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
@@ -1204,9 +1236,11 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C)."* 
+- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
+- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
+  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
 - *🌿 Botánicos y Minerales Adaptógenos*
   - Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
 - *💧 Agua Purificada de Infusión*
@@ -1214,7 +1248,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Procedimiento Paso a Paso:**
 1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.
+2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
 3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
 4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
 
@@ -1225,21 +1259,23 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 | Insumo | Cantidad Total (6 Comensales) | Unidad | Categoría |
 |---|---|---|---|
+| **Claras de huevo (a temperatura ambiente)** | 6 | piezas | ☁️ Bases de Huevo Nube |
 | **Queso Parmesano finamente rallado** | 60 | g | ☁️ Bases de Huevo Nube |
-| **Almendras fileteadas tostadas** | 180 | g | 🌰 Semillas y Nueces |
-| **Nuez de Castilla troceada** | 90 | g | 🌰 Semillas y Nueces |
-| **Nuez pecana troceada** | 360 | g | 🌰 Semillas y Nueces |
-| **Semillas de chía orgánicas** | 288 | g | 🌰 Semillas y Nueces |
-| **Semillas de sésamo tostadas** | 30 | ml | 🌰 Semillas y Nueces |
-| **Vegetales frescos de la granja troceados** | 1440 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
+| **Nuez de Castilla troceada** | 90 | g | 🌰 Grasas Saludables y Semillas |
+| **Nuez pecana troceada** | 360 | g | 🌰 Grasas Saludables y Semillas |
+| **Almendras fileteadas tostadas** | 270 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
+| **Semillas de chía orgánicas** | 336 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
+| **Semillas de sésamo tostadas** | 930 | g | 🌰 Semillas y Nueces |
+| **Vegetales frescos de la granja troceados** | 720 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
+| **Cúrcuma orgánica en polvo** | 12 | g | 🌶️ Chiles, Condimentos e Infusiones |
 | **Flores de manzanilla fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Hojas de menta fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Hojas de toronjil fresco de la granja** | 120 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Cebollín fresco picado / eneldo** | 12 | g | 🌿 Servicio y Decoración |
+| **Pimienta negra recién molida** | 3 | g | 🌿 Servicio y Decoración |
 | **Sombreros de champiñón Portobello grandes** | 12 | piezas | 🍄 Sombreros de Portobello Base |
-| **Jugo de limón fresco recién exprimido** | 3 | g | 🍋 Cítricos y Ácidos Naturales |
-| **Jugo de limón fresco recién exprimido** | 729 | ml | 🍋 Cítricos y Ácidos Naturales |
-| **Arilos de Granada fresca de la granja** | 1080 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Jugo de limón fresco recién exprimido** | 801 | ml | 🍋 Cítricos y Ácidos Naturales |
+| **Arilos de Granada fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Arándanos frescos orgánicos** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Frambuesas frescas orgánicas** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Fresas frescas de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
@@ -1254,46 +1290,47 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 | **Coliflor fresca rostizada de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
 | **Flor de calabaza fresca de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
 | **Caldo concentrado o fondo oscuro** | 180 | ml | 🍾 Licores y Especias de la Salsa |
+| **Pimienta negra entera en grano (martajada en mortero)** | 18 | g | 🍾 Licores y Especias de la Salsa |
+| **Fórmula Biotecnológica Nootrópica 33Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
+| **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
 | **Agua purificada (80°C)** | 10500 | ml | 💧 Agua Purificada de Infusión |
-| **Aceite de oliva extra virgen (VEVO)** | 654 | ml | 🥑 Grasas Saludables y Frutos |
-| **Aguacate Hass fresco** | 1260 | g | 🥑 Grasas Saludables y Frutos |
-| **Aguacate Hass fresco** | 12 | piezas | 🥑 Grasas Saludables y Frutos |
-| **Mantequilla de pastoreo / Ghee** | 1635 | g | 🥑 Grasas Saludables y Frutos |
-| **Mantequilla de pastoreo / Ghee** | 300 | ml | 🥑 Grasas Saludables y Frutos |
+| **Aguacate Hass fresco** | 20.4 | piezas | 🥑 Grasas Saludables y Frutos |
+| **Mantequilla de pastoreo / Ghee** | 1911 | g | 🥑 Grasas Saludables y Frutos |
+| **Aceite de oliva extra virgen (VEVO)** | 534 | ml | 🥑 Hortaliza y Grasas Saludables |
 | **Alcaparras finamente picadas** | 60 | g | 🥑 Macerado Cítrico y Grasas |
+| **Huevos frescos enteros (para pochar)** | 6 | piezas | 🥓 Cubierta y Proteína |
 | **Vinagre blanco (para agua de pochado)** | 45 | ml | 🥓 Cubierta y Proteína |
-| **Claras de huevo frescas orgánicas** | 6 | piezas | 🥚 Huevo y Derivados |
-| **Huevos orgánicos de libre pastoreo** | 84 | piezas | 🥚 Huevo y Derivados |
+| **Huevos frescos orgánicos** | 60 | piezas | 🥚 Proteína de Huevo Mollet |
+| **Huevos orgánicos de libre pastoreo** | 12 | piezas | 🥚 Proteína de Huevo Orgánico |
+| **Ajo y cebolla blanca picados** | 90 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Apio fresco de la granja** | 1500 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Calabacitas tiernas de la granja** | 3000 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Champiñones Portobello frescos** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Chayotes tiernos de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Espárragos verdes frescos de la granja** | 1440 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Hinojo fresco de la granja** | 810 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Nopales tiernos limpios de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Pepino blanco fresco de la granja** | 1080 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Orégano seco molido** | 12 | g | 🥦 Vegetal Base Cosecha Activa |
-| **Crema Caliente de Champiñones Portobello y Cúrcuma** | 900 | g | 🥩 Proteína Principal Seleccionada |
 | **Carne molida / Filete de Sirloin magro** | 1740 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Corte de Ribeye de res premium** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Huachinango fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Pescado Blanco (Robalo)** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Filete de Salmón fresco con piel** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Lomo de Atún fresco corte sashimi** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Lomo de Atún fresco corte sashimi** | 780 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pavo artesanal** | 2850 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Pechuga de pavo artesanal** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
-| **Pechuga de pollo orgánica** | 390 | ml | 🥩 Proteínas Principales Seleccionadas |
+| **Pechuga de pollo orgánica** | 1290 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Tocino de pavo artesanal crujiente** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
 | **Costilla de res limpia troceada** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Queso Cotija desmoronado** | 90 | g | 🥩 Relleno de Sirloin y Guacamole |
 | **Espinacas baby frescas de la granja** | 240 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de arúgula fresca** | 360 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de lechuga orejona viva** | 360 | g | 🥬 Hojas Verdes y Envolturas |
-| **Queso crema suave artesanal** | 180 | g | 🧀 Relleno Cetogénico y Nueces |
+| **Queso Parmesano o de cabra** | 330 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
+| **Queso crema suave artesanal** | 360 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
 | **Queso Panela artesanal** | 180 | g | 🧀 Relleno de Queso y Pavo |
-| **Pimienta negra en grano / molida** | 21 | g | 🧂 Condimentos y Sal Mineral |
-| **Sal de mar mineral en escamas** | 342 | g | 🧂 Condimentos y Sal Mineral |
-| **Sal de mar mineral en escamas** | 90 | ml | 🧂 Condimentos y Sal Mineral |
-| **Queso Parmesano o de cabra** | 180 | g | 🧈 Emulsión y Sazón |
-| **Cilantro fresco y orégano** | 45 | g | 🧈 Grasa Saludable y Sazón |
+| **Sal de mar mineral en escamas** | 1599 | g | 🧂 Condimentos y Sal Mineral |
+| **Cilantro fresco y orégano** | 36 | g | 🧈 Grasa Saludable y Sazón |
+| **Yemas de huevo frescas** | 6 | piezas | 🧈 Salsa Holandesa Casera |
 | **Infusión de té de frutos rojos y menta** | 5040 | ml | 🫐 Extracto Frutal e Infusión Viva |
 | **Pimiento morrón dulce en anillos (2 cm)** | 360 | g | 🫑 Base Vegetal |

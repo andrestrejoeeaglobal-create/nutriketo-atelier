@@ -387,8 +387,14 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         return {
             "title": clean_title,
             "cooking_technique": "gelatin_molding",
-            "sensory_description": f"Postre cetogénico fresco de {clean_title} preparado con colágeno puro hidrolizado, infusionado con extracto natural de {fruit_name} y suplementado con bioelementos.",
+            "sensory_description": f"Postre cetogénico fresco de {clean_title} preparado con colágeno puro hidrolizado, infusionado con extracto natural de {fruit_name} y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®.",
             "ingredient_groups": [
+                {
+                    "category": "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA",
+                    "items": [
+                        {"name": "Fórmula Biotecnológica Nootrópica 33Plus®", "base_qty_per_person": 5.0, "unit": "g", "source": "Atelier T.I.L.O.®", "unit_cost": 0.0}
+                    ]
+                },
                 {
                     "category": "🍮 Base Hidrocoloide y Gelificante",
                     "items": [
@@ -406,14 +412,14 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             ],
             "steps": [
                 "1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.",
-                "2. Calentamiento e Infusión: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina hidratada agitando hasta claridad cristalina.",
+                "2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.",
                 "3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.",
                 "4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C."
             ]
         }
 
     # 2. INFUSIONES Y BEBIDAS ADAPTÓGENAS
-    bev_pattern = r'\b(infusión|infusion|té|magnesio|toronjil|manzanilla|digestivo|nocturna|hinojo)\b'
+    bev_pattern = r'\b(infusión|infusion|té|tisana|magnesio|toronjil|manzanilla|digestivo|nocturna|hinojo)\b'
     if bool(re.search(bev_pattern, clean_lower)):
         botanical_item = "Hojas de toronjil fresco de la granja"
         if "manzanilla" in clean_lower: botanical_item = "Flores de manzanilla fresca"
@@ -423,8 +429,14 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         return {
             "title": clean_title,
             "cooking_technique": "steep_beverage",
-            "sensory_description": f"Infusión botánica relajante e hidratante de {clean_title} infusionada a temperatura controlada (máx 60°C).",
+            "sensory_description": f"Infusión botánica relajante e hidratante de {clean_title} infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®.",
             "ingredient_groups": [
+                {
+                    "category": "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA",
+                    "items": [
+                        {"name": "Fórmula Biotecnológica Reparadora 34Plus®", "base_qty_per_person": 5.0, "unit": "g", "source": "Atelier T.I.L.O.®", "unit_cost": 0.0}
+                    ]
+                },
                 {
                     "category": "🌿 Botánicos y Minerales Adaptógenos",
                     "items": [{"name": botanical_item, "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
@@ -436,20 +448,21 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             ],
             "steps": [
                 "1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).",
-                "2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas en tetera.",
+                "2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.",
                 "3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.",
                 "4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal."
             ]
         }
 
     # 3. ENSAMBLES FRUTALES / FRUTA FRESCA EN TAZÓN
-    if any(kw in clean_lower for kw in ["tazón", "tazon", "pitayas frescas", "fresas frescas", "moras frescas", "higos frescos", "frambuesas orgánicas", "arándanos frescos"]):
+    if any(kw in clean_lower for kw in ["tazón", "tazon", "pitayas frescas", "fresas frescas", "moras frescas", "higos frescos", "frambuesas orgánicas", "arándanos frescos", "arilos de granada", "granada fresca"]):
         fruit_name = "Moras frescas de la granja"
         if "higo" in clean_lower: fruit_name = "Higos frescos vivos de la granja"
         elif "pitaya" in clean_lower or "pitahaya" in clean_lower: fruit_name = "Pitaya fresca de la granja"
         elif "frambuesa" in clean_lower: fruit_name = "Frambuesas frescas orgánicas"
         elif "arándano" in clean_lower or "arandano" in clean_lower: fruit_name = "Arándanos frescos orgánicos"
         elif "fresa" in clean_lower: fruit_name = "Fresas frescas de la granja"
+        elif "granada" in clean_lower: fruit_name = "Arilos de Granada fresca de la granja"
 
         nut_name = "Almendras fileteadas tostadas"
         if "pecana" in clean_lower: nut_name = "Nuez pecana troceada"
@@ -891,7 +904,84 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         }
 
     # -------------------------------------------------------------------------
-    # 11. CHAMPIÑONES PORTOBELLO RELLENOS
+    # 11. CREMA DE CHAMPIÑONES PORTOBELLO Y CÚRCUMA
+    # -------------------------------------------------------------------------
+    if any(kw in clean_lower for kw in ["champiñones portobello y cúrcuma", "champiñones portobello y curcuma", "crema caliente de champiñones"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "boil_and_blend",
+            "sensory_description": "Emulsión reconfortante y suave de champiñones Portobello frescos sofritos con ajo y cúrcuma orgánica en mantequilla de pastoreo, cocinados en caldo vegetal y terciopelados con queso Parmesano.",
+            "ingredient_groups": [
+                {
+                    "category": "🥦 Hortalizas y Vegetales Córtex",
+                    "items": [
+                        {"name": "Champiñones Portobello frescos", "base_qty_per_person": 120.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Ajo y cebolla blanca picados", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🌶️ Chiles, Condimentos e Infusiones",
+                    "items": [
+                        {"name": "Cúrcuma orgánica en polvo", "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral en escamas", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+                    "items": [
+                        {"name": "Mantequilla de pastoreo / Ghee", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Queso Parmesano o de cabra", "base_qty_per_person": 10.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Sofreído Aromático: Sofreír los champiñones Portobello frescos troceados con ajo, cebolla blanca y cúrcuma orgánica en mantequilla de pastoreo durante 4 minutos.",
+                "2. Cocción en Fondo: Verter caldo concentrado caliente y simular a fuego lento (85°C–90°C) durante 10 minutos para extraer sabores.",
+                "3. Licuado y Emulsión: Licuar a alta velocidad hasta obtener una crema de textura terciopelo homogénea.",
+                "4. Servir Caliente: Mantener a fuego bajo sin hervir, incorporar el queso Parmesano rallado y servir caliente a 68°C."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 12. PECHUGA DE POLLO RELLENA
+    # -------------------------------------------------------------------------
+    if "pechuga de pollo rellena" in clean_lower or ("pechuga de pollo" in clean_lower and "rellena" in clean_lower):
+        return {
+            "title": clean_title,
+            "cooking_technique": "stuffed_poultry_bake",
+            "sensory_description": "Pechuga de pollo orgánica rellena de espinacas baby salteadas y queso crema suave artesanal, sellada a la mantequilla y bañada en salsa cremosa de Parmesano.",
+            "ingredient_groups": [
+                {
+                    "category": "🥩 Proteínas Principales Seleccionadas",
+                    "items": [
+                        {"name": "Pechuga de pollo orgánica", "base_qty_per_person": 150.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🥬 Hojas Verdes y Envolturas",
+                    "items": [
+                        {"name": "Espinacas baby frescas de la granja", "base_qty_per_person": 40.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)",
+                    "items": [
+                        {"name": "Queso crema suave artesanal", "base_qty_per_person": 30.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0},
+                        {"name": "Queso Parmesano o de cabra", "base_qty_per_person": 15.0, "unit": "g", "source": "Mercado", "unit_cost": 10.0},
+                        {"name": "Mantequilla de pastoreo / Ghee", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Relleno y Mariposa: Abrir la pechuga de pollo orgánica en mariposa. Saltear espinacas baby en mantequilla e integrar con el queso crema suave; rellenar la pechuga y asegurar con palillos.",
+                "2. Dorado en Sartén: Calentar mantequilla en sartén a fuego medio (170°C). Sellar la pechuga rellena durante 5 a 6 minutos por lado hasta dorar.",
+                "3. Emulsión Parmesana: Verter crema y queso Parmesano rallado en la sartén a fuego bajo agitando con batidor hasta obtener una salsa cremoso-sedosa.",
+                "4. Servir Caliente: Bañar la pechuga rellena con la salsa cremosa de Parmesano y servir de inmediato a 74°C interno."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 13. CHAMPIÑONES PORTOBELLO RELLENOS
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["portobello relleno", "portobello rellenos"]):
         return {
@@ -922,7 +1012,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         }
 
     # -------------------------------------------------------------------------
-    # 12. CREMAS DE VEGETALES (BRÓCOLI, COLIFLOR, ESPÁRRAGOS, CHAMPIÑONES, FLOR DE CALABAZA)
+    # 14. CREMAS DE VEGETALES (BRÓCOLI, COLIFLOR, ESPÁRRAGOS, FLOR DE CALABAZA)
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["crema de", "sopa de", "crema ligera"]):
         veg_base = "Acelgas frescas de la granja"
