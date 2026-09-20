@@ -651,7 +651,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             "sensory_description": "Versión gourmet cetogénica que sustituye el pan tradicional por huevos nube esponjosos y horneados, coronados con tocino de pavo crujiente, huevo pochado de yema fluida y salsa holandesa emulsionada a baño maría.",
             "ingredient_groups": [
                 {
-                    "category": "☁️ Bases de Huevo Nube (2 unidades)",
+                    "category": "☁️ Bases de Huevo Nube",
                     "items": [
                         {"name": "Claras de huevo (a temperatura ambiente)", "base_qty_per_person": 1.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
                         {"name": "Sal marina y crémor tártaro / limón", "base_qty_per_person": 0.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
@@ -684,16 +684,183 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
                 }
             ],
             "steps": [
-                "1. Hornear los Huevos Nube: Precalentar horno a 180°C. Batir claras con sal y crémor tártaro a picos firmes. Con espátula, integrar el queso parmesano rallado. Formar nidos en charola con papel encerado y horneado por 10-12 min a 180°C hasta dorar ligero.",
-                "2. Cocinar el Tocino de Pavo: Dorar las tiras de tocino de pavo en sartén a fuego medio hasta que queden crujientes; escurrir en papel absorbente.",
-                "3. Elaborar Salsa Holandesa a Baño María: En tazón sobre agua hirviendo suave (sin tocar agua), batir yemas, agua y jugo de limón hasta espesar. Verter mantequilla derretida tibia en hilo fino batiendo continuamente hasta emulsionar. Sazonar con pimienta negra y sal.",
-                "4. Pochar los Huevos: Calentar agua con vinagre a 85°C–90°C. Crear remolino, verter huevo previamente colado y pochar por 3 minutos exactos para mantener yema líquida.",
-                "5. Armado y Montaje: Base de huevo nube caliente -> 2 tiras de tocino de pavo crujiente cruzadas -> huevo pochado caliente -> napa generosa con salsa holandesa tibia -> cebollín fresco y pimienta negra."
+                "1. Mise en place y horneado de nubes: Precalentar horno a 180°C. Batir las claras de huevo con sal marina a picos firmes e integrar el queso Parmesano rallado. Formar nidos en charola con papel encerado y hornear 10–12 min hasta dorar ligero.",
+                "2. Dorado de tocino: Dorar las tiras de tocino de pavo artesanal en sartén a fuego medio hasta que queden crujientes; reservar tibias.",
+                "3. Emulsión holandesa a baño María: En tazón sobre agua a ebullición suave (sin tocar el agua), batir las yemas de huevo con jugo de limón. Incorporar la mantequilla derretida tibia en hilo fino batiendo continuamente hasta obtener una emulsión tersa y cremosa. Sazonar con sal y pimienta.",
+                "4. Pochado de huevos: Calentar agua con vinagre a 85°C–90°C. Crear un remolino suave, verter los huevos enteros y pochar durante 3 minutos exactos para mantener la yema fluida.",
+                "5. Ensamble gourmet: Montar la nube de clara horneada, colocar las tiras de tocino de pavo crujiente, el huevo pochado y napa generosamente con la salsa holandesa tibia. Decorar con cebollín fresco."
             ]
         }
 
     # -------------------------------------------------------------------------
-    # 8. SHAKSHUKA (HUEVOS ESTRELLADOS EN SALSA DE JITOMATE Y ESPECIAS)
+    # 8. HUEVOS MOLLET MARINADOS EN TAMARI Y SÉSAMO
+    # -------------------------------------------------------------------------
+    if any(kw in clean_lower for kw in ["mollet", "tamari"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "boil_and_marinate",
+            "sensory_description": "Huevos orgánicos cocinados a 6 minutos con clara cuajada y yema sedosa, marinados en infusión umami de salsa Tamari keto y aceite de sésamo.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Proteína de Huevo Mollet",
+                    "items": [
+                        {"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🍶 Marinado Umami Tamari",
+                    "items": [
+                        {"name": "Salsa Tamari (soya keto)", "base_qty_per_person": 15.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Aceite de sésamo tostado", "base_qty_per_person": 5.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Semillas de sésamo blanco y negro", "base_qty_per_person": 3.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🌿 Topping y Aromáticos",
+                    "items": [
+                        {"name": "Cebollín fresco picado", "base_qty_per_person": 3.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Cocción de precisión (6 min): Sumergir los huevos frescos en agua hirviendo a 100°C y cocinar durante 6 minutos exactos. Transferir de inmediato a baño de agua helada (0°C–4°C) para detener la cocción.",
+                "2. Pelado e infusión Tamari: Pelar los huevos delicadamente. Sumergir en la mezcla de salsa Tamari y aceite de sésamo durante 2 horas en refrigeración.",
+                "3. Corte y ensamble: Cortar cada huevo por la mitad revelando el núcleo líquido cremoso.",
+                "4. Servicio aromático: Emplatar decorando con semillas de sésamo tostadas y cebollín fresco picado."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 9. ROLLO TAMAGOYAKI CULINARIO EN CAPAS
+    # -------------------------------------------------------------------------
+    if "tamagoyaki" in clean_lower:
+        return {
+            "title": clean_title,
+            "cooking_technique": "baked_egg_matrix",
+            "sensory_description": "Rollo artesanal en capas finas de huevo batido a la mantequilla de pastoreo, enrollado en sartén tamagoyaki con queso Panela y pechuga de pavo.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Base Proteica de Huevo",
+                    "items": [
+                        {"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Mantequilla de pastoreo", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧀 Relleno de Queso y Pavo",
+                    "items": [
+                        {"name": "Queso Panela artesanal en bastones", "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Pechuga de pavo artesanal picada", "base_qty_per_person": 25.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0},
+                        {"name": "Sal de mar y pimienta blanca", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Emulsión de batido: Batir los huevos frescos con sal marina y pimienta blanca hasta homogenizar sin generar exceso de aire.",
+                "2. Cocción en capas: Fundir mantequilla de pastoreo en sartén rectangular a fuego medio-bajo (140°C). Verter una capa delgada del batido de huevo permitiendo que cuaje ligeramente.",
+                "3. Rellenado y enrollado: Disponer los bastones de queso panela y pavo artesanal en un extremo y enrollar firmemente. Verter una segunda capa de huevo, dejar cuajar y continuar el enrollado.",
+                "4. Trinchado y servicio: Transferir la pieza a tabla tibia, reposar 2 minutos y cortar en medallones de 2 cm. Servir caliente a 68°C."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 10. CHAWANMUSHI CULINARIO DE HUEVO AL VAPOR
+    # -------------------------------------------------------------------------
+    if "chawanmushi" in clean_lower:
+        return {
+            "title": clean_title,
+            "cooking_technique": "steam_custard",
+            "sensory_description": "Natilla salada al vapor japonesa de huevo orgánico y caldo clarificado concentrado, de textura suave y tersa tipo sedosa.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Emulsión de Huevo y Fondo",
+                    "items": [
+                        {"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Caldo / dashi de pollo clarificado", "base_qty_per_person": 65.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar y salsa Tamari", "base_qty_per_person": 2.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🌿 Acabado Botánico",
+                    "items": [
+                        {"name": "Aceite de sésamo tostado", "base_qty_per_person": 2.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Cebollín fresco picado", "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Filtrado de proteína: Batir los huevos integrando el caldo clarificado frío y sal marina. Colar 2 veces por tamiz fino para eliminar burbujas y albúmina densa.",
+                "2. Porcionado en ramekins: Verter la mezcla purificada en moldes refractarios individuales.",
+                "3. Cocción al vapor indirecta: Cubrir cada molde con tapa o papel y cocer en vaporera a 85°C–88°C durante 12 a 14 minutos hasta que la natilla tome consistencia firme pero temblorosa.",
+                "4. Servicio terso: Retirar con cuidado y servirse tibio con gotas de aceite de sésamo y cebollín fresco."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 11. HUEVOS EN ANILLO DE PIMIENTO MORRÓN DULCE
+    # -------------------------------------------------------------------------
+    if any(kw in clean_lower for kw in ["anillo de pimiento", "pimiento morrón"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "pan_fry_egg",
+            "sensory_description": "Huevos orgánicos cocinados al sartén en nido vegetal de anillos de pimiento morrón dulce, salteados con mantequilla de pastoreo.",
+            "ingredient_groups": [
+                {
+                    "category": "🫑 Base Vegetal para Nido",
+                    "items": [
+                        {"name": "Anillos de pimiento morrón dulce (2 cm grosor)", "base_qty_per_person": 0.5, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🥚 Proteína de Huevo y Cocción",
+                    "items": [
+                        {"name": "Huevos frescos orgánicos de libre pastoreo", "base_qty_per_person": 1.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Mantequilla de pastoreo", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral y pimienta negra", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Preparación del nido vegetal: Cortar anillos gruesos de pimiento morrón desvenado.",
+                "2. Sofrito vegetal: Dorar los anillos de pimiento en sartén con mantequilla a fuego medio (160°C) durante 2 minutos por lado.",
+                "3. Cocción de huevos: Cascar un huevo entero en el centro de cada anillo y sazonar con sal mineral.",
+                "4. Cocción tapada: Tapar la sartén y cocinar a fuego bajo 3-4 minutos hasta clara firme y yema fluida. Servir caliente."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 12. HUEVOS AL SARTÉN CON CAMPANA A LA MANTEQUILLA CLARIFICADA
+    # -------------------------------------------------------------------------
+    if any(kw in clean_lower for kw in ["campana", "sartén con campana"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "pan_fry_egg",
+            "sensory_description": "Huevos orgánicos fritos con vapor atrapado bajo campana de acero, logrando clara suave de textura nácar y yema cremosa.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Proteína de Huevo Orgánico",
+                    "items": [
+                        {"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧈 Grasa Saludable e Infusión",
+                    "items": [
+                        {"name": "Mantequilla clarificada (Ghee) al romero", "base_qty_per_person": 12.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral y pimienta negra", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Infusión de grasa: Calentar mantequilla clarificada con romero en sartén a fuego medio (160°C).",
+                "2. Cascar huevos: Cascar los huevos frescos en la sartén suavemente.",
+                "3. Trampa de vapor con campana: Cubrir de inmediato con campana de acero para atrapar el vapor de la mantequilla.",
+                "4. Servicio nácar: Cocinar 3 minutos hasta clara blanca brillante y yema cremosa. Servir caliente."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 13. SHAKSHUKA (HUEVOS ESTRELLADOS EN SALSA DE JITOMATE Y ESPECIAS)
     # -------------------------------------------------------------------------
     if "shakshuka" in clean_lower:
         return {
@@ -727,7 +894,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         }
 
     # -------------------------------------------------------------------------
-    # 9. MUFFINS SALADOS DE HUEVO (HORNEADOS EN MOLDES A 180°C)
+    # 14. MUFFINS SALADOS DE HUEVO (HORNEADOS EN MOLDES A 180°C)
     # -------------------------------------------------------------------------
     if "muffins salados" in clean_lower or "muffins de huevo" in clean_lower:
         return {
@@ -761,7 +928,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         }
 
     # -------------------------------------------------------------------------
-    # 8. HUEVOS REVUELTOS CON MACHACA DE PAVO, JITOMATE BOLA Y CEBOLLA SALTEADA
+    # 15. HUEVOS REVUELTOS CON MACHACA DE PAVO, JITOMATE BOLA Y CEBOLLA SALTEADA
     # -------------------------------------------------------------------------
     if "machaca" in clean_lower:
         return {
@@ -793,9 +960,9 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
                 }
             ],
             "steps": [
-                "1. Sofrito de Hortalizas (3 min a 160°C): Calentar 6g de mantequilla clarificada en sartén a fuego medio (160°C); añadir la cebolla picada y sofréir durante 2 minutos hasta transparente. Agregar el jitomate bola en cubos y cocinar 1 minuto más hasta soltar sus jugos aromáticos.",
-                "2. Integración y Dorado de la Machaca (2 min a 160°C): Incorporar los 90g de machaca de pavo artesanal al sofrito de cebolla y jitomate; saltear durante 2 minutos a fuego medio para integrar los aromas y atemperar la proteína.",
-                "3. Cocción de Huevos Revueltos (3 min a 140°C): Reducir el fuego a medio-bajo (140°C), añadir los 6g restantes de mantequilla y verter los 2 huevos frescos previamente batidos con sal de mar. Mover suavemente con espátula durante 3 minutos hasta obtener un revuelto jugoso e impregnado del sofrito de machaca, jitomate y cebolla.",
+                "1. Sofrito de Hortalizas: Calentar la mitad de la mantequilla clarificada en sartén a fuego medio (160°C); añadir la cebolla picada y sofréir durante 2 minutos hasta transparente. Agregar el jitomate bola en cubos y cocinar 1 minuto más hasta soltar sus jugos aromáticos.",
+                "2. Integración de la Machaca: Incorporar la machaca de pavo artesanal al sofrito de cebolla y jitomate; saltear durante 2 minutos a fuego medio para integrar los aromas y atemperar la proteína.",
+                "3. Cocción de Huevos Revueltos: Reducir el fuego a medio-bajo (140°C), añadir la mantequilla restante y verter los huevos frescos previamente batidos con sal de mar. Mover suavemente con espátula durante 3 minutos hasta obtener un revuelto jugoso e impregnado del sofrito.",
                 "4. Montaje y Servicio: Decorar con cilantro fresco picado y servir caliente a 68°C de inmediato."
             ]
         }
@@ -1094,8 +1261,8 @@ def norm_title(t):
 def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", active_harvest: list = None) -> dict:
     recipe = None
     if not dish_name:
-        recipe = _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
-    elif dish_name in CANONICAL_RECIPE_CATALOG:
+        recipe = _internal_build_typed_recipe_for_dish(dish_name, course_type=course_type, active_harvest=active_harvest)
+    elif 'CANONICAL_RECIPE_CATALOG' in globals() and dish_name in CANONICAL_RECIPE_CATALOG:
         recipe = copy.deepcopy(CANONICAL_RECIPE_CATALOG[dish_name])
     else:
         real_map = get_real_md_recipes()
@@ -1104,20 +1271,12 @@ def build_typed_recipe_for_dish(dish_name: str, course_type: str = "starter", ac
         else:
             target_norm = norm_title(dish_name)
             for r_title, r_obj in real_map.items():
-                r_norm = norm_title(r_title)
-                if target_norm == r_norm or target_norm in r_norm or r_norm in target_norm:
+                if target_norm == norm_title(r_title):
                     recipe = copy.deepcopy(r_obj)
                     break
 
-            if not recipe:
-                keywords = [w for w in re.split(r'\W+', dish_name.lower()) if len(w) > 3 and w not in ['con', 'para', 'del', 'los', 'las', 'sobre', 'fresca', 'fresco']]
-                for r_title, r_obj in real_map.items():
-                    if sum(1 for kw in keywords if kw in r_title.lower()) >= 2:
-                        recipe = copy.deepcopy(r_obj)
-                        break
-
     if not recipe:
-        recipe = _internal_build_typed_recipe_for_dish(dish_name, active_harvest=active_harvest)
+        recipe = _internal_build_typed_recipe_for_dish(dish_name, course_type=course_type, active_harvest=active_harvest)
 
     if dish_name:
         recipe["title"] = dish_name
@@ -3148,11 +3307,12 @@ function generateNextWeekMenu() {
               : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-700'
           }`;
           
-          const todayTag = isToday ? '<span class="text-[10px] uppercase font-bold text-[#FFCC00] bg-slate-900 px-1.5 py-0.5 rounded ml-1"></span>' : '';
-          const dayNumText = day.day_num || (day.date_str ? day.date_str.split(' ')[0] : (idx + 1));
-          const dayShortText = (day.day || '').substring(0, 3).toUpperCase();
+          const todayTag = isToday ? '<span class="text-[10px] uppercase font-bold text-[#FFCC00] bg-slate-900 px-1.5 py-0.5 rounded ml-1">HOY</span>' : '';
+          
+          let dayNumText = (day.day_num || (day.date_str ? day.date_str.split(' ')[0] : (idx + 1))).toString().trim().replace(/[\s\-_]+$/, '');
+          let dayShortText = (day.day || '').substring(0, 3).toUpperCase().trim().replace(/[\s\-_]+$/, '');
 
-          btn.innerHTML = `<span class="font-bold text-sm font-brand-title">${dayNumText}</span> <span class="font-semibold">${dayShortText}</span> ${todayTag}`;
+          btn.innerHTML = `<span class="font-bold text-sm font-brand-title">${dayNumText}</span> <span class="font-semibold">${dayShortText}</span>${todayTag ? ' ' + todayTag : ''}`;
           
           btn.onclick = () => {
             selectedIdx = idx;

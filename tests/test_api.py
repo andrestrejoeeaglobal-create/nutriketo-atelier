@@ -812,6 +812,46 @@ def test_ssot_v36_6_atwater_and_dynamic_tokens():
                 assert atwater_kcal >= 400.0, f"Cena en {day['day']} debe cumplir piso Atwater >= 400 kcal (obtenido {atwater_kcal})"
 
 
+def test_zero_mock_benedict_recipe_and_clean_datebar():
+    import os
+    from generate_standalone_html import build_typed_recipe_for_dish
+
+    # 1. Test Recipe Building for Benedict Eggs
+    benedict_dish = "Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente"
+    recipe = build_typed_recipe_for_dish(benedict_dish, course_type="main")
+
+    assert recipe is not None, "La receta debe ser generada"
+    assert recipe["title"] == benedict_dish
+
+    # Flatten all ingredient names
+    ing_names = []
+    for grp in recipe.get("ingredient_groups", []):
+        for item in grp.get("items", []):
+            ing_names.append((item.get("name") or "").lower())
+
+    ing_text = " ".join(ing_names)
+    assert "salsa de jitomate" not in ing_text, "Huevos Benedictinos no deben incluir salsa de jitomate (Shakshuka mock)"
+    assert "tocino de pavo" in ing_text, "Debe incluir tocino de pavo artesanal"
+    assert "claras de huevo" in ing_text or "claras" in ing_text, "Debe incluir claras para el huevo nube"
+    assert "mantequilla" in ing_text, "Debe incluir mantequilla para holandesa"
+    assert "limon" in ing_text or "limón" in ing_text, "Debe incluir jugo de limón"
+
+    # Flatten step texts
+    steps_text = " ".join(recipe.get("steps", [])).lower()
+    assert "holandesa" in steps_text or "bano maria" in steps_text or "baño maría" in steps_text, "Pasos deben describir salsa holandesa"
+    assert "nube" in steps_text or "horno" in steps_text, "Pasos deben describir horneado de nubes de clara"
+    assert "saltear huevos orgánicos, salsa de jitomate" not in steps_text, "No debe incluir plantilla estática de Shakshuka"
+
+    # 2. Test HTML Content for Benedict Recipe and DateBar
+    html_path = os.path.join(os.path.dirname(__file__), "..", "expediente_nutriketo.html")
+    assert os.path.exists(html_path), "expediente_nutriketo.html debe existir"
+    with open(html_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    assert "26 SÁB -" not in content, "Barra de fechas no debe tener guión espurio al final"
+
+
+
 
 
 
