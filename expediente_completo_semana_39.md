@@ -108,13 +108,13 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Crema Caliente de Champiñones Portobello y Cúrcuma seleccionado: **900 g** (150 g/persona)
+  - Crema Caliente de Champiñones Portobello y Cúrcuma: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Crema Caliente de Champiñones Portobello y Cúrcuma seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Crema Caliente de Champiñones Portobello y Cúrcuma con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -125,19 +125,19 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Ribeye de Res seleccionado: **900 g** (150 g/persona)
+  - Corte de Ribeye de res premium: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Ribeye de Res seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Corte de Ribeye de res premium con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Espárragos Verdes al Horno con Limón y Sal de Mar Mineral
-- **Técnica Culinaria:** `boil_and_blend`
+- **Técnica Culinaria:** `pan_roast`
 - **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Espárragos verdes frescos cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -181,13 +181,13 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano seleccionado: **900 g** (150 g/persona)
+  - Pechuga de pavo artesanal: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Pechuga de pavo artesanal con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -291,19 +291,19 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Filete de Salmón seleccionado: **900 g** (150 g/persona)
+  - Filete de Salmón fresco con piel: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Filete de Salmón seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Filete de Salmón fresco con piel con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen
-- **Técnica Culinaria:** `boil_and_blend`
+- **Técnica Culinaria:** `pan_roast`
 - **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Calabacitas tiernas cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -387,13 +387,13 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Arilos de Granada Fresca con Almendras Fileteadas y Chía seleccionado: **900 g** (150 g/persona)
+  - Arilos de Granada Fresca con Almendras Fileteadas y Chía: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Arilos de Granada Fresca con Almendras Fileteadas y Chía seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Arilos de Granada Fresca con Almendras Fileteadas y Chía con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -459,7 +459,7 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Medallones de Sirloin seleccionado: **900 g** (150 g/persona)
+  - Filete de Sirloin de res magro: **900 g** (150 g/persona)
 - *🍾 Licores y Especias de la Salsa*
   - Pimienta negra entera en grano (martajada en mortero): **18 g** (3 g/persona)
   - Caldo concentrado o fondo oscuro: **180 ml** (30 ml/persona)
@@ -468,13 +468,13 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Medallones de Sirloin seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Filete de Sirloin de res magro con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Chayotes Tiernos al Vapor con Mantequilla Clarificada
-- **Técnica Culinaria:** `boil_and_blend`
+- **Técnica Culinaria:** `pan_roast`
 - **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Chayotes tiernos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -518,13 +518,13 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Filete de Pescado Blanco seleccionado: **900 g** (150 g/persona)
+  - Filete de Pescado Blanco (Robalo): **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Filete de Pescado Blanco seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Filete de Pescado Blanco (Robalo) con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -605,24 +605,28 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 **Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `44.0g` | Carbs Netos: `3.5g`  
 
 ##### 🥗 ENTRADA: Consomé Claro de Res con Romero y Cilantro Fresco
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Consomé Claro de Res con Romero y Cilantro Fresco sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Técnica Culinaria:** `boil_and_clarify`
+- **Nota Organoléptica:** *"Fondo profundo de res preparado con costilla jugosa y tuétano fresco, infusionado a fuego lento con romero, cilantro fresco y sazón mineral."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Consomé Claro de Res con Romero y Cilantro Fresco seleccionado: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
+- *🥩 Proteínas y Huesos de Fondo*
+  - Costilla de res limpia troceada: **600 g** (100 g/persona)
+  - Tuétano de res fresco en caña: **300 g** (50 g/persona)
+- *🍲 Base de Caldo y Aromáticos*
+  - Agua purificada de cocción: **1800 ml** (300 ml/persona)
+  - Romero fresco y cebolla blanca: **90 g** (15 g/persona)
+  - Cilantro fresco de la granja picado: **60 g** (10 g/persona)
+- *🌿 Sazón Mineral*
+  - Sal de mar mineral y pimienta en grano: **18 g** (3 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Consomé Claro de Res con Romero y Cilantro Fresco seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
+1. Blanqueado de Huesos: Blanquear la costilla y el tuétano en agua hirviendo durante 3 minutos para retirar impurezas; escurrir.
+2. Cocción Lenta de Fondo: Disponer la carne y tuétano en olla profunda con agua purificada, romero y cebolla. Cocinar a fuego lento (85-90°C) durante 90 minutos hasta obtener un caldo translúcido y sustancioso.
+3. Filtrado y Clarificación: Colar el consomé caliente reservando los trozos suaves de costilla y tuétano. Rectificar sazón con sal de mar.
+4. Servicio Gourmet: Servir hirviendo en tazón hondo a 75°C coronando con abundante cilantro fresco picado.
 
 ##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano
-- **Técnica Culinaria:** `boil_and_blend`
+- **Técnica Culinaria:** `pan_roast`
 - **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Vegetales frescos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -794,19 +798,19 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Filete de Huachinango seleccionado: **900 g** (150 g/persona)
+  - Filete de Huachinango fresco: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Filete de Huachinango seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Filete de Huachinango fresco con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Ejotes Frescos Salteados con Aceite de Oliva Extra Virgen
-- **Técnica Culinaria:** `boil_and_blend`
+- **Técnica Culinaria:** `pan_roast`
 - **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Vegetales frescos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -845,22 +849,23 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 4. Napa y Servicio: Pincelar suavemente el abanico con el aderezo sin maltratar la pulpa. Servir de inmediato a 12°C.
 
 ##### 🥩 PLATILLO PRINCIPAL: Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana
-- **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Vegetales frescos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
+- **Técnica Culinaria:** `baked_stuffed_mushroom`
+- **Nota Organoléptica:** *"Sombreros de champiñón Portobello rellenos de espinacas baby salteadas, queso crema artesanal y nuez pecana crujiente."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Vegetales frescos de la granja troceados: **720 g** (120 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
+- *🍄 Sombreros de Portobello Base*
+  - Sombreros de champiñón Portobello grandes: **12 piezas** (2 piezas/persona)
+- *🧀 Relleno Cetogénico y Nueces*
+  - Espinacas baby de la granja salteadas: **240 g** (40 g/persona)
+  - Queso crema suave artesanal: **180 g** (30 g/persona)
+  - Nuez pecana troceada: **90 g** (15 g/persona)
+  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
 
 **Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Vegetales frescos de la granja de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
+1. Limpieza e Higienizado: Limpiar delicadamente los sombreros de Portobello retirando el tallo central y láminas internas con cuchara.
+2. Preparación del Relleno: Saltear las espinacas baby en aceite VEVO durante 2 minutos; integrar con el queso crema artesanal y la nuez pecana troceada.
+3. Rellenado y Horneado: Disponer la mezcla dentro de los sombreros de Portobello y hornear a 180°C durante 12 a 14 minutos hasta que el hongo esté tierno y el relleno gratinado.
+4. Servir Caliente: Emplatar de inmediato a 65°C con un hilo de aceite VEVO.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
@@ -961,13 +966,13 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Medallón de Atún Fresco Sellado seleccionado: **900 g** (150 g/persona)
+  - Lomo de Atún fresco en costra de sésamo: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Medallón de Atún Fresco Sellado seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Lomo de Atún fresco en costra de sésamo con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -1128,13 +1133,13 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Pechuga de Pavo seleccionado: **900 g** (150 g/persona)
+  - Pechuga de pavo artesanal: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Pechuga de Pavo seleccionado con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Pechuga de pavo artesanal con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -1220,108 +1225,70 @@ El presente expediente establece la matriz oficial de menús, recetario de preci
 
 | Insumo | Cantidad Total (6 Comensales) | Unidad | Categoría |
 |---|---|---|---|
-| **Aceite de oliva extra virgen (VEVO)** | 402 | ml | 🥑 Hortaliza y Grasas Saludables |
-| **Aceite de oliva extra virgen VEVO** | 72 | ml | 🍾 Vinagreta y Grasas Saludables |
-| **Aceite de sésamo tostado** | 30 | ml | 🍶 Marinado Umami Tamari |
-| **Agua fría para hidratar** | 1470 | ml | 🍮 Base Hidrocoloide y Gelificante |
-| **Agua purificada (80°C)** | 10500 | ml | 💧 Agua Purificada de Infusión |
-| **Aguacate Hass en cubos** | 960 | g | 🥑 Macerado Cítrico y Grasas |
-| **Aguacate Hass en guacamole** | 300 | g | 🥩 Relleno de Sirloin y Guacamole |
-| **Aguacate Hass fresco** | 12 | piezas | 🥑 Hortaliza y Grasas Saludables |
-| **Alcaparras finamente picadas** | 60 | g | 🥑 Macerado Cítrico y Grasas |
-| **Almendras fileteadas tostadas** | 180 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
-| **Apio fresco de la granja en bastones** | 1500 | g | 🥦 Hortalizas Crocantes de la Granja |
-| **Arilos de Granada Fresca con Almendras Fileteadas y Chía seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Arilos de Granada fresca de la granja** | 180 | g | 🫐 Extracto Frutal e Infusión Viva |
-| **Arándanos frescos orgánicos** | 480 | g | 🍓 Fruta Fresca de Cosecha Activa |
-| **Arúgula fresca de la granja** | 360 | g | 🥗 Base Vegetal / Proteína Fresca |
-| **Calabacita fresca en espirales (zoodles)** | 840 | g | 🥦 Vegetal Base Cosecha Activa |
-| **Calabacita Zucchini en bastones** | 720 | g | 🥦 Hortalizas Crocantes de la Granja |
-| **Calabacitas tiernas de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
-| **Calabacitas tiernas troceados** | 720 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
-| **Caldo / dashi de pollo clarificado** | 390 | ml | 🥚 Emulsión de Huevo y Fondo |
-| **Caldo concentrado o fondo oscuro** | 180 | ml | 🍾 Licores y Especias de la Salsa |
-| **Carne molida de Sirloin magra** | 840 | g | 🥩 Relleno de Sirloin y Guacamole |
-| **Cebollín fresco picado / eneldo** | 12 | g | 🌿 Servicio y Decoración |
-| **Chayotes tiernos de la granja troceados** | 720 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
-| **Cilantro fresco picado y cebolla morada** | 120 | g | 🍋 Curado Cítrico y Guacamole |
-| **Cilantro fresco y orégano** | 54 | g | 🧈 Grasa Saludable y Sazón |
-| **Claras de huevo (a temperatura ambiente)** | 6 | piezas | ☁️ Bases de Huevo Nube |
-| **Coliflor fresca rostizada de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
-| **Consomé Claro de Res con Romero y Cilantro Fresco seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Crema Caliente de Champiñones Portobello y Cúrcuma seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Espárragos verdes frescos de la granja** | 720 | g | 🥦 Vegetal Base Cosecha Activa |
-| **Espárragos verdes frescos troceados** | 720 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
-| **Filete de Huachinango seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Filete de pescado blanco (Robalo) en cubos** | 780 | g | 🐟 Pescado Blanco de Cosecha |
-| **Filete de Pescado Blanco seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Filete de Salmón seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Flor de calabaza fresca de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
-| **Flores de manzanilla fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
-| **Frambuesas frescas orgánicas** | 480 | g | 🍓 Fruta Fresca de Cosecha Activa |
-| **Fresas frescas de la granja** | 480 | g | 🍓 Fruta Fresca de Cosecha Activa |
-| **Grenetina natural en polvo (colágeno hidrolizado)** | 294 | g | 🍮 Base Hidrocoloide y Gelificante |
-| **Higos frescos vivos de la granja** | 480 | g | 🍓 Fruta Fresca de Cosecha Activa |
-| **Hinojo fresco en láminas** | 300 | g | 🥗 Base Vegetal / Proteína Fresca |
-| **Hojas de arúgula / espinacas baby / hinojo** | 480 | g | 🥬 Hojas Verdes y Hortalizas |
-| **Hojas de lechuga orejona viva** | 360 | g | 🥬 Envoltura de Lechuga Viva |
-| **Hojas de menta fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
-| **Hojas de salvia fresca** | 18 | g | 🥦 Vegetal Base Cosecha Activa |
-| **Hojas de toronjil fresco de la granja** | 120 | g | 🌿 Botánicos y Minerales Adaptógenos |
-| **Huevos frescos enteros (para pochar)** | 6 | piezas | 🥓 Cubierta y Proteína |
-| **Huevos frescos orgánicos** | 60 | piezas | 🥚 Proteína de Huevo Mollet |
-| **Huevos orgánicos de libre pastoreo** | 12 | piezas | 🥚 Proteína de Huevo Orgánico |
-| **Infusión de té de frutos rojos y menta** | 5040 | ml | 🫐 Extracto Frutal e Infusión Viva |
-| **Jitomate bola en cubos y cebolla morada** | 330 | g | 🥑 Hortalizas y Aderezo Cítrico |
-| **Jugo de limón fresco** | 96 | ml | 🧂 Aderezo Mineral y Cítrico |
-| **Jugo de limón fresco exprimido** | 60 | ml | 🍾 Vinagreta y Grasas Saludables |
-| **Jugo de limón fresco recién exprimido** | 450 | ml | 🧂 Cítrico y Mineral |
-| **Jugo de limón fresco y aceite VEVO** | 120 | ml | 🥑 Hortalizas y Aderezo Cítrico |
-| **Jugo de limón fresco y sal marina** | 48 | ml | 🥑 Vinagreta Cetogénica |
-| **Jugo de limón recién exprimido y agua tibia** | 15 | ml | 🧈 Salsa Holandesa Casera |
-| **Limón fresco recién exprimido** | 60 | ml | 🥦 Vegetal Base Cosecha Activa |
-| **Lomo de atún fresco corte sashimi** | 780 | g | 🐟 Pescado Fresco Sashimi |
-| **Mantequilla clarificada** | 180 | g | 🧈 Grasas y Condimentos |
-| **Mantequilla clarificada (Ghee)** | 90 | g | 🧈 Grasa Clarificada |
-| **Mantequilla clarificada / Aceite VEVO** | 360 | ml | 🧈 Grasa Saludable y Sazón |
-| **Mantequilla clarificada / Ghee** | 60 | g | 🧀 Relleno y Grasa de Cocción |
-| **Mantequilla de pastoreo** | 90 | g | 🥚 Proteína de Huevo |
-| **Mantequilla de pastoreo / Aceite VEVO** | 792 | g | 🧈 Emulsión Cremosa y Grasas |
-| **Mantequilla de pastoreo / Crema entera** | 270 | g | 🧈 Emulsión y Sazón |
-| **Mantequilla sin sal derretida tibia** | 225 | g | 🧈 Salsa Holandesa Casera |
-| **Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Medallones de Sirloin seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Medallón de Atún Fresco Sellado seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Moras frescas de la granja** | 480 | g | 🍓 Fruta Fresca de Cosecha Activa |
-| **Nopales tiernos de la granja** | 720 | g | 🥦 Vegetal Base Cosecha Activa |
-| **Nuez de Castilla troceada** | 90 | g | 🌰 Grasas Saludables y Semillas |
-| **Nuez pecana troceada** | 270 | g | 🌰 Grasas Saludables y Semillas |
-| **Orégano seco molido** | 12 | g | 🥦 Vegetal Base Cosecha Activa |
-| **Pechuga de pavo artesanal cocida desmenuzada** | 720 | g | 🍗 Proteína de Pavo Desmenuzada |
-| **Pechuga de pavo artesanal picada** | 150 | g | 🧀 Relleno de Queso y Pavo |
-| **Pechuga de Pavo seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Pepino blanco fresco en bastones** | 1080 | g | 🥦 Hortalizas Crocantes de la Granja |
-| **Pimienta negra entera en grano (martajada en mortero)** | 18 | g | 🍾 Licores y Especias de la Salsa |
-| **Pimienta negra molida y sal marina** | 3 | g | 🧈 Salsa Holandesa Casera |
-| **Pimienta negra recién molida** | 3 | g | 🌿 Servicio y Decoración |
-| **Pimiento morrón dulce en anillos (2 cm)** | 360 | g | 🫑 Base Vegetal |
-| **Pitaya fresca de la granja** | 480 | g | 🍓 Fruta Fresca de Cosecha Activa |
-| **Queso artesanal / Jamón de pavo** | 180 | g | 🧀 Relleno y Grasa de Cocción |
-| **Queso Cotija desmoronado** | 90 | g | 🥩 Relleno de Sirloin y Guacamole |
-| **Queso Panela artesanal** | 180 | g | 🧀 Relleno de Queso y Pavo |
 | **Queso Parmesano finamente rallado** | 60 | g | ☁️ Bases de Huevo Nube |
-| **Queso Parmesano o de cabra** | 180 | g | 🧈 Emulsión y Sazón |
-| **Ribeye de Res seleccionado** | 900 | g | 🥩 Proteína Principal Seleccionada |
-| **Sal de mar mineral** | 135 | g | 🧈 Grasa Saludable y Sazón |
-| **Sal de mar mineral en escamas** | 18 | g | 🧂 Aderezo Mineral y Cítrico |
-| **Sal de mar mineral y pimienta negra molida** | 12 | g | 🍾 Vinagreta y Grasas Saludables |
-| **Sal de mar y pimienta blanca** | 27 | g | 🧈 Emulsión y Sazón |
-| **Sal de mar y tomillo fresco** | 132 | g | 🧈 Emulsión Cremosa y Grasas |
-| **Sal marina y crémor tártaro / limón** | 3 | g | ☁️ Bases de Huevo Nube |
-| **Salsa Tamari (soya keto)** | 90 | ml | 🍶 Marinado Umami Tamari |
-| **Semillas de chía orgánicas** | 288 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
-| **Semillas y hojas de hinojo fresco** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
-| **Tocino de pavo artesanal crujiente** | 12 | piezas | 🥓 Cubierta y Proteína |
-| **Vegetales frescos de la granja troceados** | 2160 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
+| **Almendras fileteadas tostadas** | 180 | g | 🌰 Semillas y Nueces |
+| **Nuez de Castilla troceada** | 90 | g | 🌰 Semillas y Nueces |
+| **Nuez pecana troceada** | 360 | g | 🌰 Semillas y Nueces |
+| **Semillas de chía orgánicas** | 288 | g | 🌰 Semillas y Nueces |
+| **Semillas de sésamo tostadas** | 30 | ml | 🌰 Semillas y Nueces |
+| **Vegetales frescos de la granja troceados** | 1440 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
+| **Flores de manzanilla fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
+| **Hojas de menta fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
+| **Hojas de toronjil fresco de la granja** | 120 | g | 🌿 Botánicos y Minerales Adaptógenos |
+| **Cebollín fresco picado / eneldo** | 12 | g | 🌿 Servicio y Decoración |
+| **Sombreros de champiñón Portobello grandes** | 12 | piezas | 🍄 Sombreros de Portobello Base |
+| **Jugo de limón fresco recién exprimido** | 732 | g | 🍋 Cítricos y Ácidos Naturales |
+| **Arilos de Granada fresca de la granja** | 1080 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Arándanos frescos orgánicos** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Frambuesas frescas orgánicas** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Fresas frescas de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Higos frescos vivos de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Moras frescas de la granja** | 930 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Pitaya fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Agua fría para hidratar** | 1470 | ml | 🍮 Base Hidrocoloide y Gelificante |
+| **Grenetina natural en polvo (colágeno hidrolizado)** | 294 | g | 🍮 Base Hidrocoloide y Gelificante |
+| **Agua purificada de cocción** | 1800 | ml | 🍲 Base de Caldo y Aromáticos |
+| **Cilantro fresco de la granja picado** | 60 | g | 🍲 Base de Caldo y Aromáticos |
+| **Romero fresco y cebolla blanca** | 90 | g | 🍲 Base de Caldo y Aromáticos |
+| **Coliflor fresca rostizada de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
+| **Flor de calabaza fresca de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
+| **Caldo concentrado o fondo oscuro** | 180 | ml | 🍾 Licores y Especias de la Salsa |
+| **Agua purificada (80°C)** | 10500 | ml | 💧 Agua Purificada de Infusión |
+| **Aceite de oliva extra virgen (VEVO)** | 654 | ml | 🥑 Grasas Saludables y Frutos |
+| **Aguacate Hass fresco** | 1272 | piezas | 🥑 Grasas Saludables y Frutos |
+| **Mantequilla de pastoreo / Ghee** | 1935 | g | 🥑 Grasas Saludables y Frutos |
+| **Alcaparras finamente picadas** | 60 | g | 🥑 Macerado Cítrico y Grasas |
 | **Vinagre blanco (para agua de pochado)** | 45 | ml | 🥓 Cubierta y Proteína |
-| **Yemas de huevo frescas** | 6 | piezas | 🧈 Salsa Holandesa Casera |
+| **Claras de huevo frescas orgánicas** | 6 | piezas | 🥚 Huevo y Derivados |
+| **Huevos orgánicos de libre pastoreo** | 84 | piezas | 🥚 Huevo y Derivados |
+| **Apio fresco de la granja** | 1500 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Calabacitas tiernas de la granja** | 3000 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Chayotes tiernos de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Espárragos verdes frescos de la granja** | 1440 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Hinojo fresco de la granja** | 810 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Nopales tiernos limpios de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Pepino blanco fresco de la granja** | 1080 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Orégano seco molido** | 12 | g | 🥦 Vegetal Base Cosecha Activa |
+| **Crema Caliente de Champiñones Portobello y Cúrcuma** | 900 | g | 🥩 Proteína Principal Seleccionada |
+| **Carne molida / Filete de Sirloin magro** | 1740 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Corte de Ribeye de res premium** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Filete de Huachinango fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Filete de Pescado Blanco (Robalo)** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Filete de Salmón fresco con piel** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Lomo de Atún fresco corte sashimi** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Pechuga de pavo artesanal** | 2862 | piezas | 🥩 Proteínas Principales Seleccionadas |
+| **Pechuga de pollo orgánica** | 390 | ml | 🥩 Proteínas Principales Seleccionadas |
+| **Costilla de res limpia troceada** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
+| **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
+| **Queso Cotija desmoronado** | 90 | g | 🥩 Relleno de Sirloin y Guacamole |
+| **Espinacas baby frescas de la granja** | 240 | g | 🥬 Hojas Verdes y Envolturas |
+| **Hojas de arúgula fresca** | 360 | g | 🥬 Hojas Verdes y Envolturas |
+| **Hojas de lechuga orejona viva** | 360 | g | 🥬 Hojas Verdes y Envolturas |
+| **Queso crema suave artesanal** | 180 | g | 🧀 Relleno Cetogénico y Nueces |
+| **Queso Panela artesanal** | 180 | g | 🧀 Relleno de Queso y Pavo |
+| **Pimienta negra en grano / molida** | 21 | g | 🧂 Condimentos y Sal Mineral |
+| **Sal de mar mineral en escamas** | 432 | g | 🧂 Condimentos y Sal Mineral |
+| **Queso Parmesano o de cabra** | 180 | g | 🧈 Emulsión y Sazón |
+| **Cilantro fresco y orégano** | 45 | g | 🧈 Grasa Saludable y Sazón |
+| **Infusión de té de frutos rojos y menta** | 5040 | ml | 🫐 Extracto Frutal e Infusión Viva |
+| **Pimiento morrón dulce en anillos (2 cm)** | 360 | g | 🫑 Base Vegetal |

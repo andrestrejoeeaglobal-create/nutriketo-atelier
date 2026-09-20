@@ -243,8 +243,9 @@ def enrich_recipe_with_guarantee(recipe: dict, clean_title: str) -> dict:
         "verde", "verdes", "tabasqueñas", "tabasqueña", "claro", "clara", "rallado", "rallada", "baby", "vinagreta", "pastoreo",
         "seleccionado", "seleccionada", "seleccionados", "seleccionadas", "molida", "molido", "troceado", "troceada",
         "benedictinos", "sobre", "nube", "holandesa", "aderezo", "sin", "crotones", "abanico", "salpicón", "salpicon", "costra",
-        "ranchera", "orgánico", "orgánica", "orgónicos", "orgánicas", "fileteadas", "fileteada", "fileteados", "cremosa", "desmenuzada",
-        "keto", "cetogénica", "cetogénico"
+        "ranchera", "orgánico", "orgánica", "orgánicos", "orgánicas", "fileteadas", "fileteada", "fileteados", "cremosa", "desmenuzada",
+        "keto", "cetogénica", "cetogénico", "tacos", "taco", "envuelto", "pitayas", "pitaya", "medallones", "medallon", "medallón",
+        "filete", "filetes", "capas", "rollo", "anillo", "campana", "tisana"
     }
 
     aliases_map = {
@@ -309,7 +310,10 @@ def enrich_recipe_with_guarantee(recipe: dict, clean_title: str) -> dict:
         "tierna", "frescas", "frescos", "fresco", "fresca", "baby", "viva", "vivas", "vivo",
         "maduro", "madura", "artesanal", "artesanales", "orgánicos", "organicos", "orgánica", "organica",
         "completo", "estilo", "sabor", "con", "del", "las", "los", "una", "uno", "por", "sobre",
-        "espejo", "tazón", "tazon", "abanico", "bastones", "smoothie", "elixir", "tisana", "muffins"
+        "espejo", "tazón", "tazon", "abanico", "bastones", "smoothie", "elixir", "tisana", "muffins",
+        "tacos", "taco", "envuelto", "salpicón", "salpicon", "ceviche", "pitayas", "pitaya", "medallones",
+        "medallon", "medallón", "filete", "filetes", "capas", "rollo", "anillo", "campana", "crema",
+        "sopa", "consomé", "consome", "gelatina", "seleccionado", "seleccionada", "seleccionados", "seleccionadas"
     }
     missing_bom_words = []
     for w in title_words:
@@ -350,7 +354,11 @@ def enrich_recipe_with_guarantee(recipe: dict, clean_title: str) -> dict:
 
     if missing_step_words:
         missing_str = ", ".join(list(dict.fromkeys(missing_step_words)))
-        recipe["steps"].append(f"4. Integración Técnica, Rostizado y Acondicionamiento (2 min): Incorporar, rostizar e integrar {missing_str} en la preparación final a 180°C.")
+        tech = recipe.get("cooking_technique", "")
+        if tech in ["raw_assembly", "cold_cure_assembly", "taco_wrap", "gelatin_molding", "steep_beverage", "steam_custard"]:
+            recipe["steps"].append(f"4. Integración y Presentación en Frío (1 min): Integrar {missing_str} manteniendo la preparación fresca a 4°C–10°C.")
+        else:
+            recipe["steps"].append(f"4. Integración y Sazón Final (2 min): Incorporar e integrar {missing_str} en la preparación caliente.")
 
     return recipe
 
@@ -844,7 +852,77 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         }
 
     # -------------------------------------------------------------------------
-    # 11. CREMAS DE VEGETALES (BRÓCOLI, COLIFLOR, ESPÁRRAGOS, CHAMPIÑONES, FLOR DE CALABAZA)
+    # 10. CONSOMÉS Y CALDOS CLAROS
+    # -------------------------------------------------------------------------
+    if any(kw in clean_lower for kw in ["consomé", "consome", "caldo claro"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "boil_and_clarify",
+            "sensory_description": "Fondo profundo de res preparado con costilla jugosa y tuétano fresco, infusionado a fuego lento con romero, cilantro fresco y sazón mineral.",
+            "ingredient_groups": [
+                {
+                    "category": "🥩 Proteínas y Huesos de Fondo",
+                    "items": [
+                        {"name": "Costilla de res limpia troceada", "base_qty_per_person": 100.0, "unit": "g", "source": "Mercado", "unit_cost": 30.0},
+                        {"name": "Tuétano de res fresco en caña", "base_qty_per_person": 50.0, "unit": "g", "source": "Mercado", "unit_cost": 20.0}
+                    ]
+                },
+                {
+                    "category": "🍲 Base de Caldo y Aromáticos",
+                    "items": [
+                        {"name": "Agua purificada de cocción", "base_qty_per_person": 300.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Romero fresco y cebolla blanca", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Cilantro fresco de la granja picado", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🌿 Sazón Mineral",
+                    "items": [
+                        {"name": "Sal de mar mineral y pimienta en grano", "base_qty_per_person": 3.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Blanqueado de Huesos: Blanquear la costilla y el tuétano en agua hirviendo durante 3 minutos para retirar impurezas; escurrir.",
+                "2. Cocción Lenta de Fondo: Disponer la carne y tuétano en olla profunda con agua purificada, romero y cebolla. Cocinar a fuego lento (85-90°C) durante 90 minutos hasta obtener un caldo translúcido y sustancioso.",
+                "3. Filtrado y Clarificación: Colar el consomé caliente reservando los trozos suaves de costilla y tuétano. Rectificar sazón con sal de mar.",
+                "4. Servicio Gourmet: Servir hirviendo en tazón hondo a 75°C coronando con abundante cilantro fresco picado."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 11. CHAMPIÑONES PORTOBELLO RELLENOS
+    # -------------------------------------------------------------------------
+    if any(kw in clean_lower for kw in ["portobello relleno", "portobello rellenos"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "baked_stuffed_mushroom",
+            "sensory_description": "Sombreros de champiñón Portobello rellenos de espinacas baby salteadas, queso crema artesanal y nuez pecana crujiente.",
+            "ingredient_groups": [
+                {
+                    "category": "🍄 Sombreros de Portobello Base",
+                    "items": [{"name": "Sombreros de champiñón Portobello grandes", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}]
+                },
+                {
+                    "category": "🧀 Relleno Cetogénico y Nueces",
+                    "items": [
+                        {"name": "Espinacas baby de la granja salteadas", "base_qty_per_person": 40.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Queso crema suave artesanal", "base_qty_per_person": 30.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0},
+                        {"name": "Nuez pecana troceada", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Limpieza e Higienizado: Limpiar delicadamente los sombreros de Portobello retirando el tallo central y láminas internas con cuchara.",
+                "2. Preparación del Relleno: Saltear las espinacas baby en aceite VEVO durante 2 minutos; integrar con el queso crema artesanal y la nuez pecana troceada.",
+                "3. Rellenado y Horneado: Disponer la mezcla dentro de los sombreros de Portobello y hornear a 180°C durante 12 a 14 minutos hasta que el hongo esté tierno y el relleno gratinado.",
+                "4. Servir Caliente: Emplatar de inmediato a 65°C con un hilo de aceite VEVO."
+            ]
+        }
+
+    # -------------------------------------------------------------------------
+    # 12. CREMAS DE VEGETALES (BRÓCOLI, COLIFLOR, ESPÁRRAGOS, CHAMPIÑONES, FLOR DE CALABAZA)
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["crema de", "sopa de", "crema ligera"]):
         veg_base = "Acelgas frescas de la granja"
@@ -882,7 +960,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         }
 
     # -------------------------------------------------------------------------
-    # 12. OMELETTES, FRITTATAS Y REVUELTOS (PAN_FRY_EGG)
+    # 13. OMELETTES, FRITTATAS Y REVUELTOS (PAN_FRY_EGG)
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["omelette", "frittata", "revueltos"]):
         return {
@@ -911,7 +989,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         }
 
     # -------------------------------------------------------------------------
-    # 13. VEGETALES Y ACOMPAÑAMIENTOS AL VAPOR / PLANCHA
+    # 14. VEGETALES Y ACOMPAÑAMIENTOS AL VAPOR / PLANCHA
     # -------------------------------------------------------------------------
     is_veg_side = any(kw in clean_lower for kw in [
         "chayote", "calabacita", "espárrago", "brócoli", "coliflor", "ejote", "nopal", "nopales",
@@ -929,7 +1007,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
 
         return {
             "title": clean_title,
-            "cooking_technique": "boil_and_blend",
+            "cooking_technique": "pan_roast",
             "sensory_description": f"Acompañamiento vegetal liviano de {veg_name} cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO.",
             "ingredient_groups": [
                 {
@@ -954,9 +1032,17 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
         }
 
     # -------------------------------------------------------------------------
-    # 14. PLATILLOS PRINCIPALES PROTEICOS DE CARNE / POLLO / PESCADO / PAVO
+    # 15. PLATILLOS PRINCIPALES PROTEICOS DE CARNE / POLLO / PESCADO / PAVO
     # -------------------------------------------------------------------------
-    prot_name = clean_title.split(" en ")[0].split(" a ")[0].split(" al ")[0] + " seleccionado"
+    if "sirloin" in clean_lower: prot_name = "Filete de Sirloin de res magro"
+    elif "ribeye" in clean_lower: prot_name = "Corte de Ribeye de res premium"
+    elif "salmón" in clean_lower or "salmon" in clean_lower: prot_name = "Filete de Salmón fresco con piel"
+    elif "huachinango" in clean_lower: prot_name = "Filete de Huachinango fresco"
+    elif "pescado blanco" in clean_lower or "robalo" in clean_lower: prot_name = "Filete de Pescado Blanco (Robalo)"
+    elif "atún" in clean_lower or "atun" in clean_lower: prot_name = "Lomo de Atún fresco en costra de sésamo"
+    elif "pavo" in clean_lower: prot_name = "Pechuga de pavo artesanal"
+    elif "pollo" in clean_lower: prot_name = "Pechuga de pollo orgánica"
+    else: prot_name = clean_title.split(" en ")[0].split(" a ")[0].split(" al ")[0].strip()
 
     groups = [
         {
