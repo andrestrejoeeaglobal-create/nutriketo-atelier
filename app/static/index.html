@@ -696,7 +696,8 @@ function generateNextWeekMenu() {
     const currentDayNum = (new Date().getDay() >= 0 && new Date().getDay() <= 6) ? new Date().getDay() : 0;
     let selectedIdx = currentDayNum;
 
-    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v38_canonical';
+    const CURRENT_APP_VERSION = 'v36_6_ssot_canonical';
+    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v36_6_ssot';
 
     function toggleTheme() {
       const html = document.documentElement;
@@ -778,6 +779,23 @@ function generateNextWeekMenu() {
 
     function loadAppState() {
       try {
+        const storedVersion = localStorage.getItem('nutriketo_app_version');
+        if (storedVersion !== CURRENT_APP_VERSION) {
+          console.warn('Detectada versión obsoleta/corrupta de localStorage. Purgando claves de versiones anteriores e inicializando SSOT V36.6 canónico.');
+          const legacyKeys = [
+            'nutriketo_app_state_v38_canonical',
+            'nutriketo_app_state_v34_granular',
+            'nutriketo_app_state_v33',
+            'nutriketo_app_state',
+            'nutriketo_app_state_v36_6_ssot'
+          ];
+          for (const lKey of legacyKeys) {
+            localStorage.removeItem(lKey);
+          }
+          localStorage.setItem('nutriketo_app_version', CURRENT_APP_VERSION);
+          return false;
+        }
+
         let saved = localStorage.getItem(LOCAL_STORAGE_KEY);
         if (!saved) {
           const legacyKeys = ['nutriketo_app_state_v34_granular', 'nutriketo_app_state_v33', 'nutriketo_app_state'];
@@ -915,6 +933,7 @@ function generateNextWeekMenu() {
           dispatchedMeals
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
+        localStorage.setItem('nutriketo_app_version', CURRENT_APP_VERSION);
       } catch(e) {
         console.error("Error al guardar localStorage:", e);
       }
