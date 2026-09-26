@@ -768,7 +768,18 @@ class KetoAIArchitect:
             avocado_count = 0
             curr_day_meals = []
 
-            for m_type, din_spec, st_name, m_name, sd_name, fat, prot, carbs, ings in day_data["meals"]:
+            for item in day_data["meals"]:
+                if hasattr(item, 'main_dish_name'):
+                    st_name = item.starter_name
+                    m_name = item.main_dish_name
+                    sd_name = item.side_dish_name
+                elif isinstance(item, dict):
+                    st_name = item.get('starter_name') or item.get('starter')
+                    m_name = item.get('main_dish_name') or item.get('main')
+                    sd_name = item.get('side_dish_name') or item.get('side')
+                else:
+                    m_type, din_spec, st_name, m_name, sd_name = item[0], item[1], item[2], item[3], item[4]
+
                 meal_struct = {"starter": st_name, "main": m_name, "side": sd_name}
 
                 # 1. Exclusividad Semanal de Platillo Principal
@@ -1013,8 +1024,221 @@ class KetoAIArchitect:
 
         return WeeklyMenuPlan(diners_count=diners_count, days=daily_menus)
 
-    def generate_weekly_plan(self, diners_count: int = 6, preferences: str = "", week_number: int = 39, **kwargs) -> WeeklyMenuPlan:
-        if week_number == 39 or kwargs.get("week_number") == 39:
+    def build_semana_40_plan(self, diners_count: int = 6) -> WeeklyMenuPlan:
+        factor = diners_count / 6.0
+        days_data = [
+            {
+                "day": "Domingo", "date_str": "27 Sep", "day_num": "27", "month": "Septiembre",
+                "full_date_title": "Menú Completo para el Domingo 27 Sep",
+                "preliminary": [
+                    {
+                        "base_name": "Ejotes Tiernos y Mantequilla de Pastoreo al Sartén",
+                        "ingredients": [
+                            Ingredient(name="Ejotes verdes", quantity=round(180.0 * factor, 1), unit="g"),
+                            Ingredient(name="Mantequilla de pastoreo", quantity=round(100.0 * factor, 1), unit="g")
+                        ],
+                        "cutting_prep": f"Cortar ejotes tiernos en tercios para {diners_count} personas.",
+                        "cooking_process": "Blanquear 2 min en agua hirviendo y saltear en mantequilla.",
+                        "storage_reserve": "Reservar para incorporar los huevos revueltos rústicos."
+                    }
+                ],
+                "meals": [
+                    Meal(meal_type="Desayuno", starter_name="Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo", side_dish_name="Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®", fat_g=29.5, protein_g=32.0, net_carbs_g=3.2),
+                    Meal(meal_type="Comida", starter_name="Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano", main_dish_name="Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo", side_dish_name="Espárragos Verdes al Horno con Limón y Sal de Mar Mineral", fat_g=38.5, protein_g=42.0, net_carbs_g=3.6),
+                    Meal(meal_type="Cena", starter_name="Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen", main_dish_name="Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=24.0, protein_g=28.0, net_carbs_g=2.4)
+                ]
+            },
+            {
+                "day": "Lunes", "date_str": "28 Sep", "day_num": "28", "month": "Septiembre",
+                "full_date_title": "Menú Completo para el Lunes 28 Sep",
+                "preliminary": [
+                    {
+                        "base_name": "Mantequilla de Eneldo y Hierbas Finas",
+                        "ingredients": [
+                            Ingredient(name="Mantequilla de pastoreo", quantity=round(150.0 * factor, 1), unit="g"),
+                            Ingredient(name="Eneldo fresco", quantity=round(20.0 * factor, 1), unit="g")
+                        ],
+                        "cutting_prep": f"Picar eneldo ultra fino e integrar a mantequilla pomada para {diners_count} personas.",
+                        "cooking_process": "Emulsionar a temperatura ambiente y formar rodillo.",
+                        "storage_reserve": "Refrigerar a 4°C hasta sellar el salmón."
+                    }
+                ],
+                "meals": [
+                    Meal(meal_type="Desayuno", starter_name="Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía", main_dish_name="Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda", side_dish_name="Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=30.0, protein_g=33.0, net_carbs_g=3.4),
+                    Meal(meal_type="Comida", starter_name="Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón", main_dish_name="Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo", side_dish_name="Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen", fat_g=36.0, protein_g=40.0, net_carbs_g=3.5),
+                    Meal(meal_type="Cena", starter_name="Bastones de Pepino y Apio al Limón con Sal Mineral", main_dish_name="Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón", side_dish_name="Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=23.0, protein_g=27.0, net_carbs_g=2.5)
+                ]
+            },
+            {
+                "day": "Martes", "date_str": "29 Sep", "day_num": "29", "month": "Septiembre",
+                "full_date_title": "Menú Completo para el Martes 29 Sep",
+                "preliminary": [
+                    {
+                        "base_name": "Machaca Magra de Res y Orégano al Sartén",
+                        "ingredients": [
+                            Ingredient(name="Machaca de res artesanal", quantity=round(150.0 * factor, 1), unit="g"),
+                            Ingredient(name="Mantequilla de pastoreo", quantity=round(80.0 * factor, 1), unit="g")
+                        ],
+                        "cutting_prep": f"Deshebrar machaca artesanal seca para {diners_count} personas.",
+                        "cooking_process": "Dorar en mantequilla a fuego medio con orégano seco.",
+                        "storage_reserve": "Incorporar huevos enteros y cuajar suavemente al sartén."
+                    }
+                ],
+                "meals": [
+                    Meal(meal_type="Desayuno", starter_name="Arilos de Granada Fresca con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén", side_dish_name="Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=28.5, protein_g=33.5, net_carbs_g=3.3),
+                    Meal(meal_type="Comida", starter_name="Crema de Coliflor Rostizada al Ajo y Queso de Cabra", main_dish_name="Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra y Romero", side_dish_name="Chayotes Tiernos al Vapor con Mantequilla Clarificada", fat_g=37.0, protein_g=41.0, net_carbs_g=3.6),
+                    Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal de Mar", main_dish_name="Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO", side_dish_name="Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=21.5, protein_g=26.5, net_carbs_g=2.1)
+                ]
+            },
+            {
+                "day": "Miércoles", "date_str": "30 Sep", "day_num": "30", "month": "Septiembre",
+                "full_date_title": "Menú Completo para el Miércoles 30 Sep",
+                "preliminary": [
+                    {
+                        "base_name": "Base de Nube de Clara y Mantequilla de Ajo Rostizado",
+                        "ingredients": [
+                            Ingredient(name="Claras de huevo", quantity=round(12.0 * factor, 1), unit="piezas"),
+                            Ingredient(name="Mantequilla de pastoreo", quantity=round(120.0 * factor, 1), unit="g")
+                        ],
+                        "cutting_prep": f"Montar {int(12*factor)} claras a punto de nieve con pizca de sal marina.",
+                        "cooking_process": "Hornear nidos de clara a 180°C por 10 min hasta dorar ligero.",
+                        "storage_reserve": "Reservar nidos tibios para montar huevos benedictinos."
+                    }
+                ],
+                "meals": [
+                    Meal(meal_type="Desayuno", starter_name="Arándanos Frescos con Nueces Pecana y Semillas de Girasol", main_dish_name="Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente", side_dish_name="Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus®", fat_g=29.0, protein_g=32.5, net_carbs_g=3.1),
+                    Meal(meal_type="Comida", starter_name="Consomé Claro de Nopales y Hortalizas Tiernas", main_dish_name="Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano", side_dish_name="Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO", fat_g=36.5, protein_g=40.0, net_carbs_g=3.4),
+                    Meal(meal_type="Cena", starter_name="Bastones de Pepino y Zucchini al Limón con Sal Mineral", main_dish_name="Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón", side_dish_name="Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=22.0, protein_g=28.5, net_carbs_g=2.3)
+                ]
+            },
+            {
+                "day": "Jueves", "date_str": "01 Oct", "day_num": "01", "month": "Octubre",
+                "full_date_title": "Menú Completo para el Jueves 01 Oct",
+                "preliminary": [
+                    {
+                        "base_name": "Sartén de Hierro y Aceite VEVO al Tomillo",
+                        "ingredients": [
+                            Ingredient(name="Huevos enteros", quantity=round(12.0 * factor, 1), unit="piezas"),
+                            Ingredient(name="Aceite de oliva virgen extra", quantity=round(60.0 * factor, 1), unit="ml")
+                        ],
+                        "cutting_prep": f"Calentar sartén de hierro fundido con aceite VEVO para {diners_count} personas.",
+                        "cooking_process": "Estrellar huevos manteniendo clara sellada y yema fluida.",
+                        "storage_reserve": "Sazonar con tomillo fresco y sal de mar en escamas."
+                    }
+                ],
+                "meals": [
+                    Meal(meal_type="Desayuno", starter_name="Pitayas Frescas con Semillas de Chía y Coco Rallado", main_dish_name="Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco", side_dish_name="Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=29.0, protein_g=31.0, net_carbs_g=3.1),
+                    Meal(meal_type="Comida", starter_name="Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen", main_dish_name="Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón", side_dish_name="Ejotes Frescos Salteados con Almendras Fileteadas", fat_g=35.0, protein_g=39.0, net_carbs_g=3.5),
+                    Meal(meal_type="Cena", starter_name="Abanico de Aguacate Hass con Sal de Mar", main_dish_name="Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=24.0, protein_g=25.5, net_carbs_g=2.8)
+                ]
+            },
+            {
+                "day": "Viernes", "date_str": "02 Oct", "day_num": "02", "month": "Octubre",
+                "full_date_title": "Menú Completo para el Viernes 02 Oct",
+                "preliminary": [
+                    {
+                        "base_name": "Tamagoyaki Base Culinaria",
+                        "ingredients": [
+                            Ingredient(name="Huevos frescos", quantity=round(12.0 * factor, 1), unit="piezas"),
+                            Ingredient(name="Queso Panela", quantity=round(180.0 * factor, 1), unit="g")
+                        ],
+                        "cutting_prep": f"Batir 12 huevos con pizca de sal y pimienta blanca para {diners_count} personas.",
+                        "cooking_process": "Verter capas delgadas en sartén rectangular a fuego bajo enrollando con queso panela.",
+                        "storage_reserve": "Cortar en rollos uniformes para el desayuno."
+                    }
+                ],
+                "meals": [
+                    Meal(meal_type="Desayuno", starter_name="Fresas Frescas de la Granja con Nueces de Castilla y Chía", main_dish_name="Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela", side_dish_name="Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=28.5, protein_g=32.0, net_carbs_g=3.3),
+                    Meal(meal_type="Comida", starter_name="Sopa de Calabacitas y Cilantro al Queso Parmesano", main_dish_name="Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón", side_dish_name="Espárragos Verdes Asados con Limón y Sal Marina", fat_g=37.0, protein_g=41.0, net_carbs_g=4.0),
+                    Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal Mineral", main_dish_name="Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate", side_dish_name="Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=22.0, protein_g=27.0, net_carbs_g=2.2)
+                ]
+            },
+            {
+                "day": "Sábado", "date_str": "03 Oct", "day_num": "03", "month": "Octubre",
+                "full_date_title": "Menú Completo para el Sábado 03 Oct",
+                "preliminary": [
+                    {
+                        "base_name": "Cama de Espinacas y Queso de Cabra para Cazuela",
+                        "ingredients": [
+                            Ingredient(name="Espinacas frescas", quantity=round(200.0 * factor, 1), unit="g"),
+                            Ingredient(name="Queso de cabra artesanal", quantity=round(120.0 * factor, 1), unit="g")
+                        ],
+                        "cutting_prep": f"Disponer cama de espinacas baby en cazuelas refractarias para {diners_count} personas.",
+                        "cooking_process": "Cascar 2 huevos sobre la cama, desmoronar queso de cabra y hornear tapado a 180°C por 12 min.",
+                        "storage_reserve": "Servir caliente recién horneado."
+                    }
+                ],
+                "meals": [
+                    Meal(meal_type="Desayuno", starter_name="Higos Frescos Vivos de la Granja con Almendras Fileteadas y Chía", main_dish_name="Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra", side_dish_name="Gelatina Artesanal de Higo (4°C) con Fórmula Nootrópica 33Plus®", fat_g=28.0, protein_g=32.0, net_carbs_g=3.4),
+                    Meal(meal_type="Comida", starter_name="Crema de Espinacas y Ajo Rostizado al Parmesano", main_dish_name="Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo", side_dish_name="Calabacitas Verdes al Sartén con Sal de Mar", fat_g=35.5, protein_g=39.5, net_carbs_g=3.4),
+                    Meal(meal_type="Cena", starter_name="Ensalada Mix de Hojas Verdes de la Granja con Vinagre VEVO", main_dish_name="Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=21.0, protein_g=28.0, net_carbs_g=2.1)
+                ]
+            }
+        ]
+
+        self._validate_menu_diversity(days_data)
+
+        daily_menus = []
+        for d in days_data:
+            prelims = [
+                PreliminaryPrep(
+                    base_name=p["base_name"],
+                    ingredients=p["ingredients"],
+                    cutting_prep=p["cutting_prep"],
+                    cooking_process=p["cooking_process"],
+                    storage_reserve=p["storage_reserve"]
+                ) for p in d.get("preliminary", [])
+            ]
+            recipes = [
+                PreparationRecipe(
+                    dish_name=m.main_dish_name,
+                    category=m.meal_type,
+                    prep_time_min=15,
+                    steps=[],
+                    phase_1="Mise en place de insumos de granja escalados.",
+                    phase_2="Acondicionamiento y corte de precisión.",
+                    phase_3="Cocción a temperatura controlada en sartén de hierro.",
+                    phase_4="Emplatado de inmediato a 65°C."
+                ) for m in d["meals"]
+            ]
+            tot_fat = sum(m.fat_g for m in d["meals"])
+            tot_prot = sum(m.protein_g for m in d["meals"])
+            tot_carbs = sum(m.net_carbs_g for m in d["meals"])
+            tot_kcal = round(tot_fat * 9 + tot_prot * 4 + tot_carbs * 4, 1)
+
+            nutrition = NutritionMetrics(
+                calories_kcal=tot_kcal,
+                total_fat_g=tot_fat,
+                sat_fat_g=round(tot_fat * 0.4, 1),
+                cholesterol_mg=280.0,
+                sodium_mg=520.0,
+                net_carbs_g=tot_carbs,
+                fiber_g=14.0,
+                protein_g=tot_prot
+            )
+
+            daily_menus.append(
+                DailyMenu(
+                    day=d["day"],
+                    date_str=d["date_str"],
+                    day_num=d["day_num"],
+                    full_date_title=d["full_date_title"],
+                    preliminary_preps=prelims,
+                    meals=d["meals"],
+                    recipes=recipes,
+                    nutrition=nutrition
+                )
+            )
+
+        return WeeklyMenuPlan(diners_count=diners_count, days=daily_menus)
+
+    def generate_weekly_plan(self, diners_count: int = 6, preferences: str = "", week_number: int = 40, **kwargs) -> WeeklyMenuPlan:
+        w_num = kwargs.get("week_number", week_number)
+        if w_num == 40 or week_number == 40:
+            plan = self.build_semana_40_plan(diners_count=diners_count)
+            InventorySyncMaster.seed_shopping_list_from_plan(plan)
+            return plan
+        elif w_num == 39 or week_number == 39:
             plan = self.build_semana_39_plan(diners_count=diners_count)
             InventorySyncMaster.seed_shopping_list_from_plan(plan)
             return plan
