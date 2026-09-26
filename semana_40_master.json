@@ -46,20 +46,20 @@
           "main_dish_name": "Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo",
           "side_dish_name": "Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®",
           "dish_name_legacy": null,
-          "fat_g": 29.5,
-          "protein_g": 32.0,
+          "fat_g": 31.0,
+          "protein_g": 33.0,
           "net_carbs_g": 3.2,
           "ingredients": []
         },
         {
           "meal_type": "Comida",
-          "starter_name": "Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano",
-          "main_dish_name": "Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo",
+          "starter_name": "Crema Caliente de Flor de Calabaza y Queso de Cabra",
+          "main_dish_name": "Corte Magro de Arrachera de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo",
           "side_dish_name": "Espárragos Verdes al Horno con Limón y Sal de Mar Mineral",
           "dish_name_legacy": null,
-          "fat_g": 38.5,
-          "protein_g": 42.0,
-          "net_carbs_g": 3.6,
+          "fat_g": 50.0,
+          "protein_g": 44.0,
+          "net_carbs_g": 4.0,
           "ingredients": []
         },
         {
@@ -68,9 +68,9 @@
           "main_dish_name": "Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano",
           "side_dish_name": "Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®",
           "dish_name_legacy": null,
-          "fat_g": 24.0,
-          "protein_g": 28.0,
-          "net_carbs_g": 2.4,
+          "fat_g": 29.0,
+          "protein_g": 34.0,
+          "net_carbs_g": 2.8,
           "ingredients": []
         }
       ],
@@ -87,7 +87,7 @@
           "scaled_ingredients": []
         },
         {
-          "dish_name": "Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo",
+          "dish_name": "Corte Magro de Arrachera de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo",
           "category": "Comida",
           "prep_time_min": 15,
           "steps": [],
@@ -111,14 +111,14 @@
       ],
       "clinical_nutrition": null,
       "nutrition": {
-        "calories_kcal": 1272.8,
-        "total_fat_g": 92.0,
-        "sat_fat_g": 36.8,
+        "calories_kcal": 1474.0,
+        "total_fat_g": 110.0,
+        "sat_fat_g": 44.0,
         "cholesterol_mg": 280.0,
         "sodium_mg": 520.0,
-        "net_carbs_g": 9.2,
+        "net_carbs_g": 10.0,
         "fiber_g": 14.0,
-        "protein_g": 102.0,
+        "protein_g": 111.0,
         "ig_impact": "Bajo (Curva plana / Sin pico glucémico)",
         "metabolic_notes": "Amortiguación enzimática óptima por grasas y fibra."
       }
@@ -157,7 +157,7 @@
           ],
           "cutting_prep": "Picar eneldo ultra fino e integrar a mantequilla pomada para 6 personas.",
           "cooking_process": "Emulsionar a temperatura ambiente y formar rodillo.",
-          "storage_reserve": "Refrigerar a 4°C hasta sellar el salmón."
+          "storage_reserve": "Refrigerar a 4°C hasta atemperar el pavo al curry."
         }
       ],
       "meal_prep_blocks": [],
@@ -168,30 +168,30 @@
           "main_dish_name": "Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda",
           "side_dish_name": "Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®",
           "dish_name_legacy": null,
-          "fat_g": 30.0,
-          "protein_g": 33.0,
+          "fat_g": 31.0,
+          "protein_g": 33.5,
           "net_carbs_g": 3.4,
           "ingredients": []
         },
         {
           "meal_type": "Comida",
           "starter_name": "Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón",
-          "main_dish_name": "Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo",
+          "main_dish_name": "Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano",
           "side_dish_name": "Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen",
           "dish_name_legacy": null,
-          "fat_g": 36.0,
-          "protein_g": 40.0,
-          "net_carbs_g": 3.5,
+          "fat_g": 51.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 4.2,
           "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Bastones de Pepino y Apio al Limón con Sal Mineral",
-          "main_dish_name": "Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón",
+          "main_dish_name": "Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón",
           "side_dish_name": "Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®",
           "dish_name_legacy": null,
-          "fat_g": 23.0,
-          "protein_g": 27.0,
+          "fat_g": 29.5,
+          "protein_g": 34.0,
           "net_carbs_g": 2.5,
           "ingredients": []
         }
@@ -209,7 +209,7 @@
           "scaled_ingredients": []
         },
         {
-          "dish_name": "Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo",
+          "dish_name": "Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano",
           "category": "Comida",
           "prep_time_min": 15,
           "steps": [],
@@ -220,7 +220,7 @@
           "scaled_ingredients": []
         },
         {
-          "dish_name": "Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón",
+          "dish_name": "Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón",
           "category": "Cena",
           "prep_time_min": 15,
           "steps": [],
@@ -233,14 +233,14 @@
       ],
       "clinical_nutrition": null,
       "nutrition": {
-        "calories_kcal": 1238.6,
-        "total_fat_g": 89.0,
-        "sat_fat_g": 35.6,
+        "calories_kcal": 1485.9,
+        "total_fat_g": 111.5,
+        "sat_fat_g": 44.6,
         "cholesterol_mg": 280.0,
         "sodium_mg": 520.0,
-        "net_carbs_g": 9.4,
+        "net_carbs_g": 10.1,
         "fiber_g": 14.0,
-        "protein_g": 100.0,
+        "protein_g": 110.5,
         "ig_impact": "Bajo (Curva plana / Sin pico glucémico)",
         "metabolic_notes": "Amortiguación enzimática óptima por grasas y fibra."
       }
@@ -290,7 +290,7 @@
           "main_dish_name": "Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén",
           "side_dish_name": "Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®",
           "dish_name_legacy": null,
-          "fat_g": 28.5,
+          "fat_g": 31.0,
           "protein_g": 33.5,
           "net_carbs_g": 3.3,
           "ingredients": []
@@ -298,12 +298,12 @@
         {
           "meal_type": "Comida",
           "starter_name": "Crema de Coliflor Rostizada al Ajo y Queso de Cabra",
-          "main_dish_name": "Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra y Romero",
+          "main_dish_name": "Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada",
           "side_dish_name": "Chayotes Tiernos al Vapor con Mantequilla Clarificada",
           "dish_name_legacy": null,
-          "fat_g": 37.0,
-          "protein_g": 41.0,
-          "net_carbs_g": 3.6,
+          "fat_g": 50.0,
+          "protein_g": 44.0,
+          "net_carbs_g": 4.0,
           "ingredients": []
         },
         {
@@ -312,9 +312,9 @@
           "main_dish_name": "Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO",
           "side_dish_name": "Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®",
           "dish_name_legacy": null,
-          "fat_g": 21.5,
-          "protein_g": 26.5,
-          "net_carbs_g": 2.1,
+          "fat_g": 29.0,
+          "protein_g": 34.0,
+          "net_carbs_g": 2.5,
           "ingredients": []
         }
       ],
@@ -331,7 +331,7 @@
           "scaled_ingredients": []
         },
         {
-          "dish_name": "Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra y Romero",
+          "dish_name": "Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada",
           "category": "Comida",
           "prep_time_min": 15,
           "steps": [],
@@ -355,14 +355,14 @@
       ],
       "clinical_nutrition": null,
       "nutrition": {
-        "calories_kcal": 1223.0,
-        "total_fat_g": 87.0,
-        "sat_fat_g": 34.8,
+        "calories_kcal": 1475.2,
+        "total_fat_g": 110.0,
+        "sat_fat_g": 44.0,
         "cholesterol_mg": 280.0,
         "sodium_mg": 520.0,
-        "net_carbs_g": 9.0,
+        "net_carbs_g": 9.8,
         "fiber_g": 14.0,
-        "protein_g": 101.0,
+        "protein_g": 111.5,
         "ig_impact": "Bajo (Curva plana / Sin pico glucémico)",
         "metabolic_notes": "Amortiguación enzimática óptima por grasas y fibra."
       }
@@ -412,8 +412,8 @@
           "main_dish_name": "Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente",
           "side_dish_name": "Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus®",
           "dish_name_legacy": null,
-          "fat_g": 29.0,
-          "protein_g": 32.5,
+          "fat_g": 31.5,
+          "protein_g": 33.0,
           "net_carbs_g": 3.1,
           "ingredients": []
         },
@@ -423,9 +423,9 @@
           "main_dish_name": "Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano",
           "side_dish_name": "Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO",
           "dish_name_legacy": null,
-          "fat_g": 36.5,
-          "protein_g": 40.0,
-          "net_carbs_g": 3.4,
+          "fat_g": 51.0,
+          "protein_g": 43.5,
+          "net_carbs_g": 4.0,
           "ingredients": []
         },
         {
@@ -434,9 +434,9 @@
           "main_dish_name": "Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón",
           "side_dish_name": "Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus®",
           "dish_name_legacy": null,
-          "fat_g": 22.0,
-          "protein_g": 28.5,
-          "net_carbs_g": 2.3,
+          "fat_g": 29.5,
+          "protein_g": 34.0,
+          "net_carbs_g": 2.8,
           "ingredients": []
         }
       ],
@@ -477,14 +477,14 @@
       ],
       "clinical_nutrition": null,
       "nutrition": {
-        "calories_kcal": 1226.7,
-        "total_fat_g": 87.5,
-        "sat_fat_g": 35.0,
+        "calories_kcal": 1489.6,
+        "total_fat_g": 112.0,
+        "sat_fat_g": 44.8,
         "cholesterol_mg": 280.0,
         "sodium_mg": 520.0,
-        "net_carbs_g": 8.8,
+        "net_carbs_g": 9.9,
         "fiber_g": 14.0,
-        "protein_g": 101.0,
+        "protein_g": 110.5,
         "ig_impact": "Bajo (Curva plana / Sin pico glucémico)",
         "metabolic_notes": "Amortiguación enzimática óptima por grasas y fibra."
       }
@@ -534,8 +534,8 @@
           "main_dish_name": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco",
           "side_dish_name": "Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®",
           "dish_name_legacy": null,
-          "fat_g": 29.0,
-          "protein_g": 31.0,
+          "fat_g": 31.0,
+          "protein_g": 33.0,
           "net_carbs_g": 3.1,
           "ingredients": []
         },
@@ -545,9 +545,9 @@
           "main_dish_name": "Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón",
           "side_dish_name": "Ejotes Frescos Salteados con Almendras Fileteadas",
           "dish_name_legacy": null,
-          "fat_g": 35.0,
-          "protein_g": 39.0,
-          "net_carbs_g": 3.5,
+          "fat_g": 50.0,
+          "protein_g": 44.0,
+          "net_carbs_g": 4.0,
           "ingredients": []
         },
         {
@@ -556,8 +556,8 @@
           "main_dish_name": "Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana",
           "side_dish_name": "Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®",
           "dish_name_legacy": null,
-          "fat_g": 24.0,
-          "protein_g": 25.5,
+          "fat_g": 29.0,
+          "protein_g": 33.5,
           "net_carbs_g": 2.8,
           "ingredients": []
         }
@@ -599,14 +599,14 @@
       ],
       "clinical_nutrition": null,
       "nutrition": {
-        "calories_kcal": 1211.6,
-        "total_fat_g": 88.0,
-        "sat_fat_g": 35.2,
+        "calories_kcal": 1471.6,
+        "total_fat_g": 110.0,
+        "sat_fat_g": 44.0,
         "cholesterol_mg": 280.0,
         "sodium_mg": 520.0,
-        "net_carbs_g": 9.4,
+        "net_carbs_g": 9.9,
         "fiber_g": 14.0,
-        "protein_g": 95.5,
+        "protein_g": 110.5,
         "ig_impact": "Bajo (Curva plana / Sin pico glucémico)",
         "metabolic_notes": "Amortiguación enzimática óptima por grasas y fibra."
       }
@@ -656,31 +656,31 @@
           "main_dish_name": "Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela",
           "side_dish_name": "Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®",
           "dish_name_legacy": null,
-          "fat_g": 28.5,
-          "protein_g": 32.0,
+          "fat_g": 31.0,
+          "protein_g": 33.0,
           "net_carbs_g": 3.3,
           "ingredients": []
         },
         {
           "meal_type": "Comida",
-          "starter_name": "Sopa de Calabacitas y Cilantro al Queso Parmesano",
+          "starter_name": "Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano",
           "main_dish_name": "Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón",
           "side_dish_name": "Espárragos Verdes Asados con Limón y Sal Marina",
           "dish_name_legacy": null,
-          "fat_g": 37.0,
-          "protein_g": 41.0,
+          "fat_g": 51.5,
+          "protein_g": 44.0,
           "net_carbs_g": 4.0,
           "ingredients": []
         },
         {
           "meal_type": "Cena",
           "starter_name": "Bastones de Zucchini y Apio al Limón con Sal Mineral",
-          "main_dish_name": "Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate",
+          "main_dish_name": "Tartar de Robalo Fresco al Limón con Aguacate Hass y Cilantro",
           "side_dish_name": "Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®",
           "dish_name_legacy": null,
-          "fat_g": 22.0,
-          "protein_g": 27.0,
-          "net_carbs_g": 2.2,
+          "fat_g": 29.0,
+          "protein_g": 34.0,
+          "net_carbs_g": 2.8,
           "ingredients": []
         }
       ],
@@ -708,7 +708,7 @@
           "scaled_ingredients": []
         },
         {
-          "dish_name": "Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate",
+          "dish_name": "Tartar de Robalo Fresco al Limón con Aguacate Hass y Cilantro",
           "category": "Cena",
           "prep_time_min": 15,
           "steps": [],
@@ -721,14 +721,14 @@
       ],
       "clinical_nutrition": null,
       "nutrition": {
-        "calories_kcal": 1225.5,
-        "total_fat_g": 87.5,
-        "sat_fat_g": 35.0,
+        "calories_kcal": 1487.9,
+        "total_fat_g": 111.5,
+        "sat_fat_g": 44.6,
         "cholesterol_mg": 280.0,
         "sodium_mg": 520.0,
-        "net_carbs_g": 9.5,
+        "net_carbs_g": 10.1,
         "fiber_g": 14.0,
-        "protein_g": 100.0,
+        "protein_g": 111.0,
         "ig_impact": "Bajo (Curva plana / Sin pico glucémico)",
         "metabolic_notes": "Amortiguación enzimática óptima por grasas y fibra."
       }
@@ -778,8 +778,8 @@
           "main_dish_name": "Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra",
           "side_dish_name": "Gelatina Artesanal de Higo (4°C) con Fórmula Nootrópica 33Plus®",
           "dish_name_legacy": null,
-          "fat_g": 28.0,
-          "protein_g": 32.0,
+          "fat_g": 31.0,
+          "protein_g": 33.0,
           "net_carbs_g": 3.4,
           "ingredients": []
         },
@@ -789,9 +789,9 @@
           "main_dish_name": "Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo",
           "side_dish_name": "Calabacitas Verdes al Sartén con Sal de Mar",
           "dish_name_legacy": null,
-          "fat_g": 35.5,
-          "protein_g": 39.5,
-          "net_carbs_g": 3.4,
+          "fat_g": 50.5,
+          "protein_g": 44.0,
+          "net_carbs_g": 3.8,
           "ingredients": []
         },
         {
@@ -800,9 +800,9 @@
           "main_dish_name": "Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate",
           "side_dish_name": "Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®",
           "dish_name_legacy": null,
-          "fat_g": 21.0,
-          "protein_g": 28.0,
-          "net_carbs_g": 2.1,
+          "fat_g": 29.5,
+          "protein_g": 34.0,
+          "net_carbs_g": 2.8,
           "ingredients": []
         }
       ],
@@ -843,14 +843,14 @@
       ],
       "clinical_nutrition": null,
       "nutrition": {
-        "calories_kcal": 1194.1,
-        "total_fat_g": 84.5,
-        "sat_fat_g": 33.8,
+        "calories_kcal": 1483.0,
+        "total_fat_g": 111.0,
+        "sat_fat_g": 44.4,
         "cholesterol_mg": 280.0,
         "sodium_mg": 520.0,
-        "net_carbs_g": 8.9,
+        "net_carbs_g": 10.0,
         "fiber_g": 14.0,
-        "protein_g": 99.5,
+        "protein_g": 111.0,
         "ig_impact": "Bajo (Curva plana / Sin pico glucémico)",
         "metabolic_notes": "Amortiguación enzimática óptima por grasas y fibra."
       }
