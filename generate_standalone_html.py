@@ -2,6 +2,7 @@ import copy
 import re, unicodedata
 import json
 import os
+import shutil
 os.environ["GEMINI_API_KEY"] = ""
 from app.config import settings
 settings.GEMINI_API_KEY = ""
@@ -1587,6 +1588,21 @@ def generate_standalone():
         plan_39_dict["week_label"] = "Semana 39 (20 al 26 de Septiembre de 2026)"
         plan_39_dict["week_start"] = "2026-09-20"
 
+    s40_path = os.path.join(os.path.dirname(__file__), 'semana_40_master.json')
+    if os.path.exists(s40_path):
+        with open(s40_path, 'r', encoding='utf-8') as f:
+            plan_40_dict = json.load(f)
+    else:
+        architect = KetoAIArchitect()
+        plan_40_dict = architect.build_semana_40_plan(diners_count=6).model_dump()
+        with open(s40_path, 'w', encoding='utf-8') as f:
+            json.dump(plan_40_dict, f, ensure_ascii=False, indent=2)
+
+    plan_40_dict["week_name"] = "Semana 40"
+    plan_40_dict["week_label"] = "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)"
+    plan_40_dict["week_start"] = "2026-09-27"
+    plan_40_dict["date_range"] = "27 de Septiembre al 03 de Octubre de 2026"
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
@@ -1594,12 +1610,12 @@ def generate_standalone():
         "Semana 36 (30 de Agosto al 05 de Septiembre de 2026)": plan_36_dict,
         "Semana 37 (06 al 12 de Septiembre de 2026)": plan_37_dict,
         "Semana 38 (13 al 19 de Septiembre de 2026)": plan_38_dict,
-        "Semana 39 (20 al 26 de Septiembre de 2026)": plan_39_dict
+        "Semana 39 (20 al 26 de Septiembre de 2026)": plan_39_dict,
+        "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)": plan_40_dict
     }
 
-    
     # ENRIQUECIMIENTO PASIVO DE RECETAS ESTRUCTURADAS (V15.22.1)
-    for p_dict in [plan_33_dict, plan_34_dict, plan_35_dict, plan_36_dict, plan_37_dict, plan_38_dict, plan_39_dict]:
+    for p_dict in [plan_33_dict, plan_34_dict, plan_35_dict, plan_36_dict, plan_37_dict, plan_38_dict, plan_39_dict, plan_40_dict]:
         for day in p_dict.get("days", []):
             for meal in day.get("meals", []):
                 s_name = meal.get("starter_name") or meal.get("starter")
@@ -2370,8 +2386,8 @@ function generateNextWeekMenu() {
     const currentDayNum = (new Date().getDay() >= 0 && new Date().getDay() <= 6) ? new Date().getDay() : 0;
     let selectedIdx = currentDayNum;
 
-    const CURRENT_APP_VERSION = 'v36_6_ssot_canonical';
-    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v36_6_ssot';
+    const CURRENT_APP_VERSION = 'v40_0_ssot_canonical';
+    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v40_0_ssot';
 
     function toggleTheme() {
       const html = document.documentElement;
@@ -3472,7 +3488,8 @@ function generateNextWeekMenu() {
         plan.days.forEach((day, idx) => {
           const btn = document.createElement('button');
           const isActive = idx === selectedIdx;
-          const isToday = (day.day_num === "26" || (day.date_str && day.date_str.includes("26")));
+          const todayNumStr = new Date().getDate().toString();
+          const isToday = (day.day_num === todayNumStr || (day.day_num && parseInt(day.day_num) === new Date().getDate()) || (day.date_str && day.date_str.includes(todayNumStr)));
           
           btn.type = 'button';
           btn.className = `min-h-[48px] px-4 py-2.5 rounded-xl border text-xs font-brand-body flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
@@ -6104,6 +6121,10 @@ function renderRecipes(day, activeDiners) {
 
     with open("expediente_nutriketo.html", "w", encoding="utf-8") as f:
         f.write(html_content)
+
+    shutil.copy("expediente_nutriketo.html", "index.html")
+    if os.path.exists("app/static"):
+        shutil.copy("expediente_nutriketo.html", "app/static/index.html")
 
     print("TODAS LAS 3 CORRECCIONES APLICADAS Y RECOMPILADAS CON ÉXITO:")
     print(" 1. Insumos 100% Granulares (Desagrupados).")
