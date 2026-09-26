@@ -28,31 +28,9 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
     if "mantequilla" in name_clean or "ghee" in name_clean:
         return ("Mantequilla de pastoreo / Ghee", "🥑 Grasas Saludables y Frutos", "mantequilla_pastoreo", "g", scaled_qty)
 
-    # 4. Pechuga de pavo vs Tocino de pavo
-    if "tocino de pavo" in name_clean:
-        return ("Tocino de pavo artesanal crujiente", "🥩 Proteínas Principales Seleccionadas", "tocino_pavo", "piezas", scaled_qty)
-    if "pavo" in name_clean:
-        if clean_unit.lower() in ["piezas", "pieza"]:
-            return ("Pechuga de pavo artesanal", "🥩 Proteínas Principales Seleccionadas", "pechuga_pavo", "g", scaled_qty * 150.0)
-        return ("Pechuga de pavo artesanal", "🥩 Proteínas Principales Seleccionadas", "pechuga_pavo", "g", scaled_qty)
-
-    # 5. Machaca Artesanal
-    if "machaca" in name_clean:
-        return ("Carne seca machaca artesanal de res", "🥩 Proteínas Principales Seleccionadas", "machaca_artesanal", "g", scaled_qty)
-
-    # 6. Pechuga de pollo
-    if "pollo" in name_clean:
-        return ("Pechuga de pollo orgánica", "🥩 Proteínas Principales Seleccionadas", "pechuga_pollo", "g", scaled_qty)
-
-    # 7. Sal de mar
-    if "sal" in name_clean:
-        return ("Sal de mar mineral en escamas", "🧂 Condimentos y Sal Mineral", "sal_marina", "g", scaled_qty)
-
-    # 8. Jugo de limón
-    if "limón" in name_clean or "limon" in name_clean:
-        return ("Jugo de limón fresco recién exprimido", "🍋 Cítricos y Ácidos Naturales", "jugo_limon", "ml", scaled_qty)
-
-    # 9. Proteins (placed before seeds so protein dish titles like 'Lomo de atún en costra de sésamo' don't get misclassified as sesame seeds)
+    # 4. Proteins (placed before seasonings so 'Salmón' is not matched by 'sal')
+    if "salmón" in name_clean or "salmon" in name_clean:
+        return ("Filete de Salmón fresco con piel", "🥩 Proteínas Principales Seleccionadas", "filete_salmon", "g", scaled_qty)
     if "arrachera" in name_clean:
         return ("Corte magro de Arrachera de res", "🥩 Proteínas Principales Seleccionadas", "arrachera_res", "g", scaled_qty)
     if "robalo" in name_clean:
@@ -61,14 +39,36 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
         return ("Carne molida / Filete de Sirloin magro", "🥩 Proteínas Principales Seleccionadas", "carne_sirloin", "g", scaled_qty)
     if "ribeye" in name_clean:
         return ("Corte de Ribeye de res premium", "🥩 Proteínas Principales Seleccionadas", "ribeye_res", "g", scaled_qty)
-    if "salmón" in name_clean or "salmon" in name_clean:
-        return ("Filete de Salmón fresco con piel", "🥩 Proteínas Principales Seleccionadas", "filete_salmon", "g", scaled_qty)
     if "atún" in name_clean or "atun" in name_clean:
         return ("Medallón de Atún fresco", "🥩 Proteínas Principales Seleccionadas", "atun_fresco", "g", scaled_qty)
     if "pescado" in name_clean:
         return ("Filete de Pescado blanco fresco", "🥩 Proteínas Principales Seleccionadas", "pescado_blanco", "g", scaled_qty)
     if "huachinango" in name_clean:
         return ("Filete de Huachinango fresco", "🥩 Proteínas Principales Seleccionadas", "huachinango_fresco", "g", scaled_qty)
+
+    # 5. Pechuga de pavo vs Tocino de pavo
+    if "tocino de pavo" in name_clean:
+        return ("Tocino de pavo artesanal crujiente", "🥩 Proteínas Principales Seleccionadas", "tocino_pavo", "piezas", scaled_qty)
+    if "pavo" in name_clean:
+        if clean_unit.lower() in ["piezas", "pieza"]:
+            return ("Pechuga de pavo artesanal", "🥩 Proteínas Principales Seleccionadas", "pechuga_pavo", "g", scaled_qty * 150.0)
+        return ("Pechuga de pavo artesanal", "🥩 Proteínas Principales Seleccionadas", "pechuga_pavo", "g", scaled_qty)
+
+    # 6. Machaca Artesanal
+    if "machaca" in name_clean:
+        return ("Carne seca machaca artesanal de res", "🥩 Proteínas Principales Seleccionadas", "machaca_artesanal", "g", scaled_qty)
+
+    # 7. Pechuga de pollo
+    if "pollo" in name_clean:
+        return ("Pechuga de pollo orgánica", "🥩 Proteínas Principales Seleccionadas", "pechuga_pollo", "g", scaled_qty)
+
+    # 8. Sal de mar (use word boundary to avoid matching 'salmón' or 'salsa')
+    if re.search(r'\bsal\b', name_clean) or "sal de mar" in name_clean or "sal marina" in name_clean:
+        return ("Sal de mar mineral en escamas", "🧂 Condimentos y Sal Mineral", "sal_marina", "g", scaled_qty)
+
+    # 9. Jugo de limón
+    if "limón" in name_clean or "limon" in name_clean:
+        return ("Jugo de limón fresco recién exprimido", "🍋 Cítricos y Ácidos Naturales", "jugo_limon", "ml", scaled_qty)
 
     # 10. Sésamo / Ajonjolí (only actual seeds)
     if "sésamo" in name_clean or "sesamo" in name_clean or "ajonjolí" in name_clean:

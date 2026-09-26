@@ -1326,6 +1326,7 @@
 | **Corte magro de Arrachera de res** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Huachinango fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Robalo fresco** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Filete de Salmón fresco con piel** | 780 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Medallón de Atún fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pavo artesanal** | 2520 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pollo orgánica** | 3480 | g | 🥩 Proteínas Principales Seleccionadas |
@@ -1333,14 +1334,14 @@
 | **Costilla de res limpia troceada** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Queso de cabra artesanal** | 180 | g | 🥬 Cama Vegetal e Insumos Córtex |
-| **Espinacas baby frescas de la granja** | 1200 | g | 🥬 Hojas Verdes y Envolturas |
+| **Espinacas baby frescas de la granja** | 1440 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de arúgula fresca** | 360 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de lechuga orejona viva** | 360 | g | 🥬 Hojas Verdes y Envolturas |
 | **Queso crema suave artesanal** | 360 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
 | **Queso Panela artesanal en láminas finas** | 180 | g | 🧀 Relleno de Queso |
 | **Finas hierbas frescas de la granja** | 12 | g | 🧀 Relleno y Aromáticos |
 | **Queso Gouda artesanal** | 180 | g | 🧀 Relleno y Aromáticos |
-| **Sal de mar mineral en escamas** | 1461 | g | 🧂 Condimentos y Sal Mineral |
+| **Sal de mar mineral en escamas** | 441 | g | 🧂 Condimentos y Sal Mineral |
 | **Queso Parmesano o de cabra** | 330 | g | 🧈 Emulsión y Sazón |
 | **Tomillo fresco de la granja** | 9 | g | 🧈 Grasa Saludable y Botánicos |
 | **Cilantro fresco y orégano** | 54 | g | 🧈 Grasa Saludable y Sazón |
