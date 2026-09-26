@@ -495,23 +495,27 @@ def validate_recipe_compliance(recipe: TypedRecipeSchema, forbidden_harvest: lis
         if not has_pepper:
             return False, f"RECETA RECHAZADA SSOT V36.6 REV3: '{recipe.title}' contiene Cúrcuma pero carece de Pimienta Negra / Piperina para activación trofológica."
 
-    # 7.20. SSOT V36.6 REV3: Mandato Matutino de Huevo y Exclusión de Carnes Rojas Pesadas
+    # 7.20. SSOT V36.6 REV3: Mandato Matutino de Huevo y Exclusión de Carnes Rojas Pesadas (Excepción Machaca Artesanal <= 30g)
     if is_desayuno:
-        has_egg = any(e in title_lower for e in ["huevo", "huevos", "clara", "claras", "yema", "yemas", "omelette", "tamagoyaki", "chawanmushi", "çılbır", "cilbir"]) or any(e in item for item in bom_items for e in ["huevo", "huevos", "clara", "claras", "yema", "yemas"])
+        has_egg = any(e in title_lower for e in ["huevo", "huevos", "clara", "claras", "yema", "yemas", "omelette", "tamagoyaki", "chawanmushi", "çılbır", "cilbir", "machaca"]) or any(e in item for item in bom_items for e in ["huevo", "huevos", "clara", "claras", "yema", "yemas"])
         if not has_egg:
             return False, f"RECETA RECHAZADA SSOT V36.6 REV3: Desayuno '{recipe.title}' no incluye Huevo Orgánico de Pastoreo como matriz proteica."
         
-        forbidden_heavy_beef = ["ribeye", "sirloin", "arrachera", "corte de res", "bistec", "bisteck", "lomo de res"]
+        forbidden_heavy_beef = ["ribeye", "sirloin", "arrachera", "corte de res", "bistec", "bisteck", "lomo de res", "falda de res"]
         for heavy in forbidden_heavy_beef:
             if re.search(r'\b' + heavy + r'\b', title_lower):
                 return False, f"RECETA RECHAZADA SSOT V36.6 REV3: Desayuno '{recipe.title}' contiene corte pesado de res ('{heavy}')."
 
-    # 7.21. SSOT V36.6 REV3: Pureza BOM 3D (Prohibición de Adjetivaciones Culinarias en Inventario)
+    # 7.21. SSOT V36.6 REV3: Pureza BOM 3D (Validación por Lista Blanca Canónica)
+    from app.services.inventory_master import normalize_to_canonical_slug, INGREDIENT_CANONICAL_MAP
     forbidden_bom_adjectives = ["jugoso", "jugosa", "marinado", "marinada", "dorado", "dorada", "fresco a la parrilla", "fresca a la plancha", "crujiente"]
     for b_item in bom_items:
         for adj in forbidden_bom_adjectives:
             if adj in b_item:
                 return False, f"RECETA RECHAZADA SSOT V36.6 REV3: Pureza BOM violada. Ítem en inventario '{b_item}' contiene adjetivación culinaria '{adj}'."
+        c_slug = normalize_to_canonical_slug(b_item)
+        if not c_slug or c_slug not in INGREDIENT_CANONICAL_MAP:
+            return False, f"RECETA RECHAZADA SSOT V36.6 REV3: Pureza BOM violada. Ítem en inventario '{b_item}' no coincide con ninguna clave del catálogo canónico de materias primas."
 
     return True, "OK"
 

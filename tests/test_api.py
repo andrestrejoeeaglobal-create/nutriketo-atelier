@@ -902,7 +902,7 @@ def test_ssot_v36_6_rev3_validator_rules():
                 category="Carnes",
                 items=[
                     IngredientItemSchema(name="Pechuga jugosa a la parrilla", base_qty_per_person=180.0, unit="g"),
-                    IngredientItemSchema(name="Mantequilla", base_qty_per_person=20.0, unit="g")
+                    IngredientItemSchema(name="Mantequilla de pastoreo", base_qty_per_person=20.0, unit="g")
                 ]
             )
         ],
@@ -911,6 +911,44 @@ def test_ssot_v36_6_rev3_validator_rules():
     ok_bom, msg_bom = validate_recipe_compliance(bad_bom_recipe)
     assert ok_bom is False
     assert "Pureza BOM violada" in msg_bom
+
+    # 4. Test Machaca Scramble acceptance in Breakfast
+    ok_machaca_recipe = TypedRecipeSchema(
+        title="Huevos Revueltos con Machaca Artesanal",
+        cooking_technique="machaca_scramble",
+        ingredient_groups=[
+            IngredientGroupSchema(
+                category="Carnes",
+                items=[
+                    IngredientItemSchema(name="Huevos enteros", base_qty_per_person=2.0, unit="piezas"),
+                    IngredientItemSchema(name="Machaca de res artesanal", base_qty_per_person=25.0, unit="g"),
+                    IngredientItemSchema(name="Mantequilla de pastoreo", base_qty_per_person=15.0, unit="g")
+                ]
+            )
+        ],
+        steps=["1. Dorar machaca artesanal en mantequilla.", "2. Incorporar huevos y cuajar."]
+    )
+    ok_machaca, msg_machaca = validate_recipe_compliance(ok_machaca_recipe, meal_type="Desayuno")
+    assert ok_machaca is True, f"Machaca scramble debe ser aceptado en desayuno (obtenido: {msg_machaca})"
+
+    # 5. Test BOM Whitelist rejection for unmapped item
+    bad_unmapped_recipe = TypedRecipeSchema(
+        title="Omelette de Huevos Enteros",
+        cooking_technique="baveuse_omelette",
+        ingredient_groups=[
+            IngredientGroupSchema(
+                category="General",
+                items=[
+                    IngredientItemSchema(name="Huevos enteros", base_qty_per_person=2.0, unit="piezas"),
+                    IngredientItemSchema(name="Sustancia Misteriosa No Canonica 999", base_qty_per_person=10.0, unit="g")
+                ]
+            )
+        ],
+        steps=["1. Batir los huevos enteros e incorporar sustancia misteriosa no canonica 999.", "2. Cuajar en sartén y servir."]
+    )
+    ok_unmapped, msg_unmapped = validate_recipe_compliance(bad_unmapped_recipe, meal_type="Desayuno")
+    assert ok_unmapped is False
+    assert "no coincide con ninguna clave del catálogo canónico" in msg_unmapped
 
 
 
