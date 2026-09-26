@@ -496,7 +496,7 @@ def validate_recipe_compliance(recipe: TypedRecipeSchema, forbidden_harvest: lis
             return False, f"RECETA RECHAZADA SSOT V36.6 REV3: '{recipe.title}' contiene Cúrcuma pero carece de Pimienta Negra / Piperina para activación trofológica."
 
     # 7.20. SSOT V36.6 REV3: Mandato Matutino de Huevo y Exclusión de Carnes Rojas Pesadas
-    if is_desayuno and (course_role in ["main", "Plato Principal"] or "principal" in title_lower or "desayuno" in title_lower):
+    if is_desayuno:
         has_egg = any(e in title_lower for e in ["huevo", "huevos", "clara", "claras", "yema", "yemas", "omelette", "tamagoyaki", "chawanmushi", "çılbır", "cilbir"]) or any(e in item for item in bom_items for e in ["huevo", "huevos", "clara", "claras", "yema", "yemas"])
         if not has_egg:
             return False, f"RECETA RECHAZADA SSOT V36.6 REV3: Desayuno '{recipe.title}' no incluye Huevo Orgánico de Pastoreo como matriz proteica."
