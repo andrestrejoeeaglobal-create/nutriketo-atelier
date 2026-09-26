@@ -52,11 +52,31 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
     if "limón" in name_clean or "limon" in name_clean:
         return ("Jugo de limón fresco recién exprimido", "🍋 Cítricos y Ácidos Naturales", "jugo_limon", "ml", scaled_qty)
 
-    # 9. Sésamo / Ajonjolí
+    # 9. Proteins (placed before seeds so protein dish titles like 'Lomo de atún en costra de sésamo' don't get misclassified as sesame seeds)
+    if "cerdo" in name_clean:
+        return ("Medallones de lomo de cerdo magro", "🥩 Proteínas Principales Seleccionadas", "lomo_cerdo", "g", scaled_qty)
+    if "camarón" in name_clean or "camaron" in name_clean or "camarones" in name_clean:
+        return ("Camarón fresco de Pacífico limpio", "🥩 Proteínas Principales Seleccionadas", "camaron_fresco", "g", scaled_qty)
+    if "robalo" in name_clean:
+        return ("Filete de Robalo fresco", "🥩 Proteínas Principales Seleccionadas", "filete_robalo", "g", scaled_qty)
+    if "sirloin" in name_clean:
+        return ("Carne molida / Filete de Sirloin magro", "🥩 Proteínas Principales Seleccionadas", "carne_sirloin", "g", scaled_qty)
+    if "ribeye" in name_clean:
+        return ("Corte de Ribeye de res premium", "🥩 Proteínas Principales Seleccionadas", "ribeye_res", "g", scaled_qty)
+    if "salmón" in name_clean or "salmon" in name_clean:
+        return ("Filete de Salmón fresco con piel", "🥩 Proteínas Principales Seleccionadas", "filete_salmon", "g", scaled_qty)
+    if "atún" in name_clean or "atun" in name_clean:
+        return ("Medallón de Atún fresco", "🥩 Proteínas Principales Seleccionadas", "atun_fresco", "g", scaled_qty)
+    if "pescado" in name_clean:
+        return ("Filete de Pescado blanco fresco", "🥩 Proteínas Principales Seleccionadas", "pescado_blanco", "g", scaled_qty)
+    if "huachinango" in name_clean:
+        return ("Filete de Huachinango fresco", "🥩 Proteínas Principales Seleccionadas", "huachinango_fresco", "g", scaled_qty)
+
+    # 10. Sésamo / Ajonjolí (only actual seeds)
     if "sésamo" in name_clean or "sesamo" in name_clean or "ajonjolí" in name_clean:
         return ("Semillas de sésamo tostadas", "🌰 Semillas y Nueces", "semillas_sesamo", "g", scaled_qty)
 
-    # 10. Fruits
+    # 11. Fruits
     if any(k in name_clean for k in ["granada", "arilos de granada"]):
         return ("Arilos de Granada fresca de la granja", "🍓 Frutas Keto y Cosecha Viva", "granada_fresca", "g", scaled_qty)
     if any(k in name_clean for k in ["higo", "higos"]):
@@ -72,7 +92,7 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
     if any(k in name_clean for k in ["mora", "moras"]):
         return ("Moras frescas de la granja", "🍓 Frutas Keto y Cosecha Viva", "moras_frescas", "g", scaled_qty)
 
-    # 11. Vegetables
+    # 12. Vegetables
     if "espárrago" in name_clean or "esparrago" in name_clean:
         return ("Espárragos verdes frescos de la granja", "🥦 Hortalizas y Vegetales Córtex", "esparragos_verdes", "g", scaled_qty)
     if "calabacita" in name_clean or "zucchini" in name_clean:
@@ -95,20 +115,6 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
         return ("Chayotes tiernos de la granja", "🥦 Hortalizas y Vegetales Córtex", "chayote_tierno", "g", scaled_qty)
     if "ejote" in name_clean or "ejotes" in name_clean:
         return ("Ejotes verdes frescos de la granja", "🥦 Hortalizas y Vegetales Córtex", "ejotes_frescos", "g", scaled_qty)
-
-    # 12. Proteins
-    if "sirloin" in name_clean:
-        return ("Carne molida / Filete de Sirloin magro", "🥩 Proteínas Principales Seleccionadas", "carne_sirloin", "g", scaled_qty)
-    if "ribeye" in name_clean:
-        return ("Corte de Ribeye de res premium", "🥩 Proteínas Principales Seleccionadas", "ribeye_res", "g", scaled_qty)
-    if "salmón" in name_clean or "salmon" in name_clean:
-        return ("Filete de Salmón fresco con piel", "🥩 Proteínas Principales Seleccionadas", "filete_salmon", "g", scaled_qty)
-    if "atún" in name_clean or "atun" in name_clean:
-        return ("Medallón de Atún fresco", "🥩 Proteínas Principales Seleccionadas", "atun_fresco", "g", scaled_qty)
-    if "pescado" in name_clean:
-        return ("Filete de Pescado blanco fresco", "🥩 Proteínas Principales Seleccionadas", "pescado_blanco", "g", scaled_qty)
-    if "huachinango" in name_clean:
-        return ("Filete de Huachinango fresco", "🥩 Proteínas Principales Seleccionadas", "huachinango_fresco", "g", scaled_qty)
 
     return (iname.strip(), category, name_clean, unit, scaled_qty)
 
@@ -203,9 +209,15 @@ lines.append('')
 lines.append('| Insumo | Cantidad Total (6 Comensales) | Unidad | Categoría |')
 lines.append('|---|---|---|---|')
 
+import math
 for k in sorted(shopping_map.keys(), key=lambda x: (shopping_map[x]['category'], shopping_map[x]['name'])):
     item = shopping_map[k]
-    lines.append(f"| **{item['name']}** | {item['total_qty']:g} | {item['unit']} | {item['category']} |")
+    val = item['total_qty']
+    if item['unit'].lower() in ['piezas', 'pieza']:
+        val_str = str(math.ceil(val))
+    else:
+        val_str = f"{val:g}"
+    lines.append(f"| **{item['name']}** | {val_str} | {item['unit']} | {item['category']} |")
 
 output_text = '\n'.join(lines)
 

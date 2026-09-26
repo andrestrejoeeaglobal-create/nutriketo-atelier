@@ -671,8 +671,36 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             ]
         }
 
-    # 10. TACOS EN ENVUELTO DE LECHUGA VIVA CON SIRLOIN Y GUACAMOLE
-    if "tacos en envuelto" in clean_lower or "lechuga viva" in clean_lower:
+    # 10. TACOS EN ENVUELTO DE LECHUGA VIVA CON SIRLOIN O POLLO Y GUACAMOLE
+    if "tacos en envuelto" in clean_lower or "taco wrap" in clean_lower or "lechuga viva" in clean_lower:
+        if "pollo" in clean_lower or "pechuga" in clean_lower:
+            return {
+                "title": clean_title,
+                "cooking_technique": "taco_wrap",
+                "sensory_description": "Tacos cetogénicos frescos servidos en hojas crujientes de lechuga orejona viva a 4°C, rellenos de pechuga de pollo orgánica desmenuzada, guacamole cremoso y vinagreta cítrica VEVO.",
+                "ingredient_groups": [
+                    {
+                        "category": "🥬 Envoltura de Lechuga Viva",
+                        "items": [{"name": "Hojas de lechuga orejona viva", "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]
+                    },
+                    {
+                        "category": "🍗 Relleno de Pollo y Guacamole",
+                        "items": [
+                            {"name": "Pechuga de pollo orgánica desmenuzada", "base_qty_per_person": 130.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                            {"name": "Aguacate Hass en guacamole", "base_qty_per_person": 50.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                            {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                            {"name": "Jugo de limón fresco", "base_qty_per_person": 5.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                            {"name": "Sal de mar mineral en escamas", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                        ]
+                    }
+                ],
+                "steps": [
+                    "1. Preparación y Desmenuzado de Pollo: Cocinar y desmenuzar la pechuga de pollo orgánica sazonando con sal mineral y un hilo de aceite VEVO; mantener tibia.",
+                    "2. Envoltura Crujiente: Seleccionar, lavar y centrifugar las hojas enteras de lechuga orejona viva manteniéndolas heladas a 4°C.",
+                    "3. Elaboración de Guacamole: Machacar el aguacate Hass fresco con sal de mar mineral y jugo de limón recién exprimido.",
+                    "4. Ensamble de Tacos: Disponer la pechuga de pollo desmenuzada al centro de cada hoja de lechuga fría y coronar con guacamole fresco. Servir a 12°C."
+                ]
+            }
         return {
             "title": clean_title,
             "cooking_technique": "taco_wrap",
@@ -1159,7 +1187,8 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["crema de", "sopa de", "crema ligera"]):
         veg_base = "Acelgas frescas de la granja"
-        if "brócoli" in clean_lower or "brocoli" in clean_lower: veg_base = "Brócoli fresco en floretes de la granja"
+        if "espinaca" in clean_lower or "espinacas" in clean_lower: veg_base = "Espinacas baby frescas de la granja"
+        elif "brócoli" in clean_lower or "brocoli" in clean_lower: veg_base = "Brócoli fresco en floretes de la granja"
         elif "coliflor" in clean_lower: veg_base = "Coliflor fresca rostizada de la granja"
         elif "espárragos" in clean_lower or "esparragos" in clean_lower: veg_base = "Espárragos verdes frescos de la granja"
         elif "champiñones" in clean_lower or "portobello" in clean_lower: veg_base = "Champiñones portobello frescos y ajo"

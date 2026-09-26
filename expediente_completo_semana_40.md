@@ -8,12 +8,12 @@
 ## 1. Menú Sintético Semanal (Visión Ejecutiva)
 | Día | Desayuno (Huevo Orgánico & Nootrópico) | Comida (3 Tiempos Atwater) | Cena (Digestión Ligera & 34Plus®) |
 |---|---|---|---|
-| **Domingo 27 Sep** | Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo | Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo | Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano |
-| **Lunes 28 Sep** | Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda | Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo | Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón |
-| **Martes 29 Sep** | Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén | Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra y Romero | Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO |
+| **Domingo 27 Sep** | Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo | Medallones de Cerdo a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo | Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano |
+| **Lunes 28 Sep** | Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda | Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano | Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón |
+| **Martes 29 Sep** | Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén | Filete de Robalo a la Sartén en Salsa de Eneldo y Mantequilla Clarificada | Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO |
 | **Miércoles 30 Sep** | Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente | Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano | Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón |
 | **Jueves 01 Oct** | Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco | Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón | Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana |
-| **Viernes 02 Oct** | Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela | Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón | Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate |
+| **Viernes 02 Oct** | Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela | Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón | Cazuela Fría de Camarones al Limón con Aguacate Hass y Cilantro |
 | **Sábado 03 Oct** | Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra | Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo | Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate |
 
 ---
@@ -22,8 +22,8 @@
 
 ### 📅 DOMINGO 27 SEP
 
-#### 🍽️ Servicio: DESAYUNO (406 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `32.0g` | Carbs Netos: `3.2g`  
+#### 🍽️ Servicio: DESAYUNO (424 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.0g` | Carbs Netos: `3.2g`  
 
 ##### 🥗 ENTRADA: Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía
 - **Técnica Culinaria:** `raw_assembly`
@@ -81,43 +81,39 @@
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
-#### 🍽️ Servicio: COMIDA (529 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `38.5g` | Proteína: `42.0g` | Carbs Netos: `3.6g`  
+#### 🍽️ Servicio: COMIDA (642 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `44.0g` | Carbs Netos: `4.0g`  
 
-##### 🥗 ENTRADA: Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano
-- **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica:** *"Emulsión reconfortante y suave de champiñones Portobello frescos sofritos con ajo y cúrcuma orgánica en mantequilla de pastoreo, cocinados en caldo vegetal y terciopelados con queso Parmesano."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥦 Hortalizas y Vegetales Córtex*
-  - Champiñones Portobello frescos: **720 g** (120 g/persona)
-  - Ajo y cebolla blanca picados: **90 g** (15 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*
-  - Cúrcuma orgánica en polvo: **12 g** (2 g/persona)
-  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten / Keto)*
-  - Mantequilla de pastoreo / Ghee: **90 g** (15 g/persona)
-  - Queso Parmesano o de cabra: **60 g** (10 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Sofreído Aromático: Sofreír los champiñones Portobello frescos troceados con ajo, cebolla blanca y cúrcuma orgánica en mantequilla de pastoreo durante 4 minutos.
-2. Cocción en Fondo: Verter caldo concentrado caliente y simular a fuego lento (85°C–90°C) durante 10 minutos para extraer sabores.
-3. Licuado y Emulsión: Licuar a alta velocidad hasta obtener una crema de textura terciopelo homogénea.
-4. Servir Caliente: Mantener a fuego bajo sin hervir, incorporar el queso Parmesano rallado y servir caliente a 68°C.
-
-##### 🥩 PLATILLO PRINCIPAL: Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo
+##### 🥗 ENTRADA: Crema Caliente de Flor de Calabaza y Queso de Cabra
 - **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Nota Organoléptica:** *"Platillo principal proteico de Crema Caliente de Flor de Calabaza y Queso de Cabra sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Corte de Ribeye de res premium: **900 g** (150 g/persona)
+  - Crema Caliente de Flor de Calabaza y Queso de Cabra: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Corte de Ribeye de res premium con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Crema Caliente de Flor de Calabaza y Queso de Cabra con papel absorbente; sazonar con sal de mar y hierbas.
+2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
+3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
+4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
+
+##### 🥩 PLATILLO PRINCIPAL: Medallones de Cerdo a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo
+- **Técnica Culinaria:** `saute_and_sear`
+- **Nota Organoléptica:** *"Platillo principal proteico de Medallones de Cerdo a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *🥩 Proteína Principal Seleccionada*
+  - Medallones de Cerdo: **900 g** (150 g/persona)
+- *🧈 Emulsión Cremosa y Grasas*
+  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
+  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
+
+**Procedimiento Paso a Paso:**
+1. Atemperar y Sazonar: Secar la superficie de Medallones de Cerdo con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -140,8 +136,8 @@
 3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
 4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
 
-#### 🍽️ Servicio: CENA (338 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `24.0g` | Proteína: `28.0g` | Carbs Netos: `2.4g`  
+#### 🍽️ Servicio: CENA (408 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
 
 ##### 🥗 ENTRADA: Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen
 - **Técnica Culinaria:** `raw_assembly`
@@ -198,8 +194,8 @@
 
 ### 📅 LUNES 28 SEP
 
-#### 🍽️ Servicio: DESAYUNO (416 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `30.0g` | Proteína: `33.0g` | Carbs Netos: `3.4g`  
+#### 🍽️ Servicio: DESAYUNO (427 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.5g` | Carbs Netos: `3.4g`  
 
 ##### 🥗 ENTRADA: Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía
 - **Técnica Culinaria:** `raw_assembly`
@@ -258,8 +254,8 @@
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
-#### 🍽️ Servicio: COMIDA (498 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `36.0g` | Proteína: `40.0g` | Carbs Netos: `3.5g`  
+#### 🍽️ Servicio: COMIDA (648 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `51.0g` | Proteína: `43.0g` | Carbs Netos: `4.2g`  
 
 ##### 🥗 ENTRADA: Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón
 - **Técnica Culinaria:** `raw_assembly`
@@ -278,19 +274,19 @@
 3. Mezclado Suave: Integrar las hojas verdes con la vinagreta justo antes de emplatar.
 4. Servicio Fresco: Servir en tazón frío a 10°C.
 
-##### 🥩 PLATILLO PRINCIPAL: Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo
+##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano
 - **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Nota Organoléptica:** *"Platillo principal proteico de Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Filete de Salmón fresco con piel: **900 g** (150 g/persona)
+  - Pechuga de pollo orgánica: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Filete de Salmón fresco con piel con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Pechuga de pollo orgánica con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -313,8 +309,8 @@
 3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
 4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
 
-#### 🍽️ Servicio: CENA (325 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `23.0g` | Proteína: `27.0g` | Carbs Netos: `2.5g`  
+#### 🍽️ Servicio: CENA (412 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `34.0g` | Carbs Netos: `2.5g`  
 
 ##### 🥗 ENTRADA: Bastones de Pepino y Apio al Limón con Sal Mineral
 - **Técnica Culinaria:** `raw_assembly`
@@ -334,24 +330,22 @@
 3. Escurrido y Sazón: Escurrir perfectamente y aderezar con jugo de limón fresco y sal de mar mineral.
 4. Servicio Frío: Servir de inmediato a 6°C en vaso o plato de cristal.
 
-##### 🥩 PLATILLO PRINCIPAL: Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón
-- **Técnica Culinaria:** `cold_cure_assembly`
-- **Nota Organoléptica:** *"Tartar gourmet frío de lomo de atún fresco cortado en cubos de 5 mm, macerado con alcaparras, aceite VEVO, jugo de limón y cubos de aguacate Hass."* 
+##### 🥩 PLATILLO PRINCIPAL: Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón
+- **Técnica Culinaria:** `saute_and_sear`
+- **Nota Organoléptica:** *"Platillo principal proteico de Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🐟 Pescado Fresco Sashimi*
-  - Lomo de atún fresco corte sashimi: **780 g** (130 g/persona)
-- *🥑 Macerado Cítrico y Grasas*
-  - Aguacate Hass en cubos: **360 g** (60 g/persona)
-  - Alcaparras finamente picadas: **60 g** (10 g/persona)
-  - Jugo de limón fresco: **60 ml** (10 ml/persona)
-  - Aceite de oliva extra virgen (VEVO): **72 ml** (12 ml/persona)
+- *🥩 Proteína Principal Seleccionada*
+  - Filete de Salmón fresco con piel: **900 g** (150 g/persona)
+- *🧈 Emulsión Cremosa y Grasas*
+  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
+  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cadena de Frío y Corte: Mantener el atún fresco a 2°C–4°C. Cortar con cuchillo de filo único en cubos regulares de 5 mm.
-2. Emulsión de Macerado: En tazón de cristal helado, integrar el aceite VEVO, jugo de limón fresco, alcaparras picadas y sal marina.
-3. Ensamble Macerado: Incorporar el atún y los cubos de aguacate mezclando suavemente con espátula fría.
-4. Moldeo y Servicio Frío: Moldear en aro metálico de 8 cm y servir de inmediato a 8°C.
+1. Atemperar y Sazonar: Secar la superficie de Filete de Salmón fresco con piel con papel absorbente; sazonar con sal de mar y hierbas.
+2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
+3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
+4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
@@ -373,8 +367,8 @@
 
 ### 📅 MARTES 29 SEP
 
-#### 🍽️ Servicio: DESAYUNO (404 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `28.5g` | Proteína: `33.5g` | Carbs Netos: `3.3g`  
+#### 🍽️ Servicio: DESAYUNO (426 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.5g` | Carbs Netos: `3.3g`  
 
 ##### 🥗 ENTRADA: Arilos de Granada Fresca con Almendras Fileteadas y Chía
 - **Técnica Culinaria:** `raw_assembly`
@@ -434,8 +428,8 @@
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
-#### 🍽️ Servicio: COMIDA (511 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `37.0g` | Proteína: `41.0g` | Carbs Netos: `3.6g`  
+#### 🍽️ Servicio: COMIDA (642 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `44.0g` | Carbs Netos: `4.0g`  
 
 ##### 🥗 ENTRADA: Crema de Coliflor Rostizada al Ajo y Queso de Cabra
 - **Técnica Culinaria:** `boil_and_blend`
@@ -455,22 +449,19 @@
 3. Licuar a alta velocidad hasta textura terciopelo.
 4. Emulsionar con crema a fuego bajo sin hervir y servir caliente a 68°C.
 
-##### 🥩 PLATILLO PRINCIPAL: Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra y Romero
+##### 🥩 PLATILLO PRINCIPAL: Filete de Robalo a la Sartén en Salsa de Eneldo y Mantequilla Clarificada
 - **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra y Romero sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Nota Organoléptica:** *"Platillo principal proteico de Filete de Robalo a la Sartén en Salsa de Eneldo y Mantequilla Clarificada sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Filete de Sirloin de res magro: **900 g** (150 g/persona)
-- *🍾 Licores y Especias de la Salsa*
-  - Pimienta negra entera en grano (martajada en mortero): **18 g** (3 g/persona)
-  - Caldo concentrado o fondo oscuro: **180 ml** (30 ml/persona)
+  - Filete de Pescado Blanco (Robalo): **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Filete de Sirloin de res magro con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Filete de Pescado Blanco (Robalo) con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -493,8 +484,8 @@
 3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
 4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
 
-#### 🍽️ Servicio: CENA (308 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `21.5g` | Proteína: `26.5g` | Carbs Netos: `2.1g`  
+#### 🍽️ Servicio: CENA (407 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `34.0g` | Carbs Netos: `2.5g`  
 
 ##### 🥗 ENTRADA: Bastones de Zucchini y Apio al Limón con Sal de Mar
 - **Técnica Culinaria:** `raw_assembly`
@@ -551,8 +542,8 @@
 
 ### 📅 MIÉRCOLES 30 SEP
 
-#### 🍽️ Servicio: DESAYUNO (403 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `32.5g` | Carbs Netos: `3.1g`  
+#### 🍽️ Servicio: DESAYUNO (428 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `31.5g` | Proteína: `33.0g` | Carbs Netos: `3.1g`  
 
 ##### 🥗 ENTRADA: Arándanos Frescos con Nueces Pecana y Semillas de Girasol
 - **Técnica Culinaria:** `raw_assembly`
@@ -620,8 +611,8 @@
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
-#### 🍽️ Servicio: COMIDA (502 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `36.5g` | Proteína: `40.0g` | Carbs Netos: `3.4g`  
+#### 🍽️ Servicio: COMIDA (649 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `51.0g` | Proteína: `43.5g` | Carbs Netos: `4.0g`  
 
 ##### 🥗 ENTRADA: Consomé Claro de Nopales y Hortalizas Tiernas
 - **Técnica Culinaria:** `boil_and_clarify`
@@ -682,8 +673,8 @@
 3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
 4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
 
-#### 🍽️ Servicio: CENA (321 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `22.0g` | Proteína: `28.5g` | Carbs Netos: `2.3g`  
+#### 🍽️ Servicio: CENA (413 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
 
 ##### 🥗 ENTRADA: Bastones de Pepino y Zucchini al Limón con Sal Mineral
 - **Técnica Culinaria:** `raw_assembly`
@@ -741,8 +732,8 @@
 
 ### 📅 JUEVES 01 OCT
 
-#### 🍽️ Servicio: DESAYUNO (397 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `31.0g` | Carbs Netos: `3.1g`  
+#### 🍽️ Servicio: DESAYUNO (423 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.0g` | Carbs Netos: `3.1g`  
 
 ##### 🥗 ENTRADA: Pitayas Frescas con Semillas de Chía y Coco Rallado
 - **Técnica Culinaria:** `raw_assembly`
@@ -799,8 +790,8 @@
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
-#### 🍽️ Servicio: COMIDA (485 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `35.0g` | Proteína: `39.0g` | Carbs Netos: `3.5g`  
+#### 🍽️ Servicio: COMIDA (642 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `44.0g` | Carbs Netos: `4.0g`  
 
 ##### 🥗 ENTRADA: Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen
 - **Técnica Culinaria:** `raw_assembly`
@@ -856,8 +847,8 @@
 3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
 4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
 
-#### 🍽️ Servicio: CENA (329 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `24.0g` | Proteína: `25.5g` | Carbs Netos: `2.8g`  
+#### 🍽️ Servicio: CENA (406 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `33.5g` | Carbs Netos: `2.8g`  
 
 ##### 🥗 ENTRADA: Abanico de Aguacate Hass con Sal de Mar
 - **Técnica Culinaria:** `raw_assembly`
@@ -916,8 +907,8 @@
 
 ### 📅 VIERNES 02 OCT
 
-#### 🍽️ Servicio: DESAYUNO (398 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `28.5g` | Proteína: `32.0g` | Carbs Netos: `3.3g`  
+#### 🍽️ Servicio: DESAYUNO (424 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.0g` | Carbs Netos: `3.3g`  
 
 ##### 🥗 ENTRADA: Fresas Frescas de la Granja con Nueces de Castilla y Chía
 - **Técnica Culinaria:** `raw_assembly`
@@ -974,26 +965,29 @@
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
-#### 🍽️ Servicio: COMIDA (513 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `37.0g` | Proteína: `41.0g` | Carbs Netos: `4.0g`  
+#### 🍽️ Servicio: COMIDA (656 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `51.5g` | Proteína: `44.0g` | Carbs Netos: `4.0g`  
 
-##### 🥗 ENTRADA: Sopa de Calabacitas y Cilantro al Queso Parmesano
+##### 🥗 ENTRADA: Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano
 - **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica:** *"Emulsión caliente y tersa de Sopa de Calabacitas y Cilantro al Queso Parmesano sazonada con hierbas de la granja y grasa cetogénica de pastoreo."* 
+- **Nota Organoléptica:** *"Emulsión reconfortante y suave de champiñones Portobello frescos sofritos con ajo y cúrcuma orgánica en mantequilla de pastoreo, cocinados en caldo vegetal y terciopelados con queso Parmesano."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍵 Base Vegetal / Extracto Mineral*
-  - Calabacitas tiernas de la granja: **720 g** (120 g/persona)
-- *🧈 Emulsión y Sazón*
-  - Mantequilla de pastoreo / Crema entera: **90 g** (15 g/persona)
+- *🥦 Hortalizas y Vegetales Córtex*
+  - Champiñones Portobello frescos: **720 g** (120 g/persona)
+  - Ajo y cebolla blanca picados: **90 g** (15 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*
+  - Cúrcuma orgánica en polvo: **12 g** (2 g/persona)
+  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten / Keto)*
+  - Mantequilla de pastoreo / Ghee: **90 g** (15 g/persona)
   - Queso Parmesano o de cabra: **60 g** (10 g/persona)
-  - Sal de mar y pimienta blanca: **9 g** (1.5 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Sofreír vegetales en mantequilla sin dorar.
-2. Cocinar en caldo a fuego medio-bajo (85-95°C) por 10 minutos hasta tiernos.
-3. Licuar a alta velocidad hasta textura terciopelo.
-4. Emulsionar con crema a fuego bajo sin hervir y servir caliente a 68°C.
+1. Sofreído Aromático: Sofreír los champiñones Portobello frescos troceados con ajo, cebolla blanca y cúrcuma orgánica en mantequilla de pastoreo durante 4 minutos.
+2. Cocción en Fondo: Verter caldo concentrado caliente y simular a fuego lento (85°C–90°C) durante 10 minutos para extraer sabores.
+3. Licuado y Emulsión: Licuar a alta velocidad hasta obtener una crema de textura terciopelo homogénea.
+4. Servir Caliente: Mantener a fuego bajo sin hervir, incorporar el queso Parmesano rallado y servir caliente a 68°C.
 
 ##### 🥩 PLATILLO PRINCIPAL: Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón
 - **Técnica Culinaria:** `saute_and_sear`
@@ -1030,8 +1024,8 @@
 3. Sazón e Integración de Grasas: - Aderezar espárragos verdes de inmediato con mantequilla clarificada o aceite VEVO, sal mineral de mar y limón.
 4. Servicio Caliente: - Emplatar de inmediato como acompañamiento caliente a 68°C.
 
-#### 🍽️ Servicio: CENA (315 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `22.0g` | Proteína: `27.0g` | Carbs Netos: `2.2g`  
+#### 🍽️ Servicio: CENA (408 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
 
 ##### 🥗 ENTRADA: Bastones de Zucchini y Apio al Limón con Sal Mineral
 - **Técnica Culinaria:** `raw_assembly`
@@ -1051,24 +1045,25 @@
 3. Escurrido y Sazón: Escurrir perfectamente y aderezar con jugo de limón fresco y sal de mar mineral.
 4. Servicio Frío: Servir de inmediato a 6°C en vaso o plato de cristal.
 
-##### 🥩 PLATILLO PRINCIPAL: Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate
-- **Técnica Culinaria:** `cold_cure_assembly`
-- **Nota Organoléptica:** *"Ceviche frío de pescado blanco curado en frío con jugo de limón fresco recién exprimido, cilantro, cebolla morada y cubos de aguacate Hass."* 
+##### 🥩 PLATILLO PRINCIPAL: Cazuela Fría de Camarones al Limón con Aguacate Hass y Cilantro
+- **Técnica Culinaria:** `skillet_bake`
+- **Nota Organoléptica:** *"Cazuela artesanal horneada con huevos frescos asentados sobre cama de espinacas baby sofritas en mantequilla de pastoreo y gratinados con queso de cabra artesanal."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🐟 Pescado Blanco de Cosecha*
-  - Filete de pescado blanco (Robalo) en cubos: **780 g** (130 g/persona)
-- *🍋 Curado Cítrico y Guacamole*
-  - Jugo de limón fresco recién exprimido: **150 ml** (25 ml/persona)
-  - Aguacate Hass en cubos: **300 g** (50 g/persona)
-  - Cilantro fresco picado y cebolla morada: **120 g** (20 g/persona)
-  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
+- *🥚 Proteína de Huevo Orgánico*
+  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
+- *🥬 Cama Vegetal e Insumos Córtex*
+  - Espinacas baby frescas de la granja: **240 g** (40 g/persona)
+  - Queso de cabra artesanal: **180 g** (30 g/persona)
+- *🧈 Grasa y Sazón*
+  - Mantequilla de pastoreo / Ghee: **60 g** (10 g/persona)
+  - Sal de mar mineral y pimienta: **9 g** (1.5 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Corte de Pescado en Frío: Cortar el filete de pescado blanco fresco en cubos de 8 mm manteniendo la proteína a 4°C.
-2. Desnaturalización Cítrica en Frío: Marinar en jugo de limón fresco con sal marina durante 8 a 10 minutos exactos hasta tornar opaco.
-3. Integración de Aromáticos: Escurrir ligeramente e incorporar la cebolla morada picada, cilantro fresco y aceite VEVO.
-4. Servicio con Aguacate: Añadir los cubos de aguacate al final y servir frío a 6°C en copa de cristal.
+1. Sofrito de Sustrato Vegetal: Sofreír las espinacas baby en mantequilla dentro de una cazuela o sartén de hierro apta para horno a fuego medio durante 2 minutos.
+2. Montaje de Nidos Proteicos: Formar cavidades en la cama de espinacas y cascar los huevos dentro de cada cavidad. Espolvorear el queso de cabra artesanal alrededor.
+3. Horneado o Cocción Tapada: Hornear a 180°C (o tapar en estufa a fuego bajo) durante 8 a 10 minutos hasta que la clara cuaje firme y la yema quede cremosa.
+4. Servicio Gourmet: Servir caliente al centro en la misma cazuela a 68°C.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
@@ -1090,8 +1085,8 @@
 
 ### 📅 SÁBADO 03 OCT
 
-#### 🍽️ Servicio: DESAYUNO (394 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `28.0g` | Proteína: `32.0g` | Carbs Netos: `3.4g`  
+#### 🍽️ Servicio: DESAYUNO (425 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.0g` | Carbs Netos: `3.4g`  
 
 ##### 🥗 ENTRADA: Higos Frescos Vivos de la Granja con Almendras Fileteadas y Chía
 - **Técnica Culinaria:** `raw_assembly`
@@ -1150,8 +1145,8 @@
 3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
 4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
 
-#### 🍽️ Servicio: COMIDA (491 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `35.5g` | Proteína: `39.5g` | Carbs Netos: `3.4g`  
+#### 🍽️ Servicio: COMIDA (646 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `50.5g` | Proteína: `44.0g` | Carbs Netos: `3.8g`  
 
 ##### 🥗 ENTRADA: Crema de Espinacas y Ajo Rostizado al Parmesano
 - **Técnica Culinaria:** `boil_and_blend`
@@ -1159,7 +1154,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🍵 Base Vegetal / Extracto Mineral*
-  - Acelgas frescas de la granja: **720 g** (120 g/persona)
+  - Espinacas baby frescas de la granja: **720 g** (120 g/persona)
 - *🧈 Emulsión y Sazón*
   - Mantequilla de pastoreo / Crema entera: **90 g** (15 g/persona)
   - Queso Parmesano o de cabra: **60 g** (10 g/persona)
@@ -1206,8 +1201,8 @@
 3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
 4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
 
-#### 🍽️ Servicio: CENA (309 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `21.0g` | Proteína: `28.0g` | Carbs Netos: `2.1g`  
+#### 🍽️ Servicio: CENA (413 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
 
 ##### 🥗 ENTRADA: Ensalada Mix de Hojas Verdes de la Granja con Vinagre VEVO
 - **Técnica Culinaria:** `raw_assembly`
@@ -1227,21 +1222,24 @@
 4. Servicio Fresco: Servir en tazón frío a 10°C.
 
 ##### 🥩 PLATILLO PRINCIPAL: Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Técnica Culinaria:** `taco_wrap`
+- **Nota Organoléptica:** *"Tacos cetogénicos frescos servidos en hojas crujientes de lechuga orejona viva a 4°C, rellenos de pechuga de pollo orgánica desmenuzada, guacamole cremoso y vinagreta cítrica VEVO."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Pechuga de pollo orgánica: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
+- *🥬 Envoltura de Lechuga Viva*
+  - Hojas de lechuga orejona viva: **360 g** (60 g/persona)
+- *🍗 Relleno de Pollo y Guacamole*
+  - Pechuga de pollo orgánica desmenuzada: **780 g** (130 g/persona)
+  - Aguacate Hass en guacamole: **300 g** (50 g/persona)
+  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
+  - Jugo de limón fresco: **30 ml** (5 ml/persona)
+  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Pechuga de pollo orgánica con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
+1. Preparación y Desmenuzado de Pollo: Cocinar y desmenuzar la pechuga de pollo orgánica sazonando con sal mineral y un hilo de aceite VEVO; mantener tibia.
+2. Envoltura Crujiente: Seleccionar, lavar y centrifugar las hojas enteras de lechuga orejona viva manteniéndolas heladas a 4°C.
+3. Elaboración de Guacamole: Machacar el aguacate Hass fresco con sal de mar mineral y jugo de limón recién exprimido.
+4. Ensamble de Tacos: Disponer la pechuga de pollo desmenuzada al centro de cada hoja de lechuga fría y coronar con guacamole fresco. Servir a 12°C.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `steep_beverage`
@@ -1274,7 +1272,6 @@
 | **Nuez pecana troceada** | 270 | g | 🌰 Grasas Saludables y Semillas |
 | **Almendras fileteadas tostadas** | 360 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
 | **Semillas de chía orgánicas** | 336 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
-| **Semillas de sésamo tostadas** | 900 | g | 🌰 Semillas y Nueces |
 | **Vegetales frescos de la granja troceados** | 1440 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
 | **Cúrcuma orgánica en polvo** | 12 | g | 🌶️ Chiles, Condimentos e Infusiones |
 | **Flores de manzanilla fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
@@ -1283,65 +1280,62 @@
 | **Cebollín fresco picado / eneldo** | 12 | g | 🌿 Servicio y Decoración |
 | **Pimienta negra recién molida** | 3 | g | 🌿 Servicio y Decoración |
 | **Sombreros de champiñón Portobello grandes** | 12 | piezas | 🍄 Sombreros de Portobello Base |
-| **Jugo de limón fresco recién exprimido** | 741 | ml | 🍋 Cítricos y Ácidos Naturales |
+| **Jugo de limón fresco recién exprimido** | 561 | ml | 🍋 Cítricos y Ácidos Naturales |
 | **Arilos de Granada fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Arándanos frescos orgánicos** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Frambuesas frescas orgánicas** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Fresas frescas de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Higos frescos vivos de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Moras frescas de la granja** | 930 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Moras frescas de la granja** | 810 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Pitaya fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Agua fría para hidratar** | 1470 | ml | 🍮 Base Hidrocoloide y Gelificante |
 | **Grenetina natural en polvo (colágeno hidrolizado)** | 294 | g | 🍮 Base Hidrocoloide y Gelificante |
 | **Agua purificada de cocción** | 1800 | ml | 🍲 Base de Caldo y Aromáticos |
 | **Cilantro fresco de la granja picado** | 60 | g | 🍲 Base de Caldo y Aromáticos |
 | **Romero fresco y cebolla blanca** | 90 | g | 🍲 Base de Caldo y Aromáticos |
-| **Acelgas frescas de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
 | **Coliflor fresca rostizada de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
-| **Caldo concentrado o fondo oscuro** | 180 | ml | 🍾 Licores y Especias de la Salsa |
-| **Pimienta negra entera en grano (martajada en mortero)** | 18 | g | 🍾 Licores y Especias de la Salsa |
 | **Aceite de oliva extra virgen VEVO** | 72 | ml | 🍾 Vinagreta y Grasas Saludables |
 | **Fórmula Biotecnológica Nootrópica 33Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
 | **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
 | **Agua purificada (80°C)** | 10500 | ml | 💧 Agua Purificada de Infusión |
-| **Aguacate Hass fresco** | 18.4 | piezas | 🥑 Grasas Saludables y Frutos |
-| **Mantequilla de pastoreo / Ghee** | 2043 | g | 🥑 Grasas Saludables y Frutos |
-| **Aceite de oliva extra virgen (VEVO)** | 552 | ml | 🥑 Hortaliza y Grasas Saludables |
-| **Alcaparras finamente picadas** | 60 | g | 🥑 Macerado Cítrico y Grasas |
+| **Aguacate Hass fresco** | 16 | piezas | 🥑 Grasas Saludables y Frutos |
+| **Mantequilla de pastoreo / Ghee** | 2085 | g | 🥑 Grasas Saludables y Frutos |
+| **Aceite de oliva extra virgen (VEVO)** | 480 | ml | 🥑 Hortaliza y Grasas Saludables |
 | **Huevos frescos enteros (para pochar)** | 6 | piezas | 🥓 Cubierta y Proteína |
 | **Vinagre blanco (para agua de pochado)** | 45 | ml | 🥓 Cubierta y Proteína |
-| **Huevos orgánicos de libre pastoreo** | 72 | piezas | 🥚 Proteína de Huevo Orgánico |
+| **Huevos orgánicos de libre pastoreo** | 84 | piezas | 🥚 Proteína de Huevo Orgánico |
 | **Ajo y cebolla blanca picados** | 90 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Apio fresco de la granja** | 1200 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Calabacitas tiernas de la granja** | 2880 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Calabacitas tiernas de la granja** | 2160 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Champiñones Portobello frescos** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Chayotes tiernos de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Ejotes verdes frescos de la granja** | 240 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Espárragos verdes frescos de la granja** | 1440 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Hinojo fresco de la granja** | 1290 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Pepino blanco fresco de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Crema Caliente de Flor de Calabaza y Queso de Cabra** | 900 | g | 🥩 Proteína Principal Seleccionada |
 | **Cebolla blanca finamente picada** | 60 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
 | **Orégano seco molido a mano** | 6 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
-| **Carne molida / Filete de Sirloin magro** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Carne seca machaca artesanal de res** | 150 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Corte de Ribeye de res premium** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Huachinango fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Filete de Pescado blanco fresco** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Medallón de Atún fresco** | 780 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Filete de Robalo fresco** | 1800 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Medallones de lomo de cerdo magro** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Medallón de Atún fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pavo artesanal** | 2520 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Pechuga de pollo orgánica** | 1800 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Pechuga de pollo orgánica** | 2580 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Tocino de pavo artesanal crujiente** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
 | **Costilla de res limpia troceada** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
-| **Queso de cabra artesanal** | 180 | g | 🥬 Cama Vegetal e Insumos Córtex |
-| **Espinacas baby frescas de la granja** | 480 | g | 🥬 Hojas Verdes y Envolturas |
+| **Queso de cabra artesanal** | 360 | g | 🥬 Cama Vegetal e Insumos Córtex |
+| **Espinacas baby frescas de la granja** | 1440 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de arúgula fresca** | 360 | g | 🥬 Hojas Verdes y Envolturas |
-| **Queso Parmesano o de cabra** | 330 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
+| **Hojas de lechuga orejona viva** | 360 | g | 🥬 Hojas Verdes y Envolturas |
 | **Queso crema suave artesanal** | 360 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
 | **Queso Panela artesanal en láminas finas** | 180 | g | 🧀 Relleno de Queso |
 | **Finas hierbas frescas de la granja** | 12 | g | 🧀 Relleno y Aromáticos |
 | **Queso Gouda artesanal** | 180 | g | 🧀 Relleno y Aromáticos |
-| **Sal de mar mineral en escamas** | 1575 | g | 🧂 Condimentos y Sal Mineral |
+| **Sal de mar mineral en escamas** | 1596 | g | 🧂 Condimentos y Sal Mineral |
+| **Queso Parmesano o de cabra** | 270 | g | 🧈 Emulsión y Sazón |
 | **Tomillo fresco de la granja** | 9 | g | 🧈 Grasa Saludable y Botánicos |
 | **Cilantro fresco y orégano** | 54 | g | 🧈 Grasa Saludable y Sazón |
 | **Yemas de huevo frescas** | 6 | piezas | 🧈 Salsa Holandesa Casera |

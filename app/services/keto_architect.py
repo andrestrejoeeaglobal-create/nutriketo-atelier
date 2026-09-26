@@ -1043,9 +1043,9 @@ class KetoAIArchitect:
                     }
                 ],
                 "meals": [
-                    Meal(meal_type="Desayuno", starter_name="Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo", side_dish_name="Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®", fat_g=29.5, protein_g=32.0, net_carbs_g=3.2),
-                    Meal(meal_type="Comida", starter_name="Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano", main_dish_name="Ribeye de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo", side_dish_name="Espárragos Verdes al Horno con Limón y Sal de Mar Mineral", fat_g=38.5, protein_g=42.0, net_carbs_g=3.6),
-                    Meal(meal_type="Cena", starter_name="Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen", main_dish_name="Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=24.0, protein_g=28.0, net_carbs_g=2.4)
+                    Meal(meal_type="Desayuno", starter_name="Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo", side_dish_name="Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.0, net_carbs_g=3.2),
+                    Meal(meal_type="Comida", starter_name="Crema Caliente de Flor de Calabaza y Queso de Cabra", main_dish_name="Medallones de Cerdo a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo", side_dish_name="Espárragos Verdes al Horno con Limón y Sal de Mar Mineral", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
+                    Meal(meal_type="Cena", starter_name="Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen", main_dish_name="Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=34.0, net_carbs_g=2.8)
                 ]
             },
             {
@@ -1060,13 +1060,13 @@ class KetoAIArchitect:
                         ],
                         "cutting_prep": f"Picar eneldo ultra fino e integrar a mantequilla pomada para {diners_count} personas.",
                         "cooking_process": "Emulsionar a temperatura ambiente y formar rodillo.",
-                        "storage_reserve": "Refrigerar a 4°C hasta sellar el salmón."
+                        "storage_reserve": "Refrigerar a 4°C hasta atemperar el pavo al curry."
                     }
                 ],
                 "meals": [
-                    Meal(meal_type="Desayuno", starter_name="Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía", main_dish_name="Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda", side_dish_name="Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=30.0, protein_g=33.0, net_carbs_g=3.4),
-                    Meal(meal_type="Comida", starter_name="Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón", main_dish_name="Filete de Salmón en Costra de Almendras y Mantequilla de Eneldo", side_dish_name="Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen", fat_g=36.0, protein_g=40.0, net_carbs_g=3.5),
-                    Meal(meal_type="Cena", starter_name="Bastones de Pepino y Apio al Limón con Sal Mineral", main_dish_name="Tartar de Atún Fresco con Aguacate Hass, Alcaparras y Limón", side_dish_name="Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=23.0, protein_g=27.0, net_carbs_g=2.5)
+                    Meal(meal_type="Desayuno", starter_name="Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía", main_dish_name="Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda", side_dish_name="Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.5, net_carbs_g=3.4),
+                    Meal(meal_type="Comida", starter_name="Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón", main_dish_name="Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano", side_dish_name="Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen", fat_g=51.0, protein_g=43.0, net_carbs_g=4.2),
+                    Meal(meal_type="Cena", starter_name="Bastones de Pepino y Apio al Limón con Sal Mineral", main_dish_name="Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón", side_dish_name="Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.5, protein_g=34.0, net_carbs_g=2.5)
                 ]
             },
             {
@@ -1085,9 +1085,9 @@ class KetoAIArchitect:
                     }
                 ],
                 "meals": [
-                    Meal(meal_type="Desayuno", starter_name="Arilos de Granada Fresca con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén", side_dish_name="Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=28.5, protein_g=33.5, net_carbs_g=3.3),
-                    Meal(meal_type="Comida", starter_name="Crema de Coliflor Rostizada al Ajo y Queso de Cabra", main_dish_name="Medallones de Sirloin a la Sartén en Salsa de Pimienta Negra y Romero", side_dish_name="Chayotes Tiernos al Vapor con Mantequilla Clarificada", fat_g=37.0, protein_g=41.0, net_carbs_g=3.6),
-                    Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal de Mar", main_dish_name="Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO", side_dish_name="Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=21.5, protein_g=26.5, net_carbs_g=2.1)
+                    Meal(meal_type="Desayuno", starter_name="Arilos de Granada Fresca con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén", side_dish_name="Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.5, net_carbs_g=3.3),
+                    Meal(meal_type="Comida", starter_name="Crema de Coliflor Rostizada al Ajo y Queso de Cabra", main_dish_name="Filete de Robalo a la Sartén en Salsa de Eneldo y Mantequilla Clarificada", side_dish_name="Chayotes Tiernos al Vapor con Mantequilla Clarificada", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
+                    Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal de Mar", main_dish_name="Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO", side_dish_name="Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=34.0, net_carbs_g=2.5)
                 ]
             },
             {
@@ -1106,9 +1106,9 @@ class KetoAIArchitect:
                     }
                 ],
                 "meals": [
-                    Meal(meal_type="Desayuno", starter_name="Arándanos Frescos con Nueces Pecana y Semillas de Girasol", main_dish_name="Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente", side_dish_name="Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus®", fat_g=29.0, protein_g=32.5, net_carbs_g=3.1),
-                    Meal(meal_type="Comida", starter_name="Consomé Claro de Nopales y Hortalizas Tiernas", main_dish_name="Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano", side_dish_name="Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO", fat_g=36.5, protein_g=40.0, net_carbs_g=3.4),
-                    Meal(meal_type="Cena", starter_name="Bastones de Pepino y Zucchini al Limón con Sal Mineral", main_dish_name="Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón", side_dish_name="Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=22.0, protein_g=28.5, net_carbs_g=2.3)
+                    Meal(meal_type="Desayuno", starter_name="Arándanos Frescos con Nueces Pecana y Semillas de Girasol", main_dish_name="Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente", side_dish_name="Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.5, protein_g=33.0, net_carbs_g=3.1),
+                    Meal(meal_type="Comida", starter_name="Consomé Claro de Nopales y Hortalizas Tiernas", main_dish_name="Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano", side_dish_name="Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO", fat_g=51.0, protein_g=43.5, net_carbs_g=4.0),
+                    Meal(meal_type="Cena", starter_name="Bastones de Pepino y Zucchini al Limón con Sal Mineral", main_dish_name="Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón", side_dish_name="Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.5, protein_g=34.0, net_carbs_g=2.8)
                 ]
             },
             {
@@ -1127,9 +1127,9 @@ class KetoAIArchitect:
                     }
                 ],
                 "meals": [
-                    Meal(meal_type="Desayuno", starter_name="Pitayas Frescas con Semillas de Chía y Coco Rallado", main_dish_name="Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco", side_dish_name="Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=29.0, protein_g=31.0, net_carbs_g=3.1),
-                    Meal(meal_type="Comida", starter_name="Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen", main_dish_name="Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón", side_dish_name="Ejotes Frescos Salteados con Almendras Fileteadas", fat_g=35.0, protein_g=39.0, net_carbs_g=3.5),
-                    Meal(meal_type="Cena", starter_name="Abanico de Aguacate Hass con Sal de Mar", main_dish_name="Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=24.0, protein_g=25.5, net_carbs_g=2.8)
+                    Meal(meal_type="Desayuno", starter_name="Pitayas Frescas con Semillas de Chía y Coco Rallado", main_dish_name="Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco", side_dish_name="Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.0, net_carbs_g=3.1),
+                    Meal(meal_type="Comida", starter_name="Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen", main_dish_name="Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón", side_dish_name="Ejotes Frescos Salteados con Almendras Fileteadas", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
+                    Meal(meal_type="Cena", starter_name="Abanico de Aguacate Hass con Sal de Mar", main_dish_name="Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=33.5, net_carbs_g=2.8)
                 ]
             },
             {
@@ -1148,9 +1148,9 @@ class KetoAIArchitect:
                     }
                 ],
                 "meals": [
-                    Meal(meal_type="Desayuno", starter_name="Fresas Frescas de la Granja con Nueces de Castilla y Chía", main_dish_name="Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela", side_dish_name="Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=28.5, protein_g=32.0, net_carbs_g=3.3),
-                    Meal(meal_type="Comida", starter_name="Sopa de Calabacitas y Cilantro al Queso Parmesano", main_dish_name="Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón", side_dish_name="Espárragos Verdes Asados con Limón y Sal Marina", fat_g=37.0, protein_g=41.0, net_carbs_g=4.0),
-                    Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal Mineral", main_dish_name="Ceviche Fresco de Filete de Pescado Blanco al Limón con Cilantro y Aguacate", side_dish_name="Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=22.0, protein_g=27.0, net_carbs_g=2.2)
+                    Meal(meal_type="Desayuno", starter_name="Fresas Frescas de la Granja con Nueces de Castilla y Chía", main_dish_name="Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela", side_dish_name="Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.0, net_carbs_g=3.3),
+                    Meal(meal_type="Comida", starter_name="Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano", main_dish_name="Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón", side_dish_name="Espárragos Verdes Asados con Limón y Sal Marina", fat_g=51.5, protein_g=44.0, net_carbs_g=4.0),
+                    Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal Mineral", main_dish_name="Cazuela Fría de Camarones al Limón con Aguacate Hass y Cilantro", side_dish_name="Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=34.0, net_carbs_g=2.8)
                 ]
             },
             {
@@ -1169,9 +1169,9 @@ class KetoAIArchitect:
                     }
                 ],
                 "meals": [
-                    Meal(meal_type="Desayuno", starter_name="Higos Frescos Vivos de la Granja con Almendras Fileteadas y Chía", main_dish_name="Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra", side_dish_name="Gelatina Artesanal de Higo (4°C) con Fórmula Nootrópica 33Plus®", fat_g=28.0, protein_g=32.0, net_carbs_g=3.4),
-                    Meal(meal_type="Comida", starter_name="Crema de Espinacas y Ajo Rostizado al Parmesano", main_dish_name="Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo", side_dish_name="Calabacitas Verdes al Sartén con Sal de Mar", fat_g=35.5, protein_g=39.5, net_carbs_g=3.4),
-                    Meal(meal_type="Cena", starter_name="Ensalada Mix de Hojas Verdes de la Granja con Vinagre VEVO", main_dish_name="Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=21.0, protein_g=28.0, net_carbs_g=2.1)
+                    Meal(meal_type="Desayuno", starter_name="Higos Frescos Vivos de la Granja con Almendras Fileteadas y Chía", main_dish_name="Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra", side_dish_name="Gelatina Artesanal de Higo (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.0, net_carbs_g=3.4),
+                    Meal(meal_type="Comida", starter_name="Crema de Espinacas y Ajo Rostizado al Parmesano", main_dish_name="Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo", side_dish_name="Calabacitas Verdes al Sartén con Sal de Mar", fat_g=50.5, protein_g=44.0, net_carbs_g=3.8),
+                    Meal(meal_type="Cena", starter_name="Ensalada Mix de Hojas Verdes de la Granja con Vinagre VEVO", main_dish_name="Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.5, protein_g=34.0, net_carbs_g=2.8)
                 ]
             }
         ]
