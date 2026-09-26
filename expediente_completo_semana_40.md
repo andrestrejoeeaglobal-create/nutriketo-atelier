@@ -10,7 +10,7 @@
 |---|---|---|---|
 | **Domingo 27 Sep** | Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo | Corte Magro de Arrachera de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo | Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano |
 | **Lunes 28 Sep** | Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda | Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano | Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón |
-| **Martes 29 Sep** | Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén | Pechuga de Pollo al Sartén en Salsa de Eneldo y Mantequilla Clarificada | Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO |
+| **Martes 29 Sep** | Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén | Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada | Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO |
 | **Miércoles 30 Sep** | Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente | Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano | Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón |
 | **Jueves 01 Oct** | Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco | Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón | Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana |
 | **Viernes 02 Oct** | Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela | Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón | Tartar de Robalo Fresco al Limón con Aguacate Hass y Cilantro |
@@ -452,19 +452,19 @@
 3. Licuar a alta velocidad hasta textura terciopelo.
 4. Emulsionar con crema a fuego bajo sin hervir y servir caliente a 68°C.
 
-##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo al Sartén en Salsa de Eneldo y Mantequilla Clarificada
+##### 🥩 PLATILLO PRINCIPAL: Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada
 - **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Pechuga de Pollo al Sartén en Salsa de Eneldo y Mantequilla Clarificada sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Nota Organoléptica:** *"Platillo principal proteico de Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Proteína Principal Seleccionada*
-  - Pechuga de pollo orgánica: **900 g** (150 g/persona)
+  - Filete de Sirloin de res magro: **900 g** (150 g/persona)
 - *🧈 Emulsión Cremosa y Grasas*
   - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
   - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Pechuga de pollo orgánica con papel absorbente; sazonar con sal de mar y hierbas.
+1. Atemperar y Sazonar: Secar la superficie de Filete de Sirloin de res magro con papel absorbente; sazonar con sal de mar y hierbas.
 2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
 3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
 4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
@@ -661,21 +661,22 @@
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO
 - **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Vegetales frescos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
+- **Nota Organoléptica:** *"Acompañamiento vegetal crujiente de ejotes verdes frescos de la granja salteados en aceite VEVO y coronados con almendras fileteadas tostadas."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Vegetales frescos de la granja troceados: **720 g** (120 g/persona)
+  - Ejotes verdes frescos de la granja: **720 g** (120 g/persona)
+- *🌰 Crujiente y Frutos Secos*
+  - Almendras fileteadas tostadas: **60 g** (10 g/persona)
 - *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
+  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
   - Sal de mar mineral: **9 g** (1.5 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Vegetales frescos de la granja de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
+1. Higienizado y Corte: Lavar los ejotes verdes frescos de cosecha activa y despuntar; cortar en tercios uniformes.
+2. Blanqueado y Choque Térmico: Blanquear los ejotes en agua hirviendo con sal durante 3 minutos y pasar a agua helada.
+3. Salteado en VEVO: Calentar el aceite VEVO en sartén a fuego medio (150°C), añadir los ejotes blanqueados y saltear durante 3 minutos.
+4. Ensamble de Almendras y Servicio: Espolvorear las almendras fileteadas tostadas sobre los ejotes, rectificar sal de mar mineral y servir de inmediato.
 
 #### 🍽️ Servicio: CENA (413 kcal Atwater Target)
 **Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
@@ -835,21 +836,22 @@
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Ejotes Frescos Salteados con Almendras Fileteadas
 - **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Vegetales frescos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
+- **Nota Organoléptica:** *"Acompañamiento vegetal crujiente de ejotes verdes frescos de la granja salteados en mantequilla clarificada u oliva VEVO y coronados con almendras fileteadas tostadas."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Vegetales frescos de la granja troceados: **720 g** (120 g/persona)
+  - Ejotes verdes frescos de la granja: **720 g** (120 g/persona)
+- *🌰 Crujiente y Frutos Secos*
+  - Almendras fileteadas tostadas: **60 g** (10 g/persona)
 - *🧈 Grasa Saludable y Sazón*
   - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
   - Sal de mar mineral: **9 g** (1.5 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Vegetales frescos de la granja de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
+1. Higienizado y Corte: Lavar los ejotes verdes frescos y despuntar las puntas; cortar en tercios uniformes.
+2. Blanqueado y Choque Térmico: Blanquear los ejotes en agua con sal durante 3 minutos y pasar a agua con hielo para fijar la clorofila brillante.
+3. Salteado y Tostado de Almendras: Tostar las almendras fileteadas en sartén seca hasta dorar. En la misma sartén, derretir la mantequilla clarificada y saltear los ejotes blanqueados a fuego vivo durante 3 minutos.
+4. Servicio Gourmet: Incorporar las almendras fileteadas tostadas, sazonar con sal de mar mineral y servir caliente.
 
 #### 🍽️ Servicio: CENA (406 kcal Atwater Target)
 **Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `33.5g` | Carbs Netos: `2.8g`  
@@ -1273,10 +1275,9 @@
 | **Queso Parmesano finamente rallado** | 60 | g | ☁️ Bases de Huevo Nube |
 | **Nuez de Castilla troceada** | 90 | g | 🌰 Grasas Saludables y Semillas |
 | **Nuez pecana troceada** | 270 | g | 🌰 Grasas Saludables y Semillas |
-| **Almendras fileteadas tostadas** | 360 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
+| **Almendras fileteadas tostadas** | 480 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
 | **Semillas de chía orgánicas** | 336 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
 | **Semillas de sésamo tostadas** | 60 | g | 🌰 Semillas y Nueces |
-| **Vegetales frescos de la granja troceados** | 1440 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
 | **Cúrcuma orgánica en polvo** | 12 | g | 🌶️ Chiles, Condimentos e Infusiones |
 | **Flores de manzanilla fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Hojas de menta fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
@@ -1304,8 +1305,8 @@
 | **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
 | **Agua purificada (80°C)** | 10500 | ml | 💧 Agua Purificada de Infusión |
 | **Aguacate Hass fresco** | 21 | piezas | 🥑 Grasas Saludables y Frutos |
-| **Mantequilla de pastoreo / Ghee** | 1971 | g | 🥑 Grasas Saludables y Frutos |
-| **Aceite de oliva extra virgen (VEVO)** | 552 | ml | 🥑 Hortaliza y Grasas Saludables |
+| **Mantequilla de pastoreo / Ghee** | 1911 | g | 🥑 Grasas Saludables y Frutos |
+| **Aceite de oliva extra virgen (VEVO)** | 612 | ml | 🥑 Hortaliza y Grasas Saludables |
 | **Alcaparras finamente picadas** | 60 | g | 🥑 Macerado Cítrico y Grasas |
 | **Huevos frescos enteros (para pochar)** | 6 | piezas | 🥓 Cubierta y Proteína |
 | **Vinagre blanco (para agua de pochado)** | 45 | ml | 🥓 Cubierta y Proteína |
@@ -1315,13 +1316,14 @@
 | **Calabacitas tiernas de la granja** | 2160 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Champiñones Portobello frescos** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Chayotes tiernos de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Ejotes verdes frescos de la granja** | 240 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Ejotes verdes frescos de la granja** | 1680 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Espárragos verdes frescos de la granja** | 1440 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Hinojo fresco de la granja** | 1290 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Nopales tiernos limpios de la granja** | 240 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Pepino blanco fresco de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Cebolla blanca finamente picada** | 60 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
 | **Orégano seco molido a mano** | 6 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
+| **Carne molida / Filete de Sirloin magro** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Carne seca machaca artesanal de res** | 150 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Corte magro de Arrachera de res** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Huachinango fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
@@ -1329,7 +1331,7 @@
 | **Filete de Salmón fresco con piel** | 780 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Medallón de Atún fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pavo artesanal** | 2520 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Pechuga de pollo orgánica** | 3480 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Pechuga de pollo orgánica** | 2580 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Tocino de pavo artesanal crujiente** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
 | **Costilla de res limpia troceada** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
@@ -1344,6 +1346,6 @@
 | **Sal de mar mineral en escamas** | 441 | g | 🧂 Condimentos y Sal Mineral |
 | **Queso Parmesano o de cabra** | 330 | g | 🧈 Emulsión y Sazón |
 | **Tomillo fresco de la granja** | 9 | g | 🧈 Grasa Saludable y Botánicos |
-| **Cilantro fresco y orégano** | 54 | g | 🧈 Grasa Saludable y Sazón |
+| **Cilantro fresco y orégano** | 36 | g | 🧈 Grasa Saludable y Sazón |
 | **Yemas de huevo frescas** | 6 | piezas | 🧈 Salsa Holandesa Casera |
 | **Infusión de té de frutos rojos y menta** | 5040 | ml | 🫐 Extracto Frutal e Infusión Viva |

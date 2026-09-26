@@ -1086,7 +1086,7 @@ class KetoAIArchitect:
                 ],
                 "meals": [
                     Meal(meal_type="Desayuno", starter_name="Arilos de Granada Fresca con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén", side_dish_name="Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.5, net_carbs_g=3.3),
-                    Meal(meal_type="Comida", starter_name="Crema de Coliflor Rostizada al Ajo y Queso de Cabra", main_dish_name="Pechuga de Pollo al Sartén en Salsa de Eneldo y Mantequilla Clarificada", side_dish_name="Chayotes Tiernos al Vapor con Mantequilla Clarificada", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
+                    Meal(meal_type="Comida", starter_name="Crema de Coliflor Rostizada al Ajo y Queso de Cabra", main_dish_name="Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada", side_dish_name="Chayotes Tiernos al Vapor con Mantequilla Clarificada", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
                     Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal de Mar", main_dish_name="Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO", side_dish_name="Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=34.0, net_carbs_g=2.5)
                 ]
             },

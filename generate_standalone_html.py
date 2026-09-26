@@ -105,6 +105,71 @@ CANONICAL_RECIPE_CATALOG = {
         ]
     },
 
+    "Ejotes Frescos Salteados con Almendras Fileteadas": {
+        "title": "Ejotes Frescos Salteados con Almendras Fileteadas",
+        "cooking_technique": "pan_roast",
+        "sensory_description": "Acompañamiento vegetal crujiente de ejotes verdes frescos de la granja salteados en mantequilla clarificada u oliva VEVO y coronados con almendras fileteadas tostadas.",
+        "ingredient_groups": [
+            {
+                "category": "🌱 Vegetal / Acompañamiento Base (Cosecha Activa)",
+                "items": [
+                    {"name": "Ejotes verdes frescos de la granja", "base_qty_per_person": 120.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                ]
+            },
+            {
+                "category": "🌰 Crujiente y Frutos Secos",
+                "items": [
+                    {"name": "Almendras fileteadas tostadas", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                ]
+            },
+            {
+                "category": "🧈 Grasa Saludable y Sazón",
+                "items": [
+                    {"name": "Mantequilla clarificada / Aceite VEVO", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                    {"name": "Sal de mar mineral", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                ]
+            }
+        ],
+        "steps": [
+            "1. Higienizado y Corte: Lavar los ejotes verdes frescos y despuntar las puntas; cortar en tercios uniformes.",
+            "2. Blanqueado y Choque Térmico: Blanquear los ejotes en agua con sal durante 3 minutos y pasar a agua con hielo para fijar la clorofila brillante.",
+            "3. Salteado y Tostado de Almendras: Tostar las almendras fileteadas en sartén seca hasta dorar. En la misma sartén, derretir la mantequilla clarificada y saltear los ejotes blanqueados a fuego vivo durante 3 minutos.",
+            "4. Servicio Gourmet: Incorporar las almendras fileteadas tostadas, sazonar con sal de mar mineral y servir caliente."
+        ]
+    },
+    "Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO": {
+        "title": "Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO",
+        "cooking_technique": "pan_roast",
+        "sensory_description": "Acompañamiento vegetal crujiente de ejotes verdes frescos de la granja salteados en aceite VEVO y coronados con almendras fileteadas tostadas.",
+        "ingredient_groups": [
+            {
+                "category": "🌱 Vegetal / Acompañamiento Base (Cosecha Activa)",
+                "items": [
+                    {"name": "Ejotes verdes frescos de la granja", "base_qty_per_person": 120.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                ]
+            },
+            {
+                "category": "🌰 Crujiente y Frutos Secos",
+                "items": [
+                    {"name": "Almendras fileteadas tostadas", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                ]
+            },
+            {
+                "category": "🧈 Grasa Saludable y Sazón",
+                "items": [
+                    {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                    {"name": "Sal de mar mineral", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                ]
+            }
+        ],
+        "steps": [
+            "1. Higienizado y Corte: Lavar los ejotes verdes frescos de cosecha activa y despuntar; cortar en tercios uniformes.",
+            "2. Blanqueado y Choque Térmico: Blanquear los ejotes en agua hirviendo con sal durante 3 minutos y pasar a agua helada.",
+            "3. Salteado en VEVO: Calentar el aceite VEVO en sartén a fuego medio (150°C), añadir los ejotes blanqueados y saltear durante 3 minutos.",
+            "4. Ensamble de Almendras y Servicio: Espolvorear las almendras fileteadas tostadas sobre los ejotes, rectificar sal de mar mineral y servir de inmediato."
+        ]
+    },
+
     # -------------------------------------------------------------------------
     # PLATILLOS PRINCIPALES PROTEICOS Y RELLENOS
     # -------------------------------------------------------------------------

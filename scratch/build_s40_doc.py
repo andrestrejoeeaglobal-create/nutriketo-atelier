@@ -70,9 +70,11 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
     if "limón" in name_clean or "limon" in name_clean:
         return ("Jugo de limón fresco recién exprimido", "🍋 Cítricos y Ácidos Naturales", "jugo_limon", "ml", scaled_qty)
 
-    # 10. Sésamo / Ajonjolí (only actual seeds)
+    # 10. Sésamo / Ajonjolí / Almendras
     if "sésamo" in name_clean or "sesamo" in name_clean or "ajonjolí" in name_clean:
         return ("Semillas de sésamo tostadas", "🌰 Semillas y Nueces", "semillas_sesamo", "g", scaled_qty)
+    if "almendra" in name_clean or "almendras" in name_clean:
+        return ("Almendras fileteadas tostadas", "🌰 Grasas Saludables, Semillas y Crujientes", "almendras_fileteadas", "g", scaled_qty)
 
     # 11. Fruits
     if any(k in name_clean for k in ["granada", "arilos de granada"]):
