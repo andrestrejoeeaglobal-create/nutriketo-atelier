@@ -585,16 +585,52 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             ]
         }
 
-    # 7. TARTAR DE ATÚN FRESCO (CRUDO FRÍO)
-    if "tartar" in clean_lower:
+    # 7. SASHIMI Y TARTAR DE PESCADO FRESCO (CRUDO FRÍO)
+    if "sashimi" in clean_lower:
+        fish_item = "Filete de Salmón fresco con piel"
+        if "atún" in clean_lower or "atun" in clean_lower:
+            fish_item = "Lomo de atún fresco corte sashimi"
         return {
             "title": clean_title,
             "cooking_technique": "cold_cure_assembly",
-            "sensory_description": "Tartar gourmet frío de lomo de atún fresco cortado en cubos de 5 mm, macerado con alcaparras, aceite VEVO, jugo de limón y cubos de aguacate Hass.",
+            "sensory_description": f"Sashimi fino de {clean_title} servido helado a 4°C, marinado con aceite de ajonjolí tostado, jugo de limón fresco y láminas de aguacate Hass.",
             "ingredient_groups": [
                 {
                     "category": "🐟 Pescado Fresco Sashimi",
-                    "items": [{"name": "Lomo de atún fresco corte sashimi", "base_qty_per_person": 130.0, "unit": "g", "source": "Mercado", "unit_cost": 45.0}]
+                    "items": [{"name": fish_item, "base_qty_per_person": 130.0, "unit": "g", "source": "Mercado", "unit_cost": 45.0}]
+                },
+                {
+                    "category": "🥑 Aderezo Cítrico y Grasas",
+                    "items": [
+                        {"name": "Aguacate Hass en láminas", "base_qty_per_person": 50.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Aceite de sésamo tostado", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Jugo de limón fresco recién exprimido", "base_qty_per_person": 15.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral en escamas", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                f"1. Corte de Precisión en Frío: Cortar la proteína helada a 2°C en láminas finas diagonales de 3 mm.",
+                "2. Emulsión Cítrica de Ajonjolí: Mezclar el aceite de sésamo tostado con el jugo de limón fresco y la sal de mar mineral.",
+                "3. Montaje y Marinación: Disponer las láminas de pescado en plato frío alternando con láminas de aguacate Hass; verter el aderezo cítrico.",
+                "4. Servicio Gourmet Frío: Servir de inmediato a 4°C–6°C."
+            ]
+        }
+
+    if "tartar" in clean_lower:
+        fish_item = "Lomo de atún fresco corte sashimi"
+        if "robalo" in clean_lower or "pescado" in clean_lower:
+            fish_item = "Filete de Robalo fresco corte tartar"
+        elif "salmón" in clean_lower or "salmon" in clean_lower:
+            fish_item = "Filete de Salmón fresco corte tartar"
+        return {
+            "title": clean_title,
+            "cooking_technique": "cold_cure_assembly",
+            "sensory_description": f"Tartar gourmet frío de {clean_title} cortado en cubos de 5 mm, macerado con alcaparras, aceite VEVO, jugo de limón y cubos de aguacate Hass.",
+            "ingredient_groups": [
+                {
+                    "category": "🐟 Pescado Fresco Sashimi / Tartar",
+                    "items": [{"name": fish_item, "base_qty_per_person": 130.0, "unit": "g", "source": "Mercado", "unit_cost": 45.0}]
                 },
                 {
                     "category": "🥑 Macerado Cítrico y Grasas",
@@ -607,9 +643,9 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
                 }
             ],
             "steps": [
-                "1. Cadena de Frío y Corte: Mantener el atún fresco a 2°C–4°C. Cortar con cuchillo de filo único en cubos regulares de 5 mm.",
+                f"1. Cadena de Frío y Corte: Mantener el pescado fresco a 2°C–4°C. Cortar con cuchillo de filo único en cubos regulares de 5 mm.",
                 "2. Emulsión de Macerado: En tazón de cristal helado, integrar el aceite VEVO, jugo de limón fresco, alcaparras picadas y sal marina.",
-                "3. Ensamble Macerado: Incorporar el atún y los cubos de aguacate mezclando suavemente con espátula fría.",
+                "3. Ensamble Macerado: Incorporar el pescado y los cubos de aguacate mezclando suavemente con espátula fría.",
                 "4. Moldeo y Servicio Frío: Moldear en aro metálico de 8 cm y servir de inmediato a 8°C."
             ]
         }
@@ -1039,10 +1075,20 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
     # 10. CONSOMÉS Y CALDOS CLAROS
     # -------------------------------------------------------------------------
     if any(kw in clean_lower for kw in ["consomé", "consome", "caldo claro"]):
+        veg_items = []
+        if "nopal" in clean_lower or "nopales" in clean_lower:
+            veg_items.append({"name": "Nopales tiernos limpios en tiras", "base_qty_per_person": 40.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0})
+
+        base_cat_items = [
+            {"name": "Agua purificada de cocción", "base_qty_per_person": 300.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+            {"name": "Romero fresco y cebolla blanca", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+            {"name": "Cilantro fresco de la granja picado", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+        ] + veg_items
+
         return {
             "title": clean_title,
             "cooking_technique": "boil_and_clarify",
-            "sensory_description": "Fondo profundo de res preparado con costilla jugosa y tuétano fresco, infusionado a fuego lento con romero, cilantro fresco y sazón mineral.",
+            "sensory_description": "Fondo profundo de res preparado con costilla jugosa, tuétano fresco y tiras de nopales tiernos, infusionado a fuego lento con romero, cilantro fresco y sazón mineral.",
             "ingredient_groups": [
                 {
                     "category": "🥩 Proteínas y Huesos de Fondo",
@@ -1052,12 +1098,8 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
                     ]
                 },
                 {
-                    "category": "🍲 Base de Caldo y Aromáticos",
-                    "items": [
-                        {"name": "Agua purificada de cocción", "base_qty_per_person": 300.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Romero fresco y cebolla blanca", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Cilantro fresco de la granja picado", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
+                    "category": "🍲 Base de Caldo y Hortalizas",
+                    "items": base_cat_items
                 },
                 {
                     "category": "🌿 Sazón Mineral",
@@ -1068,9 +1110,9 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             ],
             "steps": [
                 "1. Blanqueado de Huesos: Blanquear la costilla y el tuétano en agua hirviendo durante 3 minutos para retirar impurezas; escurrir.",
-                "2. Cocción Lenta de Fondo: Disponer la carne y tuétano en olla profunda con agua purificada, romero y cebolla. Cocinar a fuego lento (85-90°C) durante 90 minutos hasta obtener un caldo translúcido y sustancioso.",
-                "3. Filtrado y Clarificación: Colar el consomé caliente reservando los trozos suaves de costilla y tuétano. Rectificar sazón con sal de mar.",
-                "4. Servicio Gourmet: Servir hirviendo en tazón hondo a 75°C coronando con abundante cilantro fresco picado."
+                "2. Cocción Lenta de Fondo con Nopales: Disponer la carne, tuétano y tiras de nopales tiernos en olla profunda con agua purificada, romero y cebolla. Cocinar a fuego lento (85-90°C) durante 90 minutos.",
+                "3. Filtrado y Clarificación: Colar el consomé caliente reservando la costilla suave, el tuétano y las tiras de nopales tiernos. Rectificar sazón con sal de mar.",
+                "4. Servicio Gourmet: Servir hirviendo en tazón hondo a 75°C coronando con las tiras de nopales y abundante cilantro fresco picado."
             ]
         }
 
@@ -1185,7 +1227,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
     # -------------------------------------------------------------------------
     # 14. CREMAS DE VEGETALES (BRÓCOLI, COLIFLOR, ESPÁRRAGOS, FLOR DE CALABAZA)
     # -------------------------------------------------------------------------
-    if any(kw in clean_lower for kw in ["crema de", "sopa de", "crema ligera"]):
+    if ("crema" in clean_lower or "sopa" in clean_lower) and not ("rellena" in clean_lower or "salsa" in clean_lower or "costra" in clean_lower):
         veg_base = "Acelgas frescas de la granja"
         if "espinaca" in clean_lower or "espinacas" in clean_lower: veg_base = "Espinacas baby frescas de la granja"
         elif "brócoli" in clean_lower or "brocoli" in clean_lower: veg_base = "Brócoli fresco en floretes de la granja"

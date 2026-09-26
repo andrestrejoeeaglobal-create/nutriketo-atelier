@@ -53,10 +53,8 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
         return ("Jugo de limón fresco recién exprimido", "🍋 Cítricos y Ácidos Naturales", "jugo_limon", "ml", scaled_qty)
 
     # 9. Proteins (placed before seeds so protein dish titles like 'Lomo de atún en costra de sésamo' don't get misclassified as sesame seeds)
-    if "cerdo" in name_clean:
-        return ("Medallones de lomo de cerdo magro", "🥩 Proteínas Principales Seleccionadas", "lomo_cerdo", "g", scaled_qty)
-    if "camarón" in name_clean or "camaron" in name_clean or "camarones" in name_clean:
-        return ("Camarón fresco de Pacífico limpio", "🥩 Proteínas Principales Seleccionadas", "camaron_fresco", "g", scaled_qty)
+    if "arrachera" in name_clean:
+        return ("Corte magro de Arrachera de res", "🥩 Proteínas Principales Seleccionadas", "arrachera_res", "g", scaled_qty)
     if "robalo" in name_clean:
         return ("Filete de Robalo fresco", "🥩 Proteínas Principales Seleccionadas", "filete_robalo", "g", scaled_qty)
     if "sirloin" in name_clean:

@@ -1044,7 +1044,7 @@ class KetoAIArchitect:
                 ],
                 "meals": [
                     Meal(meal_type="Desayuno", starter_name="Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo", side_dish_name="Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.0, net_carbs_g=3.2),
-                    Meal(meal_type="Comida", starter_name="Crema Caliente de Flor de Calabaza y Queso de Cabra", main_dish_name="Medallones de Cerdo a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo", side_dish_name="Espárragos Verdes al Horno con Limón y Sal de Mar Mineral", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
+                    Meal(meal_type="Comida", starter_name="Crema Caliente de Flor de Calabaza y Queso de Cabra", main_dish_name="Corte Magro de Arrachera de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo", side_dish_name="Espárragos Verdes al Horno con Limón y Sal de Mar Mineral", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
                     Meal(meal_type="Cena", starter_name="Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen", main_dish_name="Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano", side_dish_name="Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=34.0, net_carbs_g=2.8)
                 ]
             },
@@ -1086,7 +1086,7 @@ class KetoAIArchitect:
                 ],
                 "meals": [
                     Meal(meal_type="Desayuno", starter_name="Arilos de Granada Fresca con Almendras Fileteadas y Chía", main_dish_name="Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén", side_dish_name="Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.5, net_carbs_g=3.3),
-                    Meal(meal_type="Comida", starter_name="Crema de Coliflor Rostizada al Ajo y Queso de Cabra", main_dish_name="Filete de Robalo a la Sartén en Salsa de Eneldo y Mantequilla Clarificada", side_dish_name="Chayotes Tiernos al Vapor con Mantequilla Clarificada", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
+                    Meal(meal_type="Comida", starter_name="Crema de Coliflor Rostizada al Ajo y Queso de Cabra", main_dish_name="Pechuga de Pollo al Sartén en Salsa de Eneldo y Mantequilla Clarificada", side_dish_name="Chayotes Tiernos al Vapor con Mantequilla Clarificada", fat_g=50.0, protein_g=44.0, net_carbs_g=4.0),
                     Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal de Mar", main_dish_name="Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO", side_dish_name="Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=34.0, net_carbs_g=2.5)
                 ]
             },
@@ -1150,7 +1150,7 @@ class KetoAIArchitect:
                 "meals": [
                     Meal(meal_type="Desayuno", starter_name="Fresas Frescas de la Granja con Nueces de Castilla y Chía", main_dish_name="Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela", side_dish_name="Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®", fat_g=31.0, protein_g=33.0, net_carbs_g=3.3),
                     Meal(meal_type="Comida", starter_name="Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano", main_dish_name="Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón", side_dish_name="Espárragos Verdes Asados con Limón y Sal Marina", fat_g=51.5, protein_g=44.0, net_carbs_g=4.0),
-                    Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal Mineral", main_dish_name="Cazuela Fría de Camarones al Limón con Aguacate Hass y Cilantro", side_dish_name="Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=34.0, net_carbs_g=2.8)
+                    Meal(meal_type="Cena", starter_name="Bastones de Zucchini y Apio al Limón con Sal Mineral", main_dish_name="Tartar de Robalo Fresco al Limón con Aguacate Hass y Cilantro", side_dish_name="Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®", fat_g=29.0, protein_g=34.0, net_carbs_g=2.8)
                 ]
             },
             {
