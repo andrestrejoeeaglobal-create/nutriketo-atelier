@@ -3815,7 +3815,7 @@ function formatBaseQuantity(val, type, origUnit) {
 function calculateActiveMenuBOM(weekKey, diners) {
   const numDiners = parseInt(diners) || (typeof activeDiners !== 'undefined' ? parseInt(activeDiners) || 6 : 6);
 
-  if (typeof ACTIVE_WEEK_CANONICAL_BOM !== 'undefined' && ACTIVE_WEEK_CANONICAL_BOM && ACTIVE_WEEK_CANONICAL_BOM.bom) {
+  if (weekKey && weekKey.includes("38") && typeof ACTIVE_WEEK_CANONICAL_BOM !== 'undefined' && ACTIVE_WEEK_CANONICAL_BOM && ACTIVE_WEEK_CANONICAL_BOM.bom) {
     const canonicalItems = [];
     for (const catKey in ACTIVE_WEEK_CANONICAL_BOM.bom) {
       const group = ACTIVE_WEEK_CANONICAL_BOM.bom[catKey];
@@ -3840,7 +3840,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
     }
   }
 
-  const activePlan = getPlanForWeek(weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 38'));
+  const activePlan = getPlanForWeek(weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40'));
   if (!activePlan || !activePlan.days) return [];
 
   const bomMap = {};
@@ -3919,7 +3919,7 @@ function calculateNetShoppingList(diners) {
     : 7;
   let marketNetCount = 0;
 
-  const activeBOMItems = calculateActiveMenuBOM(typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 38', numDiners);
+  const activeBOMItems = calculateActiveMenuBOM(typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40', numDiners);
   const isFromActiveBOM = activeBOMItems && activeBOMItems.length > 0;
   const itemsToProcess = isFromActiveBOM
     ? activeBOMItems 
@@ -4041,7 +4041,7 @@ function render3DShoppingList() {
     if (!vShop) return;
 
     const numDiners = typeof activeDiners !== 'undefined' ? parseInt(activeDiners) || 6 : 6;
-    const weekKey = typeof activeWeek !== 'undefined' ? activeWeek : 'semana_38';
+    const weekKey = typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40';
     const weekSlug = weekKey.toLowerCase().replace(/[^a-z0-9]/g, '_');
 
     const netData = calculateNetShoppingList(numDiners);
@@ -4062,7 +4062,7 @@ function render3DShoppingList() {
           <div>
             <h3 class="text-xl font-bold font-brand-title text-slate-900 dark:text-slate-100 flex items-center gap-2" style="margin:0;">
               <svg class="icon-svg-md text-[#1C75BC]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              <span>Abastecimiento Neto de Mercado (SSOT V36.2)</span>
+              <span>Abastecimiento Neto de Mercado (SSOT V36.6 REV3)</span>
             </h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
               Matriz de Mando Tridimensional de 4 Cuadrantes para ${numDiners} comensales. Sincronización Canónica Determinista.
