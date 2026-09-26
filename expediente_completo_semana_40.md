@@ -43,21 +43,23 @@
 4. Servicio Gourmet Fresco: - Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos.
 
 ##### 🥩 PLATILLO PRINCIPAL: Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo
-- **Técnica Culinaria:** `pan_fry_egg`
-- **Nota Organoléptica:** *"Preparación de huevo artesanal de Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo cocinado suavemente a fuego medio-bajo."* 
+- **Técnica Culinaria:** `scrambled_stir_fry`
+- **Nota Organoléptica:** *"Huevos revueltos rústicos suaves cocinados al sartén en mantequilla de pastoreo con vegetales frescos sofritos al dente."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥚 Proteína de Huevo Orgánico*
   - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
-- *🧀 Relleno y Grasa de Cocción*
-  - Mantequilla clarificada / Ghee: **60 g** (10 g/persona)
-  - Queso artesanal / Jamón de pavo: **180 g** (30 g/persona)
+- *🥦 Vegetal de Acompañamiento y Relleno*
+  - Ejotes verdes frescos de la granja: **240 g** (40 g/persona)
+- *🧈 Grasa y Sazón Mineral*
+  - Mantequilla de pastoreo / Ghee: **60 g** (10 g/persona)
+  - Sal de mar mineral: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Batir los huevos con sal mineral hasta homogeneizar.
-2. Derretir mantequilla en sartén a fuego medio-bajo (140°C).
-3. Verter los huevos, cocinar suavemente moviendo bordes y rellenar con queso/pavo.
-4. Doblar y servir caliente.
+1. Batido de Huevo: Batir los huevos orgánicos con sal mineral hasta homogenizar la emulsión.
+2. Salteado Vegetal: Saltear los vegetales frescos en mantequilla a fuego medio (140°C) durante 2 minutos hasta suavizar.
+3. Cuajado Cremoso: Verter la mezcla de huevo sobre los vegetales salteados, moviendo suavemente con espátula desde los bordes.
+4. Servicio Gourmet: Retirar del fuego antes de resecar y servir caliente a 65°C.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
@@ -217,21 +219,24 @@
 4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
 
 ##### 🥩 PLATILLO PRINCIPAL: Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda
-- **Técnica Culinaria:** `pan_fry_egg`
-- **Nota Organoléptica:** *"Preparación de huevo artesanal de Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda cocinado suavemente a fuego medio-bajo."* 
+- **Técnica Culinaria:** `baveuse_omelette`
+- **Nota Organoléptica:** *"Omelette francés clásico preparado a fuego suave en mantequilla de pastoreo con centro cremoso baveuse, finas hierbas y queso derretido."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥚 Proteína de Huevo Orgánico*
   - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
-- *🧀 Relleno y Grasa de Cocción*
-  - Mantequilla clarificada / Ghee: **60 g** (10 g/persona)
-  - Queso artesanal / Jamón de pavo: **180 g** (30 g/persona)
+- *🧀 Relleno y Aromáticos*
+  - Queso Gouda artesanal: **180 g** (30 g/persona)
+  - Finas hierbas frescas de la granja: **12 g** (2 g/persona)
+- *🧈 Grasa y Sazón*
+  - Mantequilla de pastoreo: **60 g** (10 g/persona)
+  - Sal de mar mineral: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Batir los huevos con sal mineral hasta homogeneizar.
-2. Derretir mantequilla en sartén a fuego medio-bajo (140°C).
-3. Verter los huevos, cocinar suavemente moviendo bordes y rellenar con queso/pavo.
-4. Doblar y servir caliente.
+1. Batido Homogéneo: Batir vigorosamente los huevos con las finas hierbas frescas picadas y la sal mineral.
+2. Calentamiento Suave: Derretir la mantequilla de pastoreo en sartén antiadherente a fuego bajo (140°C).
+3. Cuajado Baveuse: Verter los huevos agitando velozmente en círculos con tenedor de madera para formar cuajadas pequeñas; añadir el queso al centro.
+4. Plegado y Servicio: Doblar sobre sí mismo en forma de óvalo dejando el centro jugoso (baveuse) y servir de inmediato.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
@@ -389,25 +394,25 @@
 4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
 
 ##### 🥩 PLATILLO PRINCIPAL: Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén
-- **Técnica Culinaria:** `pan_fry_egg`
-- **Nota Organoléptica:** *"Fondo profundo y claro de Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén infusionado a fuego lento con cilantro fresco y minerales."* 
+- **Técnica Culinaria:** `machaca_scramble`
+- **Nota Organoléptica:** *"Huevos revueltos suaves a la mantequilla de pastoreo con machaca artesanal de res deshidratada en fibra corta, aromática de orégano y cebolla picada."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteínas y Huesos de Fondo*
-  - Costilla de res limpia / Hueso con tuétano: **600 g** (100 g/persona)
-  - Tuétano de res fresco en caña: **300 g** (50 g/persona)
-- *🍲 Base de Caldo y Aromáticos*
-  - Agua purificada de cocción: **1800 ml** (300 ml/persona)
-  - Cebolla blanca y ajo rostizado: **120 g** (20 g/persona)
-  - Cilantro fresco de la granja picado: **60 g** (10 g/persona)
-- *🌿 Sazón Mineral*
-  - Sal de mar mineral y pimienta en grano: **18 g** (3 g/persona)
+- *🥚 Proteína de Huevo Orgánico*
+  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
+- *🥩 Proteína Seca Deshidratada y Aromáticos*
+  - Carne seca machaca artesanal de Sonora: **150 g** (25 g/persona)
+  - Cebolla blanca finamente picada: **60 g** (10 g/persona)
+  - Orégano seco molido a mano: **6 g** (1 g/persona)
+- *🧈 Grasa de Cocción y Sazón Mineral*
+  - Mantequilla clarificada / Ghee: **60 g** (10 g/persona)
+  - Sal de mar mineral: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Blanqueado de Huesos: Blanquear los huesos y carne en agua hirviendo durante 3 minutos para retirar impurezas.
-2. Cocción Lenta de Fondo: Cocinar a fuego lento (85-90°C) durante 90 minutos con agua, cebolla y ajo hasta obtener un caldo translúcido y sustancioso.
-3. Clarificación: Colar el consomé caliente reservando los trozos suaves de carne y tuétano.
-4. Servicio Gourmet: Servir caliente a 75°C decorado con cilantro fresco picado.
+1. Sofreído Aromático: Sofreír la cebolla picada y la carne seca machaca artesanal en mantequilla/ghee a fuego medio (140°C) durante 2 minutos para activar aromas y reactivar fibras.
+2. Emulsión de Huevo: Batir los huevos orgánicos de libre pastoreo en un tazón con sal mineral y orégano seco molido a mano.
+3. Cuajado Suave en Sartén: Verter la mezcla de huevo sobre la machaca en la sartén a fuego medio-bajo; revolver suavemente con espátula durante 2-3 minutos hasta cuajar cremoso.
+4. Servicio Gourmet: Servir caliente de inmediato a 65°C.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
@@ -757,21 +762,22 @@
 4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
 
 ##### 🥩 PLATILLO PRINCIPAL: Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Técnica Culinaria:** `sunny_side_up`
+- **Nota Organoléptica:** *"Huevos frescos estrellados en sartén de hierro colado con aceite VEVO e infusión de tomillo fresco, cocinados con yema fluida brillante y clara cuajada opaca."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Huevos Estrellados: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
+- *🥚 Proteína de Huevo Orgánico*
+  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
+- *🧈 Grasa Saludable y Botánicos*
+  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
+  - Tomillo fresco de la granja: **9 g** (1.5 g/persona)
+  - Sal de mar mineral en escamas: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Huevos Estrellados con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
+1. Acondicionamiento Térmico: Calentar la sartén de hierro colado a fuego suave (130°C–140°C) con el aceite VEVO y las ramitas de tomillo fresco.
+2. Incorporación Proteica: Cascar los huevos frescos orgánicos directamente en la sartén sin romper la yema.
+3. Cocción Tapada Sin Voltear: Tapar la sartén inmediatamente y cocinar a fuego mínimo durante 3 minutos hasta que las claras cuajen blancas y la yema permanezca fluida.
+4. Servicio Gourmet: Retirar suavemente con pala ancha, sazonar con sal en escamas y servir caliente a 65°C.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
@@ -931,20 +937,22 @@
 4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
 
 ##### 🥩 PLATILLO PRINCIPAL: Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela
-- **Técnica Culinaria:** `baked_egg_matrix`
-- **Nota Organoléptica:** *"Rollo artesanal en capas finas de huevo batido a la mantequilla de pastoreo, enrollado en sartén tamagoyaki con queso Panela y pechuga de pavo."* 
+- **Técnica Culinaria:** `tamagoyaki_roll`
+- **Nota Organoléptica:** *"Rollo artesanal en capas finas de huevo orgánico batido a la mantequilla de pastoreo, enrollado en sartén tamagoyaki con queso Panela."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥚 Base Proteica de Huevo*
-  - Huevos frescos orgánicos: **12 piezas** (2 piezas/persona)
-- *🧀 Relleno de Queso y Pavo*
-  - Queso Panela artesanal: **180 g** (30 g/persona)
-  - Pechuga de pavo artesanal picada: **150 g** (25 g/persona)
+- *🥚 Proteína de Huevo Orgánico*
+  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
+- *🧀 Relleno de Queso*
+  - Queso Panela artesanal en láminas finas: **180 g** (30 g/persona)
+- *🧈 Grasa de Cocción y Sazón*
+  - Mantequilla de pastoreo / Ghee: **60 g** (10 g/persona)
+  - Sal de mar mineral y pimienta: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Batido e Integración: Batir huevos con sal marina y pimienta.
-2. Cocción en capas: Verter capas delgadas en sartén rectangular a fuego bajo enrollando con queso panela y pavo.
-3. Servicio: Cortar en medallones de 2 cm y servir caliente.
+1. Batido e Integración: Batir huevos frescos orgánicos con sal marina y pimienta.
+2. Cocción en Capas: Verter capas delgadas en sartén rectangular a fuego bajo enrollando con láminas de queso panela.
+3. Servicio Gourmet: Cortar en medallones de 2 cm y servir caliente a 65°C.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
@@ -1103,22 +1111,24 @@
 4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
 
 ##### 🥩 PLATILLO PRINCIPAL: Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Vegetales frescos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
+- **Técnica Culinaria:** `skillet_bake`
+- **Nota Organoléptica:** *"Cazuela artesanal horneada con huevos frescos asentados sobre cama de espinacas baby sofritas en mantequilla de pastoreo y gratinados con queso de cabra artesanal."* 
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Vegetales frescos de la granja troceados: **720 g** (120 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
+- *🥚 Proteína de Huevo Orgánico*
+  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
+- *🥬 Cama Vegetal e Insumos Córtex*
+  - Espinacas baby frescas de la granja: **240 g** (40 g/persona)
+  - Queso de cabra artesanal: **180 g** (30 g/persona)
+- *🧈 Grasa y Sazón*
+  - Mantequilla de pastoreo / Ghee: **60 g** (10 g/persona)
+  - Sal de mar mineral y pimienta: **9 g** (1.5 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Vegetales frescos de la granja de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
+1. Sofrito de Sustrato Vegetal: Sofreír las espinacas baby en mantequilla dentro de una cazuela o sartén de hierro apta para horno a fuego medio durante 2 minutos.
+2. Montaje de Nidos Proteicos: Formar cavidades en la cama de espinacas y cascar los huevos dentro de cada cavidad. Espolvorear el queso de cabra artesanal alrededor.
+3. Horneado o Cocción Tapada: Hornear a 180°C (o tapar en estufa a fuego bajo) durante 8 a 10 minutos hasta que la clara cuaje firme y la yema quede cremosa.
+4. Servicio Gourmet: Servir caliente al centro en la misma cazuela a 68°C.
 
 ##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Higo (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
@@ -1265,7 +1275,7 @@
 | **Almendras fileteadas tostadas** | 360 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
 | **Semillas de chía orgánicas** | 336 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
 | **Semillas de sésamo tostadas** | 900 | g | 🌰 Semillas y Nueces |
-| **Vegetales frescos de la granja troceados** | 2160 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
+| **Vegetales frescos de la granja troceados** | 1440 | g | 🌱 Vegetal / Acompañamiento Base (Cosecha Activa) |
 | **Cúrcuma orgánica en polvo** | 12 | g | 🌶️ Chiles, Condimentos e Infusiones |
 | **Flores de manzanilla fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Hojas de menta fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
@@ -1283,9 +1293,8 @@
 | **Pitaya fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Agua fría para hidratar** | 1470 | ml | 🍮 Base Hidrocoloide y Gelificante |
 | **Grenetina natural en polvo (colágeno hidrolizado)** | 294 | g | 🍮 Base Hidrocoloide y Gelificante |
-| **Agua purificada de cocción** | 3600 | ml | 🍲 Base de Caldo y Aromáticos |
-| **Cebolla blanca y ajo rostizado** | 120 | g | 🍲 Base de Caldo y Aromáticos |
-| **Cilantro fresco de la granja picado** | 120 | g | 🍲 Base de Caldo y Aromáticos |
+| **Agua purificada de cocción** | 1800 | ml | 🍲 Base de Caldo y Aromáticos |
+| **Cilantro fresco de la granja picado** | 60 | g | 🍲 Base de Caldo y Aromáticos |
 | **Romero fresco y cebolla blanca** | 90 | g | 🍲 Base de Caldo y Aromáticos |
 | **Acelgas frescas de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
 | **Coliflor fresca rostizada de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
@@ -1296,39 +1305,44 @@
 | **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
 | **Agua purificada (80°C)** | 10500 | ml | 💧 Agua Purificada de Infusión |
 | **Aguacate Hass fresco** | 18.4 | piezas | 🥑 Grasas Saludables y Frutos |
-| **Mantequilla de pastoreo / Ghee** | 1995 | g | 🥑 Grasas Saludables y Frutos |
-| **Aceite de oliva extra virgen (VEVO)** | 492 | ml | 🥑 Hortaliza y Grasas Saludables |
+| **Mantequilla de pastoreo / Ghee** | 2043 | g | 🥑 Grasas Saludables y Frutos |
+| **Aceite de oliva extra virgen (VEVO)** | 552 | ml | 🥑 Hortaliza y Grasas Saludables |
 | **Alcaparras finamente picadas** | 60 | g | 🥑 Macerado Cítrico y Grasas |
 | **Huevos frescos enteros (para pochar)** | 6 | piezas | 🥓 Cubierta y Proteína |
 | **Vinagre blanco (para agua de pochado)** | 45 | ml | 🥓 Cubierta y Proteína |
-| **Huevos frescos orgánicos** | 12 | piezas | 🥚 Base Proteica de Huevo |
-| **Huevos orgánicos de libre pastoreo** | 24 | piezas | 🥚 Proteína de Huevo Orgánico |
+| **Huevos orgánicos de libre pastoreo** | 72 | piezas | 🥚 Proteína de Huevo Orgánico |
 | **Ajo y cebolla blanca picados** | 90 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Apio fresco de la granja** | 1200 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Calabacitas tiernas de la granja** | 2880 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Champiñones Portobello frescos** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Chayotes tiernos de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Ejotes verdes frescos de la granja** | 240 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Espárragos verdes frescos de la granja** | 1440 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Hinojo fresco de la granja** | 1290 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Pepino blanco fresco de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Huevos Estrellados** | 900 | g | 🥩 Proteína Principal Seleccionada |
+| **Cebolla blanca finamente picada** | 60 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
+| **Orégano seco molido a mano** | 6 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
 | **Carne molida / Filete de Sirloin magro** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Carne seca machaca artesanal de res** | 150 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Corte de Ribeye de res premium** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Huachinango fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Filete de Pescado blanco fresco** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Medallón de Atún fresco** | 780 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Pechuga de pavo artesanal** | 3030 | g | 🥩 Proteínas Principales Seleccionadas |
+| **Pechuga de pavo artesanal** | 2520 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pollo orgánica** | 1800 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Tocino de pavo artesanal crujiente** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
-| **Costilla de res limpia / Hueso con tuétano** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Costilla de res limpia troceada** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
-| **Tuétano de res fresco en caña** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
-| **Espinacas baby frescas de la granja** | 240 | g | 🥬 Hojas Verdes y Envolturas |
+| **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
+| **Queso de cabra artesanal** | 180 | g | 🥬 Cama Vegetal e Insumos Córtex |
+| **Espinacas baby frescas de la granja** | 480 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de arúgula fresca** | 360 | g | 🥬 Hojas Verdes y Envolturas |
 | **Queso Parmesano o de cabra** | 330 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
 | **Queso crema suave artesanal** | 360 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
-| **Queso Panela artesanal** | 180 | g | 🧀 Relleno de Queso y Pavo |
+| **Queso Panela artesanal en láminas finas** | 180 | g | 🧀 Relleno de Queso |
+| **Finas hierbas frescas de la granja** | 12 | g | 🧀 Relleno y Aromáticos |
+| **Queso Gouda artesanal** | 180 | g | 🧀 Relleno y Aromáticos |
 | **Sal de mar mineral en escamas** | 1575 | g | 🧂 Condimentos y Sal Mineral |
-| **Cilantro fresco y orégano** | 63 | g | 🧈 Grasa Saludable y Sazón |
+| **Tomillo fresco de la granja** | 9 | g | 🧈 Grasa Saludable y Botánicos |
+| **Cilantro fresco y orégano** | 54 | g | 🧈 Grasa Saludable y Sazón |
 | **Yemas de huevo frescas** | 6 | piezas | 🧈 Salsa Holandesa Casera |
 | **Infusión de té de frutos rojos y menta** | 5040 | ml | 🫐 Extracto Frutal e Infusión Viva |

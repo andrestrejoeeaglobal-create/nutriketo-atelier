@@ -748,36 +748,240 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             ]
         }
 
-    # 12. OTROS PLATILLOS DE HUEVO (MOLLET, TAMAGOYAKI, CHAWANMUSHI, ANILLO, CAMPANA, MACHACA, OMELETTE)
-    if any(kw in clean_lower for kw in ["mollet", "tamari"]):
+    # 12. MATRIZ EXPANDIDA DE HUEVOS MATUTINOS (9 TÉCNICAS CANÓNICAS SSOT V36.6)
+    if "machaca" in clean_lower:
         return {
             "title": clean_title,
-            "cooking_technique": "boil_and_marinate",
-            "sensory_description": "Huevos orgánicos cocinados a 6 minutos con clara cuajada y yema sedosa, marinados en infusión umami de salsa Tamari keto y aceite de sésamo.",
+            "cooking_technique": "machaca_scramble",
+            "sensory_description": "Huevos revueltos suaves a la mantequilla de pastoreo con machaca artesanal de res deshidratada en fibra corta, aromática de orégano y cebolla picada.",
             "ingredient_groups": [
-                {"category": "🥚 Proteína de Huevo Mollet", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}]},
-                {"category": "🍶 Marinado Umami Tamari", "items": [{"name": "Salsa Tamari (soya keto)", "base_qty_per_person": 15.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}, {"name": "Aceite de sésamo tostado", "base_qty_per_person": 5.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}]}
+                {
+                    "category": "🥚 Proteína de Huevo Orgánico",
+                    "items": [
+                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🥩 Proteína Seca Deshidratada y Aromáticos",
+                    "items": [
+                        {"name": "Carne seca machaca artesanal de Sonora", "base_qty_per_person": 25.0, "unit": "g", "source": "Mercado", "unit_cost": 15.0},
+                        {"name": "Cebolla blanca finamente picada", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Orégano seco molido a mano", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧈 Grasa de Cocción y Sazón Mineral",
+                    "items": [
+                        {"name": "Mantequilla clarificada / Ghee", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
             ],
             "steps": [
-                "1. Cocción de precisión (6 min): Sumergir los huevos en agua hirviendo durante 6 minutos exactos; pasar a choque térmico de hielo.",
-                "2. Marinado: Pelar suavemente y marinar en salsa Tamari y aceite de sésamo durante 2 horas en refrigeración.",
-                "3. Servicio: Cortar por la mitad y servir mostrando el núcleo cremoso."
+                "1. Sofreído Aromático: Sofreír la cebolla picada y la carne seca machaca artesanal en mantequilla/ghee a fuego medio (140°C) durante 2 minutos para activar aromas y reactivar fibras.",
+                "2. Emulsión de Huevo: Batir los huevos orgánicos de libre pastoreo en un tazón con sal mineral y orégano seco molido a mano.",
+                "3. Cuajado Suave en Sartén: Verter la mezcla de huevo sobre la machaca en la sartén a fuego medio-bajo; revolver suavemente con espátula durante 2-3 minutos hasta cuajar cremoso.",
+                "4. Servicio Gourmet: Servir caliente de inmediato a 65°C."
+            ]
+        }
+
+    if any(kw in clean_lower for kw in ["estrellado", "estrellados", "sunny side"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "sunny_side_up",
+            "sensory_description": "Huevos frescos estrellados en sartén de hierro colado con aceite VEVO e infusión de tomillo fresco, cocinados con yema fluida brillante y clara cuajada opaca.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Proteína de Huevo Orgánico",
+                    "items": [
+                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧈 Grasa Saludable y Botánicos",
+                    "items": [
+                        {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Tomillo fresco de la granja", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral en escamas", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Acondicionamiento Térmico: Calentar la sartén de hierro colado a fuego suave (130°C–140°C) con el aceite VEVO y las ramitas de tomillo fresco.",
+                "2. Incorporación Proteica: Cascar los huevos frescos orgánicos directamente en la sartén sin romper la yema.",
+                "3. Cocción Tapada Sin Voltear: Tapar la sartén inmediatamente y cocinar a fuego mínimo durante 3 minutos hasta que las claras cuajen blancas y la yema permanezca fluida.",
+                "4. Servicio Gourmet: Retirar suavemente con pala ancha, sazonar con sal en escamas y servir caliente a 65°C."
+            ]
+        }
+
+    if any(kw in clean_lower for kw in ["cazuela", "skillet"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "skillet_bake",
+            "sensory_description": "Cazuela artesanal horneada con huevos frescos asentados sobre cama de espinacas baby sofritas en mantequilla de pastoreo y gratinados con queso de cabra artesanal.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Proteína de Huevo Orgánico",
+                    "items": [
+                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🥬 Cama Vegetal e Insumos Córtex",
+                    "items": [
+                        {"name": "Espinacas baby frescas de la granja", "base_qty_per_person": 40.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Queso de cabra artesanal", "base_qty_per_person": 30.0, "unit": "g", "source": "Mercado", "unit_cost": 12.0}
+                    ]
+                },
+                {
+                    "category": "🧈 Grasa y Sazón",
+                    "items": [
+                        {"name": "Mantequilla de pastoreo / Ghee", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral y pimienta", "base_qty_per_person": 1.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Sofrito de Sustrato Vegetal: Sofreír las espinacas baby en mantequilla dentro de una cazuela o sartén de hierro apta para horno a fuego medio durante 2 minutos.",
+                "2. Montaje de Nidos Proteicos: Formar cavidades en la cama de espinacas y cascar los huevos dentro de cada cavidad. Espolvorear el queso de cabra artesanal alrededor.",
+                "3. Horneado o Cocción Tapada: Hornear a 180°C (o tapar en estufa a fuego bajo) durante 8 a 10 minutos hasta que la clara cuaje firme y la yema quede cremosa.",
+                "4. Servicio Gourmet: Servir caliente al centro en la misma cazuela a 68°C."
+            ]
+        }
+
+    if any(kw in clean_lower for kw in ["baveuse", "omelette"]):
+        veg_item = "Finas hierbas frescas de la granja"
+        cheese_item = "Queso Gouda artesanal"
+        if "gouda" in clean_lower: cheese_item = "Queso Gouda artesanal"
+        elif "panela" in clean_lower: cheese_item = "Queso Panela artesanal"
+        elif "cabra" in clean_lower: cheese_item = "Queso de cabra artesanal"
+
+        return {
+            "title": clean_title,
+            "cooking_technique": "baveuse_omelette",
+            "sensory_description": "Omelette francés clásico preparado a fuego suave en mantequilla de pastoreo con centro cremoso baveuse, finas hierbas y queso derretido.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Proteína de Huevo Orgánico",
+                    "items": [
+                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧀 Relleno y Aromáticos",
+                    "items": [
+                        {"name": cheese_item, "base_qty_per_person": 30.0, "unit": "g", "source": "Mercado", "unit_cost": 10.0},
+                        {"name": veg_item, "base_qty_per_person": 2.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧈 Grasa y Sazón",
+                    "items": [
+                        {"name": "Mantequilla de pastoreo", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Batido Homogéneo: Batir vigorosamente los huevos con las finas hierbas frescas picadas y la sal mineral.",
+                "2. Calentamiento Suave: Derretir la mantequilla de pastoreo en sartén antiadherente a fuego bajo (140°C).",
+                "3. Cuajado Baveuse: Verter los huevos agitando velozmente en círculos con tenedor de madera para formar cuajadas pequeñas; añadir el queso al centro.",
+                "4. Plegado y Servicio: Doblar sobre sí mismo en forma de óvalo dejando el centro jugoso (baveuse) y servir de inmediato."
+            ]
+        }
+
+    if any(kw in clean_lower for kw in ["revuelto", "revueltos"]):
+        veg_name = "Ejotes verdes frescos de la granja" if "ejotes" in clean_lower else ("Nopales tiernos limpios" if "nopal" in clean_lower else "Vegetales frescos de la granja")
+        return {
+            "title": clean_title,
+            "cooking_technique": "scrambled_stir_fry",
+            "sensory_description": "Huevos revueltos rústicos suaves cocinados al sartén en mantequilla de pastoreo con vegetales frescos sofritos al dente.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Proteína de Huevo Orgánico",
+                    "items": [
+                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🥦 Vegetal de Acompañamiento y Relleno",
+                    "items": [
+                        {"name": veg_name, "base_qty_per_person": 40.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧈 Grasa y Sazón Mineral",
+                    "items": [
+                        {"name": "Mantequilla de pastoreo / Ghee", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Batido de Huevo: Batir los huevos orgánicos con sal mineral hasta homogenizar la emulsión.",
+                "2. Salteado Vegetal: Saltear los vegetales frescos en mantequilla a fuego medio (140°C) durante 2 minutos hasta suavizar.",
+                "3. Cuajado Cremoso: Verter la mezcla de huevo sobre los vegetales salteados, moviendo suavemente con espátula desde los bordes.",
+                "4. Servicio Gourmet: Retirar del fuego antes de resecar y servir caliente a 65°C."
             ]
         }
 
     if "tamagoyaki" in clean_lower:
         return {
             "title": clean_title,
-            "cooking_technique": "baked_egg_matrix",
-            "sensory_description": "Rollo artesanal en capas finas de huevo batido a la mantequilla de pastoreo, enrollado en sartén tamagoyaki con queso Panela y pechuga de pavo.",
+            "cooking_technique": "tamagoyaki_roll",
+            "sensory_description": "Rollo artesanal en capas finas de huevo orgánico batido a la mantequilla de pastoreo, enrollado en sartén tamagoyaki con queso Panela.",
             "ingredient_groups": [
-                {"category": "🥚 Base Proteica de Huevo", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}]},
-                {"category": "🧀 Relleno de Queso y Pavo", "items": [{"name": "Queso Panela artesanal", "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}, {"name": "Pechuga de pavo artesanal picada", "base_qty_per_person": 25.0, "unit": "g", "source": "Mercado", "unit_cost": 8.0}]}
+                {
+                    "category": "🥚 Proteína de Huevo Orgánico",
+                    "items": [
+                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧀 Relleno de Queso",
+                    "items": [
+                        {"name": "Queso Panela artesanal en láminas finas", "base_qty_per_person": 30.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🧈 Grasa de Cocción y Sazón",
+                    "items": [
+                        {"name": "Mantequilla de pastoreo / Ghee", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral y pimienta", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
             ],
             "steps": [
-                "1. Batido e Integración: Batir huevos con sal marina y pimienta.",
-                "2. Cocción en capas: Verter capas delgadas en sartén rectangular a fuego bajo enrollando con queso panela y pavo.",
-                "3. Servicio: Cortar en medallones de 2 cm y servir caliente."
+                "1. Batido e Integración: Batir huevos frescos orgánicos con sal marina y pimienta.",
+                "2. Cocción en Capas: Verter capas delgadas en sartén rectangular a fuego bajo enrollando con láminas de queso panela.",
+                "3. Servicio Gourmet: Cortar en medallones de 2 cm y servir caliente a 65°C."
+            ]
+        }
+
+    if any(kw in clean_lower for kw in ["mollet", "tamari"]):
+        return {
+            "title": clean_title,
+            "cooking_technique": "boil_and_marinate",
+            "sensory_description": "Huevos orgánicos cocinados a 6 minutos con clara cuajada y yema sedosa, marinados en infusión umami de salsa Tamari keto y aceite de sésamo.",
+            "ingredient_groups": [
+                {
+                    "category": "🥚 Proteína de Huevo Mollet",
+                    "items": [
+                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                },
+                {
+                    "category": "🍶 Marinado Umami Tamari",
+                    "items": [
+                        {"name": "Salsa Tamari (soya keto)", "base_qty_per_person": 15.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Aceite de sésamo tostado", "base_qty_per_person": 5.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
+                    ]
+                }
+            ],
+            "steps": [
+                "1. Cocción de Precisión (6 min): Sumergir huevos orgánicos en agua hirviendo 6 min exactos; pasar a agua helada.",
+                "2. Marinado Umami: Pelar suavemente y marinar en Tamari y aceite de sésamo durante 2 horas.",
+                "3. Servicio Gourmet: Cortar por la mitad y servir mostrando el núcleo cremoso."
             ]
         }
 
@@ -787,80 +991,18 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
             "cooking_technique": "steam_custard",
             "sensory_description": "Natilla salada al vapor japonesa de huevo orgánico y caldo clarificado concentrado.",
             "ingredient_groups": [
-                {"category": "🥚 Emulsión de Huevo y Fondo", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}, {"name": "Caldo / dashi de pollo clarificado", "base_qty_per_person": 65.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}]}
-            ],
-            "steps": [
-                "1. Filtrado: Batir huevos con caldo colando 2 veces por tamiz fino.",
-                "2. Cocción al vapor: Cocinar a 85°C en ramekins tapados durante 12 minutos hasta textura sedosa.",
-                "3. Servicio: Servir tibio decorado con cebollín."
-            ]
-        }
-
-    if any(kw in clean_lower for kw in ["anillo de pimiento", "pimiento morrón"]):
-        return {
-            "title": clean_title,
-            "cooking_technique": "pan_fry_egg",
-            "sensory_description": "Huevos orgánicos cocinados al sartén en nido vegetal de anillos de pimiento morrón dulce.",
-            "ingredient_groups": [
-                {"category": "🫑 Base Vegetal", "items": [{"name": "Pimiento morrón dulce en anillos (2 cm)", "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]},
-                {"category": "🥚 Proteína de Huevo", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}, {"name": "Mantequilla de pastoreo", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]}
-            ],
-            "steps": [
-                "1. Dorado vegetal: Dorar anillos de pimiento en sartén con mantequilla.",
-                "2. Cocción de huevos: Cascar huevo dentro de cada anillo y cocinar tapado a fuego bajo por 3 min.",
-                "3. Servicio: Servir caliente."
-            ]
-        }
-
-    if any(kw in clean_lower for kw in ["campana", "sartén con campana"]):
-        return {
-            "title": clean_title,
-            "cooking_technique": "pan_fry_egg",
-            "sensory_description": "Huevos orgánicos fritos con vapor atrapado bajo campana de acero a la mantequilla clarificada.",
-            "ingredient_groups": [
-                {"category": "🥚 Proteína de Huevo", "items": [{"name": "Huevos frescos orgánicos", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0}]},
-                {"category": "🧈 Grasa Clarificada", "items": [{"name": "Mantequilla clarificada (Ghee)", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}]}
-            ],
-            "steps": [
-                "1. Calentar Ghee a fuego medio.",
-                "2. Cascar huevos y cubrir inmediatamente con campana de acero por 3 minutos.",
-                "3. Servir caliente."
-            ]
-        }
-
-    if "machaca" in clean_lower:
-        return {
-            "title": clean_title,
-            "cooking_technique": "pan_fry_egg",
-            "sensory_description": f"Fondo profundo y claro de {clean_title} infusionado a fuego lento con cilantro fresco y minerales.",
-            "ingredient_groups": [
                 {
-                    "category": "🥩 Proteínas y Huesos de Fondo",
+                    "category": "🥚 Emulsión de Huevo y Fondo",
                     "items": [
-                        {"name": "Costilla de res limpia / Hueso con tuétano", "base_qty_per_person": 100.0, "unit": "g", "source": "Mercado", "unit_cost": 30.0},
-                        {"name": "Tuétano de res fresco en caña", "base_qty_per_person": 50.0, "unit": "g", "source": "Mercado", "unit_cost": 20.0}
-                    ]
-                },
-                {
-                    "category": "🍲 Base de Caldo y Aromáticos",
-                    "items": [
-                        {"name": "Agua purificada de cocción", "base_qty_per_person": 300.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Cebolla blanca y ajo rostizado", "base_qty_per_person": 20.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Cilantro fresco de la granja picado", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
-                    ]
-                },
-                {
-                    "category": "🌿 Sazón Mineral",
-                    "items": [
-                        {"name": "Sal de mar mineral y pimienta en grano", "base_qty_per_person": 3.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                        {"name": "Huevos orgánicos de libre pastoreo", "base_qty_per_person": 2.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Caldo de pollo clarificado", "base_qty_per_person": 65.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 }
             ],
             "steps": [
-                "1. Blanqueado de Huesos: Blanquear los huesos y carne en agua hirviendo durante 3 minutos para retirar impurezas.",
-                "2. Cocción Lenta de Fondo: Cocinar a fuego lento (85-90°C) durante 90 minutos con agua, cebolla y ajo hasta obtener un caldo translúcido y sustancioso.",
-                "3. Clarificación: Colar el consomé caliente reservando los trozos suaves de carne y tuétano.",
-                "4. Servicio Gourmet: Servir caliente a 75°C decorado con cilantro fresco picado."
+                "1. Filtrado: Batir huevos con caldo colando 2 veces por tamiz fino.",
+                "2. Cocción al Vapor: Cocinar a 85°C en ramekins tapados 12 minutos hasta textura sedosa.",
+                "3. Servicio Gourmet: Servir tibio decorado con cebollín."
             ]
         }
 

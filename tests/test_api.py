@@ -951,6 +951,46 @@ def test_ssot_v36_6_rev3_validator_rules():
     assert "no coincide con ninguna clave del catálogo canónico" in msg_unmapped
 
 
+def test_all_7_breakfast_recipes_pure_egg_symmetry():
+    from generate_standalone_html import build_typed_recipe_for_dish
+
+    breakfast_dishes = [
+        "Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo",
+        "Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda",
+        "Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén",
+        "Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente",
+        "Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco",
+        "Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela",
+        "Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra"
+    ]
+
+    for dish in breakfast_dishes:
+        recipe = build_typed_recipe_for_dish(dish, course_type="main")
+        assert recipe is not None, f"Receta para {dish} debe existir"
+
+        ing_items = [item for grp in recipe.get("ingredient_groups", []) for item in grp.get("items", [])]
+        ing_names = [i["name"].lower() for i in ing_items]
+        ing_text = " ".join(ing_names)
+
+        assert any(k in ing_text for k in ["huevo", "huevos", "claras", "yemas"]), f"Desayuno '{dish}' debe contener huevo"
+
+        for item in ing_items:
+            iname = item["name"].lower()
+            if "huevo" in iname and "nube" not in iname and "claras" not in iname:
+                assert item["unit"] == "piezas", f"En '{dish}', los huevos deben cuantificarse en 'piezas', obtenido '{item['unit']}'"
+
+        assert "costilla" not in ing_text, f"Desayuno '{dish}' contiene costilla (fallback no permitido)"
+        assert "tuétano" not in ing_text and "tuetano" not in ing_text, f"Desayuno '{dish}' contiene tuétano (fallback no permitido)"
+        assert "ribeye" not in ing_text, f"Desayuno '{dish}' contiene ribeye (fallback no permitido)"
+        assert "sirloin" not in ing_text, f"Desayuno '{dish}' contiene sirloin (fallback no permitido)"
+
+        steps_text = " ".join(recipe.get("steps", [])).lower()
+        assert "blanqueado de huesos" not in steps_text, f"Desayuno '{dish}' contiene paso de blanqueado de huesos"
+        assert "90 minutos" not in steps_text, f"Desayuno '{dish}' contiene caldo de 90 min"
+        assert "sellar en sartén a 180°c durante 3-4 minutos por lado" not in steps_text, f"Desayuno '{dish}' usa plantilla cárnica saute_and_sear"
+
+
+
 
 
 
