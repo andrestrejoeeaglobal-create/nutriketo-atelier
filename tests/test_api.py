@@ -851,6 +851,69 @@ def test_zero_mock_benedict_recipe_and_clean_datebar():
     assert "26 SÁB -" not in content, "Barra de fechas no debe tener guión espurio al final"
 
 
+def test_ssot_v36_6_rev3_validator_rules():
+    from app.schemas import TypedRecipeSchema, IngredientGroupSchema, IngredientItemSchema
+    from app.services.recipe_validator import validate_recipe_compliance
+
+    # 1. Test Curcumin without Pepper rejection
+    bad_curcumin_recipe = TypedRecipeSchema(
+        title="Crema de Coliflor y Cúrcuma",
+        cooking_technique="boil_and_blend",
+        ingredient_groups=[
+            IngredientGroupSchema(
+                category="Verduras",
+                items=[
+                    IngredientItemSchema(name="Coliflor fresca", base_qty_per_person=150.0, unit="g"),
+                    IngredientItemSchema(name="Cúrcuma pura", base_qty_per_person=3.0, unit="g")
+                ]
+            )
+        ],
+        steps=["1. Cocinar coliflor y cúrcuma.", "2. Licuar y servir."]
+    )
+    ok_curcumin, msg_curcumin = validate_recipe_compliance(bad_curcumin_recipe)
+    assert ok_curcumin is False
+    assert "Cúrcuma pero carece de Pimienta Negra" in msg_curcumin
+
+    # 2. Test Breakfast Heavy Beef rejection
+    bad_breakfast_beef = TypedRecipeSchema(
+        title="Huevos Benedictinos con Ribeye de Res a la Parrilla",
+        cooking_technique="saute_and_sear",
+        ingredient_groups=[
+            IngredientGroupSchema(
+                category="Carnes",
+                items=[
+                    IngredientItemSchema(name="Ribeye de res", base_qty_per_person=200.0, unit="g"),
+                    IngredientItemSchema(name="Huevos enteros", base_qty_per_person=2.0, unit="piezas")
+                ]
+            )
+        ],
+        steps=["1. Sellar ribeye a 180°C.", "2. Servir con huevos benedictinos."]
+    )
+    ok_beef, msg_beef = validate_recipe_compliance(bad_breakfast_beef, meal_type="Desayuno")
+    assert ok_beef is False
+    assert "corte pesado de res" in msg_beef
+
+    # 3. Test BOM Purity rejection for culinary adjectives
+    bad_bom_recipe = TypedRecipeSchema(
+        title="Pechuga al Sartén con Vegetales",
+        cooking_technique="saute_and_sear",
+        ingredient_groups=[
+            IngredientGroupSchema(
+                category="Carnes",
+                items=[
+                    IngredientItemSchema(name="Pechuga jugosa a la parrilla", base_qty_per_person=180.0, unit="g"),
+                    IngredientItemSchema(name="Mantequilla", base_qty_per_person=20.0, unit="g")
+                ]
+            )
+        ],
+        steps=["1. Cocinar pechuga jugosa a la parrilla en mantequilla.", "2. Servir caliente."]
+    )
+    ok_bom, msg_bom = validate_recipe_compliance(bad_bom_recipe)
+    assert ok_bom is False
+    assert "Pureza BOM violada" in msg_bom
+
+
+
 
 
 

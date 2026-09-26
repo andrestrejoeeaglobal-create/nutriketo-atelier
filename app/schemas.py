@@ -376,6 +376,15 @@ class CulinaryTechniqueEnum(str, Enum):
     BOIL_AND_BLEND = "boil_and_blend"      # Cremas y sopas
     POACH_AND_EMULSION = "poach_and_emulsion" # Pochados y salsas emulsionadas
     PAN_FRY_EGG = "pan_fry_egg"            # Omelettes y revueltos
+    SCRAMBLED_STIR_FRY = "scrambled_stir_fry" # Huevos revueltos rústicos con vegetales
+    SUNNY_SIDE_UP = "sunny_side_up"        # Huevos estrellados en hierro
+    MACHACA_SCRAMBLE = "machaca_scramble"  # Huevos revueltos con machaca artesanal
+    SKILLET_BAKE = "skillet_bake"          # Cazuela al horno con cama de vegetales
+    BAVEUSE_OMELETTE = "baveuse_omelette"  # Omelette francés suave
+    BOIL_AND_MARINATE = "boil_and_marinate"# Huevos mollet marinados
+    TAMAGOYAKI_ROLL = "tamagoyaki_roll"    # Rollo de huevo japonés
+    STEAM_CUSTARD = "steam_custard"        # Chawanmushi al vapor
+    VEGETABLE_RING_FRY = "vegetable_ring_fry" # Huevo en anillo de vegetal
     ROAST_BAKE = "roast_bake"              # Vegetales asados, gratinados
     SAUTE_AND_SEAR = "saute_and_sear"      # Proteínas sólidas, filetes
     STEEP_BEVERAGE = "steep_beverage"      # Tés, tisanas e infusiones

@@ -208,8 +208,28 @@ def resolve_technique(dish_name: str, category: str = "") -> str:
     if any(k in name for k in ["çılbır", "cilbir", "turcos", "pochado", "pochados", "benedict"]):
         return "poach_and_emulsion"
 
+    # 4.1. Técnicas Específicas de la Matriz Flexible de Huevo Matutina
+    if "machaca" in name:
+        return "machaca_scramble"
+    if any(k in name for k in ["estrellado", "estrellados", "sunny side"]):
+        return "sunny_side_up"
+    if any(k in name for k in ["cazuela", "skillet"]):
+        return "skillet_bake"
+    if "tamagoyaki" in name:
+        return "tamagoyaki_roll"
+    if "chawanmushi" in name:
+        return "steam_custard"
+    if "mollet" in name:
+        return "boil_and_marinate"
+    if "anillo" in name:
+        return "vegetable_ring_fry"
+    if any(k in name for k in ["baveuse", "omelette"]):
+        return "baveuse_omelette"
+    if any(k in name for k in ["revuelto", "revueltos"]):
+        return "scrambled_stir_fry"
+
     # 5. Huevos Fritos / Omelettes / Sartenes (pan_fry_egg)
-    if any(k in name for k in ["omelette", "huevo", "revuelto", "frittata", "shakshuka"]):
+    if any(k in name for k in ["huevo", "frittata", "shakshuka"]):
         return "pan_fry_egg"
         
     # 6. Platos fríos / Frutas / Ensaladas / Bastones
