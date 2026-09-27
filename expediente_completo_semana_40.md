@@ -1281,7 +1281,7 @@
 | **Hojas de menta fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Hojas de toronjil fresco de la granja** | 120 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Pimienta negra recién molida** | 3 | g | 🌿 Servicio y Decoración |
-| **Sombreros de champiñón Portobello grandes** | 12 | piezas | 🍄 Sombreros de Portobello Base |
+| **Champiñones Portobello frescos** | 732 | piezas | 🍄 Sombreros de Portobello Base |
 | **Jugo de limón fresco recién exprimido** | 810 | ml | 🍋 Cítricos y Ácidos Naturales |
 | **Arilos de Granada fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Arándanos frescos orgánicos** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
@@ -1310,7 +1310,6 @@
 | **Ajo y cebolla blanca** | 90 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Apio fresco de la granja** | 1200 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Calabacitas tiernas de la granja** | 2160 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Champiñones Portobello frescos** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Chayotes tiernos de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Ejotes verdes frescos de la granja** | 1680 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Espárragos verdes frescos de la granja** | 1440 | g | 🥦 Hortalizas y Vegetales Córtex |

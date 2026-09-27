@@ -252,6 +252,8 @@ def resolve_to_market_raw_material(dish_ingredient_name: str) -> str:
         return "Cebollín fresco de la granja"
     if "almendra" in cn_lower:
         return "Almendras fileteadas tostadas"
+    if any(k in cn_lower for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
+        return "Champiñones Portobello frescos"
 
     return clean_name
 
@@ -331,6 +333,8 @@ class InventorySyncMaster:
     def categorize_ingredient_name(name: str) -> str:
         slug = normalize_to_canonical_slug(name)
         name_lower = name.lower()
+        if any(k in name_lower for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
+            return "🥬 Verduras, Hortalizas y Frescos"
         if slug in ["33plus", "34plus"] or any(k in name_lower for k in ["33plus", "34plus", "grenetina", "colágeno", "colageno"]):
             return "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA"
         if re.search(r'\b(huevo|huevos|clara|claras|pollo|sirloin|res|mignon|ribeye|pescado|salmón|salmon|pavo|machaca|jamón|jamon|tocino|atún|atun|huachinango|robalo|róbalo)\b', name_lower):
@@ -528,6 +532,10 @@ class InventorySyncMaster:
             return "🌾 Cosecha Directa de la Granja / Huerto"
         
         name = (item_name or "").lower().strip()
+
+        # 0. Hongos y Setas (Prioridad Taxonómica: Verduras, Hortalizas y Frescos)
+        if any(k in name for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
+            return "🥬 Verduras, Hortalizas y Frescos"
 
         # 1. Suplementación Celular
         if any(k in name for k in ["33plus", "34plus", "sinergix", "suplemento", "suplementos", "vitamina", "vitaminas", "colágeno", "colageno", "electrolitos", "fórmula nootrópica", "formula nootropica", "fórmula reparadora", "formula reparadora"]):

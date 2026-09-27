@@ -2564,6 +2564,11 @@ function generateNextWeekMenu() {
     function getSmartItemCategory(itemName, explicitCategory) {
       const name = (itemName || '').toLowerCase().trim();
 
+      // 0. Prioridad Taxonómica Estricta: Hongos y Setas (Verduras, Hortalizas y Frescos)
+      if (/portobello|champiñon|champiñones|champinon|champinones|setas|hongos/i.test(name)) {
+        return '🥬 Verduras, Hortalizas y Frescos';
+      }
+
       // 1. Suplementación Celular — Biotecnología
       if (/33plus|34plus|sinergix|suplemento|suplementos|vitamina|vitaminas|colágeno|colageno|electrolitos|fórmula nootrópica|formula nootropica|fórmula reparadora|formula reparadora/i.test(name)) {
         return '💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA';
