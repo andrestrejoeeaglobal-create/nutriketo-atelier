@@ -2723,7 +2723,7 @@ function generateNextWeekMenu() {
           rawShopBase.forEach(item => {
             if (!item || !item.item_name) return;
             const cleanName = item.item_name.replace(/\\s*\\/\\s*/g, ' \u2014 ').replace(/\\//g, ' \u2014 ').trim();
-            if (!cleanName || (/miel|durazno/i.test(cleanName) && !item.category.includes('Cosecha'))) return;
+            if (!cleanName) return;
             const slug = normalizeToCanonicalSlug(cleanName);
             if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === cleanName.toLowerCase())) return;
             if (deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === cleanName.toLowerCase())) return;
@@ -3151,7 +3151,8 @@ function generateNextWeekMenu() {
         const seenPantrySlugs = new Set();
         
         rawShopBase.filter(i => !i.category.includes('Cosecha')).forEach(i => {
-          const cleanName = (i.item_name || '').replace(/\s*\/\s*/g, ' \u2014 ').replace(/\//g, ' \u2014 ').trim();
+          const rawClean = (i.item_name || '').replace(/\\s*\\/\\s*/g, ' \u2014 ').replace(/\\//g, ' \u2014 ').trim();
+          const cleanName = (typeof sanitizeMarketRawMaterial === 'function' ? sanitizeMarketRawMaterial(rawClean) : '') || rawClean;
           if (!cleanName) return;
           const slug = normalizeToCanonicalSlug(cleanName);
           if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === cleanName.toLowerCase())) return;

@@ -76,7 +76,10 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Té de hierbas", "base_qty": 1.0, "unit": "paquete"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Café en grano — molido", "base_qty": 1.0, "unit": "paquete"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Hierbas secas (Orégano — Tomillo)", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Sal de mar", "base_qty": 1.0, "unit": "frasco"}
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Sal de mar", "base_qty": 1.0, "unit": "frasco"},
+    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Duraznos frescos", "base_qty": 1.5, "unit": "kg"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Miel de abeja", "base_qty": 500.0, "unit": "g"},
+    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Harina de trigo refinada", "base_qty": 1.0, "unit": "kg"}
 ]
 
 import unicodedata
