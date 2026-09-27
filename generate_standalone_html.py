@@ -6226,6 +6226,11 @@ function renderRecipes(day, activeDiners) {
       <script>
     document.addEventListener('DOMContentLoaded', () => {
       try {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('./sw.js')
+            .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
+            .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
+        }
         if (typeof loadAppState === 'function') loadAppState();
         const overlay = document.getElementById('setup-overlay');
         const mainContent = document.getElementById('main-app-content');

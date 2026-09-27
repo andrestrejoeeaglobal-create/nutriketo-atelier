@@ -279,6 +279,7 @@ class DailyMenu(BaseModel):
 class WeeklyMenuPlan(BaseModel):
     diners_count: int = Field(..., ge=1)
     days: List[DailyMenu] = Field(...)
+    summary: Optional[Dict[str, float]] = Field(default=None, description="Resumen de métricas acumuladas SSOT (net_carbs_daily, daily_net_carbs, fat_daily, protein_daily)")
 
 class WeeklyMenuRequest(BaseModel):
     diners_count: int = Field(default=2, ge=1)

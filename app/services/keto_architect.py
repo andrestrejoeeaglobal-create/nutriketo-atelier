@@ -1229,8 +1229,21 @@ class KetoAIArchitect:
                     nutrition=nutrition
                 )
             )
+        all_daily_carbs = [sum(m.net_carbs_g for m in d["meals"]) for d in days_data]
+        avg_net_carbs = round(sum(all_daily_carbs) / len(all_daily_carbs), 1) if all_daily_carbs else 10.0
+        all_daily_fat = [sum(m.fat_g for m in d["meals"]) for d in days_data]
+        avg_fat = round(sum(all_daily_fat) / len(all_daily_fat), 1) if all_daily_fat else 110.5
+        all_daily_prot = [sum(m.protein_g for m in d["meals"]) for d in days_data]
+        avg_prot = round(sum(all_daily_prot) / len(all_daily_prot), 1) if all_daily_prot else 111.0
 
-        return WeeklyMenuPlan(diners_count=diners_count, days=daily_menus)
+        plan_summary = {
+            "net_carbs_daily": avg_net_carbs,
+            "daily_net_carbs": avg_net_carbs,
+            "fat_daily": avg_fat,
+            "protein_daily": avg_prot
+        }
+
+        return WeeklyMenuPlan(diners_count=diners_count, days=daily_menus, summary=plan_summary)
 
     def generate_weekly_plan(self, diners_count: int = 6, preferences: str = "", week_number: int = 40, **kwargs) -> WeeklyMenuPlan:
         w_num = kwargs.get("week_number", week_number)
