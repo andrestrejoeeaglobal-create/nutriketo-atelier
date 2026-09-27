@@ -63,6 +63,18 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
     if "mantequilla" in name_clean or "ghee" in name_clean:
         return ("Mantequilla de pastoreo / Ghee", "🥑 Grasas Saludables y Frutos", "mantequilla_pastoreo", "g", scaled_qty)
 
+    # 3.5 Cheeses
+    if "parmesano o de cabra" in name_clean or ("parmesano" in name_clean and "nube" not in name_clean):
+        return ("Queso Parmesano artesanal", "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "queso_parmesano", "g", scaled_qty)
+    if "queso de cabra" in name_clean or "cabra artesanal" in name_clean:
+        return ("Queso de cabra artesanal", "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "queso_cabra", "g", scaled_qty)
+    if "gouda" in name_clean:
+        return ("Queso Gouda artesanal", "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "queso_gouda", "g", scaled_qty)
+    if "queso crema" in name_clean or "crema suave" in name_clean:
+        return ("Queso crema suave artesanal", "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "queso_crema", "g", scaled_qty)
+    if "panela" in name_clean:
+        return ("Queso Panela artesanal", "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "queso_panela", "g", scaled_qty)
+
     # 4. Proteins (placed before seasonings so 'Salmón' is not matched by 'sal')
     if "salmón" in name_clean or "salmon" in name_clean:
         return ("Filete de Salmón fresco con piel", "🥩 Proteínas Principales Seleccionadas", "filete_salmon", "g", scaled_qty)

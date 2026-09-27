@@ -232,10 +232,16 @@ def resolve_to_market_raw_material(dish_ingredient_name: str) -> str:
         return "Aguacate Hass fresco"
     if "jitomate" in cn_lower:
         return "Jitomate bola fresco"
-    if "queso panela" in cn_lower:
+    if "parmesano o de cabra" in cn_lower or ("parmesano" in cn_lower and "nube" not in cn_lower):
+        return "Queso Parmesano artesanal"
+    if "queso de cabra" in cn_lower or "cabra artesanal" in cn_lower:
+        return "Queso de cabra artesanal"
+    if "gouda" in cn_lower:
+        return "Queso Gouda artesanal"
+    if "queso crema" in cn_lower or "crema suave" in cn_lower:
+        return "Queso crema suave artesanal"
+    if "queso panela" in cn_lower or "panela" in cn_lower:
         return "Queso Panela artesanal"
-    if "queso parmesano" in cn_lower or "parmesano" in cn_lower:
-        return "Queso Parmesano maduro"
     if "tocino de pavo" in cn_lower:
         return "Tocino de pavo artesanal"
     if "pechuga de pollo" in cn_lower or ("pollo" in cn_lower and "caldo" not in cn_lower):

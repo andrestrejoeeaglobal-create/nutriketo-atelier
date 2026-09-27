@@ -3847,7 +3847,14 @@ function sanitizeMarketRawMaterial(rawName) {
   if (lower.includes('portobello') || lower.includes('champiñon') || lower.includes('champiñones') || lower.includes('champinon') || lower.includes('champinones') || lower.includes('setas') || lower.includes('hongos')) return 'Champiñones Portobello frescos';
   if (lower.includes('jitomate') || (lower.includes('tomate') && !lower.includes('tomillo'))) return 'Jitomate bola fresco';
   if (lower.includes('aguacate')) return 'Aguacate Hass fresco';
+
+  // Disolver disyunciones culinarias de lácteos hacia SKUs canónicos deterministas
+  if (lower.includes('parmesano o de cabra') || (lower.includes('parmesano') && !lower.includes('nube'))) return 'Queso Parmesano artesanal';
+  if (lower.includes('queso de cabra') || lower.includes('cabra artesanal')) return 'Queso de cabra artesanal';
+  if (lower.includes('gouda')) return 'Queso Gouda artesanal';
+  if (lower.includes('queso crema') || lower.includes('crema suave')) return 'Queso crema suave artesanal';
   if (lower.includes('panela')) return 'Queso Panela artesanal';
+
   if (lower.includes('pepino')) return 'Pepino blanco fresco';
   if (lower.includes('apio')) return 'Apio fresco de la granja';
   if (lower.includes('zucchini')) return 'Calabacita Zucchini';

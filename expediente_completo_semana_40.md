@@ -1330,20 +1330,20 @@
 | **Tocino de pavo artesanal** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
 | **Costilla de res limpia** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
-| **Queso de cabra artesanal** | 180 | g | 🥬 Cama Vegetal e Insumos Córtex |
 | **Cebollín fresco de la granja** | 12 | g | 🥬 Hojas Verdes y Envolturas |
 | **Cilantro fresco de la granja** | 81.6 | g | 🥬 Hojas Verdes y Envolturas |
 | **Espinacas baby frescas de la granja** | 1440 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de arúgula fresca** | 360 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de lechuga orejona viva** | 360 | g | 🥬 Hojas Verdes y Envolturas |
+| **Queso Gouda artesanal** | 180 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
+| **Queso Panela artesanal** | 180 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
+| **Queso Parmesano artesanal** | 390 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
 | **Queso crema suave artesanal** | 360 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
-| **Queso Panela artesanal** | 180 | g | 🧀 Relleno de Queso |
+| **Queso de cabra artesanal** | 180 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
 | **Finas hierbas frescas de la granja** | 12 | g | 🧀 Relleno y Aromáticos |
-| **Queso Gouda artesanal** | 180 | g | 🧀 Relleno y Aromáticos |
 | **Sal de mar mineral en escamas** | 291.6 | g | 🧂 Condimentos y Sal Mineral |
 | **Tomillo fresco** | 28.8 | g | 🧈 Emulsión Cremosa y Grasas |
 | **Pimienta negra molida** | 21.6 | g | 🧈 Emulsión y Sazón |
-| **Queso Parmesano maduro** | 390 | g | 🧈 Emulsión y Sazón |
 | **Tomillo fresco de la granja** | 9 | g | 🧈 Grasa Saludable y Botánicos |
 | **Orégano seco** | 14.4 | g | 🧈 Grasa Saludable y Sazón |
 | **Yemas de huevo frescas** | 6 | piezas | 🧈 Salsa Holandesa Casera |
