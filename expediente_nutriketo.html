@@ -2020,6 +2020,34 @@ function formatBaseQuantity(val, type, origUnit) {
   return `${Math.ceil(val)} ${origUnit || 'piezas'}`;
 }
 
+function sanitizeMarketRawMaterial(rawName) {
+  if (!rawName) return '';
+  let clean = rawName
+    .replace(/\s+en\s+l[aá]minas(\s+finas)?/gi, '')
+    .replace(/\s+en\s+cubos/gi, '')
+    .replace(/\s+en\s+guacamole/gi, '')
+    .replace(/\s+en\s+bastones/gi, '')
+    .replace(/\s+trocead[oa]s?/gi, '')
+    .replace(/\s+picad[oa]s?/gi, '')
+    .replace(/\s+rostizad[oa]s?/gi, '')
+    .replace(/\s+saltead[oa]s?/gi, '')
+    .replace(/\s+en\s+tiras/gi, '')
+    .replace(/\s+desmenuzad[oa]/gi, '')
+    .trim();
+
+  const lower = clean.toLowerCase();
+  if (lower.includes('aguacate')) return 'Aguacate Hass fresco';
+  if (lower.includes('panela')) return 'Queso Panela artesanal';
+  if (lower.includes('pepino')) return 'Pepino blanco fresco';
+  if (lower.includes('apio')) return 'Apio fresco de la granja';
+  if (lower.includes('zucchini')) return 'Calabacita Zucchini';
+  if (lower.includes('calabacita')) return 'Calabacitas tiernas';
+  if (lower.includes('hinojo')) return 'Hinojo fresco';
+  if (lower.includes('chayote')) return 'Chayotes tiernos de la granja';
+  if (lower.includes('esparragos') || lower.includes('espárragos')) return 'Espárragos verdes frescos de la granja';
+  return clean;
+}
+
 function calculateActiveMenuBOM(weekKey, diners) {
   const numDiners = parseInt(diners) || (typeof activeDiners !== 'undefined' ? parseInt(activeDiners) || 6 : 6);
 
@@ -2056,7 +2084,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
   activePlan.days.forEach((day, dayIdx) => {
     (day.meals || []).forEach(rawMeal => {
       const activeMeal = typeof getMealObj === 'function' ? getMealObj(dayIdx, rawMeal) : rawMeal;
-      const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(dayIdx, activeMeal.meal_type) : activeDiners;
+      const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(dayIdx, activeMeal.meal_type) : numDiners;
 
       const sRecipe = activeMeal.starter_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.starter_name, 'starter', activeMeal.meal_type) : null);
       const mRecipe = activeMeal.main_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.main_dish_name || activeMeal.dish_name, 'main', activeMeal.meal_type) : null);
@@ -2074,23 +2102,49 @@ function calculateActiveMenuBOM(weekKey, diners) {
                 return;
               }
 
-              const slug = normalizeToCanonicalSlug(rawName);
+              const canonicalName = sanitizeMarketRawMaterial(rawName);
+              const slug = normalizeToCanonicalSlug(canonicalName);
               if (!slug) return;
 
               const perPersonQty = parseFloat(ing.base_qty_per_person !== undefined ? ing.base_qty_per_person : (ing.quantity || ing.qty || 1)) || 0;
               const mealQty = perPersonQty * mealDiners;
+              const ingUnit = (ing.unit || 'g').trim();
 
-              if (!bomMap[slug]) {
-                bomMap[slug] = {
-                  id: `bought_v36_${slug}`,
-                  slug: slug,
-                  item_name: ing.name || rawName,
-                  category: getSmartItemCategory(ing.name || rawName, grp.category),
-                  quantity: mealQty,
-                  unit: ing.unit || 'g'
-                };
+              if (canonicalName === 'Aguacate Hass fresco') {
+                let pieces = 0;
+                if (ingUnit === 'piezas' || ingUnit === 'pz' || ingUnit === 'pieza') {
+                  pieces = mealQty;
+                } else if (ingUnit === 'g') {
+                  pieces = mealQty / 105.0;
+                } else {
+                  pieces = mealQty;
+                }
+
+                if (!bomMap[slug]) {
+                  bomMap[slug] = {
+                    id: `bought_v36_${slug}`,
+                    slug: slug,
+                    item_name: canonicalName,
+                    category: getSmartItemCategory(canonicalName, grp.category),
+                    quantity: pieces,
+                    unit: 'piezas'
+                  };
+                } else {
+                  bomMap[slug].quantity += pieces;
+                }
               } else {
-                bomMap[slug].quantity += mealQty;
+                if (!bomMap[slug]) {
+                  bomMap[slug] = {
+                    id: `bought_v36_${slug}`,
+                    slug: slug,
+                    item_name: canonicalName,
+                    category: getSmartItemCategory(canonicalName, grp.category),
+                    quantity: mealQty,
+                    unit: ingUnit
+                  };
+                } else {
+                  bomMap[slug].quantity += mealQty;
+                }
               }
             });
           });
@@ -2099,7 +2153,14 @@ function calculateActiveMenuBOM(weekKey, diners) {
     });
   });
 
-  return Object.values(bomMap);
+  const resultList = Object.values(bomMap);
+  resultList.forEach(item => {
+    if (item.unit === 'piezas' || item.unit === 'pz' || item.unit === 'pieza') {
+      item.quantity = Math.ceil(item.quantity);
+    }
+  });
+
+  return resultList;
 }
 
 function calculateNetShoppingList(diners) {
