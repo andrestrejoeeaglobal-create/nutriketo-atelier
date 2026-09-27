@@ -342,13 +342,15 @@ class InventorySyncMaster:
     def categorize_ingredient_name(name: str) -> str:
         slug = normalize_to_canonical_slug(name)
         name_lower = name.lower()
-        if any(k in name_lower for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
+        if any(k in name_lower for k in ["durazno", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar"]):
+            return "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)"
+        if any(k in name_lower for k in ["cebolla", "cebollas", "portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
             return "🥬 Verduras, Hortalizas y Frescos"
         if slug in ["33plus", "34plus"] or any(k in name_lower for k in ["33plus", "34plus", "grenetina", "colágeno", "colageno"]):
-            return "💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA"
+            return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
         if re.search(r'\b(huevo|huevos|clara|claras|pollo|sirloin|res|mignon|ribeye|pescado|salmón|salmon|pavo|machaca|jamón|jamon|tocino|atún|atun|huachinango|robalo|róbalo)\b', name_lower):
             return "🥩 Carnes, Pescados y Proteínas"
-        if any(k in name_lower for k in ["fresa", "frambuesa", "mora", "arándano", "arandano", "pitahaya", "pitaya", "higo", "granada", "arilos", "durazno"]):
+        if not any(k in name_lower for k in ["cebolla", "morada"]) and any(k in name_lower for k in ["fresa", "frambuesa", "mora", "arándano", "arandano", "pitahaya", "pitaya", "higo", "granada", "arilos"]):
             return "🍓 Frutas de Bajo Índice Glucémico"
         if any(k in name_lower for k in ["queso", "mantequilla", "ghee", "crema"]):
             return "🧀 Lácteos y Quesos (Sin Gluten / Keto)"
@@ -542,11 +544,20 @@ class InventorySyncMaster:
         
         name = (item_name or "").lower().strip()
 
-        # 0. Hongos y Setas (Prioridad Taxonómica: Verduras, Hortalizas y Frescos)
+        # 0. Insumos en Cuarentena / No Sugeridos
+        if (explicit_category and any(k in explicit_category.lower() for k in ["cuarentena", "prohibited", "🛑"])) or \
+           any(k in name for k in ["durazno", "duraznos", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar"]):
+            return "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)"
+
+        # 0.1 Hongos y Setas (Prioridad Taxonómica: Verduras, Hortalizas y Frescos)
         if any(k in name for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
             return "🥬 Verduras, Hortalizas y Frescos"
 
-        # 0.1 Jitomate / Tomate (Prioridad Taxonómica: Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
+        # 0.2 Cebollas (Prioridad Taxonómica: Verduras, Hortalizas y Frescos)
+        if any(k in name for k in ["cebolla", "cebollas"]):
+            return "🥬 Verduras, Hortalizas y Frescos"
+
+        # 0.3 Jitomate / Tomate (Prioridad Taxonómica: Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
         if any(k in name for k in ["jitomate", "tomate"]) and "tomillo" not in name:
             return "🥬 Verduras, Hortalizas y Frescos"
 
@@ -554,8 +565,8 @@ class InventorySyncMaster:
         if any(k in name for k in ["33plus", "34plus", "sinergix", "suplemento", "suplementos", "vitamina", "vitaminas", "colágeno", "colageno", "electrolitos", "fórmula nootrópica", "formula nootropica", "fórmula reparadora", "formula reparadora"]):
             return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
 
-        # 2. Frutas de Bajo Índice Glucémico (Excluyendo jitomate, tomate, aceite/leche de coco)
-        if not any(k in name for k in ["aceite", "leche", "jitomate", "tomate"]) and any(k in name for k in ["mora", "moras", "frambuesa", "frambuesas", "fresa", "fresas", "arándano", "arandano", "arándanos", "arandanos", "granada", "granadas", "higo", "higos", "pitahaya", "pitahayas", "pitaya", "pitayas"]):
+        # 2. Frutas de Bajo Índice Glucémico (Excluyendo jitomate, tomate, cebolla morada, etc.)
+        if not any(k in name for k in ["aceite", "leche", "jitomate", "tomate", "cebolla", "morada"]) and any(k in name for k in ["mora", "moras", "frambuesa", "frambuesas", "fresa", "fresas", "arándano", "arandano", "arándanos", "arandanos", "granada", "granadas", "higo", "higos", "pitahaya", "pitahayas", "pitaya", "pitayas"]):
             return "🍓 Frutas de Bajo Índice Glucémico"
 
         # 3. Grasas, Aceites y Semillas (Aguacates, Aceitunas, Aceites, Leche de coco, Semillas, Mayonesa)

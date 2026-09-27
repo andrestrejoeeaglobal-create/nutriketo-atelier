@@ -2557,9 +2557,30 @@ function generateNextWeekMenu() {
       if (/mostaza/i.test(lower)) return 'Mostaza Dijon — Tipo Antigua';
       if (/tamari|soya keto/i.test(lower)) return 'Salsa Tamari — Soya Keto';
 
-      return rawName.trim();
-    }
+    const CANONICAL_SECTION_ORDER = [
+      "🍓 Frutas de Bajo Índice Glucémico",
+      "🥑 Grasas, Aceites y Semillas",
+      "🥩 Carnes, Pescados y Proteínas",
+      "🌶️ Chiles, Condimentos e Infusiones",
+      "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+      "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+      "🥬 Verduras, Hortalizas y Frescos",
+      "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)"
+    ];
 
+    function getCategoryIndex(catName) {
+      if (!catName) return 999;
+      const name = catName.toLowerCase();
+      if (name.includes('fruta')) return 0;
+      if (name.includes('grasa') || name.includes('aceite')) return 1;
+      if (name.includes('carne') || name.includes('pescado') || name.includes('proteína') || name.includes('proteina')) return 2;
+      if (name.includes('chile') || name.includes('condimento') || name.includes('infusión') || name.includes('infusion')) return 3;
+      if (name.includes('suplement') || name.includes('biotecnología') || name.includes('biotecnologia')) return 4;
+      if (name.includes('lácteo') || name.includes('lacteo') || name.includes('queso')) return 5;
+      if (name.includes('verdura') || name.includes('hortaliza') || name.includes('fresco')) return 6;
+      if (name.includes('cuarentena') || name.includes('sugerido') || name.includes('prohibid') || name.includes('🛑')) return 7;
+      return 8;
+    }
 
     function getSmartItemCategory(itemName, explicitCategory) {
       const name = (itemName || '').toLowerCase().trim();
@@ -2575,7 +2596,12 @@ function generateNextWeekMenu() {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
-      // 0.1 Prioridad Taxonómica Estricta: Jitomate / Tomate (Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
+      // 0.2 Prioridad Taxonómica Estricta: Cebollas (Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
+      if (/cebolla|cebollas/i.test(name)) {
+        return '🥬 Verduras, Hortalizas y Frescos';
+      }
+
+      // 0.3 Prioridad Taxonómica Estricta: Jitomate / Tomate (Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
       if (/jitomate|tomate bola|\btomate\b/i.test(name) && !name.includes('tomillo')) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
@@ -2585,8 +2611,8 @@ function generateNextWeekMenu() {
         return '💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA';
       }
 
-      // 2. Frutas de Bajo Índice Glucémico (Excluyendo jitomate, tomate, aceite/leche de coco)
-      if (!/aceite|leche|jitomate|tomate/i.test(name) && /mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|pitaya|pitayas/i.test(name)) {
+      // 2. Frutas de Bajo Índice Glucémico (Excluyendo jitomate, tomate, cebolla morada)
+      if (!/aceite|leche|jitomate|tomate|cebolla|morada/i.test(name) && /\bmora\b|\bmoras\b|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|pitaya|pitayas/i.test(name)) {
         return '🍓 Frutas de Bajo Índice Glucémico';
       }
 
@@ -3190,25 +3216,7 @@ function generateNextWeekMenu() {
           categoriesMap[cat].push(i);
         });
 
-        const catOrder = [
-          "🥩 Carnes, Pescados y Proteínas",
-          "🥬 Verduras, Hortalizas y Frescos",
-          "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-          "🌶️ Chiles, Condimentos e Infusiones",
-          "🌰 Grasas, Aceites y Semillas",
-          "🍓 Frutas de Bajo Índice Glucémico",
-          "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
-          "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)"
-        ];
-
-        const sortedCats = Object.keys(categoriesMap).sort((a, b) => {
-          const idxA = catOrder.indexOf(a);
-          const idxB = catOrder.indexOf(b);
-          if (idxA !== -1 && idxB !== -1) return idxA - idxB;
-          if (idxA !== -1) return -1;
-          if (idxB !== -1) return 1;
-          return a.localeCompare(b);
-        });
+        const sortedCats = Object.keys(categoriesMap).sort((a, b) => getCategoryIndex(a) - getCategoryIndex(b));
 
         sortedCats.forEach(catName => {
           const isQuarantine = catName.includes('Cuarentena') || catName.includes('🛑');
@@ -3222,7 +3230,7 @@ function generateNextWeekMenu() {
           pGrid.appendChild(catHeader);
 
           const items = categoriesMap[catName];
-          items.sort((a, b) => a.item_name.localeCompare(b.item_name));
+          items.sort((a, b) => a.item_name.localeCompare(b.item_name, 'es', { sensitivity: 'base' }));
 
           items.forEach(i => {
             const slug = normalizeToCanonicalSlug(i.item_name);
@@ -4289,7 +4297,7 @@ function render3DShoppingList() {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
     `;
 
-    const mCatKeys = Object.keys(marketCategories);
+    const mCatKeys = Object.keys(marketCategories).sort((a, b) => getCategoryIndex(a) - getCategoryIndex(b));
     if (mCatKeys.length === 0) {
       html += `
         <div class="col-span-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 p-6 rounded-xl text-center text-emerald-800 dark:text-emerald-200 font-bold">
@@ -4299,6 +4307,7 @@ function render3DShoppingList() {
     } else {
       mCatKeys.forEach(catName => {
         const items = marketCategories[catName];
+        items.sort((a, b) => (a.name || a.item_name || '').localeCompare(b.name || b.item_name || '', 'es', { sensitivity: 'base' }));
         html += `
           <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-4 rounded-xl">
             <h4 class="font-bold text-[#1C75BC] text-xs font-brand-title uppercase mb-3 border-b border-slate-200 dark:border-slate-800 pb-1.5 flex justify-between items-center">
