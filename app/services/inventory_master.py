@@ -31,7 +31,7 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Filete de pescado blanco", "base_qty": 1.2, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Filete de salmón fresco", "base_qty": 1.2, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Pechuga de pavo", "base_qty": 1.2, "unit": "kg"},
-    {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Jamón de pavo en cubos", "base_qty": 1.0, "unit": "kg"},
+    {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Jamón de pavo artesanal", "base_qty": 1.0, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Tocino de pavo crujiente", "base_qty": 1.0, "unit": "kg"},
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Lomo de atún fresco", "base_qty": 1.2, "unit": "kg"},
 
@@ -44,8 +44,8 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🧀 Lácteos y Quesos (Sin Gluten / Keto)", "item_name": "Crema entera — para batir", "base_qty": 1.0, "unit": "litro"},
 
     # 🥬 Verduras, Hortalizas y Frescos
-    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Aguacates Hass medianos", "base_qty": 24.0, "unit": "piezas"},
-    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Jitomate Bola — Saladette", "base_qty": 3.5, "unit": "kg"},
+    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Aguacate Hass fresco", "base_qty": 24.0, "unit": "piezas"},
+    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Jitomate bola fresco", "base_qty": 3.5, "unit": "kg"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Cebolla blanca", "base_qty": 2.0, "unit": "kg"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Limones frescos", "base_qty": 2.0, "unit": "kg"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Champiñones Portobello", "base_qty": 12.0, "unit": "piezas"},
@@ -183,6 +183,119 @@ def format_cooking_step(step_text: str, protein_family: Optional[str] = None) ->
             return step_text + target_clause
 
     return step_text
+
+RAW_PIECE_YIELD_GRAMS = {
+    "aguacate_hass_fresco": 105.0,        # ~105g de pulpa comestible por fruto
+    "limon_fresco": 35.0,                 # ~35ml de jugo por pieza
+    "pimiento_morron": 150.0,             # ~150g de pulpa limpia
+    "champiñon_portobello": 60.0,         # ~60g por sombrero
+    "jitomate_bola": 150.0,               # ~150g por jitomate fresco
+    "pepino_blanco": 180.0,               # ~180g por pepino
+    "calabacita_tierna": 120.0,           # ~120g por calabacita
+    "huevo_organico": 50.0,               # ~50g por huevo entero
+}
+
+PREP_PATTERNS = [
+    r"\s+en\s+l[aá]minas(\s+finas)?",
+    r"\s+en\s+cubos(\s+de\s+\d+\s*mm)?",
+    r"\s+en\s+guacamole",
+    r"\s+en\s+rodajas",
+    r"\s+en\s+abanico",
+    r"\s+(finamente\s+)?desmenuzad[oa]s?",
+    r"\s+(finamente\s+)?trocead[oa]s?",
+    r"\s+(finamente\s+)?rallad[oa]s?",
+    r"\s+(finamente\s+)?picad[oa]s?(\s+fin[oa])?",
+    r"\s+filetead[oa]s?",
+    r"\s+tostad[oa]s?",
+    r"\s+crujiente",
+    r"\s+asad[oa]s?",
+    r"\s+rostizad[oa]s?",
+    r"\s+sellad[oa]s?",
+    r"\s+blanquead[oa]s?",
+    r"\s+al\s+horno",
+    r"\s+a\s+la\s+parrilla",
+    r"\s+al\s+sart[eé]n",
+    r"\s+al\s+vapor",
+]
+
+def resolve_to_market_raw_material(dish_ingredient_name: str) -> str:
+    """Purga cualquier acción culinaria y devuelve la materia prima atómica comercial."""
+    if not dish_ingredient_name:
+        return ""
+    clean_name = dish_ingredient_name.strip()
+    for pattern in PREP_PATTERNS:
+        clean_name = re.sub(pattern, "", clean_name, flags=re.IGNORECASE)
+    clean_name = re.sub(r'\s+', ' ', clean_name).strip()
+
+    cn_lower = clean_name.lower()
+    if "aguacate" in cn_lower:
+        return "Aguacate Hass fresco"
+    if "jitomate" in cn_lower:
+        return "Jitomate bola fresco"
+    if "queso panela" in cn_lower:
+        return "Queso Panela artesanal"
+    if "queso parmesano" in cn_lower or "parmesano" in cn_lower:
+        return "Queso Parmesano maduro"
+    if "tocino de pavo" in cn_lower:
+        return "Tocino de pavo artesanal"
+    if "pechuga de pollo" in cn_lower or ("pollo" in cn_lower and "caldo" not in cn_lower):
+        return "Pechuga de pollo orgánica"
+    if "pechuga de pavo" in cn_lower or ("pavo" in cn_lower and "tocino" not in cn_lower):
+        return "Pechuga de pavo artesanal"
+    if "machaca" in cn_lower:
+        return "Carne seca machaca artesanal de res"
+    if "huevo" in cn_lower and "claras" not in cn_lower and "yemas" not in cn_lower:
+        return "Huevos orgánicos de libre pastoreo"
+    if "limón" in cn_lower or "limon" in cn_lower:
+        return "Jugo de limón fresco recién exprimido" if "jugo" in cn_lower else "Limones frescos"
+    if "cebollín" in cn_lower or "cebollin" in cn_lower:
+        return "Cebollín fresco de la granja"
+    if "almendra" in cn_lower:
+        return "Almendras fileteadas tostadas"
+
+    return clean_name
+
+def consolidate_market_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Consolida universalmente todas las demandas semanales hacia la materia prima atómica comercial sin duplicidades."""
+    consolidated_items = {}
+
+    for item in weekly_dish_ingredients:
+        raw_name = resolve_to_market_raw_material(item.get("name") or item.get("item_name", ""))
+        qty = float(item.get("quantity") or item.get("base_qty", 1.0))
+        unit = str(item.get("unit", "g")).strip().lower()
+        category = item.get("category") or "General"
+
+        if raw_name not in consolidated_items:
+            consolidated_items[raw_name] = {
+                "name": raw_name,
+                "category": category,
+                "quantity": 0.0,
+                "unit": item.get("unit", "g"),
+                "is_piece": unit in ["piezas", "pieza", "pz", "piezas/persona"]
+            }
+
+        slug = raw_name.lower().replace(" ", "_").replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o")
+        
+        if "aguacate" in slug and not consolidated_items[raw_name]["is_piece"] and unit == "g":
+            consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["aguacate_hass_fresco"]
+            consolidated_items[raw_name]["unit"] = "piezas"
+            consolidated_items[raw_name]["is_piece"] = True
+        elif consolidated_items[raw_name]["is_piece"] and unit == "g" and "aguacate" in slug:
+            consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["aguacate_hass_fresco"]
+        elif "limon" in slug and unit in ["ml", "g"]:
+            consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["limon_fresco"]
+            consolidated_items[raw_name]["unit"] = "piezas"
+            consolidated_items[raw_name]["is_piece"] = True
+        else:
+            consolidated_items[raw_name]["quantity"] += qty
+
+    output_bom = []
+    for name, data in consolidated_items.items():
+        if data["is_piece"]:
+            data["quantity"] = int(math.ceil(data["quantity"]))
+        output_bom.append(data)
+
+    return output_bom
 
 def normalize_to_canonical_slug(raw_name: str) -> str:
     if not raw_name:

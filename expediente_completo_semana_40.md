@@ -1272,46 +1272,42 @@
 | Insumo | Cantidad Total (6 Comensales) | Unidad | Categoría |
 |---|---|---|---|
 | **Claras de huevo (a temperatura ambiente)** | 6 | piezas | ☁️ Bases de Huevo Nube |
-| **Queso Parmesano finamente rallado** | 60 | g | ☁️ Bases de Huevo Nube |
-| **Nuez de Castilla troceada** | 90 | g | 🌰 Grasas Saludables y Semillas |
-| **Nuez pecana troceada** | 270 | g | 🌰 Grasas Saludables y Semillas |
-| **Almendras fileteadas tostadas** | 480 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
+| **Almendras enteras** | 480 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
+| **Nueces de Castilla** | 360 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
 | **Semillas de chía orgánicas** | 336 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
-| **Semillas de sésamo tostadas** | 60 | g | 🌰 Semillas y Nueces |
+| **Semillas de sésamo** | 60 | g | 🌰 Semillas y Nueces |
 | **Cúrcuma orgánica en polvo** | 12 | g | 🌶️ Chiles, Condimentos e Infusiones |
 | **Flores de manzanilla fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Hojas de menta fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
 | **Hojas de toronjil fresco de la granja** | 120 | g | 🌿 Botánicos y Minerales Adaptógenos |
-| **Cebollín fresco picado / eneldo** | 12 | g | 🌿 Servicio y Decoración |
 | **Pimienta negra recién molida** | 3 | g | 🌿 Servicio y Decoración |
 | **Sombreros de champiñón Portobello grandes** | 12 | piezas | 🍄 Sombreros de Portobello Base |
-| **Jugo de limón fresco recién exprimido** | 711 | ml | 🍋 Cítricos y Ácidos Naturales |
+| **Jugo de limón fresco recién exprimido** | 810 | ml | 🍋 Cítricos y Ácidos Naturales |
 | **Arilos de Granada fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Arándanos frescos orgánicos** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Frambuesas frescas orgánicas** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Fresas frescas de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Higos frescos vivos de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Moras frescas de la granja** | 810 | g | 🍓 Frutas Keto y Cosecha Viva |
+| **Moras frescas de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Pitaya fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
 | **Agua fría para hidratar** | 1470 | ml | 🍮 Base Hidrocoloide y Gelificante |
 | **Grenetina natural en polvo (colágeno hidrolizado)** | 294 | g | 🍮 Base Hidrocoloide y Gelificante |
 | **Agua purificada de cocción** | 1800 | ml | 🍲 Base de Caldo y Hortalizas |
-| **Cilantro fresco de la granja picado** | 60 | g | 🍲 Base de Caldo y Hortalizas |
 | **Romero fresco y cebolla blanca** | 90 | g | 🍲 Base de Caldo y Hortalizas |
-| **Coliflor fresca rostizada de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
+| **Coliflor fresca de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
 | **Flor de calabaza fresca de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
 | **Aceite de oliva extra virgen VEVO** | 72 | ml | 🍾 Vinagreta y Grasas Saludables |
 | **Fórmula Biotecnológica Nootrópica 33Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
 | **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
 | **Agua purificada (80°C)** | 10500 | ml | 💧 Agua Purificada de Infusión |
-| **Aguacate Hass fresco** | 21 | piezas | 🥑 Grasas Saludables y Frutos |
+| **Aguacate Hass fresco** | 24 | piezas | 🥑 Grasas Saludables y Frutos |
 | **Mantequilla de pastoreo / Ghee** | 1911 | g | 🥑 Grasas Saludables y Frutos |
 | **Aceite de oliva extra virgen (VEVO)** | 612 | ml | 🥑 Hortaliza y Grasas Saludables |
-| **Alcaparras finamente picadas** | 60 | g | 🥑 Macerado Cítrico y Grasas |
-| **Huevos frescos enteros (para pochar)** | 6 | piezas | 🥓 Cubierta y Proteína |
+| **Jitomate bola fresco** | 330 | g | 🥑 Hortalizas y Aderezo Cítrico |
+| **Alcaparras** | 60 | g | 🥑 Macerado Cítrico y Grasas |
 | **Vinagre blanco (para agua de pochado)** | 45 | ml | 🥓 Cubierta y Proteína |
-| **Huevos orgánicos de libre pastoreo** | 72 | piezas | 🥚 Proteína de Huevo Orgánico |
-| **Ajo y cebolla blanca picados** | 90 | g | 🥦 Hortalizas y Vegetales Córtex |
+| **Huevos orgánicos de libre pastoreo** | 78 | piezas | 🥚 Proteína de Huevo Orgánico |
+| **Ajo y cebolla blanca** | 90 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Apio fresco de la granja** | 1200 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Calabacitas tiernas de la granja** | 2160 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Champiñones Portobello frescos** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
@@ -1321,7 +1317,7 @@
 | **Hinojo fresco de la granja** | 1290 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Nopales tiernos limpios de la granja** | 240 | g | 🥦 Hortalizas y Vegetales Córtex |
 | **Pepino blanco fresco de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Cebolla blanca finamente picada** | 60 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
+| **Cebolla blanca** | 60 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
 | **Orégano seco molido a mano** | 6 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
 | **Carne molida / Filete de Sirloin magro** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Carne seca machaca artesanal de res** | 150 | g | 🥩 Proteínas Principales Seleccionadas |
@@ -1332,20 +1328,21 @@
 | **Medallón de Atún fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pavo artesanal** | 2520 | g | 🥩 Proteínas Principales Seleccionadas |
 | **Pechuga de pollo orgánica** | 2580 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Tocino de pavo artesanal crujiente** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
-| **Costilla de res limpia troceada** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
+| **Tocino de pavo artesanal** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
+| **Costilla de res limpia** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
 | **Queso de cabra artesanal** | 180 | g | 🥬 Cama Vegetal e Insumos Córtex |
+| **Cebollín fresco de la granja** | 12 | g | 🥬 Hojas Verdes y Envolturas |
+| **Cilantro fresco de la granja** | 96 | g | 🥬 Hojas Verdes y Envolturas |
 | **Espinacas baby frescas de la granja** | 1440 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de arúgula fresca** | 360 | g | 🥬 Hojas Verdes y Envolturas |
 | **Hojas de lechuga orejona viva** | 360 | g | 🥬 Hojas Verdes y Envolturas |
 | **Queso crema suave artesanal** | 360 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
-| **Queso Panela artesanal en láminas finas** | 180 | g | 🧀 Relleno de Queso |
+| **Queso Panela artesanal** | 180 | g | 🧀 Relleno de Queso |
 | **Finas hierbas frescas de la granja** | 12 | g | 🧀 Relleno y Aromáticos |
 | **Queso Gouda artesanal** | 180 | g | 🧀 Relleno y Aromáticos |
-| **Sal de mar mineral en escamas** | 441 | g | 🧂 Condimentos y Sal Mineral |
-| **Queso Parmesano o de cabra** | 330 | g | 🧈 Emulsión y Sazón |
+| **Sal de mar mineral en escamas** | 342 | g | 🧂 Condimentos y Sal Mineral |
+| **Queso Parmesano maduro** | 390 | g | 🧈 Emulsión y Sazón |
 | **Tomillo fresco de la granja** | 9 | g | 🧈 Grasa Saludable y Botánicos |
-| **Cilantro fresco y orégano** | 36 | g | 🧈 Grasa Saludable y Sazón |
 | **Yemas de huevo frescas** | 6 | piezas | 🧈 Salsa Holandesa Casera |
 | **Infusión de té de frutos rojos y menta** | 5040 | ml | 🫐 Extracto Frutal e Infusión Viva |

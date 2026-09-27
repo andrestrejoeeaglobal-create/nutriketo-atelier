@@ -990,6 +990,52 @@ def test_all_7_breakfast_recipes_pure_egg_symmetry():
         assert "sellar en sartén a 180°c durante 3-4 minutos por lado" not in steps_text, f"Desayuno '{dish}' usa plantilla cárnica saute_and_sear"
 
 
+def test_universal_bom_ontology_and_no_prep_states():
+    from app.services.inventory_master import resolve_to_market_raw_material
+    import re, os
+
+    exp_path = "expediente_completo_semana_40.md"
+    if not os.path.exists(exp_path):
+        pytest.skip("expediente_completo_semana_40.md no existe aún")
+
+    with open(exp_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    bom_section = content.split("## 3. Lista de Compras Consolidada")[-1]
+    table_lines = [line.strip() for line in bom_section.split("\n") if line.startswith("| **")]
+
+    blacklist_patterns = [
+        r"en\s+l[aá]minas",
+        r"en\s+cubos",
+        r"en\s+guacamole",
+        r"en\s+rodajas",
+        r"en\s+abanico",
+        r"desmenuzad[oa]",
+        r"trocead[oa]",
+        r"rallad[oa]",
+        r"picad[oa]",
+    ]
+
+    seen_roots = set()
+    for line in table_lines:
+        parts = [p.strip() for p in line.split("|") if p.strip()]
+        if len(parts) >= 3:
+            item_name = parts[0].replace("**", "").strip()
+            qty_str = parts[1].strip()
+            unit_str = parts[2].strip()
+
+            for pat in blacklist_patterns:
+                assert not re.search(pat, item_name, re.IGNORECASE), f"Blacklist prep state '{pat}' detectado en BOM: '{item_name}'"
+
+            root_name = resolve_to_market_raw_material(item_name)
+            assert root_name not in seen_roots, f"Duplicado de raíz canónica detectado en BOM: '{root_name}' (proviene de '{item_name}')"
+            seen_roots.add(root_name)
+
+            if unit_str.lower() in ["piezas", "pieza", "pz"]:
+                assert qty_str.isdigit(), f"Insumo por pieza '{item_name}' debe ser entero en BOM, obtenido '{qty_str}'"
+
+
+
 
 
 

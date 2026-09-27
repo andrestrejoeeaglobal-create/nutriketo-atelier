@@ -5,9 +5,11 @@ import sys
 sys.path.insert(0, os.path.abspath('.'))
 from generate_standalone_html import build_typed_recipe_for_dish
 from app.services.keto_architect import KetoAIArchitect
+from app.services.inventory_master import resolve_to_market_raw_material
 
 def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: float):
-    name_clean = re.sub(r'^[^\w\s]+\s*', '', iname.lower().strip())
+    raw_atomic_name = resolve_to_market_raw_material(iname)
+    name_clean = re.sub(r'^[^\w\s]+\s*', '', raw_atomic_name.lower().strip())
     clean_unit = unit.strip()
     scaled_qty = base_qty
     
@@ -20,7 +22,7 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
     # 2. Aguacate Hass
     if "aguacate" in name_clean or "guacamole" in name_clean:
         if clean_unit.lower() in ["g", "grams"]:
-            qty_piezas = scaled_qty / 150.0
+            qty_piezas = scaled_qty / 105.0
             return ("Aguacate Hass fresco", "🥑 Grasas Saludables y Frutos", "aguacate_hass", "piezas", qty_piezas)
         return ("Aguacate Hass fresco", "🥑 Grasas Saludables y Frutos", "aguacate_hass", "piezas", scaled_qty)
         
@@ -48,7 +50,7 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
 
     # 5. Pechuga de pavo vs Tocino de pavo
     if "tocino de pavo" in name_clean:
-        return ("Tocino de pavo artesanal crujiente", "🥩 Proteínas Principales Seleccionadas", "tocino_pavo", "piezas", scaled_qty)
+        return ("Tocino de pavo artesanal", "🥩 Proteínas Principales Seleccionadas", "tocino_pavo", "piezas", scaled_qty)
     if "pavo" in name_clean:
         if clean_unit.lower() in ["piezas", "pieza"]:
             return ("Pechuga de pavo artesanal", "🥩 Proteínas Principales Seleccionadas", "pechuga_pavo", "g", scaled_qty * 150.0)
@@ -70,11 +72,13 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
     if "limón" in name_clean or "limon" in name_clean:
         return ("Jugo de limón fresco recién exprimido", "🍋 Cítricos y Ácidos Naturales", "jugo_limon", "ml", scaled_qty)
 
-    # 10. Sésamo / Ajonjolí / Almendras
+    # 10. Sésamo / Ajonjolí / Almendras / Nueces
     if "sésamo" in name_clean or "sesamo" in name_clean or "ajonjolí" in name_clean:
-        return ("Semillas de sésamo tostadas", "🌰 Semillas y Nueces", "semillas_sesamo", "g", scaled_qty)
+        return ("Semillas de sésamo", "🌰 Semillas y Nueces", "semillas_sesamo", "g", scaled_qty)
     if "almendra" in name_clean or "almendras" in name_clean:
-        return ("Almendras fileteadas tostadas", "🌰 Grasas Saludables, Semillas y Crujientes", "almendras_fileteadas", "g", scaled_qty)
+        return ("Almendras enteras", "🌰 Grasas Saludables, Semillas y Crujientes", "almendras_fileteadas", "g", scaled_qty)
+    if "nuez" in name_clean or "nueces" in name_clean:
+        return ("Nueces de Castilla", "🌰 Grasas Saludables, Semillas y Crujientes", "nueces_castilla", "g", scaled_qty)
 
     # 11. Fruits
     if any(k in name_clean for k in ["granada", "arilos de granada"]):
@@ -115,8 +119,12 @@ def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: floa
         return ("Chayotes tiernos de la granja", "🥦 Hortalizas y Vegetales Córtex", "chayote_tierno", "g", scaled_qty)
     if "ejote" in name_clean or "ejotes" in name_clean:
         return ("Ejotes verdes frescos de la granja", "🥦 Hortalizas y Vegetales Córtex", "ejotes_frescos", "g", scaled_qty)
+    if "cebollín" in name_clean or "cebollin" in name_clean:
+        return ("Cebollín fresco de la granja", "🥬 Hojas Verdes y Envolturas", "cebollin_fresco", "g", scaled_qty)
+    if "cilantro" in name_clean:
+        return ("Cilantro fresco de la granja", "🥬 Hojas Verdes y Envolturas", "cilantro_fresco", "g", scaled_qty)
 
-    return (iname.strip(), category, name_clean, unit, scaled_qty)
+    return (raw_atomic_name, category, name_clean, unit, scaled_qty)
 
 
 architect = KetoAIArchitect()
