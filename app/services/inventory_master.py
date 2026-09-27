@@ -537,12 +537,16 @@ class InventorySyncMaster:
         if any(k in name for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
             return "🥬 Verduras, Hortalizas y Frescos"
 
+        # 0.1 Jitomate / Tomate (Prioridad Taxonómica: Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
+        if any(k in name for k in ["jitomate", "tomate"]) and "tomillo" not in name:
+            return "🥬 Verduras, Hortalizas y Frescos"
+
         # 1. Suplementación Celular
         if any(k in name for k in ["33plus", "34plus", "sinergix", "suplemento", "suplementos", "vitamina", "vitaminas", "colágeno", "colageno", "electrolitos", "fórmula nootrópica", "formula nootropica", "fórmula reparadora", "formula reparadora"]):
             return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
 
-        # 2. Frutas de Bajo Índice Glucémico (Excluyendo aceite/leche de coco)
-        if not any(k in name for k in ["aceite", "leche"]) and any(k in name for k in ["mora", "moras", "frambuesa", "frambuesas", "fresa", "fresas", "arándano", "arandano", "arándanos", "arandanos", "granada", "granadas", "higo", "higos", "pitahaya", "pitahayas", "pitaya", "pitayas"]):
+        # 2. Frutas de Bajo Índice Glucémico (Excluyendo jitomate, tomate, aceite/leche de coco)
+        if not any(k in name for k in ["aceite", "leche", "jitomate", "tomate"]) and any(k in name for k in ["mora", "moras", "frambuesa", "frambuesas", "fresa", "fresas", "arándano", "arandano", "arándanos", "arandanos", "granada", "granadas", "higo", "higos", "pitahaya", "pitahayas", "pitaya", "pitayas"]):
             return "🍓 Frutas de Bajo Índice Glucémico"
 
         # 3. Grasas, Aceites y Semillas (Aguacates, Aceitunas, Aceites, Leche de coco, Semillas, Mayonesa)

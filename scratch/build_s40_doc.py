@@ -7,6 +7,39 @@ from generate_standalone_html import build_typed_recipe_for_dish
 from app.services.keto_architect import KetoAIArchitect
 from app.services.inventory_master import resolve_to_market_raw_material
 
+def process_market_item_py(iname: str, unit: str, total_qty: float):
+    if not iname:
+        return []
+    clean = re.sub(r'\s*\(\s*\d+°C\s*\)', '', iname, flags=re.IGNORECASE)
+    clean = re.sub(r'\s*\d+°C', '', clean, flags=re.IGNORECASE)
+    clean = re.sub(r'\s+fr[íi]a\s+para\s+hidratar', '', clean, flags=re.IGNORECASE)
+    clean = re.sub(r'\s+para\s+hidratar', '', clean, flags=re.IGNORECASE)
+    clean = clean.strip()
+    cn_lower = clean.lower()
+
+    if "jitomate" in cn_lower and "cebolla" in cn_lower:
+        return [
+            ("Jitomate bola fresco", unit, total_qty * 0.6),
+            ("Cebolla morada fresca", unit, total_qty * 0.4)
+        ]
+    if "sal de mar" in cn_lower and "tomillo" in cn_lower:
+        return [
+            ("Sal de mar mineral en escamas", unit, total_qty * 0.7),
+            ("Tomillo fresco", unit, total_qty * 0.3)
+        ]
+    if "sal de mar" in cn_lower and "pimienta" in cn_lower:
+        return [
+            ("Sal de mar mineral en escamas", unit, total_qty * 0.7),
+            ("Pimienta negra molida", unit, total_qty * 0.3)
+        ]
+    if "cilantro" in cn_lower and "orégano" in cn_lower:
+        return [
+            ("Cilantro fresco de la granja", unit, total_qty * 0.6),
+            ("Orégano seco", unit, total_qty * 0.4)
+        ]
+
+    return [(clean, unit, total_qty)]
+
 def normalize_shopping_item(iname: str, category: str, unit: str, base_qty: float):
     raw_atomic_name = resolve_to_market_raw_material(iname)
     name_clean = re.sub(r'^[^\w\s]+\s*', '', raw_atomic_name.lower().strip())
@@ -197,11 +230,13 @@ for day in s40.get('days', []):
                     unit = item.get('unit', 'g')
                     lines.append(f"  - {iname}: **{total_qty:g} {unit}** ({base_qty:g} {unit}/persona)")
                     
-                    c_name, c_cat, c_key, c_unit, calc_qty = normalize_shopping_item(iname, grp['category'], unit, total_qty)
-                    map_key = c_key
-                    if map_key not in shopping_map:
-                        shopping_map[map_key] = {'name': c_name, 'total_qty': 0.0, 'unit': c_unit, 'category': c_cat}
-                    shopping_map[map_key]['total_qty'] += calc_qty
+                    sub_items = process_market_item_py(iname, unit, total_qty)
+                    for s_name, s_unit, s_qty in sub_items:
+                        c_name, c_cat, c_key, c_unit, calc_qty = normalize_shopping_item(s_name, grp['category'], s_unit, s_qty)
+                        map_key = c_key
+                        if map_key not in shopping_map:
+                            shopping_map[map_key] = {'name': c_name, 'total_qty': 0.0, 'unit': c_unit, 'category': c_cat}
+                        shopping_map[map_key]['total_qty'] += calc_qty
 
             lines.append('')
             lines.append('**Procedimiento Paso a Paso:**')
