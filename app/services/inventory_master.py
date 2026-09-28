@@ -342,7 +342,7 @@ class InventorySyncMaster:
     def categorize_ingredient_name(name: str) -> str:
         slug = normalize_to_canonical_slug(name)
         name_lower = name.lower()
-        if "leche de coco" in name_lower:
+        if "leche de coco" in name_lower or any(k in name_lower for k in ["almendra", "almendras", "nuez", "nueces", "chía", "chia", "macadamia", "girasol"]):
             return "🥑 Grasas, Aceites y Semillas"
         if any(k in name_lower for k in ["cebolla", "cebollas", "cebollín", "cebollin"]):
             return "🥬 Verduras, Hortalizas y Frescos"
@@ -352,7 +352,7 @@ class InventorySyncMaster:
             return "🥬 Verduras, Hortalizas y Frescos"
         if slug in ["33plus", "34plus"] or any(k in name_lower for k in ["33plus", "34plus", "grenetina", "colágeno", "colageno"]):
             return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
-        if re.search(r'\b(huevo|huevos|clara|claras|pollo|sirloin|res|mignon|ribeye|pescado|salmón|salmon|pavo|machaca|jamón|jamon|tocino|atún|atun|huachinango|robalo|róbalo)\b', name_lower):
+        if re.search(r'\b(huevo|huevos|clara|claras|pollo|sirloin|res|mignon|ribeye|pescado|salmón|salmon|pavo|machaca|jamón|jamon|tocino|atún|atun|huachinango|robalo|róbalo|arrachera|costilla|tuétano|tuetano|filete|filetes)\b', name_lower):
             return "🥩 Carnes, Pescados y Proteínas"
         if not any(k in name_lower for k in ["cebolla", "morada"]) and any(k in name_lower for k in ["fresa", "frambuesa", "mora", "arándano", "arandano", "pitahaya", "pitaya", "higo", "granada", "arilos"]):
             return "🍓 Frutas de Bajo Índice Glucémico"
