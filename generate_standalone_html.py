@@ -2590,7 +2590,12 @@ function generateNextWeekMenu() {
 
       // 0.0 Prioridad Taxonómica Estricta: Leche de coco -> Grasas, Aceites y Semillas (NUNCA Cuarentena)
       if (/leche de coco/i.test(name)) {
-        return '🌰 Grasas, Aceites y Semillas';
+        return '🥑 Grasas, Aceites y Semillas';
+      }
+
+      // 0.1 Prioridad Taxonómica Estricta: Cebollas (Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
+      if (/cebolla|cebollas|cebollín|cebollin/i.test(name)) {
+        return '🥬 Verduras, Hortalizas y Frescos';
       }
 
       // 0. Prioridad Taxonómica Estricta: Insumos No Sugeridos / Cuarentena
@@ -2599,13 +2604,8 @@ function generateNextWeekMenu() {
         return '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)';
       }
 
-      // 0.1 Prioridad Taxonómica Estricta: Hongos y Setas (Verduras, Hortalizas y Frescos)
+      // 0.2 Prioridad Taxonómica Estricta: Hongos y Setas (Verduras, Hortalizas y Frescos)
       if (/portobello|champiñon|champiñones|champinon|champinones|setas|hongos/i.test(name)) {
-        return '🥬 Verduras, Hortalizas y Frescos';
-      }
-
-      // 0.2 Prioridad Taxonómica Estricta: Cebollas (Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
-      if (/cebolla|cebollas/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
@@ -2626,7 +2626,7 @@ function generateNextWeekMenu() {
 
       // 3. Grasas, Aceites y Semillas (Aguacates, Aceitunas, Aceites, Leche de coco, Semillas, Mayonesa)
       if (/aceite|mct|leche de coco|mantequilla|ghee|aguacate|aguacates|aceituna|aceitunas|nuez|nueces|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli|mayonesa/i.test(name)) {
-        return '🌰 Grasas, Aceites y Semillas';
+        return '🥑 Grasas, Aceites y Semillas';
       }
 
       // 4. Lácteos y Quesos (Sin Gluten — Keto)
@@ -4384,6 +4384,11 @@ function render3DShoppingList() {
     const pantryMap = window.PANTRY_STOCK_INVENTORY || {};
     const canonicalPantry = Object.keys(pantryMap).filter(k => pantryMap[k].status === 'canonical');
     const prohibitedPantry = Object.keys(pantryMap).filter(k => pantryMap[k].status === 'prohibited');
+
+    canonicalPantry.sort((a, b) => (pantryMap[a].name || a).localeCompare(pantryMap[b].name || b, 'es', { sensitivity: 'base' }));
+    prohibitedPantry.sort((a, b) => (pantryMap[a].name || a).localeCompare(pantryMap[b].name || b, 'es', { sensitivity: 'base' }));
+    pantryCoveredItems.sort((a, b) => a.name.localeCompare(b.name, 'es', { sensitivity: 'base' }));
+    farmItems.sort((a, b) => a.name.localeCompare(b.name, 'es', { sensitivity: 'base' }));
 
     canonicalPantry.forEach(k => {
       const item = pantryMap[k];

@@ -55,7 +55,7 @@ RAW_SHOPPING_ITEMS_BASE = [
 
     # 🛒 Abarrotes, Semillas y Grasas
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Semillas de chía", "base_qty": 400.0, "unit": "g"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Leche de coco (sin azúcar)", "base_qty": 3.0, "unit": "latas"},
+    {"category": "🥑 Grasas, Aceites y Semillas", "item_name": "Leche de coco (sin azúcar)", "base_qty": 3.0, "unit": "latas"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Nueces pecana", "base_qty": 400.0, "unit": "g"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Almendras enteras", "base_qty": 400.0, "unit": "g"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Harina de almendras (Keto)", "base_qty": 1.0, "unit": "kg"},
@@ -77,9 +77,9 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Café en grano — molido", "base_qty": 1.0, "unit": "paquete"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Hierbas secas (Orégano — Tomillo)", "base_qty": 1.0, "unit": "frasco"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Sal de mar", "base_qty": 1.0, "unit": "frasco"},
-    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Duraznos frescos", "base_qty": 1.5, "unit": "kg"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Miel de abeja", "base_qty": 500.0, "unit": "g"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Harina de trigo refinada", "base_qty": 1.0, "unit": "kg"}
+    {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Duraznos frescos", "base_qty": 1.5, "unit": "kg"},
+    {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Miel de abeja", "base_qty": 500.0, "unit": "g"},
+    {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Harina de trigo refinada", "base_qty": 1.0, "unit": "kg"}
 ]
 
 import unicodedata
@@ -342,9 +342,13 @@ class InventorySyncMaster:
     def categorize_ingredient_name(name: str) -> str:
         slug = normalize_to_canonical_slug(name)
         name_lower = name.lower()
+        if "leche de coco" in name_lower:
+            return "🥑 Grasas, Aceites y Semillas"
+        if any(k in name_lower for k in ["cebolla", "cebollas", "cebollín", "cebollin"]):
+            return "🥬 Verduras, Hortalizas y Frescos"
         if any(k in name_lower for k in ["durazno", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar"]):
             return "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)"
-        if any(k in name_lower for k in ["cebolla", "cebollas", "portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
+        if any(k in name_lower for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
             return "🥬 Verduras, Hortalizas y Frescos"
         if slug in ["33plus", "34plus"] or any(k in name_lower for k in ["33plus", "34plus", "grenetina", "colágeno", "colageno"]):
             return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
