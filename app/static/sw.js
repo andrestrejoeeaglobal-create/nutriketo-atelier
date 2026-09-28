@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Governance Rule RULE-2026-CROSS-DEVICE-MIRROR-001
-const CACHE_NAME = 'nutriketo-v36-6-rev3-s40-syntax-fix-v11';
+const CACHE_NAME = 'nutriketo-v36-6-rev3-s40-sw-fix-v12';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -40,6 +40,9 @@ self.addEventListener('activate', (event) => {
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
+  const reqUrl = event.request.url || '';
+  if (!reqUrl.startsWith('http://') && !reqUrl.startsWith('https://')) return;
+
   // Network-First with Fallback to Cache
   event.respondWith(
     fetch(event.request)
@@ -47,13 +50,15 @@ self.addEventListener('fetch', (event) => {
         if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseToCache);
+            cache.put(event.request, responseToCache).catch((err) => {
+              console.warn('[ServiceWorker] Cache put ignored for:', reqUrl, err);
+            });
           });
         }
         return networkResponse;
       })
       .catch(() => {
-        console.warn('[ServiceWorker] Network failed, falling back to cache for:', event.request.url);
+        console.warn('[ServiceWorker] Network failed, falling back to cache for:', reqUrl);
         return caches.match(event.request);
       })
   );
