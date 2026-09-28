@@ -134,23 +134,33 @@
         return '🥑 Grasas, Aceites y Semillas';
       }
 
-      // 0.1 Prioridad Taxonómica Estricta: Cebollas (Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
+      // 0.1 Prioridad Taxonómica Estricta: Cebollas (Verduras, Hortalizas y Frescos — NUNCA frutas)
       if (/cebolla|cebollas|cebollín|cebollin/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
-      // 0. Prioridad Taxonómica Estricta: Insumos No Sugeridos / Cuarentena
+      // 0.2 Prioridad Taxonómica Estricta: Carnes / Proteínas (Arrachera, Sirloin, Pechuga, Pescado, etc.)
+      if (/arrachera|corte|cortes|ribeye|sirloin|res|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
+        return '🥩 Carnes, Pescados y Proteínas';
+      }
+
+      // 0.3 Prioridad Taxonómica Estricta: Frutas de Bajo Índice Glucémico (Moras, Frambuesas, Arándanos, Granada, Higo, Pitaya)
+      if (!name.includes('cebolla') && /mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|pitaya|pitayas|arilos/i.test(name)) {
+        return '🍓 Frutas de Bajo Índice Glucémico';
+      }
+
+      // 0.4 Prioridad Taxonómica Estricta: Insumos No Sugeridos / Cuarentena
       if ((explicitCategory && (explicitCategory.includes('cuarentena') || explicitCategory.includes('prohibited') || explicitCategory.includes('Cuarentena') || explicitCategory.includes('🛑'))) ||
           /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca/i.test(name)) {
         return '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)';
       }
 
-      // 0.2 Prioridad Taxonómica Estricta: Hongos y Setas (Verduras, Hortalizas y Frescos)
+      // 0.5 Prioridad Taxonómica Estricta: Hongos y Setas
       if (/portobello|champiñon|champiñones|champinon|champinones|setas|hongos/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
-      // 0.3 Prioridad Taxonómica Estricta: Jitomate / Tomate (Verduras, Hortalizas y Frescos — NUNCA frutas de desayuno)
+      // 0.6 Prioridad Taxonómica Estricta: Jitomate / Tomate
       if (/jitomate|tomate bola|tomate/i.test(name) && !name.includes('tomillo')) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
@@ -160,27 +170,17 @@
         return '💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA';
       }
 
-      // 2. Frutas de Bajo Índice Glucémico (Excluyendo jitomate, tomate, cebolla morada)
-      if (!/aceite|leche|jitomate|tomate|cebolla|morada/i.test(name) && /mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|pitaya|pitayas/i.test(name)) {
-        return '🍓 Frutas de Bajo Índice Glucémico';
-      }
-
-      // 3. Grasas, Aceites y Semillas (Aguacates, Aceitunas, Aceites, Leche de coco, Semillas, Mayonesa)
+      // 3. Grasas, Aceites y Semillas
       if (/aceite|mct|leche de coco|mantequilla|ghee|aguacate|aguacates|aceituna|aceitunas|nuez|nueces|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli|mayonesa/i.test(name)) {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
-      // 4. Lácteos y Quesos (Sin Gluten — Keto)
+      // 4. Lácteos y Quesos
       if (/queso|quesos|leche|crema|gouda|panela|parmesano|manchego|mascarpone|mozzarella/i.test(name)) {
         return '🧀 Lácteos y Quesos (Sin Gluten — Keto)';
       }
 
-      // 5. Carnes, Pescados y Proteínas (USAR res PARA EVITAR QUE "fresco" ACTIVE "res")
-      if (/carne|carnes|sirloin|ribeye|res|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
-        return '🥩 Carnes, Pescados y Proteínas';
-      }
-
-      // 6. Chiles, Condimentos e Infusiones (Aderezos, BBQ, Café, Chocolates, Especias, Salsas, Achiote, Alcaparras)
+      // 6. Chiles, Condimentos e Infusiones
       if (/sal|sal de|sal mineral|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|vinagre|balsámico|balsamico|jengibre|agua|infusión|infusion|té|te|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
         return '🌶️ Chiles, Condimentos e Infusiones';
       }
@@ -190,7 +190,6 @@
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
-      // Fallback
       return '🌶️ Chiles, Condimentos e Infusiones';
     }
 
@@ -1456,6 +1455,9 @@ function sanitizeMarketRawMaterial(rawName) {
   let clean = rawName
     .replace(/\s*\(\s*\d+°C\s*\)/gi, '')
     .replace(/\s*\d+°C/gi, '')
+    .replace(/\s*\(\s*para\s+agua\s+de\s+pochado\s*\)/gi, '')
+    .replace(/\s+para\s+agua\s+de\s+pochado/gi, '')
+    .replace(/\s+y\s+agua\s+tibia/gi, '')
     .replace(/\s+fr[íi]a\s+para\s+hidratar/gi, '')
     .replace(/\s+para\s+hidratar/gi, '')
     .replace(/\s+para\s+pochado/gi, '')
@@ -1470,6 +1472,7 @@ function sanitizeMarketRawMaterial(rawName) {
     .replace(/\s+saltead[oa]s?/gi, '')
     .replace(/\s+en\s+tiras/gi, '')
     .replace(/\s+desmenuzad[oa]s?/gi, '')
+    .replace(/\s+finamente/gi, '')
     .trim();
 
   const lower = clean.toLowerCase();
@@ -1493,6 +1496,8 @@ function sanitizeMarketRawMaterial(rawName) {
   if (lower.includes('esparragos') || lower.includes('espárragos')) return 'Espárragos verdes frescos de la granja';
   if (lower.includes('cilantro')) return 'Cilantro fresco de la granja';
   if (lower.includes('cebollín') || lower.includes('cebollin')) return 'Cebollín fresco de la granja';
+  if (lower.includes('dientes de ajo') || lower === 'ajo' || lower.includes('ajo fresco')) return 'Dientes de ajo fresco';
+  if (lower.includes('semillas de chía') || lower.includes('semillas de chia')) return 'Semillas de chía orgánicas';
   if (lower === 'agua' || lower.includes('agua purificada')) return 'Agua purificada';
   return clean;
 }
@@ -1503,10 +1508,14 @@ function processMarketItem(rawName, totalQty, unit) {
   let cleanStr = rawName
     .replace(/\s*\(\s*\d+°C\s*\)/gi, '')
     .replace(/\s*\d+°C/gi, '')
+    .replace(/\s*\(\s*para\s+agua\s+de\s+pochado\s*\)/gi, '')
+    .replace(/\s+para\s+agua\s+de\s+pochado/gi, '')
+    .replace(/\s+y\s+agua\s+tibia/gi, '')
     .replace(/\s+fr[íi]a\s+para\s+hidratar/gi, '')
     .replace(/\s+para\s+hidratar/gi, '')
     .replace(/\s+para\s+pochado/gi, '')
     .replace(/\s+para\s+cocci[oó]n/gi, '')
+    .replace(/\s+finamente/gi, '')
     .trim();
 
   const lower = cleanStr.toLowerCase();
@@ -1515,6 +1524,24 @@ function processMarketItem(rawName, totalQty, unit) {
     return [
       { name: 'Jitomate bola fresco', qty: totalQty * 0.6, unit: 'g' },
       { name: 'Cebolla morada fresca', qty: totalQty * 0.4, unit: 'g' }
+    ];
+  }
+  if (lower.includes('ajo') && lower.includes('cebolla')) {
+    return [
+      { name: 'Dientes de ajo fresco', qty: totalQty * 0.4, unit: 'g' },
+      { name: 'Cebolla blanca fresca', qty: totalQty * 0.6, unit: 'g' }
+    ];
+  }
+  if (lower.includes('jugo de limón') && lower.includes('sal marina')) {
+    return [
+      { name: 'Jugo de limón fresco recién exprimido', qty: totalQty * 0.7, unit: 'ml' },
+      { name: 'Sal de mar mineral en escamas', qty: totalQty * 0.3, unit: 'g' }
+    ];
+  }
+  if (lower.includes('sal marina') && lower.includes('crémor')) {
+    return [
+      { name: 'Sal de mar mineral en escamas', qty: totalQty * 0.7, unit: 'g' },
+      { name: 'Crémor tártaro', qty: totalQty * 0.3, unit: 'g' }
     ];
   }
   if (lower.includes('sal de mar') && lower.includes('tomillo')) {
