@@ -4214,6 +4214,9 @@ function calculateNetShoppingList(diners) {
     if (/almendra/i.test(name)) {
       cat = '🥑 Grasas, Aceites y Semillas';
     }
+    if (/portobello|champiñon|champiñones/i.test(name)) {
+      cat = '🥬 Verduras, Hortalizas y Frescos';
+    }
     // 2. Homologar todas las variantes de limón
     if (/lim[oó]n/i.test(name)) {
       name = 'Jugo de limón fresco recién exprimido';
@@ -4457,6 +4460,9 @@ function render3DShoppingList() {
       // 1. Reubicar almendras en grasas
       if (/almendra/i.test(name)) {
         cat = '🥑 Grasas, Aceites y Semillas';
+      }
+      if (/portobello|champiñon|champiñones/i.test(name)) {
+        cat = '🥬 Verduras, Hortalizas y Frescos';
       }
       // 2. Homologar todas las variantes de limón
       if (/lim[oó]n/i.test(name)) {
