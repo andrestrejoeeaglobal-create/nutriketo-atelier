@@ -2557,6 +2557,9 @@ function generateNextWeekMenu() {
       if (/mostaza/i.test(lower)) return 'Mostaza Dijon — Tipo Antigua';
       if (/tamari|soya keto/i.test(lower)) return 'Salsa Tamari — Soya Keto';
 
+      return rawName.trim();
+    }
+
     const CANONICAL_SECTION_ORDER = [
       "🍓 Frutas de Bajo Índice Glucémico",
       "🥑 Grasas, Aceites y Semillas",
