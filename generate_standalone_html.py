@@ -1146,7 +1146,8 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
 
         base_cat_items = [
             {"name": "Agua purificada de cocción", "base_qty_per_person": 300.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-            {"name": "Romero fresco y cebolla blanca", "base_qty_per_person": 15.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+            {"name": "Romero fresco", "base_qty_per_person": 5.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+            {"name": "Cebolla blanca fresca", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
             {"name": "Cilantro fresco de la granja picado", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
         ] + veg_items
 
@@ -2610,6 +2611,11 @@ function generateNextWeekMenu() {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
+      // 0.15 Prioridad Taxonómica Estricta: Grasas, Aceites y Semillas (Almendras, nueces, chía, etc. — NUNCA carnes aun si dicen fileteadas)
+      if (/almendra|almendras|nuez|nueces|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli|aguacate|aceituna/i.test(name)) {
+        return '🥑 Grasas, Aceites y Semillas';
+      }
+
       // 0.2 Prioridad Taxonómica Estricta: Carnes / Proteínas (Arrachera, Sirloin, Pechuga, Pescado, etc.)
       if (/arrachera|corte|cortes|ribeye|sirloin|\bres\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
         return '🥩 Carnes, Pescados y Proteínas';
@@ -3936,6 +3942,9 @@ function sanitizeMarketRawMaterial(rawName) {
   if (lower.includes('cebollín') || lower.includes('cebollin')) return 'Cebollín fresco de la granja';
   if (lower.includes('dientes de ajo') || lower === 'ajo' || lower.includes('ajo fresco')) return 'Dientes de ajo fresco';
   if (lower.includes('semillas de chía') || lower.includes('semillas de chia')) return 'Semillas de chía orgánicas';
+  if (lower.includes('limón') || lower.includes('limon')) return 'Jugo de limón fresco recién exprimido';
+  if (lower.includes('pimienta negra')) return 'Pimienta negra recién molida';
+  if (lower.includes('cebolla blanca') && !lower.includes('morada') && !lower.includes('romero')) return 'Cebolla blanca fresca';
   if (lower === 'agua' || lower.includes('agua purificada')) return 'Agua purificada';
   return clean;
 }
@@ -3957,6 +3966,13 @@ function processMarketItem(rawName, totalQty, unit) {
     .trim();
 
   const lower = cleanStr.toLowerCase();
+
+  if (lower.includes('romero') && lower.includes('cebolla')) {
+    return [
+      { name: 'Romero fresco', qty: totalQty * 0.4, unit: 'g' },
+      { name: 'Cebolla blanca fresca', qty: totalQty * 0.6, unit: 'g' }
+    ];
+  }
 
   if (lower.includes('jitomate') && lower.includes('cebolla')) {
     return [
@@ -4174,40 +4190,63 @@ function calculateNetShoppingList(diners) {
       }) : []);
 
   // === INTERCEPTOR FORZADO DE PUREZA ATÓMICA DE MERCADO ===
-  let itemsProcessedMap = {};
-  rawItemsToProcess.forEach(item => {
-    let name = item.name || item.item_name || '';
-    let category = item.category || '';
-    
-    // 1. Almendras obligatoriamente a Grasas
+  let itemsToMutate = rawItemsToProcess.map(it => {
+    let name = it.name || it.item_name || '';
+    let cat = it.category || '';
+
+    // 1. Reubicar almendras en grasas
     if (/almendra/i.test(name)) {
-        category = '🥑 Grasas, Aceites y Semillas';
+      cat = '🥑 Grasas, Aceites y Semillas';
     }
-    // 2. Homologar alcaparras (purgar finamente)
-    if (/alcaparra/i.test(name)) {
-        name = 'Alcaparras en salmuera';
-    }
-    // 3. Unificar cebolla blanca (purgar finamente)
-    if (/cebolla blanca/i.test(name) && !/romero/i.test(name)) {
-        name = 'Cebolla blanca fresca';
-    }
-    // 4. Limones a SKU único
+    // 2. Homologar todas las variantes de limón
     if (/lim[oó]n/i.test(name)) {
-        name = 'Jugo de limón fresco recién exprimido';
+      name = 'Jugo de limón fresco recién exprimido';
+      cat = '🌶️ Chiles, Condimentos e Infusiones';
     }
-    // 5. Homologar Ajo y Chía
+    // 3. Homologar pimienta negra
+    if (/pimienta negra/i.test(name)) {
+      name = 'Pimienta negra recién molida';
+      cat = '🌶️ Chiles, Condimentos e Infusiones';
+    }
+    // 4. Homologar cebolla blanca
+    if (/cebolla blanca/i.test(name) && !/morada/i.test(name) && !/romero/i.test(name)) {
+      name = 'Cebolla blanca fresca';
+      cat = '🥬 Verduras, Hortalizas y Frescos';
+    }
+    // 5. Homologar alcaparras y ajo
+    if (/alcaparra/i.test(name)) {
+      name = 'Alcaparras en salmuera';
+    }
     if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
-        name = 'Dientes de ajo fresco';
+      name = 'Dientes de ajo fresco';
     }
     if (/ch[ií]a/i.test(name)) {
-        name = 'Semillas de chía orgánicas';
+      name = 'Semillas de chía orgánicas';
     }
+    return { ...it, name: name, item_name: name, category: cat };
+  });
 
-    const key = category + '___' + name;
-    if (!itemsProcessedMap[key]) {
-      itemsProcessedMap[key] = { ...item, name: name, item_name: name, category: category, quantity: parseFloat(item.quantity) || 1 };
+  // Desglosar romero y cebolla si persiste la cadena fusionada
+  let expandedItemsList = [];
+  itemsToMutate.forEach(it => {
+    let name = it.name || it.item_name || '';
+    if (/romero.*cebolla/i.test(name)) {
+      let totalQty = parseFloat(it.quantity) || 99;
+      expandedItemsList.push({ ...it, name: 'Romero fresco', item_name: 'Romero fresco', quantity: totalQty * 0.4, category: '🌶️ Chiles, Condimentos e Infusiones' });
+      expandedItemsList.push({ ...it, name: 'Cebolla blanca fresca', item_name: 'Cebolla blanca fresca', quantity: totalQty * 0.6, category: '🥬 Verduras, Hortalizas y Frescos' });
     } else {
-      itemsProcessedMap[key].quantity += (parseFloat(item.quantity) || 1);
+      expandedItemsList.push(it);
+    }
+  });
+
+  // Consolidar cantidades duplicadas por categoría y nombre
+  let itemsProcessedMap = {};
+  expandedItemsList.forEach(it => {
+    let key = (it.category || '') + '___' + (it.name || it.item_name || '');
+    if (!itemsProcessedMap[key]) {
+      itemsProcessedMap[key] = { ...it, quantity: parseFloat(it.quantity) || 1 };
+    } else {
+      itemsProcessedMap[key].quantity += (parseFloat(it.quantity) || 1);
     }
   });
 
@@ -4386,7 +4425,70 @@ function render3DShoppingList() {
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
     `;
 
-    const mCatKeys = Object.keys(marketCategories).sort((a, b) => getCategoryIndex(a) - getCategoryIndex(b));
+    // === RE-AGRUPAMIENTO DETERMINISTA IN-SITU EN RENDER ===
+    const cleanMarketCategories = {};
+    let allMarketItems = [];
+    Object.keys(marketCategories).forEach(ck => {
+      (marketCategories[ck] || []).forEach(it => {
+        allMarketItems.push({ ...it, originalCat: ck });
+      });
+    });
+
+    allMarketItems = allMarketItems.map(it => {
+      let name = it.name || it.item_name || '';
+      let cat = it.category || it.originalCat || '';
+
+      // 1. Reubicar almendras en grasas
+      if (/almendra/i.test(name)) {
+        cat = '🥑 Grasas, Aceites y Semillas';
+      }
+      // 2. Homologar todas las variantes de limón
+      if (/lim[oó]n/i.test(name)) {
+        name = 'Jugo de limón fresco recién exprimido';
+        cat = '🌶️ Chiles, Condimentos e Infusiones';
+      }
+      // 3. Homologar pimienta negra
+      if (/pimienta negra/i.test(name)) {
+        name = 'Pimienta negra recién molida';
+        cat = '🌶️ Chiles, Condimentos e Infusiones';
+      }
+      // 4. Homologar cebolla blanca
+      if (/cebolla blanca/i.test(name) && !/morada/i.test(name) && !/romero/i.test(name)) {
+        name = 'Cebolla blanca fresca';
+        cat = '🥬 Verduras, Hortalizas y Frescos';
+      }
+      // 5. Homologar alcaparras, ajo, chía
+      if (/alcaparra/i.test(name)) {
+        name = 'Alcaparras en salmuera';
+      }
+      if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
+        name = 'Dientes de ajo fresco';
+      }
+      if (/ch[ií]a/i.test(name)) {
+        name = 'Semillas de chía orgánicas';
+      }
+      return { ...it, name: name, item_name: name, category: cat };
+    });
+
+    let expandedMarketItems = [];
+    allMarketItems.forEach(it => {
+      let name = it.name || it.item_name || '';
+      if (/romero.*cebolla/i.test(name)) {
+        expandedMarketItems.push({ ...it, name: 'Romero fresco', item_name: 'Romero fresco', category: '🌶️ Chiles, Condimentos e Infusiones', slug: 'romero_fresco' });
+        expandedMarketItems.push({ ...it, name: 'Cebolla blanca fresca', item_name: 'Cebolla blanca fresca', category: '🥬 Verduras, Hortalizas y Frescos', slug: 'cebolla_blanca_fresca' });
+      } else {
+        expandedMarketItems.push(it);
+      }
+    });
+
+    expandedMarketItems.forEach(it => {
+      const cName = it.category || '🛒 Abarrotes y Frescos';
+      if (!cleanMarketCategories[cName]) cleanMarketCategories[cName] = [];
+      cleanMarketCategories[cName].push(it);
+    });
+
+    const activeMarketCategories = cleanMarketCategories;
+    const mCatKeys = Object.keys(activeMarketCategories).sort((a, b) => getCategoryIndex(a) - getCategoryIndex(b));
     if (mCatKeys.length === 0) {
       html += `
         <div class="col-span-full bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 p-6 rounded-xl text-center text-emerald-800 dark:text-emerald-200 font-bold">
@@ -4395,40 +4497,9 @@ function render3DShoppingList() {
       `;
     } else {
       mCatKeys.forEach(catName => {
-        let items = marketCategories[catName];
+        let items = activeMarketCategories[catName];
 
-        // === INTERCEPTOR FORZADO DE PUREZA ATÓMICA DE MERCADO ===
-        items = items.map(item => {
-            let name = item.name || item.item_name || '';
-            let category = item.category || catName;
-            
-            // 1. Almendras obligatoriamente a Grasas
-            if (/almendra/i.test(name)) {
-                category = '🥑 Grasas, Aceites y Semillas';
-            }
-            // 2. Homologar alcaparras (purgar finamente)
-            if (/alcaparra/i.test(name)) {
-                name = 'Alcaparras en salmuera';
-            }
-            // 3. Unificar cebolla blanca (purgar finamente)
-            if (/cebolla blanca/i.test(name) && !/romero/i.test(name)) {
-                name = 'Cebolla blanca fresca';
-            }
-            // 4. Limones a SKU único
-            if (/lim[oó]n/i.test(name)) {
-                name = 'Jugo de limón fresco recién exprimido';
-            }
-            // 5. Homologar Ajo y Chía
-            if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
-                name = 'Dientes de ajo fresco';
-            }
-            if (/ch[ií]a/i.test(name)) {
-                name = 'Semillas de chía orgánicas';
-            }
-            return { ...item, name: name, item_name: name, category: category };
-        });
-
-        // Consolidar duplicados resultantes (limones, cebollas blancas)
+        // Consolidar duplicados resultantes por categoría
         const consolidatedMap = {};
         items.forEach(it => {
             const key = it.category + '___' + it.name;
