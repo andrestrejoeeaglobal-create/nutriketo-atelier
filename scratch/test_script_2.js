@@ -1728,12 +1728,52 @@ function calculateNetShoppingList(diners) {
 
   const activeBOMItems = calculateActiveMenuBOM(typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40', numDiners);
   const isFromActiveBOM = activeBOMItems && activeBOMItems.length > 0;
-  const itemsToProcess = isFromActiveBOM
+  let rawItemsToProcess = isFromActiveBOM
     ? activeBOMItems 
     : (typeof rawShopBase !== 'undefined' && Array.isArray(rawShopBase) ? rawShopBase.filter(i => {
         const cleanLower = (i.item_name || '').toLowerCase();
         return !/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno/i.test(cleanLower);
       }) : []);
+
+  // === INTERCEPTOR FORZADO DE PUREZA ATÓMICA DE MERCADO ===
+  let itemsProcessedMap = {};
+  rawItemsToProcess.forEach(item => {
+    let name = item.name || item.item_name || '';
+    let category = item.category || '';
+    
+    // 1. Almendras obligatoriamente a Grasas
+    if (/almendra/i.test(name)) {
+        category = '🥑 Grasas, Aceites y Semillas';
+    }
+    // 2. Homologar alcaparras (purgar finamente)
+    if (/alcaparra/i.test(name)) {
+        name = 'Alcaparras en salmuera';
+    }
+    // 3. Unificar cebolla blanca (purgar finamente)
+    if (/cebolla blanca/i.test(name) && !/romero/i.test(name)) {
+        name = 'Cebolla blanca fresca';
+    }
+    // 4. Limones a SKU único
+    if (/lim[oó]n/i.test(name)) {
+        name = 'Jugo de limón fresco recién exprimido';
+    }
+    // 5. Homologar Ajo y Chía
+    if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
+        name = 'Dientes de ajo fresco';
+    }
+    if (/ch[ií]a/i.test(name)) {
+        name = 'Semillas de chía orgánicas';
+    }
+
+    const key = category + '___' + name;
+    if (!itemsProcessedMap[key]) {
+      itemsProcessedMap[key] = { ...item, name: name, item_name: name, category: category, quantity: parseFloat(item.quantity) || 1 };
+    } else {
+      itemsProcessedMap[key].quantity += (parseFloat(item.quantity) || 1);
+    }
+  });
+
+  const itemsToProcess = Object.values(itemsProcessedMap);
 
   itemsToProcess.forEach(item => {
     if (!item || !item.item_name) return;
@@ -1917,7 +1957,50 @@ function render3DShoppingList() {
       `;
     } else {
       mCatKeys.forEach(catName => {
-        const items = marketCategories[catName];
+        let items = marketCategories[catName];
+
+        // === INTERCEPTOR FORZADO DE PUREZA ATÓMICA DE MERCADO ===
+        items = items.map(item => {
+            let name = item.name || item.item_name || '';
+            let category = item.category || catName;
+            
+            // 1. Almendras obligatoriamente a Grasas
+            if (/almendra/i.test(name)) {
+                category = '🥑 Grasas, Aceites y Semillas';
+            }
+            // 2. Homologar alcaparras (purgar finamente)
+            if (/alcaparra/i.test(name)) {
+                name = 'Alcaparras en salmuera';
+            }
+            // 3. Unificar cebolla blanca (purgar finamente)
+            if (/cebolla blanca/i.test(name) && !/romero/i.test(name)) {
+                name = 'Cebolla blanca fresca';
+            }
+            // 4. Limones a SKU único
+            if (/lim[oó]n/i.test(name)) {
+                name = 'Jugo de limón fresco recién exprimido';
+            }
+            // 5. Homologar Ajo y Chía
+            if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
+                name = 'Dientes de ajo fresco';
+            }
+            if (/ch[ií]a/i.test(name)) {
+                name = 'Semillas de chía orgánicas';
+            }
+            return { ...item, name: name, item_name: name, category: category };
+        });
+
+        // Consolidar duplicados resultantes (limones, cebollas blancas)
+        const consolidatedMap = {};
+        items.forEach(it => {
+            const key = it.category + '___' + it.name;
+            if (!consolidatedMap[key]) {
+                consolidatedMap[key] = { ...it, quantity: parseFloat(it.quantity) || 0 };
+            } else {
+                consolidatedMap[key].quantity += (parseFloat(it.quantity) || 0);
+            }
+        });
+        items = Object.values(consolidatedMap);
         items.sort((a, b) => (a.name || a.item_name || '').localeCompare(b.name || b.item_name || '', 'es', { sensitivity: 'base' }));
         html += `
           <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-4 rounded-xl">
