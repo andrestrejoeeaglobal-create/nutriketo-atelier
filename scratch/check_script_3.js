@@ -129,6 +129,11 @@
     function getSmartItemCategory(itemName, explicitCategory) {
       const name = (itemName || '').toLowerCase().trim();
 
+      // 0.0 Prioridad Taxonómica Estricta: Leche de coco -> Grasas, Aceites y Semillas (NUNCA Cuarentena)
+      if (/leche de coco/i.test(name)) {
+        return '🌰 Grasas, Aceites y Semillas';
+      }
+
       // 0. Prioridad Taxonómica Estricta: Insumos No Sugeridos / Cuarentena
       if ((explicitCategory && (explicitCategory.includes('cuarentena') || explicitCategory.includes('prohibited') || explicitCategory.includes('Cuarentena') || explicitCategory.includes('🛑'))) ||
           /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca/i.test(name)) {
@@ -1623,39 +1628,41 @@ function calculateActiveMenuBOM(weekKey, diners) {
                     pieces = itemQty;
                   }
 
-                  if (!bomMap[slug]) {
-                    bomMap[slug] = {
-                      id: `bought_v36_${slug}`,
-                      slug: slug,
-                      item_name: canonicalName,
-                      category: getSmartItemCategory(canonicalName, grp.category),
-                      quantity: pieces,
-                      unit: 'piezas'
-                    };
+                    const itemCat = canonicalName.toLowerCase().includes('cebolla') ? '🥬 Verduras, Hortalizas y Frescos' : getSmartItemCategory(canonicalName);
+                    if (!bomMap[slug]) {
+                      bomMap[slug] = {
+                        id: `bought_v36_${slug}`,
+                        slug: slug,
+                        item_name: canonicalName,
+                        category: itemCat,
+                        quantity: pieces,
+                        unit: 'piezas'
+                      };
+                    } else {
+                      bomMap[slug].quantity += pieces;
+                    }
                   } else {
-                    bomMap[slug].quantity += pieces;
+                    const itemCat = canonicalName.toLowerCase().includes('cebolla') ? '🥬 Verduras, Hortalizas y Frescos' : getSmartItemCategory(canonicalName);
+                    if (!bomMap[slug]) {
+                      bomMap[slug] = {
+                        id: `bought_v36_${slug}`,
+                        slug: slug,
+                        item_name: canonicalName,
+                        category: itemCat,
+                        quantity: itemQty,
+                        unit: itemUnit
+                      };
+                    } else {
+                      bomMap[slug].quantity += itemQty;
+                    }
                   }
-                } else {
-                  if (!bomMap[slug]) {
-                    bomMap[slug] = {
-                      id: `bought_v36_${slug}`,
-                      slug: slug,
-                      item_name: canonicalName,
-                      category: getSmartItemCategory(canonicalName, grp.category),
-                      quantity: itemQty,
-                      unit: itemUnit
-                    };
-                  } else {
-                    bomMap[slug].quantity += itemQty;
-                  }
-                }
+                });
               });
             });
-          });
-        }
+          }
+        });
       });
     });
-  });
 
   const resultList = Object.values(bomMap);
   resultList.forEach(item => {
@@ -1711,8 +1718,8 @@ function calculateNetShoppingList(diners) {
     }
 
     const slug = normalizeToCanonicalSlug(item.slug || cleanName);
-    const catRaw = item.category || getSmartItemCategory(cleanName);
-    const cat = catRaw ? catRaw.replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ') : '🛒 Abarrotes y Frescos';
+    const catSmart = cleanLower.includes('cebolla') ? '🥬 Verduras, Hortalizas y Frescos' : getSmartItemCategory(cleanName);
+    const cat = catSmart ? catSmart.replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ') : '🛒 Abarrotes y Frescos';
 
     totalCount++;
 
