@@ -701,7 +701,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
                     "category": "🥑 Macerado Cítrico y Grasas",
                     "items": [
                         {"name": "Aguacate Hass en cubos", "base_qty_per_person": 60.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Alcaparras finamente picadas", "base_qty_per_person": 10.0, "unit": "g", "source": "Mercado", "unit_cost": 12.0},
+                        {"name": "Alcaparras en salmuera", "base_qty_per_person": 10.0, "unit": "g", "source": "Mercado", "unit_cost": 12.0},
                         {"name": "Jugo de limón fresco", "base_qty_per_person": 10.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
                         {"name": "Aceite de oliva extra virgen (VEVO)", "base_qty_per_person": 12.0, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
@@ -895,7 +895,7 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
                     "category": "🥩 Proteína Seca Deshidratada y Aromáticos",
                     "items": [
                         {"name": "Carne seca machaca artesanal de Sonora", "base_qty_per_person": 25.0, "unit": "g", "source": "Mercado", "unit_cost": 15.0},
-                        {"name": "Cebolla blanca finamente picada", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Cebolla blanca fresca", "base_qty_per_person": 10.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
                         {"name": "Orégano seco molido a mano", "base_qty_per_person": 1.0, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 },
@@ -1832,6 +1832,18 @@ def generate_standalone():
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arquitectura Herami — Atelier T.I.L.O.®</title>
+
+  <!-- PURGA AGRESIVA DE CACHÉ CLIENTE Y SERVICE WORKER -->
+  <script>
+  if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.getRegistrations().then(regs => {
+          for (let r of regs) { r.unregister(); }
+      });
+  }
+  if ('caches' in window) {
+      caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+  }
+  </script>
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
