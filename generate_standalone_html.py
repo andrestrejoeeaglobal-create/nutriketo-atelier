@@ -857,8 +857,9 @@ def _internal_build_typed_recipe_for_dish(dish_name: str, course_type: str = "st
                     "items": [
                         {"name": "Yemas de huevo frescas", "base_qty_per_person": 1.0, "unit": "piezas", "source": "Granja El Herami", "unit_cost": 0.0},
                         {"name": "Mantequilla sin sal derretida tibia", "base_qty_per_person": 37.5, "unit": "g", "source": "Mercado", "unit_cost": 15.0},
-                        {"name": "Jugo de limón recién exprimido y agua tibia", "base_qty_per_person": 2.5, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
-                        {"name": "Pimienta negra molida y sal marina", "base_qty_per_person": 0.5, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
+                        {"name": "Jugo de limón fresco recién exprimido", "base_qty_per_person": 2.5, "unit": "ml", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Pimienta negra recién molida", "base_qty_per_person": 0.2, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0},
+                        {"name": "Sal de mar mineral en escamas", "base_qty_per_person": 0.3, "unit": "g", "source": "Granja El Herami", "unit_cost": 0.0}
                     ]
                 },
                 {
