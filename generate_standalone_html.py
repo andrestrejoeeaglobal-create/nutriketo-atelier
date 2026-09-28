@@ -2610,6 +2610,11 @@ function generateNextWeekMenu() {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
+      // 0.05 Prioridad Taxonómica Estricta: Hongos y Setas (NUNCA Grasas, NUNCA Carnes)
+      if (/portobello|champiñon|champiñones|champinon|champinones|setas|hongos/i.test(name)) {
+        return '🥬 Verduras, Hortalizas y Frescos';
+      }
+
       // 0.1 Prioridad Taxonómica Estricta: Cebollas (Verduras, Hortalizas y Frescos — NUNCA frutas)
       if (/cebolla|cebollas|cebollín|cebollin/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
