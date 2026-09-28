@@ -46,18 +46,18 @@ RAW_SHOPPING_ITEMS_BASE = [
     # 🥬 Verduras, Hortalizas y Frescos
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Aguacate Hass fresco", "base_qty": 24.0, "unit": "piezas"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Jitomate bola fresco", "base_qty": 3.5, "unit": "kg"},
-    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Cebolla blanca", "base_qty": 2.0, "unit": "kg"},
-    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Limones frescos", "base_qty": 2.0, "unit": "kg"},
+    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Cebolla blanca fresca", "base_qty": 2.0, "unit": "kg"},
+    {"category": "🌶️ Chiles, Condimentos e Infusiones", "item_name": "Jugo de limón fresco recién exprimido", "base_qty": 2.0, "unit": "kg"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Champiñones Portobello", "base_qty": 12.0, "unit": "piezas"},
-    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Dientes de ajo", "base_qty": 3.0, "unit": "cabezas"},
+    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Dientes de ajo fresco", "base_qty": 3.0, "unit": "cabezas"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Apio fresco", "base_qty": 1.0, "unit": "manojo"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Fresas frescas", "base_qty": 500.0, "unit": "g"},
 
-    # 🛒 Abarrotes, Semillas y Grasas
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Semillas de chía", "base_qty": 400.0, "unit": "g"},
+    # 🥑 Grasas, Aceites y Semillas
+    {"category": "🥑 Grasas, Aceites y Semillas", "item_name": "Semillas de chía orgánicas", "base_qty": 400.0, "unit": "g"},
     {"category": "🥑 Grasas, Aceites y Semillas", "item_name": "Leche de coco (sin azúcar)", "base_qty": 3.0, "unit": "latas"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Nueces pecana", "base_qty": 400.0, "unit": "g"},
-    {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Almendras enteras", "base_qty": 400.0, "unit": "g"},
+    {"category": "🥑 Grasas, Aceites y Semillas", "item_name": "Nueces pecana", "base_qty": 400.0, "unit": "g"},
+    {"category": "🥑 Grasas, Aceites y Semillas", "item_name": "Almendras fileteadas tostadas", "base_qty": 400.0, "unit": "g"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Harina de almendras (Keto)", "base_qty": 1.0, "unit": "kg"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Fórmula Nootrópica 33Plus®", "base_qty": 14.0, "unit": "dosis completas"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Fórmula Reparadora 34Plus®", "base_qty": 14.0, "unit": "dosis completas"},

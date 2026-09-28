@@ -2482,6 +2482,9 @@ function generateNextWeekMenu() {
       "semillas-chia": { name: "Semillas de chía orgánicas", stock: 100, unit: "g", status: "canonical" },
       "sal-mar": { name: "Sal de mar mineral pura", stock: 1000, unit: "g", status: "canonical" },
       "almendras-fileteadas": { name: "Almendras fileteadas tostadas", stock: 100, unit: "g", status: "canonical" },
+      "dientes-de-ajo": { name: "Dientes de ajo fresco", stock: 36, unit: "g", status: "canonical" },
+      "limon-fresco": { name: "Jugo de limón fresco recién exprimido", stock: 200, unit: "ml", status: "canonical" },
+      "pimienta-negra": { name: "Pimienta negra recién molida", stock: 50, unit: "g", status: "canonical" },
       "aceite-coco-mct": { name: "Aceite de coco MCT", stock: 250, unit: "ml", status: "canonical" },
       "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
       "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
@@ -3832,6 +3835,13 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "queso-crema": ["queso crema", "queso crema artesanal"],
   "mantequilla-pastoreo": ["mantequilla", "mantequilla de vaca", "mantequilla de pastoreo", "mantequilla sin sal"],
   "jitomate-bola": ["jitomate", "jitomates", "jitomate bola", "jitomate bola jugoso"],
+  "almendras-fileteadas": ["almendras fileteadas tostadas", "almendras fileteadas", "almendras tostadas", "almendras enteras", "almendra", "almendras"],
+  "semillas-chia": ["semillas de chía orgánicas", "semillas de chia organicas", "semillas de chía", "semillas de chia", "chía", "chia"],
+  "dientes-de-ajo": ["dientes de ajo fresco", "dientes de ajo", "ajo fresco", "ajo"],
+  "limon-fresco": ["jugo de limón fresco recién exprimido", "jugo de limon fresco recien exprimido", "jugo de limón fresco", "limón fresco recién exprimido", "limones frescos", "limón", "limon"],
+  "pimienta-negra": ["pimienta negra recién molida", "pimienta negra recien molida", "pimienta negra molida y sal marina", "pimienta negra molida", "pimienta negra"],
+  "cebolla-blanca": ["cebolla blanca fresca", "cebolla blanca"],
+  "romero-fresco": ["romero fresco", "romero"],
   "33plus": ["33plus", "33 plus", "fórmula 33plus", "elixir 33plus"],
   "34plus": ["34plus", "34 plus", "fórmula 34plus", "tisana 34plus"]
 };
