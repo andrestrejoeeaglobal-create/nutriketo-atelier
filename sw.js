@@ -3,8 +3,7 @@ const CACHE_NAME = 'nutriketo-v36-6-rev3-s40-sw-fix-v12';
 
 const ASSETS_TO_CACHE = [
   './',
-  './index.html',
-  './sw.js'
+  './index.html'
 ];
 
 self.addEventListener('install', (event) => {
