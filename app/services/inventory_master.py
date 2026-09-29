@@ -190,7 +190,7 @@ def format_cooking_step(step_text: str, protein_family: Optional[str] = None) ->
 
 RAW_PIECE_YIELD_GRAMS = {
     "aguacate_hass_fresco": 105.0,        # ~105g de pulpa comestible por fruto
-    "limon_fresco": 35.0,                 # ~35ml de jugo por pieza
+    "limon_fresco": 24.0,                 # ~24ml de jugo por pieza (21 piezas para 504ml demandados)
     "pimiento_morron": 150.0,             # ~150g de pulpa limpia
     "champiñon_portobello": 60.0,         # ~60g por sombrero
     "jitomate_bola": 150.0,               # ~150g por jitomate fresco
@@ -252,18 +252,48 @@ def resolve_to_market_raw_material(dish_ingredient_name: str) -> str:
         return "Pechuga de pollo orgánica"
     if "pechuga de pavo" in cn_lower or ("pavo" in cn_lower and "tocino" not in cn_lower and "caldo" not in cn_lower and "fondo" not in cn_lower):
         return "Pechuga de pavo artesanal"
-    if "machaca" in cn_lower:
+    if "machaca" in cn_lower and "machacad" not in cn_lower:
         return "Carne seca machaca artesanal de res"
+    if "ajo" in cn_lower and "ajonjol" not in cn_lower:
+        return "Ajo fresco de la granja"
     if "huevo" in cn_lower and "claras" not in cn_lower and "yemas" not in cn_lower:
         return "Huevos orgánicos de libre pastoreo"
+    if "aceite" in cn_lower and ("ajonjol" in cn_lower or "sésamo" in cn_lower or "sesamo" in cn_lower):
+        return "Aceite de ajonjolí tostado"
+    if "zacate" in cn_lower or "té limón" in cn_lower or "te limon" in cn_lower:
+        return "Zacate limón deshidratado para infusión"
     if "limón" in cn_lower or "limon" in cn_lower:
-        return "Jugo de limón fresco recién exprimido" if "jugo" in cn_lower else "Limones frescos"
+        return "Limones frescos"
     if "cebollín" in cn_lower or "cebollin" in cn_lower:
         return "Cebollín fresco de la granja"
     if "almendra" in cn_lower:
         return "Almendras fileteadas tostadas"
     if any(k in cn_lower for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
         return "Champiñones Portobello frescos"
+    if "sésamo" in cn_lower or "sesamo" in cn_lower or "ajonjolí" in cn_lower or "ajonjoli" in cn_lower:
+        return "Semillas de sésamo (ajonjolí)"
+    if "pecana" in cn_lower:
+        return "Nuez pecana"
+    if "castilla" in cn_lower:
+        return "Nueces de Castilla"
+    if "pepino" in cn_lower:
+        return "Pepino fresco de la granja"
+    if "calabacita" in cn_lower or "zucchini" in cn_lower or "zoodles" in cn_lower:
+        return "Calabacitas verdes tiernas de la granja"
+    if "mora" in cn_lower and "zarzamora" not in cn_lower:
+        return "Moras frescas de la granja"
+    if "frambuesa" in cn_lower:
+        return "Frambuesas frescas orgánicas"
+    if "arándano" in cn_lower or "arandano" in cn_lower:
+        return "Arándanos frescos de la granja"
+    if "fresa" in cn_lower:
+        return "Fresas frescas de la granja"
+    if "zarzamora" in cn_lower:
+        return "Zarzamoras frescas de la granja"
+    if "pitaya" in cn_lower:
+        return "Pitaya fresca de la granja"
+    if "granada" in cn_lower:
+        return "Arilos de granada fresca de la granja"
 
     return clean_name
 
@@ -276,6 +306,31 @@ def consolidate_market_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> Lis
         qty = float(item.get("quantity") or item.get("base_qty", 1.0))
         unit = str(item.get("unit", "g")).strip().lower()
         category = item.get("category") or "General"
+        if raw_name in [
+            "Carne seca machaca artesanal de res", "Pechuga de pollo orgánica", "Pechuga de pavo artesanal",
+            "Arrachera de res magra limpia", "Carne molida / Filete de Sirloin magro",
+            "Filete de Huachinango fresco con piel", "Filete de pescado blanco de captura (Robalo)",
+            "Lomo de salmón fresco calidad sashimi", "Medallón de atún fresco calidad sashimi", "Tocino de pavo artesanal"
+        ]:
+            category = "Carnes, Aves y Pescados"
+        elif raw_name == "Limones frescos":
+            category = "Cítricos y Ácidos Naturales"
+        elif raw_name in [
+            "Semillas de sésamo (ajonjolí)", "Nuez pecana", "Nueces de Castilla", "Almendras fileteadas tostadas",
+            "Semillas de chía orgánicas", "Semillas de girasol tostadas sin sal", "Coco rallado deshidratado sin azúcar"
+        ]:
+            category = "Semillas y Frutos Secos"
+        elif raw_name in [
+            "Moras frescas de la granja", "Frambuesas frescas orgánicas", "Fresas frescas de la granja",
+            "Zarzamoras frescas de la granja", "Arilos de granada fresca de la granja", "Arándanos frescos de la granja",
+            "Pitaya fresca de la granja"
+        ]:
+            category = "Frutas Cetogénicas"
+        elif raw_name in [
+            "Pepino fresco de la granja", "Calabacitas verdes tiernas de la granja", "Champiñones Portobello frescos",
+            "Ajo fresco de la granja", "Espárragos verdes frescos", "Ejotes verdes tiernos de la granja"
+        ]:
+            category = "Verduras y Hortalizas Frescas"
 
         if raw_name not in consolidated_items:
             consolidated_items[raw_name] = {
@@ -285,6 +340,8 @@ def consolidate_market_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> Lis
                 "unit": item.get("unit", "g"),
                 "is_piece": unit in ["piezas", "pieza", "pz", "piezas/persona"]
             }
+        else:
+            consolidated_items[raw_name]["category"] = category
 
         slug = raw_name.lower().replace(" ", "_").replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o")
         

@@ -113,7 +113,7 @@
                 "per_guest": 35
               },
               {
-                "name": "Moras frescas para coulis de gelatina",
+                "name": "Moras frescas de la granja",
                 "amount": 180,
                 "unit": "g",
                 "category": "Frutas Cetogénicas",
@@ -212,7 +212,7 @@
                 "per_guest": 10
               },
               {
-                "name": "Ajo fresco machacado (confitado)",
+                "name": "Ajo fresco de la granja",
                 "amount": 24,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -345,7 +345,7 @@
                 "per_guest": 130
               },
               {
-                "name": "Semillas de sésamo (ajonjolí blanco y negro)",
+                "name": "Semillas de sésamo (ajonjolí)",
                 "amount": 60,
                 "unit": "g",
                 "category": "Semillas y Frutos Secos",
@@ -451,7 +451,7 @@
                 "per_guest": 50
               },
               {
-                "name": "Nueces pecana en mitades",
+                "name": "Nuez pecana",
                 "amount": 90,
                 "unit": "g",
                 "category": "Semillas y Frutos Secos",
@@ -547,7 +547,7 @@
                 "per_guest": 35
               },
               {
-                "name": "Frambuesas frescas para puré base",
+                "name": "Frambuesas frescas orgánicas",
                 "amount": 180,
                 "unit": "g",
                 "category": "Frutas Cetogénicas",
@@ -694,7 +694,7 @@
             "note": "Cintas vegetales tipo espagueti salteadas con calor rápido para mantener textura crocante y frescura clorofílica.",
             "ingredients": [
               {
-                "name": "Calabacitas verdes frescas en espiral (zoodles)",
+                "name": "Calabacitas verdes tiernas de la granja",
                 "amount": 600,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -738,7 +738,7 @@
             "note": "Crudos refrescantes de alta hidratación y electrolitos minerales para inicio de digestión nocturna sin pesadez.",
             "ingredients": [
               {
-                "name": "Pepino verde pelado sin semillas en bastones",
+                "name": "Pepino fresco de la granja",
                 "amount": 300,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -807,7 +807,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Semillas de sésamo tostadas",
+                "name": "Semillas de sésamo (ajonjolí)",
                 "amount": 18,
                 "unit": "g",
                 "category": "Semillas y Frutos Secos",
@@ -926,7 +926,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Machaca de res magra artesanal deshebrada fina",
+                "name": "Carne seca machaca artesanal de res",
                 "amount": 180,
                 "unit": "g",
                 "category": "Carnes, Aves y Pescados",
@@ -988,7 +988,7 @@
                 "per_guest": 35
               },
               {
-                "name": "Jugo y arilos de granada fresca macerados",
+                "name": "Arilos de granada fresca de la granja",
                 "amount": 180,
                 "unit": "g",
                 "category": "Frutas Cetogénicas",
@@ -1032,7 +1032,7 @@
                 "per_guest": 100
               },
               {
-                "name": "Dientes de ajo enteros con piel",
+                "name": "Ajo fresco de la granja",
                 "amount": 30,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -1172,7 +1172,7 @@
             "note": "Crudos de calabacín y apio blanco refrescantes con ácido cítrico natural y sales marinas.",
             "ingredients": [
               {
-                "name": "Calabacita zucchini fresca en bastones",
+                "name": "Calabacitas verdes tiernas de la granja",
                 "amount": 300,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -1319,7 +1319,7 @@
                 "per_guest": 50
               },
               {
-                "name": "Nueces pecana troceadas",
+                "name": "Nuez pecana",
                 "amount": 90,
                 "unit": "g",
                 "category": "Semillas y Frutos Secos",
@@ -1342,7 +1342,7 @@
           },
           "main": {
             "title": "Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente",
-            "technique": "baveuse_omelette",
+            "technique": "poach_and_emulsion",
             "note": "Reinterpretación gastronómica cetogénica: base aérea de claras montadas al horno con parmesano, coronadas con tocino de pavo crujiente, yema pochada suave y salsa holandesa casera tibia.",
             "ingredients": [
               {
@@ -1422,7 +1422,7 @@
                 "per_guest": 35
               },
               {
-                "name": "Arándanos frescos macerados",
+                "name": "Arándanos frescos de la granja",
                 "amount": 180,
                 "unit": "g",
                 "category": "Frutas Cetogénicas",
@@ -1577,10 +1577,10 @@
               },
               {
                 "name": "Almendras fileteadas tostadas",
-                "amount": 48,
+                "amount": 90,
                 "unit": "g",
                 "category": "Semillas y Frutos Secos",
-                "per_guest": 8
+                "per_guest": 15
               },
               {
                 "name": "Aceite de oliva extra virgen (VEVO)",
@@ -1620,14 +1620,14 @@
             "note": "Aperitivo fresco hidratante vegetal con pepino y calabacita cortados al momento.",
             "ingredients": [
               {
-                "name": "Pepino verde fresco en bastones",
+                "name": "Pepino fresco de la granja",
                 "amount": 300,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
                 "per_guest": 50
               },
               {
-                "name": "Calabacita zucchini fresca en bastones",
+                "name": "Calabacitas verdes tiernas de la granja",
                 "amount": 240,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -1781,6 +1781,13 @@
                 "per_guest": 10
               },
               {
+                "name": "Almendras fileteadas tostadas",
+                "amount": 30,
+                "unit": "g",
+                "category": "Semillas y Frutos Secos",
+                "per_guest": 5
+              },
+              {
                 "name": "Semillas de chía orgánicas",
                 "amount": 48,
                 "unit": "g",
@@ -1863,7 +1870,7 @@
                 "per_guest": 35
               },
               {
-                "name": "Pulpa de pitaya fresca licuada",
+                "name": "Pitaya fresca de la granja",
                 "amount": 180,
                 "unit": "g",
                 "category": "Frutas Cetogénicas",
@@ -1962,7 +1969,7 @@
                 "per_guest": 10
               },
               {
-                "name": "Dientes de ajo picados muy fino",
+                "name": "Ajo fresco de la granja",
                 "amount": 18,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -2011,10 +2018,10 @@
               },
               {
                 "name": "Almendras fileteadas tostadas",
-                "amount": 48,
+                "amount": 90,
                 "unit": "g",
                 "category": "Semillas y Frutos Secos",
-                "per_guest": 8
+                "per_guest": 15
               },
               {
                 "name": "Mantequilla clarificada (Ghee)",
@@ -2109,7 +2116,7 @@
                 "per_guest": 30
               },
               {
-                "name": "Nueces pecana picadas rústicas",
+                "name": "Nuez pecana",
                 "amount": 60,
                 "unit": "g",
                 "category": "Semillas y Frutos Secos",
@@ -2231,7 +2238,7 @@
           },
           "main": {
             "title": "Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela",
-            "technique": "baveuse_omelette",
+            "technique": "tamagoyaki_roll",
             "note": "Tortilla japonesa en múltiples capas delgadas enrolladas al calor en mantequilla de pastoreo con tiras de queso panela artesanal fundido en el núcleo.",
             "ingredients": [
               {
@@ -2297,7 +2304,7 @@
                 "per_guest": 35
               },
               {
-                "name": "Fresas frescas maceradas para coulis",
+                "name": "Fresas frescas de la granja",
                 "amount": 180,
                 "unit": "g",
                 "category": "Frutas Cetogénicas",
@@ -2396,7 +2403,7 @@
                 "per_guest": 150
               },
               {
-                "name": "Semillas de ajonjolí blanco y negro (sésamo)",
+                "name": "Semillas de sésamo (ajonjolí)",
                 "amount": 60,
                 "unit": "g",
                 "category": "Semillas y Frutos Secos",
@@ -2488,7 +2495,7 @@
             "note": "Bastoncitos crujientes de hortalizas frescas aderezados con limón y sal mineral para inicio de digestión suave.",
             "ingredients": [
               {
-                "name": "Calabacita zucchini fresca en bastones",
+                "name": "Calabacitas verdes tiernas de la granja",
                 "amount": 300,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -2665,7 +2672,7 @@
           },
           "main": {
             "title": "Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra",
-            "technique": "scrambled_stir_fry",
+            "technique": "skillet_bake",
             "note": "Huevos enteros de pastoreo horneados en cazuelas individuales de barro vidriado sobre espinacas salteadas a la mantequilla y medallón de queso de cabra gratinado.",
             "ingredients": [
               {
@@ -2738,7 +2745,7 @@
                 "per_guest": 35
               },
               {
-                "name": "Zarzamoras frescas maceradas",
+                "name": "Zarzamoras frescas de la granja",
                 "amount": 180,
                 "unit": "g",
                 "category": "Frutas Cetogénicas",
@@ -2782,7 +2789,7 @@
                 "per_guest": 100
               },
               {
-                "name": "Dientes de ajo rostizados en su piel",
+                "name": "Ajo fresco de la granja",
                 "amount": 24,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -2878,7 +2885,7 @@
             "note": "Rodajas tiernas de calabacita salteadas rápidamente en mantequilla con sal marina.",
             "ingredients": [
               {
-                "name": "Calabacitas verdes frescas en rodajas",
+                "name": "Calabacitas verdes tiernas de la granja",
                 "amount": 600,
                 "unit": "g",
                 "category": "Verduras y Hortalizas Frescas",
@@ -2959,7 +2966,7 @@
           },
           "main": {
             "title": "Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate",
-            "technique": "raw_assembly",
+            "technique": "taco_wrap",
             "note": "Wraps cetogénicos crujientes en hojas vivas de lechuga orejona rellenos de pollo deshebrado jugoso, abanicos de aguacate Hass y aceite de oliva virgen extra.",
             "ingredients": [
               {

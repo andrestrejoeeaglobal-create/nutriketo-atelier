@@ -65,7 +65,7 @@
 - *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
 - *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
-- *Frutas Cetogénicas*: Moras frescas para coulis de gelatina: **180 g** (30 g/persona)
+- *Frutas Cetogénicas*: Moras frescas de la granja: **180 g** (30 g/persona)
 - *Líquidos e Infusiones*: Infusión de frutos rojos y menta: **720 ml** (120 ml/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -101,7 +101,7 @@
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Carnes, Aves y Pescados*: Arrachera de res magra limpia: **900 g** (150 g/persona)
 - *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **60 g** (10 g/persona)
-- *Verduras y Hortalizas Frescas*: Ajo fresco machacado (confitado): **24 g** (4 g/persona)
+- *Verduras y Hortalizas Frescas*: Ajo fresco de la granja: **24 g** (4 g/persona)
 - *Especias, Hierbas y Condimentos*: Hojas de tomillo fresco: **12 g** (2 g/persona)
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **30 ml** (5 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
@@ -152,7 +152,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Carnes, Aves y Pescados*: Pechuga de pavo fresca en medallones: **780 g** (130 g/persona)
-- *Semillas y Frutos Secos*: Semillas de sésamo (ajonjolí blanco y negro): **60 g** (10 g/persona)
+- *Semillas y Frutos Secos*: Semillas de sésamo (ajonjolí): **60 g** (10 g/persona)
 - *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado fino: **60 g** (10 g/persona)
 - *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **36 g** (6 g/persona)
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **24 ml** (4 ml/persona)
@@ -192,7 +192,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Frutas Cetogénicas*: Frambuesas frescas orgánicas: **300 g** (50 g/persona)
-- *Semillas y Frutos Secos*: Nueces pecana en mitades: **90 g** (15 g/persona)
+- *Semillas y Frutos Secos*: Nuez pecana: **90 g** (15 g/persona)
 - *Semillas y Frutos Secos*: Semillas de chía orgánicas: **48 g** (8 g/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -226,7 +226,7 @@
 - *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
 - *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
-- *Frutas Cetogénicas*: Frambuesas frescas para puré base: **180 g** (30 g/persona)
+- *Frutas Cetogénicas*: Frambuesas frescas orgánicas: **180 g** (30 g/persona)
 - *Líquidos e Infusiones*: Infusión de hierbabuena y flores rojas: **720 ml** (120 ml/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -279,7 +279,7 @@
 - **Nota Organoléptica y Bioquímica:** *"Cintas vegetales tipo espagueti salteadas con calor rápido para mantener textura crocante y frescura clorofílica."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *Verduras y Hortalizas Frescas*: Calabacitas verdes frescas en espiral (zoodles): **600 g** (100 g/persona)
+- *Verduras y Hortalizas Frescas*: Calabacitas verdes tiernas de la granja: **600 g** (100 g/persona)
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
@@ -297,7 +297,7 @@
 - **Nota Organoléptica y Bioquímica:** *"Crudos refrescantes de alta hidratación y electrolitos minerales para inicio de digestión nocturna sin pesadez."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *Verduras y Hortalizas Frescas*: Pepino verde pelado sin semillas en bastones: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Pepino fresco de la granja: **300 g** (50 g/persona)
 - *Verduras y Hortalizas Frescas*: Apio tierno crujiente en bastones: **240 g** (40 g/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
@@ -317,7 +317,7 @@
 - *Verduras y Hortalizas Frescas*: Aguacate Hass fresco en láminas: **360 g** (60 g/persona)
 - *Lácteos y Grasas Saludables*: Aceite de ajonjolí tostado prensado en frío: **30 ml** (5 ml/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
-- *Semillas y Frutos Secos*: Semillas de sésamo tostadas: **18 g** (3 g/persona)
+- *Semillas y Frutos Secos*: Semillas de sésamo (ajonjolí): **18 g** (3 g/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -369,7 +369,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Huevos y Ovoproductos*: Huevos orgánicos enteros de libre pastoreo: **18 piezas** (3 piezas/persona)
-- *Carnes, Aves y Pescados*: Machaca de res magra artesanal deshebrada fina: **180 g** (30 g/persona)
+- *Carnes, Aves y Pescados*: Carne seca machaca artesanal de res: **180 g** (30 g/persona)
 - *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **72 g** (12 g/persona)
 - *Especias, Hierbas y Condimentos*: Hojas de orégano silvestre seco: **6 g** (1 g/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
@@ -388,7 +388,7 @@
 - *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
 - *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
-- *Frutas Cetogénicas*: Jugo y arilos de granada fresca macerados: **180 g** (30 g/persona)
+- *Frutas Cetogénicas*: Arilos de granada fresca de la granja: **180 g** (30 g/persona)
 - *Líquidos e Infusiones*: Infusión botánica de manzanilla y frutos rojos: **720 ml** (120 ml/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -406,7 +406,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Verduras y Hortalizas Frescas*: Coliflor fresca de la granja en floretes: **600 g** (100 g/persona)
-- *Verduras y Hortalizas Frescas*: Dientes de ajo enteros con piel: **30 g** (5 g/persona)
+- *Verduras y Hortalizas Frescas*: Ajo fresco de la granja: **30 g** (5 g/persona)
 - *Líquidos e Infusiones*: Caldo de pollo o fondo vegetal casero: **600 ml** (100 ml/persona)
 - *Lácteos y Grasas Saludables*: Queso de cabra suave artesanal: **120 g** (20 g/persona)
 - *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **48 g** (8 g/persona)
@@ -458,7 +458,7 @@
 - **Nota Organoléptica y Bioquímica:** *"Crudos de calabacín y apio blanco refrescantes con ácido cítrico natural y sales marinas."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *Verduras y Hortalizas Frescas*: Calabacita zucchini fresca en bastones: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Calabacitas verdes tiernas de la granja: **300 g** (50 g/persona)
 - *Verduras y Hortalizas Frescas*: Apio tierno crujiente en bastones: **240 g** (40 g/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
@@ -514,7 +514,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Frutas Cetogénicas*: Arándanos frescos de la granja: **300 g** (50 g/persona)
-- *Semillas y Frutos Secos*: Nueces pecana troceadas: **90 g** (15 g/persona)
+- *Semillas y Frutos Secos*: Nuez pecana: **90 g** (15 g/persona)
 - *Semillas y Frutos Secos*: Semillas de girasol tostadas sin sal: **48 g** (8 g/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -524,7 +524,7 @@
 4. Esparcir las nueces pecana y las semillas de girasol tostadas por encima; servir fresco a 12°C.
 
 ##### 🥩 PLATILLO PRINCIPAL: Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente
-- **Técnica Culinaria:** `baveuse_omelette`
+- **Técnica Culinaria:** `poach_and_emulsion`
 - **Nota Organoléptica y Bioquímica:** *"Reinterpretación gastronómica cetogénica: base aérea de claras montadas al horno con parmesano, coronadas con tocino de pavo crujiente, yema pochada suave y salsa holandesa casera tibia."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -549,7 +549,7 @@
 - *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
 - *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
-- *Frutas Cetogénicas*: Arándanos frescos macerados: **180 g** (30 g/persona)
+- *Frutas Cetogénicas*: Arándanos frescos de la granja: **180 g** (30 g/persona)
 - *Líquidos e Infusiones*: Infusión de frutos rojos y té blanco: **720 ml** (120 ml/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -603,7 +603,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Verduras y Hortalizas Frescas*: Ejotes verdes tiernos de la granja: **600 g** (100 g/persona)
-- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **48 g** (8 g/persona)
+- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **90 g** (15 g/persona)
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
@@ -621,8 +621,8 @@
 - **Nota Organoléptica y Bioquímica:** *"Aperitivo fresco hidratante vegetal con pepino y calabacita cortados al momento."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *Verduras y Hortalizas Frescas*: Pepino verde fresco en bastones: **300 g** (50 g/persona)
-- *Verduras y Hortalizas Frescas*: Calabacita zucchini fresca en bastones: **240 g** (40 g/persona)
+- *Verduras y Hortalizas Frescas*: Pepino fresco de la granja: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Calabacitas verdes tiernas de la granja: **240 g** (40 g/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
@@ -679,6 +679,7 @@
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Frutas Cetogénicas*: Pitaya fresca de la granja en cubos: **300 g** (50 g/persona)
 - *Semillas y Frutos Secos*: Coco rallado deshidratado sin azúcar: **60 g** (10 g/persona)
+- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **30 g** (5 g/persona)
 - *Semillas y Frutos Secos*: Semillas de chía orgánicas: **48 g** (8 g/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -711,7 +712,7 @@
 - *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
 - *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
-- *Frutas Cetogénicas*: Pulpa de pitaya fresca licuada: **180 g** (30 g/persona)
+- *Frutas Cetogénicas*: Pitaya fresca de la granja: **180 g** (30 g/persona)
 - *Líquidos e Infusiones*: Infusión de zacate limón y menta: **720 ml** (120 ml/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -747,7 +748,7 @@
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Carnes, Aves y Pescados*: Filetes de huachinango fresco con piel: **900 g** (150 g/persona)
 - *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **60 g** (10 g/persona)
-- *Verduras y Hortalizas Frescas*: Dientes de ajo picados muy fino: **18 g** (3 g/persona)
+- *Verduras y Hortalizas Frescas*: Ajo fresco de la granja: **18 g** (3 g/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **36 ml** (6 ml/persona)
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **24 ml** (4 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
@@ -764,7 +765,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Verduras y Hortalizas Frescas*: Ejotes verdes tiernos de la granja: **600 g** (100 g/persona)
-- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **48 g** (8 g/persona)
+- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **90 g** (15 g/persona)
 - *Lácteos y Grasas Saludables*: Mantequilla clarificada (Ghee): **36 g** (6 g/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
@@ -800,7 +801,7 @@
 - *Verduras y Hortalizas Frescas*: Sombreros de champiñón Portobello frescos grandes: **12 piezas** (2 piezas/persona)
 - *Verduras y Hortalizas Frescas*: Espinacas frescas de la granja: **360 g** (60 g/persona)
 - *Lácteos y Grasas Saludables*: Queso crema artesanal sin almidón: **180 g** (30 g/persona)
-- *Semillas y Frutos Secos*: Nueces pecana picadas rústicas: **60 g** (10 g/persona)
+- *Semillas y Frutos Secos*: Nuez pecana: **60 g** (10 g/persona)
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
 - *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado: **36 g** (6 g/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
@@ -849,7 +850,7 @@
 4. Aderezar con las nueces y las semillas de chía; servir a 12°C.
 
 ##### 🥩 PLATILLO PRINCIPAL: Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela
-- **Técnica Culinaria:** `baveuse_omelette`
+- **Técnica Culinaria:** `tamagoyaki_roll`
 - **Nota Organoléptica y Bioquímica:** *"Tortilla japonesa en múltiples capas delgadas enrolladas al calor en mantequilla de pastoreo con tiras de queso panela artesanal fundido en el núcleo."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -872,7 +873,7 @@
 - *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
 - *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
-- *Frutas Cetogénicas*: Fresas frescas maceradas para coulis: **180 g** (30 g/persona)
+- *Frutas Cetogénicas*: Fresas frescas de la granja: **180 g** (30 g/persona)
 - *Líquidos e Infusiones*: Infusión de frutos rojos y flores de jamaica suave: **720 ml** (120 ml/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -908,7 +909,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Carnes, Aves y Pescados*: Medallones de atún fresco calidad sashimi: **900 g** (150 g/persona)
-- *Semillas y Frutos Secos*: Semillas de ajonjolí blanco y negro (sésamo): **60 g** (10 g/persona)
+- *Semillas y Frutos Secos*: Semillas de sésamo (ajonjolí): **60 g** (10 g/persona)
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **36 ml** (6 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
@@ -943,7 +944,7 @@
 - **Nota Organoléptica y Bioquímica:** *"Bastoncitos crujientes de hortalizas frescas aderezados con limón y sal mineral para inicio de digestión suave."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *Verduras y Hortalizas Frescas*: Calabacita zucchini fresca en bastones: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Calabacitas verdes tiernas de la granja: **300 g** (50 g/persona)
 - *Verduras y Hortalizas Frescas*: Apio tierno crujiente en bastones: **240 g** (40 g/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
@@ -1010,7 +1011,7 @@
 4. Espolvorear con las almendras fileteadas tostadas y las semillas de chía crudas; servir a 12°C.
 
 ##### 🥩 PLATILLO PRINCIPAL: Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra
-- **Técnica Culinaria:** `scrambled_stir_fry`
+- **Técnica Culinaria:** `skillet_bake`
 - **Nota Organoléptica y Bioquímica:** *"Huevos enteros de pastoreo horneados en cazuelas individuales de barro vidriado sobre espinacas salteadas a la mantequilla y medallón de queso de cabra gratinado."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -1034,7 +1035,7 @@
 - *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
 - *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
 - *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
-- *Frutas Cetogénicas*: Zarzamoras frescas maceradas: **180 g** (30 g/persona)
+- *Frutas Cetogénicas*: Zarzamoras frescas de la granja: **180 g** (30 g/persona)
 - *Líquidos e Infusiones*: Infusión botánica de frutos negros y menta: **720 ml** (120 ml/persona)
 
 **Procedimiento Paso a Paso de Autor:**
@@ -1052,7 +1053,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *Verduras y Hortalizas Frescas*: Espinacas frescas de la granja: **600 g** (100 g/persona)
-- *Verduras y Hortalizas Frescas*: Dientes de ajo rostizados en su piel: **24 g** (4 g/persona)
+- *Verduras y Hortalizas Frescas*: Ajo fresco de la granja: **24 g** (4 g/persona)
 - *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **48 g** (8 g/persona)
 - *Líquidos e Infusiones*: Caldo claro de verduras o pollo casero: **600 ml** (100 ml/persona)
 - *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado: **60 g** (10 g/persona)
@@ -1086,7 +1087,7 @@
 - **Nota Organoléptica y Bioquímica:** *"Rodajas tiernas de calabacita salteadas rápidamente en mantequilla con sal marina."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *Verduras y Hortalizas Frescas*: Calabacitas verdes frescas en rodajas: **600 g** (100 g/persona)
+- *Verduras y Hortalizas Frescas*: Calabacitas verdes tiernas de la granja: **600 g** (100 g/persona)
 - *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **36 g** (6 g/persona)
 - *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
@@ -1116,7 +1117,7 @@
 4. Repartir con suavidad en 6 platos fríos.
 
 ##### 🥩 PLATILLO PRINCIPAL: Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate
-- **Técnica Culinaria:** `raw_assembly`
+- **Técnica Culinaria:** `taco_wrap`
 - **Nota Organoléptica y Bioquímica:** *"Wraps cetogénicos crujientes en hojas vivas de lechuga orejona rellenos de pollo deshebrado jugoso, abanicos de aguacate Hass y aceite de oliva virgen extra."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
@@ -1156,6 +1157,7 @@
 | Insumo | Cantidad Total (6 Comensales) | Unidad | Categoría |
 |---|---|---|---|
 | **Arrachera de res magra limpia** | 900 | g | Carnes, Aves y Pescados |
+| **Carne seca machaca artesanal de res** | 180 | g | Carnes, Aves y Pescados |
 | **Filete de pescado blanco de captura (Robalo o Corvina)** | 780 | g | Carnes, Aves y Pescados |
 | **Filete de robalo salvaje fresco calidad ceviche** | 780 | g | Carnes, Aves y Pescados |
 | **Filetes de huachinango fresco con piel** | 900 | g | Carnes, Aves y Pescados |
@@ -1165,7 +1167,7 @@
 | **Pechuga de pavo artesanal** | 2460 | g | Carnes, Aves y Pescados |
 | **Pechuga de pollo orgánica** | 2580 | g | Carnes, Aves y Pescados |
 | **Tocino de pavo artesanal** | 180 | g | Carnes, Aves y Pescados |
-| **Jugo de limón fresco recién exprimido** | 15 | piezas | Cítricos y Ácidos Naturales |
+| **Limones frescos** | 21 | piezas | Cítricos y Ácidos Naturales |
 | **Vinagre de manzana orgánico sin filtrar** | 18 | ml | Cítricos y Ácidos Naturales |
 | **Cebollín fresco de la granja** | 18 | g | Especias, Hierbas y Condimentos |
 | **Cilantro fresco** | 18 | g | Especias, Hierbas y Condimentos |
@@ -1184,22 +1186,15 @@
 | **Hojas de toronjil fresco de la granja** | 120 | g | Especias, Hierbas y Condimentos |
 | **Sal de mar mineral de Colima** | 252 | g | Especias, Hierbas y Condimentos |
 | **Semillas y hojas de hinojo fresco** | 24 | g | Especias, Hierbas y Condimentos |
-| **Arilos de granada fresca de la granja** | 300 | g | Frutas Cetogénicas |
-| **Arándanos frescos de la granja** | 300 | g | Frutas Cetogénicas |
-| **Arándanos frescos macerados** | 180 | g | Frutas Cetogénicas |
-| **Frambuesas frescas orgánicas** | 300 | g | Frutas Cetogénicas |
-| **Frambuesas frescas para puré base** | 180 | g | Frutas Cetogénicas |
-| **Fresas frescas de la granja en mitades** | 300 | g | Frutas Cetogénicas |
-| **Fresas frescas maceradas para coulis** | 180 | g | Frutas Cetogénicas |
-| **Jugo y arilos de granada fresca macerados** | 180 | g | Frutas Cetogénicas |
-| **Moras frescas de la granja** | 300 | g | Frutas Cetogénicas |
-| **Moras frescas para coulis de gelatina** | 180 | g | Frutas Cetogénicas |
-| **Pitaya fresca de la granja** | 300 | g | Frutas Cetogénicas |
-| **Pulpa de pitaya fresca licuada** | 180 | g | Frutas Cetogénicas |
-| **Zarzamoras frescas de la granja** | 300 | g | Frutas Cetogénicas |
-| **Zarzamoras frescas maceradas** | 180 | g | Frutas Cetogénicas |
+| **Arilos de granada fresca de la granja** | 480 | g | Frutas Cetogénicas |
+| **Arándanos frescos de la granja** | 480 | g | Frutas Cetogénicas |
+| **Frambuesas frescas orgánicas** | 480 | g | Frutas Cetogénicas |
+| **Fresas frescas de la granja** | 480 | g | Frutas Cetogénicas |
+| **Moras frescas de la granja** | 480 | g | Frutas Cetogénicas |
+| **Pitaya fresca de la granja** | 480 | g | Frutas Cetogénicas |
+| **Zarzamoras frescas de la granja** | 480 | g | Frutas Cetogénicas |
 | **Huevos orgánicos de libre pastoreo** | 126 | piezas | Huevos y Ovoproductos |
-| **Aceite de ajonjolí prensado en frío** | 30 | ml | Lácteos y Grasas Saludables |
+| **Aceite de ajonjolí tostado** | 30 | ml | Lácteos y Grasas Saludables |
 | **Aceite de oliva extra virgen (VEVO)** | 750 | ml | Lácteos y Grasas Saludables |
 | **Crema entera de rancho sin pasteurizar ultra** | 300 | ml | Lácteos y Grasas Saludables |
 | **Grenetina natural pura (colágeno hidrolizado)** | 294 | g | Lácteos y Grasas Saludables |
@@ -1225,35 +1220,26 @@
 | **Infusión de frutos rojos y menta** | 720 | ml | Líquidos e Infusiones |
 | **Infusión de frutos rojos y té blanco** | 720 | ml | Líquidos e Infusiones |
 | **Infusión de hierbabuena y flores rojas** | 720 | ml | Líquidos e Infusiones |
-| **Limones frescos** | 21 | piezas | Líquidos e Infusiones |
-| **Almendras fileteadas tostadas** | 366 | g | Semillas y Frutos Secos |
+| **Zacate limón deshidratado para infusión** | 30 | piezas | Líquidos e Infusiones |
+| **Almendras fileteadas tostadas** | 480 | g | Semillas y Frutos Secos |
 | **Coco deshidratado sin azúcar** | 60 | g | Semillas y Frutos Secos |
 | **Nueces de Castilla** | 90 | g | Semillas y Frutos Secos |
-| **Nueces pecana** | 90 | g | Semillas y Frutos Secos |
-| **Nueces pecana en mitades** | 90 | g | Semillas y Frutos Secos |
-| **Nueces pecana rústicas** | 60 | g | Semillas y Frutos Secos |
-| **Semillas de ajonjolí blanco y negro (sésamo)** | 60 | g | Semillas y Frutos Secos |
+| **Nuez pecana** | 240 | g | Semillas y Frutos Secos |
 | **Semillas de chía orgánicas** | 288 | g | Semillas y Frutos Secos |
 | **Semillas de girasol sin sal** | 48 | g | Semillas y Frutos Secos |
-| **Semillas de sésamo** | 18 | g | Semillas y Frutos Secos |
-| **Semillas de sésamo (ajonjolí blanco y negro)** | 60 | g | Semillas y Frutos Secos |
+| **Semillas de sésamo (ajonjolí)** | 138 | g | Semillas y Frutos Secos |
 | **Fórmula Biotecnológica Nootrópica 33Plus®** | 210 | g | Suplementación T.I.L.O. |
 | **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | Suplementación T.I.L.O. |
 | **Aguacate Hass fresco** | 23 | piezas | Verduras y Hortalizas Frescas |
+| **Ajo fresco de la granja** | 96 | g | Verduras y Hortalizas Frescas |
 | **Apio tierno en bastones** | 720 | g | Verduras y Hortalizas Frescas |
 | **Arúgula fresca de la granja** | 480 | g | Verduras y Hortalizas Frescas |
 | **Arúgula y espinaca baby fresca mixta** | 300 | g | Verduras y Hortalizas Frescas |
 | **Bulbo de hinojo fresco traslúcidas** | 300 | g | Verduras y Hortalizas Frescas |
-| **Calabacita zucchini fresca en bastones** | 840 | g | Verduras y Hortalizas Frescas |
-| **Calabacitas verdes frescas** | 600 | g | Verduras y Hortalizas Frescas |
-| **Calabacitas verdes frescas en espiral (zoodles)** | 600 | g | Verduras y Hortalizas Frescas |
-| **Carne seca machaca artesanal de res** | 204 | g | Verduras y Hortalizas Frescas |
+| **Calabacitas verdes tiernas de la granja** | 2040 | g | Verduras y Hortalizas Frescas |
 | **Champiñones Portobello frescos** | 22 | piezas | Verduras y Hortalizas Frescas |
 | **Chayotes tiernos pelados** | 600 | g | Verduras y Hortalizas Frescas |
 | **Coliflor fresca de la granja en floretes** | 600 | g | Verduras y Hortalizas Frescas |
-| **Dientes de ajo en su piel** | 24 | g | Verduras y Hortalizas Frescas |
-| **Dientes de ajo enteros con piel** | 30 | g | Verduras y Hortalizas Frescas |
-| **Dientes de ajo muy fino** | 18 | g | Verduras y Hortalizas Frescas |
 | **Ejotes verdes tiernos de la granja** | 1560 | g | Verduras y Hortalizas Frescas |
 | **Espinacas baby tiernas** | 240 | g | Verduras y Hortalizas Frescas |
 | **Espinacas frescas de la granja** | 1680 | g | Verduras y Hortalizas Frescas |
@@ -1261,8 +1247,7 @@
 | **Flor de calabaza fresca limpia (sin cáliz amargo)** | 600 | g | Verduras y Hortalizas Frescas |
 | **Hojas grandes de lechuga orejona viva de la granja** | 18 | piezas | Verduras y Hortalizas Frescas |
 | **Nopales tiernos de la granja cortados finos** | 360 | g | Verduras y Hortalizas Frescas |
-| **Pepino verde fresco en bastones** | 300 | g | Verduras y Hortalizas Frescas |
-| **Pepino verde pelado sin semillas en bastones** | 300 | g | Verduras y Hortalizas Frescas |
+| **Pepino fresco de la granja** | 600 | g | Verduras y Hortalizas Frescas |
 
 ---
 
