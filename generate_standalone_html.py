@@ -7,7 +7,7 @@ os.environ["GEMINI_API_KEY"] = ""
 from app.config import settings
 settings.GEMINI_API_KEY = ""
 from app.services.keto_architect import KetoAIArchitect
-from app.services.inventory_master import InventorySyncMaster
+from app.services.inventory_master import InventorySyncMaster, consolidate_market_bom
 from app.database import init_db
 
 # Carga dinámica de la Lista de Compras desde InventorySyncMaster (SSOT Culinario)
@@ -1752,19 +1752,64 @@ def generate_standalone():
         "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)": plan_40_dict
     }
 
-    # ENRIQUECIMIENTO PASIVO DE RECETAS ESTRUCTURADAS (V15.22.1)
-    for p_dict in [plan_33_dict, plan_34_dict, plan_35_dict, plan_36_dict, plan_37_dict, plan_38_dict, plan_39_dict, plan_40_dict]:
+    def dish_to_typed_recipe(dish_obj):
+        if not dish_obj or not isinstance(dish_obj, dict):
+            return None
+        cat_map = {}
+        for ing in dish_obj.get("ingredients", []):
+            cat = ing.get("category", "Ingredientes")
+            if cat not in cat_map:
+                cat_map[cat] = []
+            per_person = ing.get("per_guest", round(ing.get("amount", 0) / 6.0, 2))
+            cat_map[cat].append({
+                "name": ing.get("name"),
+                "base_qty_per_person": per_person,
+                "qty": ing.get("amount"),
+                "total_qty": ing.get("amount"),
+                "unit": ing.get("unit"),
+                "source": "Granja El Herami" if "granja" in ing.get("name", "").lower() else "Mercado Canónico"
+            })
+        groups = [{"category": c, "items": items} for c, items in cat_map.items()]
+        return {
+            "title": dish_obj.get("title"),
+            "name": dish_obj.get("title"),
+            "cooking_technique": dish_obj.get("technique"),
+            "sensory_description": dish_obj.get("note", ""),
+            "coct_reasoning": dish_obj.get("coct_reasoning", {}),
+            "ingredient_groups": groups,
+            "steps": dish_obj.get("steps", [])
+        }
+
+    # ENRIQUECIMIENTO PASIVO DE RECETAS ESTRUCTURADAS (Semanas 33 a 39)
+    for p_dict in [plan_33_dict, plan_34_dict, plan_35_dict, plan_36_dict, plan_37_dict, plan_38_dict, plan_39_dict]:
         for day in p_dict.get("days", []):
             for meal in day.get("meals", []):
                 s_name = meal.get("starter_name") or meal.get("starter")
                 m_name = meal.get("main_dish_name") or meal.get("dish_name") or meal.get("main")
                 sd_name = meal.get("side_dish_name") or meal.get("side")
-                if s_name:
+                if s_name and isinstance(s_name, str):
                     meal["starter_recipe"] = build_typed_recipe_for_dish(s_name, "starter")
-                if m_name:
+                if m_name and isinstance(m_name, str):
                     meal["main_recipe"] = build_typed_recipe_for_dish(m_name, "main")
-                if sd_name:
+                if sd_name and isinstance(sd_name, str):
                     meal["side_recipe"] = build_typed_recipe_for_dish(sd_name, "side")
+
+    # ENRIQUECIMIENTO COGNITIVO COCT SEMANA 40 (SSOT V36.6 REV3)
+    all_s40_ings = []
+    for day in plan_40_dict.get("days", []):
+        for meal in day.get("meals", []):
+            if "starter" in meal and isinstance(meal["starter"], dict):
+                meal["starter_recipe"] = dish_to_typed_recipe(meal["starter"])
+                all_s40_ings.extend(meal["starter"].get("ingredients", []))
+            if "main" in meal and isinstance(meal["main"], dict):
+                meal["main_recipe"] = dish_to_typed_recipe(meal["main"])
+                all_s40_ings.extend(meal["main"].get("ingredients", []))
+            if "side" in meal and isinstance(meal["side"], dict):
+                meal["side_recipe"] = dish_to_typed_recipe(meal["side"])
+                all_s40_ings.extend(meal["side"].get("ingredients", []))
+
+    s40_canonical_bom = consolidate_market_bom(all_s40_ings)
+    s40_canonical_bom_json = json.dumps(s40_canonical_bom, ensure_ascii=False)
 
     datasets_json = json.dumps(weekly_datasets, ensure_ascii=False)
     shop_json = json.dumps(GRANULAR_SHOPPING_BASE, ensure_ascii=False)
@@ -2475,6 +2520,7 @@ function generateNextWeekMenu() {
     const datasets = """ + datasets_json + """;
     let rawShopBase = """ + shop_json + """;
     const ACTIVE_WEEK_CANONICAL_BOM = """ + canonical_bom_json + """;
+    const ACTIVE_WEEK_40_CANONICAL_BOM = """ + s40_canonical_bom_json + """;
         window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
     window.PANTRY_STOCK_INVENTORY = {
       // Insumos Canónicos Aptos (Status: "canonical")
@@ -4075,6 +4121,23 @@ function calculateActiveMenuBOM(weekKey, diners) {
     }
   }
 
+  if (weekKey && (weekKey.includes("40") || weekKey === "Semana 40") && typeof ACTIVE_WEEK_40_CANONICAL_BOM !== 'undefined' && Array.isArray(ACTIVE_WEEK_40_CANONICAL_BOM) && ACTIVE_WEEK_40_CANONICAL_BOM.length > 0) {
+    const factor = numDiners / 6.0;
+    return ACTIVE_WEEK_40_CANONICAL_BOM.map(item => {
+      const cleanCat = item.category ? item.category.replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ') : '🛒 Abarrotes y Frescos';
+      const slug = normalizeToCanonicalSlug(item.name);
+      return {
+        id: `bought_s40_${slug}`,
+        slug: slug,
+        item_name: item.name,
+        category: cleanCat,
+        quantity: Math.round((item.quantity * factor + Number.EPSILON) * 100) / 100,
+        unit: item.unit || 'g',
+        is_farm: cleanCat.includes('Granja') || cleanCat.includes('Huerto') || cleanCat.includes('Cosecha')
+      };
+    });
+  }
+
   const activePlan = getPlanForWeek(weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40'));
   if (!activePlan || !activePlan.days) return [];
 
@@ -4209,6 +4272,10 @@ function calculateNetShoppingList(diners) {
   let itemsToMutate = rawItemsToProcess.map(it => {
     let name = it.name || it.item_name || '';
     let cat = it.category || '';
+
+    if (typeof activeWeek !== 'undefined' && activeWeek && activeWeek.includes('40')) {
+      return { ...it, name: name, item_name: name, category: cat };
+    }
 
     // 1. Reubicar almendras en grasas
     if (/almendra/i.test(name)) {
@@ -4786,6 +4853,7 @@ function renderCourseCard(courseData, diners, badgeText) {
     title: rawTitle,
     diners: activeDiners,
     sensory_description: sensory,
+    coct_reasoning: recipeObj.coct_reasoning || courseData.coct_reasoning || null,
     ingredient_groups: groups,
     steps: stepsList
   };
@@ -5180,6 +5248,17 @@ function renderRecipes(day, activeDiners) {
           <div class="bg-amber-50/60 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/40 p-3 rounded-xl mb-4 text-xs text-amber-900 dark:text-amber-200 leading-relaxed font-brand-body italic">
             " ${r.sensory_description} "
           </div>
+
+          ${(r.coct_reasoning && typeof r.coct_reasoning === 'object' && Object.keys(r.coct_reasoning).length > 0) ? `
+          <div class="bg-emerald-50/70 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-800 p-3.5 rounded-xl mb-4 text-xs font-brand-body space-y-1.5 shadow-sm text-left">
+            <div class="flex items-center gap-1.5 font-bold text-emerald-800 dark:text-emerald-300 text-[11px] uppercase font-brand-title tracking-wide border-b border-emerald-200 dark:border-emerald-800/60 pb-1">
+              <span>🔬 Razonamiento Culinario CoCT (Física del Bocado):</span>
+            </div>
+            ${r.coct_reasoning.thermodynamics ? `<p class="text-slate-800 dark:text-slate-200"><strong class="text-emerald-700 dark:text-emerald-400">Termodinámica:</strong> ${r.coct_reasoning.thermodynamics}</p>` : ''}
+            ${r.coct_reasoning.flavor_and_aromatics ? `<p class="text-slate-800 dark:text-slate-200"><strong class="text-emerald-700 dark:text-emerald-400">Construcción de Sabor:</strong> ${r.coct_reasoning.flavor_and_aromatics}</p>` : ''}
+            ${r.coct_reasoning.textural_architecture ? `<p class="text-slate-800 dark:text-slate-200"><strong class="text-emerald-700 dark:text-emerald-400">Arquitectura de Textura:</strong> ${r.coct_reasoning.textural_architecture}</p>` : ''}
+            ${r.coct_reasoning.critical_control_points ? `<p class="text-slate-800 dark:text-slate-200"><strong class="text-emerald-700 dark:text-emerald-400">Puntos Críticos de Control:</strong> ${r.coct_reasoning.critical_control_points}</p>` : ''}
+          </div>` : ''}
 
           <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
             <div>
@@ -6691,6 +6770,7 @@ function renderRecipes(day, activeDiners) {
         f.write(html_content)
 
     shutil.copy("expediente_nutriketo.html", "index.html")
+    shutil.copy("expediente_nutriketo.html", "atelier.html")
     if os.path.exists("app/static"):
         shutil.copy("expediente_nutriketo.html", "app/static/index.html")
 

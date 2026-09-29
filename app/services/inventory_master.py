@@ -303,7 +303,7 @@ def consolidate_market_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> Lis
 
     for item in weekly_dish_ingredients:
         raw_name = resolve_to_market_raw_material(item.get("name") or item.get("item_name", ""))
-        qty = float(item.get("quantity") or item.get("base_qty", 1.0))
+        qty = float(item.get("amount") or item.get("quantity") or item.get("base_qty", 1.0))
         unit = str(item.get("unit", "g")).strip().lower()
         category = item.get("category") or "General"
         if raw_name in [
