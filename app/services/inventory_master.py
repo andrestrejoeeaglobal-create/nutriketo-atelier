@@ -1,5 +1,6 @@
 import sqlite3
 import re
+import math
 from typing import List, Dict, Any, Optional
 from app.database import get_db
 from app.logger import logger
@@ -247,9 +248,9 @@ def resolve_to_market_raw_material(dish_ingredient_name: str) -> str:
         return "Queso Panela artesanal"
     if "tocino de pavo" in cn_lower:
         return "Tocino de pavo artesanal"
-    if "pechuga de pollo" in cn_lower or ("pollo" in cn_lower and "caldo" not in cn_lower):
+    if "pechuga de pollo" in cn_lower or ("pollo" in cn_lower and "caldo" not in cn_lower and "fondo" not in cn_lower):
         return "Pechuga de pollo orgánica"
-    if "pechuga de pavo" in cn_lower or ("pavo" in cn_lower and "tocino" not in cn_lower):
+    if "pechuga de pavo" in cn_lower or ("pavo" in cn_lower and "tocino" not in cn_lower and "caldo" not in cn_lower and "fondo" not in cn_lower):
         return "Pechuga de pavo artesanal"
     if "machaca" in cn_lower:
         return "Carne seca machaca artesanal de res"
@@ -295,6 +296,10 @@ def consolidate_market_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> Lis
             consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["aguacate_hass_fresco"]
         elif "limon" in slug and unit in ["ml", "g"]:
             consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["limon_fresco"]
+            consolidated_items[raw_name]["unit"] = "piezas"
+            consolidated_items[raw_name]["is_piece"] = True
+        elif "portobello" in slug and unit == "g":
+            consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["champiñon_portobello"]
             consolidated_items[raw_name]["unit"] = "piezas"
             consolidated_items[raw_name]["is_piece"] = True
         else:

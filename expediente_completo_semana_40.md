@@ -1,12 +1,13 @@
 # 📄 Expediente Técnico Canónico Semanal — Semana 40
 **Semana 40 (27 de Septiembre al 03 de Octubre de 2026)**  
 **Ecosistema:** NutriKeto Atelier T.I.L.O.® — Arquitectura Bioquímica SSOT V36.6 REV3  
-**Comensales Activos:** 6 Personas  
+**Comensales Activos:** 6 Personas | **Ratio de Huevo:** 3 Huevos Enteros al Desayuno (Leucina $\ge 2.5\text{ g}$)  
 
 ---
 
-## 1. Menú Sintético Semanal (Visión Ejecutiva)
-| Día | Desayuno (Huevo Orgánico & Nootrópico) | Comida (3 Tiempos Atwater) | Cena (Digestión Ligera & 34Plus®) |
+## 1. Menú Semanal Canónico (Visión Ejecutiva)
+
+| Día | Desayuno (Huevo Orgánico & 33Plus®) | Comida (3 Tiempos Atwater) | Cena (Digestión Ligera & 34Plus®) |
 |---|---|---|---|
 | **Domingo 27 Sep** | Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo | Corte Magro de Arrachera de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo | Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano |
 | **Lunes 28 Sep** | Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda | Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano | Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón |
@@ -18,1333 +19,1255 @@
 
 ---
 
-## 2. Recetario Canónico Día por Día
+## 2. Recetario Técnico y Gastronómico Día por Día
 
-### 📅 DOMINGO 27 SEP
+### 📅 DOMINGO 27 DE SEPTIEMBRE DE 2026
 
-#### 🍽️ Servicio: DESAYUNO (424 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.0g` | Carbs Netos: `3.2g`  
+#### 🍽️ Servicio: DESAYUNO (511 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `38.5g` | Proteína: `35.8g` | Carbs Netos: `5.4g`  
 
 ##### 🥗 ENTRADA: Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Nota de Cata y Balance Sensorial: Entrada cetogénica fresca y viva que resalta la acidez natural de moras frescas en contraste con el perfil crujiente y lípido de almendras fileteadas tostadas, semillas de chía orgánicas. Aporta fitonutrientes y carbohidratos de bajo impacto glucémico."* 
+- **Nota Organoléptica y Bioquímica:** *"Entrada cetogénica fresca y viva que resalta la acidez natural de las moras de cosecha con el contraste lípido de almendras tostadas y semillas de chía hidratadas."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍓 Fruta Fresca de Cosecha Activa*
-  - Moras frescas de la granja: **300 g** (50 g/persona)
-- *🌰 Grasas Saludables, Semillas y Crujientes*
-  - Almendras fileteadas tostadas: **90 g** (15 g/persona)
-  - Semillas de chía orgánicas: **48 g** (8 g/persona)
+- *Frutas Cetogénicas*: Moras frescas de la granja: **300 g** (50 g/persona)
+- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **90 g** (15 g/persona)
+- *Semillas y Frutos Secos*: Semillas de chía orgánicas: **48 g** (8 g/persona)
 
-**Procedimiento Paso a Paso:**
-1. Selección e Higienización Criogénica: - Seleccionar e higienizar delicadamente las moras frescas a 10°C con agua purificada. - Reservar los frutos vivos de cosecha en su punto óptimo de turgencia y madurez.
-2. Porcionado y Ensamble de Precisión: - Disponer las moras frescas porcionadas y enteras según su calibre natural. - Acomodarlas en copas de cristal o tazones individuales de cristal.
-3. Acondicionamiento Crujiente y Semillas: - Espolvorear en forma de lluvia almendras fileteadas tostadas, semillas de chía orgánicas sobre la superficie frutal.
-4. Servicio Gourmet Fresco: - Presentar de inmediato a temperatura fresca (10°C–12°C) como entrada metabólica rica en antioxidantes vivos.
+**Procedimiento Paso a Paso de Autor:**
+1. Seleccionar e higienizar delicadamente las moras frescas con agua purificada fría a 10°C; escurrir sobre papel absorbente para preservar la cutícula frutal intacta.
+2. Distribuir las moras enteras de manera homogénea en 6 copas o tazones de cristal frío.
+3. Tostar ligeramente las almendras fileteadas en sartén seca a 120°C por 90 segundos hasta liberar aceites esenciales sin dorar en exceso; dejar enfriar.
+4. Espolvorear en lluvia fina las almendras tostadas y las semillas de chía crudas sobre las moras; servir de inmediato a temperatura fresca (12°C).
 
 ##### 🥩 PLATILLO PRINCIPAL: Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo
 - **Técnica Culinaria:** `scrambled_stir_fry`
-- **Nota Organoléptica:** *"Huevos revueltos rústicos suaves cocinados al sartén en mantequilla de pastoreo con vegetales frescos sofritos al dente."* 
+- **Nota Organoléptica y Bioquímica:** *"Huevos enteros de pastoreo cuajados a fuego lento en cuajada sedosa con ejotes tiernos blanqueados y salteados al dente en mantequilla de pastoreo."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥚 Proteína de Huevo Orgánico*
-  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
-- *🥦 Vegetal de Acompañamiento y Relleno*
-  - Ejotes verdes frescos de la granja: **240 g** (40 g/persona)
-- *🧈 Grasa y Sazón Mineral*
-  - Mantequilla de pastoreo / Ghee: **60 g** (10 g/persona)
-  - Sal de mar mineral: **6 g** (1 g/persona)
+- *Huevos y Ovoproductos*: Huevos orgánicos enteros de libre pastoreo: **18 piezas** (3 piezas/persona)
+- *Verduras y Hortalizas Frescas*: Ejotes verdes tiernos de la granja: **360 g** (60 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **72 g** (12 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
-**Procedimiento Paso a Paso:**
-1. Batido de Huevo: Batir los huevos orgánicos con sal mineral hasta homogenizar la emulsión.
-2. Salteado Vegetal: Saltear los vegetales frescos en mantequilla a fuego medio (140°C) durante 2 minutos hasta suavizar.
-3. Cuajado Cremoso: Verter la mezcla de huevo sobre los vegetales salteados, moviendo suavemente con espátula desde los bordes.
-4. Servicio Gourmet: Retirar del fuego antes de resecar y servir caliente a 65°C.
+**Procedimiento Paso a Paso de Autor:**
+1. Despuntar y cortar los ejotes verdes en segmentos de 3 cm; blanquear en agua hirviendo con sal durante 3 minutos y cortar cocción en baño de hielo para fijar clorofila.
+2. Cascar los 18 huevos enteros en un tazón amplio; añadir la sal de mar mineral y batir con batidor de globo durante 45 segundos hasta homogenizar yemas y claras con aireación ligera.
+3. Calentar una sartén de hierro o fondo grueso a 130°C con 36 g de mantequilla; saltear los ejotes blanqueados y bien secos por 2 minutos hasta impregnar aroma.
+4. Añadir el resto de la mantequilla, reducir el fuego a 115°C y verter la mezcla de huevos. Mover continuamente con espátula de silicón desde los bordes hacia el centro en ondas suaves durante 3-4 minutos hasta formar cuajada húmeda y brillante (baveuse). Retirar del calor residual y servir caliente a 65°C.
 
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®
-- **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Moras frescas de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Gelatina Artesanal de Moras Frescas (4°C) con Fórmula Nootrópica 33Plus®
+- **Técnica Culinaria:** `cold_gelatin_infusion`
+- **Nota Organoléptica y Bioquímica:** *"Matriz hidrocoloide de colágeno hidrolizado puro con pulpa natural de moras y preservación biológica de los adaptógenos de 33Plus® a baja temperatura."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
-- *🍮 Base Hidrocoloide y Gelificante*
-  - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
-  - Agua fría para hidratar: **210 ml** (35 ml/persona)
-- *🫐 Extracto Frutal e Infusión Viva*
-  - Moras frescas de la granja: **180 g** (30 g/persona)
-  - Infusión de té de frutos rojos y menta: **720 ml** (120 ml/persona)
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
+- *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
+- *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
+- *Frutas Cetogénicas*: Moras frescas para coulis de gelatina: **180 g** (30 g/persona)
+- *Líquidos e Infusiones*: Infusión de frutos rojos y menta: **720 ml** (120 ml/persona)
 
-**Procedimiento Paso a Paso:**
-1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
-3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
-4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
+**Procedimiento Paso a Paso de Autor:**
+1. Espolvorear la grenetina en forma de lluvia sobre los 210 ml de agua purificada fría a 15°C; dejar reposar 7 minutos hasta hidratación y gelificación completa.
+2. Triturar ligeramente las moras frescas con tenedor y templar la infusión de frutos rojos y menta a máximo 60°C (temperatura de protección de principios activos nootrópicos).
+3. Disolver la grenetina hidratada en la infusión tibia mediante agitación constante. Incorporar los 30 g de Fórmula Nootrópica 33Plus® e integrar vigorosamente hasta homogeneidad límpida.
+4. Repartir las moras trituradas en 6 moldes de cristal y vaciar la mezcla coloidal líquida; refrigerar a 4°C durante 3 horas y media hasta consistencia firme y servir frío a 4°C.
 
-#### 🍽️ Servicio: COMIDA (642 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `44.0g` | Carbs Netos: `4.0g`  
+#### 🍽️ Servicio: COMIDA (632 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `48.0g` | Proteína: `45.2g` | Carbs Netos: `4.8g`  
 
 ##### 🥗 ENTRADA: Crema Caliente de Flor de Calabaza y Queso de Cabra
 - **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica:** *"Emulsión caliente y tersa de Crema Caliente de Flor de Calabaza y Queso de Cabra sazonada con hierbas de la granja y grasa cetogénica de pastoreo."* 
+- **Nota Organoléptica y Bioquímica:** *"Sopa aterciopelada y cálida elaborada con flores de calabaza limpias, fondo de vegetales y emulsión cremosa de queso de cabra artesanal."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍵 Base Vegetal / Extracto Mineral*
-  - Flor de calabaza fresca de la granja: **720 g** (120 g/persona)
-- *🧈 Emulsión y Sazón*
-  - Mantequilla de pastoreo / Crema entera: **90 g** (15 g/persona)
-  - Queso Parmesano o de cabra: **60 g** (10 g/persona)
-  - Sal de mar y pimienta blanca: **9 g** (1.5 g/persona)
+- *Verduras y Hortalizas Frescas*: Flor de calabaza fresca limpia (sin cáliz amargo): **600 g** (100 g/persona)
+- *Líquidos e Infusiones*: Caldo de hueso o fondo vegetal casero sin almidón: **600 ml** (100 ml/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **48 g** (8 g/persona)
+- *Lácteos y Grasas Saludables*: Queso de cabra suave artesanal: **120 g** (20 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
-**Procedimiento Paso a Paso:**
-1. Sofreír vegetales en mantequilla sin dorar.
-2. Cocinar en caldo a fuego medio-bajo (85-95°C) por 10 minutos hasta tiernos.
-3. Licuar a alta velocidad hasta textura terciopelo.
-4. Emulsionar con crema a fuego bajo sin hervir y servir caliente a 68°C.
+**Procedimiento Paso a Paso de Autor:**
+1. Retirar tallos y pistilos amargos de las flores de calabaza; enjuagar con agua fría y escurrir perfectamente.
+2. Fundir 48 g de mantequilla en una cacerola a fuego suave (120°C); añadir las flores de calabaza y sudar por 3 minutos sin que tomen coloración tostada.
+3. Verter el fondo casero tibio y la sal de mar; cocinar a hervor apenas perceptible (85°C) durante 6 minutos para extraer pigmentos y sabor.
+4. Transferir al vaso de la licuadora con el queso de cabra desmenuzado; procesar a máxima velocidad durante 2 minutos hasta obtener una emulsión lisa, densa y brillante. Servir de inmediato a 68°C en platos hondos precalentados.
 
 ##### 🥩 PLATILLO PRINCIPAL: Corte Magro de Arrachera de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo
 - **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Corte Magro de Arrachera de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Nota Organoléptica y Bioquímica:** *"Corte premium de arrachera magra sellado a fuego vivo para caramelización Maillard de superficie, bañado en mantequilla infusionada con ajo confitado y hojas de tomillo."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Corte Magro de Arrachera de Res: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
+- *Carnes, Aves y Pescados*: Arrachera de res magra limpia: **900 g** (150 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **60 g** (10 g/persona)
+- *Verduras y Hortalizas Frescas*: Ajo fresco machacado (confitado): **24 g** (4 g/persona)
+- *Especias, Hierbas y Condimentos*: Hojas de tomillo fresco: **12 g** (2 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
-**Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Corte Magro de Arrachera de Res con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
+**Procedimiento Paso a Paso de Autor:**
+1. Atemperar la arrachera fuera de refrigeración por 20 minutos; secar la humedad superficial con toallas de papel y frotar con 30 ml de aceite VEVO y sal mineral.
+2. Calentar una parrilla o plancha estriada de hierro fundido hasta alcanzar 210°C (humo incipiente). Colocar las porciones de arrachera asegurando contacto directo sin amontonar.
+3. Sellar firmemente durante 3 minutos y medio por lado sin mover la carne para lograr costra crocante y término medio jugoso (temperatura interna de 55°C).
+4. En los últimos 60 segundos, añadir la mantequilla, el ajo confitado y el tomillo sobre la carne, bañando las piezas constantemente con la cuchara (arrosé). Pasar a tabla y reposar 5 minutos antes de rebanar a contrahebra.
 
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Espárragos Verdes al Horno con Limón y Sal de Mar Mineral
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Espárragos Verdes al Horno con Limón y Sal de Mar Mineral
 - **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Espárragos verdes frescos cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
+- **Nota Organoléptica y Bioquímica:** *"Espárragos trigueros horneados a alta temperatura hasta adquirir puntas crocantes, terminados con zest y zumo de limón fresco."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Espárragos verdes frescos troceados: **720 g** (120 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
+- *Verduras y Hortalizas Frescas*: Espárragos verdes frescos: **600 g** (100 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Espárragos verdes frescos de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
+**Procedimiento Paso a Paso de Autor:**
+1. Romper la base leñosa de cada espárrago por su punto de quiebre natural; enjuagar y secar completamente.
+2. Disponer los espárragos en una bandeja metálica en una sola capa; rociar con 36 ml de aceite VEVO y espolvorear la sal mineral, frotando bien los tallos.
+3. Hornear a 200°C en horno precalentado durante 10-12 minutos hasta que los tallos estén tiernos al tenedor y las puntas ligeramente tostadas.
+4. Retirar del horno, rociar inmediatamente con el jugo de limón recién exprimido y servir calientes como guarnición crocante y alcalinizante.
 
-#### 🍽️ Servicio: CENA (408 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
+#### 🍽️ Servicio: CENA (508 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `36.5g` | Proteína: `41.2g` | Carbs Netos: `3.6g`  
 
 ##### 🥗 ENTRADA: Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Entrada botánica fresca de aguacate Hass cremoso cortado en finas láminas dispuestas en abanico, aderezado con aceite de oliva extra virgen y sal marina."* 
+- **Nota Organoléptica y Bioquímica:** *"Entrada lipidica noble y digestible con aguacate en su punto perfecto de mantecosidad y aderezo monoinstaturado."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥑 Hortaliza y Grasas Saludables*
-  - Aguacate Hass fresco: **6 piezas** (1 piezas/persona)
-  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
-- *🧂 Aderezo Mineral y Cítrico*
-  - Jugo de limón fresco: **18 ml** (3 ml/persona)
-  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
+- *Verduras y Hortalizas Frescas*: Aguacate Hass fresco en su punto: **480 g** (80 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
-**Procedimiento Paso a Paso:**
-1. Corte de Precisión: Cortar el aguacate Hass por la mitad a 4°C, retirar la semilla y pelar delicadamente. Laminar longitudinalmente a 2 mm.
-2. Montaje en Abanico: Abrir las láminas sobre el plato de servicio formando un abanico uniforme.
-3. Emulsión Cítrica: Emulsionar en cuenco pequeño el aceite VEVO con el jugo de limón fresco y la sal de mar mineral.
-4. Napa y Servicio: Pincelar suavemente el abanico con el aderezo sin maltratar la pulpa. Servir de inmediato a 12°C.
+**Procedimiento Paso a Paso de Autor:**
+1. Cortar los aguacates por la mitad longitudinalmente, retirar el hueso con cuidado y desprender la piel con una cuchara sopera sin romper la pulpa.
+2. Colocar cada media pieza sobre la tabla y cortar láminas finas uniformes de 3 mm en sentido transversal.
+3. Presionar delicadamente con la palma en diagonal para formar un abanico elegante en cada uno de los 6 platos individuales.
+4. Aliñar con un hilo fino de aceite VEVO de primera prensada y cristales de sal mineral de mar justo antes de servir.
 
 ##### 🥩 PLATILLO PRINCIPAL: Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
+- **Técnica Culinaria:** `crusted_pan_sear`
+- **Nota Organoléptica y Bioquímica:** *"Proteína magra de fácil asimilación nocturna rebozada en sésamo tostado y queso curado, dorada suavemente en sartén."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Pechuga de pavo artesanal: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
+- *Carnes, Aves y Pescados*: Pechuga de pavo fresca en medallones: **780 g** (130 g/persona)
+- *Semillas y Frutos Secos*: Semillas de sésamo (ajonjolí blanco y negro): **60 g** (10 g/persona)
+- *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado fino: **60 g** (10 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **36 g** (6 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **24 ml** (4 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
 
-**Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Pechuga de pavo artesanal con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
+**Procedimiento Paso a Paso de Autor:**
+1. Secar los medallones de pavo; sazonar uniformemente con sal mineral por ambos lados.
+2. Mezclar las semillas de sésamo con el queso Parmesano rallado en un plato extendido; presionar cada medallón firmemente sobre la mezcla para crear una costra adherida homogénea.
+3. Calentar la mantequilla y el aceite VEVO en una sartén amplia a fuego medio (150°C). Colocar los medallones con cuidado.
+4. Cocinar 3 minutos y medio por cara sin manipular bruscamente, permitiendo que el parmesano gratine y el sésamo dore en costra dorada crujiente. Escurrir sobre rejilla y servir caliente.
 
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
-- **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
-- *🌿 Botánicos y Minerales Adaptógenos*
-  - Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
-- *💧 Agua Purificada de Infusión*
-  - Agua purificada (80°C): **1500 ml** (250 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
-3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
-4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
-
-### 📅 LUNES 28 SEP
-
-#### 🍽️ Servicio: DESAYUNO (427 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.5g` | Carbs Netos: `3.4g`  
-
-##### 🥗 ENTRADA: Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Ensamble fresco frutal de Frambuesas frescas orgánicas con Nuez pecana troceada y semillas de chía. Aporta antioxidantes de cosecha viva."* 
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
+- **Técnica Culinaria:** `nocturnal_tisane`
+- **Nota Organoléptica y Bioquímica:** *"Bebida botánica reconstituyente nocturna para inducción de relajación neuromuscular y modulación celular 34Plus."*  
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍓 Fruta Fresca de Cosecha Activa*
-  - Frambuesas frescas orgánicas: **300 g** (50 g/persona)
-- *🌰 Grasas Saludables y Semillas*
-  - Nuez pecana troceada: **90 g** (15 g/persona)
-  - Semillas de chía orgánicas: **48 g** (8 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Selección e Higienización: Seleccionar e higienizar delicadamente Frambuesas frescas orgánicas a 8°C.
-2. Porcionado: Cortar la fruta fresca en trozos regulares y acomodar en tazón frío individual.
-3. Cobertura Crujiente: Espolvorear Nuez pecana troceada y semillas de chía orgánicas en la superficie.
-4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
-
-##### 🥩 PLATILLO PRINCIPAL: Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda
-- **Técnica Culinaria:** `baveuse_omelette`
-- **Nota Organoléptica:** *"Omelette francés clásico preparado a fuego suave en mantequilla de pastoreo con centro cremoso baveuse, finas hierbas y queso derretido."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥚 Proteína de Huevo Orgánico*
-  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
-- *🧀 Relleno y Aromáticos*
-  - Queso Gouda artesanal: **180 g** (30 g/persona)
-  - Finas hierbas frescas de la granja: **12 g** (2 g/persona)
-- *🧈 Grasa y Sazón*
-  - Mantequilla de pastoreo: **60 g** (10 g/persona)
-  - Sal de mar mineral: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Batido Homogéneo: Batir vigorosamente los huevos con las finas hierbas frescas picadas y la sal mineral.
-2. Calentamiento Suave: Derretir la mantequilla de pastoreo en sartén antiadherente a fuego bajo (140°C).
-3. Cuajado Baveuse: Verter los huevos agitando velozmente en círculos con tenedor de madera para formar cuajadas pequeñas; añadir el queso al centro.
-4. Plegado y Servicio: Doblar sobre sí mismo en forma de óvalo dejando el centro jugoso (baveuse) y servir de inmediato.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®
-- **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Frambuesas frescas orgánicas y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
-- *🍮 Base Hidrocoloide y Gelificante*
-  - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
-  - Agua fría para hidratar: **210 ml** (35 ml/persona)
-- *🫐 Extracto Frutal e Infusión Viva*
-  - Frambuesas frescas orgánicas: **180 g** (30 g/persona)
-  - Infusión de té de frutos rojos y menta: **720 ml** (120 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
-3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
-4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
-
-#### 🍽️ Servicio: COMIDA (648 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `51.0g` | Proteína: `43.0g` | Carbs Netos: `4.2g`  
-
-##### 🥗 ENTRADA: Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Ensalada fresca botánica de Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón aderezada con vinagreta artesanal de aceite VEVO y limón."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥬 Hojas Verdes y Hortalizas*
-  - Hojas de arúgula / espinacas baby / hinojo: **480 g** (80 g/persona)
-- *🥑 Vinagreta Cetogénica*
-  - Aceite de oliva extra virgen (VEVO): **90 ml** (15 ml/persona)
-  - Jugo de limón fresco y sal marina: **48 ml** (8 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Centrifugado: Lavar y centrifugar las hojas verdes manteniéndolas heladas a 4°C.
-2. Emulsión de Vinagreta: Batir en tazón el aceite VEVO con jugo de limón fresco y sal marina.
-3. Mezclado Suave: Integrar las hojas verdes con la vinagreta justo antes de emplatar.
-4. Servicio Fresco: Servir en tazón frío a 10°C.
-
-##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Pechuga de pollo orgánica: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Pechuga de pollo orgánica con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Calabacitas tiernas cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Calabacitas tiernas troceados: **720 g** (120 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Calabacitas tiernas de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
-
-#### 🍽️ Servicio: CENA (412 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `34.0g` | Carbs Netos: `2.5g`  
-
-##### 🥗 ENTRADA: Bastones de Pepino y Apio al Limón con Sal Mineral
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Botana crocante e hidratante de Pepino blanco fresco en bastones y apio fresco cortados en bastones fríos al limón con sal mineral."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥦 Hortalizas Crocantes de la Granja*
-  - Pepino blanco fresco en bastones: **360 g** (60 g/persona)
-  - Apio fresco de la granja en bastones: **300 g** (50 g/persona)
-- *🧂 Cítrico y Mineral*
-  - Jugo de limón fresco recién exprimido: **60 ml** (10 ml/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar y pelar parcialmente las hortalizas. Cortar en bastones uniformes de 8 cm de largo.
-2. Choque Térmico Hidratante: Sumergir los bastones en agua con hielo a 0°C–4°C durante 10 minutos para maximizar la turgencia crujiente.
-3. Escurrido y Sazón: Escurrir perfectamente y aderezar con jugo de limón fresco y sal de mar mineral.
-4. Servicio Frío: Servir de inmediato a 6°C en vaso o plato de cristal.
-
-##### 🥩 PLATILLO PRINCIPAL: Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón
-- **Técnica Culinaria:** `cold_cure_assembly`
-- **Nota Organoléptica:** *"Sashimi fino de Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón servido helado a 4°C, marinado con aceite de ajonjolí tostado, jugo de limón fresco y láminas de aguacate Hass."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🐟 Pescado Fresco Sashimi*
-  - Filete de Salmón fresco con piel: **780 g** (130 g/persona)
-- *🥑 Aderezo Cítrico y Grasas*
-  - Aguacate Hass en láminas: **300 g** (50 g/persona)
-  - Aceite de sésamo tostado: **60 ml** (10 ml/persona)
-  - Jugo de limón fresco recién exprimido: **90 ml** (15 ml/persona)
-  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Corte de Precisión en Frío: Cortar la proteína helada a 2°C en láminas finas diagonales de 3 mm.
-2. Emulsión Cítrica de Ajonjolí: Mezclar el aceite de sésamo tostado con el jugo de limón fresco y la sal de mar mineral.
-3. Montaje y Marinación: Disponer las láminas de pescado en plato frío alternando con láminas de aguacate Hass; verter el aderezo cítrico.
-4. Servicio Gourmet Frío: Servir de inmediato a 4°C–6°C.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®
-- **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
-- *🌿 Botánicos y Minerales Adaptógenos*
-  - Hojas de menta fresca: **30 g** (5 g/persona)
-- *💧 Agua Purificada de Infusión*
-  - Agua purificada (80°C): **1500 ml** (250 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
-3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
-4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
-
-### 📅 MARTES 29 SEP
-
-#### 🍽️ Servicio: DESAYUNO (426 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.5g` | Carbs Netos: `3.3g`  
-
-##### 🥗 ENTRADA: Arilos de Granada Fresca con Almendras Fileteadas y Chía
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Ensamble fresco frutal de Arilos de Granada fresca de la granja con Almendras fileteadas tostadas y semillas de chía. Aporta antioxidantes de cosecha viva."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍓 Fruta Fresca de Cosecha Activa*
-  - Arilos de Granada fresca de la granja: **300 g** (50 g/persona)
-- *🌰 Grasas Saludables y Semillas*
-  - Almendras fileteadas tostadas: **90 g** (15 g/persona)
-  - Semillas de chía orgánicas: **48 g** (8 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Selección e Higienización: Seleccionar e higienizar delicadamente Arilos de Granada fresca de la granja a 8°C.
-2. Porcionado: Cortar la fruta fresca en trozos regulares y acomodar en tazón frío individual.
-3. Cobertura Crujiente: Espolvorear Almendras fileteadas tostadas y semillas de chía orgánicas en la superficie.
-4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
-
-##### 🥩 PLATILLO PRINCIPAL: Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén
-- **Técnica Culinaria:** `machaca_scramble`
-- **Nota Organoléptica:** *"Huevos revueltos suaves a la mantequilla de pastoreo con machaca artesanal de res deshidratada en fibra corta, aromática de orégano y cebolla picada."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥚 Proteína de Huevo Orgánico*
-  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
-- *🥩 Proteína Seca Deshidratada y Aromáticos*
-  - Carne seca machaca artesanal de Sonora: **150 g** (25 g/persona)
-  - Cebolla blanca finamente picada: **60 g** (10 g/persona)
-  - Orégano seco molido a mano: **6 g** (1 g/persona)
-- *🧈 Grasa de Cocción y Sazón Mineral*
-  - Mantequilla clarificada / Ghee: **60 g** (10 g/persona)
-  - Sal de mar mineral: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Sofreído Aromático: Sofreír la cebolla picada y la carne seca machaca artesanal en mantequilla/ghee a fuego medio (140°C) durante 2 minutos para activar aromas y reactivar fibras.
-2. Emulsión de Huevo: Batir los huevos orgánicos de libre pastoreo en un tazón con sal mineral y orégano seco molido a mano.
-3. Cuajado Suave en Sartén: Verter la mezcla de huevo sobre la machaca en la sartén a fuego medio-bajo; revolver suavemente con espátula durante 2-3 minutos hasta cuajar cremoso.
-4. Servicio Gourmet: Servir caliente de inmediato a 65°C.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®
-- **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Arilos de Granada fresca de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
-- *🍮 Base Hidrocoloide y Gelificante*
-  - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
-  - Agua fría para hidratar: **210 ml** (35 ml/persona)
-- *🫐 Extracto Frutal e Infusión Viva*
-  - Arilos de Granada fresca de la granja: **180 g** (30 g/persona)
-  - Infusión de té de frutos rojos y menta: **720 ml** (120 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
-3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
-4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
-
-#### 🍽️ Servicio: COMIDA (642 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `44.0g` | Carbs Netos: `4.0g`  
-
-##### 🥗 ENTRADA: Crema de Coliflor Rostizada al Ajo y Queso de Cabra
-- **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica:** *"Emulsión caliente y tersa de Crema de Coliflor Rostizada al Ajo y Queso de Cabra sazonada con hierbas de la granja y grasa cetogénica de pastoreo."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍵 Base Vegetal / Extracto Mineral*
-  - Coliflor fresca rostizada de la granja: **720 g** (120 g/persona)
-- *🧈 Emulsión y Sazón*
-  - Mantequilla de pastoreo / Crema entera: **90 g** (15 g/persona)
-  - Queso Parmesano o de cabra: **60 g** (10 g/persona)
-  - Sal de mar y pimienta blanca: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Sofreír vegetales en mantequilla sin dorar.
-2. Cocinar en caldo a fuego medio-bajo (85-95°C) por 10 minutos hasta tiernos.
-3. Licuar a alta velocidad hasta textura terciopelo.
-4. Emulsionar con crema a fuego bajo sin hervir y servir caliente a 68°C.
-
-##### 🥩 PLATILLO PRINCIPAL: Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Filete de Sirloin de res magro: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Filete de Sirloin de res magro con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Chayotes Tiernos al Vapor con Mantequilla Clarificada
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Chayotes tiernos de la granja cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Chayotes tiernos de la granja troceados: **720 g** (120 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Chayotes tiernos de la granja de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
-
-#### 🍽️ Servicio: CENA (407 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `34.0g` | Carbs Netos: `2.5g`  
-
-##### 🥗 ENTRADA: Bastones de Zucchini y Apio al Limón con Sal de Mar
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Botana crocante e hidratante de Calabacita Zucchini en bastones y apio fresco cortados en bastones fríos al limón con sal mineral."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥦 Hortalizas Crocantes de la Granja*
-  - Calabacita Zucchini en bastones: **360 g** (60 g/persona)
-  - Apio fresco de la granja en bastones: **300 g** (50 g/persona)
-- *🧂 Cítrico y Mineral*
-  - Jugo de limón fresco recién exprimido: **60 ml** (10 ml/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar y pelar parcialmente las hortalizas. Cortar en bastones uniformes de 8 cm de largo.
-2. Choque Térmico Hidratante: Sumergir los bastones en agua con hielo a 0°C–4°C durante 10 minutos para maximizar la turgencia crujiente.
-3. Escurrido y Sazón: Escurrir perfectamente y aderezar con jugo de limón fresco y sal de mar mineral.
-4. Servicio Frío: Servir de inmediato a 6°C en vaso o plato de cristal.
-
-##### 🥩 PLATILLO PRINCIPAL: Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Filete de Pescado Blanco (Robalo): **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Filete de Pescado Blanco (Robalo) con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®
-- **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
-- *🌿 Botánicos y Minerales Adaptógenos*
-  - Flores de manzanilla fresca: **30 g** (5 g/persona)
-- *💧 Agua Purificada de Infusión*
-  - Agua purificada (80°C): **1500 ml** (250 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
-3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
-4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
-
-### 📅 MIÉRCOLES 30 SEP
-
-#### 🍽️ Servicio: DESAYUNO (428 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `31.5g` | Proteína: `33.0g` | Carbs Netos: `3.1g`  
-
-##### 🥗 ENTRADA: Arándanos Frescos con Nueces Pecana y Semillas de Girasol
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Ensamble fresco frutal de Arándanos frescos orgánicos con Nuez pecana troceada y semillas de chía. Aporta antioxidantes de cosecha viva."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍓 Fruta Fresca de Cosecha Activa*
-  - Arándanos frescos orgánicos: **300 g** (50 g/persona)
-- *🌰 Grasas Saludables y Semillas*
-  - Nuez pecana troceada: **90 g** (15 g/persona)
-  - Semillas de chía orgánicas: **48 g** (8 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Selección e Higienización: Seleccionar e higienizar delicadamente Arándanos frescos orgánicos a 8°C.
-2. Porcionado: Cortar la fruta fresca en trozos regulares y acomodar en tazón frío individual.
-3. Cobertura Crujiente: Espolvorear Nuez pecana troceada y semillas de chía orgánicas en la superficie.
-4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
-
-##### 🥩 PLATILLO PRINCIPAL: Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente
-- **Técnica Culinaria:** `poach_and_emulsion`
-- **Nota Organoléptica:** *"Versión gourmet cetogénica que sustituye el pan tradicional por huevos nube esponjosos y horneados, coronados con tocino de pavo crujiente, huevo pochado de yema fluida y salsa holandesa emulsionada a baño maría."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *☁️ Bases de Huevo Nube*
-  - Claras de huevo (a temperatura ambiente): **6 piezas** (1 piezas/persona)
-  - Sal marina y crémor tártaro / limón: **3 g** (0.5 g/persona)
-  - Queso Parmesano finamente rallado: **60 g** (10 g/persona)
-- *🥓 Cubierta y Proteína*
-  - Tocino de pavo artesanal crujiente: **12 piezas** (2 piezas/persona)
-  - Huevos frescos enteros (para pochar): **6 piezas** (1 piezas/persona)
-  - Vinagre blanco (para agua de pochado): **45 ml** (7.5 ml/persona)
-- *🧈 Salsa Holandesa Casera*
-  - Yemas de huevo frescas: **6 piezas** (1 piezas/persona)
-  - Mantequilla sin sal derretida tibia: **225 g** (37.5 g/persona)
-  - Jugo de limón recién exprimido y agua tibia: **15 ml** (2.5 ml/persona)
-  - Pimienta negra molida y sal marina: **3 g** (0.5 g/persona)
-- *🌿 Servicio y Decoración*
-  - Cebollín fresco picado / eneldo: **12 g** (2 g/persona)
-  - Pimienta negra recién molida: **3 g** (0.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Mise en place y horneado de nubes: Precalentar horno a 180°C. Batir las claras de huevo con sal marina a picos firmes e integrar el queso Parmesano rallado. Formar nidos en charola con papel encerado y hornear 10–12 min hasta dorar ligero.
-2. Dorado de tocino: Dorar las tiras de tocino de pavo artesanal en sartén a fuego medio hasta que queden crujientes; reservar tibias.
-3. Emulsión holandesa a baño María: En tazón sobre agua a ebullición suave (sin tocar el agua), batir las yemas de huevo con jugo de limón. Incorporar la mantequilla derretida tibia en hilo fino batiendo continuamente hasta obtener una emulsión tersa y cremosa. Sazonar con sal y pimienta.
-4. Pochado de huevos: Calentar agua con vinagre a 85°C–90°C. Crear un remolino suave, verter los huevos enteros y pochar durante 3 minutos exactos para mantener la yema fluida.
-5. Ensamble gourmet: Montar la nube de clara horneada, colocar las tiras de tocino de pavo crujiente, el huevo pochado y napa generosamente con la salsa holandesa tibia. Decorar con cebollín fresco.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus®
-- **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Arándanos frescos orgánicos y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
-- *🍮 Base Hidrocoloide y Gelificante*
-  - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
-  - Agua fría para hidratar: **210 ml** (35 ml/persona)
-- *🫐 Extracto Frutal e Infusión Viva*
-  - Arándanos frescos orgánicos: **180 g** (30 g/persona)
-  - Infusión de té de frutos rojos y menta: **720 ml** (120 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
-3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
-4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
-
-#### 🍽️ Servicio: COMIDA (649 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `51.0g` | Proteína: `43.5g` | Carbs Netos: `4.0g`  
-
-##### 🥗 ENTRADA: Consomé Claro de Nopales y Hortalizas Tiernas
-- **Técnica Culinaria:** `boil_and_clarify`
-- **Nota Organoléptica:** *"Fondo profundo de res preparado con costilla jugosa, tuétano fresco y tiras de nopales tiernos, infusionado a fuego lento con romero, cilantro fresco y sazón mineral."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteínas y Huesos de Fondo*
-  - Costilla de res limpia troceada: **600 g** (100 g/persona)
-  - Tuétano de res fresco en caña: **300 g** (50 g/persona)
-- *🍲 Base de Caldo y Hortalizas*
-  - Agua purificada de cocción: **1800 ml** (300 ml/persona)
-  - Romero fresco y cebolla blanca: **90 g** (15 g/persona)
-  - Cilantro fresco de la granja picado: **60 g** (10 g/persona)
-  - Nopales tiernos limpios en tiras: **240 g** (40 g/persona)
-- *🌿 Sazón Mineral*
-  - Sal de mar mineral y pimienta en grano: **18 g** (3 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Blanqueado de Huesos: Blanquear la costilla y el tuétano en agua hirviendo durante 3 minutos para retirar impurezas; escurrir.
-2. Cocción Lenta de Fondo con Nopales: Disponer la carne, tuétano y tiras de nopales tiernos en olla profunda con agua purificada, romero y cebolla. Cocinar a fuego lento (85-90°C) durante 90 minutos.
-3. Filtrado y Clarificación: Colar el consomé caliente reservando la costilla suave, el tuétano y las tiras de nopales tiernos. Rectificar sazón con sal de mar.
-4. Servicio Gourmet: Servir hirviendo en tazón hondo a 75°C coronando con las tiras de nopales y abundante cilantro fresco picado.
-
-##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano
-- **Técnica Culinaria:** `stuffed_poultry_bake`
-- **Nota Organoléptica:** *"Pechuga de pollo orgánica rellena de espinacas baby salteadas y queso crema suave artesanal, sellada a la mantequilla y bañada en salsa cremosa de Parmesano."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteínas Principales Seleccionadas*
-  - Pechuga de pollo orgánica: **900 g** (150 g/persona)
-- *🥬 Hojas Verdes y Envolturas*
-  - Espinacas baby frescas de la granja: **240 g** (40 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten / Keto)*
-  - Queso crema suave artesanal: **180 g** (30 g/persona)
-  - Queso Parmesano o de cabra: **90 g** (15 g/persona)
-  - Mantequilla de pastoreo / Ghee: **90 g** (15 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Relleno y Mariposa: Abrir la pechuga de pollo orgánica en mariposa. Saltear espinacas baby en mantequilla e integrar con el queso crema suave; rellenar la pechuga y asegurar con palillos.
-2. Dorado en Sartén: Calentar mantequilla en sartén a fuego medio (170°C). Sellar la pechuga rellena durante 5 a 6 minutos por lado hasta dorar.
-3. Emulsión Parmesana: Verter crema y queso Parmesano rallado en la sartén a fuego bajo agitando con batidor hasta obtener una salsa cremoso-sedosa.
-4. Servir Caliente: Bañar la pechuga rellena con la salsa cremosa de Parmesano y servir de inmediato a 74°C interno.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal crujiente de ejotes verdes frescos de la granja salteados en aceite VEVO y coronados con almendras fileteadas tostadas."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Ejotes verdes frescos de la granja: **720 g** (120 g/persona)
-- *🌰 Crujiente y Frutos Secos*
-  - Almendras fileteadas tostadas: **60 g** (10 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los ejotes verdes frescos de cosecha activa y despuntar; cortar en tercios uniformes.
-2. Blanqueado y Choque Térmico: Blanquear los ejotes en agua hirviendo con sal durante 3 minutos y pasar a agua helada.
-3. Salteado en VEVO: Calentar el aceite VEVO en sartén a fuego medio (150°C), añadir los ejotes blanqueados y saltear durante 3 minutos.
-4. Ensamble de Almendras y Servicio: Espolvorear las almendras fileteadas tostadas sobre los ejotes, rectificar sal de mar mineral y servir de inmediato.
-
-#### 🍽️ Servicio: CENA (413 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
-
-##### 🥗 ENTRADA: Bastones de Pepino y Zucchini al Limón con Sal Mineral
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Botana crocante e hidratante de Pepino blanco fresco en bastones y apio fresco cortados en bastones fríos al limón con sal mineral."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥦 Hortalizas Crocantes de la Granja*
-  - Pepino blanco fresco en bastones: **360 g** (60 g/persona)
-  - Apio fresco de la granja en bastones: **300 g** (50 g/persona)
-- *🧂 Cítrico y Mineral*
-  - Jugo de limón fresco recién exprimido: **60 ml** (10 ml/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar y pelar parcialmente las hortalizas. Cortar en bastones uniformes de 8 cm de largo.
-2. Choque Térmico Hidratante: Sumergir los bastones en agua con hielo a 0°C–4°C durante 10 minutos para maximizar la turgencia crujiente.
-3. Escurrido y Sazón: Escurrir perfectamente y aderezar con jugo de limón fresco y sal de mar mineral.
-4. Servicio Frío: Servir de inmediato a 6°C en vaso o plato de cristal.
-
-##### 🥩 PLATILLO PRINCIPAL: Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón
-- **Técnica Culinaria:** `cold_cure_assembly`
-- **Nota Organoléptica:** *"Salpicón artesanal frío de pechuga de pavo desmenuzada con aguacate Hass en cubos, jitomate bola, cebolla morada y vinagreta cítrica."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍗 Proteína de Pavo Desmenuzada*
-  - Pechuga de pavo artesanal cocida desmenuzada: **720 g** (120 g/persona)
-- *🥑 Hortalizas y Aderezo Cítrico*
-  - Aguacate Hass en cubos: **300 g** (50 g/persona)
-  - Jitomate bola en cubos y cebolla morada: **330 g** (55 g/persona)
-  - Jugo de limón fresco y aceite VEVO: **120 ml** (20 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Desmenuzado en Frío: Atemperar la pechuga de pavo artesanal cocida a 4°C y desmenuzar en tiras delgadas.
-2. Integración Hortaliza: Meclar el pavo con el jitomate bola en cubos, cebolla morada finamente picada y cilantro.
-3. Aderezo Cítrico: Emulsionar el aceite VEVO con jugo de limón fresco y sal marina; incorporar al salpicón.
-4. Montaje con Aguacate: Agregar cubos de aguacate Hass al final y servir frío a 12°C.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus®
-- **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
-- *🌿 Botánicos y Minerales Adaptógenos*
-  - Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
-- *💧 Agua Purificada de Infusión*
-  - Agua purificada (80°C): **1500 ml** (250 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
-3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
-4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
-
-### 📅 JUEVES 01 OCT
-
-#### 🍽️ Servicio: DESAYUNO (423 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.0g` | Carbs Netos: `3.1g`  
-
-##### 🥗 ENTRADA: Pitayas Frescas con Semillas de Chía y Coco Rallado
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Ensamble fresco frutal de Pitaya fresca de la granja con Almendras fileteadas tostadas y semillas de chía. Aporta antioxidantes de cosecha viva."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍓 Fruta Fresca de Cosecha Activa*
-  - Pitaya fresca de la granja: **300 g** (50 g/persona)
-- *🌰 Grasas Saludables y Semillas*
-  - Almendras fileteadas tostadas: **90 g** (15 g/persona)
-  - Semillas de chía orgánicas: **48 g** (8 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Selección e Higienización: Seleccionar e higienizar delicadamente Pitaya fresca de la granja a 8°C.
-2. Porcionado: Cortar la fruta fresca en trozos regulares y acomodar en tazón frío individual.
-3. Cobertura Crujiente: Espolvorear Almendras fileteadas tostadas y semillas de chía orgánicas en la superficie.
-4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
-
-##### 🥩 PLATILLO PRINCIPAL: Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco
-- **Técnica Culinaria:** `sunny_side_up`
-- **Nota Organoléptica:** *"Huevos frescos estrellados en sartén de hierro colado con aceite VEVO e infusión de tomillo fresco, cocinados con yema fluida brillante y clara cuajada opaca."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥚 Proteína de Huevo Orgánico*
-  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
-- *🧈 Grasa Saludable y Botánicos*
-  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
-  - Tomillo fresco de la granja: **9 g** (1.5 g/persona)
-  - Sal de mar mineral en escamas: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Acondicionamiento Térmico: Calentar la sartén de hierro colado a fuego suave (130°C–140°C) con el aceite VEVO y las ramitas de tomillo fresco.
-2. Incorporación Proteica: Cascar los huevos frescos orgánicos directamente en la sartén sin romper la yema.
-3. Cocción Tapada Sin Voltear: Tapar la sartén inmediatamente y cocinar a fuego mínimo durante 3 minutos hasta que las claras cuajen blancas y la yema permanezca fluida.
-4. Servicio Gourmet: Retirar suavemente con pala ancha, sazonar con sal en escamas y servir caliente a 65°C.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®
-- **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Pitaya fresca de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
-- *🍮 Base Hidrocoloide y Gelificante*
-  - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
-  - Agua fría para hidratar: **210 ml** (35 ml/persona)
-- *🫐 Extracto Frutal e Infusión Viva*
-  - Pitaya fresca de la granja: **180 g** (30 g/persona)
-  - Infusión de té de frutos rojos y menta: **720 ml** (120 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
-3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
-4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
-
-#### 🍽️ Servicio: COMIDA (642 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `44.0g` | Carbs Netos: `4.0g`  
-
-##### 🥗 ENTRADA: Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Nota de Cata y Balance Sensorial: Ensamble fresco salado cetogénico. Aporta turgencia vegetal crujiente aderezada con la acidez limpia del limón y aceite VEVO."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥗 Base Vegetal / Proteína Fresca*
-  - Arúgula fresca de la granja: **360 g** (60 g/persona)
-  - Hinojo fresco en láminas: **300 g** (50 g/persona)
-- *🍾 Vinagreta y Grasas Saludables*
-  - Aceite de oliva extra virgen VEVO: **72 ml** (12 ml/persona)
-  - Jugo de limón fresco exprimido: **60 ml** (10 ml/persona)
-  - Sal de mar mineral y pimienta negra molida: **12 g** (2 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienización Criogénica: - Seleccionar y desinfectar arúgula fresca, hinojo fresco a 10°C con agua purificada.
-2. Corte de Precisión de Alta Cocina: - Cortar arúgula fresca, hinojo fresco en cuadrícula o láminas rústicas a temperatura ambiente.
-3. Vinagreta y Emulsión en Frío: - Emulsionar en frío el aceite VEVO con jugo de limón fresco. - Espolvorear con sal mineral de mar y especias.
-4. Montaje Fresco Gourmet: - Presentar la ensalada sazonada al momento a 10°C–12°C.
-
-##### 🥩 PLATILLO PRINCIPAL: Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Filete de Huachinango fresco: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Filete de Huachinango fresco con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Ejotes Frescos Salteados con Almendras Fileteadas
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal crujiente de ejotes verdes frescos de la granja salteados en mantequilla clarificada u oliva VEVO y coronados con almendras fileteadas tostadas."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Ejotes verdes frescos de la granja: **720 g** (120 g/persona)
-- *🌰 Crujiente y Frutos Secos*
-  - Almendras fileteadas tostadas: **60 g** (10 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los ejotes verdes frescos y despuntar las puntas; cortar en tercios uniformes.
-2. Blanqueado y Choque Térmico: Blanquear los ejotes en agua con sal durante 3 minutos y pasar a agua con hielo para fijar la clorofila brillante.
-3. Salteado y Tostado de Almendras: Tostar las almendras fileteadas en sartén seca hasta dorar. En la misma sartén, derretir la mantequilla clarificada y saltear los ejotes blanqueados a fuego vivo durante 3 minutos.
-4. Servicio Gourmet: Incorporar las almendras fileteadas tostadas, sazonar con sal de mar mineral y servir caliente.
-
-#### 🍽️ Servicio: CENA (406 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `33.5g` | Carbs Netos: `2.8g`  
-
-##### 🥗 ENTRADA: Abanico de Aguacate Hass con Sal de Mar
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Entrada botánica fresca de aguacate Hass cremoso cortado en finas láminas dispuestas en abanico, aderezado con aceite de oliva extra virgen y sal marina."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥑 Hortaliza y Grasas Saludables*
-  - Aguacate Hass fresco: **6 piezas** (1 piezas/persona)
-  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
-- *🧂 Aderezo Mineral y Cítrico*
-  - Jugo de limón fresco: **18 ml** (3 ml/persona)
-  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Corte de Precisión: Cortar el aguacate Hass por la mitad a 4°C, retirar la semilla y pelar delicadamente. Laminar longitudinalmente a 2 mm.
-2. Montaje en Abanico: Abrir las láminas sobre el plato de servicio formando un abanico uniforme.
-3. Emulsión Cítrica: Emulsionar en cuenco pequeño el aceite VEVO con el jugo de limón fresco y la sal de mar mineral.
-4. Napa y Servicio: Pincelar suavemente el abanico con el aderezo sin maltratar la pulpa. Servir de inmediato a 12°C.
-
-##### 🥩 PLATILLO PRINCIPAL: Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana
-- **Técnica Culinaria:** `baked_stuffed_mushroom`
-- **Nota Organoléptica:** *"Sombreros de champiñón Portobello rellenos de espinacas baby salteadas, queso crema artesanal y nuez pecana crujiente."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍄 Sombreros de Portobello Base*
-  - Sombreros de champiñón Portobello grandes: **12 piezas** (2 piezas/persona)
-- *🧀 Relleno Cetogénico y Nueces*
-  - Espinacas baby de la granja salteadas: **240 g** (40 g/persona)
-  - Queso crema suave artesanal: **180 g** (30 g/persona)
-  - Nuez pecana troceada: **90 g** (15 g/persona)
-  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Limpieza e Higienizado: Limpiar delicadamente los sombreros de Portobello retirando el tallo central y láminas internas con cuchara.
-2. Preparación del Relleno: Saltear las espinacas baby en aceite VEVO durante 2 minutos; integrar con el queso crema artesanal y la nuez pecana troceada.
-3. Rellenado y Horneado: Disponer la mezcla dentro de los sombreros de Portobello y hornear a 180°C durante 12 a 14 minutos hasta que el hongo esté tierno y el relleno gratinado.
-4. Servir Caliente: Emplatar de inmediato a 65°C con un hilo de aceite VEVO.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
-- **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
-- *🌿 Botánicos y Minerales Adaptógenos*
-  - Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
-- *💧 Agua Purificada de Infusión*
-  - Agua purificada (80°C): **1500 ml** (250 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
-3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
-4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
-
-### 📅 VIERNES 02 OCT
-
-#### 🍽️ Servicio: DESAYUNO (424 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.0g` | Carbs Netos: `3.3g`  
-
-##### 🥗 ENTRADA: Fresas Frescas de la Granja con Nueces de Castilla y Chía
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Ensamble fresco frutal de Fresas frescas de la granja con Nuez de Castilla troceada y semillas de chía. Aporta antioxidantes de cosecha viva."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍓 Fruta Fresca de Cosecha Activa*
-  - Fresas frescas de la granja: **300 g** (50 g/persona)
-- *🌰 Grasas Saludables y Semillas*
-  - Nuez de Castilla troceada: **90 g** (15 g/persona)
-  - Semillas de chía orgánicas: **48 g** (8 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Selección e Higienización: Seleccionar e higienizar delicadamente Fresas frescas de la granja a 8°C.
-2. Porcionado: Cortar la fruta fresca en trozos regulares y acomodar en tazón frío individual.
-3. Cobertura Crujiente: Espolvorear Nuez de Castilla troceada y semillas de chía orgánicas en la superficie.
-4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
-
-##### 🥩 PLATILLO PRINCIPAL: Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela
-- **Técnica Culinaria:** `tamagoyaki_roll`
-- **Nota Organoléptica:** *"Rollo artesanal en capas finas de huevo orgánico batido a la mantequilla de pastoreo, enrollado en sartén tamagoyaki con queso Panela."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥚 Proteína de Huevo Orgánico*
-  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
-- *🧀 Relleno de Queso*
-  - Queso Panela artesanal en láminas finas: **180 g** (30 g/persona)
-- *🧈 Grasa de Cocción y Sazón*
-  - Mantequilla de pastoreo / Ghee: **60 g** (10 g/persona)
-  - Sal de mar mineral y pimienta: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Batido e Integración: Batir huevos frescos orgánicos con sal marina y pimienta.
-2. Cocción en Capas: Verter capas delgadas en sartén rectangular a fuego bajo enrollando con láminas de queso panela.
-3. Servicio Gourmet: Cortar en medallones de 2 cm y servir caliente a 65°C.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®
-- **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Fresas frescas de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
-- *🍮 Base Hidrocoloide y Gelificante*
-  - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
-  - Agua fría para hidratar: **210 ml** (35 ml/persona)
-- *🫐 Extracto Frutal e Infusión Viva*
-  - Fresas frescas de la granja: **180 g** (30 g/persona)
-  - Infusión de té de frutos rojos y menta: **720 ml** (120 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
-3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
-4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
-
-#### 🍽️ Servicio: COMIDA (656 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `51.5g` | Proteína: `44.0g` | Carbs Netos: `4.0g`  
-
-##### 🥗 ENTRADA: Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano
-- **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica:** *"Emulsión reconfortante y suave de champiñones Portobello frescos sofritos con ajo y cúrcuma orgánica en mantequilla de pastoreo, cocinados en caldo vegetal y terciopelados con queso Parmesano."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥦 Hortalizas y Vegetales Córtex*
-  - Champiñones Portobello frescos: **720 g** (120 g/persona)
-  - Ajo y cebolla blanca picados: **90 g** (15 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*
-  - Cúrcuma orgánica en polvo: **12 g** (2 g/persona)
-  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten / Keto)*
-  - Mantequilla de pastoreo / Ghee: **90 g** (15 g/persona)
-  - Queso Parmesano o de cabra: **60 g** (10 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Sofreído Aromático: Sofreír los champiñones Portobello frescos troceados con ajo, cebolla blanca y cúrcuma orgánica en mantequilla de pastoreo durante 4 minutos.
-2. Cocción en Fondo: Verter caldo concentrado caliente y simular a fuego lento (85°C–90°C) durante 10 minutos para extraer sabores.
-3. Licuado y Emulsión: Licuar a alta velocidad hasta obtener una crema de textura terciopelo homogénea.
-4. Servir Caliente: Mantener a fuego bajo sin hervir, incorporar el queso Parmesano rallado y servir caliente a 68°C.
-
-##### 🥩 PLATILLO PRINCIPAL: Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Lomo de Atún fresco en costra de sésamo: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Lomo de Atún fresco en costra de sésamo con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Espárragos Verdes Asados con Limón y Sal Marina
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Nota de Cata y Balance Sensorial: Guarnición vegetal caliente al punto al dente. Mantiene la fibra crujiente sazonada con mantequilla clarificada y limón."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥦 Vegetal Base Cosecha Activa*
-  - Espárragos verdes frescos de la granja: **720 g** (120 g/persona)
-  - Limón fresco recién exprimido: **60 ml** (10 ml/persona)
-- *🧈 Grasas y Condimentos*
-  - Mantequilla clarificada: **60 g** (10 g/persona)
-  - Sal de mar mineral: **12 g** (2 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte de Precisión: - Lavar y cortar espárragos verdes en gajos, bastones o espirales delgadas.
-2. Cocción Térmica Controlada en Plancha (150°C): - Asar espárragos verdes en plancha o comal a 150°C durante 6 a 8 minutos hasta dorar al dente.
-3. Sazón e Integración de Grasas: - Aderezar espárragos verdes de inmediato con mantequilla clarificada o aceite VEVO, sal mineral de mar y limón.
-4. Servicio Caliente: - Emplatar de inmediato como acompañamiento caliente a 68°C.
-
-#### 🍽️ Servicio: CENA (408 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.0g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
-
-##### 🥗 ENTRADA: Bastones de Zucchini y Apio al Limón con Sal Mineral
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Botana crocante e hidratante de Calabacita Zucchini en bastones y apio fresco cortados en bastones fríos al limón con sal mineral."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥦 Hortalizas Crocantes de la Granja*
-  - Calabacita Zucchini en bastones: **360 g** (60 g/persona)
-  - Apio fresco de la granja en bastones: **300 g** (50 g/persona)
-- *🧂 Cítrico y Mineral*
-  - Jugo de limón fresco recién exprimido: **60 ml** (10 ml/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar y pelar parcialmente las hortalizas. Cortar en bastones uniformes de 8 cm de largo.
-2. Choque Térmico Hidratante: Sumergir los bastones en agua con hielo a 0°C–4°C durante 10 minutos para maximizar la turgencia crujiente.
-3. Escurrido y Sazón: Escurrir perfectamente y aderezar con jugo de limón fresco y sal de mar mineral.
-4. Servicio Frío: Servir de inmediato a 6°C en vaso o plato de cristal.
-
-##### 🥩 PLATILLO PRINCIPAL: Tartar de Robalo Fresco al Limón con Aguacate Hass y Cilantro
-- **Técnica Culinaria:** `cold_cure_assembly`
-- **Nota Organoléptica:** *"Tartar gourmet frío de Tartar de Robalo Fresco al Limón con Aguacate Hass y Cilantro cortado en cubos de 5 mm, macerado con alcaparras, aceite VEVO, jugo de limón y cubos de aguacate Hass."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🐟 Pescado Fresco Sashimi / Tartar*
-  - Filete de Robalo fresco corte tartar: **780 g** (130 g/persona)
-- *🥑 Macerado Cítrico y Grasas*
-  - Aguacate Hass en cubos: **360 g** (60 g/persona)
-  - Alcaparras finamente picadas: **60 g** (10 g/persona)
-  - Jugo de limón fresco: **60 ml** (10 ml/persona)
-  - Aceite de oliva extra virgen (VEVO): **72 ml** (12 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Cadena de Frío y Corte: Mantener el pescado fresco a 2°C–4°C. Cortar con cuchillo de filo único en cubos regulares de 5 mm.
-2. Emulsión de Macerado: En tazón de cristal helado, integrar el aceite VEVO, jugo de limón fresco, alcaparras picadas y sal marina.
-3. Ensamble Macerado: Incorporar el pescado y los cubos de aguacate mezclando suavemente con espátula fría.
-4. Moldeo y Servicio Frío: Moldear en aro metálico de 8 cm y servir de inmediato a 8°C.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®
-- **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
-- *🌿 Botánicos y Minerales Adaptógenos*
-  - Semillas y hojas de hinojo fresco: **30 g** (5 g/persona)
-- *💧 Agua Purificada de Infusión*
-  - Agua purificada (80°C): **1500 ml** (250 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
-3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
-4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
-
-### 📅 SÁBADO 03 OCT
-
-#### 🍽️ Servicio: DESAYUNO (425 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `31.0g` | Proteína: `33.0g` | Carbs Netos: `3.4g`  
-
-##### 🥗 ENTRADA: Higos Frescos Vivos de la Granja con Almendras Fileteadas y Chía
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Ensamble fresco frutal de Higos frescos vivos de la granja con Almendras fileteadas tostadas y semillas de chía. Aporta antioxidantes de cosecha viva."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍓 Fruta Fresca de Cosecha Activa*
-  - Higos frescos vivos de la granja: **300 g** (50 g/persona)
-- *🌰 Grasas Saludables y Semillas*
-  - Almendras fileteadas tostadas: **90 g** (15 g/persona)
-  - Semillas de chía orgánicas: **48 g** (8 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Selección e Higienización: Seleccionar e higienizar delicadamente Higos frescos vivos de la granja a 8°C.
-2. Porcionado: Cortar la fruta fresca en trozos regulares y acomodar en tazón frío individual.
-3. Cobertura Crujiente: Espolvorear Almendras fileteadas tostadas y semillas de chía orgánicas en la superficie.
-4. Servicio Fresco: Servir de inmediato a 10°C como entrada viva y metabólica.
-
-##### 🥩 PLATILLO PRINCIPAL: Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra
-- **Técnica Culinaria:** `skillet_bake`
-- **Nota Organoléptica:** *"Cazuela artesanal horneada con huevos frescos asentados sobre cama de espinacas baby sofritas en mantequilla de pastoreo y gratinados con queso de cabra artesanal."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥚 Proteína de Huevo Orgánico*
-  - Huevos orgánicos de libre pastoreo: **12 piezas** (2 piezas/persona)
-- *🥬 Cama Vegetal e Insumos Córtex*
-  - Espinacas baby frescas de la granja: **240 g** (40 g/persona)
-  - Queso de cabra artesanal: **180 g** (30 g/persona)
-- *🧈 Grasa y Sazón*
-  - Mantequilla de pastoreo / Ghee: **60 g** (10 g/persona)
-  - Sal de mar mineral y pimienta: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Sofrito de Sustrato Vegetal: Sofreír las espinacas baby en mantequilla dentro de una cazuela o sartén de hierro apta para horno a fuego medio durante 2 minutos.
-2. Montaje de Nidos Proteicos: Formar cavidades en la cama de espinacas y cascar los huevos dentro de cada cavidad. Espolvorear el queso de cabra artesanal alrededor.
-3. Horneado o Cocción Tapada: Hornear a 180°C (o tapar en estufa a fuego bajo) durante 8 a 10 minutos hasta que la clara cuaje firme y la yema quede cremosa.
-4. Servicio Gourmet: Servir caliente al centro en la misma cazuela a 68°C.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Gelatina Artesanal de Higo (4°C) con Fórmula Nootrópica 33Plus®
-- **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica:** *"Postre cetogénico fresco de Gelatina Artesanal de Higo (4°C) con Fórmula Nootrópica 33Plus® preparado con colágeno puro hidrolizado, infusionado con extracto natural de Higos frescos vivos de la granja y suplementado con la Fórmula Biotecnológica Nootrópica 33Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
-- *🍮 Base Hidrocoloide y Gelificante*
-  - Grenetina natural en polvo (colágeno hidrolizado): **42 g** (7 g/persona)
-  - Agua fría para hidratar: **210 ml** (35 ml/persona)
-- *🫐 Extracto Frutal e Infusión Viva*
-  - Higos frescos vivos de la granja: **180 g** (30 g/persona)
-  - Infusión de té de frutos rojos y menta: **720 ml** (120 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Hidratación del Colágeno: Espolvorear la grenetina sobre el agua fría y dejar reposar 5 minutos hasta que esponje por completo.
-2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetina e integrar la Fórmula Nootrópica 33Plus® agitando hasta claridad cristalina.
-3. Moldeo Frutal: Distribuir la fruta fresca porcionada en moldes individuales de cristal y verter la mezcla tibia.
-4. Refrigeración y Cuajado: Refrigerar a 4°C durante 3 a 4 horas hasta que la estructura gelifique firme. Servir frío a 4°C.
-
-#### 🍽️ Servicio: COMIDA (646 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `50.5g` | Proteína: `44.0g` | Carbs Netos: `3.8g`  
-
-##### 🥗 ENTRADA: Crema de Espinacas y Ajo Rostizado al Parmesano
-- **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica:** *"Emulsión caliente y tersa de Crema de Espinacas y Ajo Rostizado al Parmesano sazonada con hierbas de la granja y grasa cetogénica de pastoreo."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🍵 Base Vegetal / Extracto Mineral*
-  - Espinacas baby frescas de la granja: **720 g** (120 g/persona)
-- *🧈 Emulsión y Sazón*
-  - Mantequilla de pastoreo / Crema entera: **90 g** (15 g/persona)
-  - Queso Parmesano o de cabra: **60 g** (10 g/persona)
-  - Sal de mar y pimienta blanca: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Sofreír vegetales en mantequilla sin dorar.
-2. Cocinar en caldo a fuego medio-bajo (85-95°C) por 10 minutos hasta tiernos.
-3. Licuar a alta velocidad hasta textura terciopelo.
-4. Emulsionar con crema a fuego bajo sin hervir y servir caliente a 68°C.
-
-##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica:** *"Platillo principal proteico de Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo sellado a alta temperatura y sazonado con grasas metabólicas saludables."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Proteína Principal Seleccionada*
-  - Pechuga de pavo artesanal: **900 g** (150 g/persona)
-- *🧈 Emulsión Cremosa y Grasas*
-  - Mantequilla de pastoreo / Aceite VEVO: **72 g** (12 g/persona)
-  - Sal de mar y tomillo fresco: **12 g** (2 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Atemperar y Sazonar: Secar la superficie de Pechuga de pavo artesanal con papel absorbente; sazonar con sal de mar y hierbas.
-2. Sellar a Alta Temperatura: Calentar mantequilla y aceite VEVO en sartén de hierro a 180°C. Sellar la proteína 3-4 minutos por lado hasta dorar.
-3. Desglase y Elaboración de Salsa: Verter el licor/fondo en la sartén a fuego medio para incorporar los jugos del fondo.
-4. Montaje Gourmet: Regresar la proteína a la sartén por 1 minuto para atemperar, napar generosamente y servir caliente.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Calabacitas Verdes al Sartén con Sal de Mar
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica:** *"Acompañamiento vegetal liviano de Calabacitas tiernas cocinados al vapor controlado y salteados en mantequilla clarificada u oliva VEVO."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌱 Vegetal / Acompañamiento Base (Cosecha Activa)*
-  - Calabacitas tiernas troceados: **720 g** (120 g/persona)
-- *🧈 Grasa Saludable y Sazón*
-  - Mantequilla clarificada / Aceite VEVO: **60 ml** (10 ml/persona)
-  - Cilantro fresco y orégano: **9 g** (1.5 g/persona)
-  - Sal de mar mineral: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Corte: Lavar los Calabacitas tiernas de cosecha activa y cortar en gajos o cuadrícula.
-2. Cocción al Vapor o Plancha: Asar en comal o cocinar al vapor durante 6-8 minutos hasta estar tiernos al dente.
-3. Sazón: Aderezar con aceite VEVO, cilantro fresco y sal de mar.
-4. Servir Caliente: Emplatar de inmediato como acompañamiento vegetal.
-
-#### 🍽️ Servicio: CENA (413 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `29.5g` | Proteína: `34.0g` | Carbs Netos: `2.8g`  
-
-##### 🥗 ENTRADA: Ensalada Mix de Hojas Verdes de la Granja con Vinagre VEVO
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica:** *"Ensalada fresca botánica de Ensalada Mix de Hojas Verdes de la Granja con Vinagre VEVO aderezada con vinagreta artesanal de aceite VEVO y limón."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥬 Hojas Verdes y Hortalizas*
-  - Hojas de arúgula / espinacas baby / hinojo: **480 g** (80 g/persona)
-- *🥑 Vinagreta Cetogénica*
-  - Aceite de oliva extra virgen (VEVO): **90 ml** (15 ml/persona)
-  - Jugo de limón fresco y sal marina: **48 ml** (8 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Higienizado y Centrifugado: Lavar y centrifugar las hojas verdes manteniéndolas heladas a 4°C.
-2. Emulsión de Vinagreta: Batir en tazón el aceite VEVO con jugo de limón fresco y sal marina.
-3. Mezclado Suave: Integrar las hojas verdes con la vinagreta justo antes de emplatar.
-4. Servicio Fresco: Servir en tazón frío a 10°C.
-
-##### 🥩 PLATILLO PRINCIPAL: Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate
-- **Técnica Culinaria:** `taco_wrap`
-- **Nota Organoléptica:** *"Tacos cetogénicos frescos servidos en hojas crujientes de lechuga orejona viva a 4°C, rellenos de pechuga de pollo orgánica desmenuzada, guacamole cremoso y vinagreta cítrica VEVO."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥬 Envoltura de Lechuga Viva*
-  - Hojas de lechuga orejona viva: **360 g** (60 g/persona)
-- *🍗 Relleno de Pollo y Guacamole*
-  - Pechuga de pollo orgánica desmenuzada: **780 g** (130 g/persona)
-  - Aguacate Hass en guacamole: **300 g** (50 g/persona)
-  - Aceite de oliva extra virgen (VEVO): **60 ml** (10 ml/persona)
-  - Jugo de limón fresco: **30 ml** (5 ml/persona)
-  - Sal de mar mineral en escamas: **9 g** (1.5 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Preparación y Desmenuzado de Pollo: Cocinar y desmenuzar la pechuga de pollo orgánica sazonando con sal mineral y un hilo de aceite VEVO; mantener tibia.
-2. Envoltura Crujiente: Seleccionar, lavar y centrifugar las hojas enteras de lechuga orejona viva manteniéndolas heladas a 4°C.
-3. Elaboración de Guacamole: Machacar el aguacate Hass fresco con sal de mar mineral y jugo de limón recién exprimido.
-4. Ensamble de Tacos: Disponer la pechuga de pollo desmenuzada al centro de cada hoja de lechuga fría y coronar con guacamole fresco. Servir a 12°C.
-
-##### 🌿 ACOMPAÑAMIENTO / BEBIDA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
-- **Técnica Culinaria:** `steep_beverage`
-- **Nota Organoléptica:** *"Infusión botánica relajante e hidratante de Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus® infusionada a temperatura controlada (máx 60°C) con la Fórmula Biotecnológica Reparadora 34Plus®."* 
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA*
-  - Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
-- *🌿 Botánicos y Minerales Adaptógenos*
-  - Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
-- *💧 Agua Purificada de Infusión*
-  - Agua purificada (80°C): **1500 ml** (250 ml/persona)
-
-**Procedimiento Paso a Paso:**
-1. Calentamiento de Agua: Calentar el agua purificada en hervidor de cristal a 80°C (sin permitir ebullición violenta).
-2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Plus®.
-3. Reposo Aromático: Dejar reposar tapado durante 5 minutos para extraer los aceites esenciales bioactivos.
-4. Servicio Reconfortante: Colar con tamiz fino y servir tibio a 60°C en taza de cerámica artesanal.
+- *Especias, Hierbas y Condimentos*: Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
+- *Líquidos e Infusiones*: Agua purificada caliente: **900 ml** (150 ml/persona)
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Calentar el agua purificada en hervidor de vidrio hasta 85°C; verter sobre las hojas frescas de toronjil en tetera con filtro.
+2. Tapar e infusionar durante 6 minutos para extraer polifenoles y aceites calmantes naturales.
+3. Colar la tisana y dejar atemperar en jarra hasta que la temperatura baje a 58°C (crucial para respetar la integridad de 34Plus®).
+4. Disolver los 30 g de Fórmula 34Plus® batiendo suavemente hasta disolución completa; repartir en 6 tazas de cerámica tibia y servir como inductor de sueño.
 
 ---
 
-## 3. Lista de Compras Consolidada
+### 📅 LUNES 28 DE SEPTIEMBRE DE 2026
+
+#### 🍽️ Servicio: DESAYUNO (519 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `39.2g` | Proteína: `36.4g` | Carbs Netos: `5.1g`  
+
+##### 🥗 ENTRADA: Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Entrada frutal roja rica en elagitaninos con el aporte de zinc y lípidos protectores de la nuez pecana."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Frutas Cetogénicas*: Frambuesas frescas orgánicas: **300 g** (50 g/persona)
+- *Semillas y Frutos Secos*: Nueces pecana en mitades: **90 g** (15 g/persona)
+- *Semillas y Frutos Secos*: Semillas de chía orgánicas: **48 g** (8 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Inspeccionar las frambuesas delicadamente; retirar impurezas con pincel suave sin aplastar la pulpa.
+2. Trozar ligeramente las mitades de nuez pecana con las manos para preservar textura rústica.
+3. Distribuir las frambuesas en 6 copas de postre de boca ancha.
+4. Coronar con las nueces pecana y las semillas de chía crudas; servir a 12°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda
+- **Técnica Culinaria:** `baveuse_omelette`
+- **Nota Organoléptica y Bioquímica:** *"Técnica clásica francesa de tres pliegues: exterior liso sin coloración, interior cremoso y aromático relleno de gouda fundido y hierbas finas."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Huevos y Ovoproductos*: Huevos orgánicos enteros de libre pastoreo: **18 piezas** (3 piezas/persona)
+- *Lácteos y Grasas Saludables*: Queso Gouda artesanal rallado: **120 g** (20 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **60 g** (10 g/persona)
+- *Especias, Hierbas y Condimentos*: Finas hierbas frescas (cebollín, perejil francés y perifollo): **18 g** (3 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Picar muy finamente las hierbas frescas con cuchillo afilado para no oxidar los tallos.
+2. Batir los 18 huevos con sal mineral enérgicamente por 1 minuto; incorporar las finas hierbas picadas a la emulsión cruda.
+3. Calentar una sartén antiadherente o de hierro curado a fuego medio-bajo (135°C) con 10 g de mantequilla por porción. Verter la mezcla de 3 huevos por tanda.
+4. Agitar la sartén con movimientos circulares mientras se revuelve con espátula de silicón formando cuajada microscópica por 90 segundos; colocar 20 g de gouda en el centro, plegar los dos extremos en cilindro (roulé), voltear sobre el plato tibio con el pliegue hacia abajo y lustrar con una nuez de mantequilla fría.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®
+- **Técnica Culinaria:** `cold_gelatin_infusion`
+- **Nota Organoléptica y Bioquímica:** *"Gelatina rubí de colágeno natural infusionada en frío con frambuesas y enriquecida con el soporte neurocognitivo 33Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
+- *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
+- *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
+- *Frutas Cetogénicas*: Frambuesas frescas para puré base: **180 g** (30 g/persona)
+- *Líquidos e Infusiones*: Infusión de hierbabuena y flores rojas: **720 ml** (120 ml/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Hidratar la grenetina pura en los 210 ml de agua fría durante 6 minutos hasta absorción homogénea.
+2. Macerar las frambuesas con tenedor y mezclarlas en la infusión tibia calentada a 58°C.
+3. Incorporar la grenetina hidratada agitando con varillas hasta fundir totalmente; verter los 30 g de Fórmula 33Plus® disolviendo sin grumos.
+4. Vaciar en moldes de silicón o cristal individuales; enfriar a temperatura ambiente 15 minutos y transferir a cámara frigorífica a 4°C por 3 horas hasta cuajado óptimo.
+
+#### 🍽️ Servicio: COMIDA (675 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `51.5g` | Proteína: `47.8g` | Carbs Netos: `5.2g`  
+
+##### 🥗 ENTRADA: Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Ensalada clorofílica amarga y estimulante biliar con hojas tiernas aderezadas con aceite VEVO y zumo de limón recién prensado."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Arúgula fresca de la granja: **240 g** (40 g/persona)
+- *Verduras y Hortalizas Frescas*: Espinacas baby tiernas: **240 g** (40 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Lavar y centrifugar las hojas de arúgula y espinaca baby asegurando secado total para adherencia del aceite.
+2. Emulsionar en un tazón de vidrio el aceite VEVO con el jugo de limón y la sal mineral batiendo con un tenedor hasta opalescencia.
+3. Disponer las hojas en ensaladera amplia y rociar la vinagreta justo al momento del servicio.
+4. Mezclar con dos cucharas de madera con movimientos envolventes suaves para no marchitar las hojas; repartir en 6 platos fríos.
+
+##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano
+- **Técnica Culinaria:** `curry_aromatic_simmer`
+- **Nota Organoléptica y Bioquímica:** *"Pechuga de pollo cocinada a fuego lento en emulsión aromática de cúrcuma orgánica, curry aromático, crema espesa y queso Parmesano Reggiano fundido."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Pechuga de pollo orgánica deshuesada en cubos: **900 g** (150 g/persona)
+- *Especias, Hierbas y Condimentos*: Cúrcuma orgánica en polvo: **12 g** (2 g/persona)
+- *Especias, Hierbas y Condimentos*: Curry aromático suave en polvo: **12 g** (2 g/persona)
+- *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado: **90 g** (15 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **60 g** (10 g/persona)
+- *Lácteos y Grasas Saludables*: Crema entera de rancho sin pasteurizar ultra: **180 ml** (30 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Cortar la pechuga en dados homogéneos de 3 cm; salar ligeramente con sal de mar mineral.
+2. En sartén honda o wok a 125°C, fundir la mantequilla y añadir la cúrcuma y el curry en polvo; sofreír durante 45 segundos para tostar especias y activar la curcumina en medio graso sin quemar.
+3. Añadir los trozos de pechuga de pollo, sellando a fuego medio durante 4 minutos para retener jugos internos.
+4. Verter la crema entera y el queso Parmesano rallado; reducir el fuego al mínimo (80°C–85°C) y cocinar tapado durante 8 minutos hasta salsa espesa, dorada y untuosa. Servir bien caliente.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Zoodles de Calabacita al Sartén con Aceite de Oliva Extra Virgen
+- **Técnica Culinaria:** `pan_roast`
+- **Nota Organoléptica y Bioquímica:** *"Cintas vegetales tipo espagueti salteadas con calor rápido para mantener textura crocante y frescura clorofílica."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Calabacitas verdes frescas en espiral (zoodles): **600 g** (100 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Procesar las calabacitas con espiralizador de verduras para obtener filamentos continuos; reposar 5 minutos sobre paño para drenar exceso de agua superficial.
+2. Calentar sartén amplia con el aceite VEVO a fuego vivo (160°C).
+3. Saltear los zoodles durante exactamente 2 minutos y medio con movimiento de salteo continuo.
+4. Sazonar con la sal mineral, retirar del calor inmediatamente para evitar que suelten líquido y servir al dente como base del pollo al curry.
+
+#### 🍽️ Servicio: CENA (526 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `38.0g` | Proteína: `42.5g` | Carbs Netos: `3.4g`  
+
+##### 🥗 ENTRADA: Bastones de Pepino y Apio al Limón con Sal Mineral
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Crudos refrescantes de alta hidratación y electrolitos minerales para inicio de digestión nocturna sin pesadez."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Pepino verde pelado sin semillas en bastones: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Apio tierno crujiente en bastones: **240 g** (40 g/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Cortar el pepino y el apio en bastones simétricos de 8 cm de largo.
+2. Sumergir 5 minutos en agua con cubos de hielo para maximizar turgencia celular y crujido.
+3. Secar prolijamente sobre paño de cocina y colocar verticalmente en vasitos individuales de cristal.
+4. Bañar con el jugo de limón recién exprimido y coronar con granos de sal mineral de Colima.
+
+##### 🥩 PLATILLO PRINCIPAL: Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Láminas nobles de salmón salvaje crudo con aguacate en cubos finos, perfumadas con aceite de sésamo prensado en frío y gotas cítricas."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Lomo de salmón fresco calidad sashimi: **780 g** (130 g/persona)
+- *Verduras y Hortalizas Frescas*: Aguacate Hass fresco en láminas: **360 g** (60 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de ajonjolí tostado prensado en frío: **30 ml** (5 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Semillas y Frutos Secos*: Semillas de sésamo tostadas: **18 g** (3 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Mantener el salmón a 2°C hasta el instante del corte; cortar cortes bies finos de 4 mm con cuchillo yanagiba o fileteador muy afilado en un solo trazo.
+2. Disponer las láminas de salmón intercaladas con abanicos delgados de aguacate Hass en platos fríos.
+3. Emulsionar en gotero el aceite de ajonjolí con el jugo de limón fresco y la sal de mar mineral.
+4. Rociar delicadamente sobre cada corte de salmón; terminar esparciendo las semillas de sésamo tostadas y servir de inmediato.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Tisana Nocturna de Menta (Máx 60°C) con Fórmula Reparadora 34Plus®
+- **Técnica Culinaria:** `nocturnal_tisane`
+- **Nota Organoléptica y Bioquímica:** *"Infusión digestiva refrescante de hojas de menta verde con asimilación nocturna de micronutrientes 34Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Especias, Hierbas y Condimentos*: Hojas de menta fresca de la granja: **30 g** (5 g/persona)
+- *Líquidos e Infusiones*: Agua purificada caliente: **900 ml** (150 ml/persona)
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Infusionar las hojas de menta limpia en agua a 85°C durante 5 minutos en tetera con émbolo.
+2. Bajar el émbolo y decantar la infusión; permitir reposo hasta alcanzar 57°C.
+3. Incorporar gradualmente los 30 g de Fórmula 34Plus®, disolviendo suavemente con cuchara de madera.
+4. Servir caliente en tazas de infusión a temperatura reconfortante previa al descanso.
+
+---
+
+### 📅 MARTES 29 DE SEPTIEMBRE DE 2026
+
+#### 🍽️ Servicio: DESAYUNO (563 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `39.8g` | Proteína: `46.2g` | Carbs Netos: `5.0g`  
+
+##### 🥗 ENTRADA: Arilos de Granada Fresca con Almendras Fileteadas y Chía
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Perlas rojas crujientes con alto contenido de punicalaginas antioxidantes balanceadas con grasas de almendra."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Frutas Cetogénicas*: Arilos de granada fresca de la granja: **300 g** (50 g/persona)
+- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **90 g** (15 g/persona)
+- *Semillas y Frutos Secos*: Semillas de chía orgánicas: **48 g** (8 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Desgranar la granada en un cuenco con agua fría para separar arilos limpios sin membranas blancas amargas; escurrir perfectamente.
+2. Tostar las almendras en seco a 120°C por 2 minutos hasta aroma avellanado.
+3. Distribuir los arilos escarlata en copas de vidrio frío.
+4. Coronar con las almendras fileteadas y las semillas de chía; servir a 12°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén
+- **Técnica Culinaria:** `scrambled_stir_fry`
+- **Nota Organoléptica y Bioquímica:** *"Desayuno de alta potencia cetogénica con carne seca magra artesanal rehidratada y frita en mantequilla con huevos de pastoreo."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Huevos y Ovoproductos*: Huevos orgánicos enteros de libre pastoreo: **18 piezas** (3 piezas/persona)
+- *Carnes, Aves y Pescados*: Machaca de res magra artesanal deshebrada fina: **180 g** (30 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **72 g** (12 g/persona)
+- *Especias, Hierbas y Condimentos*: Hojas de orégano silvestre seco: **6 g** (1 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. En sartén de hierro a fuego medio (140°C), derretir 36 g de mantequilla; agregar la machaca de res y frotar con el orégano seco entre las manos, sofriendo por 2 minutos hasta que desprenda aroma tostado intenso.
+2. Batir los 18 huevos enteros en tazón con la sal mineral durante 30 segundos.
+3. Incorporar el resto de la mantequilla al sartén sobre la machaca caliente y verter la emulsión de huevo completa.
+4. Bajar a fuego suave (120°C) y revolver con movimientos circulares lentos desde el exterior hacia el centro durante 3 minutos hasta cuajado jugoso y carnoso. Servir de inmediato a 65°C.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Gelatina Artesanal de Granada Viva (4°C) con Fórmula Nootrópica 33Plus®
+- **Técnica Culinaria:** `cold_gelatin_infusion`
+- **Nota Organoléptica y Bioquímica:** *"Gelatina de arilos de granada prensados y colágeno hidrolizado a baja temperatura enriquecida con 33Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
+- *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
+- *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
+- *Frutas Cetogénicas*: Jugo y arilos de granada fresca macerados: **180 g** (30 g/persona)
+- *Líquidos e Infusiones*: Infusión botánica de manzanilla y frutos rojos: **720 ml** (120 ml/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Hidratar la grenetina en agua purificada fría por 7 minutos.
+2. Templar la infusión botánica a 60°C e incorporar el extracto fresco de granada.
+3. Fundir la grenetina en el líquido tibio y adicionar gradualmente la Fórmula Nootrópica 33Plus® batiendo hasta integración sin espuma.
+4. Verter en moldes individuales y reposar a 4°C en refrigeración por 3 horas hasta textura gelificada brillante.
+
+#### 🍽️ Servicio: COMIDA (643 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `47.2g` | Proteína: `46.8g` | Carbs Netos: `5.4g`  
+
+##### 🥗 ENTRADA: Crema de Coliflor Rostizada al Ajo y Queso de Cabra
+- **Técnica Culinaria:** `boil_and_blend`
+- **Nota Organoléptica y Bioquímica:** *"Floretes de coliflor caramelizados al horno con dientes de ajo dulce triturados en sopa aterciopelada con queso de cabra."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Coliflor fresca de la granja en floretes: **600 g** (100 g/persona)
+- *Verduras y Hortalizas Frescas*: Dientes de ajo enteros con piel: **30 g** (5 g/persona)
+- *Líquidos e Infusiones*: Caldo de pollo o fondo vegetal casero: **600 ml** (100 ml/persona)
+- *Lácteos y Grasas Saludables*: Queso de cabra suave artesanal: **120 g** (20 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **48 g** (8 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Rostizar los floretes de coliflor y los ajos en bandeja a 200°C durante 15 minutos hasta bordes dorados de reacción Maillard dulce.
+2. Pelar los ajos asados y colocarlos en cacerola con la coliflor dorada, el fondo casero y la mantequilla.
+3. Cocinar a fuego suave por 6 minutos para amalgamar aromas.
+4. Licuar a alta potencia con el queso de cabra y la sal mineral durante 2 minutos hasta textura sedosa; servir caliente a 70°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada
+- **Técnica Culinaria:** `saute_and_sear`
+- **Nota Organoléptica y Bioquímica:** *"Corte de res de pastoreo sellado en mantequilla clarificada con emulsión fragante de eneldo fresco y reducción de jugos propios."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Medallones de Sirloin de res magro: **900 g** (150 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla clarificada (Ghee): **60 g** (10 g/persona)
+- *Especias, Hierbas y Condimentos*: Hojas de eneldo fresco picado: **18 g** (3 g/persona)
+- *Líquidos e Infusiones*: Caldo concentrado de res sin almidón: **120 ml** (20 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Atemperar los medallones de Sirloin a 20°C; sazonar con sal mineral de mar por ambas caras.
+2. Calentar sartén pesada a fuego medio-alto (190°C) con 40 g de ghee hasta punto de humo tenue. Colocar la carne.
+3. Sellar firmemente por 3 minutos por lado para término medio con centro rosado tierno.
+4. Retirar la carne a plato tibio; bajar el fuego, verter el caldo concentrado desglasando el fondo de sartén por 1 minuto, añadir el resto del ghee y el eneldo fresco emulsionando en salsa brillante. Napar los medallones y servir.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Chayotes Tiernos al Vapor con Mantequilla Clarificada
+- **Técnica Culinaria:** `pan_roast`
+- **Nota Organoléptica y Bioquímica:** *"Chayotes sin espinas en láminas delgadas cocidos al vapor y aderezados con ghee dorado."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Chayotes tiernos pelados en láminas: **600 g** (100 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla clarificada (Ghee): **36 g** (6 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Pelar y rebanar los chayotes en medias lunas uniformes de 5 mm.
+2. Cocinar en vaporera con agua hirviendo durante 7 minutos hasta textura tierna pero firme al bocado.
+3. Pasar a tazón caliente, bañar con el ghee fundido y sazonar con la sal de mar mineral.
+4. Revolver delicadamente y servir caliente como acompañamiento vegetal suave y alcalinizante.
+
+#### 🍽️ Servicio: CENA (491 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `35.0g` | Proteína: `39.5g` | Carbs Netos: `3.2g`  
+
+##### 🥗 ENTRADA: Bastones de Zucchini y Apio al Limón con Sal de Mar
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Crudos de calabacín y apio blanco refrescantes con ácido cítrico natural y sales marinas."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Calabacita zucchini fresca en bastones: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Apio tierno crujiente en bastones: **240 g** (40 g/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Cortar el zucchini y el apio en bastoncitos finos uniformes.
+2. Acondicionar en baño de agua helada por 4 minutos para resaltar firmeza crujiente.
+3. Escurrir y disponer en copas de mesa.
+4. Aliñar con el zumo de limón fresco y cristales de sal mineral.
+
+##### 🥩 PLATILLO PRINCIPAL: Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO
+- **Técnica Culinaria:** `skin_crisp_fish`
+- **Nota Organoléptica y Bioquímica:** *"Filete magro de pescado blanco de captura horneado suavemente en papillote abierto con hierbas frescas y aceite virgen extra."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Filete de pescado blanco de captura (Robalo o Corvina): **780 g** (130 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **48 ml** (8 ml/persona)
+- *Especias, Hierbas y Condimentos*: Finas hierbas frescas (perejil, tomillo y orégano): **18 g** (3 g/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Secar los filetes de pescado con toallas de papel; verificar ausencia de espinas con pinza culinaria.
+2. Disponer sobre bandeja con papel para hornear; sazonar con sal de mar, jugo de limón y las finas hierbas frescas picadas.
+3. Rociar generosamente con el aceite VEVO sobre cada porción.
+4. Hornear a 170°C durante 10-12 minutos hasta que la lasca se separe fácilmente con un tenedor y la carne esté translúcida y jugosa. Servir caliente.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Tisana Nocturna de Manzanilla (Máx 60°C) con Fórmula Reparadora 34Plus®
+- **Técnica Culinaria:** `nocturnal_tisane`
+- **Nota Organoléptica y Bioquímica:** *"Infusión suave y digestiva de flores de manzanilla silvestre combinada con soporte 34Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Especias, Hierbas y Condimentos*: Flores de manzanilla deshidratadas de alta pureza: **24 g** (4 g/persona)
+- *Líquidos e Infusiones*: Agua purificada caliente: **900 ml** (150 ml/persona)
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Colocar las flores de manzanilla en filtro de tetera; verter agua a 85°C e infusionar tapado por 6 minutos.
+2. Filtrar el líquido floral y dejar enfriar hasta que baje a 58°C.
+3. Disolver los 30 g de Fórmula Reparadora 34Plus® integrando con espátula de silicón.
+4. Servir caliente en tazas individuales para inducir descanso reparador.
+
+---
+
+### 📅 MIÉRCOLES 30 DE SEPTIEMBRE DE 2026
+
+#### 🍽️ Servicio: DESAYUNO (521 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `38.8g` | Proteína: `36.2g` | Carbs Netos: `5.2g`  
+
+##### 🥗 ENTRADA: Arándanos Frescos con Nueces Pecana y Semillas de Girasol
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Entrada de frutos azules de bajo índice glucémico con textura crocante de pipas de girasol y nueces."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Frutas Cetogénicas*: Arándanos frescos de la granja: **300 g** (50 g/persona)
+- *Semillas y Frutos Secos*: Nueces pecana troceadas: **90 g** (15 g/persona)
+- *Semillas y Frutos Secos*: Semillas de girasol tostadas sin sal: **48 g** (8 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Lavar y secar meticulosamente los arándanos frescos.
+2. Tostar las semillas de girasol en sartén caliente por 90 segundos para acentuar crocancia.
+3. Servir los arándanos en platos pequeños de cerámica.
+4. Esparcir las nueces pecana y las semillas de girasol tostadas por encima; servir fresco a 12°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente
+- **Técnica Culinaria:** `baveuse_omelette`
+- **Nota Organoléptica y Bioquímica:** *"Reinterpretación gastronómica cetogénica: base aérea de claras montadas al horno con parmesano, coronadas con tocino de pavo crujiente, yema pochada suave y salsa holandesa casera tibia."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Huevos y Ovoproductos*: Huevos orgánicos enteros de libre pastoreo: **18 piezas** (3 piezas/persona)
+- *Carnes, Aves y Pescados*: Tocino de pavo curado magro en tiras: **180 g** (30 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal (para holandesa): **72 g** (12 g/persona)
+- *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado fino: **36 g** (6 g/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **18 ml** (3 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Separar 6 huevos en claras y yemas. Montar las 6 claras a punto de nieve firme con una pizca de sal; plegar delicadamente el queso parmesano rallado. Formar 6 montículos o 'nubes' sobre bandeja con papel para hornear, hacer un hueco central con una cuchara y hornear a 180°C durante 5 minutos hasta apenas doradas.
+2. Dorar las tiras de tocino de pavo en sartén sin grasa hasta que estén crocantes; escurrir sobre papel secante.
+3. Preparar las 12 piezas de huevos restantes pochándolos en agua a 85°C con vinagre durante 3 minutos hasta clara cuajada y yema fluida; o cocinar en escalfado de precisión. Colocar una yema/huevo pochado sobre cada nube horneada con el tocino de pavo crujiente.
+4. Emulsionar a baño maría suave (55°C) las 6 yemas reservadas con la mantequilla fundida en chorro fino, jugo de limón y sal mineral hasta obtener una salsa holandesa espesa y brillante. Napar las nubes benedictinas y servir tibias de inmediato a 60°C.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Gelatina Artesanal de Arándanos Vivos (4°C) con Fórmula Nootrópica 33Plus®
+- **Técnica Culinaria:** `cold_gelatin_infusion`
+- **Nota Organoléptica y Bioquímica:** *"Gelatina morada de colágeno natural infusionada con arándanos y adaptógenos activos 33Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
+- *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
+- *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
+- *Frutas Cetogénicas*: Arándanos frescos macerados: **180 g** (30 g/persona)
+- *Líquidos e Infusiones*: Infusión de frutos rojos y té blanco: **720 ml** (120 ml/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Hidratar la grenetina en agua purificada fría durante 7 minutos.
+2. Calentar la infusión a 58°C y mezclar con los arándanos frescos triturados.
+3. Disolver la grenetina y añadir los 30 g de Fórmula 33Plus®, emulsionando hasta transparencia violeta.
+4. Repartir en copas de cristal y refrigerar a 4°C durante 3 horas y media. Servir frío a 4°C.
+
+#### 🍽️ Servicio: COMIDA (691 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `52.0g` | Proteína: `48.5g` | Carbs Netos: `5.0g`  
+
+##### 🥗 ENTRADA: Consomé Claro de Nopales y Hortalizas Tiernas
+- **Técnica Culinaria:** `boil_and_blend`
+- **Nota Organoléptica y Bioquímica:** *"Caldo límpido desgrasado con bastoncitos de nopal tierno blanqueado, epazote fresco y hortalizas de granja."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Nopales tiernos de la granja cortados en cubos finos: **360 g** (60 g/persona)
+- *Líquidos e Infusiones*: Fondo claro de pollo o res clarificado: **720 ml** (120 ml/persona)
+- *Especias, Hierbas y Condimentos*: Hojas de epazote fresco de la granja: **12 g** (2 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **24 ml** (4 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Cocer los cubitos de nopal en agua hirviendo con una cucharada de sal y cáscara de tomate durante 5 minutos para eliminar baba; enjuagar con agua fría y escurrir.
+2. Calentar el fondo clarificado en cacerola con las hojas de epazote fresco y cocinar a fuego lento durante 8 minutos para perfumar el caldo.
+3. Incorporar los nopales blanqueados y el aceite VEVO; rectificar de sal mineral.
+4. Servir caliente a 72°C en tazones hondos como consomé depurativo y ligero.
+
+##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano
+- **Técnica Culinaria:** `saute_and_sear`
+- **Nota Organoléptica y Bioquímica:** *"Suprema de pollo rellena de espinacas pochadas y queso crema artesanal, horneada y bañada en reducción de queso Parmesano Reggiano."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Pechuga de pollo orgánica deshuesada (supremas): **900 g** (150 g/persona)
+- *Lácteos y Grasas Saludables*: Queso crema artesanal sin almidón: **120 g** (20 g/persona)
+- *Verduras y Hortalizas Frescas*: Espinacas frescas de la granja: **240 g** (40 g/persona)
+- *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado: **60 g** (10 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **48 g** (8 g/persona)
+- *Lácteos y Grasas Saludables*: Crema entera de rancho sin pasteurizar ultra: **120 ml** (20 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Pocher las espinacas en sartén con 12 g de mantequilla durante 1 minuto hasta colapsar; escurrir todo exceso de agua y mezclar con el queso crema y sal mineral.
+2. Abrir las pechugas de pollo en corte mariposa o bolsillo lateral; rellenar con la crema de espinacas y cerrar con palillo de bambú.
+3. Sellar las pechugas en sartén de hierro con 24 g de mantequilla a 160°C durante 3 minutos por cara para sellar la fibra; transferir a horno a 180°C por 12 minutos hasta cocción completa interior.
+4. En la misma sartén, reducir la crema entera con el queso Parmesano rallado a fuego muy suave hasta ligar; retirar los palillos del pollo, rebanar al sesgo, napar con la salsa tibia y servir.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Ejotes Frescos Salteados con Almendras Fileteadas y Aceite VEVO
+- **Técnica Culinaria:** `pan_roast`
+- **Nota Organoléptica y Bioquímica:** *"Ejotes verdes crujientes salteados a fuego vivo con láminas de almendra tostada y aceite de oliva virgen extra."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Ejotes verdes tiernos de la granja: **600 g** (100 g/persona)
+- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **48 g** (8 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Blanquear los ejotes en agua salada hirviendo por 3 minutos; pasar inmediatamente a baño de agua con hielo para retener color esmeralda.
+2. Calentar sartén amplia con el aceite VEVO a 150°C.
+3. Saltear los ejotes bien secos durante 2 minutos hasta adquirir temperatura intensa.
+4. Incorporar las almendras fileteadas tostadas y la sal mineral, saltear 30 segundos más y servir crujientes.
+
+#### 🍽️ Servicio: CENA (516 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `36.8g` | Proteína: `41.5g` | Carbs Netos: `3.8g`  
+
+##### 🥗 ENTRADA: Bastones de Pepino y Zucchini al Limón con Sal Mineral
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Aperitivo fresco hidratante vegetal con pepino y calabacita cortados al momento."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Pepino verde fresco en bastones: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Calabacita zucchini fresca en bastones: **240 g** (40 g/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Cortar el pepino y el zucchini en tiras uniformes de 7 cm.
+2. Acomodar en platos llanos refrigerados previamente.
+3. Exprimir el limón fresco por encima en gotas homogéneas.
+4. Espolvorear con sal marina mineral.
+
+##### 🥩 PLATILLO PRINCIPAL: Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Cena ligera de hebras de pechuga de pavo horneada aliñadas en frío con aguacate cremoso, cilantro fresco, aceite VEVO y zumo de limón."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Pechuga de pavo horneada deshebrada fina: **780 g** (130 g/persona)
+- *Verduras y Hortalizas Frescas*: Aguacate Hass fresco en cubos medianos: **360 g** (60 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **42 ml** (7 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **36 ml** (6 ml/persona)
+- *Especias, Hierbas y Condimentos*: Cilantro fresco picado: **18 g** (3 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Colocar la pechuga de pavo deshebrada en un tazón amplio de cristal.
+2. En un cuenco separado, batir el aceite VEVO, el jugo de limón natural, el cilantro picado y la sal mineral hasta formar vinagreta opaca.
+3. Incorporar los cubos de aguacate Hass junto con el pavo deshebrado.
+4. Plegar suavemente con espátula de goma cuidando de no deshacer el aguacate. Servir fresco a 14°C.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Tisana Nocturna Digestiva (Máx 60°C) con Fórmula Reparadora 34Plus®
+- **Técnica Culinaria:** `nocturnal_tisane`
+- **Nota Organoléptica y Bioquímica:** *"Infusión de toronjil y anís dulce para apaciguamiento gástrico y regeneración celular nocturna con 34Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Especias, Hierbas y Condimentos*: Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
+- *Líquidos e Infusiones*: Agua purificada caliente: **900 ml** (150 ml/persona)
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Infusionar las hojas de toronjil en agua caliente a 85°C por 6 minutos.
+2. Colar y permitir atemperar hasta 57°C.
+3. Disolver los 30 g de Fórmula 34Plus® mezclando suavemente.
+4. Repartir en tazas térmicas y consumir tibio 45 minutos antes de dormir.
+
+---
+
+### 📅 JUEVES 01 DE OCTUBRE DE 2026
+
+#### 🍽️ Servicio: DESAYUNO (515 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `38.6g` | Proteína: `35.5g` | Carbs Netos: `5.0g`  
+
+##### 🥗 ENTRADA: Pitayas Frescas con Semillas de Chía y Coco Rallado
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Fruta exótica de pulpa vibrante y bajo contenido calórico combinada con triglicéridos de cadena media de coco."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Frutas Cetogénicas*: Pitaya fresca de la granja en cubos: **300 g** (50 g/persona)
+- *Semillas y Frutos Secos*: Coco rallado deshidratado sin azúcar: **60 g** (10 g/persona)
+- *Semillas y Frutos Secos*: Semillas de chía orgánicas: **48 g** (8 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Pelar la pitaya con cuidado y cortar en cubos regulares de 2 cm.
+2. Tostar el coco rallado en sartén seca a 110°C por 60 segundos hasta fragancia dulce sin quemar.
+3. Acomodar los cubos de pitaya en tazones individuales.
+4. Espolvorear con el coco tostado y las semillas de chía crudas; servir a 12°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco
+- **Técnica Culinaria:** `scrambled_stir_fry`
+- **Nota Organoléptica y Bioquímica:** *"Huevos enteros fritos con técnica española en aceite virgen extra caliente: clara crocante de puntilla dorada y yema líquida sedosa aromada con tomillo."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Huevos y Ovoproductos*: Huevos orgánicos enteros de libre pastoreo: **18 piezas** (3 piezas/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **72 ml** (12 ml/persona)
+- *Especias, Hierbas y Condimentos*: Hojas de tomillo fresco de la granja: **12 g** (2 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Deshojar el tomillo fresco y reservar.
+2. Calentar el aceite de oliva extra virgen en una sartén amplia de hierro fundido a 170°C.
+3. Cascar los huevos en tandas de 3 directamente sobre el aceite caliente; bañar las claras con el aceite con una cuchara para inflar el borde en puntilla crujiente sin cuajar la yema (máximo 90 segundos).
+4. Retirar con espumadera plana escurriendo el aceite; colocar en plato caliente, salpicar con el tomillo fresco y la sal de mar mineral sobre la yema líquida.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Gelatina Artesanal de Pitaya Viva (4°C) con Fórmula Nootrópica 33Plus®
+- **Técnica Culinaria:** `cold_gelatin_infusion`
+- **Nota Organoléptica y Bioquímica:** *"Gelatina cetogénica translúcida de pulpa de pitaya natural enriquecida con biotecnología 33Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
+- *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
+- *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
+- *Frutas Cetogénicas*: Pulpa de pitaya fresca licuada: **180 g** (30 g/persona)
+- *Líquidos e Infusiones*: Infusión de zacate limón y menta: **720 ml** (120 ml/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Hidratar la grenetina en agua purificada fría por 7 minutos.
+2. Mezclar la pulpa de pitaya con la infusión herbal tibia (58°C).
+3. Incorporar la grenetina hasta fundir y luego la Fórmula Nootrópica 33Plus® agitando suavemente.
+4. Servir en moldes y refrigerar a 4°C por 3 horas hasta textura gelificada compacta.
+
+#### 🍽️ Servicio: COMIDA (647 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `48.4g` | Proteína: `46.5g` | Carbs Netos: `4.8g`  
+
+##### 🥗 ENTRADA: Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Bulbo de hinojo en láminas transparentes con arúgula picante aliñada con limón y aceite VEVO para estímulo gástrico."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Bulbo de hinojo fresco en láminas traslúcidas: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Arúgula fresca de la granja: **240 g** (40 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Pasar el bulbo de hinojo por mandolina para obtener láminas milimétricas transparentes; colocar en agua helada 5 minutos para que se ricen.
+2. Centrifugar la arúgula y secar las láminas de hinojo.
+3. Emulsionar el aceite VEVO con el jugo de limón y la sal mineral.
+4. Combinar los vegetales en plato amplio y aderezar justo al momento de servir.
+
+##### 🥩 PLATILLO PRINCIPAL: Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón
+- **Técnica Culinaria:** `skin_crisp_fish`
+- **Nota Organoléptica y Bioquímica:** *"Filete fresco de huachinango salvaje cocinado unilateralmente sobre su piel hasta crocancia absoluta y terminado con mantequilla avellanada de ajo y limón."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Filetes de huachinango fresco con piel: **900 g** (150 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **60 g** (10 g/persona)
+- *Verduras y Hortalizas Frescas*: Dientes de ajo picados muy fino: **18 g** (3 g/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **36 ml** (6 ml/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **24 ml** (4 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Hacer 3 incisiones poco profundas en la piel de cada filete con cuchillo de chef; secar la piel perfectamente con papel y salar.
+2. Calentar una sartén de fondo grueso con el aceite VEVO a 165°C. Colocar los filetes con la piel hacia abajo presionando con una espátula durante los primeros 30 segundos para evitar que se curve.
+3. Cocinar sobre la piel durante 5 minutos (el 80% de la cocción ocurre por transmisión térmica desde la piel crujiente).
+4. Voltear los filetes suavemente por solo 45 segundos; añadir la mantequilla, el ajo picado y el limón alrededor, bañando los filetes con la salsa espumosa y servir inmediatamente sobre la piel crujiente hacia arriba.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Ejotes Frescos Salteados con Almendras Fileteadas
+- **Técnica Culinaria:** `pan_roast`
+- **Nota Organoléptica y Bioquímica:** *"Ejotes tiernos al dente salteados en mantequilla clarificada con almendras doradas."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Ejotes verdes tiernos de la granja: **600 g** (100 g/persona)
+- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **48 g** (8 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla clarificada (Ghee): **36 g** (6 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Blanquear los ejotes en agua hirviendo durante 3 minutos y enfriar en agua con hielo.
+2. Fundir el ghee en sartén amplia a fuego medio-alto (150°C).
+3. Saltear los ejotes escurridos durante 2 minutos hasta adquirir brillo y ligero dorado.
+4. Mezclar con las almendras fileteadas tostadas y la sal de mar mineral; servir caliente.
+
+#### 🍽️ Servicio: CENA (465 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `39.5g` | Proteína: `19.8g` | Carbs Netos: `5.2g`  
+
+##### 🥗 ENTRADA: Abanico de Aguacate Hass con Sal de Mar
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Láminas sedosas de aguacate Hass sazonadas con cristales marinos y gotas de oliva virgen."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Aguacate Hass fresco en su punto: **480 g** (80 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Desprender la cáscara del aguacate y cortar láminas paralelas delgadas.
+2. Abrir en abanico sobre platos fríos.
+3. Aliñar con aceite VEVO y sal mineral de Colima.
+4. Servir de inmediato para evitar pardeamiento enzimático.
+
+##### 🥩 PLATILLO PRINCIPAL: Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana
+- **Técnica Culinaria:** `pan_roast`
+- **Nota Organoléptica y Bioquímica:** *"Sombreros carnosos de portobello horneados rellenos de espinacas tiernas, queso crema artesanal y nueces pecana picadas crocantes."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Sombreros de champiñón Portobello frescos grandes: **12 piezas** (2 piezas/persona)
+- *Verduras y Hortalizas Frescas*: Espinacas frescas de la granja: **360 g** (60 g/persona)
+- *Lácteos y Grasas Saludables*: Queso crema artesanal sin almidón: **180 g** (30 g/persona)
+- *Semillas y Frutos Secos*: Nueces pecana picadas rústicas: **60 g** (10 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado: **36 g** (6 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Limpiar los sombreros de Portobello con paño húmedo; retirar el pie fibroso y raspar suavemente las láminas negras con una cucharita.
+2. Sudar las espinacas en sartén con un chorrito de aceite VEVO por 2 minutos; escurrir todo exceso de líquido y mezclar en tazón con el queso crema, las nueces pecana picadas y la sal mineral.
+3. Pincelar los sombreros de Portobello por ambos lados con aceite VEVO; rellenar la cavidad con la mezcla de espinacas y espolvorear el queso Parmesano por encima.
+4. Hornear a 190°C durante 14 minutos hasta que el portobello esté tierno y el relleno gratinado dorado. Servir caliente.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
+- **Técnica Culinaria:** `nocturnal_tisane`
+- **Nota Organoléptica y Bioquímica:** *"Infusión botánica nocturna reconstituyente con extracto de toronjil y fórmula reparadora 34Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Especias, Hierbas y Condimentos*: Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
+- *Líquidos e Infusiones*: Agua purificada caliente: **900 ml** (150 ml/persona)
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Infusionar las hojas de toronjil en agua caliente por 6 minutos.
+2. Colar y enfriar hasta 58°C.
+3. Añadir los 30 g de Fórmula 34Plus® disolviendo con suavidad.
+4. Servir caliente en tazas para noche de descanso reparador.
+
+---
+
+### 📅 VIERNES 02 DE OCTUBRE DE 2026
+
+#### 🍽️ Servicio: DESAYUNO (521 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `38.5g` | Proteína: `36.5g` | Carbs Netos: `5.3g`  
+
+##### 🥗 ENTRADA: Fresas Frescas de la Granja con Nueces de Castilla y Chía
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Fresas silvestres jugosas en mitades con grasas poliinsaturadas omega 3 de nuez de Castilla y chía."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Frutas Cetogénicas*: Fresas frescas de la granja en mitades: **300 g** (50 g/persona)
+- *Semillas y Frutos Secos*: Nueces de Castilla troceadas: **90 g** (15 g/persona)
+- *Semillas y Frutos Secos*: Semillas de chía orgánicas: **48 g** (8 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Lavar y desinfectar las fresas retirando el pedúnculo verde; cortar en mitades simétricas.
+2. Picar las nueces de Castilla en trozos medianos.
+3. Disponer las fresas en copas de cristal.
+4. Aderezar con las nueces y las semillas de chía; servir a 12°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela
+- **Técnica Culinaria:** `baveuse_omelette`
+- **Nota Organoléptica y Bioquímica:** *"Tortilla japonesa en múltiples capas delgadas enrolladas al calor en mantequilla de pastoreo con tiras de queso panela artesanal fundido en el núcleo."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Huevos y Ovoproductos*: Huevos orgánicos enteros de libre pastoreo: **18 piezas** (3 piezas/persona)
+- *Lácteos y Grasas Saludables*: Queso Panela artesanal fresco en bastones: **120 g** (20 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **60 g** (10 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Batir los 18 huevos con la sal mineral filtrando por un colador para eliminar grumos de clara y lograr textura uniforme.
+2. Engrasar una sartén rectangular o redonda con mantequilla a 120°C. Verter una capa fina de huevo; cuando esté semi-cuajada, colocar bastoncitos de panela en un extremo y enrollar sobre sí misma.
+3. Empujar el rollo a un extremo, engrasar de nuevo y verter otra lámina fina de huevo asegurando que penetre bajo el rollo previo; enrollar de nuevo integrando la capa.
+4. Repetir hasta terminar la mezcla de huevo; reposar 2 minutos sobre esterilla de bambú para fijar forma, cortar en cilindros gruesos y servir tibio a 60°C.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®
+- **Técnica Culinaria:** `cold_gelatin_infusion`
+- **Nota Organoléptica y Bioquímica:** *"Gelatina de fresas frescas maceradas y colágeno hidrolizado a baja temperatura con soporte 33Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
+- *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
+- *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
+- *Frutas Cetogénicas*: Fresas frescas maceradas para coulis: **180 g** (30 g/persona)
+- *Líquidos e Infusiones*: Infusión de frutos rojos y flores de jamaica suave: **720 ml** (120 ml/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Hidratar la grenetina en agua fría por 7 minutos.
+2. Macerar las fresas y calentar la infusión a 58°C.
+3. Disolver la grenetina en el líquido caliente e incorporar la Fórmula 33Plus® agitando suavemente.
+4. Vaciar en moldes de cristal y refrigerar a 4°C durante 3 horas y media. Servir frío a 4°C.
+
+#### 🍽️ Servicio: COMIDA (672 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `47.8g` | Proteína: `52.4g` | Carbs Netos: `4.6g`  
+
+##### 🥗 ENTRADA: Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano
+- **Técnica Culinaria:** `boil_and_blend`
+- **Nota Organoléptica y Bioquímica:** *"Crema profunda de hongos portobello sofritos con cúrcuma activada en mantequilla y ligada con queso Parmesano Reggiano."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Champiñones Portobello frescos troceados: **600 g** (100 g/persona)
+- *Especias, Hierbas y Condimentos*: Cúrcuma orgánica en polvo: **12 g** (2 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **48 g** (8 g/persona)
+- *Líquidos e Infusiones*: Caldo de res o fondo vegetal casero: **600 ml** (100 ml/persona)
+- *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado: **60 g** (10 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. En cacerola honda a 130°C, fundir la mantequilla y saltear los portobellos con la cúrcuma en polvo por 4 minutos hasta dorar intensamente.
+2. Agregar el caldo casero y cocinar a fuego lento por 8 minutos para concentrar sabores terrosos.
+3. Incorporar la sal de mar mineral y procesar en licuadora a alta potencia durante 2 minutos hasta textura sedosa y homogénea.
+4. Regresar a fuego bajo, fundir el queso Parmesano rallado batiendo con globo y servir caliente a 70°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón
+- **Técnica Culinaria:** `crusted_flash_sear`
+- **Nota Organoléptica y Bioquímica:** *"Tataki de atún rojo calidad sashimi rebozado en sésamo bicolor, sellado a temperatura incandescente por 45-60 segundos por lado para preservar centro crudo y rojo a 35°C, terminado con limón fresco (cero desglase líquido para proteger la costra crocante)."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Medallones de atún fresco calidad sashimi: **900 g** (150 g/persona)
+- *Semillas y Frutos Secos*: Semillas de ajonjolí blanco y negro (sésamo): **60 g** (10 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **36 ml** (6 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Secar los medallones de atún con papel secante; sazonar con sal mineral y pincelar con unas gotas de aceite VEVO.
+2. Rebozar las caras de los medallones sobre la mezcla de ajonjolí blanco y negro presionando con la palma para asegurar adherencia uniforme.
+3. Calentar sartén de hierro a fuego vivo (215°C) con 24 ml de aceite VEVO hasta calor incipiente. Colocar los medallones.
+4. Sellar durante exactamente 45 a 60 segundos por cara: el ajonjolí debe tostarse crujiente mientras el centro del atún permanece rojo, fresco y tibio (35°C). Retirar de inmediato de la sartén sin añadir líquidos para preservar intacta la crocancia de la costra; cortar en láminas gruesas de 1 cm sobre tabla de madera, rociar con el jugo de limón recién exprimido y servir al momento.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Espárragos Verdes Asados con Limón y Sal Marina
+- **Técnica Culinaria:** `pan_roast`
+- **Nota Organoléptica y Bioquímica:** *"Espárragos trigueros cocinados a la plancha a alta temperatura con gotas cítricas y cristales marinos."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Espárragos verdes frescos: **600 g** (100 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Despuntar la base leñosa de los espárragos; secar completamente.
+2. Pincelar con aceite VEVO y colocar en parrilla estriada a 180°C durante 6 minutos rotando cada 2 minutos.
+3. Retirar cuando tomen marcas doradas de parrillado.
+4. Sazonar con jugo de limón y sal marina gruesa; servir crujientes.
+
+#### 🍽️ Servicio: CENA (512 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `36.4g` | Proteína: `41.8g` | Carbs Netos: `3.6g`  
+
+##### 🥗 ENTRADA: Bastones de Zucchini y Apio al Limón con Sal Mineral
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Bastoncitos crujientes de hortalizas frescas aderezados con limón y sal mineral para inicio de digestión suave."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Calabacita zucchini fresca en bastones: **300 g** (50 g/persona)
+- *Verduras y Hortalizas Frescas*: Apio tierno crujiente en bastones: **240 g** (40 g/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Cortar el zucchini y el apio en bastones simétricos.
+2. Enfriar en agua helada por 5 minutos y escurrir.
+3. Servir en vasitos de vidrio frío.
+4. Rociar con limón fresco y sal mineral.
+
+##### 🥩 PLATILLO PRINCIPAL: Tartar de Robalo Fresco al Limón con Aguacate Hass y Cilantro
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Tartar marino en frío de robalo salvaje cortado a cuchillo en brunoise fina, macerado al instante con limón fresco, aguacate en dados, cilantro y aceite VEVO."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Filete de robalo salvaje fresco calidad ceviche: **780 g** (130 g/persona)
+- *Verduras y Hortalizas Frescas*: Aguacate Hass fresco en brunoise fina: **360 g** (60 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **42 ml** (7 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco recién exprimido: **48 ml** (8 ml/persona)
+- *Especias, Hierbas y Condimentos*: Hojas de cilantro fresco picado fino: **18 g** (3 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Mantener los filetes de robalo bien fríos (2°C); cortar con cuchillo afilado en cubitos milimétricos de 4 mm (brunoise limpia sin aplastar la carne).
+2. Colocar el pescado en un tazón de vidrio sobre un recipiente con cubos de hielo.
+3. Incorporar los dados finos de aguacate, el cilantro picado, el aceite VEVO y la sal de mar mineral.
+4. Añadir el jugo de limón justo 2 minutos antes de emplatar para evitar sobre-cocinar la proteína con ácido; moldear en aros metálicos individuales y retirar el aro al momento de servir.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Tisana Nocturna de Hinojo (Máx 60°C) con Fórmula Reparadora 34Plus®
+- **Técnica Culinaria:** `nocturnal_tisane`
+- **Nota Organoléptica y Bioquímica:** *"Infusión carminativa y antiinflamatoria de semillas y hojas de hinojo dulce con soporte reparador 34Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Especias, Hierbas y Condimentos*: Semillas y hojas de hinojo fresco: **24 g** (4 g/persona)
+- *Líquidos e Infusiones*: Agua purificada caliente: **900 ml** (150 ml/persona)
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Machacar ligeramente las semillas de hinojo e infusionar con las hojas en agua a 85°C por 7 minutos.
+2. Colar y permitir atemperar hasta 58°C.
+3. Disolver los 30 g de Fórmula 34Plus® integrando con cuchara de madera.
+4. Servir caliente en tazas de noche.
+
+---
+
+### 📅 SÁBADO 03 DE OCTUBRE DE 2026
+
+#### 🍽️ Servicio: DESAYUNO (530 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `39.4g` | Proteína: `37.8g` | Carbs Netos: `5.1g`  
+
+##### 🥗 ENTRADA: Zarzamoras Frescas de la Granja con Almendras Fileteadas y Chía
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Frutos negros silvestres ricos en cianidina y polifenoles de cosecha viva de la granja con almendras crocantes."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Frutas Cetogénicas*: Zarzamoras frescas de la granja: **300 g** (50 g/persona)
+- *Semillas y Frutos Secos*: Almendras fileteadas tostadas: **90 g** (15 g/persona)
+- *Semillas y Frutos Secos*: Semillas de chía orgánicas: **48 g** (8 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Higienizar las zarzamoras con agua fría purificada y secar delicadamente sobre papel absorbente.
+2. Tostar las almendras fileteadas en sartén seca por 90 segundos a 120°C.
+3. Disponer las zarzamoras en copas de postre frías.
+4. Espolvorear con las almendras fileteadas tostadas y las semillas de chía crudas; servir a 12°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra
+- **Técnica Culinaria:** `scrambled_stir_fry`
+- **Nota Organoléptica y Bioquímica:** *"Huevos enteros de pastoreo horneados en cazuelas individuales de barro vidriado sobre espinacas salteadas a la mantequilla y medallón de queso de cabra gratinado."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Huevos y Ovoproductos*: Huevos orgánicos enteros de libre pastoreo: **18 piezas** (3 piezas/persona)
+- *Verduras y Hortalizas Frescas*: Espinacas frescas de la granja: **480 g** (80 g/persona)
+- *Lácteos y Grasas Saludables*: Queso de cabra suave artesanal: **120 g** (20 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **60 g** (10 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Saltear las espinacas limpias en una sartén con 30 g de mantequilla durante 2 minutos hasta colapsar; sazonar con una pizca de sal mineral y escurrir.
+2. Untar 6 cazuelitas individuales para horno con el resto de la mantequilla; colocar una cama uniforme de espinacas en el fondo de cada una.
+3. Cascar con cuidado 3 huevos enteros dentro de cada cazuelita sobre las espinacas sin romper las yemas; coronar con 20 g de queso de cabra desmoronado alrededor.
+4. Hornear a 180°C durante 8 a 10 minutos hasta que la clara cuaje opaca y firme pero la yema permanezca líquida y untuosa. Servir con precaución en la cazuela caliente a 68°C.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®
+- **Técnica Culinaria:** `cold_gelatin_infusion`
+- **Nota Organoléptica y Bioquímica:** *"Gelatina cetogénica de pulpa de zarzamora y colágeno natural hidrolizado a baja temperatura con aporte nootrópico 33Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Nootrópica 33Plus®: **30 g** (5 g/persona)
+- *Lácteos y Grasas Saludables*: Grenetina natural pura (colágeno hidrolizado): **42 g** (7 g/persona)
+- *Líquidos e Infusiones*: Agua purificada para hidratación: **210 ml** (35 ml/persona)
+- *Frutas Cetogénicas*: Zarzamoras frescas maceradas: **180 g** (30 g/persona)
+- *Líquidos e Infusiones*: Infusión botánica de frutos negros y menta: **720 ml** (120 ml/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Hidratar la grenetina en agua fría durante 7 minutos.
+2. Calentar la infusión a 58°C y mezclar las zarzamoras maceradas.
+3. Disolver la grenetina y añadir la Fórmula 33Plus® batiendo con suavidad sin generar burbujas.
+4. Vaciar en recipientes individuales y cuajar a 4°C en refrigeración por 3 horas y media. Servir frío.
+
+#### 🍽️ Servicio: COMIDA (655 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `48.2g` | Proteína: `49.5g` | Carbs Netos: `4.5g`  
+
+##### 🥗 ENTRADA: Crema de Espinacas y Ajo Rostizado al Parmesano
+- **Técnica Culinaria:** `boil_and_blend`
+- **Nota Organoléptica y Bioquímica:** *"Sopa sedosa de espinacas tiernas y dientes de ajo confitados al horno, emulsionada con mantequilla y queso Parmesano Reggiano."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Espinacas frescas de la granja: **600 g** (100 g/persona)
+- *Verduras y Hortalizas Frescas*: Dientes de ajo rostizados en su piel: **24 g** (4 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **48 g** (8 g/persona)
+- *Líquidos e Infusiones*: Caldo claro de verduras o pollo casero: **600 ml** (100 ml/persona)
+- *Lácteos y Grasas Saludables*: Queso Parmesano Reggiano rallado: **60 g** (10 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Pelar los ajos confitados al horno; calentar la mantequilla en olla a fuego medio (130°C).
+2. Saltear las espinacas limpias con los ajos por 2 minutos hasta colapsar la clorofila.
+3. Añadir el caldo casero tibio y sal mineral; cocinar a fuego suave por 4 minutos.
+4. Licuar a alta potencia con el queso Parmesano rallado durante 90 segundos hasta conseguir crema esmeralda aterciopelada; servir a 68°C.
+
+##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo
+- **Técnica Culinaria:** `saute_and_sear`
+- **Nota Organoléptica y Bioquímica:** *"Pechuga de pavo entera marinada en romero fresco de granja y asada al horno lentamente bañada en mantequilla de pastoreo para máxima terneza."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Carnes, Aves y Pescados*: Pechuga de pavo fresca deshuesada en pieza: **900 g** (150 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **72 g** (12 g/persona)
+- *Especias, Hierbas y Condimentos*: Hojas de romero fresco picadas: **18 g** (3 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **24 ml** (4 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Frotar la pechuga de pavo con la sal marina, el romero fresco finamente picado y 24 ml de aceite VEVO; reposar 15 minutos.
+2. En una fuente de hierro, dorar la pieza por todos sus costados en 24 g de mantequilla a fuego medio por 5 minutos.
+3. Colocar el resto de la mantequilla sobre la superficie de la pechuga y hornear a 165°C durante 25 minutos, bañándola con sus jugos cada 8 minutos hasta alcanzar 72°C internos.
+4. Reposar la pieza tapada con papel aluminio durante 8 minutos antes de trinchar en lonchas uniformes de 5 mm y servir bien caliente con sus propios jugos desglasados.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Calabacitas Verdes al Sartén con Sal de Mar
+- **Técnica Culinaria:** `pan_roast`
+- **Nota Organoléptica y Bioquímica:** *"Rodajas tiernas de calabacita salteadas rápidamente en mantequilla con sal marina."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Calabacitas verdes frescas en rodajas: **600 g** (100 g/persona)
+- *Lácteos y Grasas Saludables*: Mantequilla de pastoreo artesanal: **36 g** (6 g/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Cortar las calabacitas en rodajas de 6 mm.
+2. Calentar sartén amplia con la mantequilla a fuego vivo (150°C).
+3. Saltear las rodajas durante 3 minutos hasta que tomen ligero tono dorado en las caras sin sobrecocinar.
+4. Sazonar con la sal mineral y servir calientes como guarnición ligera.
+
+#### 🍽️ Servicio: CENA (512 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `35.8g` | Proteína: `43.2g` | Carbs Netos: `3.7g`  
+
+##### 🥗 ENTRADA: Ensalada Mix de Hojas Verdes de la Granja con Vinagre VEVO
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Mix clorofílico de arúgula, espinaca y lechugas tiernas aliñadas con aceite de oliva extra virgen y vinagre de manzana orgánico."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Arúgula y espinaca baby fresca mixta: **300 g** (50 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Cítricos y Ácidos Naturales*: Vinagre de manzana orgánico sin filtrar: **18 ml** (3 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Lavar y secar meticulosamente las hojas verdes.
+2. Batir enérgicamente el aceite VEVO, el vinagre de manzana y la sal mineral hasta crear emulsión traslúcida.
+3. Aderezar las hojas en ensaladera amplia justo antes del servicio.
+4. Repartir con suavidad en 6 platos fríos.
+
+##### 🥩 PLATILLO PRINCIPAL: Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate
+- **Técnica Culinaria:** `raw_assembly`
+- **Nota Organoléptica y Bioquímica:** *"Wraps cetogénicos crujientes en hojas vivas de lechuga orejona rellenos de pollo deshebrado jugoso, abanicos de aguacate Hass y aceite de oliva virgen extra."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Verduras y Hortalizas Frescas*: Hojas grandes de lechuga orejona viva de la granja: **18 piezas** (3 piezas/persona)
+- *Carnes, Aves y Pescados*: Pechuga de pollo cocida y deshebrada fina: **780 g** (130 g/persona)
+- *Verduras y Hortalizas Frescas*: Aguacate Hass fresco en láminas: **360 g** (60 g/persona)
+- *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **36 ml** (6 ml/persona)
+- *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
+- *Especias, Hierbas y Condimentos*: Sal de mar mineral de Colima: **6 g** (1 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Lavar las 18 hojas de lechuga orejona en agua helada con desinfectante biológico; escurrir y secar completamente para preservar textura rígida y crujiente.
+2. Sazonar el pollo deshebrado con el aceite VEVO, jugo de limón y sal mineral en un tazón.
+3. Disponer 3 hojas de lechuga por comensal a manera de canoas o tacos.
+4. Rellenar cada hoja con el pollo marinado y coronar con las láminas frescas de aguacate Hass; servir de inmediato para consumo directo con las manos.
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Tisana Nocturna de Toronjil (Máx 60°C) con Fórmula Reparadora 34Plus®
+- **Técnica Culinaria:** `nocturnal_tisane`
+- **Nota Organoléptica y Bioquímica:** *"Tisana sedante de cierre semanal de toronjil con micronutrición reparadora nocturna 34Plus."*  
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *Especias, Hierbas y Condimentos*: Hojas de toronjil fresco de la granja: **30 g** (5 g/persona)
+- *Líquidos e Infusiones*: Agua purificada caliente: **900 ml** (150 ml/persona)
+- *Suplementación T.I.L.O.*: Fórmula Biotecnológica Reparadora 34Plus®: **30 g** (5 g/persona)
+
+**Procedimiento Paso a Paso de Autor:**
+1. Infusionar el toronjil fresco en agua a 85°C durante 6 minutos.
+2. Filtrar y permitir enfriar hasta 57°C.
+3. Incorporar los 30 g de Fórmula 34Plus® agitando suavemente.
+4. Servir caliente en tazas de infusión previas al descanso.
+
+---
+
+## 3. Lista de Compras Consolidada (BOM 3D)
 **Total Insumos Requeridos para 6 Comensales durante 7 Días Completos (Semana 40):**
 
 | Insumo | Cantidad Total (6 Comensales) | Unidad | Categoría |
 |---|---|---|---|
-| **Claras de huevo (a temperatura ambiente)** | 6 | piezas | ☁️ Bases de Huevo Nube |
-| **Almendras enteras** | 480 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
-| **Nueces de Castilla** | 360 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
-| **Semillas de chía orgánicas** | 336 | g | 🌰 Grasas Saludables, Semillas y Crujientes |
-| **Semillas de sésamo** | 60 | g | 🌰 Semillas y Nueces |
-| **Cúrcuma orgánica en polvo** | 12 | g | 🌶️ Chiles, Condimentos e Infusiones |
-| **Flores de manzanilla fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
-| **Hojas de menta fresca** | 30 | g | 🌿 Botánicos y Minerales Adaptógenos |
-| **Hojas de toronjil fresco de la granja** | 120 | g | 🌿 Botánicos y Minerales Adaptógenos |
-| **Pimienta negra recién molida** | 3 | g | 🌿 Servicio y Decoración |
-| **Champiñones Portobello frescos** | 732 | piezas | 🍄 Sombreros de Portobello Base |
-| **Jugo de limón fresco recién exprimido** | 810 | ml | 🍋 Cítricos y Ácidos Naturales |
-| **Arilos de Granada fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Arándanos frescos orgánicos** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Frambuesas frescas orgánicas** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Fresas frescas de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Higos frescos vivos de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Moras frescas de la granja** | 612 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Pitaya fresca de la granja** | 480 | g | 🍓 Frutas Keto y Cosecha Viva |
-| **Agua** | 1470 | ml | 🍮 Base Hidrocoloide y Gelificante |
-| **Grenetina natural en polvo (colágeno hidrolizado)** | 294 | g | 🍮 Base Hidrocoloide y Gelificante |
-| **Agua purificada de cocción** | 1800 | ml | 🍲 Base de Caldo y Hortalizas |
-| **Romero fresco y cebolla blanca** | 90 | g | 🍲 Base de Caldo y Hortalizas |
-| **Coliflor fresca de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
-| **Flor de calabaza fresca de la granja** | 720 | g | 🍵 Base Vegetal / Extracto Mineral |
-| **Aceite de oliva extra virgen VEVO** | 72 | ml | 🍾 Vinagreta y Grasas Saludables |
-| **Fórmula Biotecnológica Nootrópica 33Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
-| **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | 💊 SUPLEMENTACIÓN CELULAR / BIOTECNOLOGÍA |
-| **Agua purificada** | 10500 | ml | 💧 Agua Purificada de Infusión |
-| **Aguacate Hass fresco** | 24 | piezas | 🥑 Grasas Saludables y Frutos |
-| **Mantequilla de pastoreo / Ghee** | 1911 | g | 🥑 Grasas Saludables y Frutos |
-| **Aceite de oliva extra virgen (VEVO)** | 612 | ml | 🥑 Hortaliza y Grasas Saludables |
-| **Jitomate bola fresco** | 198 | g | 🥑 Hortalizas y Aderezo Cítrico |
-| **Alcaparras** | 60 | g | 🥑 Macerado Cítrico y Grasas |
-| **Vinagre blanco (para agua de pochado)** | 45 | ml | 🥓 Cubierta y Proteína |
-| **Huevos orgánicos de libre pastoreo** | 78 | piezas | 🥚 Proteína de Huevo Orgánico |
-| **Ajo y cebolla blanca** | 90 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Apio fresco de la granja** | 1200 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Calabacitas tiernas de la granja** | 2160 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Chayotes tiernos de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Ejotes verdes frescos de la granja** | 1680 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Espárragos verdes frescos de la granja** | 1440 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Hinojo fresco de la granja** | 1290 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Nopales tiernos limpios de la granja** | 240 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Pepino blanco fresco de la granja** | 720 | g | 🥦 Hortalizas y Vegetales Córtex |
-| **Cebolla blanca** | 60 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
-| **Orégano seco molido a mano** | 6 | g | 🥩 Proteína Seca Deshidratada y Aromáticos |
-| **Carne molida / Filete de Sirloin magro** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Carne seca machaca artesanal de res** | 150 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Corte magro de Arrachera de res** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Filete de Huachinango fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Filete de Robalo fresco** | 1680 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Filete de Salmón fresco con piel** | 780 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Medallón de Atún fresco** | 900 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Pechuga de pavo artesanal** | 2520 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Pechuga de pollo orgánica** | 2580 | g | 🥩 Proteínas Principales Seleccionadas |
-| **Tocino de pavo artesanal** | 12 | piezas | 🥩 Proteínas Principales Seleccionadas |
-| **Costilla de res limpia** | 600 | g | 🥩 Proteínas y Huesos de Fondo |
-| **Tuétano de res fresco en caña** | 300 | g | 🥩 Proteínas y Huesos de Fondo |
-| **Cebollín fresco de la granja** | 12 | g | 🥬 Hojas Verdes y Envolturas |
-| **Cilantro fresco de la granja** | 81.6 | g | 🥬 Hojas Verdes y Envolturas |
-| **Espinacas baby frescas de la granja** | 1440 | g | 🥬 Hojas Verdes y Envolturas |
-| **Hojas de arúgula fresca** | 360 | g | 🥬 Hojas Verdes y Envolturas |
-| **Hojas de lechuga orejona viva** | 360 | g | 🥬 Hojas Verdes y Envolturas |
-| **Queso Gouda artesanal** | 180 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
-| **Queso Panela artesanal** | 180 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
-| **Queso Parmesano artesanal** | 390 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
-| **Queso crema suave artesanal** | 360 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
-| **Queso de cabra artesanal** | 180 | g | 🧀 Lácteos y Quesos (Sin Gluten / Keto) |
-| **Finas hierbas frescas de la granja** | 12 | g | 🧀 Relleno y Aromáticos |
-| **Sal de mar mineral en escamas** | 291.6 | g | 🧂 Condimentos y Sal Mineral |
-| **Tomillo fresco** | 28.8 | g | 🧈 Emulsión Cremosa y Grasas |
-| **Pimienta negra molida** | 21.6 | g | 🧈 Emulsión y Sazón |
-| **Tomillo fresco de la granja** | 9 | g | 🧈 Grasa Saludable y Botánicos |
-| **Orégano seco** | 14.4 | g | 🧈 Grasa Saludable y Sazón |
-| **Yemas de huevo frescas** | 6 | piezas | 🧈 Salsa Holandesa Casera |
-| **Infusión de té de frutos rojos y menta** | 5040 | ml | 🫐 Extracto Frutal e Infusión Viva |
+| **Arrachera de res magra limpia** | 900 | g | Carnes, Aves y Pescados |
+| **Filete de pescado blanco de captura (Robalo o Corvina)** | 780 | g | Carnes, Aves y Pescados |
+| **Filete de robalo salvaje fresco calidad ceviche** | 780 | g | Carnes, Aves y Pescados |
+| **Filetes de huachinango fresco con piel** | 900 | g | Carnes, Aves y Pescados |
+| **Lomo de salmón fresco calidad sashimi** | 780 | g | Carnes, Aves y Pescados |
+| **Medallones de Sirloin de res magro** | 900 | g | Carnes, Aves y Pescados |
+| **Medallones de atún fresco calidad sashimi** | 900 | g | Carnes, Aves y Pescados |
+| **Pechuga de pavo artesanal** | 2460 | g | Carnes, Aves y Pescados |
+| **Pechuga de pollo orgánica** | 2580 | g | Carnes, Aves y Pescados |
+| **Tocino de pavo artesanal** | 180 | g | Carnes, Aves y Pescados |
+| **Jugo de limón fresco recién exprimido** | 15 | piezas | Cítricos y Ácidos Naturales |
+| **Vinagre de manzana orgánico sin filtrar** | 18 | ml | Cítricos y Ácidos Naturales |
+| **Cebollín fresco de la granja** | 18 | g | Especias, Hierbas y Condimentos |
+| **Cilantro fresco** | 18 | g | Especias, Hierbas y Condimentos |
+| **Curry aromático suave en polvo** | 12 | g | Especias, Hierbas y Condimentos |
+| **Cúrcuma orgánica en polvo** | 24 | g | Especias, Hierbas y Condimentos |
+| **Finas hierbas frescas (perejil, tomillo y orégano)** | 18 | g | Especias, Hierbas y Condimentos |
+| **Flores de manzanilla deshidratadas de alta pureza** | 24 | g | Especias, Hierbas y Condimentos |
+| **Hojas de cilantro fresco** | 18 | g | Especias, Hierbas y Condimentos |
+| **Hojas de eneldo fresco** | 18 | g | Especias, Hierbas y Condimentos |
+| **Hojas de epazote fresco de la granja** | 12 | g | Especias, Hierbas y Condimentos |
+| **Hojas de menta fresca de la granja** | 30 | g | Especias, Hierbas y Condimentos |
+| **Hojas de orégano silvestre seco** | 6 | g | Especias, Hierbas y Condimentos |
+| **Hojas de romero fresco** | 18 | g | Especias, Hierbas y Condimentos |
+| **Hojas de tomillo fresco** | 12 | g | Especias, Hierbas y Condimentos |
+| **Hojas de tomillo fresco de la granja** | 12 | g | Especias, Hierbas y Condimentos |
+| **Hojas de toronjil fresco de la granja** | 120 | g | Especias, Hierbas y Condimentos |
+| **Sal de mar mineral de Colima** | 252 | g | Especias, Hierbas y Condimentos |
+| **Semillas y hojas de hinojo fresco** | 24 | g | Especias, Hierbas y Condimentos |
+| **Arilos de granada fresca de la granja** | 300 | g | Frutas Cetogénicas |
+| **Arándanos frescos de la granja** | 300 | g | Frutas Cetogénicas |
+| **Arándanos frescos macerados** | 180 | g | Frutas Cetogénicas |
+| **Frambuesas frescas orgánicas** | 300 | g | Frutas Cetogénicas |
+| **Frambuesas frescas para puré base** | 180 | g | Frutas Cetogénicas |
+| **Fresas frescas de la granja en mitades** | 300 | g | Frutas Cetogénicas |
+| **Fresas frescas maceradas para coulis** | 180 | g | Frutas Cetogénicas |
+| **Jugo y arilos de granada fresca macerados** | 180 | g | Frutas Cetogénicas |
+| **Moras frescas de la granja** | 300 | g | Frutas Cetogénicas |
+| **Moras frescas para coulis de gelatina** | 180 | g | Frutas Cetogénicas |
+| **Pitaya fresca de la granja** | 300 | g | Frutas Cetogénicas |
+| **Pulpa de pitaya fresca licuada** | 180 | g | Frutas Cetogénicas |
+| **Zarzamoras frescas de la granja** | 300 | g | Frutas Cetogénicas |
+| **Zarzamoras frescas maceradas** | 180 | g | Frutas Cetogénicas |
+| **Huevos orgánicos de libre pastoreo** | 126 | piezas | Huevos y Ovoproductos |
+| **Aceite de ajonjolí prensado en frío** | 30 | ml | Lácteos y Grasas Saludables |
+| **Aceite de oliva extra virgen (VEVO)** | 750 | ml | Lácteos y Grasas Saludables |
+| **Crema entera de rancho sin pasteurizar ultra** | 300 | ml | Lácteos y Grasas Saludables |
+| **Grenetina natural pura (colágeno hidrolizado)** | 294 | g | Lácteos y Grasas Saludables |
+| **Mantequilla clarificada (Ghee)** | 132 | g | Lácteos y Grasas Saludables |
+| **Mantequilla de pastoreo artesanal** | 888 | g | Lácteos y Grasas Saludables |
+| **Mantequilla de pastoreo artesanal (para holandesa)** | 72 | g | Lácteos y Grasas Saludables |
+| **Queso Gouda artesanal** | 120 | g | Lácteos y Grasas Saludables |
+| **Queso Panela artesanal** | 120 | g | Lácteos y Grasas Saludables |
+| **Queso Parmesano artesanal** | 402 | g | Lácteos y Grasas Saludables |
+| **Queso crema suave artesanal** | 300 | g | Lácteos y Grasas Saludables |
+| **Queso de cabra artesanal** | 360 | g | Lácteos y Grasas Saludables |
+| **Agua purificada caliente** | 6300 | ml | Líquidos e Infusiones |
+| **Agua purificada para hidratación** | 1470 | ml | Líquidos e Infusiones |
+| **Caldo claro de verduras o pollo casero** | 600 | ml | Líquidos e Infusiones |
+| **Caldo concentrado de res sin almidón** | 120 | ml | Líquidos e Infusiones |
+| **Caldo de hueso o fondo vegetal casero sin almidón** | 600 | ml | Líquidos e Infusiones |
+| **Caldo de pollo o fondo vegetal casero** | 600 | ml | Líquidos e Infusiones |
+| **Caldo de res o fondo vegetal casero** | 600 | ml | Líquidos e Infusiones |
+| **Fondo claro de pollo o res clarificado** | 720 | ml | Líquidos e Infusiones |
+| **Infusión botánica de frutos negros y menta** | 720 | ml | Líquidos e Infusiones |
+| **Infusión botánica de manzanilla y frutos rojos** | 720 | ml | Líquidos e Infusiones |
+| **Infusión de frutos rojos y flores de jamaica suave** | 720 | ml | Líquidos e Infusiones |
+| **Infusión de frutos rojos y menta** | 720 | ml | Líquidos e Infusiones |
+| **Infusión de frutos rojos y té blanco** | 720 | ml | Líquidos e Infusiones |
+| **Infusión de hierbabuena y flores rojas** | 720 | ml | Líquidos e Infusiones |
+| **Limones frescos** | 21 | piezas | Líquidos e Infusiones |
+| **Almendras fileteadas tostadas** | 366 | g | Semillas y Frutos Secos |
+| **Coco deshidratado sin azúcar** | 60 | g | Semillas y Frutos Secos |
+| **Nueces de Castilla** | 90 | g | Semillas y Frutos Secos |
+| **Nueces pecana** | 90 | g | Semillas y Frutos Secos |
+| **Nueces pecana en mitades** | 90 | g | Semillas y Frutos Secos |
+| **Nueces pecana rústicas** | 60 | g | Semillas y Frutos Secos |
+| **Semillas de ajonjolí blanco y negro (sésamo)** | 60 | g | Semillas y Frutos Secos |
+| **Semillas de chía orgánicas** | 288 | g | Semillas y Frutos Secos |
+| **Semillas de girasol sin sal** | 48 | g | Semillas y Frutos Secos |
+| **Semillas de sésamo** | 18 | g | Semillas y Frutos Secos |
+| **Semillas de sésamo (ajonjolí blanco y negro)** | 60 | g | Semillas y Frutos Secos |
+| **Fórmula Biotecnológica Nootrópica 33Plus®** | 210 | g | Suplementación T.I.L.O. |
+| **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | Suplementación T.I.L.O. |
+| **Aguacate Hass fresco** | 23 | piezas | Verduras y Hortalizas Frescas |
+| **Apio tierno en bastones** | 720 | g | Verduras y Hortalizas Frescas |
+| **Arúgula fresca de la granja** | 480 | g | Verduras y Hortalizas Frescas |
+| **Arúgula y espinaca baby fresca mixta** | 300 | g | Verduras y Hortalizas Frescas |
+| **Bulbo de hinojo fresco traslúcidas** | 300 | g | Verduras y Hortalizas Frescas |
+| **Calabacita zucchini fresca en bastones** | 840 | g | Verduras y Hortalizas Frescas |
+| **Calabacitas verdes frescas** | 600 | g | Verduras y Hortalizas Frescas |
+| **Calabacitas verdes frescas en espiral (zoodles)** | 600 | g | Verduras y Hortalizas Frescas |
+| **Carne seca machaca artesanal de res** | 204 | g | Verduras y Hortalizas Frescas |
+| **Champiñones Portobello frescos** | 22 | piezas | Verduras y Hortalizas Frescas |
+| **Chayotes tiernos pelados** | 600 | g | Verduras y Hortalizas Frescas |
+| **Coliflor fresca de la granja en floretes** | 600 | g | Verduras y Hortalizas Frescas |
+| **Dientes de ajo en su piel** | 24 | g | Verduras y Hortalizas Frescas |
+| **Dientes de ajo enteros con piel** | 30 | g | Verduras y Hortalizas Frescas |
+| **Dientes de ajo muy fino** | 18 | g | Verduras y Hortalizas Frescas |
+| **Ejotes verdes tiernos de la granja** | 1560 | g | Verduras y Hortalizas Frescas |
+| **Espinacas baby tiernas** | 240 | g | Verduras y Hortalizas Frescas |
+| **Espinacas frescas de la granja** | 1680 | g | Verduras y Hortalizas Frescas |
+| **Espárragos verdes frescos** | 1200 | g | Verduras y Hortalizas Frescas |
+| **Flor de calabaza fresca limpia (sin cáliz amargo)** | 600 | g | Verduras y Hortalizas Frescas |
+| **Hojas grandes de lechuga orejona viva de la granja** | 18 | piezas | Verduras y Hortalizas Frescas |
+| **Nopales tiernos de la granja cortados finos** | 360 | g | Verduras y Hortalizas Frescas |
+| **Pepino verde fresco en bastones** | 300 | g | Verduras y Hortalizas Frescas |
+| **Pepino verde pelado sin semillas en bastones** | 300 | g | Verduras y Hortalizas Frescas |
+
+---
+
+## 4. Dictamen de Conformidad Bioquímica y Operativa
+- **Umbral de Leucina:** Superado en 100% de los desayunos mediante 3 huevos enteros de libre pastoreo por comensal (18.9g de proteína primaria de alto valor biológico).
+- **Gobernanza Térmica:** 21 recetas con técnicas culinarias específicas de autor (`baveuse_omelette`, `crusted_flash_sear`, `skin_crisp_fish`, `curry_aromatic_simmer`, `boil_and_blend`, `saute_and_sear`).
+- **Integridad Agronómica:** 0% presencia de higos u otros ingredientes restringidos por SSOT.
+- **Sincronización BOM 3D:** Coincidencia matemática 1:1 entre gramajes de recetas y abastecimiento semanal.
