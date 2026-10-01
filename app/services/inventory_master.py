@@ -389,15 +389,15 @@ def resolve_to_canonical_sku(name: str):
     if "huevo" in nl and "claras" not in nl and "yemas" not in nl:
         return "Huevos orgánicos de libre pastoreo", "Huevos y Ovoproductos"
 
-    # 7. Lácteos y Grasas Saludables
-    if "mantequilla clarificada" in nl or "ghee" in nl:
-        return "Mantequilla clarificada (Ghee)", "Lácteos y Grasas Saludables"
-    if "mantequilla" in nl:
-        return "Mantequilla de pastoreo artesanal", "Lácteos y Grasas Saludables"
+    # 7. Grasas y Aceites Saludables
     if "aceite de oliva" in nl or "vevo" in nl:
-        return "Aceite de oliva extra virgen (VEVO)", "Lácteos y Grasas Saludables"
+        return "Aceite de oliva extra virgen (VEVO)", "Grasas y Aceites Saludables"
     if "aceite" in nl and ("ajonjol" in nl or "sésamo" in nl or "sesamo" in nl):
-        return "Aceite de ajonjolí tostado", "Lácteos y Grasas Saludables"
+        return "Aceite de ajonjolí tostado", "Grasas y Aceites Saludables"
+    if "mantequilla clarificada" in nl or "ghee" in nl:
+        return "Mantequilla clarificada (Ghee)", "Grasas y Aceites Saludables"
+    if "mantequilla" in nl:
+        return "Mantequilla de pastoreo artesanal", "Grasas y Aceites Saludables"
 
     # 8. Lácteos y Quesos (Sin Gluten / Keto)
     if "crema entera" in nl or "crema de rancho" in nl:

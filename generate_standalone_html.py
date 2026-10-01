@@ -2649,19 +2649,24 @@ function generateNextWeekMenu() {
     }
 
     function getSmartItemCategory(itemName, explicitCategory) {
+      const name = (itemName || '').toLowerCase().trim();
+
+      // 0.0 Inmunidad Taxonómica Estricta: Aceites vegetales, VEVO, ajonjolí, mantequilla y ghee son grasas puras (NUNCA lácteos ni quesos)
+      if (/aceite|vevo|ajonjolí|ajonjoli|mantequilla|ghee/i.test(name)) {
+        return '🥑 Grasas, Aceites y Semillas';
+      }
+
       if (explicitCategory && typeof explicitCategory === 'string' && explicitCategory.trim()) {
         const ec = explicitCategory.trim();
         if (ec.includes("Verduras") || ec.includes("Hortalizas")) return "🥬 Verduras, Hortalizas y Frescos";
         if (ec.includes("Carnes") || ec.includes("Pescados") || ec.includes("Proteínas")) return "🥩 Carnes, Pescados y Proteínas";
         if (ec.includes("Frutas")) return "🍓 Frutas de Bajo Índice Glucémico";
-        if (ec.includes("Lácteos") || ec.includes("Quesos")) return "🧀 Lácteos y Quesos (Sin Gluten — Keto)";
+        if (ec.includes("Quesos") || (ec.includes("Lácteos") && !ec.includes("Grasas"))) return "🧀 Lácteos y Quesos (Sin Gluten — Keto)";
         if (ec.includes("Grasas") || ec.includes("Aceites") || ec.includes("Semillas")) return "🥑 Grasas, Aceites y Semillas";
         if (ec.includes("Suplementación") || ec.includes("Biotecnología") || ec.includes("Bases Hidrocoloides")) return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA";
         if (ec.includes("Cítricos") || ec.includes("Ácidos")) return "🍋 Cítricos y Ácidos Naturales";
         if (ec.includes("Especias") || ec.includes("Hierbas") || ec.includes("Aromáticos") || ec.includes("Condimentos")) return "🌶️ Chiles, Condimentos e Infusiones";
       }
-
-      const name = (itemName || '').toLowerCase().trim();
 
       // 0.0 Prioridad Taxonómica Estricta: Leche de coco -> Grasas, Aceites y Semillas (NUNCA Cuarentena)
       if (/leche de coco/i.test(name)) {
