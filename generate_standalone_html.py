@@ -2649,6 +2649,18 @@ function generateNextWeekMenu() {
     }
 
     function getSmartItemCategory(itemName, explicitCategory) {
+      if (explicitCategory && typeof explicitCategory === 'string' && explicitCategory.trim()) {
+        const ec = explicitCategory.trim();
+        if (ec.includes("Verduras") || ec.includes("Hortalizas")) return "🥬 Verduras, Hortalizas y Frescos";
+        if (ec.includes("Carnes") || ec.includes("Pescados") || ec.includes("Proteínas")) return "🥩 Carnes, Pescados y Proteínas";
+        if (ec.includes("Frutas")) return "🍓 Frutas de Bajo Índice Glucémico";
+        if (ec.includes("Lácteos") || ec.includes("Quesos")) return "🧀 Lácteos y Quesos (Sin Gluten — Keto)";
+        if (ec.includes("Grasas") || ec.includes("Aceites") || ec.includes("Semillas")) return "🥑 Grasas, Aceites y Semillas";
+        if (ec.includes("Suplementación") || ec.includes("Biotecnología") || ec.includes("Bases Hidrocoloides")) return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA";
+        if (ec.includes("Cítricos") || ec.includes("Ácidos")) return "🍋 Cítricos y Ácidos Naturales";
+        if (ec.includes("Especias") || ec.includes("Hierbas") || ec.includes("Aromáticos") || ec.includes("Condimentos")) return "🌶️ Chiles, Condimentos e Infusiones";
+      }
+
       const name = (itemName || '').toLowerCase().trim();
 
       // 0.0 Prioridad Taxonómica Estricta: Leche de coco -> Grasas, Aceites y Semillas (NUNCA Cuarentena)
@@ -2712,13 +2724,18 @@ function generateNextWeekMenu() {
         return '🧀 Lácteos y Quesos (Sin Gluten — Keto)';
       }
 
+      // 5. Cítricos y Ácidos Naturales
+      if (/limón|limon|vinagre|balsámico|balsamico/i.test(name)) {
+        return '🍋 Cítricos y Ácidos Naturales';
+      }
+
       // 6. Chiles, Condimentos e Infusiones
-      if (/sal|sal de|sal mineral|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|vinagre|balsámico|balsamico|jengibre|agua|infusión|infusion|té|te|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
+      if (/\bsal\b|\bsal de\b|\bsal mineral\b|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|jengibre|agua|infusión|infusion|\bté\b|\bte\b|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
         return '🌶️ Chiles, Condimentos e Infusiones';
       }
 
       // 7. Verduras, Hortalizas y Frescos
-      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espinaca|espinacas|hinojo|jitomate|jitomates|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|ajo|dientes de ajo|champiñones|champinon|champinones|portobello|setas/i.test(name)) {
+      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espárrago|esparrago|esparragos|espárragos|espinaca|espinacas|flor de calabaza|hinojo|jitomate|jitomates|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|ajo|dientes de ajo|champiñones|champinon|champinones|portobello|setas/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
@@ -3924,15 +3941,15 @@ function parseQuantityInBaseUnit(qty, unitRaw) {
     const val = num < 50 ? num * 1000 : num;
     return { val: val, type: "mass", baseUnit: "g" };
   }
+  if (unitStr.includes("ml") || unitStr.includes("mililitro")) {
+    return { val: num, type: "vol", baseUnit: "ml" };
+  }
   if (unitStr.includes("g") || unitStr.includes("gramo")) {
     return { val: num, type: "mass", baseUnit: "g" };
   }
-  if (unitStr.includes("l") || unitStr.includes("litro") || unitStr.includes("lt")) {
+  if (unitStr === "l" || unitStr === "lt" || unitStr === "lts" || unitStr.includes("litro") || /\bl\b|\blt\b|\blts\b/i.test(unitStr)) {
     const val = num < 50 ? num * 1000 : num;
     return { val: val, type: "vol", baseUnit: "ml" };
-  }
-  if (unitStr.includes("ml") || unitStr.includes("mililitro")) {
-    return { val: num, type: "vol", baseUnit: "ml" };
   }
   return { val: num, type: "count", baseUnit: unitStr || "piezas" };
 }
@@ -4348,7 +4365,7 @@ function calculateNetShoppingList(diners) {
     }
 
     const slug = normalizeToCanonicalSlug(item.slug || cleanName);
-    const catSmart = cleanLower.includes('cebolla') ? '🥬 Verduras, Hortalizas y Frescos' : getSmartItemCategory(cleanName);
+    const catSmart = getSmartItemCategory(cleanName, item.category);
     const cat = catSmart ? catSmart.replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ') : '🛒 Abarrotes y Frescos';
 
     totalCount++;
