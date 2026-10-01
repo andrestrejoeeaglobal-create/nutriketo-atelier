@@ -274,6 +274,12 @@ def resolve_to_market_raw_material(dish_ingredient_name: str) -> str:
         return "Semillas de sésamo (ajonjolí)"
     if "pecana" in cn_lower:
         return "Nuez pecana"
+    if "mantequilla" in cn_lower:
+        if "clarificada" in cn_lower or "ghee" in cn_lower:
+            return "Mantequilla clarificada (Ghee)"
+        return "Mantequilla de pastoreo artesanal"
+    if any(k in cn_lower for k in ["robalo", "róbalo"]) or "pescado blanco" in cn_lower:
+        return "Filete de robalo salvaje fresco de captura"
     if "castilla" in cn_lower:
         return "Nueces de Castilla"
     if "pepino" in cn_lower:
@@ -310,6 +316,7 @@ def consolidate_market_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> Lis
             "Carne seca machaca artesanal de res", "Pechuga de pollo orgánica", "Pechuga de pavo artesanal",
             "Arrachera de res magra limpia", "Carne molida / Filete de Sirloin magro",
             "Filete de Huachinango fresco con piel", "Filete de pescado blanco de captura (Robalo)",
+            "Filete de robalo salvaje fresco de captura",
             "Lomo de salmón fresco calidad sashimi", "Medallón de atún fresco calidad sashimi", "Tocino de pavo artesanal"
         ]:
             category = "Carnes, Aves y Pescados"

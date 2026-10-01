@@ -639,7 +639,7 @@
   - *Puntos Críticos de Control:* Secar filetes; pincelar con aceite VEVO; hornear exactamente 9 a 11 min a 170°C; gotas de limón al salir.
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *Carnes, Aves y Pescados*: Filete de pescado blanco de captura (Robalo o Corvina): **780 g** (130 g/persona)
+| **Filete de robalo salvaje fresco de captura** | 1560 | g | Carnes, Aves y Pescados |
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **48 ml** (8 ml/persona)
 - *Especias, Hierbas y Condimentos*: Finas hierbas frescas (perejil, tomillo y orégano): **18 g** (3 g/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
@@ -922,7 +922,7 @@
 ---
 
 ##### 🥩 PLATILLO PRINCIPAL: Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco
-- **Técnica Culinaria:** `scrambled_stir_fry`
+- **Técnica Culinaria:** `sunny_side_up`
 - **Nota Organoléptica y Bioquímica:** *"Huevos enteros fritos con técnica española en aceite virgen extra caliente: clara crocante de puntilla dorada y yema líquida sedosa aromada con tomillo."*  
 - **Razonamiento Culinario CoCT (Física del Bocado):**
   - *Termodinámica:* Fritura plana en aceite VEVO a 160°C en sartén de hierro precalentada. La clara forma encaje crujiente dorado en la base mientras la yema se mantiene completamente líquida y caliente a 55°C por cocción unilateral convectiva de aceite rociado con cuchara.
@@ -1555,8 +1555,7 @@
 |---|---|---|---|
 | **Arrachera de res magra limpia** | 900 | g | Carnes, Aves y Pescados |
 | **Carne seca machaca artesanal de res** | 180 | g | Carnes, Aves y Pescados |
-| **Filete de pescado blanco de captura (Robalo o Corvina)** | 780 | g | Carnes, Aves y Pescados |
-| **Filete de robalo salvaje fresco calidad ceviche** | 780 | g | Carnes, Aves y Pescados |
+| **Filete de robalo salvaje fresco de captura** | 1560 | g | Carnes, Aves y Pescados |
 | **Filetes de huachinango fresco con piel** | 900 | g | Carnes, Aves y Pescados |
 | **Lomo de salmón fresco calidad sashimi** | 780 | g | Carnes, Aves y Pescados |
 | **Medallones de Sirloin de res magro** | 900 | g | Carnes, Aves y Pescados |
@@ -1596,8 +1595,7 @@
 | **Crema entera de rancho sin pasteurizar ultra** | 300 | ml | Lácteos y Grasas Saludables |
 | **Grenetina natural pura (colágeno hidrolizado)** | 294 | g | Lácteos y Grasas Saludables |
 | **Mantequilla clarificada (Ghee)** | 132 | g | Lácteos y Grasas Saludables |
-| **Mantequilla de pastoreo artesanal** | 888 | g | Lácteos y Grasas Saludables |
-| **Mantequilla de pastoreo artesanal (para holandesa)** | 72 | g | Lácteos y Grasas Saludables |
+| **Mantequilla de pastoreo artesanal** | 960 | g | Lácteos y Grasas Saludables |
 | **Queso Gouda artesanal** | 120 | g | Lácteos y Grasas Saludables |
 | **Queso Panela artesanal** | 120 | g | Lácteos y Grasas Saludables |
 | **Queso Parmesano artesanal** | 402 | g | Lácteos y Grasas Saludables |
