@@ -639,7 +639,7 @@
   - *Puntos Críticos de Control:* Secar filetes; pincelar con aceite VEVO; hornear exactamente 9 a 11 min a 170°C; gotas de limón al salir.
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-| **Filete de robalo salvaje fresco de captura** | 1560 | g | Carnes, Aves y Pescados |
+- *Carnes, Aves y Pescados*: Filete de robalo salvaje fresco de captura: **780 g** (130 g/persona)
 - *Lácteos y Grasas Saludables*: Aceite de oliva extra virgen (VEVO): **48 ml** (8 ml/persona)
 - *Especias, Hierbas y Condimentos*: Finas hierbas frescas (perejil, tomillo y orégano): **18 g** (3 g/persona)
 - *Cítricos y Ácidos Naturales*: Jugo de limón natural fresco: **30 ml** (5 ml/persona)
@@ -1559,7 +1559,7 @@
 | **Grenetina natural pura (colágeno hidrolizado)** | 294 | g | Bases Hidrocoloides y Suplementación Celular |
 | **Arrachera de res magra limpia** | 900 | g | Carnes, Aves y Pescados |
 | **Carne seca machaca artesanal de res** | 180 | g | Carnes, Aves y Pescados |
-| **Filete de robalo salvaje fresco de captura** | 1560 | g | Carnes, Aves y Pescados |
+- *Carnes, Aves y Pescados*: Filete de robalo salvaje fresco de captura: **780 g** (130 g/persona)
 | **Filetes de huachinango fresco con piel** | 900 | g | Carnes, Aves y Pescados |
 | **Huesos de res con tuétano para fondo** | 500 | g | Carnes, Aves y Pescados |
 | **Huesos y retazo de pollo orgánico para fondo** | 500 | g | Carnes, Aves y Pescados |
