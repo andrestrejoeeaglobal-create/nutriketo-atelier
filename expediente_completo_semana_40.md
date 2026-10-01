@@ -1559,7 +1559,7 @@
 | **Grenetina natural pura (colágeno hidrolizado)** | 294 | g | Bases Hidrocoloides y Suplementación Celular |
 | **Arrachera de res magra limpia** | 900 | g | Carnes, Aves y Pescados |
 | **Carne seca machaca artesanal de res** | 180 | g | Carnes, Aves y Pescados |
-- *Carnes, Aves y Pescados*: Filete de robalo salvaje fresco de captura: **780 g** (130 g/persona)
+| **Filete de robalo salvaje fresco de captura** | 1560 | g | Carnes, Aves y Pescados |
 | **Filetes de huachinango fresco con piel** | 900 | g | Carnes, Aves y Pescados |
 | **Huesos de res con tuétano para fondo** | 500 | g | Carnes, Aves y Pescados |
 | **Huesos y retazo de pollo orgánico para fondo** | 500 | g | Carnes, Aves y Pescados |
