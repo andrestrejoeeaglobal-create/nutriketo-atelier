@@ -1551,12 +1551,18 @@
 ## 3. Lista de Compras Consolidada (BOM 3D)
 **Total Insumos Requeridos para 6 Comensales durante 7 Días Completos (Semana 40):**
 
+### 3.1 Requisición de Abastecimiento Comercial (BOM 3D)
+*75 Materias Primas Atómicas Comerciales de Mercado (Carnes, Vegetales, Lácteos, Semillas, Suplementos):*
+
 | Insumo | Cantidad Total (6 Comensales) | Unidad | Categoría |
 |---|---|---|---|
+| **Grenetina natural pura (colágeno hidrolizado)** | 294 | g | Bases Hidrocoloides y Suplementación Celular |
 | **Arrachera de res magra limpia** | 900 | g | Carnes, Aves y Pescados |
 | **Carne seca machaca artesanal de res** | 180 | g | Carnes, Aves y Pescados |
 | **Filete de robalo salvaje fresco de captura** | 1560 | g | Carnes, Aves y Pescados |
 | **Filetes de huachinango fresco con piel** | 900 | g | Carnes, Aves y Pescados |
+| **Huesos de res con tuétano para fondo** | 500 | g | Carnes, Aves y Pescados |
+| **Huesos y retazo de pollo orgánico para fondo** | 500 | g | Carnes, Aves y Pescados |
 | **Lomo de salmón fresco calidad sashimi** | 780 | g | Carnes, Aves y Pescados |
 | **Medallones de Sirloin de res magro** | 900 | g | Carnes, Aves y Pescados |
 | **Medallones de atún fresco calidad sashimi** | 900 | g | Carnes, Aves y Pescados |
@@ -1564,58 +1570,42 @@
 | **Pechuga de pollo orgánica** | 2580 | g | Carnes, Aves y Pescados |
 | **Tocino de pavo artesanal** | 180 | g | Carnes, Aves y Pescados |
 | **Limones frescos** | 21 | piezas | Cítricos y Ácidos Naturales |
-| **Vinagre de manzana orgánico sin filtrar** | 18 | ml | Cítricos y Ácidos Naturales |
-| **Cebollín fresco de la granja** | 18 | g | Especias, Hierbas y Condimentos |
-| **Cilantro fresco** | 18 | g | Especias, Hierbas y Condimentos |
-| **Curry aromático suave en polvo** | 12 | g | Especias, Hierbas y Condimentos |
-| **Cúrcuma orgánica en polvo** | 24 | g | Especias, Hierbas y Condimentos |
-| **Finas hierbas frescas (perejil, tomillo y orégano)** | 18 | g | Especias, Hierbas y Condimentos |
-| **Flores de manzanilla deshidratadas de alta pureza** | 24 | g | Especias, Hierbas y Condimentos |
-| **Hojas de cilantro fresco** | 18 | g | Especias, Hierbas y Condimentos |
-| **Hojas de eneldo fresco** | 18 | g | Especias, Hierbas y Condimentos |
-| **Hojas de epazote fresco de la granja** | 12 | g | Especias, Hierbas y Condimentos |
-| **Hojas de menta fresca de la granja** | 30 | g | Especias, Hierbas y Condimentos |
-| **Hojas de orégano silvestre seco** | 6 | g | Especias, Hierbas y Condimentos |
-| **Hojas de romero fresco** | 18 | g | Especias, Hierbas y Condimentos |
-| **Hojas de tomillo fresco** | 12 | g | Especias, Hierbas y Condimentos |
-| **Hojas de tomillo fresco de la granja** | 12 | g | Especias, Hierbas y Condimentos |
-| **Hojas de toronjil fresco de la granja** | 120 | g | Especias, Hierbas y Condimentos |
-| **Sal de mar mineral de Colima** | 252 | g | Especias, Hierbas y Condimentos |
-| **Semillas y hojas de hinojo fresco** | 24 | g | Especias, Hierbas y Condimentos |
-| **Arilos de granada fresca de la granja** | 480 | g | Frutas Cetogénicas |
-| **Arándanos frescos de la granja** | 480 | g | Frutas Cetogénicas |
+| **Vinagre de manzana orgánico** | 18 | ml | Cítricos y Ácidos Naturales |
+| **Ajo fresco** | 96 | g | Especias, Hierbas y Aromáticos |
+| **Cilantro fresco** | 36 | g | Especias, Hierbas y Aromáticos |
+| **Curry aromático suave en polvo** | 12 | g | Especias, Hierbas y Aromáticos |
+| **Cúrcuma orgánica en polvo** | 24 | g | Especias, Hierbas y Aromáticos |
+| **Eneldo fresco** | 18 | g | Especias, Hierbas y Aromáticos |
+| **Epazote fresco** | 12 | g | Especias, Hierbas y Aromáticos |
+| **Finas hierbas frescas** | 36 | g | Especias, Hierbas y Aromáticos |
+| **Flores de jamaica orgánica deshidratada** | 120 | g | Especias, Hierbas y Aromáticos |
+| **Flores de manzanilla deshidratadas** | 24 | g | Especias, Hierbas y Aromáticos |
+| **Hojas de menta fresca** | 30 | g | Especias, Hierbas y Aromáticos |
+| **Hojas de toronjil fresco** | 120 | g | Especias, Hierbas y Aromáticos |
+| **Orégano silvestre seco** | 6 | g | Especias, Hierbas y Aromáticos |
+| **Romero fresco** | 18 | g | Especias, Hierbas y Aromáticos |
+| **Sal de mar mineral de Colima** | 252 | g | Especias, Hierbas y Aromáticos |
+| **Semillas y hojas de hinojo fresco** | 24 | g | Especias, Hierbas y Aromáticos |
+| **Tomillo fresco** | 24 | g | Especias, Hierbas y Aromáticos |
+| **Zacate limón deshidratado** | 60 | g | Especias, Hierbas y Aromáticos |
+| **Arilos de granada fresca** | 480 | g | Frutas Cetogénicas |
+| **Arándanos frescos** | 480 | g | Frutas Cetogénicas |
 | **Frambuesas frescas orgánicas** | 480 | g | Frutas Cetogénicas |
-| **Fresas frescas de la granja** | 480 | g | Frutas Cetogénicas |
-| **Moras frescas de la granja** | 480 | g | Frutas Cetogénicas |
-| **Pitaya fresca de la granja** | 480 | g | Frutas Cetogénicas |
-| **Zarzamoras frescas de la granja** | 480 | g | Frutas Cetogénicas |
+| **Fresas frescas** | 480 | g | Frutas Cetogénicas |
+| **Moras frescas** | 480 | g | Frutas Cetogénicas |
+| **Pitaya fresca** | 480 | g | Frutas Cetogénicas |
+| **Zarzamoras frescas** | 480 | g | Frutas Cetogénicas |
 | **Huevos orgánicos de libre pastoreo** | 126 | piezas | Huevos y Ovoproductos |
 | **Aceite de ajonjolí tostado** | 30 | ml | Lácteos y Grasas Saludables |
 | **Aceite de oliva extra virgen (VEVO)** | 750 | ml | Lácteos y Grasas Saludables |
-| **Crema entera de rancho sin pasteurizar ultra** | 300 | ml | Lácteos y Grasas Saludables |
-| **Grenetina natural pura (colágeno hidrolizado)** | 294 | g | Lácteos y Grasas Saludables |
 | **Mantequilla clarificada (Ghee)** | 132 | g | Lácteos y Grasas Saludables |
 | **Mantequilla de pastoreo artesanal** | 960 | g | Lácteos y Grasas Saludables |
-| **Queso Gouda artesanal** | 120 | g | Lácteos y Grasas Saludables |
-| **Queso Panela artesanal** | 120 | g | Lácteos y Grasas Saludables |
-| **Queso Parmesano artesanal** | 402 | g | Lácteos y Grasas Saludables |
-| **Queso crema suave artesanal** | 300 | g | Lácteos y Grasas Saludables |
-| **Queso de cabra artesanal** | 360 | g | Lácteos y Grasas Saludables |
-| **Agua purificada caliente** | 6300 | ml | Líquidos e Infusiones |
-| **Agua purificada para hidratación** | 1470 | ml | Líquidos e Infusiones |
-| **Caldo claro de verduras o pollo casero** | 600 | ml | Líquidos e Infusiones |
-| **Caldo concentrado de res sin almidón** | 120 | ml | Líquidos e Infusiones |
-| **Caldo de hueso o fondo vegetal casero sin almidón** | 600 | ml | Líquidos e Infusiones |
-| **Caldo de pollo o fondo vegetal casero** | 600 | ml | Líquidos e Infusiones |
-| **Caldo de res o fondo vegetal casero** | 600 | ml | Líquidos e Infusiones |
-| **Fondo claro de pollo o res clarificado** | 720 | ml | Líquidos e Infusiones |
-| **Infusión botánica de frutos negros y menta** | 720 | ml | Líquidos e Infusiones |
-| **Infusión botánica de manzanilla y frutos rojos** | 720 | ml | Líquidos e Infusiones |
-| **Infusión de frutos rojos y flores de jamaica suave** | 720 | ml | Líquidos e Infusiones |
-| **Infusión de frutos rojos y menta** | 720 | ml | Líquidos e Infusiones |
-| **Infusión de frutos rojos y té blanco** | 720 | ml | Líquidos e Infusiones |
-| **Infusión de hierbabuena y flores rojas** | 720 | ml | Líquidos e Infusiones |
-| **Zacate limón deshidratado para infusión** | 30 | piezas | Líquidos e Infusiones |
+| **Crema entera de rancho sin pasteurizar ultra** | 300 | ml | Lácteos y Quesos (Sin Gluten / Keto) |
+| **Queso Gouda artesanal** | 120 | g | Lácteos y Quesos (Sin Gluten / Keto) |
+| **Queso Panela artesanal** | 120 | g | Lácteos y Quesos (Sin Gluten / Keto) |
+| **Queso Parmesano artesanal** | 402 | g | Lácteos y Quesos (Sin Gluten / Keto) |
+| **Queso crema suave artesanal** | 300 | g | Lácteos y Quesos (Sin Gluten / Keto) |
+| **Queso de cabra artesanal** | 360 | g | Lácteos y Quesos (Sin Gluten / Keto) |
 | **Almendras fileteadas tostadas** | 480 | g | Semillas y Frutos Secos |
 | **Coco deshidratado sin azúcar** | 60 | g | Semillas y Frutos Secos |
 | **Nueces de Castilla** | 90 | g | Semillas y Frutos Secos |
@@ -1626,25 +1616,33 @@
 | **Fórmula Biotecnológica Nootrópica 33Plus®** | 210 | g | Suplementación T.I.L.O. |
 | **Fórmula Biotecnológica Reparadora 34Plus®** | 210 | g | Suplementación T.I.L.O. |
 | **Aguacate Hass fresco** | 23 | piezas | Verduras y Hortalizas Frescas |
-| **Ajo fresco de la granja** | 96 | g | Verduras y Hortalizas Frescas |
-| **Apio tierno en bastones** | 720 | g | Verduras y Hortalizas Frescas |
-| **Arúgula fresca de la granja** | 480 | g | Verduras y Hortalizas Frescas |
-| **Arúgula y espinaca baby fresca mixta** | 300 | g | Verduras y Hortalizas Frescas |
-| **Bulbo de hinojo fresco traslúcidas** | 300 | g | Verduras y Hortalizas Frescas |
-| **Calabacitas verdes tiernas de la granja** | 2040 | g | Verduras y Hortalizas Frescas |
+| **Apio tierno** | 720 | g | Verduras y Hortalizas Frescas |
+| **Arúgula fresca** | 480 | g | Verduras y Hortalizas Frescas |
+| **Bulbo de hinojo fresco** | 300 | g | Verduras y Hortalizas Frescas |
+| **Calabacitas verdes tiernas** | 2040 | g | Verduras y Hortalizas Frescas |
 | **Champiñones Portobello frescos** | 22 | piezas | Verduras y Hortalizas Frescas |
 | **Chayotes tiernos pelados** | 600 | g | Verduras y Hortalizas Frescas |
-| **Coliflor fresca de la granja en floretes** | 600 | g | Verduras y Hortalizas Frescas |
-| **Ejotes verdes tiernos de la granja** | 1560 | g | Verduras y Hortalizas Frescas |
-| **Espinacas baby tiernas** | 240 | g | Verduras y Hortalizas Frescas |
-| **Espinacas frescas de la granja** | 1680 | g | Verduras y Hortalizas Frescas |
+| **Coliflor fresca** | 600 | g | Verduras y Hortalizas Frescas |
+| **Ejotes verdes tiernos** | 1560 | g | Verduras y Hortalizas Frescas |
+| **Espinacas baby tiernas** | 540 | g | Verduras y Hortalizas Frescas |
+| **Espinacas frescas** | 1680 | g | Verduras y Hortalizas Frescas |
 | **Espárragos verdes frescos** | 1200 | g | Verduras y Hortalizas Frescas |
-| **Flor de calabaza fresca limpia (sin cáliz amargo)** | 600 | g | Verduras y Hortalizas Frescas |
-| **Hojas grandes de lechuga orejona viva de la granja** | 18 | piezas | Verduras y Hortalizas Frescas |
-| **Nopales tiernos de la granja cortados finos** | 360 | g | Verduras y Hortalizas Frescas |
-| **Pepino fresco de la granja** | 600 | g | Verduras y Hortalizas Frescas |
+| **Flor de calabaza limpia** | 600 | g | Verduras y Hortalizas Frescas |
+| **Lechuga orejona viva (cogollo)** | 2 | piezas | Verduras y Hortalizas Frescas |
+| **Nopales tiernos** | 360 | g | Verduras y Hortalizas Frescas |
+| **Pepino fresco** | 600 | g | Verduras y Hortalizas Frescas |
 
 ---
+
+### 3.2 Suministros Operativos de Red y Elaboraciones de Cocina (Mise en Place)
+*Insumos de servicio continuo y elaboraciones internas no cotizadas como SKU de supermercado:*
+
+| Insumo Operativo / Preparación | Cantidad / Demanda | Unidad | Naturaleza Operativa |
+|---|---|---|---|
+| Agua purificada de cocina y mesa (red / garrafón) | 7.8 | L | Suministro Operativo de Red (UTILITY_SOLVENT) |
+| Fondo claro de pollo o ave casero | 1,920 | ml | Mise en Place Cocina (Elaborado con 500g huesos/retazo) |
+| Caldo concentrado y fondo de res casero | 1,920 | ml | Mise en Place Cocina (Elaborado con 500g huesos/tuétano) |
+| Infusiones botánicas para gelatinas (7 turnos) | 5,040 | ml | Mise en Place Cocina (Elaboradas con jamaica, menta y flores secas) |
 
 ## 4. Dictamen de Conformidad Bioquímica y Operativa
 - **Umbral de Leucina:** Superado en 100% de los desayunos mediante 3 huevos enteros de libre pastoreo por comensal (18.9g de proteína primaria de alto valor biológico).

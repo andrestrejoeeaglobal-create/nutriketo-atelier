@@ -201,16 +201,16 @@ RAW_PIECE_YIELD_GRAMS = {
 
 PREP_PATTERNS = [
     r"\s+en\s+l[aá]minas(\s+finas)?",
-    r"\s+en\s+cubos(\s+de\s+\d+\s*mm)?",
+    r"\s+en\s+cubos(\s+de\s+\d+\s*mm|\s+medianos|\s+finos)?",
     r"\s+en\s+guacamole",
     r"\s+en\s+rodajas",
     r"\s+en\s+abanico",
     r"\s+(finamente\s+)?desmenuzad[oa]s?",
     r"\s+(finamente\s+)?trocead[oa]s?",
-    r"\s+(finamente\s+)?rallad[oa]s?",
+    r"\s+(finamente\s+)?rallad[oa]s?(\s+fino)?",
     r"\s+(finamente\s+)?picad[oa]s?(\s+fin[oa])?",
     r"\s+filetead[oa]s?",
-    r"\s+tostad[oa]s?",
+    r"\s+tostad[oa]s?(\s+sin\s+sal)?",
     r"\s+crujiente",
     r"\s+asad[oa]s?",
     r"\s+rostizad[oa]s?",
@@ -220,162 +220,382 @@ PREP_PATTERNS = [
     r"\s+a\s+la\s+parrilla",
     r"\s+al\s+sart[eé]n",
     r"\s+al\s+vapor",
+    r"\s+reci[eé]n\s+exprimido",
+    r"\s+en\s+su\s+punto",
+    r"\s+en\s+pieza",
+    r"\s+en\s+tiras",
+    r"\s+en\s+medallones",
+    r"\s+en\s+floretes",
+    r"\s+en\s+mitades",
+    r"\s+en\s+bastones",
+    r"\s+para\s+hidrataci[oó]n",
+    r"\s+caliente",
+    r"\s+tibi[oa]",
+    r"\s+fr[ií][oa]",
+    r"\s+para\s+infusi[oó]n",
+    r"\s+limpia\s+\(sin\s+c[aá]liz\s+amargo\)",
+    r"\s+de\s+alta\s+pureza",
+    r"\s+\(supremas\)",
+    r"\s+deshuesad[oa]",
+    r"\s+sin\s+almid[oó]n",
+    r"\s+de\s+la\s+granja",
+    r"\s+del\s+huerto",
+    r"\s+de\s+libre\s+pastoreo",
+    r"\s+\(ceboll[ií]n,\s+perejil\s+franc[eé]s\s+y\s+perifollo\)",
+    r"\s+\(perejil,\s+tomillo\s+y\s+or[eé]gano\)",
 ]
 
+def resolve_to_canonical_sku(name: str):
+    """Purga cualquier acción culinaria, adjetivos térmicos o poéticos y devuelve la tupla (SKU Canónico, Categoría Bioquímica Inmutable)."""
+    if not name:
+        return "", "Abarrotes y Varios"
+    clean = name.strip()
+    for p in PREP_PATTERNS:
+        clean = re.sub(p, "", clean, flags=re.IGNORECASE)
+    clean = re.sub(r'\s+', ' ', clean).strip()
+    nl = clean.lower()
+
+    # Salvaguarda: Elaboraciones de cocina (HOUSE_PREP) y solventes
+    if any(k in nl for k in ["caldo ", "caldo de", "fondo ", "fondo de", "fondo claro", "infusión", "infusion"]):
+        return clean, "Mise en Place / Fondos de Cocina"
+    if any(k in nl for k in ["agua purificada", "agua para hidrataci", "hielo"]):
+        return "Agua purificada de cocina y mesa (red / garrafón)", "Suministros Operativos de Red"
+
+    # 1. Frutas Cetogénicas
+    if "mora" in nl and "zarzamora" not in nl:
+        return "Moras frescas", "Frutas Cetogénicas"
+    if "frambuesa" in nl:
+        return "Frambuesas frescas orgánicas", "Frutas Cetogénicas"
+    if "arándano" in nl or "arandano" in nl:
+        return "Arándanos frescos", "Frutas Cetogénicas"
+    if "fresa" in nl:
+        return "Fresas frescas", "Frutas Cetogénicas"
+    if "zarzamora" in nl:
+        return "Zarzamoras frescas", "Frutas Cetogénicas"
+    if "pitaya" in nl or "pitahaya" in nl:
+        return "Pitaya fresca", "Frutas Cetogénicas"
+    if "granada" in nl or "arilos" in nl:
+        return "Arilos de granada fresca", "Frutas Cetogénicas"
+
+    # 2. Verduras y Hortalizas Frescas
+    if "aguacate" in nl:
+        return "Aguacate Hass fresco", "Verduras y Hortalizas Frescas"
+    if "jitomate" in nl:
+        return "Jitomate bola fresco", "Verduras y Hortalizas Frescas"
+    if "lechuga orejona" in nl or "lechuga" in nl:
+        return "Lechuga orejona viva (cogollo)", "Verduras y Hortalizas Frescas"
+    if "apio" in nl:
+        return "Apio tierno", "Verduras y Hortalizas Frescas"
+    if "calabacita" in nl or "zucchini" in nl or "zoodles" in nl:
+        return "Calabacitas verdes tiernas", "Verduras y Hortalizas Frescas"
+    if "ejote" in nl:
+        return "Ejotes verdes tiernos", "Verduras y Hortalizas Frescas"
+    if "espárrago" in nl or "esparrago" in nl:
+        return "Espárragos verdes frescos", "Verduras y Hortalizas Frescas"
+    if "espinaca" in nl and "baby" in nl:
+        return "Espinacas baby tiernas", "Verduras y Hortalizas Frescas"
+    if "espinaca" in nl:
+        return "Espinacas frescas", "Verduras y Hortalizas Frescas"
+    if "arúgula" in nl or "arugula" in nl:
+        if "espinaca" in nl:
+            return "Arúgula y espinaca baby mixta", "Verduras y Hortalizas Frescas"
+        return "Arúgula fresca", "Verduras y Hortalizas Frescas"
+    if "coliflor" in nl:
+        return "Coliflor fresca", "Verduras y Hortalizas Frescas"
+    if "chayote" in nl:
+        return "Chayotes tiernos pelados", "Verduras y Hortalizas Frescas"
+    if "flor de calabaza" in nl:
+        return "Flor de calabaza limpia", "Verduras y Hortalizas Frescas"
+    if "nopal" in nl:
+        return "Nopales tiernos", "Verduras y Hortalizas Frescas"
+    if "pepino" in nl:
+        return "Pepino fresco", "Verduras y Hortalizas Frescas"
+    if "portobello" in nl or "champiñ" in nl or "champin" in nl:
+        return "Champiñones Portobello frescos", "Verduras y Hortalizas Frescas"
+    if "hinojo" in nl:
+        if "bulbo" in nl:
+            return "Bulbo de hinojo fresco", "Verduras y Hortalizas Frescas"
+        return "Semillas y hojas de hinojo fresco", "Especias, Hierbas y Aromáticos"
+
+    # 3. Especias, Hierbas y Aromáticos (Ajo reclasificado formalmente aquí)
+    if "ajo" in nl and "ajonjol" not in nl:
+        return "Ajo fresco", "Especias, Hierbas y Aromáticos"
+    if "tomillo" in nl:
+        return "Tomillo fresco", "Especias, Hierbas y Aromáticos"
+    if "romero" in nl:
+        return "Romero fresco", "Especias, Hierbas y Aromáticos"
+    if "eneldo" in nl:
+        return "Eneldo fresco", "Especias, Hierbas y Aromáticos"
+    if "epazote" in nl:
+        return "Epazote fresco", "Especias, Hierbas y Aromáticos"
+    if "orégano" in nl or "oregano" in nl:
+        return "Orégano silvestre seco", "Especias, Hierbas y Aromáticos"
+    if "menta" in nl:
+        return "Hojas de menta fresca", "Especias, Hierbas y Aromáticos"
+    if "toronjil" in nl:
+        return "Hojas de toronjil fresco", "Especias, Hierbas y Aromáticos"
+    if "cilantro" in nl:
+        return "Cilantro fresco", "Especias, Hierbas y Aromáticos"
+    if "cebollín" in nl or "cebollin" in nl:
+        return "Cebollín fresco", "Especias, Hierbas y Aromáticos"
+    if "finas hierbas" in nl:
+        return "Finas hierbas frescas", "Especias, Hierbas y Aromáticos"
+    if "curry" in nl:
+        return "Curry aromático suave en polvo", "Especias, Hierbas y Aromáticos"
+    if "cúrcuma" in nl or "curcuma" in nl:
+        return "Cúrcuma orgánica en polvo", "Especias, Hierbas y Aromáticos"
+    if "manzanilla" in nl:
+        return "Flores de manzanilla deshidratadas", "Especias, Hierbas y Aromáticos"
+    if "zacate" in nl or "lemongrass" in nl:
+        return "Zacate limón deshidratado", "Especias, Hierbas y Aromáticos"
+    if "sal de mar" in nl or "sal mineral" in nl:
+        return "Sal de mar mineral de Colima", "Especias, Hierbas y Aromáticos"
+    if "jamaica" in nl:
+        return "Flores de jamaica orgánica deshidratada", "Especias, Hierbas y Aromáticos"
+
+    # 4. Cítricos y Ácidos Naturales
+    if "limón" in nl or "limon" in nl:
+        return "Limones frescos", "Cítricos y Ácidos Naturales"
+    if "vinagre" in nl:
+        return "Vinagre de manzana orgánico", "Cítricos y Ácidos Naturales"
+
+    # 5. Carnes, Aves y Pescados
+    if "arrachera" in nl:
+        return "Arrachera de res magra limpia", "Carnes, Aves y Pescados"
+    if "machaca" in nl:
+        return "Carne seca machaca artesanal de res", "Carnes, Aves y Pescados"
+    if "sirloin" in nl:
+        return "Medallones de Sirloin de res magro", "Carnes, Aves y Pescados"
+    if "pechuga de pavo" in nl or ("pavo" in nl and "tocino" not in nl):
+        return "Pechuga de pavo artesanal", "Carnes, Aves y Pescados"
+    if "pechuga de pollo" in nl or ("pollo" in nl and "hueso" not in nl and "retazo" not in nl):
+        return "Pechuga de pollo orgánica", "Carnes, Aves y Pescados"
+    if "tocino de pavo" in nl:
+        return "Tocino de pavo artesanal", "Carnes, Aves y Pescados"
+    if any(k in nl for k in ["robalo", "róbalo"]) or "pescado blanco" in nl:
+        return "Filete de robalo salvaje fresco de captura", "Carnes, Aves y Pescados"
+    if "huachinango" in nl:
+        return "Filetes de huachinango fresco con piel", "Carnes, Aves y Pescados"
+    if "salmón" in nl or "salmon" in nl:
+        return "Lomo de salmón fresco calidad sashimi", "Carnes, Aves y Pescados"
+    if "atún" in nl or "atun" in nl:
+        return "Medallones de atún fresco calidad sashimi", "Carnes, Aves y Pescados"
+    if "huesos de res" in nl or "tuétano" in nl:
+        return "Huesos de res con tuétano para fondo", "Carnes, Aves y Pescados"
+    if "huesos de pollo" in nl or "retazo de pollo" in nl:
+        return "Huesos y retazo de pollo orgánico para fondo", "Carnes, Aves y Pescados"
+
+    # 6. Huevos y Ovoproductos
+    if "huevo" in nl and "claras" not in nl and "yemas" not in nl:
+        return "Huevos orgánicos de libre pastoreo", "Huevos y Ovoproductos"
+
+    # 7. Lácteos y Grasas Saludables
+    if "mantequilla clarificada" in nl or "ghee" in nl:
+        return "Mantequilla clarificada (Ghee)", "Lácteos y Grasas Saludables"
+    if "mantequilla" in nl:
+        return "Mantequilla de pastoreo artesanal", "Lácteos y Grasas Saludables"
+    if "aceite de oliva" in nl or "vevo" in nl:
+        return "Aceite de oliva extra virgen (VEVO)", "Lácteos y Grasas Saludables"
+    if "aceite" in nl and ("ajonjol" in nl or "sésamo" in nl or "sesamo" in nl):
+        return "Aceite de ajonjolí tostado", "Lácteos y Grasas Saludables"
+
+    # 8. Lácteos y Quesos (Sin Gluten / Keto)
+    if "crema entera" in nl or "crema de rancho" in nl:
+        return "Crema entera de rancho sin pasteurizar ultra", "Lácteos y Quesos (Sin Gluten / Keto)"
+    if "parmesano" in nl:
+        return "Queso Parmesano artesanal", "Lácteos y Quesos (Sin Gluten / Keto)"
+    if "gouda" in nl:
+        return "Queso Gouda artesanal", "Lácteos y Quesos (Sin Gluten / Keto)"
+    if "panela" in nl:
+        return "Queso Panela artesanal", "Lácteos y Quesos (Sin Gluten / Keto)"
+    if "queso crema" in nl:
+        return "Queso crema suave artesanal", "Lácteos y Quesos (Sin Gluten / Keto)"
+    if "queso de cabra" in nl or "cabra" in nl:
+        return "Queso de cabra artesanal", "Lácteos y Quesos (Sin Gluten / Keto)"
+
+    # 9. Semillas y Frutos Secos
+    if "almendra" in nl:
+        return "Almendras fileteadas tostadas", "Semillas y Frutos Secos"
+    if "sésamo" in nl or "sesamo" in nl or "ajonjolí" in nl or "ajonjoli" in nl:
+        return "Semillas de sésamo (ajonjolí)", "Semillas y Frutos Secos"
+    if "chía" in nl or "chia" in nl:
+        return "Semillas de chía orgánicas", "Semillas y Frutos Secos"
+    if "girasol" in nl:
+        return "Semillas de girasol sin sal", "Semillas y Frutos Secos"
+    if "coco" in nl:
+        return "Coco deshidratado sin azúcar", "Semillas y Frutos Secos"
+    if "pecana" in nl:
+        return "Nuez pecana", "Semillas y Frutos Secos"
+    if "castilla" in nl:
+        return "Nueces de Castilla", "Semillas y Frutos Secos"
+
+    # 10. Bases Hidrocoloides y Suplementación Celular (Inmutable)
+    if "grenetina" in nl or "colágeno" in nl or "colageno" in nl:
+        return "Grenetina natural pura (colágeno hidrolizado)", "Bases Hidrocoloides y Suplementación Celular"
+    if "33plus" in nl:
+        return "Fórmula Biotecnológica Nootrópica 33Plus®", "Suplementación T.I.L.O."
+    if "34plus" in nl:
+        return "Fórmula Biotecnológica Reparadora 34Plus®", "Suplementación T.I.L.O."
+
+    return clean, "Abarrotes y Varios"
+
 def resolve_to_market_raw_material(dish_ingredient_name: str) -> str:
-    """Purga cualquier acción culinaria y devuelve la materia prima atómica comercial."""
-    if not dish_ingredient_name:
-        return ""
-    clean_name = dish_ingredient_name.strip()
-    for pattern in PREP_PATTERNS:
-        clean_name = re.sub(pattern, "", clean_name, flags=re.IGNORECASE)
-    clean_name = re.sub(r'\s+', ' ', clean_name).strip()
+    sku, _ = resolve_to_canonical_sku(dish_ingredient_name)
+    return sku
 
-    cn_lower = clean_name.lower()
-    if "aguacate" in cn_lower:
-        return "Aguacate Hass fresco"
-    if "jitomate" in cn_lower:
-        return "Jitomate bola fresco"
-    if "parmesano o de cabra" in cn_lower or ("parmesano" in cn_lower and "nube" not in cn_lower):
-        return "Queso Parmesano artesanal"
-    if "queso de cabra" in cn_lower or "cabra artesanal" in cn_lower:
-        return "Queso de cabra artesanal"
-    if "gouda" in cn_lower:
-        return "Queso Gouda artesanal"
-    if "queso crema" in cn_lower or "crema suave" in cn_lower:
-        return "Queso crema suave artesanal"
-    if "queso panela" in cn_lower or "panela" in cn_lower:
-        return "Queso Panela artesanal"
-    if "tocino de pavo" in cn_lower:
-        return "Tocino de pavo artesanal"
-    if "pechuga de pollo" in cn_lower or ("pollo" in cn_lower and "caldo" not in cn_lower and "fondo" not in cn_lower):
-        return "Pechuga de pollo orgánica"
-    if "pechuga de pavo" in cn_lower or ("pavo" in cn_lower and "tocino" not in cn_lower and "caldo" not in cn_lower and "fondo" not in cn_lower):
-        return "Pechuga de pavo artesanal"
-    if "machaca" in cn_lower and "machacad" not in cn_lower:
-        return "Carne seca machaca artesanal de res"
-    if "ajo" in cn_lower and "ajonjol" not in cn_lower:
-        return "Ajo fresco de la granja"
-    if "huevo" in cn_lower and "claras" not in cn_lower and "yemas" not in cn_lower:
-        return "Huevos orgánicos de libre pastoreo"
-    if "aceite" in cn_lower and ("ajonjol" in cn_lower or "sésamo" in cn_lower or "sesamo" in cn_lower):
-        return "Aceite de ajonjolí tostado"
-    if "zacate" in cn_lower or "té limón" in cn_lower or "te limon" in cn_lower:
-        return "Zacate limón deshidratado para infusión"
-    if "limón" in cn_lower or "limon" in cn_lower:
-        return "Limones frescos"
-    if "cebollín" in cn_lower or "cebollin" in cn_lower:
-        return "Cebollín fresco de la granja"
-    if "almendra" in cn_lower:
-        return "Almendras fileteadas tostadas"
-    if any(k in cn_lower for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
-        return "Champiñones Portobello frescos"
-    if "sésamo" in cn_lower or "sesamo" in cn_lower or "ajonjolí" in cn_lower or "ajonjoli" in cn_lower:
-        return "Semillas de sésamo (ajonjolí)"
-    if "pecana" in cn_lower:
-        return "Nuez pecana"
-    if "mantequilla" in cn_lower:
-        if "clarificada" in cn_lower or "ghee" in cn_lower:
-            return "Mantequilla clarificada (Ghee)"
-        return "Mantequilla de pastoreo artesanal"
-    if any(k in cn_lower for k in ["robalo", "róbalo"]) or "pescado blanco" in cn_lower:
-        return "Filete de robalo salvaje fresco de captura"
-    if "castilla" in cn_lower:
-        return "Nueces de Castilla"
-    if "pepino" in cn_lower:
-        return "Pepino fresco de la granja"
-    if "calabacita" in cn_lower or "zucchini" in cn_lower or "zoodles" in cn_lower:
-        return "Calabacitas verdes tiernas de la granja"
-    if "mora" in cn_lower and "zarzamora" not in cn_lower:
-        return "Moras frescas de la granja"
-    if "frambuesa" in cn_lower:
-        return "Frambuesas frescas orgánicas"
-    if "arándano" in cn_lower or "arandano" in cn_lower:
-        return "Arándanos frescos de la granja"
-    if "fresa" in cn_lower:
-        return "Fresas frescas de la granja"
-    if "zarzamora" in cn_lower:
-        return "Zarzamoras frescas de la granja"
-    if "pitaya" in cn_lower:
-        return "Pitaya fresca de la granja"
-    if "granada" in cn_lower:
-        return "Arilos de granada fresca de la granja"
-
-    return clean_name
-
-def consolidate_market_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    """Consolida universalmente todas las demandas semanales hacia la materia prima atómica comercial sin duplicidades."""
-    consolidated_items = {}
+def consolidate_full_ontology_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> Dict[str, Any]:
+    """Consolida universalmente separando en:
+       1. commercial_bom: ~75 materias primas atómicas comerciales de mercado.
+       2. operational_supplies: Suministros de red/servicio continuo (Agua purificada 7.8 L).
+       3. house_preps: Elaboraciones previas de cocina / mise en place (caldos, infusiones).
+    """
+    commodities = {}
+    house_preps = {}
+    solvents = {}
+    needs_chicken_bones = False
+    needs_beef_bones = False
+    needs_botanical_blend = False
+    needs_zacate_limon = False
 
     for item in weekly_dish_ingredients:
-        raw_name = resolve_to_market_raw_material(item.get("name") or item.get("item_name", ""))
+        raw_input_name = item.get("name") or item.get("item_name", "")
         qty = float(item.get("amount") or item.get("quantity") or item.get("base_qty", 1.0))
         unit = str(item.get("unit", "g")).strip().lower()
-        category = item.get("category") or "General"
-        if raw_name in [
-            "Carne seca machaca artesanal de res", "Pechuga de pollo orgánica", "Pechuga de pavo artesanal",
-            "Arrachera de res magra limpia", "Carne molida / Filete de Sirloin magro",
-            "Filete de Huachinango fresco con piel", "Filete de pescado blanco de captura (Robalo)",
-            "Filete de robalo salvaje fresco de captura",
-            "Lomo de salmón fresco calidad sashimi", "Medallón de atún fresco calidad sashimi", "Tocino de pavo artesanal"
-        ]:
-            category = "Carnes, Aves y Pescados"
-        elif raw_name == "Limones frescos":
-            category = "Cítricos y Ácidos Naturales"
-        elif raw_name in [
-            "Semillas de sésamo (ajonjolí)", "Nuez pecana", "Nueces de Castilla", "Almendras fileteadas tostadas",
-            "Semillas de chía orgánicas", "Semillas de girasol tostadas sin sal", "Coco rallado deshidratado sin azúcar"
-        ]:
-            category = "Semillas y Frutos Secos"
-        elif raw_name in [
-            "Moras frescas de la granja", "Frambuesas frescas orgánicas", "Fresas frescas de la granja",
-            "Zarzamoras frescas de la granja", "Arilos de granada fresca de la granja", "Arándanos frescos de la granja",
-            "Pitaya fresca de la granja"
-        ]:
-            category = "Frutas Cetogénicas"
-        elif raw_name in [
-            "Pepino fresco de la granja", "Calabacitas verdes tiernas de la granja", "Champiñones Portobello frescos",
-            "Ajo fresco de la granja", "Espárragos verdes frescos", "Ejotes verdes tiernos de la granja"
-        ]:
-            category = "Verduras y Hortalizas Frescas"
+        nl = raw_input_name.lower()
 
-        if raw_name not in consolidated_items:
-            consolidated_items[raw_name] = {
-                "name": raw_name,
+        # A. Suministros Operativos de Red (UTILITY_SOLVENT)
+        if any(k in nl for k in ["agua purificada", "agua para hidrataci", "hielo"]):
+            key = "Agua purificada de cocina y mesa (red / garrafón)"
+            if key not in solvents:
+                solvents[key] = {
+                    "name": key,
+                    "category": "Suministros Operativos de Red",
+                    "quantity": 0.0,
+                    "unit": "ml"
+                }
+            solvents[key]["quantity"] += qty
+            continue
+
+        # B. Elaboraciones Intermedias de Cocina (HOUSE_PREP)
+        if any(k in nl for k in ["caldo claro", "caldo de ", "caldo concentrado", "fondo claro", "infusi"]):
+            if raw_input_name not in house_preps:
+                house_preps[raw_input_name] = {
+                    "name": raw_input_name,
+                    "category": "Mise en Place / Fondos de Cocina",
+                    "quantity": 0.0,
+                    "unit": unit
+                }
+            house_preps[raw_input_name]["quantity"] += qty
+
+            # Trazabilidad de Descomposición a Compras (Salvaguarda B)
+            if "pollo" in nl or "ave" in nl:
+                needs_chicken_bones = True
+            if "res" in nl or "hueso" in nl:
+                needs_beef_bones = True
+            if "infusi" in nl:
+                needs_botanical_blend = True
+            if "zacate" in nl:
+                needs_zacate_limon = True
+            continue
+
+        # C. Materia Prima Comercial de Mercado (RAW_COMMODITY)
+        canonical_name, category = resolve_to_canonical_sku(raw_input_name)
+        is_piece = unit in ["piezas", "pieza", "pz", "piezas/persona"]
+
+        if "zacate" in canonical_name.lower() and is_piece:
+            qty = qty * 2.0  # 2g por tallo deshidratado
+            unit = "g"
+            is_piece = False
+
+        if canonical_name not in commodities:
+            commodities[canonical_name] = {
+                "name": canonical_name,
                 "category": category,
                 "quantity": 0.0,
-                "unit": item.get("unit", "g"),
-                "is_piece": unit in ["piezas", "pieza", "pz", "piezas/persona"]
+                "unit": "piezas" if is_piece else unit,
+                "is_piece": is_piece
             }
-        else:
-            consolidated_items[raw_name]["category"] = category
 
-        slug = raw_name.lower().replace(" ", "_").replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o")
-        
-        if "aguacate" in slug and not consolidated_items[raw_name]["is_piece"] and unit == "g":
-            consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["aguacate_hass_fresco"]
-            consolidated_items[raw_name]["unit"] = "piezas"
-            consolidated_items[raw_name]["is_piece"] = True
-        elif consolidated_items[raw_name]["is_piece"] and unit == "g" and "aguacate" in slug:
-            consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["aguacate_hass_fresco"]
+        slug = canonical_name.lower().replace(" ", "_").replace("á", "a").replace("é", "e").replace("í", "i").replace("ó", "o")
+        if "aguacate" in slug and not commodities[canonical_name]["is_piece"] and unit == "g":
+            commodities[canonical_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["aguacate_hass_fresco"]
+            commodities[canonical_name]["unit"] = "piezas"
+            commodities[canonical_name]["is_piece"] = True
+        elif commodities[canonical_name]["is_piece"] and unit == "g" and "aguacate" in slug:
+            commodities[canonical_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["aguacate_hass_fresco"]
         elif "limon" in slug and unit in ["ml", "g"]:
-            consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["limon_fresco"]
-            consolidated_items[raw_name]["unit"] = "piezas"
-            consolidated_items[raw_name]["is_piece"] = True
+            commodities[canonical_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["limon_fresco"]
+            commodities[canonical_name]["unit"] = "piezas"
+            commodities[canonical_name]["is_piece"] = True
         elif "portobello" in slug and unit == "g":
-            consolidated_items[raw_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["champiñon_portobello"]
-            consolidated_items[raw_name]["unit"] = "piezas"
-            consolidated_items[raw_name]["is_piece"] = True
+            commodities[canonical_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["champiñon_portobello"]
+            commodities[canonical_name]["unit"] = "piezas"
+            commodities[canonical_name]["is_piece"] = True
+        elif "lechuga" in slug and is_piece and qty >= 6:
+            # 18 hojas grandes = 2 cogollos
+            commodities[canonical_name]["quantity"] += qty / 9.0
+            commodities[canonical_name]["unit"] = "piezas"
+            commodities[canonical_name]["is_piece"] = True
         else:
-            consolidated_items[raw_name]["quantity"] += qty
+            commodities[canonical_name]["quantity"] += qty
 
-    output_bom = []
-    for name, data in consolidated_items.items():
+    # Inyección de Insumos Base de Sub-recetas (Salvaguarda B)
+    if needs_chicken_bones and "Huesos y retazo de pollo orgánico para fondo" not in commodities:
+        commodities["Huesos y retazo de pollo orgánico para fondo"] = {
+            "name": "Huesos y retazo de pollo orgánico para fondo",
+            "category": "Carnes, Aves y Pescados",
+            "quantity": 500.0,
+            "unit": "g",
+            "is_piece": False
+        }
+    if needs_beef_bones and "Huesos de res con tuétano para fondo" not in commodities:
+        commodities["Huesos de res con tuétano para fondo"] = {
+            "name": "Huesos de res con tuétano para fondo",
+            "category": "Carnes, Aves y Pescados",
+            "quantity": 500.0,
+            "unit": "g",
+            "is_piece": False
+        }
+    if needs_botanical_blend and "Flores de jamaica orgánica deshidratada" not in commodities:
+        commodities["Flores de jamaica orgánica deshidratada"] = {
+            "name": "Flores de jamaica orgánica deshidratada",
+            "category": "Especias, Hierbas y Aromáticos",
+            "quantity": 120.0,
+            "unit": "g",
+            "is_piece": False
+        }
+    if needs_zacate_limon and "Zacate limón deshidratado" not in commodities:
+        commodities["Zacate limón deshidratado"] = {
+            "name": "Zacate limón deshidratado",
+            "category": "Especias, Hierbas y Aromáticos",
+            "quantity": 60.0,
+            "unit": "g",
+            "is_piece": False
+        }
+
+    output_commercial = []
+    for name, data in commodities.items():
         if data["is_piece"]:
             data["quantity"] = int(math.ceil(data["quantity"]))
-        output_bom.append(data)
+        else:
+            data["quantity"] = round(data["quantity"], 1) if not data["quantity"].is_integer() else int(data["quantity"])
+        output_commercial.append(data)
 
-    return output_bom
+    output_commercial.sort(key=lambda x: (x["category"], x["name"]))
+
+    output_solvents = list(solvents.values())
+    output_preps = list(house_preps.values())
+
+    return {
+        "commercial_bom": output_commercial,
+        "operational_supplies": output_solvents,
+        "house_preps": output_preps
+    }
+
+def consolidate_market_bom(weekly_dish_ingredients: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Devuelve por defecto la lista comercial atómica pura para compatibilidad plena con el frontend."""
+    res = consolidate_full_ontology_bom(weekly_dish_ingredients)
+    return res["commercial_bom"]
 
 def normalize_to_canonical_slug(raw_name: str) -> str:
     if not raw_name:
