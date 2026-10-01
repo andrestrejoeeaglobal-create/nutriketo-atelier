@@ -1001,7 +1001,7 @@ def test_universal_bom_ontology_and_no_prep_states():
     with open(exp_path, "r", encoding="utf-8") as f:
         content = f.read()
 
-    bom_section = content.split("## 3. Lista de Compras Consolidada")[-1]
+    bom_section = content.split("## 3. Lista de Compras Consolidada")[-1].split("## 4.")[0]
     table_lines = [line.strip() for line in bom_section.split("\n") if line.startswith("| **")]
 
     blacklist_patterns = [
