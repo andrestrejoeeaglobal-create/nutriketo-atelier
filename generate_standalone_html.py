@@ -2550,6 +2550,7 @@ function generateNextWeekMenu() {
       "Cilantro fresco",
       "Arúgula fresca",
       "Coliflor fresca",
+      "Limones agrios frescos de la granja",
       "Pitayas frescas",
       "Granadas frescas",
       "Fresas frescas",
@@ -2569,7 +2570,7 @@ function generateNextWeekMenu() {
 
     let activeWeek = "Semana 41 (04 al 10 de Octubre de 2026)";
     let activeDiners = 6;
-    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca"];
+    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja"];
     let pantryStock = {
       "Huevos enteros": 2.0,
       "Pechuga de pollo": 1.0,
@@ -2695,7 +2696,7 @@ function generateNextWeekMenu() {
         { stem: 'chayote', aliases: ['chayote', 'chayotes'] },
         { stem: 'hinojo', aliases: ['hinojo'] },
         { stem: 'aguacate', aliases: ['aguacate', 'aguacate hass'] },
-        { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'jugo de limon'] },
+        { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'limon agrio', 'limones agrios', 'limones agrios frescos', 'limones agrios frescos de la granja', 'jugo de limon', 'jugo de limon fresco', 'jugo de limon fresco de la granja', 'jugo de limon recien exprimido', 'limon agrio fresco con semilla'] },
         { stem: 'ajo', aliases: ['ajo', 'ajos', 'ajo fresco', 'dientes de ajo'], exclude: ['ajonjoli'] },
         { stem: 'sal', aliases: ['sal de mar', 'sal de colima', 'sal mineral', 'sal de mar mineral de colima'] },
         { stem: '33plus', aliases: ['33plus', 'formula nootropica 33plus', 'formula biotecnologica nootropica 33plus'] },
@@ -3194,7 +3195,7 @@ function generateNextWeekMenu() {
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
 
           if (Array.isArray(state.deletedFarmItems)) {
-            deletedFarmItems = state.deletedFarmItems;
+            deletedFarmItems = state.deletedFarmItems.filter(d => !areInsumosEquivalent(d, 'limon'));
           } else {
             deletedFarmItems = [];
           }
@@ -3217,8 +3218,11 @@ function generateNextWeekMenu() {
               const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
               return !/miel|durazno|higo/i.test(hStr);
             });
+            if (!selectedHarvest.some(h => areInsumosEquivalent(typeof h === 'string' ? h : (h.item_name || h.name || ''), 'limon'))) {
+              selectedHarvest.push("Limones agrios frescos de la granja");
+            }
           } else {
-            selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca"];
+            selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja"];
           }
 
           if (state.pantryStock && typeof state.pantryStock === 'object') {
@@ -5096,10 +5100,10 @@ function calculateNetShoppingList(diners) {
     if (/portobello|champiñon|champiñones/i.test(name)) {
       cat = '🥬 Verduras, Hortalizas y Frescos';
     }
-    // 2. Homologar todas las variantes de limón
+    // 2. Homologar todas las variantes de limón como Cosecha Propia de la Granja El Herami ($0)
     if (/lim[oó]n/i.test(name)) {
-      name = 'Jugo de limón fresco recién exprimido';
-      cat = '🌶️ Chiles, Condimentos e Infusiones';
+      name = 'Limones agrios frescos de la granja';
+      cat = '🌱 Vegetal / Acompañamiento Base (Cosecha Activa)';
     }
     // 3. Homologar pimienta negra
     if (/pimienta negra/i.test(name)) {

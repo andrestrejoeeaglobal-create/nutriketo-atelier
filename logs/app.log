@@ -78267,3 +78267,473 @@ For further information visit https://errors.pydantic.dev/2.12/u/class-not-fully
 [2026-10-02 16:31:39,038] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
 [2026-10-02 16:31:39,104] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
 [2026-10-02 16:31:39,132] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:11:41,699] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:11:41,728] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:11:41,755] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:11:41,765] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:11:41,770] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:11:41,798] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:12:47,032] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:47,067] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:47,368] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:47,396] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:47,427] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (4 comensales).
+[2026-10-02 17:12:47,445] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:47,474] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:47,500] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (2 comensales).
+[2026-10-02 17:12:47,520] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:12:47,561] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:12:47,580] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:47,610] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:47,627] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pitahaya Fresca con Queso Cottage.
+[2026-10-02 17:12:47,632] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Quesadillas Keto en Crosta de Queso Gouda y Jamón de Pavo.
+[2026-10-02 17:12:47,635] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Infusión Herbolaria Botánica de la Granja.
+[2026-10-02 17:12:47,641] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Calabacitas Asadas al Queso Parmesano.
+[2026-10-02 17:12:47,645] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Albóndigas de Res Rellenas de Huevo Cocido en Salsa Keto.
+[2026-10-02 17:12:47,649] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Jamaica y Canela Sin Azúcar.
+[2026-10-02 17:12:47,652] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pico de Gallo Suave (Sin Chile).
+[2026-10-02 17:12:47,656] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete Mignon de Res a la Parrilla con Mantequilla de Hierbas.
+[2026-10-02 17:12:47,661] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Mousse Keto de Frutos Rojos y Crema.
+[2026-10-02 17:12:47,667] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Espinacas Frescas Salteadas a la Mantequilla.
+[2026-10-02 17:12:47,670] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Omelette de 3 Claras de Huevo a Baja Temperatura (63°C) con Queso Panela.
+[2026-10-02 17:12:47,675] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Té Verde Botánico.
+[2026-10-02 17:12:47,679] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada Verde de Arúgula de la Granja.
+[2026-10-02 17:12:47,683] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Res Magro (150g) al Sartén con Aceite de Coco.
+[2026-10-02 17:12:47,686] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Puré de Coliflor con Mantequilla de Pastoreo.
+[2026-10-02 17:12:47,691] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Abanico de Aguacate Hass con Limón.
+[2026-10-02 17:12:47,695] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Pescado Blanco al Sartén con Aceite de Oliva y Cilantro.
+[2026-10-02 17:12:47,699] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Granada y Limón Sin Azúcar.
+[2026-10-02 17:12:47,703] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Fresas Frescas y Nueces Pecana.
+[2026-10-02 17:12:47,709] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pudín de Chía Preparado con Leche de Coco Sin Azúcar y Nueces.
+[2026-10-02 17:12:47,713] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Café en grano / molido.
+[2026-10-02 17:12:47,716] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Espárragos Verdes Asados con Sal de Mar.
+[2026-10-02 17:12:47,720] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Salmón a la Plancha Sellado en Aceite de Coco.
+[2026-10-02 17:12:47,724] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Keto de Vainilla y Canela Sin Azúcar.
+[2026-10-02 17:12:47,732] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pechuga de Pavo al Horno con Queso Gouda Gratinado.
+[2026-10-02 17:12:47,735] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Bastones de Pepino Fresco con Sal de Mar.
+[2026-10-02 17:12:47,740] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Nopales Tiernos Asados al Comal.
+[2026-10-02 17:12:47,745] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Huevos Pochados en Cama de Espinacas.
+[2026-10-02 17:12:47,748] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Té de hierbas digestivo.
+[2026-10-02 17:12:47,752] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada Verde de Arúgula de la Granja.
+[2026-10-02 17:12:47,755] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Picadillo de Atún con Nogada Tradicional.
+[2026-10-02 17:12:47,761] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Jamaica y Menta Sin Azúcar.
+[2026-10-02 17:12:47,765] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Rodajas de Calabacitas Verdes Salteadas.
+[2026-10-02 17:12:47,769] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pechuga de Pollo Desmenuzada a las Hierbas Secas al Sartén.
+[2026-10-02 17:12:47,772] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Mousse Keto de Limón y Queso Crema.
+[2026-10-02 17:12:47,778] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ejotes Frescos Salteados en Aceite de Coco.
+[2026-10-02 17:12:47,782] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Huevos Revueltos a Baja Temperatura (63°C) con Tocino de Pavo Picado.
+[2026-10-02 17:12:47,785] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Té de hierbas digestivo.
+[2026-10-02 17:12:47,789] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Brócoli Fresco al Vapor con Mantequilla.
+[2026-10-02 17:12:47,795] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Res en Crosta de Parmesano y Mantequilla de Hierbas.
+[2026-10-02 17:12:47,799] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Granada Sin Azúcar.
+[2026-10-02 17:12:47,803] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada de Hojas Verdes de la Granja.
+[2026-10-02 17:12:47,812] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Bastones de Zucchini Fresco con Sal de Mar.
+[2026-10-02 17:12:47,816] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Fresas Frescas de la Cosecha con Queso Cottage.
+[2026-10-02 17:12:47,820] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Omelette de Huevo de Granja con Jamón de Pavo y Queso Gouda.
+[2026-10-02 17:12:47,826] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Infusión Herbolaria Botánica de la Granja.
+[2026-10-02 17:12:47,831] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada de Hojas Verdes Mixtas con Aceite de Oliva.
+[2026-10-02 17:12:47,834] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Pescado Blanco al Vapor con Mantequilla de Ajo y Cilantro.
+[2026-10-02 17:12:47,838] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Puré de Coliflor con Queso Parmesano.
+[2026-10-02 17:12:47,844] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pico de Gallo Suave (Sin Chile).
+[2026-10-02 17:12:47,849] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Chicharrón de Queso Gouda al Comal.
+[2026-10-02 17:12:47,853] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Mousse Keto de Frutos Rojos y Crema.
+[2026-10-02 17:12:47,860] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Hojas de Arúgula Fresca con Aceite de Oliva.
+[2026-10-02 17:12:47,863] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Hot Cakes de Harina de Almendras (Keto) con Claras a Baja Temperatura.
+[2026-10-02 17:12:47,867] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Té Verde Botánico.
+[2026-10-02 17:12:47,870] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Rodajas de Nopales Tiernos Asados al Comal.
+[2026-10-02 17:12:47,875] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pechuga de Pavo al Pastor Keto Gratinada con Queso Gouda.
+[2026-10-02 17:12:47,880] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Vainilla y Canela Sin Azúcar.
+[2026-10-02 17:12:47,884] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada Verde de Espinacas de la Granja.
+[2026-10-02 17:12:47,893] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Guacamole Casero con Totopos Keto de Queso.
+[2026-10-02 17:12:47,907] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:12:47,945] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:47,971] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:47,991] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,019] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,038] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,068] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,201] [INFO] [nutriketo]: InventorySyncMaster: Ingreso de trazabilidad registrado exitosamente 'Vinagre balsámico (orgánico / keto)' +2.0 frascos -> 🏺 Alacena Principal / Seca (Total: 2.0).
+[2026-10-02 17:12:48,217] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,254] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,281] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,308] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,320] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,351] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,371] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,400] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,419] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,447] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,459] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,488] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,510] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:12:48,530] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,558] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,579] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,607] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,626] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,653] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,670] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,698] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,714] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,742] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,758] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,787] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,801] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,830] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,838] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,868] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,877] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,905] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,914] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,941] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,950] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:48,978] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:48,993] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,029] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,051] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,079] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,086] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,114] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,163] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,193] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,249] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,287] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,362] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,392] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,458] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,486] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,559] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,587] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,714] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,744] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,817] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,851] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:49,920] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:49,960] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,034] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,071] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,286] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,297] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,331] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:12:50,466] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,498] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,516] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,553] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,568] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,598] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,631] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,662] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,674] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,710] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,721] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,753] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,767] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,841] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,853] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:50,926] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:50,970] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:12:50,971] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de frutos rojos y menta'
+[2026-10-02 17:12:50,973] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Ajo fresco de la granja'
+[2026-10-02 17:12:50,975] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de tomillo fresco'
+[2026-10-02 17:12:50,975] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:50,976] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de toronjil fresco de la granja'
+[2026-10-02 17:12:50,976] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:12:50,977] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Finas hierbas frescas (cebollín, perejil francés y perifollo)'
+[2026-10-02 17:12:50,977] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:12:50,978] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de hierbabuena y flores rojas'
+[2026-10-02 17:12:50,980] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:50,981] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Cúrcuma orgánica en polvo'
+[2026-10-02 17:12:50,981] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Curry aromático suave en polvo'
+[2026-10-02 17:12:50,982] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:50,982] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:50,983] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de menta fresca de la granja'
+[2026-10-02 17:12:50,983] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:12:50,984] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de orégano silvestre seco'
+[2026-10-02 17:12:50,984] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:12:50,986] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión botánica de manzanilla y frutos rojos'
+[2026-10-02 17:12:50,987] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Ajo fresco de la granja'
+[2026-10-02 17:12:50,990] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de eneldo fresco picado'
+[2026-10-02 17:12:50,994] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:50,997] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Finas hierbas frescas (perejil, tomillo y orégano)'
+[2026-10-02 17:12:51,003] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,004] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Flores de manzanilla deshidratadas de alta pureza'
+[2026-10-02 17:12:51,005] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:12:51,007] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,008] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:12:51,009] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de frutos rojos y té blanco'
+[2026-10-02 17:12:51,009] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de epazote fresco de la granja'
+[2026-10-02 17:12:51,010] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,011] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,013] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Cilantro fresco picado'
+[2026-10-02 17:12:51,013] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de toronjil fresco de la granja'
+[2026-10-02 17:12:51,013] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:12:51,014] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de tomillo fresco de la granja'
+[2026-10-02 17:12:51,014] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:12:51,015] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de zacate limón y menta'
+[2026-10-02 17:12:51,015] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,016] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Ajo fresco de la granja'
+[2026-10-02 17:12:51,016] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,017] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de toronjil fresco de la granja'
+[2026-10-02 17:12:51,017] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:12:51,018] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:12:51,018] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de frutos rojos y flores de jamaica suave'
+[2026-10-02 17:12:51,018] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Cúrcuma orgánica en polvo'
+[2026-10-02 17:12:51,019] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,019] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,021] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,022] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco recién exprimido'
+[2026-10-02 17:12:51,024] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de cilantro fresco picado fino'
+[2026-10-02 17:12:51,024] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:12:51,025] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:12:51,026] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión botánica de frutos negros y menta'
+[2026-10-02 17:12:51,026] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Ajo fresco de la granja'
+[2026-10-02 17:12:51,027] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de romero fresco picadas'
+[2026-10-02 17:12:51,027] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Vinagre de manzana orgánico sin filtrar'
+[2026-10-02 17:12:51,028] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:12:51,028] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de toronjil fresco de la granja'
+[2026-10-02 17:12:51,029] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:12:51,037] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:51,079] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:51,151] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:51,267] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:51,672] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:51,735] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:51,816] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:51,847] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:12:52,636] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:12:52,667] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:14:40,775] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:14:40,787] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:14:40,809] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:14:40,817] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:14:40,824] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:14:40,851] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:15:21,129] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:21,172] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:21,564] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:21,593] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:21,620] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (4 comensales).
+[2026-10-02 17:15:21,634] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:21,665] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:21,690] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (2 comensales).
+[2026-10-02 17:15:21,711] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:15:21,761] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:15:21,782] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:21,813] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:21,832] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pitahaya Fresca con Queso Cottage.
+[2026-10-02 17:15:21,838] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Quesadillas Keto en Crosta de Queso Gouda y Jamón de Pavo.
+[2026-10-02 17:15:21,845] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Infusión Herbolaria Botánica de la Granja.
+[2026-10-02 17:15:21,849] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Calabacitas Asadas al Queso Parmesano.
+[2026-10-02 17:15:21,854] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Albóndigas de Res Rellenas de Huevo Cocido en Salsa Keto.
+[2026-10-02 17:15:21,861] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Jamaica y Canela Sin Azúcar.
+[2026-10-02 17:15:21,866] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pico de Gallo Suave (Sin Chile).
+[2026-10-02 17:15:21,870] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete Mignon de Res a la Parrilla con Mantequilla de Hierbas.
+[2026-10-02 17:15:21,876] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Mousse Keto de Frutos Rojos y Crema.
+[2026-10-02 17:15:21,883] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Espinacas Frescas Salteadas a la Mantequilla.
+[2026-10-02 17:15:21,886] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Omelette de 3 Claras de Huevo a Baja Temperatura (63°C) con Queso Panela.
+[2026-10-02 17:15:21,893] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Té Verde Botánico.
+[2026-10-02 17:15:21,897] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada Verde de Arúgula de la Granja.
+[2026-10-02 17:15:21,901] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Res Magro (150g) al Sartén con Aceite de Coco.
+[2026-10-02 17:15:21,905] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Puré de Coliflor con Mantequilla de Pastoreo.
+[2026-10-02 17:15:21,912] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Abanico de Aguacate Hass con Limón.
+[2026-10-02 17:15:21,916] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Pescado Blanco al Sartén con Aceite de Oliva y Cilantro.
+[2026-10-02 17:15:21,920] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Granada y Limón Sin Azúcar.
+[2026-10-02 17:15:21,927] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Fresas Frescas y Nueces Pecana.
+[2026-10-02 17:15:21,931] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pudín de Chía Preparado con Leche de Coco Sin Azúcar y Nueces.
+[2026-10-02 17:15:21,935] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Café en grano / molido.
+[2026-10-02 17:15:21,942] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Espárragos Verdes Asados con Sal de Mar.
+[2026-10-02 17:15:21,946] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Salmón a la Plancha Sellado en Aceite de Coco.
+[2026-10-02 17:15:21,950] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Keto de Vainilla y Canela Sin Azúcar.
+[2026-10-02 17:15:21,963] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pechuga de Pavo al Horno con Queso Gouda Gratinado.
+[2026-10-02 17:15:21,968] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Bastones de Pepino Fresco con Sal de Mar.
+[2026-10-02 17:15:21,975] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Nopales Tiernos Asados al Comal.
+[2026-10-02 17:15:21,979] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Huevos Pochados en Cama de Espinacas.
+[2026-10-02 17:15:21,984] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Té de hierbas digestivo.
+[2026-10-02 17:15:21,989] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada Verde de Arúgula de la Granja.
+[2026-10-02 17:15:21,996] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Picadillo de Atún con Nogada Tradicional.
+[2026-10-02 17:15:22,000] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Jamaica y Menta Sin Azúcar.
+[2026-10-02 17:15:22,005] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Rodajas de Calabacitas Verdes Salteadas.
+[2026-10-02 17:15:22,013] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pechuga de Pollo Desmenuzada a las Hierbas Secas al Sartén.
+[2026-10-02 17:15:22,019] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Mousse Keto de Limón y Queso Crema.
+[2026-10-02 17:15:22,027] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ejotes Frescos Salteados en Aceite de Coco.
+[2026-10-02 17:15:22,031] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Huevos Revueltos a Baja Temperatura (63°C) con Tocino de Pavo Picado.
+[2026-10-02 17:15:22,035] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Té de hierbas digestivo.
+[2026-10-02 17:15:22,043] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Brócoli Fresco al Vapor con Mantequilla.
+[2026-10-02 17:15:22,048] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Res en Crosta de Parmesano y Mantequilla de Hierbas.
+[2026-10-02 17:15:22,052] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Granada Sin Azúcar.
+[2026-10-02 17:15:22,059] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada de Hojas Verdes de la Granja.
+[2026-10-02 17:15:22,068] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Bastones de Zucchini Fresco con Sal de Mar.
+[2026-10-02 17:15:22,076] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Fresas Frescas de la Cosecha con Queso Cottage.
+[2026-10-02 17:15:22,081] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Omelette de Huevo de Granja con Jamón de Pavo y Queso Gouda.
+[2026-10-02 17:15:22,085] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Infusión Herbolaria Botánica de la Granja.
+[2026-10-02 17:15:22,092] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada de Hojas Verdes Mixtas con Aceite de Oliva.
+[2026-10-02 17:15:22,096] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Filete de Pescado Blanco al Vapor con Mantequilla de Ajo y Cilantro.
+[2026-10-02 17:15:22,102] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Puré de Coliflor con Queso Parmesano.
+[2026-10-02 17:15:22,109] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pico de Gallo Suave (Sin Chile).
+[2026-10-02 17:15:22,114] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Chicharrón de Queso Gouda al Comal.
+[2026-10-02 17:15:22,118] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Mousse Keto de Frutos Rojos y Crema.
+[2026-10-02 17:15:22,126] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Hojas de Arúgula Fresca con Aceite de Oliva.
+[2026-10-02 17:15:22,130] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Hot Cakes de Harina de Almendras (Keto) con Claras a Baja Temperatura.
+[2026-10-02 17:15:22,138] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Té Verde Botánico.
+[2026-10-02 17:15:22,145] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Rodajas de Nopales Tiernos Asados al Comal.
+[2026-10-02 17:15:22,150] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Pechuga de Pavo al Pastor Keto Gratinada con Queso Gouda.
+[2026-10-02 17:15:22,154] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Gelatina Casera de Vainilla y Canela Sin Azúcar.
+[2026-10-02 17:15:22,162] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Ensalada Verde de Espinacas de la Granja.
+[2026-10-02 17:15:22,182] [WARNING] [nutriketo]: Sin GEMINI_API_KEY configurado. Usando receta de rescate para Guacamole Casero con Totopos Keto de Queso.
+[2026-10-02 17:15:22,226] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:15:22,281] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,314] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,336] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,370] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,391] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,422] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,446] [INFO] [nutriketo]: InventorySyncMaster: Ingreso de trazabilidad registrado exitosamente 'Vinagre balsámico (orgánico / keto)' +2.0 frascos -> 🏺 Alacena Principal / Seca (Total: 2.0).
+[2026-10-02 17:15:22,457] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,488] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,516] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,547] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,559] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,587] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,608] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,636] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,655] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,685] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,697] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,724] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,751] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:15:22,771] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,799] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,817] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,846] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,865] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,893] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,911] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,938] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,953] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:22,980] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:22,996] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,025] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,037] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,066] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,076] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,103] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,113] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,141] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,151] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,181] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,190] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,219] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,233] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,270] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,294] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,321] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,329] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,355] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,403] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,435] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,492] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,525] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,599] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,640] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,731] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,767] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,828] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:23,870] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:23,981] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,017] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,104] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,136] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,185] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,213] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,275] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,302] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,520] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,529] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,540] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 17:15:24,638] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,670] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,685] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,714] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,729] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,760] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,795] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,828] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,841] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,873] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,886] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,916] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,930] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:24,963] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:24,976] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:25,014] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:25,042] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:15:25,043] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de frutos rojos y menta'
+[2026-10-02 17:15:25,044] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Ajo fresco de la granja'
+[2026-10-02 17:15:25,044] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de tomillo fresco'
+[2026-10-02 17:15:25,044] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,045] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de toronjil fresco de la granja'
+[2026-10-02 17:15:25,045] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:15:25,046] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Finas hierbas frescas (cebollín, perejil francés y perifollo)'
+[2026-10-02 17:15:25,046] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:15:25,046] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de hierbabuena y flores rojas'
+[2026-10-02 17:15:25,047] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,047] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Cúrcuma orgánica en polvo'
+[2026-10-02 17:15:25,048] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Curry aromático suave en polvo'
+[2026-10-02 17:15:25,048] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,049] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,049] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de menta fresca de la granja'
+[2026-10-02 17:15:25,049] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:15:25,050] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de orégano silvestre seco'
+[2026-10-02 17:15:25,050] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:15:25,050] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión botánica de manzanilla y frutos rojos'
+[2026-10-02 17:15:25,051] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Ajo fresco de la granja'
+[2026-10-02 17:15:25,051] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de eneldo fresco picado'
+[2026-10-02 17:15:25,052] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,052] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Finas hierbas frescas (perejil, tomillo y orégano)'
+[2026-10-02 17:15:25,052] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,053] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Flores de manzanilla deshidratadas de alta pureza'
+[2026-10-02 17:15:25,053] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:15:25,054] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,054] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:15:25,055] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de frutos rojos y té blanco'
+[2026-10-02 17:15:25,055] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de epazote fresco de la granja'
+[2026-10-02 17:15:25,056] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,058] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,058] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Cilantro fresco picado'
+[2026-10-02 17:15:25,058] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de toronjil fresco de la granja'
+[2026-10-02 17:15:25,059] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:15:25,059] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de tomillo fresco de la granja'
+[2026-10-02 17:15:25,060] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:15:25,060] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de zacate limón y menta'
+[2026-10-02 17:15:25,060] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,061] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Ajo fresco de la granja'
+[2026-10-02 17:15:25,061] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,062] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de toronjil fresco de la granja'
+[2026-10-02 17:15:25,062] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:15:25,063] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:15:25,063] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión de frutos rojos y flores de jamaica suave'
+[2026-10-02 17:15:25,063] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Cúrcuma orgánica en polvo'
+[2026-10-02 17:15:25,064] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,064] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,065] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,065] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco recién exprimido'
+[2026-10-02 17:15:25,065] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de cilantro fresco picado fino'
+[2026-10-02 17:15:25,066] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:15:25,066] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Nootrópica 33Plus®'
+[2026-10-02 17:15:25,067] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Infusión botánica de frutos negros y menta'
+[2026-10-02 17:15:25,067] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Ajo fresco de la granja'
+[2026-10-02 17:15:25,068] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de romero fresco picadas'
+[2026-10-02 17:15:25,068] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Vinagre de manzana orgánico sin filtrar'
+[2026-10-02 17:15:25,068] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Jugo de limón natural fresco'
+[2026-10-02 17:15:25,069] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Hojas de toronjil fresco de la granja'
+[2026-10-02 17:15:25,069] [WARNING] [nutriketo.nutrition_engine]: Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: 'Fórmula Biotecnológica Reparadora 34Plus®'
+[2026-10-02 17:15:25,079] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:25,108] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:25,135] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:25,166] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:25,557] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:25,587] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:25,665] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:25,698] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 17:15:25,768] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 17:15:25,797] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
