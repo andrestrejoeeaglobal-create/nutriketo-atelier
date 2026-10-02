@@ -1758,6 +1758,34 @@ def generate_standalone():
             plan_40_dict["days"][idx]["iso_date"] = d_info["iso_date"]
             plan_40_dict["days"][idx]["full_date_title"] = f"Menú Completo para el {d_info['day']} {d_info['date_str']}"
 
+    s41_path = os.path.join(os.path.dirname(__file__), 'semana_41_master.json')
+    if os.path.exists(s41_path):
+        with open(s41_path, 'r', encoding='utf-8') as f:
+            plan_41_dict = json.load(f)
+    else:
+        plan_41_dict = copy.deepcopy(plan_40_dict)
+        plan_41_dict["week_name"] = "Semana 41"
+        plan_41_dict["week_label"] = "Semana 41 (04 al 10 de Octubre de 2026)"
+        plan_41_dict["week_start"] = "2026-10-04"
+        plan_41_dict["date_range"] = "04 al 10 de Octubre de 2026"
+
+    s41_day_dates = [
+        {"day": "Domingo", "day_num": "04", "date_str": "04 Oct", "iso_date": "2026-10-04"},
+        {"day": "Lunes", "day_num": "05", "date_str": "05 Oct", "iso_date": "2026-10-05"},
+        {"day": "Martes", "day_num": "06", "date_str": "06 Oct", "iso_date": "2026-10-06"},
+        {"day": "Miércoles", "day_num": "07", "date_str": "07 Oct", "iso_date": "2026-10-07"},
+        {"day": "Jueves", "day_num": "08", "date_str": "08 Oct", "iso_date": "2026-10-08"},
+        {"day": "Viernes", "day_num": "09", "date_str": "09 Oct", "iso_date": "2026-10-09"},
+        {"day": "Sábado", "day_num": "10", "date_str": "10 Oct", "iso_date": "2026-10-10"}
+    ]
+    for idx, d_info in enumerate(s41_day_dates):
+        if idx < len(plan_41_dict.get("days", [])):
+            plan_41_dict["days"][idx]["day"] = d_info["day"]
+            plan_41_dict["days"][idx]["day_num"] = d_info["day_num"]
+            plan_41_dict["days"][idx]["date_str"] = d_info["date_str"]
+            plan_41_dict["days"][idx]["iso_date"] = d_info["iso_date"]
+            plan_41_dict["days"][idx]["full_date_title"] = f"Menú Completo para el {d_info['day']} {d_info['date_str']}"
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
@@ -1766,7 +1794,8 @@ def generate_standalone():
         "Semana 37 (06 al 12 de Septiembre de 2026)": plan_37_dict,
         "Semana 38 (13 al 19 de Septiembre de 2026)": plan_38_dict,
         "Semana 39 (20 al 26 de Septiembre de 2026)": plan_39_dict,
-        "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)": plan_40_dict
+        "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)": plan_40_dict,
+        "Semana 41 (04 al 10 de Octubre de 2026)": plan_41_dict
     }
 
     def dish_to_typed_recipe(dish_obj):
@@ -2397,7 +2426,9 @@ function generateNextWeekMenu() {
                 <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)">Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
                 <option value="Semana 37 (06 al 12 de Septiembre de 2026)">Semana 37 (06 al 12 de Septiembre de 2026)</option>
                 <option value="Semana 38 (13 al 19 de Septiembre de 2026)">Semana 38 (13 al 19 de Septiembre de 2026)</option>
-                <option value="Semana 39 (20 al 26 de Septiembre de 2026)" selected>Semana 39 (20 al 26 de Septiembre de 2026)</option>
+                <option value="Semana 39 (20 al 26 de Septiembre de 2026)">Semana 39 (20 al 26 de Septiembre de 2026)</option>
+                <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
+                <option value="Semana 41 (04 al 10 de Octubre de 2026)" selected>Semana 41 (04 al 10 de Octubre de 2026)</option>
               </select>
             </div>
             <div>
@@ -2518,7 +2549,8 @@ function generateNextWeekMenu() {
             <option value="Semana 37 (06 al 12 de Septiembre de 2026)">Semana 37 (06 al 12 de Septiembre de 2026)</option>
             <option value="Semana 38 (13 al 19 de Septiembre de 2026)">Semana 38 (13 al 19 de Septiembre de 2026)</option>
             <option value="Semana 39 (20 al 26 de Septiembre de 2026)">Semana 39 (20 al 26 de Septiembre de 2026)</option>
-            <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)" selected>Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
+            <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
+            <option value="Semana 41 (04 al 10 de Octubre de 2026)" selected>Semana 41 (04 al 10 de Octubre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
@@ -2682,7 +2714,7 @@ function generateNextWeekMenu() {
     let deletedFarmItems = [];
     let deletedPantryItems = [];
 
-    let activeWeek = "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)";
+    let activeWeek = "Semana 41 (04 al 10 de Octubre de 2026)";
     let activeDiners = 6;
     let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca"];
     let pantryStock = {

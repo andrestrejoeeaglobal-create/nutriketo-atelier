@@ -1,0 +1,76 @@
+Total BOM items: 75
+Bases Hidrocoloides y Suplementación Celular: Grenetina natural pura (colágeno hidrolizado) - 294 g
+Carnes, Aves y Pescados: Arrachera de res magra limpia - 900 g
+Carnes, Aves y Pescados: Carne seca machaca artesanal de res - 180 g
+Carnes, Aves y Pescados: Filete de robalo salvaje fresco de captura - 1560 g
+Carnes, Aves y Pescados: Filetes de huachinango fresco con piel - 900 g
+Carnes, Aves y Pescados: Huesos de res con tuétano para fondo - 500 g
+Carnes, Aves y Pescados: Huesos y retazo de pollo orgánico para fondo - 500 g
+Carnes, Aves y Pescados: Lomo de salmón fresco calidad sashimi - 780 g
+Carnes, Aves y Pescados: Medallones de Sirloin de res magro - 900 g
+Carnes, Aves y Pescados: Medallones de atún fresco calidad sashimi - 900 g
+Carnes, Aves y Pescados: Pechuga de pavo artesanal - 2460 g
+Carnes, Aves y Pescados: Pechuga de pollo orgánica - 2580 g
+Carnes, Aves y Pescados: Tocino de pavo artesanal - 180 g
+Cítricos y Ácidos Naturales: Limones frescos - 21 piezas
+Cítricos y Ácidos Naturales: Vinagre de manzana orgánico - 18 ml
+Especias, Hierbas y Aromáticos: Ajo fresco - 96 g
+Especias, Hierbas y Aromáticos: Cilantro fresco - 36 g
+Especias, Hierbas y Aromáticos: Curry aromático suave en polvo - 12 g
+Especias, Hierbas y Aromáticos: Cúrcuma orgánica en polvo - 24 g
+Especias, Hierbas y Aromáticos: Eneldo fresco - 18 g
+Especias, Hierbas y Aromáticos: Epazote fresco - 12 g
+Especias, Hierbas y Aromáticos: Finas hierbas frescas - 36 g
+Especias, Hierbas y Aromáticos: Flores de jamaica orgánica deshidratada - 120 g
+Especias, Hierbas y Aromáticos: Flores de manzanilla deshidratadas - 24 g
+Especias, Hierbas y Aromáticos: Hojas de menta fresca - 30 g
+Especias, Hierbas y Aromáticos: Hojas de toronjil fresco - 120 g
+Especias, Hierbas y Aromáticos: Orégano silvestre seco - 6 g
+Especias, Hierbas y Aromáticos: Romero fresco - 18 g
+Especias, Hierbas y Aromáticos: Sal de mar mineral de Colima - 252 g
+Especias, Hierbas y Aromáticos: Semillas y hojas de hinojo fresco - 24 g
+Especias, Hierbas y Aromáticos: Tomillo fresco - 24 g
+Especias, Hierbas y Aromáticos: Zacate limón deshidratado - 60 g
+Frutas Cetogénicas: Arilos de granada fresca - 480 g
+Frutas Cetogénicas: Arándanos frescos - 480 g
+Frutas Cetogénicas: Frambuesas frescas orgánicas - 480 g
+Frutas Cetogénicas: Fresas frescas - 480 g
+Frutas Cetogénicas: Moras frescas - 480 g
+Frutas Cetogénicas: Pitaya fresca - 480 g
+Frutas Cetogénicas: Zarzamoras frescas - 480 g
+Grasas y Aceites Saludables: Aceite de ajonjolí tostado - 30 ml
+Grasas y Aceites Saludables: Aceite de oliva extra virgen (VEVO) - 750 ml
+Grasas y Aceites Saludables: Mantequilla clarificada (Ghee) - 132 g
+Grasas y Aceites Saludables: Mantequilla de pastoreo artesanal - 960 g
+Huevos y Ovoproductos: Huevos orgánicos de libre pastoreo - 126 piezas
+Lácteos y Quesos (Sin Gluten / Keto): Crema entera de rancho sin pasteurizar ultra - 300 ml
+Lácteos y Quesos (Sin Gluten / Keto): Queso Gouda artesanal - 120 g
+Lácteos y Quesos (Sin Gluten / Keto): Queso Panela artesanal - 120 g
+Lácteos y Quesos (Sin Gluten / Keto): Queso Parmesano artesanal - 402 g
+Lácteos y Quesos (Sin Gluten / Keto): Queso crema suave artesanal - 300 g
+Lácteos y Quesos (Sin Gluten / Keto): Queso de cabra artesanal - 360 g
+Semillas y Frutos Secos: Almendras fileteadas tostadas - 480 g
+Semillas y Frutos Secos: Coco deshidratado sin azúcar - 60 g
+Semillas y Frutos Secos: Nueces de Castilla - 90 g
+Semillas y Frutos Secos: Nuez pecana - 240 g
+Semillas y Frutos Secos: Semillas de chía orgánicas - 288 g
+Semillas y Frutos Secos: Semillas de girasol sin sal - 48 g
+Semillas y Frutos Secos: Semillas de sésamo (ajonjolí) - 138 g
+Suplementación T.I.L.O.: Fórmula Biotecnológica Nootrópica 33Plus® - 210 g
+Suplementación T.I.L.O.: Fórmula Biotecnológica Reparadora 34Plus® - 210 g
+Verduras y Hortalizas Frescas: Aguacate Hass fresco - 23 piezas
+Verduras y Hortalizas Frescas: Apio tierno - 720 g
+Verduras y Hortalizas Frescas: Arúgula fresca - 480 g
+Verduras y Hortalizas Frescas: Bulbo de hinojo fresco - 300 g
+Verduras y Hortalizas Frescas: Calabacitas verdes tiernas - 2040 g
+Verduras y Hortalizas Frescas: Champiñones Portobello frescos - 22 piezas
+Verduras y Hortalizas Frescas: Chayotes tiernos pelados - 600 g
+Verduras y Hortalizas Frescas: Coliflor fresca - 600 g
+Verduras y Hortalizas Frescas: Ejotes verdes tiernos - 1560 g
+Verduras y Hortalizas Frescas: Espinacas baby tiernas - 540 g
+Verduras y Hortalizas Frescas: Espinacas frescas - 1680 g
+Verduras y Hortalizas Frescas: Espárragos verdes frescos - 1200 g
+Verduras y Hortalizas Frescas: Flor de calabaza limpia - 600 g
+Verduras y Hortalizas Frescas: Lechuga orejona viva (cogollo) - 2 piezas
+Verduras y Hortalizas Frescas: Nopales tiernos - 360 g
+Verduras y Hortalizas Frescas: Pepino fresco - 600 g
