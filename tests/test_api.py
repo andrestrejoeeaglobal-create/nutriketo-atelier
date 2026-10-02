@@ -1035,6 +1035,109 @@ def test_universal_bom_ontology_and_no_prep_states():
                 assert qty_str.isdigit(), f"Insumo por pieza '{item_name}' debe ser entero en BOM, obtenido '{qty_str}'"
 
 
+def test_calorie_consistency_sec2_vs_sec4():
+    """Salvaguarda A: Verifica paridad calórica estricta (0 kcal tolerancia servicio por servicio)
+    entre los encabezados de recetas (Sección 2) y la matriz cuantitativa (Sección 4.2).
+    También verifica tolerancia <= 1 kcal en consolidado diario frente a la suma de partes.
+    """
+    import os, re
+    exp_path = "expediente_completo_semana_40.md"
+    if not os.path.exists(exp_path):
+        pytest.skip(f"{exp_path} no existe aún")
+
+    with open(exp_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    sec2_part = content.split("## 3. Lista de Compras Consolidada")[0]
+    sec2_kcals = [int(m) for m in re.findall(r'#### 🍽️ Servicio: (?:DESAYUNO|COMIDA|CENA) \((\d+) kcal Atwater Target\)', sec2_part)]
+
+    sec4_part = content.split("### 4.2 Matriz Cuantitativa Estandarizada Servicio por Servicio")[1].split("### 4.3")[0]
+    sec4_kcals = [int(m) for m in re.findall(r'\| \*\*(?:Desayuno|Comida|Cena)\*\* \| (\d+) kcal \|', sec4_part)]
+
+    assert len(sec2_kcals) == 21, f"Se esperaban 21 encabezados calóricos en Sec. 2, se encontraron {len(sec2_kcals)}"
+    assert len(sec4_kcals) == 21, f"Se esperaban 21 registros calóricos en Sec. 4.2, se encontraron {len(sec4_kcals)}"
+
+    for i in range(21):
+        assert sec2_kcals[i] == sec4_kcals[i], f"Desfase calórico en servicio #{i+1}: Sec 2 tiene {sec2_kcals[i]} kcal vs Sec 4.2 tiene {sec4_kcals[i]} kcal"
+
+    # Verificar tolerancia <= 1 kcal en totales diarios de la tabla 4.2
+    daily_totals = [int(m) for m in re.findall(r'\| \*\*TOTAL DÍA\*\* \| \*\*(\d+) kcal\*\* \|', sec4_part)]
+    assert len(daily_totals) == 7, f"Se esperaban 7 totales diarios en Sec. 4.2, se encontraron {len(daily_totals)}"
+    for d in range(7):
+        parts_sum = sum(sec4_kcals[d*3 : (d+1)*3])
+        assert abs(daily_totals[d] - parts_sum) <= 1, f"Día {d+1}: Total tabla {daily_totals[d]} difiere de suma de partes {parts_sum} por más de 1 kcal"
+
+
+def test_no_species_contradiction_in_nutritional_justifications():
+    """Salvaguarda C: Verifica que platillos marinos o de aves no arrastren descriptores
+    de carne roja de pastoreo ni hierro hemo bovino en la Sección 4.3.
+    """
+    import os, re
+    exp_path = "expediente_completo_semana_40.md"
+    if not os.path.exists(exp_path):
+        pytest.skip(f"{exp_path} no existe aún")
+
+    with open(exp_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    sec43_part = content.split("### 4.3 Justificación Nutricional")[1].split("## 5. Dictamen")[0]
+
+    for m in re.finditer(r'- \*\*Platillo Principal:\*\* \*(.*?)\*\n\s+- \*Mecanismo Fisiológico:\* (.*?)\n', sec43_part):
+        dish = m.group(1).lower()
+        just = m.group(2).lower()
+        # Pescados marinos (atún, salmón, robalo, huachinango)
+        if any(k in dish for k in ['atún', 'atun', 'salmón', 'salmon', 'robalo', 'huachinango', 'pescado']):
+            assert "pastoreo" not in just, f"Platillo marino '{dish}' menciona falsamente 'pastoreo': {just}"
+            assert "hierro hemo" not in just, f"Platillo marino '{dish}' menciona falsamente 'hierro hemo': {just}"
+        # Aves (pollo, pavo)
+        if any(k in dish for k in ['pollo', 'pavo']):
+            assert "hierro hemo" not in just, f"Platillo de ave '{dish}' menciona falsamente 'hierro hemo': {just}"
+
+
+def test_no_circadian_inversion_in_meal_justifications():
+    """Verifica que ningún platillo de Desayuno o Comida sea justificado erróneamente
+    con descriptores de descanso o reposo nocturno.
+    """
+    import os, re
+    exp_path = "expediente_completo_semana_40.md"
+    if not os.path.exists(exp_path):
+        pytest.skip(f"{exp_path} no existe aún")
+
+    with open(exp_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    sec43_part = content.split("### 4.3 Justificación Nutricional")[1].split("## 5. Dictamen")[0]
+
+    for meal_sec in re.split(r'##### 🍽️ ', sec43_part)[1:]:
+        header = meal_sec.split('\n')[0].upper()
+        body = meal_sec[len(header):].lower()
+        if "DESAYUNO" in header or "COMIDA" in header:
+            assert "descanso nocturno" not in body, f"Servicio diurno '{header}' contiene 'descanso nocturno'"
+            assert "reposo nocturno" not in body, f"Servicio diurno '{header}' contiene 'reposo nocturno'"
+            assert "previa al sueño" not in body, f"Servicio diurno '{header}' contiene 'previa al sueño'"
+
+
+def test_fiber_is_dynamic_not_static():
+    """Salvaguarda B: Verifica que la fibra diaria calculada en la semana presente varianza real
+    y no sea una constante plana fija (ej. 16.7g).
+    """
+    import os, re
+    exp_path = "expediente_completo_semana_40.md"
+    if not os.path.exists(exp_path):
+        pytest.skip(f"{exp_path} no existe aún")
+
+    with open(exp_path, "r", encoding="utf-8") as f:
+        content = f.read()
+
+    sec41_part = content.split("### 4.1 Resumen Semanal")[1].split("### 4.2")[0]
+    daily_fibers = [float(m) for m in re.findall(r'\| \*\*.*?\*\* \| \d+ kcal \| [0-9.]+ g \| [0-9.]+ g \| [0-9.]+ g \| ([0-9.]+) g \|', sec41_part)]
+
+    assert len(daily_fibers) >= 7, f"Se esperaban al menos 7 valores de fibra diaria, se encontraron {len(daily_fibers)}"
+    unique_fibers = set(daily_fibers[:7])
+    assert len(unique_fibers) > 1, f"La fibra diaria es un valor plano artificial ({unique_fibers}), debe ser dinámica según cada vegetal"
+
+
+
 
 
 
