@@ -77,7 +77,7 @@
                 "per_guest": 12
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -197,7 +197,7 @@
                 "per_guest": 20
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -258,7 +258,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -305,7 +305,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -357,7 +357,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -417,7 +417,7 @@
                 "per_guest": 4
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -570,7 +570,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -690,7 +690,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -757,7 +757,7 @@
                 "per_guest": 30
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -797,7 +797,7 @@
                 "per_guest": 6
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -855,7 +855,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -915,7 +915,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1068,7 +1068,7 @@
                 "per_guest": 1
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1195,7 +1195,7 @@
                 "per_guest": 8
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1249,7 +1249,7 @@
                 "per_guest": 20
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1275,11 +1275,11 @@
             "note": "Chayotes sin espinas en láminas delgadas cocidos al vapor y aderezados con ghee dorado.",
             "ingredients": [
               {
-                "name": "Chayotes tiernos pelados en láminas",
-                "amount": 600,
-                "unit": "g",
+                "name": "Chayotes tiernos pelados",
+                "amount": 3,
+                "unit": "piezas",
                 "category": "Verduras y Hortalizas Frescas",
-                "per_guest": 100
+                "per_guest": 0.5
               },
               {
                 "name": "Mantequilla clarificada (Ghee)",
@@ -1289,7 +1289,7 @@
                 "per_guest": 6
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1347,7 +1347,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1400,7 +1400,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1560,7 +1560,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1680,7 +1680,7 @@
                 "per_guest": 4
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1747,7 +1747,7 @@
                 "per_guest": 20
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1794,7 +1794,7 @@
                 "per_guest": 6
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1852,7 +1852,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -1912,7 +1912,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2065,7 +2065,7 @@
                 "per_guest": 2
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2185,7 +2185,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2245,7 +2245,7 @@
                 "per_guest": 4
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2292,7 +2292,7 @@
                 "per_guest": 6
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2343,7 +2343,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2410,7 +2410,7 @@
                 "per_guest": 6
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2556,7 +2556,7 @@
                 "per_guest": 10
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2683,7 +2683,7 @@
                 "per_guest": 10
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2737,7 +2737,7 @@
                 "per_guest": 6
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2784,7 +2784,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2842,7 +2842,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -2902,7 +2902,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -3055,7 +3055,7 @@
                 "per_guest": 10
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -3182,7 +3182,7 @@
                 "per_guest": 10
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -3236,7 +3236,7 @@
                 "per_guest": 4
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -3276,7 +3276,7 @@
                 "per_guest": 6
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -3334,7 +3334,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",
@@ -3394,7 +3394,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Sal de mar mineral de Colima",
+                "name": "Sal de mar",
                 "amount": 6,
                 "unit": "g",
                 "category": "Especias, Hierbas y Condimentos",

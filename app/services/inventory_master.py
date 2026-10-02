@@ -201,6 +201,7 @@ RAW_PIECE_YIELD_GRAMS = {
     "jitomate_bola": 150.0,               # ~150g por jitomate fresco
     "pepino_blanco": 180.0,               # ~180g por pepino
     "calabacita_tierna": 120.0,           # ~120g por calabacita
+    "chayote_tierno": 200.0,              # ~200g de pulpa por pieza (3 piezas para 600g)
     "huevo_organico": 50.0,               # ~50g por huevo entero
 }
 
@@ -354,7 +355,7 @@ def resolve_to_canonical_sku(name: str):
     if "zacate" in nl or "lemongrass" in nl:
         return "Zacate limón deshidratado", "Especias, Hierbas y Aromáticos"
     if "sal de mar" in nl or "sal mineral" in nl:
-        return "Sal de mar mineral de Colima", "Especias, Hierbas y Aromáticos"
+        return "Sal de mar", "Especias, Hierbas y Aromáticos"
     if "jamaica" in nl:
         return "Flores de jamaica orgánica deshidratada", "Especias, Hierbas y Aromáticos"
 
@@ -534,6 +535,10 @@ def consolidate_full_ontology_bom(weekly_dish_ingredients: List[Dict[str, Any]])
             commodities[canonical_name]["is_piece"] = True
         elif "portobello" in slug and unit == "g":
             commodities[canonical_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["champiñon_portobello"]
+            commodities[canonical_name]["unit"] = "piezas"
+            commodities[canonical_name]["is_piece"] = True
+        elif "chayote" in slug and (unit == "g" or "gram" in unit):
+            commodities[canonical_name]["quantity"] += qty / RAW_PIECE_YIELD_GRAMS["chayote_tierno"]
             commodities[canonical_name]["unit"] = "piezas"
             commodities[canonical_name]["is_piece"] = True
         elif "lechuga" in slug and is_piece and qty >= 6:

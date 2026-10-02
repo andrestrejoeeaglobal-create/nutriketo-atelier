@@ -152,6 +152,8 @@ def calculate_dish_fiber_g(ingredients: List[Dict[str, Any]], diners: int = 6) -
                     qty *= 80.0
                 elif "limon" in name.lower():
                     qty *= 20.0
+                elif "chayote" in name.lower():
+                    qty *= 200.0  # ~200g pulpa por pieza (3 piezas = 600g)
                 else:
                     qty *= 50.0
             total_fiber_batch += calculate_ingredient_fiber_g(name, qty)

@@ -2544,7 +2544,8 @@ function generateNextWeekMenu() {
       // Insumos Canónicos Aptos (Status: "canonical")
       "aceite-oliva": { name: "Aceite de oliva extra virgen VEVO", stock: 1, unit: "botella_vevo", status: "canonical" },
       "semillas-chia": { name: "Semillas de chía orgánicas", stock: 100, unit: "g", status: "canonical" },
-      "sal-mar": { name: "Sal de mar mineral pura", stock: 1, unit: "bolsa_sal", status: "canonical" },
+      "sal-mar": { name: "Sal de mar", stock: 1, unit: "bolsa_sal", status: "canonical" },
+      "chayotes-tiernos": { name: "Chayotes tiernos pelados", stock: 1, unit: "piezas", status: "canonical" },
       "almendras-fileteadas": { name: "Almendras fileteadas tostadas", stock: 100, unit: "g", status: "canonical" },
       "ajo-fresco": { name: "Ajo fresco", stock: 36, unit: "g", status: "canonical" },
       "limon-fresco": { name: "Jugo de limón fresco recién exprimido", stock: 200, unit: "ml", status: "canonical" },
@@ -2786,6 +2787,14 @@ function generateNextWeekMenu() {
           { id: 'frasco_50', label: 'Cabeza / Frasco (50 g)', multiplier: 50, unit: 'g', type: 'mass' },
           { id: 'frasco_100', label: 'Malla / Frasco (100 g)', multiplier: 100, unit: 'g', type: 'mass' },
           { id: 'bolsa_250', label: 'Bolsa (250 g)', multiplier: 250, unit: 'g', type: 'mass' }
+        ];
+      }
+
+      // 4b. Chayotes tiernos pelados
+      if (/chayote/i.test(name)) {
+        return [
+          { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' },
+          { id: 'bolsa_3', label: 'Malla / Bolsa (3 pzas)', multiplier: 3, unit: 'piezas', type: 'count' }
         ];
       }
 
@@ -4492,6 +4501,8 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "pimienta-negra": ["pimienta negra recién molida", "pimienta negra recien molida", "pimienta negra molida y sal marina", "pimienta negra molida", "pimienta negra"],
   "cebolla-blanca": ["cebolla blanca fresca", "cebolla blanca"],
   "romero-fresco": ["romero fresco", "romero"],
+  "sal-mar": ["sal de mar", "sal de mar mineral", "sal mineral", "sal de colima", "sal de mar mineral de colima", "sal"],
+  "chayotes-tiernos": ["chayotes tiernos pelados", "chayote tierno", "chayotes tiernos", "chayote", "chayotes", "chayotes tiernos pelados en laminas", "chayotes tiernos pelados en láminas"],
   "33plus": ["33plus", "33 plus", "fórmula 33plus", "elixir 33plus"],
   "34plus": ["34plus", "34 plus", "fórmula 34plus", "tisana 34plus"]
 };
@@ -4632,7 +4643,7 @@ function sanitizeMarketRawMaterial(rawName) {
   if (lower.includes('zucchini')) return 'Calabacita Zucchini';
   if (lower.includes('calabacita')) return 'Calabacitas tiernas';
   if (lower.includes('hinojo')) return 'Hinojo fresco';
-  if (lower.includes('chayote')) return 'Chayotes tiernos de la granja';
+  if (lower.includes('chayote')) return 'Chayotes tiernos pelados';
   if (lower.includes('esparragos') || lower.includes('espárragos')) return 'Espárragos verdes frescos de la granja';
   if (lower.includes('cilantro')) return 'Cilantro fresco de la granja';
   if (lower.includes('cebollín') || lower.includes('cebollin')) return 'Cebollín fresco de la granja';
@@ -4640,6 +4651,7 @@ function sanitizeMarketRawMaterial(rawName) {
   if (lower.includes('semillas de chía') || lower.includes('semillas de chia')) return 'Semillas de chía orgánicas';
   if (lower.includes('limón') || lower.includes('limon')) return 'Jugo de limón fresco recién exprimido';
   if (lower.includes('pimienta negra')) return 'Pimienta negra recién molida';
+  if (lower.includes('sal de mar') || lower.includes('sal mineral') || lower.includes('sal de colima') || lower === 'sal') return 'Sal de mar';
   if (lower.includes('cebolla blanca') && !lower.includes('morada') && !lower.includes('romero')) return 'Cebolla blanca fresca';
   if (lower === 'agua' || lower.includes('agua purificada')) return 'Agua purificada';
   return clean;
@@ -4943,6 +4955,15 @@ function calculateNetShoppingList(diners) {
     if (/ch[ií]a/i.test(name)) {
       name = 'Semillas de chía orgánicas';
     }
+    // 6. Homologar Sal de mar y Chayote
+    if (/sal de mar|sal mineral|sal de colima/i.test(name) || name.toLowerCase() === 'sal') {
+      name = 'Sal de mar';
+      cat = '🌶️ Chiles, Condimentos e Infusiones';
+    }
+    if (/chayote/i.test(name)) {
+      name = 'Chayotes tiernos pelados';
+      cat = '🥬 Verduras, Hortalizas y Frescos';
+    }
     return { ...it, name: name, item_name: name, category: cat };
   });
 
@@ -5216,6 +5237,15 @@ function render3DShoppingList() {
       }
       if (/ch[ií]a/i.test(name)) {
         name = 'Semillas de chía orgánicas';
+      }
+      // 6. Homologar Sal de mar y Chayote
+      if (/sal de mar|sal mineral|sal de colima/i.test(name) || name.toLowerCase() === 'sal') {
+        name = 'Sal de mar';
+        cat = '🌶️ Chiles, Condimentos e Infusiones';
+      }
+      if (/chayote/i.test(name)) {
+        name = 'Chayotes tiernos pelados';
+        cat = '🥬 Verduras, Hortalizas y Frescos';
       }
       return { ...it, name: name, item_name: name, category: cat };
     });
