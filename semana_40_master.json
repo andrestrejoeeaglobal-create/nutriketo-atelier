@@ -483,7 +483,9 @@
           "fiber_g": 6.6,
           "atwater_kcal": 508
         }
-      ]
+      ],
+      "day_num": "27",
+      "iso_date": "2026-09-27"
     },
     {
       "day": "Lunes",
@@ -976,10 +978,12 @@
           "protein_g": 42.5,
           "net_carbs_g": 3.4,
           "calories": 526,
-          "fiber_g": 5.9,
+          "fiber_g": 5.3,
           "atwater_kcal": 526
         }
-      ]
+      ],
+      "day_num": "28",
+      "iso_date": "2026-09-28"
     },
     {
       "day": "Martes",
@@ -1462,7 +1466,9 @@
           "fiber_g": 1.1,
           "atwater_kcal": 486
         }
-      ]
+      ],
+      "day_num": "29",
+      "iso_date": "2026-09-29"
     },
     {
       "day": "Miércoles",
@@ -1972,7 +1978,9 @@
           "fiber_g": 4.7,
           "atwater_kcal": 512
         }
-      ]
+      ],
+      "day_num": "30",
+      "iso_date": "2026-09-30"
     },
     {
       "day": "Jueves",
@@ -2468,7 +2476,9 @@
           "fiber_g": 10.1,
           "atwater_kcal": 456
         }
-      ]
+      ],
+      "day_num": "01",
+      "iso_date": "2026-10-01"
     },
     {
       "day": "Viernes",
@@ -2958,7 +2968,9 @@
           "fiber_g": 5.2,
           "atwater_kcal": 509
         }
-      ]
+      ],
+      "day_num": "02",
+      "iso_date": "2026-10-02"
     },
     {
       "day": "Sábado",
@@ -3448,7 +3460,9 @@
           "fiber_g": 7.3,
           "atwater_kcal": 510
         }
-      ]
+      ],
+      "day_num": "03",
+      "iso_date": "2026-10-03"
     }
   ]
 }

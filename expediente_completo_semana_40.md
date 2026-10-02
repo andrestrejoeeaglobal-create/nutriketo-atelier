@@ -1653,20 +1653,20 @@ La dieta mantiene un perfil cetogénico terapéutico estricto con un ratio medio
 | Día | Kcal / Comensal | Grasa Total (g) | Proteína AVB (g) | Carbohidratos Netos (g) | Fibra Prebiótica (g) | Ratio Lípidos : (Prot + CHO) |
 |---|---|---|---|---|---|---|
 | **Domingo 27 Sep** | 1651 kcal | 123.0 g | 122.2 g | 13.8 g | 20.7 g | 0.90 : 1 |
-| **Lunes 28 Sep** | 1721 kcal | 128.7 g | 126.7 g | 13.7 g | 18.1 g | 0.92 : 1 |
+| **Lunes 28 Sep** | 1721 kcal | 128.7 g | 126.7 g | 13.7 g | 17.5 g | 0.92 : 1 |
 | **Martes 29 Sep** | 1683 kcal | 122.0 g | 132.5 g | 13.6 g | 12.6 g | 0.84 : 1 |
 | **Miércoles 30 Sep** | 1709 kcal | 127.6 g | 126.2 g | 14.0 g | 15.5 g | 0.91 : 1 |
 | **Jueves 01 Oct** | 1606 kcal | 126.5 g | 101.8 g | 15.0 g | 24.7 g | 1.08 : 1 |
 | **Viernes 02 Oct** | 1681 kcal | 122.7 g | 130.7 g | 13.5 g | 15.4 g | 0.85 : 1 |
 | **Sábado 03 Oct** | 1686 kcal | 123.4 g | 130.5 g | 13.3 g | 21.2 g | 0.86 : 1 |
-| **PROMEDIO DIARIO** | **1677 kcal** | **124.8 g** | **124.4 g** | **13.8 g** | **18.3 g** | **0.90 : 1** |
-| **TOTAL SEMANAL (6 Comensales)** | **70,422 kcal** | **5,243.4 g** | **5,223.6 g** | **581.4 g** | **769.2 g** | — |
+| **PROMEDIO DIARIO** | **1677 kcal** | **124.8 g** | **124.4 g** | **13.8 g** | **18.2 g** | **0.90 : 1** |
+| **TOTAL SEMANAL (6 Comensales)** | **70,422 kcal** | **5,243.4 g** | **5,223.6 g** | **581.4 g** | **765.6 g** | — |
 
 #### 📌 KPIs Clínico-Nutricionales Clave:
 - **Densidad Calórica Promedio:** `1677 kcal/día/comensal` (Distribución de Atwater: 67.0% Grasa | 29.7% Proteína | 3.3% Carbohidratos Netos).
 - **Límite de Carbohidratos Netos:** `13.8 g/día/comensal` (Umbral máximo de seguridad: 25.0 g/día; margen de tolerancia libre de cetólisis: 44.8%).
 - **Ingesta Proteica Adaptativa:** `124.4 g/día/comensal` (~2.0 g/kg para peso corporal magro medio de 62 kg, garantizando preservación muscular sin gluconeogénesis excesiva).
-- **Fibra Dietética Prebiótica Dinámica:** `18.3 g/día/comensal` (Calculada dinámicamente según la masa celular de cada vegetal, semilla y fruto rojo).
+- **Fibra Dietética Prebiótica Dinámica:** `18.2 g/día/comensal` (Calculada dinámicamente según la masa celular de cada vegetal, semilla y fruto rojo).
 - **Suministro de Colágeno Bioactivo Puro:** `294 g semanales` (42 g/día para el grupo, 7.0 g/día/comensal en gelatina de desayuno).
 - **Dosis Biotecnológica Activa:** 30 g/día de Fórmula Nootrópica 33Plus® matutina (5 g/comensal) y 30 g/día de Fórmula Reparadora 34Plus® nocturna (5 g/comensal).
 - **Aporte de Sodio de Colima y Electrolitos:** `12 g de sal marina mineral/comensal/semana` (~2.0 g Na+/día añadido), previniendo eficazmente la natriuresis del ayuno cetogénico.
@@ -1691,8 +1691,8 @@ Desglose nutricional individualizado por cada servicio de los 7 días de la sema
 |---|---|---|---|---|---|
 | **Desayuno** | 519 kcal | 39.2 g (56%) | 36.4 g (73%) | 5.1 g (20%) | 9.3 g (37%) |
 | **Comida** | 676 kcal | 51.5 g (74%) | 47.8 g (96%) | 5.2 g (21%) | 2.9 g (12%) |
-| **Cena** | 526 kcal | 38.0 g (54%) | 42.5 g (85%) | 3.4 g (14%) | 5.9 g (24%) |
-| **TOTAL DÍA** | **1721 kcal** | **128.7 g (184%)** | **126.7 g (253%)** | **13.7 g (55%)** | **18.1 g (72%)** |
+| **Cena** | 526 kcal | 38.0 g (54%) | 42.5 g (85%) | 3.4 g (14%) | 5.3 g (21%) |
+| **TOTAL DÍA** | **1721 kcal** | **128.7 g (184%)** | **126.7 g (253%)** | **13.7 g (55%)** | **17.5 g (70%)** |
 
 #### 📊 MARTES 29 DE SEPTIEMBRE DE 2026
 

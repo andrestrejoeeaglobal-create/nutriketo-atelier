@@ -1741,6 +1741,23 @@ def generate_standalone():
     plan_40_dict["week_start"] = "2026-09-27"
     plan_40_dict["date_range"] = "27 de Septiembre al 03 de Octubre de 2026"
 
+    s40_day_dates = [
+        {"day": "Domingo", "day_num": "27", "date_str": "27 Sep", "iso_date": "2026-09-27"},
+        {"day": "Lunes", "day_num": "28", "date_str": "28 Sep", "iso_date": "2026-09-28"},
+        {"day": "Martes", "day_num": "29", "date_str": "29 Sep", "iso_date": "2026-09-29"},
+        {"day": "Miércoles", "day_num": "30", "date_str": "30 Sep", "iso_date": "2026-09-30"},
+        {"day": "Jueves", "day_num": "01", "date_str": "01 Oct", "iso_date": "2026-10-01"},
+        {"day": "Viernes", "day_num": "02", "date_str": "02 Oct", "iso_date": "2026-10-02"},
+        {"day": "Sábado", "day_num": "03", "date_str": "03 Oct", "iso_date": "2026-10-03"}
+    ]
+    for idx, d_info in enumerate(s40_day_dates):
+        if idx < len(plan_40_dict.get("days", [])):
+            plan_40_dict["days"][idx]["day"] = d_info["day"]
+            plan_40_dict["days"][idx]["day_num"] = d_info["day_num"]
+            plan_40_dict["days"][idx]["date_str"] = d_info["date_str"]
+            plan_40_dict["days"][idx]["iso_date"] = d_info["iso_date"]
+            plan_40_dict["days"][idx]["full_date_title"] = f"Menú Completo para el {d_info['day']} {d_info['date_str']}"
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
@@ -2014,6 +2031,7 @@ function generateNextWeekMenu() {
         label: daysShort[i],
         date_str: `${dayNumStr} ${monthShortStr}`,
         day_num: dayNumStr,
+        iso_date: `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${dayNumStr}`,
         full_date_title: `Menú Completo para el ${daysOfWeek[i]} ${dayNumStr} de ${fullMonthNames[d.getMonth()]} de ${d.getFullYear()}`
       });
     }
@@ -4244,6 +4262,88 @@ function generateNextWeekMenu() {
       return datasets["Semana 35 (23 al 29 de Agosto de 2026)"] || Object.values(datasets)[0] || null;
     }
 
+    function isCalendarToday(dayObj, planObj) {
+      if (!dayObj) return false;
+      const now = new Date();
+      const currentYear = now.getFullYear();
+      const currentMonth = now.getMonth(); // 0-index (Sept=8, Oct=9)
+      const currentDay = now.getDate();
+
+      // 1. Coincidencia directa por iso_date estricta
+      if (dayObj.iso_date && /^\d{4}-\d{2}-\d{2}$/.test(dayObj.iso_date)) {
+        const [y, m, d] = dayObj.iso_date.split('-').map(Number);
+        return y === currentYear && (m - 1) === currentMonth && d === currentDay;
+      }
+
+      // 2. Extraer día numérico estricto (delimitado por límite de palabra, NUNCA .includes())
+      let targetDay = null;
+      if (dayObj.day_num !== undefined && dayObj.day_num !== null) {
+        targetDay = parseInt(dayObj.day_num, 10);
+      } else if (dayObj.date_str) {
+        const matchDay = dayObj.date_str.match(/\b0?(\d{1,2})\b/);
+        if (matchDay) targetDay = parseInt(matchDay[1], 10);
+      }
+      if (!targetDay || isNaN(targetDay) || targetDay !== currentDay) {
+        return false;
+      }
+
+      // 3. Extraer y validar mes en español
+      const SPANISH_MONTH_MAP = {
+        'ene': 0, 'enero': 0,
+        'feb': 1, 'febrero': 1,
+        'mar': 2, 'marzo': 2,
+        'abr': 3, 'abril': 3,
+        'may': 4, 'mayo': 4,
+        'jun': 5, 'junio': 5,
+        'jul': 6, 'julio': 6,
+        'ago': 7, 'agosto': 7,
+        'sep': 8, 'sept': 8, 'septiembre': 8,
+        'oct': 9, 'octubre': 9,
+        'nov': 10, 'noviembre': 10,
+        'dic': 11, 'diciembre': 11
+      };
+
+      const cleanStr = (s) => (s || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+      const dayClean = cleanStr(dayObj.date_str || '');
+      let targetMonth = null;
+
+      for (const [mName, mIdx] of Object.entries(SPANISH_MONTH_MAP)) {
+        const reg = new RegExp(`\\b${mName}\\b`, 'i');
+        if (reg.test(dayClean)) {
+          targetMonth = mIdx;
+          break;
+        }
+      }
+
+      if (targetMonth === null) {
+        const planClean = cleanStr(`${planObj?.week_label || ''} ${planObj?.date_range || ''}`);
+        for (const [mName, mIdx] of Object.entries(SPANISH_MONTH_MAP)) {
+          const reg = new RegExp(`\\b${mName}\\b`, 'i');
+          if (reg.test(planClean)) {
+            targetMonth = mIdx;
+            break;
+          }
+        }
+      }
+
+      if (targetMonth === null || targetMonth !== currentMonth) {
+        return false;
+      }
+
+      // 4. Extraer y validar año
+      let targetYear = null;
+      const combinedClean = cleanStr(`${dayObj.date_str || ''} ${planObj?.week_label || ''} ${planObj?.date_range || ''}`);
+      const yearMatch = combinedClean.match(/\b(202\d)\b/);
+      if (yearMatch) {
+        targetYear = parseInt(yearMatch[1], 10);
+      }
+      if (targetYear !== null && targetYear !== currentYear) {
+        return false;
+      }
+
+      return true;
+    }
+
     function renderDateBar() {
       try {
         const plan = getPlanForWeek(activeWeek);
@@ -4257,8 +4357,7 @@ function generateNextWeekMenu() {
         plan.days.forEach((day, idx) => {
           const btn = document.createElement('button');
           const isActive = idx === selectedIdx;
-          const todayNumStr = new Date().getDate().toString();
-          const isToday = (day.day_num === todayNumStr || (day.day_num && parseInt(day.day_num) === new Date().getDate()) || (day.date_str && day.date_str.includes(todayNumStr)));
+          const isToday = isCalendarToday(day, plan);
           
           btn.type = 'button';
           btn.className = `min-h-[48px] px-4 py-2.5 rounded-xl border text-xs font-brand-body flex items-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
@@ -6016,17 +6115,18 @@ function renderRecipes(day, activeDiners) {
           }
 
           function getMainQualitativeDesc(dishName, mealType) {
-            const name = (dishName || '').toLowerCase();
-            const mtype = (mealType || '').toLowerCase();
+            const cleanStr = (s) => (s || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            const name = cleanStr(dishName);
+            const mtype = cleanStr(mealType);
             if (/huevo|omelette|tamagoyaki|cazuela|frittata|benedictino|revuelto|estrellado/i.test(name)) {
               return 'Activación obligatoria del umbral de leucina (≥ 2.5 g vía 3 huevos enteros de libre pastoreo) para encender la vía mTOR y generar saciedad bifásica.';
             }
-            if (/\b(salmón|salmon|atún|atun)\b/i.test(name)) {
+            if (/\b(salmon|atun)\b/i.test(name)) {
               return mtype.includes('cena')
                 ? 'Proteína marina noble rica en ácidos grasos poliinsaturados Omega-3 (EPA/DHA) y selenio, de digestibilidad acelerada para un reposo nocturno antiinflamatorio.'
                 : 'Aporte de ácidos grasos Omega-3 de cadena larga (EPA/DHA), fósforo y proteína marina noble para enfoque cognitivo diurno y salud vascular.';
             }
-            if (/\b(robalo|róbalo|huachinango|pescado)\b/i.test(name)) {
+            if (/\b(robalo|huachinango|pescado|pescado blanco)\b/i.test(name)) {
               return mtype.includes('cena')
                 ? 'Proteína blanca de captura salvaje con alta digestibilidad, bajo residuo gástrico y mínimo costo termogénico nocturno.'
                 : 'Proteína marina magra de captura salvaje, rica en yodo y oligoelementos oceánicos, ideal para digestión diurna sin pesadez posprandial.';
@@ -6036,25 +6136,26 @@ function renderRecipes(day, activeDiners) {
                 ? 'Proteína magra de alta digestibilidad rica en L-triptófano y aminoácidos esenciales, favoreciendo la biosíntesis de serotonina y melatonina nocturna.'
                 : 'Proteína magra de ave de libre pastoreo rica en aminoácidos de cadena ramificada, que sostiene el anabolismo muscular diurno sin enlentecer el vaciamiento gástrico.';
             }
-            if (/\b(arrachera|sirloin|machaca|res|vacuno)\b/i.test(name)) {
+            if (/\b(arrachera|sirloin|machaca|res|vacuno|tuetano)\b/i.test(name)) {
               return 'Densidad de hierro hemo de alta absorción, zinc elemental, creatina natural y proteína densa de pastoreo para anabolismo tisular y preservación magra.';
             }
-            if (/\b(portobello|champiñón|champiñones|champinon|champinones|setas)\b/i.test(name)) {
+            if (/\b(portobello|champinon|champinones|setas?)\b/i.test(name)) {
               return 'Aporte de betaglucanos fúngicos, glutamato natural de umami y matriz vegetal densa en fibra prebiótica con saciedad prolongada.';
             }
             return 'Suministro balanceado de aminoácidos esenciales para balance nitrogenado positivo y saciedad dentro del protocolo cetogénico.';
           }
 
           function getSideQualitativeDesc(dishName, mealType) {
-            const name = (dishName || '').toLowerCase();
-            const mtype = (mealType || '').toLowerCase();
+            const cleanStr = (s) => (s || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+            const name = cleanStr(dishName);
+            const mtype = cleanStr(mealType);
             if (name.includes('33plus') || mtype.includes('desayuno')) {
               return 'Soporte osteoarticular mediante colágeno hidrolizado puro y activación nootrópica mitocondrial matutina.';
             }
             if (name.includes('34plus') || mtype.includes('cena') || name.includes('tisana') || name.includes('nocturna') || name.includes('manzanilla') || name.includes('toronjil')) {
               return 'Inducción circadiana del descanso mediante fitonutrientes ansiolíticos naturales (modulación GABAérgica) y sustratos bioactivos reparadores de la Fórmula 34Plus®.';
             }
-            if (name.includes('espárragos') || name.includes('esparragos') || name.includes('nopales') || name.includes('coliflor') || name.includes('zoodles') || name.includes('chayote') || name.includes('calabacitas') || name.includes('ejotes')) {
+            if (name.includes('esparragos') || name.includes('nopales') || name.includes('coliflor') || name.includes('zoodles') || name.includes('chayote') || name.includes('calabacitas') || name.includes('ejotes')) {
               return 'Aporte de potasio intracelular y fibra prebiótica insoluble que optimiza la microbiota sin impacto en la glucemia ni interrupción de la cetosis.';
             }
             return 'Aporta electrolitos esenciales (Potasio, Magnesio) y sustratos funcionales sin interferir con la cetosis.';
@@ -6090,7 +6191,7 @@ function renderRecipes(day, activeDiners) {
           day.meals.forEach(rawM => {
             const m = typeof getMealObj === 'function' ? getMealObj(safeIdx, rawM) : rawM;
             const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(safeIdx, m.meal_type) : activeDiners;
-            const kcalPerPerson = (m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4).toFixed(0);
+            const kcalPerPerson = (m && m.atwater_kcal) ? m.atwater_kcal : (m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4).toFixed(0);
             const fiberG = getMealFiberG(m);
             const mealTitleText = (m.meal_type || '').toLowerCase().includes('desayuno') ? `${m.meal_type} Completo (3 Tiempos)` : `${m.meal_type} Completa (3 Tiempos)`;
 

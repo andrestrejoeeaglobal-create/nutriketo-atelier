@@ -12,7 +12,18 @@ Garantiza:
 
 import re
 import math
+import unicodedata
+import logging
 from typing import Dict, Any, List, Optional, Tuple
+
+logger = logging.getLogger("nutriketo.nutrition_engine")
+
+def strip_accents(text: str) -> str:
+    """Preprocesamiento canónico que elimina tildes y caracteres diacríticos."""
+    if not text:
+        return ""
+    return unicodedata.normalize('NFD', text).encode('ascii', 'ignore').decode('utf-8').lower()
+
 
 # =============================================================================
 # 1. CÁLCULO ATWATER ESTANDARIZADO
@@ -86,14 +97,35 @@ BOTANICAL_FIBER_DENSITY_PER_100G = {
 }
 
 
+ZERO_FIBER_ANIMAL_OR_FAT_PATTERN = re.compile(
+    r'\b(aceite|mantequilla|ghee|grasa|manteca|vevo|salmon|atun|robalo|huachinango|pescado|'
+    r'pollo|pavo|pechuga|muslo|sirloin|arrachera|machaca|res|carne|tuetano|hueso|huesos|'
+    r'retazo|huevo|huevos|clara|claras|yema|yemas|tocino|jamon|panceta|queso|parmesano|'
+    r'gouda|manchego|panela|cabra|crema|yogur|agua|sal de mar|sal marina|sal mineral|colageno|grenetina|gelatina)\b',
+    re.IGNORECASE
+)
+
+
 def calculate_ingredient_fiber_g(item_name: str, qty_g: float) -> float:
-    """Calcula la fibra dietética real de un insumo botánico en gramos según su masa."""
+    """Calcula la fibra dietética real de un insumo botánico en gramos según su masa.
+    Cualquier ingrediente animal o graso puro se resuelve explícitamente como 0.0 g/100g.
+    """
     if not item_name or qty_g <= 0:
         return 0.0
-    nl = item_name.lower()
+    clean_name = strip_accents(item_name)
+
+    # Salvaguarda Cero-Fibra: Insumos animales o grasas puras son estrictamente 0.0 g/100g
+    if ZERO_FIBER_ANIMAL_OR_FAT_PATTERN.search(clean_name):
+        return 0.0
+
+    # Salvaguarda 2: Catálogo de densidad botánica
     for key, density in BOTANICAL_FIBER_DENSITY_PER_100G.items():
-        if key in nl:
+        clean_key = strip_accents(key)
+        if clean_key in clean_name:
             return round((qty_g * density) / 100.0, 2)
+
+    # Advertencia de log solo si el insumo botánico no está registrado
+    logger.warning("Insumo botánico no registrado en BOTANICAL_FIBER_DENSITY: '%s'", item_name)
     return 0.0
 
 
@@ -132,28 +164,29 @@ def calculate_dish_fiber_g(ingredients: List[Dict[str, Any]], diners: int = 6) -
 
 SPECIES_PATTERNS = [
     # 1. Especies Marinas Pelágicas (Omega-3 / EPA-DHA)
-    ("marine_pelagic", re.compile(r'\b(salm[oó]n|at[uú]n)\b', re.IGNORECASE)),
+    ("marine_pelagic", re.compile(r'\b(salmon|atun)\b', re.IGNORECASE)),
     # 2. Especies Marinas Blancas (Digestión rápida, minerales traza)
-    ("marine_white", re.compile(r'\b(robalo|r[oó]balo|huachinango|pescado|pescado blanco)\b', re.IGNORECASE)),
+    ("marine_white", re.compile(r'\b(robalo|huachinango|pescado|pescado blanco)\b', re.IGNORECASE)),
     # 3. Aves (Proteína magra de alta digestibilidad - Salvaguarda C con límites léxicos estrictos)
     ("poultry", re.compile(r'\b(pollo|pollos|pavo|pavos|ave|aves|pechuga|pechugas)\b', re.IGNORECASE)),
     # 4. Bovinos de Pastoreo (Hierro hemo, zinc, creatina - Límite estricto \bres\b para evitar 'fresco' / 'fresca')
-    ("bovine_red_meat", re.compile(r'\b(arrachera|sirloin|machaca|res|vacuno|tu[eé]tano)\b', re.IGNORECASE)),
+    ("bovine_red_meat", re.compile(r'\b(arrachera|sirloin|machaca|res|vacuno|tuetano)\b', re.IGNORECASE)),
     # 5. Ovoproductos (Leucina, colina, albumina)
     ("ovoproduct", re.compile(r'\b(huevo|huevos|clara|claras|yema|yemas|omelette|tamagoyaki|cazuela|benedictino|revuelt[oa]s?|estrellad[oa]s?)\b', re.IGNORECASE)),
     # 6. Fúngicos (Betaglucanos, umami)
-    ("fungal", re.compile(r'\b(portobello|champi[nñ][oó]n|champi[nñ]ones|setas?)\b', re.IGNORECASE)),
+    ("fungal", re.compile(r'\b(portobello|champinon|champinones|setas?)\b', re.IGNORECASE)),
 ]
 
 
 def resolve_main_dish_species(dish_name: str) -> str:
     """Identifica la especie biológica primaria de un platillo con precedencia estricta.
-    Impide que adjetivos como 'fresco' o 'artesanal' colisionen con 'res'.
+    Fuerza preprocesamiento canónico con strip_accents() antes de evaluar los tokens.
     """
     if not dish_name:
         return "generic_protein"
+    clean_dish = strip_accents(dish_name)
     for species_id, pattern in SPECIES_PATTERNS:
-        if pattern.search(dish_name):
+        if pattern.search(clean_dish):
             return species_id
     return "generic_protein"
 

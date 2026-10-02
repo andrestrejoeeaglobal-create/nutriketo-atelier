@@ -1425,6 +1425,51 @@ def test_condiments_biological_thresholds_and_pantry_reflexivity():
     assert "v40_2_ssot_canonical_skus" in html
     assert "nutriketo_app_state_v40_2_ssot" in html
 
+def test_temporal_date_resolution_and_nutrition_engine_precision():
+    """
+    Valida la resolución temporal ontológica de fechas y las tres precisiones técnicas:
+    1. Normalización Diacrítica en Ontología Léxica (unicodedata.normalize NFD).
+    2. Fallback Seguro Cero-Fibra para grasas y proteínas animales puras (0.0 g/100g).
+    3. Extirpación de la coincidencia de subcadena .includes(todayNumStr) y presencia de isCalendarToday.
+    """
+    from app.services.nutrition_engine import (
+        strip_accents,
+        calculate_ingredient_fiber_g,
+        resolve_main_dish_species
+    )
+
+    # 1. Normalización Diacrítica en Ontología Léxica
+    assert strip_accents("Atún Fresco") == "atun fresco"
+    assert strip_accents("Proteína Cárnica") == "proteina carnica"
+    assert strip_accents("Jugo de Limón") == "jugo de limon"
+    assert resolve_main_dish_species("Filete de Atún Sellado") == "marine_pelagic"
+    assert resolve_main_dish_species("Filete de Atun Sellado") == "marine_pelagic"
+    assert resolve_main_dish_species("Pechuga de Pollo Fresca") == "poultry"
+    assert resolve_main_dish_species("Machaca Artesanal de Res") == "bovine_red_meat"
+
+    # 2. Tratamiento de Insumos Fuera de Catálogo (Zero-Fiber Fallback)
+    assert calculate_ingredient_fiber_g("Aceite de oliva extra virgen VEVO", 50) == 0.0
+    assert calculate_ingredient_fiber_g("Mantequilla clarificada de pastoreo", 30) == 0.0
+    assert calculate_ingredient_fiber_g("Filete de salmón salvaje", 150) == 0.0
+    assert calculate_ingredient_fiber_g("Pechuga de pollo fresca", 200) == 0.0
+    # Insumos botánicos sí computan fibra
+    assert calculate_ingredient_fiber_g("Semillas de chía orgánicas", 100) == 34.4
+    assert calculate_ingredient_fiber_g("Aguacate Hass fresco", 100) == 6.7
+
+    # 3. Verificación de Código y HTML Compilado
+    with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
+        code = f.read()
+
+    with open("atelier.html", "r", encoding="utf-8") as f:
+        html = f.read()
+
+    assert "function isCalendarToday" in code
+    assert "function isCalendarToday" in html
+    assert "day.date_str.includes(todayNumStr)" not in code
+    assert "day.date_str.includes(todayNumStr)" not in html
+    assert "2026-10-02" in code
+
+
 
 
 
