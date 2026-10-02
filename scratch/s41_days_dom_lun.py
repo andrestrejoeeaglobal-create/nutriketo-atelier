@@ -56,7 +56,7 @@ def get_domingo_lunes():
                         "note": "Plato fuerte matutino de alta densidad proteica y leucina (≥2.5 g), con cuajada cremosa de 3 huevos por comensal y chayote tierno amortizado de alacena.",
                         "ingredients": [
                             {"name": "Huevos orgánicos de pastoreo", "amount": 18, "unit": "piezas", "category": "🥩 Carnes, Pescados y Proteínas", "per_guest": 3},
-                            {"name": "Chayotes tiernos pelados", "amount": 1, "unit": "piezas", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 0.16},
+                            {"name": "Chayotes tiernos", "amount": 1, "unit": "piezas", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 0.16},
                             {"name": "Mantequilla de pastoreo", "amount": 90, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 15},
                             {"name": "Sal de mar", "amount": 6, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1},
                             {"name": "Cebollín fresco de la granja", "amount": 30, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 5}

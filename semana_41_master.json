@@ -78,7 +78,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Chayotes tiernos pelados",
+                "name": "Chayotes tiernos",
                 "amount": 1,
                 "unit": "piezas",
                 "category": "🥬 Verduras, Hortalizas y Frescos",
@@ -196,7 +196,7 @@
                 "per_guest": 3
               },
               {
-                "name": "Chayotes tiernos pelados",
+                "name": "Chayotes tiernos",
                 "amount": 1,
                 "unit": "piezas",
                 "category": "🥬 Verduras, Hortalizas y Frescos",
@@ -3862,7 +3862,7 @@
             "note": "Sopa ligera y mineral que aprovecha el chayote tierno pelado de mercado junto con aceite VEVO y caldo clarificado.",
             "ingredients": [
               {
-                "name": "Chayotes tiernos pelados",
+                "name": "Chayotes tiernos",
                 "amount": 1,
                 "unit": "piezas",
                 "category": "🥬 Verduras, Hortalizas y Frescos",

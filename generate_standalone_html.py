@@ -2505,7 +2505,7 @@ function generateNextWeekMenu() {
       "aceite-oliva": { name: "Aceite de oliva extra virgen VEVO", stock: 1, unit: "botella_vevo", status: "canonical" },
       "semillas-chia": { name: "Semillas de chía orgánicas", stock: 100, unit: "g", status: "canonical" },
       "sal-mar": { name: "Sal de mar", stock: 1, unit: "bolsa_sal", status: "canonical" },
-      "chayotes-tiernos": { name: "Chayotes tiernos pelados", stock: 1, unit: "piezas", status: "canonical" },
+      "chayotes-tiernos": { name: "Chayotes tiernos", stock: 1, unit: "piezas", status: "canonical" },
       "almendras-fileteadas": { name: "Almendras fileteadas tostadas", stock: 100, unit: "g", status: "canonical" },
       "ajo-fresco": { name: "Ajo fresco", stock: 36, unit: "g", status: "canonical" },
       "limon-fresco": { name: "Jugo de limón fresco recién exprimido", stock: 200, unit: "ml", status: "canonical" },
@@ -2693,7 +2693,7 @@ function generateNextWeekMenu() {
         { stem: 'manzanilla', aliases: ['manzanilla'] },
         { stem: 'jamaica', aliases: ['jamaica'] },
         { stem: 'apio', aliases: ['apio'] },
-        { stem: 'chayote', aliases: ['chayote', 'chayotes'] },
+        { stem: 'chayote', aliases: ['chayote', 'chayotes', 'chayote tierno', 'chayotes tiernos', 'chayotes tiernos pelados'] },
         { stem: 'hinojo', aliases: ['hinojo'] },
         { stem: 'aguacate', aliases: ['aguacate', 'aguacate hass'] },
         { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'limon agrio', 'limones agrios', 'limones agrios frescos', 'limones agrios frescos de la granja', 'jugo de limon', 'jugo de limon fresco', 'jugo de limon fresco de la granja', 'jugo de limon recien exprimido', 'limon agrio fresco con semilla'] },
@@ -4655,7 +4655,7 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "cebolla-blanca": ["cebolla blanca fresca", "cebolla blanca", "cebolla", "cebollas"],
   "romero-fresco": ["romero fresco", "romero"],
   "sal-mar": ["sal de mar", "sal de mar mineral", "sal mineral", "sal de colima", "sal de mar mineral de colima", "sal"],
-  "chayotes-tiernos": ["chayotes tiernos pelados", "chayote tierno", "chayotes tiernos", "chayote", "chayotes", "chayotes tiernos pelados en laminas", "chayotes tiernos pelados en láminas"],
+  "chayotes-tiernos": ["chayotes tiernos", "chayote tierno", "chayotes tiernos pelados", "chayote", "chayotes", "chayotes tiernos pelados en laminas", "chayotes tiernos pelados en láminas"],
   "tomate-verde": ["tomate verde", "tomate verde fresco", "tomatillo", "tomates verdes"],
   "yoghurt-griego": ["yoghurt griego natural sin azúcar", "yoghurt griego", "yogurt griego", "yoghurt griego natural", "yogur griego"],
   "mayonesa": ["mayonesa", "mayonesa casera", "mayonesa keto"],
@@ -4806,7 +4806,7 @@ function sanitizeMarketRawMaterial(rawName) {
   if (lower.includes('zucchini')) return 'Calabacita Zucchini';
   if (lower.includes('calabacita')) return 'Calabacitas tiernas';
   if (lower.includes('hinojo')) return 'Hinojo fresco';
-  if (lower.includes('chayote')) return 'Chayotes tiernos pelados';
+  if (lower.includes('chayote')) return 'Chayotes tiernos';
   if (lower.includes('esparragos') || lower.includes('espárragos')) return 'Espárragos verdes frescos de la granja';
   if (lower.includes('cilantro')) return 'Cilantro fresco de la granja';
   if (lower.includes('cebollín') || lower.includes('cebollin')) return 'Cebollín fresco de la granja';
@@ -5131,7 +5131,7 @@ function calculateNetShoppingList(diners) {
       cat = '🌶️ Chiles, Condimentos e Infusiones';
     }
     if (/chayote/i.test(name)) {
-      name = 'Chayotes tiernos pelados';
+      name = 'Chayotes tiernos';
       cat = '🥬 Verduras, Hortalizas y Frescos';
     }
     return { ...it, name: name, item_name: name, category: cat };
@@ -5441,7 +5441,7 @@ function render3DShoppingList() {
         cat = '🌶️ Chiles, Condimentos e Infusiones';
       }
       if (/chayote/i.test(name)) {
-        name = 'Chayotes tiernos pelados';
+        name = 'Chayotes tiernos';
         cat = '🥬 Verduras, Hortalizas y Frescos';
       }
       return { ...it, name: name, item_name: name, category: cat };

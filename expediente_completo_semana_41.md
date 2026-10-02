@@ -65,7 +65,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥩 Carnes, Pescados y Proteínas*: Huevos orgánicos de pastoreo: **18 piezas** (3 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Chayotes tiernos pelados: **1 piezas** (0.16 piezas/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Chayotes tiernos: **1 piezas** (0.16 piezas/persona)
 - *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **90 g** (15 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cebollín fresco de la granja: **30 g** (5 g/persona)
@@ -1262,7 +1262,7 @@
   - *Puntos Críticos de Control:* No sobrecocer el chayote para preservar textura al dente.
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Chayotes tiernos pelados: **1 piezas** (0.16 piezas/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Chayotes tiernos: **1 piezas** (0.16 piezas/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cebollín fresco de la granja: **80 g** (13.3 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **40 ml** (6.6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **480 ml** (80 ml/persona)
@@ -2041,7 +2041,7 @@ La presente matriz desglosa los insumos necesarios para alimentar a **6 comensal
 | **Mayonesa** | 500 g | 450 g | **50 g** | **$0 / 0 g** (100% Amortizado) |
 | **Leche de coco** | 500 ml | 500 ml | **0 ml** | **$0 / 0 ml** (100% Absorbido) |
 | **Sardinas enlatadas** | 2 latas | 2 latas | **0 latas** | **$0 / 0 latas** (100% Absorbido) |
-| **Chayotes tiernos pelados** | 1 pieza | 2 piezas | **0 piezas** | **1 pieza neta** (1 pza amortizada) |
+| **Chayotes tiernos** | 1 pieza | 2 piezas | **0 piezas** | **1 pieza neta** (1 pza amortizada) |
 | **Sal de mar** | 1 bolsa (1,000 g) | 84 g | **916 g** | **$0 / 0 g** (Amortizado) |
 | **Aceite de oliva extra virgen VEVO** | 1 botella (750 ml) | 430 ml | **320 ml** | **$0 / 0 ml** (Amortizado) |
 | **Semillas de chía orgánicas** | 100 g | 270 g | **0 g** | **170 g netos** (100g amortizados) |
@@ -2080,7 +2080,7 @@ La presente matriz desglosa los insumos necesarios para alimentar a **6 comensal
 | **Pechuga de pavo artesanal** | 2,160 | g (2.16 kg) | 🥩 Carnes, Pescados y Proteínas |
 | **Carne seca machaca artesanal de res** | 180 | g | 🥩 Carnes, Pescados y Proteínas |
 | **Champiñones Portobello frescos** | 720 | g | 🥬 Verduras, Hortalizas y Frescos |
-| **Chayotes tiernos pelados** | 1 | piezas | 🥬 Verduras, Hortalizas y Frescos |
+| **Chayotes tiernos** | 1 | piezas | 🥬 Verduras, Hortalizas y Frescos |
 | **Pepino fresco de la granja/mercado** | 1,020 | g (~1.0 kg) | 🥬 Verduras, Hortalizas y Frescos |
 | **Rábanos frescos de la huerta** | 120 | g | 🥬 Verduras, Hortalizas y Frescos |
 | **Hojas de lechuga orejona viva** | 240 | g | 🥬 Verduras, Hortalizas y Frescos |
