@@ -1261,8 +1261,8 @@ def test_harvest_pantry_reactivity_and_purity():
     for p_slug in ["fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "zarzamoras-frescas"]:
         assert p_slug in pantry_content, f"Slug '{p_slug}' ausente en window.PANTRY_STOCK_INVENTORY"
 
-    # Stems multi-categoría (Carnes, Huevos, Lácteos, Grasas)
-    assert "{ stem: 'pollo', aliases: ['pollo', 'pechuga de pollo', 'pechuga de pollo organica', 'pechuga'] }" in code
+    # Stems multi-categoría (Carnes, Huevos, Lácteos, Grasas) con discriminación estricta
+    assert "stem: 'pollo'" in code and "exclude: ['hueso'" in code
     assert "{ stem: 'huevo', aliases: ['huevo', 'huevos', 'huevos enteros', 'huevos organicos', 'huevos frescos', 'huevos organicos de libre pastoreo', 'huevo entero'] }" in code
     assert "{ stem: 'mantequilla', aliases: ['mantequilla', 'mantequilla de vaca', 'mantequilla de pastoreo', 'mantequilla de pastoreo artesanal', 'mantequilla sin sal']" in code
 
@@ -1338,6 +1338,58 @@ def test_pantry_meats_and_eggs_amortization_and_bom_purity():
 
     assert "ACTIVE_WEEK_40_CANONICAL_BOM" in html
     assert "addPantryCasillero" in html
+
+
+def test_commercial_packaging_and_dimensional_normalization():
+    """
+    Valida la Directiva Técnica de Ley de Empaques Reales y Normalización Dimensional:
+    1. Factores de conversión comercial:
+       - bolsa_sal / bolsa_1000: 1 bolsa = 1,000 g
+       - casillero: 1 casillero = 30 piezas
+       - bolsa_retazo: 1 bolsa = 500 g
+       - paquete_3_2: 1 paquete = 3,200 g
+       - botella_vevo / botella_750: 1 botella = 750 ml
+    2. Aislamiento léxico estricto (Anti-False-Positive):
+       - Pechuga de pollo != Huesos y retazo de pollo (el stock de pollo no amortiza huesos)
+       - Aceite de ajonjolí != Semillas de sésamo
+       - Ajo fresco != Aceite de ajonjolí
+       - Aceite de oliva != Aceitunas
+    3. Eliminación de huérfanos con demanda 0 en Alacena:
+       - 'aceite-coco-mct' purgado de window.PANTRY_STOCK_INVENTORY
+    4. Persistencia e interfaz:
+       - getCommercialUnitOptions y resolvePantryCommercialUnit presentes en HTML y JS
+       - Selectores <select> renderizados para paquetes comerciales
+    """
+    with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
+        code = f.read()
+
+    with open("index.html", "r", encoding="utf-8") as f:
+        html = f.read()
+
+    # 1. Factores y funciones canónicas
+    assert "function getCommercialUnitOptions" in code
+    assert "function resolvePantryCommercialUnit" in code
+    assert "function updatePantryStockUnit" in code
+    assert "paquete_3_2" in code
+    assert "bolsa_retazo" in code
+    assert "botella_vevo" in code
+    assert "bolsa_sal" in code
+
+    # 2. Aislamiento léxico
+    assert "exclude: ['hueso', 'huesos', 'retazo', 'fondo', 'caldo']" in code
+    assert "exclude: ['ajonjoli']" in code
+    assert "exclude: ['semilla', 'semillas', 'grano']" in code
+    assert "exclude: ['aceite']" in code
+    assert "exclude: ['aceituna', 'aceitunas']" in code
+
+    # 3. Purgado de huérfanos
+    assert '"aceite-coco-mct"' not in code
+
+    # 4. Presencia en HTML
+    assert "getCommercialUnitOptions" in html
+    assert "resolvePantryCommercialUnit" in html
+    assert "updatePantryStockUnit" in html
+
 
 
 

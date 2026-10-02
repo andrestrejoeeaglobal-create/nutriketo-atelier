@@ -2524,14 +2524,13 @@ function generateNextWeekMenu() {
         window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
     window.PANTRY_STOCK_INVENTORY = {
       // Insumos Canónicos Aptos (Status: "canonical")
-      "aceite-oliva": { name: "Aceite de oliva extra virgen VEVO", stock: 500, unit: "ml", status: "canonical" },
+      "aceite-oliva": { name: "Aceite de oliva extra virgen VEVO", stock: 1, unit: "botella_vevo", status: "canonical" },
       "semillas-chia": { name: "Semillas de chía orgánicas", stock: 100, unit: "g", status: "canonical" },
-      "sal-mar": { name: "Sal de mar mineral pura", stock: 1000, unit: "g", status: "canonical" },
+      "sal-mar": { name: "Sal de mar mineral pura", stock: 1, unit: "bolsa_sal", status: "canonical" },
       "almendras-fileteadas": { name: "Almendras fileteadas tostadas", stock: 100, unit: "g", status: "canonical" },
       "dientes-de-ajo": { name: "Dientes de ajo fresco", stock: 36, unit: "g", status: "canonical" },
       "limon-fresco": { name: "Jugo de limón fresco recién exprimido", stock: 200, unit: "ml", status: "canonical" },
       "pimienta-negra": { name: "Pimienta negra recién molida", stock: 50, unit: "g", status: "canonical" },
-      "aceite-coco-mct": { name: "Aceite de coco MCT", stock: 250, unit: "ml", status: "canonical" },
       "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
       "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
       // Frutas de Bajo Índice Glucémico en Alacena (Registro Previsto)
@@ -2598,8 +2597,8 @@ function generateNextWeekMenu() {
     const currentDayNum = (new Date().getDay() >= 0 && new Date().getDay() <= 6) ? new Date().getDay() : 0;
     let selectedIdx = currentDayNum;
 
-    const CURRENT_APP_VERSION = 'v40_0_ssot_canonical';
-    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v40_0_ssot';
+    const CURRENT_APP_VERSION = 'v40_1_ssot_commercial_units';
+    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v40_1_ssot';
 
     function toggleTheme() {
       const html = document.documentElement;
@@ -2643,24 +2642,24 @@ function generateNextWeekMenu() {
 
       if (a === b) return true;
 
-      // Stems y alias canónicos con coincidencia léxica multi-categoría
+      // Stems y alias canónicos con coincidencia léxica multi-categoría y discriminación estricta
       const itemKeywords = [
         // Carnes, Aves y Pescados
-        { stem: 'pollo', aliases: ['pollo', 'pechuga de pollo', 'pechuga de pollo organica', 'pechuga'] },
+        { stem: 'pollo', aliases: ['pechuga de pollo', 'pechuga de pollo organica', 'pechuga', 'carne de pollo', 'pollo organico'], exclude: ['hueso', 'huesos', 'retazo', 'fondo', 'caldo'] },
+        { stem: 'huesos-pollo', aliases: ['huesos y retazo de pollo', 'retazo de pollo', 'huesos de pollo', 'retazo de pollo organico'], exclude: ['pechuga'] },
+        { stem: 'tuetano', aliases: ['tuetano', 'huesos de res con tuetano', 'huesos de res', 'carne para caldo rico', 'costilla tuetano'], exclude: ['arrachera', 'sirloin', 'machaca', 'filete de res'] },
         { stem: 'huevo', aliases: ['huevo', 'huevos', 'huevos enteros', 'huevos organicos', 'huevos frescos', 'huevos organicos de libre pastoreo', 'huevo entero'] },
         { stem: 'mantequilla', aliases: ['mantequilla', 'mantequilla de vaca', 'mantequilla de pastoreo', 'mantequilla de pastoreo artesanal', 'mantequilla sin sal'], exclude: ['ghee', 'clarificada'] },
         { stem: 'ghee', aliases: ['ghee', 'mantequilla clarificada'] },
-        { stem: 'sirloin', aliases: ['sirloin', 'medallones de sirloin', 'medallon de sirloin', 'medallones de sirloin de res magro', 'carne molida de sirloin'] },
-        { stem: 'arrachera', aliases: ['arrachera', 'arrachera de res', 'arrachera de res magra limpia', 'arrachera limpia'] },
+        { stem: 'sirloin', aliases: ['sirloin', 'medallones de sirloin', 'medallon de sirloin', 'medallones de sirloin de res magro', 'carne molida de sirloin'], exclude: ['tuetano', 'huesos'] },
+        { stem: 'arrachera', aliases: ['arrachera', 'arrachera de res', 'arrachera de res magra limpia', 'arrachera limpia'], exclude: ['tuetano', 'huesos'] },
         { stem: 'robalo', aliases: ['robalo', 'filete de robalo', 'filete de robalo salvaje', 'filete de robalo salvaje fresco de captura', 'pescado blanco', 'filete de pescado blanco'] },
         { stem: 'huachinango', aliases: ['huachinango', 'filetes de huachinango', 'filete de huachinango con piel'] },
         { stem: 'salmon', aliases: ['salmon', 'lomo de salmon', 'filete de salmon'] },
         { stem: 'atun', aliases: ['atun', 'medallones de atun', 'lomo de atun'] },
-        { stem: 'pavo', aliases: ['pavo', 'pechuga de pavo', 'pechuga de pavo artesanal'] },
+        { stem: 'pavo', aliases: ['pavo', 'pechuga de pavo', 'pechuga de pavo artesanal'], exclude: ['tocino'] },
         { stem: 'tocino-pavo', aliases: ['tocino de pavo', 'tocino de pavo artesanal', 'tocino de pavo crujiente'] },
         { stem: 'machaca', aliases: ['machaca', 'carne seca machaca', 'carne seca machaca artesanal'] },
-        { stem: 'tuetano', aliases: ['tuetano', 'huesos de res con tuetano', 'carne para caldo rico', 'costilla tuetano'] },
-        { stem: 'huesos-pollo', aliases: ['huesos y retazo de pollo', 'retazo de pollo', 'pollo entero para caldo'] },
         // Lácteos y Quesos
         { stem: 'gouda', aliases: ['gouda', 'queso gouda', 'queso gouda artesanal'] },
         { stem: 'panela', aliases: ['panela', 'queso panela', 'queso panela artesanal'] },
@@ -2669,15 +2668,16 @@ function generateNextWeekMenu() {
         { stem: 'cabra', aliases: ['queso de cabra', 'queso de cabra artesanal', 'cabra artesanal'] },
         { stem: 'crema', aliases: ['crema', 'crema entera', 'crema entera de rancho', 'crema para batir'], exclude: ['queso crema'] },
         // Grasas, Aceites y Semillas
-        { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'] },
-        { stem: 'aceite-ajonjoli', aliases: ['aceite de ajonjoli', 'aceite de sesamo', 'aceite de ajonjoli tostado'] },
+        { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'], exclude: ['aceituna', 'aceitunas'] },
+        { stem: 'aceite-ajonjoli', aliases: ['aceite de ajonjoli', 'aceite de sesamo', 'aceite de ajonjoli tostado'], exclude: ['semilla', 'semillas', 'grano'] },
+        { stem: 'semillas-sesamo', aliases: ['semillas de sesamo', 'semillas de ajonjoli', 'ajonjoli en grano', 'semilla de ajonjoli', 'semillas de sesamo (ajonjoli)'], exclude: ['aceite'] },
         { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'pecana', 'pecanas'] },
         { stem: 'nuez-castilla', aliases: ['nuez de castilla', 'nueces de castilla', 'nuez de castilla fresca'] },
         { stem: 'almendra', aliases: ['almendra', 'almendras', 'almendras fileteadas', 'almendras fileteadas tostadas'] },
         { stem: 'chia', aliases: ['chia', 'semillas de chia', 'semillas de chia organicas'] },
         { stem: 'girasol', aliases: ['semillas de girasol', 'semilla de girasol', 'girasol'] },
-        { stem: 'sesamo', aliases: ['semillas de sesamo', 'semillas de ajonjoli', 'ajonjoli'] },
-        { stem: 'coco', aliases: ['coco deshidratado', 'coco rallado', 'coco sin azucar', 'leche de coco'] },
+        { stem: 'coco-rallado', aliases: ['coco deshidratado', 'coco rallado', 'coco sin azucar'], exclude: ['leche de coco', 'aceite de coco'] },
+        { stem: 'leche-coco', aliases: ['leche de coco'], exclude: ['deshidratado', 'rallado', 'aceite'] },
         // Frutas
         { stem: 'granada', aliases: ['granada', 'granadas', 'arilos'] },
         { stem: 'pitaya', aliases: ['pitaya', 'pitayas', 'pitahaya', 'pitahayas'] },
@@ -2705,7 +2705,7 @@ function generateNextWeekMenu() {
         { stem: 'hinojo', aliases: ['hinojo'] },
         { stem: 'aguacate', aliases: ['aguacate', 'aguacate hass'] },
         { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'jugo de limon'] },
-        { stem: 'ajo', aliases: ['ajo', 'ajos', 'ajo fresco', 'dientes de ajo'] },
+        { stem: 'ajo', aliases: ['ajo', 'ajos', 'ajo fresco', 'dientes de ajo'], exclude: ['ajonjoli'] },
         { stem: 'sal', aliases: ['sal de mar', 'sal de colima', 'sal mineral', 'sal de mar mineral de colima'] },
         { stem: '33plus', aliases: ['33plus', 'formula nootropica 33plus', 'formula biotecnologica nootropica 33plus'] },
         { stem: '34plus', aliases: ['34plus', 'formula reparadora 34plus', 'formula biotecnologica reparadora 34plus'] },
@@ -2726,6 +2726,196 @@ function generateNextWeekMenu() {
       if (slugA && slugB && (slugA === slugB || slugA.includes(slugB) || slugB.includes(slugA))) return true;
 
       return false;
+    }
+
+    function getCommercialUnitOptions(itemName, defaultUnit) {
+      const name = (itemName || '').toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+
+      if (/huevo/i.test(name)) {
+        return [
+          { id: 'casillero', label: 'Casillero (30 pzas)', multiplier: 30, unit: 'piezas', type: 'count' },
+          { id: 'docena', label: 'Docena (12 pzas)', multiplier: 12, unit: 'piezas', type: 'count' },
+          { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' }
+        ];
+      }
+      if (/sal.*(mar|mineral|colima)/i.test(name) || name === 'sal' || name === 'sal pura') {
+        return [
+          { id: 'bolsa_sal', label: 'Bolsa (1 kg / 1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'frasco_sal', label: 'Frasco (250 g)', multiplier: 250, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/hueso|retazo|tuetano/i.test(name)) {
+        return [
+          { id: 'bolsa_retazo', label: 'Bolsa / Retazo (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/pechuga|pollo/i.test(name)) {
+        return [
+          { id: 'paquete_3_2', label: 'Paquete Familiar (3.2 kg)', multiplier: 3200, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/sirloin|arrachera|machaca|res|carne|pavo|tocino/i.test(name)) {
+        return [
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'paquete_500', label: 'Paquete (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/robalo|huachinango|salmon|atun|pescado/i.test(name)) {
+        return [
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'paquete_500', label: 'Filetes (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/aceite.*oliva|vevo/i.test(name)) {
+        return [
+          { id: 'botella_vevo', label: 'Botella (750 ml)', multiplier: 750, unit: 'ml', type: 'vol' },
+          { id: 'frasco_500', label: 'Botella (500 ml)', multiplier: 500, unit: 'ml', type: 'vol' },
+          { id: 'botella_250', label: 'Botella (250 ml)', multiplier: 250, unit: 'ml', type: 'vol' },
+          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' }
+        ];
+      }
+      if (/aceite|vinagre/i.test(name)) {
+        return [
+          { id: 'frasco_500', label: 'Botella (500 ml)', multiplier: 500, unit: 'ml', type: 'vol' },
+          { id: 'frasco_250', label: 'Frasco (250 ml)', multiplier: 250, unit: 'ml', type: 'vol' },
+          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' }
+        ];
+      }
+      if (/fresa|zarzamora|frambuesa|arandano|mora/i.test(name)) {
+        return [
+          { id: 'domo_500', label: 'Domo (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'domo_250', label: 'Domo (250 g)', multiplier: 250, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/chia|sesamo|ajonjoli|almendra|nuez|nueces|girasol|semilla|harina/i.test(name)) {
+        return [
+          { id: 'bolsa_500', label: 'Bolsa (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'bolsa_250', label: 'Bolsa (250 g)', multiplier: 250, unit: 'g', type: 'mass' },
+          { id: 'bolsa_100', label: 'Bolsa (100 g)', multiplier: 100, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/queso|gouda|panela|parmesano|cabra|mantequilla|ghee/i.test(name)) {
+        return [
+          { id: 'paquete_500', label: 'Pieza / Paq (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'paquete_250', label: 'Pieza / Paq (250 g)', multiplier: 250, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/33plus|34plus/i.test(name)) {
+        return [
+          { id: 'frasco_120', label: 'Frasco Lote (120 g)', multiplier: 120, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+
+      const def = (defaultUnit || 'g').toLowerCase();
+      if (def.includes('kg') || def.includes('kilo')) {
+        return [
+          { id: 'kg', label: 'Kilos (kg)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (def.includes('ml')) {
+        return [
+          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' },
+          { id: 'l', label: 'Litros (L)', multiplier: 1000, unit: 'ml', type: 'vol' }
+        ];
+      }
+      if (def.includes('l') || def.includes('lt')) {
+        return [
+          { id: 'l', label: 'Litros (L)', multiplier: 1000, unit: 'ml', type: 'vol' },
+          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' }
+        ];
+      }
+      if (def.includes('piez') || def.includes('pza') || def.includes('cabeza') || def.includes('manojo')) {
+        return [
+          { id: defaultUnit || 'piezas', label: defaultUnit || 'piezas', multiplier: 1, unit: defaultUnit || 'piezas', type: 'count' }
+        ];
+      }
+      return [
+        { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+        { id: 'kg', label: 'Kilos (kg)', multiplier: 1000, unit: 'g', type: 'mass' }
+      ];
+    }
+
+    function resolvePantryCommercialUnit(inputValue, unitType, multiplierOverride) {
+      const num = parseFloat(inputValue) || 0;
+      if (num <= 0) return { val: 0, type: 'mass', baseUnit: 'g' };
+
+      if (typeof multiplierOverride === 'number' && multiplierOverride > 0) {
+        return { val: num * multiplierOverride, type: 'mass', baseUnit: 'g' };
+      }
+
+      const u = (unitType || 'g').toLowerCase().trim();
+
+      switch (u) {
+        case 'bolsa_sal':
+        case 'bolsa_1000':
+        case 'kg':
+        case 'kilo':
+        case 'kilos':
+          return { val: num * 1000, type: 'mass', baseUnit: 'g' };
+        case 'frasco_sal':
+        case 'frasco_250':
+        case 'bolsa_250':
+        case 'domo_250':
+        case 'paquete_250':
+          return { val: num * 250, type: 'mass', baseUnit: 'g' };
+        case 'bolsa_retazo':
+        case 'bolsa_retazo_500':
+        case 'paquete_500':
+        case 'domo_500':
+        case 'bolsa_500':
+          return { val: num * 500, type: 'mass', baseUnit: 'g' };
+        case 'bolsa_100':
+          return { val: num * 100, type: 'mass', baseUnit: 'g' };
+        case 'paquete_3_2':
+          return { val: num * 3200, type: 'mass', baseUnit: 'g' };
+        case 'frasco_120':
+          return { val: num * 120, type: 'mass', baseUnit: 'g' };
+        case 'casillero':
+          return { val: num * 30, type: 'count', baseUnit: 'piezas' };
+        case 'docena':
+          return { val: num * 12, type: 'count', baseUnit: 'piezas' };
+        case 'botella_vevo':
+        case 'botella_750':
+          return { val: num * 750, type: 'vol', baseUnit: 'ml' };
+        case 'botella_250':
+          return { val: num * 250, type: 'vol', baseUnit: 'ml' };
+        case 'frasco_500':
+          return { val: num * 500, type: 'vol', baseUnit: 'ml' };
+        case 'l':
+        case 'lt':
+        case 'litro':
+        case 'litros':
+          return { val: num * 1000, type: 'vol', baseUnit: 'ml' };
+        case 'ml':
+        case 'mililitro':
+        case 'mililitros':
+          return { val: num, type: 'vol', baseUnit: 'ml' };
+        case 'g':
+        case 'gramo':
+        case 'gramos':
+          return { val: num, type: 'mass', baseUnit: 'g' };
+        case 'piezas':
+        case 'pieza':
+        case 'pza':
+        case 'pzas':
+          return { val: num, type: 'count', baseUnit: 'piezas' };
+        default:
+          return null;
+      }
     }
 
     const CANONICAL_SECTION_ORDER = [
@@ -2925,6 +3115,12 @@ function generateNextWeekMenu() {
             });
           }
 
+          if (state.pantryCardUnits && typeof state.pantryCardUnits === 'object') {
+            window.pantryCardUnits = state.pantryCardUnits;
+          } else {
+            window.pantryCardUnits = {};
+          }
+
           if (state.checkedRows) checkedRows = state.checkedRows;
           if (state.mealDinersState) mealDinersState = state.mealDinersState;
           if (state.dispatchedMeals && typeof state.dispatchedMeals === 'object') {
@@ -3000,6 +3196,7 @@ function generateNextWeekMenu() {
           deletedFarmItems,
           deletedPantryItems,
           pantryStock,
+          pantryCardUnits: window.pantryCardUnits || {},
           checkedRows,
           customShopItems,
           selectedIdx,
@@ -3419,25 +3616,8 @@ function generateNextWeekMenu() {
           }
         });
 
-        // 2.2 Insumos canónicos registrados en PANTRY_STOCK_INVENTORY
-        if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
-          Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
-            const pObj = window.PANTRY_STOCK_INVENTORY[k];
-            if (!pObj || pObj.status !== 'canonical') return;
-            const pName = pObj.name || k;
-            const slug = normalizeToCanonicalSlug(pName);
-            if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === pName.toLowerCase())) return;
-            const alreadyInList = nonFarm.some(existing => areInsumosEquivalent(existing.item_name, pName));
-            if (!alreadyInList) {
-              seenPantrySlugs.add(slug);
-              nonFarm.push({
-                item_name: pName,
-                unit: pObj.unit || 'g',
-                category: getSmartItemCategory(pName, '')
-              });
-            }
-          });
-        }
+        // 2.2 Alacena deriva 100% del BOM Canónico del Menú Activo (Directiva Ley de Empaques Reales y SSOT)
+        // Se suprimen insumos huérfanos con demanda semanal cero.
 
         // 2.3 Insumos en Cuarentena (siempre presentes en su bloque al fondo)
         const QUARANTINE_PANTRY_ITEMS = [
@@ -3485,7 +3665,21 @@ function generateNextWeekMenu() {
           items.forEach(i => {
             const slug = normalizeToCanonicalSlug(i.item_name);
             const safeName = i.item_name.replace(/'/g, "\\'");
-            window.pantryCardUnits[i.item_name] = i.unit;
+
+            const options = getCommercialUnitOptions(i.item_name, i.unit);
+            let currentUnit = window.pantryCardUnits[i.item_name];
+            if (!currentUnit) {
+              if (window.PANTRY_STOCK_INVENTORY) {
+                const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, i.item_name));
+                if (invKey && window.PANTRY_STOCK_INVENTORY[invKey].unit) {
+                  currentUnit = window.PANTRY_STOCK_INVENTORY[invKey].unit;
+                }
+              }
+            }
+            if (!currentUnit && options.length > 0) {
+              currentUnit = options[0].id;
+            }
+            window.pantryCardUnits[i.item_name] = currentUnit;
 
             let val = pantryStock[i.item_name];
             if (val === undefined) {
@@ -3505,6 +3699,12 @@ function generateNextWeekMenu() {
               <button type="button" onclick="addPantryCasillero('${safeName}')" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 4px; padding: 2px 6px; font-size: 0.72rem; font-weight: 700; color: #047857; cursor: pointer; white-space: nowrap; transition: all 0.2s;" onmouseover="this.style.background='rgba(16,185,129,0.25)'" onmouseout="this.style.background='rgba(16,185,129,0.12)'" title="Sumar 1 casillero completo (+30 piezas)">+30 (1 Casillero)</button>
             ` : '';
 
+            const selectHtml = options.length > 0 ? `
+              <select style="padding: 0.25rem 0.35rem; font-weight: 700; font-size: 0.78rem; border: 1px solid ${isQuarantine ? 'rgba(239, 68, 68, 0.5)' : 'var(--border-clinical)'}; border-radius: 6px; background: var(--surface-card); color: var(--text-main); cursor: pointer; max-width: 145px;" onchange="updatePantryStockUnit('${safeName}', this.value, this.previousElementSibling)">
+                ${options.map(opt => `<option value="${opt.id}" ${opt.id === currentUnit ? 'selected' : ''}>${opt.label}</option>`).join('')}
+              </select>
+            ` : `<span style="font-size: 0.78rem; font-weight: 600; color: ${isQuarantine ? '#dc2626' : 'var(--text-muted)'};">${i.unit}</span>`;
+
             const div = document.createElement('div');
             div.className = isQuarantine ? 'option-row quarantine-card-item' : 'option-row';
             div.style.color = 'var(--text-main)';
@@ -3520,8 +3720,8 @@ function generateNextWeekMenu() {
               </div>
               <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.4rem; width: 100%; margin-top: 0.2rem; flex-wrap: wrap;">
                 ${eggHelperBtn}
-                <input type="number" step="${i.unit === 'piezas' ? '1' : '0.1'}" min="0" value="${val}" style="width: 70px; padding: 0.25rem 0.4rem; font-weight: 800; text-align: center; border: 1px solid ${isQuarantine ? 'rgba(239, 68, 68, 0.5)' : 'var(--border-clinical)'}; border-radius: 6px; background: var(--surface-card); color: var(--text-main); font-size: 0.88rem;" onchange="updatePantryStock('${safeName}', this.value, '${i.unit}')">
-                <span style="font-size: 0.78rem; font-weight: 600; color: ${isQuarantine ? '#dc2626' : 'var(--text-muted)'};">${i.unit}</span>
+                <input type="number" step="${currentUnit === 'piezas' || currentUnit === 'casillero' ? '1' : '0.1'}" min="0" value="${val}" style="width: 70px; padding: 0.25rem 0.4rem; font-weight: 800; text-align: center; border: 1px solid ${isQuarantine ? 'rgba(239, 68, 68, 0.5)' : 'var(--border-clinical)'}; border-radius: 6px; background: var(--surface-card); color: var(--text-main); font-size: 0.88rem;" onchange="updatePantryStock('${safeName}', this.value, window.pantryCardUnits['${safeName}'])">
+                ${selectHtml}
               </div>
             `;
             pGrid.appendChild(div);
@@ -3724,9 +3924,39 @@ function generateNextWeekMenu() {
     }
 
     function addPantryCasillero(itemName) {
+      if (typeof window.pantryCardUnits === 'undefined') window.pantryCardUnits = {};
+      const currentUnit = window.pantryCardUnits[itemName] || 'piezas';
       const current = parseFloat(pantryStock[itemName]) || 0;
-      const newVal = current + 30;
-      updatePantryStock(itemName, newVal, 'piezas');
+      let increment = 30;
+      if (currentUnit === 'casillero') {
+        increment = 1;
+      } else if (currentUnit === 'docena') {
+        increment = 2.5;
+      }
+      const newVal = current + increment;
+      updatePantryStock(itemName, newVal, currentUnit);
+      initSetupPanel();
+    }
+
+    function updatePantryStockUnit(itemName, newUnitId, inputElem) {
+      if (typeof window.pantryCardUnits === 'undefined') window.pantryCardUnits = {};
+      const oldUnitId = window.pantryCardUnits[itemName] || 'g';
+      const currentVal = parseFloat(pantryStock[itemName]) || 0;
+
+      const oldBase = (resolvePantryCommercialUnit(currentVal, oldUnitId) || { val: currentVal }).val;
+      const dummyOne = (resolvePantryCommercialUnit(1, newUnitId) || { val: 1 }).val || 1;
+
+      let convertedVal = oldBase > 0 ? (oldBase / dummyOne) : currentVal;
+      convertedVal = Math.round(convertedVal * 100) / 100;
+
+      window.pantryCardUnits[itemName] = newUnitId;
+      pantryStock[itemName] = convertedVal;
+
+      if (inputElem) {
+        inputElem.value = convertedVal;
+      }
+
+      updatePantryStock(itemName, convertedVal, newUnitId);
       initSetupPanel();
     }
 
@@ -4126,6 +4356,12 @@ function normalizeToCanonicalSlug(rawName) {
 function parseQuantityInBaseUnit(qty, unitRaw) {
   const num = parseFloat(qty) || 0;
   const unitStr = (unitRaw || "").toLowerCase().trim();
+
+  // 0. Factores de Empaque Comercial Canónicos (Directiva SSOT)
+  const commercialResolved = resolvePantryCommercialUnit(num, unitStr);
+  if (commercialResolved) {
+    return commercialResolved;
+  }
 
   // 1. Empaques compuestos con especificación de peso/volumen (ej. "paquete (3.2 kg)", "frasco (1 kg)", "frasco (500 g)")
   const pkgMatch = unitStr.match(/(\d+(?:\.\d+)?)\s*(kg|kilo|kilos|g|gramos?|l|lt|litros?|ml)/i);
@@ -4622,10 +4858,15 @@ function calculateNetShoppingList(diners) {
 
         if (areInsumosEquivalent(pObj.name || pKey, cleanName)) {
           const pQty = parseFloat(pObj.stock) || 0;
-          const pUnit = pObj.unit || (typeof window.pantryCardUnits !== 'undefined' && window.pantryCardUnits[pObj.name]) || item.unit;
+          let pUnit = (typeof window.pantryCardUnits !== 'undefined' && (window.pantryCardUnits[pObj.name] || window.pantryCardUnits[pKey])) || pObj.unit;
+          if (!pUnit && typeof window.pantryCardUnits !== 'undefined') {
+            const matchedUnitKey = Object.keys(window.pantryCardUnits).find(k => areInsumosEquivalent(k, cleanName));
+            if (matchedUnitKey) pUnit = window.pantryCardUnits[matchedUnitKey];
+          }
+          if (!pUnit) pUnit = item.unit;
           let parsedStock = parseQuantityInBaseUnit(pQty, pUnit);
-          // Clinical Safety Net: si la demanda es > 200g y pQty < 20 para carnes/pescados, interpretar como kg
-          if (parsedStock.type === 'mass' && parsedStock.val < 20 && baseInfo.val > 200 && (cat.includes('Carne') || cat.includes('Proteína') || cat.includes('Pescado'))) {
+          // Clinical Safety Net: si la demanda es > 200g y pQty < 20 para carnes/pescados, interpretar como kg (a menos que ya sea empaque comercial)
+          if (parsedStock.type === 'mass' && parsedStock.val < 20 && baseInfo.val > 200 && (cat.includes('Carne') || cat.includes('Proteína') || cat.includes('Pescado')) && !pUnit.includes('paquete') && !pUnit.includes('bolsa')) {
             parsedStock.val *= 1000;
           }
           stockInBase += parsedStock.val;
@@ -4638,10 +4879,15 @@ function calculateNetShoppingList(diners) {
         const pVal = parseFloat(pantryStock[pName]) || 0;
         if (pVal <= 0) return;
         if (areInsumosEquivalent(pName, cleanName)) {
-          const pUnit = (typeof window.pantryCardUnits !== 'undefined' && window.pantryCardUnits[pName]) || item.unit;
+          let pUnit = (typeof window.pantryCardUnits !== 'undefined' && window.pantryCardUnits[pName]) || null;
+          if (!pUnit && typeof window.pantryCardUnits !== 'undefined') {
+            const matchedUnitKey = Object.keys(window.pantryCardUnits).find(k => areInsumosEquivalent(k, cleanName));
+            if (matchedUnitKey) pUnit = window.pantryCardUnits[matchedUnitKey];
+          }
+          if (!pUnit) pUnit = item.unit;
           let parsedStock = parseQuantityInBaseUnit(pVal, pUnit);
-          // Clinical Safety Net: si la demanda es > 200g y pVal < 20 para carnes/pescados, interpretar como kg
-          if (parsedStock.type === 'mass' && parsedStock.val < 20 && baseInfo.val > 200 && (cat.includes('Carne') || cat.includes('Proteína') || cat.includes('Pescado'))) {
+          // Clinical Safety Net: si la demanda es > 200g y pVal < 20 para carnes/pescados, interpretar como kg (a menos que ya sea empaque comercial)
+          if (parsedStock.type === 'mass' && parsedStock.val < 20 && baseInfo.val > 200 && (cat.includes('Carne') || cat.includes('Proteína') || cat.includes('Pescado')) && !pUnit.includes('paquete') && !pUnit.includes('bolsa')) {
             parsedStock.val *= 1000;
           }
           stockInBase += parsedStock.val;
