@@ -217,7 +217,7 @@ def get_martes_miercoles():
                         "ingredients": [
                             {"name": "Hojas de arúgula fresca", "amount": 180, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 30},
                             {"name": "Aceite de oliva extra virgen VEVO", "amount": 30, "unit": "ml", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 5},
-                            {"name": "Jugo de limón fresco", "amount": 15, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 2.5},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 15, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 2.5},
                             {"name": "Sal de mar", "amount": 3, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.5}
                         ],
                         "steps": [
@@ -247,7 +247,7 @@ def get_martes_miercoles():
                             {"name": "Aguacate Hass fresco", "amount": 2, "unit": "piezas", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 0.33},
                             {"name": "Cebolla blanca fresca", "amount": 100, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 16.6},
                             {"name": "Cilantro fresco de la granja", "amount": 20, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 3.3},
-                            {"name": "Jugo de limón fresco", "amount": 30, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 5},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 30, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 5},
                             {"name": "Sal de mar", "amount": 6, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1}
                         ],
                         "steps": [
@@ -447,7 +447,7 @@ def get_martes_miercoles():
                             {"name": "Semillas de sésamo", "amount": 60, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 10},
                             {"name": "Mayonesa", "amount": 150, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 25},
                             {"name": "Eneldo fresco", "amount": 15, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 2.5},
-                            {"name": "Jugo de limón fresco", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
                             {"name": "Aceite de oliva extra virgen VEVO", "amount": 30, "unit": "ml", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 5},
                             {"name": "Sal de mar", "amount": 6, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1}
                         ],
@@ -512,7 +512,7 @@ def get_martes_miercoles():
                         "ingredients": [
                             {"name": "Fondo claro de pollo casero", "amount": 600, "unit": "ml", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 100},
                             {"name": "Tomillo fresco", "amount": 8, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1.3},
-                            {"name": "Jugo de limón fresco", "amount": 20, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 3.3},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 20, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 3.3},
                             {"name": "Sal de mar", "amount": 4, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.6}
                         ],
                         "steps": [

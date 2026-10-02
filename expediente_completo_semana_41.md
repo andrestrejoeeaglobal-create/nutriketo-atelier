@@ -194,7 +194,7 @@
 - *🥬 Verduras, Hortalizas y Frescos*: Espárragos verdes frescos de la granja: **480 g** (80 g/persona)
 - *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso Parmesano artesanal: **60 g** (10 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **30 ml** (5 ml/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **25 ml** (4.1 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -205,7 +205,7 @@
 
 **Métricas Culinarias SSOT:**
 - **Volumen de Fondo/Líquido:** `0 ml`
-- **Agente de Desglasado:** `Jugo de limón fresco recién exprimido`
+- **Agente de Desglasado:** `Jugo de limón fresco de la granja recién exprimido`
 - **Temperatura Objetivo de Servicio:** `60 °C`
 - **Textura Dianal:** *Al dente, turgente y crujiente*
 - **Notas Operativas de Pase:** *Montar alineados en paralelo junto al corte de carne.*
@@ -227,7 +227,7 @@
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🌶️ Chiles, Condimentos e Infusiones*: Caldo concentrado y fondo de res casero: **600 ml** (100 ml/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cilantro fresco de la granja: **24 g** (4 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **30 ml** (5 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **30 ml** (5 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -414,7 +414,7 @@
 - *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **600 ml** (100 ml/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Calabacitas verdes tiernas de la granja: **240 g** (40 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Apio fresco de la granja: **120 g** (20 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **25 ml** (4.1 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Orégano seco: **4 g** (0.6 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
@@ -446,7 +446,7 @@
 - *🥬 Verduras, Hortalizas y Frescos*: Jitomate Saladet fresco: **480 g** (80 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **70 g** (11.6 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Romero fresco: **10 g** (1.6 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **30 ml** (5 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **30 ml** (5 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **8 g** (1.3 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -457,7 +457,7 @@
 
 **Métricas Culinarias SSOT:**
 - **Volumen de Fondo/Líquido:** `40 ml`
-- **Agente de Desglasado:** `Jugo de limón fresco y mantequilla`
+- **Agente de Desglasado:** `Jugo de limón fresco de la granja y mantequilla`
 - **Temperatura Objetivo de Servicio:** `68 °C`
 - **Textura Dianal:** *Jugoso, dorado y tierno*
 - **Notas Operativas de Pase:** *Filetear en cortes transversales de 1.5 cm al emplatar.*
@@ -511,7 +511,7 @@
 - *🥬 Verduras, Hortalizas y Frescos*: Pepino fresco de la granja: **360 g** (60 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Rábanos frescos de la huerta: **120 g** (20 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **30 ml** (5 ml/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **20 ml** (3.3 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **20 ml** (3.3 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -542,7 +542,7 @@
 - *🥑 Grasas, Aceites y Semillas*: Almendras fileteadas tostadas: **90 g** (15 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **60 g** (10 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Eneldo fresco: **15 g** (2.5 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **20 ml** (3.3 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **20 ml** (3.3 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -792,7 +792,7 @@
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🥬 Verduras, Hortalizas y Frescos*: Hojas de arúgula fresca: **180 g** (30 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **30 ml** (5 ml/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **15 ml** (2.5 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **15 ml** (2.5 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **3 g** (0.5 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -824,7 +824,7 @@
 - *🥑 Grasas, Aceites y Semillas*: Aguacate Hass fresco: **2 piezas** (0.33 piezas/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cebolla blanca fresca: **100 g** (16.6 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cilantro fresco de la granja: **20 g** (3.3 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **30 ml** (5 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **30 ml** (5 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -1012,7 +1012,7 @@
 - *🥑 Grasas, Aceites y Semillas*: Semillas de sésamo: **60 g** (10 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Mayonesa: **150 g** (25 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Eneldo fresco: **15 g** (2.5 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **25 ml** (4.1 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **30 ml** (5 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
@@ -1075,7 +1075,7 @@
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **600 ml** (100 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Tomillo fresco: **8 g** (1.3 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **20 ml** (3.3 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **20 ml** (3.3 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -1362,7 +1362,7 @@
 - *🥬 Verduras, Hortalizas y Frescos*: Hojas de arúgula fresca: **180 g** (30 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Pepino fresco de la granja: **240 g** (40 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **25 ml** (4.1 ml/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **15 ml** (2.5 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **15 ml** (2.5 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **3 g** (0.5 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -1549,7 +1549,7 @@
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **600 ml** (100 ml/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cilantro fresco de la granja: **20 g** (3.3 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **25 ml** (4.1 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -1579,7 +1579,7 @@
 - *🥩 Carnes, Pescados y Proteínas*: Medallón de Atún fresco: **900 g** (150 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Semillas de sésamo: **60 g** (10 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aguacate Hass fresco: **3 piezas** (0.5 piezas/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **30 ml** (5 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **30 ml** (5 ml/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cilantro fresco de la granja: **20 g** (3.3 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **30 ml** (5 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **8 g** (1.3 g/persona)
@@ -1676,7 +1676,7 @@
 - *🥑 Grasas, Aceites y Semillas*: Aguacate Hass fresco: **2 piezas** (0.33 piezas/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Ajo fresco: **10 g** (1.6 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **40 g** (6.6 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **20 ml** (3.3 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **20 ml** (3.3 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -1869,7 +1869,7 @@
 - *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **70 g** (11.6 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Ajo fresco: **18 g** (3 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Alcaparras: **30 g** (5 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **25 ml** (4.1 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -1932,7 +1932,7 @@
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
 - *🌶️ Chiles, Condimentos e Infusiones*: Caldo concentrado y fondo de res casero: **600 ml** (100 ml/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco: **25 ml** (4.1 ml/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
@@ -2014,7 +2014,7 @@
 La presente matriz desglosa los insumos necesarios para alimentar a **6 comensales durante los 7 días completos (21 servicios)**, separando de manera estricta la cosecha propia ($0), la absorción de alacena y refrigerador, las compras netas consolidadas en mercado local y los insumos proscritos en cuarentena NOM-004.
 
 ### 3.1 Cosecha Activa en Granja El Herami (Suministro Propio $0)
-*Sección congelada a petición operativa: contiene exclusivamente los 9 cultivos activos validados sin altas adicionales.*
+*Suministro directo de la granja que cubre al 100% las hortalizas y cítricos del recetario sin costo de compra externa.*
 
 | Cultivo de la Granja | Demanda Semanal Bruta (6 Comensales) | Unidad | Estado de Abastecimiento |
 |---|---|---|---|
@@ -2027,6 +2027,7 @@ La presente matriz desglosa los insumos necesarios para alimentar a **6 comensal
 | Cilantro fresco | 94 | g | Cosecha Directa ($0) |
 | Hojas de arúgula fresca | 360 | g | Cosecha Directa ($0) |
 | Coliflor fresca | 600 | g | Cosecha Directa ($0) |
+| Limones agrios frescos de la granja | 1,200 (1.2 kg) | g (~315 ml jugo) | Cosecha Directa ($0) |
 
 ### 3.2 Inventario Físico en Alacena y Refrigerador (Absorción y Amortización Neta)
 *Los 12 insumos físicos declarados absorben la demanda bruta del recetario de la Semana 41, reduciendo a $0 el costo de compra en mercado.*
@@ -2098,7 +2099,6 @@ La presente matriz desglosa los insumos necesarios para alimentar a **6 comensal
 | **Fresas frescas** | 900 | g | 🍓 Frutas de Bajo Índice Glucémico |
 | **Moras frescas** | 480 | g (~500 g) | 🍓 Frutas de Bajo Índice Glucémico |
 | **Frambuesas frescas orgánicas** | 420 | g (~450 g) | 🍓 Frutas de Bajo Índice Glucémico |
-| **Limón agrio fresco con semilla** | 1.2 | kg (~315 ml jugo extraído) | 🍋 Cítricos y Ácidos Naturales |
 | **Grenetina natural en polvo (colágeno)** | 210 | g (5 turnos de gelatina) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
 | **Fórmula Nootrópica 33Plus®** | 210 | g (30 g/día x 7 días) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
 | **Fórmula Reparadora 34Plus®** | 210 | g (30 g/día x 7 días) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |

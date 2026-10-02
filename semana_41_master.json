@@ -455,7 +455,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -482,7 +482,7 @@
               "critical_control_points": "No sobrecocer; los espárragos deben mantener color verde brillante y resistencia al dente."
             },
             "broth_volume_ml": 0,
-            "deglaze_agent": "Jugo de limón fresco recién exprimido",
+            "deglaze_agent": "Jugo de limón fresco de la granja recién exprimido",
             "service_temp_c": 60,
             "texture_target": "Al dente, turgente y crujiente",
             "service_notes": "Montar alineados en paralelo junto al corte de carne."
@@ -573,7 +573,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -600,7 +600,7 @@
               "critical_control_points": "No sobrecocer; los espárragos deben mantener color verde brillante y resistencia al dente."
             },
             "broth_volume_ml": 0,
-            "deglaze_agent": "Jugo de limón fresco recién exprimido",
+            "deglaze_agent": "Jugo de limón fresco de la granja recién exprimido",
             "service_temp_c": 60,
             "texture_target": "Al dente, turgente y crujiente",
             "service_notes": "Montar alineados en paralelo junto al corte de carne."
@@ -634,7 +634,7 @@
                 "per_guest": 4
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 30,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -1206,7 +1206,7 @@
                 "per_guest": 20
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -1278,7 +1278,7 @@
                 "per_guest": 1.6
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 30,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -1305,7 +1305,7 @@
               "critical_control_points": "Termómetro de sonda a 74°C en el centro de la pechuga; reposo de 3 min."
             },
             "broth_volume_ml": 40,
-            "deglaze_agent": "Jugo de limón fresco y mantequilla",
+            "deglaze_agent": "Jugo de limón fresco de la granja y mantequilla",
             "service_temp_c": 68,
             "texture_target": "Jugoso, dorado y tierno",
             "service_notes": "Filetear en cortes transversales de 1.5 cm al emplatar."
@@ -1403,7 +1403,7 @@
                 "per_guest": 1.6
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 30,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -1430,7 +1430,7 @@
               "critical_control_points": "Termómetro de sonda a 74°C en el centro de la pechuga; reposo de 3 min."
             },
             "broth_volume_ml": 40,
-            "deglaze_agent": "Jugo de limón fresco y mantequilla",
+            "deglaze_agent": "Jugo de limón fresco de la granja y mantequilla",
             "service_temp_c": 68,
             "texture_target": "Jugoso, dorado y tierno",
             "service_notes": "Filetear en cortes transversales de 1.5 cm al emplatar."
@@ -1530,7 +1530,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 20,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -1595,7 +1595,7 @@
                 "per_guest": 2.5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 20,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -1706,7 +1706,7 @@
                 "per_guest": 2.5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 20,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -2393,7 +2393,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 15,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -2465,7 +2465,7 @@
                 "per_guest": 3.3
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 30,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -2583,7 +2583,7 @@
                 "per_guest": 3.3
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 30,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -3033,7 +3033,7 @@
                 "per_guest": 2.5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -3157,7 +3157,7 @@
                 "per_guest": 2.5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -3276,7 +3276,7 @@
                 "per_guest": 1.3
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 20,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -4201,7 +4201,7 @@
                 "per_guest": 4.1
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 15,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -4768,7 +4768,7 @@
                 "per_guest": 3.3
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -4826,7 +4826,7 @@
                 "per_guest": 0.5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 30,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -4943,7 +4943,7 @@
                 "per_guest": 0.5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 30,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -5142,7 +5142,7 @@
                 "per_guest": 6.6
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 20,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -5267,7 +5267,7 @@
                 "per_guest": 6.6
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 20,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -5773,7 +5773,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -5898,7 +5898,7 @@
                 "per_guest": 5
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",
@@ -6011,7 +6011,7 @@
                 "per_guest": 100
               },
               {
-                "name": "Jugo de limón fresco",
+                "name": "Jugo de limón fresco de la granja",
                 "amount": 25,
                 "unit": "ml",
                 "category": "🍋 Cítricos y Ácidos Naturales",

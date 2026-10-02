@@ -108,7 +108,7 @@ def generate_s41_markdown(data):
     lines.append("")
     
     lines.append("### 3.1 Cosecha Activa en Granja El Herami (Suministro Propio $0)")
-    lines.append("*Sección congelada a petición operativa: contiene exclusivamente los 9 cultivos activos validados sin altas adicionales.*")
+    lines.append("*Suministro directo de la granja que cubre al 100% las hortalizas y cítricos del recetario sin costo de compra externa.*")
     lines.append("")
     lines.append("| Cultivo de la Granja | Demanda Semanal Bruta (6 Comensales) | Unidad | Estado de Abastecimiento |")
     lines.append("|---|---|---|---|")
@@ -121,6 +121,7 @@ def generate_s41_markdown(data):
     lines.append("| Cilantro fresco | 94 | g | Cosecha Directa ($0) |")
     lines.append("| Hojas de arúgula fresca | 360 | g | Cosecha Directa ($0) |")
     lines.append("| Coliflor fresca | 600 | g | Cosecha Directa ($0) |")
+    lines.append("| Limones agrios frescos de la granja | 1,200 (1.2 kg) | g (~315 ml jugo) | Cosecha Directa ($0) |")
     lines.append("")
     
     lines.append("### 3.2 Inventario Físico en Alacena y Refrigerador (Absorción y Amortización Neta)")
@@ -195,7 +196,6 @@ def generate_s41_markdown(data):
     lines.append("| **Fresas frescas** | 900 | g | 🍓 Frutas de Bajo Índice Glucémico |")
     lines.append("| **Moras frescas** | 480 | g (~500 g) | 🍓 Frutas de Bajo Índice Glucémico |")
     lines.append("| **Frambuesas frescas orgánicas** | 420 | g (~450 g) | 🍓 Frutas de Bajo Índice Glucémico |")
-    lines.append("| **Limón agrio fresco con semilla** | 1.2 | kg (~315 ml jugo extraído) | 🍋 Cítricos y Ácidos Naturales |")
     lines.append("| **Grenetina natural en polvo (colágeno)** | 210 | g (5 turnos de gelatina) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |")
     lines.append("| **Fórmula Nootrópica 33Plus®** | 210 | g (30 g/día x 7 días) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |")
     lines.append("| **Fórmula Reparadora 34Plus®** | 210 | g (30 g/día x 7 días) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |")

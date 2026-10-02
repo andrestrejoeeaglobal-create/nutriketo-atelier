@@ -183,7 +183,7 @@ def get_domingo_lunes():
                             {"name": "Espárragos verdes frescos de la granja", "amount": 480, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 80},
                             {"name": "Queso Parmesano artesanal", "amount": 60, "unit": "g", "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)", "per_guest": 10},
                             {"name": "Aceite de oliva extra virgen VEVO", "amount": 30, "unit": "ml", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 5},
-                            {"name": "Jugo de limón fresco", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
                             {"name": "Sal de mar", "amount": 4, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.6}
                         ],
                         "steps": [
@@ -199,7 +199,7 @@ def get_domingo_lunes():
                             "critical_control_points": "No sobrecocer; los espárragos deben mantener color verde brillante y resistencia al dente."
                         },
                         "broth_volume_ml": 0,
-                        "deglaze_agent": "Jugo de limón fresco recién exprimido",
+                        "deglaze_agent": "Jugo de limón fresco de la granja recién exprimido",
                         "service_temp_c": 60,
                         "texture_target": "Al dente, turgente y crujiente",
                         "service_notes": "Montar alineados en paralelo junto al corte de carne."
@@ -220,7 +220,7 @@ def get_domingo_lunes():
                         "ingredients": [
                             {"name": "Caldo concentrado y fondo de res casero", "amount": 600, "unit": "ml", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 100},
                             {"name": "Cilantro fresco de la granja", "amount": 24, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 4},
-                            {"name": "Jugo de limón fresco", "amount": 30, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 5},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 30, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 5},
                             {"name": "Sal de mar", "amount": 4, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.6}
                         ],
                         "steps": [
@@ -419,7 +419,7 @@ def get_domingo_lunes():
                             {"name": "Fondo claro de pollo casero", "amount": 600, "unit": "ml", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 100},
                             {"name": "Calabacitas verdes tiernas de la granja", "amount": 240, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 40},
                             {"name": "Apio fresco de la granja", "amount": 120, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 20},
-                            {"name": "Jugo de limón fresco", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
                             {"name": "Orégano seco", "amount": 4, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.6},
                             {"name": "Sal de mar", "amount": 6, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1}
                         ],
@@ -449,7 +449,7 @@ def get_domingo_lunes():
                             {"name": "Jitomate Saladet fresco", "amount": 480, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 80},
                             {"name": "Mantequilla de pastoreo", "amount": 70, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 11.6},
                             {"name": "Romero fresco", "amount": 10, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1.6},
-                            {"name": "Jugo de limón fresco", "amount": 30, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 5},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 30, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 5},
                             {"name": "Sal de mar", "amount": 8, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1.3}
                         ],
                         "steps": [
@@ -465,7 +465,7 @@ def get_domingo_lunes():
                             "critical_control_points": "Termómetro de sonda a 74°C en el centro de la pechuga; reposo de 3 min."
                         },
                         "broth_volume_ml": 40,
-                        "deglaze_agent": "Jugo de limón fresco y mantequilla",
+                        "deglaze_agent": "Jugo de limón fresco de la granja y mantequilla",
                         "service_temp_c": 68,
                         "texture_target": "Jugoso, dorado y tierno",
                         "service_notes": "Filetear en cortes transversales de 1.5 cm al emplatar."
@@ -516,7 +516,7 @@ def get_domingo_lunes():
                             {"name": "Pepino fresco de la granja", "amount": 360, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 60},
                             {"name": "Rábanos frescos de la huerta", "amount": 120, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 20},
                             {"name": "Aceite de oliva extra virgen VEVO", "amount": 30, "unit": "ml", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 5},
-                            {"name": "Jugo de limón fresco", "amount": 20, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 3.3},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 20, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 3.3},
                             {"name": "Sal de mar", "amount": 4, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.6}
                         ],
                         "steps": [
@@ -545,7 +545,7 @@ def get_domingo_lunes():
                             {"name": "Almendras fileteadas tostadas", "amount": 90, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 15},
                             {"name": "Mantequilla de pastoreo", "amount": 60, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 10},
                             {"name": "Eneldo fresco", "amount": 15, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 2.5},
-                            {"name": "Jugo de limón fresco", "amount": 20, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 3.3},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 20, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 3.3},
                             {"name": "Sal de mar", "amount": 6, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1}
                         ],
                         "steps": [

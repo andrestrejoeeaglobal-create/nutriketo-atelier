@@ -222,7 +222,7 @@ def get_jueves_viernes_sabado():
                             {"name": "Hojas de arúgula fresca", "amount": 180, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 30},
                             {"name": "Pepino fresco de la granja", "amount": 240, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 40},
                             {"name": "Aceite de oliva extra virgen VEVO", "amount": 25, "unit": "ml", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 4.1},
-                            {"name": "Jugo de limón fresco", "amount": 15, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 2.5},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 15, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 2.5},
                             {"name": "Sal de mar", "amount": 3, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.5}
                         ],
                         "steps": [
@@ -421,7 +421,7 @@ def get_jueves_viernes_sabado():
                         "ingredients": [
                             {"name": "Fondo claro de pollo casero", "amount": 600, "unit": "ml", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 100},
                             {"name": "Cilantro fresco de la granja", "amount": 20, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 3.3},
-                            {"name": "Jugo de limón fresco", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
                             {"name": "Sal de mar", "amount": 4, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.6}
                         ],
                         "steps": [
@@ -449,7 +449,7 @@ def get_jueves_viernes_sabado():
                             {"name": "Medallón de Atún fresco", "amount": 900, "unit": "g", "category": "🥩 Carnes, Pescados y Proteínas", "per_guest": 150},
                             {"name": "Semillas de sésamo", "amount": 60, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 10},
                             {"name": "Aguacate Hass fresco", "amount": 3, "unit": "piezas", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 0.5},
-                            {"name": "Jugo de limón fresco", "amount": 30, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 5},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 30, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 5},
                             {"name": "Cilantro fresco de la granja", "amount": 20, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 3.3},
                             {"name": "Aceite de oliva extra virgen VEVO", "amount": 30, "unit": "ml", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 5},
                             {"name": "Sal de mar", "amount": 8, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1.3}
@@ -546,7 +546,7 @@ def get_jueves_viernes_sabado():
                             {"name": "Aguacate Hass fresco", "amount": 2, "unit": "piezas", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 0.33},
                             {"name": "Ajo fresco", "amount": 10, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 1.6},
                             {"name": "Mantequilla de pastoreo", "amount": 40, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 6.6},
-                            {"name": "Jugo de limón fresco", "amount": 20, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 3.3},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 20, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 3.3},
                             {"name": "Sal de mar", "amount": 6, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1}
                         ],
                         "steps": [
@@ -751,7 +751,7 @@ def get_jueves_viernes_sabado():
                             {"name": "Mantequilla de pastoreo", "amount": 70, "unit": "g", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 11.6},
                             {"name": "Ajo fresco", "amount": 18, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 3},
                             {"name": "Alcaparras", "amount": 30, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 5},
-                            {"name": "Jugo de limón fresco", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
                             {"name": "Sal de mar", "amount": 6, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 1}
                         ],
                         "steps": [
@@ -816,7 +816,7 @@ def get_jueves_viernes_sabado():
                         "note": "Caldo caliente denso en colágeno y electrolitos que reconforta el tracto gastrointestinal en la última cena de la semana.",
                         "ingredients": [
                             {"name": "Caldo concentrado y fondo de res casero", "amount": 600, "unit": "ml", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 100},
-                            {"name": "Jugo de limón fresco", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
+                            {"name": "Jugo de limón fresco de la granja", "amount": 25, "unit": "ml", "category": "🍋 Cítricos y Ácidos Naturales", "per_guest": 4.1},
                             {"name": "Sal de mar", "amount": 4, "unit": "g", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 0.6}
                         ],
                         "steps": [
