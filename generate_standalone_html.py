@@ -1828,6 +1828,16 @@ def generate_standalone():
     s40_canonical_bom = consolidate_market_bom(all_s40_ings)
     s40_canonical_bom_json = json.dumps(s40_canonical_bom, ensure_ascii=False)
 
+    all_s40_weekend_ings = []
+    for day_idx, day in enumerate(plan_40_dict.get("days", [])):
+        if day_idx >= 5:  # Sábado (índice 5) y Domingo (índice 6)
+            for meal in day.get("meals", []):
+                for course in ["starter", "main", "side"]:
+                    if course in meal and isinstance(meal[course], dict):
+                        all_s40_weekend_ings.extend(meal[course].get("ingredients", []))
+    s40_weekend_bom = consolidate_market_bom(all_s40_weekend_ings)
+    s40_weekend_bom_json = json.dumps(s40_weekend_bom, ensure_ascii=False)
+
     datasets_json = json.dumps(weekly_datasets, ensure_ascii=False)
     shop_json = json.dumps(GRANULAR_SHOPPING_BASE, ensure_ascii=False)
     
@@ -2539,7 +2549,9 @@ function generateNextWeekMenu() {
     let rawShopBase = """ + shop_json + """;
     const ACTIVE_WEEK_CANONICAL_BOM = """ + canonical_bom_json + """;
     const ACTIVE_WEEK_40_CANONICAL_BOM = """ + s40_canonical_bom_json + """;
-        window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
+    const ACTIVE_WEEK_40_WEEKEND_BOM = """ + s40_weekend_bom_json + """;
+    window.shoppingListDayFilter = 'weekend'; // Por defecto fin de semana activo (Sábado y Domingo)
+    window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
     window.PANTRY_STOCK_INVENTORY = {
       // Insumos Canónicos Aptos (Status: "canonical")
       "aceite-oliva": { name: "Aceite de oliva extra virgen VEVO", stock: 1, unit: "botella_vevo", status: "canonical" },
@@ -4867,21 +4879,28 @@ function calculateActiveMenuBOM(weekKey, diners) {
     }
   }
 
-  if (weekKey && (weekKey.includes("40") || weekKey === "Semana 40") && typeof ACTIVE_WEEK_40_CANONICAL_BOM !== 'undefined' && Array.isArray(ACTIVE_WEEK_40_CANONICAL_BOM) && ACTIVE_WEEK_40_CANONICAL_BOM.length > 0) {
-    const factor = numDiners / 6.0;
-    return ACTIVE_WEEK_40_CANONICAL_BOM.map(item => {
-      const cleanCat = item.category ? item.category.replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ') : '🛒 Abarrotes y Frescos';
-      const slug = normalizeToCanonicalSlug(item.name);
-      return {
-        id: `bought_s40_${slug}`,
-        slug: slug,
-        item_name: item.name,
-        category: cleanCat,
-        quantity: Math.round((item.quantity * factor + Number.EPSILON) * 100) / 100,
-        unit: item.unit || 'g',
-        is_farm: cleanCat.includes('Granja') || cleanCat.includes('Huerto') || cleanCat.includes('Cosecha')
-      };
-    });
+  if (weekKey && (weekKey.includes("40") || weekKey === "Semana 40")) {
+    const isWeekend = (typeof window.shoppingListDayFilter !== 'undefined' && window.shoppingListDayFilter === 'weekend');
+    const sourceBOM = (isWeekend && typeof ACTIVE_WEEK_40_WEEKEND_BOM !== 'undefined' && Array.isArray(ACTIVE_WEEK_40_WEEKEND_BOM) && ACTIVE_WEEK_40_WEEKEND_BOM.length > 0)
+      ? ACTIVE_WEEK_40_WEEKEND_BOM
+      : (typeof ACTIVE_WEEK_40_CANONICAL_BOM !== 'undefined' && Array.isArray(ACTIVE_WEEK_40_CANONICAL_BOM) ? ACTIVE_WEEK_40_CANONICAL_BOM : []);
+
+    if (sourceBOM.length > 0) {
+      const factor = numDiners / 6.0;
+      return sourceBOM.map(item => {
+        const cleanCat = item.category ? item.category.replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ') : '🛒 Abarrotes y Frescos';
+        const slug = normalizeToCanonicalSlug(item.name);
+        return {
+          id: `bought_s40_${slug}`,
+          slug: slug,
+          item_name: item.name,
+          category: cleanCat,
+          quantity: Math.round((item.quantity * factor + Number.EPSILON) * 100) / 100,
+          unit: item.unit || 'g',
+          is_farm: cleanCat.includes('Granja') || cleanCat.includes('Huerto') || cleanCat.includes('Cosecha')
+        };
+      });
+    }
   }
 
   const activePlan = getPlanForWeek(weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40'));
@@ -5246,11 +5265,13 @@ function render3DShoppingList() {
     const pantryActiveCount = netData.pantryActiveCount || 7;
     const marketNetCount = netData.marketNetCount || 48;
 
+    const isWeekend = (typeof window.shoppingListDayFilter !== 'undefined' && window.shoppingListDayFilter === 'weekend');
+
     let html = `
       <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-6 font-brand-body">
         
         <!-- ENCABEZADO Y BADGE -->
-        <div class="flex items-center justify-between mb-6 border-b border-slate-100 dark:border-slate-700 pb-4 flex-wrap gap-3">
+        <div class="flex items-center justify-between mb-4 border-b border-slate-100 dark:border-slate-700 pb-4 flex-wrap gap-3">
           <div>
             <h3 class="text-xl font-bold font-brand-title text-slate-900 dark:text-slate-100 flex items-center gap-2" style="margin:0;">
               <svg class="icon-svg-md text-[#1C75BC]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
@@ -5264,6 +5285,31 @@ function render3DShoppingList() {
             👨‍🍳 ${numDiners} comensales activos
           </span>
         </div>
+
+        <!-- SELECTOR DE ALCANCE TEMPORAL DE ABASTECIMIENTO -->
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; background: var(--surface-card); border: 1px solid var(--border-clinical); border-radius: 12px; padding: 0.6rem 1rem; margin-bottom: 1.25rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <span style="font-size: 0.82rem; font-weight: 800; color: var(--text-main);">Alcance Operativo:</span>
+            <div style="display: flex; gap: 0.4rem;">
+              <button type="button" onclick="setShoppingListDayFilter('weekend')" style="padding: 0.4rem 0.85rem; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; ${isWeekend ? 'background: #1C75BC; color: #fff; border: 1px solid #1C75BC; box-shadow: 0 2px 4px rgba(28,117,188,0.25);' : 'background: transparent; color: var(--text-main); border: 1px solid var(--border-clinical);'}">⏳ Cierre Fin de Semana (Sáb 3 - Dom 4 Oct)</button>
+              <button type="button" onclick="setShoppingListDayFilter('all')" style="padding: 0.4rem 0.85rem; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; ${!isWeekend ? 'background: #1C75BC; color: #fff; border: 1px solid #1C75BC; box-shadow: 0 2px 4px rgba(28,117,188,0.25);' : 'background: transparent; color: var(--text-main); border: 1px solid var(--border-clinical);'}">📅 Ciclo Completo (7 Días)</button>
+            </div>
+          </div>
+          <span style="font-size: 0.75rem; font-weight: 700; color: #1C75BC;">Hoy: Viernes 2 Octubre</span>
+        </div>
+
+        ${isWeekend ? `
+        <!-- BANNER CLINICO DE CIERRE DE FIN DE SEMANA -->
+        <div style="background: rgba(28, 117, 188, 0.08); border-left: 4px solid #1C75BC; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1.25rem;">
+          <div style="font-weight: 800; font-size: 0.86rem; color: #1C75BC; display: flex; align-items: center; gap: 0.4rem;">
+            <span>🛡️ Auditoría Temporal: Cierre Fin de Semana Activo</span>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-main); margin: 0.35rem 0 0 0; line-height: 1.45;">
+            Los insumos de <strong>Lunes a Viernes</strong> ya han sido consumidos en el ciclo semanal. La lista de compras inferior computa <strong>única y exclusivamente la demanda de Sábado 3 y Domingo 4 de Octubre</strong> (6 comensales).<br>
+            <strong>🌱 Saldo Intacto en Alacena:</strong> El menú de fin de semana requiere <strong>0 g de Jitomate y 0 g de Cebolla</strong>. Sus <strong>3 kg de Jitomate Saladet</strong> y <strong>3 kg de Cebolla blanca</strong> no sufren merma este fin de semana y quedan íntegros como saldo a favor transferible al recetario de la <strong>Semana 41</strong>.
+          </p>
+        </div>
+        ` : ''}
 
         <!-- MATRIZ DE MANDO DE 4 CUADRANTES -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -5552,6 +5598,11 @@ function render3DShoppingList() {
   } catch (e) {
     console.error("Error en render3DShoppingList:", e);
   }
+}
+
+function setShoppingListDayFilter(filter) {
+  window.shoppingListDayFilter = filter;
+  render3DShoppingList();
 }
 
 function toggleCanonicalBoughtItem(weekSlug, canonicalId, isChecked) {
