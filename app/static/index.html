@@ -771,8 +771,42 @@ function generateNextWeekMenu() {
 
       if (a === b) return true;
 
-      // Stems y alias canónicos con coincidencia léxica
+      // Stems y alias canónicos con coincidencia léxica multi-categoría
       const itemKeywords = [
+        // Carnes, Aves y Pescados
+        { stem: 'pollo', aliases: ['pollo', 'pechuga de pollo', 'pechuga de pollo organica', 'pechuga'] },
+        { stem: 'huevo', aliases: ['huevo', 'huevos', 'huevos enteros', 'huevos organicos', 'huevos frescos', 'huevos organicos de libre pastoreo', 'huevo entero'] },
+        { stem: 'mantequilla', aliases: ['mantequilla', 'mantequilla de vaca', 'mantequilla de pastoreo', 'mantequilla de pastoreo artesanal', 'mantequilla sin sal'], exclude: ['ghee', 'clarificada'] },
+        { stem: 'ghee', aliases: ['ghee', 'mantequilla clarificada'] },
+        { stem: 'sirloin', aliases: ['sirloin', 'medallones de sirloin', 'medallon de sirloin', 'medallones de sirloin de res magro', 'carne molida de sirloin'] },
+        { stem: 'arrachera', aliases: ['arrachera', 'arrachera de res', 'arrachera de res magra limpia', 'arrachera limpia'] },
+        { stem: 'robalo', aliases: ['robalo', 'filete de robalo', 'filete de robalo salvaje', 'filete de robalo salvaje fresco de captura', 'pescado blanco', 'filete de pescado blanco'] },
+        { stem: 'huachinango', aliases: ['huachinango', 'filetes de huachinango', 'filete de huachinango con piel'] },
+        { stem: 'salmon', aliases: ['salmon', 'lomo de salmon', 'filete de salmon'] },
+        { stem: 'atun', aliases: ['atun', 'medallones de atun', 'lomo de atun'] },
+        { stem: 'pavo', aliases: ['pavo', 'pechuga de pavo', 'pechuga de pavo artesanal'] },
+        { stem: 'tocino-pavo', aliases: ['tocino de pavo', 'tocino de pavo artesanal', 'tocino de pavo crujiente'] },
+        { stem: 'machaca', aliases: ['machaca', 'carne seca machaca', 'carne seca machaca artesanal'] },
+        { stem: 'tuetano', aliases: ['tuetano', 'huesos de res con tuetano', 'carne para caldo rico', 'costilla tuetano'] },
+        { stem: 'huesos-pollo', aliases: ['huesos y retazo de pollo', 'retazo de pollo', 'pollo entero para caldo'] },
+        // Lácteos y Quesos
+        { stem: 'gouda', aliases: ['gouda', 'queso gouda', 'queso gouda artesanal'] },
+        { stem: 'panela', aliases: ['panela', 'queso panela', 'queso panela artesanal'] },
+        { stem: 'parmesano', aliases: ['parmesano', 'queso parmesano', 'queso parmesano artesanal'] },
+        { stem: 'queso-crema', aliases: ['queso crema', 'queso crema suave', 'queso crema suave artesanal'] },
+        { stem: 'cabra', aliases: ['queso de cabra', 'queso de cabra artesanal', 'cabra artesanal'] },
+        { stem: 'crema', aliases: ['crema', 'crema entera', 'crema entera de rancho', 'crema para batir'], exclude: ['queso crema'] },
+        // Grasas, Aceites y Semillas
+        { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'] },
+        { stem: 'aceite-ajonjoli', aliases: ['aceite de ajonjoli', 'aceite de sesamo', 'aceite de ajonjoli tostado'] },
+        { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'pecana', 'pecanas'] },
+        { stem: 'nuez-castilla', aliases: ['nuez de castilla', 'nueces de castilla', 'nuez de castilla fresca'] },
+        { stem: 'almendra', aliases: ['almendra', 'almendras', 'almendras fileteadas', 'almendras fileteadas tostadas'] },
+        { stem: 'chia', aliases: ['chia', 'semillas de chia', 'semillas de chia organicas'] },
+        { stem: 'girasol', aliases: ['semillas de girasol', 'semilla de girasol', 'girasol'] },
+        { stem: 'sesamo', aliases: ['semillas de sesamo', 'semillas de ajonjoli', 'ajonjoli'] },
+        { stem: 'coco', aliases: ['coco deshidratado', 'coco rallado', 'coco sin azucar', 'leche de coco'] },
+        // Frutas
         { stem: 'granada', aliases: ['granada', 'granadas', 'arilos'] },
         { stem: 'pitaya', aliases: ['pitaya', 'pitayas', 'pitahaya', 'pitahayas'] },
         { stem: 'fresa', aliases: ['fresa', 'fresas'] },
@@ -780,7 +814,8 @@ function generateNextWeekMenu() {
         { stem: 'zarzamora', aliases: ['zarzamora', 'zarzamoras'] },
         { stem: 'arandano', aliases: ['arandano', 'arandanos'] },
         { stem: 'mora', aliases: ['mora', 'moras'], exclude: ['morada'] },
-        { stem: 'espinaca', aliases: ['espinaca', 'espinacas'] },
+        // Verduras
+        { stem: 'espinaca', aliases: ['espinaca', 'espinacas', 'espinacas baby'] },
         { stem: 'calabacita', aliases: ['calabacita', 'calabacitas', 'calabaza'] },
         { stem: 'brocoli', aliases: ['brocoli', 'brocolis'] },
         { stem: 'esparrago', aliases: ['esparrago', 'esparragos'] },
@@ -796,8 +831,13 @@ function generateNextWeekMenu() {
         { stem: 'apio', aliases: ['apio'] },
         { stem: 'chayote', aliases: ['chayote', 'chayotes'] },
         { stem: 'hinojo', aliases: ['hinojo'] },
-        { stem: 'almendra', aliases: ['almendra', 'almendras'] },
-        { stem: 'chia', aliases: ['chia'] }
+        { stem: 'aguacate', aliases: ['aguacate', 'aguacate hass'] },
+        { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'jugo de limon'] },
+        { stem: 'ajo', aliases: ['ajo', 'ajos', 'ajo fresco', 'dientes de ajo'] },
+        { stem: 'sal', aliases: ['sal de mar', 'sal de colima', 'sal mineral', 'sal de mar mineral de colima'] },
+        { stem: '33plus', aliases: ['33plus', 'formula nootropica 33plus', 'formula biotecnologica nootropica 33plus'] },
+        { stem: '34plus', aliases: ['34plus', 'formula reparadora 34plus', 'formula biotecnologica reparadora 34plus'] },
+        { stem: 'grenetina', aliases: ['grenetina', 'grenetina natural', 'grenetina natural pura', 'colageno hidrolizado'] }
       ];
 
       for (const entry of itemKeywords) {
@@ -1509,19 +1549,58 @@ function generateNextWeekMenu() {
         pGrid.innerHTML = '';
         const nonFarm = [];
         const seenPantrySlugs = new Set();
-        
-        rawShopBase.filter(i => !i.category.includes('Cosecha')).forEach(i => {
-          const rawClean = (i.item_name || '').replace(/\s*\/\s*/g, ' — ').replace(/\//g, ' — ').trim();
-          const cleanName = (typeof sanitizeMarketRawMaterial === 'function' ? sanitizeMarketRawMaterial(rawClean) : '') || rawClean;
-          if (!cleanName) return;
-          const slug = normalizeToCanonicalSlug(cleanName);
-          if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === cleanName.toLowerCase())) return;
-          if (!seenPantrySlugs.has(slug)) {
+        if (typeof window.pantryCardUnits === 'undefined') window.pantryCardUnits = {};
+
+        // 2.1 Insumos del BOM Canónico del Menú Activo (Semana 40)
+        const activeBom = (typeof ACTIVE_WEEK_40_CANONICAL_BOM !== 'undefined' && Array.isArray(ACTIVE_WEEK_40_CANONICAL_BOM) && ACTIVE_WEEK_40_CANONICAL_BOM.length > 0)
+          ? ACTIVE_WEEK_40_CANONICAL_BOM
+          : (typeof rawShopBase !== 'undefined' ? rawShopBase : []);
+
+        activeBom.forEach(bItem => {
+          const bName = bItem.name || bItem.item_name;
+          if (!bName) return;
+          const cat = getSmartItemCategory(bName, bItem.category);
+          // Si el insumo es vegetal/fruta de cosecha del huerto, pertenece al Checklist de Cosecha
+          const isFarm = (bItem.category && bItem.category.includes('Cosecha')) ||
+                         FARM_MASTER_CATALOG.some(fc => areInsumosEquivalent(fc, bName));
+          if (isFarm) return;
+
+          const slug = normalizeToCanonicalSlug(bName);
+          if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === bName.toLowerCase())) return;
+
+          // Deduplicación estricta por equivalencia léxica
+          const alreadyInList = nonFarm.some(existing => areInsumosEquivalent(existing.item_name, bName));
+          if (!alreadyInList) {
             seenPantrySlugs.add(slug);
-            nonFarm.push({ ...i, item_name: cleanName });
+            nonFarm.push({
+              item_name: bName,
+              unit: bItem.unit || 'g',
+              category: cat
+            });
           }
         });
 
+        // 2.2 Insumos canónicos registrados en PANTRY_STOCK_INVENTORY
+        if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+          Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
+            const pObj = window.PANTRY_STOCK_INVENTORY[k];
+            if (!pObj || pObj.status !== 'canonical') return;
+            const pName = pObj.name || k;
+            const slug = normalizeToCanonicalSlug(pName);
+            if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === pName.toLowerCase())) return;
+            const alreadyInList = nonFarm.some(existing => areInsumosEquivalent(existing.item_name, pName));
+            if (!alreadyInList) {
+              seenPantrySlugs.add(slug);
+              nonFarm.push({
+                item_name: pName,
+                unit: pObj.unit || 'g',
+                category: getSmartItemCategory(pName, '')
+              });
+            }
+          });
+        }
+
+        // 2.3 Insumos en Cuarentena (siempre presentes en su bloque al fondo)
         const QUARANTINE_PANTRY_ITEMS = [
           { item_name: 'Duraznos frescos', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Higos frescos', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
@@ -1532,45 +1611,14 @@ function generateNextWeekMenu() {
 
         QUARANTINE_PANTRY_ITEMS.forEach(qItem => {
           const slug = normalizeToCanonicalSlug(qItem.item_name);
-          if (!seenPantrySlugs.has(slug) && !deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === qItem.item_name.toLowerCase())) {
-            seenPantrySlugs.add(slug);
-            nonFarm.push(qItem);
+          if (!deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === qItem.item_name.toLowerCase())) {
+            const alreadyInList = nonFarm.some(existing => areInsumosEquivalent(existing.item_name, qItem.item_name));
+            if (!alreadyInList) {
+              seenPantrySlugs.add(slug);
+              nonFarm.push(qItem);
+            }
           }
         });
-
-        // Incluir insumos canónicos registrados en PANTRY_STOCK_INVENTORY
-        if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
-          Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
-            const pObj = window.PANTRY_STOCK_INVENTORY[k];
-            if (!pObj || pObj.status !== 'canonical') return;
-            const slug = normalizeToCanonicalSlug(pObj.name || k);
-            if (!seenPantrySlugs.has(slug) && !deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === (pObj.name || '').toLowerCase())) {
-              seenPantrySlugs.add(slug);
-              nonFarm.push({
-                item_name: pObj.name,
-                unit: pObj.unit || 'g',
-                category: getSmartItemCategory(pObj.name, '')
-              });
-            }
-          });
-        }
-
-        // Incluir insumos del BOM canónico del menú activo (Semana 40)
-        if (typeof ACTIVE_WEEK_40_CANONICAL_BOM !== 'undefined' && Array.isArray(ACTIVE_WEEK_40_CANONICAL_BOM)) {
-          ACTIVE_WEEK_40_CANONICAL_BOM.forEach(bItem => {
-            const bName = bItem.name || bItem.item_name;
-            if (!bName) return;
-            const slug = normalizeToCanonicalSlug(bName);
-            if (!seenPantrySlugs.has(slug) && !deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === bName.toLowerCase())) {
-              seenPantrySlugs.add(slug);
-              nonFarm.push({
-                item_name: bName,
-                unit: bItem.unit || 'g',
-                category: getSmartItemCategory(bName, bItem.category)
-              });
-            }
-          });
-        }
 
         const categoriesMap = {};
         nonFarm.forEach(i => {
@@ -1597,6 +1645,9 @@ function generateNextWeekMenu() {
 
           items.forEach(i => {
             const slug = normalizeToCanonicalSlug(i.item_name);
+            const safeName = i.item_name.replace(/'/g, "\'");
+            window.pantryCardUnits[i.item_name] = i.unit;
+
             let val = pantryStock[i.item_name];
             if (val === undefined) {
               const matchedKey = Object.keys(pantryStock).find(k => areInsumosEquivalent(k, i.item_name));
@@ -1609,10 +1660,15 @@ function generateNextWeekMenu() {
                 val = 0;
               }
             }
+
+            const isEggItem = /huevo/i.test(i.item_name);
+            const eggHelperBtn = isEggItem ? `
+              <button type="button" onclick="addPantryCasillero('${safeName}')" style="background: rgba(16, 185, 129, 0.12); border: 1px solid rgba(16, 185, 129, 0.4); border-radius: 4px; padding: 2px 6px; font-size: 0.72rem; font-weight: 700; color: #047857; cursor: pointer; white-space: nowrap; transition: all 0.2s;" onmouseover="this.style.background='rgba(16,185,129,0.25)'" onmouseout="this.style.background='rgba(16,185,129,0.12)'" title="Sumar 1 casillero completo (+30 piezas)">+30 (1 Casillero)</button>
+            ` : '';
+
             const div = document.createElement('div');
             div.className = isQuarantine ? 'option-row quarantine-card-item' : 'option-row';
             div.style.color = 'var(--text-main)';
-            const safeName = i.item_name.replace(/'/g, "\'");
             if (isQuarantine) {
               div.style.cssText = 'display: flex; flex-direction: column; justify-content: space-between; gap: 0.4rem; padding: 0.55rem 0.75rem; border-radius: 10px; background: rgba(239, 68, 68, 0.05); border: 1px solid rgba(239, 68, 68, 0.35); box-shadow: var(--shadow-clinical-sm);';
             } else {
@@ -1623,8 +1679,9 @@ function generateNextWeekMenu() {
                 <span style="font-weight: 700; font-size: 0.88rem; color: ${isQuarantine ? '#dc2626' : 'var(--text-main)'}; word-break: break-word; line-height: 1.25;">${i.item_name}</span>
                 <button type="button" onclick="deletePantryItem('${safeName}')" style="background: none; border: none; color: #ef4444; font-size: 0.95rem; cursor: pointer; padding: 0.1rem 0.3rem; border-radius: 4px; opacity: 0.7; transition: opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.7'" title="Eliminar ${safeName} del Inventario">🗑️</button>
               </div>
-              <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.4rem; width: 100%; margin-top: 0.2rem;">
-                <input type="number" step="0.1" min="0" value="${val}" style="width: 70px; padding: 0.25rem 0.4rem; font-weight: 800; text-align: center; border: 1px solid ${isQuarantine ? 'rgba(239, 68, 68, 0.5)' : 'var(--border-clinical)'}; border-radius: 6px; background: var(--surface-card); color: var(--text-main); font-size: 0.88rem;" onchange="updatePantryStock('${safeName}', this.value)">
+              <div style="display: flex; align-items: center; justify-content: flex-end; gap: 0.4rem; width: 100%; margin-top: 0.2rem; flex-wrap: wrap;">
+                ${eggHelperBtn}
+                <input type="number" step="${i.unit === 'piezas' ? '1' : '0.1'}" min="0" value="${val}" style="width: 70px; padding: 0.25rem 0.4rem; font-weight: 800; text-align: center; border: 1px solid ${isQuarantine ? 'rgba(239, 68, 68, 0.5)' : 'var(--border-clinical)'}; border-radius: 6px; background: var(--surface-card); color: var(--text-main); font-size: 0.88rem;" onchange="updatePantryStock('${safeName}', this.value, '${i.unit}')">
                 <span style="font-size: 0.78rem; font-weight: 600; color: ${isQuarantine ? '#dc2626' : 'var(--text-muted)'};">${i.unit}</span>
               </div>
             `;
@@ -1797,9 +1854,13 @@ function generateNextWeekMenu() {
       }
     }
 
-    function updatePantryStock(itemName, val) {
+    function updatePantryStock(itemName, val, unit) {
       const parsed = parseFloat(val) || 0;
+      if (typeof window.pantryCardUnits === 'undefined') window.pantryCardUnits = {};
+      const cardUnit = unit || window.pantryCardUnits[itemName] || 'g';
+      window.pantryCardUnits[itemName] = cardUnit;
       pantryStock[itemName] = parsed;
+
       const slug = normalizeToCanonicalSlug(itemName);
       if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
         const matchedKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => 
@@ -1807,11 +1868,12 @@ function generateNextWeekMenu() {
         );
         if (matchedKey) {
           window.PANTRY_STOCK_INVENTORY[matchedKey].stock = parsed;
+          window.PANTRY_STOCK_INVENTORY[matchedKey].unit = cardUnit;
         } else {
           window.PANTRY_STOCK_INVENTORY[slug] = {
             name: itemName,
             stock: parsed,
-            unit: 'g',
+            unit: cardUnit,
             status: 'canonical'
           };
         }
@@ -1820,6 +1882,13 @@ function generateNextWeekMenu() {
       if (typeof render3DShoppingList === 'function') {
         render3DShoppingList();
       }
+    }
+
+    function addPantryCasillero(itemName) {
+      const current = parseFloat(pantryStock[itemName]) || 0;
+      const newVal = current + 30;
+      updatePantryStock(itemName, newVal, 'piezas');
+      initSetupPanel();
     }
 
     function showClinicalConfirmModal(options) {
@@ -2219,20 +2288,49 @@ function parseQuantityInBaseUnit(qty, unitRaw) {
   const num = parseFloat(qty) || 0;
   const unitStr = (unitRaw || "").toLowerCase().trim();
 
+  // 1. Empaques compuestos con especificación de peso/volumen (ej. "paquete (3.2 kg)", "frasco (1 kg)", "frasco (500 g)")
+  const pkgMatch = unitStr.match(/(\d+(?:\.\d+)?)\s*(kg|kilo|kilos|g|gramos?|l|lt|litros?|ml)/i);
+  if (pkgMatch && (unitStr.includes("paquete") || unitStr.includes("empaque") || unitStr.includes("frasco") || unitStr.includes("lata") || unitStr.includes("botella"))) {
+    const pkgSize = parseFloat(pkgMatch[1]);
+    const pkgUnit = pkgMatch[2].toLowerCase();
+    let baseMultiplier = pkgSize;
+    if (pkgUnit.includes("kg") || pkgUnit.includes("kilo") || pkgUnit.includes("l") || pkgUnit.includes("lt")) {
+      baseMultiplier = pkgSize * 1000;
+    }
+    const isVol = pkgUnit.includes("l") || pkgUnit.includes("ml");
+    return { val: num * baseMultiplier, type: isVol ? "vol" : "mass", baseUnit: isVol ? "ml" : "g" };
+  }
+
+  // 2. Casilleros y docenas de huevos
+  if (unitStr.includes("casillero")) {
+    return { val: num * 30, type: "count", baseUnit: "piezas" };
+  }
+  if (unitStr.includes("docena")) {
+    return { val: num * 12, type: "count", baseUnit: "piezas" };
+  }
+
+  // 3. Masa en Kilogramos
   if (unitStr.includes("kg") || unitStr.includes("kilo")) {
     const val = num < 50 ? num * 1000 : num;
     return { val: val, type: "mass", baseUnit: "g" };
   }
+
+  // 4. Volumen en Mililitros
   if (unitStr.includes("ml") || unitStr.includes("mililitro")) {
     return { val: num, type: "vol", baseUnit: "ml" };
   }
+
+  // 5. Masa en Gramos
   if (unitStr.includes("g") || unitStr.includes("gramo")) {
     return { val: num, type: "mass", baseUnit: "g" };
   }
+
+  // 6. Volumen en Litros
   if (unitStr === "l" || unitStr === "lt" || unitStr === "lts" || unitStr.includes("litro") || /l|lt|lts/i.test(unitStr)) {
     const val = num < 50 ? num * 1000 : num;
     return { val: val, type: "vol", baseUnit: "ml" };
   }
+
   return { val: num, type: "count", baseUnit: unitStr || "piezas" };
 }
 
@@ -2685,8 +2783,13 @@ function calculateNetShoppingList(diners) {
 
         if (areInsumosEquivalent(pObj.name || pKey, cleanName)) {
           const pQty = parseFloat(pObj.stock) || 0;
-          const pUnit = pObj.unit || item.unit;
-          stockInBase += parseQuantityInBaseUnit(pQty, pUnit).val;
+          const pUnit = pObj.unit || (typeof window.pantryCardUnits !== 'undefined' && window.pantryCardUnits[pObj.name]) || item.unit;
+          let parsedStock = parseQuantityInBaseUnit(pQty, pUnit);
+          // Clinical Safety Net: si la demanda es > 200g y pQty < 20 para carnes/pescados, interpretar como kg
+          if (parsedStock.type === 'mass' && parsedStock.val < 20 && baseInfo.val > 200 && (cat.includes('Carne') || cat.includes('Proteína') || cat.includes('Pescado'))) {
+            parsedStock.val *= 1000;
+          }
+          stockInBase += parsedStock.val;
         }
       });
     }
@@ -2696,7 +2799,13 @@ function calculateNetShoppingList(diners) {
         const pVal = parseFloat(pantryStock[pName]) || 0;
         if (pVal <= 0) return;
         if (areInsumosEquivalent(pName, cleanName)) {
-          stockInBase += parseQuantityInBaseUnit(pVal, item.unit).val;
+          const pUnit = (typeof window.pantryCardUnits !== 'undefined' && window.pantryCardUnits[pName]) || item.unit;
+          let parsedStock = parseQuantityInBaseUnit(pVal, pUnit);
+          // Clinical Safety Net: si la demanda es > 200g y pVal < 20 para carnes/pescados, interpretar como kg
+          if (parsedStock.type === 'mass' && parsedStock.val < 20 && baseInfo.val > 200 && (cat.includes('Carne') || cat.includes('Proteína') || cat.includes('Pescado'))) {
+            parsedStock.val *= 1000;
+          }
+          stockInBase += parsedStock.val;
         }
       });
     }

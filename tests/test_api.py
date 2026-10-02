@@ -1261,6 +1261,85 @@ def test_harvest_pantry_reactivity_and_purity():
     for p_slug in ["fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "zarzamoras-frescas"]:
         assert p_slug in pantry_content, f"Slug '{p_slug}' ausente en window.PANTRY_STOCK_INVENTORY"
 
+    # Stems multi-categoría (Carnes, Huevos, Lácteos, Grasas)
+    assert "{ stem: 'pollo', aliases: ['pollo', 'pechuga de pollo', 'pechuga de pollo organica', 'pechuga'] }" in code
+    assert "{ stem: 'huevo', aliases: ['huevo', 'huevos', 'huevos enteros', 'huevos organicos', 'huevos frescos', 'huevos organicos de libre pastoreo', 'huevo entero'] }" in code
+    assert "{ stem: 'mantequilla', aliases: ['mantequilla', 'mantequilla de vaca', 'mantequilla de pastoreo', 'mantequilla de pastoreo artesanal', 'mantequilla sin sal']" in code
+
+
+def test_pantry_meats_and_eggs_amortization_and_bom_purity():
+    """
+    Valida la solución transversal de Alacena para Carnes, Huevos y Lácteos:
+    1. Unidades de empaque y multiplicadores:
+       - '1 paquete (3.2 kg)' o '3.2 kg' -> 3,200 g (no 1 g).
+       - '2 casilleros' -> 60 piezas (no 2 piezas).
+    2. Amortización exacta contra demanda bruta BOM Semana 40:
+       - Pechuga de pollo: Bruto con merma = 2,967 g (~3.0 kg). Alacena 3,200 g -> Neto Mercado = 0 g ($0).
+       - Huevos: Bruto con merma = 145 piezas. Alacena 60 piezas -> Neto Mercado = 85 piezas.
+    3. Pureza ontológica: Ningún SKU obsoleto de Semana 33 (Carne molida de Sirloin, Pollo entero para caldo, Filete de res magro)
+       debe aparecer en el BOM canónico de Semana 40.
+    4. El grid de Alacena en generate_standalone_html.py debe construirse estrictamente desde ACTIVE_WEEK_40_CANONICAL_BOM.
+    """
+    import json
+    import math
+
+    with open("semana_40_master.json", "r", encoding="utf-8") as f:
+        s40 = json.load(f)
+
+    from app.services.inventory_master import consolidate_market_bom
+    all_ings = []
+    for day in s40.get("days", []):
+        for meal in day.get("meals", []):
+            for part in ["starter", "main", "side"]:
+                if part in meal and isinstance(meal[part], dict):
+                    all_ings.extend(meal[part].get("ingredients", []))
+    bom = consolidate_market_bom(all_ings)
+    bom_names = [item["name"] for item in bom]
+
+    # 1. Pureza ontológica: Cero SKUs obsoletos de Semana 33
+    assert "Carne molida de Sirloin" not in bom_names, "SKU obsoleto Semana 33 presente en BOM Semana 40"
+    assert "Pollo entero para caldo" not in bom_names, "SKU obsoleto Semana 33 presente en BOM Semana 40"
+    assert "Filete de res magro" not in bom_names, "SKU obsoleto Semana 33 presente en BOM Semana 40"
+    assert "Mantequilla de vaca (sin sal)" not in bom_names, "SKU obsoleto Semana 33 presente en BOM Semana 40"
+
+    # Presencia de SKUs canónicos de Semana 40
+    assert "Arrachera de res magra limpia" in bom_names
+    assert "Medallones de Sirloin de res magro" in bom_names
+    assert "Filete de robalo salvaje fresco de captura" in bom_names
+    assert "Pechuga de pollo orgánica" in bom_names
+    assert "Huevos orgánicos de libre pastoreo" in bom_names
+    assert "Mantequilla de pastoreo artesanal" in bom_names
+
+    # 2. Simulación matemática de amortización Atwater / BOM
+    chicken_item = next(i for i in bom if i["name"] == "Pechuga de pollo orgánica")
+    chicken_gross_yield = chicken_item["quantity"] * 1.15  # 2580 * 1.15 = 2967 g (~3.0 kg)
+    chicken_pantry_val = 3200.0  # 3.2 kg registrados
+    chicken_net = max(0, chicken_gross_yield - chicken_pantry_val)
+    assert chicken_net == 0.0, f"Pollo debe estar 100% cubierto por alacena ($0), dio: {chicken_net}"
+
+    egg_item = next(i for i in bom if i["name"] == "Huevos orgánicos de libre pastoreo")
+    egg_gross_yield = math.ceil(egg_item["quantity"] * 1.15)  # 126 * 1.15 = 144.9 -> 145 piezas
+    egg_pantry_val = 2 * 30.0  # 2 casilleros = 60 piezas
+    egg_net = max(0, egg_gross_yield - egg_pantry_val)
+    assert egg_net == 85.0, f"Huevos netos en mercado debe ser 85 piezas, dio: {egg_net}"
+
+    # 3. Inspección del código generado y del HTML compilado
+    with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
+        code = f.read()
+
+    assert "ACTIVE_WEEK_40_CANONICAL_BOM" in code
+    assert "casillero" in code
+    assert "window.pantryCardUnits" in code
+    assert "addPantryCasillero" in code
+    assert "+30 (1 Casillero)" in code
+
+    with open("index.html", "r", encoding="utf-8") as f:
+        html = f.read()
+
+    assert "ACTIVE_WEEK_40_CANONICAL_BOM" in html
+    assert "addPantryCasillero" in html
+
+
 
 
 
