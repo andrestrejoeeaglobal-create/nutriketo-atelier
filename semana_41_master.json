@@ -182,6 +182,124 @@
             "service_temp_c": 4,
             "texture_target": "Gel elástico cristalino",
             "service_notes": "Mantener en cámara fría hasta el momento exacto del pase."
+          },
+          "main": {
+            "title": "Huevos Revueltos a la Mantequilla con Chayote Tierno Salteado y Finas Hierbas",
+            "technique": "saute_and_sear",
+            "note": "Plato fuerte matutino de alta densidad proteica y leucina (≥2.5 g), con cuajada cremosa de 3 huevos por comensal y chayote tierno amortizado de alacena.",
+            "ingredients": [
+              {
+                "name": "Huevos orgánicos de pastoreo",
+                "amount": 18,
+                "unit": "piezas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 3
+              },
+              {
+                "name": "Chayotes tiernos pelados",
+                "amount": 1,
+                "unit": "piezas",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 0.16
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 90,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 15
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              },
+              {
+                "name": "Cebollín fresco de la granja",
+                "amount": 30,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 5
+              }
+            ],
+            "steps": [
+              "1. Mise en place de hortaliza: Pelar el chayote tierno de alacena y cortarlo en brunoise fina de 3 mm; blanquear en agua hirviendo con sal durante 90 segundos para ablandar sin perder turgencia; escurrir perfectamente.",
+              "2. Batido suave: Cascar los 18 huevos en cuenco hondo de acero; sazonar con la sal de mar y batir con tenedor durante 30 segundos rompiendo chalazas sin incorporar aire espumoso.",
+              "3. Salteo de fondo: Fundir 40 g de mantequilla en sartén antiadherente amplia a 125°C; incorporar el chayote y cebollín salteando durante 2 minutos hasta impregnar aroma sin tomar color.",
+              "4. Cuajado térmico controlado: Añadir el resto de la mantequilla, verter los huevos y reducir el fuego al mínimo (110°C). Remover en círculos concéntricos con espátula de silicón formando pliegues suaves y húmedos durante 3 minutos. Retirar del fuego con textura cremosa y jugosa a 65°C."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Desnaturalización controlada de ovoalbúmina (62°C a 68°C). La grasa de pastoreo emulsiona la fase acuosa previniendo la sinéresis del huevo.",
+              "flavor_and_aromatics": "Complejidad láctea avellanada con notas herbáceas frescas de cebollín y la dulzura vegetal neutra del chayote.",
+              "textural_architecture": "Cuajada suntuosa aterciopelada salpicada por la resistencia tierna y crujiente del chayote en brunoise.",
+              "critical_control_points": "Retirar del calor directo 15 segundos antes del punto deseado; el calor residual finaliza la cocción."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Fuego Suave)",
+            "service_temp_c": 65,
+            "texture_target": "Baveuse, sedosa y untuosa",
+            "service_notes": "Servir de inmediato en platos tibios para evitar el enfriamiento de la grasa láctea."
+          },
+          "side": {
+            "title": "Gelatina Artesanal de Fresas y Menta (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Vehículo biotecnológico matutino que aporta colágeno hidrolizado puro, adaptógenos y L-Teanina para sostener el enfoque cognitivo matutino.",
+            "ingredients": [
+              {
+                "name": "Fresas frescas",
+                "amount": 120,
+                "unit": "g",
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "per_guest": 20
+              },
+              {
+                "name": "Grenetina natural en polvo",
+                "amount": 42,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 7
+              },
+              {
+                "name": "Fórmula Nootrópica 33Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Hojas de menta fresca",
+                "amount": 15,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 2.5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 720,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 120
+              }
+            ],
+            "steps": [
+              "1. Hidratación bloom: Hidratar la grenetina en 180 ml de agua purificada fría durante 8 minutos hasta formar una esponja compacta.",
+              "2. Infusión y disolución: Calentar el resto del agua a 70°C con las hojas de menta; retirar del fuego, retirar la menta y disolver la grenetina hidratada agitando con varilla.",
+              "3. Integración biotecnológica: Dejar enfriar el líquido a 42°C (temperatura segura que preserva los fitonutrientes termosensibles de 33Plus®); incorporar la Fórmula 33Plus® y las fresas trituradas rústicamente.",
+              "4. Moldeado y reposo: Repartir en 6 moldes refractarios de cristal y refrigerar a 4°C por 3 horas hasta lograr gelificación elástica cristalina."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Disolución a 60°C y templado a 42°C previo a inyección nootrópica. Blindaje térmico estricto de polifenoles y L-Teanina.",
+              "flavor_and_aromatics": "Fondo herbal refrescante de menta que mitiga el perfil mineral del colágeno, aromatizado con ésteres de fresa.",
+              "textural_architecture": "Gel firme pero de ruptura elástica suave en boca a 36°C.",
+              "critical_control_points": "Monitoreo con termómetro de cocina; no incorporar 33Plus® por encima de 45°C."
+            },
+            "broth_volume_ml": 120,
+            "deglaze_agent": "N/A (Gelificación)",
+            "service_temp_c": 4,
+            "texture_target": "Gel elástico cristalino",
+            "service_notes": "Mantener en cámara fría hasta el momento exacto del pase."
           }
         },
         {
@@ -311,6 +429,124 @@
             "service_notes": "Trinchar en láminas de 1 cm perpendicular a la fibra muscular."
           },
           "side_dish": {
+            "title": "Espárragos Verdes Salteados al Limón con Láminas de Queso Parmesano",
+            "technique": "saute_and_sear",
+            "note": "Acompañamiento vegetal crujiente rico en asparagina, ácido fólico y potasio, con acidez cítrica desengrasante y umami curado de parmesano.",
+            "ingredients": [
+              {
+                "name": "Espárragos verdes frescos de la granja",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Queso Parmesano artesanal",
+                "amount": 60,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 10
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 5
+              },
+              {
+                "name": "Jugo de limón fresco",
+                "amount": 25,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 4.1
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Calibración: Retirar el tercio leñoso inferior de los espárragos mediante quiebre natural.",
+              "2. Salteo vivo: Calentar el aceite VEVO en sartén amplia a 160°C; disponer los espárragos en una sola capa y saltear 4 minutos rotándolos hasta lograr un tierno crujiente.",
+              "3. Desglasado cítrico: Verter el jugo de limón recién exprimido levantando los azúcares naturales del fondo y retirar del fuego.",
+              "4. Acabado: Servir calientes y coronar con láminas finas de queso parmesano recién cortadas con pelador."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Calor rápido en medio lipídico que reblandece la celulosa manteniendo la pectina estructural firme (al dente).",
+              "flavor_and_aromatics": "Amargor verde primaveral equilibrado por la salinidad cítrica del limón y el glutamato natural del parmesano.",
+              "textural_architecture": "Tallo flexible y crujiente con cubierta umami fundente de queso.",
+              "critical_control_points": "No sobrecocer; los espárragos deben mantener color verde brillante y resistencia al dente."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "Jugo de limón fresco recién exprimido",
+            "service_temp_c": 60,
+            "texture_target": "Al dente, turgente y crujiente",
+            "service_notes": "Montar alineados en paralelo junto al corte de carne."
+          },
+          "main": {
+            "title": "Corte Magro de Ribeye de Res a la Parrilla con Mantequilla de Romero y Ajo",
+            "technique": "saute_and_sear",
+            "note": "Proteína principal de máxima calidad biológica con reacción de Maillard superficial intensa y centro jugoso a término medio (54°C).",
+            "ingredients": [
+              {
+                "name": "Corte magro de Ribeye de res premium",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 80,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 13.3
+              },
+              {
+                "name": "Romero fresco",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Ajo fresco machacado",
+                "amount": 12,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 2
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 8,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.3
+              }
+            ],
+            "steps": [
+              "1. Atemperado y secado: Retirar la carne del frío 30 minutos antes; secar minuciosamente la superficie con papel absorbente para asegurar caramelización inmediata.",
+              "2. Sellado a alta temperatura: Calentar plancha o sartén de hierro colado a 180°C; colocar los medallones sazonados con sal de mar y sellar 3 minutos por lado sin mover.",
+              "3. Arrosé aromático: En el último minuto, añadir la mantequilla, los dientes de ajo machacados y el romero; bañar continuamente la carne con la mantequilla espumosa avellanada.",
+              "4. Reposo miogénico: Retirar sobre rejilla tibia y dejar reposar 4 minutos para redistribución osmótica de jugos antes de trinchar."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Reacción de Maillard (150°C a 165°C) que sintetiza pirazinas y furanos aromáticos. Desnaturalización de mioglobina controlada a 54°C interno.",
+              "flavor_and_aromatics": "Umami cárnico profundo acentuado por la grasa butírica infusionada con terpenos de romero y alicina tostada.",
+              "textural_architecture": "Corteza crujiente y crocante con núcleo tierno, húmedo y elástico que cede al corte.",
+              "critical_control_points": "Superficie de carne completamente seca al entrar al hierro; reposo obligatorio de 4 min."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "Mantequilla espumosa aromática",
+            "service_temp_c": 56,
+            "texture_target": "Corteza crujiente, centro jugoso y suave",
+            "service_notes": "Trinchar en láminas de 1 cm perpendicular a la fibra muscular."
+          },
+          "side": {
             "title": "Espárragos Verdes Salteados al Limón con Láminas de Queso Parmesano",
             "technique": "saute_and_sear",
             "note": "Acompañamiento vegetal crujiente rico en asparagina, ácido fólico y potasio, con acidez cítrica desengrasante y umami curado de parmesano.",
@@ -545,6 +781,123 @@
             "service_temp_c": 52,
             "texture_target": "Infusión traslúcida aromática",
             "service_notes": "Tomar en ambiente de luz cálida tenue."
+          },
+          "main": {
+            "title": "Sardinas al Sartén con Salsa Rústica de Tomate Verde, Cilantro y Aguacate Hass",
+            "technique": "saute_and_sear",
+            "note": "Cena antiinflamatoria de altísimo valor en ácidos grasos Omega-3 (EPA/DHA), calcio y fósforo, amortizando sardinas y tomate verde del inventario.",
+            "ingredients": [
+              {
+                "name": "Sardinas enlatadas",
+                "amount": 1,
+                "unit": "latas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 0.16
+              },
+              {
+                "name": "Tomate verde fresco",
+                "amount": 360,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 60
+              },
+              {
+                "name": "Aguacate Hass fresco",
+                "amount": 2,
+                "unit": "piezas",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 0.33
+              },
+              {
+                "name": "Cebolla blanca fresca",
+                "amount": 60,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 10
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 5
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Tueste de salsa rústica: En comal o sartén seco a 170°C, tatemar los tomates verdes y la cebolla blanca hasta que la piel muestre manchas oscuras; majar en molcajete o pulsar en procesador con sal de mar y cilantro.",
+              "2. Salteo y sellado: Calentar el aceite VEVO en sartén a 130°C; verter la salsa verde rústica cocinando 3 minutos; acomodar con cuidado los lomos de sardina escurridos dejando que se impregnen del guisado durante 2 minutos sin romper los filetes.",
+              "3. Montaje graso: Disponer las sardinas guisadas con su salsa tibia y acompañar con abanicos de aguacate Hass fresco sazonados con un toque de sal mineral."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Tatemado de tomate verde que concentra pectinas y neutraliza acidez punzante. Tratamiento suave de la sardina para no oxidar los ácidos grasos poliinsaturados.",
+              "flavor_and_aromatics": "Acidez ahumada de tomate verde y cebolla rostizada que corta la intensidad grasa de la sardina azul y se redondea con el aguacate.",
+              "textural_architecture": "Carne suave y desmenuzable de pescado azul sobre salsa untuosa rústica con cremosidad mantecosa de aguacate.",
+              "critical_control_points": "No agitar violentamente la sartén para mantener íntegros los lomos de sardina."
+            },
+            "broth_volume_ml": 60,
+            "deglaze_agent": "Salsa tatemada de tomate verde",
+            "service_temp_c": 60,
+            "texture_target": "Guisado rústico tierno y cremoso",
+            "service_notes": "Servir tibio con el aguacate a temperatura ambiente."
+          },
+          "side": {
+            "title": "Infusión Digestiva de Manzanilla y Azahar con Fórmula Reparadora 34Plus®",
+            "technique": "steep_beverage",
+            "note": "Cierre crepuscular neuro-metabólico con inductores de GABA, cromo e inulina de agave para estabilización nocturna de la glucosa y autofagia celular.",
+            "ingredients": [
+              {
+                "name": "Flores de manzanilla seca",
+                "amount": 18,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 3
+              },
+              {
+                "name": "Flores de azahar",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Fórmula Reparadora 34Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 900,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 150
+              }
+            ],
+            "steps": [
+              "1. Infusión botánica: Calentar el agua purificada a 90°C; apagar el fuego, verter las flores de manzanilla y azahar y tapar durante 6 minutos extrayendo aceites esenciales calmantes.",
+              "2. Filtrado: Colar sobre jarra térmica.",
+              "3. Incorporación celular: Dejar atemperar la infusión hasta 55°C (umbral biológico seguro); disolver la Fórmula 34Plus® con agitador magnético o batidor mini asegurando completa dispersión coloidal.",
+              "4. Servicio nocturno: Servir en tazas precalentadas 45 minutos antes de dormir."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Infusión tapada para no volatilizar apigenina y terpenos. Incorporación de 34Plus a 55°C para garantizar integridad de enzimas y fibra prebiótica.",
+              "flavor_and_aromatics": "Fondo floral dulce y relajante de manzanilla y azahar con final limpio sin amargor.",
+              "textural_architecture": "Tisana sedosa, ligera y cálida.",
+              "critical_control_points": "No hervir las flores directamente; servir a temperatura reconfortante de 52°C."
+            },
+            "broth_volume_ml": 150,
+            "deglaze_agent": "N/A (Infusión Caliente)",
+            "service_temp_c": 52,
+            "texture_target": "Infusión traslúcida aromática",
+            "service_notes": "Tomar en ambiente de luz cálida tenue."
           }
         }
       ]
@@ -669,6 +1022,110 @@
             "service_notes": "Servir en platos individuales precalentados."
           },
           "side_dish": {
+            "title": "Té Verde Sencha Orgánico con Fórmula Nootrópica 33Plus®",
+            "technique": "steep_beverage",
+            "note": "Sinergia energizante matutina que amplifica la catequina EGCG del té verde con los adaptógenos y L-Tirosina de la fórmula 33Plus®.",
+            "ingredients": [
+              {
+                "name": "Té verde Sencha en hebras",
+                "amount": 18,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 3
+              },
+              {
+                "name": "Fórmula Nootrópica 33Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 900,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 150
+              }
+            ],
+            "steps": [
+              "1. Infusión a temperatura controlada: Calentar el agua a 78°C (evitando ebullición para no amargar las hebras de té); infundir el Sencha durante 2.5 minutos.",
+              "2. Colado y templado: Filtrar el té y dejar reposar 3 minutos hasta que la temperatura descienda a 45°C.",
+              "3. Dispersión nootrópica: Incorporar los 30 g de Fórmula 33Plus® agitando suavemente hasta disolución completa.",
+              "4. Pase: Servir tibio en tazas de porcelana."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Temperatura de infusión a 78°C que extrae teanina sin saturar taninos astringentes. Incorporación celular a 45°C.",
+              "flavor_and_aromatics": "Fondo vegetal marino y herbal limpio de té verde con notas cítricas suaves de la fórmula nootrópica.",
+              "textural_architecture": "Líquido etéreo traslúcido de paso aterciopelado.",
+              "critical_control_points": "No superar 80°C durante la infusión del té verde."
+            },
+            "broth_volume_ml": 150,
+            "deglaze_agent": "N/A (Infusión)",
+            "service_temp_c": 45,
+            "texture_target": "Líquido ligero cristalino",
+            "service_notes": "Consumir durante la primera hora de vigilia."
+          },
+          "main": {
+            "title": "Omelette Baveuse con Espinacas Tiernas de la Granja y Queso Gouda",
+            "technique": "saute_and_sear",
+            "note": "Clásico de la cocina francesa adaptado a keto: 3 huevos por persona con interior cremoso y fundente, hortaliza de granja y gouda madurado.",
+            "ingredients": [
+              {
+                "name": "Huevos orgánicos de pastoreo",
+                "amount": 18,
+                "unit": "piezas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 3
+              },
+              {
+                "name": "Espinacas frescas de la granja",
+                "amount": 240,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 40
+              },
+              {
+                "name": "Queso Gouda artesanal",
+                "amount": 120,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 20
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 70,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 11.6
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Marchitado rápido: Saltear las espinacas en 20 g de mantequilla durante 60 segundos hasta que colapsen; escurrir líquido residual.",
+              "2. Batido: Batir los huevos con sal de mar hasta textura homogénea sin burbujas.",
+              "3. Cuajado y doblado: En sartén a fuego medio (130°C) con 50 g de mantequilla, verter los huevos agitando enérgicamente la sartén mientras se revuelve con espátula; cuando el fondo cuaje pero la superficie esté húmeda (baveuse), colocar las espinacas y el queso gouda rallado al centro.",
+              "4. Enrollado y servicio: Doblar en tres sobre sí mismo, barnizar con una nuez de mantequilla en el plato y servir de inmediato."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Transición rápida de calor que cuaja la pared exterior a 72°C mientras el núcleo permanece baveuse a 64°C, fundiendo el gouda.",
+              "flavor_and_aromatics": "Mantequilla avellanada, salinidad madura del gouda y notas ferrosas limpias de espinaca fresca.",
+              "textural_architecture": "Envoltorio elástico sedoso con corazón líquido-cremoso y queso fundente en hebras.",
+              "critical_control_points": "Control estricto del tiempo en sartén (no exceder 90 segundos de cocción activa)."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Sartén Antiadherente)",
+            "service_temp_c": 68,
+            "texture_target": "Baveuse exterior dorado pálido, corazón fundente",
+            "service_notes": "Servir en platos individuales precalentados."
+          },
+          "side": {
             "title": "Té Verde Sencha Orgánico con Fórmula Nootrópica 33Plus®",
             "technique": "steep_beverage",
             "note": "Sinergia energizante matutina que amplifica la catequina EGCG del té verde con los adaptógenos y L-Tirosina de la fórmula 33Plus®.",
@@ -911,6 +1368,131 @@
             "service_temp_c": 65,
             "texture_target": "Carnoso, tierno y sin baba",
             "service_notes": "Acompañar junto a la pechuga de pollo."
+          },
+          "main": {
+            "title": "Pechuga de Pollo al Limón y Romero Sellada en Mantequilla con Salsa de Jitomate Saladet Rústica",
+            "technique": "saute_and_sear",
+            "note": "Pechuga orgánica jugosa sellada en costra dorada de mantequilla, complementada con una reducción rústica de jitomate saladet de alacena.",
+            "ingredients": [
+              {
+                "name": "Pechuga de pollo orgánica",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Jitomate Saladet fresco",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 70,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 11.6
+              },
+              {
+                "name": "Romero fresco",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Jugo de limón fresco",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 5
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 8,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.3
+              }
+            ],
+            "steps": [
+              "1. Preparación de salsa: Picar el jitomate saladet en cubos; en cacerola pequeña con 15 g de mantequilla, sudar el jitomate con una pizca de sal hasta concentrar pulpa durante 8 minutos.",
+              "2. Sellado de pechuga: Secar los filetes de pollo; sazonar con sal de mar; calentar sartén amplia con 40 g de mantequilla a 150°C y sellar 4 minutos por lado hasta dorar.",
+              "3. Desglasado y arrosé: Añadir las ramas de romero, el jugo de limón y el resto de la mantequilla; bañar los filetes en la emulsión espumosa durante 90 segundos hasta alcanzar 74°C interno.",
+              "4. Emplatado: Servir las pechugas bañadas con la salsa rústica de jitomate y los jugos de mantequilla al romero."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Sellado en mantequilla clarificada natural a 150°C que carameliza aminoácidos sin secar el núcleo muscular de la pechuga.",
+              "flavor_and_aromatics": "Dulzura ácida del jitomate cocido combinada con la potencia terpénica del romero y la acidez del limón.",
+              "textural_architecture": "Fibra muscular tierna y jugosa con cubierta cremosa de salsa rústica.",
+              "critical_control_points": "Termómetro de sonda a 74°C en el centro de la pechuga; reposo de 3 min."
+            },
+            "broth_volume_ml": 40,
+            "deglaze_agent": "Jugo de limón fresco y mantequilla",
+            "service_temp_c": 68,
+            "texture_target": "Jugoso, dorado y tierno",
+            "service_notes": "Filetear en cortes transversales de 1.5 cm al emplatar."
+          },
+          "side": {
+            "title": "Nopales Asados con Orégano y Queso Panela Artesanal",
+            "technique": "roast_bake",
+            "note": "Fibra soluble mucilaginosa que reduce la respuesta glucémica postprandial, asada a la plancha con queso panela tierno.",
+            "ingredients": [
+              {
+                "name": "Nopales tiernos limpios de la granja",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Queso Panela artesanal",
+                "amount": 120,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 20
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 25,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 4.1
+              },
+              {
+                "name": "Orégano seco",
+                "amount": 5,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.8
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Marcado de nopal: Cortar los nopales en tiras anchas; barnizar con aceite VEVO y espolvorear sal de mar y orégano.",
+              "2. Asado en comal: Asar a 170°C durante 3 minutos por lado hasta que cambien a color verde oliva y se evapore la baba superficial.",
+              "3. Dorada de queso: Marcar los cubos de queso panela 1 minuto en la misma plancha.",
+              "4. Ensamble: Servir los nopales calientes coronados con el queso panela asado."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Calor seco en comal que coagula los mucílagos sin deshidratar la pulpa carnosa del nopal.",
+              "flavor_and_aromatics": "Acidez terrosa vegetal con notas rústicas de orégano y la suavidad láctea fresca del panela.",
+              "textural_architecture": "Mordida carnosa y jugosa con contraste de queso panela elástico y tibio.",
+              "critical_control_points": "Plancha muy caliente para evaporar rápidamente la baba natural."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Plancha Seca)",
+            "service_temp_c": 65,
+            "texture_target": "Carnoso, tierno y sin baba",
+            "service_notes": "Acompañar junto a la pechuga de pollo."
           }
         },
         {
@@ -1046,6 +1628,117 @@
             "service_notes": "Montar con espátula ancha para preservar la integridad del lomo."
           },
           "side_dish": {
+            "title": "Té Relajante de Toronjil con Fórmula Reparadora 34Plus®",
+            "technique": "steep_beverage",
+            "note": "Infusión relajante rica en ácido rosmarínico que promueve la relajación del sistema nervioso central antes del sueño profundo.",
+            "ingredients": [
+              {
+                "name": "Hojas de toronjil fresco",
+                "amount": 18,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 3
+              },
+              {
+                "name": "Fórmula Reparadora 34Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 900,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 150
+              }
+            ],
+            "steps": [
+              "1. Infusión: Calentar el agua a 90°C y verter sobre las hojas de toronjil; tapar y reposar 5 minutos.",
+              "2. Filtración y atemperado: Colar y dejar descender la temperatura a 52°C.",
+              "3. Integración celular: Agregar la Fórmula 34Plus® agitando suavemente hasta total homogeneidad.",
+              "4. Servicio: Servir tibio 30 minutos antes de dormir."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Infusión tapada para no perder aldehídos cítricos relajantes. Enfriamiento a 52°C para salvaguardar cromo y prebióticos.",
+              "flavor_and_aromatics": "Aroma cítrico alimonado y balsámico suave que induce calma.",
+              "textural_architecture": "Tisana fluida y reconfortante.",
+              "critical_control_points": "Servir a temperatura tibia no mayor a 55°C."
+            },
+            "broth_volume_ml": 150,
+            "deglaze_agent": "N/A (Infusión)",
+            "service_temp_c": 50,
+            "texture_target": "Líquido traslúcido relajante",
+            "service_notes": "Tomar en silencio."
+          },
+          "main": {
+            "title": "Filete de Robalo Fresco al Horno con Costra de Almendras y Eneldo",
+            "technique": "roast_bake",
+            "note": "Pescado blanco magro de altísima biodisponibilidad cocinado a 180°C bajo un velo crocante de almendras tostadas y mantequilla de eneldo.",
+            "ingredients": [
+              {
+                "name": "Filete de Robalo fresco",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Almendras fileteadas tostadas",
+                "amount": 90,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 15
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 60,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 10
+              },
+              {
+                "name": "Eneldo fresco",
+                "amount": 15,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 2.5
+              },
+              {
+                "name": "Jugo de limón fresco",
+                "amount": 20,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 3.3
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Acondicionamiento de filetes: Disponer los lomos de robalo en charola con papel encerado; sazonar con sal de mar y gotas de limón.",
+              "2. Pomada de costra: Mezclar la mantequilla pomada con el eneldo finamente picado y las almendras fileteadas.",
+              "3. Cobertura y horneado: Extender la pasta de mantequilla y almendras sobre la superficie de cada lomo; hornear a 180°C en convección durante 9 minutos hasta que las almendras doren y el pescado marque 52°C interno.",
+              "4. Pase: Retirar y servir caliente con los jugos de mantequilla derretida de la charola."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Horneado suave a 180°C con calor envolvente. La capa de almendras y mantequilla aísla el filete impidiendo la evaporación hídrica del músculo blanco.",
+              "flavor_and_aromatics": "Delicadeza marina del robalo contrastada con las notas anisadas de eneldo y el tostado crujiente de almendra.",
+              "textural_architecture": "Láminas de pescado blanco que se separan suavemente con el tenedor bajo una costra crujiente dorada.",
+              "critical_control_points": "No exceder los 9-10 minutos de horno para evitar sobrecocción del pescado."
+            },
+            "broth_volume_ml": 20,
+            "deglaze_agent": "Jugos de cocción y mantequilla de eneldo",
+            "service_temp_c": 58,
+            "texture_target": "Láminas sedosas con costra crocante",
+            "service_notes": "Montar con espátula ancha para preservar la integridad del lomo."
+          },
+          "side": {
             "title": "Té Relajante de Toronjil con Fórmula Reparadora 34Plus®",
             "technique": "steep_beverage",
             "note": "Infusión relajante rica en ácido rosmarínico que promueve la relajación del sistema nervioso central antes del sueño profundo.",
@@ -1270,6 +1963,124 @@
             "service_temp_c": 4,
             "texture_target": "Gel elástico brillante",
             "service_notes": "Servir directamente del refrigerador."
+          },
+          "main": {
+            "title": "Huevos Pochados sobre Cama de Yoghurt Griego al Ajo (Çılbır Keto) con Mantequilla al Pimentón",
+            "technique": "poach_and_emulsion",
+            "note": "Adaptación culinaria turca de alta biodisponibilidad: 3 huevos pochados con yema líquida sobre base cremosa de yoghurt de alacena y mantequilla espumosa con pimentón.",
+            "ingredients": [
+              {
+                "name": "Huevos orgánicos de pastoreo",
+                "amount": 18,
+                "unit": "piezas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 3
+              },
+              {
+                "name": "Yoghurt griego natural sin azúcar",
+                "amount": 300,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 50
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 90,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 15
+              },
+              {
+                "name": "Ajo fresco",
+                "amount": 12,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 2
+              },
+              {
+                "name": "Pimentón dulce en polvo",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Cama láctea al ajo: Atemperar el yoghurt griego a 20°C; mezclar con el ajo rallado ultra fino y la sal de mar formando una crema untuosa y repartir en 6 platos hondos.",
+              "2. Pochado de huevos: Calentar agua a 85°C con un chorrito de vinagre; crear un suave remolino y deslizar los huevos individualmente pochando durante 3 minutos exactos hasta que la clara cuaje envolviendo la yema líquida.",
+              "3. Mantequilla noisette al pimentón: Fundir la mantequilla en cacerola pequeña a 130°C hasta que tome notas avellanadas; retirar del fuego, añadir el pimentón dulce emulsionando en caliente sin quemarlo.",
+              "4. Ensamble de autor: Escurrir los huevos pochados y depositarlos con delicadeza sobre el yoghurt; verter la mantequilla roja espumosa sobre los huevos y servir inmediatamente."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Pochado a 85°C que coagula ovoalbúmina (72°C) preservando la vitelina líquida a 60°C. Contraste térmico entre el huevo caliente y el yoghurt tibio.",
+              "flavor_and_aromatics": "Acidez láctica picante de ajo compensada por la grasa suntuosa de la mantequilla noisette y el aroma ahumado del pimentón.",
+              "textural_architecture": "Yema líquida envolvente que se mezcla con el yoghurt espeso y la grasa fundente.",
+              "critical_control_points": "Control del hervor del agua (nunca a borbotones para no desarmar la clara)."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Pochado)",
+            "service_temp_c": 64,
+            "texture_target": "Yema líquida fluyente sobre crema sedosa",
+            "service_notes": "Servir con cuchara para degustar todos los estratos al unísono."
+          },
+          "side": {
+            "title": "Gelatina de Frambuesas Silvestres (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Vehículo de colágeno puro y nootrópicos con notas vibrantes de frambuesa fresca para soporte osteoarticular y concentración mental.",
+            "ingredients": [
+              {
+                "name": "Frambuesas frescas orgánicas",
+                "amount": 120,
+                "unit": "g",
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "per_guest": 20
+              },
+              {
+                "name": "Grenetina natural en polvo",
+                "amount": 42,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 7
+              },
+              {
+                "name": "Fórmula Nootrópica 33Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 720,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 120
+              }
+            ],
+            "steps": [
+              "1. Hidratación bloom: Hidratar la grenetina en 180 ml de agua purificada fría por 8 minutos.",
+              "2. Disolución térmica: Calentar 540 ml de agua a 65°C y disolver la grenetina con batidor de globo.",
+              "3. Incorporación celular: Dejar templar a 42°C; agregar la Fórmula 33Plus® y las frambuesas machacadas rústicamente.",
+              "4. Refrigeración: Moldear y refrigerar a 4°C por 3 horas hasta cuajado elástico."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Inyección nootrópica a 42°C para preservar intactos los adaptógenos.",
+              "flavor_and_aromatics": "Acidez punzante limpia de frambuesa con fondo neutro de colágeno.",
+              "textural_architecture": "Gel firme y translúcido de disolución suave en boca.",
+              "critical_control_points": "Temperatura de disolución no mayor a 45°C al añadir 33Plus®."
+            },
+            "broth_volume_ml": 120,
+            "deglaze_agent": "N/A (Gelatina)",
+            "service_temp_c": 4,
+            "texture_target": "Gel elástico brillante",
+            "service_notes": "Servir directamente del refrigerador."
           }
         },
         {
@@ -1391,6 +2202,117 @@
             "service_notes": "Cubrir con abundante salsa y lluvia de pimienta fresca."
           },
           "side_dish": {
+            "title": "Brócoli al Vapor Gratinado con Queso Gouda y Mantequilla",
+            "technique": "roast_bake",
+            "note": "Ramilletes de brócoli de la granja ricos en sulforafano, cocidos al dente y gratinados con queso gouda fundente.",
+            "ingredients": [
+              {
+                "name": "Brócoli fresco de la granja",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Queso Gouda artesanal",
+                "amount": 120,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 20
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 40,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 6.6
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Vaporización corta: Cocer los ramilletes de brócoli al vapor durante 4 minutos exactos manteniendo verdor vivo y consistencia crujiente.",
+              "2. Aliño y gratinado: Disponer en fuente refractaria; baar con la mantequilla derretida y sal de mar; cubrir con el queso gouda rallado.",
+              "3. Golpe de calor: Gratinar en horno a 220°C con grill superior durante 3 minutos hasta que el queso burbujee y muestre manchas doradas.",
+              "4. Pase: Servir inmediatamente crujiente y fundente."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Vapor de 100°C por 4 min que inactiva mirosinasa mínimamente reteniendo sulforafano activo; gratinado a 220°C por radiación infrarroja.",
+              "flavor_and_aromatics": "Notas sulfurosas suaves y terrosas del brócoli cubiertas por el manto salado y tostado del gouda fundido.",
+              "textural_architecture": "Tallo crocante y cogollo suave bajo una capa elástica dorada de queso.",
+              "critical_control_points": "No sobrepasar los 4 min de vapor para evitar reblandecimiento del brócoli."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Gratinado)",
+            "service_temp_c": 70,
+            "texture_target": "Crocante con cubierta fundente dorada",
+            "service_notes": "Servir como guarnición caliente."
+          },
+          "main": {
+            "title": "Medallones de Sirloin de Res al Sartén en Salsa Cremosa de Pimienta Negra y Leche de Coco",
+            "technique": "saute_and_sear",
+            "note": "Corte de sirloin magro sellado a la perfección en salsa sedosa de leche de coco de alacena emulsionada con pimienta negra recién molida.",
+            "ingredients": [
+              {
+                "name": "Carne molida / Filete de Sirloin magro",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Leche de coco",
+                "amount": 250,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 41.6
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 50,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 8.3
+              },
+              {
+                "name": "Pimienta negra recién molida",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 8,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.3
+              }
+            ],
+            "steps": [
+              "1. Sellado de medallones: Formar medallones compactos de sirloin; sazonar con sal de mar; calentar sartén a 175°C con 20 g de mantequilla y sellar 3 minutos por lado hasta término medio jugoso; reservar en plato caliente.",
+              "2. Tostado de pimienta: En la misma sartén con los jugos de sellado, agregar la pimienta negra machacada tostando 30 segundos para liberar piperina.",
+              "3. Desglasado y emulsión: Verter la leche de coco de alacena y 30 g de mantequilla restante; raspar el fondo con espátula de madera reduciendo a fuego medio 2 minutos hasta consistencia nape densa.",
+              "4. Integración y nappe: Regresar los medallones con sus jugos a la salsa durante 60 segundos; bañar y servir de inmediato."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Desglasado térmico que emulsiona los triglicéridos de cadena media (MCT) de la leche de coco con los residuos solubles de la mioglobina en el fondo de la sartén.",
+              "flavor_and_aromatics": "Pungencia aromática de piperina redondeada por la untuosidad dulce y tropical de la leche de coco.",
+              "textural_architecture": "Carne tierna y firme de res bañada en un terciopelo espeso y caliente.",
+              "critical_control_points": "No hervir la leche de coco a fuego excesivo para evitar disociación de fases grasas."
+            },
+            "broth_volume_ml": 40,
+            "deglaze_agent": "Leche de coco y jugos de res",
+            "service_temp_c": 66,
+            "texture_target": "Medallón tierno cubierto de salsa untuosa",
+            "service_notes": "Cubrir con abundante salsa y lluvia de pimienta fresca."
+          },
+          "side": {
             "title": "Brócoli al Vapor Gratinado con Queso Gouda y Mantequilla",
             "technique": "roast_bake",
             "note": "Ramilletes de brócoli de la granja ricos en sulforafano, cocidos al dente y gratinados con queso gouda fundente.",
@@ -1619,6 +2541,124 @@
             "service_temp_c": 52,
             "texture_target": "Líquido aromático relajante",
             "service_notes": "Tomar a sorbos lentos."
+          },
+          "main": {
+            "title": "Salpicón Rústico de Pechuga de Pavo Desmenuzada con Mayonesa Casera, Aguacate y Cebolla Blanca",
+            "technique": "raw_assembly",
+            "note": "Cena fría ligera que amortiza 150 g de mayonesa y 100 g de cebolla blanca del inventario, con hebras magras de pavo artesanal y aguacate Hass.",
+            "ingredients": [
+              {
+                "name": "Pechuga de pavo artesanal",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Mayonesa",
+                "amount": 150,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 25
+              },
+              {
+                "name": "Aguacate Hass fresco",
+                "amount": 2,
+                "unit": "piezas",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 0.33
+              },
+              {
+                "name": "Cebolla blanca fresca",
+                "amount": 100,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 16.6
+              },
+              {
+                "name": "Cilantro fresco de la granja",
+                "amount": 20,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 3.3
+              },
+              {
+                "name": "Jugo de limón fresco",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 5
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Deshebrado fino: Desmenuzar la pechuga de pavo en hebras longitudinales uniformes.",
+              "2. Desflemado de cebolla: Cortar la cebolla blanca de alacena en plumas muy delgadas y bañar con el jugo de limón y sal durante 4 minutos para mitigar su pungencia.",
+              "3. Emulsión y mezcla: Integrar la mayonesa de alacena con el pavo deshebrado, la cebolla desflemada y el cilantro picado, revolviendo con espátula hasta consistencia cremosa y homogénea.",
+              "4. Pase con aguacate: Cortar el aguacate Hass en cubos medianos e incorporarlo con suavidad al final para mantener su estructura intacta."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Servicio templado-frío (14°C a 16°C). La grasa emulsionada de la mayonesa recubre la fibra muscular del pavo evitando sequedad palatal.",
+              "flavor_and_aromatics": "Fresco, ligeramente ácido por el limón y la cebolla, con la riqueza aterciopelada de la mayonesa y el aguacate.",
+              "textural_architecture": "Hebras tiernas de pavo envueltas en crema ligera salpicadas por la mantecosidad del aguacate.",
+              "critical_control_points": "Integrar el aguacate al final con movimientos envolventes."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Ensalada Templada)",
+            "service_temp_c": 15,
+            "texture_target": "Cremoso, fibroso y tierno",
+            "service_notes": "Servir en platos llanos decorado con hojas de cilantro."
+          },
+          "side": {
+            "title": "Infusión de Manzanilla con Fórmula Reparadora 34Plus®",
+            "technique": "steep_beverage",
+            "note": "Sedante digestivo natural rico en apigenina que promueve la actividad del receptor GABA-A y prepara para el descanso reparador.",
+            "ingredients": [
+              {
+                "name": "Flores de manzanilla seca",
+                "amount": 18,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 3
+              },
+              {
+                "name": "Fórmula Reparadora 34Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 900,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 150
+              }
+            ],
+            "steps": [
+              "1. Infusión: Hervir agua a 90°C; infusionar la manzanilla durante 5 minutos tapada.",
+              "2. Colado y atemperado: Colar sobre jarra y dejar reposar hasta descender a 52°C.",
+              "3. Dosis celular: Agregar los 30 g de Fórmula 34Plus® disolviendo con agitador.",
+              "4. Servicio: Servir caliente 40 minutos antes de dormir."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Temperatura de disolución a 52°C para blindar minerales orgánicos y fibras prebióticas.",
+              "flavor_and_aromatics": "Notas florales dulces y cálidas de manzanilla.",
+              "textural_architecture": "Líquido traslúcido suave.",
+              "critical_control_points": "No hervir la manzanilla en ebullición continua."
+            },
+            "broth_volume_ml": 150,
+            "deglaze_agent": "N/A (Infusión)",
+            "service_temp_c": 52,
+            "texture_target": "Líquido aromático relajante",
+            "service_notes": "Tomar a sorbos lentos."
           }
         }
       ]
@@ -1743,6 +2783,110 @@
             "service_notes": "Servir inmediatamente en platos calientes."
           },
           "side_dish": {
+            "title": "Infusión Nootrópica de Té Matcha con Fórmula 33Plus®",
+            "technique": "steep_beverage",
+            "note": "Bebida bioactiva matutina con L-Teanina natural del matcha ceremonial y la formulación nootrópica 33Plus® para concentración sostenida sin picos de cortisol.",
+            "ingredients": [
+              {
+                "name": "Té matcha ceremonial en polvo",
+                "amount": 12,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 2
+              },
+              {
+                "name": "Fórmula Nootrópica 33Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 720,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 120
+              }
+            ],
+            "steps": [
+              "1. Batido chasen: Tamizar el matcha en cuenco; verter 120 ml de agua a 70°C y batir vigorosamente con batidor de bambú formando espuma densa esmeralda.",
+              "2. Dilución y templado: Añadir el resto del agua atemperando el líquido a 45°C.",
+              "3. Activación: Incorporar la Fórmula 33Plus® agitando suavemente hasta completa dispersión.",
+              "4. Pase: Servir espumoso en tazones de cerámica."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Agua a 70°C para no desnaturalizar las catequinas del matcha; templado a 45°C previo a añadir 33Plus®.",
+              "flavor_and_aromatics": "Umami vegetal denso con amargor placentero y textura espumosa aterciopelada.",
+              "textural_architecture": "Emulsión líquida microespumosa.",
+              "critical_control_points": "Batir en zigzag rápido hasta lograr microburbujas uniformes."
+            },
+            "broth_volume_ml": 120,
+            "deglaze_agent": "N/A (Batido)",
+            "service_temp_c": 45,
+            "texture_target": "Espuma verde densa aterciopelada",
+            "service_notes": "Consumir recién batido."
+          },
+          "main": {
+            "title": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO, Sal de Mar y Espárragos Verdes",
+            "technique": "saute_and_sear",
+            "note": "Huevos estrellados clásicos en sartén de hierro colado: puntilla crocante dorada en aceite de oliva VEVO, yema fluida y espárragos salteados.",
+            "ingredients": [
+              {
+                "name": "Huevos orgánicos de pastoreo",
+                "amount": 18,
+                "unit": "piezas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 3
+              },
+              {
+                "name": "Espárragos verdes frescos de la granja",
+                "amount": 360,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 60
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 50,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 8.3
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 40,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 6.6
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Salteo de espárragos: En sartén de hierro con 20 ml de VEVO, saltear las puntas de espárragos 3 minutos hasta que doren ligero; retirar y reservar.",
+              "2. Fritura suave de huevos: Agregar el resto de VEVO y la mantequilla calentando a 160°C; cascar los huevos con cuidado de 3 en 3.",
+              "3. Puntilla y arrosé: Bañar las claras con la grasa caliente para que la puntilla dore y la clara superior cuaje mientras la yema permanece completamente líquida y brillante.",
+              "4. Emplatado: Servir 3 huevos por plato, salpicar con sal de mar en escamas y colocar los espárragos tibios a un costado."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Gradiente térmico en hierro: base de clara caramelizada a 160°C (puntilla) con yema atemperada a 58°C para máxima biodisponibilidad de colina.",
+              "flavor_and_aromatics": "Sabor rico y graso con notas frutales de VEVO y salinidad crujiente de sal de mar en escamas.",
+              "textural_architecture": "Borde crocante quebradizo con centro líquido cremoso y tallo vegetal turgente.",
+              "critical_control_points": "Control de temperatura para no romper la membrana de la yema."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Sartén Hierro)",
+            "service_temp_c": 68,
+            "texture_target": "Puntilla crujiente con yema fluida",
+            "service_notes": "Servir inmediatamente en platos calientes."
+          },
+          "side": {
             "title": "Infusión Nootrópica de Té Matcha con Fórmula 33Plus®",
             "technique": "steep_beverage",
             "note": "Bebida bioactiva matutina con L-Teanina natural del matcha ceremonial y la formulación nootrópica 33Plus® para concentración sostenida sin picos de cortisol.",
@@ -1978,6 +3122,130 @@
             "service_temp_c": 65,
             "texture_target": "Al dente crujiente",
             "service_notes": "Acompañar junto al filete de salmón."
+          },
+          "main": {
+            "title": "Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Salsa Emulsionada de Mayonesa y Eneldo",
+            "technique": "saute_and_sear",
+            "note": "Salmón rosado rico en astaxantina y Omega-3 con costra crujiente de sésamo, acompañado de salsa emulsionada que amortiza 150 g de mayonesa de alacena.",
+            "ingredients": [
+              {
+                "name": "Filete de Salmón fresco con piel",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Semillas de sésamo",
+                "amount": 60,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 10
+              },
+              {
+                "name": "Mayonesa",
+                "amount": 150,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 25
+              },
+              {
+                "name": "Eneldo fresco",
+                "amount": 15,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 2.5
+              },
+              {
+                "name": "Jugo de limón fresco",
+                "amount": 25,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 4.1
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 5
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Costra de sésamo: Presionar la cara superior de los lomos de salmón sobre las semillas de ajonjolí para crear un manto uniforme; sazonar con sal de mar.",
+              "2. Sellado de precisión: Calentar sartén amplia con aceite VEVO a 160°C; colocar el salmón con la piel hacia abajo durante 4 minutos hasta lograr piel hipercrocante; voltear con cuidado sobre el sésamo durante 2 minutos hasta dorar las semillas manteniendo el centro a 50°C.",
+              "3. Emulsión de eneldo: Mezclar enérgicamente la mayonesa de alacena con el eneldo picado fino, jugo de limón y una pizca de sal marina.",
+              "4. Emplatado: Servir el salmón crujiente acompañado de una generosa cucharada de salsa emulsionada de mayonesa y eneldo."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Cocción asimétrica (4 min piel / 2 min costra) que protege la grasa miocárdica de 50°C en el centro, evitando exudación de albúmina blanca.",
+              "flavor_and_aromatics": "Grasa marina profunda con el tostado de sésamo y el frescor anisado y cítrico de la emulsión de eneldo.",
+              "textural_architecture": "Piel crocante y semillas tostadas con lascas tiernas y jugosas de salmón que se funden al contacto.",
+              "critical_control_points": "Fuego moderado al dorar el sésamo para evitar que se amargue."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Costra Sartén)",
+            "service_temp_c": 52,
+            "texture_target": "Láminas sedosas con doble costra crujiente",
+            "service_notes": "Montar con la piel hacia arriba para que no pierda su textura crocante."
+          },
+          "side": {
+            "title": "Ejotes Salteados en Mantequilla de Pastoreo con Almendras Tostadas",
+            "technique": "saute_and_sear",
+            "note": "Ejotes frescos de la granja salteados al dente en mantequilla con lluvia crujiente de láminas de almendra.",
+            "ingredients": [
+              {
+                "name": "Ejotes verdes tiernos de la granja",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 50,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 8.3
+              },
+              {
+                "name": "Almendras fileteadas tostadas",
+                "amount": 45,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 7.5
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Blanqueado: Sumergir los ejotes en agua hirviendo con sal durante 2.5 minutos; enfriar en agua con hielo y secar.",
+              "2. Salteo: Fundir la mantequilla a 130°C en sartén; incorporar los ejotes salteando a fuego vivo 2 minutos.",
+              "3. Pase: Servir calientes coronados con las almendras tostadas crujientes."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Choque térmico que bloquea la pérdida de clorofila. Salteo rápido en medio lipídico caliente.",
+              "flavor_and_aromatics": "Dulzura vegetal y mantequilla avellanada con el tostado seco de la almendra.",
+              "textural_architecture": "Mordida turgente y elástica con láminas quebradizas.",
+              "critical_control_points": "Secar perfectamente los ejotes tras el hielo para no enfriar la mantequilla."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "Mantequilla derretida",
+            "service_temp_c": 65,
+            "texture_target": "Al dente crujiente",
+            "service_notes": "Acompañar junto al filete de salmón."
           }
         },
         {
@@ -2162,6 +3430,130 @@
             "service_temp_c": 50,
             "texture_target": "Infusión traslúcida aromática",
             "service_notes": "Beber antes de apagar las luces."
+          },
+          "main": {
+            "title": "Tostadas de Hoja de Lechuga con Sardinas Guisadas al Tomate Verde y Cilantro",
+            "technique": "saute_and_sear",
+            "note": "Taco-wrap fresco que amortiza la segunda lata de sardinas y 360 g de tomate verde de alacena, servido en hojas crujientes de lechuga orejona viva con aguacate.",
+            "ingredients": [
+              {
+                "name": "Sardinas enlatadas",
+                "amount": 1,
+                "unit": "latas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 0.16
+              },
+              {
+                "name": "Hojas de lechuga orejona viva",
+                "amount": 240,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 40
+              },
+              {
+                "name": "Tomate verde fresco",
+                "amount": 360,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 60
+              },
+              {
+                "name": "Aguacate Hass fresco",
+                "amount": 2,
+                "unit": "piezas",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 0.33
+              },
+              {
+                "name": "Cebolla blanca fresca",
+                "amount": 80,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 13.3
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 25,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 4.1
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Guisado verde: Tatemar los tomates verdes y la cebolla blanca; procesar rústicamente con sal; calentar el aceite VEVO en sartén y sofreír la salsa 3 minutos.",
+              "2. Integración de sardinas: Añadir los lomos de sardina escurridos; salsear con cuidado sin romperlos durante 2 minutos a fuego bajo.",
+              "3. Montaje en hoja viva: Disponer las hojas de lechuga orejona fresca y lavada a modo de barcas; rellenar con las sardinas guisadas tibias y decorar con láminas de aguacate Hass."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Contraste térmico: guisado tibio (50°C) sobre hoja de lechuga fresca crujiente (10°C). La hoja aísla y aporta humedad refrescante.",
+              "flavor_and_aromatics": "Intensidad umami de sardina mitigada por la acidez del tomate verde y la frescura acuosa de la lechuga.",
+              "textural_architecture": "Crocante acuoso de lechuga seguido del guisado tierno y la cremosidad del aguacate.",
+              "critical_control_points": "Montar al momento del servicio para que la lechuga no pierda turgencia."
+            },
+            "broth_volume_ml": 40,
+            "deglaze_agent": "Salsa de tomate verde",
+            "service_temp_c": 50,
+            "texture_target": "Envoltura crujiente con relleno suave",
+            "service_notes": "Comer con las manos a modo de taco."
+          },
+          "side": {
+            "title": "Té Caliente de Lavanda y Azahar con Fórmula Reparadora 34Plus®",
+            "technique": "steep_beverage",
+            "note": "Combinación floral sedante rica en linalol para regular el ritmo circadiano y apoyar la regeneración celular durante la noche.",
+            "ingredients": [
+              {
+                "name": "Flores de lavanda secas",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Flores de azahar",
+                "amount": 8,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.3
+              },
+              {
+                "name": "Fórmula Reparadora 34Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 900,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 150
+              }
+            ],
+            "steps": [
+              "1. Infusión: Calentar el agua a 88°C; verter sobre lavanda y azahar tapando durante 5 minutos.",
+              "2. Colado y templado: Filtrar y dejar enfriar hasta 52°C.",
+              "3. Dosis biotecnológica: Incorporar la Fórmula 34Plus® agitando suavemente.",
+              "4. Pase: Servir en tazas tibias."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Temperatura moderada para evitar la extracción de taninos amargos de lavanda.",
+              "flavor_and_aromatics": "Fondo floral seductor, relajante y profundamente aromático.",
+              "textural_architecture": "Infusión traslúcida y reconfortante.",
+              "critical_control_points": "No exceder 5 minutos de infusión para evitar amargor."
+            },
+            "broth_volume_ml": 150,
+            "deglaze_agent": "N/A (Infusión)",
+            "service_temp_c": 50,
+            "texture_target": "Infusión traslúcida aromática",
+            "service_notes": "Beber antes de apagar las luces."
           }
         }
       ]
@@ -2293,6 +3685,117 @@
             "service_notes": "Servir en platos hondos calientes."
           },
           "side_dish": {
+            "title": "Gelatina de Moras de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Vehículo de colágeno y adaptógenos que aporta soporte cognitivo y articular con notas silvestres de mora.",
+            "ingredients": [
+              {
+                "name": "Moras frescas",
+                "amount": 120,
+                "unit": "g",
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "per_guest": 20
+              },
+              {
+                "name": "Grenetina natural en polvo",
+                "amount": 42,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 7
+              },
+              {
+                "name": "Fórmula Nootrópica 33Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 720,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 120
+              }
+            ],
+            "steps": [
+              "1. Bloom: Hidratar la grenetina en agua fría durante 8 minutos.",
+              "2. Disolución: Disolver a 65°C en el agua caliente restante.",
+              "3. Templado: Bajar la temperatura a 42°C; agregar 33Plus® y las moras trituradas rústicamente.",
+              "4. Cuajado: Refrigerar a 4°C por 3 horas."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Control de temperatura a 42°C para preservar los nootrópicos.",
+              "flavor_and_aromatics": "Fondo silvestre terroso y refrescante.",
+              "textural_architecture": "Gel firme y elástico.",
+              "critical_control_points": "Refrigeración continua a 4°C."
+            },
+            "broth_volume_ml": 120,
+            "deglaze_agent": "N/A (Gelatina)",
+            "service_temp_c": 4,
+            "texture_target": "Gel elástico cristalino",
+            "service_notes": "Mantener refrigerado hasta el pase."
+          },
+          "main": {
+            "title": "Huevos Revueltos Rústicos con Machaca de Res y Cebolla Blanca Salteada",
+            "technique": "saute_and_sear",
+            "note": "Desayuno de alta potencia con carne seca magra artesanal deshebrada, cebolla blanca de alacena salteada y 18 huevos de pastoreo.",
+            "ingredients": [
+              {
+                "name": "Huevos orgánicos de pastoreo",
+                "amount": 18,
+                "unit": "piezas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 3
+              },
+              {
+                "name": "Carne seca machaca artesanal de res",
+                "amount": 180,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 30
+              },
+              {
+                "name": "Cebolla blanca fresca",
+                "amount": 120,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 20
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 80,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 13.3
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Rehidratación y tostado: En sartén con 30 g de mantequilla a 140°C, saltear la cebolla blanca picada fina 2 minutos; incorporar la machaca deshebrada tostándola ligeramente para que absorba la grasa láctea.",
+              "2. Cuajado suave: Cascar los huevos, batir ligeramente con la sal y verter en la sartén junto con los 50 g de mantequilla restantes.",
+              "3. Fuego mínimo: Cocinar a fuego lento (110°C) plegando en ondas suaves hasta obtener una cuajada húmeda y tierna que envuelve la machaca durante 3 minutos.",
+              "4. Pase: Retirar del calor y servir de inmediato."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Tostado breve de la machaca que fija aromas cárnicos curados, seguido de cuajado a 68°C donde el huevo rehidrata las fibras de la carne seca.",
+              "flavor_and_aromatics": "Salinidad cárnica profunda concentrada con el dulzor caramelizado de la cebolla y la riqueza láctea.",
+              "textural_architecture": "Huevos cremosos jugosos con hebras tiernas y masticables de machaca.",
+              "critical_control_points": "No salar en exceso porque la machaca ya contiene salinidad natural concentrada."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Sartén)",
+            "service_temp_c": 66,
+            "texture_target": "Cuajada cremosa con hebras tiernas",
+            "service_notes": "Servir en platos hondos calientes."
+          },
+          "side": {
             "title": "Gelatina de Moras de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
             "technique": "gelatin_molding",
             "note": "Vehículo de colágeno y adaptógenos que aporta soporte cognitivo y articular con notas silvestres de mora.",
@@ -2536,6 +4039,131 @@
             "service_temp_c": 65,
             "texture_target": "Tierno jugoso con costra de queso",
             "service_notes": "Guarnición caliente al lado de la arrachera."
+          },
+          "main": {
+            "title": "Arrachera de Res Magra a la Parrilla con Mantequilla de Ajo y Chimichurri Fresco",
+            "technique": "saute_and_sear",
+            "note": "Corte parrillero de arrachera con caramelización intensa a fuego vivo, bañado en mantequilla de ajo y chimichurri aromático keto.",
+            "ingredients": [
+              {
+                "name": "Corte magro de Arrachera de res",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 70,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 11.6
+              },
+              {
+                "name": "Ajo fresco",
+                "amount": 15,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 2.5
+              },
+              {
+                "name": "Cilantro fresco de la granja",
+                "amount": 30,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 5
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 5
+              },
+              {
+                "name": "Vinagre de manzana o balsámico",
+                "amount": 15,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 2.5
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 8,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.3
+              }
+            ],
+            "steps": [
+              "1. Chimichurri keto: Picar el cilantro y ajo ultra fino; mezclar con el aceite VEVO, vinagre y sal de mar en cuenco.",
+              "2. Sellado a la parrilla: Secar la arrachera; colocar sobre parrilla de hierro a 190°C durante 2.5 minutos por lado logrando costra Maillard sin secar el centro.",
+              "3. Reposo y baño: Retirar la carne a tabla tibia; baar con la mantequilla de pastoreo fundida con ajo.",
+              "4. Trinche y servicio: Cortar contra la fibra en láminas de 1 cm y salsear con el chimichurri fresco."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Calor radiante extremo (190°C) que sella la periferia muscular rápidamente manteniendo el interior tierno (54°C).",
+              "flavor_and_aromatics": "Umami cárnico potente con la acidez vivaz del vinagre y los aceites aromáticos de cilantro y ajo.",
+              "textural_architecture": "Carne fibrosa tierna y muy jugosa con salsa herbácea fluida.",
+              "critical_control_points": "Corte obligatorio contra la veta muscular para máxima terneza."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "Mantequilla de ajo y jugos de carne",
+            "service_temp_c": 62,
+            "texture_target": "Carne tierna y jugosa con costra ahumada",
+            "service_notes": "Montar en tabla de madera o plato caliente."
+          },
+          "side": {
+            "title": "Calabacitas Verdes Asadas con Queso Parmesano",
+            "technique": "roast_bake",
+            "note": "Rodajas gruesas de calabacita asadas al comal con aceite VEVO y gratinadas con láminas de parmesano madurado.",
+            "ingredients": [
+              {
+                "name": "Calabacitas verdes tiernas de la granja",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Queso Parmesano artesanal",
+                "amount": 60,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 10
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 5
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Marcado: Cortar las calabacitas en rodajas oblicuas de 1 cm; barnizar con aceite VEVO y salar.",
+              "2. Asado en plancha: Marcar a 170°C 2 minutos por lado hasta dorar.",
+              "3. Gratinado rápido: Colocar las láminas de parmesano encima en el último minuto para que se fundan.",
+              "4. Pase: Servir inmediatamente calientes."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Calor rápido que carameliza azúcares superficiales manteniendo la frescura jugosa del centro.",
+              "flavor_and_aromatics": "Sabor vegetal dulce con la salinidad umami profunda del parmesano.",
+              "textural_architecture": "Centro tierno y jugoso con queso fundente.",
+              "critical_control_points": "No dejar que las calabacitas pierdan líquido en exceso."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Plancha)",
+            "service_temp_c": 65,
+            "texture_target": "Tierno jugoso con costra de queso",
+            "service_notes": "Guarnición caliente al lado de la arrachera."
           }
         },
         {
@@ -2671,6 +4299,124 @@
             "service_notes": "Servir en platos hondos calientes."
           },
           "side_dish": {
+            "title": "Infusión Digestiva de Menta y Toronjil con Fórmula 34Plus®",
+            "technique": "steep_beverage",
+            "note": "Cierre crepuscular digestivo que combina mentol y ácido rosmarínico para relajar el músculo liso gástrico y promover el descanso profundo.",
+            "ingredients": [
+              {
+                "name": "Hojas de menta fresca",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Hojas de toronjil fresco",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Fórmula Reparadora 34Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 900,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 150
+              }
+            ],
+            "steps": [
+              "1. Infusión: Calentar el agua a 90°C; infusionar menta y toronjil tapado durante 5 minutos.",
+              "2. Filtrado: Colar sobre jarra térmica.",
+              "3. Integración celular: Atemperar a 52°C y disolver la Fórmula 34Plus®.",
+              "4. Pase: Servir tibio 30 minutos antes de dormir."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Infusión cerrada para evitar pérdida de aceites volátiles.",
+              "flavor_and_aromatics": "Fresco, mentolado y balsámico suave.",
+              "textural_architecture": "Tisana fluida reconfortante.",
+              "critical_control_points": "Servir a 50°C para máximo confort nocturno."
+            },
+            "broth_volume_ml": 150,
+            "deglaze_agent": "N/A (Infusión)",
+            "service_temp_c": 50,
+            "texture_target": "Líquido aromático calmante",
+            "service_notes": "Tomar despacio antes de acostarse."
+          },
+          "main": {
+            "title": "Pechuga de Pavo en Cubos al Sartén con Curry Suave en Leche de Coco Cremosa",
+            "technique": "saute_and_sear",
+            "note": "Guisado reconfortante que amortiza los restantes 250 ml de leche de coco y 80 g de cebolla blanca de alacena, aromatizado con cúrcuma y curry suave.",
+            "ingredients": [
+              {
+                "name": "Pechuga de pavo artesanal",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Leche de coco",
+                "amount": 250,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 41.6
+              },
+              {
+                "name": "Cebolla blanca fresca",
+                "amount": 80,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 13.3
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 50,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 8.3
+              },
+              {
+                "name": "Curry suave en polvo / Cúrcuma",
+                "amount": 12,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 2
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Sellado de pavo: Cortar la pechuga de pavo en cubos de 2 cm; sazonar con sal de mar; sellar a fuego vivo en 20 g de mantequilla a 160°C durante 3 minutos dorando la superficie; reservar.",
+              "2. Sofrito aromático: En la misma sartén con 30 g de mantequilla, pochar la cebolla blanca picada fina durante 3 minutos; agregar el curry suave tostando 30 segundos.",
+              "3. Reducción en leche de coco: Verter la leche de coco de alacena raspanado el fondo; incorporar los cubos de pavo con sus jugos y cocinar a hervor lento (85°C) durante 4 minutos hasta que la salsa espese.",
+              "4. Pase: Servir caliente bañado en la salsa dorada aromática."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Cocción suave en medio lipídico rico en MCT (leche de coco y mantequilla) que mantiene el pavo jugoso sin secar sus fibras.",
+              "flavor_and_aromatics": "Complejidad exótica de cúrcuma y especias templadas suavizada por la dulzura grasa del coco y la cebolla.",
+              "textural_architecture": "Cubos tiernos y carnosos de pavo envueltos en terciopelo espeso aromático.",
+              "critical_control_points": "No hervir a borbotones para que la leche de coco no se separe."
+            },
+            "broth_volume_ml": 50,
+            "deglaze_agent": "Leche de coco cremosa",
+            "service_temp_c": 65,
+            "texture_target": "Cubos tiernos con salsa densa",
+            "service_notes": "Servir en platos hondos calientes."
+          },
+          "side": {
             "title": "Infusión Digestiva de Menta y Toronjil con Fórmula 34Plus®",
             "technique": "steep_beverage",
             "note": "Cierre crepuscular digestivo que combina mentol y ácido rosmarínico para relajar el músculo liso gástrico y promover el descanso profundo.",
@@ -2888,6 +4634,110 @@
             "service_temp_c": 45,
             "texture_target": "Líquido limpio vegetal",
             "service_notes": "Consumir tibio por la mañana."
+          },
+          "main": {
+            "title": "Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Panela y Finas Hierbas",
+            "technique": "saute_and_sear",
+            "note": "Técnica japonesa de capas finas enrolladas en sartén rectangular con mantequilla de pastoreo, queso panela tierno y finas hierbas.",
+            "ingredients": [
+              {
+                "name": "Huevos orgánicos de pastoreo",
+                "amount": 18,
+                "unit": "piezas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 3
+              },
+              {
+                "name": "Queso Panela artesanal",
+                "amount": 180,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 30
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 80,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 13.3
+              },
+              {
+                "name": "Cebollín fresco de la granja",
+                "amount": 25,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 4.1
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Batido homogéneo: Cascar los 18 huevos; sazonar con sal de mar y cebollín picado ultra fino; batir con varilla sin espumar.",
+              "2. Capas laminadas: En sartén rectangular barnizada con mantequilla a 125°C, verter un cucharón de huevo extendiéndolo; cuando cuaje suavemente, colocar bastones de queso panela y enrollar hacia el extremo.",
+              "3. Construcción del rollo: Barnizar el espacio libre con mantequilla, verter otro cucharón permitiendo que penetre bajo el rollo previo y volver a enrollar repitiendo 4 veces hasta formar un rollo grueso y tierno.",
+              "4. Porcionado y pase: Retirar sobre esterilla, dejar templar 1 minuto y cortar en rodajas transversales uniformes de 2 cm mostrando el espiral de queso."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Cocción por capas milimétricas a 120°C que garantiza retención de humedad interna y textura homogénea tierna sin bordes secos.",
+              "flavor_and_aromatics": "Dulzura natural del huevo emulsionado con mantequilla, notas frescas de cebollín y el lácteo tierno del panela.",
+              "textural_architecture": "Hojaldrado esponjoso y húmedo de huevo con centro suave y elástico de queso.",
+              "critical_control_points": "Fuego estrictamente medio-bajo para no dorar en exceso las capas."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Sartén Tamagoyaki)",
+            "service_temp_c": 64,
+            "texture_target": "Esponjoso, en capas húmedas y fundente",
+            "service_notes": "Servir 3 rodajas por comensal sobre plato tibio."
+          },
+          "side": {
+            "title": "Té Verde con Fórmula Nootrópica 33Plus®",
+            "technique": "steep_beverage",
+            "note": "Inyección nootrópica matutina con antioxidantes y adaptógenos para activar el circuito dopaminérgico y la claridad mental.",
+            "ingredients": [
+              {
+                "name": "Té verde Sencha en hebras",
+                "amount": 15,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 2.5
+              },
+              {
+                "name": "Fórmula Nootrópica 33Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 720,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 120
+              }
+            ],
+            "steps": [
+              "1. Infusión suave: Calentar agua a 78°C; infusionar el té verde durante 2 minutos.",
+              "2. Colado: Filtrar el líquido y templar a 45°C.",
+              "3. Dosis celular: Integrar la Fórmula 33Plus® disolviendo con suavidad.",
+              "4. Pase: Servir en tazas precalentadas."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Temperatura controlada a 78°C para evitar sabor astringente.",
+              "flavor_and_aromatics": "Fresco, herbáceo limpio y vigorizante.",
+              "textural_architecture": "Líquido traslúcido ligero.",
+              "critical_control_points": "No sobreinfundir las hebras."
+            },
+            "broth_volume_ml": 120,
+            "deglaze_agent": "N/A (Infusión)",
+            "service_temp_c": 45,
+            "texture_target": "Líquido limpio vegetal",
+            "service_notes": "Consumir tibio por la mañana."
           }
         },
         {
@@ -3023,6 +4873,123 @@
             "service_notes": "Servir las láminas en abanico sobre el plato."
           },
           "side_dish": {
+            "title": "Espárragos Verdes Salteados al Sartén en Mantequilla Clarificada",
+            "technique": "saute_and_sear",
+            "note": "Espárragos tiernos salteados rápidamente en mantequilla clarificada con sal marina.",
+            "ingredients": [
+              {
+                "name": "Espárragos verdes frescos de la granja",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 50,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 8.3
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Despunte: Quebrar la base leñosa de los espárragos.",
+              "2. Salteo vivo: En sartén amplia con mantequilla fundida a 150°C, saltear los espárragos 4 minutos rotándolos.",
+              "3. Pase: Sazonar con sal de mar y servir al dente."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Cocción corta en medio lipídico caliente que mantiene la estructura péctica firme.",
+              "flavor_and_aromatics": "Amargor vegetal limpio envuelto en mantequilla avellanada.",
+              "textural_architecture": "Crocante elástico y jugoso.",
+              "critical_control_points": "Mantener verde esmeralda brillante."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "Mantequilla derretida",
+            "service_temp_c": 65,
+            "texture_target": "Al dente crujiente",
+            "service_notes": "Acompañar al atún sellado."
+          },
+          "main": {
+            "title": "Medallón de Atún Fresco Sellado a Fuego Vivo con Costra de Sésamo y Guacamole Rústico",
+            "technique": "saute_and_sear",
+            "note": "Atún fresco premium sellado en plancha de hierro a 200°C manteniendo centro rojo tataki (45°C), con costra de sésamo y guacamole rústico al limón.",
+            "ingredients": [
+              {
+                "name": "Medallón de Atún fresco",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Semillas de sésamo",
+                "amount": 60,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 10
+              },
+              {
+                "name": "Aguacate Hass fresco",
+                "amount": 3,
+                "unit": "piezas",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 0.5
+              },
+              {
+                "name": "Jugo de limón fresco",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 5
+              },
+              {
+                "name": "Cilantro fresco de la granja",
+                "amount": 20,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 3.3
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 30,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 5
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 8,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.3
+              }
+            ],
+            "steps": [
+              "1. Guacamole rústico: Machacar la pulpa de aguacate en molcajete con cilantro, jugo de limón, sal de mar y un hilo de VEVO dejando tropezones rústicos.",
+              "2. Costra de atún: Empanizar los bordes y caras del atún sobre las semillas de sésamo sazonadas con sal de mar.",
+              "3. Sellado flash: Calentar sartén de hierro colado a 200°C con 15 ml de VEVO; sellar los medallones 45 segundos por lado hasta tostar el sésamo manteniendo el interior crudo tataki.",
+              "4. Corte y emplatado: Dejar reposar 1 minuto; cortar en láminas oblicuas de 1.5 cm y acompañar con una generosa porción de guacamole."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Choque térmico ultra rápido a 200°C que carameliza el sésamo y la proteína superficial dejando el centro tataki a 42°C, blindando los ácidos Omega-3.",
+              "flavor_and_aromatics": "Umami puro marino con la riqueza tostada del sésamo y la frescura mantecosa ácida del guacamole.",
+              "textural_architecture": "Costra crujiente crocante con corazón sedoso fundente que se disuelve en boca.",
+              "critical_control_points": "No exceder 60 segundos por lado para no sobrecocer el atún."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Tataki en Plancha)",
+            "service_temp_c": 45,
+            "texture_target": "Costra crujiente con centro tataki sedoso",
+            "service_notes": "Servir las láminas en abanico sobre el plato."
+          },
+          "side": {
             "title": "Espárragos Verdes Salteados al Sartén en Mantequilla Clarificada",
             "technique": "saute_and_sear",
             "note": "Espárragos tiernos salteados rápidamente en mantequilla clarificada con sal marina.",
@@ -3258,6 +5225,131 @@
             "service_temp_c": 50,
             "texture_target": "Líquido relajante aromático",
             "service_notes": "Beber lentamente en la cama."
+          },
+          "main": {
+            "title": "Pechuga de Pollo Desmenuzada al Sartén con Mayonesa al Ajo y Aguacate Hass",
+            "technique": "saute_and_sear",
+            "note": "Cena reconfortante que amortiza 150 g de mayonesa de alacena (completando 450 g consumidos de los 500 g de stock), pollo tierno y aguacate fresco.",
+            "ingredients": [
+              {
+                "name": "Pechuga de pollo orgánica",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Mayonesa",
+                "amount": 150,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 25
+              },
+              {
+                "name": "Aguacate Hass fresco",
+                "amount": 2,
+                "unit": "piezas",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 0.33
+              },
+              {
+                "name": "Ajo fresco",
+                "amount": 10,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 40,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 6.6
+              },
+              {
+                "name": "Jugo de limón fresco",
+                "amount": 20,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 3.3
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Salteo de pollo: Desmenuzar la pechuga de pollo cocida; calentar sartén con mantequilla a 140°C y saltear el pollo con el ajo rallado durante 3 minutos hasta que dore ligero.",
+              "2. Aliño tibio: Retirar del fuego; incorporar la mayonesa de alacena, el jugo de limón y la sal de mar revolviendo suavemente para formar una crema untuosa caliente.",
+              "3. Pase con aguacate: Cortar el aguacate Hass en dados e integrarlo al final.",
+              "4. Emplatado: Servir inmediatamente cremoso y templado."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Incorporación de la mayonesa con el fuego apagado (60°C) para evitar que la emulsión de huevo y aceite se rompa en grasa líquida.",
+              "flavor_and_aromatics": "Suavidad láctea del pollo y mantequilla con el toque profundo de ajo asado y la cremosidad del aguacate.",
+              "textural_architecture": "Hebras tiernas envueltas en velo sedoso con tropezones fundentes de aguacate.",
+              "critical_control_points": "No someter la mayonesa a calor directo extremo."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "Jugo de limón y mantequilla",
+            "service_temp_c": 58,
+            "texture_target": "Cremoso untuoso tibio",
+            "service_notes": "Servir en platos hondos calientes."
+          },
+          "side": {
+            "title": "Infusión de Manzanilla y Melisa con Fórmula Reparadora 34Plus®",
+            "technique": "steep_beverage",
+            "note": "Tisana sedante para regular neurotransmisores inhibidores y apoyar la digestión antes de dormir.",
+            "ingredients": [
+              {
+                "name": "Flores de manzanilla seca",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Hojas de toronjil fresco",
+                "amount": 10,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1.6
+              },
+              {
+                "name": "Fórmula Reparadora 34Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 900,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 150
+              }
+            ],
+            "steps": [
+              "1. Infusión: Infusionar las hierbas en agua a 90°C por 5 minutos.",
+              "2. Filtrado y atemperado: Colar y dejar descender a 52°C.",
+              "3. Dosis biotecnológica: Incorporar la Fórmula 34Plus® agitando suavemente.",
+              "4. Pase: Servir caliente 40 minutos antes del descanso."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Enfriamiento controlado para resguardar componentes activos.",
+              "flavor_and_aromatics": "Fondo floral cálido reconfortante.",
+              "textural_architecture": "Líquido transparente suave.",
+              "critical_control_points": "Servir a 50°C."
+            },
+            "broth_volume_ml": 150,
+            "deglaze_agent": "N/A (Infusión)",
+            "service_temp_c": 50,
+            "texture_target": "Líquido relajante aromático",
+            "service_notes": "Beber lentamente en la cama."
           }
         }
       ]
@@ -3396,6 +5488,131 @@
             "service_notes": "Servir sobre bajo-plato de madera con advertencia térmica."
           },
           "side_dish": {
+            "title": "Gelatina de Frutos del Bosque (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Vehículo de colágeno puro y adaptógenos nootrópicos con pulpa natural de frutos rojos para sostener el vigor del sábado.",
+            "ingredients": [
+              {
+                "name": "Moras frescas",
+                "amount": 60,
+                "unit": "g",
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "per_guest": 10
+              },
+              {
+                "name": "Fresas frescas",
+                "amount": 60,
+                "unit": "g",
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "per_guest": 10
+              },
+              {
+                "name": "Grenetina natural en polvo",
+                "amount": 42,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 7
+              },
+              {
+                "name": "Fórmula Nootrópica 33Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 720,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 120
+              }
+            ],
+            "steps": [
+              "1. Bloom: Hidratar la grenetina en agua fría 8 minutos.",
+              "2. Disolución: Disolver a 65°C agitando con varilla.",
+              "3. Templado y 33Plus: Dejar descender a 42°C; incorporar la Fórmula 33Plus® y los frutos rojos machacados.",
+              "4. Cuajado: Refrigerar a 4°C por 3 horas."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Temperatura máxima de 42°C para blindar adaptógenos termosensibles.",
+              "flavor_and_aromatics": "Frutas rojas silvestres con final fresco.",
+              "textural_architecture": "Gel firme elástico y cristalino.",
+              "critical_control_points": "Refrigeración constante a 4°C."
+            },
+            "broth_volume_ml": 120,
+            "deglaze_agent": "N/A (Gelatina)",
+            "service_temp_c": 4,
+            "texture_target": "Gel firme brillante",
+            "service_notes": "Servir frío al desayuno."
+          },
+          "main": {
+            "title": "Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate Saladet y Queso de Cabra",
+            "technique": "roast_bake",
+            "note": "Plato de celebración de fin de semana horneado en cazuelas individuales: 3 huevos por comensal sobre compota de jitomate saladet de alacena, espinacas de granja y queso de cabra.",
+            "ingredients": [
+              {
+                "name": "Huevos orgánicos de pastoreo",
+                "amount": 18,
+                "unit": "piezas",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 3
+              },
+              {
+                "name": "Espinacas frescas de la granja",
+                "amount": 240,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 40
+              },
+              {
+                "name": "Jitomate Saladet fresco",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Queso de cabra suave artesanal",
+                "amount": 120,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 20
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 60,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 10
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Base de jitomate y espinaca: En sartén con 20 g de mantequilla, sudar el jitomate saladet en cubos y las espinacas hasta concentrar jugos durante 4 minutos; sazonar con sal de mar y repartir en el fondo de 6 cazuelas refractarias.",
+              "2. Disposición de huevos: Cascar 3 huevos en cada cazuela sobre la cama vegetal con cuidado de no romper las yemas.",
+              "3. Queso y mantequilla: Desmoronar el queso de cabra sobre las claras y colocar una nuez de mantequilla en cada cazuela.",
+              "4. Horneado de precisión: Hornear a 180°C durante 10 minutos hasta que la clara esté blanca y cuajada pero la yema permanezca líquida y temblorosa (60°C). Servir inmediatamente en la cazuela caliente."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Cocción radiante en refractario que conduce calor uniforme: cuajado de la clara a 72°C con yema fluida protegida a 60°C.",
+              "flavor_and_aromatics": "Acidez dulce de jitomate saladet cocido, acidez caprina aromática y riqueza mantecosa del huevo.",
+              "textural_architecture": "Base jugosa vegetal con clara cuajada tierna, queso fundente y yema espesa que corre al cortar.",
+              "critical_control_points": "Control visual del horno a los 9-10 minutos para no sobrecocer la yema."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Horno Refractario)",
+            "service_temp_c": 70,
+            "texture_target": "Clara firme y sedosa con yema líquida fluida",
+            "service_notes": "Servir sobre bajo-plato de madera con advertencia térmica."
+          },
+          "side": {
             "title": "Gelatina de Frutos del Bosque (4°C) con Fórmula Nootrópica 33Plus®",
             "technique": "gelatin_molding",
             "note": "Vehículo de colágeno puro y adaptógenos nootrópicos con pulpa natural de frutos rojos para sostener el vigor del sábado.",
@@ -3646,6 +5863,131 @@
             "service_temp_c": 65,
             "texture_target": "Carnoso tierno sin baba",
             "service_notes": "Guarnición al lado del huachinango."
+          },
+          "main": {
+            "title": "Filete de Huachinango Fresco al Sartén con Mantequilla de Ajo y Alcaparras",
+            "technique": "saute_and_sear",
+            "note": "Pescado blanco costero de piel crocante sellado en mantequilla clarificada con ajo laminado y el toque salino de alcaparras.",
+            "ingredients": [
+              {
+                "name": "Filete de Huachinango fresco",
+                "amount": 900,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 150
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 70,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 11.6
+              },
+              {
+                "name": "Ajo fresco",
+                "amount": 18,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 3
+              },
+              {
+                "name": "Alcaparras",
+                "amount": 30,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 5
+              },
+              {
+                "name": "Jugo de limón fresco",
+                "amount": 25,
+                "unit": "ml",
+                "category": "🍋 Cítricos y Ácidos Naturales",
+                "per_guest": 4.1
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Secado de piel: Secar los filetes de huachinango con papel absorbente; hacer dos cortes superficiales en la piel para evitar que se arquee; sazonar con sal de mar.",
+              "2. Sellado de piel crocante: Calentar sartén amplia con 30 g de mantequilla a 160°C; colocar los filetes con la piel hacia abajo presionando suavemente los primeros 30 segundos; cocinar 4 minutos hasta piel súper crocante.",
+              "3. Volteo y meunière: Voltear 1 minuto; añadir el resto de la mantequilla, el ajo en láminas y las alcaparras; bañar el filete con la mantequilla espumosa avellanada.",
+              "4. Acabado cítrico: Añadir el jugo de limón desglasando la sartén y servir de inmediato."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Cocción por contacto a 160°C que deshidrata el colágeno de la piel haciéndola crujiente como chicharrón, con núcleo a 52°C.",
+              "flavor_and_aromatics": "Delicadeza marina del huachinango realzada por la acidez punzante de las alcaparras y la mantequilla tostada.",
+              "textural_architecture": "Piel hipercrocante con láminas carnosas suaves de pescado que se deshacen en la boca.",
+              "critical_control_points": "Presionar los filetes al entrar a la sartén para evitar combamiento."
+            },
+            "broth_volume_ml": 20,
+            "deglaze_agent": "Jugo de limón y mantequilla de alcaparras",
+            "service_temp_c": 60,
+            "texture_target": "Piel crujiente con lascas tiernas de pescado",
+            "service_notes": "Servir con la piel hacia arriba."
+          },
+          "side": {
+            "title": "Nopales Tiernos Asados con Orégano y Queso Parmesano",
+            "technique": "roast_bake",
+            "note": "Nopales de la huerta asados a fuego vivo y espolvoreados con queso parmesano curado y orégano seco.",
+            "ingredients": [
+              {
+                "name": "Nopales tiernos limpios de la granja",
+                "amount": 480,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 80
+              },
+              {
+                "name": "Queso Parmesano artesanal",
+                "amount": 60,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 10
+              },
+              {
+                "name": "Aceite de oliva extra virgen VEVO",
+                "amount": 25,
+                "unit": "ml",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 4.1
+              },
+              {
+                "name": "Orégano seco",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 4,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 0.6
+              }
+            ],
+            "steps": [
+              "1. Marcado: Cortar los nopales en tiras; barnizar con aceite VEVO y salar.",
+              "2. Asado en comal: Cocinar 3 minutos por lado a 175°C hasta dorar sin baba.",
+              "3. Queso y orégano: Espolvorear el parmesano y orégano en caliente dejando fundir ligeramente.",
+              "4. Pase: Servir inmediatamente."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Calor seco en comal que evapora la baba natural.",
+              "flavor_and_aromatics": "Acidez terrosa vegetal con notas rústicas de orégano y el umami del parmesano.",
+              "textural_architecture": "Carnoso, firme y crujiente.",
+              "critical_control_points": "Plancha muy caliente para evitar textura gomosa."
+            },
+            "broth_volume_ml": 0,
+            "deglaze_agent": "N/A (Plancha)",
+            "service_temp_c": 65,
+            "texture_target": "Carnoso tierno sin baba",
+            "service_notes": "Guarnición al lado del huachinango."
           }
         },
         {
@@ -3767,6 +6109,117 @@
             "service_notes": "Servir 1 portobello grande por comensal en plato extendido caliente."
           },
           "side_dish": {
+            "title": "Infusión Crepuscular de Azahar con Fórmula Reparadora 34Plus®",
+            "technique": "steep_beverage",
+            "note": "Cierre semanal perfecto que induce relajación profunda y autofagia celular durante la noche de sábado a domingo.",
+            "ingredients": [
+              {
+                "name": "Flores de azahar",
+                "amount": 18,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 3
+              },
+              {
+                "name": "Fórmula Reparadora 34Plus®",
+                "amount": 30,
+                "unit": "g",
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "per_guest": 5
+              },
+              {
+                "name": "Agua purificada",
+                "amount": 900,
+                "unit": "ml",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 150
+              }
+            ],
+            "steps": [
+              "1. Infusión: Calentar el agua a 90°C; verter sobre las flores de azahar y tapar durante 6 minutos.",
+              "2. Filtrado: Colar y dejar descender a 52°C.",
+              "3. Dosis biotecnológica: Incorporar la Fórmula 34Plus® asegurando disolución total.",
+              "4. Pase: Servir tibia en tazas térmicas."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Infusión suave que resguarda los ésteres aromáticos relajantes.",
+              "flavor_and_aromatics": "Sutil, floral dulce y apaciguador.",
+              "textural_architecture": "Tisana sedosa y ligera.",
+              "critical_control_points": "Servir a 50°C."
+            },
+            "broth_volume_ml": 150,
+            "deglaze_agent": "N/A (Infusión)",
+            "service_temp_c": 50,
+            "texture_target": "Infusión traslúcida calmante",
+            "service_notes": "Beber lentamente para concluir la semana nutricional."
+          },
+          "main": {
+            "title": "Champiñones Portobello Rellenos de Pechuga de Pavo, Espinacas y Queso Gouda Gratinado",
+            "technique": "roast_bake",
+            "note": "Cena gourmet de cierre: sombreros carnosos de Portobello horneados y rellenos con pechuga de pavo artesanal, espinacas marchitadas y gouda gratinado.",
+            "ingredients": [
+              {
+                "name": "Champiñones Portobello frescos",
+                "amount": 720,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 120
+              },
+              {
+                "name": "Pechuga de pavo artesanal",
+                "amount": 360,
+                "unit": "g",
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "per_guest": 60
+              },
+              {
+                "name": "Espinacas frescas de la granja",
+                "amount": 180,
+                "unit": "g",
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "per_guest": 30
+              },
+              {
+                "name": "Queso Gouda artesanal",
+                "amount": 120,
+                "unit": "g",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "per_guest": 20
+              },
+              {
+                "name": "Mantequilla de pastoreo",
+                "amount": 40,
+                "unit": "g",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "per_guest": 6.6
+              },
+              {
+                "name": "Sal de mar",
+                "amount": 6,
+                "unit": "g",
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "per_guest": 1
+              }
+            ],
+            "steps": [
+              "1. Preparación de hongos: Limpiar los sombreros de Portobello retirando el tallo con cuidado; barnizar con mantequilla fundida y sal marina.",
+              "2. Salteo de relleno: Picar la pechuga de pavo en cubos pequeños; saltear con las espinacas en mantequilla durante 2 minutos hasta colapsar la hoja.",
+              "3. Relleno y gratinado: Colocar la mezcla dentro de cada sombrero de Portobello; cubrir con queso gouda rallado; hornear a 190°C en convección durante 10 minutos hasta que el hongo esté tierno y el queso forme una costra dorada burbujeante.",
+              "4. Pase: Servir calientes con los jugos concentrados que desprenden en la charola."
+            ],
+            "coct_reasoning": {
+              "thermodynamics": "Horneado a 190°C que concentra el agua natural del hongo en umami puro, mientras el queso gratina por calor superior reteniendo el vapor del relleno.",
+              "flavor_and_aromatics": "Umami vegetal terroso profundo de portobello que abraza la suavidad del pavo, la salinidad fundente del gouda y la frescura de espinaca.",
+              "textural_architecture": "Sombrero carnoso y suculento como un filete vegetal relleno de hebras tiernas bajo una costra elástica gratinada.",
+              "critical_control_points": "No pelar el hongo para conservar sus aromas superficiales."
+            },
+            "broth_volume_ml": 20,
+            "deglaze_agent": "Jugos de cocción del portobello y mantequilla",
+            "service_temp_c": 68,
+            "texture_target": "Hongo carnoso suculento con gratinado fundente",
+            "service_notes": "Servir 1 portobello grande por comensal en plato extendido caliente."
+          },
+          "side": {
             "title": "Infusión Crepuscular de Azahar con Fórmula Reparadora 34Plus®",
             "technique": "steep_beverage",
             "note": "Cierre semanal perfecto que induce relajación profunda y autofagia celular durante la noche de sábado a domingo.",
