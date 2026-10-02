@@ -122,7 +122,7 @@ def get_jueves_viernes_sabado():
                         "technique": "boil_and_blend",
                         "note": "Sopa ligera y mineral que aprovecha el chayote tierno pelado de mercado junto con aceite VEVO y caldo clarificado.",
                         "ingredients": [
-                            {"name": "Chayotes tiernos de la granja", "amount": 1, "unit": "piezas", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 0.16},
+                            {"name": "Chayotes tiernos pelados", "amount": 1, "unit": "piezas", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 0.16},
                             {"name": "Cebollín fresco de la granja", "amount": 80, "unit": "g", "category": "🥬 Verduras, Hortalizas y Frescos", "per_guest": 13.3},
                             {"name": "Aceite de oliva extra virgen VEVO", "amount": 40, "unit": "ml", "category": "🥑 Grasas, Aceites y Semillas", "per_guest": 6.6},
                             {"name": "Fondo claro de pollo casero", "amount": 480, "unit": "ml", "category": "🌶️ Chiles, Condimentos e Infusiones", "per_guest": 80},

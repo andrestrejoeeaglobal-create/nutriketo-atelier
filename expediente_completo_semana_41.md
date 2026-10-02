@@ -1262,7 +1262,7 @@
   - *Puntos Críticos de Control:* No sobrecocer el chayote para preservar textura al dente.
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Chayotes tiernos de la granja: **1 piezas** (0.16 piezas/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Chayotes tiernos pelados: **1 piezas** (0.16 piezas/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cebollín fresco de la granja: **80 g** (13.3 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **40 ml** (6.6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **480 ml** (80 ml/persona)
@@ -2067,7 +2067,7 @@ La presente matriz desglosa los insumos necesarios para alimentar a **6 comensal
 
 | Insumo / Materia Prima | Cantidad Neta a Comprar | Unidad Comercial | Categoría Clínica |
 |---|---|---|---|
-| **Huevos orgánicos enteros de pastoreo** | 126 | piezas (4 casilleros + 6 pzas) | 🥩 Carnes, Pescados y Proteínas |
+| **Huevos orgánicos enteros de pastoreo** | 126 | piezas (4 casilleros de 30 pzas + 6 pzas a granel) | 🥩 Carnes, Pescados y Proteínas |
 | **Corte magro de Ribeye de res premium** | 900 | g | 🥩 Carnes, Pescados y Proteínas |
 | **Filete de Robalo fresco** | 900 | g | 🥩 Carnes, Pescados y Proteínas |
 | **Carne molida / Filete de Sirloin magro** | 900 | g | 🥩 Carnes, Pescados y Proteínas |
@@ -2098,7 +2098,7 @@ La presente matriz desglosa los insumos necesarios para alimentar a **6 comensal
 | **Fresas frescas** | 900 | g | 🍓 Frutas de Bajo Índice Glucémico |
 | **Moras frescas** | 480 | g (~500 g) | 🍓 Frutas de Bajo Índice Glucémico |
 | **Frambuesas frescas orgánicas** | 420 | g (~450 g) | 🍓 Frutas de Bajo Índice Glucémico |
-| **Jugo de limón fresco recién exprimido** | 315 | ml (~1.2 kg limones) | 🍋 Cítricos y Ácidos Naturales |
+| **Limón agrio fresco con semilla** | 1.2 | kg (~315 ml jugo extraído) | 🍋 Cítricos y Ácidos Naturales |
 | **Grenetina natural en polvo (colágeno)** | 210 | g (5 turnos de gelatina) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
 | **Fórmula Nootrópica 33Plus®** | 210 | g (30 g/día x 7 días) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
 | **Fórmula Reparadora 34Plus®** | 210 | g (30 g/día x 7 días) | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
@@ -2116,18 +2116,18 @@ La dieta mantiene un perfil cetogénico terapéutico estricto con un ratio medio
 
 | Día | Kcal / Comensal | Grasa Total (g) | Proteína AVB (g) | Carbohidratos Netos (g) | Fibra Prebiótica (g) | Ratio Lípidos : (Prot + CHO) |
 |---|---|---|---|---|---|---|
-| **Domingo 04 Oct** | 1651 kcal | 123.2 g | 122.5 g | 13.8 g | 19.8 g | 0.90 : 1 |
+| **Domingo 04 Oct** | 1654 kcal | 123.2 g | 122.5 g | 13.8 g | 19.8 g | 0.90 : 1 |
 | **Lunes 05 Oct** | 1721 kcal | 128.7 g | 126.7 g | 13.7 g | 17.5 g | 0.92 : 1 |
 | **Martes 06 Oct** | 1683 kcal | 122.0 g | 132.5 g | 13.6 g | 14.8 g | 0.84 : 1 |
 | **Miércoles 07 Oct** | 1709 kcal | 127.6 g | 126.2 g | 14.0 g | 16.2 g | 0.91 : 1 |
-| **Jueves 08 Oct** | 1665 kcal | 126.5 g | 121.8 g | 15.0 g | 18.4 g | 0.92 : 1 |
+| **Jueves 08 Oct** | 1686 kcal | 126.5 g | 121.8 g | 15.0 g | 18.4 g | 0.92 : 1 |
 | **Viernes 09 Oct** | 1681 kcal | 122.7 g | 130.7 g | 13.5 g | 15.4 g | 0.85 : 1 |
 | **Sábado 10 Oct** | 1686 kcal | 123.4 g | 130.5 g | 13.3 g | 20.6 g | 0.86 : 1 |
-| **PROMEDIO DIARIO** | **1685 kcal** | **124.9 g** | **127.3 g** | **13.8 g** | **17.5 g** | **0.89 : 1** |
-| **TOTAL SEMANAL (6 Comensales)** | **70,770 kcal** | **5,245.8 g** | **5,346.6 g** | **579.6 g** | **735.0 g** | — |
+| **PROMEDIO DIARIO** | **1689 kcal** | **124.9 g** | **127.3 g** | **13.8 g** | **17.5 g** | **0.89 : 1** |
+| **TOTAL SEMANAL (6 Comensales)** | **70,950 kcal** | **5,245.8 g** | **5,346.6 g** | **579.6 g** | **735.0 g** | — |
 
 #### 📌 KPIs Clínico-Nutricionales Clave:
-- **Densidad Calórica Promedio:** `1685 kcal/día/comensal` (Distribución de Atwater: 67.4% Grasa | 29.3% Proteína | 3.3% Carbohidratos Netos).
+- **Densidad Calórica Promedio:** `1689 kcal/día/comensal` (Distribución de Atwater: 67.4% Grasa | 29.3% Proteína | 3.3% Carbohidratos Netos).
 - **Límite de Carbohidratos Netos:** `13.8 g/día/comensal` (Umbral máximo de seguridad: 25.0 g/día; margen de tolerancia libre de cetólisis: 44.8%).
 - **Ingesta Proteica Adaptativa:** `127.3 g/día/comensal` (~2.0 g/kg para peso corporal magro medio de 63 kg, garantizando preservación muscular y síntesis de colágeno sin gluconeogénesis aberrante).
 - **Fibra Dietética Prebiótica Dinámica:** `17.5 g/día/comensal` (Calculada dinámicamente según la masa celular de hortalizas de huerto, chía, semillas y frutos rojos).
