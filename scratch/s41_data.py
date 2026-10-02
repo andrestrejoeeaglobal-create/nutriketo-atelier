@@ -15,6 +15,13 @@ def get_semana_41_data():
     all_days.extend(get_martes_miercoles())
     all_days.extend(get_jueves_viernes_sabado())
     
+    for d in all_days:
+        for m in d.get("meals", []):
+            if "main_dish" in m and "main" not in m:
+                m["main"] = m["main_dish"]
+            if "side_dish" in m and "side" not in m:
+                m["side"] = m["side_dish"]
+
     return {
         "diners_count": 6,
         "week_name": "Semana 41",

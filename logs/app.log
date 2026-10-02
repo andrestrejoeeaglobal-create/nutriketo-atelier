@@ -77791,3 +77791,9 @@ For further information visit https://errors.pydantic.dev/2.12/u/class-not-fully
 [2026-10-02 15:56:03,026] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
 [2026-10-02 15:56:03,092] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
 [2026-10-02 15:56:03,126] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 16:08:44,923] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 16:08:44,933] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 16:08:44,953] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
+[2026-10-02 16:08:44,961] [INFO] [nutriketo]: Inicializando esquema de base de datos SQLite con tablas multivista...
+[2026-10-02 16:08:44,968] [INFO] [nutriketo]: Esquema SQLite inicializado con éxito.
+[2026-10-02 16:08:44,990] [INFO] [nutriketo]: InventorySyncMaster: Lista de Compras Semana 33 actualizada dinámicamente (6 comensales).
