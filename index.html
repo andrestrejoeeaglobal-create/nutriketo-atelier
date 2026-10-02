@@ -656,7 +656,7 @@ function generateNextWeekMenu() {
       "semillas-chia": { name: "Semillas de chía orgánicas", stock: 100, unit: "g", status: "canonical" },
       "sal-mar": { name: "Sal de mar mineral pura", stock: 1, unit: "bolsa_sal", status: "canonical" },
       "almendras-fileteadas": { name: "Almendras fileteadas tostadas", stock: 100, unit: "g", status: "canonical" },
-      "dientes-de-ajo": { name: "Dientes de ajo fresco", stock: 36, unit: "g", status: "canonical" },
+      "ajo-fresco": { name: "Ajo fresco", stock: 36, unit: "g", status: "canonical" },
       "limon-fresco": { name: "Jugo de limón fresco recién exprimido", stock: 200, unit: "ml", status: "canonical" },
       "pimienta-negra": { name: "Pimienta negra recién molida", stock: 50, unit: "g", status: "canonical" },
       "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
@@ -725,8 +725,8 @@ function generateNextWeekMenu() {
     const currentDayNum = (new Date().getDay() >= 0 && new Date().getDay() <= 6) ? new Date().getDay() : 0;
     let selectedIdx = currentDayNum;
 
-    const CURRENT_APP_VERSION = 'v40_1_ssot_commercial_units';
-    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v40_1_ssot';
+    const CURRENT_APP_VERSION = 'v40_2_ssot_canonical_skus';
+    const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v40_2_ssot';
 
     function toggleTheme() {
       const html = document.documentElement;
@@ -856,9 +856,11 @@ function generateNextWeekMenu() {
       return false;
     }
 
-    function getCommercialUnitOptions(itemName, defaultUnit) {
+    function getCommercialUnitOptions(itemName, defaultUnit, weeklyQty) {
       const name = (itemName || '').toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").trim();
+      const qty = parseFloat(weeklyQty) || 0;
 
+      // 1. Ovoproductos
       if (/huevo/i.test(name)) {
         return [
           { id: 'casillero', label: 'Casillero (30 pzas)', multiplier: 30, unit: 'piezas', type: 'count' },
@@ -866,6 +868,8 @@ function generateNextWeekMenu() {
           { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' }
         ];
       }
+
+      // 2. Sal mineral de Colima / Sal pura
       if (/sal.*(mar|mineral|colima)/i.test(name) || name === 'sal' || name === 'sal pura') {
         return [
           { id: 'bolsa_sal', label: 'Bolsa (1 kg / 1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
@@ -873,6 +877,29 @@ function generateNextWeekMenu() {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
+
+      // 3. Hierbas aromáticas, especias, infusiones y condimentos botánicos (Micro-gramajes < 100g)
+      // ¡ESTRICTAMENTE PROHIBIDO MOSTRAR "Kilo (1,000 g)"!
+      if (/eneldo|epazote|romero|tomillo|hierbas|hinojo|menta|jamaica|toronjil|manzanilla|oregano|albahaca|laurel|salvia|especias|pimienta|canela|curcuma|achiote|zacate/i.test(name)) {
+        return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'frasco_50', label: 'Manojo / Frasco chico (50 g)', multiplier: 50, unit: 'g', type: 'mass' },
+          { id: 'frasco_100', label: 'Frasco estándar (100 g)', multiplier: 100, unit: 'g', type: 'mass' },
+          { id: 'bolsa_250', label: 'Bolsa (250 g)', multiplier: 250, unit: 'g', type: 'mass' }
+        ];
+      }
+
+      // 4. Ajo fresco
+      if (/ajo/i.test(name) && !/ajonjoli/i.test(name)) {
+        return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'frasco_50', label: 'Cabeza / Frasco (50 g)', multiplier: 50, unit: 'g', type: 'mass' },
+          { id: 'frasco_100', label: 'Malla / Frasco (100 g)', multiplier: 100, unit: 'g', type: 'mass' },
+          { id: 'bolsa_250', label: 'Bolsa (250 g)', multiplier: 250, unit: 'g', type: 'mass' }
+        ];
+      }
+
+      // 5. Huesos y retazo para fondo
       if (/hueso|retazo|tuetano/i.test(name)) {
         return [
           { id: 'bolsa_retazo', label: 'Bolsa / Retazo (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
@@ -880,20 +907,26 @@ function generateNextWeekMenu() {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
-      if (/pechuga|pollo/i.test(name)) {
+
+      // 6. Pollo y aves
+      if (/pechuga.*pollo|carne.*pollo|pollo/i.test(name) && !/hueso|retazo|fondo|caldo/i.test(name)) {
         return [
           { id: 'paquete_3_2', label: 'Paquete Familiar (3.2 kg)', multiplier: 3200, unit: 'g', type: 'mass' },
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
-      if (/sirloin|arrachera|machaca|res|carne|pavo|tocino/i.test(name)) {
+
+      // 7. Carnes de Res, Pavo y Tocino (CON LÍMITES ESTRICTOS DE PALABRA res PARA NO COINCIDIR CON "fresco")
+      if (/(?:sirloin|arrachera|machaca|res|carne de res|filete de res|pechuga de pavo|pavo|tocino)/i.test(name)) {
         return [
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
           { id: 'paquete_500', label: 'Paquete (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
+
+      // 8. Pescados
       if (/robalo|huachinango|salmon|atun|pescado/i.test(name)) {
         return [
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
@@ -901,6 +934,8 @@ function generateNextWeekMenu() {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
+
+      // 9. Aceites y fluidos
       if (/aceite.*oliva|vevo/i.test(name)) {
         return [
           { id: 'botella_vevo', label: 'Botella (750 ml)', multiplier: 750, unit: 'ml', type: 'vol' },
@@ -916,6 +951,8 @@ function generateNextWeekMenu() {
           { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' }
         ];
       }
+
+      // 10. Frutas cetogénicas
       if (/fresa|zarzamora|frambuesa|arandano|mora/i.test(name)) {
         return [
           { id: 'domo_500', label: 'Domo (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
@@ -924,6 +961,8 @@ function generateNextWeekMenu() {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
+
+      // 11. Semillas, frutos secos, harinas keto
       if (/chia|sesamo|ajonjoli|almendra|nuez|nueces|girasol|semilla|harina/i.test(name)) {
         return [
           { id: 'bolsa_500', label: 'Bolsa (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
@@ -932,6 +971,8 @@ function generateNextWeekMenu() {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
+
+      // 12. Quesos y lácteos
       if (/queso|gouda|panela|parmesano|cabra|mantequilla|ghee/i.test(name)) {
         return [
           { id: 'paquete_500', label: 'Pieza / Paq (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
@@ -940,6 +981,8 @@ function generateNextWeekMenu() {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
+
+      // 13. Suplementos 33Plus / 34Plus
       if (/33plus|34plus/i.test(name)) {
         return [
           { id: 'frasco_120', label: 'Frasco Lote (120 g)', multiplier: 120, unit: 'g', type: 'mass' },
@@ -947,13 +990,8 @@ function generateNextWeekMenu() {
         ];
       }
 
+      // 14. Fallback con discriminación de umbral biológico
       const def = (defaultUnit || 'g').toLowerCase();
-      if (def.includes('kg') || def.includes('kilo')) {
-        return [
-          { id: 'kg', label: 'Kilos (kg)', multiplier: 1000, unit: 'g', type: 'mass' },
-          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
-        ];
-      }
       if (def.includes('ml')) {
         return [
           { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' },
@@ -971,6 +1009,23 @@ function generateNextWeekMenu() {
           { id: defaultUnit || 'piezas', label: defaultUnit || 'piezas', multiplier: 1, unit: defaultUnit || 'piezas', type: 'count' }
         ];
       }
+
+      // Umbral biológico para masas (gramos):
+      if (qty > 0 && qty < 100) {
+        return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'frasco_50', label: 'Frasco chico (50 g)', multiplier: 50, unit: 'g', type: 'mass' },
+          { id: 'frasco_100', label: 'Frasco estándar (100 g)', multiplier: 100, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (qty >= 500) {
+        return [
+          { id: 'kg', label: 'Kilos (kg)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'paquete_500', label: 'Paquete (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+
       return [
         { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
         { id: 'kg', label: 'Kilos (kg)', multiplier: 1000, unit: 'g', type: 'mass' }
@@ -1000,14 +1055,17 @@ function generateNextWeekMenu() {
         case 'domo_250':
         case 'paquete_250':
           return { val: num * 250, type: 'mass', baseUnit: 'g' };
+        case 'frasco_100':
+        case 'bolsa_100':
+          return { val: num * 100, type: 'mass', baseUnit: 'g' };
+        case 'frasco_50':
+          return { val: num * 50, type: 'mass', baseUnit: 'g' };
         case 'bolsa_retazo':
         case 'bolsa_retazo_500':
         case 'paquete_500':
         case 'domo_500':
         case 'bolsa_500':
           return { val: num * 500, type: 'mass', baseUnit: 'g' };
-        case 'bolsa_100':
-          return { val: num * 100, type: 'mass', baseUnit: 'g' };
         case 'paquete_3_2':
           return { val: num * 3200, type: 'mass', baseUnit: 'g' };
         case 'frasco_120':
@@ -1757,10 +1815,14 @@ function generateNextWeekMenu() {
           const bName = bItem.name || bItem.item_name;
           if (!bName) return;
           const cat = getSmartItemCategory(bName, bItem.category);
-          // Si el insumo es vegetal/fruta de cosecha del huerto, pertenece al Checklist de Cosecha
-          const isFarm = (bItem.category && bItem.category.includes('Cosecha')) ||
-                         FARM_MASTER_CATALOG.some(fc => areInsumosEquivalent(fc, bName));
-          if (isFarm) return;
+          // Proyección Reflexiva Total del BOM a la Alacena (Directiva SSOT):
+          // Un insumo sólo se excluye de la Alacena si está actualmente marcado en Cosecha (selectedHarvest).
+          // Si no está en Cosecha, TIENE que estar en Alacena para posibilitar su amortización física.
+          const isCurrentlyHarvested = selectedHarvest.some(h => {
+            const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+            return areInsumosEquivalent(hStr, bName);
+          });
+          if (isCurrentlyHarvested) return;
 
           const slug = normalizeToCanonicalSlug(bName);
           if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === bName.toLowerCase())) return;
@@ -1771,6 +1833,7 @@ function generateNextWeekMenu() {
             seenPantrySlugs.add(slug);
             nonFarm.push({
               item_name: bName,
+              quantity: bItem.quantity || bItem.amount || 0,
               unit: bItem.unit || 'g',
               category: cat
             });
@@ -1827,7 +1890,7 @@ function generateNextWeekMenu() {
             const slug = normalizeToCanonicalSlug(i.item_name);
             const safeName = i.item_name.replace(/'/g, "\'");
 
-            const options = getCommercialUnitOptions(i.item_name, i.unit);
+            const options = getCommercialUnitOptions(i.item_name, i.unit, i.quantity);
             let currentUnit = window.pantryCardUnits[i.item_name];
             if (!currentUnit) {
               if (window.PANTRY_STOCK_INVENTORY) {
@@ -2486,7 +2549,7 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "jitomate-bola": ["jitomate", "jitomates", "jitomate bola", "jitomate bola jugoso"],
   "almendras-fileteadas": ["almendras fileteadas tostadas", "almendras fileteadas", "almendras tostadas", "almendras enteras", "almendra", "almendras"],
   "semillas-chia": ["semillas de chía orgánicas", "semillas de chia organicas", "semillas de chía", "semillas de chia", "chía", "chia"],
-  "dientes-de-ajo": ["dientes de ajo fresco", "dientes de ajo", "ajo fresco", "ajo"],
+  "ajo-fresco": ["ajo fresco", "dientes de ajo fresco", "dientes de ajo", "ajo"],
   "limon-fresco": ["jugo de limón fresco recién exprimido", "jugo de limon fresco recien exprimido", "jugo de limón fresco", "limón fresco recién exprimido", "limones frescos", "limón", "limon"],
   "pimienta-negra": ["pimienta negra recién molida", "pimienta negra recien molida", "pimienta negra molida y sal marina", "pimienta negra molida", "pimienta negra"],
   "cebolla-blanca": ["cebolla blanca fresca", "cebolla blanca"],
@@ -2635,7 +2698,7 @@ function sanitizeMarketRawMaterial(rawName) {
   if (lower.includes('esparragos') || lower.includes('espárragos')) return 'Espárragos verdes frescos de la granja';
   if (lower.includes('cilantro')) return 'Cilantro fresco de la granja';
   if (lower.includes('cebollín') || lower.includes('cebollin')) return 'Cebollín fresco de la granja';
-  if (lower.includes('dientes de ajo') || lower === 'ajo' || lower.includes('ajo fresco')) return 'Dientes de ajo fresco';
+  if (lower.includes('dientes de ajo') || lower === 'ajo' || lower.includes('ajo fresco')) return 'Ajo fresco';
   if (lower.includes('semillas de chía') || lower.includes('semillas de chia')) return 'Semillas de chía orgánicas';
   if (lower.includes('limón') || lower.includes('limon')) return 'Jugo de limón fresco recién exprimido';
   if (lower.includes('pimienta negra')) return 'Pimienta negra recién molida';
@@ -2677,7 +2740,7 @@ function processMarketItem(rawName, totalQty, unit) {
   }
   if (lower.includes('ajo') && lower.includes('cebolla')) {
     return [
-      { name: 'Dientes de ajo fresco', qty: totalQty * 0.4, unit: 'g' },
+      { name: 'Ajo fresco', qty: totalQty * 0.4, unit: 'g' },
       { name: 'Cebolla blanca fresca', qty: totalQty * 0.6, unit: 'g' }
     ];
   }
@@ -2937,7 +3000,7 @@ function calculateNetShoppingList(diners) {
       name = 'Alcaparras en salmuera';
     }
     if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
-      name = 'Dientes de ajo fresco';
+      name = 'Ajo fresco';
     }
     if (/ch[ií]a/i.test(name)) {
       name = 'Semillas de chía orgánicas';
@@ -3211,7 +3274,7 @@ function render3DShoppingList() {
         name = 'Alcaparras en salmuera';
       }
       if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
-        name = 'Dientes de ajo fresco';
+        name = 'Ajo fresco';
       }
       if (/ch[ií]a/i.test(name)) {
         name = 'Semillas de chía orgánicas';

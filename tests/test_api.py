@@ -1390,6 +1390,42 @@ def test_commercial_packaging_and_dimensional_normalization():
     assert "resolvePantryCommercialUnit" in html
     assert "updatePantryStockUnit" in html
 
+def test_condiments_biological_thresholds_and_pantry_reflexivity():
+    """
+    Valida la extirpación de raíz de las 3 anomalías sistémicas detectadas en la auditoría forense:
+    1. Simetría canónica inmutable de 'Ajo fresco' (Alacena, Mercado, BOM y Canonical Slugs).
+    2. Proscripción de 'Kilo' en hierbas finas y micro-gramajes (< 100 g) con resolución de empaques micro.
+    3. Proyección reflexiva total de insumos del BOM a Alacena (no exclusión ciega por FARM_MASTER_CATALOG).
+    """
+    with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
+        code = f.read()
+
+    with open("atelier.html", "r", encoding="utf-8") as f:
+        html = f.read()
+
+    # 1. Simetría Canónica Inmutable de "Ajo fresco"
+    assert '"ajo-fresco": { name: "Ajo fresco"' in code
+    assert '"ajo-fresco": ["ajo fresco"' in code
+    assert "name = 'Ajo fresco';" in code
+    assert "name = 'Dientes de ajo fresco';" not in code  # Extirpado de cálculo y render
+
+    # 2. Desacoplamiento de Res vs Hierbas Frescas (Regex \bres\b)
+    assert r"\bres\b" in code or r"\b(res|filete de res|carne de res)\b" in code
+    assert "eneldo|epazote|romero|tomillo|hierbas|hinojo|menta|jamaica|toronjil|manzanilla" in code
+
+    # Unidades micro para hierbas
+    assert "frasco_50" in code
+    assert "frasco_100" in code
+    assert "Manojo / Frasco chico (50 g)" in code
+
+    # 3. Proyección Reflexiva del BOM en Alacena
+    assert "const isCurrentlyHarvested = selectedHarvest.some" in code
+
+    # 4. Verificación de Versión SSOT en HTML compilado
+    assert "v40_2_ssot_canonical_skus" in html
+    assert "nutriketo_app_state_v40_2_ssot" in html
+
+
 
 
 
