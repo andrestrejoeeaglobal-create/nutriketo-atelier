@@ -2534,9 +2534,18 @@ function generateNextWeekMenu() {
       "aceite-coco-mct": { name: "Aceite de coco MCT", stock: 250, unit: "ml", status: "canonical" },
       "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
       "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
+      // Frutas de Bajo Índice Glucémico en Alacena (Registro Previsto)
+      "fresas-frescas": { name: "Fresas frescas", stock: 0, unit: "g", status: "canonical" },
+      "arilos-granada": { name: "Arilos de granada fresca", stock: 0, unit: "g", status: "canonical" },
+      "moras-frescas": { name: "Moras frescas", stock: 0, unit: "g", status: "canonical" },
+      "frambuesas-frescas": { name: "Frambuesas frescas orgánicas", stock: 0, unit: "g", status: "canonical" },
+      "arandanos-frescos": { name: "Arándanos frescos", stock: 0, unit: "g", status: "canonical" },
+      "pitaya-fresca": { name: "Pitaya fresca", stock: 0, unit: "g", status: "canonical" },
+      "zarzamoras-frescas": { name: "Zarzamoras frescas", stock: 0, unit: "g", status: "canonical" },
       // Insumos No Sugeridos / Cuarentena (Status: "prohibited")
       "miel-pura": { name: "Miel pura de la granja El Herami", stock: 250, unit: "g", status: "prohibited", reason: "Alto Índice Glucémico / Fructosa Pura (Rompe Cetosis)" },
       "duraznos-frescos": { name: "Duraznos frescos", stock: 1.5, unit: "kg", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Fuera de Protocolo Keto)" },
+      "higos-frescos": { name: "Higos frescos", stock: 1.5, unit: "kg", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
       "harina-trigo": { name: "Harina de trigo tradicional", stock: 1000, unit: "g", status: "prohibited", reason: "Glucémico / Inflamatorio (Gluten)" },
       "aceite-vegetal-mixto": { name: "Aceite vegetal mixto comercial", stock: 800, unit: "ml", status: "prohibited", reason: "Pro-inflamatorio / Omega 6 oxidado" }
     };
@@ -2551,9 +2560,13 @@ function generateNextWeekMenu() {
       "Cilantro fresco",
       "Arúgula fresca",
       "Coliflor fresca",
-      "Higos frescos",
       "Pitayas frescas",
       "Granadas frescas",
+      "Fresas frescas",
+      "Frambuesas frescas",
+      "Moras frescas",
+      "Zarzamoras frescas",
+      "Arándanos frescos",
       "Hojas de menta fresca",
       "Toronjil fresco",
       "Manzanilla fresca",
@@ -2566,7 +2579,7 @@ function generateNextWeekMenu() {
 
     let activeWeek = "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)";
     let activeDiners = 6;
-    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
+    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca"];
     let pantryStock = {
       "Huevos enteros": 2.0,
       "Pechuga de pollo": 1.0,
@@ -2621,6 +2634,58 @@ function generateNextWeekMenu() {
       if (/tamari|soya keto/i.test(lower)) return 'Salsa Tamari — Soya Keto';
 
       return rawName.trim();
+    }
+
+    function areInsumosEquivalent(aName, bName) {
+      if (!aName || !bName) return false;
+      const a = aName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+      const b = bName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+
+      if (a === b) return true;
+
+      // Stems y alias canónicos con coincidencia léxica
+      const itemKeywords = [
+        { stem: 'granada', aliases: ['granada', 'granadas', 'arilos'] },
+        { stem: 'pitaya', aliases: ['pitaya', 'pitayas', 'pitahaya', 'pitahayas'] },
+        { stem: 'fresa', aliases: ['fresa', 'fresas'] },
+        { stem: 'frambuesa', aliases: ['frambuesa', 'frambuesas'] },
+        { stem: 'zarzamora', aliases: ['zarzamora', 'zarzamoras'] },
+        { stem: 'arandano', aliases: ['arandano', 'arandanos'] },
+        { stem: 'mora', aliases: ['mora', 'moras'], exclude: ['morada'] },
+        { stem: 'espinaca', aliases: ['espinaca', 'espinacas'] },
+        { stem: 'calabacita', aliases: ['calabacita', 'calabacitas', 'calabaza'] },
+        { stem: 'brocoli', aliases: ['brocoli', 'brocolis'] },
+        { stem: 'esparrago', aliases: ['esparrago', 'esparragos'] },
+        { stem: 'nopal', aliases: ['nopal', 'nopales'] },
+        { stem: 'ejote', aliases: ['ejote', 'ejotes'] },
+        { stem: 'cilantro', aliases: ['cilantro'] },
+        { stem: 'arugula', aliases: ['arugula'] },
+        { stem: 'coliflor', aliases: ['coliflor'] },
+        { stem: 'menta', aliases: ['menta'] },
+        { stem: 'toronjil', aliases: ['toronjil'] },
+        { stem: 'manzanilla', aliases: ['manzanilla'] },
+        { stem: 'jamaica', aliases: ['jamaica'] },
+        { stem: 'apio', aliases: ['apio'] },
+        { stem: 'chayote', aliases: ['chayote', 'chayotes'] },
+        { stem: 'hinojo', aliases: ['hinojo'] },
+        { stem: 'almendra', aliases: ['almendra', 'almendras'] },
+        { stem: 'chia', aliases: ['chia'] }
+      ];
+
+      for (const entry of itemKeywords) {
+        if (entry.exclude && (entry.exclude.some(ex => a.includes(ex)) || entry.exclude.some(ex => b.includes(ex)))) {
+          continue;
+        }
+        const aMatch = entry.aliases.some(alias => a.includes(alias));
+        const bMatch = entry.aliases.some(alias => b.includes(alias));
+        if (aMatch && bMatch) return true;
+      }
+
+      const slugA = normalizeToCanonicalSlug(aName);
+      const slugB = normalizeToCanonicalSlug(bName);
+      if (slugA && slugB && (slugA === slugB || slugA.includes(slugB) || slugB.includes(slugA))) return true;
+
+      return false;
     }
 
     const CANONICAL_SECTION_ORDER = [
@@ -2693,14 +2758,14 @@ function generateNextWeekMenu() {
         return '🥩 Carnes, Pescados y Proteínas';
       }
 
-      // 0.3 Prioridad Taxonómica Estricta: Frutas de Bajo Índice Glucémico (Moras, Frambuesas, Arándanos, Granada, Higo, Pitaya)
-      if (!name.includes('cebolla') && /mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|higo|higos|pitahaya|pitahayas|pitaya|pitayas|arilos/i.test(name)) {
+      // 0.3 Prioridad Taxonómica Estricta: Frutas de Bajo Índice Glucémico (Moras, Frambuesas, Arándanos, Granada, Pitaya, Zarzamora, Fresas)
+      if (!name.includes('cebolla') && /mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|pitahaya|pitahayas|pitaya|pitayas|arilos|zarzamora|zarzamoras/i.test(name)) {
         return '🍓 Frutas de Bajo Índice Glucémico';
       }
 
       // 0.4 Prioridad Taxonómica Estricta: Insumos No Sugeridos / Cuarentena
       if ((explicitCategory && (explicitCategory.includes('cuarentena') || explicitCategory.includes('prohibited') || explicitCategory.includes('Cuarentena') || explicitCategory.includes('🛑'))) ||
-          /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca/i.test(name)) {
+          /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca|higo|higos/i.test(name)) {
         return '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)';
       }
 
@@ -2799,23 +2864,23 @@ function generateNextWeekMenu() {
           if (Array.isArray(state.customFarmItems)) {
             customFarmItems = state.customFarmItems.filter(f => {
               const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
-              return !/miel|durazno/i.test(fStr);
+              return !/miel|durazno|higo/i.test(fStr);
             });
           }
 
           if (Array.isArray(state.selectedHarvest)) {
             selectedHarvest = state.selectedHarvest.filter(h => {
               const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
-              return !/miel|durazno/i.test(hStr);
+              return !/miel|durazno|higo/i.test(hStr);
             });
           } else {
-            selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Higos frescos"];
+            selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca"];
           }
 
           if (state.pantryStock && typeof state.pantryStock === 'object') {
             pantryStock = {};
             Object.keys(state.pantryStock).forEach(itemName => {
-              if (/miel|durazno/i.test(itemName)) return;
+              if (/miel|durazno|higo/i.test(itemName)) return;
               pantryStock[itemName] = state.pantryStock[itemName];
             });
           }
@@ -3298,6 +3363,7 @@ function generateNextWeekMenu() {
 
         const QUARANTINE_PANTRY_ITEMS = [
           { item_name: 'Duraznos frescos', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
+          { item_name: 'Higos frescos', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Miel pura de la granja El Herami', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Harina de trigo tradicional', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Aceite vegetal mixto comercial', unit: 'ml', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' }
@@ -3310,6 +3376,40 @@ function generateNextWeekMenu() {
             nonFarm.push(qItem);
           }
         });
+
+        // Incluir insumos canónicos registrados en PANTRY_STOCK_INVENTORY
+        if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+          Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
+            const pObj = window.PANTRY_STOCK_INVENTORY[k];
+            if (!pObj || pObj.status !== 'canonical') return;
+            const slug = normalizeToCanonicalSlug(pObj.name || k);
+            if (!seenPantrySlugs.has(slug) && !deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === (pObj.name || '').toLowerCase())) {
+              seenPantrySlugs.add(slug);
+              nonFarm.push({
+                item_name: pObj.name,
+                unit: pObj.unit || 'g',
+                category: getSmartItemCategory(pObj.name, '')
+              });
+            }
+          });
+        }
+
+        // Incluir insumos del BOM canónico del menú activo (Semana 40)
+        if (typeof ACTIVE_WEEK_40_CANONICAL_BOM !== 'undefined' && Array.isArray(ACTIVE_WEEK_40_CANONICAL_BOM)) {
+          ACTIVE_WEEK_40_CANONICAL_BOM.forEach(bItem => {
+            const bName = bItem.name || bItem.item_name;
+            if (!bName) return;
+            const slug = normalizeToCanonicalSlug(bName);
+            if (!seenPantrySlugs.has(slug) && !deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === bName.toLowerCase())) {
+              seenPantrySlugs.add(slug);
+              nonFarm.push({
+                item_name: bName,
+                unit: bItem.unit || 'g',
+                category: getSmartItemCategory(bName, bItem.category)
+              });
+            }
+          });
+        }
 
         const categoriesMap = {};
         nonFarm.forEach(i => {
@@ -3338,11 +3438,11 @@ function generateNextWeekMenu() {
             const slug = normalizeToCanonicalSlug(i.item_name);
             let val = pantryStock[i.item_name];
             if (val === undefined) {
-              const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+              const matchedKey = Object.keys(pantryStock).find(k => areInsumosEquivalent(k, i.item_name));
               if (matchedKey !== undefined) {
                 val = pantryStock[matchedKey];
               } else if (window.PANTRY_STOCK_INVENTORY) {
-                const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => normalizeToCanonicalSlug(window.PANTRY_STOCK_INVENTORY[k].name) === slug);
+                const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, i.item_name));
                 val = invKey ? window.PANTRY_STOCK_INVENTORY[invKey].stock : 0;
               } else {
                 val = 0;
@@ -3540,8 +3640,20 @@ function generateNextWeekMenu() {
       const parsed = parseFloat(val) || 0;
       pantryStock[itemName] = parsed;
       const slug = normalizeToCanonicalSlug(itemName);
-      if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[slug]) {
-        window.PANTRY_STOCK_INVENTORY[slug].stock = parsed;
+      if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+        const matchedKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => 
+          k === slug || areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, itemName)
+        );
+        if (matchedKey) {
+          window.PANTRY_STOCK_INVENTORY[matchedKey].stock = parsed;
+        } else {
+          window.PANTRY_STOCK_INVENTORY[slug] = {
+            name: itemName,
+            stock: parsed,
+            unit: 'g',
+            status: 'canonical'
+          };
+        }
       }
       saveAppState();
       if (typeof render3DShoppingList === 'function') {
@@ -3842,6 +3954,10 @@ function generateNextWeekMenu() {
         if (activeBtn) {
           activeBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-300', 'border-slate-200', 'dark:border-slate-700');
           activeBtn.classList.add('bg-[#1C75BC]', 'text-white', 'border-[#1C75BC]');
+        }
+
+        if (targetId === 'v-shop' && typeof render3DShoppingList === 'function') {
+          render3DShoppingList();
         }
 
         if (typeof updateExportButtonUI === 'function') updateExportButtonUI();
@@ -4378,10 +4494,7 @@ function calculateNetShoppingList(diners) {
     const isHarvestInList = harvestList.some(h => {
       if (!h) return false;
       const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
-      const hSlug = normalizeToCanonicalSlug(hStr);
-      const hLower = hStr.toLowerCase();
-      return (hSlug && slug && (hSlug === slug || slug.includes(hSlug) || hSlug.includes(slug))) ||
-             (hLower && cleanLower && (hLower === cleanLower || cleanLower.includes(hLower) || hLower.includes(cleanLower)));
+      return areInsumosEquivalent(hStr, cleanName);
     });
 
     const isHarvest = isHarvestInList || cat.includes("Cosecha");
@@ -4409,11 +4522,20 @@ function calculateNetShoppingList(diners) {
         const pObj = window.PANTRY_STOCK_INVENTORY[pKey];
         if (!pObj || pObj.status !== 'canonical') return;
 
-        const pSlug = normalizeToCanonicalSlug(pObj.name || pKey);
-        if (pSlug === slug || pKey === slug || pSlug.includes(slug) || slug.includes(pSlug)) {
+        if (areInsumosEquivalent(pObj.name || pKey, cleanName)) {
           const pQty = parseFloat(pObj.stock) || 0;
           const pUnit = pObj.unit || item.unit;
           stockInBase += parseQuantityInBaseUnit(pQty, pUnit).val;
+        }
+      });
+    }
+
+    if (stockInBase === 0 && typeof pantryStock !== 'undefined' && pantryStock) {
+      Object.keys(pantryStock).forEach(pName => {
+        const pVal = parseFloat(pantryStock[pName]) || 0;
+        if (pVal <= 0) return;
+        if (areInsumosEquivalent(pName, cleanName)) {
+          stockInBase += parseQuantityInBaseUnit(pVal, item.unit).val;
         }
       });
     }

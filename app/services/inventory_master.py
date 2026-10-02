@@ -17,9 +17,15 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Ejotes frescos", "base_qty": 1.5, "unit": "kg"},
     {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Cilantro fresco", "base_qty": 3.0, "unit": "manojos"},
     {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Arúgula fresca", "base_qty": 3.0, "unit": "manojos"},
-    {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Higos frescos", "base_qty": 1.5, "unit": "kg"},
-    {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Pitayas frescas", "base_qty": 1.0, "unit": "kg"},
-    {"category": "🌾 Cosecha Directa de la Granja / Huerto", "item_name": "Granadas frescas", "base_qty": 6.0, "unit": "piezas"},
+
+    # 🍓 Frutas de Bajo Índice Glucémico
+    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Arilos de granada fresca", "base_qty": 480.0, "unit": "g"},
+    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Arándanos frescos", "base_qty": 480.0, "unit": "g"},
+    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Frambuesas frescas orgánicas", "base_qty": 480.0, "unit": "g"},
+    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Fresas frescas", "base_qty": 480.0, "unit": "g"},
+    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Moras frescas", "base_qty": 480.0, "unit": "g"},
+    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Pitaya fresca", "base_qty": 480.0, "unit": "g"},
+    {"category": "🍓 Frutas de Bajo Índice Glucémico", "item_name": "Zarzamoras frescas", "base_qty": 480.0, "unit": "g"},
 
     # 🥩 Carnes, Pescados y Proteínas
     {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Huevos enteros", "base_qty": 8.0, "unit": "casilleros"},
@@ -52,7 +58,6 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Champiñones Portobello", "base_qty": 12.0, "unit": "piezas"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Dientes de ajo fresco", "base_qty": 3.0, "unit": "cabezas"},
     {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Apio fresco", "base_qty": 1.0, "unit": "manojo"},
-    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Fresas frescas", "base_qty": 500.0, "unit": "g"},
 
     # 🥑 Grasas, Aceites y Semillas
     {"category": "🥑 Grasas, Aceites y Semillas", "item_name": "Semillas de chía orgánicas", "base_qty": 400.0, "unit": "g"},
@@ -121,11 +126,11 @@ INGREDIENT_CANONICAL_MAP = {
     "fresa-fresca": ["fresa", "fresas", "fresas frescas", "fresa fresca"],
     "nuez-castilla": ["nuez", "nueces", "nuez de castilla", "nueces pecana", "nuez pecana"],
     "frambuesa-fresca": ["frambuesa", "frambuesas", "frambuesas frescas", "frambuesa fresca"],
-    "mora-fresca": ["mora", "moras", "moras frescas", "mora fresca", "zarzamora", "zarzamoras"],
+    "mora-fresca": ["mora", "moras", "moras frescas", "mora fresca"],
+    "zarzamora-fresca": ["zarzamora", "zarzamoras", "zarzamoras frescas"],
     "arandano-fresco": ["arándano", "arandano", "arándanos", "arandanos", "arándanos frescos"],
-    "granada-fresca": ["granada", "granadas", "arilos de granada", "granada fresca"],
+    "granada-fresca": ["granada", "granadas", "arilos de granada", "arilos de granada fresca", "granada fresca", "arilos"],
     "pitaya-fresca": ["pitaya", "pitahaya", "pitayas", "pitahayas", "pitaya fresca"],
-    "higo-fresco": ["higo", "higos", "higos frescos"],
     "almendra-entera": ["almendra", "almendras", "almendras fileteadas", "almendras tostadas", "almendras enteras"],
     "chia-organica": ["chía", "chia", "semillas de chía", "semillas de chia"],
     "nopal-tierno": ["nopal", "nopales", "nopales tiernos", "nopales asados"],
@@ -635,7 +640,7 @@ class InventorySyncMaster:
             return "🥑 Grasas, Aceites y Semillas"
         if any(k in name_lower for k in ["cebolla", "cebollas", "cebollín", "cebollin"]):
             return "🥬 Verduras, Hortalizas y Frescos"
-        if any(k in name_lower for k in ["durazno", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar"]):
+        if any(k in name_lower for k in ["durazno", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar", "higo", "higos"]):
             return "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)"
         if any(k in name_lower for k in ["portobello", "champiñon", "champiñones", "champinon", "champinones", "setas", "hongos"]):
             return "🥬 Verduras, Hortalizas y Frescos"
@@ -643,7 +648,7 @@ class InventorySyncMaster:
             return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
         if re.search(r'\b(huevo|huevos|clara|claras|pollo|sirloin|res|mignon|ribeye|pescado|salmón|salmon|pavo|machaca|jamón|jamon|tocino|atún|atun|huachinango|robalo|róbalo|arrachera|costilla|tuétano|tuetano|filete|filetes)\b', name_lower):
             return "🥩 Carnes, Pescados y Proteínas"
-        if not any(k in name_lower for k in ["cebolla", "morada"]) and any(k in name_lower for k in ["fresa", "frambuesa", "mora", "arándano", "arandano", "pitahaya", "pitaya", "higo", "granada", "arilos"]):
+        if not any(k in name_lower for k in ["cebolla", "morada"]) and any(k in name_lower for k in ["fresa", "frambuesa", "mora", "arándano", "arandano", "pitahaya", "pitaya", "granada", "arilos", "zarzamora"]):
             return "🍓 Frutas de Bajo Índice Glucémico"
         if any(k in name_lower for k in ["queso", "mantequilla", "ghee", "crema"]):
             return "🧀 Lácteos y Quesos (Sin Gluten / Keto)"
@@ -839,7 +844,7 @@ class InventorySyncMaster:
 
         # 0. Insumos en Cuarentena / No Sugeridos
         if (explicit_category and any(k in explicit_category.lower() for k in ["cuarentena", "prohibited", "🛑"])) or \
-           any(k in name for k in ["durazno", "duraznos", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar"]):
+           any(k in name for k in ["durazno", "duraznos", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar", "higo", "higos"]):
             return "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)"
 
         # 0.1 Hongos y Setas (Prioridad Taxonómica: Verduras, Hortalizas y Frescos)
@@ -859,7 +864,7 @@ class InventorySyncMaster:
             return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
 
         # 2. Frutas de Bajo Índice Glucémico (Excluyendo jitomate, tomate, cebolla morada, etc.)
-        if not any(k in name for k in ["aceite", "leche", "jitomate", "tomate", "cebolla", "morada"]) and any(k in name for k in ["mora", "moras", "frambuesa", "frambuesas", "fresa", "fresas", "arándano", "arandano", "arándanos", "arandanos", "granada", "granadas", "higo", "higos", "pitahaya", "pitahayas", "pitaya", "pitayas"]):
+        if not any(k in name for k in ["aceite", "leche", "jitomate", "tomate", "cebolla", "morada"]) and any(k in name for k in ["mora", "moras", "frambuesa", "frambuesas", "fresa", "fresas", "arándano", "arandano", "arándanos", "arandanos", "granada", "granadas", "pitahaya", "pitahayas", "pitaya", "pitayas", "zarzamora", "zarzamoras", "arilos"]):
             return "🍓 Frutas de Bajo Índice Glucémico"
 
         # 3. Grasas, Aceites y Semillas (Aguacates, Aceitunas, Aceites, Leche de coco, Semillas, Mayonesa)

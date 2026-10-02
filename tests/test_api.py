@@ -1215,6 +1215,53 @@ def test_triple_parity_fiber_and_calories():
             meal_idx += 1
 
 
+def test_harvest_pantry_reactivity_and_purity():
+    """Garantiza la paridad y pureza de Cosecha y Alacena:
+    1. Purga total de higos de Cosecha (FARM_MASTER_CATALOG y RAW_SHOPPING_ITEMS_BASE).
+    2. Existencia de frutos cetogénicos en catálogo de Alacena y Cosecha.
+    3. Presencia de la función areInsumosEquivalent en el frontend para vincular
+       'Granadas frescas' con 'Arilos de granada fresca' y descontar a Cosecha Propia ($0).
+    """
+    import os, re
+    from app.services.inventory_master import RAW_SHOPPING_ITEMS_BASE
+
+    # 1. Purgar higos de RAW_SHOPPING_ITEMS_BASE
+    for item in RAW_SHOPPING_ITEMS_BASE:
+        name = item.get("item_name", "").lower()
+        cat = item.get("category", "").lower()
+        if "cosecha" in cat:
+            assert "higo" not in name, f"Insumo prohibido 'higo' detectado en Cosecha: {name}"
+
+    # 2. Verificar que los 7 frutos cetogénicos están en RAW_SHOPPING_ITEMS_BASE bajo Frutas
+    fruit_items = [i["item_name"].lower() for i in RAW_SHOPPING_ITEMS_BASE if "fruta" in i["category"].lower()]
+    for expected in ["arilos de granada fresca", "arándanos frescos", "frambuesas frescas orgánicas", "fresas frescas", "moras frescas", "pitaya fresca", "zarzamoras frescas"]:
+        assert any(expected in f for f in fruit_items), f"Fruto cetogénico '{expected}' ausente en catálogo de compras"
+
+    # 3. Verificar código fuente de generate_standalone_html.py
+    html_gen_path = "generate_standalone_html.py"
+    with open(html_gen_path, "r", encoding="utf-8") as f:
+        code = f.read()
+
+    # FARM_MASTER_CATALOG no debe tener higos
+    farm_catalog_match = re.search(r'const FARM_MASTER_CATALOG = \[(.*?)\];', code, re.DOTALL)
+    assert farm_catalog_match, "FARM_MASTER_CATALOG no encontrado"
+    farm_catalog_content = farm_catalog_match.group(1).lower()
+    assert "higo" not in farm_catalog_content, "Higos presentes en FARM_MASTER_CATALOG"
+    assert "granadas frescas" in farm_catalog_content, "Granadas ausentes en FARM_MASTER_CATALOG"
+    assert "fresas frescas" in farm_catalog_content, "Fresas ausentes en FARM_MASTER_CATALOG"
+
+    # Presencia de función areInsumosEquivalent
+    assert "function areInsumosEquivalent(aName, bName)" in code
+    assert "{ stem: 'granada', aliases: ['granada', 'granadas', 'arilos'] }" in code
+
+    # PANTRY_STOCK_INVENTORY debe contener las frutas cetogénicas
+    pantry_inventory_match = re.search(r'window\.PANTRY_STOCK_INVENTORY = \{(.*?)\};', code, re.DOTALL)
+    assert pantry_inventory_match, "PANTRY_STOCK_INVENTORY no encontrado"
+    pantry_content = pantry_inventory_match.group(1)
+    for p_slug in ["fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "zarzamoras-frescas"]:
+        assert p_slug in pantry_content, f"Slug '{p_slug}' ausente en window.PANTRY_STOCK_INVENTORY"
+
+
 
 
 
