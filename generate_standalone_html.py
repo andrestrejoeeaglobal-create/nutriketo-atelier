@@ -2550,6 +2550,13 @@ function generateNextWeekMenu() {
       "ajo-fresco": { name: "Ajo fresco", stock: 36, unit: "g", status: "canonical" },
       "limon-fresco": { name: "Jugo de limón fresco recién exprimido", stock: 200, unit: "ml", status: "canonical" },
       "pimienta-negra": { name: "Pimienta negra recién molida", stock: 50, unit: "g", status: "canonical" },
+      "jitomate-saladet": { name: "Jitomate Saladet fresco", stock: 3, unit: "kg", status: "canonical" },
+      "cebolla-blanca": { name: "Cebolla blanca fresca", stock: 3, unit: "kg", status: "canonical" },
+      "tomate-verde": { name: "Tomate verde fresco", stock: 1, unit: "kg", status: "canonical" },
+      "yoghurt-griego": { name: "Yoghurt griego natural sin azúcar", stock: 900, unit: "g", status: "canonical" },
+      "mayonesa": { name: "Mayonesa", stock: 500, unit: "g", status: "canonical" },
+      "leche-coco": { name: "Leche de coco", stock: 500, unit: "ml", status: "canonical" },
+      "sardinas": { name: "Sardinas enlatadas", stock: 2, unit: "latas", status: "canonical" },
       "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
       "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
       // Frutas de Bajo Índice Glucémico en Alacena (Registro Previsto)
@@ -2561,6 +2568,11 @@ function generateNextWeekMenu() {
       "pitaya-fresca": { name: "Pitaya fresca", stock: 0, unit: "g", status: "canonical" },
       "zarzamoras-frescas": { name: "Zarzamoras frescas", stock: 0, unit: "g", status: "canonical" },
       // Insumos No Sugeridos / Cuarentena (Status: "prohibited")
+      "papa": { name: "Papa fresca", stock: 1, unit: "kg", status: "prohibited", reason: "Tubérculo de alto índice glucémico y almidón puro (Rompe Cetosis)" },
+      "lentejas": { name: "Lentejas", stock: 500, unit: "g", status: "prohibited", reason: "Leguminosa alta en carbohidratos netos y lectinas (Fuera de Protocolo Keto)" },
+      "garbanzo": { name: "Garbanzo", stock: 500, unit: "g", status: "prohibited", reason: "Leguminosa con elevado almidón y carbohidratos netos (Rompe Cetosis)" },
+      "frijol": { name: "Frijol", stock: 750, unit: "g", status: "prohibited", reason: "Leguminosa proscrita en cetosis por elevado aporte glucémico" },
+      "arroz": { name: "Arroz tradicional", stock: 750, unit: "g", status: "prohibited", reason: "Cereal de altísima biodisponibilidad amilácea (Rompe Cetosis)" },
       "miel-pura": { name: "Miel pura de la granja El Herami", stock: 250, unit: "g", status: "prohibited", reason: "Alto Índice Glucémico / Fructosa Pura (Rompe Cetosis)" },
       "duraznos-frescos": { name: "Duraznos frescos", stock: 1.5, unit: "kg", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Fuera de Protocolo Keto)" },
       "higos-frescos": { name: "Higos frescos", stock: 1.5, unit: "kg", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
@@ -2825,7 +2837,13 @@ function generateNextWeekMenu() {
         ];
       }
 
-      // 8. Pescados
+      // 8. Pescados y Mariscos
+      if (/sardina/i.test(name)) {
+        return [
+          { id: 'latas', label: 'Latas (pzas)', multiplier: 1, unit: 'latas', type: 'count' },
+          { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' }
+        ];
+      }
       if (/robalo|huachinango|salmon|atun|pescado/i.test(name)) {
         return [
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
@@ -2834,7 +2852,21 @@ function generateNextWeekMenu() {
         ];
       }
 
-      // 9. Aceites y fluidos
+      // 9. Aceites, fluidos y mayonesa
+      if (/leche de coco/i.test(name)) {
+        return [
+          { id: 'tetra_500', label: 'Tetrapak / Envase (500 ml)', multiplier: 500, unit: 'ml', type: 'vol' },
+          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' },
+          { id: 'l', label: 'Litros (L)', multiplier: 1000, unit: 'ml', type: 'vol' }
+        ];
+      }
+      if (/mayonesa/i.test(name)) {
+        return [
+          { id: 'frasco_500', label: 'Frasco (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
       if (/aceite.*oliva|vevo/i.test(name)) {
         return [
           { id: 'botella_vevo', label: 'Botella (750 ml)', multiplier: 750, unit: 'ml', type: 'vol' },
@@ -2872,11 +2904,38 @@ function generateNextWeekMenu() {
       }
 
       // 12. Quesos y lácteos
+      if (/yoghurt|yogurt/i.test(name)) {
+        return [
+          { id: 'bote_900', label: 'Bote (900 g)', multiplier: 900, unit: 'g', type: 'mass' },
+          { id: 'paquete_500', label: 'Bote (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
       if (/queso|gouda|panela|parmesano|cabra|mantequilla|ghee/i.test(name)) {
         return [
           { id: 'paquete_500', label: 'Pieza / Paq (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
           { id: 'paquete_250', label: 'Pieza / Paq (250 g)', multiplier: 250, unit: 'g', type: 'mass' },
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+
+      // 12b. Jitomate, Cebolla, Tomate verde
+      if (/jitomate|cebolla|tomate/i.test(name)) {
+        return [
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'paquete_500', label: 'Bolsa (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+
+      // 12c. Leguminosas, Cereales y Tubérculos (Cuarentena)
+      if (/lenteja|garbanzo|frijol|arroz|papa/i.test(name)) {
+        return [
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'bolsa_750', label: 'Bolsa (750 g)', multiplier: 750, unit: 'g', type: 'mass' },
+          { id: 'paquete_500', label: 'Bolsa (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
@@ -2998,6 +3057,15 @@ function generateNextWeekMenu() {
         case 'pza':
         case 'pzas':
           return { val: num, type: 'count', baseUnit: 'piezas' };
+        case 'latas':
+        case 'lata':
+          return { val: num, type: 'count', baseUnit: 'latas' };
+        case 'bote_900':
+          return { val: num * 900, type: 'mass', baseUnit: 'g' };
+        case 'tetra_500':
+          return { val: num * 500, type: 'vol', baseUnit: 'ml' };
+        case 'bolsa_750':
+          return { val: num * 750, type: 'mass', baseUnit: 'g' };
         default:
           return null;
       }
@@ -3068,8 +3136,8 @@ function generateNextWeekMenu() {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
-      // 0.2 Prioridad Taxonómica Estricta: Carnes / Proteínas (Arrachera, Sirloin, Pechuga, Pescado, etc.)
-      if (/arrachera|corte|cortes|ribeye|sirloin|\bres\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
+      // 0.2 Prioridad Taxonómica Estricta: Carnes / Proteínas (Arrachera, Sirloin, Pechuga, Pescado, Sardinas, etc.)
+      if (/arrachera|corte|cortes|ribeye|sirloin|\bres\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|sardina|sardinas|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
         return '🥩 Carnes, Pescados y Proteínas';
       }
 
@@ -3080,7 +3148,7 @@ function generateNextWeekMenu() {
 
       // 0.4 Prioridad Taxonómica Estricta: Insumos No Sugeridos / Cuarentena
       if ((explicitCategory && (explicitCategory.includes('cuarentena') || explicitCategory.includes('prohibited') || explicitCategory.includes('Cuarentena') || explicitCategory.includes('🛑'))) ||
-          /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca|higo|higos/i.test(name)) {
+          /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca|higo|higos|papa|papas|lenteja|lentejas|garbanzo|garbanzos|frijol|frijoles|arroz/i.test(name)) {
         return '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)';
       }
 
@@ -3105,7 +3173,7 @@ function generateNextWeekMenu() {
       }
 
       // 4. Lácteos y Quesos
-      if (/queso|quesos|leche|crema|gouda|panela|parmesano|manchego|mascarpone|mozzarella/i.test(name)) {
+      if (/queso|quesos|leche|crema|gouda|panela|parmesano|manchego|mascarpone|mozzarella|yoghurt|yogurt/i.test(name)) {
         return '🧀 Lácteos y Quesos (Sin Gluten — Keto)';
       }
 
@@ -3706,11 +3774,33 @@ function generateNextWeekMenu() {
           }
         });
 
-        // 2.2 Alacena deriva 100% del BOM Canónico del Menú Activo (Directiva Ley de Empaques Reales y SSOT)
-        // Se suprimen insumos huérfanos con demanda semanal cero.
+        // 2.2 Insumos Canónicos Activos en Inventario Físico de Alacena (con stock declarado)
+        if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined') {
+          Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
+            const pObj = window.PANTRY_STOCK_INVENTORY[k];
+            if (!pObj || pObj.status !== 'canonical') return;
+            const slug = normalizeToCanonicalSlug(pObj.name || k);
+            if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === pObj.name.toLowerCase())) return;
+            const alreadyInList = nonFarm.some(existing => areInsumosEquivalent(existing.item_name, pObj.name));
+            if (!alreadyInList) {
+              seenPantrySlugs.add(slug);
+              nonFarm.push({
+                item_name: pObj.name,
+                quantity: 0,
+                unit: pObj.unit || 'g',
+                category: getSmartItemCategory(pObj.name)
+              });
+            }
+          });
+        }
 
         // 2.3 Insumos en Cuarentena (siempre presentes en su bloque al fondo)
         const QUARANTINE_PANTRY_ITEMS = [
+          { item_name: 'Papa fresca', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
+          { item_name: 'Lentejas', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
+          { item_name: 'Garbanzo', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
+          { item_name: 'Frijol', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
+          { item_name: 'Arroz tradicional', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Duraznos frescos', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Higos frescos', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Miel pura de la granja El Herami', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
@@ -4493,16 +4583,26 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "queso-cabra": ["queso de cabra", "cabra artesanal", "queso de cabra artesanal"],
   "queso-crema": ["queso crema", "queso crema artesanal"],
   "mantequilla-pastoreo": ["mantequilla", "mantequilla de vaca", "mantequilla de pastoreo", "mantequilla sin sal"],
-  "jitomate-bola": ["jitomate", "jitomates", "jitomate bola", "jitomate bola jugoso"],
+  "jitomate-bola": ["jitomate", "jitomates", "jitomate bola", "jitomate bola jugoso", "jitomate saladet", "jitomate saladet fresco", "saladet"],
   "almendras-fileteadas": ["almendras fileteadas tostadas", "almendras fileteadas", "almendras tostadas", "almendras enteras", "almendra", "almendras"],
   "semillas-chia": ["semillas de chía orgánicas", "semillas de chia organicas", "semillas de chía", "semillas de chia", "chía", "chia"],
   "ajo-fresco": ["ajo fresco", "dientes de ajo fresco", "dientes de ajo", "ajo"],
   "limon-fresco": ["jugo de limón fresco recién exprimido", "jugo de limon fresco recien exprimido", "jugo de limón fresco", "limón fresco recién exprimido", "limones frescos", "limón", "limon"],
   "pimienta-negra": ["pimienta negra recién molida", "pimienta negra recien molida", "pimienta negra molida y sal marina", "pimienta negra molida", "pimienta negra"],
-  "cebolla-blanca": ["cebolla blanca fresca", "cebolla blanca"],
+  "cebolla-blanca": ["cebolla blanca fresca", "cebolla blanca", "cebolla", "cebollas"],
   "romero-fresco": ["romero fresco", "romero"],
   "sal-mar": ["sal de mar", "sal de mar mineral", "sal mineral", "sal de colima", "sal de mar mineral de colima", "sal"],
   "chayotes-tiernos": ["chayotes tiernos pelados", "chayote tierno", "chayotes tiernos", "chayote", "chayotes", "chayotes tiernos pelados en laminas", "chayotes tiernos pelados en láminas"],
+  "tomate-verde": ["tomate verde", "tomate verde fresco", "tomatillo", "tomates verdes"],
+  "yoghurt-griego": ["yoghurt griego natural sin azúcar", "yoghurt griego", "yogurt griego", "yoghurt griego natural", "yogur griego"],
+  "mayonesa": ["mayonesa", "mayonesa casera", "mayonesa keto"],
+  "leche-coco": ["leche de coco", "leche de coco sin azúcar", "leche de coco sin azucar"],
+  "sardinas": ["sardinas enlatadas", "sardinas", "sardina", "lata de sardinas", "latas de sardinas"],
+  "papa": ["papa fresca", "papa", "papas", "papas frescas"],
+  "lentejas": ["lentejas", "lenteja"],
+  "garbanzo": ["garbanzo", "garbanzos"],
+  "frijol": ["frijol", "frijoles"],
+  "arroz": ["arroz tradicional", "arroz", "arroz blanco"],
   "33plus": ["33plus", "33 plus", "fórmula 33plus", "elixir 33plus"],
   "34plus": ["34plus", "34 plus", "fórmula 34plus", "tisana 34plus"]
 };

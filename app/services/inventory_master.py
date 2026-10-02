@@ -83,6 +83,18 @@ RAW_SHOPPING_ITEMS_BASE = [
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Café en grano — molido", "base_qty": 1.0, "unit": "paquete"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Hierbas secas (Orégano — Tomillo)", "base_qty": 1.0, "unit": "frasco"},
     {"category": "🛒 Abarrotes, Semillas y Grasas", "item_name": "Sal de mar", "base_qty": 1.0, "unit": "frasco"},
+    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Jitomate Saladet fresco", "base_qty": 3.0, "unit": "kg"},
+    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Cebolla blanca fresca", "base_qty": 3.0, "unit": "kg"},
+    {"category": "🥬 Verduras, Hortalizas y Frescos", "item_name": "Tomate verde fresco", "base_qty": 1.0, "unit": "kg"},
+    {"category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)", "item_name": "Yoghurt griego natural sin azúcar", "base_qty": 900.0, "unit": "g"},
+    {"category": "🥑 Grasas, Aceites y Semillas", "item_name": "Mayonesa", "base_qty": 500.0, "unit": "g"},
+    {"category": "🥑 Grasas, Aceites y Semillas", "item_name": "Leche de coco", "base_qty": 500.0, "unit": "ml"},
+    {"category": "🥩 Carnes, Pescados y Proteínas", "item_name": "Sardinas enlatadas", "base_qty": 2.0, "unit": "latas"},
+    {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Papa fresca", "base_qty": 1.0, "unit": "kg"},
+    {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Lentejas", "base_qty": 500.0, "unit": "g"},
+    {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Garbanzo", "base_qty": 500.0, "unit": "g"},
+    {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Frijol", "base_qty": 750.0, "unit": "g"},
+    {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Arroz tradicional", "base_qty": 750.0, "unit": "g"},
     {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Duraznos frescos", "base_qty": 1.5, "unit": "kg"},
     {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Miel de abeja", "base_qty": 500.0, "unit": "g"},
     {"category": "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", "item_name": "Harina de trigo refinada", "base_qty": 1.0, "unit": "kg"}
@@ -849,7 +861,7 @@ class InventorySyncMaster:
 
         # 0. Insumos en Cuarentena / No Sugeridos
         if (explicit_category and any(k in explicit_category.lower() for k in ["cuarentena", "prohibited", "🛑"])) or \
-           any(k in name for k in ["durazno", "duraznos", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar", "higo", "higos"]):
+           any(k in name for k in ["durazno", "duraznos", "miel", "harina de trigo", "aceite vegetal mixto", "azúcar", "azucar", "higo", "higos", "papa", "papas", "lenteja", "lentejas", "garbanzo", "garbanzos", "frijol", "frijoles", "arroz"]):
             return "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)"
 
         # 0.1 Hongos y Setas (Prioridad Taxonómica: Verduras, Hortalizas y Frescos)
