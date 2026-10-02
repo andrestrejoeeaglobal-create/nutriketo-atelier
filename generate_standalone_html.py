@@ -2414,25 +2414,88 @@ function generateNextWeekMenu() {
 
           <!-- Añadir Nuevo Insumo a Cosecha -->
           <div class="add-custom-box">
-            <input type="text" id="new-harvest-name" class="add-input" list="setup-pantry-datalist" placeholder="Ej. Higos frescos, Vinagre de manzana..." onkeypress="if(event.key==='Enter') addNewHarvestItem()">
+            <input type="text" id="new-harvest-name" class="add-input" placeholder="Ej. Romero fresco, Epazote fresco..." onkeypress="if(event.key==='Enter') addNewHarvestItem()">
             <button type="button" class="btn-add-item" onclick="addNewHarvestItem()">➕ Añadir Insumo a Cosecha</button>
           </div>
         </div>
 
-        <!-- PASO 3: Auditoría de Alacena y Refrigerador con Opción para Añadir Nuevo -->
+        <!-- PASO 3: Auditoría de Alacena y Refrigerador con Registro Ergonómico y Selección de Sección -->
         <div class="setup-step">
           <div class="setup-step-title">3. Inventario Disponible en Alacena y Refrigerador</div>
           <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem;">Registra los insumos existentes (individuales) para descontarlos automáticamente:</div>
           <div class="grid-options" id="pantry-stock-grid"></div>
 
-          <!-- Añadir Nuevo Insumo a Alacena -->
-          <div class="add-custom-box">
-            <input type="text" id="new-pantry-name" class="add-input" list="setup-pantry-datalist" placeholder="Nombre (ej. Café en grano, Vinagre...)" onkeypress="if(event.key==='Enter') addNewPantryItem()">
-            <input type="number" step="0.1" id="new-pantry-qty" style="width: 75px;" class="add-input" placeholder="Cant." onkeypress="if(event.key==='Enter') addNewPantryItem()">
-            <input type="text" id="new-pantry-unit" style="width: 85px;" class="add-input" placeholder="Unidad" onkeypress="if(event.key==='Enter') addNewPantryItem()">
-            <button type="button" class="btn-add-item" onclick="addNewPantryItem()">➕ Añadir Insumo a Alacena</button>
+          <!-- Módulo Ergonómico para Registrar Nuevo Insumo en Alacena -->
+          <div style="background: var(--surface-card); border: 1.5px solid var(--border-clinical); border-radius: 14px; padding: 1rem 1.1rem; margin-top: 1.25rem; box-shadow: var(--shadow-clinical-sm);">
+            <div style="font-weight: 800; font-size: 0.9rem; color: var(--color-34plus); margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+              <span style="display: flex; align-items: center; gap: 0.45rem;">
+                <svg style="width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 2;" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+                <span>Registrar Nuevo Insumo en Inventario Físico</span>
+              </span>
+              <span id="pantry-cat-indicator" style="font-size: 0.75rem; font-weight: 800; padding: 0.25rem 0.6rem; border-radius: 6px; background: rgba(28,117,188,0.12); color: #1C75BC; border: 1px solid rgba(28,117,188,0.25);">Destino: 🥬 Verduras y Frescos</span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) auto; gap: 0.75rem; align-items: flex-end;">
+              <div style="min-width: 200px;">
+                <label style="display: block; font-size: 0.74rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.3rem;">Nombre del Insumo:</label>
+                <input type="text" id="new-pantry-name" style="width: 100%; padding: 0.5rem 0.75rem; border: 1.5px solid var(--border-clinical); border-radius: 8px; font-size: 0.86rem; background: var(--surface-ground); color: var(--text-main);" placeholder="Ej. Nueces de la India, Cúrcuma, Salmón..." oninput="onNewPantryNameInput(this.value)" onkeypress="if(event.key==='Enter') addNewPantryItem()">
+              </div>
+
+              <div style="min-width: 220px;">
+                <label style="display: block; font-size: 0.74rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.3rem;">Sección / Categoría Clínica:</label>
+                <select id="new-pantry-cat" style="width: 100%; padding: 0.5rem 0.75rem; border: 1.5px solid var(--border-clinical); border-radius: 8px; font-size: 0.84rem; font-weight: 700; background: var(--surface-ground); color: var(--text-main); cursor: pointer;" onchange="onNewPantryCatChange(this.value)">
+                  <option value="🥬 Verduras, Hortalizas y Frescos">🥬 Verduras, Hortalizas y Frescos</option>
+                  <option value="🥩 Carnes, Pescados y Proteínas">🥩 Carnes, Pescados y Proteínas</option>
+                  <option value="🧀 Lácteos y Quesos (Sin Gluten — Keto)">🧀 Lácteos y Quesos (Sin Gluten — Keto)</option>
+                  <option value="🥑 Grasas, Aceites y Semillas">🥑 Grasas, Aceites y Semillas</option>
+                  <option value="🍓 Frutas de Bajo Índice Glucémico">🍓 Frutas de Bajo Índice Glucémico</option>
+                  <option value="🍋 Cítricos y Ácidos Naturales">🍋 Cítricos y Ácidos Naturales</option>
+                  <option value="🌶️ Chiles, Condimentos e Infusiones">🌶️ Chiles, Condimentos e Infusiones</option>
+                  <option value="💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA">💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA</option>
+                  <option value="🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)">🛑 Insumos No Sugeridos / Cuarentena</option>
+                </select>
+              </div>
+
+              <div style="min-width: 90px; max-width: 120px;">
+                <label style="display: block; font-size: 0.74rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.3rem;">Cantidad:</label>
+                <input type="number" step="any" min="0" id="new-pantry-qty" value="1" style="width: 100%; padding: 0.5rem 0.6rem; border: 1.5px solid var(--border-clinical); border-radius: 8px; font-size: 0.88rem; font-weight: 800; text-align: center; background: var(--surface-ground); color: var(--text-main);" onkeypress="if(event.key==='Enter') addNewPantryItem()">
+              </div>
+
+              <div style="min-width: 170px;">
+                <label style="display: block; font-size: 0.74rem; font-weight: 700; color: var(--text-muted); margin-bottom: 0.3rem;">Unidad / Empaque Comercial:</label>
+                <select id="new-pantry-unit" onchange="this.dataset.userLocked='true'" style="width: 100%; padding: 0.5rem 0.75rem; border: 1.5px solid var(--border-clinical); border-radius: 8px; font-size: 0.84rem; font-weight: 700; background: var(--surface-ground); color: var(--text-main); cursor: pointer;">
+                  <option value="kg">Kilo (1,000 g)</option>
+                  <option value="g">Gramos (g)</option>
+                  <option value="piezas">Piezas (pzas)</option>
+                  <option value="latas">Latas (pzas)</option>
+                  <option value="l">Litros (L)</option>
+                  <option value="ml">Mililitros (ml)</option>
+                  <option value="frasco_500">Frasco / Envase (500 g/ml)</option>
+                  <option value="frasco_250">Frasco (250 g/ml)</option>
+                  <option value="bote_900">Bote (900 g)</option>
+                  <option value="bolsa_1000">Bolsa (1,000 g)</option>
+                  <option value="bolsa_750">Bolsa (750 g)</option>
+                  <option value="bolsa_500">Bolsa (500 g)</option>
+                  <option value="bolsa_250">Bolsa (250 g)</option>
+                  <option value="botella_vevo">Botella (750 ml)</option>
+                  <option value="casillero">Casillero (30 pzas)</option>
+                  <option value="docena">Docena (12 pzas)</option>
+                </select>
+              </div>
+
+              <div>
+                <button type="button" id="btn-add-pantry-item" onclick="addNewPantryItem()" style="padding: 0.55rem 1.15rem; min-height: 42px; display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; white-space: nowrap; font-weight: 800; font-size: 0.85rem; border-radius: 8px; background: #1C75BC; color: #fff; border: none; cursor: pointer; box-shadow: 0 2px 6px rgba(28,117,188,0.3); transition: background 0.2s;" onmouseover="this.style.background='#165c94'" onmouseout="this.style.background='#1C75BC'">
+                  <span>➕ Añadir Insumo</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Fila Condicional de Cuarentena (aparece si se selecciona Cuarentena) -->
+            <div id="pantry-quarantine-reason-box" style="display: none; margin-top: 0.75rem; padding: 0.6rem 0.85rem; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: 8px;">
+              <label style="display: block; font-size: 0.74rem; font-weight: 800; color: #dc2626; margin-bottom: 0.25rem;">⚠️ Motivo de Cuarentena / Exclusión Clínica (NOM-004):</label>
+              <input type="text" id="new-pantry-reason" style="width: 100%; padding: 0.45rem 0.65rem; border: 1px solid rgba(239, 68, 68, 0.4); border-radius: 6px; font-size: 0.82rem; background: var(--surface-card); color: var(--text-main);" placeholder="Ej. Alto Índice Glucémico / Almidón refinado / Leguminosa fuera de protocolo cetogénico">
+            </div>
           </div>
-          <datalist id="setup-pantry-datalist"></datalist>
         </div>
 
         <button class="btn-action" onclick="saveAndUnlockApp()">🏛️ Compilar Arquitectura Semanal</button>
@@ -3109,23 +3172,24 @@ function generateNextWeekMenu() {
     }
 
     function getSmartItemCategory(itemName, explicitCategory) {
-      const name = (itemName || '').toLowerCase().trim();
-
-      // 0.0 Inmunidad Taxonómica Estricta: Aceites vegetales, VEVO, ajonjolí, mantequilla y ghee son grasas puras (NUNCA lácteos ni quesos)
-      if (/aceite|vevo|ajonjolí|ajonjoli|mantequilla|ghee/i.test(name)) {
-        return '🥑 Grasas, Aceites y Semillas';
-      }
-
       if (explicitCategory && typeof explicitCategory === 'string' && explicitCategory.trim()) {
         const ec = explicitCategory.trim();
-        if (ec.includes("Verduras") || ec.includes("Hortalizas")) return "🥬 Verduras, Hortalizas y Frescos";
+        if (ec.includes("Cuarentena") || ec.includes("🛑") || ec.includes("No Sugeridos") || ec.includes("prohibited")) return "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)";
+        if (ec.includes("Verduras") || ec.includes("Hortalizas") || ec.includes("Frescos")) return "🥬 Verduras, Hortalizas y Frescos";
         if (ec.includes("Carnes") || ec.includes("Pescados") || ec.includes("Proteínas")) return "🥩 Carnes, Pescados y Proteínas";
         if (ec.includes("Frutas")) return "🍓 Frutas de Bajo Índice Glucémico";
         if (ec.includes("Quesos") || (ec.includes("Lácteos") && !ec.includes("Grasas"))) return "🧀 Lácteos y Quesos (Sin Gluten — Keto)";
         if (ec.includes("Grasas") || ec.includes("Aceites") || ec.includes("Semillas")) return "🥑 Grasas, Aceites y Semillas";
         if (ec.includes("Suplementación") || ec.includes("Biotecnología") || ec.includes("Bases Hidrocoloides")) return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA";
         if (ec.includes("Cítricos") || ec.includes("Ácidos")) return "🍋 Cítricos y Ácidos Naturales";
-        if (ec.includes("Especias") || ec.includes("Hierbas") || ec.includes("Aromáticos") || ec.includes("Condimentos")) return "🌶️ Chiles, Condimentos e Infusiones";
+        if (ec.includes("Especias") || ec.includes("Hierbas") || ec.includes("Aromáticos") || ec.includes("Condimentos") || ec.includes("Infusiones")) return "🌶️ Chiles, Condimentos e Infusiones";
+      }
+
+      const name = (itemName || '').toLowerCase().trim();
+
+      // 0.0 Inmunidad Taxonómica Estricta: Aceites vegetales, VEVO, ajonjolí, mantequilla y ghee son grasas puras (NUNCA lácteos ni quesos)
+      if (/aceite|vevo|ajonjolí|ajonjoli|mantequilla|ghee/i.test(name)) {
+        return '🥑 Grasas, Aceites y Semillas';
       }
 
       // 0.0 Prioridad Taxonómica Estricta: Leche de coco -> Grasas, Aceites y Semillas (NUNCA Cuarentena)
@@ -3286,6 +3350,10 @@ function generateNextWeekMenu() {
             window.pantryCardUnits = {};
           }
 
+          if (state.pantryStockInventory && typeof state.pantryStockInventory === 'object') {
+            window.PANTRY_STOCK_INVENTORY = Object.assign(window.PANTRY_STOCK_INVENTORY || {}, state.pantryStockInventory);
+          }
+
           if (state.checkedRows) checkedRows = state.checkedRows;
           if (state.mealDinersState) mealDinersState = state.mealDinersState;
           if (state.dispatchedMeals && typeof state.dispatchedMeals === 'object') {
@@ -3362,6 +3430,7 @@ function generateNextWeekMenu() {
           deletedPantryItems,
           pantryStock,
           pantryCardUnits: window.pantryCardUnits || {},
+          pantryStockInventory: window.PANTRY_STOCK_INVENTORY || {},
           checkedRows,
           customShopItems,
           selectedIdx,
@@ -3786,21 +3855,25 @@ function generateNextWeekMenu() {
           }
         });
 
-        // 2.2 Insumos Canónicos Activos en Inventario Físico de Alacena (con stock declarado)
+        // 2.2 Insumos Canónicos y Registrados Activos en Inventario Físico de Alacena (con stock declarado)
         if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined') {
           Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
             const pObj = window.PANTRY_STOCK_INVENTORY[k];
-            if (!pObj || pObj.status !== 'canonical') return;
+            if (!pObj) return;
             const slug = normalizeToCanonicalSlug(pObj.name || k);
             if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === pObj.name.toLowerCase())) return;
             const alreadyInList = nonFarm.some(existing => areInsumosEquivalent(existing.item_name, pObj.name));
             if (!alreadyInList) {
               seenPantrySlugs.add(slug);
+              const assignedCat = (pObj.status === 'prohibited')
+                ? '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)'
+                : (pObj.category || getSmartItemCategory(pObj.name));
               nonFarm.push({
                 item_name: pObj.name,
                 quantity: 0,
                 unit: pObj.unit || 'g',
-                category: getSmartItemCategory(pObj.name)
+                category: assignedCat,
+                status: pObj.status || 'canonical'
               });
             }
           });
@@ -3833,7 +3906,7 @@ function generateNextWeekMenu() {
 
         const categoriesMap = {};
         nonFarm.forEach(i => {
-          const cat = getSmartItemCategory(i.item_name, i.category);
+          const cat = i.category || getSmartItemCategory(i.item_name, i.category);
           if (!categoriesMap[cat]) categoriesMap[cat] = [];
           categoriesMap[cat].push(i);
         });
@@ -3923,19 +3996,6 @@ function generateNextWeekMenu() {
 
       if (document.getElementById('setup-week')) document.getElementById('setup-week').value = activeWeek;
       if (document.getElementById('setup-diners')) document.getElementById('setup-diners').value = activeDiners;
-
-      const pantryDatalist = document.getElementById('setup-pantry-datalist');
-      if (pantryDatalist) {
-        pantryDatalist.innerHTML = '';
-        const allPossibleItems = new Set();
-        FARM_MASTER_CATALOG.forEach(m => allPossibleItems.add(m));
-        rawShopBase.forEach(i => { if (i && i.item_name) allPossibleItems.add(i.item_name); });
-        allPossibleItems.forEach(name => {
-          const opt = document.createElement('option');
-          opt.value = name;
-          pantryDatalist.appendChild(opt);
-        });
-      }
     }
 
     function toggleEditDetails() {
@@ -4002,14 +4062,93 @@ function generateNextWeekMenu() {
       if (typeof showToast === 'function') showToast(`🌿 '${val}' añadido a Cosecha Activa.`);
     }
 
+    function updatePantryCatBadge(cat) {
+      const badge = document.getElementById('pantry-cat-indicator');
+      if (!badge) return;
+      if (cat.includes('Cuarentena') || cat.includes('🛑') || cat.includes('prohibited')) {
+        badge.textContent = 'Destino: 🛑 Cuarentena (Fuera de Protocolo)';
+        badge.style.background = 'rgba(239, 68, 68, 0.15)';
+        badge.style.color = '#dc2626';
+        badge.style.borderColor = 'rgba(239, 68, 68, 0.4)';
+      } else {
+        badge.textContent = `Destino: ${cat}`;
+        badge.style.background = 'rgba(28,117,188,0.12)';
+        badge.style.color = '#1C75BC';
+        badge.style.borderColor = 'rgba(28,117,188,0.25)';
+      }
+    }
+
+    function onNewPantryNameInput(val) {
+      const catSelect = document.getElementById('new-pantry-cat');
+      const unitSelect = document.getElementById('new-pantry-unit');
+      const qBox = document.getElementById('pantry-quarantine-reason-box');
+      if (!val || !val.trim()) {
+        updatePantryCatBadge('🥬 Verduras, Hortalizas y Frescos');
+        if (qBox) qBox.style.display = 'none';
+        return;
+      }
+
+      // Sugerir categoría automáticamente si el usuario no la ha fijado manualmente
+      if (catSelect && catSelect.dataset.userLocked !== 'true') {
+        const smartCat = getSmartItemCategory(val, '');
+        catSelect.value = smartCat;
+        updatePantryCatBadge(smartCat);
+        if (qBox) {
+          qBox.style.display = (smartCat.includes('Cuarentena') || smartCat.includes('🛑')) ? 'block' : 'none';
+        }
+      }
+
+      // Sugerir unidad de empaque comercial si el usuario no la ha fijado manualmente
+      if (unitSelect && unitSelect.dataset.userLocked !== 'true') {
+        const v = val.toLowerCase();
+        if (/huevo|huevos/i.test(v)) {
+          unitSelect.value = 'casillero';
+        } else if (/sardina|sardinas|atún|atun/i.test(v)) {
+          unitSelect.value = 'latas';
+        } else if (/yogurt|yoghurt/i.test(v)) {
+          unitSelect.value = 'bote_900';
+        } else if (/leche de coco|leche/i.test(v)) {
+          unitSelect.value = 'ml';
+        } else if (/mayonesa|ghee|mantequilla|crema/i.test(v)) {
+          unitSelect.value = 'frasco_500';
+        } else if (/aceite|vinagre/i.test(v)) {
+          unitSelect.value = 'botella_vevo';
+        } else if (/frijol|arroz/i.test(v)) {
+          unitSelect.value = 'bolsa_750';
+        } else if (/lenteja|garbanzo/i.test(v)) {
+          unitSelect.value = 'bolsa_500';
+        } else if (/sal\b|pimienta|orégano|oregano|comino|canela|clavo|epazote|romero|tomillo/i.test(v)) {
+          unitSelect.value = 'g';
+        } else if (/chayote|pepino|aguacate/i.test(v)) {
+          unitSelect.value = 'piezas';
+        } else {
+          unitSelect.value = 'kg';
+        }
+      }
+    }
+
+    function onNewPantryCatChange(cat) {
+      const catSelect = document.getElementById('new-pantry-cat');
+      if (catSelect) catSelect.dataset.userLocked = 'true';
+      updatePantryCatBadge(cat);
+      const qBox = document.getElementById('pantry-quarantine-reason-box');
+      if (qBox) {
+        qBox.style.display = (cat.includes('Cuarentena') || cat.includes('🛑')) ? 'block' : 'none';
+      }
+    }
+
     function addNewPantryItem() {
       const nameInput = document.getElementById('new-pantry-name');
+      const catSelect = document.getElementById('new-pantry-cat');
       const qtyInput = document.getElementById('new-pantry-qty');
-      const unitInput = document.getElementById('new-pantry-unit');
+      const unitSelect = document.getElementById('new-pantry-unit');
+      const reasonInput = document.getElementById('new-pantry-reason');
 
       const val = nameInput ? nameInput.value.trim() : '';
+      const chosenCat = catSelect ? catSelect.value : getSmartItemCategory(val);
       const qty = parseFloat(qtyInput ? qtyInput.value : 1.0) || 1.0;
-      const unit = (unitInput ? unitInput.value.trim() : '') || 'unidades';
+      const unit = (unitSelect ? unitSelect.value.trim() : '') || 'kg';
+      const reason = (reasonInput ? reasonInput.value.trim() : '') || '';
 
       if (!val) {
         if (typeof showToast === 'function') {
@@ -4019,6 +4158,9 @@ function generateNextWeekMenu() {
         return;
       }
 
+      const isQuarantine = chosenCat.includes('Cuarentena') || chosenCat.includes('🛑');
+      const itemStatus = isQuarantine ? 'prohibited' : 'canonical';
+
       const slug = normalizeToCanonicalSlug(val);
       deletedPantryItems = deletedPantryItems.filter(d => normalizeToCanonicalSlug(d) !== slug && d.toLowerCase() !== val.toLowerCase());
 
@@ -4026,32 +4168,48 @@ function generateNextWeekMenu() {
       const canonicalName = existingInShop ? existingInShop.item_name : val;
 
       pantryStock[canonicalName] = qty;
+      if (typeof window.pantryCardUnits === 'undefined') window.pantryCardUnits = {};
+      window.pantryCardUnits[canonicalName] = unit;
 
       if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
         window.PANTRY_STOCK_INVENTORY[slug] = {
           name: canonicalName,
           stock: qty,
           unit: unit,
-          status: 'canonical'
+          category: chosenCat,
+          status: itemStatus,
+          reason: isQuarantine ? (reason || 'Insumo fuera de protocolo cetogénico (Cuarentena NOM-004)') : null
         };
       }
 
-      if (!existingInShop) {
+      // Si es canónico y no está en rawShopBase, lo registramos para que pueda calcularse amortización si entra al menú
+      if (!isQuarantine && !existingInShop) {
         const newId = 200 + rawShopBase.length + 1;
-        const smartCat = getSmartItemCategory(val, '');
         rawShopBase.push({
           id: newId,
-          category: smartCat,
-          item_name: val,
+          category: chosenCat,
+          item_name: canonicalName,
           quantity: qty,
           unit: unit,
           quantity_str: `${qty} ${unit}`
         });
       }
 
+      // Resetear campos
       if (nameInput) nameInput.value = '';
-      if (qtyInput) qtyInput.value = '';
-      if (unitInput) unitInput.value = '';
+      if (qtyInput) qtyInput.value = '1';
+      if (catSelect) {
+        catSelect.dataset.userLocked = '';
+        catSelect.value = '🥬 Verduras, Hortalizas y Frescos';
+      }
+      if (unitSelect) {
+        unitSelect.dataset.userLocked = '';
+        unitSelect.value = 'kg';
+      }
+      if (reasonInput) reasonInput.value = '';
+      const qBox = document.getElementById('pantry-quarantine-reason-box');
+      if (qBox) qBox.style.display = 'none';
+      updatePantryCatBadge('🥬 Verduras, Hortalizas y Frescos');
 
       saveAppState();
       initSetupPanel();
@@ -4059,7 +4217,11 @@ function generateNextWeekMenu() {
         render3DShoppingList();
       }
       if (typeof showToast === 'function') {
-        showToast(`📦 '${canonicalName}' registrado en Alacena (${qty} ${unit}).`);
+        if (isQuarantine) {
+          showToast(`🛑 '${canonicalName}' colocado en Cuarentena (${qty} ${unit}).`, 'warning');
+        } else {
+          showToast(`📦 '${canonicalName}' registrado en ${chosenCat} (${qty} ${unit}).`, 'success');
+        }
       }
     }
 
