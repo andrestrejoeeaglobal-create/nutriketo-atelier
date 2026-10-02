@@ -1137,6 +1137,84 @@ def test_fiber_is_dynamic_not_static():
     assert len(unique_fibers) > 1, f"La fibra diaria es un valor plano artificial ({unique_fibers}), debe ser dinámica según cada vegetal"
 
 
+def test_triple_parity_fiber_and_calories():
+    """Garantía de Paridad Triple (SSOT V36.6):
+    Verifica que cada uno de los 21 servicios mantenga paridad matemática idéntica
+    entre:
+    1. Base de datos pre-hidratada (semana_40_master.json)
+    2. Expediente técnico Markdown (expediente_completo_semana_40.md Sec. 4.2)
+    3. Motor bioanalítico (app.services.nutrition_engine)
+    4. Frontend en standalone HTML (consumidor pasivo de fiber_g y Atwater).
+    """
+    import os, json, re
+    from app.services.nutrition_engine import compute_atwater_kcal, calculate_dish_fiber_g
+
+    json_path = "semana_40_master.json"
+    exp_path = "expediente_completo_semana_40.md"
+    html_gen_path = "generate_standalone_html.py"
+
+    if not os.path.exists(json_path) or not os.path.exists(exp_path):
+        pytest.skip("Archivos necesarios no encontrados")
+
+    with open(json_path, "r", encoding="utf-8") as f:
+        master_data = json.load(f)
+
+    with open(exp_path, "r", encoding="utf-8") as f:
+        exp_content = f.read()
+
+    with open(html_gen_path, "r", encoding="utf-8") as f:
+        html_code = f.read()
+
+    # 1. Verificar consumidor pasivo en frontend (cero heurísticas hardcoded)
+    assert "function getMealFiberG(m)" in html_code
+    assert "if (m && typeof m.fiber_g === 'number' && m.fiber_g > 0) return m.fiber_g;" in html_code
+    assert "sname.includes('chía')" not in html_code, "getMealFiberG aún contiene heurísticas residuales"
+
+    # 2. Extraer datos de la Sección 4.2 del Markdown
+    sec42_part = exp_content.split("### 4.2 Matriz Cuantitativa Estandarizada Servicio por Servicio")[1].split("### 4.3")[0]
+    pattern = r'\| \*\*(Desayuno|Comida|Cena)\*\* \| (\d+) kcal \| ([0-9.]+) g \(\d+%\) \| ([0-9.]+) g \(\d+%\) \| ([0-9.]+) g \(\d+%\) \| ([0-9.]+) g \(\d+%\) \|'
+    sec42_rows = re.findall(pattern, sec42_part)
+
+    assert len(sec42_rows) == 21, f"Se esperaban 21 registros en Sec. 4.2, se encontraron {len(sec42_rows)}"
+
+    meal_idx = 0
+    for day in master_data["days"]:
+        for meal in day["meals"]:
+            # A. Paridad JSON vs nutrition_engine
+            expected_kc = compute_atwater_kcal(meal["fat_g"], meal["protein_g"], meal["net_carbs_g"])
+            f_st = calculate_dish_fiber_g(meal.get("starter", {}).get("ingredients", []))
+            f_mn = calculate_dish_fiber_g(meal.get("main", {}).get("ingredients", []))
+            f_sd = calculate_dish_fiber_g(meal.get("side", {}).get("ingredients", []))
+            expected_fib = round(f_st + f_mn + f_sd, 1)
+
+            assert meal.get("atwater_kcal") == expected_kc, (
+                f"Discrepancia JSON Atwater {day['day']} {meal['meal_type']}: {meal.get('atwater_kcal')} != {expected_kc}"
+            )
+            assert meal.get("fiber_g") == expected_fib, (
+                f"Discrepancia JSON Fibra {day['day']} {meal['meal_type']}: {meal.get('fiber_g')} != {expected_fib}"
+            )
+
+            # B. Paridad JSON vs Markdown Sec. 4.2
+            m_type, m_kc, m_fat, m_prot, m_carbs, m_fib = sec42_rows[meal_idx]
+            assert int(m_kc) == meal["atwater_kcal"], (
+                f"Discrepancia Kcal Markdown vs JSON {day['day']} {meal['meal_type']}: {m_kc} != {meal['atwater_kcal']}"
+            )
+            assert float(m_fat) == meal["fat_g"], (
+                f"Discrepancia Grasa Markdown vs JSON {day['day']} {meal['meal_type']}: {m_fat} != {meal['fat_g']}"
+            )
+            assert float(m_prot) == meal["protein_g"], (
+                f"Discrepancia Proteína Markdown vs JSON {day['day']} {meal['meal_type']}: {m_prot} != {meal['protein_g']}"
+            )
+            assert float(m_carbs) == meal["net_carbs_g"], (
+                f"Discrepancia Carbs Markdown vs JSON {day['day']} {meal['meal_type']}: {m_carbs} != {meal['net_carbs_g']}"
+            )
+            assert float(m_fib) == meal["fiber_g"], (
+                f"Discrepancia Fibra Markdown vs JSON {day['day']} {meal['meal_type']}: {m_fib} != {meal['fiber_g']}"
+            )
+
+            meal_idx += 1
+
+
 
 
 

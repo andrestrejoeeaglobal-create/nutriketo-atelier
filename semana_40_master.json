@@ -154,7 +154,9 @@
           "fat_g": 38.5,
           "protein_g": 35.8,
           "net_carbs_g": 5.4,
-          "calories": 511
+          "calories": 511,
+          "fiber_g": 10.5,
+          "atwater_kcal": 511
         },
         {
           "meal_type": "Comida",
@@ -326,7 +328,9 @@
           "fat_g": 48.0,
           "protein_g": 45.2,
           "net_carbs_g": 4.8,
-          "calories": 632
+          "calories": 632,
+          "fiber_g": 3.6,
+          "atwater_kcal": 632
         },
         {
           "meal_type": "Cena",
@@ -475,7 +479,9 @@
           "fat_g": 36.5,
           "protein_g": 41.2,
           "net_carbs_g": 3.6,
-          "calories": 508
+          "calories": 508,
+          "fiber_g": 6.6,
+          "atwater_kcal": 508
         }
       ]
     },
@@ -639,7 +645,9 @@
           "fat_g": 39.2,
           "protein_g": 36.4,
           "net_carbs_g": 5.1,
-          "calories": 519
+          "calories": 519,
+          "fiber_g": 9.3,
+          "atwater_kcal": 519
         },
         {
           "meal_type": "Comida",
@@ -809,7 +817,9 @@
           "fat_g": 51.5,
           "protein_g": 47.8,
           "net_carbs_g": 5.2,
-          "calories": 675
+          "calories": 676,
+          "fiber_g": 2.9,
+          "atwater_kcal": 676
         },
         {
           "meal_type": "Cena",
@@ -965,7 +975,9 @@
           "fat_g": 38.0,
           "protein_g": 42.5,
           "net_carbs_g": 3.4,
-          "calories": 526
+          "calories": 526,
+          "fiber_g": 5.9,
+          "atwater_kcal": 526
         }
       ]
     },
@@ -1129,7 +1141,9 @@
           "fat_g": 39.8,
           "protein_g": 46.2,
           "net_carbs_g": 5.0,
-          "calories": 563
+          "calories": 563,
+          "fiber_g": 7.8,
+          "atwater_kcal": 563
         },
         {
           "meal_type": "Comida",
@@ -1293,7 +1307,9 @@
           "fat_g": 47.2,
           "protein_g": 46.8,
           "net_carbs_g": 5.4,
-          "calories": 643
+          "calories": 634,
+          "fiber_g": 3.7,
+          "atwater_kcal": 634
         },
         {
           "meal_type": "Cena",
@@ -1442,7 +1458,9 @@
           "fat_g": 35.0,
           "protein_g": 39.5,
           "net_carbs_g": 3.2,
-          "calories": 491
+          "calories": 486,
+          "fiber_g": 1.1,
+          "atwater_kcal": 486
         }
       ]
     },
@@ -1613,7 +1631,9 @@
           "fat_g": 38.8,
           "protein_g": 36.2,
           "net_carbs_g": 5.2,
-          "calories": 521
+          "calories": 515,
+          "fiber_g": 4.0,
+          "atwater_kcal": 515
         },
         {
           "meal_type": "Comida",
@@ -1790,7 +1810,9 @@
           "fat_g": 52.0,
           "protein_g": 48.5,
           "net_carbs_g": 5.0,
-          "calories": 691
+          "calories": 682,
+          "fiber_g": 6.8,
+          "atwater_kcal": 682
         },
         {
           "meal_type": "Cena",
@@ -1946,7 +1968,9 @@
           "fat_g": 36.8,
           "protein_g": 41.5,
           "net_carbs_g": 3.8,
-          "calories": 516
+          "calories": 512,
+          "fiber_g": 4.7,
+          "atwater_kcal": 512
         }
       ]
     },
@@ -2110,7 +2134,9 @@
           "fat_g": 38.6,
           "protein_g": 35.5,
           "net_carbs_g": 5.0,
-          "calories": 515
+          "calories": 509,
+          "fiber_g": 7.4,
+          "atwater_kcal": 509
         },
         {
           "meal_type": "Comida",
@@ -2280,7 +2306,9 @@
           "fat_g": 48.4,
           "protein_g": 46.5,
           "net_carbs_g": 4.8,
-          "calories": 647
+          "calories": 641,
+          "fiber_g": 7.2,
+          "atwater_kcal": 641
         },
         {
           "meal_type": "Cena",
@@ -2436,7 +2464,9 @@
           "fat_g": 39.5,
           "protein_g": 19.8,
           "net_carbs_g": 5.2,
-          "calories": 465
+          "calories": 456,
+          "fiber_g": 10.1,
+          "atwater_kcal": 456
         }
       ]
     },
@@ -2593,7 +2623,9 @@
           "fat_g": 38.5,
           "protein_g": 36.5,
           "net_carbs_g": 5.3,
-          "calories": 521
+          "calories": 514,
+          "fiber_g": 5.4,
+          "atwater_kcal": 514
         },
         {
           "meal_type": "Comida",
@@ -2764,7 +2796,9 @@
           "fat_g": 47.8,
           "protein_g": 52.4,
           "net_carbs_g": 4.6,
-          "calories": 672
+          "calories": 658,
+          "fiber_g": 4.8,
+          "atwater_kcal": 658
         },
         {
           "meal_type": "Cena",
@@ -2920,7 +2954,9 @@
           "fat_g": 36.4,
           "protein_g": 41.8,
           "net_carbs_g": 3.6,
-          "calories": 512
+          "calories": 509,
+          "fiber_g": 5.2,
+          "atwater_kcal": 509
         }
       ]
     },
@@ -3084,7 +3120,9 @@
           "fat_g": 39.4,
           "protein_g": 37.8,
           "net_carbs_g": 5.1,
-          "calories": 530
+          "calories": 526,
+          "fiber_g": 10.7,
+          "atwater_kcal": 526
         },
         {
           "meal_type": "Comida",
@@ -3248,7 +3286,9 @@
           "fat_g": 48.2,
           "protein_g": 49.5,
           "net_carbs_g": 4.5,
-          "calories": 655
+          "calories": 650,
+          "fiber_g": 3.2,
+          "atwater_kcal": 650
         },
         {
           "meal_type": "Cena",
@@ -3404,7 +3444,9 @@
           "fat_g": 35.8,
           "protein_g": 43.2,
           "net_carbs_g": 3.7,
-          "calories": 512
+          "calories": 510,
+          "fiber_g": 7.3,
+          "atwater_kcal": 510
         }
       ]
     }

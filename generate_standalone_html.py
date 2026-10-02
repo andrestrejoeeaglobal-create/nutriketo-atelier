@@ -5522,34 +5522,7 @@ function renderRecipes(day, activeDiners) {
 
           function getMealFiberG(m) {
             if (m && typeof m.fiber_g === 'number' && m.fiber_g > 0) return m.fiber_g;
-            const sname = (m.starter_name || '').toLowerCase();
-            const mname = (m.main_dish_name || m.dish_name || '').toLowerCase();
-            const sdname = (m.side_dish_name || '').toLowerCase();
-
-            let fiber = 0.0;
-            // Densidad botánica estimativa según ingredientes reconocidos
-            if (sname.includes('chía') || sname.includes('chia')) fiber += 2.8;
-            if (sname.includes('mora') || sname.includes('frambuesa') || sname.includes('zarzamora')) fiber += 3.2;
-            if (sname.includes('granada') || sname.includes('arándano') || sname.includes('fresa')) fiber += 2.0;
-            if (sname.includes('aguacate')) fiber += 5.0;
-            if (sname.includes('hinojo') || sname.includes('arúgula') || sname.includes('espinaca')) fiber += 1.8;
-            if (sname.includes('pepino') || sname.includes('apio') || sname.includes('zucchini')) fiber += 1.1;
-
-            if (mname.includes('ejote') || mname.includes('ejotes')) fiber += 1.6;
-            if (mname.includes('espinaca') || mname.includes('espinacas')) fiber += 1.4;
-            if (mname.includes('portobello')) fiber += 2.4;
-            if (mname.includes('aguacate')) fiber += 4.5;
-            if (mname.includes('lechuga')) fiber += 1.2;
-            if (mname.includes('ajonjolí') || mname.includes('sésamo')) fiber += 1.2;
-
-            if (sdname.includes('espárragos') || sdname.includes('esparragos')) fiber += 2.1;
-            if (sdname.includes('ejote') || sdname.includes('ejotes')) fiber += 2.2;
-            if (sdname.includes('almendra') || sdname.includes('almendras')) fiber += 1.9;
-            if (sdname.includes('chayote') || sdname.includes('chayotes')) fiber += 1.7;
-            if (sdname.includes('calabacita') || sdname.includes('zoodles')) fiber += 1.0;
-            if (sdname.includes('mora') || sdname.includes('frambuesa')) fiber += 1.6;
-
-            return Math.max(1.1, Math.round(fiber * 10) / 10);
+            return 0.0;
           }
 
           day.meals.forEach(rawM => {
