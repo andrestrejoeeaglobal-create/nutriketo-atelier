@@ -2519,7 +2519,7 @@ function generateNextWeekMenu() {
       "sardinas": { name: "Sardinas enlatadas", stock: 2, unit: "latas", status: "canonical" },
       "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
       "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
-      // Frutas de Bajo Índice Glucémico en Alacena (Registro Previsto)
+      // Frutas de Bajo Índice Glucémico en Catálogo (Stock Inicial 0 - Filtrado en Render)
       "fresas-frescas": { name: "Fresas frescas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada fresca", stock: 0, unit: "g", status: "canonical" },
       "moras-frescas": { name: "Moras frescas", stock: 0, unit: "g", status: "canonical" },
@@ -2680,7 +2680,8 @@ function generateNextWeekMenu() {
         { stem: 'mora', aliases: ['mora', 'moras'], exclude: ['morada'] },
         // Verduras
         { stem: 'espinaca', aliases: ['espinaca', 'espinacas', 'espinacas baby'] },
-        { stem: 'calabacita', aliases: ['calabacita', 'calabacitas', 'calabaza'] },
+        { stem: 'calabacita', aliases: ['calabacita', 'calabacitas', 'calabaza', 'zucchini'], exclude: ['semilla', 'semillas', 'pepita', 'pepitas'] },
+        { stem: 'semillas-calabaza', aliases: ['semillas de calabaza', 'semilla de calabaza', 'pepitas de calabaza', 'pepita de calabaza'], exclude: ['calabacita', 'calabacitas'] },
         { stem: 'brocoli', aliases: ['brocoli', 'brocolis'] },
         { stem: 'esparrago', aliases: ['esparrago', 'esparragos'] },
         { stem: 'nopal', aliases: ['nopal', 'nopales'] },
@@ -2963,6 +2964,8 @@ function generateNextWeekMenu() {
 
       switch (u) {
         case 'bolsa_sal':
+        case 'bolsa (1 kg)':
+        case 'bolsa (1 kg / 1,000 g)':
         case 'bolsa_1000':
         case 'kg':
         case 'kilo':
@@ -4563,6 +4566,11 @@ function generateNextWeekMenu() {
         };
         const targetId = map[tabId] || (tabId && tabId.startsWith('v-') ? tabId : 'v-menu');
         currentTab = targetId.replace('v-', '');
+        try {
+          if (typeof sessionStorage !== 'undefined') {
+            sessionStorage.setItem('nutriketo_active_tab', tabId);
+          }
+        } catch(e) {}
 
         document.querySelectorAll('.v-panel').forEach(el => el.style.display = 'none');
         const target = document.getElementById(targetId);
@@ -5552,7 +5560,10 @@ function render3DShoppingList() {
     `;
 
     const pantryMap = window.PANTRY_STOCK_INVENTORY || {};
-    const canonicalPantry = Object.keys(pantryMap).filter(k => pantryMap[k].status === 'canonical');
+    const canonicalPantry = Object.keys(pantryMap).filter(k => {
+      const it = pantryMap[k];
+      return it && it.status === 'canonical' && parseFloat(it.stock) > 0;
+    });
     const prohibitedPantry = Object.keys(pantryMap).filter(k => pantryMap[k].status === 'prohibited');
 
     canonicalPantry.sort((a, b) => (pantryMap[a].name || a).localeCompare(pantryMap[b].name || b, 'es', { sensitivity: 'base' }));
@@ -5562,13 +5573,16 @@ function render3DShoppingList() {
 
     canonicalPantry.forEach(k => {
       const item = pantryMap[k];
+      let displayUnit = item.unit || '';
+      if (displayUnit === 'bolsa_sal') displayUnit = 'bolsa (1 kg)';
+      else if (displayUnit === 'botella_vevo') displayUnit = 'botella (750 ml)';
       html += `
         <div class="bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 p-3 rounded-lg flex justify-between items-center">
           <div>
             <div class="font-bold text-xs text-slate-900 dark:text-slate-100">${item.name}</div>
             <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5">🟢 Apto / Canónico</div>
           </div>
-          <div class="font-bold text-xs text-[#3AAA35] font-mono">${item.stock} ${item.unit}</div>
+          <div class="font-bold text-xs text-[#3AAA35] font-mono">${item.stock} ${displayUnit}</div>
         </div>
       `;
     });
@@ -7629,7 +7643,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev3-s40-ui-align-v13')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-pantry-fix-v18')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
@@ -7651,7 +7665,8 @@ function renderRecipes(day, activeDiners) {
         if (typeof renderDateBar === 'function') renderDateBar();
         const initIdx = (typeof selectedIdx === 'number' && !isNaN(selectedIdx) && selectedIdx >= 0) ? selectedIdx : 0;
         if (typeof renderDay === 'function') renderDay(initIdx);
-        if (typeof switchTab === 'function') switchTab('design');
+        const savedTab = (typeof sessionStorage !== 'undefined' && sessionStorage.getItem('nutriketo_active_tab')) ? sessionStorage.getItem('nutriketo_active_tab') : 'design';
+        if (typeof switchTab === 'function') switchTab(savedTab);
       } catch (e) {
         console.error("Error en auto-init:", e);
       }
