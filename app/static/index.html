@@ -4592,11 +4592,14 @@ function renderRecipes(day, activeDiners) {
             Ficha Completa de Ensamblaje (3 Tiempos)
           </span>
         </div>
-        <div class="meal-diners-stepper flex items-center gap-1 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-full px-2.5 py-0.5 text-xs text-[#3AAA35] font-brand-body select-none">
-          <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(selectedIdx, '${m.meal_type}', ${fullMeal.diners - 1})">−</button>
-          <span class="diners-count font-mono font-bold">${fullMeal.diners}</span>
-          <span class="diners-label font-semibold">comensales</span>
-          <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(selectedIdx, '${m.meal_type}', ${fullMeal.diners + 1})">+</button>
+        <div class="flex items-center gap-2">
+          ${recipeDispatchHtml}
+          <div class="meal-diners-stepper flex items-center gap-1 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-full px-2.5 py-0.5 text-xs text-[#3AAA35] font-brand-body select-none">
+            <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(selectedIdx, '${m.meal_type}', ${fullMeal.diners - 1})">−</button>
+            <span class="diners-count font-mono font-bold">${fullMeal.diners}</span>
+            <span class="diners-label font-semibold">comensales</span>
+            <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(selectedIdx, '${m.meal_type}', ${fullMeal.diners + 1})">+</button>
+          </div>
         </div>
       </div>
       ${coursesHtml}
@@ -4681,6 +4684,7 @@ function renderRecipes(day, activeDiners) {
                   </h3>
                 </div>
                 <div class="flex items-center gap-2">
+                  ${menuDispatchHtml}
                   <div class="meal-diners-stepper flex items-center gap-1 bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-full px-2.5 py-0.5 text-xs text-[#3AAA35] font-brand-body select-none">
                     <button type="button" class="btn-step-diners px-1.5 py-0.1 rounded hover:bg-emerald-200/60 dark:hover:bg-emerald-800/60 font-bold cursor-pointer transition-colors" onclick="updateMealDiners(${safeIdx}, '${m.meal_type}', ${mealDiners - 1})">−</button>
                     <span class="diners-count font-mono font-bold">${mealDiners}</span>
@@ -6039,7 +6043,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v21')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v22')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }

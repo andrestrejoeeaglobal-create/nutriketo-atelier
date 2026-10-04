@@ -1525,7 +1525,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "MEAL_FEEDBACK_LEDGER" in code
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
-    assert "nutriketo-v36-6-rev4-s41-service-checkin-v21" in code
+    assert "nutriketo-v36-6-rev4-s41-service-checkin-v22" in code
 
 
 
