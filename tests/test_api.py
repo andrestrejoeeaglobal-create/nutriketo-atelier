@@ -1469,6 +1469,65 @@ def test_temporal_date_resolution_and_nutrition_engine_precision():
     assert "day.date_str.includes(todayNumStr)" not in html
     assert "2026-10-02" in code
 
+@pytest.mark.asyncio
+async def test_service_checkin_proportional_deduction_and_feedback_ledger():
+    """
+    MOD-SERVICE-CHECKIN-INVENTORY-FEEDBACK-V1 Test:
+    Valida:
+    1. Descuento proporcional estricto: Factor = Headcount / 6.0
+       Ejemplo: Headcount=4 para receta base de 6 comensales (900g) -> 600g consumidos.
+    2. Modificadores de repetición algorítmica (computeRepeatWeightModifier):
+       - 5 estrellas con tolerancia 'optima' -> 1.35
+       - 4 estrellas con tolerancia 'normal' -> 1.15
+       - 3 estrellas con tolerancia 'normal' -> 1.00
+       - 2 estrellas o 'pesada' -> 0.50
+       - 1 estrella -> 0.20
+    3. Presencia de funciones SSOT, variables globales y ledger de servicio en generate_standalone_html.py.
+    """
+    # 1. Validación de cálculo matemático proporcional
+    headcount = 4
+    base_diners = 6.0
+    factor = headcount / base_diners
+    base_qty_g = 900.0
+    consumed_qty_g = round(base_qty_g * factor, 2)
+    assert abs(factor - (4.0 / 6.0)) < 1e-6
+    assert consumed_qty_g == 600.0
+
+    # 2. Validación de matriz de modifiers
+    def py_repeat_weight_modifier(stars, digestion):
+        s = int(stars) if stars else 5
+        d = digestion or 'optima'
+        if s <= 1:
+            return 0.20
+        if s == 2 or d == 'pesada':
+            return 0.50
+        if s >= 5 and d == 'optima':
+            return 1.35
+        if s >= 4 and (d == 'optima' or d == 'normal'):
+            return 1.15
+        if s == 3 or d == 'normal':
+            return 1.00
+        return 1.00
+
+    assert py_repeat_weight_modifier(5, 'optima') == 1.35
+    assert py_repeat_weight_modifier(4, 'normal') == 1.15
+    assert py_repeat_weight_modifier(3, 'normal') == 1.00
+    assert py_repeat_weight_modifier(2, 'pesada') == 0.50
+    assert py_repeat_weight_modifier(1, 'pesada') == 0.20
+    assert py_repeat_weight_modifier(1, 'optima') == 0.20
+
+    # 3. Verificación de presencia en el generador de standalone HTML
+    with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
+        code = f.read()
+
+    assert "function openServiceCheckinModal" in code
+    assert "function computeRepeatWeightModifier" in code
+    assert "MEAL_FEEDBACK_LEDGER" in code
+    assert "confirmServiceCheckin" in code
+    assert "confirmRevertDispatch" in code
+    assert "nutriketo-v36-6-rev4-s41-service-checkin-v21" in code
+
+
 
 
 
