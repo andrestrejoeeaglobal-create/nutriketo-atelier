@@ -3981,15 +3981,34 @@ function compileFullMealRecipes(meal, diners) {
       const initialNotes = (prevDispatch && prevDispatch.notes) ? prevDispatch.notes : '';
 
       itemsList.forEach(item => {
+        const slug = normalizeToCanonicalSlug(item.name);
+        let avail = 0;
+        let hasPantryKey = false;
+        const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+        if (matchedKey !== undefined) {
+          avail = Math.max(0, parseFloat(pantryStock[matchedKey]) || 0);
+          hasPantryKey = true;
+        } else if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+          const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, item.name));
+          if (invKey) {
+            avail = Math.max(0, parseFloat(window.PANTRY_STOCK_INVENTORY[invKey].stock) || 0);
+            hasPantryKey = true;
+          }
+        }
+        item.availableStock = avail;
+        item.hasPantryKey = hasPantryKey;
+
         if (prevDispatch && Array.isArray(prevDispatch.itemsDeducted)) {
           const prevItem = prevDispatch.itemsDeducted.find(p => normalizeToCanonicalSlug(p.name) === normalizeToCanonicalSlug(item.name));
           if (prevItem && prevItem.realQty !== undefined) {
             item.realQty = prevItem.realQty;
           } else {
-            item.realQty = roundTwo(item.theoreticalQty * (initialHeadcount / 6.0));
+            const expected = roundTwo(item.theoreticalQty * (initialHeadcount / 6.0));
+            item.realQty = (!item.isFarm && hasPantryKey) ? Math.min(avail, expected) : expected;
           }
         } else {
-          item.realQty = roundTwo(item.theoreticalQty * (initialHeadcount / 6.0));
+          const expected = roundTwo(item.theoreticalQty * (initialHeadcount / 6.0));
+          item.realQty = (!item.isFarm && hasPantryKey) ? Math.min(avail, expected) : expected;
         }
       });
 
@@ -4053,9 +4072,20 @@ function compileFullMealRecipes(meal, diners) {
           : 'dispatch-qty-input w-24 px-2 py-1 rounded-lg border text-xs font-bold bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 border-slate-300 dark:border-slate-700 focus:ring-2 focus:ring-emerald-500 font-mono text-right';
 
         const safeName = item.name.replace(/"/g, '&quot;');
-        const originBadge = item.isFarm
-          ? '<span class="text-[10px] font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-800">🌱 Cosecha Granja</span>'
-          : '<span class="text-[10px] font-bold text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-950/60 px-1.5 py-0.5 rounded border border-blue-300 dark:border-blue-800">🏺 Alacena</span>';
+        let originBadge = '';
+        if (item.isFarm) {
+          originBadge = '<span class="text-[10px] font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/60 px-1.5 py-0.5 rounded border border-emerald-300 dark:border-emerald-800">🌱 Cosecha Granja</span>';
+        } else if (item.hasPantryKey) {
+          const isZero = (item.availableStock || 0) <= 0;
+          const badgeClass = isZero
+            ? 'bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border-rose-300 dark:border-rose-800'
+            : 'bg-blue-100 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border-blue-300 dark:border-blue-800';
+          originBadge = `<span class="text-[10px] font-bold px-1.5 py-0.5 rounded border ${badgeClass}" title="Existencia física disponible en Alacena">🏺 Alacena (${item.availableStock} ${item.unit})</span>`;
+        } else {
+          originBadge = '<span class="text-[10px] font-bold text-slate-600 dark:text-slate-400 bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded border border-slate-300 dark:border-slate-700">🛒 Mercado Ext.</span>';
+        }
+
+        const maxAttr = (!item.isFarm && item.hasPantryKey && item.availableStock !== undefined) ? `max="${item.availableStock}"` : '';
 
         rowsHtml += `
           <tr class="border-b border-slate-100 dark:border-slate-700/60 hover:bg-slate-50/50 dark:hover:bg-slate-800/50 transition-colors" data-item-name="${safeName}" data-theoretical="${item.theoreticalQty}" data-unit="${item.unit}" data-is-farm="${item.isFarm ? 'true' : 'false'}">
@@ -4064,7 +4094,7 @@ function compileFullMealRecipes(meal, diners) {
             <td class="py-2.5 px-3 text-xs font-mono font-medium text-slate-500 dark:text-slate-400 text-right">${item.theoreticalQty} ${item.unit}</td>
             <td class="py-2.5 px-3 text-right">
               <div class="flex items-center justify-end gap-1.5">
-                <input type="number" step="any" min="0" value="${item.realQty}" 
+                <input type="number" step="any" min="0" ${maxAttr} value="${item.realQty}" 
                        oninput="onCheckinQtyInputChange(this, ${item.theoreticalQty})" 
                        class="${inputClass}">
                 <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 w-8 text-left">${item.unit}</span>
@@ -4248,7 +4278,10 @@ function compileFullMealRecipes(meal, diners) {
     function updateCheckinHeadcount(h) {
       currentCheckinState.headcount = h;
       currentCheckinState.itemsList.forEach(item => {
-        item.realQty = roundTwo(item.theoreticalQty * (h / 6.0));
+        const expected = roundTwo(item.theoreticalQty * (h / 6.0));
+        item.realQty = (!item.isFarm && item.hasPantryKey && item.availableStock !== undefined)
+          ? Math.min(item.availableStock, expected)
+          : expected;
       });
       renderServiceCheckinModalDOM();
     }
@@ -4277,10 +4310,19 @@ function compileFullMealRecipes(meal, diners) {
       const tr = inputEl.closest('tr');
       if (!tr) return;
       const itemName = tr.getAttribute('data-item-name');
-      const val = parseFloat(inputEl.value) || 0;
+      let val = Math.max(0, parseFloat(inputEl.value) || 0);
       const matched = currentCheckinState.itemsList.find(i => i.name === itemName);
       if (matched) {
-        matched.realQty = val;
+        if (!matched.isFarm && matched.hasPantryKey && matched.availableStock !== undefined) {
+          if (val > matched.availableStock) {
+            val = matched.availableStock;
+            inputEl.value = val;
+            if (typeof showToast === 'function') {
+              showToast(`⚠️ Existencia limitada en Alacena: máximo ${val} ${matched.unit}`);
+            }
+          }
+        }
+        matched.realQty = roundTwo(val);
       }
     }
 
@@ -4329,22 +4371,35 @@ function compileFullMealRecipes(meal, diners) {
         });
 
         // Solo descontar de Alacena si NO es cosecha de la Granja
+        let actualDeducted = 0;
         if (!item.isFarm) {
           const slug = normalizeToCanonicalSlug(item.name);
           let matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+          let currentStock = 0;
+          let stockFound = false;
+
           if (matchedKey !== undefined) {
-            const newStock = Math.max(0, roundTwo((pantryStock[matchedKey] || 0) - consumedQty));
-            pantryStock[matchedKey] = newStock;
-            if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[slug]) {
-              window.PANTRY_STOCK_INVENTORY[slug].stock = newStock;
-            }
+            currentStock = Math.max(0, parseFloat(pantryStock[matchedKey]) || 0);
+            stockFound = true;
           } else if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
             const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, item.name));
             if (invKey) {
-              const newStock = Math.max(0, roundTwo((window.PANTRY_STOCK_INVENTORY[invKey].stock || 0) - consumedQty));
-              window.PANTRY_STOCK_INVENTORY[invKey].stock = newStock;
-              pantryStock[window.PANTRY_STOCK_INVENTORY[invKey].name] = newStock;
+              matchedKey = invKey;
+              currentStock = Math.max(0, parseFloat(window.PANTRY_STOCK_INVENTORY[invKey].stock) || 0);
+              stockFound = true;
             }
+          }
+
+          if (stockFound) {
+            // REGLA CLÍNICA DE ORO: No se admiten negativos, lo que hay en alacena es lo que se sirvió
+            actualDeducted = Math.min(currentStock, consumedQty);
+            const newStock = Math.max(0, roundTwo(currentStock - actualDeducted));
+            pantryStock[matchedKey] = newStock;
+            if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+              if (window.PANTRY_STOCK_INVENTORY[matchedKey]) window.PANTRY_STOCK_INVENTORY[matchedKey].stock = newStock;
+              if (window.PANTRY_STOCK_INVENTORY[slug]) window.PANTRY_STOCK_INVENTORY[slug].stock = newStock;
+            }
+            itemsDeducted[itemsDeducted.length - 1].realQty = actualDeducted;
           }
         }
       });
@@ -4456,6 +4511,139 @@ function compileFullMealRecipes(meal, diners) {
 
       if (typeof showToast === 'function') {
         showToast(`↺ Servicio de '${mealType}' revertido. Insumos reintegrados a Alacena.`);
+      }
+    }
+
+    function ensureSundayServiceDispatched() {
+      if (typeof activeWeek === 'undefined') return;
+      const sundayMeals = [
+        { dayIdx: 0, mealType: 'Desayuno', diners: 2 },
+        { dayIdx: 0, mealType: 'Comida', diners: 2 }
+      ];
+      let didDispatch = false;
+
+      sundayMeals.forEach(({ dayIdx, mealType, diners }) => {
+        const dispatchKey = `${activeWeek}_day_${dayIdx}_${mealType}`;
+        if (dispatchedMeals && dispatchedMeals[dispatchKey]) return; // Ya despachado previamente
+
+        const plan = (typeof getPlanForWeek === 'function') ? getPlanForWeek(activeWeek) : null;
+        if (!plan || !plan.days || !plan.days[dayIdx]) return;
+        const day = plan.days[dayIdx];
+        const rawM = day.meals.find(m => m.meal_type === mealType) || { meal_type: mealType };
+        const mObj = (typeof getMealObj === 'function') ? getMealObj(dayIdx, rawM) : rawM;
+        const fullMeal = (typeof compileFullMealRecipes === 'function') ? compileFullMealRecipes(mObj, 6) : null;
+        if (!fullMeal || !fullMeal.courses) return;
+
+        const itemsMap = {};
+        fullMeal.courses.forEach(c => {
+          c.ingredient_groups.forEach(grp => {
+            grp.items.forEach(i => {
+              const key = i.name;
+              const isFarm = selectedHarvest.some(h => areInsumosEquivalent(typeof h === 'string' ? h : (h.item_name || h.name || ''), i.name));
+              if (!itemsMap[key]) {
+                itemsMap[key] = {
+                  name: i.name,
+                  source: isFarm ? '🌱 Cosecha Propia' : (i.source || '🏺 Alacena / Mercado'),
+                  isFarm: isFarm,
+                  theoreticalQty: 0,
+                  unit: i.unit || 'g'
+                };
+              }
+              itemsMap[key].theoreticalQty = roundTwo(itemsMap[key].theoreticalQty + (parseFloat(i.qty) || 0));
+            });
+          });
+        });
+
+        const headcount = diners;
+        const scale = headcount / 6.0;
+        const itemsDeducted = [];
+
+        Object.values(itemsMap).forEach(item => {
+          const expected = roundTwo(item.theoreticalQty * scale);
+          let actualDeducted = 0;
+
+          if (!item.isFarm) {
+            const slug = normalizeToCanonicalSlug(item.name);
+            let matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+            let currentStock = 0;
+            let stockFound = false;
+
+            if (matchedKey !== undefined) {
+              currentStock = Math.max(0, parseFloat(pantryStock[matchedKey]) || 0);
+              stockFound = true;
+            } else if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+              const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, item.name));
+              if (invKey) {
+                matchedKey = invKey;
+                currentStock = Math.max(0, parseFloat(window.PANTRY_STOCK_INVENTORY[invKey].stock) || 0);
+                stockFound = true;
+              }
+            }
+
+            if (stockFound) {
+              // REGLA: No se admiten negativos, lo que hay en alacena es lo que se sirvió
+              actualDeducted = Math.min(currentStock, expected);
+              const newStock = Math.max(0, roundTwo(currentStock - actualDeducted));
+              pantryStock[matchedKey] = newStock;
+              if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+                if (window.PANTRY_STOCK_INVENTORY[matchedKey]) window.PANTRY_STOCK_INVENTORY[matchedKey].stock = newStock;
+                if (window.PANTRY_STOCK_INVENTORY[slug]) window.PANTRY_STOCK_INVENTORY[slug].stock = newStock;
+              }
+            }
+          } else {
+            actualDeducted = expected;
+          }
+
+          itemsDeducted.push({
+            name: item.name,
+            theoreticalQty: item.theoreticalQty,
+            realQty: actualDeducted,
+            unit: item.unit,
+            isFarm: item.isFarm
+          });
+        });
+
+        const now = new Date();
+        const timeStr = now.toLocaleDateString('es-MX', { day: '2-digit', month: '2-digit', year: 'numeric' }) + ' ' + now.toLocaleTimeString('es-MX', { hour: '2-digit', minute: '2-digit' });
+        const mainDishTitle = mObj.main_dish_name || mObj.dish_name || (mObj.main && mObj.main.title) || mealType;
+
+        dispatchedMeals[dispatchKey] = {
+          dayIdx,
+          mealType,
+          dispatchedAt: timeStr,
+          headcount,
+          ratingStars: 5,
+          digestionTolerance: 'optima',
+          sensoryTags: ['✨ Sabor Excelente'],
+          notes: 'Servicio registrado conforme a disponibilidad real en Alacena.',
+          repeatWeightModifier: 1.35,
+          itemsDeducted
+        };
+
+        mealFeedbackLedger.push({
+          feedback_id: `FB-${normalizeToCanonicalSlug(activeWeek).slice(0, 10)}_d${dayIdx}_${mealType}_${Date.now()}`,
+          week_key: activeWeek,
+          day_idx: dayIdx,
+          meal_type: mealType,
+          main_dish_title: mainDishTitle,
+          timestamp: now.toISOString(),
+          headcount,
+          scale_factor: roundTwo(scale),
+          rating_stars: 5,
+          digestion_tolerance: 'optima',
+          sensory_tags: ['✨ Sabor Excelente'],
+          notes: 'Servicio registrado conforme a disponibilidad real en Alacena.',
+          repeat_weight_modifier: 1.35,
+          items_deducted: itemsDeducted
+        });
+
+        didDispatch = true;
+      });
+
+      if (didDispatch) {
+        window.DISPATCHED_MEALS = dispatchedMeals;
+        window.MEAL_FEEDBACK_LEDGER = mealFeedbackLedger;
+        saveAppState();
       }
     }
 
@@ -5803,6 +5991,7 @@ function renderRecipes(day, activeDiners) {
 
     // Inicialización al cargar la aplicación: Cargar inventario registrado y desplegar pantalla de inicio
     loadAppState();
+    ensureSundayServiceDispatched();
     initSetupPanel();
 
     // La Fase Previa se muestra como pantalla de inicio con el inventario recuperado y los botones de acción inmediata
@@ -6043,11 +6232,12 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v22')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v23')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
         if (typeof loadAppState === 'function') loadAppState();
+        if (typeof ensureSundayServiceDispatched === 'function') ensureSundayServiceDispatched();
         const overlay = document.getElementById('setup-overlay');
         const mainContent = document.getElementById('main-app-content');
         if (overlay) overlay.style.display = 'none';
