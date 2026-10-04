@@ -2516,7 +2516,19 @@ function generateNextWeekMenu() {
       "yoghurt-griego": { name: "Yoghurt griego natural sin azúcar", stock: 900, unit: "g", status: "canonical" },
       "mayonesa": { name: "Mayonesa", stock: 500, unit: "g", status: "canonical" },
       "leche-coco": { name: "Leche de coco", stock: 500, unit: "ml", status: "canonical" },
-      "sardinas": { name: "Sardinas enlatadas", stock: 2, unit: "latas", status: "canonical" },
+      "sardinas": { name: "Sardinas enlatadas", stock: 8, unit: "latas", status: "canonical" },
+      "atun-latas": { name: "Atún enlatado", stock: 2, unit: "piezas", status: "canonical" },
+      "salmon-lomo": { name: "Lomo de salmón fresco", stock: 1165, unit: "g", status: "canonical" },
+      "ribeye-corte": { name: "Corte magro de Ribeye de res premium", stock: 1005, unit: "g", status: "canonical" },
+      "fajita-mojarra": { name: "Fajitas de mojarra tilapia", stock: 1, unit: "piezas", status: "canonical" },
+      "hamburguesa-arrachera": { name: "Hamburguesa de arrachera", stock: 1, unit: "piezas", status: "canonical" },
+      "queso-ricotta": { name: "Queso Ricotta", stock: 960, unit: "g", status: "canonical" },
+      "crema-acida": { name: "Crema ácida", stock: 1, unit: "piezas", status: "canonical" },
+      "oikos-prot": { name: "Lácteo Oikos Proteína", stock: 1, unit: "piezas", status: "canonical" },
+      "nuez-india": { name: "Nuez de la India", stock: 3, unit: "piezas", status: "canonical" },
+      "lechuga-sweet": { name: "Lechuga Sweet", stock: 1, unit: "piezas", status: "canonical" },
+      "agua-mineral": { name: "Agua mineral", stock: 16, unit: "litros", status: "canonical" },
+      "agua-purificada": { name: "Agua purificada", stock: 120, unit: "botellas (355 ml)", status: "canonical" },
       "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
       "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
       // Frutas de Bajo Índice Glucémico en Catálogo (Stock Inicial 0 - Filtrado en Render)
@@ -2642,10 +2654,13 @@ function generateNextWeekMenu() {
         { stem: 'ghee', aliases: ['ghee', 'mantequilla clarificada'] },
         { stem: 'sirloin', aliases: ['sirloin', 'medallones de sirloin', 'medallon de sirloin', 'medallones de sirloin de res magro', 'carne molida de sirloin'], exclude: ['tuetano', 'huesos'] },
         { stem: 'arrachera', aliases: ['arrachera', 'arrachera de res', 'arrachera de res magra limpia', 'arrachera limpia'], exclude: ['tuetano', 'huesos'] },
+        { stem: 'ribeye', aliases: ['ribeye', 'corte magro de ribeye', 'corte de ribeye', 'corte magro de ribeye de res premium', 'ribeye de res'] },
+        { stem: 'mojarra', aliases: ['mojarra', 'fajita de mojarra', 'fajitas de mojarra', 'tilapia', 'fajita de tilapia', 'fajitas de mojarra tilapia'] },
+        { stem: 'hamburguesa-arrachera', aliases: ['hamburguesa de arrachera', 'hamburguesas de arrachera', 'arrachburg'] },
         { stem: 'robalo', aliases: ['robalo', 'filete de robalo', 'filete de robalo salvaje', 'filete de robalo salvaje fresco de captura', 'pescado blanco', 'filete de pescado blanco'] },
         { stem: 'huachinango', aliases: ['huachinango', 'filetes de huachinango', 'filete de huachinango con piel'] },
         { stem: 'salmon', aliases: ['salmon', 'lomo de salmon', 'filete de salmon'] },
-        { stem: 'atun', aliases: ['atun', 'medallones de atun', 'lomo de atun'] },
+        { stem: 'atun', aliases: ['atun', 'medallones de atun', 'lomo de atun', 'atun enlatado', 'atun en lata', 'atunsuna'] },
         { stem: 'pavo', aliases: ['pavo', 'pechuga de pavo', 'pechuga de pavo artesanal'], exclude: ['tocino'] },
         { stem: 'tocino-pavo', aliases: ['tocino de pavo', 'tocino de pavo artesanal', 'tocino de pavo crujiente'] },
         { stem: 'machaca', aliases: ['machaca', 'carne seca machaca', 'carne seca machaca artesanal'] },
@@ -2655,13 +2670,16 @@ function generateNextWeekMenu() {
         { stem: 'parmesano', aliases: ['parmesano', 'queso parmesano', 'queso parmesano artesanal'] },
         { stem: 'queso-crema', aliases: ['queso crema', 'queso crema suave', 'queso crema suave artesanal'] },
         { stem: 'cabra', aliases: ['queso de cabra', 'queso de cabra artesanal', 'cabra artesanal'] },
-        { stem: 'crema', aliases: ['crema', 'crema entera', 'crema entera de rancho', 'crema para batir'], exclude: ['queso crema'] },
+        { stem: 'ricotta', aliases: ['ricotta', 'queso ricotta', 'requeson'] },
+        { stem: 'oikos', aliases: ['oikos', 'oikos pro', 'lacteo oikos', 'yoghurt oikos', 'yogurt oikos', 'oikos proteina'] },
+        { stem: 'crema', aliases: ['crema', 'crema entera', 'crema entera de rancho', 'crema para batir', 'crema acida'], exclude: ['queso crema'] },
         // Grasas, Aceites y Semillas
         { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'], exclude: ['aceituna', 'aceitunas'] },
         { stem: 'aceite-ajonjoli', aliases: ['aceite de ajonjoli', 'aceite de sesamo', 'aceite de ajonjoli tostado'], exclude: ['semilla', 'semillas', 'grano'] },
         { stem: 'semillas-sesamo', aliases: ['semillas de sesamo', 'semillas de ajonjoli', 'ajonjoli en grano', 'semilla de ajonjoli', 'semillas de sesamo (ajonjoli)'], exclude: ['aceite'] },
         { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'pecana', 'pecanas'] },
         { stem: 'nuez-castilla', aliases: ['nuez de castilla', 'nueces de castilla', 'nuez de castilla fresca'] },
+        { stem: 'nuez-india', aliases: ['nuez de la india', 'nueces de la india', 'nuez india', 'nueces india', 'anacardo', 'anacardos', 'maranon'] },
         { stem: 'almendra', aliases: ['almendra', 'almendras', 'almendras fileteadas', 'almendras fileteadas tostadas'] },
         { stem: 'chia', aliases: ['chia', 'semillas de chia', 'semillas de chia organicas'] },
         { stem: 'girasol', aliases: ['semillas de girasol', 'semilla de girasol', 'girasol'] },
@@ -2694,9 +2712,12 @@ function generateNextWeekMenu() {
         { stem: 'chayote', aliases: ['chayote', 'chayotes', 'chayote tierno', 'chayotes tiernos', 'chayotes tiernos pelados'] },
         { stem: 'hinojo', aliases: ['hinojo'] },
         { stem: 'aguacate', aliases: ['aguacate', 'aguacate hass'] },
+        { stem: 'lechuga-sweet', aliases: ['lechuga sweet', 'sweet lettuce'] },
         { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'limon agrio', 'limones agrios', 'limones agrios frescos', 'limones agrios frescos de la granja', 'jugo de limon', 'jugo de limon fresco', 'jugo de limon fresco de la granja', 'jugo de limon recien exprimido', 'limon agrio fresco con semilla'] },
         { stem: 'ajo', aliases: ['ajo', 'ajos', 'ajo fresco', 'dientes de ajo'], exclude: ['ajonjoli'] },
         { stem: 'sal', aliases: ['sal de mar', 'sal de colima', 'sal mineral', 'sal de mar mineral de colima'] },
+        { stem: 'agua-purificada', aliases: ['agua purificada', 'agua pura', 'botellas de agua purificada', 'botella de agua purificada'], exclude: ['mineral'] },
+        { stem: 'agua-mineral', aliases: ['agua mineral', 'aguamin', 'botellas de agua mineral', 'botella de agua mineral'] },
         { stem: '33plus', aliases: ['33plus', 'formula nootropica 33plus', 'formula biotecnologica nootropica 33plus'] },
         { stem: '34plus', aliases: ['34plus', 'formula reparadora 34plus', 'formula biotecnologica reparadora 34plus'] },
         { stem: 'grenetina', aliases: ['grenetina', 'grenetina natural', 'grenetina natural pura', 'colageno hidrolizado'] }
@@ -2788,7 +2809,7 @@ function generateNextWeekMenu() {
       }
 
       // 7. Carnes de Res, Pavo y Tocino (CON LÍMITES ESTRICTOS DE PALABRA \bres\b PARA NO COINCIDIR CON "fresco")
-      if (/(?:sirloin|arrachera|machaca|\bres\b|carne de res|filete de res|pechuga de pavo|\bpavo\b|tocino)/i.test(name)) {
+      if (/(?:ribeye|sirloin|arrachera|machaca|\bres\b|carne de res|filete de res|pechuga de pavo|\bpavo\b|tocino)/i.test(name)) {
         return [
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
           { id: 'paquete_500', label: 'Paquete (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
@@ -2797,17 +2818,26 @@ function generateNextWeekMenu() {
       }
 
       // 8. Pescados y Mariscos
-      if (/sardina/i.test(name)) {
+      if (/sardina|atun enlatado|atun en lata/i.test(name)) {
         return [
           { id: 'latas', label: 'Latas (pzas)', multiplier: 1, unit: 'latas', type: 'count' },
           { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' }
         ];
       }
-      if (/robalo|huachinango|salmon|atun|pescado/i.test(name)) {
+      if (/robalo|huachinango|salmon|atun|pescado|mojarra|tilapia/i.test(name)) {
         return [
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
           { id: 'paquete_500', label: 'Filetes (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+
+      // 8b. Agua purificada e hidratación
+      if (/agua/i.test(name)) {
+        return [
+          { id: 'litros', label: 'Litros (L)', multiplier: 1000, unit: 'ml', type: 'vol' },
+          { id: 'botellas (355 ml)', label: 'Botella (355 ml)', multiplier: 355, unit: 'ml', type: 'vol' },
+          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' }
         ];
       }
 
@@ -2863,7 +2893,7 @@ function generateNextWeekMenu() {
       }
 
       // 12. Quesos y lácteos
-      if (/yoghurt|yogurt/i.test(name)) {
+      if (/yoghurt|yogurt|oikos/i.test(name)) {
         return [
           { id: 'bote_900', label: 'Bote (900 g)', multiplier: 900, unit: 'g', type: 'mass' },
           { id: 'paquete_500', label: 'Bote (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
@@ -2871,7 +2901,7 @@ function generateNextWeekMenu() {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
-      if (/queso|gouda|panela|parmesano|cabra|mantequilla|ghee/i.test(name)) {
+      if (/queso|gouda|panela|parmesano|cabra|ricotta|mantequilla|ghee/i.test(name)) {
         return [
           { id: 'paquete_500', label: 'Pieza / Paq (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
           { id: 'paquete_250', label: 'Pieza / Paq (250 g)', multiplier: 250, unit: 'g', type: 'mass' },
@@ -3005,6 +3035,11 @@ function generateNextWeekMenu() {
         case 'litro':
         case 'litros':
           return { val: num * 1000, type: 'vol', baseUnit: 'ml' };
+        case 'botellas_355':
+        case 'botella_355':
+        case 'botella (355 ml)':
+        case 'botellas (355 ml)':
+          return { val: num * 355, type: 'vol', baseUnit: 'ml' };
         case 'ml':
         case 'mililitro':
         case 'mililitros':
@@ -3017,6 +3052,10 @@ function generateNextWeekMenu() {
         case 'pieza':
         case 'pza':
         case 'pzas':
+        case 'pack':
+        case 'packs':
+        case 'paquete':
+        case 'paquetes':
           return { val: num, type: 'count', baseUnit: 'piezas' };
         case 'latas':
         case 'lata':
@@ -3099,7 +3138,7 @@ function generateNextWeekMenu() {
       }
 
       // 0.2 Prioridad Taxonómica Estricta: Carnes / Proteínas (Arrachera, Sirloin, Pechuga, Pescado, Sardinas, etc.)
-      if (/arrachera|corte|cortes|ribeye|sirloin|\bres\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|salmón|salmon|atún|atun|sardina|sardinas|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
+      if (/arrachera|corte|cortes|ribeye|sirloin|\bres\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|mojarra|tilapia|salmón|salmon|atún|atun|sardina|sardinas|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
         return '🥩 Carnes, Pescados y Proteínas';
       }
 
@@ -3243,6 +3282,25 @@ function generateNextWeekMenu() {
             delete state.pantryStockInventory['miel-pura'];
             delete state.pantryStockInventory['duraznos-frescos'];
             delete state.pantryStockInventory['higos-frescos'];
+
+            // Garantizar ingesta del comprobante Sam's Club Periférico Cuautitlán (03/10/2026)
+            const SAMS_TICKET_KEYS = [
+              'sardinas', 'atun-latas', 'salmon-lomo', 'ribeye-corte', 'fajita-mojarra',
+              'hamburguesa-arrachera', 'queso-ricotta', 'crema-acida', 'oikos-prot',
+              'nuez-india', 'lechuga-sweet', 'agua-mineral', 'agua-purificada'
+            ];
+            if (!state.samsReceiptProcessed_20261003) {
+              if (state.pantryStockInventory['sardinas']) {
+                state.pantryStockInventory['sardinas'].stock = Math.max(state.pantryStockInventory['sardinas'].stock || 0, 8);
+              }
+              SAMS_TICKET_KEYS.forEach(k => {
+                if (window.PANTRY_STOCK_INVENTORY[k]) {
+                  state.pantryStockInventory[k] = Object.assign({}, window.PANTRY_STOCK_INVENTORY[k]);
+                }
+              });
+              state.samsReceiptProcessed_20261003 = true;
+            }
+
             window.PANTRY_STOCK_INVENTORY = Object.assign(window.PANTRY_STOCK_INVENTORY || {}, state.pantryStockInventory);
           }
 
@@ -3323,6 +3381,7 @@ function generateNextWeekMenu() {
           pantryStock,
           pantryCardUnits: window.pantryCardUnits || {},
           pantryStockInventory: window.PANTRY_STOCK_INVENTORY || {},
+          samsReceiptProcessed_20261003: true,
           checkedRows,
           customShopItems,
           selectedIdx,
@@ -7615,7 +7674,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-pantry-fix-v19')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-pantry-sams-v20')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
