@@ -3430,18 +3430,6 @@ function render3DShoppingList() {
           </span>
         </div>
 
-        <!-- SELECTOR DE ALCANCE TEMPORAL DE ABASTECIMIENTO -->
-        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; background: var(--surface-card); border: 1px solid var(--border-clinical); border-radius: 12px; padding: 0.6rem 1rem; margin-bottom: 1.25rem;">
-          <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <span style="font-size: 0.82rem; font-weight: 800; color: var(--text-main);">Alcance Operativo:</span>
-            <div style="display: flex; gap: 0.4rem;">
-              <button type="button" onclick="setShoppingListDayFilter('all')" style="padding: 0.4rem 0.85rem; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; ${!isWeekend ? 'background: #1C75BC; color: #fff; border: 1px solid #1C75BC; box-shadow: 0 2px 4px rgba(28,117,188,0.25);' : 'background: transparent; color: var(--text-main); border: 1px solid var(--border-clinical);'}">📅 Ciclo Completo (7 Días)</button>
-              <button type="button" onclick="setShoppingListDayFilter('weekend')" style="padding: 0.4rem 0.85rem; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; ${isWeekend ? 'background: #1C75BC; color: #fff; border: 1px solid #1C75BC; box-shadow: 0 2px 4px rgba(28,117,188,0.25);' : 'background: transparent; color: var(--text-main); border: 1px solid var(--border-clinical);'}">⏳ Cierre Fin de Semana (Sáb - Dom)</button>
-            </div>
-          </div>
-          <span style="font-size: 0.75rem; font-weight: 700; color: #3AAA35;">📦 Sábado: Jornada de Abastecimiento</span>
-        </div>
-
         <!-- MATRIZ DE MANDO DE 4 CUADRANTES -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-4 rounded-xl text-center">
