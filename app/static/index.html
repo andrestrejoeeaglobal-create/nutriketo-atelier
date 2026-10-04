@@ -3442,28 +3442,6 @@ function render3DShoppingList() {
           <span style="font-size: 0.75rem; font-weight: 700; color: #3AAA35;">📦 Sábado: Jornada de Abastecimiento</span>
         </div>
 
-        ${!isWeekend ? `
-        <!-- BANNER LOGÍSTICO OFICIAL DE CICLO COMPLETO -->
-        <div style="background: rgba(58, 170, 53, 0.08); border-left: 4px solid #3AAA35; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1.25rem;">
-          <div style="font-weight: 800; font-size: 0.86rem; color: #3AAA35; display: flex; align-items: center; gap: 0.4rem;">
-            <span>📦 Ciclo Logístico Activo: Planificación de Viernes / Abastecimiento de Sábado</span>
-          </div>
-          <p style="font-size: 0.8rem; color: var(--text-main); margin: 0.35rem 0 0 0; line-height: 1.45;">
-            La lista de compras neta consolidada cubre el ciclo completo de <strong>7 días (Domingo a Sábado)</strong>, amortizando el stock físico verificado en Alacena y la cosecha disponible de Granja El Herami para abastecer el sábado e iniciar el consumo el domingo.
-          </p>
-        </div>
-        ` : `
-        <!-- BANNER DE AUDITORÍA ESPECÍFICA DE FIN DE SEMANA -->
-        <div style="background: rgba(28, 117, 188, 0.08); border-left: 4px solid #1C75BC; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1.25rem;">
-          <div style="font-weight: 800; font-size: 0.86rem; color: #1C75BC; display: flex; align-items: center; gap: 0.4rem;">
-            <span>🛡️ Auditoría Temporal: Cierre Fin de Semana Activo</span>
-          </div>
-          <p style="font-size: 0.8rem; color: var(--text-main); margin: 0.35rem 0 0 0; line-height: 1.45;">
-            Visualizando exclusivamente la demanda de fin de semana (Sábado y Domingo, 6 comensales).
-          </p>
-        </div>
-        `}
-
         <!-- MATRIZ DE MANDO DE 4 CUADRANTES -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
           <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-4 rounded-xl text-center">
