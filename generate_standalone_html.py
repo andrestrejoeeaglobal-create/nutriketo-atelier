@@ -2498,7 +2498,7 @@ function generateNextWeekMenu() {
     const ACTIVE_WEEK_CANONICAL_BOM = """ + canonical_bom_json + """;
     const ACTIVE_WEEK_40_CANONICAL_BOM = """ + s40_canonical_bom_json + """;
     const ACTIVE_WEEK_40_WEEKEND_BOM = """ + s40_weekend_bom_json + """;
-    window.shoppingListDayFilter = 'weekend'; // Por defecto fin de semana activo (Sábado y Domingo)
+    window.shoppingListDayFilter = 'all'; // Canónico por defecto: Ciclo Completo (7 Días)
     window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
     window.PANTRY_STOCK_INVENTORY = {
       // Insumos Canónicos Aptos (Status: "canonical")
@@ -5350,25 +5350,34 @@ function render3DShoppingList() {
           <div style="display: flex; align-items: center; gap: 0.5rem;">
             <span style="font-size: 0.82rem; font-weight: 800; color: var(--text-main);">Alcance Operativo:</span>
             <div style="display: flex; gap: 0.4rem;">
-              <button type="button" onclick="setShoppingListDayFilter('weekend')" style="padding: 0.4rem 0.85rem; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; ${isWeekend ? 'background: #1C75BC; color: #fff; border: 1px solid #1C75BC; box-shadow: 0 2px 4px rgba(28,117,188,0.25);' : 'background: transparent; color: var(--text-main); border: 1px solid var(--border-clinical);'}">⏳ Cierre Fin de Semana (Sáb 3 - Dom 4 Oct)</button>
               <button type="button" onclick="setShoppingListDayFilter('all')" style="padding: 0.4rem 0.85rem; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; ${!isWeekend ? 'background: #1C75BC; color: #fff; border: 1px solid #1C75BC; box-shadow: 0 2px 4px rgba(28,117,188,0.25);' : 'background: transparent; color: var(--text-main); border: 1px solid var(--border-clinical);'}">📅 Ciclo Completo (7 Días)</button>
+              <button type="button" onclick="setShoppingListDayFilter('weekend')" style="padding: 0.4rem 0.85rem; border-radius: 8px; font-weight: 700; font-size: 0.78rem; cursor: pointer; transition: all 0.2s; ${isWeekend ? 'background: #1C75BC; color: #fff; border: 1px solid #1C75BC; box-shadow: 0 2px 4px rgba(28,117,188,0.25);' : 'background: transparent; color: var(--text-main); border: 1px solid var(--border-clinical);'}">⏳ Cierre Fin de Semana (Sáb - Dom)</button>
             </div>
           </div>
-          <span style="font-size: 0.75rem; font-weight: 700; color: #1C75BC;">Hoy: Viernes 2 Octubre</span>
+          <span style="font-size: 0.75rem; font-weight: 700; color: #3AAA35;">📦 Sábado: Jornada de Abastecimiento</span>
         </div>
 
-        ${isWeekend ? `
-        <!-- BANNER CLINICO DE CIERRE DE FIN DE SEMANA -->
+        ${!isWeekend ? `
+        <!-- BANNER LOGÍSTICO OFICIAL DE CICLO COMPLETO -->
+        <div style="background: rgba(58, 170, 53, 0.08); border-left: 4px solid #3AAA35; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1.25rem;">
+          <div style="font-weight: 800; font-size: 0.86rem; color: #3AAA35; display: flex; align-items: center; gap: 0.4rem;">
+            <span>📦 Ciclo Logístico Activo: Planificación de Viernes / Abastecimiento de Sábado</span>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-main); margin: 0.35rem 0 0 0; line-height: 1.45;">
+            La lista de compras neta consolidada cubre el ciclo completo de <strong>7 días (Domingo a Sábado)</strong>, amortizando el stock físico verificado en Alacena y la cosecha disponible de Granja El Herami para abastecer el sábado e iniciar el consumo el domingo.
+          </p>
+        </div>
+        ` : `
+        <!-- BANNER DE AUDITORÍA ESPECÍFICA DE FIN DE SEMANA -->
         <div style="background: rgba(28, 117, 188, 0.08); border-left: 4px solid #1C75BC; padding: 0.75rem 1rem; border-radius: 8px; margin-bottom: 1.25rem;">
           <div style="font-weight: 800; font-size: 0.86rem; color: #1C75BC; display: flex; align-items: center; gap: 0.4rem;">
             <span>🛡️ Auditoría Temporal: Cierre Fin de Semana Activo</span>
           </div>
           <p style="font-size: 0.8rem; color: var(--text-main); margin: 0.35rem 0 0 0; line-height: 1.45;">
-            Los insumos de <strong>Lunes a Viernes</strong> ya han sido consumidos en el ciclo semanal. La lista de compras inferior computa <strong>única y exclusivamente la demanda de Sábado 3 y Domingo 4 de Octubre</strong> (6 comensales).<br>
-            <strong>🌱 Saldo Intacto en Alacena:</strong> El menú de fin de semana requiere <strong>0 g de Jitomate y 0 g de Cebolla</strong>. Sus <strong>3 kg de Jitomate Saladet</strong> y <strong>3 kg de Cebolla blanca</strong> no sufren merma este fin de semana y quedan íntegros como saldo a favor transferible al recetario de la <strong>Semana 41</strong>.
+            Visualizando exclusivamente la demanda de fin de semana (Sábado y Domingo, 6 comensales).
           </p>
         </div>
-        ` : ''}
+        `}
 
         <!-- MATRIZ DE MANDO DE 4 CUADRANTES -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
