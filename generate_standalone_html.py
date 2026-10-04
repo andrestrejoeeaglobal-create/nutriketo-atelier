@@ -2533,9 +2533,6 @@ function generateNextWeekMenu() {
       "garbanzo": { name: "Garbanzo", stock: 500, unit: "g", status: "prohibited", reason: "Leguminosa con elevado almidón y carbohidratos netos (Rompe Cetosis)" },
       "frijol": { name: "Frijol", stock: 750, unit: "g", status: "prohibited", reason: "Leguminosa proscrita en cetosis por elevado aporte glucémico" },
       "arroz": { name: "Arroz tradicional", stock: 750, unit: "g", status: "prohibited", reason: "Cereal de altísima biodisponibilidad amilácea (Rompe Cetosis)" },
-      "miel-pura": { name: "Miel pura de la granja El Herami", stock: 250, unit: "g", status: "prohibited", reason: "Alto Índice Glucémico / Fructosa Pura (Rompe Cetosis)" },
-      "duraznos-frescos": { name: "Duraznos frescos", stock: 1.5, unit: "kg", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Fuera de Protocolo Keto)" },
-      "higos-frescos": { name: "Higos frescos", stock: 1.5, unit: "kg", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
       "harina-trigo": { name: "Harina de trigo tradicional", stock: 1000, unit: "g", status: "prohibited", reason: "Glucémico / Inflamatorio (Gluten)" },
       "aceite-vegetal-mixto": { name: "Aceite vegetal mixto comercial", stock: 800, unit: "ml", status: "prohibited", reason: "Pro-inflamatorio / Omega 6 oxidado" }
     };
@@ -3243,6 +3240,9 @@ function generateNextWeekMenu() {
           }
 
           if (state.pantryStockInventory && typeof state.pantryStockInventory === 'object') {
+            delete state.pantryStockInventory['miel-pura'];
+            delete state.pantryStockInventory['duraznos-frescos'];
+            delete state.pantryStockInventory['higos-frescos'];
             window.PANTRY_STOCK_INVENTORY = Object.assign(window.PANTRY_STOCK_INVENTORY || {}, state.pantryStockInventory);
           }
 
@@ -3778,9 +3778,6 @@ function generateNextWeekMenu() {
           { item_name: 'Garbanzo', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Frijol', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Arroz tradicional', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
-          { item_name: 'Duraznos frescos', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
-          { item_name: 'Higos frescos', unit: 'kg', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
-          { item_name: 'Miel pura de la granja El Herami', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Harina de trigo tradicional', unit: 'g', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' },
           { item_name: 'Aceite vegetal mixto comercial', unit: 'ml', category: '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)' }
         ];
@@ -7618,7 +7615,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-pantry-fix-v18')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-pantry-fix-v19')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
