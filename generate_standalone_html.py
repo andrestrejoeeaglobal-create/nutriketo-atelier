@@ -6592,12 +6592,11 @@ function renderRecipes(day, activeDiners) {
     if (recipeDispatchInfo) {
       const starsStr = '★'.repeat(recipeDispatchInfo.ratingStars || 5);
       recipeDispatchHtml = `
-        <div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700 rounded-full px-3 py-1 text-xs text-emerald-800 dark:text-emerald-200 select-none min-h-[44px]">
-          <span class="font-extrabold text-emerald-700 dark:text-emerald-300">✓ Servido</span>
+        <div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700 rounded-full px-3.5 py-1 text-xs text-emerald-800 dark:text-emerald-200 select-none min-h-[44px]">
+          <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-sm">✓</span>
+          <span class="font-extrabold text-emerald-800 dark:text-emerald-200">Descargo de inventario y encuesta realizado</span>
           <span class="text-amber-500 font-bold">${starsStr}</span>
-          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">(${recipeDispatchInfo.headcount || 6}p)</span>
-          <button type="button" class="ml-1 text-[11px] font-bold text-amber-600 dark:text-amber-400 hover:underline cursor-pointer" onclick="openServiceCheckinModal(${selectedIdx}, '${m.meal_type}', true)" title="Ver o ajustar evaluación de servicio">✏️ Ajustar</button>
-          <button type="button" class="ml-1 text-[11px] font-bold text-slate-400 hover:text-rose-500 cursor-pointer" onclick="confirmRevertDispatch(${selectedIdx}, '${m.meal_type}')" title="Reintegrar insumos al inventario">↺</button>
+          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">(${recipeDispatchInfo.headcount || 2}p)</span>
         </div>
       `;
     } else {
@@ -6756,12 +6755,11 @@ function renderRecipes(day, activeDiners) {
             if (menuDispatchInfo) {
               const starsStr = '★'.repeat(menuDispatchInfo.ratingStars || 5);
               menuDispatchHtml = `
-                <div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700 rounded-full px-3 py-1 text-xs text-emerald-800 dark:text-emerald-200 select-none min-h-[44px]">
-                  <span class="font-extrabold text-emerald-700 dark:text-emerald-300">✓ Servido</span>
+                <div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700 rounded-full px-3.5 py-1 text-xs text-emerald-800 dark:text-emerald-200 select-none min-h-[44px]">
+                  <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-sm">✓</span>
+                  <span class="font-extrabold text-emerald-800 dark:text-emerald-200">Descargo de inventario y encuesta realizado</span>
                   <span class="text-amber-500 font-bold">${starsStr}</span>
-                  <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">(${menuDispatchInfo.headcount || 6}p)</span>
-                  <button type="button" class="ml-1 text-[11px] font-bold text-amber-600 dark:text-amber-400 hover:underline cursor-pointer" onclick="openServiceCheckinModal(${safeIdx}, '${m.meal_type}', true)" title="Ver o ajustar evaluación de servicio">✏️ Ajustar</button>
-                  <button type="button" class="ml-1 text-[11px] font-bold text-slate-400 hover:text-rose-500 cursor-pointer" onclick="confirmRevertDispatch(${safeIdx}, '${m.meal_type}')" title="Reintegrar insumos al inventario">↺</button>
+                  <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">(${menuDispatchInfo.headcount || 2}p)</span>
                 </div>
               `;
             } else {
@@ -8147,7 +8145,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v23')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v24')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }

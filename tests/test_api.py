@@ -1526,7 +1526,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
     assert "ensureSundayServiceDispatched" in code
-    assert "nutriketo-v36-6-rev4-s41-service-checkin-v23" in code
+    assert "nutriketo-v36-6-rev4-s41-service-checkin-v24" in code
 
 
 
