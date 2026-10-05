@@ -10,9 +10,9 @@
 | Día | Desayuno (Huevo Orgánico & 33Plus®) | Comida (3 Tiempos Atwater) | Cena (Digestión Ligera & 34Plus®) |
 |---|---|---|---|
 | **Domingo 04 Oct** | Huevos Revueltos a la Mantequilla con Chayote Tierno Salteado y Finas Hierbas | Corte Magro de Ribeye de Res a la Parrilla con Mantequilla de Romero y Ajo | Sardinas al Sartén con Salsa Rústica de Tomate Verde, Cilantro y Aguacate Hass |
-| **Lunes 05 Oct** | Omelette Baveuse con Espinacas Tiernas de la Granja y Queso Gouda | Pechuga de Pollo al Limón y Romero Sellada en Mantequilla con Salsa de Jitomate Saladet Rústica | Filete de Robalo Fresco al Horno con Costra de Almendras y Eneldo |
+| **Lunes 05 Oct** | Omelette Baveuse con Espinacas Tiernas de la Granja y Queso Gouda | Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Salsa Emulsionada de Mayonesa y Eneldo | Filete de Robalo Fresco al Horno con Costra de Almendras y Eneldo |
 | **Martes 06 Oct** | Huevos Pochados sobre Cama de Yoghurt Griego al Ajo (Çılbır Keto) con Mantequilla al Pimentón | Medallones de Sirloin de Res al Sartén en Salsa Cremosa de Pimienta Negra y Leche de Coco | Salpicón Rústico de Pechuga de Pavo Desmenuzada con Mayonesa Casera, Aguacate y Cebolla Blanca |
-| **Miércoles 07 Oct** | Huevos Estrellados en Sartén de Hierro con Aceite VEVO, Sal de Mar y Espárragos Verdes | Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Salsa Emulsionada de Mayonesa y Eneldo | Tostadas de Hoja de Lechuga con Sardinas Guisadas al Tomate Verde y Cilantro |
+| **Miércoles 07 Oct** | Huevos Estrellados en Sartén de Hierro con Aceite VEVO, Sal de Mar y Espárragos Verdes | Pechuga de Pollo al Limón y Romero Sellada en Mantequilla con Salsa de Jitomate Saladet Rústica | Tostadas de Hoja de Lechuga con Sardinas Guisadas al Tomate Verde y Cilantro |
 | **Jueves 08 Oct** | Huevos Revueltos Rústicos con Machaca de Res y Cebolla Blanca Salteada | Arrachera de Res Magra a la Parrilla con Mantequilla de Ajo y Chimichurri Fresco | Pechuga de Pavo en Cubos al Sartén con Curry Suave en Leche de Coco Cremosa |
 | **Viernes 09 Oct** | Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Panela y Finas Hierbas | Medallón de Atún Fresco Sellado a Fuego Vivo con Costra de Sésamo y Guacamole Rústico | Pechuga de Pollo Desmenuzada al Sartén con Mayonesa al Ajo y Aguacate Hass |
 | **Sábado 10 Oct** | Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate Saladet y Queso de Cabra | Filete de Huachinango Fresco al Sartén con Mantequilla de Ajo y Alcaparras | Champiñones Portobello Rellenos de Pechuga de Pavo, Espinacas y Queso Gouda Gratinado |
@@ -398,100 +398,99 @@
 
 ---
 
-#### 🍽️ Servicio: COMIDA (676 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `51.5g` | Proteína: `47.8g` | Carbs Netos: `5.2g`  
+#### 🍽️ Servicio: COMIDA (682 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `52.0g` | Proteína: `48.5g` | Carbs Netos: `5.0g`  
 
-##### 🥗 ENTRADA: Sopa Campirana de Pollo y Verduras al Limón con Toque de Orégano
+##### 🥗 ENTRADA: Crema Aterciopelada de Coliflor y Ajo Rostizado con Aceite de Oliva VEVO
 - **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica y Bioquímica:** *"Caldo nutritivo reconfortante con vegetales de corteza tersa y perfumado con cítricos y orégano seco de rancho."*  
+- **Nota Organoléptica y Bioquímica:** *"Textura sedosa tipo vichyssoise cetogénica basada en coliflor de la granja y ajo rostizado, emulsionada con aceite VEVO en crudo."*  
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción escalonada que respeta los puntos de ablandamiento de la celulosa del apio y la calabacita sin sobrecocer.
-  - *Construcción de Sabor:* Fondo reconfortante avícola elevado por la acidez vivaz del limón y la calidez amaderada del orégano.
-  - *Arquitectura de Textura:* Caldo límpido y transparente con mordida crujiente y vegetal.
-  - *Puntos Críticos de Control:* No hervir a borbotones para mantener la claridad del fondo.
+  - *Termodinámica:* Cocción justa para disolver la hemicelulosa de la coliflor sin generar sulfuros amargos. Emulsión mecánica de VEVO que genera textura untuosa.
+  - *Construcción de Sabor:* Suavidad vegetal láctea natural con la profundidad caramelizada del ajo y notas herbales de oliva.
+  - *Arquitectura de Textura:* Terciopelo denso satinado sin almidón.
+  - *Puntos Críticos de Control:* Licuar a máxima potencia para pulverizar toda fibra perceptible.
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **600 ml** (100 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Calabacitas verdes tiernas de la granja: **240 g** (40 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Apio fresco de la granja: **120 g** (20 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Orégano seco: **4 g** (0.6 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Coliflor fresca de la granja: **600 g** (100 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Ajo fresco: **18 g** (3 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **50 ml** (8.3 ml/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **480 ml** (80 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
-1. Corte de vegetales: Cortar el apio y las calabacitas en media luna uniforme de 4 mm.
-2. Cocción en fondo: Llevar el fondo de pollo a hervor suave a 90°C con la sal de mar y el orégano; añadir el apio cocinando 3 minutos y luego la calabacita cocinando 3 minutos adicionales.
-3. Acabado aromático: Retirar del fuego, añadir el jugo de limón y servir caliente con los vegetales al dente.
+1. Rostizado de ajo: Dorar los dientes de ajo en láminas en 15 ml de VEVO hasta dorar.
+2. Hervor de coliflor: Agregar los floretes de coliflor y el fondo de pollo; cocinar tapado a hervor suave durante 8 minutos hasta que la coliflor esté tierna.
+3. Emulsión vorticial: Trasladar a licuadora de alta velocidad, añadir la sal de mar y procesar mientras se vierte el resto de VEVO en hilo durante 60 segundos.
+4. Servicio: Servir cremosa y caliente.
 
 **Métricas Culinarias SSOT:**
-- **Volumen de Fondo/Líquido:** `120 ml`
-- **Agente de Desglasado:** `Fondo claro de pollo`
-- **Temperatura Objetivo de Servicio:** `72 °C`
-- **Textura Dianal:** *Caldo cristalino con vegetales firmes*
-- **Notas Operativas de Pase:** *Servir en cuencos hondos de loza.*
+- **Volumen de Fondo/Líquido:** `160 ml`
+- **Agente de Desglasado:** `Fondo de pollo`
+- **Temperatura Objetivo de Servicio:** `70 °C`
+- **Textura Dianal:** *Terciopelo líquido homogéneo*
+- **Notas Operativas de Pase:** *Servir en tazones hondos con un hilo de VEVO crudo.*
 
 ---
 
-##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo al Limón y Romero Sellada en Mantequilla con Salsa de Jitomate Saladet Rústica
+##### 🥩 PLATILLO PRINCIPAL: Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Salsa Emulsionada de Mayonesa y Eneldo
 - **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica y Bioquímica:** *"Pechuga orgánica jugosa sellada en costra dorada de mantequilla, complementada con una reducción rústica de jitomate saladet de alacena."*  
+- **Nota Organoléptica y Bioquímica:** *"Salmón rosado rico en astaxantina y Omega-3 con costra crujiente de sésamo, acompañado de salsa emulsionada que amortiza 150 g de mayonesa de alacena."*  
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Sellado en mantequilla clarificada natural a 150°C que carameliza aminoácidos sin secar el núcleo muscular de la pechuga.
-  - *Construcción de Sabor:* Dulzura ácida del jitomate cocido combinada con la potencia terpénica del romero y la acidez del limón.
-  - *Arquitectura de Textura:* Fibra muscular tierna y jugosa con cubierta cremosa de salsa rústica.
-  - *Puntos Críticos de Control:* Termómetro de sonda a 74°C en el centro de la pechuga; reposo de 3 min.
+  - *Termodinámica:* Cocción asimétrica (4 min piel / 2 min costra) que protege la grasa miocárdica de 50°C en el centro, evitando exudación de albúmina blanca.
+  - *Construcción de Sabor:* Grasa marina profunda con el tostado de sésamo y el frescor anisado y cítrico de la emulsión de eneldo.
+  - *Arquitectura de Textura:* Piel crocante y semillas tostadas con lascas tiernas y jugosas de salmón que se funden al contacto.
+  - *Puntos Críticos de Control:* Fuego moderado al dorar el sésamo para evitar que se amargue.
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Pechuga de pollo orgánica: **900 g** (150 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Jitomate Saladet fresco: **480 g** (80 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **70 g** (11.6 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Romero fresco: **10 g** (1.6 g/persona)
-- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **30 ml** (5 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **8 g** (1.3 g/persona)
+- *🥩 Carnes, Pescados y Proteínas*: Filete de Salmón fresco con piel: **900 g** (150 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Semillas de sésamo: **60 g** (10 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Mayonesa: **150 g** (25 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Eneldo fresco: **15 g** (2.5 g/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
+- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **30 ml** (5 ml/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
-1. Preparación de salsa: Picar el jitomate saladet en cubos; en cacerola pequeña con 15 g de mantequilla, sudar el jitomate con una pizca de sal hasta concentrar pulpa durante 8 minutos.
-2. Sellado de pechuga: Secar los filetes de pollo; sazonar con sal de mar; calentar sartén amplia con 40 g de mantequilla a 150°C y sellar 4 minutos por lado hasta dorar.
-3. Desglasado y arrosé: Añadir las ramas de romero, el jugo de limón y el resto de la mantequilla; bañar los filetes en la emulsión espumosa durante 90 segundos hasta alcanzar 74°C interno.
-4. Emplatado: Servir las pechugas bañadas con la salsa rústica de jitomate y los jugos de mantequilla al romero.
-
-**Métricas Culinarias SSOT:**
-- **Volumen de Fondo/Líquido:** `40 ml`
-- **Agente de Desglasado:** `Jugo de limón fresco de la granja y mantequilla`
-- **Temperatura Objetivo de Servicio:** `68 °C`
-- **Textura Dianal:** *Jugoso, dorado y tierno*
-- **Notas Operativas de Pase:** *Filetear en cortes transversales de 1.5 cm al emplatar.*
-
----
-
-##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Nopales Asados con Orégano y Queso Panela Artesanal
-- **Técnica Culinaria:** `roast_bake`
-- **Nota Organoléptica y Bioquímica:** *"Fibra soluble mucilaginosa que reduce la respuesta glucémica postprandial, asada a la plancha con queso panela tierno."*  
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Calor seco en comal que coagula los mucílagos sin deshidratar la pulpa carnosa del nopal.
-  - *Construcción de Sabor:* Acidez terrosa vegetal con notas rústicas de orégano y la suavidad láctea fresca del panela.
-  - *Arquitectura de Textura:* Mordida carnosa y jugosa con contraste de queso panela elástico y tibio.
-  - *Puntos Críticos de Control:* Plancha muy caliente para evaporar rápidamente la baba natural.
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Nopales tiernos limpios de la granja: **480 g** (80 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso Panela artesanal: **120 g** (20 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **25 ml** (4.1 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Orégano seco: **5 g** (0.8 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
-
-**Procedimiento de Autor (Pasos Deducidos por CoCT):**
-1. Marcado de nopal: Cortar los nopales en tiras anchas; barnizar con aceite VEVO y espolvorear sal de mar y orégano.
-2. Asado en comal: Asar a 170°C durante 3 minutos por lado hasta que cambien a color verde oliva y se evapore la baba superficial.
-3. Dorada de queso: Marcar los cubos de queso panela 1 minuto en la misma plancha.
-4. Ensamble: Servir los nopales calientes coronados con el queso panela asado.
+1. Costra de sésamo: Presionar la cara superior de los lomos de salmón sobre las semillas de ajonjolí para crear un manto uniforme; sazonar con sal de mar.
+2. Sellado de precisión: Calentar sartén amplia con aceite VEVO a 160°C; colocar el salmón con la piel hacia abajo durante 4 minutos hasta lograr piel hipercrocante; voltear con cuidado sobre el sésamo durante 2 minutos hasta dorar las semillas manteniendo el centro a 50°C.
+3. Emulsión de eneldo: Mezclar enérgicamente la mayonesa de alacena con el eneldo picado fino, jugo de limón y una pizca de sal marina.
+4. Emplatado: Servir el salmón crujiente acompañado de una generosa cucharada de salsa emulsionada de mayonesa y eneldo.
 
 **Métricas Culinarias SSOT:**
 - **Volumen de Fondo/Líquido:** `0 ml`
-- **Agente de Desglasado:** `N/A (Plancha Seca)`
+- **Agente de Desglasado:** `N/A (Costra Sartén)`
+- **Temperatura Objetivo de Servicio:** `52 °C`
+- **Textura Dianal:** *Láminas sedosas con doble costra crujiente*
+- **Notas Operativas de Pase:** *Montar con la piel hacia arriba para que no pierda su textura crocante.*
+
+---
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Ejotes Salteados en Mantequilla de Pastoreo con Almendras Tostadas
+- **Técnica Culinaria:** `saute_and_sear`
+- **Nota Organoléptica y Bioquímica:** *"Ejotes frescos de la granja salteados al dente en mantequilla con lluvia crujiente de láminas de almendra."*  
+- **Razonamiento Culinario CoCT (Física del Bocado):**
+  - *Termodinámica:* Choque térmico que bloquea la pérdida de clorofila. Salteo rápido en medio lipídico caliente.
+  - *Construcción de Sabor:* Dulzura vegetal y mantequilla avellanada con el tostado seco de la almendra.
+  - *Arquitectura de Textura:* Mordida turgente y elástica con láminas quebradizas.
+  - *Puntos Críticos de Control:* Secar perfectamente los ejotes tras el hielo para no enfriar la mantequilla.
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *🥬 Verduras, Hortalizas y Frescos*: Ejotes verdes tiernos de la granja: **480 g** (80 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **50 g** (8.3 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Almendras fileteadas tostadas: **45 g** (7.5 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
+
+**Procedimiento de Autor (Pasos Deducidos por CoCT):**
+1. Blanqueado: Sumergir los ejotes en agua hirviendo con sal durante 2.5 minutos; enfriar en agua con hielo y secar.
+2. Salteo: Fundir la mantequilla a 130°C en sartén; incorporar los ejotes salteando a fuego vivo 2 minutos.
+3. Pase: Servir calientes coronados con las almendras tostadas crujientes.
+
+**Métricas Culinarias SSOT:**
+- **Volumen de Fondo/Líquido:** `0 ml`
+- **Agente de Desglasado:** `Mantequilla derretida`
 - **Temperatura Objetivo de Servicio:** `65 °C`
-- **Textura Dianal:** *Carnoso, tierno y sin baba*
-- **Notas Operativas de Pase:** *Acompañar junto a la pechuga de pollo.*
+- **Textura Dianal:** *Al dente crujiente*
+- **Notas Operativas de Pase:** *Acompañar junto al filete de salmón.*
 
 ---
 
@@ -964,98 +963,99 @@
 
 ---
 
-#### 🍽️ Servicio: COMIDA (682 kcal Atwater Target)
-**Macros 3 Tiempos:** Grasa: `52.0g` | Proteína: `48.5g` | Carbs Netos: `5.0g`  
+#### 🍽️ Servicio: COMIDA (676 kcal Atwater Target)
+**Macros 3 Tiempos:** Grasa: `51.5g` | Proteína: `47.8g` | Carbs Netos: `5.2g`  
 
-##### 🥗 ENTRADA: Crema Aterciopelada de Coliflor y Ajo Rostizado con Aceite de Oliva VEVO
+##### 🥗 ENTRADA: Sopa Campirana de Pollo y Verduras al Limón con Toque de Orégano
 - **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica y Bioquímica:** *"Textura sedosa tipo vichyssoise cetogénica basada en coliflor de la granja y ajo rostizado, emulsionada con aceite VEVO en crudo."*  
+- **Nota Organoléptica y Bioquímica:** *"Caldo nutritivo reconfortante con vegetales de corteza tersa y perfumado con cítricos y orégano seco de rancho."*  
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción justa para disolver la hemicelulosa de la coliflor sin generar sulfuros amargos. Emulsión mecánica de VEVO que genera textura untuosa.
-  - *Construcción de Sabor:* Suavidad vegetal láctea natural con la profundidad caramelizada del ajo y notas herbales de oliva.
-  - *Arquitectura de Textura:* Terciopelo denso satinado sin almidón.
-  - *Puntos Críticos de Control:* Licuar a máxima potencia para pulverizar toda fibra perceptible.
+  - *Termodinámica:* Cocción escalonada que respeta los puntos de ablandamiento de la celulosa del apio y la calabacita sin sobrecocer.
+  - *Construcción de Sabor:* Fondo reconfortante avícola elevado por la acidez vivaz del limón y la calidez amaderada del orégano.
+  - *Arquitectura de Textura:* Caldo límpido y transparente con mordida crujiente y vegetal.
+  - *Puntos Críticos de Control:* No hervir a borbotones para mantener la claridad del fondo.
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Coliflor fresca de la granja: **600 g** (100 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Ajo fresco: **18 g** (3 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **50 ml** (8.3 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **480 ml** (80 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento de Autor (Pasos Deducidos por CoCT):**
-1. Rostizado de ajo: Dorar los dientes de ajo en láminas en 15 ml de VEVO hasta dorar.
-2. Hervor de coliflor: Agregar los floretes de coliflor y el fondo de pollo; cocinar tapado a hervor suave durante 8 minutos hasta que la coliflor esté tierna.
-3. Emulsión vorticial: Trasladar a licuadora de alta velocidad, añadir la sal de mar y procesar mientras se vierte el resto de VEVO en hilo durante 60 segundos.
-4. Servicio: Servir cremosa y caliente.
-
-**Métricas Culinarias SSOT:**
-- **Volumen de Fondo/Líquido:** `160 ml`
-- **Agente de Desglasado:** `Fondo de pollo`
-- **Temperatura Objetivo de Servicio:** `70 °C`
-- **Textura Dianal:** *Terciopelo líquido homogéneo*
-- **Notas Operativas de Pase:** *Servir en tazones hondos con un hilo de VEVO crudo.*
-
----
-
-##### 🥩 PLATILLO PRINCIPAL: Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Salsa Emulsionada de Mayonesa y Eneldo
-- **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica y Bioquímica:** *"Salmón rosado rico en astaxantina y Omega-3 con costra crujiente de sésamo, acompañado de salsa emulsionada que amortiza 150 g de mayonesa de alacena."*  
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción asimétrica (4 min piel / 2 min costra) que protege la grasa miocárdica de 50°C en el centro, evitando exudación de albúmina blanca.
-  - *Construcción de Sabor:* Grasa marina profunda con el tostado de sésamo y el frescor anisado y cítrico de la emulsión de eneldo.
-  - *Arquitectura de Textura:* Piel crocante y semillas tostadas con lascas tiernas y jugosas de salmón que se funden al contacto.
-  - *Puntos Críticos de Control:* Fuego moderado al dorar el sésamo para evitar que se amargue.
-
-**Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Filete de Salmón fresco con piel: **900 g** (150 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas de sésamo: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Mayonesa: **150 g** (25 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Eneldo fresco: **15 g** (2.5 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo casero: **600 ml** (100 ml/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Calabacitas verdes tiernas de la granja: **240 g** (40 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Apio fresco de la granja: **120 g** (20 g/persona)
 - *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **25 ml** (4.1 ml/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **30 ml** (5 ml/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Orégano seco: **4 g** (0.6 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
-1. Costra de sésamo: Presionar la cara superior de los lomos de salmón sobre las semillas de ajonjolí para crear un manto uniforme; sazonar con sal de mar.
-2. Sellado de precisión: Calentar sartén amplia con aceite VEVO a 160°C; colocar el salmón con la piel hacia abajo durante 4 minutos hasta lograr piel hipercrocante; voltear con cuidado sobre el sésamo durante 2 minutos hasta dorar las semillas manteniendo el centro a 50°C.
-3. Emulsión de eneldo: Mezclar enérgicamente la mayonesa de alacena con el eneldo picado fino, jugo de limón y una pizca de sal marina.
-4. Emplatado: Servir el salmón crujiente acompañado de una generosa cucharada de salsa emulsionada de mayonesa y eneldo.
+1. Corte de vegetales: Cortar el apio y las calabacitas en media luna uniforme de 4 mm.
+2. Cocción en fondo: Llevar el fondo de pollo a hervor suave a 90°C con la sal de mar y el orégano; añadir el apio cocinando 3 minutos y luego la calabacita cocinando 3 minutos adicionales.
+3. Acabado aromático: Retirar del fuego, añadir el jugo de limón y servir caliente con los vegetales al dente.
 
 **Métricas Culinarias SSOT:**
-- **Volumen de Fondo/Líquido:** `0 ml`
-- **Agente de Desglasado:** `N/A (Costra Sartén)`
-- **Temperatura Objetivo de Servicio:** `52 °C`
-- **Textura Dianal:** *Láminas sedosas con doble costra crujiente*
-- **Notas Operativas de Pase:** *Montar con la piel hacia arriba para que no pierda su textura crocante.*
+- **Volumen de Fondo/Líquido:** `120 ml`
+- **Agente de Desglasado:** `Fondo claro de pollo`
+- **Temperatura Objetivo de Servicio:** `72 °C`
+- **Textura Dianal:** *Caldo cristalino con vegetales firmes*
+- **Notas Operativas de Pase:** *Servir en cuencos hondos de loza.*
 
 ---
 
-##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Ejotes Salteados en Mantequilla de Pastoreo con Almendras Tostadas
+##### 🥩 PLATILLO PRINCIPAL: Pechuga de Pollo al Limón y Romero Sellada en Mantequilla con Salsa de Jitomate Saladet Rústica
 - **Técnica Culinaria:** `saute_and_sear`
-- **Nota Organoléptica y Bioquímica:** *"Ejotes frescos de la granja salteados al dente en mantequilla con lluvia crujiente de láminas de almendra."*  
+- **Nota Organoléptica y Bioquímica:** *"Pechuga orgánica jugosa sellada en costra dorada de mantequilla, complementada con una reducción rústica de jitomate saladet de alacena."*  
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Choque térmico que bloquea la pérdida de clorofila. Salteo rápido en medio lipídico caliente.
-  - *Construcción de Sabor:* Dulzura vegetal y mantequilla avellanada con el tostado seco de la almendra.
-  - *Arquitectura de Textura:* Mordida turgente y elástica con láminas quebradizas.
-  - *Puntos Críticos de Control:* Secar perfectamente los ejotes tras el hielo para no enfriar la mantequilla.
+  - *Termodinámica:* Sellado en mantequilla clarificada natural a 150°C que carameliza aminoácidos sin secar el núcleo muscular de la pechuga.
+  - *Construcción de Sabor:* Dulzura ácida del jitomate cocido combinada con la potencia terpénica del romero y la acidez del limón.
+  - *Arquitectura de Textura:* Fibra muscular tierna y jugosa con cubierta cremosa de salsa rústica.
+  - *Puntos Críticos de Control:* Termómetro de sonda a 74°C en el centro de la pechuga; reposo de 3 min.
 
 **Ingredientes (Escalado Fijo para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Ejotes verdes tiernos de la granja: **480 g** (80 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **50 g** (8.3 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Almendras fileteadas tostadas: **45 g** (7.5 g/persona)
+- *🥩 Carnes, Pescados y Proteínas*: Pechuga de pollo orgánica: **900 g** (150 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Jitomate Saladet fresco: **480 g** (80 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Mantequilla de pastoreo: **70 g** (11.6 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Romero fresco: **10 g** (1.6 g/persona)
+- *🍋 Cítricos y Ácidos Naturales*: Jugo de limón fresco de la granja: **30 ml** (5 ml/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **8 g** (1.3 g/persona)
+
+**Procedimiento de Autor (Pasos Deducidos por CoCT):**
+1. Preparación de salsa: Picar el jitomate saladet en cubos; en cacerola pequeña con 15 g de mantequilla, sudar el jitomate con una pizca de sal hasta concentrar pulpa durante 8 minutos.
+2. Sellado de pechuga: Secar los filetes de pollo; sazonar con sal de mar; calentar sartén amplia con 40 g de mantequilla a 150°C y sellar 4 minutos por lado hasta dorar.
+3. Desglasado y arrosé: Añadir las ramas de romero, el jugo de limón y el resto de la mantequilla; bañar los filetes en la emulsión espumosa durante 90 segundos hasta alcanzar 74°C interno.
+4. Emplatado: Servir las pechugas bañadas con la salsa rústica de jitomate y los jugos de mantequilla al romero.
+
+**Métricas Culinarias SSOT:**
+- **Volumen de Fondo/Líquido:** `40 ml`
+- **Agente de Desglasado:** `Jugo de limón fresco de la granja y mantequilla`
+- **Temperatura Objetivo de Servicio:** `68 °C`
+- **Textura Dianal:** *Jugoso, dorado y tierno*
+- **Notas Operativas de Pase:** *Filetear en cortes transversales de 1.5 cm al emplatar.*
+
+---
+
+##### 🌿 ACOMPAÑAMIENTO / INFUSIÓN / GELATINA: Nopales Asados con Orégano y Queso Panela Artesanal
+- **Técnica Culinaria:** `roast_bake`
+- **Nota Organoléptica y Bioquímica:** *"Fibra soluble mucilaginosa que reduce la respuesta glucémica postprandial, asada a la plancha con queso panela tierno."*  
+- **Razonamiento Culinario CoCT (Física del Bocado):**
+  - *Termodinámica:* Calor seco en comal que coagula los mucílagos sin deshidratar la pulpa carnosa del nopal.
+  - *Construcción de Sabor:* Acidez terrosa vegetal con notas rústicas de orégano y la suavidad láctea fresca del panela.
+  - *Arquitectura de Textura:* Mordida carnosa y jugosa con contraste de queso panela elástico y tibio.
+  - *Puntos Críticos de Control:* Plancha muy caliente para evaporar rápidamente la baba natural.
+
+**Ingredientes (Escalado Fijo para 6 Comensales):**
+- *🥬 Verduras, Hortalizas y Frescos*: Nopales tiernos limpios de la granja: **480 g** (80 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso Panela artesanal: **120 g** (20 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva extra virgen VEVO: **25 ml** (4.1 ml/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Orégano seco: **5 g** (0.8 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **4 g** (0.6 g/persona)
 
 **Procedimiento de Autor (Pasos Deducidos por CoCT):**
-1. Blanqueado: Sumergir los ejotes en agua hirviendo con sal durante 2.5 minutos; enfriar en agua con hielo y secar.
-2. Salteo: Fundir la mantequilla a 130°C en sartén; incorporar los ejotes salteando a fuego vivo 2 minutos.
-3. Pase: Servir calientes coronados con las almendras tostadas crujientes.
+1. Marcado de nopal: Cortar los nopales en tiras anchas; barnizar con aceite VEVO y espolvorear sal de mar y orégano.
+2. Asado en comal: Asar a 170°C durante 3 minutos por lado hasta que cambien a color verde oliva y se evapore la baba superficial.
+3. Dorada de queso: Marcar los cubos de queso panela 1 minuto en la misma plancha.
+4. Ensamble: Servir los nopales calientes coronados con el queso panela asado.
 
 **Métricas Culinarias SSOT:**
 - **Volumen de Fondo/Líquido:** `0 ml`
-- **Agente de Desglasado:** `Mantequilla derretida`
+- **Agente de Desglasado:** `N/A (Plancha Seca)`
 - **Temperatura Objetivo de Servicio:** `65 °C`
-- **Textura Dianal:** *Al dente crujiente*
+- **Textura Dianal:** *Carnoso, tierno y sin baba*
 - **Notas Operativas de Pase:** *Acompañar junto al filete de salmón.*
 
 ---

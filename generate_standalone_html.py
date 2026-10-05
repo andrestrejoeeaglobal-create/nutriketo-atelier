@@ -3354,8 +3354,19 @@ function generateNextWeekMenu() {
           } else {
             mealFeedbackLedger = [];
           }
-          window.MEAL_FEEDBACK_LEDGER = mealFeedbackLedger;
-          if (state.customDishesState) customDishesState = state.customDishesState;
+          if (state.customDishesState) {
+            customDishesState = state.customDishesState;
+            delete customDishesState['Semana 41 (04 al 10 de Octubre de 2026)_day_1_Comida'];
+            delete customDishesState['Semana 41 (04 al 10 de Octubre de 2026)_day_3_Comida'];
+            delete customDishesState['Semana 41_day_1_Comida'];
+            delete customDishesState['Semana 41_day_3_Comida'];
+          }
+          if (window.MEAL_DISH_OVERRIDES) {
+            delete window.MEAL_DISH_OVERRIDES['Semana 41 (04 al 10 de Octubre de 2026)_day_1_Comida'];
+            delete window.MEAL_DISH_OVERRIDES['Semana 41 (04 al 10 de Octubre de 2026)_day_3_Comida'];
+            delete window.MEAL_DISH_OVERRIDES['Semana 41_day_1_Comida'];
+            delete window.MEAL_DISH_OVERRIDES['Semana 41_day_3_Comida'];
+          }
           if (state.selectedIdx !== undefined && !isNaN(parseInt(state.selectedIdx))) {
             selectedIdx = parseInt(state.selectedIdx);
           } else {
@@ -8168,7 +8179,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v25')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v26')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }

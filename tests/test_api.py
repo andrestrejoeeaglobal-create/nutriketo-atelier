@@ -1526,11 +1526,29 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
     assert "ensureSundayServiceDispatched" in code
-    assert "nutriketo-v36-6-rev4-s41-service-checkin-v25" in code
+    assert "nutriketo-v36-6-rev4-s41-service-checkin-v26" in code
     # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
     assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
     assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
     assert "kg_aguacate" in code
+
+    # 4. Verificación del intercambio de Salmón (Lunes) y Pollo (Miércoles) en Semana 41 Master
+    import json
+    with open("semana_41_master.json", "r", encoding="utf-8") as s41_f:
+        s41_data = json.load(s41_f)
+
+    lunes_comida = s41_data["days"][1]["meals"][1]
+    miercoles_comida = s41_data["days"][3]["meals"][1]
+
+    # Lunes Comida ahora es Salmón Fresco (descongelado, prioridad culinaria inmediata)
+    assert "Salmón" in lunes_comida["main_dish_name"] or "Salmon" in lunes_comida["main_dish_name"]
+    assert "Coliflor" in lunes_comida["starter_name"]
+    assert "Ejotes" in lunes_comida["side_dish_name"]
+
+    # Miércoles Comida ahora es Pechuga de Pollo al Limón
+    assert "Pollo" in miercoles_comida["main_dish_name"]
+    assert "Sopa Campirana" in miercoles_comida["starter_name"]
+    assert "Nopales" in miercoles_comida["side_dish_name"]
 
 
 
