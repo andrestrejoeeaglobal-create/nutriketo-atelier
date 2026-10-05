@@ -1526,7 +1526,11 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
     assert "ensureSundayServiceDispatched" in code
-    assert "nutriketo-v36-6-rev4-s41-service-checkin-v24" in code
+    assert "nutriketo-v36-6-rev4-s41-service-checkin-v25" in code
+    # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
+    assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
+    assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
+    assert "kg_aguacate" in code
 
 
 

@@ -856,6 +856,15 @@ function generateNextWeekMenu() {
         ];
       }
 
+      // 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)
+      if (/aguacate/i.test(name)) {
+        return [
+          { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' },
+          { id: 'malla_3', label: 'Malla (3 pzas)', multiplier: 3, unit: 'piezas', type: 'count' },
+          { id: 'kg_aguacate', label: 'Kilo (~5-6 pzas)', multiplier: 5, unit: 'piezas', type: 'count' }
+        ];
+      }
+
       // 5. Huesos y retazo para fondo
       if (/hueso|retazo|tuetano/i.test(name)) {
         return [
@@ -899,7 +908,7 @@ function generateNextWeekMenu() {
       }
 
       // 8b. Agua purificada e hidratación
-      if (/agua/i.test(name)) {
+      if (/agua/i.test(name) && !/aguacate/i.test(name)) {
         return [
           { id: 'litros', label: 'Litros (L)', multiplier: 1000, unit: 'ml', type: 'vol' },
           { id: 'botellas (355 ml)', label: 'Botella (355 ml)', multiplier: 355, unit: 'ml', type: 'vol' },
@@ -1089,6 +1098,13 @@ function generateNextWeekMenu() {
           return { val: num * 30, type: 'count', baseUnit: 'piezas' };
         case 'docena':
           return { val: num * 12, type: 'count', baseUnit: 'piezas' };
+        case 'malla_3':
+        case 'malla (3 pzas)':
+        case 'bolsa_3':
+        case 'malla / bolsa (3 pzas)':
+          return { val: num * 3, type: 'count', baseUnit: 'piezas' };
+        case 'kg_aguacate':
+          return { val: num * 5, type: 'count', baseUnit: 'piezas' };
         case 'botella_vevo':
         case 'botella_750':
           return { val: num * 750, type: 'vol', baseUnit: 'ml' };
@@ -1342,6 +1358,13 @@ function generateNextWeekMenu() {
             window.pantryCardUnits = state.pantryCardUnits;
           } else {
             window.pantryCardUnits = {};
+          }
+          if (window.pantryCardUnits) {
+            Object.keys(window.pantryCardUnits).forEach(k => {
+              if (/aguacate/i.test(k) && (window.pantryCardUnits[k] === 'litros' || window.pantryCardUnits[k] === 'l' || window.pantryCardUnits[k] === 'ml' || window.pantryCardUnits[k] === 'botellas (355 ml)')) {
+                window.pantryCardUnits[k] = 'piezas';
+              }
+            });
           }
 
           if (state.pantryStockInventory && typeof state.pantryStockInventory === 'object') {
@@ -6230,7 +6253,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v24')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v25')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
