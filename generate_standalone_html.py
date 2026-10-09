@@ -1786,6 +1786,34 @@ def generate_standalone():
             plan_41_dict["days"][idx]["iso_date"] = d_info["iso_date"]
             plan_41_dict["days"][idx]["full_date_title"] = f"Menú Completo para el {d_info['day']} {d_info['date_str']}"
 
+    s42_path = os.path.join(os.path.dirname(__file__), 'semana_42_master.json')
+    if os.path.exists(s42_path):
+        with open(s42_path, 'r', encoding='utf-8') as f:
+            plan_42_dict = json.load(f)
+    else:
+        plan_42_dict = copy.deepcopy(plan_41_dict)
+        plan_42_dict["week_name"] = "Semana 42"
+        plan_42_dict["week_label"] = "Semana 42 (11 al 17 de Octubre de 2026)"
+        plan_42_dict["week_start"] = "2026-10-11"
+        plan_42_dict["date_range"] = "11 al 17 de Octubre de 2026"
+
+    s42_day_dates = [
+        {"day": "Domingo", "day_num": "11", "date_str": "11 Oct", "iso_date": "2026-10-11"},
+        {"day": "Lunes", "day_num": "12", "date_str": "12 Oct", "iso_date": "2026-10-12"},
+        {"day": "Martes", "day_num": "13", "date_str": "13 Oct", "iso_date": "2026-10-13"},
+        {"day": "Miércoles", "day_num": "14", "date_str": "14 Oct", "iso_date": "2026-10-14"},
+        {"day": "Jueves", "day_num": "15", "date_str": "15 Oct", "iso_date": "2026-10-15"},
+        {"day": "Viernes", "day_num": "16", "date_str": "16 Oct", "iso_date": "2026-10-16"},
+        {"day": "Sábado", "day_num": "17", "date_str": "17 Oct", "iso_date": "2026-10-17"}
+    ]
+    for idx, d_info in enumerate(s42_day_dates):
+        if idx < len(plan_42_dict.get("days", [])):
+            plan_42_dict["days"][idx]["day"] = d_info["day"]
+            plan_42_dict["days"][idx]["day_num"] = d_info["day_num"]
+            plan_42_dict["days"][idx]["date_str"] = d_info["date_str"]
+            plan_42_dict["days"][idx]["iso_date"] = d_info["iso_date"]
+            plan_42_dict["days"][idx]["full_date_title"] = f"Menú Completo para el {d_info['day']} {d_info['date_str']}"
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
@@ -1795,7 +1823,8 @@ def generate_standalone():
         "Semana 38 (13 al 19 de Septiembre de 2026)": plan_38_dict,
         "Semana 39 (20 al 26 de Septiembre de 2026)": plan_39_dict,
         "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)": plan_40_dict,
-        "Semana 41 (04 al 10 de Octubre de 2026)": plan_41_dict
+        "Semana 41 (04 al 10 de Octubre de 2026)": plan_41_dict,
+        "Semana 42 (11 al 17 de Octubre de 2026)": plan_42_dict
     }
 
     def dish_to_typed_recipe(dish_obj):
@@ -1870,6 +1899,23 @@ def generate_standalone():
             if side_obj and isinstance(side_obj, dict):
                 meal["side_recipe"] = dish_to_typed_recipe(side_obj)
                 all_s41_ings.extend(side_obj.get("ingredients", []))
+
+    # ENRIQUECIMIENTO COGNITIVO COCT SEMANA 42 (SSOT V36.6 REV3)
+    all_s42_ings = []
+    for day in plan_42_dict.get("days", []):
+        for meal in day.get("meals", []):
+            starter_obj = meal.get("starter")
+            if starter_obj and isinstance(starter_obj, dict):
+                meal["starter_recipe"] = dish_to_typed_recipe(starter_obj)
+                all_s42_ings.extend(starter_obj.get("ingredients", []))
+            main_obj = meal.get("main") or meal.get("main_dish")
+            if main_obj and isinstance(main_obj, dict):
+                meal["main_recipe"] = dish_to_typed_recipe(main_obj)
+                all_s42_ings.extend(main_obj.get("ingredients", []))
+            side_obj = meal.get("side") or meal.get("side_dish")
+            if side_obj and isinstance(side_obj, dict):
+                meal["side_recipe"] = dish_to_typed_recipe(side_obj)
+                all_s42_ings.extend(side_obj.get("ingredients", []))
 
     s40_canonical_bom = consolidate_market_bom(all_s40_ings)
     s40_canonical_bom_json = json.dumps(s40_canonical_bom, ensure_ascii=False)
@@ -1997,26 +2043,39 @@ function validateCulinaryImmunity(text) {
 }
 
 function generateNextWeekMenu() {
-  const targetWeek = "Semana 41 (04 al 10 de Octubre de 2026)";
+  const targetWeek = "Semana 42 (11 al 17 de Octubre de 2026)";
   if (typeof datasets !== 'undefined' && datasets[targetWeek]) {
     if (activeWeek !== targetWeek) {
-      if (typeof selectWeek === 'function') {
-        selectWeek(targetWeek);
+      if (typeof onHeaderWeekChange === 'function') {
+        onHeaderWeekChange(targetWeek);
       } else {
         activeWeek = targetWeek;
         if (typeof renderDay === 'function') renderDay(0);
         if (typeof renderDateBar === 'function') renderDateBar();
       }
       if (typeof showToast === 'function') {
-        showToast("✨ Cargada la planificación clínica SSOT de la Semana 41.");
+        showToast("✨ Cargada la planificación clínica SSOT de la Semana 42 (11 al 17 de Octubre de 2026).");
+      }
+      return;
+    } else {
+      if (typeof showToast === 'function') {
+        showToast("📋 La Semana 42 (11 al 17 de Octubre de 2026) ya se encuentra plenamente activa con sus 63 recetas detalladas.");
+      } else {
+        alert("📋 La Semana 42 (11 al 17 de Octubre de 2026) ya se encuentra plenamente activa con sus 63 recetas detalladas.");
       }
       return;
     }
   }
   if (typeof showToast === 'function') {
-    showToast("📋 La planificación de semanas clínicas está gobernada por el Cortex T.I.L.O. (Balance Atwater, 33Plus/34Plus, NOM-004 y Amortización). La Semana 41 ya se encuentra plenamente activa con sus 63 recetas detalladas.");
+    showToast("📋 La planificación de semanas clínicas está gobernada por el Cortex T.I.L.O. (Balance Atwater, 33Plus/34Plus, NOM-004 y Amortización).");
   } else {
-    alert("📋 La planificación de semanas clínicas está gobernada por el Cortex T.I.L.O. (Balance Atwater, 33Plus/34Plus, NOM-004 y Amortización). La Semana 41 ya se encuentra plenamente activa con sus 63 recetas detalladas.");
+    alert("📋 La planificación de semanas clínicas está gobernada por el Cortex T.I.L.O. (Balance Atwater, 33Plus/34Plus, NOM-004 y Amortización).");
+  }
+}
+
+function selectWeek(weekKey) {
+  if (typeof onHeaderWeekChange === 'function') {
+    onHeaderWeekChange(weekKey);
   }
 }
 
@@ -2281,7 +2340,8 @@ function generateNextWeekMenu() {
                 <option value="Semana 38 (13 al 19 de Septiembre de 2026)">Semana 38 (13 al 19 de Septiembre de 2026)</option>
                 <option value="Semana 39 (20 al 26 de Septiembre de 2026)">Semana 39 (20 al 26 de Septiembre de 2026)</option>
                 <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
-                <option value="Semana 41 (04 al 10 de Octubre de 2026)" selected>Semana 41 (04 al 10 de Octubre de 2026)</option>
+                <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
+                <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
               </select>
             </div>
             <div>
@@ -2403,7 +2463,8 @@ function generateNextWeekMenu() {
             <option value="Semana 38 (13 al 19 de Septiembre de 2026)">Semana 38 (13 al 19 de Septiembre de 2026)</option>
             <option value="Semana 39 (20 al 26 de Septiembre de 2026)">Semana 39 (20 al 26 de Septiembre de 2026)</option>
             <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
-            <option value="Semana 41 (04 al 10 de Octubre de 2026)" selected>Semana 41 (04 al 10 de Octubre de 2026)</option>
+            <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
+            <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
@@ -2413,7 +2474,7 @@ function generateNextWeekMenu() {
           <button onclick="reopenSetupPanel()" style="background: var(--color-accent-light); border: 1.5px solid var(--color-34plus); color: var(--color-34plus); padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; cursor: pointer; font-size: 0.8rem; min-height: 44px; display: flex; align-items: center; gap: 0.3rem;" title="Reconfigurar Parámetros Operativos">
             <span>⚙️</span> <span>Reconfigurar Parámetros</span>
           </button>
-              <button type="button" onclick="generateNextWeekMenu()" class="btn-action bg-[#1C75BC] text-white hover:bg-blue-700 transition-colors flex items-center gap-2" title="Cargar y Validar Semana 41 SSOT"><span>📋 Semana 41 SSOT</span></button>
+          <button type="button" id="btn-next-week" onclick="generateNextWeekMenu()" class="btn-action bg-[#1C75BC] text-white hover:bg-blue-700 transition-colors flex items-center gap-2" title="Planificar y Cargar Semana 42 SSOT"><span id="btn-next-week-text">⚡ Generar Semana 42 SSOT</span></button>
         </div>
       </div>
 
@@ -4495,6 +4556,18 @@ function generateNextWeekMenu() {
       const headerSubtitle = document.getElementById('header-week-subtitle');
       if (headerSubtitle) headerSubtitle.innerText = `${activeWeek} | Ecosistema T.I.L.O.®`;
 
+      const btnNextWeekText = document.getElementById('btn-next-week-text');
+      const btnNextWeek = document.getElementById('btn-next-week');
+      if (btnNextWeekText) {
+        if (newWeek.startsWith('Semana 42')) {
+          btnNextWeekText.innerText = "📋 Semana 42 SSOT (Activa)";
+          if (btnNextWeek) btnNextWeek.title = "Semana 42 SSOT Activa en el Atelier";
+        } else {
+          btnNextWeekText.innerText = "⚡ Generar Semana 42 SSOT";
+          if (btnNextWeek) btnNextWeek.title = "Planificar y Cargar Semana 42 SSOT";
+        }
+      }
+
       if (typeof selectedIdx !== 'number' || isNaN(selectedIdx) || selectedIdx < 0 || (targetPlan.days && selectedIdx >= targetPlan.days.length)) {
         selectedIdx = 0;
       }
@@ -4546,7 +4619,7 @@ function generateNextWeekMenu() {
       const currentDay = now.getDate();
 
       // 1. Coincidencia directa por iso_date estricta
-      if (dayObj.iso_date && /^\d{4}-\d{2}-\d{2}$/.test(dayObj.iso_date)) {
+      if (dayObj.iso_date && /^\\d{4}-\\d{2}-\\d{2}$/.test(dayObj.iso_date)) {
         const [y, m, d] = dayObj.iso_date.split('-').map(Number);
         return y === currentYear && (m - 1) === currentMonth && d === currentDay;
       }
@@ -4556,7 +4629,7 @@ function generateNextWeekMenu() {
       if (dayObj.day_num !== undefined && dayObj.day_num !== null) {
         targetDay = parseInt(dayObj.day_num, 10);
       } else if (dayObj.date_str) {
-        const matchDay = dayObj.date_str.match(/\b0?(\d{1,2})\b/);
+        const matchDay = dayObj.date_str.match(/\\b0?(\\d{1,2})\\b/);
         if (matchDay) targetDay = parseInt(matchDay[1], 10);
       }
       if (!targetDay || isNaN(targetDay) || targetDay !== currentDay) {
@@ -4609,7 +4682,7 @@ function generateNextWeekMenu() {
       // 4. Extraer y validar año
       let targetYear = null;
       const combinedClean = cleanStr(`${dayObj.date_str || ''} ${planObj?.week_label || ''} ${planObj?.date_range || ''}`);
-      const yearMatch = combinedClean.match(/\b(202\d)\b/);
+      const yearMatch = combinedClean.match(/\\b(202\\d)\\b/);
       if (yearMatch) {
         targetYear = parseInt(yearMatch[1], 10);
       }
@@ -4644,8 +4717,8 @@ function generateNextWeekMenu() {
           
           const todayTag = isToday ? '<span class="text-[10px] uppercase font-bold text-[#FFCC00] bg-slate-900 px-1.5 py-0.5 rounded ml-1">HOY</span>' : '';
           
-          let dayNumText = (day.day_num || (day.date_str ? day.date_str.split(' ')[0] : (idx + 1))).toString().trim().replace(/[\s\-_]+$/, '');
-          let dayShortText = (day.day || '').substring(0, 3).toUpperCase().trim().replace(/[\s\-_]+$/, '');
+          let dayNumText = (day.day_num || (day.date_str ? day.date_str.split(' ')[0] : (idx + 1))).toString().trim().replace(/[\\s\\-_]+$/, '');
+          let dayShortText = (day.day || '').substring(0, 3).toUpperCase().trim().replace(/[\\s\\-_]+$/, '');
 
           btn.innerHTML = `<span class="font-bold text-sm font-brand-title">${dayNumText}</span> <span class="font-semibold">${dayShortText}</span>${todayTag ? ' ' + todayTag : ''}`;
           
@@ -4804,7 +4877,7 @@ function normalizeToCanonicalSlug(rawName) {
     }
   }
 
-  const sanitized = cleanNoAcc.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
+  const sanitized = cleanNoAcc.replace(/[^a-z0-9\\s-]/g, '').replace(/\\s+/g, '-').replace(/^-+|-+$/g, '');
   return sanitized || "insumo-general";
 }
 
@@ -4819,7 +4892,7 @@ function parseQuantityInBaseUnit(qty, unitRaw) {
   }
 
   // 1. Empaques compuestos con especificación de peso/volumen (ej. "paquete (3.2 kg)", "frasco (1 kg)", "frasco (500 g)")
-  const pkgMatch = unitStr.match(/(\d+(?:\.\d+)?)\s*(kg|kilo|kilos|g|gramos?|l|lt|litros?|ml)/i);
+  const pkgMatch = unitStr.match(/(\\d+(?:\\.\\d+)?)\\s*(kg|kilo|kilos|g|gramos?|l|lt|litros?|ml)/i);
   if (pkgMatch && (unitStr.includes("paquete") || unitStr.includes("empaque") || unitStr.includes("frasco") || unitStr.includes("lata") || unitStr.includes("botella"))) {
     const pkgSize = parseFloat(pkgMatch[1]);
     const pkgUnit = pkgMatch[2].toLowerCase();
@@ -8179,7 +8252,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v26')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v27')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
@@ -8198,6 +8271,18 @@ function renderRecipes(day, activeDiners) {
 
         const headerSubtitle = document.getElementById('header-week-subtitle');
         if (headerSubtitle && activeWeek) headerSubtitle.innerText = `${activeWeek} | Ecosistema T.I.L.O.®`;
+
+        const btnNextWeekText = document.getElementById('btn-next-week-text');
+        const btnNextWeek = document.getElementById('btn-next-week');
+        if (btnNextWeekText && activeWeek) {
+          if (activeWeek.startsWith('Semana 42')) {
+            btnNextWeekText.innerText = "📋 Semana 42 SSOT (Activa)";
+            if (btnNextWeek) btnNextWeek.title = "Semana 42 SSOT Activa en el Atelier";
+          } else {
+            btnNextWeekText.innerText = "⚡ Generar Semana 42 SSOT";
+            if (btnNextWeek) btnNextWeek.title = "Planificar y Cargar Semana 42 SSOT";
+          }
+        }
 
         if (typeof renderDateBar === 'function') renderDateBar();
         const initIdx = (typeof selectedIdx === 'number' && !isNaN(selectedIdx) && selectedIdx >= 0) ? selectedIdx : 0;

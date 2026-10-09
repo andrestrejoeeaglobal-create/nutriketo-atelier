@@ -1526,7 +1526,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
     assert "ensureSundayServiceDispatched" in code
-    assert "nutriketo-v36-6-rev4-s41-service-checkin-v26" in code
+    assert "nutriketo-v36-6-rev4-s41-service-checkin-v27" in code
     # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
     assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
     assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
@@ -1549,6 +1549,30 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "Pollo" in miercoles_comida["main_dish_name"]
     assert "Sopa Campirana" in miercoles_comida["starter_name"]
     assert "Nopales" in miercoles_comida["side_dish_name"]
+
+    # 5. Verificación de la Semana 42 Master SSOT canónica (11 al 17 de Octubre de 2026)
+    with open("semana_42_master.json", "r", encoding="utf-8") as s42_f:
+        s42_data = json.load(s42_f)
+
+    assert len(s42_data["days"]) == 7
+    total_meals_s42 = sum(len(d["meals"]) for d in s42_data["days"])
+    assert total_meals_s42 == 21
+
+    # Verificar presencia de amortización de insumos Sam's Club y El Herami
+    # Domingo Comida: Hamburguesa de arrachera
+    domingo_comida_s42 = s42_data["days"][0]["meals"][1]
+    assert "Arrachera" in domingo_comida_s42["main_dish_name"]
+    # Lunes Comida: Fajitas de mojarra
+    lunes_comida_s42 = s42_data["days"][1]["meals"][1]
+    assert "Mojarra" in lunes_comida_s42["main_dish_name"]
+    # Jueves Comida: Salmón
+    jueves_comida_s42 = s42_data["days"][4]["meals"][1]
+    assert "Salmón" in jueves_comida_s42["main_dish_name"]
+
+    # Verificación en el generador de standalone HTML
+    assert "Semana 42 (11 al 17 de Octubre de 2026)" in code
+    assert "semana_42_master.json" in code
+    assert "btn-next-week" in code
 
 
 
