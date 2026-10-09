@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Governance Rule RULE-2026-CROSS-DEVICE-MIRROR-001
-const CACHE_NAME = 'nutriketo-v36-6-rev4-s41-service-checkin-v27';
+const CACHE_NAME = 'nutriketo-v36-6-rev4-s41-service-checkin-v28';
 
 const ASSETS_TO_CACHE = [
   './',

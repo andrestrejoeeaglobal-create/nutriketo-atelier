@@ -1526,7 +1526,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
     assert "ensureSundayServiceDispatched" in code
-    assert "nutriketo-v36-6-rev4-s41-service-checkin-v27" in code
+    assert "nutriketo-v36-6-rev4-s41-service-checkin-v28" in code
     # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
     assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
     assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
@@ -1573,6 +1573,11 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "Semana 42 (11 al 17 de Octubre de 2026)" in code
     assert "semana_42_master.json" in code
     assert "btn-next-week" in code
+
+    # 6. Verificación de la Temporada de Cosecha de Nuez Pecana en Granja El Herami
+    assert "Nuez pecana fresca de la granja" in code
+    assert "nuex pecana" in code
+    assert "Consolidar insumos de Cosecha Propia Activa" in code
 
 
 

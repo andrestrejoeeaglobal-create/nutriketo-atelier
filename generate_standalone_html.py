@@ -2621,6 +2621,7 @@ function selectWeek(weekKey) {
       "Arúgula fresca",
       "Coliflor fresca",
       "Limones agrios frescos de la granja",
+      "Nuez pecana fresca de la granja",
       "Pitayas frescas",
       "Granadas frescas",
       "Fresas frescas",
@@ -2640,7 +2641,7 @@ function selectWeek(weekKey) {
 
     let activeWeek = "Semana 41 (04 al 10 de Octubre de 2026)";
     let activeDiners = 6;
-    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja"];
+    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja", "Nuez pecana fresca de la granja"];
     let pantryStock = {
       "Huevos enteros": 2.0,
       "Pechuga de pollo": 1.0,
@@ -2713,8 +2714,8 @@ function selectWeek(weekKey) {
 
     function areInsumosEquivalent(aName, bName) {
       if (!aName || !bName) return false;
-      const a = aName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
-      const b = bName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
+      const a = aName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\bnuex\b/g, "nuez").trim();
+      const b = bName.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\bnuex\b/g, "nuez").trim();
 
       if (a === b) return true;
 
@@ -2752,7 +2753,7 @@ function selectWeek(weekKey) {
         { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'], exclude: ['aceituna', 'aceitunas'] },
         { stem: 'aceite-ajonjoli', aliases: ['aceite de ajonjoli', 'aceite de sesamo', 'aceite de ajonjoli tostado'], exclude: ['semilla', 'semillas', 'grano'] },
         { stem: 'semillas-sesamo', aliases: ['semillas de sesamo', 'semillas de ajonjoli', 'ajonjoli en grano', 'semilla de ajonjoli', 'semillas de sesamo (ajonjoli)'], exclude: ['aceite'] },
-        { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'pecana', 'pecanas'] },
+        { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'nuex pecana', 'nuex', 'pecana', 'pecanas', 'nuez pecana fresca', 'nuez pecana de la granja', 'nuez pecana fresca de la granja', 'nueces pecanas', 'nuez pecana en mitades', 'nuez pecana pelada', 'nuez', 'nueces', 'nuez picada'] },
         { stem: 'nuez-castilla', aliases: ['nuez de castilla', 'nueces de castilla', 'nuez de castilla fresca'] },
         { stem: 'nuez-india', aliases: ['nuez de la india', 'nueces de la india', 'nuez india', 'nueces india', 'anacardo', 'anacardos', 'maranon'] },
         { stem: 'almendra', aliases: ['almendra', 'almendras', 'almendras fileteadas', 'almendras fileteadas tostadas'] },
@@ -3340,6 +3341,10 @@ function selectWeek(weekKey) {
             customFarmItems = state.customFarmItems.filter(f => {
               const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
               return !/miel|durazno|higo/i.test(fStr);
+            }).map(f => {
+              const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
+              if (/nuex.*pecan|nuez.*pecan/i.test(fStr)) return "Nuez pecana fresca de la granja";
+              return f;
             });
           }
 
@@ -3347,12 +3352,19 @@ function selectWeek(weekKey) {
             selectedHarvest = state.selectedHarvest.filter(h => {
               const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
               return !/miel|durazno|higo/i.test(hStr);
+            }).map(h => {
+              const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+              if (/nuex.*pecan|nuez.*pecan/i.test(hStr)) return "Nuez pecana fresca de la granja";
+              return h;
             });
             if (!selectedHarvest.some(h => areInsumosEquivalent(typeof h === 'string' ? h : (h.item_name || h.name || ''), 'limon'))) {
               selectedHarvest.push("Limones agrios frescos de la granja");
             }
+            if (!selectedHarvest.some(h => areInsumosEquivalent(typeof h === 'string' ? h : (h.item_name || h.name || ''), 'nuez pecana')) && !deletedFarmItems.some(d => areInsumosEquivalent(d, 'nuez pecana'))) {
+              selectedHarvest.push("Nuez pecana fresca de la granja");
+            }
           } else {
-            selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja"];
+            selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja", "Nuez pecana fresca de la granja"];
           }
 
           if (state.pantryStock && typeof state.pantryStock === 'object') {
@@ -4075,13 +4087,20 @@ function selectWeek(weekKey) {
 
     function addNewHarvestItem() {
       const nameInput = document.getElementById('new-harvest-name');
-      const val = nameInput ? nameInput.value.trim() : '';
+      let val = nameInput ? nameInput.value.trim() : '';
       if (!val) {
         if (typeof showToast === 'function') {
           showToast('⚠️ Por favor escribe el nombre del insumo para la Cosecha.', 'warning');
         }
         if (nameInput) nameInput.focus();
         return;
+      }
+
+      if (/nuex/i.test(val)) {
+        val = val.replace(/nuex/gi, 'nuez');
+      }
+      if (/^nuez\\s+pecana$/i.test(val.trim())) {
+        val = "Nuez pecana fresca de la granja";
       }
 
       const slug = normalizeToCanonicalSlug(val);
@@ -5474,6 +5493,46 @@ function calculateNetShoppingList(diners) {
         stockInBase: stockInBase,
         note: note
       });
+    }
+  });
+
+  // 3. Consolidar insumos de Cosecha Propia Activa ($0 Granja El Herami)
+  // Garantiza que los insumos añadidos por el usuario (customFarmItems) y la temporada activa de nuez pecana
+  // aparezcan siempre en Abastecimiento de Cosecha Propia
+  const allHarvestCandidates = [
+    ...(Array.isArray(customFarmItems) ? customFarmItems : []),
+    ...(Array.isArray(harvestList) ? harvestList : []),
+    ...(Array.isArray(selectedHarvest) ? selectedHarvest : [])
+  ];
+
+  const uniqueHarvestNames = [];
+  allHarvestCandidates.forEach(h => {
+    if (!h) return;
+    const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+    if (!hStr) return;
+    if (!uniqueHarvestNames.some(u => areInsumosEquivalent(u, hStr) || normalizeToCanonicalSlug(u) === normalizeToCanonicalSlug(hStr))) {
+      uniqueHarvestNames.push(hStr);
+    }
+  });
+
+  uniqueHarvestNames.forEach(hName => {
+    const isDel = (typeof deletedFarmItems !== 'undefined' && Array.isArray(deletedFarmItems)) && deletedFarmItems.some(d => areInsumosEquivalent(d, hName));
+    if (isDel) return;
+
+    const alreadyListed = farmItems.some(f => areInsumosEquivalent(f.name, hName) || normalizeToCanonicalSlug(f.name) === normalizeToCanonicalSlug(hName));
+    if (!alreadyListed) {
+      const isCustom = (typeof customFarmItems !== 'undefined' && Array.isArray(customFarmItems)) && customFarmItems.some(c => areInsumosEquivalent(c, hName));
+      const isPecan = /nuez|pecan|nuex/i.test(hName);
+
+      if (isCustom || isPecan) {
+        farmCount++;
+        farmItems.push({
+          name: hName,
+          slug: normalizeToCanonicalSlug(hName),
+          reason: "🌿 Cosecha activa de temporada a $0 (Granja El Herami)",
+          category: "🌾 Cosecha Directa de la Granja / Huerto"
+        });
+      }
     }
   });
 
@@ -8252,7 +8311,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v27')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v28')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
