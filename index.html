@@ -1601,7 +1601,7 @@ let pantryStock = {
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
 
           if (Array.isArray(state.deletedFarmItems)) {
-            deletedFarmItems = state.deletedFarmItems.filter(d => !areInsumosEquivalent(d, 'limon'));
+            deletedFarmItems = state.deletedFarmItems;
           } else {
             deletedFarmItems = [];
           }
@@ -1632,12 +1632,6 @@ let pantryStock = {
               if (/nuex.*pecan|nuez.*pecan/i.test(hStr)) return "Nuez pecana fresca de la granja";
               return h;
             });
-            if (!selectedHarvest.some(h => areInsumosEquivalent(typeof h === 'string' ? h : (h.item_name || h.name || ''), 'limon'))) {
-              selectedHarvest.push("Limones agrios frescos de la granja");
-            }
-            if (!selectedHarvest.some(h => areInsumosEquivalent(typeof h === 'string' ? h : (h.item_name || h.name || ''), 'nuez pecana')) && !deletedFarmItems.some(d => areInsumosEquivalent(d, 'nuez pecana'))) {
-              selectedHarvest.push("Nuez pecana fresca de la granja");
-            }
           } else {
             selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja", "Nuez pecana fresca de la granja"];
           }
@@ -3632,11 +3626,7 @@ function calculateNetShoppingList(diners) {
     if (/portobello|champiñon|champiñones/i.test(name)) {
       cat = '🥬 Verduras, Hortalizas y Frescos';
     }
-    // 2. Homologar todas las variantes de limón como Cosecha Propia de la Granja El Herami ($0)
-    if (/lim[oó]n/i.test(name)) {
-      name = 'Limones agrios frescos de la granja';
-      cat = '🌱 Vegetal / Acompañamiento Base (Cosecha Activa)';
-    }
+
     // 3. Homologar pimienta negra
     if (/pimienta negra/i.test(name)) {
       name = 'Pimienta negra recién molida';
@@ -3733,7 +3723,7 @@ function calculateNetShoppingList(diners) {
       return areInsumosEquivalent(hStr, cleanName);
     });
 
-    const isHarvest = isHarvestInList || cat.includes("Cosecha");
+    const isHarvest = isHarvestInList;
 
     if (isHarvest) {
       farmCount++;
@@ -3883,28 +3873,25 @@ function calculateNetShoppingList(diners) {
   });
 
   // 3. Consolidar insumos de Cosecha Propia Activa ($0 Granja El Herami)
-  // Garantiza que los insumos añadidos por el usuario (customFarmItems) y la temporada activa de nuez pecana
-  // aparezcan siempre en Abastecimiento de Cosecha Propia
-  const allHarvestCandidates = [
-    ...(Array.isArray(customFarmItems) ? customFarmItems : []),
-    ...(Array.isArray(harvestList) ? harvestList : []),
-    ...(Array.isArray(selectedHarvest) ? selectedHarvest : [])
-  ];
-
-  const uniqueHarvestNames = [];
-  allHarvestCandidates.forEach(h => {
-    if (!h) return;
+  // Muestra los insumos que el usuario tiene activamente seleccionados en su cosecha manual (selectedHarvest)
+  // que no fueron requeridos por las recetas del menú semanal pero están cosechados activamente
+  const activeHarvestCandidates = (Array.isArray(harvestList) ? harvestList : []).filter(h => {
+    if (!h) return false;
     const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
-    if (!hStr) return;
-    if (!uniqueHarvestNames.some(u => areInsumosEquivalent(u, hStr) || normalizeToCanonicalSlug(u) === normalizeToCanonicalSlug(hStr))) {
-      uniqueHarvestNames.push(hStr);
+    if (!hStr) return false;
+    const isDel = (typeof deletedFarmItems !== 'undefined' && Array.isArray(deletedFarmItems)) && deletedFarmItems.some(d => areInsumosEquivalent(d, hStr));
+    return !isDel;
+  });
+
+  const uniqueActiveHarvestNames = [];
+  activeHarvestCandidates.forEach(h => {
+    const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
+    if (!uniqueActiveHarvestNames.some(u => areInsumosEquivalent(u, hStr) || normalizeToCanonicalSlug(u) === normalizeToCanonicalSlug(hStr))) {
+      uniqueActiveHarvestNames.push(hStr);
     }
   });
 
-  uniqueHarvestNames.forEach(hName => {
-    const isDel = (typeof deletedFarmItems !== 'undefined' && Array.isArray(deletedFarmItems)) && deletedFarmItems.some(d => areInsumosEquivalent(d, hName));
-    if (isDel) return;
-
+  uniqueActiveHarvestNames.forEach(hName => {
     const alreadyListed = farmItems.some(f => areInsumosEquivalent(f.name, hName) || normalizeToCanonicalSlug(f.name) === normalizeToCanonicalSlug(hName));
     if (!alreadyListed) {
       const isCustom = (typeof customFarmItems !== 'undefined' && Array.isArray(customFarmItems)) && customFarmItems.some(c => areInsumosEquivalent(c, hName));
@@ -6109,8 +6096,7 @@ function renderRecipes(day, activeDiners) {
       const purchaseList = [];
 
       rawShopBase.forEach(item => {
-        const isFarmCategory = item.category.includes('Cosecha');
-        const isSelectedFarm = isFarmCategory && selectedHarvest.includes(item.item_name);
+        const isSelectedFarm = selectedHarvest.some(h => areInsumosEquivalent(typeof h === 'string' ? h : (h.item_name || h.name || ''), item.item_name));
         const rawReq = (item.quantity || 1.0) * factor;
         const pStock = pantryStock[item.item_name] || 0.0;
 
