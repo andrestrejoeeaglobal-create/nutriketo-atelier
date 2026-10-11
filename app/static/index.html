@@ -660,7 +660,7 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-090-aceite-de-coco": { item_num: 90, name: "Aceite de coco", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
       "sku-091-tang": { item_num: 91, name: "Tang", stock: 104, unit: "g", packaging: "8 envases de 13 g", status: "prohibited", reason: "Polvo industrial para bebidas con azúcar y aditivos sintéticos no cetogénicos." },
       "sku-092-atun-en-agua": { item_num: 92, name: "Atún en agua", stock: 700, unit: "g", packaging: "7 envases de 100 g", status: "canonical" },
-      "sku-093-sardina-en-salsa-de-tomate": { item_num: 93, name: "Sardina en salsa de tomate", stock: 1700, unit: "g", packaging: "4 envases de 425 g", status: "canonical" },
+      "sku-093-sardinas": { item_num: 93, name: "Sardinas", stock: 4, unit: "latas de 425 g", packaging: "4 latas de 425 g (1,700 g)", status: "canonical" },
       "sku-094-rajas-de-jalapeno": { item_num: 94, name: "Rajas de jalapeño", stock: 314, unit: "g", packaging: "2 envases de 157 g", status: "canonical" },
       "sku-095-harina-power-cakes": { item_num: 95, name: "Harina Power Cakes", stock: 1000, unit: "g", packaging: "1000 g", status: "prohibited", reason: "Mezcla para panqueques con carbohidratos de rápida absorción; fuera de cetosis." },
       "sku-096-hojuelas-de-avena": { item_num: 96, name: "Hojuelas de avena", stock: 100, unit: "g", packaging: "100 g", status: "prohibited", reason: "Cereal alto en carbohidratos netos y almidones; rompe cetosis." },
@@ -811,7 +811,7 @@ let pantryStock = {
       "Aceite de coco": 500,
       "Tang": 104,
       "Atún en agua": 700,
-      "Sardina en salsa de tomate": 1700,
+      "Sardinas": 4,
       "Rajas de jalapeño": 314,
       "Harina Power Cakes": 1000,
       "Hojuelas de avena": 100,
@@ -1143,7 +1143,14 @@ let pantryStock = {
       }
 
       // 8. Pescados y Mariscos
-      if (/sardina|atun enlatado|atun en lata/i.test(name)) {
+      if (/sardina/i.test(name)) {
+        return [
+          { id: 'latas de 425 g', label: 'Latas (425 g)', multiplier: 425, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/atun enlatado|atun en lata/i.test(name)) {
         return [
           { id: 'latas', label: 'Latas (pzas)', multiplier: 1, unit: 'latas', type: 'count' },
           { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' }
@@ -1350,6 +1357,13 @@ let pantryStock = {
         case 'domo_500':
         case 'bolsa_500':
           return { val: num * 500, type: 'mass', baseUnit: 'g' };
+        case 'latas de 425 g':
+        case 'lata de 425 g':
+        case 'latas (425 g)':
+        case 'lata (425 g)':
+        case 'latas_425':
+        case 'lata_425':
+          return { val: num * 425, type: 'mass', baseUnit: 'g' };
         case 'paquete_3_2':
           return { val: num * 3200, type: 'mass', baseUnit: 'g' };
         case 'frasco_120':
@@ -1642,6 +1656,10 @@ let pantryStock = {
               if (/miel|durazno|higo/i.test(itemName)) return;
               pantryStock[itemName] = state.pantryStock[itemName];
             });
+            if (pantryStock['Sardina en salsa de tomate'] !== undefined) {
+              pantryStock['Sardinas'] = (pantryStock['Sardina en salsa de tomate'] === 1700) ? 4 : pantryStock['Sardina en salsa de tomate'];
+              delete pantryStock['Sardina en salsa de tomate'];
+            }
           }
 
           if (state.pantryCardUnits && typeof state.pantryCardUnits === 'object') {
@@ -1650,6 +1668,10 @@ let pantryStock = {
             window.pantryCardUnits = {};
           }
           if (window.pantryCardUnits) {
+            if (window.pantryCardUnits['Sardina en salsa de tomate']) {
+              window.pantryCardUnits['Sardinas'] = 'latas de 425 g';
+              delete window.pantryCardUnits['Sardina en salsa de tomate'];
+            }
             Object.keys(window.pantryCardUnits).forEach(k => {
               if (/aguacate/i.test(k) && (window.pantryCardUnits[k] === 'litros' || window.pantryCardUnits[k] === 'l' || window.pantryCardUnits[k] === 'ml' || window.pantryCardUnits[k] === 'botellas (355 ml)')) {
                 window.pantryCardUnits[k] = 'piezas';
