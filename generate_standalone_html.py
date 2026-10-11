@@ -2341,7 +2341,7 @@ function selectWeek(weekKey) {
                 <option value="Semana 39 (20 al 26 de Septiembre de 2026)">Semana 39 (20 al 26 de Septiembre de 2026)</option>
                 <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
                 <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
-                <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
+                <option value="Semana 42 (11 al 17 de Octubre de 2026)" selected>Semana 42 (11 al 17 de Octubre de 2026)</option>
               </select>
             </div>
             <div>
@@ -2464,7 +2464,7 @@ function selectWeek(weekKey) {
             <option value="Semana 39 (20 al 26 de Septiembre de 2026)">Semana 39 (20 al 26 de Septiembre de 2026)</option>
             <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
             <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
-            <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
+            <option value="Semana 42 (11 al 17 de Octubre de 2026)" selected>Semana 42 (11 al 17 de Octubre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
@@ -2850,7 +2850,7 @@ let pantryStock = {
     
     // Obtener el día actual en transcurso dinámicamente según la fecha del sistema (0 = Domingo, 1 = Lunes, 2 = Martes...)
     const currentDayNum = (new Date().getDay() >= 0 && new Date().getDay() <= 6) ? new Date().getDay() : 0;
-    let selectedIdx = currentDayNum;
+    selectedIdx = currentDayNum;
 
     // SSOT Heritage & Migration: v40_2_ssot_canonical_skus -> v42_pantry_106_canonical_skus
     const CURRENT_APP_VERSION = 'v42_2_pantry_exact_packaging_units';
@@ -8709,7 +8709,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev6-s42-today-sync-v34')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev7-s42-syntaxfix-v35')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
