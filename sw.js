@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Governance Rule RULE-2026-CROSS-DEVICE-MIRROR-001
-const CACHE_NAME = 'nutriketo-v36-6-rev7-s42-syntaxfix-v35';
+const CACHE_NAME = 'nutriketo-v36-6-rev8-s42-clean-cache-v36';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -9,9 +9,18 @@ const ASSETS_TO_CACHE = [
 self.addEventListener('install', (event) => {
   console.log('[ServiceWorker] Install event triggered - Version:', CACHE_NAME);
   event.waitUntil(
-    caches.open(CACHE_NAME).then((cache) => {
-      console.log('[ServiceWorker] Caching core static assets');
-      return cache.addAll(ASSETS_TO_CACHE);
+    caches.open(CACHE_NAME).then(async (cache) => {
+      console.log('[ServiceWorker] Caching core static assets with no-cache flag');
+      for (const url of ASSETS_TO_CACHE) {
+        try {
+          const res = await fetch(url, { cache: 'no-cache' });
+          if (res && res.status === 200) {
+            await cache.put(url, res);
+          }
+        } catch(e) {
+          console.warn('[ServiceWorker] Pre-cache failed for:', url, e);
+        }
+      }
     })
   );
   self.skipWaiting();
@@ -42,9 +51,9 @@ self.addEventListener('fetch', (event) => {
   const reqUrl = event.request.url || '';
   if (!reqUrl.startsWith('http://') && !reqUrl.startsWith('https://')) return;
 
-  // Network-First with Fallback to Cache
+  // Network-First with Fallback to Cache, bypassing stale disk cache
   event.respondWith(
-    fetch(event.request)
+    fetch(event.request, { cache: 'no-cache' })
       .then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();

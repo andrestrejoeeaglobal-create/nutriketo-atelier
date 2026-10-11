@@ -1997,6 +1997,9 @@ def generate_standalone():
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
   <title>Arquitectura Herami — Atelier T.I.L.O.®</title>
 
   <!-- PURGA AGRESIVA DE CACHÉ CLIENTE Y SERVICE WORKER -->
@@ -8709,9 +8712,21 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev7-s42-syntaxfix-v35')
-            .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev8-s42-clean-cache-v36')
+            .then((reg) => {
+              console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
+              if (reg.update) reg.update();
+            })
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
+
+          let isReloading = false;
+          navigator.serviceWorker.addEventListener('controllerchange', () => {
+            if (!isReloading) {
+              isReloading = true;
+              console.log('[ServiceWorker] Nuevo controlador activo. Recargando con versión fresca...');
+              window.location.reload();
+            }
+          });
         }
         if (typeof loadAppState === 'function') loadAppState();
         if (typeof ensureSundayServiceDispatched === 'function') ensureSundayServiceDispatched();
