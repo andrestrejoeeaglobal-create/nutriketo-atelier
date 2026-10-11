@@ -1593,8 +1593,8 @@ def test_physical_pantry_106_skus_and_multisinergix():
     with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
         code = f.read()
 
-    assert "CURRENT_APP_VERSION = 'v42_pantry_106_canonical_skus'" in code
-    assert "LOCAL_STORAGE_KEY = 'nutriketo_app_state_v42_106_canonical'" in code
+    assert "CURRENT_APP_VERSION = 'v42_2_pantry_exact_packaging_units'" in code
+    assert "LOCAL_STORAGE_KEY = 'nutriketo_app_state_v42_2_exact_units'" in code
 
     # Ítems 105 y 106 presentes en el inventario
     assert 'sku-105-multisinergix' in code
