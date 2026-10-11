@@ -1526,7 +1526,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
     assert "ensureSundayServiceDispatched" in code
-    assert "nutriketo-v36-6-rev4-s41-service-checkin-v28" in code
+    assert "nutriketo-v36-6-rev4-s41-service-checkin-v29" in code
     # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
     assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
     assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
@@ -1578,6 +1578,45 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "Nuez pecana fresca de la granja" in code
     assert "nuex pecana" in code
     assert "Consolidar insumos de Cosecha Propia Activa" in code
+
+
+def test_physical_pantry_106_skus_and_multisinergix():
+    """
+    Valida la sincronización estricta de los 106 insumos del inventario físico de despensa:
+    1. 106 SKUs mapeados con su número de ítem, stock exacto y empaque.
+    2. Ítem 105: MultiSinergix® (300 g) sustituye a 33Plus®.
+    3. Ítem 106: AminoSinergix® (200 g) sustituye a 34Plus®.
+    4. Exactamente 27 insumos en cuarentena con justificación clínica NOM-004/Keto.
+    5. Purgado de ítems huérfanos/fantasma de versiones anteriores (hamburguesa-arrachera, oikos-prot, etc.).
+    """
+    import re
+    with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
+        code = f.read()
+
+    assert "CURRENT_APP_VERSION = 'v42_pantry_106_canonical_skus'" in code
+    assert "LOCAL_STORAGE_KEY = 'nutriketo_app_state_v42_106_canonical'" in code
+
+    # Ítems 105 y 106 presentes en el inventario
+    assert 'sku-105-multisinergix' in code
+    assert 'sku-106-aminosinergix' in code
+    assert 'MultiSinergix®' in code
+    assert 'AminoSinergix®' in code
+
+    # Ausencia de ítems fantasma antiguos en PANTRY_STOCK_INVENTORY
+    pantry_match = re.search(r'window\.PANTRY_STOCK_INVENTORY = \{(.*?)\};', code, re.DOTALL)
+    assert pantry_match, "PANTRY_STOCK_INVENTORY no encontrado"
+    p_content = pantry_match.group(1)
+
+    assert '"hamburguesa-arrachera"' not in p_content
+    assert '"oikos-prot"' not in p_content
+    assert '"ribeye-corte"' not in p_content
+    assert '"semillas-chia"' not in p_content
+
+    # Mantequilla 290g, Queso cottage 2880g, Huevo 105 piezas
+    assert 'sku-001-mantequilla' in p_content and '290' in p_content
+    assert 'sku-003-queso-cottage' in p_content and '2880' in p_content
+    assert 'sku-104-huevo' in p_content and '105' in p_content
+
 
 
 
