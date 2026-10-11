@@ -711,6 +711,8 @@ window.PANTRY_STOCK_INVENTORY = {
       "Toronjil fresco",
       "Manzanilla fresca",
       "Jamaica fresca",
+      "Romero fresco",
+      "Epazote fresco",
       "Agua purificada de manantial"
     ];
     let customFarmItems = [];
@@ -1004,7 +1006,12 @@ let pantryStock = {
         { stem: 'multisinergix', aliases: ['multisinergix', 'multi sinergix', '33plus', '33 plus', 'formula nootropica 33plus', 'formula biotecnologica nootropica 33plus', 'formula nootropica multisinergix'] },
         { stem: 'aminosinergix', aliases: ['aminosinergix', 'amino sinergix', '34plus', '34 plus', 'formula reparadora 34plus', 'formula biotecnologica reparadora 34plus', 'formula reparadora aminosinergix'] },
         { stem: 'nogada', aliases: ['nogada'] },
-        { stem: 'grenetina', aliases: ['grenetina', 'grenetina natural', 'grenetina natural pura', 'grenetina natural en polvo', 'colageno hidrolizado'] }
+        { stem: 'grenetina', aliases: ['grenetina', 'grenetina natural', 'grenetina natural pura', 'grenetina natural en polvo', 'colageno hidrolizado'] },
+        { stem: 'romero', aliases: ['romero', 'romero fresco', 'romero fresco de la granja', 'ramitas de romero', 'ramita de romero', 'hojas de romero', 'romero recien cortado'] },
+        { stem: 'epazote', aliases: ['epazote', 'epazote fresco', 'epazote fresco de la granja', 'hojas de epazote', 'epazote morado', 'epazote verde'] },
+        { stem: 'eneldo', aliases: ['eneldo', 'eneldo fresco', 'eneldo fresco de la granja', 'hojas de eneldo', 'ramitas de eneldo'] },
+        { stem: 'albahaca', aliases: ['albahaca', 'albahaca fresca', 'albahaca fresca de la granja', 'hojas de albahaca'] },
+        { stem: 'hierbas-botanicas', aliases: ['hierbas botanicas', 'hierbas botanicas (toronjil y menta)', 'hierbas botanicas toronjil y menta', 'toronjil y menta'] }
       ];
 
       for (const entry of itemKeywords) {
@@ -1014,6 +1021,13 @@ let pantryStock = {
         const aMatch = entry.aliases.some(alias => a.includes(alias));
         const bMatch = entry.aliases.some(alias => b.includes(alias));
         if (aMatch && bMatch) return true;
+      }
+
+      // Comparación léxica de despojo botánico/fresco (ej. "Romero" vs "Romero fresco", "Epazote" vs "Epazote fresco")
+      const cleanHerbA = a.replace(/\b(fresco|fresca|frescos|frescas|organico|organica|organicos|organicas|de la granja|tiernos|tiernas|recien cortado|recien cortada|en rama|en hojas|ramitas de|ramita de|hojas de|dientes de)\b/g, '').replace(/\s+/g, ' ').trim();
+      const cleanHerbB = b.replace(/\b(fresco|fresca|frescos|frescas|organico|organica|organicos|organicas|de la granja|tiernos|tiernas|recien cortado|recien cortada|en rama|en hojas|ramitas de|ramita de|hojas de|dientes de)\b/g, '').replace(/\s+/g, ' ').trim();
+      if (cleanHerbA.length >= 3 && cleanHerbA === cleanHerbB) {
+        return true;
       }
 
       const slugA = normalizeToCanonicalSlug(aName);
@@ -3172,7 +3186,12 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "aminosinergix": ["aminosinergix", "amino sinergix", "34plus", "34 plus", "fórmula 34plus", "formula reparadora 34plus", "formula reparadora aminosinergix"],
   "flat-steak": ["flat steak", "flatsteak", "bife plano"],
   "carne-molida": ["carne molida", "carne molida de res"],
-  "fajitas-mojarra": ["fajitas de mojarra", "fajita de mojarra", "fajitas de mojarra tilapia", "tilapia"]
+  "fajitas-mojarra": ["fajitas de mojarra", "fajita de mojarra", "fajitas de mojarra tilapia", "tilapia"],
+  "romero": ["romero", "romero fresco", "romero fresco de la granja", "ramitas de romero", "ramita de romero", "hojas de romero", "romero recien cortado"],
+  "epazote": ["epazote", "epazote fresco", "epazote fresco de la granja", "hojas de epazote", "epazote morado", "epazote verde"],
+  "eneldo": ["eneldo", "eneldo fresco", "eneldo fresco de la granja", "hojas de eneldo", "ramitas de eneldo"],
+  "albahaca": ["albahaca", "albahaca fresca", "albahaca fresca de la granja", "hojas de albahaca"],
+  "hierbas-botanicas": ["hierbas botánicas (toronjil y menta)", "hierbas botanicas (toronjil y menta)", "hierbas botánicas", "hierbas botanicas", "toronjil y menta"]
 };
 
 function normalizeToCanonicalSlug(rawName) {
