@@ -2474,11 +2474,13 @@ function selectWeek(weekKey) {
           <button onclick="reopenSetupPanel()" style="background: var(--color-accent-light); border: 1.5px solid var(--color-34plus); color: var(--color-34plus); padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; cursor: pointer; font-size: 0.8rem; min-height: 44px; display: flex; align-items: center; gap: 0.3rem;" title="Reconfigurar Parámetros Operativos">
             <span>⚙️</span> <span>Reconfigurar Parámetros</span>
           </button>
-          <button type="button" id="btn-next-week" onclick="generateNextWeekMenu()" class="btn-action bg-[#1C75BC] text-white hover:bg-blue-700 transition-colors flex items-center gap-2" title="Planificar y Cargar Semana 42 SSOT"><span id="btn-next-week-text">⚡ Generar Semana 42 SSOT</span></button>
+          <button type="button" id="btn-next-week" onclick="generateNextWeekMenu()" style="background: #1C75BC; border: 1.5px solid #1C75BC; color: #fff; padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; cursor: pointer; font-size: 0.8rem; min-height: 44px; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" title="Generar Nueva Semana">
+            <span>✨</span> <span id="btn-next-week-text">Generar Nueva Semana</span>
+          </button>
         </div>
       </div>
 
-      <h2 id="selected-date-header" style="text-align: center; font-family: var(--font-headers); font-size: 1.4rem; color: var(--color-34plus); text-transform: uppercase; margin-bottom: 0.8rem;">DOMINGO 16 AGO</h2>
+      <h2 id="selected-date-header" style="text-align: center; font-family: var(--font-headers); font-size: 1.4rem; color: var(--color-34plus); text-transform: uppercase; margin-bottom: 0.8rem;">DOMINGO 11 OCT</h2>
 
       <div class="date-num-bar" id="date-bar"></div>
 
@@ -2713,7 +2715,8 @@ window.PANTRY_STOCK_INVENTORY = {
     let deletedFarmItems = [];
     let deletedPantryItems = [];
 
-    let activeWeek = "Semana 41 (04 al 10 de Octubre de 2026)";
+    let activeWeek = "Semana 42 (11 al 17 de Octubre de 2026)";
+    let selectedIdx = 0;
     let activeDiners = 6;
     let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja", "Nuez pecana fresca de la granja"];
 let pantryStock = {
@@ -4839,13 +4842,8 @@ let pantryStock = {
       const btnNextWeekText = document.getElementById('btn-next-week-text');
       const btnNextWeek = document.getElementById('btn-next-week');
       if (btnNextWeekText) {
-        if (newWeek.startsWith('Semana 42')) {
-          btnNextWeekText.innerText = "📋 Semana 42 SSOT (Activa)";
-          if (btnNextWeek) btnNextWeek.title = "Semana 42 SSOT Activa en el Atelier";
-        } else {
-          btnNextWeekText.innerText = "⚡ Generar Semana 42 SSOT";
-          if (btnNextWeek) btnNextWeek.title = "Planificar y Cargar Semana 42 SSOT";
-        }
+        btnNextWeekText.innerText = "Generar Nueva Semana";
+        if (btnNextWeek) btnNextWeek.title = "Generar Nueva Semana";
       }
 
       if (typeof selectedIdx !== 'number' || isNaN(selectedIdx) || selectedIdx < 0 || (targetPlan.days && selectedIdx >= targetPlan.days.length)) {
@@ -4888,7 +4886,7 @@ let pantryStock = {
           return datasets[k];
         }
       }
-      return datasets["Semana 35 (23 al 29 de Agosto de 2026)"] || Object.values(datasets)[0] || null;
+      return datasets["Semana 42 (11 al 17 de Octubre de 2026)"] || Object.values(datasets)[Object.values(datasets).length - 1] || null;
     }
 
     function isCalendarToday(dayObj, planObj) {
@@ -4971,6 +4969,24 @@ let pantryStock = {
       }
 
       return true;
+    }
+
+    function findTodayWeekAndDayIndex() {
+      if (typeof datasets === 'undefined' || !datasets) return null;
+      const weekKeys = Object.keys(datasets);
+      // Buscar en orden cronológico inverso (de la semana más reciente a la más antigua)
+      for (let w = weekKeys.length - 1; w >= 0; w--) {
+        const wKey = weekKeys[w];
+        const plan = datasets[wKey];
+        if (plan && plan.days && Array.isArray(plan.days)) {
+          for (let i = 0; i < plan.days.length; i++) {
+            if (typeof isCalendarToday === 'function' && isCalendarToday(plan.days[i], plan)) {
+              return { weekKey: wKey, dayIndex: i };
+            }
+          }
+        }
+      }
+      return null;
     }
 
     function renderDateBar() {
@@ -5710,6 +5726,11 @@ function calculateNetShoppingList(diners) {
     const cleanLower = cleanName.toLowerCase();
 
     if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno/i.test(cleanLower)) {
+      return;
+    }
+
+    // Regla culinaria de taller: Los caldos y fondos (fondo claro de pollo, caldo de res, etc.) no se compran comercialmente, se preparan en cocina
+    if (/(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(cleanLower) && !cleanLower.includes('polvo') && !cleanLower.includes('concentrado')) {
       return;
     }
 
@@ -8098,6 +8119,10 @@ function renderRecipes(day, activeDiners) {
       const purchaseList = [];
 
       rawShopBase.forEach(item => {
+        const itemLower = (item.item_name || '').toLowerCase();
+        if (/(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(itemLower) && !itemLower.includes('polvo') && !itemLower.includes('concentrado')) {
+          return;
+        }
         const isSelectedFarm = selectedHarvest.some(h => areInsumosEquivalent(typeof h === 'string' ? h : (h.item_name || h.name || ''), item.item_name));
         const rawReq = (item.quantity || 1.0) * factor;
         const pStock = pantryStock[item.item_name] || 0.0;
@@ -8684,12 +8709,25 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev4-s41-service-checkin-v29')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev6-s42-today-sync-v34')
             .then((reg) => console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope))
             .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
         }
         if (typeof loadAppState === 'function') loadAppState();
         if (typeof ensureSundayServiceDispatched === 'function') ensureSundayServiceDispatched();
+
+        // Enforce today's calendar date detection to select and highlight green on boot
+        if (typeof findTodayWeekAndDayIndex === 'function') {
+          const todayMatch = findTodayWeekAndDayIndex();
+          if (todayMatch) {
+            activeWeek = todayMatch.weekKey;
+            selectedIdx = todayMatch.dayIndex;
+          } else if (!activeWeek || !datasets[activeWeek]) {
+            activeWeek = "Semana 42 (11 al 17 de Octubre de 2026)";
+            selectedIdx = 0;
+          }
+        }
+
         const overlay = document.getElementById('setup-overlay');
         const mainContent = document.getElementById('main-app-content');
         if (overlay) overlay.style.display = 'none';
@@ -8706,14 +8744,9 @@ function renderRecipes(day, activeDiners) {
 
         const btnNextWeekText = document.getElementById('btn-next-week-text');
         const btnNextWeek = document.getElementById('btn-next-week');
-        if (btnNextWeekText && activeWeek) {
-          if (activeWeek.startsWith('Semana 42')) {
-            btnNextWeekText.innerText = "📋 Semana 42 SSOT (Activa)";
-            if (btnNextWeek) btnNextWeek.title = "Semana 42 SSOT Activa en el Atelier";
-          } else {
-            btnNextWeekText.innerText = "⚡ Generar Semana 42 SSOT";
-            if (btnNextWeek) btnNextWeek.title = "Planificar y Cargar Semana 42 SSOT";
-          }
+        if (btnNextWeekText) {
+          btnNextWeekText.innerText = "Generar Nueva Semana";
+          if (btnNextWeek) btnNextWeek.title = "Generar Nueva Semana";
         }
 
         if (typeof renderDateBar === 'function') renderDateBar();
