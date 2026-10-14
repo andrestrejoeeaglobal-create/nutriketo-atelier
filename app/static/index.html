@@ -36,8 +36,8 @@ function getDeconstructedRecipeForDish(dishTitle, courseRole) {
 const FORBIDDEN_INGREDIENTS = {
   picante: ["chile", "serrano", "jalapeño", "habanero", "chipotle", "pimienta negra", "paprika picante"],
   cerdo: ["cerdo", "puerco", "tocino de cerdo", "jamon de cerdo", "manteca", "chicharron"],
-  gluten_granos: ["trigo", "maiz", "arroz", "harina refinada", "avena"],
-  azucares: ["azucar", "jarabe", "miel", "sacarosa", "maltitol"]
+  gluten_granos: ["trigo", "maiz", "arroz", "harina refinada", "avena", "frijol"],
+  azucares: ["azucar", "jarabe", "miel", "sacarosa", "maltitol", "higo"]
 };
 
 function validateCulinaryImmunity(text) {
@@ -679,18 +679,49 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-104-huevo": { item_num: 104, name: "Huevo", stock: 105, unit: "piezas", packaging: "105 piezas", status: "canonical" },
       "sku-105-multisinergix": { item_num: 105, name: "MultiSinergix®", stock: 300, unit: "g", packaging: "300 g", status: "canonical" },
       "sku-106-aminosinergix": { item_num: 106, name: "AminoSinergix®", stock: 200, unit: "g", packaging: "200 g", status: "canonical" },
-      "zarzamoras-frescas": { name: "Zarzamora", stock: 500, unit: "g", status: "canonical" },
+      // --- ORDEN DE ENTRADA Y AUDITORÍA PURGADA TICKET SAM'S CLUB TR04095 (San Juan del Río, Qro. — 2026-10-12T18:06:21) ---
+      "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas baby tiernas", stock: 500, quantity_commercial: 1, commercial_unit: "domo_500", unit: "g", packaging: "1 domo (~500 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+      "champinones_portobello_frescos": { item_num: 108, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñones Portobello frescos", stock: 12, quantity_commercial: 2, commercial_unit: "paquetes", unit: "piezas", packaging: "2 paquetes (~12 pzas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+      "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos verdes frescos", stock: 800, quantity_commercial: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "1 manojo comercial (~800 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+      "fresas_frescas": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas frescas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1 domo / caja (~1,000 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
+      "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas frescas orgánicas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "1 domo (~340 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
+      "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso Ricotta (Qcotta 960g)", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "2 botes de 960 g c/u (1,920 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
+      "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chipotles en conserva (Pack 6x220g)", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1 pack (6 latas de 220 g c/u / 1,320 g)", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical" },
+      "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos frescos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
+      "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
+      "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas frescas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada fresca", stock: 0, unit: "g", status: "canonical" },
       "moras-frescas": { name: "Moras frescas", stock: 0, unit: "g", status: "canonical" },
       "frambuesas-frescas": { name: "Frambuesas frescas orgánicas", stock: 0, unit: "g", status: "canonical" },
       "arandanos-frescos": { name: "Arándanos frescos", stock: 0, unit: "g", status: "canonical" },
       "pitaya-fresca": { name: "Pitaya fresca", stock: 0, unit: "g", status: "canonical" },
-      "multisinergix": { name: "MultiSinergix®", stock: 300, unit: "g", status: "canonical" },
-      "aminosinergix": { name: "AminoSinergix®", stock: 200, unit: "g", status: "canonical" },
-      "33plus": { name: "MultiSinergix®", stock: 300, unit: "g", status: "canonical" },
-      "34plus": { name: "AminoSinergix®", stock: 200, unit: "g", status: "canonical" },
+      "multisinergix": { name: "MultiSinergix®", stock: 0, unit: "g", status: "canonical" },
+      "aminosinergix": { name: "AminoSinergix®", stock: 0, unit: "g", status: "canonical" },
+      "33plus": { name: "MultiSinergix®", stock: 0, unit: "g", status: "canonical" },
+      "34plus": { name: "AminoSinergix®", stock: 0, unit: "g", status: "canonical" },
       "ajo-fresco": { name: "Ajo fresco", stock: 0, unit: "g", status: "canonical" }
+    };
+
+    window.LAST_PANTRY_INTAKE_EVENT = {
+      pantry_intake_event: {
+        timestamp: "2026-10-12T18:06:21",
+        source: "Sams Club San Juan del Rio",
+        ticket_id: "TR04095",
+        items_to_credit: [
+          { sku: "espinacas_baby_tiernas", display_name: "Espinacas baby tiernas", quantity: 1, commercial_unit: "domo_500", base_quantity_g: 500 },
+          { sku: "champinones_portobello_frescos", display_name: "Champiñones Portobello frescos", quantity: 2, commercial_unit: "paquetes", base_quantity_pieces: 12 },
+          { sku: "esparragos_verdes_frescos", display_name: "Espárragos verdes frescos", quantity: 1, commercial_unit: "manojo_comercial", base_quantity_g: 800 },
+          { sku: "fresas_frescas", display_name: "Fresas frescas", quantity: 1, commercial_unit: "caja_1000", base_quantity_g: 1000 },
+          { sku: "frambuesas_frescas_organicas", display_name: "Frambuesas frescas orgánicas", quantity: 1, commercial_unit: "domo_340", base_quantity_g: 340 },
+          { sku: "queso_ricotta_artesanal", display_name: "Queso Ricotta (Qcotta 960g)", quantity: 2, commercial_unit: "bote_960g", base_quantity_g: 1920 },
+          { sku: "chiles_chipotles_adobados", display_name: "Chipotles en conserva (Pack 6x220g)", quantity: 1, commercial_unit: "pack_6", base_quantity_g: 1320 }
+        ],
+        quarantine_items: [
+          { sku: "higos_frescos", display_name: "Higos frescos", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
+          { sku: "frijol_pinto", display_name: "Frijol pinto", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" }
+        ]
+      }
     };
 
     const FARM_MASTER_CATALOG = [
@@ -836,7 +867,16 @@ let pantryStock = {
       "MultiSinergix": 300,
       "AminoSinergix": 200,
       "Fórmula Nootrópica 33Plus®": 300,
-      "Fórmula Reparadora 34Plus®": 200
+      "Fórmula Reparadora 34Plus®": 200,
+      "Espinacas baby tiernas": 500,
+      "Champiñones Portobello frescos": 12,
+      "Espárragos verdes frescos": 800,
+      "Fresas frescas": 1000,
+      "Frambuesas frescas orgánicas": 340,
+      "Queso Ricotta (Qcotta 960g)": 1920,
+      "Chipotles en conserva (Pack 6x220g)": 1320,
+      "Higos frescos": 1,
+      "Frijol pinto": 1
     };
     let checkedRows = {};
     let mealDinersState = {};
@@ -943,7 +983,7 @@ let pantryStock = {
         { stem: 'parmesano', aliases: ['parmesano', 'queso parmesano', 'queso parmesano artesanal'] },
         { stem: 'queso-crema', aliases: ['queso crema', 'queso crema suave', 'queso crema suave artesanal'] },
         { stem: 'cabra', aliases: ['queso de cabra', 'queso de cabra artesanal', 'cabra artesanal', 'queso de cabra suave artesanal'] },
-        { stem: 'ricotta', aliases: ['ricotta', 'queso ricotta', 'requeson'] },
+        { stem: 'ricotta', aliases: ['ricotta', 'queso ricotta', 'queso ricotta (qcotta 960g)', 'queso ricotta artesanal', 'qcotta', 'requeson'] },
         { stem: 'oikos', aliases: ['oikos', 'oikos pro', 'lacteo oikos', 'yoghurt oikos', 'yogurt oikos', 'oikos proteina', 'yogur griego', 'yoghurt griego'] },
         { stem: 'crema', aliases: ['crema', 'crema entera', 'crema entera de rancho', 'crema para batir', 'crema acida'], exclude: ['queso crema'] },
         { stem: 'cottage', aliases: ['queso cottage', 'cottage'] },
@@ -964,18 +1004,18 @@ let pantryStock = {
         // Frutas
         { stem: 'granada', aliases: ['granada', 'granadas', 'arilos'] },
         { stem: 'pitaya', aliases: ['pitaya', 'pitayas', 'pitahaya', 'pitahayas'] },
-        { stem: 'fresa', aliases: ['fresa', 'fresas'] },
-        { stem: 'frambuesa', aliases: ['frambuesa', 'frambuesas'] },
+        { stem: 'fresa', aliases: ['fresa', 'fresas', 'fresas frescas', 'fresas silvestres'] },
+        { stem: 'frambuesa', aliases: ['frambuesa', 'frambuesas', 'frambuesas frescas', 'frambuesas frescas organicas'] },
         { stem: 'zarzamora', aliases: ['zarzamora', 'zarzamoras'] },
         { stem: 'arandano', aliases: ['arandano', 'arandanos'] },
         { stem: 'mora', aliases: ['mora', 'moras'], exclude: ['morada'] },
         // Verduras
-        { stem: 'espinaca', aliases: ['espinaca', 'espinacas', 'espinacas baby'] },
+        { stem: 'espinaca', aliases: ['espinaca', 'espinacas', 'espinacas baby', 'espinacas baby tiernas', 'espinacas frescas'] },
         { stem: 'calabacita', aliases: ['calabacita', 'calabacitas', 'calabaza', 'zucchini', 'calabacitas verdes tiernas'], exclude: ['semilla', 'semillas', 'pepita', 'pepitas', 'flor'] },
         { stem: 'flor-calabaza', aliases: ['flor de calabaza', 'flores de calabaza'] },
         { stem: 'semillas-calabaza', aliases: ['semillas de calabaza', 'semilla de calabaza', 'pepitas de calabaza', 'pepita de calabaza', 'pepitas'], exclude: ['calabacita', 'calabacitas'] },
         { stem: 'brocoli', aliases: ['brocoli', 'brocolis'] },
-        { stem: 'esparrago', aliases: ['esparrago', 'esparragos'] },
+        { stem: 'esparrago', aliases: ['esparrago', 'esparragos', 'esparragos verdes', 'esparragos verdes frescos'] },
         { stem: 'nopal', aliases: ['nopal', 'nopales'] },
         { stem: 'ejote', aliases: ['ejote', 'ejotes', 'ejotes verdes', 'ejotes verdes tiernos'] },
         { stem: 'cilantro', aliases: ['cilantro'] },
@@ -995,7 +1035,8 @@ let pantryStock = {
         { stem: 'cebolla-polvo', aliases: ['cebolla en polvo'] },
         { stem: 'jitomate', aliases: ['jitomate', 'jitomates', 'saladet', 'jitomate saladet', 'jitomate saladet fresco', 'jitomate bola'], exclude: ['tomate verde', 'tomatillo'] },
         { stem: 'tomate-verde', aliases: ['tomate verde', 'tomate verde fresco', 'tomatillo', 'tomate'], exclude: ['jitomate', 'saladet', 'salsa'] },
-        { stem: 'champinon', aliases: ['champinon', 'champinones', 'portobello', 'champinones portobello', 'champinones portobello frescos'] },
+        { stem: 'champinon', aliases: ['champinon', 'champinones', 'portobello', 'champinones portobello', 'champinones portobello frescos', 'hongo portobello', 'sombreros portobello'] },
+        { stem: 'chipotle', aliases: ['chipotle', 'chipotles', 'chiles chipotles', 'chiles chipotles adobados', 'chipotles en conserva'] },
         { stem: 'lechuga-sweet', aliases: ['lechuga sweet', 'sweet lettuce', 'lechuga', 'lechugas', 'lechuga orejona', 'hojas de lechuga', 'hojas de lechuga orejona viva'] },
         { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'limon agrio', 'limones agrios', 'limones agrios frescos', 'limones agrios frescos de la granja', 'jugo de limon', 'jugo de limon fresco', 'jugo de limon fresco de la granja', 'jugo de limon recien exprimido', 'limon agrio fresco con semilla'] },
         { stem: 'ajo', aliases: ['ajo', 'ajos', 'ajo fresco', 'dientes de ajo'], exclude: ['ajonjoli'] },
@@ -1121,7 +1162,35 @@ let pantryStock = {
         ];
       }
 
-      // 5c. Flor de calabaza y Lechugas
+      // 5c. Flor de calabaza, Lechugas, Espinacas, Espárragos y Portobello
+      if (/espinaca/i.test(name)) {
+        return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'domo_500', label: 'Domo / Bolsa (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/esparrago/i.test(name)) {
+        return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'manojo_comercial', label: 'Manojo comercial (800 g)', multiplier: 800, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/portobello/i.test(name)) {
+        return [
+          { id: 'piezas', label: 'Piezas / Sombreros (~100 g)', multiplier: 1, unit: 'piezas', type: 'count' },
+          { id: 'paquetes', label: 'Paquete (6 pzas)', multiplier: 6, unit: 'piezas', type: 'count' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/chipotle/i.test(name)) {
+        return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'pack_6', label: 'Pack 6 latas (1,320 g)', multiplier: 1320, unit: 'g', type: 'mass' },
+          { id: 'lata_220', label: 'Lata (220 g)', multiplier: 220, unit: 'g', type: 'mass' }
+        ];
+      }
       if (/flor de calabaza/i.test(name)) {
         return [
           { id: 'manojo', label: 'Manojo (~180 g)', multiplier: 1, unit: 'manojo', type: 'count' },
@@ -1235,10 +1304,12 @@ let pantryStock = {
       // 10. Frutas cetogénicas
       if (/fresa|zarzamora|frambuesa|arandano|mora/i.test(name)) {
         return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'caja_1000', label: 'Domo / Caja (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
           { id: 'domo_500', label: 'Domo (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'domo_340', label: 'Domo (340 g)', multiplier: 340, unit: 'g', type: 'mass' },
           { id: 'domo_250', label: 'Domo (250 g)', multiplier: 250, unit: 'g', type: 'mass' },
-          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
-          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' }
         ];
       }
 
@@ -1261,6 +1332,13 @@ let pantryStock = {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
+      if (/ricotta|qcotta/i.test(name)) {
+        return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'bote_960g', label: 'Bote (960 g)', multiplier: 960, unit: 'g', type: 'mass' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' }
+        ];
+      }
       if (/queso|gouda|panela|parmesano|cabra|ricotta|mantequilla|ghee/i.test(name)) {
         return [
           { id: 'paquete_500', label: 'Pieza / Paq (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
@@ -1279,9 +1357,16 @@ let pantryStock = {
         ];
       }
 
-      // 12c. Leguminosas, Cereales y Tubérculos (Cuarentena)
+      // 12c. Leguminosas, Cereales, Tubérculos y Frutas de Alta Fructosa (Cuarentena)
+      if (/higo/i.test(name)) {
+        return [
+          { id: 'paquete / domo', label: 'Paquete / Domo', multiplier: 1, unit: 'paquete / domo', type: 'count' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
       if (/lenteja|garbanzo|frijol|arroz|papa/i.test(name)) {
         return [
+          { id: 'costal / bolsa institucional', label: 'Costal / Bolsa institucional', multiplier: 1, unit: 'costal / bolsa institucional', type: 'count' },
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
           { id: 'bolsa_750', label: 'Bolsa (750 g)', multiplier: 750, unit: 'g', type: 'mass' },
           { id: 'paquete_500', label: 'Bolsa (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
@@ -1356,10 +1441,22 @@ let pantryStock = {
         case 'bolsa (1 kg)':
         case 'bolsa (1 kg / 1,000 g)':
         case 'bolsa_1000':
+        case 'caja_1000':
         case 'kg':
         case 'kilo':
         case 'kilos':
           return { val: num * 1000, type: 'mass', baseUnit: 'g' };
+        case 'manojo_comercial':
+          return { val: num * 800, type: 'mass', baseUnit: 'g' };
+        case 'domo_340':
+          return { val: num * 340, type: 'mass', baseUnit: 'g' };
+        case 'bote_960g':
+        case 'bote_960':
+          return { val: num * 960, type: 'mass', baseUnit: 'g' };
+        case 'pack_6':
+          return { val: num * 1320, type: 'mass', baseUnit: 'g' };
+        case 'lata_220':
+          return { val: num * 220, type: 'mass', baseUnit: 'g' };
         case 'frasco_sal':
         case 'frasco_250':
         case 'bolsa_250':
@@ -1560,7 +1657,7 @@ let pantryStock = {
       }
 
       // 4. Lácteos y Quesos
-      if (/queso|quesos|leche|crema|gouda|panela|parmesano|manchego|mascarpone|mozzarella|yoghurt|yogurt/i.test(name)) {
+      if (/queso|quesos|ricotta|qcotta|cottage|leche|crema|gouda|panela|parmesano|manchego|mascarpone|mozzarella|yoghurt|yogurt/i.test(name)) {
         return '🧀 Lácteos y Quesos (Sin Gluten — Keto)';
       }
 
@@ -1570,7 +1667,7 @@ let pantryStock = {
       }
 
       // 6. Chiles, Condimentos e Infusiones
-      if (/sal|sal de|sal mineral|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|jengibre|agua|infusión|infusion|té|te|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
+      if (/sal|sal de|sal mineral|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|chipotle|chipotles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|jengibre|agua|infusión|infusion|té|te|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
         return '🌶️ Chiles, Condimentos e Infusiones';
       }
 
@@ -1649,7 +1746,7 @@ let pantryStock = {
           if (Array.isArray(state.customFarmItems)) {
             customFarmItems = state.customFarmItems.filter(f => {
               const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
-              return !/miel|durazno|higo/i.test(fStr);
+              return !/miel|durazno|higo|frijol/i.test(fStr);
             }).map(f => {
               const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
               if (/nuex.*pecan|nuez.*pecan/i.test(fStr)) return "Nuez pecana fresca de la granja";
@@ -1660,7 +1757,7 @@ let pantryStock = {
           if (Array.isArray(state.selectedHarvest)) {
             selectedHarvest = state.selectedHarvest.filter(h => {
               const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
-              return !/miel|durazno|higo/i.test(hStr);
+              return !/miel|durazno|higo|frijol/i.test(hStr);
             }).map(h => {
               const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
               if (/nuex.*pecan|nuez.*pecan/i.test(hStr)) return "Nuez pecana fresca de la granja";
@@ -1673,7 +1770,7 @@ let pantryStock = {
           if (state.pantryStock && typeof state.pantryStock === 'object') {
             pantryStock = {};
             Object.keys(state.pantryStock).forEach(itemName => {
-              if (/miel|durazno|higo/i.test(itemName)) return;
+              if (/miel|durazno/i.test(itemName)) return;
               pantryStock[itemName] = state.pantryStock[itemName];
             });
             if (pantryStock['Sardina en salsa de tomate'] !== undefined) {
@@ -1704,9 +1801,38 @@ let pantryStock = {
             delete state.pantryStockInventory['duraznos-frescos'];
             delete state.pantryStockInventory['higos-frescos'];
 
-            // Comprobante Sam's Club 03/10/2026 reemplazado por inventario físico canónico de 106 insumos
-
             window.PANTRY_STOCK_INVENTORY = Object.assign(window.PANTRY_STOCK_INVENTORY || {}, state.pantryStockInventory);
+          }
+
+          // Inyección Canónica Purgada Ticket Sam's Club San Juan del Río (TR04095 - 2026-10-12T18:06:21)
+          if (localStorage.getItem('nutriketo_intake_tr04095_applied') !== 'true') {
+            const tr04095Pantry = {
+              "Espinacas baby tiernas": 500,
+              "Champiñones Portobello frescos": 12,
+              "Espárragos verdes frescos": 800,
+              "Fresas frescas": 1000,
+              "Frambuesas frescas orgánicas": 340,
+              "Queso Ricotta (Qcotta 960g)": 1920,
+              "Chipotles en conserva (Pack 6x220g)": 1320,
+              "Higos frescos": 1,
+              "Frijol pinto": 1
+            };
+            Object.assign(pantryStock, tr04095Pantry);
+            if (window.PANTRY_STOCK_INVENTORY) {
+              window.PANTRY_STOCK_INVENTORY["espinacas_baby_tiernas"] = { item_num: 107, sku_ticket: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas baby tiernas", stock: 500, commercial_qty: 1, commercial_unit: "domo_500", unit: "g", packaging: "1 domo (~500 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
+              window.PANTRY_STOCK_INVENTORY["champinones_portobello_frescos"] = { item_num: 108, sku_ticket: "98971", ticket_desc: "HONGO PORTO", name: "Champiñones Portobello frescos", stock: 12, commercial_qty: 2, commercial_unit: "paquetes", unit: "piezas", packaging: "2 paquetes (~12 pzas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
+              window.PANTRY_STOCK_INVENTORY["esparragos_verdes_frescos"] = { item_num: 109, sku_ticket: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos verdes frescos", stock: 800, commercial_qty: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "1 manojo comercial (~800 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
+              window.PANTRY_STOCK_INVENTORY["fresas_frescas"] = { item_num: 110, sku_ticket: "88587", ticket_desc: "FRESA", name: "Fresas frescas", stock: 1000, commercial_qty: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1 domo / caja (~1,000 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
+              window.PANTRY_STOCK_INVENTORY["frambuesas_frescas_organicas"] = { item_num: 111, sku_ticket: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas frescas orgánicas", stock: 340, commercial_qty: 1, commercial_unit: "domo_340", unit: "g", packaging: "1 domo (~340 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
+              window.PANTRY_STOCK_INVENTORY["queso_ricotta_artesanal"] = { item_num: 112, sku_ticket: "256038", ticket_desc: "960GR QCOTTA", name: "Queso Ricotta (Qcotta 960g)", stock: 1920, commercial_qty: 2, commercial_unit: "bote_960g", unit: "g", packaging: "2 botes de 960 g c/u (1,920 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
+              window.PANTRY_STOCK_INVENTORY["chiles_chipotles_adobados"] = { item_num: 113, sku_ticket: "34553", ticket_desc: "6/220G CHIPO", name: "Chipotles en conserva (Pack 6x220g)", stock: 1320, commercial_qty: 1, commercial_unit: "pack_6", unit: "g", packaging: "1 pack (6 latas de 220 g c/u / 1,320 g)", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
+              window.PANTRY_STOCK_INVENTORY["higos_frescos"] = { item_num: 114, sku_ticket: "73520", ticket_desc: "HIGO", name: "Higos frescos", stock: 1, unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)", source: "Sams Club San Juan del Rio (TR04095)" };
+              window.PANTRY_STOCK_INVENTORY["frijol_pinto"] = { item_num: 115, sku_ticket: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico", source: "Sams Club San Juan del Rio (TR04095)" };
+              ["zarzamoras-frescas", "fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "ajo-fresco"].forEach(legacyK => {
+                if (window.PANTRY_STOCK_INVENTORY[legacyK]) window.PANTRY_STOCK_INVENTORY[legacyK].stock = 0;
+              });
+            }
+            localStorage.setItem('nutriketo_intake_tr04095_applied', 'true');
           }
 
           if (state.checkedRows) checkedRows = state.checkedRows;
@@ -2316,7 +2442,11 @@ let pantryStock = {
             const options = getCommercialUnitOptions(i.item_name, i.unit, i.quantity);
             let currentUnit = window.pantryCardUnits[i.item_name];
             if (!currentUnit) {
-              if (window.PANTRY_STOCK_INVENTORY) {
+              if (i.sku && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[i.sku] && window.PANTRY_STOCK_INVENTORY[i.sku].unit) {
+                currentUnit = window.PANTRY_STOCK_INVENTORY[i.sku].unit;
+              } else if (i.unit) {
+                currentUnit = i.unit;
+              } else if (window.PANTRY_STOCK_INVENTORY) {
                 const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, i.item_name));
                 if (invKey && window.PANTRY_STOCK_INVENTORY[invKey].unit) {
                   currentUnit = window.PANTRY_STOCK_INVENTORY[invKey].unit;
@@ -2329,6 +2459,12 @@ let pantryStock = {
             window.pantryCardUnits[i.item_name] = currentUnit;
 
             let val = pantryStock[i.item_name];
+            if (val === undefined && i.raw_name && pantryStock[i.raw_name] !== undefined) {
+              val = pantryStock[i.raw_name];
+            }
+            if (val === undefined && i.sku && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[i.sku] !== undefined) {
+              val = window.PANTRY_STOCK_INVENTORY[i.sku].stock;
+            }
             if (val === undefined) {
               const matchedKey = Object.keys(pantryStock).find(k => areInsumosEquivalent(k, i.item_name));
               if (matchedKey !== undefined) {
@@ -3179,6 +3315,7 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "queso-crema": ["queso crema", "queso crema artesanal"],
   "queso-philadelphia": ["queso philadelphia", "philadelphia"],
   "queso-cottage": ["queso cottage", "cottage"],
+  "queso-ricotta": ["queso ricotta", "ricotta", "queso ricotta (qcotta 960g)", "queso ricotta artesanal", "qcotta"],
   "queso-mozzarella": ["queso mozzarella", "mozzarella"],
   "mantequilla-pastoreo": ["mantequilla", "mantequilla de vaca", "mantequilla de pastoreo", "mantequilla sin sal"],
   "jitomate-bola": ["jitomate", "jitomates", "jitomate bola", "jitomate bola jugoso", "jitomate saladet", "jitomate saladet fresco", "saladet"],
@@ -3210,7 +3347,8 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "epazote": ["epazote", "epazote fresco", "epazote fresco de la granja", "hojas de epazote", "epazote morado", "epazote verde"],
   "eneldo": ["eneldo", "eneldo fresco", "eneldo fresco de la granja", "hojas de eneldo", "ramitas de eneldo"],
   "albahaca": ["albahaca", "albahaca fresca", "albahaca fresca de la granja", "hojas de albahaca"],
-  "hierbas-botanicas": ["hierbas botánicas (toronjil y menta)", "hierbas botanicas (toronjil y menta)", "hierbas botánicas", "hierbas botanicas", "toronjil y menta"]
+  "hierbas-botanicas": ["hierbas botánicas (toronjil y menta)", "hierbas botanicas (toronjil y menta)", "hierbas botánicas", "hierbas botanicas", "toronjil y menta"],
+  "chiles-chipotles": ["chipotle", "chipotles", "chiles chipotles adobados", "chipotles en conserva (pack 6x220g)", "chipotles en conserva"]
 };
 
 function normalizeToCanonicalSlug(rawName) {
@@ -3562,7 +3700,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
               if (!rawName) return;
 
               const cleanLower = rawName.toLowerCase();
-              if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno/i.test(cleanLower)) {
+              if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLower)) {
                 return;
               }
 
@@ -3656,8 +3794,9 @@ function calculateNetShoppingList(diners) {
   let totalCount = 0;
   let farmCount = 0;
   let pantryFullyCoveredCount = 0;
+  const LEGACY_PANTRY_ALIAS_KEYS = ['multisinergix', 'aminosinergix', '33plus', '34plus', 'zarzamoras-frescas', 'fresas-frescas', 'arilos-granada', 'moras-frescas', 'frambuesas-frescas', 'arandanos-frescos', 'pitaya-fresca', 'ajo-fresco'];
   let pantryActiveCount = (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY)
-    ? Object.keys(window.PANTRY_STOCK_INVENTORY).filter(k => window.PANTRY_STOCK_INVENTORY[k] && window.PANTRY_STOCK_INVENTORY[k].status === 'canonical').length
+    ? Object.keys(window.PANTRY_STOCK_INVENTORY).filter(k => !LEGACY_PANTRY_ALIAS_KEYS.includes(k) && window.PANTRY_STOCK_INVENTORY[k] && window.PANTRY_STOCK_INVENTORY[k].status === 'canonical' && parseFloat(window.PANTRY_STOCK_INVENTORY[k].stock) > 0).length
     : 7;
   let marketNetCount = 0;
 
@@ -3667,7 +3806,7 @@ function calculateNetShoppingList(diners) {
     ? activeBOMItems 
     : (typeof rawShopBase !== 'undefined' && Array.isArray(rawShopBase) ? rawShopBase.filter(i => {
         const cleanLower = (i.item_name || '').toLowerCase();
-        return !/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno/i.test(cleanLower);
+        return !/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLower);
       }) : []);
 
   // === INTERCEPTOR FORZADO DE PUREZA ATÓMICA DE MERCADO ===
@@ -3767,7 +3906,7 @@ function calculateNetShoppingList(diners) {
     const cleanName = item.item_name.strip ? item.item_name.strip() : item.item_name;
     const cleanLower = cleanName.toLowerCase();
 
-    if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno/i.test(cleanLower)) {
+    if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLower)) {
       return;
     }
 
@@ -3816,8 +3955,9 @@ function calculateNetShoppingList(diners) {
         if (!pObj || pObj.status !== 'canonical') return;
 
         if (areInsumosEquivalent(pObj.name || pKey, cleanName)) {
-          matchedPantryObj = pObj;
           const pQty = parseFloat(pObj.stock) || 0;
+          if (pQty <= 0) return;
+          matchedPantryObj = pObj;
           let pUnit = (typeof window.pantryCardUnits !== 'undefined' && (window.pantryCardUnits[pObj.name] || window.pantryCardUnits[pKey])) || pObj.unit;
           if (!pUnit && typeof window.pantryCardUnits !== 'undefined') {
             const matchedUnitKey = Object.keys(window.pantryCardUnits).find(k => areInsumosEquivalent(k, cleanName));
@@ -4216,11 +4356,13 @@ function render3DShoppingList() {
     `;
 
     const pantryMap = window.PANTRY_STOCK_INVENTORY || {};
+    const LEGACY_PANTRY_ALIAS_KEYS_3D = ['multisinergix', 'aminosinergix', '33plus', '34plus', 'zarzamoras-frescas', 'fresas-frescas', 'arilos-granada', 'moras-frescas', 'frambuesas-frescas', 'arandanos-frescos', 'pitaya-fresca', 'ajo-fresco'];
     const canonicalPantry = Object.keys(pantryMap).filter(k => {
+      if (LEGACY_PANTRY_ALIAS_KEYS_3D.includes(k)) return false;
       const it = pantryMap[k];
       return it && it.status === 'canonical' && parseFloat(it.stock) > 0;
     });
-    const prohibitedPantry = Object.keys(pantryMap).filter(k => pantryMap[k].status === 'prohibited');
+    const prohibitedPantry = Object.keys(pantryMap).filter(k => pantryMap[k] && pantryMap[k].status === 'prohibited');
 
     canonicalPantry.sort((a, b) => (pantryMap[a].name || a).localeCompare(pantryMap[b].name || b, 'es', { sensitivity: 'base' }));
     prohibitedPantry.sort((a, b) => (pantryMap[a].name || a).localeCompare(pantryMap[b].name || b, 'es', { sensitivity: 'base' }));
@@ -6751,7 +6893,7 @@ function renderRecipes(day, activeDiners) {
     document.addEventListener('DOMContentLoaded', () => {
       try {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev8-s42-clean-cache-v36')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev9-s42-tr04095-v37')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();

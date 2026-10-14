@@ -1526,7 +1526,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
     assert "ensureSundayServiceDispatched" in code
-    assert any(v in code for v in ["nutriketo-v36-6-rev4-s41-service-checkin-v29", "nutriketo-v36-6-rev6-s42-today-sync-v34", "nutriketo-v36-6-rev7-s42-syntaxfix-v35", "nutriketo-v36-6-rev8-s42-clean-cache-v36"])
+    assert any(v in code for v in ["nutriketo-v36-6-rev4-s41-service-checkin-v29", "nutriketo-v36-6-rev6-s42-today-sync-v34", "nutriketo-v36-6-rev7-s42-syntaxfix-v35", "nutriketo-v36-6-rev8-s42-clean-cache-v36", "nutriketo-v36-6-rev9-s42-tr04095-v37"])
     # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
     assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
     assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
@@ -1617,26 +1617,15 @@ def test_physical_pantry_106_skus_and_multisinergix():
     assert 'sku-003-queso-cottage' in p_content and '2880' in p_content
     assert 'sku-104-huevo' in p_content and '105' in p_content
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    # Orden de Entrada Purgada Sam's Club San Juan del Río (TR04095 - 2026-10-12T18:06:21)
+    assert '"espinacas_baby_tiernas"' in p_content and '981023610' in p_content
+    assert '"champinones_portobello_frescos"' in p_content and '98971' in p_content
+    assert '"esparragos_verdes_frescos"' in p_content and '71235' in p_content
+    assert '"fresas_frescas"' in p_content and '88587' in p_content
+    assert '"frambuesas_frescas_organicas"' in p_content and '72612' in p_content
+    assert '"queso_ricotta_artesanal"' in p_content and '256038' in p_content
+    assert '"chiles_chipotles_adobados"' in p_content and '34553' in p_content
+    assert '"higos_frescos"' in p_content and '73520' in p_content
+    assert '"frijol_pinto"' in p_content and '115359' in p_content
+    assert 'DESP JABON H' not in p_content
+    assert '6/255M JUMBO' not in p_content
