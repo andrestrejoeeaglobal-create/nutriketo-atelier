@@ -3695,6 +3695,65 @@ let pantryStock = {
       return '🌶️ Chiles, Condimentos e Infusiones';
     }
 
+    function ensureCanonicalTicketIntakesApplied() {
+      try {
+        if (Array.isArray(deletedPantryItems)) {
+          deletedPantryItems = deletedPantryItems.filter(d => {
+            const s = (typeof d === 'string' ? d : '').toLowerCase();
+            return !/fresa|frambuesa|zarzamora|espinaca|portobello|espárrago|esparrago|ricotta|qcotta|chipotle|higo|frijol|kirkland|cottage|sucrine|cogollo/i.test(s);
+          });
+        }
+        if (!window.PANTRY_STOCK_INVENTORY) window.PANTRY_STOCK_INVENTORY = {};
+        if (!pantryStock || typeof pantryStock !== 'object') pantryStock = {};
+
+        const canonicalTicketEntries = {
+          "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas baby tiernas", stock: 500, quantity_commercial: 1, commercial_unit: "domo_500", unit: "g", packaging: "1 domo (~500 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
+          "champinones_portobello_frescos": { item_num: 108, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñones Portobello frescos", stock: 12, quantity_commercial: 2, commercial_unit: "paquetes", unit: "piezas", packaging: "2 paquetes (~12 pzas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
+          "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos verdes frescos", stock: 800, quantity_commercial: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "1 manojo comercial (~800 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
+          "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas frescas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1 domo / caja (~1,000 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
+          "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas frescas orgánicas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "1 domo (~340 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
+          "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso Ricotta (Qcotta 960g)", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "2 botes de 960 g c/u (1,920 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
+          "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chipotles en conserva (Pack 6x220g)", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1 pack (6 latas de 220 g c/u / 1,320 g)", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
+          "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos frescos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)", source: "Sams Club San Juan del Rio (TR04095)" },
+          "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico", source: "Sams Club San Juan del Rio (TR04095)" },
+          "pechuga_de_pollo_organica": { item_num: 116, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo (Kirkland Signature)", stock: 1954, quantity_commercial: 1, commercial_unit: "paquete_pesado", scale_kg: 1.954, unit: "g", packaging: "1 paquete pesado (1.954 kg / 1,954 g)", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", source: "Costco Wholesale Queretaro" },
+          "fresas_frescas": { item_num: 117, sku_code: "88587 / Costco-9636-FRESA", ticket_id: "9636", name: "Fresas frescas (Costco 907g)", stock: 907, quantity_commercial: 1, commercial_unit: "domo_907", unit: "g", packaging: "1 domo Costco (907 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Costco Wholesale Queretaro" },
+          "zarzamoras_frescas": { item_num: 118, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamoras frescas (Costco 510g)", stock: 510, quantity_commercial: 1, commercial_unit: "domo_510", unit: "g", packaging: "1 domo Costco (510 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Costco Wholesale Queretaro" },
+          "queso_cottage_artesanal": { item_num: 119, sku_code: "Costco-9636-COTTAGE", ticket_id: "9636", name: "Queso Cottage", stock: 1000, quantity_commercial: 1, commercial_unit: "bote_comercial", unit: "g", packaging: "1 bote comercial (1,000 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Costco Wholesale Queretaro" },
+          "yoghurt_griego_sin_azucar": { item_num: 120, sku_code: "Costco-9636-YOGHURT", ticket_id: "9636", name: "Yoghurt griego natural sin azúcar (Kirkland)", stock: 1000, quantity_commercial: 1, commercial_unit: "bote_comercial", unit: "g", packaging: "1 bote comercial (1,000 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Costco Wholesale Queretaro" },
+          "lechuga_orejona_viva_cogollo": { item_num: 121, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)", stock: 6, quantity_commercial: 6, commercial_unit: "piezas", unit: "piezas", packaging: "1 pack (6 piezas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Costco Wholesale Queretaro" }
+        };
+
+        const isFirstV39Sync = (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_intake_v39_fruits_restored') !== 'true');
+
+        Object.keys(canonicalTicketEntries).forEach(k => {
+          const defObj = canonicalTicketEntries[k];
+          const existingObj = window.PANTRY_STOCK_INVENTORY[k];
+          if (!existingObj || isFirstV39Sync || existingObj.name !== defObj.name || !existingObj.item_num) {
+            window.PANTRY_STOCK_INVENTORY[k] = Object.assign({}, defObj);
+          }
+          if (isFirstV39Sync || pantryStock[defObj.name] === undefined) {
+            pantryStock[defObj.name] = defObj.stock;
+            window.PANTRY_STOCK_INVENTORY[k].stock = defObj.stock;
+          }
+        });
+
+        ["zarzamoras-frescas", "fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "ajo-fresco"].forEach(legacyK => {
+          if (window.PANTRY_STOCK_INVENTORY[legacyK]) window.PANTRY_STOCK_INVENTORY[legacyK].stock = 0;
+        });
+        delete window.PANTRY_STOCK_INVENTORY["ks_guante_gde_400p"];
+        delete pantryStock["Guantes de protección (400 piezas)"];
+
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('nutriketo_intake_tr04095_applied', 'true');
+          localStorage.setItem('nutriketo_intake_costco_9636_applied', 'true');
+          localStorage.setItem('nutriketo_intake_v39_fruits_restored', 'true');
+        }
+      } catch (err) {
+        console.warn('Error en ensureCanonicalTicketIntakesApplied:', err);
+      }
+    }
+
     function loadAppState() {
       try {
         const storedVersion = localStorage.getItem('nutriketo_app_version');
@@ -3725,6 +3784,7 @@ let pantryStock = {
             if (oldState.dispatchedMeals) dispatchedMeals = oldState.dispatchedMeals;
             if (Array.isArray(oldState.mealFeedbackLedger)) mealFeedbackLedger = oldState.mealFeedbackLedger;
           }
+          ensureCanonicalTicketIntakesApplied();
           saveAppState();
           return true;
         }
@@ -3820,63 +3880,7 @@ let pantryStock = {
             window.PANTRY_STOCK_INVENTORY = Object.assign(window.PANTRY_STOCK_INVENTORY || {}, state.pantryStockInventory);
           }
 
-          // Inyección Canónica Purgada Ticket Sam's Club San Juan del Río (TR04095 - 2026-10-12T18:06:21)
-          if (localStorage.getItem('nutriketo_intake_tr04095_applied') !== 'true') {
-            const tr04095Pantry = {
-              "Espinacas baby tiernas": 500,
-              "Champiñones Portobello frescos": 12,
-              "Espárragos verdes frescos": 800,
-              "Fresas frescas": 1000,
-              "Frambuesas frescas orgánicas": 340,
-              "Queso Ricotta (Qcotta 960g)": 1920,
-              "Chipotles en conserva (Pack 6x220g)": 1320,
-              "Higos frescos": 1,
-              "Frijol pinto": 1
-            };
-            Object.assign(pantryStock, tr04095Pantry);
-            if (window.PANTRY_STOCK_INVENTORY) {
-              window.PANTRY_STOCK_INVENTORY["espinacas_baby_tiernas"] = { item_num: 107, sku_ticket: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas baby tiernas", stock: 500, commercial_qty: 1, commercial_unit: "domo_500", unit: "g", packaging: "1 domo (~500 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
-              window.PANTRY_STOCK_INVENTORY["champinones_portobello_frescos"] = { item_num: 108, sku_ticket: "98971", ticket_desc: "HONGO PORTO", name: "Champiñones Portobello frescos", stock: 12, commercial_qty: 2, commercial_unit: "paquetes", unit: "piezas", packaging: "2 paquetes (~12 pzas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
-              window.PANTRY_STOCK_INVENTORY["esparragos_verdes_frescos"] = { item_num: 109, sku_ticket: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos verdes frescos", stock: 800, commercial_qty: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "1 manojo comercial (~800 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
-              window.PANTRY_STOCK_INVENTORY["fresas_frescas_tr04095"] = { item_num: 110, sku_ticket: "88587", ticket_desc: "FRESA", name: "Fresas frescas", stock: 1000, commercial_qty: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1 domo / caja (~1,000 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
-              window.PANTRY_STOCK_INVENTORY["frambuesas_frescas_organicas"] = { item_num: 111, sku_ticket: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas frescas orgánicas", stock: 340, commercial_qty: 1, commercial_unit: "domo_340", unit: "g", packaging: "1 domo (~340 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
-              window.PANTRY_STOCK_INVENTORY["queso_ricotta_artesanal"] = { item_num: 112, sku_ticket: "256038", ticket_desc: "960GR QCOTTA", name: "Queso Ricotta (Qcotta 960g)", stock: 1920, commercial_qty: 2, commercial_unit: "bote_960g", unit: "g", packaging: "2 botes de 960 g c/u (1,920 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
-              window.PANTRY_STOCK_INVENTORY["chiles_chipotles_adobados"] = { item_num: 113, sku_ticket: "34553", ticket_desc: "6/220G CHIPO", name: "Chipotles en conserva (Pack 6x220g)", stock: 1320, commercial_qty: 1, commercial_unit: "pack_6", unit: "g", packaging: "1 pack (6 latas de 220 g c/u / 1,320 g)", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
-              window.PANTRY_STOCK_INVENTORY["higos_frescos"] = { item_num: 114, sku_ticket: "73520", ticket_desc: "HIGO", name: "Higos frescos", stock: 1, unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)", source: "Sams Club San Juan del Rio (TR04095)" };
-              window.PANTRY_STOCK_INVENTORY["frijol_pinto"] = { item_num: 115, sku_ticket: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico", source: "Sams Club San Juan del Rio (TR04095)" };
-              ["zarzamoras-frescas", "fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "ajo-fresco"].forEach(legacyK => {
-                if (window.PANTRY_STOCK_INVENTORY[legacyK]) window.PANTRY_STOCK_INVENTORY[legacyK].stock = 0;
-              });
-            }
-            localStorage.setItem('nutriketo_intake_tr04095_applied', 'true');
-          }
-
-          // Inyección Canónica Purgada Ticket Costco Wholesale Querétaro (Ticket 9636 - 2026-10-15T18:31:00)
-          if (localStorage.getItem('nutriketo_intake_costco_9636_applied') !== 'true') {
-            const costco9636Pantry = {
-              "Pechuga de pollo (Kirkland Signature)": 1954,
-              "Fresas frescas (Costco 907g)": 907,
-              "Zarzamoras frescas (Costco 510g)": 510,
-              "Queso Cottage": 1000,
-              "Yoghurt griego natural sin azúcar (Kirkland)": 1000,
-              "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)": 6
-            };
-            Object.assign(pantryStock, costco9636Pantry);
-            if (window.PANTRY_STOCK_INVENTORY) {
-              if (!window.PANTRY_STOCK_INVENTORY["fresas_frescas_tr04095"]) {
-                window.PANTRY_STOCK_INVENTORY["fresas_frescas_tr04095"] = { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas frescas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1 domo / caja (~1,000 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" };
-              }
-              window.PANTRY_STOCK_INVENTORY["pechuga_de_pollo_organica"] = { item_num: 116, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo (Kirkland Signature)", stock: 1954, quantity_commercial: 1, commercial_unit: "paquete_pesado", scale_kg: 1.954, unit: "g", packaging: "1 paquete pesado (1.954 kg / 1,954 g)", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", source: "Costco Wholesale Queretaro" };
-              window.PANTRY_STOCK_INVENTORY["fresas_frescas"] = { item_num: 117, sku_code: "88587 / Costco-9636-FRESA", ticket_id: "9636", name: "Fresas frescas (Costco 907g)", stock: 907, quantity_commercial: 1, commercial_unit: "domo_907", unit: "g", packaging: "1 domo Costco (907 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Costco Wholesale Queretaro" };
-              window.PANTRY_STOCK_INVENTORY["zarzamoras_frescas"] = { item_num: 118, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamoras frescas (Costco 510g)", stock: 510, quantity_commercial: 1, commercial_unit: "domo_510", unit: "g", packaging: "1 domo Costco (510 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Costco Wholesale Queretaro" };
-              window.PANTRY_STOCK_INVENTORY["queso_cottage_artesanal"] = { item_num: 119, sku_code: "Costco-9636-COTTAGE", ticket_id: "9636", name: "Queso Cottage", stock: 1000, quantity_commercial: 1, commercial_unit: "bote_comercial", unit: "g", packaging: "1 bote comercial (1,000 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Costco Wholesale Queretaro" };
-              window.PANTRY_STOCK_INVENTORY["yoghurt_griego_sin_azucar"] = { item_num: 120, sku_code: "Costco-9636-YOGHURT", ticket_id: "9636", name: "Yoghurt griego natural sin azúcar (Kirkland)", stock: 1000, quantity_commercial: 1, commercial_unit: "bote_comercial", unit: "g", packaging: "1 bote comercial (1,000 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Costco Wholesale Queretaro" };
-              window.PANTRY_STOCK_INVENTORY["lechuga_orejona_viva_cogollo"] = { item_num: 121, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)", stock: 6, quantity_commercial: 6, commercial_unit: "piezas", unit: "piezas", packaging: "1 pack (6 piezas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Costco Wholesale Queretaro" };
-              delete window.PANTRY_STOCK_INVENTORY["ks_guante_gde_400p"];
-            }
-            delete pantryStock["Guantes de protección (400 piezas)"];
-            localStorage.setItem('nutriketo_intake_costco_9636_applied', 'true');
-          }
+          ensureCanonicalTicketIntakesApplied();
 
           if (state.checkedRows) checkedRows = state.checkedRows;
           if (state.mealDinersState) mealDinersState = state.mealDinersState;
@@ -3953,6 +3957,8 @@ let pantryStock = {
           saveAppState();
           return true;
         }
+        ensureCanonicalTicketIntakesApplied();
+        saveAppState();
       } catch(e) {
         console.error("Error al cargar localStorage:", e);
       }
@@ -4316,6 +4322,9 @@ let pantryStock = {
     }
 
     function initSetupPanel() {
+      if (typeof ensureCanonicalTicketIntakesApplied === 'function') {
+        ensureCanonicalTicketIntakesApplied();
+      }
       // 1. Cosecha Grid (sección editable ordenada A-Z de catálogo maestro + personalizados)
       const hGrid = document.getElementById('harvest-checklist-grid');
       if (hGrid) {
@@ -8902,8 +8911,17 @@ function renderRecipes(day, activeDiners) {
       <script>
     document.addEventListener('DOMContentLoaded', () => {
       try {
+        if ('caches' in window) {
+          caches.keys().then((keys) => {
+            keys.forEach((k) => {
+              if (k !== 'nutriketo-v36-6-rev11-s42-fruits-fix-v39') {
+                caches.delete(k);
+              }
+            });
+          }).catch(() => {});
+        }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev10-s42-costco9636-v38')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev11-s42-fruits-fix-v39')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();

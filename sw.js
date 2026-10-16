@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Governance Rule RULE-2026-CROSS-DEVICE-MIRROR-001
-const CACHE_NAME = 'nutriketo-v36-6-rev10-s42-costco9636-v38';
+const CACHE_NAME = 'nutriketo-v36-6-rev11-s42-fruits-fix-v39';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -10,20 +10,22 @@ self.addEventListener('install', (event) => {
   console.log('[ServiceWorker] Install event triggered - Version:', CACHE_NAME);
   event.waitUntil(
     caches.open(CACHE_NAME).then(async (cache) => {
-      console.log('[ServiceWorker] Caching core static assets with no-cache flag');
+      console.log('[ServiceWorker] Caching core static assets with cache-busting');
       for (const url of ASSETS_TO_CACHE) {
         try {
-          const res = await fetch(url, { cache: 'no-cache' });
+          const bustUrl = url + (url.includes('?') ? '&' : '?') + '_sw_bust=' + encodeURIComponent(CACHE_NAME) + '_' + Date.now();
+          const res = await fetch(bustUrl, { cache: 'no-store' });
           if (res && res.status === 200) {
-            await cache.put(url, res);
+            await cache.put(url, res.clone());
           }
-        } catch(e) {
+        } catch (e) {
           console.warn('[ServiceWorker] Pre-cache failed for:', url, e);
         }
       }
+    }).then(() => {
+      return self.skipWaiting();
     })
   );
-  self.skipWaiting();
 });
 
 self.addEventListener('activate', (event) => {
@@ -51,9 +53,9 @@ self.addEventListener('fetch', (event) => {
   const reqUrl = event.request.url || '';
   if (!reqUrl.startsWith('http://') && !reqUrl.startsWith('https://')) return;
 
-  // Network-First with Fallback to Cache, bypassing stale disk cache
+  // Network-First using URL string (avoids Chromium TypeError when Request.mode === 'navigate' + non-empty RequestInit)
   event.respondWith(
-    fetch(event.request, { cache: 'no-cache' })
+    fetch(reqUrl, { cache: 'no-store' })
       .then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();
