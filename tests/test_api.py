@@ -1526,7 +1526,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "confirmServiceCheckin" in code
     assert "confirmRevertDispatch" in code
     assert "ensureSundayServiceDispatched" in code
-    assert any(v in code for v in ["nutriketo-v36-6-rev4-s41-service-checkin-v29", "nutriketo-v36-6-rev6-s42-today-sync-v34", "nutriketo-v36-6-rev7-s42-syntaxfix-v35", "nutriketo-v36-6-rev8-s42-clean-cache-v36", "nutriketo-v36-6-rev9-s42-tr04095-v37"])
+    assert any(v in code for v in ["nutriketo-v36-6-rev4-s41-service-checkin-v29", "nutriketo-v36-6-rev6-s42-today-sync-v34", "nutriketo-v36-6-rev7-s42-syntaxfix-v35", "nutriketo-v36-6-rev8-s42-clean-cache-v36", "nutriketo-v36-6-rev9-s42-tr04095-v37", "nutriketo-v36-6-rev10-s42-costco9636-v38"])
     # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
     assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
     assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
@@ -1629,3 +1629,12 @@ def test_physical_pantry_106_skus_and_multisinergix():
     assert '"frijol_pinto"' in p_content and '115359' in p_content
     assert 'DESP JABON H' not in p_content
     assert '6/255M JUMBO' not in p_content
+
+    # Orden de Entrada Purgada Costco Wholesale Querétaro (Ticket 9636 - 2026-10-15T18:31:00)
+    assert '"pechuga_de_pollo_organica"' in p_content and '1954' in p_content
+    assert '"fresas_frescas"' in p_content and '907' in p_content
+    assert '"zarzamoras_frescas"' in p_content and '510' in p_content
+    assert '"queso_cottage_artesanal"' in p_content and '1000' in p_content
+    assert '"yoghurt_griego_sin_azucar"' in p_content and 'Kirkland' in p_content
+    assert '"lechuga_orejona_viva_cogollo"' in p_content and 'Lechuga Sucrine' in p_content
+    assert 'ks_guante_gde_400p' not in p_content
