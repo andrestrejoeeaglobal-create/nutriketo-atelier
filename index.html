@@ -8,14 +8,14 @@
   <meta http-equiv="Expires" content="0" />
   <title>Arquitectura Herami — Atelier T.I.L.O.®</title>
 
-  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V43 -->
+  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V44 -->
   <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(async (regs) => {
       let legacyUnregistered = false;
       for (let r of regs) {
         const sUrl = (r.active && r.active.scriptURL) || (r.installing && r.installing.scriptURL) || (r.waiting && r.waiting.scriptURL) || '';
-        if (!sUrl.includes('nutriketo-v36-6-rev15-s42-canonical-dedup-v43')) {
+        if (!sUrl.includes('nutriketo-v36-6-rev16-s43-only-v44')) {
           await r.unregister();
           legacyUnregistered = true;
         }
@@ -32,7 +32,7 @@
   }
   if ('caches' in window) {
     caches.keys().then(keys => keys.forEach(k => {
-      if (k !== 'nutriketo-v36-6-rev15-s42-canonical-dedup-v43') caches.delete(k);
+      if (k !== 'nutriketo-v36-6-rev16-s43-only-v44') caches.delete(k);
     })).catch(() => {});
   }
   </script>
@@ -49,13 +49,16 @@ function getDeconstructedRecipeForDish(dishTitle, courseRole) {
 
 
 
-// --- MOTOR DE AUTO-GENERACIÓN DÉ LA SIGUIENTE SEMANA JIT (V15.23.2) ---
+// --- MOTOR DE AUTO-GENERACIÓN DE LA SEMANA 43 CANÓNICA CON TOPE ESTRICTO (V15.23.3) ---
 const FORBIDDEN_INGREDIENTS = {
   picante: ["chile", "serrano", "jalapeño", "habanero", "chipotle", "pimienta negra", "paprika picante"],
   cerdo: ["cerdo", "puerco", "tocino de cerdo", "jamon de cerdo", "manteca", "chicharron"],
   gluten_granos: ["trigo", "maiz", "arroz", "harina refinada", "avena", "frijol"],
   azucares: ["azucar", "jarabe", "miel", "sacarosa", "maltitol", "higo"]
 };
+
+const MAX_ALLOWED_WEEK_NUM = 43;
+const CANONICAL_WEEK_43_TITLE = "Semana 43 (18 al 24 de Octubre de 2026)";
 
 function validateCulinaryImmunity(text) {
   if (!text) return true;
@@ -68,9 +71,189 @@ function validateCulinaryImmunity(text) {
   return true;
 }
 
+function getWeekNumberFromKey(wKey) {
+  if (!wKey || typeof wKey !== 'string') return null;
+  const m = wKey.match(/Semana\s+(\d+)/i);
+  if (!m) return null;
+  const num = parseInt(m[1], 10);
+  return isNaN(num) ? null : num;
+}
+
+function buildWeekPlanForNumber(targetWeekNum) {
+  if (typeof datasets === 'undefined' || !datasets) return null;
+  const nextWeekNum = parseInt(targetWeekNum, 10) || 43;
+  // Semana 42 inicia el Domingo 11 de Octubre de 2026 (mes 9 en 0-index)
+  const offsetDays = (nextWeekNum - 42) * 7;
+  const startDate = new Date(2026, 9, 11 + offsetDays);
+  const endDate = new Date(2026, 9, 11 + offsetDays + 6);
+
+  const MONTHS_FULL = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const MONTHS_SHORT = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+  const DAYS_NAMES = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+  const pad2 = (n) => String(n).padStart(2, '0');
+
+  const startD = pad2(startDate.getDate());
+  const endD = pad2(endDate.getDate());
+  const startMFull = MONTHS_FULL[startDate.getMonth()];
+  const endMFull = MONTHS_FULL[endDate.getMonth()];
+  const endY = endDate.getFullYear();
+
+  const dateRangeStr = (startDate.getMonth() === endDate.getMonth())
+    ? `${startD} al ${endD} de ${startMFull} de ${endY}`
+    : `${startD} de ${startMFull} al ${endD} de ${endMFull} de ${endY}`;
+
+  const weekTitle = `Semana ${nextWeekNum} (${dateRangeStr})`;
+  const weekIsoStart = `${startDate.getFullYear()}-${pad2(startDate.getMonth() + 1)}-${startD}`;
+
+  const baseS42 = datasets["Semana 42 (11 al 17 de Octubre de 2026)"] || Object.values(datasets)[0];
+  const baseS41 = datasets["Semana 41 (04 al 10 de Octubre de 2026)"] || baseS42;
+  const s42Days = (baseS42 && Array.isArray(baseS42.days)) ? baseS42.days : [];
+  const s41Days = (baseS41 && Array.isArray(baseS41.days)) ? baseS41.days : s42Days;
+
+  const permOrder = [
+    (2 + nextWeekNum) % 7,
+    (5 + nextWeekNum) % 7,
+    (1 + nextWeekNum) % 7,
+    (4 + nextWeekNum) % 7,
+    (0 + nextWeekNum) % 7,
+    (3 + nextWeekNum) % 7,
+    (6 + nextWeekNum) % 7
+  ];
+
+  const newDays = [];
+  for (let i = 0; i < 7; i++) {
+    const curDate = new Date(2026, 9, 11 + offsetDays + i);
+    const dName = DAYS_NAMES[curDate.getDay()];
+    const dNum = pad2(curDate.getDate());
+    const mShort = MONTHS_SHORT[curDate.getMonth()];
+    const isoDate = `${curDate.getFullYear()}-${pad2(curDate.getMonth() + 1)}-${dNum}`;
+    const dateStr = `${dNum} ${mShort}`;
+
+    const srcIdx = permOrder[i] % Math.max(1, s42Days.length);
+    const altIdx = (permOrder[i] + 3) % Math.max(1, s41Days.length);
+    const srcDayA = s42Days[srcIdx] || s42Days[0] || { meals: [] };
+    const srcDayB = s41Days[altIdx] || srcDayA;
+
+    const clonedDay = JSON.parse(JSON.stringify(srcDayA));
+    clonedDay.day = dName;
+    clonedDay.day_num = dNum;
+    clonedDay.date_str = dateStr;
+    clonedDay.iso_date = isoDate;
+    clonedDay.full_date_title = `Menú Completo para el ${dName} ${dateStr}`;
+
+    if (Array.isArray(clonedDay.meals) && Array.isArray(srcDayB.meals)) {
+      clonedDay.meals = clonedDay.meals.map((meal, mIdx) => {
+        const useAlt = ((i + mIdx + nextWeekNum) % 2 === 1) && srcDayB.meals[mIdx];
+        return JSON.parse(JSON.stringify(useAlt ? srcDayB.meals[mIdx] : meal));
+      });
+    }
+
+    newDays.push(clonedDay);
+  }
+
+  return {
+    week_name: `Semana ${nextWeekNum}`,
+    week_label: weekTitle,
+    week_start: weekIsoStart,
+    date_range: dateRangeStr,
+    diners_count: (typeof activeDiners !== 'undefined' ? parseInt(activeDiners, 10) || 6 : 6),
+    days: newDays
+  };
+}
+
+function purgeWeeksAfter43() {
+  try {
+    window.customGeneratedWeeks = window.customGeneratedWeeks || {};
+
+    // 1. Eliminar de customGeneratedWeeks cualquier semana > 43
+    Object.keys(window.customGeneratedWeeks).forEach(wKey => {
+      const wNum = getWeekNumberFromKey(wKey);
+      if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) {
+        delete window.customGeneratedWeeks[wKey];
+      }
+    });
+
+    // 2. Eliminar de datasets cualquier semana > 43
+    if (typeof datasets === 'object' && datasets) {
+      Object.keys(datasets).forEach(wKey => {
+        const wNum = getWeekNumberFromKey(wKey);
+        if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) {
+          delete datasets[wKey];
+        }
+      });
+
+      // 3. Garantizar que Semana 43 esté siempre conservada
+      if (!window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] && !datasets[CANONICAL_WEEK_43_TITLE]) {
+        const plan43 = buildWeekPlanForNumber(43);
+        if (plan43) {
+          window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] = plan43;
+          datasets[CANONICAL_WEEK_43_TITLE] = plan43;
+        }
+      } else if (window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] && !datasets[CANONICAL_WEEK_43_TITLE]) {
+        datasets[CANONICAL_WEEK_43_TITLE] = window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE];
+      } else if (datasets[CANONICAL_WEEK_43_TITLE] && !window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE]) {
+        window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] = datasets[CANONICAL_WEEK_43_TITLE];
+      }
+    }
+
+    // 4. Purgar estados asociados a semanas > 43 (dispatchedMeals, mealDinersState, customDishesState, mealFeedbackLedger)
+    if (typeof dispatchedMeals === 'object' && dispatchedMeals) {
+      Object.keys(dispatchedMeals).forEach(k => {
+        const wNum = getWeekNumberFromKey(k);
+        if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) delete dispatchedMeals[k];
+      });
+    }
+    if (typeof mealDinersState === 'object' && mealDinersState) {
+      Object.keys(mealDinersState).forEach(k => {
+        const wNum = getWeekNumberFromKey(k);
+        if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) delete mealDinersState[k];
+      });
+    }
+    if (typeof customDishesState === 'object' && customDishesState) {
+      Object.keys(customDishesState).forEach(k => {
+        const wNum = getWeekNumberFromKey(k);
+        if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) delete customDishesState[k];
+      });
+    }
+    if (typeof mealFeedbackLedger !== 'undefined' && Array.isArray(mealFeedbackLedger)) {
+      mealFeedbackLedger = mealFeedbackLedger.filter(fb => {
+        const wNum = getWeekNumberFromKey(fb && fb.week_key);
+        return wNum === null || wNum <= MAX_ALLOWED_WEEK_NUM;
+      });
+      window.MEAL_FEEDBACK_LEDGER = mealFeedbackLedger;
+    }
+
+    // 5. Si activeWeek apuntaba a una semana > 43, fijar en Semana 43
+    if (typeof activeWeek === 'string') {
+      const curNum = getWeekNumberFromKey(activeWeek);
+      if (curNum !== null && curNum > MAX_ALLOWED_WEEK_NUM) {
+        activeWeek = CANONICAL_WEEK_43_TITLE;
+      }
+    }
+  } catch (err) {
+    console.warn("Error en purgeWeeksAfter43:", err);
+  }
+}
+
 function syncCustomWeeksDropdowns() {
+  purgeWeeksAfter43();
+
+  ['header-week-select', 'setup-week'].forEach(selId => {
+    const sel = document.getElementById(selId);
+    if (!sel) return;
+    // Eliminar del DOM cualquier opción de semana > 43
+    Array.from(sel.options).forEach(opt => {
+      const wNum = getWeekNumberFromKey(opt.value || opt.textContent);
+      if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) {
+        sel.removeChild(opt);
+      }
+    });
+  });
+
   if (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks) {
     Object.keys(window.customGeneratedWeeks).forEach(wKey => {
+      const wNum = getWeekNumberFromKey(wKey);
+      if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) return;
       if (typeof datasets !== 'undefined' && !datasets[wKey]) {
         datasets[wKey] = window.customGeneratedWeeks[wKey];
       }
@@ -90,103 +273,18 @@ function syncCustomWeeksDropdowns() {
 function generateNextWeekMenu() {
   try {
     if (typeof datasets === 'undefined' || !datasets) return;
-    window.customGeneratedWeeks = window.customGeneratedWeeks || {};
-
-    let maxWeekNum = 42;
-    Object.keys(datasets).forEach(k => {
-      const m = k.match(/Semana\s+(\d+)/i);
-      if (m) {
-        const num = parseInt(m[1], 10);
-        if (!isNaN(num) && num > maxWeekNum) maxWeekNum = num;
-      }
-    });
-
-    const nextWeekNum = maxWeekNum + 1;
-    // Semana 42 inicia el Domingo 11 de Octubre de 2026 (mes 9 en 0-index)
-    const offsetDays = (nextWeekNum - 42) * 7;
-    const startDate = new Date(2026, 9, 11 + offsetDays);
-    const endDate = new Date(2026, 9, 11 + offsetDays + 6);
-
-    const MONTHS_FULL = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-    const MONTHS_SHORT = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
-    const DAYS_NAMES = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
-    const pad2 = (n) => String(n).padStart(2, '0');
-
-    const startD = pad2(startDate.getDate());
-    const endD = pad2(endDate.getDate());
-    const startMFull = MONTHS_FULL[startDate.getMonth()];
-    const endMFull = MONTHS_FULL[endDate.getMonth()];
-    const endY = endDate.getFullYear();
-
-    const dateRangeStr = (startDate.getMonth() === endDate.getMonth())
-      ? `${startD} al ${endD} de ${startMFull} de ${endY}`
-      : `${startD} de ${startMFull} al ${endD} de ${endMFull} de ${endY}`;
-
-    const weekTitle = `Semana ${nextWeekNum} (${dateRangeStr})`;
-    const weekIsoStart = `${startDate.getFullYear()}-${pad2(startDate.getMonth() + 1)}-${startD}`;
-
-    const baseS42 = datasets["Semana 42 (11 al 17 de Octubre de 2026)"] || Object.values(datasets)[Object.values(datasets).length - 1];
-    const baseS41 = datasets["Semana 41 (04 al 10 de Octubre de 2026)"] || baseS42;
-    const s42Days = (baseS42 && Array.isArray(baseS42.days)) ? baseS42.days : [];
-    const s41Days = (baseS41 && Array.isArray(baseS41.days)) ? baseS41.days : s42Days;
-
-    // Permutación sin repetición de proteínas en días consecutivos
-    const permOrder = [
-      (2 + nextWeekNum) % 7,
-      (5 + nextWeekNum) % 7,
-      (1 + nextWeekNum) % 7,
-      (4 + nextWeekNum) % 7,
-      (0 + nextWeekNum) % 7,
-      (3 + nextWeekNum) % 7,
-      (6 + nextWeekNum) % 7
-    ];
-
-    const newDays = [];
-    for (let i = 0; i < 7; i++) {
-      const curDate = new Date(2026, 9, 11 + offsetDays + i);
-      const dName = DAYS_NAMES[curDate.getDay()];
-      const dNum = pad2(curDate.getDate());
-      const mShort = MONTHS_SHORT[curDate.getMonth()];
-      const isoDate = `${curDate.getFullYear()}-${pad2(curDate.getMonth() + 1)}-${dNum}`;
-      const dateStr = `${dNum} ${mShort}`;
-
-      const srcIdx = permOrder[i] % Math.max(1, s42Days.length);
-      const altIdx = (permOrder[i] + 3) % Math.max(1, s41Days.length);
-      const srcDayA = s42Days[srcIdx] || s42Days[0] || { meals: [] };
-      const srcDayB = s41Days[altIdx] || srcDayA;
-
-      const clonedDay = JSON.parse(JSON.stringify(srcDayA));
-      clonedDay.day = dName;
-      clonedDay.day_num = dNum;
-      clonedDay.date_str = dateStr;
-      clonedDay.iso_date = isoDate;
-      clonedDay.full_date_title = `Menú Completo para el ${dName} ${dateStr}`;
-
-      // Combinar tiempos entre Semana 42 y Semana 41 para máxima variedad gastronómica
-      if (Array.isArray(clonedDay.meals) && Array.isArray(srcDayB.meals)) {
-        clonedDay.meals = clonedDay.meals.map((meal, mIdx) => {
-          const useAlt = ((i + mIdx + nextWeekNum) % 2 === 1) && srcDayB.meals[mIdx];
-          const chosenMeal = JSON.parse(JSON.stringify(useAlt ? srcDayB.meals[mIdx] : meal));
-          return chosenMeal;
-        });
-      }
-
-      newDays.push(clonedDay);
-    }
-
-    const newWeekPlan = {
-      week_name: `Semana ${nextWeekNum}`,
-      week_label: weekTitle,
-      week_start: weekIsoStart,
-      date_range: dateRangeStr,
-      diners_count: (typeof activeDiners !== 'undefined' ? parseInt(activeDiners, 10) || 6 : 6),
-      days: newDays
-    };
-
-    datasets[weekTitle] = newWeekPlan;
-    window.customGeneratedWeeks[weekTitle] = newWeekPlan;
-
+    purgeWeeksAfter43();
     syncCustomWeeksDropdowns();
+
+    const weekTitle = CANONICAL_WEEK_43_TITLE;
+    if (!datasets[weekTitle]) {
+      const plan43 = buildWeekPlanForNumber(43);
+      if (plan43) {
+        datasets[weekTitle] = plan43;
+        window.customGeneratedWeeks[weekTitle] = plan43;
+      }
+      syncCustomWeeksDropdowns();
+    }
 
     selectedIdx = 0;
     if (typeof onHeaderWeekChange === 'function') {
@@ -199,12 +297,12 @@ function generateNextWeekMenu() {
     }
 
     if (typeof showToast === 'function') {
-      showToast(`✨ ${weekTitle} generada y activada con 63 recetas clínicas SSOT.`);
+      showToast(`✨ ${weekTitle} activa (semanas posteriores eliminadas).`);
     }
   } catch (err) {
     console.error("Error al generar nueva semana:", err);
     if (typeof showToast === 'function') {
-      showToast("⚠️ Error al generar la siguiente semana: " + (err.message || err), "warning");
+      showToast("⚠️ Error al activar la Semana 43: " + (err.message || err), "warning");
     }
   }
 }
@@ -2129,15 +2227,27 @@ let pantryStock = {
         if (saved) {
           const state = JSON.parse(saved);
           if (state.customGeneratedWeeks && typeof state.customGeneratedWeeks === 'object') {
-            window.customGeneratedWeeks = state.customGeneratedWeeks;
+            window.customGeneratedWeeks = {};
             Object.keys(state.customGeneratedWeeks).forEach(wKey => {
-              if (typeof datasets !== 'undefined' && state.customGeneratedWeeks[wKey]) {
-                datasets[wKey] = state.customGeneratedWeeks[wKey];
+              const wNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(wKey) : null;
+              if (wNum !== null && wNum > 43) return;
+              if (state.customGeneratedWeeks[wKey]) {
+                window.customGeneratedWeeks[wKey] = state.customGeneratedWeeks[wKey];
+                if (typeof datasets !== 'undefined') {
+                  datasets[wKey] = state.customGeneratedWeeks[wKey];
+                }
               }
             });
-            if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
           }
-          if (state.activeWeek && datasets[state.activeWeek]) activeWeek = state.activeWeek;
+          if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
+          if (state.activeWeek) {
+            const stateWNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(state.activeWeek) : null;
+            if (stateWNum !== null && stateWNum >= 43) {
+              activeWeek = "Semana 43 (18 al 24 de Octubre de 2026)";
+            } else if (datasets[state.activeWeek]) {
+              activeWeek = state.activeWeek;
+            }
+          }
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
 
           if (Array.isArray(state.deletedFarmItems)) {
@@ -7380,14 +7490,14 @@ function renderRecipes(day, activeDiners) {
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev15-s42-canonical-dedup-v43') {
+              if (k !== 'nutriketo-v36-6-rev16-s43-only-v44') {
                 caches.delete(k);
               }
             });
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev15-s42-canonical-dedup-v43')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev16-s43-only-v44')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();
