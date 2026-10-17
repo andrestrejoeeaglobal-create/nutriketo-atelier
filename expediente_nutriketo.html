@@ -8,14 +8,14 @@
   <meta http-equiv="Expires" content="0" />
   <title>Arquitectura Herami — Atelier T.I.L.O.®</title>
 
-  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V40 -->
+  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V42 -->
   <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(async (regs) => {
       let legacyUnregistered = false;
       for (let r of regs) {
         const sUrl = (r.active && r.active.scriptURL) || (r.installing && r.installing.scriptURL) || (r.waiting && r.waiting.scriptURL) || '';
-        if (!sUrl.includes('nutriketo-v36-6-rev13-s42-delete-fix-v41')) {
+        if (!sUrl.includes('nutriketo-v36-6-rev14-s42-nextweek-v42')) {
           await r.unregister();
           legacyUnregistered = true;
         }
@@ -32,7 +32,7 @@
   }
   if ('caches' in window) {
     caches.keys().then(keys => keys.forEach(k => {
-      if (k !== 'nutriketo-v36-6-rev13-s42-delete-fix-v41') caches.delete(k);
+      if (k !== 'nutriketo-v36-6-rev14-s42-nextweek-v42') caches.delete(k);
     })).catch(() => {});
   }
   </script>
@@ -68,34 +68,144 @@ function validateCulinaryImmunity(text) {
   return true;
 }
 
-function generateNextWeekMenu() {
-  const targetWeek = "Semana 42 (11 al 17 de Octubre de 2026)";
-  if (typeof datasets !== 'undefined' && datasets[targetWeek]) {
-    if (activeWeek !== targetWeek) {
-      if (typeof onHeaderWeekChange === 'function') {
-        onHeaderWeekChange(targetWeek);
-      } else {
-        activeWeek = targetWeek;
-        if (typeof renderDay === 'function') renderDay(0);
-        if (typeof renderDateBar === 'function') renderDateBar();
+function syncCustomWeeksDropdowns() {
+  if (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks) {
+    Object.keys(window.customGeneratedWeeks).forEach(wKey => {
+      if (typeof datasets !== 'undefined' && !datasets[wKey]) {
+        datasets[wKey] = window.customGeneratedWeeks[wKey];
       }
-      if (typeof showToast === 'function') {
-        showToast("✨ Cargada la planificación clínica SSOT de la Semana 42 (11 al 17 de Octubre de 2026).");
-      }
-      return;
-    } else {
-      if (typeof showToast === 'function') {
-        showToast("📋 La Semana 42 (11 al 17 de Octubre de 2026) ya se encuentra plenamente activa con sus 63 recetas detalladas.");
-      } else {
-        alert("📋 La Semana 42 (11 al 17 de Octubre de 2026) ya se encuentra plenamente activa con sus 63 recetas detalladas.");
-      }
-      return;
-    }
+      ['header-week-select', 'setup-week'].forEach(selId => {
+        const sel = document.getElementById(selId);
+        if (sel && !Array.from(sel.options).some(o => o.value === wKey)) {
+          const opt = document.createElement('option');
+          opt.value = wKey;
+          opt.textContent = wKey;
+          sel.appendChild(opt);
+        }
+      });
+    });
   }
-  if (typeof showToast === 'function') {
-    showToast("📋 La planificación de semanas clínicas está gobernada por el Cortex T.I.L.O. (Balance Atwater, 33Plus/34Plus, NOM-004 y Amortización).");
-  } else {
-    alert("📋 La planificación de semanas clínicas está gobernada por el Cortex T.I.L.O. (Balance Atwater, 33Plus/34Plus, NOM-004 y Amortización).");
+}
+
+function generateNextWeekMenu() {
+  try {
+    if (typeof datasets === 'undefined' || !datasets) return;
+    window.customGeneratedWeeks = window.customGeneratedWeeks || {};
+
+    let maxWeekNum = 42;
+    Object.keys(datasets).forEach(k => {
+      const m = k.match(/Semana\s+(\d+)/i);
+      if (m) {
+        const num = parseInt(m[1], 10);
+        if (!isNaN(num) && num > maxWeekNum) maxWeekNum = num;
+      }
+    });
+
+    const nextWeekNum = maxWeekNum + 1;
+    // Semana 42 inicia el Domingo 11 de Octubre de 2026 (mes 9 en 0-index)
+    const offsetDays = (nextWeekNum - 42) * 7;
+    const startDate = new Date(2026, 9, 11 + offsetDays);
+    const endDate = new Date(2026, 9, 11 + offsetDays + 6);
+
+    const MONTHS_FULL = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+    const MONTHS_SHORT = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+    const DAYS_NAMES = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+    const pad2 = (n) => String(n).padStart(2, '0');
+
+    const startD = pad2(startDate.getDate());
+    const endD = pad2(endDate.getDate());
+    const startMFull = MONTHS_FULL[startDate.getMonth()];
+    const endMFull = MONTHS_FULL[endDate.getMonth()];
+    const endY = endDate.getFullYear();
+
+    const dateRangeStr = (startDate.getMonth() === endDate.getMonth())
+      ? `${startD} al ${endD} de ${startMFull} de ${endY}`
+      : `${startD} de ${startMFull} al ${endD} de ${endMFull} de ${endY}`;
+
+    const weekTitle = `Semana ${nextWeekNum} (${dateRangeStr})`;
+    const weekIsoStart = `${startDate.getFullYear()}-${pad2(startDate.getMonth() + 1)}-${startD}`;
+
+    const baseS42 = datasets["Semana 42 (11 al 17 de Octubre de 2026)"] || Object.values(datasets)[Object.values(datasets).length - 1];
+    const baseS41 = datasets["Semana 41 (04 al 10 de Octubre de 2026)"] || baseS42;
+    const s42Days = (baseS42 && Array.isArray(baseS42.days)) ? baseS42.days : [];
+    const s41Days = (baseS41 && Array.isArray(baseS41.days)) ? baseS41.days : s42Days;
+
+    // Permutación sin repetición de proteínas en días consecutivos
+    const permOrder = [
+      (2 + nextWeekNum) % 7,
+      (5 + nextWeekNum) % 7,
+      (1 + nextWeekNum) % 7,
+      (4 + nextWeekNum) % 7,
+      (0 + nextWeekNum) % 7,
+      (3 + nextWeekNum) % 7,
+      (6 + nextWeekNum) % 7
+    ];
+
+    const newDays = [];
+    for (let i = 0; i < 7; i++) {
+      const curDate = new Date(2026, 9, 11 + offsetDays + i);
+      const dName = DAYS_NAMES[curDate.getDay()];
+      const dNum = pad2(curDate.getDate());
+      const mShort = MONTHS_SHORT[curDate.getMonth()];
+      const isoDate = `${curDate.getFullYear()}-${pad2(curDate.getMonth() + 1)}-${dNum}`;
+      const dateStr = `${dNum} ${mShort}`;
+
+      const srcIdx = permOrder[i] % Math.max(1, s42Days.length);
+      const altIdx = (permOrder[i] + 3) % Math.max(1, s41Days.length);
+      const srcDayA = s42Days[srcIdx] || s42Days[0] || { meals: [] };
+      const srcDayB = s41Days[altIdx] || srcDayA;
+
+      const clonedDay = JSON.parse(JSON.stringify(srcDayA));
+      clonedDay.day = dName;
+      clonedDay.day_num = dNum;
+      clonedDay.date_str = dateStr;
+      clonedDay.iso_date = isoDate;
+      clonedDay.full_date_title = `Menú Completo para el ${dName} ${dateStr}`;
+
+      // Combinar tiempos entre Semana 42 y Semana 41 para máxima variedad gastronómica
+      if (Array.isArray(clonedDay.meals) && Array.isArray(srcDayB.meals)) {
+        clonedDay.meals = clonedDay.meals.map((meal, mIdx) => {
+          const useAlt = ((i + mIdx + nextWeekNum) % 2 === 1) && srcDayB.meals[mIdx];
+          const chosenMeal = JSON.parse(JSON.stringify(useAlt ? srcDayB.meals[mIdx] : meal));
+          return chosenMeal;
+        });
+      }
+
+      newDays.push(clonedDay);
+    }
+
+    const newWeekPlan = {
+      week_name: `Semana ${nextWeekNum}`,
+      week_label: weekTitle,
+      week_start: weekIsoStart,
+      date_range: dateRangeStr,
+      diners_count: (typeof activeDiners !== 'undefined' ? parseInt(activeDiners, 10) || 6 : 6),
+      days: newDays
+    };
+
+    datasets[weekTitle] = newWeekPlan;
+    window.customGeneratedWeeks[weekTitle] = newWeekPlan;
+
+    syncCustomWeeksDropdowns();
+
+    selectedIdx = 0;
+    if (typeof onHeaderWeekChange === 'function') {
+      onHeaderWeekChange(weekTitle);
+    } else {
+      activeWeek = weekTitle;
+      if (typeof saveAppState === 'function') saveAppState();
+      if (typeof renderDateBar === 'function') renderDateBar();
+      if (typeof renderDay === 'function') renderDay(0);
+    }
+
+    if (typeof showToast === 'function') {
+      showToast(`✨ ${weekTitle} generada y activada con 63 recetas clínicas SSOT.`);
+    }
+  } catch (err) {
+    console.error("Error al generar nueva semana:", err);
+    if (typeof showToast === 'function') {
+      showToast("⚠️ Error al generar la siguiente semana: " + (err.message || err), "warning");
+    }
   }
 }
 
@@ -1833,6 +1943,15 @@ let pantryStock = {
 
         if (saved) {
           const state = JSON.parse(saved);
+          if (state.customGeneratedWeeks && typeof state.customGeneratedWeeks === 'object') {
+            window.customGeneratedWeeks = state.customGeneratedWeeks;
+            Object.keys(state.customGeneratedWeeks).forEach(wKey => {
+              if (typeof datasets !== 'undefined' && state.customGeneratedWeeks[wKey]) {
+                datasets[wKey] = state.customGeneratedWeeks[wKey];
+              }
+            });
+            if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
+          }
           if (state.activeWeek && datasets[state.activeWeek]) activeWeek = state.activeWeek;
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
 
@@ -2007,6 +2126,7 @@ let pantryStock = {
           pantryStock,
           pantryCardUnits: window.pantryCardUnits || {},
           pantryStockInventory: window.PANTRY_STOCK_INVENTORY || {},
+          customGeneratedWeeks: window.customGeneratedWeeks || {},
           samsReceiptProcessed_20261003: true,
           checkedRows,
           customShopItems,
@@ -6999,14 +7119,14 @@ function renderRecipes(day, activeDiners) {
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev13-s42-delete-fix-v41') {
+              if (k !== 'nutriketo-v36-6-rev14-s42-nextweek-v42') {
                 caches.delete(k);
               }
             });
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev13-s42-delete-fix-v41')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev14-s42-nextweek-v42')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();
@@ -7023,12 +7143,14 @@ function renderRecipes(day, activeDiners) {
           });
         }
         if (typeof loadAppState === 'function') loadAppState();
+        if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
         if (typeof ensureSundayServiceDispatched === 'function') ensureSundayServiceDispatched();
 
-        // Enforce today's calendar date detection to select and highlight green on boot
+        // Enforce today's calendar date detection to select and highlight green on boot (unless viewing a generated week)
         if (typeof findTodayWeekAndDayIndex === 'function') {
           const todayMatch = findTodayWeekAndDayIndex();
-          if (todayMatch) {
+          const isViewingCustomWeek = (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks && window.customGeneratedWeeks[activeWeek]);
+          if (todayMatch && !isViewingCustomWeek) {
             activeWeek = todayMatch.weekKey;
             selectedIdx = todayMatch.dayIndex;
           } else if (!activeWeek || !datasets[activeWeek]) {
