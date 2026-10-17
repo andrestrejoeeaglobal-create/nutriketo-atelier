@@ -686,8 +686,8 @@
           "net_carbs_g": 4.2,
           "fiber_g": 6.3,
           "starter_name": "Ensalada Fresca de Espinacas Tiernas y Arúgula de la Granja con Vinagreta Cítrica VEVO",
-          "main_dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Cremosa de Chile Chipotle y Crema Ácida",
-          "dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Cremosa de Chile Chipotle y Crema Ácida",
+          "main_dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja",
+          "dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja",
           "side_dish_name": "Espárragos Verdes de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO",
           "starter": {
             "title": "Ensalada Fresca de Espinacas Tiernas y Arúgula de la Granja con Vinagreta Cítrica VEVO",
@@ -743,14 +743,14 @@
             ]
           },
           "main": {
-            "title": "Albóndigas de Carne Molida de Res al Horno en Salsa Cremosa de Chile Chipotle y Crema Ácida",
+            "title": "Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja",
             "technique": "roast_simmer",
-            "note": "Albóndigas jugosas elaboradas con carne molida de alacena bañadas en emulsión tersa de crema ácida y chile chipotle de alacena.",
+            "note": "Albóndigas jugosas elaboradas con carne molida de alacena bañadas en emulsión 100% suave (cero picante irritante) de crema ácida, queso Philadelphia y cilantro fresco de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Sellado al horno a 190°C por 12 minutos y baño en salsa emulsionada a 75°C.",
-              "flavor_and_aromatics": "Ahumado suave del chile chipotle equilibrado con la riqueza láctica de la crema ácida.",
-              "textural_architecture": "Albóndigas tiernas y jugosas cubiertas por una salsa aterciopelada.",
-              "critical_control_points": "No hervir la salsa una vez incorporada la crema ácida para mantener su tersura."
+              "thermodynamics": "Sellado al horno a 190°C por 12 minutos y baño en salsa láctea emulsionada a 75°C.",
+              "flavor_and_aromatics": "Riqueza láctica aterciopelada de la crema ácida y el queso Philadelphia con notas herbales frescas de cilantro de la granja.",
+              "textural_architecture": "Albóndigas tiernas y jugosas cubiertas por una salsa cremosa y sedosa libre de capsaicina.",
+              "critical_control_points": "No hervir la salsa una vez incorporada la crema ácida y el queso Philadelphia para mantener su tersura."
             },
             "ingredients": [
               {
@@ -768,10 +768,17 @@
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Chile chipotle",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso Philadelphia",
                 "per_guest": 15,
                 "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco",
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "g"
               },
               {
@@ -798,8 +805,8 @@
             ],
             "steps": [
               "Sazonar la carne molida de alacena con sal con ajo y pimienta negra, formar las albóndigas y hornearlas a 190°C durante 12 minutos.",
-              "Licuar la crema ácida con el chile chipotle y calentar suavemente en sartén con la mantequilla.",
-              "Bañar las albóndigas calientes con la salsa cremosa y servir."
+              "Licuar la crema ácida con el queso Philadelphia y el cilantro fresco de la granja; calentar suavemente en sartén con la mantequilla a fuego mínimo.",
+              "Bañar las albóndigas calientes con la salsa cremosa suave y servir."
             ]
           },
           "side": {
@@ -1868,7 +1875,7 @@
           "starter_name": "Abanico de Aguacate Hass de Alacena con Limón Real, Sal Marina y Aceite VEVO",
           "main_dish_name": "Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Espárragos de la Granja",
           "dish_name": "Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Espárragos de la Granja",
-          "side_dish_name": "Infusión Relajante de Manzanilla y Flor de Jamaica (≤60°C) con Fórmula Reparadora 34Plus®",
+          "side_dish_name": "Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Abanico de Aguacate Hass de Alacena con Limón Real, Sal Marina y Aceite VEVO",
             "technique": "raw_assembly",
@@ -1982,13 +1989,13 @@
             ]
           },
           "side": {
-            "title": "Infusión Relajante de Manzanilla y Flor de Jamaica (≤60°C) con Fórmula Reparadora 34Plus®",
+            "title": "Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus®",
             "technique": "herbal_infusion",
-            "note": "Infusión botánica sedante de manzanilla y flor de Jamaica de alacena enriquecida con la Toma 3 de AminoSinergix®.",
+            "note": "Infusión botánica sedante libre de diuréticos elaborada con manzanilla y canela molida de alacena, enriquecida con la Toma 3 de AminoSinergix®.",
             "coct_reasoning": {
               "thermodynamics": "Extracción herbal a 85°C y descenso térmico a ≤60°C antes de añadir AminoSinergix®.",
-              "flavor_and_aromatics": "Toque rubí ácido de la Jamaica en armonía con el dulzor floral de la manzanilla.",
-              "textural_architecture": "Tisana cálida y ligera.",
+              "flavor_and_aromatics": "Notas cálidas y aromáticas de canela en armonía con el dulzor floral sedante de la manzanilla.",
+              "textural_architecture": "Tisana cálida, reconfortante y no diurética para proteger el sueño profundo.",
               "critical_control_points": "Mantener la temperatura ≤60°C al disolver 34Plus®."
             },
             "ingredients": [
@@ -2001,9 +2008,9 @@
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Flor de Jamaica molida en polvo",
-                "per_guest": 2,
-                "amount": 12,
+                "name": "Canela molida",
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               },
               {
@@ -2022,7 +2029,7 @@
               }
             ],
             "steps": [
-              "Infusionar la manzanilla y la flor de Jamaica de alacena en agua a 85°C por 5 minutos y colar.",
+              "Infusionar la manzanilla y la canela molida de alacena en agua a 85°C por 5 minutos y colar.",
               "Templar a 58°C, disolver la dosis de AminoSinergix® (34Plus®) y servir."
             ]
           }
@@ -3413,7 +3420,7 @@
           "starter_name": "Consomé Nocturno de Calabacita Tierna de la Granja con Cilantro Fresco y Limón Real",
           "main_dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
           "dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
-          "side_dish_name": "Infusión Nocturna de Manzanilla y Flor de Jamaica (≤60°C) con Fórmula Reparadora 34Plus®",
+          "side_dish_name": "Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Consomé Nocturno de Calabacita Tierna de la Granja con Cilantro Fresco y Limón Real",
             "technique": "simmer_broth",
@@ -3541,13 +3548,13 @@
             ]
           },
           "side": {
-            "title": "Infusión Nocturna de Manzanilla y Flor de Jamaica (≤60°C) con Fórmula Reparadora 34Plus®",
+            "title": "Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus®",
             "technique": "herbal_infusion",
-            "note": "Elixir nocturno con la Toma 3 de AminoSinergix®.",
+            "note": "Elixir nocturno sedante libre de diuréticos con manzanilla, tomillo aromático de alacena, gotas de limón de la granja y la Toma 3 de AminoSinergix®.",
             "coct_reasoning": {
-              "thermodynamics": "Infusión floral a 85°C templada a ≤60°C.",
-              "flavor_and_aromatics": "Aroma relajante de manzanilla y Jamaica.",
-              "textural_architecture": "Infusión cálida y sedosa.",
+              "thermodynamics": "Infusión floral y herbal a 85°C templada a ≤60°C.",
+              "flavor_and_aromatics": "Aroma relajante de manzanilla, tomillo suave y toque cítrico fresco de la granja.",
+              "textural_architecture": "Infusión cálida y sedosa sin efecto diurético nocturno.",
               "critical_control_points": "Disolver AminoSinergix® estrictamente a ≤60°C."
             },
             "ingredients": [
@@ -3560,9 +3567,16 @@
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Flor de Jamaica molida en polvo",
-                "per_guest": 1,
-                "amount": 6,
+                "name": "Tomillo",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "g"
               },
               {
@@ -3581,8 +3595,8 @@
               }
             ],
             "steps": [
-              "Infusionar la manzanilla y flor de Jamaica en agua a 85°C durante 5 minutos y colar.",
-              "Templar a 58°C, disolver la dosis de AminoSinergix® (34Plus®) y servir."
+              "Infusionar la manzanilla y el tomillo de alacena en agua a 85°C durante 5 minutos y colar.",
+              "Templar a 58°C, añadir las gotas de limón de la granja, disolver la dosis de AminoSinergix® (34Plus®) y servir."
             ]
           }
         }

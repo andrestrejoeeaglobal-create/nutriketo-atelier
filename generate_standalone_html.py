@@ -2194,9 +2194,17 @@ function auditWeekPlanClientHardGate(weekPlan) {
       dayFat += f; dayProt += p; dayCarbs += c;
 
       const mealVegMap = {};
+      const mNorm = _normTextHardGate(mType);
       ['starter', 'main', 'side'].forEach(role => {
         const dish = meal[role] || {};
         const ings = Array.isArray(dish.ingredients) ? dish.ingredients : [];
+        const dishTextNorm = _normTextHardGate(dish.title) + ' ' + ings.map(i => _normTextHardGate(i.name)).join(' ');
+        if (dishTextNorm.includes('chile') || dishTextNorm.includes('chipotle')) {
+          violations.push(`[R1/R3.4] ${loc} (${role}): Detectado picante irritante ('chile'/'chipotle').`);
+        }
+        if (mNorm.includes('cena') && dishTextNorm.includes('jamaica')) {
+          violations.push(`[R6] ${loc} (${role}): Detectado diurético ('jamaica') en Cena.`);
+        }
         ings.forEach(ing => {
           if (_normTextHardGate(ing.name).includes('aguacate')) dayAvoCount++;
         });
@@ -2215,7 +2223,6 @@ function auditWeekPlanClientHardGate(weekPlan) {
       });
 
       const pInfo = _classifyMainProteinHardGate(meal.main || {});
-      const mNorm = _normTextHardGate(mType);
       if (mNorm.includes('comida')) {
         lProt = pInfo.key;
         lunchProts.push(pInfo.key);
@@ -3196,7 +3203,7 @@ window.PANTRY_STOCK_INVENTORY = {
       "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1,000 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
       "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "340 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
       "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso ricotta", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "1,920 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
-      "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical" },
+      "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
       "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
       "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },

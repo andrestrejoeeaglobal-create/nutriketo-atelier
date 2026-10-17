@@ -74,7 +74,6 @@ DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
     "Nuez de la India": (100.0, "g"),
     "Ajonjolí": (50.0, "g"),
     "Aceite de oliva": (400.0, "ml"),
-    "Chile chipotle": (1320.0, "g"),
     "Alcaparras": (200.0, "g"),
     "Aceitunas manzanilla": (175.0, "g"),
     "Sal de mar": (3000.0, "g"),
@@ -118,7 +117,7 @@ FORBIDDEN_INGREDIENT_TOKENS = [
     "azucar", "miel", "jarabe", "sacarosa", "maltitol", "eritritol", "estevia", "stevia",
     "higo", "durazno", "platano", "mango",
     "frijol", "arroz", "maiz", "trigo", "harina de trigo", "avena", "quinoa", "papa", "lenteja", "garbanzo",
-    "chile serrano", "jalapeno", "habanero", "paprika picante",
+    "chile", "chipotle", "chile serrano", "jalapeno", "habanero", "paprika picante",
 ]
 
 WEEKDAY_NAMES_REGEX = re.compile(
@@ -376,8 +375,14 @@ def audit_week_plan(
                 for forbidden in FORBIDDEN_INGREDIENT_TOKENS:
                     if _strip_accents(forbidden) in title_and_ings_text:
                         violations.append(
-                            f"[R1] {c_label}: Detectado insumo prohibido '{forbidden}'."
+                            f"[R1/R3.4] {c_label}: Detectado insumo prohibido o picante irritante '{forbidden}'."
                         )
+
+                # [R6] Cero diuréticos en Cena (prohibido usar Flor de Jamaica en la noche)
+                if _strip_accents(m_type) == "cena" and "jamaica" in title_and_ings_text:
+                    violations.append(
+                        f"[R6] {c_label}: Prohibido usar diuréticos ('jamaica') en infusiones o platos de Cena."
+                    )
 
                 # [R5] Conteo diario de Aguacate en los 9 tiempos del día
                 for ing in ings:
