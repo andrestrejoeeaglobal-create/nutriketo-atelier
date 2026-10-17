@@ -16,6 +16,21 @@ from app.schemas import (
     MealNutritionFactTable, NutritionFactItem, ClinicalGlycemicSection, MealGlycemicSynergy, FoodGlycemicAnalysis
 )
 from app.services.inventory_master import InventorySyncMaster
+from app.services.menu_hard_gate_auditor import (
+    audit_week_plan,
+    assert_zero_violations,
+    generate_validated_week_plan,
+)
+
+
+def validate_weekly_menu_hard_gate(week_data: dict, pantry_stock: dict = None, farm_harvest: list = None) -> dict:
+    """
+    Compuerta Dura (Hard-Gate) en keto_architect:
+    Ejecuta `assert_zero_violations` inspeccionando `ingredients[]` de las 63 recetas ([R1]-[R8]).
+    Lanza `RuntimeError` si existe siquiera 1 violación.
+    """
+    return assert_zero_violations(week_data, pantry_stock=pantry_stock, farm_harvest=farm_harvest)
+
 
 def compile_dynamic_prep_phases(dish_name: str, approved_ingredients: List[Ingredient], diners_count: int = 6) -> DynamicPrepPhases:
     """

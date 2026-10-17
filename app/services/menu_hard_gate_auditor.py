@@ -1,0 +1,976 @@
+"""
+Motor Universal de Auditoría Hard-Gate (V16.0 — Arquitectura Herami / Atelier T.I.L.O.®)
+=========================================================================================
+Valida determinísticamente cualquier plan semanal (`week_data`) inspeccionando directamente
+los `ingredients[]`, `steps[]`, `title`, `note` y `technique` de las 63 recetas (21 servicios x 3 tiempos)
+contra las 8 Reglas Duras Canónicas [R1]–[R8] y reconciliando matemáticamente el BOM Tridimensional.
+"""
+
+import json
+import re
+import unicodedata
+from typing import Dict, List, Any, Optional, Tuple
+
+
+def _strip_accents(text: str) -> str:
+    if not text:
+        return ""
+    return "".join(
+        c for c in unicodedata.normalize("NFD", str(text))
+        if unicodedata.category(c) != "Mn"
+    ).lower().strip()
+
+
+# ---------------------------------------------------------------------------
+# INVENTARIO CANÓNICO BASE (ALACENA Y GRANJA EL HERAMI)
+# ---------------------------------------------------------------------------
+DEFAULT_FARM_HARVEST: List[str] = [
+    "Espinacas frescas",
+    "Calabacitas verdes tiernas",
+    "Brócoli fresco",
+    "Espárragos verdes",
+    "Nopales tiernos",
+    "Ejotes frescos",
+    "Cilantro fresco",
+    "Arúgula fresca",
+    "Coliflor fresca",
+    "Limones agrios frescos de la granja",
+    "Nuez pecana fresca de la granja",
+]
+
+DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
+    "Huevo": (105.0, "piezas"),
+    "Pechuga de pollo": (3454.0, "g"),
+    "Flat steak": (1885.0, "g"),
+    "Carne molida": (1680.0, "g"),
+    "Lomo de salmón": (1385.0, "g"),
+    "Fajitas de mojarra": (907.0, "g"),
+    "Filete de atún": (700.0, "g"),
+    "Atún en agua": (700.0, "g"),
+    "Sardinas": (1700.0, "g"),
+    "Queso cottage": (3880.0, "g"),
+    "Yogur griego": (3880.0, "g"),
+    "Queso ricotta": (1920.0, "g"),
+    "Queso manchego": (1200.0, "g"),
+    "Queso Philadelphia": (720.0, "g"),
+    "Queso de cabra": (500.0, "g"),
+    "Crema ácida": (960.0, "g"),
+    "Mayonesa": (1000.0, "g"),
+    "Leche de coco": (960.0, "ml"),
+    "Mantequilla": (290.0, "g"),
+    "Fresas": (1000.0, "g"),
+    "Zarzamora": (1010.0, "g"),
+    "Frambuesas": (340.0, "g"),
+    "Champiñón": (2200.0, "g"),
+    "Lechuga": (9.0, "piezas"),
+    "Jitomate": (9.0, "piezas"),
+    "Morrón": (7.0, "piezas"),
+    "Cebolla": (9.0, "piezas"),
+    "Flor de calabaza": (1.0, "manojo"),
+    "Aguacate": (13.0, "piezas"),
+    "Semillas y nueces mixtas": (960.0, "g"),
+    "Almendras fileteadas": (200.0, "g"),
+    "Pistaches": (100.0, "g"),
+    "Nuez de la India": (100.0, "g"),
+    "Ajonjolí": (50.0, "g"),
+    "Aceite de oliva": (400.0, "ml"),
+    "Chile chipotle": (1320.0, "g"),
+    "Alcaparras": (200.0, "g"),
+    "Aceitunas manzanilla": (175.0, "g"),
+    "Sal de mar": (3000.0, "g"),
+    "Sal con ajo": (100.0, "g"),
+    "Orégano": (150.0, "g"),
+    "Pimienta negra": (70.0, "g"),
+    "Canela molida": (750.0, "g"),
+    "Cúrcuma": (100.0, "g"),
+    "Hierbas finas": (25.0, "g"),
+    "Tomillo": (20.0, "g"),
+    "Manzanilla": (50.0, "g"),
+    "Té chai": (70.0, "g"),
+    "Flor de Jamaica molida en polvo": (200.0, "g"),
+    "Grenetina": (112.0, "g"),
+    "MultiSinergix®": (300.0, "g"),
+    "AminoSinergix®": (200.0, "g"),
+}
+
+# Insumos de cocina libre (0 costo mercado) o de compra neta planificada en Mercado
+FREE_KITCHEN_STAPLES = {
+    "fondo claro de pollo",
+    "agua purificada",
+}
+
+KNOWN_MARKET_PURCHASE_ITEMS = {
+    "semillas de chia organicas",
+    "huevo",
+    "mantequilla",
+    "aceite de oliva",
+    "manzanilla",
+    "grenetina",
+    "multisinergix",
+    "aminosinergix",
+    "33plus",
+    "34plus",
+}
+
+
+FORBIDDEN_INGREDIENT_TOKENS = [
+    "cerdo", "puerco", "tocino de cerdo", "jamon de cerdo", "manteca de cerdo", "chicharron",
+    "azucar", "miel", "jarabe", "sacarosa", "maltitol", "eritritol", "estevia", "stevia",
+    "higo", "durazno", "platano", "mango",
+    "frijol", "arroz", "maiz", "trigo", "harina de trigo", "avena", "quinoa", "papa", "lenteja", "garbanzo",
+    "chile serrano", "jalapeno", "habanero", "paprika picante",
+]
+
+WEEKDAY_NAMES_REGEX = re.compile(
+    r"\b(lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\b",
+    re.IGNORECASE,
+)
+
+# Diccionario de raíces de arquetipos culinarios [R3]
+ARCHETYPE_PATTERNS: List[Tuple[str, List[str]]] = [
+    ("fajitas", ["fajita", "fajitas"]),
+    ("tamagoyaki", ["tamagoyaki", "rollo tamagoyaki"]),
+    ("omelette", ["omelette"]),
+    ("frittata", ["frittata"]),
+    ("cazuela", ["cazuela", "cocotte", "shakshuka"]),
+    ("anillo", ["en anillo", "anillo de"]),
+    ("cilbir", ["cilbir", "çılbır", "turcos pochados"]),
+    ("estrellados", ["estrellado", "estrellados", "sunny"]),
+    ("albondigas", ["albondiga", "albondigas"]),
+    ("hamburguesa", ["hamburguesa", "hamburguesas"]),
+    ("carpaccio", ["carpaccio"]),
+    ("timbal", ["timbal"]),
+    ("salpicon", ["salpicon"]),
+    ("barquitas", ["barquita", "barquitas", "barcas"]),
+    ("supremas", ["suprema", "supremas"]),
+    ("papillote", ["papillote"]),
+    ("rollitos", ["rollito", "rollitos", "roulade"]),
+    ("medallones", ["medallon", "medallones", "tataki"]),
+    ("juliana_wok", ["juliana", "wok"]),
+    ("corte_parrilla", ["corte de", "a la parrilla"]),
+    ("portobello_relleno", ["portobello al horno", "champinones portobello al horno"]),
+    ("salmon_costra", ["lomo de salmon", "costra de pistaches"]),
+    ("lomos_horno", ["lomos de sardina", "sardina del pacifico"]),
+]
+
+# Vegetales secundarios/base monitoreados para [R4] (intra-servicio e intra-día)
+VEGETABLE_FAMILIES: Dict[str, List[str]] = {
+    "flor_de_calabaza": ["flor de calabaza"],
+    "esparragos": ["esparrago", "esparragos"],
+    "brocoli": ["brocoli"],
+    "coliflor": ["coliflor"],
+    "ejotes": ["ejote", "ejotes"],
+    "calabacitas": ["calabacita", "calabacitas", "zucchini", "zoodles"],
+    "chayote": ["chayote", "chayotes"],
+    "nopales": ["nopal", "nopales"],
+    "espinacas": ["espinaca", "espinacas"],
+    "arugula": ["arugula"],
+    "morron": ["morron", "pimiento"],
+    "lechuga": ["lechuga"],
+    "champinon": ["champinon", "portobello"],
+}
+
+FRUIT_FAMILIES: Dict[str, List[str]] = {
+    "fresas": ["fresa", "fresas"],
+    "zarzamora": ["zarzamora", "zarzamoras"],
+    "frambuesas": ["frambuesa", "frambuesas"],
+    "arandanos": ["arandano", "arandanos"],
+    "granada": ["granada", "arilos de granada"],
+    "pitaya": ["pitaya", "pitahaya"],
+}
+
+
+def extract_dish_archetype(dish: Dict[str, Any]) -> str:
+    title_norm = _strip_accents(dish.get("title") or dish.get("name") or "")
+    tech_norm = _strip_accents(dish.get("technique") or dish.get("cooking_technique") or "")
+    for arch_key, patterns in ARCHETYPE_PATTERNS:
+        for pat in patterns:
+            if _strip_accents(pat) in title_norm:
+                return arch_key
+    return tech_norm or title_norm[:24]
+
+
+def extract_veg_and_fruit_families(dish: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+    vegs = set()
+    fruits = set()
+    for ing in dish.get("ingredients", []):
+        ing_norm = _strip_accents(ing.get("name", ""))
+        for v_key, tokens in VEGETABLE_FAMILIES.items():
+            if any(tok in ing_norm for tok in tokens):
+                vegs.add(v_key)
+        for f_key, tokens in FRUIT_FAMILIES.items():
+            if any(tok in ing_norm for tok in tokens):
+                fruits.add(f_key)
+    return sorted(vegs), sorted(fruits)
+
+
+def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Inspecciona `main_dish['ingredients']` para determinar la proteína principal real,
+    su familia biológica y si es circadiana (apta para cena).
+    """
+    ing_names = [_strip_accents(i.get("name", "")) for i in main_dish.get("ingredients", [])]
+    joined = " | ".join(ing_names)
+
+    if "flat steak" in joined or (re.search(r"\bres\b", joined) and "molida" not in joined):
+        return {"key": "flat_steak", "family": "res", "circadian_dinner_ok": False, "is_dense": True}
+    if "carne molida" in joined:
+        return {"key": "carne_molida", "family": "res", "circadian_dinner_ok": False, "is_dense": True}
+    if "salmon" in joined:
+        return {"key": "salmon", "family": "pescado_azul", "circadian_dinner_ok": False, "is_dense": True}
+    if "sardina" in joined:
+        return {"key": "sardinas", "family": "pescado_azul", "circadian_dinner_ok": False, "is_dense": True}
+    if "pechuga de pollo" in joined or re.search(r"\bpollo\b", joined):
+        return {"key": "pechuga_pollo", "family": "pollo", "circadian_dinner_ok": True, "is_dense": False}
+    if re.search(r"\bpavo\b", joined):
+        return {"key": "pavo", "family": "pavo", "circadian_dinner_ok": True, "is_dense": False}
+    if "mojarra" in joined or "robalo" in joined or "huachinango" in joined or "pescado blanco" in joined:
+        return {"key": "mojarra", "family": "pescado_blanco", "circadian_dinner_ok": True, "is_dense": False}
+    if "atun en agua" in joined:
+        return {"key": "atun_agua", "family": "atun", "circadian_dinner_ok": True, "is_dense": False}
+    if "filete de atun" in joined or re.search(r"\batun\b", joined):
+        return {"key": "filete_atun", "family": "atun", "circadian_dinner_ok": True, "is_dense": False}
+    if "champinon" in joined or "portobello" in joined:
+        return {"key": "champinon", "family": "fungica", "circadian_dinner_ok": True, "is_dense": False}
+    if "queso cottage" in joined:
+        return {"key": "queso_cottage", "family": "lactea_ligera", "circadian_dinner_ok": True, "is_dense": False}
+    if "huevo" in joined:
+        return {"key": "huevo", "family": "huevo", "circadian_dinner_ok": True, "is_dense": False}
+
+    return {"key": "otra", "family": "otra", "circadian_dinner_ok": True, "is_dense": False}
+
+
+def is_main_dish_metabolically_dense(main_dish: Dict[str, Any]) -> bool:
+    """
+    Determina si un plato fuerte es DENSO según sus ingredientes reales:
+    - Contiene carne de res (`flat steak`, `carne molida`), pescado azul (`salmón`, `sardinas`),
+      o quesos/cremas densas (`queso manchego`, `queso de cabra`, `queso philadelphia`,
+      `queso ricotta`, `crema ácida`, `aguacate`).
+    """
+    for ing in main_dish.get("ingredients", []):
+        nm = _strip_accents(ing.get("name", ""))
+        if re.search(r"\bres\b", nm) or any(
+            k in nm
+            for k in [
+                "flat steak", "carne molida", "sirloin", "ribeye", "arrachera",
+                "salmon", "sardina",
+                "queso manchego", "queso de cabra", "queso philadelphia", "queso ricotta",
+                "crema acida", "aguacate", "mayonesa"
+            ]
+        ):
+            return True
+    return False
+
+
+def has_heavy_lipid_or_dairy_in_side_or_starter(dish: Dict[str, Any]) -> List[str]:
+    """
+    Inspecciona `dish['ingredients']` en Entrada o Acompañamiento para detectar
+    ingredientes prohibidos cuando el plato fuerte es DENSO ([R2]).
+    """
+    heavy_found = []
+    for ing in dish.get("ingredients", []):
+        nm = _strip_accents(ing.get("name", ""))
+        if any(
+            k in nm
+            for k in [
+                "queso", "crema acida", "yogur", "mayonesa", "aguacate",
+                "tocino", "manteca"
+            ]
+        ):
+            heavy_found.append(ing.get("name", nm))
+    return heavy_found
+
+
+# ---------------------------------------------------------------------------
+# AUDITOR UNIVERSAL DE LAS 8 REGLAS DURAS [R1] - [R8]
+# ---------------------------------------------------------------------------
+def audit_week_plan(
+    week_data: Dict[str, Any],
+    pantry_stock: Optional[Dict[str, Tuple[float, str]]] = None,
+    farm_harvest: Optional[List[str]] = None,
+    enforce_pantry_overdraft: bool = True,
+) -> Dict[str, Any]:
+    """
+    Ejecuta la auditoría forense completa [R1]–[R8] sobre `week_data`.
+    Devuelve un diccionario con `passed` (bool), `violations` (List[str]), y `bom_summary`.
+    """
+    violations: List[str] = []
+    pantry = pantry_stock if pantry_stock is not None else DEFAULT_PANTRY_STOCK
+    harvest = farm_harvest if farm_harvest is not None else DEFAULT_FARM_HARVEST
+
+    harvest_norm_set = {_strip_accents(h) for h in harvest}
+    pantry_norm_map: Dict[str, Tuple[str, float, str]] = {
+        _strip_accents(k): (k, float(v[0]), v[1]) for k, v in pantry.items()
+    }
+
+    days = week_data.get("days", [])
+    if len(days) != 7:
+        violations.append(f"[R1] La semana debe contener exactamente 7 días (encontrados: {len(days)}).")
+
+    weekly_fat_g = 0.0
+    weekly_prot_g = 0.0
+    weekly_carbs_g = 0.0
+
+    breakfast_archetypes: Dict[str, str] = {}
+    lunch_dinner_archetypes: Dict[str, str] = {}
+    seen_main_techniques: Dict[str, str] = {}
+    seen_main_titles: Dict[str, str] = {}
+
+    lunch_proteins_by_day: List[Tuple[str, str]] = []
+    dinner_proteins_by_day: List[Tuple[str, str]] = []
+    lunch_dinner_protein_counts: Dict[str, int] = {}
+
+    bom_totals: Dict[str, Dict[str, Any]] = {}
+
+    for d_idx, day in enumerate(days):
+        day_name = day.get("day", f"Día {d_idx + 1}")
+        meals = day.get("meals", [])
+        if len(meals) != 3:
+            violations.append(f"[R1] {day_name}: Debe tener exactamente 3 servicios (encontrados: {len(meals)}).")
+            continue
+
+        day_fat = 0.0
+        day_prot = 0.0
+        day_carbs = 0.0
+
+        day_veg_to_meals: Dict[str, List[str]] = {}
+        day_avocado_locations: List[str] = []
+        day_lunch_prot_key: Optional[str] = None
+        day_dinner_prot_key: Optional[str] = None
+
+        for m_idx, meal in enumerate(meals):
+            m_type = meal.get("meal_type", f"Servicio {m_idx + 1}")
+            loc_label = f"{day_name} - {m_type}"
+
+            fat_g = float(meal.get("fat_g", 0.0))
+            prot_g = float(meal.get("protein_g", 0.0))
+            carbs_g = float(meal.get("net_carbs_g", 0.0))
+
+            # [R1] Tope estricto <= 5.0g Carbs Netos por servicio
+            if carbs_g > 5.0 or carbs_g <= 0.0:
+                violations.append(
+                    f"[R1] {loc_label}: net_carbs_g={carbs_g}g viola el umbral estricto (0 < net_carbs <= 5.0g)."
+                )
+
+            day_fat += fat_g
+            day_prot += prot_g
+            day_carbs += carbs_g
+
+            starter = meal.get("starter") or {}
+            main = meal.get("main") or {}
+            side = meal.get("side") or {}
+
+            for c_role, dish in [("starter", starter), ("main", main), ("side", side)]:
+                c_label = f"{loc_label} ({c_role}: '{dish.get('title', '')}')"
+                ings = dish.get("ingredients", [])
+                steps = dish.get("steps", [])
+                if not ings:
+                    violations.append(f"[R1] {c_label}: No contiene lista de ingredients[].")
+                if not steps:
+                    violations.append(f"[R1] {c_label}: No contiene pasos de preparación steps[].")
+
+                # Verificar ingredientes prohibidos en ingredients[] y título
+                title_and_ings_text = _strip_accents(dish.get("title", "")) + " " + " ".join(
+                    _strip_accents(i.get("name", "")) for i in ings
+                )
+                for forbidden in FORBIDDEN_INGREDIENT_TOKENS:
+                    if _strip_accents(forbidden) in title_and_ings_text:
+                        violations.append(
+                            f"[R1] {c_label}: Detectado insumo prohibido '{forbidden}'."
+                        )
+
+                # [R5] Conteo diario de Aguacate en los 9 tiempos del día
+                for ing in ings:
+                    ing_nm_norm = _strip_accents(ing.get("name", ""))
+                    if "aguacate" in ing_nm_norm:
+                        day_avocado_locations.append(c_label)
+
+                    # Acumular BOM
+                    raw_name = ing.get("name", "").strip()
+                    unit = ing.get("unit", "g").strip()
+                    amt = float(ing.get("amount", round(float(ing.get("per_guest", 0.0)) * 6, 2)))
+                    b_key = _strip_accents(raw_name)
+                    if b_key not in bom_totals:
+                        bom_totals[b_key] = {
+                            "name": raw_name,
+                            "unit": unit,
+                            "total": 0.0,
+                            "category": ing.get("category", ""),
+                        }
+                    bom_totals[b_key]["total"] = round(bom_totals[b_key]["total"] + amt, 2)
+
+                # [R7] Cero menciones a días de la semana en notas organolépticas
+                note_text = str(dish.get("note", "")) + " " + json.dumps(dish.get("coct_reasoning", {}), ensure_ascii=False)
+                m_day = WEEKDAY_NAMES_REGEX.search(note_text)
+                if m_day:
+                    violations.append(
+                        f"[R7] {c_label}: La nota organoléptica menciona un día de la semana ('{m_day.group(0)}')."
+                    )
+
+                # [R7] Coherencia bidireccional title <-> ingredients[]
+                _check_title_ingredient_coherence(c_label, dish, violations)
+
+            # [R2] Balance de Carga Metabólica (enforceMetabolicLoadBalance)
+            m_type_norm = _strip_accents(m_type)
+            if m_type_norm in ("comida", "cena") and is_main_dish_metabolically_dense(main):
+                heavy_st = has_heavy_lipid_or_dairy_in_side_or_starter(starter)
+                heavy_sd = has_heavy_lipid_or_dairy_in_side_or_starter(side)
+                if heavy_st:
+                    violations.append(
+                        f"[R2] {loc_label}: Plato principal DENSO ('{main.get('title')}') con Entrada pesada ({heavy_st})."
+                    )
+                if heavy_sd:
+                    violations.append(
+                        f"[R2] {loc_label}: Plato principal DENSO ('{main.get('title')}') con Acompañamiento pesado ({heavy_sd})."
+                    )
+
+            # [R3] Unicidad de Arquetipo Culinario y Técnica en Plato Principal
+            arch = extract_dish_archetype(main)
+            tech = _strip_accents(main.get("technique") or "")
+            m_title_norm = _strip_accents(main.get("title") or "")
+
+            if m_title_norm in seen_main_titles:
+                violations.append(
+                    f"[R3] {loc_label}: Plato principal repetido ('{main.get('title')}') ya usado en {seen_main_titles[m_title_norm]}."
+                )
+            else:
+                seen_main_titles[m_title_norm] = loc_label
+
+            if tech in seen_main_techniques:
+                violations.append(
+                    f"[R3] {loc_label}: Técnica culinaria '{tech}' repetida (ya usada en {seen_main_techniques[tech]})."
+                )
+            else:
+                seen_main_techniques[tech] = loc_label
+
+            if m_type_norm == "desayuno":
+                if arch in breakfast_archetypes:
+                    violations.append(
+                        f"[R3] {loc_label}: Arquetipo matutino '{arch}' repetido en la semana (ya usado en {breakfast_archetypes[arch]})."
+                    )
+                else:
+                    breakfast_archetypes[arch] = loc_label
+            else:
+                if arch in lunch_dinner_archetypes:
+                    violations.append(
+                        f"[R3] {loc_label}: Arquetipo culinario '{arch}' repetido en comidas/cenas (ya usado en {lunch_dinner_archetypes[arch]})."
+                    )
+                else:
+                    lunch_dinner_archetypes[arch] = loc_label
+
+            # [R4] Cero repetición de vegetal o fruta intra-servicio e intra-día
+            st_vegs, st_fruits = extract_veg_and_fruit_families(starter)
+            mn_vegs, mn_fruits = extract_veg_and_fruit_families(main)
+            sd_vegs, sd_fruits = extract_veg_and_fruit_families(side)
+
+            # Intra-servicio: ningún vegetal ni fruta se repite en 2 tiempos del mismo servicio
+            for v in set(st_vegs + mn_vegs + sd_vegs):
+                count_in_meal = (1 if v in st_vegs else 0) + (1 if v in mn_vegs else 0) + (1 if v in sd_vegs else 0)
+                if count_in_meal > 1:
+                    violations.append(
+                        f"[R4] {loc_label}: El vegetal '{v}' se repite en múltiples tiempos del mismo servicio."
+                    )
+                day_veg_to_meals.setdefault(v, []).append(m_type)
+
+            for fr in set(st_fruits + mn_fruits + sd_fruits):
+                count_fr = (1 if fr in st_fruits else 0) + (1 if fr in mn_fruits else 0) + (1 if fr in sd_fruits else 0)
+                if count_fr > 1:
+                    violations.append(
+                        f"[R4] {loc_label}: La fruta '{fr}' se repite en Entrada y Acompañamiento/Gelatina del mismo servicio."
+                    )
+
+            # Reglas específicas por tipo de servicio (Desayuno / Comida / Cena)
+            if m_type_norm == "desayuno":
+                # 3 huevos enteros por comensal y MultiSinergix en acompañamiento
+                main_ings_norm = {_strip_accents(i.get("name", "")): i for i in main.get("ingredients", [])}
+                if "huevo" not in main_ings_norm or float(main_ings_norm["huevo"].get("per_guest", 0)) != 3.0:
+                    violations.append(
+                        f"[R5] {loc_label}: El plato fuerte de desayuno debe contener exactamente 3 huevos enteros por comensal."
+                    )
+                side_ings_norm = {_strip_accents(i.get("name", "")): i for i in side.get("ingredients", [])}
+                if not any("multisinergix" in k or "33plus" in k for k in side_ings_norm):
+                    violations.append(
+                        f"[R8] {loc_label}: El acompañamiento matutino debe incluir MultiSinergix® (33Plus®)."
+                    )
+            else:
+                prot_info = classify_main_protein(main)
+                p_key = prot_info["key"]
+                lunch_dinner_protein_counts[p_key] = lunch_dinner_protein_counts.get(p_key, 0) + 1
+
+                if m_type_norm == "comida":
+                    day_lunch_prot_key = p_key
+                    lunch_proteins_by_day.append((day_name, p_key))
+                elif m_type_norm == "cena":
+                    day_dinner_prot_key = p_key
+                    dinner_proteins_by_day.append((day_name, p_key))
+                    if not prot_info["circadian_dinner_ok"]:
+                        violations.append(
+                            f"[R6] {loc_label}: Proteína '{p_key}' ({prot_info['family']}) prohibida en Cena por Regla Circadiana."
+                        )
+                    side_ings_norm = {_strip_accents(i.get("name", "")): i for i in side.get("ingredients", [])}
+                    if not any("aminosinergix" in k or "34plus" in k for k in side_ings_norm):
+                        violations.append(
+                            f"[R8] {loc_label}: El acompañamiento nocturno debe incluir AminoSinergix® (34Plus®)."
+                        )
+
+        # [R4] Intra-día: ningún vegetal secundario/base puede repetirse en dos servicios del mismo día
+        for v_key, used_meals in day_veg_to_meals.items():
+            if len(used_meals) > 1:
+                violations.append(
+                    f"[R4] {day_name}: El vegetal '{v_key}' se repite en múltiples servicios del mismo día ({', '.join(used_meals)})."
+                )
+
+        # [R5] Unicidad estricta de Aguacate (<= 1 vez por día en los 9 tiempos)
+        if len(day_avocado_locations) > 1:
+            violations.append(
+                f"[R5] {day_name}: Aguacate aparece {len(day_avocado_locations)} veces en el mismo día ({'; '.join(day_avocado_locations)}). Máximo permitido: 1."
+            )
+
+        # [R6] Comida y Cena del mismo día no pueden repetir proteína
+        if day_lunch_prot_key and day_dinner_prot_key and day_lunch_prot_key == day_dinner_prot_key:
+            violations.append(
+                f"[R6] {day_name}: Misma proteína principal ('{day_lunch_prot_key}') repetida en Comida y Cena del mismo día."
+            )
+
+        # [R1] Proporción energética cetogénica diaria (Grasa 70-78%, Proteína 20-25%, Carbs <= 5%)
+        day_kcal = (day_fat * 9.0) + (day_prot * 4.0) + (day_carbs * 4.0)
+        if day_kcal > 0:
+            f_pct = (day_fat * 9.0 / day_kcal) * 100.0
+            p_pct = (day_prot * 4.0 / day_kcal) * 100.0
+            c_pct = (day_carbs * 4.0 / day_kcal) * 100.0
+            if not (70.0 <= f_pct <= 78.0):
+                violations.append(
+                    f"[R1] {day_name}: Grasa diaria fuera de banda cetogénica ({f_pct:.1f}%, requerido 70-78%)."
+                )
+            if not (20.0 <= p_pct <= 25.0):
+                violations.append(
+                    f"[R1] {day_name}: Proteína diaria fuera de banda cetogénica ({p_pct:.1f}%, requerido 20-25%)."
+                )
+            if c_pct > 5.0:
+                violations.append(
+                    f"[R1] {day_name}: Carbohidratos netos diarios fuera de banda ({c_pct:.1f}%, requerido <= 5.0%)."
+                )
+
+        weekly_fat_g += day_fat
+        weekly_prot_g += day_prot
+        weekly_carbs_g += day_carbs
+
+    # [R6] Cero repetición de proteína en cenas consecutivas y comidas consecutivas
+    for i in range(len(dinner_proteins_by_day) - 1):
+        d1, p1 = dinner_proteins_by_day[i]
+        d2, p2 = dinner_proteins_by_day[i + 1]
+        if p1 == p2:
+            violations.append(
+                f"[R6] Cenas consecutivas ({d1} y {d2}) repiten la misma proteína principal ('{p1}')."
+            )
+    for i in range(len(lunch_proteins_by_day) - 1):
+        d1, p1 = lunch_proteins_by_day[i]
+        d2, p2 = lunch_proteins_by_day[i + 1]
+        if p1 == p2:
+            violations.append(
+                f"[R6] Comidas consecutivas ({d1} y {d2}) repiten el mismo corte proteico ('{p1}')."
+            )
+
+    # [R6] Máximo 2 apariciones de cualquier proteína en las 14 comidas/cenas
+    for p_key, cnt in lunch_dinner_protein_counts.items():
+        if cnt > 2:
+            violations.append(
+                f"[R6] La proteína '{p_key}' aparece {cnt} veces en las 14 comidas/cenas (máximo permitido: 2)."
+            )
+
+    # [R8] Reconciliación matemática exacta del BOM (incluyendo las 4 tomas diarias de Sinergix®)
+    # En recetas están incluidas Toma 2 (210g MultiSinergix®) y Toma 3 (210g AminoSinergix®).
+    # Sumamos Toma 1 (07:00 = 210g MultiSinergix®) y Toma 4 (22:30 = 210g AminoSinergix®) para el BOM total (420g + 420g).
+    for s_key, s_display in [("multisinergix", "MultiSinergix®"), ("aminosinergix", "AminoSinergix®")]:
+        matched_bom_key = next((k for k in bom_totals if s_key in k), None)
+        if matched_bom_key:
+            recipe_qty = bom_totals[matched_bom_key]["total"]
+            if abs(recipe_qty - 210.0) > 0.5:
+                violations.append(
+                    f"[R8] {s_display}: La suma en recetas de los 7 días es {recipe_qty}g (debe ser exactamente 210g = 5g x 6 comensales x 7 días)."
+                )
+            bom_totals[matched_bom_key]["total_with_protocol_4_tomas"] = round(recipe_qty + 210.0, 2)
+        else:
+            violations.append(f"[R8] No se encontró {s_display} en los ingredientes de las recetas de la semana.")
+
+    bom_reconciliation = {
+        "farm_harvest_items": [],
+        "pantry_covered_items": [],
+        "market_purchases": [],
+    }
+
+    for b_key, info in sorted(bom_totals.items()):
+        total_req = info.get("total_with_protocol_4_tomas", info["total"])
+        raw_name = info["name"]
+        unit = info["unit"]
+
+        if b_key in harvest_norm_set or b_key in FREE_KITCHEN_STAPLES:
+            bom_reconciliation["farm_harvest_items"].append({
+                "name": raw_name,
+                "required": total_req,
+                "unit": unit,
+                "source": "Granja El Herami ($0)" if b_key in harvest_norm_set else "Insumo Base de Cocina ($0)",
+                "net_to_buy": 0.0,
+            })
+        elif b_key in pantry_norm_map:
+            canon_name, stock_val, stock_unit = pantry_norm_map[b_key]
+            diff = round(total_req - stock_val, 2)
+            if diff > 0:
+                is_authorized_partial = any(km in b_key for km in KNOWN_MARKET_PURCHASE_ITEMS)
+                if enforce_pantry_overdraft and not is_authorized_partial:
+                    violations.append(
+                        f"[R8] Sobregiro de stock en Alacena para '{canon_name}': requerido={total_req} {unit}, stock={stock_val} {stock_unit} (faltante={diff} {unit})."
+                    )
+                bom_reconciliation["market_purchases"].append({
+                    "name": canon_name,
+                    "required": total_req,
+                    "stock": stock_val,
+                    "net_to_buy": diff,
+                    "unit": unit,
+                })
+            else:
+                bom_reconciliation["pantry_covered_items"].append({
+                    "name": canon_name,
+                    "required": total_req,
+                    "stock": stock_val,
+                    "remaining_stock": round(stock_val - total_req, 2),
+                    "unit": unit,
+                })
+        elif any(km in b_key for km in KNOWN_MARKET_PURCHASE_ITEMS):
+            bom_reconciliation["market_purchases"].append({
+                "name": raw_name,
+                "required": total_req,
+                "stock": 0.0,
+                "net_to_buy": total_req,
+                "unit": unit,
+            })
+        else:
+            violations.append(
+                f"[R8] Ingrediente huérfano '{raw_name}' ({total_req} {unit}): no existe en Granja El Herami, ni en Alacena Canónica, ni en Compras Netas autorizadas."
+            )
+
+
+    return {
+        "passed": len(violations) == 0,
+        "violations_count": len(violations),
+        "violations": violations,
+        "bom_summary": bom_reconciliation,
+    }
+
+
+def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violations: List[str]) -> None:
+    """
+    Verifica coherencia estricta [R7] entre las palabras clave del `title` del plato y sus `ingredients[]`.
+    """
+    title_norm = _strip_accents(dish.get("title", ""))
+    ings_norm_str = " | ".join(_strip_accents(i.get("name", "")) for i in dish.get("ingredients", []))
+
+    keyword_checks = [
+        ("fresa", "fresa"),
+        ("zarzamora", "zarzamora"),
+        ("frambuesa", "frambuesa"),
+        ("espinaca", "espinaca"),
+        ("calabacita", "calabacita"),
+        ("zoodles", "calabacita"),
+        ("brocoli", "brocoli"),
+        ("coliflor", "coliflor"),
+        ("ejote", "ejote"),
+        ("esparrago", "esparrago"),
+        ("nopal", "nopal"),
+        ("flor de calabaza", "flor de calabaza"),
+        ("aguacate", "aguacate"),
+        ("guacamole", "aguacate"),
+        ("champinon", "champinon"),
+        ("portobello", "champinon"),
+        ("salmon", "salmon"),
+        ("mojarra", "mojarra"),
+        ("sardina", "sardina"),
+        ("flat steak", "flat steak"),
+        ("carne molida", "carne molida"),
+        ("ricotta", "ricotta"),
+        ("cottage", "cottage"),
+        ("manchego", "manchego"),
+        ("cabra", "cabra"),
+        ("philadelphia", "philadelphia"),
+        ("yogur", "yogur"),
+        ("pistache", "pistache"),
+        ("almendra", "almendra"),
+        ("nuez de la india", "nuez de la india"),
+        ("nuez pecana", "nuez pecana"),
+        ("ajonjoli", "ajonjoli"),
+        ("alcaparra", "alcaparra"),
+        ("aceituna", "aceituna"),
+        ("chipotle", "chipotle"),
+        ("morron", "morron"),
+        ("jitomate", "jitomate"),
+        ("arugula", "arugula"),
+        ("lechuga", "lechuga"),
+        ("manzanilla", "manzanilla"),
+        ("jamaica", "jamaica"),
+        ("chai", "chai"),
+        ("33plus", "multisinergix"),
+        ("34plus", "aminosinergix"),
+    ]
+
+    for title_kw, ing_kw in keyword_checks:
+        if title_kw in title_norm and ing_kw not in ings_norm_str:
+            violations.append(
+                f"[R7] {c_label}: El título menciona '{title_kw}' pero no existe '{ing_kw}' en ingredients[]."
+            )
+
+    # Verificar que si hay un vegetal secundario/base en ingredients[], esté reflejado en title o note
+    title_and_note_norm = title_norm + " " + _strip_accents(dish.get("note", ""))
+    for v_key, tokens in VEGETABLE_FAMILIES.items():
+        if any(tok in ings_norm_str for tok in tokens):
+            if not any(tok in title_and_note_norm for tok in tokens):
+                violations.append(
+                    f"[R7] {c_label}: ingredients[] contiene '{v_key}' pero no se menciona ni en title ni en note."
+                )
+
+
+def assert_zero_violations(
+    week_data: Dict[str, Any],
+    pantry_stock: Optional[Dict[str, Tuple[float, str]]] = None,
+    farm_harvest: Optional[List[str]] = None,
+    enforce_pantry_overdraft: bool = True,
+) -> Dict[str, Any]:
+    """
+    Compuerta Dura (Hard-Gate) de Compilación:
+    Ejecuta `audit_week_plan` y lanza `RuntimeError` si existe siquiera 1 violación en [R1]–[R8].
+    """
+    report = audit_week_plan(
+        week_data=week_data,
+        pantry_stock=pantry_stock,
+        farm_harvest=farm_harvest,
+        enforce_pantry_overdraft=enforce_pantry_overdraft,
+    )
+    if not report["passed"]:
+        w_label = week_data.get("week_label") or week_data.get("week_name") or "Semana Desconocida"
+        formatted_errors = "\n  - ".join(report["violations"])
+        raise RuntimeError(
+            f"🚨 [HARD-GATE COMPILER ABORT] {w_label} presenta {report['violations_count']} violación(es) a las reglas canónicas [R1]-[R8]:\n  - {formatted_errors}"
+        )
+    return report
+
+
+def generate_validated_week_plan(
+    target_week_num: int,
+    base_week_data: Dict[str, Any],
+    pantry_stock: Optional[Dict[str, Tuple[float, str]]] = None,
+    farm_harvest: Optional[List[str]] = None,
+) -> Dict[str, Any]:
+    """
+    Motor de Generación por Backtracking y Satisfacción de Restricciones (CSP Solver) para Semana 44+.
+    Construye una nueva semana combinando los 7 Desayunos, 7 Comidas y 7 Cenas canónicos de tal forma que:
+    - Ningún servicio se repita en la semana (biyección exacta 7x7x7 -> BOM idéntico al 100%, 0 sobregiro [R8]).
+    - En cada día (d = 0..6), la tripleta (Desayuno_b, Comida_l, Cena_d) cumpla estrictamente:
+      * [R1] Macros diarios dentro de la banda cetogénica (Grasa 70-78%, Proteína 20-25%, Carbs <= 5%).
+      * [R4] Cero repetición de vegetal o fruta entre Desayuno, Comida y Cena del mismo día.
+      * [R5] Aguacate máximo 1 vez al día en los 9 platos sumados.
+      * [R6] Proteína de Comida != Proteína de Cena del mismo día, Comida(d) != Comida(d-1), Cena(d) != Cena(d-1).
+      * [R7] Limpieza de cualquier mención a nombres de días de la semana en notas/descripciones.
+    - Finalmente ejecuta `assert_zero_violations` sobre la semana generada antes de retornarla.
+    """
+    import copy
+    from datetime import date, timedelta
+
+    next_week_num = int(target_week_num)
+    if next_week_num == 43 and "43" in str(base_week_data.get("week_label", "")):
+        assert_zero_violations(base_week_data, pantry_stock, farm_harvest)
+        return copy.deepcopy(base_week_data)
+
+    base_days = base_week_data.get("days", [])
+    if len(base_days) != 7:
+        raise ValueError("base_week_data debe contener exactamente 7 días canónicos.")
+
+    breakfasts = [copy.deepcopy(d["meals"][0]) for d in base_days]
+    lunches = [copy.deepcopy(d["meals"][1]) for d in base_days]
+    dinners = [copy.deepcopy(d["meals"][2]) for d in base_days]
+
+    def meal_meta(meal_obj: Dict[str, Any]) -> Dict[str, Any]:
+        vegs: Set[str] = set()
+        fruits: Set[str] = set()
+        avo = 0
+        for c_key in ("starter", "main", "side"):
+            dish = meal_obj.get(c_key, {})
+            v_list, f_list = extract_veg_and_fruit_families(dish)
+            vegs.update(v_list)
+            fruits.update(f_list)
+            for ing in dish.get("ingredients", []):
+                if "aguacate" in _strip_accents(ing.get("name", "")):
+                    avo += 1
+        prot_info = classify_main_protein(meal_obj.get("main", {}))
+        return {
+            "vegs": vegs,
+            "fruits": fruits,
+            "avo": avo,
+            "prot": prot_info["key"],
+            "fat": float(meal_obj.get("fat_g", 0.0)),
+            "prot_g": float(meal_obj.get("protein_g", 0.0)),
+            "carbs": float(meal_obj.get("net_carbs_g", 0.0)),
+        }
+
+    b_meta = [meal_meta(m) for m in breakfasts]
+    l_meta = [meal_meta(m) for m in lunches]
+    d_meta = [meal_meta(m) for m in dinners]
+
+    # Orden de exploración determinista pero desplazado según target_week_num para máxima variedad entre Semana 44, 45, 46...
+    seed_shift = max(1, next_week_num - 43)
+    b_candidates_order = [(i + seed_shift) % 7 for i in range(7)]
+    l_candidates_order = [(i + seed_shift * 2 + 1) % 7 for i in range(7)]
+    d_candidates_order = [(i + seed_shift * 3 + 2) % 7 for i in range(7)]
+
+    used_b = [False] * 7
+    used_l = [False] * 7
+    used_d = [False] * 7
+    assignment: List[Tuple[int, int, int]] = []
+
+    def is_valid_day_triplet(day_idx: int, b_i: int, l_i: int, d_i: int) -> bool:
+        # Evitar que en la nueva semana todos los días caigan en el mismo índice que la semana 43
+        if next_week_num != 43 and day_idx == 0 and b_i == 0 and l_i == 0 and d_i == 0:
+            return False
+
+        bm, lm, dm = b_meta[b_i], l_meta[l_i], d_meta[d_i]
+
+        # [R5] Aguacate <= 1 por día
+        if (bm["avo"] + lm["avo"] + dm["avo"]) > 1:
+            return False
+
+        # [R4] Cero colisión de vegetales entre tiempos del mismo día
+        if (bm["vegs"] & lm["vegs"]) or (bm["vegs"] & dm["vegs"]) or (lm["vegs"] & dm["vegs"]):
+            return False
+
+        # [R4] Cero colisión de frutas entre tiempos del mismo día
+        if (bm["fruits"] & lm["fruits"]) or (bm["fruits"] & dm["fruits"]) or (lm["fruits"] & dm["fruits"]):
+            return False
+
+        # [R6] Proteína de Comida != Proteína de Cena del mismo día
+        if lm["prot"] == dm["prot"]:
+            return False
+
+        # [R6] No repetir proteína en comidas consecutivas ni cenas consecutivas
+        if day_idx > 0:
+            prev_b, prev_l, prev_d = assignment[day_idx - 1]
+            if l_meta[prev_l]["prot"] == lm["prot"]:
+                return False
+            if d_meta[prev_d]["prot"] == dm["prot"]:
+                return False
+
+        # [R1] Banda cetogénica diaria (70-78% Grasa, 20-25% Proteína, <=5% Carbs)
+        tot_f = bm["fat"] + lm["fat"] + dm["fat"]
+        tot_p = bm["prot_g"] + lm["prot_g"] + dm["prot_g"]
+        tot_c = bm["carbs"] + lm["carbs"] + dm["carbs"]
+        kcal = tot_f * 9.0 + tot_p * 4.0 + tot_c * 4.0
+        if kcal <= 0:
+            return False
+        f_pct = (tot_f * 9.0 / kcal) * 100.0
+        p_pct = (tot_p * 4.0 / kcal) * 100.0
+        c_pct = (tot_c * 4.0 / kcal) * 100.0
+        if not (70.0 <= f_pct <= 78.0 and 20.0 <= p_pct <= 25.0 and c_pct <= 5.0):
+            return False
+
+        return True
+
+    def backtrack(day_idx: int) -> bool:
+        if day_idx == 7:
+            return True
+        for b_idx in range(7):
+            b_i = (b_candidates_order[b_idx] + day_idx) % 7
+            if used_b[b_i]:
+                continue
+            for l_idx in range(7):
+                l_i = (l_candidates_order[l_idx] + day_idx * 2) % 7
+                if used_l[l_i]:
+                    continue
+                for d_idx in range(7):
+                    d_i = (d_candidates_order[d_idx] + day_idx * 3) % 7
+                    if used_d[d_i]:
+                        continue
+                    if is_valid_day_triplet(day_idx, b_i, l_i, d_i):
+                        used_b[b_i] = True
+                        used_l[l_i] = True
+                        used_d[d_i] = True
+                        assignment.append((b_i, l_i, d_i))
+                        if backtrack(day_idx + 1):
+                            return True
+                        assignment.pop()
+                        used_b[b_i] = False
+                        used_l[l_i] = False
+                        used_d[d_i] = False
+        return False
+
+    if not backtrack(0):
+        raise RuntimeError(f"No se encontró asignación válida por backtracking para la Semana {next_week_num}.")
+
+    # Fechas de la semana solicitada (Semana 42 inició Domingo 2026-10-11)
+    offset_days = (next_week_num - 42) * 7
+    start_dt = date(2026, 10, 11) + timedelta(days=offset_days)
+    end_dt = start_dt + timedelta(days=6)
+
+    months_full = [
+        "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio",
+        "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre",
+    ]
+    months_short = ["Ene", "Feb", "Mar", "Abr", "May", "Jun", "Jul", "Ago", "Sep", "Oct", "Nov", "Dic"]
+    days_names = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"]
+
+    start_d = f"{start_dt.day:02d}"
+    end_d = f"{end_dt.day:02d}"
+    start_m_full = months_full[start_dt.month - 1]
+    end_m_full = months_full[end_dt.month - 1]
+    end_y = end_dt.year
+
+    if start_dt.month == end_dt.month:
+        date_range_str = f"{start_d} al {end_d} de {start_m_full} de {end_y}"
+    else:
+        date_range_str = f"{start_d} de {start_m_full} al {end_d} de {end_m_full} de {end_y}"
+
+    week_title = f"Semana {next_week_num} ({date_range_str})"
+    week_iso_start = start_dt.isoformat()
+
+    new_days = []
+    for i in range(7):
+        cur_dt = start_dt + timedelta(days=i)
+        d_name = days_names[i]
+        d_num = f"{cur_dt.day:02d}"
+        m_short = months_short[cur_dt.month - 1]
+        iso_date = cur_dt.isoformat()
+        date_str = f"{d_num} {m_short}"
+
+        b_i, l_i, d_i = assignment[i]
+        day_meals = [
+            copy.deepcopy(breakfasts[b_i]),
+            copy.deepcopy(lunches[l_i]),
+            copy.deepcopy(dinners[d_i]),
+        ]
+
+        # [R7] Garantizar cero menciones a días de la semana en notas/descripciones
+        for m_obj in day_meals:
+            for c_key in ("starter", "main", "side", "starter_recipe", "main_recipe", "side_recipe"):
+                sub = m_obj.get(c_key)
+                if isinstance(sub, dict):
+                    for field in ("note", "sensory_description"):
+                        if isinstance(sub.get(field), str):
+                            sub[field] = WEEKDAY_NAMES_REGEX.sub("día", sub[field])
+
+        new_days.append({
+            "day": d_name,
+            "day_num": d_num,
+            "date_str": date_str,
+            "iso_date": iso_date,
+            "full_date_title": f"Menú Completo para el {d_name} {date_str}",
+            "meals": day_meals,
+        })
+
+    generated_week = {
+        "week_name": f"Semana {next_week_num}",
+        "week_label": week_title,
+        "week_start": week_iso_start,
+        "date_range": date_range_str,
+        "diners_count": int(base_week_data.get("diners_count", 6)),
+        "days": new_days,
+    }
+
+    assert_zero_violations(generated_week, pantry_stock, farm_harvest)
+    return generated_week
+

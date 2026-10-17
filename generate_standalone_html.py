@@ -2,12 +2,14 @@ import copy
 import re, unicodedata
 import json
 import os
+import sys
 import shutil
 os.environ["GEMINI_API_KEY"] = ""
 from app.config import settings
 settings.GEMINI_API_KEY = ""
 from app.services.keto_architect import KetoAIArchitect
 from app.services.inventory_master import InventorySyncMaster, consolidate_market_bom
+from app.services.menu_hard_gate_auditor import assert_zero_violations, generate_validated_week_plan
 from app.database import init_db
 
 # Carga dinámica de la Lista de Compras desde InventorySyncMaster (SSOT Culinario)
@@ -2097,6 +2099,166 @@ function getWeekNumberFromKey(wKey) {
   return isNaN(num) ? null : num;
 }
 
+function _normTextHardGate(s) {
+  return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
+}
+
+const _HG_VEG_FAMILIES = {
+  flor_de_calabaza: ['flor de calabaza'],
+  esparragos: ['esparrago', 'esparragos'],
+  brocoli: ['brocoli'],
+  coliflor: ['coliflor'],
+  ejotes: ['ejote', 'ejotes'],
+  calabacitas: ['calabacita', 'calabacitas', 'zucchini', 'zoodles'],
+  chayote: ['chayote', 'chayotes'],
+  nopales: ['nopal', 'nopales'],
+  espinacas: ['espinaca', 'espinacas'],
+  arugula: ['arugula'],
+  morron: ['morron', 'pimiento'],
+  lechuga: ['lechuga'],
+  champinon: ['champinon', 'portobello']
+};
+
+const _HG_FRUIT_FAMILIES = {
+  fresas: ['fresa', 'fresas'],
+  zarzamora: ['zarzamora', 'zarzamoras'],
+  frambuesas: ['frambuesa', 'frambuesas'],
+  arandanos: ['arandano', 'arandanos'],
+  granada: ['granada', 'arilos de granada'],
+  pitaya: ['pitaya', 'pitahaya']
+};
+
+function _extractDishVegsAndFruits(dish) {
+  const vegs = new Set();
+  const fruits = new Set();
+  const ings = (dish && Array.isArray(dish.ingredients)) ? dish.ingredients : [];
+  for (const ing of ings) {
+    const nm = _normTextHardGate(ing.name);
+    for (const [vk, toks] of Object.entries(_HG_VEG_FAMILIES)) {
+      if (toks.some(t => nm.includes(t))) vegs.add(vk);
+    }
+    for (const [fk, toks] of Object.entries(_HG_FRUIT_FAMILIES)) {
+      if (toks.some(t => nm.includes(t))) fruits.add(fk);
+    }
+  }
+  return { vegs: Array.from(vegs), fruits: Array.from(fruits) };
+}
+
+function _classifyMainProteinHardGate(mainDish) {
+  const ings = (mainDish && Array.isArray(mainDish.ingredients)) ? mainDish.ingredients : [];
+  const joined = ings.map(i => _normTextHardGate(i.name)).join(' | ');
+  if (joined.includes('flat steak') || (/\bres\b/.test(joined) && !joined.includes('molida'))) {
+    return { key: 'flat_steak', circadianDinnerOk: false };
+  }
+  if (joined.includes('carne molida')) return { key: 'carne_molida', circadianDinnerOk: false };
+  if (joined.includes('salmon')) return { key: 'salmon', circadianDinnerOk: false };
+  if (joined.includes('sardina')) return { key: 'sardinas', circadianDinnerOk: false };
+  if (joined.includes('pechuga de pollo') || /\bpollo\b/.test(joined)) return { key: 'pechuga_pollo', circadianDinnerOk: true };
+  if (/\bpavo\b/.test(joined)) return { key: 'pavo', circadianDinnerOk: true };
+  if (joined.includes('mojarra') || joined.includes('robalo') || joined.includes('huachinango') || joined.includes('pescado blanco')) {
+    return { key: 'mojarra', circadianDinnerOk: true };
+  }
+  if (joined.includes('atun en agua')) return { key: 'atun_agua', circadianDinnerOk: true };
+  if (joined.includes('filete de atun') || /\batun\b/.test(joined)) return { key: 'filete_atun', circadianDinnerOk: true };
+  if (joined.includes('champinon') || joined.includes('portobello')) return { key: 'champinon', circadianDinnerOk: true };
+  if (joined.includes('queso cottage')) return { key: 'queso_cottage', circadianDinnerOk: true };
+  if (joined.includes('huevo')) return { key: 'huevo', circadianDinnerOk: true };
+  return { key: 'otra', circadianDinnerOk: true };
+}
+
+function auditWeekPlanClientHardGate(weekPlan) {
+  const violations = [];
+  if (!weekPlan || !Array.isArray(weekPlan.days) || weekPlan.days.length !== 7) {
+    return { passed: false, violations: ['[R1] La semana debe tener exactamente 7 días.'] };
+  }
+  const dinnerProts = [];
+  const lunchProts = [];
+  const protCounts = {};
+  const weekdayRe = /\b(domingo|lunes|martes|miercoles|miércoles|jueves|viernes|sabado|sábado)\b/i;
+
+  weekPlan.days.forEach((day, dIdx) => {
+    const dName = day.day || `Día ${dIdx + 1}`;
+    const meals = Array.isArray(day.meals) ? day.meals : [];
+    let dayFat = 0, dayProt = 0, dayCarbs = 0;
+    let dayAvoCount = 0;
+    const dayVegMap = {};
+    let lProt = null, dProt = null;
+
+    meals.forEach((meal, mIdx) => {
+      const mType = meal.meal_type || `Servicio ${mIdx + 1}`;
+      const loc = `${dName} - ${mType}`;
+      const f = parseFloat(meal.fat_g || 0);
+      const p = parseFloat(meal.protein_g || 0);
+      const c = parseFloat(meal.net_carbs_g || 0);
+      if (c > 5.0 || c <= 0) violations.push(`[R1] ${loc}: net_carbs_g=${c}g excede 5.0g.`);
+      dayFat += f; dayProt += p; dayCarbs += c;
+
+      const mealVegMap = {};
+      ['starter', 'main', 'side'].forEach(role => {
+        const dish = meal[role] || {};
+        const ings = Array.isArray(dish.ingredients) ? dish.ingredients : [];
+        ings.forEach(ing => {
+          if (_normTextHardGate(ing.name).includes('aguacate')) dayAvoCount++;
+        });
+        const vf = _extractDishVegsAndFruits(dish);
+        vf.vegs.forEach(v => {
+          mealVegMap[v] = (mealVegMap[v] || 0) + 1;
+          if (!dayVegMap[v]) dayVegMap[v] = [];
+          dayVegMap[v].push(`${mType}:${role}`);
+        });
+        if (weekdayRe.test(String(dish.note || ''))) {
+          violations.push(`[R7] ${loc} (${role}): Nota contiene nombre de día de la semana.`);
+        }
+      });
+      Object.entries(mealVegMap).forEach(([v, cnt]) => {
+        if (cnt > 1) violations.push(`[R4] ${loc}: Vegetal '${v}' repetido intra-servicio.`);
+      });
+
+      const pInfo = _classifyMainProteinHardGate(meal.main || {});
+      const mNorm = _normTextHardGate(mType);
+      if (mNorm.includes('comida')) {
+        lProt = pInfo.key;
+        lunchProts.push(pInfo.key);
+        protCounts[pInfo.key] = (protCounts[pInfo.key] || 0) + 1;
+      } else if (mNorm.includes('cena')) {
+        dProt = pInfo.key;
+        dinnerProts.push(pInfo.key);
+        protCounts[pInfo.key] = (protCounts[pInfo.key] || 0) + 1;
+        if (!pInfo.circadianDinnerOk) violations.push(`[R6] ${loc}: Proteína no circadiana en cena (${pInfo.key}).`);
+      }
+    });
+
+    if (dayAvoCount > 1) violations.push(`[R5] ${dName}: Aguacate aparece ${dayAvoCount} veces en el día.`);
+    Object.entries(dayVegMap).forEach(([v, locs]) => {
+      if (locs.length > 1) violations.push(`[R4] ${dName}: Vegetal '${v}' repetido en el día (${locs.join(', ')}).`);
+    });
+    if (lProt && dProt && lProt === dProt) {
+      violations.push(`[R6] ${dName}: Misma proteína en Comida y Cena (${lProt}).`);
+    }
+    const kcal = dayFat * 9 + dayProt * 4 + dayCarbs * 4;
+    if (kcal > 0) {
+      const fPct = (dayFat * 9 / kcal) * 100;
+      const pPct = (dayProt * 4 / kcal) * 100;
+      const cPct = (dayCarbs * 4 / kcal) * 100;
+      if (fPct < 70 || fPct > 78 || pPct < 20 || pPct > 25 || cPct > 5.0) {
+        violations.push(`[R1] ${dName}: Macros diarios fuera de banda cetogénica.`);
+      }
+    }
+  });
+
+  for (let i = 0; i < lunchProts.length - 1; i++) {
+    if (lunchProts[i] === lunchProts[i + 1]) violations.push(`[R6] Comidas consecutivas repiten ${lunchProts[i]}.`);
+  }
+  for (let i = 0; i < dinnerProts.length - 1; i++) {
+    if (dinnerProts[i] === dinnerProts[i + 1]) violations.push(`[R6] Cenas consecutivas repiten ${dinnerProts[i]}.`);
+  }
+  Object.entries(protCounts).forEach(([k, cnt]) => {
+    if (cnt > 2) violations.push(`[R6] Proteína ${k} excede máximo 2 apariciones (${cnt}).`);
+  });
+
+  return { passed: violations.length === 0, violations };
+}
+
 function buildWeekPlanForNumber(targetWeekNum) {
   if (typeof datasets === 'undefined' || !datasets) return null;
   const nextWeekNum = parseInt(targetWeekNum, 10) || 43;
@@ -2127,53 +2289,131 @@ function buildWeekPlanForNumber(targetWeekNum) {
     return JSON.parse(JSON.stringify(datasets[weekTitle]));
   }
 
-  const baseS43 = datasets["Semana 43 (18 al 24 de Octubre de 2026)"];
-  const baseS42 = datasets["Semana 42 (11 al 17 de Octubre de 2026)"] || Object.values(datasets)[0];
-  const baseS41 = datasets["Semana 41 (04 al 10 de Octubre de 2026)"] || baseS42;
-  const s42Days = (baseS43 && Array.isArray(baseS43.days)) ? baseS43.days : ((baseS42 && Array.isArray(baseS42.days)) ? baseS42.days : []);
-  const s41Days = (baseS41 && Array.isArray(baseS41.days)) ? baseS41.days : s42Days;
+  const baseS43 = datasets["Semana 43 (18 al 24 de Octubre de 2026)"] || Object.values(datasets)[0];
+  const baseDays = (baseS43 && Array.isArray(baseS43.days)) ? baseS43.days : [];
+  if (baseDays.length !== 7) return null;
 
-  const permOrder = [
-    (2 + nextWeekNum) % 7,
-    (5 + nextWeekNum) % 7,
-    (1 + nextWeekNum) % 7,
-    (4 + nextWeekNum) % 7,
-    (0 + nextWeekNum) % 7,
-    (3 + nextWeekNum) % 7,
-    (6 + nextWeekNum) % 7
-  ];
+  const breakfasts = baseDays.map(d => JSON.parse(JSON.stringify(d.meals[0])));
+  const lunches = baseDays.map(d => JSON.parse(JSON.stringify(d.meals[1])));
+  const dinners = baseDays.map(d => JSON.parse(JSON.stringify(d.meals[2])));
 
-  const sanitizeDayNotes = (mealObj, targetDayName) => {
+  const extractMealMeta = (mealObj) => {
+    const vegs = new Set();
+    const fruits = new Set();
+    let avo = 0;
+    ['starter', 'main', 'side'].forEach(role => {
+      const dish = mealObj[role] || {};
+      const vf = _extractDishVegsAndFruits(dish);
+      vf.vegs.forEach(v => vegs.add(v));
+      vf.fruits.forEach(f => fruits.add(f));
+      const ings = Array.isArray(dish.ingredients) ? dish.ingredients : [];
+      ings.forEach(ing => {
+        if (_normTextHardGate(ing.name).includes('aguacate')) avo++;
+      });
+    });
+    const pInfo = _classifyMainProteinHardGate(mealObj.main || {});
+    return {
+      vegs,
+      fruits,
+      avo,
+      prot: pInfo.key,
+      fat: parseFloat(mealObj.fat_g || 0),
+      protG: parseFloat(mealObj.protein_g || 0),
+      carbs: parseFloat(mealObj.net_carbs_g || 0)
+    };
+  };
+
+  const bMeta = breakfasts.map(extractMealMeta);
+  const lMeta = lunches.map(extractMealMeta);
+  const dMeta = dinners.map(extractMealMeta);
+
+  const seedShift = Math.max(1, nextWeekNum - 43);
+  const bOrder = Array.from({ length: 7 }, (_, i) => (i + seedShift) % 7);
+  const lOrder = Array.from({ length: 7 }, (_, i) => (i + seedShift * 2 + 1) % 7);
+  const dOrder = Array.from({ length: 7 }, (_, i) => (i + seedShift * 3 + 2) % 7);
+
+  const usedB = Array(7).fill(false);
+  const usedL = Array(7).fill(false);
+  const usedD = Array(7).fill(false);
+  const assignment = [];
+
+  const hasSetOverlap = (setA, setB) => {
+    for (const elem of setA) {
+      if (setB.has(elem)) return true;
+    }
+    return false;
+  };
+
+  const isValidTriplet = (dayIdx, bI, lI, dI) => {
+    if (nextWeekNum !== 43 && dayIdx === 0 && bI === 0 && lI === 0 && dI === 0) return false;
+    const bm = bMeta[bI], lm = lMeta[lI], dm = dMeta[dI];
+    // [R5] Aguacate <= 1 por día
+    if ((bm.avo + lm.avo + dm.avo) > 1) return false;
+    // [R4] Cero repetición de vegetal o fruta el mismo día
+    if (hasSetOverlap(bm.vegs, lm.vegs) || hasSetOverlap(bm.vegs, dm.vegs) || hasSetOverlap(lm.vegs, dm.vegs)) return false;
+    if (hasSetOverlap(bm.fruits, lm.fruits) || hasSetOverlap(bm.fruits, dm.fruits) || hasSetOverlap(lm.fruits, dm.fruits)) return false;
+    // [R6] Proteína Comida != Proteína Cena del mismo día y cero repetición en días consecutivos
+    if (lm.prot === dm.prot) return false;
+    if (dayIdx > 0) {
+      const prev = assignment[dayIdx - 1];
+      if (lMeta[prev[1]].prot === lm.prot) return false;
+      if (dMeta[prev[2]].prot === dm.prot) return false;
+    }
+    // [R1] Banda cetogénica diaria
+    const totF = bm.fat + lm.fat + dm.fat;
+    const totP = bm.protG + lm.protG + dm.protG;
+    const totC = bm.carbs + lm.carbs + dm.carbs;
+    const kcal = totF * 9 + totP * 4 + totC * 4;
+    if (kcal <= 0) return false;
+    const fPct = (totF * 9 / kcal) * 100;
+    const pPct = (totP * 4 / kcal) * 100;
+    const cPct = (totC * 4 / kcal) * 100;
+    if (fPct < 70.0 || fPct > 78.0 || pPct < 20.0 || pPct > 25.0 || cPct > 5.0) return false;
+    return true;
+  };
+
+  const solveDay = (dayIdx) => {
+    if (dayIdx === 7) return true;
+    for (let bi = 0; bi < 7; bi++) {
+      const bI = (bOrder[bi] + dayIdx) % 7;
+      if (usedB[bI]) continue;
+      for (let li = 0; li < 7; li++) {
+        const lI = (lOrder[li] + dayIdx * 2) % 7;
+        if (usedL[lI]) continue;
+        for (let di = 0; di < 7; di++) {
+          const dI = (dOrder[di] + dayIdx * 3) % 7;
+          if (usedD[dI]) continue;
+          if (isValidTriplet(dayIdx, bI, lI, dI)) {
+            usedB[bI] = true; usedL[lI] = true; usedD[dI] = true;
+            assignment.push([bI, lI, dI]);
+            if (solveDay(dayIdx + 1)) return true;
+            assignment.pop();
+            usedB[bI] = false; usedL[lI] = false; usedD[dI] = false;
+          }
+        }
+      }
+    }
+    return false;
+  };
+
+  solveDay(0);
+
+  const stripWeekdaysFromMeal = (mealObj) => {
     const dayRegex = /\b(domingo|lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado)\b/gi;
     ['starter', 'main', 'side', 'starter_recipe', 'main_recipe', 'side_recipe'].forEach(k => {
       if (mealObj[k] && typeof mealObj[k] === 'object') {
         if (typeof mealObj[k].note === 'string') {
-          mealObj[k].note = mealObj[k].note.replace(dayRegex, targetDayName.toLowerCase());
+          mealObj[k].note = mealObj[k].note.replace(dayRegex, 'día');
         }
         if (typeof mealObj[k].sensory_description === 'string') {
-          mealObj[k].sensory_description = mealObj[k].sensory_description.replace(dayRegex, targetDayName.toLowerCase());
+          mealObj[k].sensory_description = mealObj[k].sensory_description.replace(dayRegex, 'día');
         }
       }
     });
-    // Hard-Gate Rule 1 & 2: Clamp net_carbs_g <= 4.8g and calibrate 75% fat / 22% protein ratio
-    const rawCarbs = parseFloat(mealObj.net_carbs_g || 4.2);
-    mealObj.net_carbs_g = Math.min(4.8, Math.round(rawCarbs * 10) / 10);
-    const mType = (mealObj.meal_type || '').toLowerCase();
-    if (mType.includes('desayuno')) {
-      mealObj.fat_g = Math.max(49.0, parseFloat(mealObj.fat_g || 49.5));
-      mealObj.protein_g = Math.min(36.0, Math.max(34.0, parseFloat(mealObj.protein_g || 35.0)));
-    } else if (mType.includes('comida')) {
-      mealObj.fat_g = Math.max(62.5, parseFloat(mealObj.fat_g || 63.5));
-      mealObj.protein_g = Math.min(42.5, Math.max(40.0, parseFloat(mealObj.protein_g || 41.5)));
-    } else {
-      mealObj.fat_g = Math.max(52.0, parseFloat(mealObj.fat_g || 52.5));
-      mealObj.protein_g = Math.min(35.5, Math.max(33.5, parseFloat(mealObj.protein_g || 34.5)));
-    }
     return mealObj;
   };
 
   const newDays = [];
-  const seenMainDishes = new Set();
   for (let i = 0; i < 7; i++) {
     const curDate = new Date(2026, 9, 11 + offsetDays + i);
     const dName = DAYS_NAMES[curDate.getDay()];
@@ -2181,42 +2421,23 @@ function buildWeekPlanForNumber(targetWeekNum) {
     const mShort = MONTHS_SHORT[curDate.getMonth()];
     const isoDate = `${curDate.getFullYear()}-${pad2(curDate.getMonth() + 1)}-${dNum}`;
     const dateStr = `${dNum} ${mShort}`;
+    const [bI, lI, dI] = assignment[i] || [i, i, i];
 
-    const srcIdx = permOrder[i] % Math.max(1, s42Days.length);
-    const altIdx = (permOrder[i] + 3) % Math.max(1, s41Days.length);
-    const srcDayA = s42Days[srcIdx] || s42Days[0] || { meals: [] };
-    const srcDayB = s41Days[altIdx] || srcDayA;
-
-    const clonedDay = JSON.parse(JSON.stringify(srcDayA));
-    clonedDay.day = dName;
-    clonedDay.day_num = dNum;
-    clonedDay.date_str = dateStr;
-    clonedDay.iso_date = isoDate;
-    clonedDay.full_date_title = `Menú Completo para el ${dName} ${dateStr}`;
-
-    if (Array.isArray(clonedDay.meals) && Array.isArray(srcDayB.meals)) {
-      clonedDay.meals = clonedDay.meals.map((meal, mIdx) => {
-        const useAlt = ((i + mIdx + nextWeekNum) % 2 === 1) && srcDayB.meals[mIdx];
-        const primaryCand = useAlt ? srcDayB.meals[mIdx] : meal;
-        const secondaryCand = useAlt ? meal : (srcDayB.meals[mIdx] || meal);
-        const pTitle = (primaryCand.main_dish_name || primaryCand.dish_name || '').trim().toLowerCase();
-        let chosen = primaryCand;
-        if (pTitle && seenMainDishes.has(pTitle)) {
-          const sTitle = (secondaryCand.main_dish_name || secondaryCand.dish_name || '').trim().toLowerCase();
-          if (sTitle && !seenMainDishes.has(sTitle)) {
-            chosen = secondaryCand;
-          }
-        }
-        const finalTitle = (chosen.main_dish_name || chosen.dish_name || '').trim().toLowerCase();
-        if (finalTitle) seenMainDishes.add(finalTitle);
-        return sanitizeDayNotes(JSON.parse(JSON.stringify(chosen)), dName);
-      });
-    }
-
-    newDays.push(clonedDay);
+    newDays.push({
+      day: dName,
+      day_num: dNum,
+      date_str: dateStr,
+      iso_date: isoDate,
+      full_date_title: `Menú Completo para el ${dName} ${dateStr}`,
+      meals: [
+        stripWeekdaysFromMeal(JSON.parse(JSON.stringify(breakfasts[bI]))),
+        stripWeekdaysFromMeal(JSON.parse(JSON.stringify(lunches[lI]))),
+        stripWeekdaysFromMeal(JSON.parse(JSON.stringify(dinners[dI])))
+      ]
+    });
   }
 
-  return {
+  const candidateWeek = {
     week_name: `Semana ${nextWeekNum}`,
     week_label: weekTitle,
     week_start: weekIsoStart,
@@ -2224,6 +2445,12 @@ function buildWeekPlanForNumber(targetWeekNum) {
     diners_count: (typeof activeDiners !== 'undefined' ? parseInt(activeDiners, 10) || 6 : 6),
     days: newDays
   };
+
+  const auditRes = auditWeekPlanClientHardGate(candidateWeek);
+  if (!auditRes.passed) {
+    console.error('[HARD-GATE CLIENT AUDITOR] Violaciones detectadas:', auditRes.violations);
+  }
+  return candidateWeek;
 }
 
 function purgeWeeksAfter43() {
@@ -9646,6 +9873,21 @@ function renderRecipes(day, activeDiners) {
 </html>
 """
 
+    # COMPUERTA DURA (HARD-GATE COMPILER AUDITOR) OBLIGATORIA ANTES DE ESCRIBIR ATELIER.HTML
+    try:
+        hg_s43 = assert_zero_violations(plan_43_dict)
+        w44_preview = generate_validated_week_plan(44, plan_43_dict)
+        hg_s44 = assert_zero_violations(w44_preview)
+        w45_preview = generate_validated_week_plan(45, plan_43_dict)
+        hg_s45 = assert_zero_violations(w45_preview)
+        print(
+            f"[HARD-GATE COMPILER AUDITOR] 0 VIOLACIONES [R1]-[R8] VERIFICADAS EN SEMANA 43, SEMANA 44 Y SEMANA 45 "
+            f"(Compras Netas Mercado: {len(hg_s43['bom_summary']['market_purchases'])} insumos, 0 sobregiros de alacena)."
+        )
+    except RuntimeError as hg_err:
+        print(str(hg_err), file=sys.stderr)
+        sys.exit(1)
+
     with open("expediente_nutriketo.html", "w", encoding="utf-8") as f:
         f.write(html_content)
 
@@ -9661,3 +9903,4 @@ function renderRecipes(day, activeDiners) {
 
 if __name__ == "__main__":
     generate_standalone()
+

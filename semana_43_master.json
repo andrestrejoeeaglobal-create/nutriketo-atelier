@@ -38,8 +38,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Fresas",
-                "per_guest": 35,
-                "amount": 210,
+                "per_guest": 30,
+                "amount": 180,
                 "unit": "g"
               },
               {
@@ -112,8 +112,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -184,26 +184,26 @@
           "protein_g": 41.5,
           "net_carbs_g": 4.3,
           "fiber_g": 6.5,
-          "starter_name": "Ensalada Verde Fresca de Espinacas Tiernas de la Granja y Calabacita al Limón con Aceite VEVO",
+          "starter_name": "Ensalada Verde Fresca de Arúgula de la Granja y Calabacita al Limón con Aceite VEVO",
           "main_dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
           "dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
           "side_dish_name": "Brócoli Fresco de la Granja al Vapor con Toque de Limón Real, Sal de Mar y Aceite VEVO",
           "starter": {
-            "title": "Ensalada Verde Fresca de Espinacas Tiernas de la Granja y Calabacita al Limón con Aceite VEVO",
+            "title": "Ensalada Verde Fresca de Arúgula de la Granja y Calabacita al Limón con Aceite VEVO",
             "technique": "raw_assembly",
-            "note": "Entrada ligera de hojas verdes crujientes y láminas finas de calabacita que equilibra la carga metabólica del corte principal.",
+            "note": "Entrada ligera de hojas verdes de arúgula y láminas finas de calabacita que equilibra la carga metabólica del corte principal.",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 8°C que activa enzimas digestivas mediante acidez cítrica natural.",
-              "flavor_and_aromatics": "Frescura herbácea de espinaca tierna con notas frutales de aceite de oliva extra virgen y limón de la granja.",
+              "flavor_and_aromatics": "Frescura herbácea de arúgula tierna con notas frutales de aceite de oliva extra virgen y limón de la granja.",
               "textural_architecture": "Hojas turgentes y listones crujientes sin lácteos ni grasas pesadas.",
               "critical_control_points": "Emulsionar el aderezo justo al momento de emplatar para mantener la textura crujiente."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Espinacas frescas",
-                "per_guest": 50,
-                "amount": 300,
+                "name": "Arúgula fresca",
+                "per_guest": 45,
+                "amount": 270,
                 "unit": "g"
               },
               {
@@ -223,8 +223,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -236,7 +236,7 @@
               }
             ],
             "steps": [
-              "Lavar y centrifugar las espinacas tiernas de la granja y laminar finamente las calabacitas.",
+              "Lavar y centrifugar la arúgula fresca de la granja y laminar finamente las calabacitas.",
               "Batir el jugo de limón fresco de la granja con el aceite de oliva VEVO y sal de mar.",
               "Aliñar suavemente y servir de inmediato como entrada ligera."
             ]
@@ -315,8 +315,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -349,8 +349,8 @@
           "net_carbs_g": 4.1,
           "fiber_g": 5.8,
           "starter_name": "Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja",
-          "main_dish_name": "Champiñones Portobello al Horno Rellenos de Espinacas de la Granja, Queso Ricotta y Nuez de la India",
-          "dish_name": "Champiñones Portobello al Horno Rellenos de Espinacas de la Granja, Queso Ricotta y Nuez de la India",
+          "main_dish_name": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Ejotes Tiernos de la Granja y Nuez de la India",
+          "dish_name": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Ejotes Tiernos de la Granja y Nuez de la India",
           "side_dish_name": "Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja",
@@ -387,8 +387,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -405,12 +405,12 @@
             ]
           },
           "main": {
-            "title": "Champiñones Portobello al Horno Rellenos de Espinacas de la Granja, Queso Ricotta y Nuez de la India",
+            "title": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Ejotes Tiernos de la Granja y Nuez de la India",
             "technique": "stuffed_cap_roast",
-            "note": "Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena.",
+            "note": "Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena con ejotes frescos de la granja ($0).",
             "coct_reasoning": {
               "thermodynamics": "Horneado corto a 185°C durante 12 minutos que concentra el umami fúngico y funde suavemente el ricotta.",
-              "flavor_and_aromatics": "Umami terroso del champiñón, cremosidad láctica suave y toque tostado de la nuez de la India.",
+              "flavor_and_aromatics": "Umami terroso del champiñón, cremosidad láctica suave, ejotes tiernos y toque tostado de la nuez de la India.",
               "textural_architecture": "Sombrero carnoso y jugoso con relleno cremoso y superficie crujiente de nuez.",
               "critical_control_points": "Pre-hornear los sombreros 5 minutos para evaporar exceso de humedad antes de rellenar."
             },
@@ -424,7 +424,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Espinacas frescas",
+                "name": "Ejotes frescos",
                 "per_guest": 45,
                 "amount": 270,
                 "unit": "g"
@@ -446,8 +446,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 15,
-                "amount": 90,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
@@ -460,7 +460,7 @@
             ],
             "steps": [
               "Limpiar los champiñones grandes de alacena, barnizar con aceite de oliva VEVO y pre-hornear 5 minutos a 185°C.",
-              "Mezclar las espinacas de la granja salteadas con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.",
+              "Mezclar los ejotes tiernos de la granja finamente picados con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.",
               "Hornear 7 minutos adicionales hasta dorar ligeramente y servir templado."
             ]
           },
@@ -592,8 +592,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Morrón",
-                "per_guest": 0.3,
-                "amount": 1.8,
+                "per_guest": 0.2,
+                "amount": 1.2,
                 "unit": "piezas"
               },
               {
@@ -613,8 +613,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -645,8 +645,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Fresas",
-                "per_guest": 25,
-                "amount": 150,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
@@ -685,27 +685,27 @@
           "protein_g": 41.0,
           "net_carbs_g": 4.2,
           "fiber_g": 6.3,
-          "starter_name": "Ensalada Fresca de Lechuga Romana y Arúgula de la Granja con Vinagreta Cítrica VEVO",
+          "starter_name": "Ensalada Fresca de Espinacas Tiernas y Arúgula de la Granja con Vinagreta Cítrica VEVO",
           "main_dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Cremosa de Chile Chipotle y Crema Ácida",
           "dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Cremosa de Chile Chipotle y Crema Ácida",
           "side_dish_name": "Espárragos Verdes de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO",
           "starter": {
-            "title": "Ensalada Fresca de Lechuga Romana y Arúgula de la Granja con Vinagreta Cítrica VEVO",
+            "title": "Ensalada Fresca de Espinacas Tiernas y Arúgula de la Granja con Vinagreta Cítrica VEVO",
             "technique": "raw_assembly",
-            "note": "Entrada verde amarga y refrescante diseñada para equilibrar la carga metabólica del plato principal de res.",
+            "note": "Entrada verde de espinacas y arúgula de la granja ($0) diseñada para equilibrar la carga metabólica del plato principal de res.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje en frío que preserva los glucosinolatos de la arúgula de la granja.",
-              "flavor_and_aromatics": "Toque pimientoso de la arúgula fresca equilibrado con limón de la granja y aceite de oliva VEVO.",
+              "thermodynamics": "Ensamblaje en frío que preserva los glucosinolatos de la arúgula y los folatos de la espinaca de la granja.",
+              "flavor_and_aromatics": "Toque pimientoso de la arúgula fresca y espinaca tierna equilibrado con limón de la granja y aceite de oliva VEVO.",
               "textural_architecture": "Hojas crujientes y ligeras con emulsión cítrica brillante.",
               "critical_control_points": "Secar perfectamente las hojas tras el lavado para que el aceite VEVO se adhiera."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Lechuga",
-                "per_guest": 0.25,
-                "amount": 1.5,
-                "unit": "piezas"
+                "name": "Espinacas frescas",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
@@ -724,8 +724,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -737,7 +737,7 @@
               }
             ],
             "steps": [
-              "Trozar las hojas de lechuga romana y mezclar con la arúgula fresca de la granja.",
+              "Lavar y centrifugar las hojas de espinaca tierna y mezclar con la arúgula fresca de la granja.",
               "Emulsionar el aceite de oliva VEVO con el jugo de limón de la granja y sal de mar.",
               "Bañar las hojas al momento de pasar a la mesa."
             ]
@@ -1061,8 +1061,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Frambuesas",
-                "per_guest": 30,
-                "amount": 180,
+                "per_guest": 25,
+                "amount": 150,
                 "unit": "g"
               },
               {
@@ -1121,8 +1121,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -1231,8 +1231,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -1290,8 +1290,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
@@ -1329,8 +1329,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -1363,8 +1363,8 @@
           "net_carbs_g": 4.2,
           "fiber_g": 5.7,
           "starter_name": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
-          "main_dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
-          "dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
+          "main_dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Brócoli Tierno de la Granja",
+          "dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Brócoli Tierno de la Granja",
           "side_dish_name": "Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
@@ -1387,8 +1387,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -1419,13 +1419,13 @@
             ]
           },
           "main": {
-            "title": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
+            "title": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Brócoli Tierno de la Granja",
             "technique": "steam_papillote",
-            "note": "Único servicio semanal de mojarra que amortiza al 100% los 900 g de alacena en una cena marina blanca de rapidísimo vaciamiento gástrico.",
+            "note": "Único servicio semanal de mojarra que amortiza al 100% los 900 g de alacena en una cena marina blanca de rapidísimo vaciamiento gástrico con brócoli de la granja ($0).",
             "coct_reasoning": {
               "thermodynamics": "Cocción suave al vapor en papillote abierto a 95°C durante 6 minutos que preserva la delicadeza del pescado blanco.",
-              "flavor_and_aromatics": "Sabor marino limpio con hierbas finas de alacena, jugo de limón fresco de la granja y aceite VEVO.",
-              "textural_architecture": "Lomos blancos jugosos acompañados de medias lunas tiernas de calabacita.",
+              "flavor_and_aromatics": "Sabor marino limpio con hierbas finas de alacena, jugo de limón fresco de la granja, brócoli tierno y aceite VEVO.",
+              "textural_architecture": "Lomos blancos jugosos acompañados de floretes tiernos de brócoli.",
               "critical_control_points": "Retirar del vapor en cuanto el pescado esté blanco opaco y bañar en frío con aceite VEVO."
             },
             "ingredients": [
@@ -1438,7 +1438,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
+                "name": "Brócoli fresco",
                 "per_guest": 65,
                 "amount": 390,
                 "unit": "g"
@@ -1453,8 +1453,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 15,
-                "amount": 90,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
@@ -1480,7 +1480,7 @@
               }
             ],
             "steps": [
-              "Disponer los filetes de mojarra de alacena y las calabacitas de la granja en vaporera con sal de mar y hierbas finas.",
+              "Disponer los filetes de mojarra de alacena y los floretes de brócoli de la granja en vaporera con sal de mar y hierbas finas.",
               "Cocer al vapor durante 6 minutos y emplatar bañando con mantequilla fundida, aceite VEVO y jugo de limón de la granja."
             ]
           },
@@ -1565,8 +1565,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Fresas",
-                "per_guest": 35,
-                "amount": 210,
+                "per_guest": 30,
+                "amount": 180,
                 "unit": "g"
               },
               {
@@ -1610,8 +1610,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Morrón",
-                "per_guest": 0.3,
-                "amount": 1.8,
+                "per_guest": 0.2,
+                "amount": 1.2,
                 "unit": "piezas"
               },
               {
@@ -1631,8 +1631,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -1663,8 +1663,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Frambuesas",
-                "per_guest": 20,
-                "amount": 120,
+                "per_guest": 15,
+                "amount": 90,
                 "unit": "g"
               },
               {
@@ -1735,8 +1735,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -1780,8 +1780,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 15,
-                "amount": 90,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
@@ -1890,8 +1890,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -1956,8 +1956,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
@@ -2121,8 +2121,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -2153,8 +2153,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Fresas",
-                "per_guest": 25,
-                "amount": 150,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
@@ -2193,17 +2193,17 @@
           "protein_g": 40.5,
           "net_carbs_g": 4.4,
           "fiber_g": 6.5,
-          "starter_name": "Crema Aterciopelada de Brócoli de la Granja al Queso Ricotta",
+          "starter_name": "Crema Aterciopelada de Brócoli de la Granja con Aceite de Oliva VEVO",
           "main_dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
           "dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
           "side_dish_name": "Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
           "starter": {
-            "title": "Crema Aterciopelada de Brócoli de la Granja al Queso Ricotta",
+            "title": "Crema Aterciopelada de Brócoli de la Granja con Aceite de Oliva VEVO",
             "technique": "boil_and_blend",
-            "note": "Crema verde esmeralda de brócoli fresco de la granja emulsionada con queso ricotta de alacena y aceite de oliva VEVO.",
+            "note": "Crema verde esmeralda de brócoli fresco de la granja emulsionada con aceite de oliva VEVO (100% ligera sin lácteos, cumpliendo enforceMetabolicLoadBalance).",
             "coct_reasoning": {
-              "thermodynamics": "Cocción breve de 6 minutos para preservar el sulforafano y licuado con ricotta a 70°C.",
-              "flavor_and_aromatics": "Sabor vegetal fresco de brócoli suavizado con la cremosidad láctica del ricotta.",
+              "thermodynamics": "Cocción breve de 6 minutos para preservar el sulforafano y licuado a alta velocidad a 70°C.",
+              "flavor_and_aromatics": "Sabor vegetal fresco de brócoli realzado con aceite de oliva VEVO y sal con ajo.",
               "textural_architecture": "Crema sedosa y ligera.",
               "critical_control_points": "No sobrecocer el brócoli para conservar su color verde vibrante y sus fitonutrientes."
             },
@@ -2211,15 +2211,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Brócoli fresco",
-                "per_guest": 80,
-                "amount": 480,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso ricotta",
-                "per_guest": 30,
-                "amount": 180,
+                "per_guest": 85,
+                "amount": 510,
                 "unit": "g"
               },
               {
@@ -2232,8 +2225,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -2246,7 +2239,7 @@
             ],
             "steps": [
               "Cocer los floretes de brócoli de la granja en el fondo claro de pollo por 6 minutos.",
-              "Licuar con el queso ricotta, aceite VEVO y sal con ajo hasta obtener una crema tersa."
+              "Licuar con el aceite de oliva VEVO en hilo y sal con ajo hasta obtener una crema tersa."
             ]
           },
           "main": {
@@ -2291,8 +2284,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -2344,8 +2337,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -2415,8 +2408,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -2481,8 +2474,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 14,
-                "amount": 84,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
@@ -2653,8 +2646,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -2685,8 +2678,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Fresas",
-                "per_guest": 25,
-                "amount": 150,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
@@ -2764,8 +2757,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -2802,8 +2795,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Morrón",
-                "per_guest": 0.3,
-                "amount": 1.8,
+                "per_guest": 0.2,
+                "amount": 1.2,
                 "unit": "piezas"
               },
               {
@@ -2823,8 +2816,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 14,
-                "amount": 84,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
@@ -2868,8 +2861,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -2900,12 +2893,12 @@
           "protein_g": 35.0,
           "net_carbs_g": 3.8,
           "fiber_g": 5.8,
-          "starter_name": "Caldo Reconfortante de Pollo y Vegetales Verdes con Limón Real y Cilantro de la Granja",
+          "starter_name": "Caldo Clarificado de Pollo al Limón Real y Cilantro de la Granja",
           "main_dish_name": "Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO",
           "dish_name": "Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO",
           "side_dish_name": "Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Caldo Reconfortante de Pollo y Vegetales Verdes con Limón Real y Cilantro de la Granja",
+            "title": "Caldo Clarificado de Pollo al Limón Real y Cilantro de la Granja",
             "technique": "simmer_broth",
             "note": "Caldo ligero de noche con cilantro fresco de la granja para hidratar y aportar electrolitos.",
             "coct_reasoning": {
@@ -2939,8 +2932,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -3005,8 +2998,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 15,
-                "amount": 90,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
@@ -3110,8 +3103,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Fresas",
-                "per_guest": 35,
-                "amount": 210,
+                "per_guest": 30,
+                "amount": 180,
                 "unit": "g"
               },
               {
@@ -3169,8 +3162,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -3294,8 +3287,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -3385,8 +3378,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
@@ -3417,12 +3410,12 @@
           "protein_g": 34.0,
           "net_carbs_g": 3.9,
           "fiber_g": 5.8,
-          "starter_name": "Consomé Nocturno de Vegetales de la Granja con Cilantro Fresco y Limón Real",
+          "starter_name": "Consomé Nocturno de Calabacita Tierna de la Granja con Cilantro Fresco y Limón Real",
           "main_dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
           "dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
           "side_dish_name": "Infusión Nocturna de Manzanilla y Flor de Jamaica (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Consomé Nocturno de Vegetales de la Granja con Cilantro Fresco y Limón Real",
+            "title": "Consomé Nocturno de Calabacita Tierna de la Granja con Cilantro Fresco y Limón Real",
             "technique": "simmer_broth",
             "note": "Caldo reconfortante de noche con calabacita en brunoise y cilantro fresco de la granja.",
             "coct_reasoning": {
@@ -3463,8 +3456,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
@@ -3529,8 +3522,8 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 14,
-                "amount": 84,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "ml"
               },
               {
