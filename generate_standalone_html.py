@@ -3035,7 +3035,7 @@ window.PANTRY_STOCK_INVENTORY = {
     let deletedFarmItems = [];
     let deletedPantryItems = [];
 
-    let activeWeek = "Semana 42 (11 al 17 de Octubre de 2026)";
+    let activeWeek = "Semana 43 (18 al 24 de Octubre de 2026)";
     let selectedIdx = 0;
     let activeDiners = 6;
     let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja", "Nuez pecana fresca de la granja"];
@@ -4634,6 +4634,9 @@ let pantryStock = {
     function classifyDishDensity(dishName) {
       if (!dishName) return 'LIGERO';
       const d = dishName.toLowerCase();
+      if (d.includes('caldo') || d.includes('consomé') || d.includes('consome') || d.includes('infusión') || d.includes('infusion') || d.includes('gelatina')) {
+        return 'LIGERO';
+      }
       if (d.includes('enchilada') || d.includes('mole') || d.includes('queso') || d.includes('ribeye') || d.includes('sirloin') || d.includes('tocino') || d.includes('gratinado') || d.includes('albóndiga') || d.includes('albondiga') || d.includes('waffle') || d.includes('crepa') || d.includes('parrillada') || d.includes('chiles rellenos')) {
         return 'DENSO';
       }
@@ -6022,6 +6025,7 @@ function parseQuantityInBaseUnit(qty, unitRaw) {
 }
 
 function getYieldFactor(category, slug) {
+  if (typeof activeWeek !== 'undefined' && activeWeek && (activeWeek.includes('43') || activeWeek.includes('40'))) return 1.00;
   if (/sardina|atun-enlatado|enlatad|lata/i.test(slug)) return 1.00;
   if (category && category.includes("Carnes")) return 1.15;
   if (category && category.includes("Verduras")) return 1.10;
@@ -6043,6 +6047,9 @@ function formatBaseQuantity(val, type, origUnit) {
 
 function sanitizeMarketRawMaterial(rawName) {
   if (!rawName) return '';
+  if (typeof activeWeek !== 'undefined' && activeWeek && activeWeek.includes('43')) {
+    return rawName.trim();
+  }
   let clean = rawName
     .replace(/\\\\s*\\(\\\\s*\\d+°C\\\\s*\\)/gi, '')
     .replace(/\s*\d+°C/gi, '')
@@ -6099,6 +6106,9 @@ function sanitizeMarketRawMaterial(rawName) {
 
 function processMarketItem(rawName, totalQty, unit) {
   if (!rawName) return [];
+  if (typeof activeWeek !== 'undefined' && activeWeek && activeWeek.includes('43')) {
+    return [{ name: rawName.trim(), qty: totalQty, unit: unit }];
+  }
 
   let cleanStr = rawName
     .replace(/\s*\(\s*\d+°C\s*\)/gi, '')
@@ -6243,7 +6253,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
 
       const sRecipe = activeMeal.starter_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.starter_name, 'starter', activeMeal.meal_type) : null);
       const mRecipe = activeMeal.main_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.main_dish_name || activeMeal.dish_name, 'main', activeMeal.meal_type) : null);
-      const sdRecipe = activeMeal.side_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.side_dish_name, 'side', activeMeal.meal_type) : null);
+      const sdRecipe = activeMeal.side_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.main_dish_name ? activeMeal.side_dish_name : '', 'side', activeMeal.meal_type) : null);
 
       [sRecipe, mRecipe, sdRecipe].forEach(recipe => {
         if (recipe && Array.isArray(recipe.ingredient_groups)) {
@@ -6253,7 +6263,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
               if (!rawName) return;
 
               const cleanLower = rawName.toLowerCase();
-              if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLower)) {
+              if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol|agua purificada/i.test(cleanLower)) {
                 return;
               }
 
@@ -6295,7 +6305,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
                       bomMap[slug].quantity += pieces;
                     }
                   } else {
-                    const itemCat = canonicalName.toLowerCase().includes('cebolla') ? '🥬 Verduras, Hortalizas y Frescos' : getSmartItemCategory(canonicalName);
+                    const itemCat = grp.category || (canonicalName.toLowerCase().includes('cebolla') ? '🥬 Verduras, Hortalizas y Frescos' : getSmartItemCategory(canonicalName));
                     if (!bomMap[slug]) {
                       bomMap[slug] = {
                         id: `bought_v36_${slug}`,
@@ -6317,10 +6327,31 @@ function calculateActiveMenuBOM(weekKey, diners) {
       });
     });
 
+  // Contabilidad integral de las 4 tomas diarias de Sinergix® (Toma 1 en ayunas + Toma 4 antes de dormir)
+  const wTarget = weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : '');
+  if (wTarget && wTarget.includes('43')) {
+    const extraDoseQty = 5 * numDiners * 7; // 210 g para 6 comensales
+    ['MultiSinergix®', 'AminoSinergix®'].forEach(suppName => {
+      const sSlug = normalizeToCanonicalSlug(suppName);
+      if (bomMap[sSlug]) {
+        bomMap[sSlug].quantity += extraDoseQty;
+      } else {
+        bomMap[sSlug] = {
+          id: `bought_v36_${sSlug}`,
+          slug: sSlug,
+          item_name: suppName,
+          category: '💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA',
+          quantity: extraDoseQty * 2,
+          unit: 'g'
+        };
+      }
+    });
+  }
+
   const resultList = Object.values(bomMap);
   resultList.forEach(item => {
-    if (item.unit === 'piezas' || item.unit === 'pz' || item.unit === 'pieza') {
-      item.quantity = Math.ceil(item.quantity);
+    if (item.unit === 'piezas' || item.unit === 'pz' || item.unit === 'pieza' || item.unit === 'manojo') {
+      item.quantity = Math.ceil(item.quantity - 1e-9);
     }
   });
 
@@ -6376,7 +6407,7 @@ function calculateNetShoppingList(diners) {
     let name = it.name || it.item_name || '';
     let cat = it.category || '';
 
-    if (typeof activeWeek !== 'undefined' && activeWeek && activeWeek.includes('40')) {
+    if (typeof activeWeek !== 'undefined' && activeWeek && (activeWeek.includes('40') || activeWeek.includes('43'))) {
       return { ...it, name: name, item_name: name, category: cat };
     }
 
@@ -7768,7 +7799,7 @@ function compileFullMealRecipes(meal, diners) {
     }
 
     function ensureSundayServiceDispatched() {
-      if (typeof activeWeek === 'undefined') return;
+      if (typeof activeWeek === 'undefined' || String(activeWeek).includes('43')) return;
       const sundayMeals = [
         { dayIdx: 0, mealType: 'Desayuno', diners: 2 },
         { dayIdx: 0, mealType: 'Comida', diners: 2 }
@@ -8546,18 +8577,31 @@ function renderRecipes(day, activeDiners) {
       const pool = window.DISH_EXCHANGE_POOL || { starters: [], mains: [], sides: [] };
 
       if (stSelect) {
-        stSelect.innerHTML = (pool.starters || []).map(s => `<option value="${s.name}">${s.name}</option>`).join('');
-        stSelect.value = currentMeal.starter_name || (pool.starters[0] ? pool.starters[0].name : '');
+        const stOptions = [...(pool.starters || [])];
+        if (currentMeal.starter_name && !stOptions.some(s => s.name === currentMeal.starter_name)) {
+          stOptions.unshift({ name: currentMeal.starter_name, macros: { kcal: 65, fat_g: 4.5, protein_g: 2.0, net_carbs_g: 1.2 } });
+        }
+        stSelect.innerHTML = stOptions.map(s => `<option value="${s.name}">${s.name}</option>`).join('');
+        stSelect.value = currentMeal.starter_name || (stOptions[0] ? stOptions[0].name : '');
       }
 
       if (mnSelect) {
-        mnSelect.innerHTML = (pool.mains || []).map(m => `<option value="${m.name}">${m.name}</option>`).join('');
-        mnSelect.value = currentMeal.main_dish_name || currentMeal.dish_name || (pool.mains[0] ? pool.mains[0].name : '');
+        const mnOptions = [...(pool.mains || [])];
+        const curMainName = currentMeal.main_dish_name || currentMeal.dish_name;
+        if (curMainName && !mnOptions.some(m => m.name === curMainName)) {
+          mnOptions.unshift({ name: curMainName, macros: { kcal: 340, fat_g: 24.0, protein_g: 28.0, net_carbs_g: 1.8 } });
+        }
+        mnSelect.innerHTML = mnOptions.map(m => `<option value="${m.name}">${m.name}</option>`).join('');
+        mnSelect.value = curMainName || (mnOptions[0] ? mnOptions[0].name : '');
       }
 
       if (sdSelect) {
-        sdSelect.innerHTML = (pool.sides || []).map(sd => `<option value="${sd.name}">${sd.name}</option>`).join('');
-        sdSelect.value = currentMeal.side_dish_name || (pool.sides[0] ? pool.sides[0].name : '');
+        const sdOptions = [...(pool.sides || [])];
+        if (currentMeal.side_dish_name && !sdOptions.some(sd => sd.name === currentMeal.side_dish_name)) {
+          sdOptions.unshift({ name: currentMeal.side_dish_name, macros: { kcal: 55, fat_g: 3.0, protein_g: 1.0, net_carbs_g: 0.8 } });
+        }
+        sdSelect.innerHTML = sdOptions.map(sd => `<option value="${sd.name}">${sd.name}</option>`).join('');
+        sdSelect.value = currentMeal.side_dish_name || (sdOptions[0] ? sdOptions[0].name : '');
       }
 
       onDishSelectChange();
@@ -8583,21 +8627,27 @@ function renderRecipes(day, activeDiners) {
       const mnName = document.getElementById('neg-main-select')?.value || '';
       const sdName = document.getElementById('neg-side-select')?.value || '';
 
-      const pool = window.DISH_EXCHANGE_POOL || { starters: [], mains: [], sides: [] };
-      const stObj = pool.starters.find(s => s.name === stName) || { macros: { kcal: 65, fat_g: 4.5, protein_g: 2.0, net_carbs_g: 1.5 } };
-      const mnObj = pool.mains.find(m => m.name === mnName) || { macros: { kcal: 340, fat_g: 24.0, protein_g: 28.0, net_carbs_g: 1.8 } };
-      const sdObj = pool.sides.find(sd => sd.name === sdName) || { macros: { kcal: 55, fat_g: 3.0, protein_g: 1.0, net_carbs_g: 0.8 } };
-
-      const totalKcal = stObj.macros.kcal + mnObj.macros.kcal + sdObj.macros.kcal;
-      const totalFat = stObj.macros.fat_g + mnObj.macros.fat_g + sdObj.macros.fat_g;
-      const totalProtein = stObj.macros.protein_g + mnObj.macros.protein_g + sdObj.macros.protein_g;
-      const totalCarbs = stObj.macros.net_carbs_g + mnObj.macros.net_carbs_g + sdObj.macros.net_carbs_g;
-
       const base = activeNegotiationContext.baseMeal || {};
       const baseKcal = base.calories_kcal || 365.0;
       const baseFat = base.fat_g || 28.5;
       const baseProtein = base.protein_g || 24.0;
       const baseCarbs = base.net_carbs_g || 3.2;
+
+      const isBaseSelection = (
+        stName === (base.starter_name || '') &&
+        mnName === (base.main_dish_name || base.dish_name || '') &&
+        sdName === (base.side_dish_name || '')
+      );
+
+      const pool = window.DISH_EXCHANGE_POOL || { starters: [], mains: [], sides: [] };
+      const stObj = pool.starters.find(s => s.name === stName) || { macros: { kcal: 65, fat_g: 4.5, protein_g: 2.0, net_carbs_g: 1.2 } };
+      const mnObj = pool.mains.find(m => m.name === mnName) || { macros: { kcal: 340, fat_g: 24.0, protein_g: 28.0, net_carbs_g: 1.8 } };
+      const sdObj = pool.sides.find(sd => sd.name === sdName) || { macros: { kcal: 55, fat_g: 3.0, protein_g: 1.0, net_carbs_g: 0.8 } };
+
+      const totalKcal = isBaseSelection ? baseKcal : (stObj.macros.kcal + mnObj.macros.kcal + sdObj.macros.kcal);
+      const totalFat = isBaseSelection ? baseFat : (stObj.macros.fat_g + mnObj.macros.fat_g + sdObj.macros.fat_g);
+      const totalProtein = isBaseSelection ? baseProtein : (stObj.macros.protein_g + mnObj.macros.protein_g + sdObj.macros.protein_g);
+      const totalCarbs = isBaseSelection ? baseCarbs : (stObj.macros.net_carbs_g + mnObj.macros.net_carbs_g + sdObj.macros.net_carbs_g);
 
       const dKcal = totalKcal - baseKcal;
       const dFat = totalFat - baseFat;
