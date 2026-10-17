@@ -946,6 +946,29 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
                     f"[R7] {c_label}: ingredients[] contiene '{v_key}' pero no se menciona ni en title ni en note."
                 )
 
+    # Verificar que coct_reasoning y steps no mencionen un vegetal de VEGETABLE_FAMILIES ausente de ingredients[]
+    coct_and_steps_norm = _strip_accents(
+        json.dumps(dish.get("coct_reasoning", {}), ensure_ascii=False)
+        + " "
+        + " ".join(dish.get("steps", []))
+    )
+    for v_key, tokens in VEGETABLE_FAMILIES.items():
+        if any(tok in coct_and_steps_norm for tok in tokens) and not any(tok in ings_norm_str for tok in tokens):
+            violations.append(
+                f"[R7] {c_label}: coct_reasoning/steps menciona '{v_key}' pero no existe en ingredients[]."
+            )
+
+    # Verificar que insumos medidos en 'piezas' o 'manojo' tengan cantidad entera para 6 comensales (evita discrepancias de redondeo entre Sección 2 y Tabla 3.2)
+    for ing in dish.get("ingredients", []):
+        u_low = str(ing.get("unit", "")).strip().lower()
+        if "piez" in u_low or "manojo" in u_low:
+            amt_val = float(ing.get("amount", 0.0))
+            if abs(amt_val - round(amt_val)) > 1e-6:
+                violations.append(
+                    f"[R6] {c_label}: El ingrediente '{ing.get('name')}' ({amt_val} {ing.get('unit')}) debe tener una cantidad entera para 6 comensales."
+                )
+
+
 
 def assert_zero_violations(
     week_data: Dict[str, Any],

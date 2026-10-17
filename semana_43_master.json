@@ -405,10 +405,10 @@
           "main": {
             "title": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Brócoli Tierno de la Granja y Nuez de la India",
             "technique": "stuffed_cap_roast",
-            "note": "Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena con brócoli frescos de la granja ($0).",
+            "note": "Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena con brócoli fresco de la granja ($0).",
             "coct_reasoning": {
               "thermodynamics": "Horneado corto a 185°C durante 12 minutos que concentra el umami fúngico y funde suavemente el ricotta.",
-              "flavor_and_aromatics": "Umami terroso del champiñón, cremosidad láctica suave, ejotes tiernos y toque tostado de la nuez de la India.",
+              "flavor_and_aromatics": "Umami terroso del champiñón, cremosidad láctica suave, brócoli tierno de la granja y toque tostado de la nuez de la India.",
               "textural_architecture": "Sombrero carnoso y jugoso con relleno cremoso y superficie crujiente de nuez.",
               "critical_control_points": "Pre-hornear los sombreros 5 minutos para evaporar exceso de humedad antes de rellenar."
             },
@@ -458,7 +458,7 @@
             ],
             "steps": [
               "Limpiar los champiñones grandes de alacena, barnizar con aceite de oliva VEVO y pre-hornear 5 minutos a 185°C.",
-              "Mezclar los brócoli tiernos de la granja finamente picados con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.",
+              "Mezclar el brócoli tierno de la granja finamente picado con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.",
               "Hornear 7 minutos adicionales hasta dorar ligeramente y servir templado."
             ]
           },
@@ -590,8 +590,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Morrón",
-                "per_guest": 0.2,
-                "amount": 1.2,
+                "per_guest": 0.3333,
+                "amount": 2.0,
                 "unit": "piezas"
               },
               {
@@ -693,7 +693,7 @@
             "note": "Entrada verde de espinacas y arúgula de la granja ($0) diseñada para equilibrar la carga metabólica del plato principal de res.",
             "coct_reasoning": {
               "thermodynamics": "Ensamblaje en frío que preserva los glucosinolatos de la arúgula y los folatos de la espinaca de la granja.",
-              "flavor_and_aromatics": "Toque pimientoso de la arúgula fresca y espinaca tierna equilibrado con limón de la granja y aceite de oliva VEVO.",
+              "flavor_and_aromatics": "Notas herbáceas frescas de la arúgula de la granja equilibradas con espinaca tierna, acidez cítrica de limón real y aceite de oliva VEVO.",
               "textural_architecture": "Hojas crujientes y ligeras con emulsión cítrica brillante.",
               "critical_control_points": "Secar perfectamente las hojas tras el lavado para que el aceite VEVO se adhiera."
             },
@@ -945,8 +945,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Lechuga",
-                "per_guest": 0.25,
-                "amount": 1.5,
+                "per_guest": 0.3333,
+                "amount": 2.0,
                 "unit": "piezas"
               },
               {
@@ -1274,8 +1274,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Cebolla",
-                "per_guest": 0.2,
-                "amount": 1.2,
+                "per_guest": 0.3333,
+                "amount": 2.0,
                 "unit": "piezas"
               },
               {
@@ -1435,8 +1435,8 @@
             "note": "Único servicio semanal de mojarra que amortiza al 100% los 900 g de alacena en una cena marina blanca de rapidísimo vaciamiento gástrico con ejotes de la granja ($0).",
             "coct_reasoning": {
               "thermodynamics": "Cocción suave al vapor en papillote abierto a 95°C durante 6 minutos que preserva la delicadeza del pescado blanco.",
-              "flavor_and_aromatics": "Sabor marino limpio con hierbas finas de alacena, jugo de limón fresco de la granja, brócoli tierno y aceite VEVO.",
-              "textural_architecture": "Lomos blancos jugosos acompañados de floretes tiernos de brócoli.",
+              "flavor_and_aromatics": "Sabor marino limpio con hierbas finas de alacena, jugo de limón fresco de la granja, ejotes tiernos de la granja y aceite VEVO.",
+              "textural_architecture": "Lomos blancos jugosos acompañados de vainas tiernas de ejote al vapor.",
               "critical_control_points": "Retirar del vapor en cuanto el pescado esté blanco opaco y bañar en frío con aceite VEVO."
             },
             "ingredients": [
@@ -1621,8 +1621,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Morrón",
-                "per_guest": 0.2,
-                "amount": 1.2,
+                "per_guest": 0.3333,
+                "amount": 2.0,
                 "unit": "piezas"
               },
               {
@@ -2467,8 +2467,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Lechuga",
-                "per_guest": 0.3,
-                "amount": 1.8,
+                "per_guest": 0.3333,
+                "amount": 2.0,
                 "unit": "piezas"
               },
               {
@@ -2802,15 +2802,15 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Morrón",
-                "per_guest": 0.2,
-                "amount": 1.2,
+                "per_guest": 0.3333,
+                "amount": 2.0,
                 "unit": "piezas"
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Cebolla",
-                "per_guest": 0.2,
-                "amount": 1.2,
+                "per_guest": 0.3333,
+                "amount": 2.0,
                 "unit": "piezas"
               },
               {
@@ -2991,8 +2991,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Lechuga",
-                "per_guest": 0.25,
-                "amount": 1.5,
+                "per_guest": 0.3333,
+                "amount": 2.0,
                 "unit": "piezas"
               },
               {
@@ -3266,8 +3266,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Lechuga",
-                "per_guest": 0.25,
-                "amount": 1.5,
+                "per_guest": 0.1666,
+                "amount": 1.0,
                 "unit": "piezas"
               },
               {
@@ -3501,8 +3501,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Flor de calabaza",
-                "per_guest": 0.16,
-                "amount": 0.96,
+                "per_guest": 0.1666,
+                "amount": 1.0,
                 "unit": "manojo"
               },
               {
