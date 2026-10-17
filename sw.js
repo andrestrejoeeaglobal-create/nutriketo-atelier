@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Governance Rule RULE-2026-CROSS-DEVICE-MIRROR-001
-const CACHE_NAME = 'nutriketo-v36-6-rev11-s42-fruits-fix-v39';
+const CACHE_NAME = 'nutriketo-v36-6-rev12-s42-sameorigin-sw-v40';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -53,7 +53,15 @@ self.addEventListener('fetch', (event) => {
   const reqUrl = event.request.url || '';
   if (!reqUrl.startsWith('http://') && !reqUrl.startsWith('https://')) return;
 
-  // Network-First using URL string (avoids Chromium TypeError when Request.mode === 'navigate' + non-empty RequestInit)
+  // Bypass cross-origin requests (e.g., cdn.tailwindcss.com, Google Fonts) so browser loads them natively without CORS blocks
+  try {
+    const parsedUrl = new URL(reqUrl);
+    if (parsedUrl.origin !== self.location.origin) return;
+  } catch (e) {
+    return;
+  }
+
+  // Same-origin Network-First using URL string
   event.respondWith(
     fetch(reqUrl, { cache: 'no-store' })
       .then((networkResponse) => {
@@ -67,9 +75,13 @@ self.addEventListener('fetch', (event) => {
         }
         return networkResponse;
       })
-      .catch(() => {
+      .catch(async () => {
         console.warn('[ServiceWorker] Network failed, falling back to cache for:', reqUrl);
-        return caches.match(event.request);
+        const cached = await caches.match(event.request);
+        if (cached) return cached;
+        const rootCached = await caches.match('./index.html') || await caches.match('./');
+        if (rootCached) return rootCached;
+        return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
       })
   );
 });

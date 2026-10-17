@@ -8,15 +8,32 @@
   <meta http-equiv="Expires" content="0" />
   <title>Arquitectura Herami — Atelier T.I.L.O.®</title>
 
-  <!-- PURGA AGRESIVA DE CACHÉ CLIENTE Y SERVICE WORKER -->
+  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V40 -->
   <script>
   if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.getRegistrations().then(regs => {
-          for (let r of regs) { r.unregister(); }
-      });
+    navigator.serviceWorker.getRegistrations().then(async (regs) => {
+      let legacyUnregistered = false;
+      for (let r of regs) {
+        const sUrl = (r.active && r.active.scriptURL) || (r.installing && r.installing.scriptURL) || (r.waiting && r.waiting.scriptURL) || '';
+        if (!sUrl.includes('nutriketo-v36-6-rev12-s42-sameorigin-sw-v40')) {
+          await r.unregister();
+          legacyUnregistered = true;
+        }
+      }
+      if (legacyUnregistered && typeof window.tailwind === 'undefined') {
+        const twScript = document.createElement('script');
+        twScript.src = 'https://cdn.tailwindcss.com';
+        twScript.onload = function() {
+          if (typeof applyTailwindConfig === 'function') applyTailwindConfig();
+        };
+        document.head.appendChild(twScript);
+      }
+    }).catch(() => {});
   }
   if ('caches' in window) {
-      caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+    caches.keys().then(keys => keys.forEach(k => {
+      if (k !== 'nutriketo-v36-6-rev12-s42-sameorigin-sw-v40') caches.delete(k);
+    })).catch(() => {});
   }
   </script>
 
@@ -88,27 +105,28 @@ function selectWeek(weekKey) {
   }
 }
 
-
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            'ea-red': '#B70E0C',
-            'ea-pink': '#F29FC5',
-            'ea-corporate': '#1C75BC',
-            'ea-green': '#3AAA35',
-            'ea-yellow': '#FFCC00',
-            'ea-navy': '#0F172A',
-            'ea-clinical': '#F8FAFC',
+    function applyTailwindConfig() {
+      if (typeof tailwind !== 'undefined') {
+        tailwind.config = {
+          darkMode: 'class',
+          theme: {
+            extend: {
+              colors: {
+                'ea-red': '#B70E0C',
+                'ea-pink': '#F29FC5',
+                'ea-corporate': '#1C75BC',
+                'ea-green': '#3AAA35',
+                'ea-yellow': '#FFCC00',
+                'ea-navy': '#0F172A',
+                'ea-clinical': '#F8FAFC',
+              }
+            }
           }
-        }
+        };
       }
     }
+    applyTailwindConfig();
   </script>
-
-  <!-- Hoja de estilos institucional de carga -->
-  <link rel="stylesheet" href="https://equipoenaccion.net/css/loadingEAstyle.css" />
 
   <!-- Variables de Gobernanza y Tokens Duales -->
   <style>
@@ -6953,14 +6971,14 @@ function renderRecipes(day, activeDiners) {
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev11-s42-fruits-fix-v39') {
+              if (k !== 'nutriketo-v36-6-rev12-s42-sameorigin-sw-v40') {
                 caches.delete(k);
               }
             });
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev11-s42-fruits-fix-v39')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev12-s42-sameorigin-sw-v40')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();
