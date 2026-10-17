@@ -65,7 +65,7 @@
           },
           "main": {
             "title": "Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate y Queso de Cabra",
-            "technique": "roast_bake",
+            "technique": "baked_cocotte",
             "note": "Plato matutino horneado en cazuelas individuales: 3 huevos enteros por comensal sobre reducción de jitomate de alacena, espinacas frescas de la granja, mantequilla y queso de cabra.",
             "coct_reasoning": {
               "thermodynamics": "Cocción radiante en refractario a 180°C: coagulación de albúmina a 72°C conservando la yema cremosa a 62°C.",
@@ -243,7 +243,7 @@
           },
           "main": {
             "title": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
-            "technique": "grill_sear",
+            "technique": "chargrill_sear",
             "note": "Corte selecto de Flat Steak de alacena sellado al hierro con mantequilla infusionada en hierbas finas de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Reacción de Maillard a 210°C en superficie durante 3 minutos por lado, reposando a 56°C internos.",
@@ -406,7 +406,7 @@
           },
           "main": {
             "title": "Champiñones Portobello al Horno Rellenos de Espinacas de la Granja, Queso Ricotta y Nuez de la India",
-            "technique": "roast_bake",
+            "technique": "stuffed_cap_roast",
             "note": "Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Horneado corto a 185°C durante 12 minutos que concentra el umami fúngico y funde suavemente el ricotta.",
@@ -914,7 +914,7 @@
           },
           "main": {
             "title": "Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro",
-            "technique": "cold_emulsion_assembly",
+            "technique": "cold_tartare_boats",
             "note": "Cena marina magra de rápido vaciamiento gástrico que amortiza al 100% el atún en agua, la lechuga y el aguacate de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Ensamblaje en frío que preserva intactos los ácidos grasos monoinsaturados del aguacate y el VEVO.",
@@ -1141,7 +1141,7 @@
               }
             ],
             "steps": [
-              "Batir los 3 huevos por persona con sal de mar y cilantro fino de la granja.",
+              "Batir los 3 huevos por comensal con sal de mar y cilantro fino de la granja.",
               "Verter una primera capa fina en sartén con mantequilla, colocar bastones de queso Philadelphia e ir enrollando en 3 capas sucesivas.",
               "Rebanar en medallones gruesos y terminar con un hilo de aceite VEVO."
             ]
@@ -1363,8 +1363,8 @@
           "net_carbs_g": 4.2,
           "fiber_g": 5.7,
           "starter_name": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
-          "main_dish_name": "Fajitas de Filete de Mojarra al Vapor con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
-          "dish_name": "Fajitas de Filete de Mojarra al Vapor con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
+          "main_dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
+          "dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
           "side_dish_name": "Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
@@ -1419,13 +1419,13 @@
             ]
           },
           "main": {
-            "title": "Fajitas de Filete de Mojarra al Vapor con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
-            "technique": "steam_gentle",
+            "title": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Calabacita Tierna de la Granja",
+            "technique": "steam_papillote",
             "note": "Único servicio semanal de mojarra que amortiza al 100% los 900 g de alacena en una cena marina blanca de rapidísimo vaciamiento gástrico.",
             "coct_reasoning": {
-              "thermodynamics": "Cocción suave al vapor a 95°C durante 6 minutos que preserva la delicadeza del pescado blanco.",
+              "thermodynamics": "Cocción suave al vapor en papillote abierto a 95°C durante 6 minutos que preserva la delicadeza del pescado blanco.",
               "flavor_and_aromatics": "Sabor marino limpio con hierbas finas de alacena, jugo de limón fresco de la granja y aceite VEVO.",
-              "textural_architecture": "Fajitas blancas jugosas acompañadas de medias lunas tiernas de calabacita.",
+              "textural_architecture": "Lomos blancos jugosos acompañados de medias lunas tiernas de calabacita.",
               "critical_control_points": "Retirar del vapor en cuanto el pescado esté blanco opaco y bañar en frío con aceite VEVO."
             },
             "ingredients": [
@@ -1480,7 +1480,7 @@
               }
             ],
             "steps": [
-              "Disponer las fajitas de mojarra de alacena y las calabacitas de la granja en vaporera con sal de mar y hierbas finas.",
+              "Disponer los filetes de mojarra de alacena y las calabacitas de la granja en vaporera con sal de mar y hierbas finas.",
               "Cocer al vapor durante 6 minutos y emplatar bañando con mantequilla fundida, aceite VEVO y jugo de limón de la granja."
             ]
           },
@@ -1754,7 +1754,7 @@
           },
           "main": {
             "title": "Lomo de Salmón Fresco Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO",
-            "technique": "pan_sear",
+            "technique": "unilateral_skin_sear",
             "note": "Único servicio semanal de salmón rico en EPA/DHA, cubierto al 100% con el stock de alacena y coronado con pistaches tostados de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Sellado unilateral en sartén a 190°C del lado de la piel (70% del tiempo) y volteo breve para conservar centro a 52°C y proteger los Omega-3.",
@@ -1916,7 +1916,7 @@
           },
           "main": {
             "title": "Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Espárragos de la Granja",
-            "technique": "pan_sear",
+            "technique": "sesame_crust_tataki",
             "note": "Cena marina magra de rapidísimo vaciamiento gástrico que amortiza al 100% los 700 g de filete de atún y el ajonjolí de alacena (sin forzar compra de róbalo).",
             "coct_reasoning": {
               "thermodynamics": "Sellado rápido en sartén a 195°C por 90 segundos por lado conservando el centro jugoso.",
@@ -2194,8 +2194,8 @@
           "net_carbs_g": 4.4,
           "fiber_g": 6.5,
           "starter_name": "Crema Aterciopelada de Brócoli de la Granja al Queso Ricotta",
-          "main_dish_name": "Fajitas de Pechuga de Pollo al Sartén en Salsa Cremosa de Leche de Coco y Cúrcuma",
-          "dish_name": "Fajitas de Pechuga de Pollo al Sartén en Salsa Cremosa de Leche de Coco y Cúrcuma",
+          "main_dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
+          "dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
           "side_dish_name": "Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
           "starter": {
             "title": "Crema Aterciopelada de Brócoli de la Granja al Queso Ricotta",
@@ -2250,36 +2250,36 @@
             ]
           },
           "main": {
-            "title": "Fajitas de Pechuga de Pollo al Sartén en Salsa Cremosa de Leche de Coco y Cúrcuma",
-            "technique": "pan_sear_simmer",
-            "note": "Fajitas tiernas de pechuga de pollo de alacena cocinadas en reducción sedosa de leche de coco y cúrcuma antiinflamatoria de alacena.",
+            "title": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
+            "technique": "mediterranean_oven_bake",
+            "note": "Único servicio semanal de sardina rico en Omega-3 EPA/DHA y calcio biodisponible, cubierto al 100% con el stock de alacena (reduciendo el pollo a solo 2 servicios semanales).",
             "coct_reasoning": {
-              "thermodynamics": "Sellado a 180°C y reducción suave de la leche de coco a 85°C con cúrcuma y pimienta negra (que multiplica la biodisponibilidad de la curcumina).",
-              "flavor_and_aromatics": "Notas exóticas de leche de coco, cúrcuma dorada, cilantro de la granja y limón.",
-              "textural_architecture": "Tiras jugosas de pechuga bañadas en emulsión dorada.",
-              "critical_control_points": "Integrar una pizca de pimienta negra junto con la cúrcuma para activar la absorción de curcumina."
+              "thermodynamics": "Horneado corto a 185°C durante 10 minutos con jitomate y cebolla de alacena que concentra el licopeno sin oxidar los lípidos marinos.",
+              "flavor_and_aromatics": "Umami marino profundo equilibrado con el dulzor ácido del jitomate asado, cebolla tierna, orégano y aceite VEVO.",
+              "textural_architecture": "Lomos enteros firmes y jugosos sobre cama aromática de jitomate y cebolla.",
+              "critical_control_points": "Hornear solo 10 minutos para preservar intactos los ácidos grasos poliinsaturados Omega-3."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
-                "name": "Pechuga de pollo",
-                "per_guest": 150,
-                "amount": 900,
+                "name": "Sardinas",
+                "per_guest": 140,
+                "amount": 840,
                 "unit": "g"
               },
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Leche de coco",
-                "per_guest": 60,
-                "amount": 360,
-                "unit": "ml"
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Jitomate",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "piezas"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Cúrcuma",
-                "per_guest": 2,
-                "amount": 12,
-                "unit": "g"
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cebolla",
+                "per_guest": 0.2,
+                "amount": 1.2,
+                "unit": "piezas"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
@@ -2318,9 +2318,9 @@
               }
             ],
             "steps": [
-              "Saltear las fajitas de pechuga de pollo de alacena en mantequilla y aceite VEVO con sal de mar, cúrcuma y pimienta negra durante 4 minutos.",
-              "Verter la leche de coco de alacena y reducir a fuego suave durante 3 minutos.",
-              "Terminar con cilantro fresco de la granja picado."
+              "Disponer los lomos de sardina de alacena en refractario sobre rodajas finas de jitomate y cebolla blanca de alacena.",
+              "Bañar con mantequilla y aceite VEVO, sazonar con sal de mar y pimienta negra, y hornear a 185°C durante 10 minutos.",
+              "Terminar con cilantro fresco de la granja picado al servir."
             ]
           },
           "side": {
@@ -2434,7 +2434,7 @@
           },
           "main": {
             "title": "Timbal Fresco de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga",
-            "technique": "cold_emulsion_assembly",
+            "technique": "chilled_timbale_mold",
             "note": "Cena ligera proteica láctea-vegetal de rápido vaciamiento gástrico que amortiza el queso cottage, el aguacate, las semillas mixtas y la lechuga de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Ensamblaje en frío a 8°C que preserva los ácidos grasos esenciales de las semillas y el aguacate.",
@@ -2733,8 +2733,8 @@
           "net_carbs_g": 4.6,
           "fiber_g": 6.4,
           "starter_name": "Crema Sedosa de Espárragos Verdes de la Granja con Aceite de Oliva VEVO",
-          "main_dish_name": "Fajitas de Flat Steak de Res Salteadas con Pimiento Morrón, Cebolla y Aceite VEVO",
-          "dish_name": "Fajitas de Flat Steak de Res Salteadas con Pimiento Morrón, Cebolla y Aceite VEVO",
+          "main_dish_name": "Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO",
+          "dish_name": "Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO",
           "side_dish_name": "Calabacitas Verdes Tiernas de la Granja Asadas a la Parrilla con Aceite VEVO y Orégano",
           "starter": {
             "title": "Crema Sedosa de Espárragos Verdes de la Granja con Aceite de Oliva VEVO",
@@ -2782,11 +2782,11 @@
             ]
           },
           "main": {
-            "title": "Fajitas de Flat Steak de Res Salteadas con Pimiento Morrón, Cebolla y Aceite VEVO",
-            "technique": "high_heat_saute",
-            "note": "Fajitas de Flat Steak que amortizan el resto del stock de alacena, salteadas a fuego vivo con pimientos morrones y cebolla de alacena.",
+            "title": "Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO",
+            "technique": "high_heat_wok_saute",
+            "note": "Juliana de Flat Steak que amortiza el resto del stock de alacena, salteada a fuego vivo tipo wok con pimientos morrones y cebolla de alacena.",
             "coct_reasoning": {
-              "thermodynamics": "Salteado rápido tipo wok a 210°C durante 3 minutos que sella las tiras de res conservando su terneza.",
+              "thermodynamics": "Salteado rápido al wok a 210°C durante 3 minutos que sella las tiras de res conservando su terneza.",
               "flavor_and_aromatics": "Caramelización de la carne de res con dulzor de pimiento morrón y cebolla asada.",
               "textural_architecture": "Tiras de carne jugosas con bastones de pimiento al dente.",
               "critical_control_points": "Cortar el Flat Steak en contra de la fibra muscular antes de saltear."
@@ -2843,8 +2843,8 @@
               }
             ],
             "steps": [
-              "Cortar el Flat Steak de alacena en fajitas en contra de la hebra y sazonar con sal de mar y pimienta negra.",
-              "Saltear a fuego alto en aceite VEVO y mantequilla durante 2 minutos, añadir el pimiento morrón y la cebolla en juliana y saltear 2 minutos más."
+              "Cortar el Flat Steak de alacena en juliana gruesa en contra de la hebra y sazonar con sal de mar y pimienta negra.",
+              "Saltear a fuego alto en wok con aceite VEVO y mantequilla durante 2 minutos, añadir el pimiento morrón y la cebolla en juliana y saltear 2 minutos más."
             ]
           },
           "side": {
@@ -2901,8 +2901,8 @@
           "net_carbs_g": 3.8,
           "fiber_g": 5.8,
           "starter_name": "Caldo Reconfortante de Pollo y Vegetales Verdes con Limón Real y Cilantro de la Granja",
-          "main_dish_name": "Tacos en Hoja de Lechuga Romana con Salpicón de Pechuga de Pollo al Limón, Alcaparras y Aceite VEVO",
-          "dish_name": "Tacos en Hoja de Lechuga Romana con Salpicón de Pechuga de Pollo al Limón, Alcaparras y Aceite VEVO",
+          "main_dish_name": "Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO",
+          "dish_name": "Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO",
           "side_dish_name": "Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Caldo Reconfortante de Pollo y Vegetales Verdes con Limón Real y Cilantro de la Granja",
@@ -2957,13 +2957,13 @@
             ]
           },
           "main": {
-            "title": "Tacos en Hoja de Lechuga Romana con Salpicón de Pechuga de Pollo al Limón, Alcaparras y Aceite VEVO",
-            "technique": "cold_emulsion_assembly",
+            "title": "Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO",
+            "technique": "steam_roulade",
             "note": "Única cena semanal de pechuga de pollo de rápido vaciamiento gástrico, amortizando la pechuga de pollo, las alcaparras, las aceitunas y la lechuga de alacena.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje fresco a 12°C que facilita una digestión nocturna ligera.",
-              "flavor_and_aromatics": "Pollo jugoso al limón con el toque mediterráneo de las alcaparras y aceitunas manzanilla de alacena en aceite VEVO.",
-              "textural_architecture": "Hebras suaves de pollo sobre hojas crujientes de lechuga romana.",
+              "thermodynamics": "Cocción suave en roulade al vapor a 95°C que preserva la humedad fibrilar y facilita una digestión nocturna ligera.",
+              "flavor_and_aromatics": "Pollo jugoso al vapor con el toque mediterráneo de las alcaparras, aceitunas manzanilla de alacena, limón de la granja y aceite VEVO.",
+              "textural_architecture": "Medallones de rollito tiernos servidos sobre cama fresca de lechuga romana.",
               "critical_control_points": "Enjuagar ligeramente las alcaparras para equilibrar el sodio."
             },
             "ingredients": [
@@ -3025,8 +3025,8 @@
               }
             ],
             "steps": [
-              "Deshebrar la pechuga de pollo cocida y mezclar con las alcaparras, aceitunas manzanilla laminadas, cilantro de la granja, jugo de limón y aceite VEVO.",
-              "Servir en barquitas crujientes de lechuga romana de alacena."
+              "Laminar las pechugas de pollo de alacena, enrollarlas con cilantro de la granja y cocerlas al vapor por 8 minutos.",
+              "Rebanar en medallones sobre cama de lechuga romana y bañar con emulsión de aceite VEVO, jugo de limón, alcaparras y aceitunas manzanilla."
             ]
           },
           "side": {
@@ -3093,8 +3093,8 @@
           "net_carbs_g": 4.4,
           "fiber_g": 6.2,
           "starter_name": "Tazón de Fresas Frescas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja",
-          "main_dish_name": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Calabacitas Tiernas de la Granja al Orégano",
-          "dish_name": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Calabacitas Tiernas de la Granja al Orégano",
+          "main_dish_name": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Ejotes Tiernos de la Granja al Orégano",
+          "dish_name": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Ejotes Tiernos de la Granja al Orégano",
           "side_dish_name": "Gelatina Cítrica de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Tazón de Fresas Frescas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja",
@@ -3135,13 +3135,13 @@
             ]
           },
           "main": {
-            "title": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Calabacitas Tiernas de la Granja al Orégano",
-            "technique": "cast_iron_fry",
-            "note": "Tres huevos enteros por comensal estrellados en sartén de hierro con aceite VEVO y mantequilla sobre cama de calabacitas tiernas de la granja.",
+            "title": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Ejotes Tiernos de la Granja al Orégano",
+            "technique": "cast_iron_sunny_fry",
+            "note": "Tres huevos enteros por comensal estrellados en sartén de hierro con aceite VEVO y mantequilla sobre cama de ejotes tiernos de la granja ($0).",
             "coct_reasoning": {
               "thermodynamics": "Conducción en hierro a 165°C que dora sutilmente la orilla de la clara manteniendo la yema líquida a 60°C.",
-              "flavor_and_aromatics": "Riqueza de la yema líquida emulsionada con aceite de oliva VEVO, mantequilla y calabacita al orégano.",
-              "textural_architecture": "Claras tiernas de borde dorado, yema fluida y rodajas al dente de calabacita.",
+              "flavor_and_aromatics": "Riqueza de la yema líquida emulsionada con aceite de oliva VEVO, mantequilla y ejotes frescos al orégano.",
+              "textural_architecture": "Claras tiernas de borde dorado, yema fluida y vainas crujientes de ejote.",
               "critical_control_points": "No sobrecocer la yema para preservar la colina y lecitina biodisponibles."
             },
             "ingredients": [
@@ -3154,7 +3154,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
+                "name": "Ejotes frescos",
                 "per_guest": 65,
                 "amount": 390,
                 "unit": "g"
@@ -3189,9 +3189,9 @@
               }
             ],
             "steps": [
-              "Saltear las calabacitas tiernas de la granja en rodajas con mantequilla y orégano durante 3 minutos y disponer como base.",
+              "Saltear los ejotes tiernos de la granja previamente blanqueados con mantequilla y orégano durante 3 minutos y disponer como base.",
               "Estrellar los 3 huevos por comensal en el sartén de hierro con aceite VEVO hasta cuajar la clara dejando la yema líquida.",
-              "Servir sobre la cama de calabacitas y sazonar con sal de mar."
+              "Servir sobre la cama de ejotes de la granja y sazonar con sal de mar."
             ]
           },
           "side": {
@@ -3313,7 +3313,7 @@
           },
           "main": {
             "title": "Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Costra de Queso Manchego y Guacamole Rústico",
-            "technique": "grill_sear",
+            "technique": "open_flame_patty_gratin",
             "note": "Plato principal que amortiza el resto de la carne molida, el queso manchego y el aguacate de alacena, coronado con el único aguacate del día.",
             "coct_reasoning": {
               "thermodynamics": "Asado a la parrilla a 200°C durante 4 minutos por lado y fundido del queso manchego con calor residual.",
@@ -3418,8 +3418,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 5.8,
           "starter_name": "Consomé Nocturno de Vegetales de la Granja con Cilantro Fresco y Limón Real",
-          "main_dish_name": "Salteado Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
-          "dish_name": "Salteado Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
+          "main_dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
+          "dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
           "side_dish_name": "Infusión Nocturna de Manzanilla y Flor de Jamaica (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Consomé Nocturno de Vegetales de la Granja con Cilantro Fresco y Limón Real",
@@ -3481,9 +3481,9 @@
             ]
           },
           "main": {
-            "title": "Salteado Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
-            "technique": "quick_saute",
-            "note": "Cena ligera fúngica-láctea de rápido vaciamiento gástrico que amortiza al 100% los champiñones, la flor de calabaza, el queso de cabra y las almendras fileteadas de alacena.",
+            "title": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
+            "technique": "warm_carpaccio_saute",
+            "note": "Cena ligera fúngica-láctea de rápido vaciamiento gástrico que amortiza al 100% los champiñones, la flor de calabaza (1 manojo en alacena), el queso de cabra y las almendras fileteadas de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Salteado a 175°C durante 4 minutos que dora los champiñones laminados y funde suavemente el queso de cabra.",
               "flavor_and_aromatics": "Umami de champiñón y flor de calabaza con acidez cremosa de queso de cabra y almendras tostadas.",
