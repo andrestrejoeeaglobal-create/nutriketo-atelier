@@ -121,6 +121,7 @@ function buildWeekPlanForNumber(targetWeekNum) {
   ];
 
   const newDays = [];
+  const seenMainDishes = new Set();
   for (let i = 0; i < 7; i++) {
     const curDate = new Date(2026, 9, 11 + offsetDays + i);
     const dName = DAYS_NAMES[curDate.getDay()];
@@ -144,7 +145,19 @@ function buildWeekPlanForNumber(targetWeekNum) {
     if (Array.isArray(clonedDay.meals) && Array.isArray(srcDayB.meals)) {
       clonedDay.meals = clonedDay.meals.map((meal, mIdx) => {
         const useAlt = ((i + mIdx + nextWeekNum) % 2 === 1) && srcDayB.meals[mIdx];
-        return JSON.parse(JSON.stringify(useAlt ? srcDayB.meals[mIdx] : meal));
+        const primaryCand = useAlt ? srcDayB.meals[mIdx] : meal;
+        const secondaryCand = useAlt ? meal : (srcDayB.meals[mIdx] || meal);
+        const pTitle = (primaryCand.main_dish_name || primaryCand.dish_name || '').trim().toLowerCase();
+        let chosen = primaryCand;
+        if (pTitle && seenMainDishes.has(pTitle)) {
+          const sTitle = (secondaryCand.main_dish_name || secondaryCand.dish_name || '').trim().toLowerCase();
+          if (sTitle && !seenMainDishes.has(sTitle)) {
+            chosen = secondaryCand;
+          }
+        }
+        const finalTitle = (chosen.main_dish_name || chosen.dish_name || '').trim().toLowerCase();
+        if (finalTitle) seenMainDishes.add(finalTitle);
+        return JSON.parse(JSON.stringify(chosen));
       });
     }
 
