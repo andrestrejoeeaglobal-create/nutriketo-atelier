@@ -2002,14 +2002,14 @@ def generate_standalone():
   <meta http-equiv="Expires" content="0" />
   <title>Arquitectura Herami — Atelier T.I.L.O.®</title>
 
-  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V42 -->
+  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V43 -->
   <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(async (regs) => {
       let legacyUnregistered = false;
       for (let r of regs) {
         const sUrl = (r.active && r.active.scriptURL) || (r.installing && r.installing.scriptURL) || (r.waiting && r.waiting.scriptURL) || '';
-        if (!sUrl.includes('nutriketo-v36-6-rev14-s42-nextweek-v42')) {
+        if (!sUrl.includes('nutriketo-v36-6-rev15-s42-canonical-dedup-v43')) {
           await r.unregister();
           legacyUnregistered = true;
         }
@@ -2026,7 +2026,7 @@ def generate_standalone():
   }
   if ('caches' in window) {
     caches.keys().then(keys => keys.forEach(k => {
-      if (k !== 'nutriketo-v36-6-rev14-s42-nextweek-v42') caches.delete(k);
+      if (k !== 'nutriketo-v36-6-rev15-s42-canonical-dedup-v43') caches.delete(k);
     })).catch(() => {});
   }
   </script>
@@ -2697,8 +2697,8 @@ function selectWeek(weekKey) {
 window.PANTRY_STOCK_INVENTORY = {
       "sku-001-mantequilla": { item_num: 1, name: "Mantequilla", stock: 290, unit: "g", packaging: "290 g", status: "canonical" },
       "sku-002-mostaza": { item_num: 2, name: "Mostaza", stock: 150, unit: "g", packaging: "3 envases de 50 g", status: "canonical" },
-      "sku-003-queso-cottage": { item_num: 3, name: "Queso cottage", stock: 2880, unit: "g", packaging: "3 envases de 960 g", status: "canonical" },
-      "sku-004-yogur-griego": { item_num: 4, name: "Yogur griego", stock: 2880, unit: "g", packaging: "3 envases de 960 g", status: "canonical" },
+      "sku-003-queso-cottage": { item_num: 3, sku_code: "Costco-9636-COTTAGE", ticket_id: "9636", name: "Queso cottage", stock: 3880, unit: "g", packaging: "3,880 g", status: "canonical" },
+      "sku-004-yogur-griego": { item_num: 4, sku_code: "Costco-9636-YOGHURT", ticket_id: "9636", name: "Yogur griego", stock: 3880, unit: "g", packaging: "3,880 g", status: "canonical" },
       "sku-005-queso-philadelphia": { item_num: 5, name: "Queso Philadelphia", stock: 720, unit: "g", packaging: "4 envases de 180 g", status: "canonical" },
       "sku-006-crema-acida": { item_num: 6, name: "Crema ácida", stock: 960, unit: "g", packaging: "960 g", status: "canonical" },
       "sku-007-mayonesa": { item_num: 7, name: "Mayonesa", stock: 1000, unit: "g", packaging: "1000 g", status: "canonical" },
@@ -2711,30 +2711,28 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-014-salsa-catsup": { item_num: 14, name: "Salsa cátsup", stock: 2600, unit: "g", packaging: "2 envases de 1300 g", status: "prohibited", reason: "Elevado aporte de azúcar añadida y jarabe de fructosa; fuera de protocolo keto." },
       "sku-015-queso-mozzarella": { item_num: 15, name: "Queso mozzarella", stock: 105, unit: "g", packaging: "105 g", status: "canonical" },
       "sku-016-nogada": { item_num: 16, name: "Nogada", stock: 960, unit: "ml", packaging: "960 ml", status: "prohibited", reason: "Preparación dulce tradicional con azúcar y leche condensada; rompe cetosis." },
-      "sku-017-agua-mineral": { item_num: 17, name: "Agua mineral", stock: 6, unit: "botellas de 1500 ml", packaging: "6 botellas de 1500 ml", status: "canonical" },
-      "sku-018-agua-mineral": { item_num: 18, name: "Agua mineral", stock: 1, unit: "botellas de 355 ml", packaging: "1 botella de 355 ml", status: "canonical" },
+      "sku-017-agua-mineral": { item_num: 17, name: "Agua mineral", stock: 9355, unit: "ml", packaging: "9,355 ml (6 de 1.5 L + 1 de 355 ml)", status: "canonical" },
       "sku-019-botella-de-agua": { item_num: 19, name: "Botella de agua", stock: 120, unit: "botellas (355 ml)", packaging: "120 botellas de 355 ml", status: "canonical" },
       "sku-020-queso-parmesano": { item_num: 20, name: "Queso parmesano", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
-      "sku-021-flat-steak": { item_num: 21, name: "Flat steak", stock: 940, unit: "g", packaging: "940 g", status: "canonical" },
-      "sku-022-flat-steak": { item_num: 22, name: "Flat steak", stock: 945, unit: "g", packaging: "945 g", status: "canonical" },
+      "sku-021-flat-steak": { item_num: 21, name: "Flat steak", stock: 1885, unit: "g", packaging: "1,885 g", status: "canonical" },
       "sku-023-lomo-de-salmon": { item_num: 23, name: "Lomo de salmón", stock: 1385, unit: "g", packaging: "1385 g", status: "canonical" },
       "sku-024-carne-molida": { item_num: 24, name: "Carne molida", stock: 1680, unit: "g", packaging: "1680 g", status: "canonical" },
       "sku-025-fajitas-de-mojarra": { item_num: 25, name: "Fajitas de mojarra", stock: 907, unit: "g", packaging: "907 g", status: "canonical" },
       "sku-026-filete-de-atun": { item_num: 26, name: "Filete de atún", stock: 700, unit: "g", packaging: "700 g", status: "canonical" },
       "sku-027-jitomate": { item_num: 27, name: "Jitomate", stock: 9, unit: "piezas", packaging: "9 piezas", status: "canonical" },
       "sku-028-morron": { item_num: 28, name: "Morrón", stock: 7, unit: "piezas", packaging: "7 piezas", status: "canonical" },
-      "sku-029-pechuga-de-pollo": { item_num: 29, name: "Pechuga de pollo", stock: 3, unit: "piezas", packaging: "3 piezas", status: "canonical" },
+      "sku-029-pechuga-de-pollo": { item_num: 29, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo", stock: 3454, unit: "g", packaging: "3,454 g", status: "canonical" },
       "sku-030-zanahoria": { item_num: 30, name: "Zanahoria", stock: 7, unit: "piezas", packaging: "7 piezas", status: "prohibited", reason: "Tubérculo amiláceo con alto índice glucémico; fuera de protocolo cetogénico estricto." },
       "sku-031-flor-de-calabaza": { item_num: 31, name: "Flor de calabaza", stock: 1, unit: "manojo", packaging: "1 manojo", status: "canonical" },
       "sku-032-calabaza": { item_num: 32, name: "Calabaza", stock: 6, unit: "piezas", packaging: "6 piezas", status: "canonical" },
       "sku-033-cebolla": { item_num: 33, name: "Cebolla", stock: 9, unit: "piezas", packaging: "9 piezas", status: "canonical" },
-      "sku-034-lechuga": { item_num: 34, name: "Lechuga", stock: 3, unit: "piezas", packaging: "3 piezas", status: "canonical" },
+      "sku-034-lechuga": { item_num: 34, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga", stock: 9, unit: "piezas", packaging: "9 piezas", status: "canonical" },
       "sku-035-ejotes": { item_num: 35, name: "Ejotes", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
       "sku-036-tomate": { item_num: 36, name: "Tomate", stock: 400, unit: "g", packaging: "400 g", status: "canonical" },
       "sku-037-elote": { item_num: 37, name: "Elote", stock: 2, unit: "piezas", packaging: "2 piezas", status: "prohibited", reason: "Grano entero amiláceo con altísima carga glucémica y carbohidratos netos." },
       "sku-038-aguacate": { item_num: 38, name: "Aguacate", stock: 13, unit: "piezas", packaging: "13 piezas", status: "canonical" },
-      "sku-039-zarzamora": { item_num: 39, name: "Zarzamora", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
-      "sku-040-champinon": { item_num: 40, name: "Champiñón", stock: 1000, unit: "g", packaging: "1000 g", status: "canonical" },
+      "sku-039-zarzamora": { item_num: 39, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamora", stock: 1010, unit: "g", packaging: "1,010 g", status: "canonical" },
+      "sku-040-champinon": { item_num: 40, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñón", stock: 2200, unit: "g", packaging: "2,200 g", status: "canonical" },
       "sku-041-pulpa-de-arandano": { item_num: 41, name: "Pulpa de arándano", stock: 3840, unit: "g", packaging: "4 envases de 960 g", status: "prohibited", reason: "Concentrado de fruta con azúcar añadida y alta fructosa; rompe cetosis." },
       "sku-042-pistaches": { item_num: 42, name: "Pistaches", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
       "sku-043-nuez-de-la-india": { item_num: 43, name: "Nuez de la India", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
@@ -2771,18 +2769,15 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-074-flor-de-jamaica-molida-en-polvo": { item_num: 74, name: "Flor de Jamaica molida en polvo", stock: 200, unit: "g", packaging: "200 g", status: "canonical" },
       "sku-075-almendras-fileteadas": { item_num: 75, name: "Almendras fileteadas", stock: 200, unit: "g", packaging: "200 g", status: "canonical" },
       "sku-076-hojas-de-laurel": { item_num: 76, name: "Hojas de laurel", stock: 20, unit: "g", packaging: "20 g", status: "canonical" },
-      "sku-077-oregano-delgado": { item_num: 77, name: "Orégano delgado", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
-      "sku-078-oregano-grueso": { item_num: 78, name: "Orégano grueso", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
+      "sku-077-oregano-delgado": { item_num: 77, name: "Orégano", stock: 150, unit: "g", packaging: "150 g", status: "canonical" },
       "sku-079-tomillo": { item_num: 79, name: "Tomillo", stock: 20, unit: "g", packaging: "20 g", status: "canonical" },
-      "sku-080-pimienta-negra": { item_num: 80, name: "Pimienta negra", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
+      "sku-080-pimienta-negra": { item_num: 80, name: "Pimienta negra", stock: 70, unit: "g", packaging: "70 g", status: "canonical" },
       "sku-081-comino": { item_num: 81, name: "Comino", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
       "sku-082-clavo-de-olor": { item_num: 82, name: "Clavo de olor", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
-      "sku-083-pimienta-molida": { item_num: 83, name: "Pimienta molida", stock: 20, unit: "g", packaging: "20 g", status: "canonical" },
       "sku-084-ajonjoli": { item_num: 84, name: "Ajonjolí", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
       "sku-085-manzanilla": { item_num: 85, name: "Manzanilla", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
       "sku-086-curcuma": { item_num: 86, name: "Cúrcuma", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
-      "sku-087-sal-marina-de-grano": { item_num: 87, name: "Sal marina de grano", stock: 2000, unit: "g", packaging: "2000 g", status: "canonical" },
-      "sku-088-sal-fina": { item_num: 88, name: "Sal fina", stock: 1000, unit: "g", packaging: "1000 g", status: "canonical" },
+      "sku-087-sal-marina-de-grano": { item_num: 87, name: "Sal de mar", stock: 3000, unit: "g", packaging: "3,000 g", status: "canonical" },
       "sku-089-manteca-de-cerdo": { item_num: 89, name: "Manteca de cerdo", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
       "sku-090-aceite-de-coco": { item_num: 90, name: "Aceite de coco", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
       "sku-091-tang": { item_num: 91, name: "Tang", stock: 104, unit: "g", packaging: "8 envases de 13 g", status: "prohibited", reason: "Polvo industrial para bebidas con azúcar y aditivos sintéticos no cetogénicos." },
@@ -2801,28 +2796,20 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-104-huevo": { item_num: 104, name: "Huevo", stock: 105, unit: "piezas", packaging: "105 piezas", status: "canonical" },
       "sku-105-multisinergix": { item_num: 105, name: "MultiSinergix®", stock: 300, unit: "g", packaging: "300 g", status: "canonical" },
       "sku-106-aminosinergix": { item_num: 106, name: "AminoSinergix®", stock: 200, unit: "g", packaging: "200 g", status: "canonical" },
-      // --- ORDEN DE ENTRADA Y AUDITORÍA PURGADA TICKET SAM'S CLUB TR04095 (San Juan del Río, Qro. — 2026-10-12T18:06:21) ---
-      "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas baby tiernas", stock: 500, quantity_commercial: 1, commercial_unit: "domo_500", unit: "g", packaging: "1 domo (~500 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
-      "champinones_portobello_frescos": { item_num: 108, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñones Portobello frescos", stock: 12, quantity_commercial: 2, commercial_unit: "paquetes", unit: "piezas", packaging: "2 paquetes (~12 pzas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
-      "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos verdes frescos", stock: 800, quantity_commercial: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "1 manojo comercial (~800 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
-      "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas frescas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1 domo / caja (~1,000 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
-      "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas frescas orgánicas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "1 domo (~340 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
-      "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso Ricotta (Qcotta 960g)", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "2 botes de 960 g c/u (1,920 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
-      "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chipotles en conserva (Pack 6x220g)", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1 pack (6 latas de 220 g c/u / 1,320 g)", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical" },
-      "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos frescos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
+      // --- INSUMOS ADICIONALES CONSOLIDADOS EN UN SOLO NOMBRE CANÓNICO SIN VARIACIONES ---
+      "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas", stock: 500, quantity_commercial: 1, commercial_unit: "domo_500", unit: "g", packaging: "500 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+      "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos", stock: 800, quantity_commercial: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "800 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+      "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1,000 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
+      "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "340 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
+      "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso ricotta", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "1,920 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
+      "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical" },
+      "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
       "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
-      // --- ORDEN DE ENTRADA PURGADA COSTCO WHOLESALE QUERÉTARO (Ticket 9636 — 2026-10-15T18:31:00) ---
-      "pechuga_de_pollo_organica": { item_num: 116, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo (Kirkland Signature)", stock: 1954, quantity_commercial: 1, commercial_unit: "paquete_pesado", scale_kg: 1.954, unit: "g", packaging: "1 paquete pesado (1.954 kg / 1,954 g)", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", source: "Costco Wholesale Queretaro" },
-      "fresas_frescas": { item_num: 117, sku_code: "88587 / Costco-9636-FRESA", ticket_id: "9636", name: "Fresas frescas (Costco 907g)", stock: 907, quantity_commercial: 1, commercial_unit: "domo_907", unit: "g", packaging: "1 domo Costco (907 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Costco Wholesale Queretaro" },
-      "zarzamoras_frescas": { item_num: 118, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamoras frescas (Costco 510g)", stock: 510, quantity_commercial: 1, commercial_unit: "domo_510", unit: "g", packaging: "1 domo Costco (510 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Costco Wholesale Queretaro" },
-      "queso_cottage_artesanal": { item_num: 119, sku_code: "Costco-9636-COTTAGE", ticket_id: "9636", name: "Queso Cottage", stock: 1000, quantity_commercial: 1, commercial_unit: "bote_comercial", unit: "g", packaging: "1 bote comercial (1,000 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Costco Wholesale Queretaro" },
-      "yoghurt_griego_sin_azucar": { item_num: 120, sku_code: "Costco-9636-YOGHURT", ticket_id: "9636", name: "Yoghurt griego natural sin azúcar (Kirkland)", stock: 1000, quantity_commercial: 1, commercial_unit: "bote_comercial", unit: "g", packaging: "1 bote comercial (1,000 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Costco Wholesale Queretaro" },
-      "lechuga_orejona_viva_cogollo": { item_num: 121, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)", stock: 6, quantity_commercial: 6, commercial_unit: "piezas", unit: "piezas", packaging: "1 pack (6 piezas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Costco Wholesale Queretaro" },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
-      "fresas-frescas": { name: "Fresas frescas", stock: 0, unit: "g", status: "canonical" },
+      "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada fresca", stock: 0, unit: "g", status: "canonical" },
       "moras-frescas": { name: "Moras frescas", stock: 0, unit: "g", status: "canonical" },
-      "frambuesas-frescas": { name: "Frambuesas frescas orgánicas", stock: 0, unit: "g", status: "canonical" },
+      "frambuesas-frescas": { name: "Frambuesas", stock: 0, unit: "g", status: "canonical" },
       "arandanos-frescos": { name: "Arándanos frescos", stock: 0, unit: "g", status: "canonical" },
       "pitaya-fresca": { name: "Pitaya fresca", stock: 0, unit: "g", status: "canonical" },
       "multisinergix": { name: "MultiSinergix®", stock: 0, unit: "g", status: "canonical" },
@@ -2838,12 +2825,11 @@ window.PANTRY_STOCK_INVENTORY = {
         source: "Costco Wholesale Queretaro",
         ticket_id: "9636",
         items_to_credit: [
-          { sku: "pechuga_de_pollo_organica", display_name: "Pechuga de pollo (Kirkland Signature)", quantity: 1, commercial_unit: "paquete_pesado", scale_kg: 1.954, base_quantity_g: 1954 },
-          { sku: "fresas_frescas", display_name: "Fresas frescas (Costco 907g)", quantity: 1, commercial_unit: "domo_907", base_quantity_g: 907 },
-          { sku: "zarzamoras_frescas", display_name: "Zarzamoras frescas (Costco 510g)", quantity: 1, commercial_unit: "domo_510", base_quantity_g: 510 },
-          { sku: "queso_cottage_artesanal", display_name: "Queso Cottage", quantity: 1, commercial_unit: "bote_comercial", base_quantity_g: 1000 },
-          { sku: "yoghurt_griego_sin_azucar", display_name: "Yoghurt griego natural sin azúcar (Kirkland)", quantity: 1, commercial_unit: "bote_comercial", base_quantity_g: 1000 },
-          { sku: "lechuga_orejona_viva_cogollo", display_name: "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)", quantity: 6, commercial_unit: "piezas", base_quantity_pieces: 6 }
+          { sku: "sku-029-pechuga-de-pollo", display_name: "Pechuga de pollo", quantity: 1, commercial_unit: "paquete_pesado", scale_kg: 1.954, base_quantity_g: 1954 },
+          { sku: "sku-039-zarzamora", display_name: "Zarzamora", quantity: 1, commercial_unit: "domo_510", base_quantity_g: 510 },
+          { sku: "sku-003-queso-cottage", display_name: "Queso cottage", quantity: 1, commercial_unit: "bote_comercial", base_quantity_g: 1000 },
+          { sku: "sku-004-yogur-griego", display_name: "Yogur griego", quantity: 1, commercial_unit: "bote_comercial", base_quantity_g: 1000 },
+          { sku: "sku-034-lechuga", display_name: "Lechuga", quantity: 6, commercial_unit: "piezas", base_quantity_pieces: 6 }
         ],
         excluded_non_food: [
           { sku: "ks_guante_gde_400p", display_name: "Guantes de protección (400 piezas)", reason: "Consumible operativo / Inocuidad de cocina y taller" }
@@ -2889,8 +2875,8 @@ window.PANTRY_STOCK_INVENTORY = {
 let pantryStock = {
       "Mantequilla": 290,
       "Mostaza": 150,
-      "Queso cottage": 2880,
-      "Yogur griego": 2880,
+      "Queso cottage": 3880,
+      "Yogur griego": 3880,
       "Queso Philadelphia": 720,
       "Crema ácida": 960,
       "Mayonesa": 1000,
@@ -2913,18 +2899,18 @@ let pantryStock = {
       "Filete de atún": 700,
       "Jitomate": 9,
       "Morrón": 7,
-      "Pechuga de pollo": 3,
+      "Pechuga de pollo": 3454,
       "Zanahoria": 7,
       "Flor de calabaza": 1,
       "Calabaza": 6,
       "Cebolla": 9,
-      "Lechuga": 3,
+      "Lechuga": 9,
       "Ejotes": 500,
       "Tomate": 400,
       "Elote": 2,
       "Aguacate": 13,
-      "Zarzamora": 500,
-      "Champiñón": 1000,
+      "Zarzamora": 1010,
+      "Champiñón": 2200,
       "Pulpa de arándano": 3840,
       "Pistaches": 100,
       "Nuez de la India": 100,
@@ -2961,18 +2947,15 @@ let pantryStock = {
       "Flor de Jamaica molida en polvo": 200,
       "Almendras fileteadas": 200,
       "Hojas de laurel": 20,
-      "Orégano delgado": 50,
-      "Orégano grueso": 100,
+      "Orégano": 150,
       "Tomillo": 20,
-      "Pimienta negra": 50,
+      "Pimienta negra": 70,
       "Comino": 50,
       "Clavo de olor": 50,
-      "Pimienta molida": 20,
       "Ajonjolí": 50,
       "Manzanilla": 50,
       "Cúrcuma": 100,
-      "Sal marina de grano": 2000,
-      "Sal fina": 1000,
+      "Sal de mar": 3000,
       "Manteca de cerdo": 500,
       "Aceite de coco": 500,
       "Tang": 104,
@@ -2991,25 +2974,14 @@ let pantryStock = {
       "Huevo": 105,
       "MultiSinergix®": 300,
       "AminoSinergix®": 200,
-      "MultiSinergix": 300,
-      "AminoSinergix": 200,
-      "Fórmula Nootrópica 33Plus®": 300,
-      "Fórmula Reparadora 34Plus®": 200,
-      "Espinacas baby tiernas": 500,
-      "Champiñones Portobello frescos": 12,
-      "Espárragos verdes frescos": 800,
-      "Fresas frescas": 1000,
-      "Frambuesas frescas orgánicas": 340,
-      "Queso Ricotta (Qcotta 960g)": 1920,
-      "Chipotles en conserva (Pack 6x220g)": 1320,
-      "Higos frescos": 1,
-      "Frijol pinto": 1,
-      "Pechuga de pollo (Kirkland Signature)": 1954,
-      "Fresas frescas (Costco 907g)": 907,
-      "Zarzamoras frescas (Costco 510g)": 510,
-      "Queso Cottage": 1000,
-      "Yoghurt griego natural sin azúcar (Kirkland)": 1000,
-      "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)": 6
+      "Espinacas": 500,
+      "Espárragos": 800,
+      "Fresas": 1000,
+      "Frambuesas": 340,
+      "Queso ricotta": 1920,
+      "Chile chipotle": 1320,
+      "Higos": 1,
+      "Frijol pinto": 1
     };
     let checkedRows = {};
     let mealDinersState = {};
@@ -3215,6 +3187,62 @@ let pantryStock = {
       if (slugA && slugB && slugA === slugB) return true;
 
       return false;
+    }
+
+    function getPureCanonicalPantryName(rawName) {
+      if (!rawName || typeof rawName !== 'string') return '';
+      const trimmed = rawName.trim();
+      if (!trimmed) return '';
+      const norm = trimmed.toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g, "");
+
+      if (/\\bfresas?\\b/.test(norm)) return 'Fresas';
+      if (/\\bframbuesas?\\b/.test(norm)) return 'Frambuesas';
+      if (/\\bzarzamoras?\\b/.test(norm)) return 'Zarzamora';
+      if (/\\bcottage\\b/.test(norm)) return 'Queso cottage';
+      if (/\\b(yogur|yoghurt|oikos)\\b/.test(norm)) return 'Yogur griego';
+      if (/\\b(ricotta|qcotta|requeson)\\b/.test(norm)) return 'Queso ricotta';
+      if (/\\bpechuga de pollo\\b/.test(norm)) return 'Pechuga de pollo';
+      if (/\\b(lechugas?|cogollos?|sucrine)\\b/.test(norm)) return 'Lechuga';
+      if (/\\b(champinon|champinones|portobello)\\b/.test(norm) && !norm.includes('crema')) return 'Champiñón';
+      if (/\\bespinacas?\\b/.test(norm)) return 'Espinacas';
+      if (/\\besparragos?\\b/.test(norm)) return 'Espárragos';
+      if (/\\bchipotles?\\b/.test(norm)) return 'Chile chipotle';
+      if (/\\bhigos?\\b/.test(norm)) return 'Higos';
+      if (/\\bfrijol pinto\\b/.test(norm)) return 'Frijol pinto';
+      if (/\\bagua mineral\\b/.test(norm)) return 'Agua mineral';
+      if (/\\bflat steak\\b/.test(norm)) return 'Flat steak';
+      if (/\\boregano\\b/.test(norm)) return 'Orégano';
+      if (/\\bpimienta (negra|molida)\\b/.test(norm)) return 'Pimienta negra';
+      if (/\\b(sal marina de grano|sal fina|sal de mar|sal mineral|sal de colima)\\b/.test(norm) || norm === 'sal') return 'Sal de mar';
+      if (/\\b(multi\\s*sinergix|33\\s*plus|formula nootropica)\\b/.test(norm)) return 'MultiSinergix®';
+      if (/\\b(amino\\s*sinergix|34\\s*plus|formula reparadora)\\b/.test(norm)) return 'AminoSinergix®';
+
+      // Eliminar etiquetas comerciales o sufijos redundantes entre paréntesis
+      let cleaned = trimmed.replace(/\\s*\\((?:costco|kirkland|sams|sam's|qcotta|pack|paquete|\\d+\\s*(?:botellas?|pzas|piezas|g|kg|ml))[^)]*\\)/gi, '').trim();
+      return cleaned || trimmed;
+    }
+
+    function isPantryItemDeleted(nameOrKey) {
+      if (!nameOrKey || !Array.isArray(deletedPantryItems) || deletedPantryItems.length === 0) return false;
+      const targetStr = String(nameOrKey).trim();
+      if (!targetStr) return false;
+      const targetLower = targetStr.toLowerCase();
+      const targetCanon = getPureCanonicalPantryName(targetStr).toLowerCase();
+      const targetSlug = normalizeToCanonicalSlug(targetStr);
+
+      return deletedPantryItems.some(d => {
+        if (!d || typeof d !== 'string') return false;
+        const dStr = d.trim();
+        if (!dStr) return false;
+        const dLower = dStr.toLowerCase();
+        if (dLower === targetLower) return true;
+        const dCanon = getPureCanonicalPantryName(dStr).toLowerCase();
+        if (dCanon && targetCanon && dCanon === targetCanon) return true;
+        const dSlug = normalizeToCanonicalSlug(dStr);
+        if (dSlug && targetSlug && dSlug === targetSlug) return true;
+        if (areInsumosEquivalent(dStr, targetStr)) return true;
+        return false;
+      });
     }
 
     function getCommercialUnitOptions(itemName, defaultUnit, weeklyQty) {
@@ -3823,64 +3851,221 @@ let pantryStock = {
       return '🌶️ Chiles, Condimentos e Infusiones';
     }
 
-    function ensureCanonicalTicketIntakesApplied() {
+    function consolidateAndPurgePantryInventory() {
       try {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_intake_v41_ready') === 'true') {
-          return;
+        if (!window.PANTRY_STOCK_INVENTORY || typeof window.PANTRY_STOCK_INVENTORY !== 'object') {
+          window.PANTRY_STOCK_INVENTORY = {};
         }
-        if (Array.isArray(deletedPantryItems)) {
+        if (!pantryStock || typeof pantryStock !== 'object') {
+          pantryStock = {};
+        }
+        if (!Array.isArray(deletedPantryItems)) {
+          deletedPantryItems = [];
+        }
+
+        const OBSOLETE_DUPLICATE_KEYS = [
+          "fresas_frescas",
+          "zarzamoras_frescas",
+          "queso_cottage_artesanal",
+          "yoghurt_griego_sin_azucar",
+          "pechuga_de_pollo_organica",
+          "lechuga_orejona_viva_cogollo",
+          "champinones_portobello_frescos",
+          "sku-018-agua-mineral",
+          "sku-022-flat-steak",
+          "sku-078-oregano-grueso",
+          "sku-083-pimienta-molida",
+          "sku-088-sal-fina",
+          "ks_guante_gde_400p",
+          "miel-pura",
+          "duraznos-frescos",
+          "higos-frescos"
+        ];
+
+        const OBSOLETE_PANTRY_STOCK_NAMES = [
+          "Fresas frescas",
+          "Fresas frescas (Costco 907g)",
+          "Frambuesas frescas orgánicas",
+          "Zarzamoras frescas (Costco 510g)",
+          "Queso Cottage",
+          "Yoghurt griego natural sin azúcar (Kirkland)",
+          "Queso Ricotta (Qcotta 960g)",
+          "Pechuga de pollo (Kirkland Signature)",
+          "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)",
+          "Champiñones Portobello frescos",
+          "Espinacas baby tiernas",
+          "Espárragos verdes frescos",
+          "Chipotles en conserva (Pack 6x220g)",
+          "Higos frescos",
+          "Orégano delgado",
+          "Orégano grueso",
+          "Pimienta molida",
+          "Sal marina de grano",
+          "Sal fina",
+          "Agua mineral (6 botellas de 1500 ml)",
+          "Agua mineral (1 botella de 355 ml)",
+          "Flat steak (Paquete 1)",
+          "Flat steak (Paquete 2)",
+          "Guantes de protección (400 piezas)",
+          "MultiSinergix",
+          "AminoSinergix",
+          "Fórmula Nootrópica 33Plus®",
+          "Fórmula Reparadora 34Plus®"
+        ];
+
+        // Migración única V43: unificar variaciones en un solo insumo canónico y purgar el duplicado de Costco 907g
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v43_canonical_dedup_ready') !== 'true') {
           deletedPantryItems = deletedPantryItems.filter(d => {
             const s = (typeof d === 'string' ? d : '').toLowerCase().trim();
-            // Limpiar únicamente borrados antiguos de tarjetas en 0g ("fresas frescas", "frambuesas frescas orgánicas"), respetando eliminaciones explícitas como "fresas frescas (costco 907g)"
-            return s !== 'fresas frescas' && s !== 'frambuesas frescas orgánicas' && s !== 'frambuesas frescas organicas';
+            return s !== 'fresas frescas' &&
+                   s !== 'fresas frescas (costco 907g)' &&
+                   s !== 'fresas_frescas' &&
+                   s !== 'frambuesas frescas orgánicas' &&
+                   s !== 'frambuesas frescas organicas';
+          });
+
+          const canonicalConsolidatedUpdates = {
+            "sku-003-queso-cottage": { item_num: 3, sku_code: "Costco-9636-COTTAGE", ticket_id: "9636", name: "Queso cottage", stock: 3880, unit: "g", packaging: "3,880 g", status: "canonical" },
+            "sku-004-yogur-griego": { item_num: 4, sku_code: "Costco-9636-YOGHURT", ticket_id: "9636", name: "Yogur griego", stock: 3880, unit: "g", packaging: "3,880 g", status: "canonical" },
+            "sku-017-agua-mineral": { item_num: 17, name: "Agua mineral", stock: 9355, unit: "ml", packaging: "9,355 ml (6 de 1.5 L + 1 de 355 ml)", status: "canonical" },
+            "sku-021-flat-steak": { item_num: 21, name: "Flat steak", stock: 1885, unit: "g", packaging: "1,885 g", status: "canonical" },
+            "sku-029-pechuga-de-pollo": { item_num: 29, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo", stock: 3454, unit: "g", packaging: "3,454 g", status: "canonical" },
+            "sku-034-lechuga": { item_num: 34, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga", stock: 9, unit: "piezas", packaging: "9 piezas", status: "canonical" },
+            "sku-039-zarzamora": { item_num: 39, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamora", stock: 1010, unit: "g", packaging: "1,010 g", status: "canonical" },
+            "sku-040-champinon": { item_num: 40, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñón", stock: 2200, unit: "g", packaging: "2,200 g", status: "canonical" },
+            "sku-077-oregano-delgado": { item_num: 77, name: "Orégano", stock: 150, unit: "g", packaging: "150 g", status: "canonical" },
+            "sku-080-pimienta-negra": { item_num: 80, name: "Pimienta negra", stock: 70, unit: "g", packaging: "70 g", status: "canonical" },
+            "sku-087-sal-marina-de-grano": { item_num: 87, name: "Sal de mar", stock: 3000, unit: "g", packaging: "3,000 g", status: "canonical" },
+            "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas", stock: 500, quantity_commercial: 1, commercial_unit: "domo_500", unit: "g", packaging: "500 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+            "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos", stock: 800, quantity_commercial: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "800 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+            "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1,000 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
+            "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "340 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
+            "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso ricotta", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "1,920 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
+            "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical" },
+            "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
+            "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" }
+          };
+
+          Object.keys(canonicalConsolidatedUpdates).forEach(k => {
+            const defObj = canonicalConsolidatedUpdates[k];
+            if (!isPantryItemDeleted(defObj.name) && !isPantryItemDeleted(k)) {
+              window.PANTRY_STOCK_INVENTORY[k] = Object.assign({}, defObj);
+              pantryStock[defObj.name] = defObj.stock;
+              if (window.pantryCardUnits) {
+                window.pantryCardUnits[defObj.name] = defObj.unit;
+              }
+            }
+          });
+
+          localStorage.setItem('nutriketo_v43_canonical_dedup_ready', 'true');
+        }
+
+        // 1. Eliminar siempre llaves secundarias obsoletas o duplicadas
+        OBSOLETE_DUPLICATE_KEYS.forEach(dupKey => {
+          delete window.PANTRY_STOCK_INVENTORY[dupKey];
+        });
+        OBSOLETE_PANTRY_STOCK_NAMES.forEach(obsName => {
+          delete pantryStock[obsName];
+          if (window.pantryCardUnits) delete window.pantryCardUnits[obsName];
+        });
+
+        // 2. Mantener llaves alias legacy en stock 0
+        const LEGACY_ZERO_KEYS = ["zarzamoras-frescas", "fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "multisinergix", "aminosinergix", "33plus", "34plus", "ajo-fresco"];
+        LEGACY_ZERO_KEYS.forEach(legacyK => {
+          if (window.PANTRY_STOCK_INVENTORY[legacyK]) {
+            window.PANTRY_STOCK_INVENTORY[legacyK].stock = 0;
+          }
+        });
+
+        // 3. Purgar cualquier ítem eliminado por el usuario y normalizar nombres canónicos sin duplicados
+        const seenCanonicalKeyByName = {};
+        Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
+          if (LEGACY_ZERO_KEYS.includes(k)) return;
+          const pObj = window.PANTRY_STOCK_INVENTORY[k];
+          if (!pObj) {
+            delete window.PANTRY_STOCK_INVENTORY[k];
+            return;
+          }
+          const rawName = pObj.name || k;
+          const canonName = getPureCanonicalPantryName(rawName);
+          if (isPantryItemDeleted(k) || isPantryItemDeleted(rawName) || isPantryItemDeleted(canonName)) {
+            delete window.PANTRY_STOCK_INVENTORY[k];
+            delete pantryStock[rawName];
+            delete pantryStock[canonName];
+            if (window.pantryCardUnits) {
+              delete window.pantryCardUnits[rawName];
+              delete window.pantryCardUnits[canonName];
+            }
+            return;
+          }
+
+          pObj.name = canonName;
+          const normKey = canonName.toLowerCase();
+          const eqExistingKey = Object.keys(seenCanonicalKeyByName).find(seenNorm =>
+            seenNorm === normKey || areInsumosEquivalent(seenNorm, canonName)
+          );
+
+          if (eqExistingKey) {
+            // Ya existe una entrada canónica para este insumo: eliminar la variación duplicada
+            delete window.PANTRY_STOCK_INVENTORY[k];
+          } else {
+            seenCanonicalKeyByName[normKey] = k;
+          }
+        });
+
+        // 4. Purgar y normalizar pantryStock para que solo tenga nombres canónicos no eliminados
+        const cleanPantryStock = {};
+        Object.keys(pantryStock).forEach(k => {
+          if (/miel|durazno/i.test(k)) return;
+          const canonName = getPureCanonicalPantryName(k);
+          if (!canonName) return;
+          if (isPantryItemDeleted(k) || isPantryItemDeleted(canonName)) return;
+          if (cleanPantryStock[canonName] === undefined) {
+            cleanPantryStock[canonName] = pantryStock[k];
+          }
+        });
+        // Sincronizar con window.PANTRY_STOCK_INVENTORY activo
+        Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
+          if (LEGACY_ZERO_KEYS.includes(k)) return;
+          const pObj = window.PANTRY_STOCK_INVENTORY[k];
+          if (pObj && pObj.name) {
+            if (cleanPantryStock[pObj.name] !== undefined) {
+              pObj.stock = cleanPantryStock[pObj.name];
+            } else {
+              cleanPantryStock[pObj.name] = pObj.stock;
+            }
+          }
+        });
+        pantryStock = cleanPantryStock;
+
+        // 5. Purgar window.pantryCardUnits y rawShopBase de insumos eliminados
+        if (window.pantryCardUnits && typeof window.pantryCardUnits === 'object') {
+          Object.keys(window.pantryCardUnits).forEach(uKey => {
+            if (isPantryItemDeleted(uKey)) {
+              delete window.pantryCardUnits[uKey];
+            }
           });
         }
-        if (!window.PANTRY_STOCK_INVENTORY) window.PANTRY_STOCK_INVENTORY = {};
-        if (!pantryStock || typeof pantryStock !== 'object') pantryStock = {};
+        if (Array.isArray(rawShopBase)) {
+          rawShopBase = rawShopBase.filter(item => {
+            if (!item || !item.item_name) return false;
+            return !isPantryItemDeleted(item.item_name);
+          });
+        }
+      } catch (err) {
+        console.warn('Error en consolidateAndPurgePantryInventory:', err);
+      }
+    }
 
-        const canonicalTicketEntries = {
-          "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas baby tiernas", stock: 500, quantity_commercial: 1, commercial_unit: "domo_500", unit: "g", packaging: "1 domo (~500 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
-          "champinones_portobello_frescos": { item_num: 108, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñones Portobello frescos", stock: 12, quantity_commercial: 2, commercial_unit: "paquetes", unit: "piezas", packaging: "2 paquetes (~12 pzas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
-          "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos verdes frescos", stock: 800, quantity_commercial: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "1 manojo comercial (~800 g)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
-          "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas frescas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1 domo / caja (~1,000 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
-          "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas frescas orgánicas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "1 domo (~340 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
-          "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso Ricotta (Qcotta 960g)", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "2 botes de 960 g c/u (1,920 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
-          "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chipotles en conserva (Pack 6x220g)", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1 pack (6 latas de 220 g c/u / 1,320 g)", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", source: "Sams Club San Juan del Rio (TR04095)" },
-          "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos frescos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)", source: "Sams Club San Juan del Rio (TR04095)" },
-          "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico", source: "Sams Club San Juan del Rio (TR04095)" },
-          "pechuga_de_pollo_organica": { item_num: 116, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo (Kirkland Signature)", stock: 1954, quantity_commercial: 1, commercial_unit: "paquete_pesado", scale_kg: 1.954, unit: "g", packaging: "1 paquete pesado (1.954 kg / 1,954 g)", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", source: "Costco Wholesale Queretaro" },
-          "fresas_frescas": { item_num: 117, sku_code: "88587 / Costco-9636-FRESA", ticket_id: "9636", name: "Fresas frescas (Costco 907g)", stock: 907, quantity_commercial: 1, commercial_unit: "domo_907", unit: "g", packaging: "1 domo Costco (907 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Costco Wholesale Queretaro" },
-          "zarzamoras_frescas": { item_num: 118, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamoras frescas (Costco 510g)", stock: 510, quantity_commercial: 1, commercial_unit: "domo_510", unit: "g", packaging: "1 domo Costco (510 g)", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", source: "Costco Wholesale Queretaro" },
-          "queso_cottage_artesanal": { item_num: 119, sku_code: "Costco-9636-COTTAGE", ticket_id: "9636", name: "Queso Cottage", stock: 1000, quantity_commercial: 1, commercial_unit: "bote_comercial", unit: "g", packaging: "1 bote comercial (1,000 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Costco Wholesale Queretaro" },
-          "yoghurt_griego_sin_azucar": { item_num: 120, sku_code: "Costco-9636-YOGHURT", ticket_id: "9636", name: "Yoghurt griego natural sin azúcar (Kirkland)", stock: 1000, quantity_commercial: 1, commercial_unit: "bote_comercial", unit: "g", packaging: "1 bote comercial (1,000 g)", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", source: "Costco Wholesale Queretaro" },
-          "lechuga_orejona_viva_cogollo": { item_num: 121, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)", stock: 6, quantity_commercial: 6, commercial_unit: "piezas", unit: "piezas", packaging: "1 pack (6 piezas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Costco Wholesale Queretaro" }
-        };
-
-        Object.keys(canonicalTicketEntries).forEach(k => {
-          const defObj = canonicalTicketEntries[k];
-          const isDeletedByUser = Array.isArray(deletedPantryItems) && deletedPantryItems.some(d => (typeof d === 'string' ? d : '').toLowerCase().trim() === defObj.name.toLowerCase().trim());
-          if (isDeletedByUser) return;
-          const existingObj = window.PANTRY_STOCK_INVENTORY[k];
-          if (!existingObj || existingObj.name !== defObj.name || !existingObj.item_num) {
-            window.PANTRY_STOCK_INVENTORY[k] = Object.assign({}, defObj);
-          }
-          if (pantryStock[defObj.name] === undefined) {
-            pantryStock[defObj.name] = defObj.stock;
-            window.PANTRY_STOCK_INVENTORY[k].stock = defObj.stock;
-          }
-        });
-
-        ["zarzamoras-frescas", "fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "ajo-fresco"].forEach(legacyK => {
-          if (window.PANTRY_STOCK_INVENTORY[legacyK]) window.PANTRY_STOCK_INVENTORY[legacyK].stock = 0;
-        });
-        delete window.PANTRY_STOCK_INVENTORY["ks_guante_gde_400p"];
-        delete pantryStock["Guantes de protección (400 piezas)"];
-
+    function ensureCanonicalTicketIntakesApplied() {
+      try {
+        consolidateAndPurgePantryInventory();
         if (typeof localStorage !== 'undefined') {
           localStorage.setItem('nutriketo_intake_tr04095_applied', 'true');
           localStorage.setItem('nutriketo_intake_costco_9636_applied', 'true');
           localStorage.setItem('nutriketo_intake_v39_fruits_restored', 'true');
           localStorage.setItem('nutriketo_intake_v41_ready', 'true');
+          localStorage.setItem('nutriketo_v43_canonical_dedup_ready', 'true');
         }
       } catch (err) {
         console.warn('Error en ensureCanonicalTicketIntakesApplied:', err);
@@ -4023,6 +4208,7 @@ let pantryStock = {
           }
 
           ensureCanonicalTicketIntakesApplied();
+          consolidateAndPurgePantryInventory();
 
           if (state.checkedRows) checkedRows = state.checkedRows;
           if (state.mealDinersState) mealDinersState = state.mealDinersState;
@@ -4511,13 +4697,13 @@ let pantryStock = {
       // 2. Alacena Grid (sección editable seccionada por Categoría y ordenada A-Z)
       const pGrid = document.getElementById('pantry-stock-grid');
       if (pGrid) {
+        consolidateAndPurgePantryInventory();
         pGrid.innerHTML = '';
         const nonFarm = [];
         const seenPantrySlugs = new Set();
         if (typeof window.pantryCardUnits === 'undefined') window.pantryCardUnits = {};
 
         // 2.1 Insumos Físicos de Despensa (window.PANTRY_STOCK_INVENTORY)
-        // Regla de Oro: En Reconfigurar Parámetros se muestran exactamente los 106 insumos del inventario físico
         if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined') {
           Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
             const pObj = window.PANTRY_STOCK_INVENTORY[k];
@@ -4526,29 +4712,22 @@ let pantryStock = {
             if (pObj.stock <= 0 && (!pObj.item_num || pObj.item_num <= 0)) return;
             if (k === 'multisinergix' || k === 'aminosinergix' || k === '33plus' || k === '34plus' || k === 'zarzamoras-frescas' || k === 'fresas-frescas' || k === 'arilos-granada' || k === 'moras-frescas' || k === 'frambuesas-frescas' || k === 'arandanos-frescos' || k === 'pitaya-fresca' || k === 'ajo-fresco') return;
 
-            let displayName = pObj.name || k;
-            if (pObj.item_num === 17) displayName = "Agua mineral (6 botellas de 1500 ml)";
-            if (pObj.item_num === 18) displayName = "Agua mineral (1 botella de 355 ml)";
-            if (pObj.item_num === 21) displayName = "Flat steak (Paquete 1)";
-            if (pObj.item_num === 22) displayName = "Flat steak (Paquete 2)";
-            if (pObj.item_num === 77) displayName = "Orégano delgado";
-            if (pObj.item_num === 78) displayName = "Orégano grueso";
-            if (pObj.item_num === 87) displayName = "Sal marina de grano";
-            if (pObj.item_num === 88) displayName = "Sal fina";
+            const displayName = getPureCanonicalPantryName(pObj.name || k);
+            if (!displayName) return;
 
-            const slug = normalizeToCanonicalSlug(displayName || pObj.name || k);
-            if (deletedPantryItems.some(d => {
-              const dClean = (typeof d === 'string' ? d : '').toLowerCase().trim();
-              return dClean === displayName.toLowerCase().trim() || dClean === (pObj.name || '').toLowerCase().trim() || dClean === k.toLowerCase().trim();
-            })) return;
+            const slug = normalizeToCanonicalSlug(displayName);
+            if (isPantryItemDeleted(k) || isPantryItemDeleted(pObj.name) || isPantryItemDeleted(displayName)) return;
 
-            const alreadyInList = nonFarm.some(existing => (existing.item_num && pObj.item_num ? existing.item_num === pObj.item_num : existing.item_name === displayName));
+            const alreadyInList = nonFarm.some(existing =>
+              existing.item_name.toLowerCase() === displayName.toLowerCase() ||
+              areInsumosEquivalent(existing.item_name, displayName)
+            );
             if (!alreadyInList) {
               seenPantrySlugs.add(slug);
 
               const assignedCat = (pObj.status === 'prohibited')
                 ? '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)'
-                : (pObj.category || getSmartItemCategory(pObj.name));
+                : (pObj.category || getSmartItemCategory(displayName));
               nonFarm.push({
                 sku: k,
                 item_num: pObj.item_num,
@@ -4569,7 +4748,7 @@ let pantryStock = {
 
         QUARANTINE_PANTRY_ITEMS.forEach(qItem => {
           const slug = normalizeToCanonicalSlug(qItem.item_name);
-          if (!deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === qItem.item_name.toLowerCase())) {
+          if (!isPantryItemDeleted(qItem.item_name)) {
             const alreadyInList = nonFarm.some(existing => areInsumosEquivalent(existing.item_name, qItem.item_name));
             if (!alreadyInList) {
               seenPantrySlugs.add(slug);
@@ -4852,28 +5031,53 @@ let pantryStock = {
       const isQuarantine = chosenCat.includes('Cuarentena') || chosenCat.includes('🛑');
       const itemStatus = isQuarantine ? 'prohibited' : 'canonical';
 
-      const slug = normalizeToCanonicalSlug(val);
-      deletedPantryItems = deletedPantryItems.filter(d => normalizeToCanonicalSlug(d) !== slug && d.toLowerCase() !== val.toLowerCase());
+      const canonicalName = getPureCanonicalPantryName(val);
+      const slug = normalizeToCanonicalSlug(canonicalName);
 
-      const existingInShop = rawShopBase.find(i => normalizeToCanonicalSlug(i.item_name) === slug || i.item_name.toLowerCase() === val.toLowerCase());
-      const canonicalName = existingInShop ? existingInShop.item_name : val;
+      deletedPantryItems = deletedPantryItems.filter(d => {
+        if (!d || typeof d !== 'string') return false;
+        const dStr = d.trim();
+        return dStr.toLowerCase() !== val.toLowerCase() &&
+               dStr.toLowerCase() !== canonicalName.toLowerCase() &&
+               getPureCanonicalPantryName(dStr).toLowerCase() !== canonicalName.toLowerCase() &&
+               normalizeToCanonicalSlug(dStr) !== slug &&
+               !areInsumosEquivalent(dStr, canonicalName);
+      });
+
+      const existingInShop = rawShopBase.find(i =>
+        normalizeToCanonicalSlug(i.item_name) === slug ||
+        i.item_name.toLowerCase() === canonicalName.toLowerCase() ||
+        areInsumosEquivalent(i.item_name, canonicalName)
+      );
 
       pantryStock[canonicalName] = qty;
       if (typeof window.pantryCardUnits === 'undefined') window.pantryCardUnits = {};
       window.pantryCardUnits[canonicalName] = unit;
 
+      const LEGACY_ZERO_KEYS = ['multisinergix', 'aminosinergix', '33plus', '34plus', 'zarzamoras-frescas', 'fresas-frescas', 'arilos-granada', 'moras-frescas', 'frambuesas-frescas', 'arandanos-frescos', 'pitaya-fresca', 'ajo-fresco'];
       if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
-        window.PANTRY_STOCK_INVENTORY[slug] = {
+        const existingKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => {
+          if (LEGACY_ZERO_KEYS.includes(k)) return false;
+          const pObj = window.PANTRY_STOCK_INVENTORY[k];
+          if (!pObj) return false;
+          return k === slug ||
+                 (pObj.name || '').toLowerCase() === canonicalName.toLowerCase() ||
+                 areInsumosEquivalent(pObj.name || k, canonicalName);
+        });
+        const targetKey = existingKey || slug;
+        const prevItemNum = (existingKey && window.PANTRY_STOCK_INVENTORY[existingKey] && window.PANTRY_STOCK_INVENTORY[existingKey].item_num) || (200 + Object.keys(window.PANTRY_STOCK_INVENTORY).length);
+        window.PANTRY_STOCK_INVENTORY[targetKey] = {
+          item_num: prevItemNum,
           name: canonicalName,
           stock: qty,
           unit: unit,
+          packaging: `${qty} ${unit}`,
           category: chosenCat,
           status: itemStatus,
           reason: isQuarantine ? (reason || 'Insumo fuera de protocolo cetogénico (Cuarentena NOM-004)') : null
         };
       }
 
-      // Si es canónico y no está en rawShopBase, lo registramos para que pueda calcularse amortización si entra al menú
       if (!isQuarantine && !existingInShop) {
         const newId = 200 + rawShopBase.length + 1;
         rawShopBase.push({
@@ -4902,6 +5106,7 @@ let pantryStock = {
       if (qBox) qBox.style.display = 'none';
       updatePantryCatBadge('🥬 Verduras, Hortalizas y Frescos');
 
+      consolidateAndPurgePantryInventory();
       saveAppState();
       initSetupPanel();
       if (typeof render3DShoppingList === 'function') {
@@ -4940,28 +5145,40 @@ let pantryStock = {
 
     function updatePantryStock(itemName, val, unit) {
       const parsed = parseFloat(val) || 0;
+      const canonName = getPureCanonicalPantryName(itemName) || itemName;
       if (typeof window.pantryCardUnits === 'undefined') window.pantryCardUnits = {};
-      const cardUnit = unit || window.pantryCardUnits[itemName] || 'g';
-      window.pantryCardUnits[itemName] = cardUnit;
-      pantryStock[itemName] = parsed;
+      const cardUnit = unit || window.pantryCardUnits[canonName] || window.pantryCardUnits[itemName] || 'g';
+      window.pantryCardUnits[canonName] = cardUnit;
+      pantryStock[canonName] = parsed;
 
-      const slug = normalizeToCanonicalSlug(itemName);
+      const slug = normalizeToCanonicalSlug(canonName);
+      const LEGACY_ZERO_KEYS = ['multisinergix', 'aminosinergix', '33plus', '34plus', 'zarzamoras-frescas', 'fresas-frescas', 'arilos-granada', 'moras-frescas', 'frambuesas-frescas', 'arandanos-frescos', 'pitaya-fresca', 'ajo-fresco'];
       if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
-        const matchedKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => 
-          k === slug || areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, itemName)
-        );
+        const matchedKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => {
+          if (LEGACY_ZERO_KEYS.includes(k)) return false;
+          const pObj = window.PANTRY_STOCK_INVENTORY[k];
+          if (!pObj) return false;
+          return k === slug ||
+                 (pObj.name || '').toLowerCase() === canonName.toLowerCase() ||
+                 areInsumosEquivalent(pObj.name || k, canonName);
+        });
         if (matchedKey) {
+          window.PANTRY_STOCK_INVENTORY[matchedKey].name = canonName;
           window.PANTRY_STOCK_INVENTORY[matchedKey].stock = parsed;
           window.PANTRY_STOCK_INVENTORY[matchedKey].unit = cardUnit;
+          window.PANTRY_STOCK_INVENTORY[matchedKey].packaging = `${parsed} ${cardUnit}`;
         } else {
           window.PANTRY_STOCK_INVENTORY[slug] = {
-            name: itemName,
+            item_num: 200 + Object.keys(window.PANTRY_STOCK_INVENTORY).length,
+            name: canonName,
             stock: parsed,
             unit: cardUnit,
+            packaging: `${parsed} ${cardUnit}`,
             status: 'canonical'
           };
         }
       }
+      consolidateAndPurgePantryInventory();
       saveAppState();
       if (typeof render3DShoppingList === 'function') {
         render3DShoppingList();
@@ -5102,59 +5319,31 @@ let pantryStock = {
     }
 
     function deletePantryItem(itemName) {
+      const canonName = getPureCanonicalPantryName(itemName) || itemName;
       showClinicalConfirmModal({
         title: 'Eliminar Insumo del Inventario',
-        message: `¿Estás seguro de que deseas eliminar definitivamente el insumo <strong>"${itemName}"</strong> del Inventario/Alacena?`,
+        message: `¿Estás seguro de que deseas eliminar definitivamente el insumo <strong>"${canonName}"</strong> en todos los módulos del sistema?`,
         icon: '🗑️',
         confirmText: 'Sí, Eliminar Insumo',
         cancelText: 'Cancelar',
         onConfirm: () => {
           const targetLower = (itemName || '').toLowerCase().trim();
-          if (!deletedPantryItems.some(d => (typeof d === 'string' ? d : '').toLowerCase().trim() === targetLower)) {
+          const canonLower = (canonName || '').toLowerCase().trim();
+          if (targetLower && !deletedPantryItems.some(d => (typeof d === 'string' ? d : '').toLowerCase().trim() === targetLower)) {
             deletedPantryItems.push(itemName);
           }
-          rawShopBase = rawShopBase.filter(i => (i.item_name || '').toLowerCase().trim() !== targetLower);
-          
-          Object.keys(pantryStock).forEach(k => {
-            if (k.toLowerCase().trim() === targetLower) {
-              delete pantryStock[k];
-            }
-          });
-
-          if (typeof window.PANTRY_STOCK_INVENTORY === 'object' && window.PANTRY_STOCK_INVENTORY) {
-            Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
-              const pObj = window.PANTRY_STOCK_INVENTORY[k];
-              if (!pObj) return;
-              let displayName = pObj.name || '';
-              if (pObj.item_num === 17) displayName = "Agua mineral (6 botellas de 1500 ml)";
-              if (pObj.item_num === 18) displayName = "Agua mineral (1 botella de 355 ml)";
-              if (pObj.item_num === 21) displayName = "Flat steak (Paquete 1)";
-              if (pObj.item_num === 22) displayName = "Flat steak (Paquete 2)";
-              if (pObj.item_num === 77) displayName = "Orégano delgado";
-              if (pObj.item_num === 78) displayName = "Orégano grueso";
-              if (pObj.item_num === 87) displayName = "Sal marina de grano";
-              if (pObj.item_num === 88) displayName = "Sal fina";
-
-              if (
-                k.toLowerCase().trim() === targetLower ||
-                (pObj.name || '').toLowerCase().trim() === targetLower ||
-                displayName.toLowerCase().trim() === targetLower
-              ) {
-                if (pObj.name && pantryStock[pObj.name] !== undefined) {
-                  delete pantryStock[pObj.name];
-                }
-                delete window.PANTRY_STOCK_INVENTORY[k];
-              }
-            });
+          if (canonLower && !deletedPantryItems.some(d => (typeof d === 'string' ? d : '').toLowerCase().trim() === canonLower)) {
+            deletedPantryItems.push(canonName);
           }
 
+          consolidateAndPurgePantryInventory();
           saveAppState();
           initSetupPanel();
           if (typeof render3DShoppingList === 'function') {
             render3DShoppingList();
           }
           if (typeof showToast === 'function') {
-            showToast(`🗑️ Insumo '${itemName}' eliminado definitivamente del Inventario.`, 'danger');
+            showToast(`🗑️ Insumo '${canonName}' eliminado definitivamente en todos los módulos.`, 'danger');
           }
         }
       });
@@ -5960,6 +6149,9 @@ function calculateActiveMenuBOM(weekKey, diners) {
 }
 
 function calculateNetShoppingList(diners) {
+  if (typeof consolidateAndPurgePantryInventory === 'function') {
+    consolidateAndPurgePantryInventory();
+  }
   const numDiners = parseInt(diners) || (typeof activeDiners !== 'undefined' ? parseInt(activeDiners) || 6 : 6);
   const factor = numDiners / 6.0;
 
@@ -5981,7 +6173,13 @@ function calculateNetShoppingList(diners) {
   let pantryFullyCoveredCount = 0;
   const LEGACY_PANTRY_ALIAS_KEYS = ['multisinergix', 'aminosinergix', '33plus', '34plus', 'zarzamoras-frescas', 'fresas-frescas', 'arilos-granada', 'moras-frescas', 'frambuesas-frescas', 'arandanos-frescos', 'pitaya-fresca', 'ajo-fresco'];
   let pantryActiveCount = (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY)
-    ? Object.keys(window.PANTRY_STOCK_INVENTORY).filter(k => !LEGACY_PANTRY_ALIAS_KEYS.includes(k) && window.PANTRY_STOCK_INVENTORY[k] && window.PANTRY_STOCK_INVENTORY[k].status === 'canonical' && parseFloat(window.PANTRY_STOCK_INVENTORY[k].stock) > 0).length
+    ? Object.keys(window.PANTRY_STOCK_INVENTORY).filter(k => {
+        if (LEGACY_PANTRY_ALIAS_KEYS.includes(k)) return false;
+        const pObj = window.PANTRY_STOCK_INVENTORY[k];
+        if (!pObj || pObj.status !== 'canonical' || parseFloat(pObj.stock) <= 0) return false;
+        if (typeof isPantryItemDeleted === 'function' && (isPantryItemDeleted(k) || isPantryItemDeleted(pObj.name))) return false;
+        return true;
+      }).length
     : 7;
   let marketNetCount = 0;
 
@@ -6069,12 +6267,12 @@ function calculateNetShoppingList(diners) {
 
   const itemsToProcess = Object.values(itemsProcessedMap);
 
-    // Inicializar inventario dinámico de alacena para amortización estricta sin duplicación
+  // Inicializar inventario dinámico de alacena para amortización estricta sin duplicación
   const dynamicPantryStock = {};
   if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
     Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
       const p = window.PANTRY_STOCK_INVENTORY[k];
-      if (p && p.status === 'canonical') {
+      if (p && p.status === 'canonical' && !(typeof isPantryItemDeleted === 'function' && (isPantryItemDeleted(k) || isPantryItemDeleted(p.name)))) {
         dynamicPantryStock[k] = {
           stock: parseFloat(p.stock) || 0,
           unit: (typeof window.pantryCardUnits !== 'undefined' && (window.pantryCardUnits[p.name] || window.pantryCardUnits[k])) || p.unit,
@@ -6138,6 +6336,7 @@ function calculateNetShoppingList(diners) {
       Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(pKey => {
         const pObj = window.PANTRY_STOCK_INVENTORY[pKey];
         if (!pObj || pObj.status !== 'canonical') return;
+        if (typeof isPantryItemDeleted === 'function' && (isPantryItemDeleted(pKey) || isPantryItemDeleted(pObj.name))) return;
 
         if (areInsumosEquivalent(pObj.name || pKey, cleanName)) {
           const pQty = parseFloat(pObj.stock) || 0;
@@ -6178,6 +6377,7 @@ function calculateNetShoppingList(diners) {
 
     if (stockInBase === 0 && typeof pantryStock !== 'undefined' && pantryStock) {
       Object.keys(pantryStock).forEach(pName => {
+        if (typeof isPantryItemDeleted === 'function' && isPantryItemDeleted(pName)) return;
         const pVal = parseFloat(pantryStock[pName]) || 0;
         if (pVal <= 0) return;
         if (areInsumosEquivalent(pName, cleanName)) {
@@ -6263,8 +6463,6 @@ function calculateNetShoppingList(diners) {
   });
 
   // 3. Consolidar insumos de Cosecha Propia Activa ($0 Granja El Herami)
-  // Muestra los insumos que el usuario tiene activamente seleccionados en su cosecha manual (selectedHarvest)
-  // que no fueron requeridos por las recetas del menú semanal pero están cosechados activamente
   const activeHarvestCandidates = (Array.isArray(harvestList) ? harvestList : []).filter(h => {
     if (!h) return false;
     const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
@@ -6315,6 +6513,9 @@ function render3DShoppingList() {
   try {
     const vShop = document.getElementById('v-shop');
     if (!vShop) return;
+    if (typeof consolidateAndPurgePantryInventory === 'function') {
+      consolidateAndPurgePantryInventory();
+    }
 
     const numDiners = typeof activeDiners !== 'undefined' ? parseInt(activeDiners) || 6 : 6;
     const weekKey = typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40';
@@ -6542,12 +6743,32 @@ function render3DShoppingList() {
 
     const pantryMap = window.PANTRY_STOCK_INVENTORY || {};
     const LEGACY_PANTRY_ALIAS_KEYS_3D = ['multisinergix', 'aminosinergix', '33plus', '34plus', 'zarzamoras-frescas', 'fresas-frescas', 'arilos-granada', 'moras-frescas', 'frambuesas-frescas', 'arandanos-frescos', 'pitaya-fresca', 'ajo-fresco'];
+    const seen3DCanonicalNames = [];
     const canonicalPantry = Object.keys(pantryMap).filter(k => {
       if (LEGACY_PANTRY_ALIAS_KEYS_3D.includes(k)) return false;
       const it = pantryMap[k];
-      return it && it.status === 'canonical' && parseFloat(it.stock) > 0;
+      if (!it || it.status !== 'canonical' || parseFloat(it.stock) <= 0) return false;
+      const cName = getPureCanonicalPantryName(it.name || k);
+      if (!cName) return false;
+      if (typeof isPantryItemDeleted === 'function' && (isPantryItemDeleted(k) || isPantryItemDeleted(it.name) || isPantryItemDeleted(cName))) return false;
+      if (seen3DCanonicalNames.some(s => s.toLowerCase() === cName.toLowerCase() || areInsumosEquivalent(s, cName))) return false;
+      seen3DCanonicalNames.push(cName);
+      it.name = cName;
+      return true;
     });
-    const prohibitedPantry = Object.keys(pantryMap).filter(k => pantryMap[k] && pantryMap[k].status === 'prohibited');
+
+    const seen3DProhibitedNames = [];
+    const prohibitedPantry = Object.keys(pantryMap).filter(k => {
+      const it = pantryMap[k];
+      if (!it || it.status !== 'prohibited') return false;
+      const cName = getPureCanonicalPantryName(it.name || k);
+      if (!cName) return false;
+      if (typeof isPantryItemDeleted === 'function' && (isPantryItemDeleted(k) || isPantryItemDeleted(it.name) || isPantryItemDeleted(cName))) return false;
+      if (seen3DProhibitedNames.some(s => s.toLowerCase() === cName.toLowerCase() || areInsumosEquivalent(s, cName))) return false;
+      seen3DProhibitedNames.push(cName);
+      it.name = cName;
+      return true;
+    });
 
     canonicalPantry.sort((a, b) => (pantryMap[a].name || a).localeCompare(pantryMap[b].name || b, 'es', { sensitivity: 'base' }));
     prohibitedPantry.sort((a, b) => (pantryMap[a].name || a).localeCompare(pantryMap[b].name || b, 'es', { sensitivity: 'base' }));
@@ -6556,14 +6777,18 @@ function render3DShoppingList() {
 
     canonicalPantry.forEach(k => {
       const item = pantryMap[k];
+      const safeName = (item.name || k).replace(/'/g, "\\'");
       let displayQty = item.packaging ? item.packaging : `${item.stock} ${item.unit || ''}`;
       html += `
-        <div class="bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 p-3 rounded-lg flex justify-between items-center">
+        <div class="bg-emerald-50/50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800 p-3 rounded-lg flex justify-between items-center gap-2">
           <div>
             <div class="font-bold text-xs text-slate-900 dark:text-slate-100">${item.name}</div>
             <div class="text-[10px] text-emerald-600 dark:text-emerald-400 font-semibold mt-0.5">🟢 Apto / Canónico</div>
           </div>
-          <div class="font-bold text-xs text-[#3AAA35] font-mono">${displayQty}</div>
+          <div class="flex items-center gap-2">
+            <div class="font-bold text-xs text-[#3AAA35] font-mono">${displayQty}</div>
+            <button type="button" onclick="deletePantryItem('${safeName}')" class="text-rose-500 hover:text-rose-700 text-xs px-1 py-0.5 rounded opacity-70 hover:opacity-100 transition-opacity cursor-pointer" title="Eliminar ${safeName} del Inventario">🗑️</button>
+          </div>
         </div>
       `;
     });
@@ -6597,14 +6822,18 @@ function render3DShoppingList() {
 
     prohibitedPantry.forEach(k => {
       const item = pantryMap[k];
+      const safeName = (item.name || k).replace(/'/g, "\\'");
       let displayQty = item.packaging ? item.packaging : `${item.stock} ${item.unit || ''}`;
       html += `
-        <div class="bg-rose-50/60 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 p-3 rounded-lg flex justify-between items-center">
+        <div class="bg-rose-50/60 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-800 p-3 rounded-lg flex justify-between items-center gap-2">
           <div>
             <div class="font-bold text-xs text-slate-900 dark:text-slate-100">${item.name}</div>
             <div class="text-[10px] text-rose-600 dark:text-rose-400 font-semibold mt-0.5">⚠️ Motivo: ${item.reason}</div>
           </div>
-          <div class="font-bold text-xs text-rose-700 dark:text-rose-300 font-mono">${displayQty}</div>
+          <div class="flex items-center gap-2">
+            <div class="font-bold text-xs text-rose-700 dark:text-rose-300 font-mono">${displayQty}</div>
+            <button type="button" onclick="deletePantryItem('${safeName}')" class="text-rose-500 hover:text-rose-700 text-xs px-1 py-0.5 rounded opacity-70 hover:opacity-100 transition-opacity cursor-pointer" title="Eliminar ${safeName} del Inventario">🗑️</button>
+          </div>
         </div>
       `;
     });
@@ -8759,7 +8988,10 @@ function renderRecipes(day, activeDiners) {
       const notesInput = document.getElementById('intake-batch-notes');
 
       const sourceType = sourceTypeSelect ? sourceTypeSelect.value : '🛒 Supermercado / Compra Neta';
-      const valName = nameInput.value.trim();
+      const rawValName = nameInput.value.trim();
+      const valName = (sourceType.includes('Cosecha') || (catSelect && catSelect.value.includes('Cosecha')))
+        ? rawValName
+        : (getPureCanonicalPantryName(rawValName) || rawValName);
       const qty = parseFloat(qtyInput.value) || 0;
       const unit = unitSelect.value;
       const cat = catSelect.value;
@@ -8780,7 +9012,7 @@ function renderRecipes(day, activeDiners) {
 
       const smartCat = getSmartItemCategory(valName, cat);
 
-      const existingInShop = rawShopBase.find(i => i.item_name.toLowerCase() === valName.toLowerCase());
+      const existingInShop = rawShopBase.find(i => i.item_name.toLowerCase() === valName.toLowerCase() || areInsumosEquivalent(i.item_name, valName));
       if (existingInShop) {
         existingInShop.category = smartCat;
       } else {
@@ -8797,8 +9029,37 @@ function renderRecipes(day, activeDiners) {
       if (sourceType.includes('Cosecha') || cat.includes('Cosecha')) {
         if (!selectedHarvest.includes(valName)) selectedHarvest.push(valName);
       } else {
-        const currentPantry = pantryStock[valName] || 0.0;
-        pantryStock[valName] = currentPantry + qty;
+        deletedPantryItems = deletedPantryItems.filter(d => {
+          if (!d || typeof d !== 'string') return false;
+          const dStr = d.trim();
+          return dStr.toLowerCase() !== rawValName.toLowerCase() &&
+                 dStr.toLowerCase() !== valName.toLowerCase() &&
+                 getPureCanonicalPantryName(dStr).toLowerCase() !== valName.toLowerCase() &&
+                 !areInsumosEquivalent(dStr, valName);
+        });
+        const currentPantry = parseFloat(pantryStock[valName]) || 0.0;
+        const newStock = currentPantry + qty;
+        pantryStock[valName] = newStock;
+        const slug = normalizeToCanonicalSlug(valName);
+        const LEGACY_ZERO_KEYS = ['multisinergix', 'aminosinergix', '33plus', '34plus', 'zarzamoras-frescas', 'fresas-frescas', 'arilos-granada', 'moras-frescas', 'frambuesas-frescas', 'arandanos-frescos', 'pitaya-fresca', 'ajo-fresco'];
+        if (window.PANTRY_STOCK_INVENTORY) {
+          const existingKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => {
+            if (LEGACY_ZERO_KEYS.includes(k)) return false;
+            const pObj = window.PANTRY_STOCK_INVENTORY[k];
+            return pObj && (k === slug || (pObj.name || '').toLowerCase() === valName.toLowerCase() || areInsumosEquivalent(pObj.name || k, valName));
+          });
+          const targetKey = existingKey || slug;
+          window.PANTRY_STOCK_INVENTORY[targetKey] = Object.assign(window.PANTRY_STOCK_INVENTORY[targetKey] || {}, {
+            item_num: (existingKey && window.PANTRY_STOCK_INVENTORY[existingKey] && window.PANTRY_STOCK_INVENTORY[existingKey].item_num) || (200 + Object.keys(window.PANTRY_STOCK_INVENTORY).length),
+            name: valName,
+            stock: newStock,
+            unit: unit,
+            packaging: `${newStock} ${unit}`,
+            category: smartCat,
+            status: (smartCat.includes('Cuarentena') || smartCat.includes('🛑')) ? 'prohibited' : 'canonical'
+          });
+        }
+        consolidateAndPurgePantryInventory();
       }
 
       saveAppState();
@@ -9080,14 +9341,14 @@ function renderRecipes(day, activeDiners) {
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev14-s42-nextweek-v42') {
+              if (k !== 'nutriketo-v36-6-rev15-s42-canonical-dedup-v43') {
                 caches.delete(k);
               }
             });
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev14-s42-nextweek-v42')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev15-s42-canonical-dedup-v43')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();

@@ -1528,7 +1528,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "ensureSundayServiceDispatched" in code
     assert "ensureCanonicalTicketIntakesApplied" in code
     assert "syncCustomWeeksDropdowns" in code
-    assert any(v in code for v in ["nutriketo-v36-6-rev4-s41-service-checkin-v29", "nutriketo-v36-6-rev6-s42-today-sync-v34", "nutriketo-v36-6-rev7-s42-syntaxfix-v35", "nutriketo-v36-6-rev8-s42-clean-cache-v36", "nutriketo-v36-6-rev9-s42-tr04095-v37", "nutriketo-v36-6-rev10-s42-costco9636-v38", "nutriketo-v36-6-rev11-s42-fruits-fix-v39", "nutriketo-v36-6-rev12-s42-sameorigin-sw-v40", "nutriketo-v36-6-rev13-s42-delete-fix-v41", "nutriketo-v36-6-rev14-s42-nextweek-v42"])
+    assert any(v in code for v in ["nutriketo-v36-6-rev4-s41-service-checkin-v29", "nutriketo-v36-6-rev6-s42-today-sync-v34", "nutriketo-v36-6-rev7-s42-syntaxfix-v35", "nutriketo-v36-6-rev8-s42-clean-cache-v36", "nutriketo-v36-6-rev9-s42-tr04095-v37", "nutriketo-v36-6-rev10-s42-costco9636-v38", "nutriketo-v36-6-rev11-s42-fruits-fix-v39", "nutriketo-v36-6-rev12-s42-sameorigin-sw-v40", "nutriketo-v36-6-rev13-s42-delete-fix-v41", "nutriketo-v36-6-rev14-s42-nextweek-v42", "nutriketo-v36-6-rev15-s42-canonical-dedup-v43"])
     # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
     assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
     assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
@@ -1584,12 +1584,12 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
 
 def test_physical_pantry_106_skus_and_multisinergix():
     """
-    Valida la sincronización estricta de los 106 insumos del inventario físico de despensa:
-    1. 106 SKUs mapeados con su número de ítem, stock exacto y empaque.
+    Valida la sincronización estricta de los insumos del inventario físico de despensa:
+    1. Consolidación canónica sin duplicados ni variaciones de nombre ("Fresas", "Queso cottage", "Pechuga de pollo", etc.).
     2. Ítem 105: MultiSinergix® (300 g) sustituye a 33Plus®.
     3. Ítem 106: AminoSinergix® (200 g) sustituye a 34Plus®.
     4. Exactamente 27 insumos en cuarentena con justificación clínica NOM-004/Keto.
-    5. Purgado de ítems huérfanos/fantasma de versiones anteriores (hamburguesa-arrachera, oikos-prot, etc.).
+    5. Purgado de ítems huérfanos/fantasma y llaves duplicadas de tickets.
     """
     import re
     with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
@@ -1604,7 +1604,7 @@ def test_physical_pantry_106_skus_and_multisinergix():
     assert 'MultiSinergix®' in code
     assert 'AminoSinergix®' in code
 
-    # Ausencia de ítems fantasma antiguos en PANTRY_STOCK_INVENTORY
+    # Ausencia de ítems fantasma antiguos y duplicados en PANTRY_STOCK_INVENTORY
     pantry_match = re.search(r'window\.PANTRY_STOCK_INVENTORY = \{(.*?)\};', code, re.DOTALL)
     assert pantry_match, "PANTRY_STOCK_INVENTORY no encontrado"
     p_content = pantry_match.group(1)
@@ -1613,30 +1613,39 @@ def test_physical_pantry_106_skus_and_multisinergix():
     assert '"oikos-prot"' not in p_content
     assert '"ribeye-corte"' not in p_content
     assert '"semillas-chia"' not in p_content
+    assert '"fresas_frescas":' not in p_content
+    assert 'Fresas frescas (Costco 907g)' not in p_content
+    assert '"zarzamoras_frescas":' not in p_content
+    assert '"pechuga_de_pollo_organica":' not in p_content
+    assert '"queso_cottage_artesanal":' not in p_content
+    assert '"yoghurt_griego_sin_azucar":' not in p_content
+    assert '"lechuga_orejona_viva_cogollo":' not in p_content
+    assert '"champinones_portobello_frescos":' not in p_content
 
-    # Mantequilla 290g, Queso cottage 2880g, Huevo 105 piezas
+    # Mantequilla 290g, Queso cottage consolidado 3880g, Huevo 105 piezas
     assert 'sku-001-mantequilla' in p_content and '290' in p_content
-    assert 'sku-003-queso-cottage' in p_content and '2880' in p_content
+    assert 'sku-003-queso-cottage' in p_content and '3880' in p_content
     assert 'sku-104-huevo' in p_content and '105' in p_content
 
-    # Orden de Entrada Purgada Sam's Club San Juan del Río (TR04095 - 2026-10-12T18:06:21)
-    assert '"espinacas_baby_tiernas"' in p_content and '981023610' in p_content
-    assert '"champinones_portobello_frescos"' in p_content and '98971' in p_content
-    assert '"esparragos_verdes_frescos"' in p_content and '71235' in p_content
-    assert '"fresas_frescas"' in p_content and '88587' in p_content
-    assert '"frambuesas_frescas_organicas"' in p_content and '72612' in p_content
-    assert '"queso_ricotta_artesanal"' in p_content and '256038' in p_content
-    assert '"chiles_chipotles_adobados"' in p_content and '34553' in p_content
-    assert '"higos_frescos"' in p_content and '73520' in p_content
-    assert '"frijol_pinto"' in p_content and '115359' in p_content
+    # Insumos consolidados en nombres canónicos puros sin variaciones repetidas
+    assert '"espinacas_baby_tiernas"' in p_content and '"Espinacas"' in p_content
+    assert '"sku-040-champinon"' in p_content and '"Champiñón"' in p_content and '2200' in p_content
+    assert '"esparragos_verdes_frescos"' in p_content and '"Espárragos"' in p_content
+    assert '"fresas_frescas_tr04095"' in p_content and '"Fresas"' in p_content and '1000' in p_content
+    assert '"frambuesas_frescas_organicas"' in p_content and '"Frambuesas"' in p_content
+    assert '"queso_ricotta_artesanal"' in p_content and '"Queso ricotta"' in p_content
+    assert '"chiles_chipotles_adobados"' in p_content and '"Chile chipotle"' in p_content
+    assert '"higos_frescos"' in p_content and '"Higos"' in p_content
+    assert '"frijol_pinto"' in p_content and '"Frijol pinto"' in p_content
+    assert '"sku-029-pechuga-de-pollo"' in p_content and '"Pechuga de pollo"' in p_content and '3454' in p_content
+    assert '"sku-039-zarzamora"' in p_content and '"Zarzamora"' in p_content and '1010' in p_content
+    assert '"sku-034-lechuga"' in p_content and '"Lechuga"' in p_content
     assert 'DESP JABON H' not in p_content
     assert '6/255M JUMBO' not in p_content
-
-    # Orden de Entrada Purgada Costco Wholesale Querétaro (Ticket 9636 - 2026-10-15T18:31:00)
-    assert '"pechuga_de_pollo_organica"' in p_content and '1954' in p_content
-    assert '"fresas_frescas"' in p_content and '907' in p_content
-    assert '"zarzamoras_frescas"' in p_content and '510' in p_content
-    assert '"queso_cottage_artesanal"' in p_content and '1000' in p_content
-    assert '"yoghurt_griego_sin_azucar"' in p_content and 'Kirkland' in p_content
-    assert '"lechuga_orejona_viva_cogollo"' in p_content and 'Lechuga Sucrine' in p_content
     assert 'ks_guante_gde_400p' not in p_content
+
+    # Funciones de deduplicación canónica y borrado universal
+    assert 'getPureCanonicalPantryName' in code
+    assert 'isPantryItemDeleted' in code
+    assert 'consolidateAndPurgePantryInventory' in code
+
