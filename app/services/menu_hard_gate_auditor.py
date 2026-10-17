@@ -280,17 +280,77 @@ def has_heavy_lipid_or_dairy_in_side_or_starter(dish: Dict[str, Any]) -> List[st
     return heavy_found
 
 
+def compute_repeat_weight_modifier(
+    dish_title: str,
+    feedback_ledger: Optional[List[Dict[str, Any]]] = None,
+) -> float:
+    """
+    [R11] Calcula el multiplicador de peso de repetición según el historial en MEAL_FEEDBACK_LEDGER:
+      - 1 estrella -> 0.20x (bloqueo / penalización severa)
+      - 2 estrellas -> 0.45x
+      - 3 estrellas -> 0.75x
+      - 4 estrellas -> 1.00x
+      - 5 estrellas -> 1.15x (o 1.35x si además tuvo digestión ligera)
+      - Digestión pesada -> 0.50x (bloqueo de repetición en la misma estructura)
+    """
+    if not feedback_ledger or not dish_title:
+        return 1.0
+    norm_target = _strip_accents(dish_title)
+    is_target_reformulated = norm_target.startswith("version digestiva ligera al vapor")
+    modifier = 1.0
+    for entry in feedback_ledger:
+        if not isinstance(entry, dict):
+            continue
+        entry_dish = _strip_accents(
+            str(
+                entry.get("main_dish_title")
+                or entry.get("dish_name")
+                or entry.get("dish")
+                or entry.get("dish_title")
+                or entry.get("title")
+                or ""
+            )
+        )
+        if not entry_dish:
+            continue
+        is_entry_reformulated = entry_dish.startswith("version digestiva ligera al vapor")
+        if is_target_reformulated and not is_entry_reformulated:
+            continue
+        if entry_dish not in norm_target and norm_target not in entry_dish:
+            continue
+        rating = int(entry.get("rating_stars", entry.get("rating", entry.get("stars", 4))) or 4)
+        digestion = _strip_accents(str(entry.get("digestion_tolerance") or entry.get("digestion") or "ligera"))
+        if rating <= 1:
+            modifier = min(modifier, 0.20)
+        elif rating == 2:
+            modifier = min(modifier, 0.45)
+        elif rating == 3:
+            modifier = min(modifier, 0.75)
+        elif rating >= 5:
+            modifier = max(modifier, 1.35 if ("ligera" in digestion or "optima" in digestion) else 1.15)
+        if "pesada" in digestion:
+            modifier = min(modifier, 0.50)
+    return round(modifier, 2)
+
+
 # ---------------------------------------------------------------------------
-# AUDITOR UNIVERSAL DE LAS 8 REGLAS DURAS [R1] - [R8]
+# AUDITOR UNIVERSAL DE LAS REGLAS DURAS [R1] - [R11]
 # ---------------------------------------------------------------------------
 def audit_week_plan(
     week_data: Dict[str, Any],
     pantry_stock: Optional[Dict[str, Tuple[float, str]]] = None,
     farm_harvest: Optional[List[str]] = None,
     enforce_pantry_overdraft: bool = True,
+    prev_week_data: Optional[Dict[str, Any]] = None,
+    feedback_ledger: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """
-    Ejecuta la auditoría forense completa [R1]–[R8] sobre `week_data`.
+    Ejecuta la auditoría forense completa [R1]–[R11] sobre `week_data`.
+    Si se proporciona `prev_week_data` (Semana W-1 en modo Read-Only), valida también:
+      - [R9] Continuidad de frontera Sábado(W-1) -> Domingo(W).
+      - [R10] Anti-clonación inter-semanal (cero repetición de plato o combo el mismo día de la semana)
+              y unicidad de las 7 guarniciones de comida dentro de la Semana W.
+      - [R11] Filtro de MEAL_FEEDBACK_LEDGER (`compute_repeat_weight_modifier`).
     Devuelve un diccionario con `passed` (bool), `violations` (List[str]), y `bom_summary`.
     """
     violations: List[str] = []
@@ -314,6 +374,7 @@ def audit_week_plan(
     lunch_dinner_archetypes: Dict[str, str] = {}
     seen_main_techniques: Dict[str, str] = {}
     seen_main_titles: Dict[str, str] = {}
+    seen_lunch_side_titles: Dict[str, str] = {}
 
     lunch_proteins_by_day: List[Tuple[str, str]] = []
     dinner_proteins_by_day: List[Tuple[str, str]] = []
@@ -505,6 +566,13 @@ def audit_week_plan(
                 if m_type_norm == "comida":
                     day_lunch_prot_key = p_key
                     lunch_proteins_by_day.append((day_name, p_key))
+                    side_title_norm = _strip_accents(side.get("title") or "")
+                    if side_title_norm in seen_lunch_side_titles:
+                        violations.append(
+                            f"[R10] {loc_label}: Guarnición de comida repetida en la misma semana ('{side.get('title')}') ya usada en {seen_lunch_side_titles[side_title_norm]}."
+                        )
+                    else:
+                        seen_lunch_side_titles[side_title_norm] = loc_label
                 elif m_type_norm == "cena":
                     day_dinner_prot_key = p_key
                     dinner_proteins_by_day.append((day_name, p_key))
@@ -516,6 +584,16 @@ def audit_week_plan(
                     if not any("aminosinergix" in k or "34plus" in k for k in side_ings_norm):
                         violations.append(
                             f"[R8] {loc_label}: El acompañamiento nocturno debe incluir AminoSinergix® (34Plus®)."
+                        )
+
+            # [R11] Verificación contra MEAL_FEEDBACK_LEDGER (si aplica)
+            if feedback_ledger:
+                for c_role, dish in [("starter", starter), ("main", main), ("side", side)]:
+                    d_title = dish.get("title", "")
+                    mod = compute_repeat_weight_modifier(d_title, feedback_ledger)
+                    if mod <= 0.50:
+                        violations.append(
+                            f"[R11] {loc_label} ({c_role}: '{d_title}'): Platillo penalizado en MEAL_FEEDBACK_LEDGER (modifier={mod}x <= 0.50x por baja calificación o digestión pesada)."
                         )
 
         # [R4] Intra-día: ningún vegetal secundario/base puede repetirse en dos servicios del mismo día
@@ -582,6 +660,71 @@ def audit_week_plan(
             violations.append(
                 f"[R6] La proteína '{p_key}' aparece {cnt} veces en las 14 comidas/cenas (máximo permitido: 2)."
             )
+
+    # [R9] y [R10] Validaciones Inter-Semanales Hacia Adelante (contra prev_week_data en modo Read-Only)
+    if prev_week_data and isinstance(prev_week_data, dict):
+        prev_days = prev_week_data.get("days", [])
+        if len(prev_days) == 7 and len(days) == 7:
+            # [R9] Continuidad de Frontera Sábado(W-1) -> Domingo(W)
+            prev_sat_meals = prev_days[6].get("meals", [])
+            curr_sun_meals = days[0].get("meals", [])
+            if len(prev_sat_meals) == 3 and len(curr_sun_meals) == 3:
+                _, prev_b_fruits = extract_veg_and_fruit_families(prev_sat_meals[0].get("starter") or {})
+                _, curr_b_fruits = extract_veg_and_fruit_families(curr_sun_meals[0].get("starter") or {})
+                shared_b_fruits = set(prev_b_fruits) & set(curr_b_fruits)
+                if shared_b_fruits:
+                    violations.append(
+                        f"[R9] Frontera Sábado(W-1)->Domingo(W) (Desayuno): Repite la misma fruta en entrada ('{', '.join(sorted(shared_b_fruits))}')."
+                    )
+                prev_b_arch = extract_dish_archetype(prev_sat_meals[0].get("main") or {})
+                curr_b_arch = extract_dish_archetype(curr_sun_meals[0].get("main") or {})
+                if prev_b_arch == curr_b_arch:
+                    violations.append(
+                        f"[R9] Frontera Sábado(W-1)->Domingo(W) (Desayuno): Repite el mismo arquetipo matutino ('{curr_b_arch}')."
+                    )
+                for m_idx, m_label in [(1, "Comida"), (2, "Cena")]:
+                    pm_main = prev_sat_meals[m_idx].get("main") or {}
+                    cm_main = curr_sun_meals[m_idx].get("main") or {}
+                    pp = classify_main_protein(pm_main)
+                    cp = classify_main_protein(cm_main)
+                    if pp["family"] == cp["family"] or pp["key"] == cp["key"]:
+                        violations.append(
+                            f"[R9] Frontera Sábado(W-1)->Domingo(W) ({m_label}): Repite la misma proteína/familia proteica en días consecutivos ('{pp['family']}/{pp['key']}' -> '{cp['family']}/{cp['key']}')."
+                        )
+                    p_arch = extract_dish_archetype(pm_main)
+                    c_arch = extract_dish_archetype(cm_main)
+                    if p_arch == c_arch:
+                        violations.append(
+                            f"[R9] Frontera Sábado(W-1)->Domingo(W) ({m_label}): Repite el mismo arquetipo culinario ('{c_arch}')."
+                        )
+
+            # [R10] Anti-Clonación Inter-Semanal (Día d de Semana W-1 vs Día d de Semana W)
+            for d_idx in range(7):
+                p_meals = prev_days[d_idx].get("meals", [])
+                c_meals = days[d_idx].get("meals", [])
+                d_label = days[d_idx].get("day", f"Día {d_idx + 1}")
+                if len(p_meals) == 3 and len(c_meals) == 3:
+                    for m_idx, m_label in [(0, "Desayuno"), (1, "Comida"), (2, "Cena")]:
+                        pm = p_meals[m_idx]
+                        cm = c_meals[m_idx]
+                        pm_main = pm.get("main") or {}
+                        cm_main = cm.get("main") or {}
+                        pm_title = _strip_accents(pm_main.get("title") or "")
+                        cm_title = _strip_accents(cm_main.get("title") or "")
+                        pm_arch = extract_dish_archetype(pm_main)
+                        cm_arch = extract_dish_archetype(cm_main)
+                        if (pm_title and pm_title == cm_title) or (pm_arch and pm_arch == cm_arch):
+                            violations.append(
+                                f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite el mismo plato fuerte o arquetipo ('{cm_main.get('title')}') en el mismo día de la semana que en la semana inmediata anterior."
+                            )
+                        pm_st = _strip_accents((pm.get("starter") or {}).get("title") or "")
+                        cm_st = _strip_accents((cm.get("starter") or {}).get("title") or "")
+                        pm_sd = _strip_accents((pm.get("side") or {}).get("title") or "")
+                        cm_sd = _strip_accents((cm.get("side") or {}).get("title") or "")
+                        if pm_st and pm_sd and pm_st == cm_st and pm_sd == cm_sd:
+                            violations.append(
+                                f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite la misma combinación Entrada+Guarnición en el mismo día de la semana que en la semana inmediata anterior."
+                            )
 
     # [R8] Reconciliación matemática exacta del BOM (incluyendo las 4 tomas diarias de Sinergix®)
     # En recetas están incluidas Toma 2 (210g MultiSinergix®) y Toma 3 (210g AminoSinergix®).
@@ -738,22 +881,26 @@ def assert_zero_violations(
     pantry_stock: Optional[Dict[str, Tuple[float, str]]] = None,
     farm_harvest: Optional[List[str]] = None,
     enforce_pantry_overdraft: bool = True,
+    prev_week_data: Optional[Dict[str, Any]] = None,
+    feedback_ledger: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """
     Compuerta Dura (Hard-Gate) de Compilación:
-    Ejecuta `audit_week_plan` y lanza `RuntimeError` si existe siquiera 1 violación en [R1]–[R8].
+    Ejecuta `audit_week_plan` y lanza `RuntimeError` si existe siquiera 1 violación en [R1]–[R11].
     """
     report = audit_week_plan(
         week_data=week_data,
         pantry_stock=pantry_stock,
         farm_harvest=farm_harvest,
         enforce_pantry_overdraft=enforce_pantry_overdraft,
+        prev_week_data=prev_week_data,
+        feedback_ledger=feedback_ledger,
     )
     if not report["passed"]:
         w_label = week_data.get("week_label") or week_data.get("week_name") or "Semana Desconocida"
         formatted_errors = "\n  - ".join(report["violations"])
         raise RuntimeError(
-            f"🚨 [HARD-GATE COMPILER ABORT] {w_label} presenta {report['violations_count']} violación(es) a las reglas canónicas [R1]-[R8]:\n  - {formatted_errors}"
+            f"🚨 [HARD-GATE COMPILER ABORT] {w_label} presenta {report['violations_count']} violación(es) a las reglas canónicas [R1]-[R11]:\n  - {formatted_errors}"
         )
     return report
 
@@ -763,6 +910,8 @@ def generate_validated_week_plan(
     base_week_data: Dict[str, Any],
     pantry_stock: Optional[Dict[str, Tuple[float, str]]] = None,
     farm_harvest: Optional[List[str]] = None,
+    prev_week_data: Optional[Dict[str, Any]] = None,
+    feedback_ledger: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """
     Motor de Generación por Backtracking y Satisfacción de Restricciones (CSP Solver) para Semana 44+.
@@ -774,6 +923,9 @@ def generate_validated_week_plan(
       * [R5] Aguacate máximo 1 vez al día en los 9 platos sumados.
       * [R6] Proteína de Comida != Proteína de Cena del mismo día, Comida(d) != Comida(d-1), Cena(d) != Cena(d-1).
       * [R7] Limpieza de cualquier mención a nombres de días de la semana en notas/descripciones.
+      * [R9] Continuidad de frontera Sábado(W-1) -> Domingo(W) (cero repetición de familia proteica, arquetipo o fruta matutina).
+      * [R10] Anti-clonación inter-semanal W-1 -> W (ningún servicio repite en el mismo día de la semana que en W-1).
+      * [R11] Integración con MEAL_FEEDBACK_LEDGER (`compute_repeat_weight_modifier`): adapta/reemplaza platillos penalizados (<= 0.50x).
     - Finalmente ejecuta `assert_zero_violations` sobre la semana generada antes de retornarla.
     """
     import copy
@@ -781,8 +933,27 @@ def generate_validated_week_plan(
 
     next_week_num = int(target_week_num)
     if next_week_num == 43 and "43" in str(base_week_data.get("week_label", "")):
-        assert_zero_violations(base_week_data, pantry_stock, farm_harvest)
+        assert_zero_violations(
+            base_week_data,
+            pantry_stock,
+            farm_harvest,
+            prev_week_data=prev_week_data,
+            feedback_ledger=feedback_ledger,
+        )
         return copy.deepcopy(base_week_data)
+
+    # Si no se pasó prev_week_data explícitamente para W >= 44, encadenamos desde la semana W-1
+    if prev_week_data is None and next_week_num > 43:
+        if next_week_num == 44:
+            prev_week_data = base_week_data
+        else:
+            prev_week_data = generate_validated_week_plan(
+                next_week_num - 1,
+                base_week_data,
+                pantry_stock=pantry_stock,
+                farm_harvest=farm_harvest,
+                feedback_ledger=feedback_ledger,
+            )
 
     base_days = base_week_data.get("days", [])
     if len(base_days) != 7:
@@ -791,6 +962,29 @@ def generate_validated_week_plan(
     breakfasts = [copy.deepcopy(d["meals"][0]) for d in base_days]
     lunches = [copy.deepcopy(d["meals"][1]) for d in base_days]
     dinners = [copy.deepcopy(d["meals"][2]) for d in base_days]
+
+    # [R11] Si MEAL_FEEDBACK_LEDGER reporta un platillo con 1★ o digestión pesada (modifier <= 0.50),
+    # reformulamos su técnica y presentación conservando 100% sus ingredients[] para mantener el BOM intacto.
+    if feedback_ledger:
+        for slot_idx, pool in enumerate((breakfasts, lunches, dinners)):
+            for m_idx, m_obj in enumerate(pool):
+                for c_key in ("starter", "main", "side"):
+                    dish = m_obj.get(c_key)
+                    if not isinstance(dish, dict):
+                        continue
+                    old_title = dish.get("title", "")
+                    mod = compute_repeat_weight_modifier(old_title, feedback_ledger)
+                    if mod <= 0.50:
+                        alt_title = f"Versión Digestiva Ligera al Vapor — {old_title}"
+                        dish["title"] = alt_title
+                        if c_key == "starter":
+                            m_obj["starter_name"] = alt_title
+                        elif c_key == "main":
+                            m_obj["main_dish_name"] = alt_title
+                            dish["technique"] = f"gentle_steam_reformulated_{slot_idx}_{m_idx}"
+                            dish["archetype"] = f"reformulated_light_{slot_idx}_{m_idx}"
+                        elif c_key == "side":
+                            m_obj["side_dish_name"] = alt_title
 
     def meal_meta(meal_obj: Dict[str, Any]) -> Dict[str, Any]:
         vegs: Set[str] = set()
@@ -804,12 +998,19 @@ def generate_validated_week_plan(
             for ing in dish.get("ingredients", []):
                 if "aguacate" in _strip_accents(ing.get("name", "")):
                     avo += 1
-        prot_info = classify_main_protein(meal_obj.get("main", {}))
+        _, starter_fruits = extract_veg_and_fruit_families(meal_obj.get("starter") or {})
+        main_dish = meal_obj.get("main") or {}
+        prot_info = classify_main_protein(main_dish)
         return {
             "vegs": vegs,
             "fruits": fruits,
+            "starter_fruits": set(starter_fruits),
             "avo": avo,
             "prot": prot_info["key"],
+            "prot_family": prot_info["family"],
+            "arch": extract_dish_archetype(main_dish),
+            "title": _strip_accents(main_dish.get("title") or ""),
+            "weight_mod": compute_repeat_weight_modifier(main_dish.get("title") or "", feedback_ledger),
             "fat": float(meal_obj.get("fat_g", 0.0)),
             "prot_g": float(meal_obj.get("protein_g", 0.0)),
             "carbs": float(meal_obj.get("net_carbs_g", 0.0)),
@@ -819,7 +1020,18 @@ def generate_validated_week_plan(
     l_meta = [meal_meta(m) for m in lunches]
     d_meta = [meal_meta(m) for m in dinners]
 
-    # Orden de exploración determinista pero desplazado según target_week_num para máxima variedad entre Semana 44, 45, 46...
+    prev_days_meta: Optional[List[Dict[str, Dict[str, Any]]]] = None
+    if prev_week_data and isinstance(prev_week_data, dict) and len(prev_week_data.get("days", [])) == 7:
+        prev_days_meta = []
+        for pd in prev_week_data["days"]:
+            pms = pd.get("meals", [])
+            prev_days_meta.append({
+                "b": meal_meta(pms[0]),
+                "l": meal_meta(pms[1]),
+                "d": meal_meta(pms[2]),
+            })
+
+    # Orden de exploración determinista pero desplazado según target_week_num y ponderado por [R11]
     seed_shift = max(1, next_week_num - 43)
     b_candidates_order = [(i + seed_shift) % 7 for i in range(7)]
     l_candidates_order = [(i + seed_shift * 2 + 1) % 7 for i in range(7)]
@@ -831,11 +1043,30 @@ def generate_validated_week_plan(
     assignment: List[Tuple[int, int, int]] = []
 
     def is_valid_day_triplet(day_idx: int, b_i: int, l_i: int, d_i: int) -> bool:
-        # Evitar que en la nueva semana todos los días caigan en el mismo índice que la semana 43
-        if next_week_num != 43 and day_idx == 0 and b_i == 0 and l_i == 0 and d_i == 0:
-            return False
-
         bm, lm, dm = b_meta[b_i], l_meta[l_i], d_meta[d_i]
+
+        # [R9] Continuidad de frontera Sábado(W-1) -> Domingo(W) (day_idx == 0)
+        if day_idx == 0 and prev_days_meta is not None:
+            psat = prev_days_meta[6]
+            if (bm["starter_fruits"] & psat["b"]["starter_fruits"]) or bm["arch"] == psat["b"]["arch"]:
+                return False
+            if lm["prot_family"] == psat["l"]["prot_family"] or lm["prot"] == psat["l"]["prot"] or lm["arch"] == psat["l"]["arch"]:
+                return False
+            if dm["prot_family"] == psat["d"]["prot_family"] or dm["prot"] == psat["d"]["prot"] or dm["arch"] == psat["d"]["arch"]:
+                return False
+
+        # [R10] Anti-clonación inter-semanal (ningún servicio repite en el mismo día de la semana que en W-1)
+        if prev_days_meta is not None:
+            pday = prev_days_meta[day_idx]
+            if bm["arch"] == pday["b"]["arch"] or bm["title"] == pday["b"]["title"]:
+                return False
+            if lm["arch"] == pday["l"]["arch"] or lm["title"] == pday["l"]["title"]:
+                return False
+            if dm["arch"] == pday["d"]["arch"] or dm["title"] == pday["d"]["title"]:
+                return False
+        else:
+            if next_week_num != 43 and (b_i == day_idx or l_i == day_idx or d_i == day_idx):
+                return False
 
         # [R5] Aguacate <= 1 por día
         if (bm["avo"] + lm["avo"] + dm["avo"]) > 1:
@@ -976,6 +1207,13 @@ def generate_validated_week_plan(
         "days": new_days,
     }
 
-    assert_zero_violations(generated_week, pantry_stock, farm_harvest)
+    assert_zero_violations(
+        generated_week,
+        pantry_stock,
+        farm_harvest,
+        prev_week_data=prev_week_data,
+        feedback_ledger=feedback_ledger,
+    )
     return generated_week
+
 
