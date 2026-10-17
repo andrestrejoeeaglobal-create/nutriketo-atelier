@@ -1,0 +1,3549 @@
+{
+  "week_name": "Semana 43",
+  "week_label": "Semana 43 (18 al 24 de Octubre de 2026)",
+  "week_start": "2026-10-18",
+  "date_range": "18 al 24 de Octubre de 2026",
+  "diners_count": 6,
+  "days": [
+    {
+      "day": "Domingo",
+      "day_num": "18",
+      "date_str": "18 Oct",
+      "iso_date": "2026-10-18",
+      "date_full": "DOMINGO 18 DE OCTUBRE DE 2026",
+      "full_date_title": "Menú Completo para el Domingo 18 Oct",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.5,
+          "protein_g": 35.0,
+          "net_carbs_g": 4.4,
+          "fiber_g": 6.2,
+          "starter_name": "Tazón de Fresas Frescas con Semillas de Chía y Nuez Pecana de la Granja",
+          "main_dish_name": "Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate Saladet y Queso de Cabra",
+          "dish_name": "Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate Saladet y Queso de Cabra",
+          "side_dish_name": "Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Tazón de Fresas Frescas con Semillas de Chía y Nuez Pecana de la Granja",
+            "technique": "raw_assembly",
+            "note": "Entrada antioxidante de polifenoles vivos con fresas frescas, ácido alfa-linolénico de chía y ácidos grasos monoinsaturados de nuez pecana cosechada en la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío a 4°C que preserva intacta la vitamina C y las antocianinas.",
+              "flavor_and_aromatics": "Acidez brillante de fresa equilibrada con notas tostadas y mantecosas de la nuez pecana de la granja.",
+              "textural_architecture": "Contraste entre la pulpa firme de la fresa y el crujido oleoso de la nuez pecana y chía.",
+              "critical_control_points": "Servir sin lácteos añadidos para optimizar la absorción de polifenoles."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 35,
+                "amount": 210,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Desinfectar y laminar las fresas frescas a 4°C.",
+              "Disponer en tazón frío y espolvorear las semillas de chía orgánicas.",
+              "Coronary con nuez pecana fresca de la granja troceada al momento."
+            ]
+          },
+          "main": {
+            "title": "Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate Saladet y Queso de Cabra",
+            "technique": "roast_bake",
+            "note": "Plato matutino horneado en cazuelas individuales: 3 huevos enteros por comensal sobre reducción de jitomate saladet, espinacas frescas de la granja, mantequilla de pastoreo y queso de cabra.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción radiante en refractario a 180°C: coagulación de albúmina a 72°C conservando la yema cremosa a 62°C.",
+              "flavor_and_aromatics": "Umami de jitomate saladet reducido con mantequilla de pastoreo y acidez láctica suave del queso de cabra.",
+              "textural_architecture": "Base vegetal jugosa, clara tierna y yema fluida emulsionada con aceite de oliva VEVO.",
+              "critical_control_points": "Retirar del horno a los 9-10 minutos para evitar sobrecocer los fosfolípidos de la yema."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Espinacas frescas de la granja",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Jitomate Saladet fresco",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso de cabra",
+                "per_guest": 20,
+                "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "En sartén con la mantequilla de pastoreo, saltear el jitomate saladet en cubos y las espinacas frescas de la granja durante 3 minutos.",
+              "Repartir la cama vegetal en 6 cazuelas refractarias y cascar 3 huevos enteros en cada una.",
+              "Desmoronar el queso de cabra encima, hornear a 180°C por 9 minutos y terminar con un hilo de aceite de oliva VEVO y sal de mar."
+            ]
+          },
+          "side": {
+            "title": "Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Matriz colagénica fría con zarzamoras silvestres (distinta a la fruta de la entrada) y adaptógenos nootrópicos de la Toma 2 matutina.",
+            "coct_reasoning": {
+              "thermodynamics": "Incorporación de la Fórmula 33Plus® a ≤42°C para blindar la CoQ10, L-Teanina y extractos herbales.",
+              "flavor_and_aromatics": "Notas profundas de zarzamora fresca con perfil cítrico limpio.",
+              "textural_architecture": "Gel firme, brillante y elástico a 4°C.",
+              "critical_control_points": "Verificar con termómetro que la mezcla descienda a 42°C antes de añadir MultiSinergix®."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Zarzamora",
+                "per_guest": 25,
+                "amount": 150,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina natural en polvo",
+                "per_guest": 7,
+                "amount": 42,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Hidratar la grenetina natural en 40 ml de agua fría porperson durante 8 minutos y disolver con los 80 ml restantes a 60°C.",
+              "Templar hasta 40-42°C e incorporar la dosis de MultiSinergix® (33Plus®) junto con las zarzamoras ligeramente maceradas.",
+              "Verter en moldes individuales y refrigerar a 4°C durante 3 horas."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 64.0,
+          "protein_g": 41.5,
+          "net_carbs_g": 4.3,
+          "fiber_g": 6.5,
+          "starter_name": "Ensalada Verde Fresca de Espinacas Tiernas de la Granja y Pepino al Limón con Aceite VEVO",
+          "main_dish_name": "Corte Magro de Ribeye de Res a la Parrilla con Mantequilla de Romero y Ajo",
+          "dish_name": "Corte Magro de Ribeye de Res a la Parrilla con Mantequilla de Romero y Ajo",
+          "side_dish_name": "Chayotes Tiernos al Vapor con Toque de Limón Real, Sal de Mar y Aceite VEVO",
+          "starter": {
+            "title": "Ensalada Verde Fresca de Espinacas Tiernas de la Granja y Pepino al Limón con Aceite VEVO",
+            "technique": "raw_assembly",
+            "note": "Entrada ligera de hojas verdes crujientes y pepino hidratante que equilibra la carga metabólica del corte Ribeye principal.",
+            "coct_reasoning": {
+              "thermodynamics": "Servicio en frío a 8°C que activa enzimas digestivas mediante acidez cítrica natural.",
+              "flavor_and_aromatics": "Frescura herbácea de espinaca tierna y pepino con notas frutales de aceite de oliva extra virgen y limón de la granja.",
+              "textural_architecture": "Hojas turgentes y láminas crujientes de pepino sin lácteos ni grasas pesadas.",
+              "critical_control_points": "Emulsionar el aderezo justo al momento de emplatar para mantener la textura crujiente."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Espinacas frescas de la granja",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Pepino fresco",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Lavar y centrifugar las espinacas tiernas de la granja y cortar el pepino en medias lunas finas.",
+              "Batir el jugo de limón fresco de la granja con el aceite de oliva VEVO y sal de mar.",
+              "Aliñar suavemente y servir de inmediato como entrada ligera."
+            ]
+          },
+          "main": {
+            "title": "Corte Magro de Ribeye de Res a la Parrilla con Mantequilla de Romero y Ajo",
+            "technique": "grill_sear",
+            "note": "Corte selecto de Ribeye de alacena sellado al hierro con mantequilla de pastoreo infusionada en ajo y romero fresco.",
+            "coct_reasoning": {
+              "thermodynamics": "Reacción de Maillard a 210°C en superficie durante 3 minutos por lado, reposando a 56°C internos.",
+              "flavor_and_aromatics": "Aromas tostados de carne asada, ajo dorado y pino balsámico del romero.",
+              "textural_architecture": "Costra exterior caramelizada con centro jugoso y tierno.",
+              "critical_control_points": "Reposar el corte 4 minutos sobre tabla templada antes de trinchar para redistribuir los jugos."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Ribeye",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 18,
+                "amount": 108,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Ajo fresco",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1.5,
+                "amount": 9.0,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Atemperar los cortes de Ribeye y sazonar con sal de mar y pimienta negra recién molida.",
+              "Sellar en sartén de hierro candente 3 minutos por lado y agregar la mantequilla con el ajo machacado para bañar el corte (arroser).",
+              "Reposar 4 minutos fuera del fuego y servir con sus jugos."
+            ]
+          },
+          "side": {
+            "title": "Chayotes Tiernos al Vapor con Toque de Limón Real, Sal de Mar y Aceite VEVO",
+            "technique": "steam_gentle",
+            "note": "Guarnición ligera de bajo índice glucémico cocida al vapor para acompañar cortes densos sin saturación láctea.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción por convección de vapor a 98°C durante 8 minutos conservando firmeza celular.",
+              "flavor_and_aromatics": "Sabor vegetal limpio realzado con limón de la granja y aceite de oliva VEVO.",
+              "textural_architecture": "Cubos al dente, jugosos y ligeros.",
+              "critical_control_points": "Retirar del vapor en cuanto cedan ligeramente al corte para preservar su estructura."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Chayotes tiernos",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Pelar y cortar los chayotes tiernos en bastones uniformes.",
+              "Cocer al vapor durante 8 minutos hasta lograr textura al dente.",
+              "Aderezar con aceite de oliva VEVO, gotas de limón de la granja y sal de mar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 52.5,
+          "protein_g": 33.5,
+          "net_carbs_g": 4.1,
+          "fiber_g": 5.8,
+          "starter_name": "Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja",
+          "main_dish_name": "Champiñones Portobello al Horno Rellenos de Espinacas de la Granja, Queso Ricotta y Nuez de la India",
+          "dish_name": "Champiñones Portobello al Horno Rellenos de Espinacas de la Granja, Queso Ricotta y Nuez de la India",
+          "side_dish_name": "Infusión Crepuscular de Flores de Azahar (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja",
+            "technique": "simmer_broth",
+            "note": "Consomé nocturno reconfortante rico en glicina y electrolitos para preparar el sistema digestivo.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión suave a 85°C que extrae compuestos aromáticos del cilantro fresco sin oxidarlos.",
+              "flavor_and_aromatics": "Notas limpias de caldo clarificado, cítrico fresco y cilantro de la granja.",
+              "textural_architecture": "Caldo cristalino y sedoso en boca.",
+              "critical_control_points": "Añadir el cilantro y el jugo de limón justo al servir."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 180,
+                "amount": 1080,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Calentar el fondo claro de pollo a fuego suave con una pizca de sal de mar.",
+              "Servir en tazón caliente y añadir el cilantro fresco de la granja picado, jugo de limón y un hilo de aceite VEVO."
+            ]
+          },
+          "main": {
+            "title": "Champiñones Portobello al Horno Rellenos de Espinacas de la Granja, Queso Ricotta y Nuez de la India",
+            "technique": "roast_bake",
+            "note": "Cena ligera de rápido vaciamiento gástrico con sombreros de champiñón rellenos de ricotta cremoso, espinacas de la granja y nuez de la India tostada.",
+            "coct_reasoning": {
+              "thermodynamics": "Horneado corto a 185°C durante 12 minutos que concentra el umami fúngico y funde suavemente el ricotta.",
+              "flavor_and_aromatics": "Umami terroso del champiñón, cremosidad láctica suave y toque tostado de la nuez de la India.",
+              "textural_architecture": "Sombrero carnoso y jugoso con relleno cremoso y superficie crujiente de nuez.",
+              "critical_control_points": "Retirar las láminas internas del champiñón y escurrir sobre papel absorbente tras los primeros 5 minutos de horneado."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Champiñón",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Espinacas frescas de la granja",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 20,
+                "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Limpiar los champiñones grandes, barnizar con aceite de oliva VEVO y pre-hornear 5 minutos a 185°C.",
+              "Mezclar las espinacas de la granja salteadas con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.",
+              "Hornear 7 minutos adicionales hasta dorar ligeramente y servir templado."
+            ]
+          },
+          "side": {
+            "title": "Infusión Crepuscular de Flores de Azahar (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "herbal_infusion",
+            "note": "Elixir nocturno calmante con péptidos bioactivos y glicinato de magnesio de la Toma 3 en la cena.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión floral a 85°C templada a ≤60°C antes de disolver AminoSinergix® (34Plus®).",
+              "flavor_and_aromatics": "Aroma floral sedante de azahar con final limpio.",
+              "textural_architecture": "Líquido tibio y reconfortante libre de teína.",
+              "critical_control_points": "No incorporar la fórmula 34Plus® por encima de 60°C para proteger sus aminoácidos cristalinos."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Flores de azahar secas",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar las flores de azahar en agua a 85°C durante 5 minutos y colar.",
+              "Dejar descender la temperatura a 55-60°C y disolver la dosis de AminoSinergix® (34Plus®).",
+              "Beber pausadamente al finalizar la cena."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Lunes",
+      "day_num": "19",
+      "date_str": "19 Oct",
+      "iso_date": "2026-10-19",
+      "date_full": "LUNES 19 DE OCTUBRE DE 2026",
+      "full_date_title": "Menú Completo para el Lunes 19 Oct",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 50.0,
+          "protein_g": 35.5,
+          "net_carbs_g": 4.5,
+          "fiber_g": 6.4,
+          "starter_name": "Tazón de Zarzamoras Silvestres con Semillas de Chía, Coco Rallado y Nuez Pecana de la Granja",
+          "main_dish_name": "Frittata Rústica de Huevos al Sartén con Pechuga de Pavo, Pimiento Morrón y Queso Gouda",
+          "dish_name": "Frittata Rústica de Huevos al Sartén con Pechuga de Pavo, Pimiento Morrón y Queso Gouda",
+          "side_dish_name": "Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Tazón de Zarzamoras Silvestres con Semillas de Chía, Coco Rallado y Nuez Pecana de la Granja",
+            "technique": "raw_assembly",
+            "note": "Entrada matutina rica en antocianinas de zarzamora con triglicéridos de cadena media del coco rallado sin azúcar, chía y nuez pecana de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío a 4°C sin tratamiento térmico.",
+              "flavor_and_aromatics": "Acidez silvestre de la zarzamora armonizada con el aroma tropical del coco rallado y la nuez pecana.",
+              "textural_architecture": "Textura jugosa de bayas con crujido fibroso de coco, chía y nuez pecana.",
+              "critical_control_points": "Utilizar exclusivamente coco rallado sin azúcar añadida."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Zarzamora",
+                "per_guest": 35,
+                "amount": 210,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Coco rallado sin azúcar",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Disponer las zarzamoras frescas desinfectadas en un tazón frío.",
+              "Espolvorear las semillas de chía orgánicas y el coco rallado sin azúcar.",
+              "Terminar con la nuez pecana fresca de la granja troceada."
+            ]
+          },
+          "main": {
+            "title": "Frittata Rústica de Huevos al Sartén con Pechuga de Pavo, Pimiento Morrón y Queso Gouda",
+            "technique": "pan_frittata",
+            "note": "Frittata dorada de 3 huevos enteros por comensal con dados de pechuga de pavo, tiras de pimiento morrón dulce y queso gouda gratinado.",
+            "coct_reasoning": {
+              "thermodynamics": "Cuajado lento en sartén de hierro a 150°C con gratinado final del queso gouda.",
+              "flavor_and_aromatics": "Dulzor natural del pimiento morrón asado, notas ahumadas de pavo y riqueza mantecosa del gouda.",
+              "textural_architecture": "Estructura esponjosa y firme con cubierta fundente de queso gouda.",
+              "critical_control_points": "Mantener fuego medio-bajo con tapa para que cuaje uniformemente sin resecar la base."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pavo",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Pimientos morrones dulces",
+                "per_guest": 35,
+                "amount": 210,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso gouda",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Saltear en mantequilla los dados de pechuga de pavo y el pimiento morrón en juliana durante 3 minutos.",
+              "Verter los huevos batidos con sal de mar, cubrir con el queso gouda rallado y tapar a fuego bajo por 6 minutos hasta cuajar.",
+              "Cortar en triángulos calientes y servir de inmediato."
+            ]
+          },
+          "side": {
+            "title": "Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Vehículo colagénico de fresa fresca (distinta a la zarzamora de la entrada) enriquecido con los adaptógenos de la Fórmula 33Plus®.",
+            "coct_reasoning": {
+              "thermodynamics": "Mezcla a ≤42°C y gelificación a 4°C para preservar la bioactividad nootrópica.",
+              "flavor_and_aromatics": "Perfume fresco de fresa natural con acidez equilibrada.",
+              "textural_architecture": "Gel cristalino y firme de corte limpio.",
+              "critical_control_points": "Controlar la temperatura del colágeno antes de añadir MultiSinergix®."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 25,
+                "amount": 150,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina natural en polvo",
+                "per_guest": 7,
+                "amount": 42,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Hidratar la grenetina en agua fría 8 minutos y disolver a baño María suave (60°C).",
+              "Enfriar a 42°C, incorporar MultiSinergix® (33Plus®) y las fresas finamente picadas.",
+              "Refrigerar a 4°C por 3 horas hasta cuajar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 63.5,
+          "protein_g": 41.0,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.3,
+          "starter_name": "Ensalada Fresca de Lechuga Romana y Arúgula de la Granja con Vinagreta Cítrica VEVO",
+          "main_dish_name": "Medallones de Sirloin de Res al Sartén en Emulsión de Pimienta Negra, Mantequilla y Aceite VEVO",
+          "dish_name": "Medallones de Sirloin de Res al Sartén en Emulsión de Pimienta Negra, Mantequilla y Aceite VEVO",
+          "side_dish_name": "Espárragos Verdes de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO",
+          "starter": {
+            "title": "Ensalada Fresca de Lechuga Romana y Arúgula de la Granja con Vinagreta Cítrica VEVO",
+            "technique": "raw_assembly",
+            "note": "Entrada verde amarga y refrescante diseñada para aligerar la carga metabólica de los medallones de Sirloin.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío que preserva los glucosinolatos de la arúgula de la granja.",
+              "flavor_and_aromatics": "Toque pimientoso de la arúgula fresca equilibrado con limón de la granja y aceite de oliva VEVO.",
+              "textural_architecture": "Hojas crujientes y ligeras con emulsión cítrica brillante.",
+              "critical_control_points": "Secar perfectamente las hojas tras el lavado para que el aceite VEVO se adhiera."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Lechuga",
+                "per_guest": 0.25,
+                "amount": 1.5,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Arúgula fresca de la granja",
+                "per_guest": 35,
+                "amount": 210,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Trozar las hojas de lechuga romana y mezclar con la arúgula fresca de la granja.",
+              "Emulsionar el aceite de oliva VEVO con el jugo de limón de la granja y sal de mar.",
+              "Bañar las hojas al momento de pasar a la mesa."
+            ]
+          },
+          "main": {
+            "title": "Medallones de Sirloin de Res al Sartén en Emulsión de Pimienta Negra, Mantequilla y Aceite VEVO",
+            "technique": "pan_sear_reduction",
+            "note": "Medallones tiernos de Sirloin sellados a la plancha con reducción aromática de pimienta negra recién quebrada y mantequilla de pastoreo.",
+            "coct_reasoning": {
+              "thermodynamics": "Sellado térmico a 200°C que carameliza las proteínas superficiales conservando jugosidad interna a 58°C.",
+              "flavor_and_aromatics": "Picor aromático de la pimienta negra tostada fundido con mantequilla de pastoreo y ajo.",
+              "textural_architecture": "Corte firme y jugoso cubierto por una emulsión brillante.",
+              "critical_control_points": "Tostar la pimienta negra en grano 30 segundos antes de desglasar con mantequilla."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Medallones de Sirloin de res",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 18,
+                "amount": 108,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Ajo fresco",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1.5,
+                "amount": 9.0,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Sazonar los medallones de Sirloin con sal de mar y pimienta negra quebrada.",
+              "Sellar en sartén caliente con aceite VEVO durante 3.5 minutos por lado.",
+              "Añadir la mantequilla de pastoreo y el ajo para formar una emulsión brillante sobre la carne y servir."
+            ]
+          },
+          "side": {
+            "title": "Espárragos Verdes de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO",
+            "technique": "steam_gentle",
+            "note": "Guarnición ligera rica en folatos y fibra prebiótica que cumple el balance metabólico junto al corte de res.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción al vapor durante 5 minutos que fija la clorofila verde esmeralda.",
+              "flavor_and_aromatics": "Notas herbáceas dulces del espárrago tierno con limón de la granja y aceite VEVO.",
+              "textural_architecture": "Tallos crujientes y tiernos sin lácteos ni gratinados pesados.",
+              "critical_control_points": "No sobrecocer más de 5 minutos para evitar pérdida de turgencia."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Espárragos verdes de la granja",
+                "per_guest": 85,
+                "amount": 510,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar la base fibrosa de los espárragos verdes de la granja.",
+              "Cocer al vapor durante 5 minutos hasta que estén verde brillante y al dente.",
+              "Aliñar con aceite de oliva VEVO, jugo de limón de la granja y sal de mar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 52.0,
+          "protein_g": 34.0,
+          "net_carbs_g": 3.9,
+          "fiber_g": 5.9,
+          "starter_name": "Bastones Frescos de Pepino y Apio al Limón Real con Sal de Mar y Aceite VEVO",
+          "main_dish_name": "Medallones de Lomo de Atún en Agua Aliñados al Aceite de Oliva VEVO, Aguacate Hass y Cilantro sobre Hojas de Lechuga",
+          "dish_name": "Medallones de Lomo de Atún en Agua Aliñados al Aceite de Oliva VEVO, Aguacate Hass y Cilantro sobre Hojas de Lechuga",
+          "side_dish_name": "Infusión Nocturna de Manzanilla y Lavanda (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Bastones Frescos de Pepino y Apio al Limón Real con Sal de Mar y Aceite VEVO",
+            "technique": "raw_assembly",
+            "note": "Crudités alcalinizantes de alta hidratación celular y mínimo aporte glucémico para abrir la cena.",
+            "coct_reasoning": {
+              "thermodynamics": "Corte en frío a 6°C que conserva la integridad celular y el potasio biodisponible.",
+              "flavor_and_aromatics": "Frescura anisada del apio y suavidad del pepino con acidez de limón de la granja.",
+              "textural_architecture": "Crujido limpio y refrescante.",
+              "critical_control_points": "Mantener los bastones en agua helada hasta 5 minutos antes de emplatar."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Pepino fresco",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Apio fresco",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar el pepino pelado sin semillas y los tallos de apio en bastones parejos.",
+              "Disponer en plato frío y bañar con jugo de limón de la granja, aceite VEVO y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Medallones de Lomo de Atún en Agua Aliñados al Aceite de Oliva VEVO, Aguacate Hass y Cilantro sobre Hojas de Lechuga",
+            "technique": "cold_emulsion_assembly",
+            "note": "Cena marina magra de rápido vaciamiento gástrico que amortiza el atún de alacena sobre hojas de lechuga fresca con aguacate Hass y aceite VEVO.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío que preserva intactos los ácidos grasos monoinsaturados del aguacate y el VEVO.",
+              "flavor_and_aromatics": "Perfil marino limpio del atún con cremosidad de aguacate Hass, cilantro de la granja y limón.",
+              "textural_architecture": "Lomos firmes de atún, dados sedosos de aguacate y barquitas crujientes de lechuga.",
+              "critical_control_points": "Escurrir perfectamente el atún antes de emulsionar con el aceite de oliva VEVO."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Atún en agua",
+                "per_guest": 140,
+                "amount": 840,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate Hass",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Lechuga",
+                "per_guest": 0.25,
+                "amount": 1.5,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Drenar los lomos de atún en agua y mezclar suavemente con aceite de oliva VEVO, jugo de limón, cilantro de la granja picado y sal de mar.",
+              "Incorporar el aguacate Hass en cubos medianos sin batir.",
+              "Servir sobre hojas enteras y crujientes de lechuga fresca."
+            ]
+          },
+          "side": {
+            "title": "Infusión Nocturna de Manzanilla y Lavanda (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "herbal_infusion",
+            "note": "Tisana floral relajante enriquecida con la Toma 3 de AminoSinergix® para inducir la reparación tisular nocturna.",
+            "coct_reasoning": {
+              "thermodynamics": "Extracción aromática a 85°C y enfriamiento a ≤60°C antes de añadir el complejo 34Plus®.",
+              "flavor_and_aromatics": "Notas melosas de manzanilla y perfume suave de lavanda.",
+              "textural_architecture": "Infusión tibia y aterciopelada.",
+              "critical_control_points": "Respetar el umbral térmico de ≤60°C al disolver la fórmula."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Flores de manzanilla y lavanda",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar las flores de manzanilla y lavanda en agua caliente por 5 minutos y colar.",
+              "Templar a 58°C e incorporar la dosis de AminoSinergix® (34Plus®) agitando suavemente.",
+              "Servir caliente al cierre de la cena."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Martes",
+      "day_num": "20",
+      "date_str": "20 Oct",
+      "iso_date": "2026-10-20",
+      "date_full": "MARTES 20 DE OCTUBRE DE 2026",
+      "full_date_title": "Menú Completo para el Martes 20 Oct",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.0,
+          "protein_g": 35.0,
+          "net_carbs_g": 4.3,
+          "fiber_g": 6.1,
+          "starter_name": "Tazón de Frambuesas Frescas con Semillas de Chía y Nuez Pecana de la Granja",
+          "main_dish_name": "Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Panela y Finas Hierbas",
+          "dish_name": "Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Panela y Finas Hierbas",
+          "side_dish_name": "Infusión Nootrópica de Té Verde Sencha (42°C) con Fórmula 33Plus®",
+          "starter": {
+            "title": "Tazón de Frambuesas Frescas con Semillas de Chía y Nuez Pecana de la Granja",
+            "technique": "raw_assembly",
+            "note": "Entrada de frambuesas ricas en ácido elágico y cetonas aromáticas acompañadas de chía y nuez pecana de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Servicio en frío a 4°C para máxima biodisponibilidad antioxidante.",
+              "flavor_and_aromatics": "Perfume floral ácido de la frambuesa con el tostado natural de la nuez pecana.",
+              "textural_architecture": "Drupeolas delicadas de frambuesa con textura crujiente de semillas y nueces.",
+              "critical_control_points": "Manipular las frambuesas con delicadeza al lavar para no romper su estructura."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Frambuesas",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Colocar las frambuesas frescas en tazón enfriado.",
+              "Espolvorear las semillas de chía orgánicas y la nuez pecana fresca de la granja troceada.",
+              "Servir inmediatamente."
+            ]
+          },
+          "main": {
+            "title": "Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Panela y Finas Hierbas",
+            "technique": "rolled_omelette",
+            "note": "Omelette japonés laminado en capas sucesivas con mantequilla de pastoreo, relleno de queso panela artesanal y cilantro de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Coagulación secuencial en sartén a 145°C formando láminas delgadas que atrapan vapor y mantequilla.",
+              "flavor_and_aromatics": "Sabor delicado de huevo a la mantequilla con frescura láctica del queso panela y hierbas.",
+              "textural_architecture": "Capas suaves y esponjosas con centro tierno de queso panela.",
+              "critical_control_points": "Engrasar ligeramente el sartén entre cada capa con mantequilla de pastoreo."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso Panela artesanal",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 16,
+                "amount": 96,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Batir los 3 huevos por persona con sal de mar y cilantro fino de la granja.",
+              "Verter una primera capa fina en sartén con mantequilla, colocar bastones de queso panela e ir enrollando en 3 capas sucesivas.",
+              "Rebanar en medallones gruesos y terminar con un hilo de aceite VEVO."
+            ]
+          },
+          "side": {
+            "title": "Infusión Nootrópica de Té Verde Sencha (42°C) con Fórmula 33Plus®",
+            "technique": "nootropic_infusion",
+            "note": "Elixir antioxidante de catequinas EGCG de té verde en sinergia con la Toma 2 de MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión de hoja verde a 75°C y enfriamiento a 42°C antes de disolver la Fórmula 33Plus®.",
+              "flavor_and_aromatics": "Notas herbales frescas con toque cítrico de los adaptógenos.",
+              "textural_architecture": "Bebida ligera y cristalina.",
+              "critical_control_points": "No hervir el té verde para evitar astringencia de taninos y templar a 42°C antes de añadir 33Plus®."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Té verde Sencha en hoja",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 180,
+                "amount": 1080,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar el té verde Sencha en agua a 75°C durante 2 minutos y retirar las hojas.",
+              "Templar a 42°C, disolver la dosis de MultiSinergix® (33Plus®) y servir."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 63.0,
+          "protein_g": 42.0,
+          "net_carbs_g": 4.5,
+          "fiber_g": 6.4,
+          "starter_name": "Consomé Clarificado de Pollo con Nopales Tiernos de la Granja al Cilantro",
+          "main_dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión de Mantequilla y VEVO",
+          "dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión de Mantequilla y VEVO",
+          "side_dish_name": "Zoodles de Calabacita Verde de la Granja al Sartén con Aceite de Oliva VEVO y Orégano",
+          "starter": {
+            "title": "Consomé Clarificado de Pollo con Nopales Tiernos de la Granja al Cilantro",
+            "technique": "simmer_broth",
+            "note": "Caldo limpio enriquecido con fibra soluble mucilaginosa de nopales tiernos de la granja y cilantro fresco.",
+            "coct_reasoning": {
+              "thermodynamics": "Hervor suave a 90°C con nopales previamente blanqueados en seco para textura limpia.",
+              "flavor_and_aromatics": "Sabor tradicional reconfortante de caldo de ave, nopal tierno y cilantro recién cortado.",
+              "textural_architecture": "Caldo fluido con dados firmes de nopal tierno.",
+              "critical_control_points": "Asar o blanquear los nopales por separado antes de integrarlos al consomé."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 180,
+                "amount": 1080,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Nopales tiernos de la granja",
+                "per_guest": 55,
+                "amount": 330,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar los nopales tiernos de la granja en cubos pequeños y asarlos en sartén seco por 4 minutos.",
+              "Integrar al fondo claro de pollo caliente con sal de mar, cilantro fresco y aceite VEVO."
+            ]
+          },
+          "main": {
+            "title": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión de Mantequilla y VEVO",
+            "technique": "stuffed_pan_roast",
+            "note": "Supremas jugosas de pechuga de pollo de alacena rellenas de queso ricotta cremoso y espinacas tiernas de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Sellado exterior a 180°C y cocción tapada a 150°C hasta alcanzar 74°C internos sin perder humedad.",
+              "flavor_and_aromatics": "Suavidad láctica del ricotta con espinaca fresca y jugo dorado de mantequilla de pastoreo.",
+              "textural_architecture": "Corte exterior dorado con corazón cremoso de ricotta y espinaca.",
+              "critical_control_points": "No sobrepasar los 74°C en el centro de la pechuga para preservar su jugosidad."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Espinacas frescas de la granja",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 16,
+                "amount": 96,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1.5,
+                "amount": 9.0,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Abrir las pechugas de pollo en mariposa, sazonar con sal de mar y rellenar con la mezcla de queso ricotta y espinacas de la granja picadas.",
+              "Sellar en sartén con aceite VEVO y mantequilla de pastoreo durante 4 minutos por lado, tapando los últimos 3 minutos.",
+              "Rebanar en medallones diagonales y bañar con la emulsión del sartén."
+            ]
+          },
+          "side": {
+            "title": "Zoodles de Calabacita Verde de la Granja al Sartén con Aceite de Oliva VEVO y Orégano",
+            "technique": "quick_saute",
+            "note": "Espaguetis vegetales de calabacita tierna de la granja salteados al minuto con aceite de oliva VEVO y orégano.",
+            "coct_reasoning": {
+              "thermodynamics": "Salteado relámpago de 90 segundos a fuego alto para evitar la exudación de agua.",
+              "flavor_and_aromatics": "Dulzor fresco de la calabacita verde con notas mediterráneas de orégano y aceite VEVO.",
+              "textural_architecture": "Hebras firmes al dente que retienen la emulsión de aceite de oliva.",
+              "critical_control_points": "Sazonar con sal de mar justo al retirar del fuego para que no suelten líquido."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Calabacitas verdes tiernas de la granja",
+                "per_guest": 90,
+                "amount": 540,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Espiralizar las calabacitas verdes tiernas de la granja conservando la cáscara rica en clorofila.",
+              "Saltear en sartén amplio con aceite de oliva VEVO durante 90 segundos a fuego vivo.",
+              "Sazonar con orégano y sal de mar al emplatar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 53.0,
+          "protein_g": 34.0,
+          "net_carbs_g": 4.2,
+          "fiber_g": 5.7,
+          "starter_name": "Gazpacho Templado Cetogénico de Jitomate Saladet con Aceite de Oliva VEVO y Orégano",
+          "main_dish_name": "Fajitas Tiernas de Pechuga de Pavo al Sartén con Brócoli de la Granja, Aceite VEVO y Finas Hierbas",
+          "dish_name": "Fajitas Tiernas de Pechuga de Pavo al Sartén con Brócoli de la Granja, Aceite VEVO y Finas Hierbas",
+          "side_dish_name": "Infusión de Manzanilla y Melisa (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Gazpacho Templado Cetogénico de Jitomate Saladet con Aceite de Oliva VEVO y Orégano",
+            "technique": "emulsified_soup",
+            "note": "Emulsión aterciopelada de jitomate saladet rico en licopeno con aceite de oliva extra virgen.",
+            "coct_reasoning": {
+              "thermodynamics": "Templado suave a 45°C que potencia la biodisponibilidad del licopeno disuelto en lípidos VEVO.",
+              "flavor_and_aromatics": "Acidez equilibrada del jitomate maduro con perfume de orégano y aceite de oliva virgen.",
+              "textural_architecture": "Textura sedosa y ligera.",
+              "critical_control_points": "Emulsionar el aceite de oliva en hilo fino al final del licuado."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Jitomate Saladet fresco",
+                "per_guest": 70,
+                "amount": 420,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Pepino fresco",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Licuar el jitomate saladet y el pepino pelado con sal de mar y orégano hasta obtener una textura fina.",
+              "Emulsionar en hilo el aceite de oliva VEVO y servir templado."
+            ]
+          },
+          "main": {
+            "title": "Fajitas Tiernas de Pechuga de Pavo al Sartén con Brócoli de la Granja, Aceite VEVO y Finas Hierbas",
+            "technique": "quick_saute",
+            "note": "Cena proteica blanca de rápida digestión con fajitas de pechuga de pavo de alacena y floretes tiernos de brócoli de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Salteado rápido a 175°C que sella las tiras de pavo conservando su ternura.",
+              "flavor_and_aromatics": "Sabor limpio de pavo con notas herbales, ajo suave y aceite de oliva VEVO.",
+              "textural_architecture": "Fajitas jugosas acompañadas de floretes crujientes de brócoli.",
+              "critical_control_points": "Cocinar el pavo solo 3-4 minutos para evitar resecar la fibra magra."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pavo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Brócoli fresco de la granja",
+                "per_guest": 65,
+                "amount": 390,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Blanquear los floretes de brócoli de la granja 2 minutos al vapor.",
+              "Saltear las fajitas de pechuga de pavo en mantequilla y aceite VEVO durante 3 minutos, integrar el brócoli y sazonar con sal de mar."
+            ]
+          },
+          "side": {
+            "title": "Infusión de Manzanilla y Melisa (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "herbal_infusion",
+            "note": "Tisana nocturna digestiva y ansiolítica natural enriquecida con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión a 85°C templada a ≤60°C para proteger los aminoácidos y péptidos bioactivos.",
+              "flavor_and_aromatics": "Notas herbales cítricas de la melisa y dulzor floral de la manzanilla.",
+              "textural_architecture": "Infusión cálida y cristalina.",
+              "critical_control_points": "Verificar que la temperatura sea ≤60°C antes de disolver AminoSinergix®."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Flores de manzanilla y hojas de melisa",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la manzanilla y melisa en agua a 85°C por 5 minutos y colar.",
+              "Templar a 58°C, disolver la dosis de AminoSinergix® (34Plus®) y servir."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Miércoles",
+      "day_num": "21",
+      "date_str": "21 Oct",
+      "iso_date": "2026-10-21",
+      "date_full": "MIÉRCOLES 21 DE OCTUBRE DE 2026",
+      "full_date_title": "Menú Completo para el Miércoles 21 Oct",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.5,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.4,
+          "fiber_g": 6.3,
+          "starter_name": "Tazón de Fresas Frescas en Láminas con Semillas de Chía y Nuez Pecana de la Granja",
+          "main_dish_name": "Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla de Pastoreo y Queso Ricotta",
+          "dish_name": "Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla de Pastoreo y Queso Ricotta",
+          "side_dish_name": "Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Tazón de Fresas Frescas en Láminas con Semillas de Chía y Nuez Pecana de la Granja",
+            "technique": "raw_assembly",
+            "note": "Entrada de fresas frescas de bajo índice glucémico con fibra soluble de chía y nuez pecana recién recolectada de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Preparación en frío a 4°C que conserva intactos los polifenoles.",
+              "flavor_and_aromatics": "Dulzor ácido de la fresa con el carácter oleoso y tostado de la nuez pecana de la granja.",
+              "textural_architecture": "Láminas jugosas con crujido de nuez pecana.",
+              "critical_control_points": "Servir sin lácteos en la entrada para máxima biodisponibilidad antioxidante."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 35,
+                "amount": 210,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar las fresas frescas en láminas y colocarlas en tazón frío.",
+              "Añadir las semillas de chía orgánicas y la nuez pecana fresca de la granja troceada."
+            ]
+          },
+          "main": {
+            "title": "Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla de Pastoreo y Queso Ricotta",
+            "technique": "pan_ring_sear",
+            "note": "Tres huevos enteros por comensal cocinados a fuego suave dentro de aros de pimiento morrón con mantequilla de pastoreo y copos de queso ricotta.",
+            "coct_reasoning": {
+              "thermodynamics": "Conducción suave a 145°C en sartén que cuaja la clara dentro del aro vegetal manteniendo la yema fluida.",
+              "flavor_and_aromatics": "Dulzor herbal del pimiento morrón asado en mantequilla y suavidad cremosa del ricotta.",
+              "textural_architecture": "Aro vegetal al dente con clara tierna y yema líquida.",
+              "critical_control_points": "Tapar el sartén 3 minutos a fuego mínimo para cuajar la superficie sin voltear el huevo."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Pimientos morrones dulces",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 16,
+                "amount": 96,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar los pimientos morrones en aros de 1.5 cm y dorarlos 1 minuto por lado en mantequilla de pastoreo.",
+              "Cascar los huevos dentro de los aros, sazonar con sal de mar y disponer copos de queso ricotta alrededor.",
+              "Tapar a fuego bajo por 3-4 minutos hasta que la clara cuaje y servir con un hilo de aceite VEVO."
+            ]
+          },
+          "side": {
+            "title": "Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Gel colagénico de frambuesa fresca (distinta a la fresa de la entrada) con los adaptógenos de la Toma 2 de MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Incorporación a ≤42°C y cuajado en frío a 4°C.",
+              "flavor_and_aromatics": "Notas vibrantes de frambuesa fresca.",
+              "textural_architecture": "Gel firme y brillante.",
+              "critical_control_points": "Cuidar estrictamente el límite térmico de 42°C al integrar 33Plus®."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Frambuesas",
+                "per_guest": 20,
+                "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina natural en polvo",
+                "per_guest": 7,
+                "amount": 42,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Hidratar la grenetina en agua fría 8 minutos y disolver a 60°C.",
+              "Templar a 42°C, incorporar MultiSinergix® (33Plus®) y las frambuesas frescas.",
+              "Refrigerar a 4°C durante 3 horas."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 64.5,
+          "protein_g": 41.0,
+          "net_carbs_g": 4.5,
+          "fiber_g": 6.6,
+          "starter_name": "Crema Aterciopelada de Coliflor de la Granja y Ajo Confitado con Aceite de Oliva VEVO",
+          "main_dish_name": "Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Emulsión de Limón y Aceite VEVO",
+          "dish_name": "Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Emulsión de Limón y Aceite VEVO",
+          "side_dish_name": "Ejotes Frescos de la Granja Salteados con Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja",
+          "starter": {
+            "title": "Crema Aterciopelada de Coliflor de la Granja y Ajo Confitado con Aceite de Oliva VEVO",
+            "technique": "boil_and_blend",
+            "note": "Crema sedosa elaborada con coliflor fresca de la granja y ajo confitado emulsionado en aceite de oliva extra virgen.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción en fondo claro y emulsión mecánica a alta velocidad a 72°C.",
+              "flavor_and_aromatics": "Dulzor de ajo confitado y notas suaves de coliflor de la granja con aceite VEVO.",
+              "textural_architecture": "Terciopelo homogéneo y reconfortante.",
+              "critical_control_points": "Emulsionar durante 90 segundos a máxima potencia para lograr textura de crema sin harina."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Coliflor fresca de la granja",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Ajo fresco",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 100,
+                "amount": 600,
+                "unit": "ml"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cocer los floretes de coliflor de la granja y el ajo en el fondo claro de pollo por 10 minutos.",
+              "Licuar a máxima velocidad incorporando el aceite de oliva VEVO en hilo y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Emulsión de Limón y Aceite VEVO",
+            "technique": "pan_sear",
+            "note": "Único servicio semanal de salmón rico en EPA/DHA, cubierto al 100% con el stock de alacena y sellado sobre su piel crujiente.",
+            "coct_reasoning": {
+              "thermodynamics": "Sellado unilateral en sartén a 190°C del lado de la piel (70% del tiempo) y volteo breve para conservar centro a 52°C y proteger los Omega-3.",
+              "flavor_and_aromatics": "Riqueza marina del salmón, notas tostadas de ajonjolí y frescura cítrica de la granja.",
+              "textural_architecture": "Piel crujiente dorada con lomo interior mantecoso y jugoso.",
+              "critical_control_points": "No sobrecocer el salmón para evitar la oxidación de los ácidos grasos poliinsaturados EPA y DHA."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Salmón",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "ml"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1.5,
+                "amount": 9.0,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Secar los filetes de salmón de alacena y sazonar con sal de mar.",
+              "Sellar del lado de la piel en sartén con aceite VEVO y mantequilla durante 4 minutos hasta lograr costra crujiente; voltear 1 minuto adicional.",
+              "Bañar con emulsión de aceite VEVO y jugo de limón fresco de la granja."
+            ]
+          },
+          "side": {
+            "title": "Ejotes Frescos de la Granja Salteados con Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja",
+            "technique": "quick_saute",
+            "note": "Ejotes verdes recién cosechados de la granja salteados al dente con mantequilla de pastoreo y trozos de nuez pecana de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Blanqueado previo de 3 minutos y salteado rápido en mantequilla a 160°C.",
+              "flavor_and_aromatics": "Sabor vegetal fresco con mantequilla avellanada y nuez pecana tostada.",
+              "textural_architecture": "Vainas verdes crujientes con trozos crocantes de nuez pecana.",
+              "critical_control_points": "Pasar los ejotes por choque térmico tras el blanqueado para fijar la clorofila."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Ejotes frescos de la granja",
+                "per_guest": 85,
+                "amount": 510,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Despuntar los ejotes frescos de la granja y cocerlos al vapor por 4 minutos.",
+              "Saltear en sartén con mantequilla de pastoreo y la nuez pecana de la granja picada durante 2 minutos; sazonar con sal de mar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 52.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 3.8,
+          "fiber_g": 6.0,
+          "starter_name": "Abanico de Aguacate Hass Fresco con Limón Real, Sal Marina y Aceite VEVO",
+          "main_dish_name": "Filete de Róbalo Blanco al Vapor con Mantequilla Clarificada, Limón Real y Espárragos de la Granja",
+          "dish_name": "Filete de Róbalo Blanco al Vapor con Mantequilla Clarificada, Limón Real y Espárragos de la Granja",
+          "side_dish_name": "Infusión Relajante de Toronjil y Flores de Azahar (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Abanico de Aguacate Hass Fresco con Limón Real, Sal Marina y Aceite VEVO",
+            "technique": "raw_assembly",
+            "note": "Entrada rica en ácido oleico y potasio biodisponible (única aparición de aguacate del miércoles).",
+            "coct_reasoning": {
+              "thermodynamics": "Corte al momento en frío para evitar oxidación enzimática de la polifenol oxidasa.",
+              "flavor_and_aromatics": "Cremosidad de aguacate Hass realzada con limón de la granja y aceite VEVO.",
+              "textural_architecture": "Gajos sedosos con cristales de sal de mar.",
+              "critical_control_points": "Bañar inmediatamente con jugo de limón de la granja tras laminar el aguacate."
+            },
+            "ingredients": [
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate Hass",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar el aguacate Hass en láminas y desplegar en abanico sobre plato frío.",
+              "Rociar con jugo de limón fresco de la granja, aceite de oliva VEVO y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Filete de Róbalo Blanco al Vapor con Mantequilla Clarificada, Limón Real y Espárragos de la Granja",
+            "technique": "steam_gentle",
+            "note": "Cena marina blanca de rapidísimo vaciamiento gástrico acompañada de espárragos verdes de la granja y emulsión de mantequilla y VEVO.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción suave al vapor a 95°C durante 7 minutos que preserva las fibras colagénicas delicadas del pescado blanco.",
+              "flavor_and_aromatics": "Sabor marino sutil y limpio con notas cítricas y herbáceas de espárrago de la granja.",
+              "textural_architecture": "Lasca blanca nacarada y tierna con tallos al dente de espárrago.",
+              "critical_control_points": "Retirar del vapor en cuanto el filete alcance 60°C internos."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Filete de Róbalo blanco fresco",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Espárragos verdes de la granja",
+                "per_guest": 65,
+                "amount": 390,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 14,
+                "amount": 84,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Disponer los filetes de róbalo blanco y los espárragos de la granja en vaporera sazonados con sal de mar.",
+              "Cocer al vapor durante 7 minutos hasta que el pescado esté blanco nacarado.",
+              "Emplatar y bañar con la mantequilla fundida, aceite VEVO y jugo de limón de la granja."
+            ]
+          },
+          "side": {
+            "title": "Infusión Relajante de Toronjil y Flores de Azahar (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "herbal_infusion",
+            "note": "Infusión botánica sedante de hojas de toronjil y flores de azahar enriquecida con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Extracción herbal a 85°C y descenso térmico a ≤60°C antes de añadir AminoSinergix®.",
+              "flavor_and_aromatics": "Aroma alimonado del toronjil en armonía con el perfume floral del azahar.",
+              "textural_architecture": "Tisana cálida y ligera.",
+              "critical_control_points": "Asegurar la presencia de toronjil y azahar y mantener la temperatura ≤60°C al disolver 34Plus®."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Hojas de toronjil y flores de azahar",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar las hojas de toronjil y las flores de azahar en agua a 85°C por 5 minutos y colar.",
+              "Templar a 58°C, disolver la dosis de AminoSinergix® (34Plus®) y servir."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Jueves",
+      "day_num": "22",
+      "date_str": "22 Oct",
+      "iso_date": "2026-10-22",
+      "date_full": "JUEVES 22 DE OCTUBRE DE 2026",
+      "full_date_title": "Menú Completo para el Jueves 22 Oct",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 50.0,
+          "protein_g": 35.5,
+          "net_carbs_g": 4.5,
+          "fiber_g": 6.2,
+          "starter_name": "Tazón de Zarzamoras Frescas con Semillas de Chía y Nuez Pecana de la Granja",
+          "main_dish_name": "Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo",
+          "dish_name": "Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo",
+          "side_dish_name": "Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Tazón de Zarzamoras Frescas con Semillas de Chía y Nuez Pecana de la Granja",
+            "technique": "raw_assembly",
+            "note": "Entrada de polifenoles vivos de zarzamora con semillas de chía y nuez pecana de la granja, libre de lácteos para cumplir la compatibilidad digestiva.",
+            "coct_reasoning": {
+              "thermodynamics": "Servicio en frío a 4°C que preserva las antocianinas.",
+              "flavor_and_aromatics": "Acidez frutal de zarzamora con el perfil tostado de la nuez pecana de la granja.",
+              "textural_architecture": "Bayas turgentes con crujido de chía y nuez pecana.",
+              "critical_control_points": "Servir sin mezclar lácteos en la fruta (cumpliendo validateNoFruitDairyMix)."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Zarzamora",
+                "per_guest": 35,
+                "amount": 210,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Disponer las zarzamoras frescas desinfectadas en tazón frío.",
+              "Espolvorear las semillas de chía orgánicas y la nuez pecana fresca de la granja troceada."
+            ]
+          },
+          "main": {
+            "title": "Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo",
+            "technique": "poach_emulsion",
+            "note": "Receta mediterránea clásica de 3 huevos enteros pochados sobre cama templada de yogur griego de alacena al ajo y mantequilla dorada.",
+            "coct_reasoning": {
+              "thermodynamics": "Escalfado suave en agua a 82°C por 3 minutos y cama de yogur griego atemperado a 25°C.",
+              "flavor_and_aromatics": "Cremosidad ácida del yogur griego con mantequilla avellanada, ajo suave y yema líquida.",
+              "textural_architecture": "Base sedosa de yogur griego coronada con huevos pochados de yema fluida.",
+              "critical_control_points": "Atemperar el yogur griego fuera del refrigerador 15 minutos antes de emplatar los huevos calientes."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Yogur griego",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 16,
+                "amount": 96,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Ajo fresco",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Mezclar el yogur griego atemperado con el ajo finamente rallado y una pizca de sal de mar, extendiéndolo en el fondo del plato.",
+              "Pochar los 3 huevos por comensal en agua a 82°C durante 3 minutos y colocarlos sobre la cama de yogur.",
+              "Bañar con la mantequilla de pastoreo fundida y un hilo de aceite de oliva VEVO."
+            ]
+          },
+          "side": {
+            "title": "Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Matriz de colágeno con fresa fresca (distinta a la zarzamora de la entrada) y la Toma 2 de MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Incorporación a ≤42°C y gelificación a 4°C.",
+              "flavor_and_aromatics": "Aroma limpio de fresa fresca con notas cítricas.",
+              "textural_architecture": "Gel firme y elástico.",
+              "critical_control_points": "Añadir MultiSinergix® únicamente cuando la mezcla esté a ≤42°C."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 25,
+                "amount": 150,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina natural en polvo",
+                "per_guest": 7,
+                "amount": 42,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Hidratar la grenetina en agua fría por 8 minutos y disolver a 60°C.",
+              "Templar a 42°C, agregar MultiSinergix® (33Plus®) y las fresas picadas.",
+              "Refrigerar a 4°C por 3 horas."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 62.5,
+          "protein_g": 40.5,
+          "net_carbs_g": 4.4,
+          "fiber_g": 6.5,
+          "starter_name": "Crema Aterciopelada de Brócoli de la Granja al Queso Ricotta y Ajo Confitado",
+          "main_dish_name": "Fajitas de Filete de Mojarra al Mojo de Ajo Dorado con Limón Real y Cilantro de la Granja",
+          "dish_name": "Fajitas de Filete de Mojarra al Mojo de Ajo Dorado con Limón Real y Cilantro de la Granja",
+          "side_dish_name": "Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
+          "starter": {
+            "title": "Crema Aterciopelada de Brócoli de la Granja al Queso Ricotta y Ajo Confitado",
+            "technique": "boil_and_blend",
+            "note": "Crema verde esmeralda de brócoli fresco de la granja emulsionada con queso ricotta de alacena y aceite de oliva VEVO.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción breve de 6 minutos para preservar el sulforafano y licuado con ricotta a 70°C.",
+              "flavor_and_aromatics": "Sabor vegetal fresco de brócoli suavizado con la cremosidad láctica del ricotta y ajo confitado.",
+              "textural_architecture": "Crema sedosa y ligera.",
+              "critical_control_points": "No sobrecocer el brócoli para conservar su color verde vibrante y sus fitonutrientes."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Brócoli fresco de la granja",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Ajo fresco",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 100,
+                "amount": 600,
+                "unit": "ml"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cocer los floretes de brócoli de la granja en el fondo claro de pollo por 6 minutos.",
+              "Licuar con el queso ricotta, el ajo confitado, aceite VEVO y sal de mar hasta obtener una crema tersa."
+            ]
+          },
+          "main": {
+            "title": "Fajitas de Filete de Mojarra al Mojo de Ajo Dorado con Limón Real y Cilantro de la Granja",
+            "technique": "pan_sear",
+            "note": "Único servicio semanal de mojarra que amortiza exactamente los 900 g disponibles en alacena, salteada al mojo de ajo dorado y limón de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Confitado aromático del ajo en mantequilla y aceite VEVO a 140°C seguido del sellado rápido del pescado.",
+              "flavor_and_aromatics": "Ajo dorado dulce, jugo de limón fresco de la granja y cilantro recién picado.",
+              "textural_architecture": "Fajitas blancas, jugosas y suaves.",
+              "critical_control_points": "Dorar el ajo a fuego medio para que no amargue antes de incorporar la mojarra."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Fajitas de mojarra",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 16,
+                "amount": 96,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 14,
+                "amount": 84,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Ajo fresco",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1.5,
+                "amount": 9.0,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Laminar el ajo y dorarlo suavemente en sartén con la mantequilla de pastoreo y el aceite de oliva VEVO.",
+              "Añadir las fajitas de mojarra sazonadas con sal de mar y cocinar 3 minutos por lado.",
+              "Terminar con jugo de limón de la granja y cilantro fresco picado."
+            ]
+          },
+          "side": {
+            "title": "Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
+            "technique": "grill_sear",
+            "note": "Guarnición prebiótica de nopales recién cortados de la granja asados a la plancha con orégano y aceite VEVO.",
+            "coct_reasoning": {
+              "thermodynamics": "Asado en seco a 190°C que evapora el mucílago superficial y concentra el sabor.",
+              "flavor_and_aromatics": "Notas herbales de orégano de alacena y nopal asado con aceite VEVO.",
+              "textural_architecture": "Pencos tiernos y firmes sin baba.",
+              "critical_control_points": "Asar sin grasa hasta sellar y añadir el aceite VEVO al retirar del fuego."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Nopales tiernos de la granja",
+                "per_guest": 90,
+                "amount": 540,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar los nopales tiernos de la granja en bastones y asarlos en plancha caliente por 5 minutos.",
+              "Sazonar con sal de mar, orégano y bañar con aceite de oliva VEVO al servir."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 53.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.1,
+          "fiber_g": 6.1,
+          "starter_name": "Ensalada Verde de Arúgula de la Granja y Pepino Fresco con Aceite VEVO y Limón",
+          "main_dish_name": "Tacos en Hoja de Lechuga Romana con Salpicón de Pechuga de Pollo, Aguacate Hass y Aceite VEVO",
+          "dish_name": "Tacos en Hoja de Lechuga Romana con Salpicón de Pechuga de Pollo, Aguacate Hass y Aceite VEVO",
+          "side_dish_name": "Infusión Digestiva de Hojas de Menta y Toronjil (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Ensalada Verde de Arúgula de la Granja y Pepino Fresco con Aceite VEVO y Limón",
+            "technique": "raw_assembly",
+            "note": "Entrada fresca y digestiva con arúgula de cosecha propia y pepino al limón.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío a 8°C.",
+              "flavor_and_aromatics": "Notas herbáceas de la arúgula equilibradas con limón de la granja y VEVO.",
+              "textural_architecture": "Hojas tiernas y rodajas crujientes de pepino.",
+              "critical_control_points": "Aderezar justo al servir."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Arúgula fresca de la granja",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Pepino fresco",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Combinar la arúgula fresca de la granja con el pepino en rodajas finas.",
+              "Aliñar con jugo de limón de la granja, aceite de oliva VEVO y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Tacos en Hoja de Lechuga Romana con Salpicón de Pechuga de Pollo, Aguacate Hass y Aceite VEVO",
+            "technique": "cold_emulsion_assembly",
+            "note": "Cena ligera de proteína blanca de rápido vaciamiento gástrico amortizando la pechuga de pollo y lechuga de alacena.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción previa de la pechuga en caldo aromático a 80°C y ensamblaje templado.",
+              "flavor_and_aromatics": "Frescura de cilantro y limón de la granja con pollo jugoso, aguacate Hass y aceite VEVO.",
+              "textural_architecture": "Barquitas crujientes de lechuga con hebras tiernas de pollo y cubos cremosos de aguacate.",
+              "critical_control_points": "Única aparición de aguacate del día; seleccionar hojas centrales enteras de lechuga."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate Hass",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Lechuga",
+                "per_guest": 0.3,
+                "amount": 1.8,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cocer la pechuga de pollo en agua con sal de mar durante 14 minutos y deshebrar finamente.",
+              "Aliñar el pollo con aceite de oliva VEVO, jugo de limón de la granja, cilantro fresco picado y cubos de aguacate Hass.",
+              "Servir dentro de hojas enteras y crujientes de lechuga romana."
+            ]
+          },
+          "side": {
+            "title": "Infusión Digestiva de Hojas de Menta y Toronjil (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "herbal_infusion",
+            "note": "Tisana carminativa y relajante con la Toma 3 de AminoSinergix® para optimizar el descanso.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión a 85°C templada a ≤60°C antes de integrar 34Plus®.",
+              "flavor_and_aromatics": "Frescura mentolada suave con fondo cítrico de toronjil.",
+              "textural_architecture": "Infusión limpia y cálida.",
+              "critical_control_points": "Respetar el límite de ≤60°C al disolver AminoSinergix®."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Hojas de menta y toronjil",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar las hojas de menta y toronjil en agua a 85°C durante 5 minutos y colar.",
+              "Templar a 58°C, disolver AminoSinergix® (34Plus®) y servir."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Viernes",
+      "day_num": "23",
+      "date_str": "23 Oct",
+      "iso_date": "2026-10-23",
+      "date_full": "VIERNES 23 DE OCTUBRE DE 2026",
+      "full_date_title": "Menú Completo para el Viernes 23 Oct",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.5,
+          "protein_g": 35.5,
+          "net_carbs_g": 4.3,
+          "fiber_g": 6.1,
+          "starter_name": "Tazón de Frambuesas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja",
+          "main_dish_name": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Espinacas de la Granja",
+          "dish_name": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Espinacas de la Granja",
+          "side_dish_name": "Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Tazón de Frambuesas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja",
+            "technique": "raw_assembly",
+            "note": "Entrada de frutos del bosque ricos en polifenoles con semillas de chía y nuez pecana fresca de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío a 4°C.",
+              "flavor_and_aromatics": "Contraste ácido-dulce de frambuesa y zarzamora con la nuez pecana de la granja.",
+              "textural_architecture": "Frutos rojos enteros con textura crujiente de semillas y nueces.",
+              "critical_control_points": "No repetir frambuesa ni zarzamora en la gelatina del acompañamiento."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Frambuesas",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Zarzamora",
+                "per_guest": 20,
+                "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Combinar las frambuesas y zarzamoras frescas en tazón frío.",
+              "Espolvorear las semillas de chía orgánicas y la nuez pecana fresca de la granja."
+            ]
+          },
+          "main": {
+            "title": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Espinacas de la Granja",
+            "technique": "french_omelette",
+            "note": "Omelette francés clásico relleno de queso cottage de alacena y espinacas tiernas de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Emulsión de huevo y mantequilla en sartén a 140°C logrando exterior liso y centro baveuse cremoso.",
+              "flavor_and_aromatics": "Mantequilla de pastoreo suave, frescura láctica del queso cottage y espinacas tiernas.",
+              "textural_architecture": "Exterior sedoso y envolvente con interior jugoso de cottage y espinaca.",
+              "critical_control_points": "Retirar del fuego cuando el centro aún esté ligeramente húmedo para que termine de cuajar con el calor residual."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso cottage",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Espinacas frescas de la granja",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 16,
+                "amount": 96,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Batir los 3 huevos por comensal con sal de mar hasta integrar sin generar espuma excesiva.",
+              "Cuajar en sartén con mantequilla de pastoreo moviendo constantemente, rellenar con las espinacas de la granja y el queso cottage escurrido, y doblar en tres.",
+              "Servir caliente con un hilo de aceite de oliva VEVO."
+            ]
+          },
+          "side": {
+            "title": "Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "gelatin_molding",
+            "note": "Gel colagénico de fresa fresca y limón de la granja (distinta a las bayas de la entrada) con la Toma 2 de MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Incorporación a ≤42°C y refrigeración a 4°C.",
+              "flavor_and_aromatics": "Perfume de fresa fresca con destello cítrico de limón de la granja.",
+              "textural_architecture": "Gel firme y refrescante.",
+              "critical_control_points": "Verificar temperatura ≤42°C antes de añadir MultiSinergix®."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 25,
+                "amount": 150,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina natural en polvo",
+                "per_guest": 7,
+                "amount": 42,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Hidratar la grenetina en agua fría por 8 minutos y fundir a 60°C.",
+              "Templar a 42°C, incorporar MultiSinergix® (33Plus®), jugo de limón de la granja y las fresas picadas.",
+              "Refrigerar a 4°C por 3 horas."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 63.5,
+          "protein_g": 41.5,
+          "net_carbs_g": 4.6,
+          "fiber_g": 6.4,
+          "starter_name": "Crema Sedosa de Espárragos Verdes de la Granja con Aceite de Oliva VEVO",
+          "main_dish_name": "Fajitas de Flat Steak de Res Salteadas con Pimiento Morrón, Cebolla Blanca y Aceite VEVO",
+          "dish_name": "Fajitas de Flat Steak de Res Salteadas con Pimiento Morrón, Cebolla Blanca y Aceite VEVO",
+          "side_dish_name": "Calabacitas Verdes Tiernas de la Granja Asadas a la Parrilla con Aceite VEVO y Orégano",
+          "starter": {
+            "title": "Crema Sedosa de Espárragos Verdes de la Granja con Aceite de Oliva VEVO",
+            "technique": "boil_and_blend",
+            "note": "Crema fina de espárragos verdes recién cosechados de la granja emulsionada con aceite de oliva VEVO.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción corta de 6 minutos y licuado de alta velocidad a 72°C.",
+              "flavor_and_aromatics": "Notas vegetales elegantes del espárrago tierno con el frutado del aceite VEVO.",
+              "textural_architecture": "Textura aterciopelada y ligera.",
+              "critical_control_points": "Reservar las puntas tiernas para decorar el plato al servir."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Espárragos verdes de la granja",
+                "per_guest": 85,
+                "amount": 510,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "ml"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cocer los espárragos verdes de la granja en el fondo claro de pollo durante 6 minutos.",
+              "Licuar con el aceite de oliva VEVO y sal de mar hasta obtener una emulsión sedosa."
+            ]
+          },
+          "main": {
+            "title": "Fajitas de Flat Steak de Res Salteadas con Pimiento Morrón, Cebolla Blanca y Aceite VEVO",
+            "technique": "high_heat_saute",
+            "note": "Único servicio semanal de Flat Steak que amortiza 900 g del stock de alacena, salteado a fuego vivo con pimientos morrones dulces.",
+            "coct_reasoning": {
+              "thermodynamics": "Salteado rápido tipo wok a 210°C durante 3 minutos que sella las tiras de res conservando su terneza.",
+              "flavor_and_aromatics": "Caramelización de la carne de res con dulzor de pimiento morrón y cebolla asada.",
+              "textural_architecture": "Tiras de carne jugosas con bastones de pimiento al dente.",
+              "critical_control_points": "Cortar el Flat Steak en contra de la fibra muscular antes de saltear."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Flat steak",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Pimientos morrones dulces",
+                "per_guest": 35,
+                "amount": 210,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cebolla blanca",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 14,
+                "amount": 84,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 14,
+                "amount": 84,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1.5,
+                "amount": 9.0,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar el Flat Steak de alacena en fajitas en contra de la hebra y sazonar con sal de mar y pimienta negra.",
+              "Saltear a fuego alto en aceite VEVO y mantequilla durante 2 minutos, añadir el pimiento morrón y la cebolla en juliana y saltear 2 minutos más."
+            ]
+          },
+          "side": {
+            "title": "Calabacitas Verdes Tiernas de la Granja Asadas a la Parrilla con Aceite VEVO y Orégano",
+            "technique": "grill_sear",
+            "note": "Monedas de calabacita tierna de la granja marcadas a la parrilla con aceite de oliva VEVO y orégano.",
+            "coct_reasoning": {
+              "thermodynamics": "Conducción directa en parrilla a 190°C por 2 minutos por lado.",
+              "flavor_and_aromatics": "Dulzor vegetal asado con aroma de orégano y aceite VEVO.",
+              "textural_architecture": "Rodajas firmes con marcas de parrilla doradas.",
+              "critical_control_points": "Cortar en rodajas de 1 cm de grosor para que conserven su centro firme."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Calabacitas verdes tiernas de la granja",
+                "per_guest": 85,
+                "amount": 510,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar las calabacitas tiernas de la granja en rodajas de 1 cm y barnizar con aceite VEVO.",
+              "Asar en parrilla caliente 2 minutos por lado y sazonar con sal de mar y orégano."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 52.5,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.8,
+          "fiber_g": 5.8,
+          "starter_name": "Caldo Reconfortante de Pollo y Vegetales Verdes con Limón Real y Cilantro de la Granja",
+          "main_dish_name": "Salpicón Fresco de Pechuga de Pavo con Queso Cottage Cremoso, Aguacate Hass y Cilantro de la Granja",
+          "dish_name": "Salpicón Fresco de Pechuga de Pavo con Queso Cottage Cremoso, Aguacate Hass y Cilantro de la Granja",
+          "side_dish_name": "Infusión Nocturna Digestiva de Menta Blanca y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Caldo Reconfortante de Pollo y Vegetales Verdes con Limón Real y Cilantro de la Granja",
+            "technique": "simmer_broth",
+            "note": "Caldo ligero de noche con apio y cilantro fresco de la granja para hidratar y aportar electrolitos.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión suave a 88°C.",
+              "flavor_and_aromatics": "Aroma limpio de apio, cilantro de la granja y limón fresco.",
+              "textural_architecture": "Caldo claro con juliana fina de apio tierno.",
+              "critical_control_points": "Servir caliente con gotas de limón al momento."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 180,
+                "amount": 1080,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Apio fresco",
+                "per_guest": 25,
+                "amount": 150,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Hervir suavemente el fondo claro de pollo con el apio finamente picado por 4 minutos.",
+              "Servir con cilantro fresco de la granja, jugo de limón y aceite de oliva VEVO."
+            ]
+          },
+          "main": {
+            "title": "Salpicón Fresco de Pechuga de Pavo con Queso Cottage Cremoso, Aguacate Hass y Cilantro de la Granja",
+            "technique": "cold_emulsion_assembly",
+            "note": "Cena ligera de proteína blanca que amortiza la pechuga de pavo y el queso cottage de alacena.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje fresco a 12°C que facilita una digestión nocturna ligera.",
+              "flavor_and_aromatics": "Pavo jugoso al limón con cremosidad de queso cottage, aguacate Hass y aceite VEVO.",
+              "textural_architecture": "Hebras suaves de pavo con dados de aguacate y perlas de cottage sobre hoja de lechuga.",
+              "critical_control_points": "Única aparición de aguacate del viernes; escurrir el exceso de suero del queso cottage."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pavo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso cottage",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate Hass",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Lechuga",
+                "per_guest": 0.25,
+                "amount": 1.5,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar la pechuga de pavo cocida en tiras finas y mezclar con el queso cottage, cilantro de la granja, jugo de limón, aceite VEVO y sal de mar.",
+              "Incorporar el aguacate Hass en cubos y servir sobre cama de lechuga fresca."
+            ]
+          },
+          "side": {
+            "title": "Infusión Nocturna Digestiva de Menta Blanca y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "herbal_infusion",
+            "note": "Elixir nocturno con la Toma 3 de AminoSinergix® para la regeneración celular durante el sueño.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión a 85°C enfriada a ≤60°C antes de añadir AminoSinergix®.",
+              "flavor_and_aromatics": "Frescura herbal de menta con toque cítrico de la granja.",
+              "textural_architecture": "Infusión tibia y limpia.",
+              "critical_control_points": "Disolver la fórmula únicamente a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Hojas de menta blanca",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar las hojas de menta en agua a 85°C por 5 minutos y colar.",
+              "Templar a 58°C, añadir las gotas de limón y disolver la dosis de AminoSinergix® (34Plus®)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Sábado",
+      "day_num": "24",
+      "date_str": "24 Oct",
+      "iso_date": "2026-10-24",
+      "date_full": "SÁBADO 24 DE OCTUBRE DE 2026",
+      "full_date_title": "Menú Completo para el Sábado 24 Oct",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 50.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.4,
+          "fiber_g": 6.2,
+          "starter_name": "Tazón de Fresas Frescas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja",
+          "main_dish_name": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Calabacitas Tiernas de la Granja al Orégano",
+          "dish_name": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Calabacitas Tiernas de la Granja al Orégano",
+          "side_dish_name": "Infusión Nootrópica de Té Matcha Ceremonial (42°C) con Fórmula 33Plus®",
+          "starter": {
+            "title": "Tazón de Fresas Frescas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja",
+            "technique": "raw_assembly",
+            "note": "Entrada de fresas frescas con mucílago prebiótico de chía y nuez pecana recién cosechada de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío a 4°C.",
+              "flavor_and_aromatics": "Acidez fresca de la fresa con la riqueza oleosa de la nuez pecana de la granja.",
+              "textural_architecture": "Gajos firmes de fresa con crujido de nuez pecana.",
+              "critical_control_points": "No mezclar lácteos en la fruta de entrada."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 35,
+                "amount": 210,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar las fresas frescas en cuartos y disponer en tazón frío.",
+              "Añadir las semillas de chía orgánicas y la nuez pecana fresca de la granja troceada."
+            ]
+          },
+          "main": {
+            "title": "Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Calabacitas Tiernas de la Granja al Orégano",
+            "technique": "cast_iron_fry",
+            "note": "Tres huevos enteros por comensal estrellados en sartén de hierro con aceite VEVO y mantequilla sobre cama de calabacitas tiernas de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Conducción en hierro a 165°C que dora sutilmente la orilla de la clara manteniendo la yema líquida a 60°C.",
+              "flavor_and_aromatics": "Riqueza de la yema líquida emulsionada con aceite de oliva VEVO, mantequilla y calabacita al orégano.",
+              "textural_architecture": "Claras tiernas de borde dorado, yema fluida y rodajas al dente de calabacita.",
+              "critical_control_points": "No sobrecocer la yema para preservar la colina y lecitina biodisponibles."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Calabacitas verdes tiernas de la granja",
+                "per_guest": 65,
+                "amount": 390,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 16,
+                "amount": 96,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Saltear las calabacitas tiernas de la granja en rodajas con mantequilla y orégano durante 3 minutos y disponer como base.",
+              "Estrellar los 3 huevos por comensal en el sartén de hierro con aceite VEVO hasta cuajar la clara dejando la yema líquida.",
+              "Servir sobre la cama de calabacitas y sazonar con sal de mar."
+            ]
+          },
+          "side": {
+            "title": "Infusión Nootrópica de Té Matcha Ceremonial (42°C) con Fórmula 33Plus®",
+            "technique": "nootropic_infusion",
+            "note": "Sinergia de L-Teanina natural del té Matcha con la Toma 2 de MultiSinergix® para enfoque cognitivo sostenido.",
+            "coct_reasoning": {
+              "thermodynamics": "Emulsión con batidor a 42°C para proteger los activos termolábiles.",
+              "flavor_and_aromatics": "Umami vegetal del Matcha con notas cítricas de 33Plus®.",
+              "textural_architecture": "Infusión microespumada y sedosa.",
+              "critical_control_points": "Incorporar la Fórmula 33Plus® estrictamente a ≤42°C."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Té Matcha ceremonial en polvo",
+                "per_guest": 2,
+                "amount": 12,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 180,
+                "amount": 1080,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Disolver el té Matcha en agua a 70°C batiendo en zigzag hasta espumar.",
+              "Templar a 42°C, integrar la dosis de MultiSinergix® (33Plus®) y servir."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 65.0,
+          "protein_g": 42.0,
+          "net_carbs_g": 4.6,
+          "fiber_g": 6.7,
+          "starter_name": "Ensalada Crujiente de Lechuga Romana, Pepino Fresco y Cilantro de la Granja al Limón con VEVO",
+          "main_dish_name": "Hamburguesa de Arrachera a la Parrilla con Costra de Queso Gouda y Guacamole Rústico",
+          "dish_name": "Hamburguesa de Arrachera a la Parrilla con Costra de Queso Gouda y Guacamole Rústico",
+          "side_dish_name": "Brócoli Fresco de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO",
+          "starter": {
+            "title": "Ensalada Crujiente de Lechuga Romana, Pepino Fresco y Cilantro de la Granja al Limón con VEVO",
+            "technique": "raw_assembly",
+            "note": "Entrada verde ligera obligatoria por balance de carga metabólica ante la hamburguesa de arrachera principal.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío a 8°C.",
+              "flavor_and_aromatics": "Frescura cítrica y herbal que limpia el paladar.",
+              "textural_architecture": "Hojas crujientes de lechuga romana y láminas de pepino sin quesos ni grasas pesadas.",
+              "critical_control_points": "Aliñar justo antes de servir."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Lechuga",
+                "per_guest": 0.25,
+                "amount": 1.5,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Pepino fresco",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Trozar la lechuga romana y mezclar con el pepino laminado y el cilantro fresco de la granja.",
+              "Aderezar con jugo de limón de la granja, aceite de oliva VEVO y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Hamburguesa de Arrachera a la Parrilla con Costra de Queso Gouda y Guacamole Rústico",
+            "technique": "grill_sear",
+            "note": "Plato principal sabatino que amortiza la hamburguesa de arrachera y el queso gouda de alacena, coronado con el único aguacate del sábado.",
+            "coct_reasoning": {
+              "thermodynamics": "Asado a la parrilla a 200°C durante 4 minutos por lado y fundido del queso gouda con calor residual.",
+              "flavor_and_aromatics": "Carne de arrachera asada, queso gouda fundido y guacamole fresco al limón de la granja.",
+              "textural_architecture": "Medallón jugoso de arrachera con capa fundente de gouda y cremosidad de aguacate.",
+              "critical_control_points": "Única aparición de aguacate del día sábado (cumpliendo enforceFatSourceUniqueness)."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Hamburguesa de arrachera",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso gouda",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate Hass",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Asar las hamburguesas de arrachera de alacena en parrilla caliente durante 4 minutos por lado.",
+              "Colocar el queso gouda encima en el último minuto para gratinar.",
+              "Servir coronando con el aguacate Hass machacado con jugo de limón de la granja y sal de mar."
+            ]
+          },
+          "side": {
+            "title": "Brócoli Fresco de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO",
+            "technique": "steam_gentle",
+            "note": "Guarnición ligera de floretes de brócoli de la granja al vapor (sin lácteos ni aguacate, cumpliendo enforceMetabolicLoadBalance).",
+            "coct_reasoning": {
+              "thermodynamics": "Vapor suave a 98°C por 5 minutos para preservar glucosinolatos y textura al dente.",
+              "flavor_and_aromatics": "Sabor verde limpio con aceite VEVO y limón de la granja.",
+              "textural_architecture": "Floretes firmes y crujientes.",
+              "critical_control_points": "Retirar a los 5 minutos exactos para mantener el color verde intenso."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Brócoli fresco de la granja",
+                "per_guest": 85,
+                "amount": 510,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Separar el brócoli fresco de la granja en arbolitos uniformes y cocer al vapor por 5 minutos.",
+              "Aderezar con aceite de oliva VEVO, jugo de limón de la granja y sal de mar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 52.0,
+          "protein_g": 34.0,
+          "net_carbs_g": 3.9,
+          "fiber_g": 5.8,
+          "starter_name": "Consomé Nocturno de Vegetales de la Granja con Cilantro Fresco y Limón Real",
+          "main_dish_name": "Salteado Templado de Champiñones Frescos Laminados y Fajitas de Pechuga de Pollo al Limón, Ajo y Aceite VEVO",
+          "dish_name": "Salteado Templado de Champiñones Frescos Laminados y Fajitas de Pechuga de Pollo al Limón, Ajo y Aceite VEVO",
+          "side_dish_name": "Té Caliente de Lavanda y Flores de Azahar (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Consomé Nocturno de Vegetales de la Granja con Cilantro Fresco y Limón Real",
+            "technique": "simmer_broth",
+            "note": "Caldo reconfortante de noche con chayote en brunoise y cilantro fresco de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Hervor suave a 88°C.",
+              "flavor_and_aromatics": "Sabor limpio de vegetales verdes, cilantro y limón de la granja.",
+              "textural_architecture": "Caldo ligero con pequeños cubos tiernos de chayote.",
+              "critical_control_points": "Integrar el cilantro al momento de servir."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 180,
+                "amount": 1080,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Chayotes tiernos",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco de la granja",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cocer el chayote en brunoise fina dentro del fondo claro de pollo por 6 minutos.",
+              "Servir caliente con cilantro fresco de la granja, jugo de limón y aceite de oliva VEVO."
+            ]
+          },
+          "main": {
+            "title": "Salteado Templado de Champiñones Frescos Laminados y Fajitas de Pechuga de Pollo al Limón, Ajo y Aceite VEVO",
+            "technique": "quick_saute",
+            "note": "Cena ligera de rápido vaciamiento gástrico (sin sardinas ni carnes rojas, y sin aguacate repetido) que amortiza los champiñones y la pechuga de pollo de alacena.",
+            "coct_reasoning": {
+              "thermodynamics": "Salteado a 175°C durante 5 minutos que dora los champiñones laminados y sella las fajitas de pollo.",
+              "flavor_and_aromatics": "Ajo dorado en aceite de oliva VEVO y mantequilla con umami de champiñón y frescura de limón de la granja.",
+              "textural_architecture": "Láminas carnosas de champiñón y tiras tiernas de pechuga de pollo.",
+              "critical_control_points": "No amontonar los champiñones en el sartén para que doren en lugar de hervir."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Champiñón",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pollo",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
+                "per_guest": 14,
+                "amount": 84,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 16,
+                "amount": 96,
+                "unit": "ml"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Ajo fresco",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Laminar los champiñones frescos de alacena y saltearlos en aceite VEVO y mantequilla con el ajo picado durante 3 minutos.",
+              "Incorporar las fajitas de pechuga de pollo sazonadas con sal de mar y saltear 3 minutos adicionales hasta cocer.",
+              "Terminar con jugo de limón fresco de la granja y servir templado."
+            ]
+          },
+          "side": {
+            "title": "Té Caliente de Lavanda y Flores de Azahar (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "herbal_infusion",
+            "note": "Elixir nocturno para el cierre de la semana con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión floral a 85°C templada a ≤60°C.",
+              "flavor_and_aromatics": "Aroma relajante de lavanda y azahar.",
+              "textural_architecture": "Infusión cálida y sedosa.",
+              "critical_control_points": "Disolver AminoSinergix® estrictamente a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Flores de lavanda y azahar",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar las flores de lavanda y azahar en agua a 85°C durante 5 minutos y colar.",
+              "Templar a 58°C, disolver la dosis de AminoSinergix® (34Plus®) y servir."
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
