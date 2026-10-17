@@ -118,6 +118,7 @@ FORBIDDEN_INGREDIENT_TOKENS = [
     "higo", "durazno", "platano", "mango",
     "frijol", "arroz", "maiz", "trigo", "harina de trigo", "avena", "quinoa", "papa", "lenteja", "garbanzo",
     "chile", "chipotle", "chile serrano", "jalapeno", "habanero", "paprika picante",
+    "cafe", "cafe colombiano", "espresso", " descafeinado",
 ]
 
 WEEKDAY_NAMES_REGEX = re.compile(
@@ -261,23 +262,56 @@ def is_main_dish_metabolically_dense(main_dish: Dict[str, Any]) -> bool:
     return False
 
 
-def has_heavy_lipid_or_dairy_in_side_or_starter(dish: Dict[str, Any]) -> List[str]:
+def has_heavy_lipid_or_dairy_in_side_or_starter(dish: Dict[str, Any], include_butter: bool = False) -> List[str]:
     """
     Inspecciona `dish['ingredients']` en Entrada o Acompañamiento para detectar
     ingredientes prohibidos cuando el plato fuerte es DENSO ([R2]).
     """
     heavy_found = []
+    tokens = [
+        "queso", "crema acida", "yogur", "mayonesa", "aguacate",
+        "tocino", "manteca"
+    ]
+    if include_butter:
+        tokens.append("mantequilla")
     for ing in dish.get("ingredients", []):
         nm = _strip_accents(ing.get("name", ""))
-        if any(
-            k in nm
-            for k in [
-                "queso", "crema acida", "yogur", "mayonesa", "aguacate",
-                "tocino", "manteca"
-            ]
-        ):
+        if any(k in nm for k in tokens):
             heavy_found.append(ing.get("name", nm))
     return heavy_found
+
+
+def is_super_dense_beef_dish(main_dish: Dict[str, Any]) -> bool:
+    """
+    Detecta cortes densos de res a la parrilla o de carne molida con queso/crema/guacamole
+    (ej. Corte de Flat Steak a la Parrilla con Mantequilla, Albóndigas en Salsa Cremosa,
+    Hamburguesa con Queso Manchego y Guacamole).
+    Para estos platos, la Entrada debe ser obligatoriamente Ensalada Verde Fresca (no consomé/crema)
+    y ni Entrada ni Guarnición pueden llevar mantequilla ni lácteos ([R2] Regla 2.3).
+    """
+    title_norm = _strip_accents(main_dish.get("title", ""))
+    ings_norm = [_strip_accents(i.get("name", "")) for i in main_dish.get("ingredients", [])]
+    joined = " | ".join(ings_norm)
+    if "carne molida" in joined or "corte de flat steak" in title_norm or "hamburguesa" in title_norm or "albondiga" in title_norm:
+        return True
+    return False
+
+
+
+def validate_no_fruit_dairy_mix(dish: Dict[str, Any]) -> Tuple[List[str], List[str]]:
+    """
+    [R4.6] validateNoFruitDairyMix:
+    Prohíbe mezclar cualquier fruta (fresas, zarzamoras, frambuesas, etc.) con lácteos
+    (yogur griego, queso cottage, queso ricotta, crema, queso, leche) en el mismo plato.
+    """
+    _, fruits_found = extract_veg_and_fruit_families(dish)
+    dairy_found: List[str] = []
+    for ing in dish.get("ingredients", []):
+        nm = _strip_accents(ing.get("name", ""))
+        if any(k in nm for k in ["yogur", "cottage", "ricotta", "queso", "crema acida", "leche de vaca"]):
+            dairy_found.append(ing.get("name", nm))
+    return fruits_found, dairy_found
+
 
 
 def compute_repeat_weight_modifier(
@@ -379,6 +413,7 @@ def audit_week_plan(
     lunch_proteins_by_day: List[Tuple[str, str]] = []
     dinner_proteins_by_day: List[Tuple[str, str]] = []
     lunch_dinner_protein_counts: Dict[str, int] = {}
+    weekly_breakfast_gelatinas_count = 0
 
     bom_totals: Dict[str, Dict[str, Any]] = {}
 
@@ -439,6 +474,13 @@ def audit_week_plan(
                             f"[R1/R3.4] {c_label}: Detectado insumo prohibido o picante irritante '{forbidden}'."
                         )
 
+                # [R4.6] validateNoFruitDairyMix: prohibido mezclar fruta con lácteos en el mismo plato
+                fr_mix, dairy_mix = validate_no_fruit_dairy_mix(dish)
+                if fr_mix and dairy_mix:
+                    violations.append(
+                        f"[R4.6] {c_label}: Violación a validateNoFruitDairyMix — prohibido mezclar fruta ({fr_mix}) con lácteos ({dairy_mix}) en el mismo plato."
+                    )
+
                 # [R6] Cero diuréticos en Cena (prohibido usar Flor de Jamaica en la noche)
                 if _strip_accents(m_type) == "cena" and "jamaica" in title_and_ings_text:
                     violations.append(
@@ -479,8 +521,9 @@ def audit_week_plan(
             # [R2] Balance de Carga Metabólica (enforceMetabolicLoadBalance)
             m_type_norm = _strip_accents(m_type)
             if m_type_norm in ("comida", "cena") and is_main_dish_metabolically_dense(main):
-                heavy_st = has_heavy_lipid_or_dairy_in_side_or_starter(starter)
-                heavy_sd = has_heavy_lipid_or_dairy_in_side_or_starter(side)
+                super_dense_beef = is_super_dense_beef_dish(main)
+                heavy_st = has_heavy_lipid_or_dairy_in_side_or_starter(starter, include_butter=super_dense_beef)
+                heavy_sd = has_heavy_lipid_or_dairy_in_side_or_starter(side, include_butter=super_dense_beef)
                 if heavy_st:
                     violations.append(
                         f"[R2] {loc_label}: Plato principal DENSO ('{main.get('title')}') con Entrada pesada ({heavy_st})."
@@ -488,6 +531,10 @@ def audit_week_plan(
                 if heavy_sd:
                     violations.append(
                         f"[R2] {loc_label}: Plato principal DENSO ('{main.get('title')}') con Acompañamiento pesado ({heavy_sd})."
+                    )
+                if super_dense_beef and "ensalada" not in _strip_accents(starter.get("title", "")):
+                    violations.append(
+                        f"[R2] {loc_label}: Corte denso de res ('{main.get('title')}') exige obligatoriamente Ensalada Verde Fresca en la Entrada (encontrado: '{starter.get('title')}')."
                     )
 
             # [R3] Unicidad de Arquetipo Culinario y Técnica en Plato Principal
@@ -547,6 +594,17 @@ def audit_week_plan(
 
             # Reglas específicas por tipo de servicio (Desayuno / Comida / Cena)
             if m_type_norm == "desayuno":
+                # Exigencia de Nuez pecana fresca de la granja y Semillas de chía en las 7 entradas de desayuno
+                starter_ings_norm = {_strip_accents(i.get("name", "")): i for i in starter.get("ingredients", [])}
+                if not any("nuez pecana" in k for k in starter_ings_norm):
+                    violations.append(
+                        f"[R8] {loc_label}: La entrada del desayuno debe incluir obligatoriamente 'Nuez pecana fresca de la granja'."
+                    )
+                if not any("chia" in k for k in starter_ings_norm):
+                    violations.append(
+                        f"[R8] {loc_label}: La entrada del desayuno debe incluir obligatoriamente 'Semillas de chía orgánicas'."
+                    )
+
                 # 3 huevos enteros por comensal y MultiSinergix en acompañamiento
                 main_ings_norm = {_strip_accents(i.get("name", "")): i for i in main.get("ingredients", [])}
                 if "huevo" not in main_ings_norm or float(main_ings_norm["huevo"].get("per_guest", 0)) != 3.0:
@@ -558,6 +616,8 @@ def audit_week_plan(
                     violations.append(
                         f"[R8] {loc_label}: El acompañamiento matutino debe incluir MultiSinergix® (33Plus®)."
                     )
+                if any("grenetina" in k for k in side_ings_norm) and "gelatina" in _strip_accents(side.get("title", "")):
+                    weekly_breakfast_gelatinas_count += 1
             else:
                 prot_info = classify_main_protein(main)
                 p_key = prot_info["key"]
@@ -638,6 +698,12 @@ def audit_week_plan(
         weekly_prot_g += day_prot
         weekly_carbs_g += day_carbs
 
+    # [R8] Exigencia de mínimo 5 Gelatinas de Grenetina con 33Plus® por semana en acompañamiento matutino
+    if weekly_breakfast_gelatinas_count < 5:
+        violations.append(
+            f"[R8] El acompañamiento matutino debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® (4°C) por semana (encontradas: {weekly_breakfast_gelatinas_count})."
+        )
+
     # [R6] Cero repetición de proteína en cenas consecutivas y comidas consecutivas
     for i in range(len(dinner_proteins_by_day) - 1):
         d1, p1 = dinner_proteins_by_day[i]
@@ -713,18 +779,23 @@ def audit_week_plan(
                         cm_title = _strip_accents(cm_main.get("title") or "")
                         pm_arch = extract_dish_archetype(pm_main)
                         cm_arch = extract_dish_archetype(cm_main)
-                        if (pm_title and pm_title == cm_title) or (pm_arch and pm_arch == cm_arch):
-                            violations.append(
-                                f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite el mismo plato fuerte o arquetipo ('{cm_main.get('title')}') en el mismo día de la semana que en la semana inmediata anterior."
-                            )
                         pm_st = _strip_accents((pm.get("starter") or {}).get("title") or "")
                         cm_st = _strip_accents((cm.get("starter") or {}).get("title") or "")
                         pm_sd = _strip_accents((pm.get("side") or {}).get("title") or "")
                         cm_sd = _strip_accents((cm.get("side") or {}).get("title") or "")
+                        same_main_title = bool(pm_title and pm_title == cm_title)
+                        same_arch_and_course = bool(
+                            pm_arch and pm_arch == cm_arch and (pm_st == cm_st or pm_sd == cm_sd)
+                        )
+                        if same_main_title or same_arch_and_course:
+                            violations.append(
+                                f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite el mismo plato fuerte o arquetipo ('{cm_main.get('title')}') en el mismo día de la semana que en la semana inmediata anterior."
+                            )
                         if pm_st and pm_sd and pm_st == cm_st and pm_sd == cm_sd:
                             violations.append(
                                 f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite la misma combinación Entrada+Guarnición en el mismo día de la semana que en la semana inmediata anterior."
                             )
+
 
     # [R8] Reconciliación matemática exacta del BOM (incluyendo las 4 tomas diarias de Sinergix®)
     # En recetas están incluidas Toma 2 (210g MultiSinergix®) y Toma 3 (210g AminoSinergix®).

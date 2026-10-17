@@ -184,41 +184,34 @@
           "protein_g": 41.0,
           "net_carbs_g": 4.5,
           "fiber_g": 6.6,
-          "starter_name": "Ensalada Verde Fresca de Arúgula de la Granja y Calabacita al Limón con Aceite VEVO",
+          "starter_name": "Crema Aterciopelada de Coliflor de la Granja con Aceite de Oliva VEVO",
           "main_dish_name": "Lomo de Salmón Fresco Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO",
           "dish_name": "Lomo de Salmón Fresco Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO",
-          "side_dish_name": "Coliflor Fresca de la Granja Rostizada al Horno con Limón Real, Sal de Mar y Aceite VEVO",
+          "side_dish_name": "Ejotes Frescos de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja",
           "starter": {
-            "title": "Ensalada Verde Fresca de Arúgula de la Granja y Calabacita al Limón con Aceite VEVO",
-            "technique": "raw_assembly",
-            "note": "Entrada ligera de hojas verdes de arúgula y láminas finas de calabacita que equilibra la carga metabólica del lomo de salmón.",
+            "title": "Crema Aterciopelada de Coliflor de la Granja con Aceite de Oliva VEVO",
+            "technique": "boil_and_blend",
+            "note": "Crema sedosa elaborada con coliflor fresca de la granja emulsionada en aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Servicio en frío a 8°C que activa enzimas digestivas mediante acidez cítrica natural.",
-              "flavor_and_aromatics": "Frescura herbácea de arúgula tierna con notas frutales de aceite de oliva extra virgen y limón de la granja.",
-              "textural_architecture": "Hojas turgentes y listones crujientes sin lácteos ni grasas pesadas.",
-              "critical_control_points": "Emulsionar el aderezo justo al momento de emplatar para mantener la textura crujiente."
+              "thermodynamics": "Cocción en fondo claro y emulsión mecánica a alta velocidad a 72°C.",
+              "flavor_and_aromatics": "Notas suaves de coliflor de la granja con sal con ajo y aceite VEVO.",
+              "textural_architecture": "Terciopelo homogéneo y reconfortante.",
+              "critical_control_points": "Emulsionar durante 90 segundos a máxima potencia para lograr textura de crema sin harina."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Arúgula fresca",
-                "per_guest": 45,
-                "amount": 270,
+                "name": "Coliflor fresca",
+                "per_guest": 80,
+                "amount": 480,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
-                "per_guest": 45,
-                "amount": 270,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios frescos de la granja",
-                "per_guest": 15,
-                "amount": 90,
-                "unit": "g"
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 100,
+                "amount": 600,
+                "unit": "ml"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
@@ -229,22 +222,21 @@
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
+                "name": "Sal con ajo",
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Lavar y centrifugar la arúgula fresca de la granja y laminar finamente las calabacitas.",
-              "Batir el jugo de limón fresco de la granja con el aceite de oliva VEVO y sal de mar.",
-              "Aliñar suavemente y servir de inmediato como entrada ligera."
+              "Cocer los floretes de coliflor de la granja en el fondo claro de pollo por 10 minutos.",
+              "Licuar a máxima velocidad incorporando el aceite de oliva VEVO en hilo y sal con ajo."
             ]
           },
           "main": {
             "title": "Lomo de Salmón Fresco Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO",
             "technique": "unilateral_skin_sear",
-            "note": "Único servicio semanal de salmón rico en EPA/DHA, cubierto al 100% con el stock de alacena y coronado con pistaches tostados de alacena (evitando proteína de res tras el cierre de la semana previa).",
+            "note": "Único servicio semanal de salmón rico en EPA/DHA, cubierto al 100% con el stock de alacena y coronado con pistaches tostados de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Sellado unilateral en sartén a 190°C del lado de la piel (70% del tiempo) y volteo breve para conservar centro a 52°C y proteger los Omega-3.",
               "flavor_and_aromatics": "Riqueza marina del salmón, notas tostadas de pistache y frescura cítrica de la granja.",
@@ -302,35 +294,35 @@
             ]
           },
           "side": {
-            "title": "Coliflor Fresca de la Granja Rostizada al Horno con Limón Real, Sal de Mar y Aceite VEVO",
-            "technique": "oven_roast_florets",
-            "note": "Guarnición ligera de floretes de coliflor de la granja rostizados al horno para acompañar el salmón sin repetir guarniciones en la semana.",
+            "title": "Ejotes Frescos de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja",
+            "technique": "quick_saute",
+            "note": "Ejotes verdes recién cosechados de la granja salteados al dente con mantequilla y trozos de nuez pecana de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Rostizado por convección a 200°C durante 18 minutos que dora las puntas conservando firmeza al dente.",
-              "flavor_and_aromatics": "Notas tostadas de coliflor de la granja realzadas con limón fresco y aceite de oliva VEVO.",
-              "textural_architecture": "Floretes dorados por fuera y tiernos por dentro, libres de lácteos pesados.",
-              "critical_control_points": "Cortar floretes de tamaño uniforme para una caramelización pareja."
+              "thermodynamics": "Blanqueado previo de 3 minutos y salteado rápido en mantequilla a 160°C.",
+              "flavor_and_aromatics": "Sabor vegetal fresco con mantequilla avellanada y nuez pecana tostada.",
+              "textural_architecture": "Vainas verdes crujientes con trozos crocantes de nuez pecana.",
+              "critical_control_points": "Pasar los ejotes por choque térmico tras el blanqueado para fijar la clorofila."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Coliflor fresca",
+                "name": "Ejotes frescos",
                 "per_guest": 85,
                 "amount": 510,
                 "unit": "g"
               },
               {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 6,
-                "amount": 36,
-                "unit": "ml"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios frescos de la granja",
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Mantequilla",
                 "per_guest": 10,
                 "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana fresca de la granja",
+                "per_guest": 12,
+                "amount": 72,
                 "unit": "g"
               },
               {
@@ -342,9 +334,8 @@
               }
             ],
             "steps": [
-              "Cortar la coliflor fresca de la granja en floretes medianos y barnizar con aceite de oliva VEVO y sal de mar.",
-              "Hornear a 200°C durante 18 minutos hasta dorar ligeramente los bordes.",
-              "Terminar al salir del horno con gotas de limón fresco de la granja."
+              "Despuntar los ejotes frescos de la granja y cocerlos al vapor por 4 minutos.",
+              "Saltear en sartén con mantequilla y la nuez pecana de la granja picada durante 2 minutos; sazonar con sal de mar."
             ]
           }
         },
@@ -356,7 +347,7 @@
           "net_carbs_g": 4.1,
           "fiber_g": 5.8,
           "starter_name": "Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja",
-          "main_dish_name": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Ejotes Tiernos de la Granja y Nuez de la India",
+          "main_dish_name": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Brócoli Tierno de la Granja y Nuez de la India",
           "dish_name": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Ejotes Tiernos de la Granja y Nuez de la India",
           "side_dish_name": "Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
@@ -412,9 +403,9 @@
             ]
           },
           "main": {
-            "title": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Ejotes Tiernos de la Granja y Nuez de la India",
+            "title": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Brócoli Tierno de la Granja y Nuez de la India",
             "technique": "stuffed_cap_roast",
-            "note": "Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena con ejotes frescos de la granja ($0).",
+            "note": "Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena con brócoli frescos de la granja ($0).",
             "coct_reasoning": {
               "thermodynamics": "Horneado corto a 185°C durante 12 minutos que concentra el umami fúngico y funde suavemente el ricotta.",
               "flavor_and_aromatics": "Umami terroso del champiñón, cremosidad láctica suave, ejotes tiernos y toque tostado de la nuez de la India.",
@@ -431,7 +422,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Ejotes frescos",
+                "name": "Brócoli fresco",
                 "per_guest": 45,
                 "amount": 270,
                 "unit": "g"
@@ -467,7 +458,7 @@
             ],
             "steps": [
               "Limpiar los champiñones grandes de alacena, barnizar con aceite de oliva VEVO y pre-hornear 5 minutos a 185°C.",
-              "Mezclar los ejotes tiernos de la granja finamente picados con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.",
+              "Mezclar los brócoli tiernos de la granja finamente picados con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.",
               "Hornear 7 minutos adicionales hasta dorar ligeramente y servir templado."
             ]
           },
@@ -1202,30 +1193,30 @@
         {
           "meal_type": "Comida",
           "time": "14:30",
-          "fat_g": 64.0,
-          "protein_g": 41.5,
-          "net_carbs_g": 4.3,
+          "fat_g": 62.5,
+          "protein_g": 40.5,
+          "net_carbs_g": 4.4,
           "fiber_g": 6.5,
-          "starter_name": "Crema Aterciopelada de Coliflor de la Granja con Aceite de Oliva VEVO",
-          "main_dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
-          "dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
-          "side_dish_name": "Ejotes Frescos de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja",
+          "starter_name": "Crema Aterciopelada de Brócoli de la Granja con Aceite de Oliva VEVO",
+          "main_dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
+          "dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
+          "side_dish_name": "Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
           "starter": {
-            "title": "Crema Aterciopelada de Coliflor de la Granja con Aceite de Oliva VEVO",
+            "title": "Crema Aterciopelada de Brócoli de la Granja con Aceite de Oliva VEVO",
             "technique": "boil_and_blend",
-            "note": "Crema sedosa elaborada con coliflor fresca de la granja emulsionada en aceite de oliva extra virgen.",
+            "note": "Crema verde esmeralda de brócoli fresco de la granja emulsionada con aceite de oliva VEVO (100% ligera sin lácteos, cumpliendo enforceMetabolicLoadBalance).",
             "coct_reasoning": {
-              "thermodynamics": "Cocción en fondo claro y emulsión mecánica a alta velocidad a 72°C.",
-              "flavor_and_aromatics": "Notas suaves de coliflor de la granja con sal con ajo y aceite VEVO.",
-              "textural_architecture": "Terciopelo homogéneo y reconfortante.",
-              "critical_control_points": "Emulsionar durante 90 segundos a máxima potencia para lograr textura de crema sin harina."
+              "thermodynamics": "Cocción breve de 6 minutos para preservar el sulforafano y licuado a alta velocidad a 70°C.",
+              "flavor_and_aromatics": "Sabor vegetal fresco de brócoli realzado con aceite de oliva VEVO y sal con ajo.",
+              "textural_architecture": "Crema sedosa y ligera.",
+              "critical_control_points": "No sobrecocer el brócoli para conservar su color verde vibrante y sus fitonutrientes."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Coliflor fresca",
-                "per_guest": 80,
-                "amount": 480,
+                "name": "Brócoli fresco",
+                "per_guest": 85,
+                "amount": 510,
                 "unit": "g"
               },
               {
@@ -1251,47 +1242,61 @@
               }
             ],
             "steps": [
-              "Cocer los floretes de coliflor de la granja en el fondo claro de pollo por 10 minutos.",
-              "Licuar a máxima velocidad incorporando el aceite de oliva VEVO en hilo y sal con ajo."
+              "Cocer los floretes de brócoli de la granja en el fondo claro de pollo por 6 minutos.",
+              "Licuar con el aceite de oliva VEVO en hilo y sal con ajo hasta obtener una crema tersa."
             ]
           },
           "main": {
-            "title": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
-            "technique": "chargrill_sear",
-            "note": "Corte selecto de Flat Steak de alacena sellado al hierro con mantequilla infusionada en hierbas finas de alacena.",
+            "title": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
+            "technique": "mediterranean_oven_bake",
+            "note": "Único servicio semanal de sardina rico en Omega-3 EPA/DHA y calcio biodisponible, cubierto al 100% con el stock de alacena (reduciendo el pollo a solo 2 servicios semanales).",
             "coct_reasoning": {
-              "thermodynamics": "Reacción de Maillard a 210°C en superficie durante 3 minutos por lado, reposando a 56°C internos.",
-              "flavor_and_aromatics": "Aromas tostados de carne asada, mantequilla avellanada y hierbas aromáticas.",
-              "textural_architecture": "Costra exterior caramelizada con centro jugoso y tierno.",
-              "critical_control_points": "Reposar el corte 4 minutos sobre tabla templada antes de trinchar para redistribuir los jugos."
+              "thermodynamics": "Horneado corto a 185°C durante 10 minutos con jitomate y cebolla de alacena que concentra el licopeno sin oxidar los lípidos marinos.",
+              "flavor_and_aromatics": "Umami marino profundo equilibrado con el dulzor ácido del jitomate asado, cebolla tierna, orégano y aceite VEVO.",
+              "textural_architecture": "Lomos enteros firmes y jugosos sobre cama aromática de jitomate y cebolla.",
+              "critical_control_points": "Hornear solo 10 minutos para preservar intactos los ácidos grasos poliinsaturados Omega-3."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
-                "name": "Flat steak",
-                "per_guest": 150,
-                "amount": 900,
+                "name": "Sardinas",
+                "per_guest": 140,
+                "amount": 840,
                 "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Jitomate",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cebolla",
+                "per_guest": 0.2,
+                "amount": 1.2,
+                "unit": "piezas"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Mantequilla",
-                "per_guest": 18,
-                "amount": 108,
+                "per_guest": 12,
+                "amount": 72,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Hierbas finas",
-                "per_guest": 1,
-                "amount": 6,
-                "unit": "g"
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal con ajo",
-                "per_guest": 1.5,
-                "amount": 9.0,
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Cilantro fresco",
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "g"
               },
               {
@@ -1300,88 +1305,38 @@
                 "per_guest": 0.5,
                 "amount": 3.0,
                 "unit": "g"
-              }
-            ],
-            "steps": [
-              "Atemperar los cortes de Flat Steak de alacena y sazonar con sal con ajo y pimienta negra.",
-              "Sellar en sartén de hierro candente 3 minutos por lado y agregar la mantequilla con las hierbas finas para bañar el corte.",
-              "Reposar 4 minutos fuera del fuego y servir con sus jugos."
-            ]
-          },
-          "side": {
-            "title": "Ejotes Frescos de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja",
-            "technique": "quick_saute",
-            "note": "Ejotes verdes recién cosechados de la granja salteados al dente con mantequilla y trozos de nuez pecana de la granja.",
-            "coct_reasoning": {
-              "thermodynamics": "Blanqueado previo de 3 minutos y salteado rápido en mantequilla a 160°C.",
-              "flavor_and_aromatics": "Sabor vegetal fresco con mantequilla avellanada y nuez pecana tostada.",
-              "textural_architecture": "Vainas verdes crujientes con trozos crocantes de nuez pecana.",
-              "critical_control_points": "Pasar los ejotes por choque térmico tras el blanqueado para fijar la clorofila."
-            },
-            "ingredients": [
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Ejotes frescos",
-                "per_guest": 85,
-                "amount": 510,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 10,
-                "amount": 60,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana fresca de la granja",
-                "per_guest": 12,
-                "amount": 72,
-                "unit": "g"
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
                 "name": "Sal de mar",
-                "per_guest": 1,
-                "amount": 6,
+                "per_guest": 1.5,
+                "amount": 9.0,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Despuntar los ejotes frescos de la granja y cocerlos al vapor por 4 minutos.",
-              "Saltear en sartén con mantequilla y la nuez pecana de la granja picada durante 2 minutos; sazonar con sal de mar."
+              "Disponer los lomos de sardina de alacena en refractario sobre rodajas finas de jitomate y cebolla blanca de alacena.",
+              "Bañar con mantequilla y aceite VEVO, sazonar con sal de mar y pimienta negra, y hornear a 185°C durante 10 minutos.",
+              "Terminar con cilantro fresco de la granja picado al servir."
             ]
-          }
-        },
-        {
-          "meal_type": "Cena",
-          "time": "20:00",
-          "fat_g": 53.0,
-          "protein_g": 34.0,
-          "net_carbs_g": 4.2,
-          "fiber_g": 5.7,
-          "starter_name": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
-          "main_dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Brócoli Tierno de la Granja",
-          "dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Brócoli Tierno de la Granja",
-          "side_dish_name": "Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
-          "starter": {
-            "title": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
-            "technique": "emulsified_soup",
-            "note": "Emulsión aterciopelada de jitomate de alacena rico en licopeno con aceite de oliva extra virgen.",
+          },
+          "side": {
+            "title": "Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
+            "technique": "grill_sear",
+            "note": "Guarnición prebiótica de nopales recién cortados de la granja asados a la plancha con orégano y aceite VEVO.",
             "coct_reasoning": {
-              "thermodynamics": "Templado suave a 45°C que potencia la biodisponibilidad del licopeno disuelto en lípidos VEVO.",
-              "flavor_and_aromatics": "Acidez equilibrada del jitomate maduro con perfume de orégano y aceite de oliva virgen.",
-              "textural_architecture": "Textura sedosa y ligera.",
-              "critical_control_points": "Emulsionar el aceite de oliva en hilo fino al final del licuado."
+              "thermodynamics": "Asado en seco a 190°C que evapora el mucílago superficial y concentra el sabor.",
+              "flavor_and_aromatics": "Notas herbales de orégano de alacena y nopal asado con aceite VEVO.",
+              "textural_architecture": "Pencos tiernos y firmes sin baba.",
+              "critical_control_points": "Asar sin grasa hasta sellar y añadir el aceite VEVO al retirar del fuego."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Jitomate",
-                "per_guest": 0.5,
-                "amount": 3.0,
-                "unit": "piezas"
+                "name": "Nopales tiernos",
+                "per_guest": 90,
+                "amount": 540,
+                "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
@@ -1403,24 +1358,81 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Agua purificada",
-                "per_guest": 80,
-                "amount": 480,
-                "unit": "ml"
               }
             ],
             "steps": [
-              "Licuar el jitomate con agua purificada, sal de mar y orégano hasta obtener una textura fina.",
-              "Emulsionar en hilo el aceite de oliva VEVO y servir templado."
+              "Cortar los nopales tiernos de la granja en bastones y asarlos en plancha caliente por 5 minutos.",
+              "Sazonar con sal de mar, orégano y bañar con aceite de oliva VEVO al servir."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 53.0,
+          "protein_g": 34.0,
+          "net_carbs_g": 4.2,
+          "fiber_g": 5.7,
+          "starter_name": "Ensalada Verde de Arúgula de la Granja y Calabacita Tierna con Aceite VEVO y Limón",
+          "main_dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Ejotes Tiernos de la Granja",
+          "dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Brócoli Tierno de la Granja",
+          "side_dish_name": "Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Ensalada Verde de Arúgula de la Granja y Calabacita Tierna con Aceite VEVO y Limón",
+            "technique": "raw_assembly",
+            "note": "Entrada fresca y digestiva con arúgula de cosecha propia y listones de calabacita al limón.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamblaje en frío a 8°C.",
+              "flavor_and_aromatics": "Notas herbáceas de la arúgula equilibradas con limón de la granja y VEVO.",
+              "textural_architecture": "Hojas tiernas y láminas crujientes.",
+              "critical_control_points": "Aderezar justo al servir."
+            },
+            "ingredients": [
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Arúgula fresca",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Calabacitas verdes tiernas",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Combinar la arúgula fresca de la granja con la calabacita en láminas finas.",
+              "Aliñar con jugo de limón de la granja, aceite de oliva VEVO y sal de mar."
             ]
           },
           "main": {
-            "title": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Brócoli Tierno de la Granja",
+            "title": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Ejotes Tiernos de la Granja",
             "technique": "steam_papillote",
-            "note": "Único servicio semanal de mojarra que amortiza al 100% los 900 g de alacena en una cena marina blanca de rapidísimo vaciamiento gástrico con brócoli de la granja ($0).",
+            "note": "Único servicio semanal de mojarra que amortiza al 100% los 900 g de alacena en una cena marina blanca de rapidísimo vaciamiento gástrico con ejotes de la granja ($0).",
             "coct_reasoning": {
               "thermodynamics": "Cocción suave al vapor en papillote abierto a 95°C durante 6 minutos que preserva la delicadeza del pescado blanco.",
               "flavor_and_aromatics": "Sabor marino limpio con hierbas finas de alacena, jugo de limón fresco de la granja, brócoli tierno y aceite VEVO.",
@@ -1437,7 +1449,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Brócoli fresco",
+                "name": "Ejotes frescos",
                 "per_guest": 65,
                 "amount": 390,
                 "unit": "g"
@@ -1479,7 +1491,7 @@
               }
             ],
             "steps": [
-              "Disponer los filetes de mojarra de alacena y los floretes de brócoli de la granja en vaporera con sal de mar y hierbas finas.",
+              "Disponer los filetes de mojarra de alacena y los ejotes tiernos de la granja en vaporera con sal de mar y hierbas finas.",
               "Cocer al vapor durante 6 minutos y emplatar bañando con mantequilla fundida, aceite VEVO y jugo de limón de la granja."
             ]
           },
@@ -1698,38 +1710,45 @@
         {
           "meal_type": "Comida",
           "time": "14:30",
-          "fat_g": 63.0,
-          "protein_g": 42.0,
-          "net_carbs_g": 4.5,
-          "fiber_g": 6.4,
-          "starter_name": "Crema Aterciopelada de Brócoli de la Granja con Aceite de Oliva VEVO",
-          "main_dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO",
-          "dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO",
-          "side_dish_name": "Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
+          "fat_g": 64.0,
+          "protein_g": 41.5,
+          "net_carbs_g": 4.3,
+          "fiber_g": 6.5,
+          "starter_name": "Ensalada Verde Fresca de Arúgula de la Granja y Calabacita al Limón con Aceite VEVO",
+          "main_dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
+          "dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
+          "side_dish_name": "Coliflor Fresca de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO",
           "starter": {
-            "title": "Crema Aterciopelada de Brócoli de la Granja con Aceite de Oliva VEVO",
-            "technique": "boil_and_blend",
-            "note": "Crema verde esmeralda de brócoli fresco de la granja emulsionada con aceite de oliva VEVO (100% ligera sin lácteos, cumpliendo enforceMetabolicLoadBalance).",
+            "title": "Ensalada Verde Fresca de Arúgula de la Granja y Calabacita al Limón con Aceite VEVO",
+            "technique": "raw_assembly",
+            "note": "Entrada ligera de hojas verdes de arúgula y láminas finas de calabacita que equilibra la carga metabólica del corte principal.",
             "coct_reasoning": {
-              "thermodynamics": "Cocción breve de 6 minutos para preservar el sulforafano y licuado a alta velocidad a 70°C.",
-              "flavor_and_aromatics": "Sabor vegetal fresco de brócoli realzado con aceite de oliva VEVO y sal con ajo.",
-              "textural_architecture": "Crema sedosa y ligera.",
-              "critical_control_points": "No sobrecocer el brócoli para conservar su color verde vibrante y sus fitonutrientes."
+              "thermodynamics": "Servicio en frío a 8°C que activa enzimas digestivas mediante acidez cítrica natural.",
+              "flavor_and_aromatics": "Frescura herbácea de arúgula tierna con notas frutales de aceite de oliva extra virgen y limón de la granja.",
+              "textural_architecture": "Hojas turgentes y listones crujientes sin lácteos ni grasas pesadas.",
+              "critical_control_points": "Emulsionar el aderezo justo al momento de emplatar para mantener la textura crujiente."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Brócoli fresco",
-                "per_guest": 85,
-                "amount": 510,
+                "name": "Arúgula fresca",
+                "per_guest": 45,
+                "amount": 270,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Fondo claro de pollo",
-                "per_guest": 100,
-                "amount": 600,
-                "unit": "ml"
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Calabacitas verdes tiernas",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
+              },
+              {
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
@@ -1740,93 +1759,87 @@
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal con ajo",
+                "name": "Sal de mar",
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Cocer los floretes de brócoli de la granja en el fondo claro de pollo por 6 minutos.",
-              "Licuar con el aceite de oliva VEVO en hilo y sal con ajo hasta obtener una crema tersa."
+              "Lavar y centrifugar la arúgula fresca de la granja y laminar finamente las calabacitas.",
+              "Batir el jugo de limón fresco de la granja con el aceite de oliva VEVO y sal de mar.",
+              "Aliñar suavemente y servir de inmediato como entrada ligera."
             ]
           },
           "main": {
-            "title": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO",
-            "technique": "stuffed_pan_roast",
-            "note": "Supremas jugosas de pechuga de pollo de alacena rellenas de queso ricotta cremoso y espinacas tiernas de la granja.",
+            "title": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
+            "technique": "chargrill_sear",
+            "note": "Corte selecto de Flat Steak de alacena sellado al hierro con mantequilla infusionada en hierbas finas de alacena.",
             "coct_reasoning": {
-              "thermodynamics": "Sellado exterior a 180°C y cocción tapada a 150°C hasta alcanzar 74°C internos sin perder humedad.",
-              "flavor_and_aromatics": "Suavidad láctica del ricotta con espinaca fresca y jugo dorado de mantequilla.",
-              "textural_architecture": "Corte exterior dorado con corazón cremoso de ricotta y espinaca.",
-              "critical_control_points": "No sobrepasar los 74°C en el centro de la pechuga para preservar su jugosidad."
+              "thermodynamics": "Reacción de Maillard a 210°C en superficie durante 3 minutos por lado, reposando a 56°C internos.",
+              "flavor_and_aromatics": "Aromas tostados de carne asada, mantequilla avellanada y hierbas aromáticas.",
+              "textural_architecture": "Costra exterior caramelizada con centro jugoso y tierno.",
+              "critical_control_points": "Reposar el corte 4 minutos sobre tabla templada antes de trinchar para redistribuir los jugos."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
-                "name": "Pechuga de pollo",
+                "name": "Flat steak",
                 "per_guest": 150,
                 "amount": 900,
                 "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso ricotta",
-                "per_guest": 40,
-                "amount": 240,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Espinacas frescas",
-                "per_guest": 45,
-                "amount": 270,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Mantequilla",
-                "per_guest": 14,
-                "amount": 84,
+                "per_guest": 18,
+                "amount": 108,
                 "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "ml"
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
+                "name": "Hierbas finas",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Sal con ajo",
                 "per_guest": 1.5,
                 "amount": 9.0,
+                "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3.0,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Abrir las pechugas de pollo en mariposa, sazonar con sal de mar y rellenar con la mezcla de queso ricotta y espinacas de la granja picadas.",
-              "Sellar en sartén con aceite VEVO y mantequilla durante 4 minutos por lado, tapando los últimos 3 minutos.",
-              "Rebanar en medallones diagonales y bañar con la emulsión del sartén."
+              "Atemperar los cortes de Flat Steak de alacena y sazonar con sal con ajo y pimienta negra.",
+              "Sellar en sartén de hierro candente 3 minutos por lado y agregar la mantequilla con las hierbas finas para bañar el corte.",
+              "Reposar 4 minutos fuera del fuego y servir con sus jugos."
             ]
           },
           "side": {
-            "title": "Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
-            "technique": "grill_sear",
-            "note": "Guarnición prebiótica de nopales recién cortados de la granja asados a la plancha con orégano y aceite VEVO.",
+            "title": "Coliflor Fresca de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO",
+            "technique": "steam_gentle",
+            "note": "Guarnición crucífera ligera de la granja al vapor, aderezada en frío con aceite de oliva extra virgen y limón real.",
             "coct_reasoning": {
-              "thermodynamics": "Asado en seco a 190°C que evapora el mucílago superficial y concentra el sabor.",
-              "flavor_and_aromatics": "Notas herbales de orégano de alacena y nopal asado con aceite VEVO.",
-              "textural_architecture": "Pencos tiernos y firmes sin baba.",
-              "critical_control_points": "Asar sin grasa hasta sellar y añadir el aceite VEVO al retirar del fuego."
+              "thermodynamics": "Cocción por convección de vapor a 98°C durante 5 minutos conservando firmeza celular.",
+              "flavor_and_aromatics": "Sabor vegetal limpio realzado con limón de la granja y aceite de oliva VEVO.",
+              "textural_architecture": "Floretes al dente, jugosos y ligeros.",
+              "critical_control_points": "Retirar del vapor a los 5 minutos para preservar la clorofila y los glucosinolatos."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Nopales tiernos",
-                "per_guest": 90,
-                "amount": 540,
+                "name": "Coliflor fresca",
+                "per_guest": 85,
+                "amount": 510,
                 "unit": "g"
               },
               {
@@ -1837,10 +1850,10 @@
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Orégano",
-                "per_guest": 0.5,
-                "amount": 3.0,
+                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "name": "Limones agrios frescos de la granja",
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "g"
               },
               {
@@ -1852,8 +1865,9 @@
               }
             ],
             "steps": [
-              "Cortar los nopales tiernos de la granja en bastones y asarlos en plancha caliente por 5 minutos.",
-              "Sazonar con sal de mar, orégano y bañar con aceite de oliva VEVO al servir."
+              "Cortar la coliflor fresca de la granja en floretes medianos uniformes.",
+              "Cocer al vapor durante 5 minutos manteniendo textura al dente.",
+              "Aderezar al momento de servir con aceite de oliva VEVO, jugo de limón y sal de mar."
             ]
           }
         },
@@ -2188,13 +2202,13 @@
         {
           "meal_type": "Comida",
           "time": "14:30",
-          "fat_g": 62.5,
-          "protein_g": 40.5,
-          "net_carbs_g": 4.4,
-          "fiber_g": 6.5,
+          "fat_g": 63.0,
+          "protein_g": 42.0,
+          "net_carbs_g": 4.5,
+          "fiber_g": 6.4,
           "starter_name": "Consomé Clarificado de Pollo con Nopales Tiernos de la Granja al Cilantro",
-          "main_dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
-          "dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
+          "main_dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO",
+          "dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO",
           "side_dish_name": "Zoodles de Calabacita Verde de la Granja al Sartén con Aceite de Oliva VEVO y Orégano",
           "starter": {
             "title": "Consomé Clarificado de Pollo con Nopales Tiernos de la Granja al Cilantro",
@@ -2249,64 +2263,50 @@
             ]
           },
           "main": {
-            "title": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
-            "technique": "mediterranean_oven_bake",
-            "note": "Único servicio semanal de sardina rico en Omega-3 EPA/DHA y calcio biodisponible, cubierto al 100% con el stock de alacena (reduciendo el pollo a solo 2 servicios semanales).",
+            "title": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO",
+            "technique": "stuffed_pan_roast",
+            "note": "Supremas jugosas de pechuga de pollo de alacena rellenas de queso ricotta cremoso y espinacas tiernas de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Horneado corto a 185°C durante 10 minutos con jitomate y cebolla de alacena que concentra el licopeno sin oxidar los lípidos marinos.",
-              "flavor_and_aromatics": "Umami marino profundo equilibrado con el dulzor ácido del jitomate asado, cebolla tierna, orégano y aceite VEVO.",
-              "textural_architecture": "Lomos enteros firmes y jugosos sobre cama aromática de jitomate y cebolla.",
-              "critical_control_points": "Hornear solo 10 minutos para preservar intactos los ácidos grasos poliinsaturados Omega-3."
+              "thermodynamics": "Sellado exterior a 180°C y cocción tapada a 150°C hasta alcanzar 74°C internos sin perder humedad.",
+              "flavor_and_aromatics": "Suavidad láctica del ricotta con espinaca fresca y jugo dorado de mantequilla.",
+              "textural_architecture": "Corte exterior dorado con corazón cremoso de ricotta y espinaca.",
+              "critical_control_points": "No sobrepasar los 74°C en el centro de la pechuga para preservar su jugosidad."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
-                "name": "Sardinas",
-                "per_guest": 140,
-                "amount": 840,
+                "name": "Pechuga de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
                 "unit": "g"
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Jitomate",
-                "per_guest": 0.5,
-                "amount": 3.0,
-                "unit": "piezas"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cebolla",
-                "per_guest": 0.2,
-                "amount": 1.2,
-                "unit": "piezas"
+                "name": "Espinacas frescas",
+                "per_guest": 45,
+                "amount": 270,
+                "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Mantequilla",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 14,
+                "amount": 84,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 6,
-                "amount": 36,
-                "unit": "ml"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro fresco",
                 "per_guest": 8,
                 "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Pimienta negra",
-                "per_guest": 0.5,
-                "amount": 3.0,
-                "unit": "g"
+                "unit": "ml"
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
@@ -2317,9 +2317,9 @@
               }
             ],
             "steps": [
-              "Disponer los lomos de sardina de alacena en refractario sobre rodajas finas de jitomate y cebolla blanca de alacena.",
-              "Bañar con mantequilla y aceite VEVO, sazonar con sal de mar y pimienta negra, y hornear a 185°C durante 10 minutos.",
-              "Terminar con cilantro fresco de la granja picado al servir."
+              "Abrir las pechugas de pollo en mariposa, sazonar con sal de mar y rellenar con la mezcla de queso ricotta y espinacas de la granja picadas.",
+              "Sellar en sartén con aceite VEVO y mantequilla durante 4 minutos por lado, tapando los últimos 3 minutos.",
+              "Rebanar en medallones diagonales y bañar con la emulsión del sartén."
             ]
           },
           "side": {
@@ -2376,48 +2376,41 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.1,
           "fiber_g": 6.1,
-          "starter_name": "Ensalada Verde de Arúgula y Espinacas Tiernas de la Granja con Aceite VEVO y Limón",
+          "starter_name": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
           "main_dish_name": "Timbal Fresco de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga",
           "dish_name": "Timbal Fresco de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga",
           "side_dish_name": "Infusión Digestiva de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Ensalada Verde de Arúgula y Espinacas Tiernas de la Granja con Aceite VEVO y Limón",
-            "technique": "raw_assembly",
-            "note": "Entrada fresca y digestiva con arúgula y espinacas tiernas de cosecha propia al limón.",
+            "title": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
+            "technique": "emulsified_soup",
+            "note": "Emulsión aterciopelada de jitomate de alacena rico en licopeno con aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje en frío a 8°C.",
-              "flavor_and_aromatics": "Notas herbáceas de la arúgula y espinaca equilibradas con limón de la granja y VEVO.",
-              "textural_architecture": "Hojas tiernas y crujientes.",
-              "critical_control_points": "Aderezar justo al servir."
+              "thermodynamics": "Templado suave a 45°C que potencia la biodisponibilidad del licopeno disuelto en lípidos VEVO.",
+              "flavor_and_aromatics": "Acidez equilibrada del jitomate maduro con perfume de orégano y aceite de oliva virgen.",
+              "textural_architecture": "Textura sedosa y ligera.",
+              "critical_control_points": "Emulsionar el aceite de oliva en hilo fino al final del licuado."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Arúgula fresca",
-                "per_guest": 40,
-                "amount": 240,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Espinacas frescas",
-                "per_guest": 45,
-                "amount": 270,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios frescos de la granja",
-                "per_guest": 12,
-                "amount": 72,
-                "unit": "g"
+                "name": "Jitomate",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "piezas"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 5,
-                "amount": 30,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3.0,
+                "unit": "g"
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
@@ -2425,11 +2418,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "ml"
               }
             ],
             "steps": [
-              "Combinar la arúgula fresca con las espinacas tiernas de la granja.",
-              "Aliñar con jugo de limón de la granja, aceite de oliva VEVO y sal de mar."
+              "Licuar el jitomate con agua purificada, sal de mar y orégano hasta obtener una textura fina.",
+              "Emulsionar en hilo el aceite de oliva VEVO y servir templado."
             ]
           },
           "main": {

@@ -2253,6 +2253,9 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
         if (dishTextNorm.includes('chile') || dishTextNorm.includes('chipotle')) {
           violations.push(`[R1/R3.4] ${loc} (${role}): Detectado picante irritante ('chile'/'chipotle').`);
         }
+        if (dishTextNorm.includes('cafe') || dishTextNorm.includes('espresso')) {
+          violations.push(`[R1] ${loc} (${role}): Detectado café prohibido.`);
+        }
         if (mNorm.includes('cena') && dishTextNorm.includes('jamaica')) {
           violations.push(`[R6] ${loc} (${role}): Detectado diurético ('jamaica') en Cena.`);
         }
@@ -2260,6 +2263,15 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
           if (_normTextHardGate(ing.name).includes('aguacate')) dayAvoCount++;
         });
         const vf = _extractDishVegsAndFruits(dish);
+        if (vf.fruits.length > 0) {
+          const hasDairy = ings.some(i => {
+            const nm = _normTextHardGate(i.name);
+            return ['yogur', 'cottage', 'ricotta', 'queso', 'crema acida', 'leche de vaca'].some(k => nm.includes(k));
+          });
+          if (hasDairy) {
+            violations.push(`[R4.6] ${loc} (${role}): Violación a validateNoFruitDairyMix (fruta con lácteo).`);
+          }
+        }
         vf.vegs.forEach(v => {
           mealVegMap[v] = (mealVegMap[v] || 0) + 1;
           if (!dayVegMap[v]) dayVegMap[v] = [];
@@ -2277,11 +2289,41 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
         if (cnt > 1) violations.push(`[R4] ${loc}: Vegetal '${v}' repetido intra-servicio.`);
       });
 
+      if (mNorm.includes('desayuno')) {
+        const stIngs = Array.isArray((meal.starter || {}).ingredients) ? meal.starter.ingredients.map(i => _normTextHardGate(i.name)) : [];
+        if (!stIngs.some(k => k.includes('nuez pecana'))) {
+          violations.push(`[R8] ${loc}: Entrada de desayuno sin 'Nuez pecana fresca de la granja'.`);
+        }
+        if (!stIngs.some(k => k.includes('chia'))) {
+          violations.push(`[R8] ${loc}: Entrada de desayuno sin 'Semillas de chía orgánicas'.`);
+        }
+        const sdTitle = _normTextHardGate((meal.side || {}).title || '');
+        const sdIngs = Array.isArray((meal.side || {}).ingredients) ? meal.side.ingredients.map(i => _normTextHardGate(i.name)) : [];
+        if (sdTitle.includes('gelatina') && sdIngs.some(k => k.includes('grenetina')) && sdIngs.some(k => k.includes('multisinergix') || k.includes('33plus'))) {
+          window._hgWeeklyGelatinasCount = (window._hgWeeklyGelatinasCount || 0) + 1;
+        }
+      }
+
       const pInfo = _classifyMainProteinHardGate(meal.main || {});
       if (mNorm.includes('comida')) {
         lProt = pInfo.key;
         lunchProts.push(pInfo.key);
         protCounts[pInfo.key] = (protCounts[pInfo.key] || 0) + 1;
+        const mTitleNorm = _normTextHardGate((meal.main || {}).title || '');
+        const mIngsJoined = Array.isArray((meal.main || {}).ingredients) ? meal.main.ingredients.map(i => _normTextHardGate(i.name)).join(' | ') : '';
+        const isSuperDenseBeef = mIngsJoined.includes('carne molida') || mTitleNorm.includes('corte de flat steak') || mTitleNorm.includes('hamburguesa') || mTitleNorm.includes('albondiga');
+        if (isSuperDenseBeef) {
+          const stTitleNorm = _normTextHardGate((meal.starter || {}).title || '');
+          if (!stTitleNorm.includes('ensalada')) {
+            violations.push(`[R2] ${loc}: Corte denso de res exige Ensalada Verde Fresca en Entrada.`);
+          }
+          ['starter', 'side'].forEach(rKey => {
+            const rIngs = Array.isArray((meal[rKey] || {}).ingredients) ? meal[rKey].ingredients.map(i => _normTextHardGate(i.name)) : [];
+            if (rIngs.some(nm => ['mantequilla', 'queso', 'crema acida', 'yogur', 'mayonesa', 'aguacate'].some(tok => nm.includes(tok)))) {
+              violations.push(`[R2] ${loc}: Plato denso de res con ${rKey} pesado.`);
+            }
+          });
+        }
         const sideTitleNorm = _normTextHardGate((meal.side && meal.side.title) || '');
         if (sideTitleNorm) {
           if (seenLunchSides[sideTitleNorm]) {
@@ -2315,6 +2357,11 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
       }
     }
   });
+
+  if ((window._hgWeeklyGelatinasCount || 0) < 5) {
+    violations.push(`[R8] La semana debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® en el desayuno (encontradas: ${window._hgWeeklyGelatinasCount || 0}).`);
+  }
+  window._hgWeeklyGelatinasCount = 0;
 
   for (let i = 0; i < lunchProts.length - 1; i++) {
     if (lunchProts[i] === lunchProts[i + 1]) violations.push(`[R6] Comidas consecutivas repiten ${lunchProts[i]}.`);
@@ -2362,8 +2409,17 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
           const cmTitle = _normTextHardGate(cmMain.title || '');
           const pmArch = _extractDishArchetypeHardGate(pmMain);
           const cmArch = _extractDishArchetypeHardGate(cmMain);
-          if ((pmTitle && pmTitle === cmTitle) || (pmArch && pmArch === cmArch)) {
+          const pmSt = _normTextHardGate((pMeals[mIdx].starter || {}).title || '');
+          const cmSt = _normTextHardGate((cMeals[mIdx].starter || {}).title || '');
+          const pmSd = _normTextHardGate((pMeals[mIdx].side || {}).title || '');
+          const cmSd = _normTextHardGate((cMeals[mIdx].side || {}).title || '');
+          const sameMainTitle = Boolean(pmTitle && pmTitle === cmTitle);
+          const sameArchAndCourse = Boolean(pmArch && pmArch === cmArch && (pmSt === cmSt || pmSd === cmSd));
+          if (sameMainTitle || sameArchAndCourse) {
             violations.push(`[R10] Anti-Clonación Inter-Semanal (${dLabel} - ${mLabel}): Repite plato o arquetipo el mismo día de la semana.`);
+          }
+          if (pmSt && pmSd && pmSt === cmSt && pmSd === cmSd) {
+            violations.push(`[R10] Anti-Clonación Inter-Semanal (${dLabel} - ${mLabel}): Repite combinación Entrada+Guarnición el mismo día de la semana.`);
           }
         });
       }
@@ -4704,16 +4760,9 @@ let pantryStock = {
           const state = JSON.parse(saved);
           if (state.customGeneratedWeeks && typeof state.customGeneratedWeeks === 'object') {
             window.customGeneratedWeeks = {};
-            Object.keys(state.customGeneratedWeeks).forEach(wKey => {
-              const wNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(wKey) : null;
-              if (wNum !== null && wNum > 43) return;
-              if (state.customGeneratedWeeks[wKey]) {
-                window.customGeneratedWeeks[wKey] = state.customGeneratedWeeks[wKey];
-                if (typeof datasets !== 'undefined') {
-                  datasets[wKey] = state.customGeneratedWeeks[wKey];
-                }
-              }
-            });
+            if (typeof datasets !== 'undefined' && datasets[CANONICAL_WEEK_43_TITLE]) {
+              window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] = datasets[CANONICAL_WEEK_43_TITLE];
+            }
           }
           if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
           if (state.activeWeek) {
@@ -4821,12 +4870,18 @@ let pantryStock = {
             delete customDishesState['Semana 41 (04 al 10 de Octubre de 2026)_day_3_Comida'];
             delete customDishesState['Semana 41_day_1_Comida'];
             delete customDishesState['Semana 41_day_3_Comida'];
+            Object.keys(customDishesState).forEach(k => {
+              if (k.includes('Semana 43')) delete customDishesState[k];
+            });
           }
           if (window.MEAL_DISH_OVERRIDES) {
             delete window.MEAL_DISH_OVERRIDES['Semana 41 (04 al 10 de Octubre de 2026)_day_1_Comida'];
             delete window.MEAL_DISH_OVERRIDES['Semana 41 (04 al 10 de Octubre de 2026)_day_3_Comida'];
             delete window.MEAL_DISH_OVERRIDES['Semana 41_day_1_Comida'];
             delete window.MEAL_DISH_OVERRIDES['Semana 41_day_3_Comida'];
+            Object.keys(window.MEAL_DISH_OVERRIDES).forEach(k => {
+              if (k.includes('Semana 43')) delete window.MEAL_DISH_OVERRIDES[k];
+            });
           }
           if (state.selectedIdx !== undefined && !isNaN(parseInt(state.selectedIdx))) {
             selectedIdx = parseInt(state.selectedIdx);
