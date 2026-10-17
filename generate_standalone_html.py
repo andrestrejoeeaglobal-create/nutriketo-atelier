@@ -2009,7 +2009,7 @@ def generate_standalone():
       let legacyUnregistered = false;
       for (let r of regs) {
         const sUrl = (r.active && r.active.scriptURL) || (r.installing && r.installing.scriptURL) || (r.waiting && r.waiting.scriptURL) || '';
-        if (!sUrl.includes('nutriketo-v36-6-rev12-s42-sameorigin-sw-v40')) {
+        if (!sUrl.includes('nutriketo-v36-6-rev13-s42-delete-fix-v41')) {
           await r.unregister();
           legacyUnregistered = true;
         }
@@ -2026,7 +2026,7 @@ def generate_standalone():
   }
   if ('caches' in window) {
     caches.keys().then(keys => keys.forEach(k => {
-      if (k !== 'nutriketo-v36-6-rev12-s42-sameorigin-sw-v40') caches.delete(k);
+      if (k !== 'nutriketo-v36-6-rev13-s42-delete-fix-v41') caches.delete(k);
     })).catch(() => {});
   }
   </script>
@@ -3715,10 +3715,14 @@ let pantryStock = {
 
     function ensureCanonicalTicketIntakesApplied() {
       try {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_intake_v41_ready') === 'true') {
+          return;
+        }
         if (Array.isArray(deletedPantryItems)) {
           deletedPantryItems = deletedPantryItems.filter(d => {
-            const s = (typeof d === 'string' ? d : '').toLowerCase();
-            return !/fresa|frambuesa|zarzamora|espinaca|portobello|espárrago|esparrago|ricotta|qcotta|chipotle|higo|frijol|kirkland|cottage|sucrine|cogollo/i.test(s);
+            const s = (typeof d === 'string' ? d : '').toLowerCase().trim();
+            // Limpiar únicamente borrados antiguos de tarjetas en 0g ("fresas frescas", "frambuesas frescas orgánicas"), respetando eliminaciones explícitas como "fresas frescas (costco 907g)"
+            return s !== 'fresas frescas' && s !== 'frambuesas frescas orgánicas' && s !== 'frambuesas frescas organicas';
           });
         }
         if (!window.PANTRY_STOCK_INVENTORY) window.PANTRY_STOCK_INVENTORY = {};
@@ -3742,15 +3746,15 @@ let pantryStock = {
           "lechuga_orejona_viva_cogollo": { item_num: 121, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga Sucrine / Cogollos vivos (Pack 6 pzas)", stock: 6, quantity_commercial: 6, commercial_unit: "piezas", unit: "piezas", packaging: "1 pack (6 piezas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", source: "Costco Wholesale Queretaro" }
         };
 
-        const isFirstV39Sync = (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_intake_v39_fruits_restored') !== 'true');
-
         Object.keys(canonicalTicketEntries).forEach(k => {
           const defObj = canonicalTicketEntries[k];
+          const isDeletedByUser = Array.isArray(deletedPantryItems) && deletedPantryItems.some(d => (typeof d === 'string' ? d : '').toLowerCase().trim() === defObj.name.toLowerCase().trim());
+          if (isDeletedByUser) return;
           const existingObj = window.PANTRY_STOCK_INVENTORY[k];
-          if (!existingObj || isFirstV39Sync || existingObj.name !== defObj.name || !existingObj.item_num) {
+          if (!existingObj || existingObj.name !== defObj.name || !existingObj.item_num) {
             window.PANTRY_STOCK_INVENTORY[k] = Object.assign({}, defObj);
           }
-          if (isFirstV39Sync || pantryStock[defObj.name] === undefined) {
+          if (pantryStock[defObj.name] === undefined) {
             pantryStock[defObj.name] = defObj.stock;
             window.PANTRY_STOCK_INVENTORY[k].stock = defObj.stock;
           }
@@ -3766,6 +3770,7 @@ let pantryStock = {
           localStorage.setItem('nutriketo_intake_tr04095_applied', 'true');
           localStorage.setItem('nutriketo_intake_costco_9636_applied', 'true');
           localStorage.setItem('nutriketo_intake_v39_fruits_restored', 'true');
+          localStorage.setItem('nutriketo_intake_v41_ready', 'true');
         }
       } catch (err) {
         console.warn('Error en ensureCanonicalTicketIntakesApplied:', err);
@@ -4401,21 +4406,25 @@ let pantryStock = {
             if (pObj.stock <= 0 && (!pObj.item_num || pObj.item_num <= 0)) return;
             if (k === 'multisinergix' || k === 'aminosinergix' || k === '33plus' || k === '34plus' || k === 'zarzamoras-frescas' || k === 'fresas-frescas' || k === 'arilos-granada' || k === 'moras-frescas' || k === 'frambuesas-frescas' || k === 'arandanos-frescos' || k === 'pitaya-fresca' || k === 'ajo-fresco') return;
 
-            const slug = normalizeToCanonicalSlug(pObj.name || k);
-            if (deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === pObj.name.toLowerCase())) return;
+            let displayName = pObj.name || k;
+            if (pObj.item_num === 17) displayName = "Agua mineral (6 botellas de 1500 ml)";
+            if (pObj.item_num === 18) displayName = "Agua mineral (1 botella de 355 ml)";
+            if (pObj.item_num === 21) displayName = "Flat steak (Paquete 1)";
+            if (pObj.item_num === 22) displayName = "Flat steak (Paquete 2)";
+            if (pObj.item_num === 77) displayName = "Orégano delgado";
+            if (pObj.item_num === 78) displayName = "Orégano grueso";
+            if (pObj.item_num === 87) displayName = "Sal marina de grano";
+            if (pObj.item_num === 88) displayName = "Sal fina";
 
-            const alreadyInList = nonFarm.some(existing => (existing.item_num && pObj.item_num ? existing.item_num === pObj.item_num : existing.item_name === pObj.name));
+            const slug = normalizeToCanonicalSlug(displayName || pObj.name || k);
+            if (deletedPantryItems.some(d => {
+              const dClean = (typeof d === 'string' ? d : '').toLowerCase().trim();
+              return dClean === displayName.toLowerCase().trim() || dClean === (pObj.name || '').toLowerCase().trim() || dClean === k.toLowerCase().trim();
+            })) return;
+
+            const alreadyInList = nonFarm.some(existing => (existing.item_num && pObj.item_num ? existing.item_num === pObj.item_num : existing.item_name === displayName));
             if (!alreadyInList) {
               seenPantrySlugs.add(slug);
-              let displayName = pObj.name;
-              if (pObj.item_num === 17) displayName = "Agua mineral (6 botellas de 1500 ml)";
-              if (pObj.item_num === 18) displayName = "Agua mineral (1 botella de 355 ml)";
-              if (pObj.item_num === 21) displayName = "Flat steak (Paquete 1)";
-              if (pObj.item_num === 22) displayName = "Flat steak (Paquete 2)";
-              if (pObj.item_num === 77) displayName = "Orégano delgado";
-              if (pObj.item_num === 78) displayName = "Orégano grueso";
-              if (pObj.item_num === 87) displayName = "Sal marina de grano";
-              if (pObj.item_num === 88) displayName = "Sal fina";
 
               const assignedCat = (pObj.status === 'prohibited')
                 ? '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)'
@@ -4980,21 +4989,40 @@ let pantryStock = {
         confirmText: 'Sí, Eliminar Insumo',
         cancelText: 'Cancelar',
         onConfirm: () => {
-          const slug = normalizeToCanonicalSlug(itemName);
-          if (!deletedPantryItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === itemName.toLowerCase())) {
+          const targetLower = (itemName || '').toLowerCase().trim();
+          if (!deletedPantryItems.some(d => (typeof d === 'string' ? d : '').toLowerCase().trim() === targetLower)) {
             deletedPantryItems.push(itemName);
           }
-          rawShopBase = rawShopBase.filter(i => normalizeToCanonicalSlug(i.item_name) !== slug && i.item_name.toLowerCase() !== itemName.toLowerCase());
+          rawShopBase = rawShopBase.filter(i => (i.item_name || '').toLowerCase().trim() !== targetLower);
           
           Object.keys(pantryStock).forEach(k => {
-            if (normalizeToCanonicalSlug(k) === slug || k.toLowerCase() === itemName.toLowerCase()) {
+            if (k.toLowerCase().trim() === targetLower) {
               delete pantryStock[k];
             }
           });
 
           if (typeof window.PANTRY_STOCK_INVENTORY === 'object' && window.PANTRY_STOCK_INVENTORY) {
             Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
-              if (normalizeToCanonicalSlug(k) === slug || k.toLowerCase() === itemName.toLowerCase()) {
+              const pObj = window.PANTRY_STOCK_INVENTORY[k];
+              if (!pObj) return;
+              let displayName = pObj.name || '';
+              if (pObj.item_num === 17) displayName = "Agua mineral (6 botellas de 1500 ml)";
+              if (pObj.item_num === 18) displayName = "Agua mineral (1 botella de 355 ml)";
+              if (pObj.item_num === 21) displayName = "Flat steak (Paquete 1)";
+              if (pObj.item_num === 22) displayName = "Flat steak (Paquete 2)";
+              if (pObj.item_num === 77) displayName = "Orégano delgado";
+              if (pObj.item_num === 78) displayName = "Orégano grueso";
+              if (pObj.item_num === 87) displayName = "Sal marina de grano";
+              if (pObj.item_num === 88) displayName = "Sal fina";
+
+              if (
+                k.toLowerCase().trim() === targetLower ||
+                (pObj.name || '').toLowerCase().trim() === targetLower ||
+                displayName.toLowerCase().trim() === targetLower
+              ) {
+                if (pObj.name && pantryStock[pObj.name] !== undefined) {
+                  delete pantryStock[pObj.name];
+                }
                 delete window.PANTRY_STOCK_INVENTORY[k];
               }
             });
@@ -8932,14 +8960,14 @@ function renderRecipes(day, activeDiners) {
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev12-s42-sameorigin-sw-v40') {
+              if (k !== 'nutriketo-v36-6-rev13-s42-delete-fix-v41') {
                 caches.delete(k);
               }
             });
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev12-s42-sameorigin-sw-v40')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev13-s42-delete-fix-v41')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();
