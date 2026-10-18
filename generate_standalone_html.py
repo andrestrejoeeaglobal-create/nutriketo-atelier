@@ -3426,6 +3426,7 @@ window.PANTRY_STOCK_INVENTORY = {
       "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
       "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
       "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 1, unit: "piezas", packaging: "1 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null },
+      "fondo-claro-de-pollo": { item_num: 317, name: "Fondo claro de pollo", stock: 2000, unit: "ml", packaging: "2,000 ml", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada", stock: 0, unit: "g", status: "canonical" },
@@ -3641,7 +3642,8 @@ let pantryStock = {
       "Queso ricotta": 1920,
       "Chile chipotle": 1320,
       "Frijol pinto": 1,
-      "Pollo entero": 1
+      "Pollo entero": 1,
+      "Fondo claro de pollo": 2000
     };
     let checkedRows = {};
     let mealDinersState = {};
@@ -3708,6 +3710,7 @@ let pantryStock = {
     const _EQUIV_MEMO_CACHE = new Map();
     const _PURE_PANTRY_NAME_CACHE = new Map();
     const _ITEM_KEYWORDS_EQUIV = [
+      { stem: 'fondo-claro-de-pollo', aliases: ['fondo claro de pollo', 'caldo claro de pollo'], exclude: ['polvo', 'concentrado', 'entero'] },
       { stem: 'pollo-entero', aliases: ['pollo entero', 'pollo entero para caldo', 'pollo entero de alacena'] },
       { stem: 'pollo', aliases: ['pechuga de pollo', 'pechuga de pollo organica', 'pechuga de pollo (kirkland signature)', 'carne de pollo', 'pollo organico'], exclude: ['hueso', 'huesos', 'retazo', 'fondo', 'caldo', 'entero'] },
       { stem: 'huesos-pollo', aliases: ['huesos y retazo de pollo', 'retazo de pollo', 'huesos de pollo', 'retazo de pollo organico'], exclude: ['pechuga'] },
@@ -3875,6 +3878,7 @@ let pantryStock = {
       else if (/\\bcottage\\b/.test(norm)) out = 'Queso cottage';
       else if (/\\b(yogur|yoghurt|oikos)\\b/.test(norm)) out = 'Yogur griego';
       else if (/\\b(ricotta|qcotta|requeson)\\b/.test(norm)) out = 'Queso ricotta';
+      else if (/\\b(fondo claro de pollo|caldo claro de pollo)\\b/.test(norm)) out = 'Fondo claro de pollo';
       else if (/\\bpollo entero\\b/.test(norm)) out = 'Pollo entero';
       else if (/\\bpechuga de pollo\\b/.test(norm)) out = 'Pechuga de pollo';
       else if (/\\b(lechugas?|cogollos?|sucrine)\\b/.test(norm)) out = 'Lechuga';
@@ -4490,6 +4494,14 @@ let pantryStock = {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
+      // 0.18 Prioridad Taxonómica: Fondos y Caldos Líquidos Naturales (No clasificar como Carne)
+      if (/fondo claro de pollo|caldo claro de pollo/i.test(name) && !/polvo|concentrado/i.test(name)) {
+        return '🌶️ Chiles, Condimentos e Infusiones';
+      }
+      if (/concentrado de caldo|caldo de pollo en polvo/i.test(name)) {
+        return '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)';
+      }
+
       // 0.2 Prioridad Taxonómica Estricta: Carnes / Proteínas (Arrachera, Sirloin, Flat steak, Carne molida, Pechuga, Pescado, Sardinas, etc.)
       if (/arrachera|flat steak|carne molida|corte|cortes|ribeye|sirloin|\\bres\\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|mojarra|tilapia|salmón|salmon|atún|atun|sardina|sardinas|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
         return '🥩 Carnes, Pescados y Proteínas';
@@ -4502,7 +4514,7 @@ let pantryStock = {
 
       // 0.4 Prioridad Taxonómica Estricta: Insumos No Sugeridos / Cuarentena
       if ((explicitCategory && (explicitCategory.includes('cuarentena') || explicitCategory.includes('prohibited') || explicitCategory.includes('Cuarentena') || explicitCategory.includes('🛑'))) ||
-          /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca|higo|higos|papa|papas|lenteja|lentejas|garbanzo|garbanzos|frijol|frijoles|arroz/i.test(name)) {
+          /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca|higo|higos|papa|papas|lenteja|lentejas|garbanzo|garbanzos|frijol|frijoles|arroz|concentrado de caldo|caldo de pollo en polvo/i.test(name)) {
         return '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)';
       }
 
@@ -4640,7 +4652,8 @@ let pantryStock = {
             "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso ricotta", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "1,920 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
             "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
             "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
-            "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 1, unit: "piezas", packaging: "1 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null }
+            "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 1, unit: "piezas", packaging: "1 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null },
+            "fondo-claro-de-pollo": { item_num: 317, name: "Fondo claro de pollo", stock: 2000, unit: "ml", packaging: "2,000 ml", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null }
           };
 
           Object.keys(canonicalConsolidatedUpdates).forEach(k => {
@@ -4657,8 +4670,8 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v43_canonical_dedup_ready', 'true');
         }
 
-        // Sincronización V50: inventario actualizado por el usuario (Pollo entero, Queso cottage 500g, Cebolla 8, Jitomate 7, Lechuga 3, Huevo 26, Agua mineral eliminada, Granja 8 ítems)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v50_user_inventory_sync') !== 'true') {
+        // Sincronización V51: inventario actualizado por el usuario (Pollo entero 1 pieza, Fondo claro de pollo 2,000 ml, Queso cottage 500g, Cebolla 8, Jitomate 7, Lechuga 3, Huevo 26, Agua mineral eliminada, Granja 8 ítems)
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v51_user_inventory_sync') !== 'true') {
           const v49Edits = {
             "Fresas": { stock: 0, unit: "g", sku: "fresas_frescas_tr04095" },
             "Frambuesas": { stock: 0, unit: "g", sku: "frambuesas_frescas_organicas" },
@@ -4675,6 +4688,7 @@ let pantryStock = {
             "Lomo de salmón": { stock: 0, unit: "g", sku: "sku-023-lomo-de-salmon" },
             "Pechuga de pollo": { stock: 0, unit: "g", sku: "sku-029-pechuga-de-pollo" },
             "Pollo entero": { stock: 1, unit: "piezas", sku: "pollo-entero", item_num: 316, category: "🥩 Carnes, Pescados y Proteínas" },
+            "Fondo claro de pollo": { stock: 2000, unit: "ml", sku: "fondo-claro-de-pollo", item_num: 317, category: "🌶️ Chiles, Condimentos e Infusiones" },
             "Calabaza": { stock: 0, unit: "piezas", sku: "sku-032-calabaza" },
             "Carne molida": { stock: 0, unit: "g", sku: "sku-024-carne-molida" },
             "Flat steak": { stock: 0, unit: "g", sku: "sku-021-flat-steak" },
@@ -4726,6 +4740,7 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v48_restored_user_inventory_sync', 'true');
           localStorage.setItem('nutriketo_v49_user_inventory_sync', 'true');
           localStorage.setItem('nutriketo_v50_user_inventory_sync', 'true');
+          localStorage.setItem('nutriketo_v51_user_inventory_sync', 'true');
         }
 
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
@@ -4761,6 +4776,19 @@ let pantryStock = {
             unit: "piezas",
             packaging: `${polloEnteroStock} piezas`,
             category: "🥩 Carnes, Pescados y Proteínas",
+            status: "canonical",
+            reason: null
+          };
+        }
+        if (!isPantryItemDeleted("Fondo claro de pollo") && !isPantryItemDeleted("fondo-claro-de-pollo") && !window.PANTRY_STOCK_INVENTORY["fondo-claro-de-pollo"]) {
+          const fondoStock = pantryStock["Fondo claro de pollo"] !== undefined ? pantryStock["Fondo claro de pollo"] : 2000;
+          window.PANTRY_STOCK_INVENTORY["fondo-claro-de-pollo"] = {
+            item_num: 317,
+            name: "Fondo claro de pollo",
+            stock: fondoStock,
+            unit: "ml",
+            packaging: `${fondoStock} ml`,
+            category: "🌶️ Chiles, Condimentos e Infusiones",
             status: "canonical",
             reason: null
           };
@@ -7239,8 +7267,13 @@ function calculateNetShoppingList(diners) {
       return;
     }
 
-    // Regla culinaria de taller: Los caldos y fondos (fondo claro de pollo, caldo de res, etc.) no se compran comercialmente, se preparan en cocina
-    if (/(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(cleanLower) && !cleanLower.includes('polvo') && !cleanLower.includes('concentrado')) {
+    // Regla culinaria de taller: Los caldos y fondos (fondo claro de pollo, caldo de res, etc.) no se compran comercialmente; si están en Alacena se amortizan en Tabla 3.2 y si no, en Tabla 3.1
+    const hasExplicitPantryStockForBroth = (typeof pantryStock !== 'undefined' && pantryStock && (parseFloat(pantryStock[cleanName]) || 0) > 0) ||
+      (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && Object.keys(window.PANTRY_STOCK_INVENTORY).some(pk => {
+        const po = window.PANTRY_STOCK_INVENTORY[pk];
+        return po && po.status === 'canonical' && (parseFloat(po.stock) || 0) > 0 && areInsumosEquivalent(po.name || pk, cleanName);
+      }));
+    if (!hasExplicitPantryStockForBroth && /(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(cleanLower) && !cleanLower.includes('polvo') && !cleanLower.includes('concentrado')) {
       const kQty = Math.round(((parseFloat(item.quantity) || 0) + Number.EPSILON) * 100) / 100;
       const kUnit = item.unit || 'ml';
       kitchenStockItems.push({

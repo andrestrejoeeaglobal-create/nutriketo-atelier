@@ -204,8 +204,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Fondo claro de pollo",
-                "per_guest": 200,
-                "amount": 1200,
+                "per_guest": 166.67,
+                "amount": 1000,
                 "unit": "ml"
               },
               {
@@ -231,7 +231,7 @@
               }
             ],
             "steps": [
-              "Trocear los espárragos verdes retirando el extremo fibroso y cocer en el fondo claro de pollo hirviendo durante 6 minutos.",
+              "Trocear los espárragos verdes retirando el extremo fibroso y cocer en el fondo claro de pollo de alacena hirviendo (1,000 ml) durante 6 minutos.",
               "Procesar en caliente con sal con ajo y pimienta negra hasta obtener una textura completamente tersa.",
               "Emulsionar en hilo con el aceite de oliva extra virgen al momento de emplatar."
             ]
@@ -358,7 +358,7 @@
           "starter": {
             "title": "Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO",
             "technique": "roasted_veloute",
-            "note": "Velouté digestiva nocturna de coliflor rostizada emulsionada con fondo claro de ave y aceite de oliva extra virgen, sin lácteos añadidos.",
+            "note": "Velouté digestiva nocturna de coliflor rostizada emulsionada con fondo claro de ave de alacena y aceite de oliva extra virgen, sin lácteos añadidos.",
             "coct_reasoning": {
               "thermodynamics": "Rostizado previo de los floretes a 200°C para activar reacción de Maillard suave antes de licuar con fondo caliente a 85°C.",
               "flavor_and_aromatics": "Dulzor tostado de la coliflor rostizada con notas de ajo y aceite de oliva extra virgen.",
@@ -376,8 +376,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Fondo claro de pollo",
-                "per_guest": 200,
-                "amount": 1200,
+                "per_guest": 166.67,
+                "amount": 1000,
                 "unit": "ml"
               },
               {
@@ -404,7 +404,7 @@
             ],
             "steps": [
               "Dorar los floretes de coliflor al horno o sartén de hierro durante 8 minutos hasta que tomen notas doradas.",
-              "Hervir 4 minutos en el fondo claro de pollo con sal con ajo y pimienta negra.",
+              "Hervir 4 minutos en el fondo claro de pollo de alacena (1,000 ml) con sal con ajo y pimienta negra.",
               "Licuar hasta obtener una crema tersa y terminar con aceite de oliva extra virgen en hilo."
             ]
           },
@@ -897,17 +897,17 @@
           "protein_g": 34.0,
           "net_carbs_g": 3.9,
           "fiber_g": 5.9,
-          "starter_name": "Sopa Juliana de Calabacitas Tiernas al Limón Real y Cilantro de la Granja con Aceite VEVO",
+          "starter_name": "Sopa Juliana de Calabacitas Tiernas en Caldo Vegetal Aromático al Laurel, Limón Real y Cilantro de la Granja con Aceite VEVO",
           "main_dish_name": "Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro",
           "dish_name": "Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro",
           "side_dish_name": "Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Sopa Juliana de Calabacitas Tiernas al Limón Real y Cilantro de la Granja con Aceite VEVO",
+            "title": "Sopa Juliana de Calabacitas Tiernas en Caldo Vegetal Aromático al Laurel, Limón Real y Cilantro de la Granja con Aceite VEVO",
             "technique": "julienne_infusion_broth",
-            "note": "Caldo reconfortante con julianas finas de calabacita tierna escalfadas al momento, perfumado con cilantro y limón de la granja.",
+            "note": "Caldo vegetal aromático elaborado en agua purificada de la granja infundido con hojas de laurel y sal con ajo de alacena, julianas finas de calabacita tierna escalfadas al momento, cilantro y limón de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Escalfado rápido de las julianas de calabacita a 90°C por 3 minutos para conservar su estructura al dente.",
-              "flavor_and_aromatics": "Sabor delicado y dulce de la calabacita tierna en fondo claro con notas cítricas y herbales.",
+              "thermodynamics": "Infusión aromática de hojas de laurel a 95°C por 5 minutos seguida de escalfado rápido de las julianas de calabacita a 90°C por 3 minutos para conservar su estructura al dente.",
+              "flavor_and_aromatics": "Sabor delicado y dulce de la calabacita tierna en caldo aromático al laurel con notas cítricas y herbales de cilantro.",
               "textural_architecture": "Cintas vegetales firmes en caldo cristalino con perlas de aceite de oliva extra virgen.",
               "critical_control_points": "Añadir las julianas de calabacita justo antes de servir para evitar que se sobrehidraten."
             },
@@ -921,10 +921,24 @@
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Fondo claro de pollo",
+                "name": "Agua purificada",
                 "per_guest": 200,
                 "amount": 1200,
                 "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Hojas de laurel",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
@@ -957,8 +971,8 @@
             ],
             "steps": [
               "Cortar las calabacitas en julianas finas.",
-              "Calentar el fondo claro de pollo con sal de mar y escalfar las julianas de calabacita durante 3 minutos.",
-              "Servir con cilantro picado de la granja, jugo de limón real y aceite de oliva extra virgen."
+              "Infundir el agua purificada de la granja con las hojas de laurel, sal con ajo y sal de mar durante 5 minutos, y escalfar las julianas de calabacita durante 3 minutos.",
+              "Retirar las hojas de laurel y servir con cilantro picado de la granja, jugo de limón real y aceite de oliva extra virgen."
             ]
           },
           "main": {
@@ -1256,18 +1270,18 @@
           "protein_g": 40.5,
           "net_carbs_g": 4.4,
           "fiber_g": 6.5,
-          "starter_name": "Crema Aterciopelada de Brócoli al Ajo Tostado con Aceite de Oliva VEVO",
+          "starter_name": "Crema Aterciopelada de Brócoli Emulsionada con Leche de Coco de Alacena, Agua Purificada de la Granja y Aceite de Oliva VEVO",
           "main_dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
           "dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
           "side_dish_name": "Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
           "starter": {
-            "title": "Crema Aterciopelada de Brócoli al Ajo Tostado con Aceite de Oliva VEVO",
+            "title": "Crema Aterciopelada de Brócoli Emulsionada con Leche de Coco de Alacena, Agua Purificada de la Granja y Aceite de Oliva VEVO",
             "technique": "cruciferous_veloute",
-            "note": "Crema verde esmeralda de floretes de brócoli emulsionada con fondo claro y aceite de oliva extra virgen, libre de lácteos para acompañar las sardinas del Pacífico.",
+            "note": "Crema verde esmeralda de floretes de brócoli cocidos en agua purificada de la granja y emulsionados con leche de coco de alacena y aceite de oliva extra virgen, libre de lácteos para acompañar las sardinas del Pacífico.",
             "coct_reasoning": {
-              "thermodynamics": "Blanqueado corto de 5 minutos en hervor suave seguido de licuado a alta cizalla para crear emulsión vegetal estable.",
-              "flavor_and_aromatics": "Notas verdes de brócoli equilibradas con ajo tostado y el amargor noble del aceite de oliva extra virgen.",
-              "textural_architecture": "Cuerpo sedoso y ligero que prepara el tracto digestivo sin sobrecarga lipídica.",
+              "thermodynamics": "Blanqueado corto de 5 minutos en agua purificada de la granja seguido de licuado a alta cizalla con leche de coco para crear emulsión vegetal estable rica en TCM.",
+              "flavor_and_aromatics": "Notas verdes de brócoli equilibradas con ajo, la redondez sedosa de la leche de coco de alacena y el aceite de oliva extra virgen.",
+              "textural_architecture": "Cuerpo sedoso y aterciopelado que prepara el tracto digestivo sin sobrecarga láctea.",
               "critical_control_points": "No prolongar la cocción más de 5 minutos para evitar formación de compuestos azufrados volátiles."
             },
             "ingredients": [
@@ -1280,9 +1294,16 @@
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Fondo claro de pollo",
-                "per_guest": 200,
-                "amount": 1200,
+                "name": "Agua purificada",
+                "per_guest": 166.67,
+                "amount": 1000,
+                "unit": "ml"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Leche de coco",
+                "per_guest": 30,
+                "amount": 180,
                 "unit": "ml"
               },
               {
@@ -1308,8 +1329,8 @@
               }
             ],
             "steps": [
-              "Cocer los floretes de brócoli en el fondo claro de pollo durante 5 minutos.",
-              "Licuar en caliente con sal con ajo y pimienta negra hasta lograr una textura aterciopelada.",
+              "Cocer los floretes de brócoli en el agua purificada de la granja (1,000 ml) durante 5 minutos.",
+              "Licuar en caliente con la leche de coco de alacena (180 ml), sal con ajo y pimienta negra hasta lograr una textura aterciopelada.",
               "Servir coronando con el aceite de oliva extra virgen en crudo."
             ]
           },
@@ -2312,19 +2333,19 @@
           "protein_g": 42.0,
           "net_carbs_g": 4.5,
           "fiber_g": 6.4,
-          "starter_name": "Crema Caliente de Champiñones y Tomillo con Aceite de Oliva VEVO",
-          "main_dish_name": "Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
-          "dish_name": "Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
+          "starter_name": "Crema Caliente de Champiñones y Tomillo Emulsionada con Leche de Coco de Alacena, Agua Purificada de la Granja y Aceite de Oliva VEVO",
+          "main_dish_name": "Piezas de Pollo Entero de Alacena al Horno (Pechuga, Muslo y Pierna) con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
+          "dish_name": "Piezas de Pollo Entero de Alacena al Horno (Pechuga, Muslo y Pierna) con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
           "side_dish_name": "Coliflor Rostizada al Horno con Cúrcuma, Limón Real y Aceite de Oliva VEVO",
           "starter": {
-            "title": "Crema Caliente de Champiñones y Tomillo con Aceite de Oliva VEVO",
+            "title": "Crema Caliente de Champiñones y Tomillo Emulsionada con Leche de Coco de Alacena, Agua Purificada de la Granja y Aceite de Oliva VEVO",
             "technique": "mushroom_veloute",
-            "note": "Crema reconfortante de champiñones salteados con tomillo de alacena y fondo claro de ave, emulsionada con aceite de oliva extra virgen sin lácteos añadidos.",
+            "note": "Crema reconfortante de champiñones salteados con tomillo de alacena en agua purificada de la granja y emulsionada con leche de coco de alacena y aceite de oliva extra virgen, sin lácteos añadidos.",
             "coct_reasoning": {
-              "thermodynamics": "Dorado previo de los champiñones a 180°C por 5 minutos antes de hervir en fondo claro y emulsionar a alta velocidad.",
-              "flavor_and_aromatics": "Umami terroso del champiñón realzado con las notas aromáticas del tomillo y el aceite de oliva.",
+              "thermodynamics": "Dorado previo de los champiñones a 180°C por 5 minutos antes de hervir en agua purificada y emulsionar a alta velocidad con leche de coco.",
+              "flavor_and_aromatics": "Umami terroso del champiñón realzado con las notas aromáticas del tomillo, la sedosidad de la leche de coco y el aceite de oliva.",
               "textural_architecture": "Velouté sedoso y ligero libre de crema láctea.",
-              "critical_control_points": "Dorar bien los champiñones antes de agregar el caldo para desarrollar profundidad aromática."
+              "critical_control_points": "Dorar bien los champiñones antes de agregar el líquido para desarrollar profundidad aromática."
             },
             "ingredients": [
               {
@@ -2336,9 +2357,16 @@
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Fondo claro de pollo",
-                "per_guest": 200,
-                "amount": 1200,
+                "name": "Agua purificada",
+                "per_guest": 166.67,
+                "amount": 1000,
+                "unit": "ml"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Leche de coco",
+                "per_guest": 30,
+                "amount": 180,
                 "unit": "ml"
               },
               {
@@ -2365,20 +2393,20 @@
             ],
             "steps": [
               "Saltear los champiñones fileteados con el tomillo y sal con ajo durante 5 minutos.",
-              "Verter el fondo claro de pollo, hervir 4 minutos y licuar hasta lograr una crema homogénea.",
+              "Verter el agua purificada de la granja (1,000 ml), hervir 4 minutos y licuar con la leche de coco de alacena (180 ml) hasta lograr una crema homogénea.",
               "Terminar con el aceite de oliva extra virgen en crudo."
             ]
           },
           "main": {
-            "title": "Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
+            "title": "Piezas de Pollo Entero de Alacena al Horno (Pechuga, Muslo y Pierna) con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
             "technique": "herb_roasted_whole_poultry",
-            "archetype": "supremas",
-            "note": "Pollo entero de alacena porcionado y horneado al romero de la granja sobre cama de espinacas tiernas y queso ricotta cremoso con aceite de oliva extra virgen.",
+            "archetype": "piezas_pollo_horno",
+            "note": "Pollo entero de alacena porcionado anatómica y equitativamente en 6 piezas (2 medias pechugas, 2 muslos y 2 piernas) y horneado al romero de la granja sobre cama de espinacas tiernas y queso ricotta cremoso con aceite de oliva extra virgen.",
             "coct_reasoning": {
               "thermodynamics": "Asado al horno a 190°C por 25 minutos que dora la piel y mantiene las piezas jugosas a 74°C internos.",
               "flavor_and_aromatics": "Aroma pino-cítrico del romero de la granja y limón real fundido con el queso ricotta y las espinacas.",
-              "textural_architecture": "Supremas tiernas y jugosas sobre base cremosa de espinacas y queso ricotta.",
-              "critical_control_points": "Reposar 5 minutos fuera del horno antes de trinchar sobre la cama de espinacas y ricotta."
+              "textural_architecture": "Piezas de pollo tiernas y jugosas (pechuga, muslo y pierna) sobre base cremosa de espinacas y queso ricotta.",
+              "critical_control_points": "Reposar 5 minutos fuera del horno antes de emplatar las 6 piezas anatómicas sobre la cama de espinacas y ricotta."
             },
             "ingredients": [
               {
@@ -2439,7 +2467,7 @@
               }
             ],
             "steps": [
-              "Porcionar el pollo entero de alacena en 6 piezas generosas y marinar con romero de la granja, jugo de limón, aceite de oliva, sal con ajo y pimienta negra.",
+              "Porcionar anatómica y equitativamente el pollo entero de alacena en 6 piezas (2 medias pechugas, 2 muslos y 2 piernas) y marinar con romero de la granja, jugo de limón, aceite de oliva, sal con ajo y pimienta negra.",
               "Hornear a 190°C durante 25 minutos bañando con sus propios jugos.",
               "Saltear brevemente las espinacas tiernas con el queso ricotta en los jugos de cocción y servir las piezas de pollo encima."
             ]
@@ -2511,7 +2539,7 @@
           "starter": {
             "title": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
             "technique": "warm_lycopene_emulsion",
-            "note": "Emulsión templada de jitomate de alacena y cebolla blanca con orégano y aceite de oliva extra virgen.",
+            "note": "Emulsión templada de jitomate de alacena y cebolla blanca en agua purificada de la granja con orégano y aceite de oliva extra virgen.",
             "coct_reasoning": {
               "thermodynamics": "Templado suave a 55°C que incrementa la biodisponibilidad del licopeno en presencia de los lípidos del aceite de oliva.",
               "flavor_and_aromatics": "Umami natural del jitomate maduro con el aroma mediterráneo del orégano.",
@@ -2535,7 +2563,7 @@
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Fondo claro de pollo",
+                "name": "Agua purificada",
                 "per_guest": 150,
                 "amount": 900,
                 "unit": "ml"
@@ -2563,7 +2591,7 @@
               }
             ],
             "steps": [
-              "Asar ligeramente el jitomate de alacena y la cebolla blanca, y licuar con el fondo claro tibio, orégano y sal de mar.",
+              "Asar ligeramente el jitomate de alacena y la cebolla blanca, y licuar con el agua purificada tibia de la granja (900 ml), orégano y sal de mar.",
               "Emulsionar con aceite de oliva extra virgen al servir."
             ]
           },
@@ -3061,24 +3089,24 @@
           "protein_g": 35.0,
           "net_carbs_g": 3.8,
           "fiber_g": 5.8,
-          "starter_name": "Caldo Clarificado de Pollo con Calabacitas Tiernas, Limón Real y Cilantro de la Granja",
+          "starter_name": "Caldo Clarificado Aromático de Calabacitas Tiernas al Laurel, Hierbas Finas, Limón Real y Cilantro de la Granja",
           "main_dish_name": "Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO",
           "dish_name": "Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO",
           "side_dish_name": "Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Caldo Clarificado de Pollo con Calabacitas Tiernas, Limón Real y Cilantro de la Granja",
+            "title": "Caldo Clarificado Aromático de Calabacitas Tiernas al Laurel, Hierbas Finas, Limón Real y Cilantro de la Granja",
             "technique": "clear_simmer_infusion",
-            "note": "Consomé ligero nocturno de ave con dados tiernos de calabacita, jugo de limón real y hojas de cilantro de la granja.",
+            "note": "Consomé ligero nocturno elaborado en agua purificada de la granja infundida con hojas de laurel, hierbas finas y sal con ajo de alacena (enriquecido con el jugo natural de cocción del pollo entero de alacena), dados tiernos de calabacita, limón real y cilantro de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Infusión a 88°C durante 4 minutos que cuece suavemente los dados de calabacita manteniendo el caldo cristalino.",
-              "flavor_and_aromatics": "Claridad aromática de ave con calabacita tierna, limón real y cilantro.",
+              "thermodynamics": "Infusión aromática a 88°C durante 4 minutos que cuece suavemente los dados de calabacita manteniendo el caldo cristalino.",
+              "flavor_and_aromatics": "Claridad aromática de laurel y hierbas finas con calabacita tierna, limón real y cilantro.",
               "textural_architecture": "Caldo limpio con dados al dente de calabacita.",
-              "critical_control_points": "Perfumar con el cilantro y el limón real al momento de servir."
+              "critical_control_points": "Retirar las hojas de laurel y perfumar con el cilantro y el limón real al momento de servir."
             },
             "ingredients": [
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Fondo claro de pollo",
+                "name": "Agua purificada",
                 "per_guest": 250,
                 "amount": 1500,
                 "unit": "ml"
@@ -3088,6 +3116,27 @@
                 "name": "Calabacitas",
                 "per_guest": 60,
                 "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Hojas de laurel",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Hierbas finas",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               },
               {
@@ -3120,8 +3169,8 @@
               }
             ],
             "steps": [
-              "Hervir suavemente los dados de calabacita en el fondo claro de pollo por 4 minutos con sal de mar.",
-              "Servir caliente con cilantro picado de la granja, jugo de limón real y aceite de oliva extra virgen."
+              "Infundir el agua purificada de la granja (1,500 ml) con las hojas de laurel, hierbas finas, sal con ajo y sal de mar, y hervir suavemente los dados de calabacita por 4 minutos.",
+              "Retirar el laurel y servir caliente con cilantro picado de la granja, jugo de limón real y aceite de oliva extra virgen."
             ]
           },
           "main": {
@@ -3601,24 +3650,24 @@
           "protein_g": 34.0,
           "net_carbs_g": 3.9,
           "fiber_g": 5.8,
-          "starter_name": "Consomé Nocturno Clarificado de Champiñones Laminados y Cilantro de la Granja al Limón Real",
+          "starter_name": "Consomé Nocturno Clarificado de Champiñones Laminados al Laurel, Orégano y Cilantro de la Granja al Limón Real",
           "main_dish_name": "Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja",
           "dish_name": "Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja",
           "side_dish_name": "Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Consomé Nocturno Clarificado de Champiñones Laminados y Cilantro de la Granja al Limón Real",
+            "title": "Consomé Nocturno Clarificado de Champiñones Laminados al Laurel, Orégano y Cilantro de la Granja al Limón Real",
             "technique": "mushroom_clear_infusion",
-            "note": "Caldo cristalino nocturno infundido con láminas de champiñón, cilantro de la granja y limón real, libre de lácteos.",
+            "note": "Caldo cristalino nocturno elaborado en agua purificada de la granja infundido con hojas de laurel, orégano, sal con ajo, láminas de champiñón, cilantro de la granja y limón real, libre de lácteos.",
             "coct_reasoning": {
-              "thermodynamics": "Infusión suave a 90°C por 5 minutos que extrae los ribonucleótidos umami del champiñón sin enturbiar el fondo.",
-              "flavor_and_aromatics": "Umami limpio de champiñón laminado con el frescor del cilantro y el limón de la granja.",
+              "thermodynamics": "Infusión suave a 90°C por 5 minutos que extrae los ribonucleótidos umami del champiñón y los aceites esenciales del laurel y orégano sin enturbiar el caldo.",
+              "flavor_and_aromatics": "Umami limpio de champiñón laminado con laurel, orégano, cilantro y limón de la granja.",
               "textural_architecture": "Caldo ligero con láminas tiernas de champiñón.",
-              "critical_control_points": "Añadir el jugo de limón real y el cilantro al momento de servir."
+              "critical_control_points": "Retirar el laurel y añadir el jugo de limón real y el cilantro al momento de servir."
             },
             "ingredients": [
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Fondo claro de pollo",
+                "name": "Agua purificada",
                 "per_guest": 250,
                 "amount": 1500,
                 "unit": "ml"
@@ -3628,6 +3677,27 @@
                 "name": "Champiñón",
                 "per_guest": 60,
                 "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Hojas de laurel",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               },
               {
@@ -3660,8 +3730,8 @@
               }
             ],
             "steps": [
-              "Filetear finamente los champiñones y cocer en el fondo claro de pollo con sal de mar durante 5 minutos.",
-              "Servir caliente con cilantro de la granja, jugo de limón real y aceite de oliva extra virgen."
+              "Filetear finamente los champiñones y cocer en el agua purificada de la granja (1,500 ml) infundida con hojas de laurel, orégano, sal con ajo y sal de mar durante 5 minutos.",
+              "Retirar las hojas de laurel y servir caliente con cilantro de la granja, jugo de limón real y aceite de oliva extra virgen."
             ]
           },
           "main": {

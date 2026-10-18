@@ -114,11 +114,11 @@ DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
     "Vinagre de vino tinto": (250.0, "ml"),
     "Rajas de jalapeño": (314.0, "g"),
     "Chile güero": (840.0, "g"),
+    "Fondo claro de pollo": (2000.0, "ml"),
 }
 
 # Insumos de cocina libre (0 costo mercado) o de compra neta planificada en Mercado
 FREE_KITCHEN_STAPLES = {
-    "fondo claro de pollo",
     "agua purificada",
 }
 
@@ -163,6 +163,7 @@ FORBIDDEN_INGREDIENT_TOKENS = [
     "frijol", "arroz", "maiz", "trigo", "harina de trigo", "avena", "quinoa", "papa", "lenteja", "garbanzo",
     "chile", "chipotle", "chile serrano", "jalapeno", "habanero", "paprika picante",
     "cafe", "cafe colombiano", "espresso", " descafeinado",
+    "concentrado de caldo", "caldo de pollo en polvo",
 ]
 
 WEEKDAY_NAMES_REGEX = re.compile(
@@ -186,7 +187,7 @@ ARCHETYPE_PATTERNS: List[Tuple[str, List[str]]] = [
     ("timbal", ["timbal"]),
     ("salpicon", ["salpicon"]),
     ("barquitas", ["barquita", "barquitas", "barcas"]),
-    ("supremas", ["suprema", "supremas"]),
+    ("piezas_pollo_horno", ["piezas de pollo entero", "suprema", "supremas"]),
     ("papillote", ["papillote"]),
     ("rollitos", ["rollito", "rollitos", "roulade"]),
     ("medallones", ["medallon", "medallones", "tataki"]),
