@@ -3773,9 +3773,10 @@ let pantryStock = {
         { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'], exclude: ['aceituna', 'aceitunas'] },
         { stem: 'aceite-ajonjoli', aliases: ['aceite de ajonjoli', 'aceite de sesamo', 'aceite de ajonjoli tostado'], exclude: ['semilla', 'semillas', 'grano'] },
         { stem: 'semillas-sesamo', aliases: ['semillas de sesamo', 'semillas de ajonjoli', 'ajonjoli en grano', 'semilla de ajonjoli', 'ajonjoli', 'semillas de sesamo (ajonjoli)'], exclude: ['aceite'] },
-        { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'nuex pecana', 'nuex', 'pecana', 'pecanas', 'nuez pecana fresca', 'nuez pecana de la granja', 'nuez pecana fresca de la granja', 'nueces pecanas', 'nuez pecana en mitades', 'nuez pecana pelada', 'nuez', 'nueces', 'nuez picada'] },
-        { stem: 'nuez-castilla', aliases: ['nuez de castilla', 'nueces de castilla', 'nuez de castilla fresca'] },
-        { stem: 'nuez-india', aliases: ['nuez de la india', 'nueces de la india', 'nuez india', 'nueces india', 'anacardo', 'anacardos', 'maranon'] },
+        { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'nuex pecana', 'nuex', 'pecana', 'pecanas', 'nuez pecana fresca', 'nuez pecana de la granja', 'nuez pecana fresca de la granja', 'nueces pecanas', 'nuez pecana en mitades', 'nuez pecana pelada', 'nuez', 'nueces', 'nuez picada'], exclude: ['india', 'mixtas', 'castilla', 'macadamia'] },
+        { stem: 'nuez-castilla', aliases: ['nuez de castilla', 'nueces de castilla', 'nuez de castilla fresca'], exclude: ['pecana', 'india', 'mixtas'] },
+        { stem: 'nuez-india', aliases: ['nuez de la india', 'nueces de la india', 'nuez india', 'nueces india', 'anacardo', 'anacardos', 'maranon'], exclude: ['pecana', 'mixtas', 'castilla'] },
+        { stem: 'semillas-mixtas', aliases: ['semillas y nueces mixtas', 'mezcla de semillas y nueces'] },
         { stem: 'almendra', aliases: ['almendra', 'almendras', 'almendras fileteadas', 'almendras fileteadas tostadas'] },
         { stem: 'chia', aliases: ['chia', 'semillas de chia', 'semillas de chia organicas'] },
         { stem: 'girasol', aliases: ['semillas de girasol', 'semilla de girasol', 'girasol', 'semillas de girasol tostadas'] },
@@ -4693,6 +4694,31 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v48_restored_user_inventory_sync', 'true');
         }
 
+        // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
+        if (!isPantryItemDeleted("Leche") && !isPantryItemDeleted("sku-013-leche") && !window.PANTRY_STOCK_INVENTORY["sku-013-leche"]) {
+          const lecheStock = pantryStock["Leche"] !== undefined ? pantryStock["Leche"] : 960;
+          window.PANTRY_STOCK_INVENTORY["sku-013-leche"] = {
+            item_num: 13,
+            name: "Leche",
+            stock: lecheStock,
+            unit: "ml",
+            packaging: `${lecheStock} ml`,
+            status: "prohibited",
+            reason: "Lácteo líquido con lactosa; fuera de protocolo cetogénico estricto."
+          };
+        }
+        if (!isPantryItemDeleted("Semillas y nueces mixtas") && !isPantryItemDeleted("sku-045-semillas-y-nueces-mixtas") && !window.PANTRY_STOCK_INVENTORY["sku-045-semillas-y-nueces-mixtas"]) {
+          const mixStock = pantryStock["Semillas y nueces mixtas"] !== undefined ? pantryStock["Semillas y nueces mixtas"] : 960;
+          window.PANTRY_STOCK_INVENTORY["sku-045-semillas-y-nueces-mixtas"] = {
+            item_num: 45,
+            name: "Semillas y nueces mixtas",
+            stock: mixStock,
+            unit: "g",
+            packaging: mixStock === 960 ? "4 envases de 240 g" : `${mixStock} g`,
+            status: "canonical"
+          };
+        }
+
         if (typeof sanitizeAndDeduplicateFarmHarvestState === 'function') {
           sanitizeAndDeduplicateFarmHarvestState();
         }
@@ -5095,7 +5121,7 @@ let pantryStock = {
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
         localStorage.setItem('nutriketo_app_version', CURRENT_APP_VERSION);
-        if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location && /^https?:/i.test(window.location.protocol)) {
+        if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
           fetch('/api/v1/inventory/live-sync', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -6564,7 +6590,7 @@ function normalizeToCanonicalSlug(rawName) {
     for (const alias of aliases) {
       const aliasClean = stripAccents(alias.trim().toLowerCase());
       if (aliasClean.includes(" ")) {
-        if (cleanNoAcc.includes(aliasClean) || aliasClean.includes(cleanNoAcc)) {
+        if (cleanNoAcc.includes(aliasClean)) {
           return slug;
         }
       } else {
