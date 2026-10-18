@@ -26,16 +26,15 @@ def _strip_accents(text: str) -> str:
 # ---------------------------------------------------------------------------
 DEFAULT_FARM_HARVEST: List[str] = [
     "Espinacas",
-    "Calabacitas verdes tiernas",
     "Brócoli",
-    "Espárragos verdes",
-    "Nopales tiernos",
+    "Espárragos",
+    "Nopales",
     "Ejotes",
     "Cilantro",
     "Arúgula",
     "Coliflor",
-    "Limones agrios de la granja",
-    "Nuez pecana de la granja",
+    "Limones",
+    "Nuez pecana",
 ]
 
 

@@ -51,7 +51,7 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana de la granja",
+                "name": "Nuez pecana",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
@@ -274,7 +274,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 12,
                 "amount": 72,
                 "unit": "g"
@@ -320,7 +320,7 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana de la granja",
+                "name": "Nuez pecana",
                 "per_guest": 12,
                 "amount": 72,
                 "unit": "g"
@@ -377,7 +377,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 12,
                 "amount": 72,
                 "unit": "g"
@@ -557,7 +557,7 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana de la granja",
+                "name": "Nuez pecana",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
@@ -714,7 +714,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
@@ -820,7 +820,7 @@
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Espárragos verdes",
+                "name": "Espárragos",
                 "per_guest": 85,
                 "amount": 510,
                 "unit": "g"
@@ -834,7 +834,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
@@ -861,60 +861,47 @@
           "protein_g": 34.0,
           "net_carbs_g": 3.9,
           "fiber_g": 5.9,
-          "starter_name": "Bastones Tiernos de Calabacita y Nopal de la Granja al Limón Real con Sal de Mar",
+          "starter_name": "Bastones de Nopales de la Granja al Limón Real con Sal de Mar",
           "main_dish_name": "Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro",
           "dish_name": "Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro",
           "side_dish_name": "Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Bastones Tiernos de Calabacita y Nopal de la Granja al Limón Real con Sal de Mar",
-            "technique": "steam_chilled",
-            "note": "Entrada vegetal alcalinizante de alta hidratación celular y mínimo aporte glucémico para abrir la cena.",
+            "title": "Bastones de Nopales de la Granja al Limón Real con Sal de Mar",
+            "technique": "blanch_and_dress",
+            "note": "Entrada nocturna alcalinizante y rica en fibra soluble con nopales de la granja y limón real.",
             "coct_reasoning": {
-              "thermodynamics": "Blanqueado breve al vapor y enfriamiento rápido para conservar textura firme.",
-              "flavor_and_aromatics": "Frescura herbal de la calabacita y el nopal con acidez de limón de la granja.",
-              "textural_architecture": "Crujido limpio y refrescante.",
-              "critical_control_points": "Aliñar con limón y aceite VEVO justo antes de servir."
+              "thermodynamics": "Blanqueado corto a 95°C por 3 minutos y enfriado rápido para fijar clorofila y eliminar mucílago.",
+              "flavor_and_aromatics": "Acidez cítrica de limón de la granja sobre notas herbales limpias del nopal.",
+              "textural_architecture": "Bastones firmes y turgentes al bocado.",
+              "critical_control_points": "Escurrir perfectamente tras el choque térmico antes de aliñar con limón."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
-                "per_guest": 45,
-                "amount": 270,
+                "name": "Nopales",
+                "per_guest": 80,
+                "amount": 480.0,
                 "unit": "g"
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Nopales tiernos",
-                "per_guest": 45,
-                "amount": 270,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 12,
-                "amount": 72,
+                "amount": 72.0,
                 "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "ml"
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6,
+                "amount": 6.0,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Cortar las calabacitas y los nopales tiernos de la granja en bastones y blanquear al vapor por 3 minutos.",
-              "Disponer en plato y bañar con jugo de limón de la granja, aceite VEVO y sal de mar."
+              "Cortar los nopales de la granja en bastones delgados y blanquear 3 minutos en agua hirviendo con una pizca de sal.",
+              "Escurrir en frío para preservar textura firme.",
+              "Aliñar al momento de servir con jugo de limón de la granja y sal de mar."
             ]
           },
           "main": {
@@ -965,7 +952,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 12,
                 "amount": 72,
                 "unit": "g"
@@ -1079,7 +1066,7 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana de la granja",
+                "name": "Nuez pecana",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
@@ -1333,7 +1320,7 @@
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Nopales tiernos",
+                "name": "Nopales",
                 "per_guest": 90,
                 "amount": 540,
                 "unit": "g"
@@ -1373,60 +1360,54 @@
           "protein_g": 34.0,
           "net_carbs_g": 4.2,
           "fiber_g": 5.7,
-          "starter_name": "Ensalada Verde de Arúgula de la Granja y Calabacita Tierna con Aceite VEVO y Limón",
+          "starter_name": "Ensalada Verde de Arúgula de la Granja con Aceite VEVO y Limón",
           "main_dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Ejotes Tiernos de la Granja",
           "dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Brócoli Tierno de la Granja",
           "side_dish_name": "Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Ensalada Verde de Arúgula de la Granja y Calabacita Tierna con Aceite VEVO y Limón",
+            "title": "Ensalada Verde de Arúgula de la Granja con Aceite VEVO y Limón",
             "technique": "raw_assembly",
-            "note": "Entrada ligera y digestiva con arúgula de cosecha propia y listones de calabacita al limón.",
+            "note": "Entrada verde viva de arúgula de la granja aderezada con aceite de oliva extra virgen y limón.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje en frío a 8°C.",
-              "flavor_and_aromatics": "Notas herbáceas de la arúgula equilibradas con limón de la granja y VEVO.",
-              "textural_architecture": "Hojas tiernas y láminas crujientes.",
-              "critical_control_points": "Aderezar justo al servir."
+              "thermodynamics": "Ensamblaje en frío a 8°C sin aplicar calor.",
+              "flavor_and_aromatics": "Notas herbáceas intensas de la arúgula equilibradas con acidez cítrica y aceite VEVO.",
+              "textural_architecture": "Hojas verdes crujientes y turgentes.",
+              "critical_control_points": "Emulsionar el aceite de oliva con el limón justo antes de servir."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Arúgula",
-                "per_guest": 40,
-                "amount": 240,
+                "per_guest": 65,
+                "amount": 390.0,
                 "unit": "g"
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
-                "per_guest": 45,
-                "amount": 270,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
-                "per_guest": 12,
-                "amount": 72,
+                "name": "Limones",
+                "per_guest": 10,
+                "amount": 60.0,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 5,
-                "amount": 30,
+                "per_guest": 6,
+                "amount": 36.0,
                 "unit": "ml"
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6,
+                "amount": 6.0,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Combinar la arúgula de la granja con la calabacita en láminas finas.",
-              "Aliñar con jugo de limón de la granja, aceite de oliva VEVO y sal de mar."
+              "Lavar y centrifugar las hojas de arúgula de la granja.",
+              "Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.",
+              "Aliñar las hojas verdes justo al emplatar."
             ]
           },
           "main": {
@@ -1470,7 +1451,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 12,
                 "amount": 72,
                 "unit": "g"
@@ -1515,7 +1496,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 8,
                 "amount": 48,
                 "unit": "g"
@@ -1589,7 +1570,7 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana de la granja",
+                "name": "Nuez pecana",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
@@ -1714,59 +1695,52 @@
           "protein_g": 41.5,
           "net_carbs_g": 4.3,
           "fiber_g": 6.5,
-          "starter_name": "Ensalada Verde de Arúgula de la Granja y Calabacita al Limón con Aceite VEVO",
+          "starter_name": "Ensalada Verde de Arúgula de la Granja al Limón con Aceite VEVO",
           "main_dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
           "dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
           "side_dish_name": "Coliflor de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO",
           "starter": {
-            "title": "Ensalada Verde de Arúgula de la Granja y Calabacita al Limón con Aceite VEVO",
+            "title": "Ensalada Verde de Arúgula de la Granja al Limón con Aceite VEVO",
             "technique": "raw_assembly",
-            "note": "Entrada ligera de hojas verdes de arúgula y láminas finas de calabacita que equilibra la carga metabólica del corte principal.",
+            "note": "Entrada ligera de hojas verdes de arúgula de la granja que equilibra la carga metabólica del corte de res.",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 8°C que activa enzimas digestivas mediante acidez cítrica natural.",
-              "flavor_and_aromatics": "Frescura herbácea de arúgula tierna con notas frutales de aceite de oliva extra virgen y limón de la granja.",
-              "textural_architecture": "Hojas turgentes y listones crujientes sin lácteos ni grasas pesadas.",
+              "flavor_and_aromatics": "Notas herbáceas de arúgula con perfil frutal de aceite de oliva extra virgen y limón de la granja.",
+              "textural_architecture": "Hojas turgentes y crujientes sin lácteos ni grasas pesadas.",
               "critical_control_points": "Emulsionar el aderezo justo al momento de emplatar para mantener la textura crujiente."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Arúgula",
-                "per_guest": 45,
-                "amount": 270,
+                "per_guest": 75,
+                "amount": 450.0,
                 "unit": "g"
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
-                "per_guest": 45,
-                "amount": 270,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 15,
-                "amount": 90,
+                "amount": 90.0,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36,
+                "amount": 36.0,
                 "unit": "ml"
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6,
+                "amount": 6.0,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Lavar y centrifugar la arúgula de la granja y laminar finamente las calabacitas.",
+              "Lavar y centrifugar la arúgula de la granja.",
               "Batir el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.",
               "Aliñar suavemente y servir de inmediato como entrada ligera."
             ]
@@ -1851,7 +1825,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
@@ -1909,7 +1883,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
@@ -1954,7 +1928,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Espárragos verdes",
+                "name": "Espárragos",
                 "per_guest": 65,
                 "amount": 390,
                 "unit": "g"
@@ -1975,7 +1949,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 12,
                 "amount": 72,
                 "unit": "g"
@@ -2088,7 +2062,7 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana de la granja",
+                "name": "Nuez pecana",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
@@ -2209,7 +2183,7 @@
           "starter_name": "Consomé Clarificado de Pollo con Nopales Tiernos de la Granja al Cilantro",
           "main_dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO",
           "dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO",
-          "side_dish_name": "Zoodles de Calabacita Verde de la Granja al Sartén con Aceite de Oliva VEVO y Orégano",
+          "side_dish_name": "Floretes de Coliflor de la Granja Rostizados al Sartén con Aceite de Oliva VEVO y Orégano",
           "starter": {
             "title": "Consomé Clarificado de Pollo con Nopales Tiernos de la Granja al Cilantro",
             "technique": "simmer_broth",
@@ -2230,7 +2204,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Nopales tiernos",
+                "name": "Nopales",
                 "per_guest": 55,
                 "amount": 330,
                 "unit": "g"
@@ -2323,28 +2297,28 @@
             ]
           },
           "side": {
-            "title": "Zoodles de Calabacita Verde de la Granja al Sartén con Aceite de Oliva VEVO y Orégano",
-            "technique": "quick_saute",
-            "note": "Espaguetis vegetales de calabacita tierna de la granja salteados al minuto con aceite de oliva VEVO y orégano.",
+            "title": "Floretes de Coliflor de la Granja Rostizados al Sartén con Aceite de Oliva VEVO y Orégano",
+            "technique": "pan_roast_florets",
+            "note": "Guarnición ligera de coliflor de la granja salteada con aceite de oliva VEVO y orégano aromático.",
             "coct_reasoning": {
-              "thermodynamics": "Salteado relámpago de 90 segundos a fuego alto para evitar la exudación de agua.",
-              "flavor_and_aromatics": "Dulzor natural de la calabacita verde con notas mediterráneas de orégano y aceite VEVO.",
-              "textural_architecture": "Hebras firmes al dente que retienen la emulsión de aceite de oliva.",
-              "critical_control_points": "Sazonar con sal de mar justo al retirar del fuego para que no suelten líquido."
+              "thermodynamics": "Dorado rápido en sartén de hierro a 175°C por 5 minutos que conserva la textura al dente.",
+              "flavor_and_aromatics": "Notas tostadas de la coliflor con aroma herbal del orégano de alacena y aceite VEVO.",
+              "textural_architecture": "Floretes firmes por dentro y ligeramente dorados por fuera.",
+              "critical_control_points": "Salar al final del salteado para mantener los floretes turgentes."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
+                "name": "Coliflor",
                 "per_guest": 90,
-                "amount": 540,
+                "amount": 540.0,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36,
+                "amount": 36.0,
                 "unit": "ml"
               },
               {
@@ -2358,14 +2332,14 @@
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6,
+                "amount": 6.0,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Espiralizar las calabacitas verdes tiernas de la granja conservando la cáscara rica en clorofila.",
-              "Saltear en sartén amplio con aceite de oliva VEVO durante 90 segundos a fuego vivo.",
-              "Sazonar con orégano y sal de mar al emplatar."
+              "Cortar la coliflor de la granja en floretes pequeños.",
+              "Saltear en sartén caliente con aceite de oliva VEVO durante 4-5 minutos.",
+              "Sazonar al retirar del fuego con orégano y sal de mar."
             ]
           }
         },
@@ -2600,7 +2574,7 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana de la granja",
+                "name": "Nuez pecana",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
@@ -2691,7 +2665,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 8,
                 "amount": 48,
                 "unit": "g"
@@ -2735,7 +2709,7 @@
           "starter_name": "Crema Sedosa de Espárragos Verdes de la Granja con Aceite de Oliva VEVO",
           "main_dish_name": "Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO",
           "dish_name": "Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO",
-          "side_dish_name": "Calabacitas Verdes Tiernas de la Granja Asadas a la Parrilla con Aceite VEVO y Orégano",
+          "side_dish_name": "Floretes de Brócoli de la Granja Asados a la Parrilla con Aceite VEVO y Orégano",
           "starter": {
             "title": "Crema Sedosa de Espárragos Verdes de la Granja con Aceite de Oliva VEVO",
             "technique": "boil_and_blend",
@@ -2749,7 +2723,7 @@
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Espárragos verdes",
+                "name": "Espárragos",
                 "per_guest": 85,
                 "amount": 510,
                 "unit": "g"
@@ -2848,28 +2822,28 @@
             ]
           },
           "side": {
-            "title": "Calabacitas Verdes Tiernas de la Granja Asadas a la Parrilla con Aceite VEVO y Orégano",
-            "technique": "grill_sear",
-            "note": "Monedas de calabacita tierna de la granja marcadas a la parrilla con aceite de oliva VEVO y orégano.",
+            "title": "Floretes de Brócoli de la Granja Asados a la Parrilla con Aceite VEVO y Orégano",
+            "technique": "char_grill_veg",
+            "note": "Guarnición vegetal de la granja asada a la parrilla con aceite de oliva VEVO y orégano.",
             "coct_reasoning": {
-              "thermodynamics": "Conducción directa en parrilla a 190°C por 2 minutos por lado.",
-              "flavor_and_aromatics": "Dulzor vegetal asado con aroma de orégano y aceite VEVO.",
-              "textural_architecture": "Rodajas firmes con marcas de parrilla doradas.",
-              "critical_control_points": "Cortar en rodajas de 1 cm de grosor para que conserven su centro firme."
+              "thermodynamics": "Marcado directo en parrilla a 190°C por 3 minutos por lado conservando el centro firme.",
+              "flavor_and_aromatics": "Notas ahumadas de parrilla sobre el brócoli con orégano y aceite VEVO.",
+              "textural_architecture": "Exterior marcado a la parrilla con tallo tierno y crujiente.",
+              "critical_control_points": "Cortar floretes de grosor uniforme para cocción pareja."
             },
             "ingredients": [
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
-                "per_guest": 85,
-                "amount": 510,
+                "name": "Brócoli",
+                "per_guest": 90,
+                "amount": 540.0,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36,
+                "amount": 36.0,
                 "unit": "ml"
               },
               {
@@ -2883,13 +2857,14 @@
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6,
+                "amount": 6.0,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Cortar las calabacitas tiernas de la granja en rodajas de 1 cm y barnizar con aceite VEVO.",
-              "Asar en parrilla caliente 2 minutos por lado y sazonar con sal de mar y orégano."
+              "Cortar el brócoli de la granja en floretes longitudinales y barnizar con aceite de oliva VEVO.",
+              "Asar en parrilla caliente durante 3 minutos por lado.",
+              "Espolvorear orégano y sal de mar al servir."
             ]
           }
         },
@@ -2931,7 +2906,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
@@ -3011,7 +2986,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 12,
                 "amount": 72,
                 "unit": "g"
@@ -3049,7 +3024,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 8,
                 "amount": 48,
                 "unit": "g"
@@ -3123,7 +3098,7 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana de la granja",
+                "name": "Nuez pecana",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
@@ -3286,7 +3261,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 12,
                 "amount": 72,
                 "unit": "g"
@@ -3345,7 +3320,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
@@ -3391,7 +3366,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
@@ -3417,67 +3392,60 @@
           "protein_g": 34.0,
           "net_carbs_g": 3.9,
           "fiber_g": 5.8,
-          "starter_name": "Consomé Nocturno de Calabacita Tierna de la Granja con Cilantro y Limón Real",
+          "starter_name": "Consomé Nocturno Clarificado de Cilantro de la Granja y Limón Real",
           "main_dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
           "dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
           "side_dish_name": "Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Consomé Nocturno de Calabacita Tierna de la Granja con Cilantro y Limón Real",
+            "title": "Consomé Nocturno Clarificado de Cilantro de la Granja y Limón Real",
             "technique": "simmer_broth",
-            "note": "Caldo reconfortante de noche con calabacita en brunoise y cilantro de la granja.",
+            "note": "Consomé ligero y digestivo con fondo claro, cilantro de la granja y toque de limón.",
             "coct_reasoning": {
-              "thermodynamics": "Hervor suave a 88°C.",
-              "flavor_and_aromatics": "Sabor limpio de vegetales verdes, cilantro y limón de la granja.",
-              "textural_architecture": "Caldo ligero con pequeños cubos tiernos de calabacita.",
-              "critical_control_points": "Integrar el cilantro al momento de servir."
+              "thermodynamics": "Infusión aromática a 85°C durante 4 minutos que preserva aceites esenciales del cilantro.",
+              "flavor_and_aromatics": "Caldo limpio con cilantro de la granja y acidez brillante de limón.",
+              "textural_architecture": "Consomé reconfortante y ligero.",
+              "critical_control_points": "Incorporar el cilantro picado y el limón al momento de servir."
             },
             "ingredients": [
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
                 "name": "Fondo claro de pollo",
                 "per_guest": 180,
-                "amount": 1080,
+                "amount": 1080.0,
                 "unit": "ml"
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Calabacitas verdes tiernas",
-                "per_guest": 40,
-                "amount": 240,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 10,
+                "amount": 60.0,
                 "unit": "g"
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 10,
-                "amount": 60,
+                "amount": 60.0,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 5,
-                "amount": 30,
+                "amount": 30.0,
                 "unit": "ml"
               },
               {
                 "category": "🌶️ Chiles, Condimentos e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6,
+                "amount": 6.0,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Cocer la calabacita en brunoise fina dentro del fondo claro de pollo por 4 minutos.",
-              "Servir caliente con cilantro de la granja, jugo de limón y aceite de oliva VEVO."
+              "Calentar el fondo claro de pollo a fuego suave con sal de mar.",
+              "Servir caliente con el cilantro de la granja picado, jugo de limón y aceite de oliva VEVO."
             ]
           },
           "main": {
@@ -3574,7 +3542,7 @@
               },
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones agrios de la granja",
+                "name": "Limones",
                 "per_guest": 8,
                 "amount": 48,
                 "unit": "g"
