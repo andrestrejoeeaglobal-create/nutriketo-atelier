@@ -136,6 +136,15 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "aguacate",
     "cebolla",
     "jitomate",
+    "brocoli",
+    "coliflor",
+    "calabacitas",
+    "calabaza",
+    "esparragos",
+    "espinacas",
+    "champinon",
+    "morron",
+    "pepino",
     "mantequilla",
     "aceite de oliva",
     "manzanilla",
@@ -204,6 +213,7 @@ VEGETABLE_FAMILIES: Dict[str, List[str]] = {
     "morron": ["morron", "pimiento"],
     "lechuga": ["lechuga"],
     "champinon": ["champinon", "portobello"],
+    "pepino": ["pepino", "pepinos"],
 }
 
 FRUIT_FAMILIES: Dict[str, List[str]] = {
@@ -450,11 +460,13 @@ def audit_week_plan(
     seen_main_techniques: Dict[str, str] = {}
     seen_main_titles: Dict[str, str] = {}
     seen_lunch_side_titles: Dict[str, str] = {}
+    seen_lunch_dinner_starter_titles: Dict[str, str] = {}
 
     lunch_proteins_by_day: List[Tuple[str, str]] = []
     dinner_proteins_by_day: List[Tuple[str, str]] = []
     lunch_dinner_protein_counts: Dict[str, int] = {}
     weekly_breakfast_gelatinas_count = 0
+    weekly_veg_family_counts: Dict[str, int] = {}
 
     bom_totals: Dict[str, Dict[str, Any]] = {}
 
@@ -495,6 +507,20 @@ def audit_week_plan(
             starter = meal.get("starter") or {}
             main = meal.get("main") or {}
             side = meal.get("side") or {}
+
+            # [R7/SPLIT-BRAIN] Prohibición absoluta de desincronización entre nombres de cabecera y objetos de receta
+            if "starter_name" in meal and meal.get("starter_name") != starter.get("title"):
+                violations.append(
+                    f"[R7/SPLIT-BRAIN] {loc_label}: starter_name ('{meal.get('starter_name')}') != starter.title ('{starter.get('title')}')."
+                )
+            if "main_dish_name" in meal and meal.get("main_dish_name") != main.get("title"):
+                violations.append(
+                    f"[R7/SPLIT-BRAIN] {loc_label}: main_dish_name ('{meal.get('main_dish_name')}') != main.title ('{main.get('title')}')."
+                )
+            if "side_dish_name" in meal and meal.get("side_dish_name") != side.get("title"):
+                violations.append(
+                    f"[R7/SPLIT-BRAIN] {loc_label}: side_dish_name ('{meal.get('side_dish_name')}') != side.title ('{side.get('title')}')."
+                )
 
             for c_role, dish in [("starter", starter), ("main", main), ("side", side)]:
                 c_label = f"{loc_label} ({c_role}: '{dish.get('title', '')}')"
@@ -612,6 +638,14 @@ def audit_week_plan(
                 else:
                     lunch_dinner_archetypes[arch] = loc_label
 
+                st_title_norm = _strip_accents(starter.get("title") or "")
+                if st_title_norm in seen_lunch_dinner_starter_titles:
+                    violations.append(
+                        f"[R3] {loc_label}: Entrada de comida/cena repetida en la semana ('{starter.get('title')}') ya usada en {seen_lunch_dinner_starter_titles[st_title_norm]}."
+                    )
+                else:
+                    seen_lunch_dinner_starter_titles[st_title_norm] = loc_label
+
             # [R4] Cero repetición de vegetal o fruta intra-servicio e intra-día
             st_vegs, st_fruits = extract_veg_and_fruit_families(starter)
             mn_vegs, mn_fruits = extract_veg_and_fruit_families(main)
@@ -625,6 +659,7 @@ def audit_week_plan(
                         f"[R4] {loc_label}: El vegetal '{v}' se repite en múltiples tiempos del mismo servicio."
                     )
                 day_veg_to_meals.setdefault(v, []).append(m_type)
+                weekly_veg_family_counts[v] = weekly_veg_family_counts.get(v, 0) + count_in_meal
 
             for fr in set(st_fruits + mn_fruits + sd_fruits):
                 count_fr = (1 if fr in st_fruits else 0) + (1 if fr in mn_fruits else 0) + (1 if fr in sd_fruits else 0)
@@ -745,6 +780,16 @@ def audit_week_plan(
             f"[R8] El acompañamiento matutino debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® (4°C) por semana (encontradas: {weekly_breakfast_gelatinas_count})."
         )
 
+    # [R4] Tope estricto semanal de Acelgas (<= 2 veces) y Nopales (<= 2 veces)
+    if weekly_veg_family_counts.get("acelgas", 0) > 2:
+        violations.append(
+            f"[R4] Acelgas aparece {weekly_veg_family_counts['acelgas']} veces en la semana (máximo permitido: 2)."
+        )
+    if weekly_veg_family_counts.get("nopales", 0) > 2:
+        violations.append(
+            f"[R4] Nopales aparece {weekly_veg_family_counts['nopales']} veces en la semana (máximo permitido: 2)."
+        )
+
     # [R6] Cero repetición de proteína en cenas consecutivas y comidas consecutivas
     for i in range(len(dinner_proteins_by_day) - 1):
         d1, p1 = dinner_proteins_by_day[i]
@@ -825,10 +870,8 @@ def audit_week_plan(
                         pm_sd = _strip_accents((pm.get("side") or {}).get("title") or "")
                         cm_sd = _strip_accents((cm.get("side") or {}).get("title") or "")
                         same_main_title = bool(pm_title and pm_title == cm_title)
-                        same_arch_and_course = bool(
-                            pm_arch and pm_arch == cm_arch and (pm_st == cm_st or pm_sd == cm_sd)
-                        )
-                        if same_main_title or same_arch_and_course:
+                        same_arch_on_same_weekday = bool(pm_arch and pm_arch == cm_arch)
+                        if same_main_title or same_arch_on_same_weekday:
                             violations.append(
                                 f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite el mismo plato fuerte o arquetipo ('{cm_main.get('title')}') en el mismo día de la semana que en la semana inmediata anterior."
                             )
@@ -909,6 +952,20 @@ def audit_week_plan(
                 f"[R8] Ingrediente huérfano '{raw_name}' ({total_req} {unit}): no existe en Granja El Herami, ni en Alacena Canónica, ni en Compras Netas autorizadas."
             )
 
+    # [R8/SPLIT-BRAIN] Aserción matemática exacta (tolerancia 0.01) entre suma de las 63 recetas y Tablas 3.1, 3.2 y 3.3
+    reconciled_by_key: Dict[str, float] = {}
+    for bucket in ("farm_harvest_items", "pantry_covered_items", "market_purchases"):
+        for item in bom_reconciliation[bucket]:
+            k_norm = _strip_accents(item["name"])
+            reconciled_by_key[k_norm] = round(reconciled_by_key.get(k_norm, 0.0) + float(item["required"]), 2)
+    for b_key, info in bom_totals.items():
+        expected_req = float(info.get("total_with_protocol_4_tomas", info["total"]))
+        actual_req = reconciled_by_key.get(b_key, 0.0)
+        if abs(expected_req - actual_req) > 0.01:
+            violations.append(
+                f"[R8/SPLIT-BRAIN] Discrepancia matemática en '{info['name']}': suma en 63 recetas={expected_req}, suma en Tablas 3.1/3.2/3.3={actual_req}."
+            )
+
 
     return {
         "passed": len(violations) == 0,
@@ -938,6 +995,7 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
         ("esparrago", "esparrago"),
         ("nopal", "nopal"),
         ("acelga", "acelga"),
+        ("pepino", "pepino"),
         ("flor de calabaza", "flor de calabaza"),
         ("aguacate", "aguacate"),
         ("guacamole", "aguacate"),

@@ -22,7 +22,7 @@
           "fiber_g": 6.2,
           "starter_name": "Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja",
           "main_dish_name": "Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella",
-          "dish_name": "Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso de Cabra",
+          "dish_name": "Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella",
           "side_dish_name": "Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja",
@@ -66,10 +66,11 @@
           "main": {
             "title": "Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella",
             "technique": "baked_cocotte",
+            "archetype": "cazuela",
             "note": "El horneado suave coagula las claras alrededor de las acelgas tiernas de la granja mientras las yemas permanecen cremosas y el queso mozzarella se funde en hilos lácteos.",
             "coct_reasoning": {
               "thermodynamics": "Cocción radiante en refractario a 180°C: coagulación de albúmina a 72°C conservando la yema cremosa a 62°C.",
-              "flavor_and_aromatics": "El dulzor natural del jitomate asado equilibra la mineralidad de las acelgas recién cortadas y la suavidad láctea del queso mozzarella fundido.",
+              "flavor_and_aromatics": "El dulzor natural del jitomate asado equilibra la mineralidad de las acelgas de la granja y la suavidad láctea del queso mozzarella fundido.",
               "textural_architecture": "Contraste entre la clara firme, la yema líquida aterciopelada y el gratinado elástico de queso mozzarella.",
               "critical_control_points": "Retirar del horno a los 9-10 minutos para evitar sobrecocer los fosfolípidos de la yema."
             },
@@ -78,56 +79,50 @@
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Huevo",
                 "per_guest": 3,
-                "amount": 18.0,
+                "amount": 18,
                 "unit": "piezas"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Acelgas",
-                "per_guest": 45,
-                "amount": 270.0,
+                "per_guest": 75,
+                "amount": 450,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Jitomate",
                 "per_guest": 0.3333,
-                "amount": 2.0,
+                "amount": 2,
                 "unit": "piezas"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso mozzarella",
-                "per_guest": 17.5,
-                "amount": 105.0,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 15,
-                "amount": 90.0,
+                "per_guest": 17,
+                "amount": 102,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 6,
-                "amount": 36.0,
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "En sartén con la mantequilla, saltear el jitomate en cubos y las acelgas de la granja durante 3 minutos.",
-              "Repartir la cama vegetal en 6 cazuelas refractarias y cascar 3 huevos enteros en cada una.",
-              "Desmoronar el queso mozzarella encima, hornear a 180°C por 9 minutos y terminar con un hilo de aceite de oliva VEVO y sal de mar."
+              "Precalentar el horno a 180°C y engrasar ligeramente cazuelas individuales con aceite de oliva.",
+              "Saltear brevemente las acelgas de la granja con el jitomate en cubos por 2 minutos para evaporar exceso de humedad.",
+              "Disponer la cama vegetal en las cazuelas, cascar 3 huevos enteros por comensal y coronar con queso mozzarella rallado.",
+              "Hornear de 9 a 10 minutos hasta que la clara cuaje y el queso mozzarella funda conservando las yemas cremosas."
             ]
           },
           "side": {
@@ -184,71 +179,80 @@
           "protein_g": 41.0,
           "net_carbs_g": 4.5,
           "fiber_g": 6.6,
-          "starter_name": "Consomé Aterciopelado de Cilantro de la Granja con Aceite de Oliva VEVO",
+          "starter_name": "Crema Aterciopelada de Espárragos Verdes con Aceite de Oliva VEVO",
           "main_dish_name": "Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO",
           "dish_name": "Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO",
           "side_dish_name": "Nopales de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja",
           "starter": {
-            "title": "Consomé Aterciopelado de Cilantro de la Granja con Aceite de Oliva VEVO",
-            "technique": "boil_and_blend",
-            "note": "Entrada templada elaborada con cilantro de la granja y fondo claro emulsionado en aceite de oliva extra virgen.",
+            "title": "Crema Aterciopelada de Espárragos Verdes con Aceite de Oliva VEVO",
+            "technique": "veloute_emulsion",
+            "note": "Emulsión sedosa de espárragos verdes tiernos en fondo claro de ave con aceite de oliva extra virgen en crudo, libre de lácteos para equilibrar la riqueza omega-3 del salmón.",
             "coct_reasoning": {
-              "thermodynamics": "Cocción en fondo claro y emulsión suave a 72°C.",
-              "flavor_and_aromatics": "Notas herbales de cilantro de la granja con sal con ajo y aceite VEVO.",
-              "textural_architecture": "Textura sedosa y reconfortante libre de lácteos pesados.",
-              "critical_control_points": "Incorporar el cilantro de la granja al final para conservar sus aceites esenciales."
+              "thermodynamics": "Cocción breve a 92°C por 6 minutos para preservar la clorofila brillante de los espárragos antes de emulsionar en licuadora de alta velocidad.",
+              "flavor_and_aromatics": "Notas herbáceas elegantes de espárrago verde realzadas con ajo suave y el frutado del aceite de oliva extra virgen.",
+              "textural_architecture": "Microemulsión vegetal aterciopelada sin necesidad de crema láctea.",
+              "critical_control_points": "Incorporar el aceite de oliva en hilo al final fuera del fuego para conservar sus polifenoles."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 10,
-                "amount": 60.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espárragos",
+                "per_guest": 80,
+                "amount": 480,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Fondo claro de pollo",
-                "per_guest": 100,
-                "amount": 600.0,
+                "per_guest": 200,
+                "amount": 1200,
                 "unit": "ml"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal con ajo",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Calentar el fondo claro de pollo durante 5 minutos.",
-              "Emulsionar con el cilantro de la granja incorporando el aceite de oliva VEVO en hilo y sal con ajo."
+              "Trocear los espárragos verdes retirando el extremo fibroso y cocer en el fondo claro de pollo hirviendo durante 6 minutos.",
+              "Procesar en caliente con sal con ajo y pimienta negra hasta obtener una textura completamente tersa.",
+              "Emulsionar en hilo con el aceite de oliva extra virgen al momento de emplatar."
             ]
           },
           "main": {
             "title": "Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO",
-            "technique": "unilateral_skin_sear",
-            "note": "Único servicio semanal de salmón rico en EPA/DHA, cubierto al 100% con el stock de alacena y coronado con pistaches tostados de alacena.",
+            "technique": "crusted_pan_sear",
+            "archetype": "salmon_costra",
+            "note": "Lomo de salmón rico en EPA y DHA sellado en sartén con costra crujiente de pistaches de alacena y emulsión cítrica de limón real de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Sellado unilateral en sartén a 190°C del lado de la piel (70% del tiempo) y volteo breve para conservar centro a 52°C y proteger los Omega-3.",
-              "flavor_and_aromatics": "Riqueza marina del salmón, notas tostadas de pistache y frescura cítrica de la granja.",
-              "textural_architecture": "Piel crujiente dorada con lomo interior mantecoso y costra crocante de pistache.",
-              "critical_control_points": "No sobrecocer el salmón para evitar la oxidación de los ácidos grasos poliinsaturados EPA y DHA."
+              "thermodynamics": "Sellado unilateral en sartén de hierro a 195°C por 3 minutos del lado de la piel y 2 minutos por el lado de la costra para mantener el centro jugoso a 52°C.",
+              "flavor_and_aromatics": "Contraste entre la untuosidad marina del salmón, el tostado dulce del pistache y el destello ácido del limón de la granja.",
+              "textural_architecture": "Piel crujiente inferior, centro meloso y costra superior crocante de pistaches triturados.",
+              "critical_control_points": "No superar los 54°C internos para proteger los ácidos grasos poliinsaturados omega-3."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Lomo de salmón",
-                "per_guest": 150,
-                "amount": 900,
+                "per_guest": 220,
+                "amount": 1320,
                 "unit": "g"
               },
               {
@@ -261,81 +265,82 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "ml"
               },
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 10,
-                "amount": 60,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1.5,
-                "amount": 9.0,
+                "amount": 9,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Secar los lomos de salmón de alacena y sazonar con sal de mar.",
-              "Sellar del lado de la piel en sartén con aceite VEVO y mantequilla durante 4 minutos hasta lograr costra crujiente; voltear 1 minuto adicional.",
-              "Coronar con los pistaches de alacena troceados y bañar con jugo de limón de la granja."
+              "Secar los lomos de salmón, salpimentar y presionar la cara superior sobre los pistaches finamente triturados.",
+              "Sellar en sartén caliente con la mitad del aceite de oliva por 3 minutos del lado de la piel y voltear 90 segundos para dorar el pistache.",
+              "Bañar fuera del fuego con la emulsión de jugo de limón de la granja y el resto del aceite de oliva extra virgen."
             ]
           },
           "side": {
             "title": "Nopales de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja",
-            "technique": "quick_saute",
-            "note": "Nopales recién cosechados de la granja salteados al dente con mantequilla y trozos de nuez pecana de la granja.",
+            "technique": "high_heat_saute",
+            "note": "Guarnición prebiótica de nopales cosechados en la granja salteados a fuego vivo en mantequilla con trozos crocantes de nuez pecana.",
             "coct_reasoning": {
-              "thermodynamics": "Blanqueado previo de 3 minutos y salteado rápido en mantequilla a 160°C.",
-              "flavor_and_aromatics": "Sabor vegetal limpio del nopal con mantequilla avellanada y nuez pecana tostada.",
-              "textural_architecture": "Tiras verdes firmes con trozos crocantes de nuez pecana.",
-              "critical_control_points": "Escurrir perfectamente los nopales tras el blanqueado para fijar la clorofila."
+              "thermodynamics": "Salteado en seco inicial a 200°C para sellar mucílagos, seguido de glaseado rápido con mantequilla a 150°C.",
+              "flavor_and_aromatics": "Acidez vegetal del nopal armonizada con las notas avellanadas de la mantequilla dorada y la nuez pecana.",
+              "textural_architecture": "Bastones de nopal firmes al diente con el crujido tostado de la nuez pecana.",
+              "critical_control_points": "Agregar la nuez pecana en los últimos 30 segundos para evitar amargor por sobretostado."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Nopales",
-                "per_guest": 85,
-                "amount": 510.0,
+                "per_guest": 80,
+                "amount": 480,
                 "unit": "g"
               },
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Mantequilla",
-                "per_guest": 10,
-                "amount": 60.0,
+                "per_guest": 7.5,
+                "amount": 45,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Nuez pecana",
-                "per_guest": 12,
-                "amount": 72.0,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Cortar los nopales de la granja en tiras y cocerlos al vapor por 4 minutos.",
-              "Saltear en sartén con mantequilla y la nuez pecana de la granja picada durante 2 minutos; sazonar con sal de mar."
+              "Cortar los nopales de la granja en bastones y asar en sartén caliente sin grasa hasta evaporar su humedad natural.",
+              "Incorporar la mantequilla, sazonar con sal con ajo y saltear 2 minutos a fuego medio-alto.",
+              "Añadir la nuez pecana tostada troceada y servir de inmediato."
             ]
           }
         },
@@ -346,134 +351,136 @@
           "protein_g": 33.5,
           "net_carbs_g": 4.1,
           "fiber_g": 5.8,
-          "starter_name": "Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja",
-          "main_dish_name": "Cebollas Asadas de Alacena Gratinadas al Horno con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana",
-          "dish_name": "Champiñones Portobello al Horno Rellenos de Queso Ricotta, Cilantro de la Granja y Nuez de la India",
+          "starter_name": "Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO",
+          "main_dish_name": "Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana",
+          "dish_name": "Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana",
           "side_dish_name": "Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja",
-            "technique": "simmer_broth",
-            "note": "Consomé nocturno reconfortante rico en glicina y electrolitos para preparar el sistema digestivo.",
+            "title": "Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO",
+            "technique": "roasted_veloute",
+            "note": "Velouté digestiva nocturna de coliflor rostizada emulsionada con fondo claro de ave y aceite de oliva extra virgen, sin lácteos añadidos.",
             "coct_reasoning": {
-              "thermodynamics": "Infusión suave a 85°C que extrae compuestos aromáticos del cilantro sin oxidarlos.",
-              "flavor_and_aromatics": "Notas limpias de caldo clarificado, cítrico y cilantro de la granja.",
-              "textural_architecture": "Caldo cristalino y sedoso en boca.",
-              "critical_control_points": "Añadir el cilantro y el jugo de limón justo al servir."
+              "thermodynamics": "Rostizado previo de los floretes a 200°C para activar reacción de Maillard suave antes de licuar con fondo caliente a 85°C.",
+              "flavor_and_aromatics": "Dulzor tostado de la coliflor rostizada con notas de ajo y aceite de oliva extra virgen.",
+              "textural_architecture": "Cremosidad sedosa lograda por los polisacáridos naturales de la coliflor emulsionados con lípidos de oliva.",
+              "critical_control_points": "Emulsionar a alta velocidad para lograr textura aterciopelada sin añadir crema ni mantequilla."
             },
             "ingredients": [
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Fondo claro de pollo",
-                "per_guest": 180,
-                "amount": 1080,
-                "unit": "ml"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Coliflor",
+                "per_guest": 90,
+                "amount": 540,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones",
-                "per_guest": 12,
-                "amount": 72,
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Dorar los floretes de coliflor al horno o sartén de hierro durante 8 minutos hasta que tomen notas doradas.",
+              "Hervir 4 minutos en el fondo claro de pollo con sal con ajo y pimienta negra.",
+              "Licuar hasta obtener una crema tersa y terminar con aceite de oliva extra virgen en hilo."
+            ]
+          },
+          "main": {
+            "title": "Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana",
+            "technique": "stuffed_portobello_gratin",
+            "archetype": "portobello_relleno",
+            "note": "Sombreros carnosos de champiñón portobello horneados y rellenos de queso ricotta cremoso, gratinados con queso parmesano de alacena, romero de la granja y nuez pecana.",
+            "coct_reasoning": {
+              "thermodynamics": "Horneado a 190°C por 14 minutos: deshidratación parcial de la matriz fúngica concentrando el glutamato natural mientras se gratina la capa superior de parmesano.",
+              "flavor_and_aromatics": "Umami profundo del champiñón portobello entrelazado con el aroma resinoso del romero de la granja y el perfil lácteo maduro del parmesano.",
+              "textural_architecture": "Base carnosa y jugosa de portobello, interior cremoso de ricotta y corteza dorada con nuez pecana crujiente.",
+              "critical_control_points": "Hornear primero los sombreros 5 minutos boca abajo para drenar exceso de agua antes de rellenar."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Champiñón",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso parmesano",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Romero",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 5,
-                "amount": 30,
+                "per_guest": 7.5,
+                "amount": 45,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
                 "per_guest": 1,
                 "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Calentar el fondo claro de pollo a fuego suave con una pizca de sal de mar.",
-              "Servir en tazón caliente y añadir el cilantro de la granja picado, jugo de limón y un hilo de aceite VEVO."
-            ]
-          },
-          "main": {
-            "title": "Cebollas Asadas de Alacena Gratinadas al Horno con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana",
-            "technique": "Asado al horno a 190°C con gratinado lácteo de Ricotta, Parmesano y Romero",
-            "note": "Plato fuerte nocturno vegetariano y circadiano que aprovecha las Cebollas de Alacena, el Queso Ricotta (1,920 g en stock) y el Queso Parmesano (100 g en stock), perfumados con Romero y Nuez pecana recién recolectados de la Granja El Herami ($0 compra).",
-            "coct_reasoning": {
-              "thermodynamics": "Asado a 190°C durante 18 minutos para caramelizar lentamente las capas internas de la cebolla sin quemar los azúcares estructurales, fundiendo la cubierta de ricotta y parmesano.",
-              "flavor_and_aromatics": "Dulzura suave de la cebolla asada contrastada con el umami salino del Parmesano, las notas balsámicas de pino del romero de la granja y la nuez pecana tostada.",
-              "textural_architecture": "Capas tiernas y sedosas de cebolla asada bajo un gratinado cremoso de queso ricotta y el toque crujiente de la nuez pecana.",
-              "critical_control_points": "Cortar las cebollas en mitades transversales uniformes; pincelar con aceite de oliva VEVO antes de hornear y añadir la nuez pecana en los últimos 3 minutos."
-            },
-            "ingredients": [
-              {
-                "name": "Cebolla",
-                "amount": 2.0,
-                "unit": "piezas",
-                "per_guest": 0.3333,
-                "category": "🥬 Verduras, Hortalizas y Frescos"
-              },
-              {
-                "name": "Queso ricotta",
-                "amount": 300.0,
-                "unit": "g",
-                "per_guest": 50.0,
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)"
-              },
-              {
-                "name": "Queso parmesano",
-                "amount": 90.0,
-                "unit": "g",
-                "per_guest": 15.0,
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)"
-              },
-              {
-                "name": "Nuez pecana",
-                "amount": 90.0,
-                "unit": "g",
-                "per_guest": 15.0,
-                "category": "🥑 Grasas, Aceites y Semillas"
-              },
-              {
-                "name": "Romero",
-                "amount": 12.0,
-                "unit": "g",
-                "per_guest": 2.0,
-                "category": "🥬 Verduras, Hortalizas y Frescos"
-              },
-              {
-                "name": "Cilantro",
-                "amount": 48.0,
-                "unit": "g",
-                "per_guest": 8.0,
-                "category": "🥬 Verduras, Hortalizas y Frescos"
-              },
-              {
-                "name": "Aceite de oliva",
-                "amount": 48.0,
-                "unit": "ml",
-                "per_guest": 8.0,
-                "category": "🥑 Grasas, Aceites y Semillas"
-              },
-              {
-                "name": "Sal de mar",
-                "amount": 6.0,
-                "unit": "g",
-                "per_guest": 1.0,
-                "category": "🌶️ Chiles, Condimentos e Infusiones"
-              }
-            ],
-            "steps": [
-              "1. Acondicionamiento y Corte en Mitades: Pelar las cebollas blancas de alacena y cortarlas transversalmente en mitades firmes conservando la raíz basal para mantener unidas las capas.",
-              "2. Asado Aromático al Romero: Disponer las mitades de cebolla en bandeja de horno, bañar con aceite de oliva extra virgen, sal de mar y las hojas de romero de la granja; hornear a 190°C durante 14 minutos hasta que estén tiernas.",
-              "3. Gratinado de Ricotta, Parmesano y Nuez Pecana: Cubrir las cebollas asadas con copos de queso ricotta y queso parmesano rallado; incorporar la nuez pecana troceada de la granja, gratinar 4 minutos adicionales, coronar con cilantro picado y servir caliente."
+              "Limpiar los champiñones portobello, barnizar con aceite de oliva y pre-hornear a 190°C por 5 minutos.",
+              "Mezclar el queso ricotta con el romero de la granja finamente picado, sal con ajo y pimienta negra.",
+              "Rellenar los sombreros, espolvorear el queso parmesano y la nuez pecana troceada, y gratinar 9 minutos adicionales."
             ]
           },
           "side": {
@@ -534,8 +541,8 @@
           "net_carbs_g": 4.5,
           "fiber_g": 6.4,
           "starter_name": "Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja",
-          "main_dish_name": "Frittata Rústica de Huevos al Sartén con Jitomate de Alacena, Cebolla, Romero de la Granja y Queso Philadelphia Cremoso",
-          "dish_name": "Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Manchego Gratinado",
+          "main_dish_name": "Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso",
+          "dish_name": "Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso",
           "side_dish_name": "Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja",
@@ -584,14 +591,15 @@
             ]
           },
           "main": {
-            "title": "Frittata Rústica de Huevos al Sartén con Jitomate de Alacena, Cebolla, Romero de la Granja y Queso Philadelphia Cremoso",
-            "technique": "open_skillet_frittata",
-            "note": "3 huevos enteros por comensal cuajados lentamente al sartén en mantequilla y aceite VEVO con dados de jitomate y cebolla de alacena, perfumados con romero de la Granja El Herami y medallones de queso Philadelphia.",
+            "title": "Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso",
+            "technique": "skillet_frittata",
+            "archetype": "frittata",
+            "note": "Frittata esponjosa de 3 huevos por comensal horneada lentamente en sartén de hierro con tiras de pimiento morrón asado, cebolla blanca y medallones de queso Philadelphia.",
             "coct_reasoning": {
-              "thermodynamics": "Salteado previo de cebolla y jitomate a 140°C con romero para evaporar agua vegetativa antes de verter el huevo batido y cuajar a 120°C.",
-              "flavor_and_aromatics": "Aroma balsámico de romero de la granja y dulzor de cebolla pochada fundidos con la acidez suave del jitomate y la untuosidad láctea del queso Philadelphia.",
-              "textural_architecture": "Estructura esponjosa y firme de frittata con vetas cremosas de queso crema fundente.",
-              "critical_control_points": "Evaporar el exceso de jugo del jitomate en sartén antes de incorporar los huevos para evitar sinéresis."
+              "thermodynamics": "Sellado inicial de base en sartén a 160°C y finalización radiante a 175°C para lograr estructura uniforme sin resecar la red proteica.",
+              "flavor_and_aromatics": "El dulzor capsantino del pimiento morrón salteado en mantequilla contrasta con la ligera acidez láctea del queso Philadelphia.",
+              "textural_architecture": "Matriz aireada de huevo con inserciones fundentes de queso crema y julianas tiernas de morrón.",
+              "critical_control_points": "Retirar cuando el centro alcance 70°C para preservar jugosidad."
             },
             "ingredients": [
               {
@@ -602,59 +610,52 @@
                 "unit": "piezas"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Jitomate",
-                "per_guest": 0.1667,
-                "amount": 1.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "piezas"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cebolla",
                 "per_guest": 0.1667,
-                "amount": 1.0,
+                "amount": 1,
                 "unit": "piezas"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Romero",
-                "per_guest": 2.0,
-                "amount": 12.0,
-                "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso Philadelphia",
-                "per_guest": 35,
-                "amount": 210,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 14,
-                "amount": 84,
+                "per_guest": 30,
+                "amount": 180,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 6,
-                "amount": 36,
-                "unit": "ml"
+                "name": "Mantequilla",
+                "per_guest": 7.5,
+                "amount": 45,
+                "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
-              "1. Sofrito Aromático de Alacena y Granja: Picar finamente la cebolla y el jitomate de alacena; saltear en sartén de hierro con la mitad de la mantequilla y las hojitas de romero de la granja durante 3 minutos.",
-              "2. Emulsión de Huevos y Cuajado Lento: Batir los 18 huevos con sal de mar; incorporar el resto de la mantequilla al sartén, verter el huevo y cocinar a fuego bajo tapado durante 5 minutos.",
-              "3. Coronación Cremosa de Philadelphia: Distribuir dados de queso Philadelphia en la superficie, rociar el aceite de oliva extra virgen en crudo y reposar 1 minuto tapado hasta fundir suavemente."
+              "Cortar el pimiento morrón y la cebolla blanca en julianas finas y sofreír en mantequilla durante 4 minutos.",
+              "Batir ligeramente los huevos con sal de mar y pimienta negra, verter sobre las verduras y distribuir dados de queso Philadelphia.",
+              "Cocinar a fuego bajo tapado por 6 minutos y gratinar 2 minutos finales hasta cuajar."
             ]
           },
           "side": {
@@ -713,78 +714,79 @@
           "fiber_g": 6.3,
           "starter_name": "Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO",
           "main_dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja",
-          "dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja",
-          "side_dish_name": "Bastones de Nopales de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO",
+          "dish_name": "Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja",
+          "side_dish_name": "Floretes de Brócoli al Vapor con Limón Real, Sal de Mar y Aceite de Oliva VEVO",
           "starter": {
             "title": "Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO",
-            "technique": "raw_assembly",
-            "note": "Entrada verde de hojas jóvenes de acelga de la granja con emulsión cítrica para equilibrar las albóndigas de res.",
+            "technique": "citrus_maceration",
+            "note": "Hojas jóvenes de acelga cosechadas en la granja masajeadas con emulsión cítrica de limón real y aceite de oliva extra virgen para preparar la digestión de las albóndigas de res.",
             "coct_reasoning": {
-              "thermodynamics": "Servicio en frío a 8°C que preserva folatos, clorofila y enzimas.",
-              "flavor_and_aromatics": "Notas minerales suaves de acelga tierna con acidez brillante de limón de la granja y aceite VEVO.",
-              "textural_architecture": "Hojas verdes turgentes y ligeras sin lácteos añadidos.",
-              "critical_control_points": "Aliñar justo al momento de servir para mantener la firmeza de las hojas."
+              "thermodynamics": "Maceración en frío a 12°C con ácido cítrico natural que ablanda las fibras de celulosa sin aplicar calor.",
+              "flavor_and_aromatics": "Frescura clorofílica y mineral de la acelga equilibrada con la acidez aromática del limón de la granja.",
+              "textural_architecture": "Hojas sedosas pero turgentes recubiertas por una película brillante de aceite de oliva.",
+              "critical_control_points": "Aliñar 3 minutos antes de servir para mantener volumen y crocancia."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Acelgas",
-                "per_guest": 75,
-                "amount": 450.0,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones",
-                "per_guest": 15,
-                "amount": 90.0,
+                "per_guest": 60,
+                "amount": 360,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Lavar, desinfectar y trocear las hojas tiernas de acelga de la granja.",
-              "Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.",
-              "Bañar la ensalada justo antes de llevar a la mesa."
+              "Seleccionar las hojas tiernas de acelga de la granja, desinfectar y cortar en chiffonnade ancha.",
+              "Emulsionar el jugo de limón real con el aceite de oliva extra virgen y la sal de mar.",
+              "Bañar las hojas al momento de servir."
             ]
           },
           "main": {
             "title": "Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja",
-            "technique": "roast_simmer",
-            "note": "Albóndigas jugosas elaboradas con carne molida de alacena bañadas en emulsión 100% suave (cero picante irritante) de crema ácida, queso Philadelphia y cilantro de la granja.",
+            "technique": "oven_braised_meatballs",
+            "archetype": "albondigas",
+            "note": "Albóndigas jugosas de res horneadas y bañadas en salsa aterciopelada de tomate de alacena emulsionada con crema ácida, queso Philadelphia y cilantro de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Sellado al horno a 190°C por 12 minutos y baño en salsa láctea emulsionada a 75°C.",
-              "flavor_and_aromatics": "Riqueza láctica aterciopelada de la crema ácida y el queso Philadelphia con notas herbales de cilantro de la granja.",
-              "textural_architecture": "Albóndigas tiernas y jugosas cubiertas por una salsa cremosa y sedosa libre de capsaicina.",
-              "critical_control_points": "No hervir la salsa una vez incorporada la crema ácida y el queso Philadelphia para mantener su tersura."
+              "thermodynamics": "Sellado en horno a 200°C por 10 minutos seguido de braseado suave en la salsa a 165°C por 8 minutos.",
+              "flavor_and_aromatics": "Acidez frutal del tomate verde amortiguada por la untuosidad láctea de la crema ácida y el queso Philadelphia con perfume de cilantro.",
+              "textural_architecture": "Albóndigas tiernas de miga húmeda cubiertas por un velouté espeso y sedoso.",
+              "critical_control_points": "Integrar el queso Philadelphia y la crema ácida fuera del hervor intenso para evitar separación de fases."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Carne molida",
-                "per_guest": 140,
-                "amount": 840,
+                "per_guest": 200,
+                "amount": 1200,
                 "unit": "g"
               },
               {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Tomate",
-                "amount": 360.0,
-                "unit": "g",
-                "per_guest": 60.0,
-                "category": "🥬 Verduras, Hortalizas y Frescos"
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
@@ -796,88 +798,95 @@
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso Philadelphia",
-                "per_guest": 15,
-                "amount": 90,
+                "per_guest": 25,
+                "amount": 150,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "g"
               },
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 12,
-                "amount": 72,
-                "unit": "g"
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal con ajo",
-                "per_guest": 1.5,
-                "amount": 9.0,
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Pimienta negra",
-                "per_guest": 0.5,
-                "amount": 3.0,
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Sazonar la carne molida de alacena con sal con ajo y pimienta negra, formar las albóndigas y hornearlas a 190°C durante 12 minutos.",
-              "Asar el tomate de alacena y licuarlo en tibio con la crema ácida, el queso Philadelphia y el cilantro de la granja hasta obtener una salsa tersa.",
-              "Bañar las albóndigas calientes con la salsa cremosa suave y servir."
+              "Sazonar la carne molida de res con sal con ajo, orégano y mitad del cilantro picado; formar albóndigas y hornear a 200°C por 10 minutos.",
+              "Cocer el tomate de alacena con la cebolla y licuar con la crema ácida, el queso Philadelphia y el resto del cilantro de la granja.",
+              "Bañar las albóndigas con la salsa tibia y hornear 5 minutos más para integrar sabores."
             ]
           },
           "side": {
-            "title": "Bastones de Nopales de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO",
-            "technique": "steam_and_dress",
-            "note": "Guarnición rica en fibra soluble de la granja cocida al vapor con limón real y aceite VEVO.",
+            "title": "Floretes de Brócoli al Vapor con Limón Real, Sal de Mar y Aceite de Oliva VEVO",
+            "technique": "crisp_tender_steam",
+            "note": "Guarnición crucífera ligera libre de lácteos: floretes de brócoli cocidos al vapor al punto al dente con aceite de oliva extra virgen y limón de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Cocción al vapor a 98°C durante 5 minutos que conserva la turgencia celular del nopal.",
-              "flavor_and_aromatics": "Perfil herbal limpio del nopal de la granja realzado con limón y aceite VEVO.",
-              "textural_architecture": "Bastones tiernos pero firmes al corte.",
-              "critical_control_points": "Retirar del vapor al alcanzar color verde brillante."
+              "thermodynamics": "Cocción al vapor a 98°C durante exactamente 4 minutos para activar la enzima mirosinasa y maximizar la biodisponibilidad de sulforafano.",
+              "flavor_and_aromatics": "Perfil limpio de brócoli verde realzado por el cítrico del limón real y el aceite de oliva.",
+              "textural_architecture": "Tallos crujientes y copas tiernas que limpian el paladar frente a la salsa cremosa de las albóndigas.",
+              "critical_control_points": "Retirar del vapor a los 4 minutos para conservar color verde esmeralda y textura firme."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Nopales",
-                "per_guest": 85,
-                "amount": 510.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Brócoli",
+                "per_guest": 90,
+                "amount": 540,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 12,
-                "amount": 72.0,
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Cortar los nopales de la granja en bastones y cocer al vapor por 5 minutos.",
-              "Disponer en plato caliente y bañar con aceite de oliva VEVO, jugo de limón de la granja y sal de mar."
+              "Separar el brócoli en floretes uniformes y cocer al vapor durante 4 minutos.",
+              "Aderezar en tibio con aceite de oliva extra virgen, jugo de limón de la granja y sal de mar."
             ]
           }
         },
@@ -888,64 +897,80 @@
           "protein_g": 34.0,
           "net_carbs_g": 3.9,
           "fiber_g": 5.9,
-          "starter_name": "Consomé Nocturno Clarificado de Cilantro de la Granja al Limón Real con Sal de Mar",
+          "starter_name": "Sopa Juliana de Calabacitas Tiernas al Limón Real y Cilantro de la Granja con Aceite VEVO",
           "main_dish_name": "Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro",
           "dish_name": "Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro",
           "side_dish_name": "Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Consomé Nocturno Clarificado de Cilantro de la Granja al Limón Real con Sal de Mar",
-            "technique": "simmer_broth",
-            "note": "Consomé ligero y alcalinizante de cilantro de la granja con toque de limón real.",
+            "title": "Sopa Juliana de Calabacitas Tiernas al Limón Real y Cilantro de la Granja con Aceite VEVO",
+            "technique": "julienne_infusion_broth",
+            "note": "Caldo reconfortante con julianas finas de calabacita tierna escalfadas al momento, perfumado con cilantro y limón de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Infusión suave a 85°C por 5 minutos que extrae aceites esenciales sin oxidarlos.",
-              "flavor_and_aromatics": "Acidez cítrica de limón de la granja sobre notas limpias de cilantro.",
-              "textural_architecture": "Caldo reconfortante, ligero y cristalino.",
-              "critical_control_points": "Incorporar el cilantro picado y el jugo de limón justo al servir."
+              "thermodynamics": "Escalfado rápido de las julianas de calabacita a 90°C por 3 minutos para conservar su estructura al dente.",
+              "flavor_and_aromatics": "Sabor delicado y dulce de la calabacita tierna en fondo claro con notas cítricas y herbales.",
+              "textural_architecture": "Cintas vegetales firmes en caldo cristalino con perlas de aceite de oliva extra virgen.",
+              "critical_control_points": "Añadir las julianas de calabacita justo antes de servir para evitar que se sobrehidraten."
             },
             "ingredients": [
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Fondo claro de pollo",
-                "per_guest": 180,
-                "amount": 1080.0,
+                "per_guest": 200,
+                "amount": 1200,
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48.0,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 12,
-                "amount": 72.0,
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Calentar el fondo claro de pollo por 5 minutos con sal de mar.",
-              "Servir caliente con cilantro de la granja picado y jugo de limón."
+              "Cortar las calabacitas en julianas finas.",
+              "Calentar el fondo claro de pollo con sal de mar y escalfar las julianas de calabacita durante 3 minutos.",
+              "Servir con cilantro picado de la granja, jugo de limón real y aceite de oliva extra virgen."
             ]
           },
           "main": {
             "title": "Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro",
-            "technique": "cold_tartare_boats",
-            "note": "Cena marina magra de rápido vaciamiento gástrico que amortiza al 100% el atún en agua, la lechuga y el aguacate de alacena.",
+            "technique": "cold_boat_assembly",
+            "archetype": "barquitas",
+            "note": "Hojas enteras y crujientes de lechuga de alacena rellenas de lomo de atún en agua emulsionado con aceite de oliva extra virgen, dados de aguacate Hass y cilantro de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje en frío que preserva intactos los ácidos grasos monoinsaturados del aguacate y el VEVO.",
-              "flavor_and_aromatics": "Perfil marino limpio del atún con cremosidad de aguacate Hass, cilantro de la granja y limón.",
-              "textural_architecture": "Lomos firmes de atún, dados sedosos de aguacate y barquitas crujientes de lechuga.",
-              "critical_control_points": "Única aparición de aguacate del día; escurrir perfectamente el atún antes de emulsionar."
+              "thermodynamics": "Ensamblaje en frío a 10°C que preserva intactos los ácidos grasos monoinsaturados del aguacate y del aceite de oliva.",
+              "flavor_and_aromatics": "Frescura marina limpia del atún con el perfume herbal del cilantro y la acidez del limón real.",
+              "textural_architecture": "Barquita vegetal crujiente de lechuga romana con relleno cremoso de aguacate y láminas firmes de atún.",
+              "critical_control_points": "Drenar completamente el atún y montar sobre las hojas secas al momento de llevar a la mesa."
             },
             "ingredients": [
               {
@@ -956,21 +981,21 @@
                 "unit": "g"
               },
               {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Lechuga",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aguacate",
                 "per_guest": 0.5,
-                "amount": 3.0,
+                "amount": 3,
                 "unit": "piezas"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Lechuga",
-                "per_guest": 0.1667,
-                "amount": 1.0,
-                "unit": "piezas"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cilantro",
                 "per_guest": 10,
                 "amount": 60,
@@ -978,30 +1003,37 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Mayonesa",
-                "per_guest": 15,
-                "amount": 90,
-                "unit": "g"
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
-              "Drenar el atún en agua de alacena y mezclar suavemente con mayonesa, jugo de limón, cilantro de la granja picado y sal de mar.",
-              "Incorporar el aguacate en cubos medianos sin batir.",
-              "Servir sobre hojas enteras y crujientes de lechuga."
+              "Lavar, desinfectar y secar perfectamente las hojas enteras de lechuga romana para formar las barquitas.",
+              "Mezclar el lomo de atún drenado con dados de aguacate Hass, cilantro picado, jugo de limón real y aceite de oliva extra virgen.",
+              "Servir la mezcla dentro de las barquitas de lechuga y sazonar con sal de mar y pimienta negra."
             ]
           },
           "side": {
@@ -1224,64 +1256,73 @@
           "protein_g": 40.5,
           "net_carbs_g": 4.4,
           "fiber_g": 6.5,
-          "starter_name": "Crema Aterciopelada de Acelgas de la Granja con Aceite de Oliva VEVO",
+          "starter_name": "Crema Aterciopelada de Brócoli al Ajo Tostado con Aceite de Oliva VEVO",
           "main_dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
           "dish_name": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
           "side_dish_name": "Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
           "starter": {
-            "title": "Crema Aterciopelada de Acelgas de la Granja con Aceite de Oliva VEVO",
-            "technique": "boil_and_blend",
-            "note": "Crema verde sedosa elaborada con acelgas de la granja emulsionadas en fondo claro y aceite de oliva extra virgen.",
+            "title": "Crema Aterciopelada de Brócoli al Ajo Tostado con Aceite de Oliva VEVO",
+            "technique": "cruciferous_veloute",
+            "note": "Crema verde esmeralda de floretes de brócoli emulsionada con fondo claro y aceite de oliva extra virgen, libre de lácteos para acompañar las sardinas del Pacífico.",
             "coct_reasoning": {
-              "thermodynamics": "Blanqueado corto y licuado de alta velocidad a 72°C para preservar clorofila y magnesio.",
-              "flavor_and_aromatics": "Sabor vegetal redondo de acelgas de la granja con sal con ajo y aceite VEVO.",
-              "textural_architecture": "Emulsión verde aterciopelada sin harinas ni espesantes.",
-              "critical_control_points": "No hervir tras licuar para mantener el color verde esmeralda."
+              "thermodynamics": "Blanqueado corto de 5 minutos en hervor suave seguido de licuado a alta cizalla para crear emulsión vegetal estable.",
+              "flavor_and_aromatics": "Notas verdes de brócoli equilibradas con ajo tostado y el amargor noble del aceite de oliva extra virgen.",
+              "textural_architecture": "Cuerpo sedoso y ligero que prepara el tracto digestivo sin sobrecarga lipídica.",
+              "critical_control_points": "No prolongar la cocción más de 5 minutos para evitar formación de compuestos azufrados volátiles."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Acelgas",
-                "per_guest": 80,
-                "amount": 480.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Brócoli",
+                "per_guest": 90,
+                "amount": 540,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Fondo claro de pollo",
-                "per_guest": 100,
-                "amount": 600.0,
+                "per_guest": 200,
+                "amount": 1200,
                 "unit": "ml"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal con ajo",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Cocer las acelgas de la granja en el fondo claro de pollo durante 5 minutos.",
-              "Licuar a máxima velocidad con el aceite de oliva VEVO y sal con ajo hasta lograr textura cremosa."
+              "Cocer los floretes de brócoli en el fondo claro de pollo durante 5 minutos.",
+              "Licuar en caliente con sal con ajo y pimienta negra hasta lograr una textura aterciopelada.",
+              "Servir coronando con el aceite de oliva extra virgen en crudo."
             ]
           },
           "main": {
             "title": "Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO",
-            "technique": "mediterranean_oven_bake",
-            "note": "Único servicio semanal de sardina rico en Omega-3 EPA/DHA y calcio biodisponible, cubierto al 100% con el stock de alacena (reduciendo el pollo a solo 2 servicios semanales).",
+            "technique": "mediterranean_oven_roast",
+            "archetype": "lomos_horno",
+            "note": "Lomos de sardina de alacena horneados al estilo mediterráneo sobre cama de jitomate asado y cebolla blanca caramelizada con orégano, limón y cilantro de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Horneado corto a 185°C durante 10 minutos con jitomate y cebolla de alacena que concentra el licopeno sin oxidar los lípidos marinos.",
-              "flavor_and_aromatics": "Umami marino profundo equilibrado con el dulzor ácido del jitomate asado, cebolla tierna, orégano y aceite VEVO.",
-              "textural_architecture": "Lomos enteros firmes y jugosos sobre cama aromática de jitomate y cebolla.",
-              "critical_control_points": "Hornear solo 10 minutos para preservar intactos los ácidos grasos poliinsaturados Omega-3."
+              "thermodynamics": "Horneado a 185°C por 12 minutos que funde el colágeno marino con los jugos licopénicos del jitomate asado.",
+              "flavor_and_aromatics": "Sabor marino intenso de la sardina equilibrado por la acidez del jitomate asado, el limón real y el orégano.",
+              "textural_architecture": "Lomos firmes y jugosos sobre cama tierna de cebolla y jitomate rostizados.",
+              "critical_control_points": "Bañar con jugo de limón real y cilantro picado al salir del horno."
             },
             "ingredients": [
               {
@@ -1292,24 +1333,77 @@
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Jitomate",
                 "per_guest": 0.3333,
-                "amount": 2.0,
+                "amount": 2,
                 "unit": "piezas"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cebolla",
                 "per_guest": 0.1667,
-                "amount": 1.0,
+                "amount": 1,
                 "unit": "piezas"
               },
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 12,
-                "amount": 72,
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 20,
+                "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar el jitomate y la cebolla blanca en rodajas, disponer en refractario con aceite de oliva y orégano y asar 8 minutos a 185°C.",
+              "Colocar los lomos de sardina sobre la cama asada y hornear 6 minutos adicionales.",
+              "Terminar con jugo de limón real y cilantro de la granja."
+            ]
+          },
+          "side": {
+            "title": "Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
+            "technique": "dry_griddle_roast",
+            "note": "Pencas tiernas de nopal de la granja asadas al comal con orégano aromático y aceite de oliva extra virgen.",
+            "coct_reasoning": {
+              "thermodynamics": "Asado por contacto en plancha de hierro a 210°C que carameliza la superficie exterior y sella la fibra soluble interna.",
+              "flavor_and_aromatics": "Notas ahumadas del comal con el perfume terroso del orégano de alacena.",
+              "textural_architecture": "Exterior ligeramente tostado e interior tierno sin mucílago libre.",
+              "critical_control_points": "Salpimentar al final del asado para mantener turgencia."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Nopales",
+                "per_guest": 80,
+                "amount": 480,
                 "unit": "g"
               },
               {
@@ -1320,76 +1414,23 @@
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Pimienta negra",
-                "per_guest": 0.5,
-                "amount": 3.0,
-                "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
-                "per_guest": 1.5,
-                "amount": 9.0,
-                "unit": "g"
-              }
-            ],
-            "steps": [
-              "Disponer los lomos de sardina de alacena en refractario sobre rodajas finas de jitomate y cebolla blanca de alacena.",
-              "Bañar con mantequilla y aceite VEVO, sazonar con sal de mar y pimienta negra, y hornear a 185°C durante 10 minutos.",
-              "Terminar con cilantro de la granja picado al servir."
-            ]
-          },
-          "side": {
-            "title": "Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar",
-            "technique": "pan_roast",
-            "note": "Nopales de la granja asados en plancha con aceite de oliva VEVO y orégano de alacena.",
-            "coct_reasoning": {
-              "thermodynamics": "Asado en plancha a 180°C por 4 minutos por lado para evaporar mucílago y concentrar sabor.",
-              "flavor_and_aromatics": "Notas herbales de orégano y nopal asado con aceite de oliva extra virgen.",
-              "textural_architecture": "Pencas tiernas con exterior ligeramente dorado.",
-              "critical_control_points": "Asar en seco los primeros 2 minutos antes de añadir el aceite de oliva VEVO."
-            },
-            "ingredients": [
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Nopales",
-                "per_guest": 90,
-                "amount": 540.0,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 6,
-                "amount": 36.0,
-                "unit": "ml"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Orégano",
-                "per_guest": 0.5,
-                "amount": 3.0,
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Asar los nopales de la granja en plancha caliente durante 4 minutos por lado.",
-              "Terminar con aceite de oliva VEVO, orégano y sal de mar."
+              "Asar los nopales de la granja en plancha de hierro bien caliente por 4 minutos por lado.",
+              "Sazonar con orégano y sal de mar, y rociar con aceite de oliva extra virgen al emplatar."
             ]
           }
         },
@@ -1400,128 +1441,128 @@
           "protein_g": 34.0,
           "net_carbs_g": 4.2,
           "fiber_g": 5.7,
-          "starter_name": "Ensalada Verde de Lechuga Romana y Cilantro de la Granja con Aceite VEVO y Limón",
-          "main_dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja",
-          "dish_name": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja",
+          "starter_name": "Carpaccio de Pepino y Aguacate Hass al Limón Real con Aceite de Oliva VEVO",
+          "main_dish_name": "Filete de Mojarra al Vapor en Papillote Abierto con Calabacitas Tiernas, Limón Real, Finas Hierbas y Cilantro de la Granja",
+          "dish_name": "Filete de Mojarra al Vapor en Papillote Abierto con Calabacitas Tiernas, Limón Real, Finas Hierbas y Cilantro de la Granja",
           "side_dish_name": "Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Ensalada Verde de Lechuga Romana y Cilantro de la Granja con Aceite VEVO y Limón",
-            "technique": "raw_assembly",
-            "note": "Entrada verde de lechuga romana de alacena y cilantro de la granja aderezada con aceite VEVO y limón.",
+            "title": "Carpaccio de Pepino y Aguacate Hass al Limón Real con Aceite de Oliva VEVO",
+            "technique": "mandoline_carpaccio",
+            "note": "Láminas translúcidas de pepino y abanicos de aguacate Hass aderezados con emulsión cítrica de limón de la granja y aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje en frío a 8°C sin aplicar calor.",
-              "flavor_and_aromatics": "Notas herbáceas de cilantro de la granja y lechuga equilibradas con acidez cítrica y aceite VEVO.",
-              "textural_architecture": "Hojas verdes crujientes y turgentes.",
-              "critical_control_points": "Emulsionar el aceite de oliva con el limón justo antes de servir."
+              "thermodynamics": "Corte en frío con mandolina a 2 mm que maximiza la superficie de contacto con la vinagreta cítrica.",
+              "flavor_and_aromatics": "Hidratación mineral del pepino combinada con la untuosidad de avellana del aguacate Hass y el destello de limón real.",
+              "textural_architecture": "Contraste entre el crujido acuoso del pepino laminado y la mantecosidad sedosa del aguacate.",
+              "critical_control_points": "Emplatar y aliñar al momento para evitar plasmólisis excesiva del pepino."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Lechuga",
-                "per_guest": 0.1667,
-                "amount": 1.0,
-                "unit": "piezas"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 70,
+                "amount": 420,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 10,
-                "amount": 60.0,
+                "per_guest": 15,
+                "amount": 90,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Lavar, desinfectar y trocear la lechuga romana junto con hojas de cilantro de la granja.",
-              "Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.",
-              "Aliñar las hojas verdes justo al emplatar."
+              "Laminar el pepino finamente en rodajas y disponer en espiral sobre plato frío alternando con láminas de aguacate Hass.",
+              "Rociar con jugo de limón real de la granja, aceite de oliva extra virgen y escamas de sal de mar."
             ]
           },
           "main": {
-            "title": "Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja",
+            "title": "Filete de Mojarra al Vapor en Papillote Abierto con Calabacitas Tiernas, Limón Real, Finas Hierbas y Cilantro de la Granja",
             "technique": "open_papillote_steam",
-            "note": "Proteína marina blanca de digestión ultraligera para la noche, aromatizada con finas hierbas, limón y cilantro de la granja.",
+            "archetype": "papillote",
+            "note": "Fajitas de mojarra blanca cocidas al vapor suave en papillote con medias lunas de calabacita tierna, finas hierbas, limón real y cilantro de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Cocción al vapor en papillote abierto a 95°C por 8 minutos que preserva la humedad de las miofibrillas.",
-              "flavor_and_aromatics": "Aroma herbal de finas hierbas, cilantro de la granja, mantequilla y limón real.",
-              "textural_architecture": "Lomo blanco suave y jugoso que se deshace en láminas.",
-              "critical_control_points": "Retirar a los 8 minutos exactos cuando la proteína alcance 60°C internos."
+              "thermodynamics": "Cocción por convección húmeda a 95°C durante 8 minutos que preserva la estructura miofibrilar delicada del pescado blanco.",
+              "flavor_and_aromatics": "Infusión aromática de finas hierbas, cilantro y cáscara cítrica de limón sobre el pescado blanco y las calabacitas.",
+              "textural_architecture": "Lasca blanca jugosa y suave acompañada de medias lunas de calabacita al dente.",
+              "critical_control_points": "Retirar a los 8 minutos en cuanto la proteína alcance 60°C internos."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Fajitas de mojarra",
-                "per_guest": 150,
-                "amount": 900.0,
+                "per_guest": 220,
+                "amount": 1320,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48.0,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 15,
-                "amount": 90.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 70,
+                "amount": 420,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48.0,
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 12,
-                "amount": 72.0,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Hierbas finas",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
-                "per_guest": 1.5,
-                "amount": 9.0,
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Disponer las fajitas de mojarra de alacena sobre cama aromática con mantequilla, finas hierbas y sal de mar.",
-              "Cocer al vapor en papillote abierto durante 8 minutos.",
-              "Terminar con cilantro de la granja picado, jugo de limón y un hilo de aceite de oliva VEVO."
+              "Disponer las fajitas de mojarra sobre cama de calabacitas en medias lunas dentro de papillote.",
+              "Sazonar con sal con ajo, hierbas finas, jugo de limón real y cilantro de la granja.",
+              "Cocer al vapor durante 8 minutos y terminar con aceite de oliva extra virgen."
             ]
           },
           "side": {
@@ -1588,8 +1629,8 @@
           "net_carbs_g": 4.4,
           "fiber_g": 6.3,
           "starter_name": "Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja",
-          "main_dish_name": "Huevos al Sartén en Anillo de Cebolla Blanca de Alacena con Mantequilla, Cilantro de la Granja y Queso Ricotta",
-          "dish_name": "Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla y Queso Ricotta",
+          "main_dish_name": "Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla, Cilantro de la Granja y Queso Ricotta",
+          "dish_name": "Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla, Cilantro de la Granja y Queso Ricotta",
           "side_dish_name": "Gelatina Artesanal de Jamaica de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja",
@@ -1630,14 +1671,15 @@
             ]
           },
           "main": {
-            "title": "Huevos al Sartén en Anillo de Cebolla Blanca de Alacena con Mantequilla, Cilantro de la Granja y Queso Ricotta",
-            "technique": "ring_pan_sear",
-            "note": "3 huevos enteros por comensal cocinados a baja temperatura dentro de aros gruesos de cebolla blanca de alacena dorados en mantequilla y coronados con queso ricotta de alacena y cilantro de la Granja El Herami.",
+            "title": "Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla, Cilantro de la Granja y Queso Ricotta",
+            "technique": "bell_pepper_ring_pan_fry",
+            "archetype": "anillo",
+            "note": "Huevos enteros cocinados a fuego lento dentro de aros de pimiento morrón dulce en mantequilla, coronados con queso ricotta de alacena y cilantro de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Sellado de los aros gruesos de cebolla a 135°C en mantequilla para caramelizar su perímetro y contener la clara líquida mientras coagula suavemente a 65°C.",
-              "flavor_and_aromatics": "Dulzor natural de los aros de cebolla dorados en mantequilla de pastoreo con la frescura herbácea del cilantro de la granja y la suavidad láctea de la ricotta.",
-              "textural_architecture": "Borde tierno-crujiente de cebolla asada, clara sedosa, yema cremosa y copos tibios de queso ricotta.",
-              "critical_control_points": "Cortar aros exteriores de cebolla de 1.5 cm de grosor para contener perfectamente los huevos al cascarlos."
+              "thermodynamics": "Conducción controlada a 145°C en sartén: el aro de pimiento morrón actúa como barrera térmica que permite cuajar la clara suavemente.",
+              "flavor_and_aromatics": "Dulzor vegetal del morrón dorado en mantequilla con la cremosidad láctea del ricotta y el cilantro.",
+              "textural_architecture": "Aro exterior crujiente-tierno de morrón, clara sedosa, yema cremosa y copos suaves de ricotta.",
+              "critical_control_points": "Tapar la sartén 3 minutos a fuego mínimo para cuajar la superficie sin voltear."
             },
             "ingredients": [
               {
@@ -1648,11 +1690,18 @@
                 "unit": "piezas"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cebolla",
-                "per_guest": 0.1667,
-                "amount": 1.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 7.5,
+                "amount": 45,
+                "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
@@ -1662,28 +1711,14 @@
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cilantro",
-                "per_guest": 6,
-                "amount": 36,
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "g"
               },
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 14,
-                "amount": 84,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 5,
-                "amount": 30,
-                "unit": "ml"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
                 "amount": 6,
@@ -1691,55 +1726,62 @@
               }
             ],
             "steps": [
-              "1. Corte de Aros Estructurales de Cebolla: Pelar la cebolla blanca de alacena y cortar rodajas transversales de 1.5 cm de espesor separando los anillos exteriores más amplios.",
-              "2. Dorado en Mantequilla y Encapsulado: Fundir la mantequilla en sartén amplia, dorar los anillos de cebolla 2 minutos por lado y cascar los huevos en su interior.",
-              "3. Coronación de Ricotta y Cilantro de la Granja: Sazonar con sal de mar, distribuir el queso ricotta y el cilantro picado de la granja alrededor de las yemas, tapar 2 minutos a fuego mínimo y terminar con aceite de oliva VEVO."
+              "Cortar los pimientos morrones en aros gruesos de 1.5 cm y dorar 1 minuto por lado en mantequilla.",
+              "Cascar los huevos dentro de los aros, sazonar con sal de mar y cocinar a fuego bajo.",
+              "Coronar con queso ricotta de alacena y hojas de cilantro de la granja."
             ]
           },
           "side": {
             "title": "Gelatina Artesanal de Jamaica de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
-            "technique": "digestive_gelatin",
-            "note": "Gelatina matutina de colágeno estructurado con infusión rubí de Jamaica y Agua purificada de la Granja El Herami ($0 compra), enriquecida a ≤45°C con MultiSinergix® (33Plus®).",
+            "technique": "cold_collagen_bloom",
+            "note": "Matriz colagénica rubí elaborada con infusión de cáliz de jamaica cosechada en la granja, enriquecida a baja temperatura con MultiSinergix® (33Plus®).",
             "coct_reasoning": {
-              "thermodynamics": "Infusión de cálices de Jamaica de la granja a 85°C, hidratación bloom de grenetina en frío y descenso térmico a ≤45°C antes de integrar 33Plus®; gelificación a 4°C.",
-              "flavor_and_aromatics": "Acidez floral brillante de las antocianinas de la jamaica de la granja en equilibrio con el perfil botánico de la Fórmula 33Plus®.",
-              "textural_architecture": "Gel coloidal rubí traslúcido, firme y refrescante.",
-              "critical_control_points": "Colar los cálices de jamaica y verificar temperatura ≤45°C antes de disolver MultiSinergix®."
+              "thermodynamics": "Extracción acuosa de antocianinas de jamaica a 75°C, enfriamiento a 38°C para incorporar 33Plus® sin degradar cofactores y gelificación a 4°C.",
+              "flavor_and_aromatics": "Acidez floral rubí de la jamaica de la granja con notas cítricas de limón real.",
+              "textural_architecture": "Gel firme y cristalino de colágeno biodisponible.",
+              "critical_control_points": "Añadir MultiSinergix® únicamente cuando la mezcla descienda por debajo de 40°C."
             },
             "ingredients": [
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Jamaica",
-                "per_guest": 5,
-                "amount": 30,
-                "unit": "g"
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 250,
+                "amount": 1500,
+                "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Grenetina",
                 "per_guest": 7,
                 "amount": 42,
                 "unit": "g"
               },
               {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "MultiSinergix®",
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Jamaica",
                 "per_guest": 5,
                 "amount": 30,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Agua purificada",
-                "per_guest": 120,
-                "amount": 720,
-                "unit": "ml"
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧬 Suplementación Biotecnológica Sinergix®",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
               }
             ],
             "steps": [
-              "1. Infusión Rubí de Jamaica de la Granja: Infusionar la jamaica cosechada en la Granja El Herami en 420 ml de agua purificada caliente durante 5 minutos y colar.",
-              "2. Hidratación Bloom de Grenetina: Hidratar los 42 g de grenetina en los 300 ml restantes de agua purificada fría durante 8 minutos y disolver en la infusión tibia de jamaica.",
-              "3. Integración Nootrópica y Cuajado a 4°C: Atemperar a 42°C, incorporar los 30 g de MultiSinergix® (33Plus®), verter en copas de cristal y refrigerar a 4°C por mínimo 3 horas."
+              "Infusionar la jamaica de la granja en mitad del agua purificada tibia y colar.",
+              "Hidratar la grenetina en el resto del agua fría, disolver en la infusión tibia y dejar templar a 38°C.",
+              "Incorporar el jugo de limón y MultiSinergix® (33Plus®), verter en moldes y refrigerar a 4°C hasta cuajar."
             ]
           }
         },
@@ -1750,166 +1792,173 @@
           "protein_g": 41.5,
           "net_carbs_g": 4.3,
           "fiber_g": 6.5,
-          "starter_name": "Ensalada Verde de Acelgas de la Granja al Limón con Aceite VEVO",
-          "main_dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
-          "dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
-          "side_dish_name": "Cebolla Blanca Asada de Alacena al Orégano con Cilantro de la Granja, Limón Real y Aceite VEVO",
+          "starter_name": "Ensalada de Espinacas Baby con Vinagreta de Limón Real y Aceite de Oliva VEVO",
+          "main_dish_name": "Juliana de Flat Steak de Res Salteada al Wok con Champiñones, Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO",
+          "dish_name": "Juliana de Flat Steak de Res Salteada al Wok con Champiñones, Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO",
+          "side_dish_name": "Calabacitas Tiernas Asadas al Orégano con Limón Real y Aceite de Oliva VEVO",
           "starter": {
-            "title": "Ensalada Verde de Acelgas de la Granja al Limón con Aceite VEVO",
-            "technique": "raw_assembly",
-            "note": "Entrada ligera de hojas verdes de acelga de la granja que equilibra la carga metabólica del corte de res.",
+            "title": "Ensalada de Espinacas Baby con Vinagreta de Limón Real y Aceite de Oliva VEVO",
+            "technique": "raw_emulsion_toss",
+            "note": "Hojas tiernas de espinaca baby aderezadas al momento con emulsión cítrica de limón de la granja y aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Servicio en frío a 8°C que activa enzimas digestivas mediante acidez cítrica natural.",
-              "flavor_and_aromatics": "Notas verdes de acelga tierna con perfil frutal de aceite de oliva extra virgen y limón de la granja.",
-              "textural_architecture": "Hojas turgentes y crujientes sin lácteos ni grasas pesadas.",
-              "critical_control_points": "Emulsionar el aderezo justo al momento de emplatar para mantener la textura crujiente."
+              "thermodynamics": "Servicio en frío a 10°C que conserva intactos el folato natural, la luteína y la vitamina C de la espinaca.",
+              "flavor_and_aromatics": "Notas herbáceas limpias de espinaca baby equilibradas con la acidez del limón real.",
+              "textural_architecture": "Hojas turgentes y crujientes con recubrimiento ligero de aceite de oliva.",
+              "critical_control_points": "Aderezar justo al emplatar para evitar pérdida de volumen."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Acelgas",
-                "per_guest": 75,
-                "amount": 450.0,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones",
-                "per_guest": 15,
-                "amount": 90.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 60,
+                "amount": 360,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Lavar y centrifugar las hojas tiernas de acelga de la granja.",
-              "Batir el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.",
-              "Aliñar suavemente y servir de inmediato como entrada ligera."
+              "Desinfectar y centrifugar las hojas de espinaca baby hasta secarlas por completo.",
+              "Emulsionar el jugo de limón real con el aceite de oliva extra virgen y sal de mar, y mezclar suavemente."
             ]
           },
           "main": {
-            "title": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
-            "technique": "chargrill_sear",
-            "note": "Corte selecto de Flat Steak de alacena sellado al hierro con mantequilla infusionada en hierbas finas de alacena.",
+            "title": "Juliana de Flat Steak de Res Salteada al Wok con Champiñones, Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO",
+            "technique": "high_heat_wok_stir_fry",
+            "archetype": "juliana_wok",
+            "note": "Tiras jugosas de flat steak de res salteadas a fuego vivo en wok con láminas de champiñón, plumas de cebolla blanca de alacena y agujas de romero de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Reacción de Maillard a 210°C en superficie durante 3 minutos por lado, reposando a 56°C internos.",
-              "flavor_and_aromatics": "Aromas tostados de carne asada, mantequilla avellanada y hierbas aromáticas.",
-              "textural_architecture": "Costra exterior caramelizada con centro jugoso y tierno.",
-              "critical_control_points": "Reposar el corte 4 minutos sobre tabla templada antes de trinchar para redistribuir los jugos."
+              "thermodynamics": "Salteado rápido en wok a 220°C durante 3 minutos que dora la superficie de las tiras de res conservando su interior rosado y tierno.",
+              "flavor_and_aromatics": "Sinergia umami entre la carne de res sellada, los champiñones dorados, la cebolla caramelizada y el romero de la granja.",
+              "textural_architecture": "Tiras de corte magro suaves con láminas carnosas de champiñón y cebolla al dente.",
+              "critical_control_points": "Saltear en tandas cortas sin sobrecargar el wok para evitar que la carne hierva en su jugo."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Flat steak",
-                "per_guest": 150,
-                "amount": 900,
+                "per_guest": 200,
+                "amount": 1200,
                 "unit": "g"
               },
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 18,
-                "amount": 108,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Champiñón",
+                "per_guest": 80,
+                "amount": 480,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Hierbas finas",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Romero",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal con ajo",
-                "per_guest": 1.5,
-                "amount": 9.0,
-                "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Pimienta negra",
                 "per_guest": 0.5,
-                "amount": 3.0,
+                "amount": 3,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Atemperar los cortes de Flat Steak de alacena y sazonar con sal con ajo y pimienta negra.",
-              "Sellar en sartén de hierro candente 3 minutos por lado y agregar la mantequilla con las hierbas finas para bañar el corte.",
-              "Reposar 4 minutos fuera del fuego y servir con sus jugos."
+              "Cortar el flat steak en julianas transversales a la fibra y sazonar con sal con ajo, pimienta negra y romero picado de la granja.",
+              "Saltear a fuego alto en wok con aceite de oliva durante 2 minutos; retirar y reservar.",
+              "En el mismo wok saltear los champiñones laminados y la cebolla en plumas por 3 minutos, reincorporar la carne 30 segundos y servir."
             ]
           },
           "side": {
-            "title": "Cebolla Blanca Asada de Alacena al Orégano con Cilantro de la Granja, Limón Real y Aceite VEVO",
-            "technique": "pan_sear_veg",
-            "note": "Guarnición aromática de cebolla blanca de alacena asada con cilantro de la granja, limón real y aceite VEVO.",
+            "title": "Calabacitas Tiernas Asadas al Orégano con Limón Real y Aceite de Oliva VEVO",
+            "technique": "griddle_char_roast",
+            "note": "Medias lunas de calabacita tierna asadas a la plancha con orégano aromático, jugo de limón de la granja y aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Asado rápido en plancha a 185°C por 3 minutos que suaviza los compuestos sulfurados conservando textura al dente.",
-              "flavor_and_aromatics": "Notas dulces de cebolla asada con orégano, cilantro de la granja y limón.",
-              "textural_architecture": "Aros jugosos y dorados libres de lácteos pesados.",
-              "critical_control_points": "Asar a fuego vivo durante 3 minutos sin sobrecocer."
+              "thermodynamics": "Asado en plancha a 195°C por 3 minutos por lado para dorar los azúcares superficiales manteniendo el centro firme.",
+              "flavor_and_aromatics": "Dulzor vegetal de la calabacita con notas mediterráneas de orégano y limón real.",
+              "textural_architecture": "Superficie marcada a la parrilla con interior jugoso.",
+              "critical_control_points": "Cortar en grosor uniforme de 1 cm para evitar sobrecocción."
             },
             "ingredients": [
               {
-                "name": "Cebolla",
-                "amount": 1.0,
-                "unit": "piezas",
-                "per_guest": 0.1667,
-                "category": "🥬 Verduras, Hortalizas y Frescos"
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
               },
               {
-                "name": "Cilantro",
-                "amount": 48.0,
-                "unit": "g",
-                "per_guest": 8.0,
-                "category": "🥬 Verduras, Hortalizas y Frescos"
-              },
-              {
+                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "amount": 36.0,
-                "unit": "ml",
-                "per_guest": 6.0,
-                "category": "🥑 Grasas, Aceites y Semillas"
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
               },
               {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "amount": 60.0,
-                "unit": "g",
-                "per_guest": 10.0,
-                "category": "🥬 Verduras, Hortalizas y Frescos"
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
               },
               {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Orégano",
-                "amount": 3.0,
-                "unit": "g",
-                "per_guest": 0.5,
-                "category": "🌶️ Chiles, Condimentos e Infusiones"
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
               },
               {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
-                "amount": 6.0,
-                "unit": "g",
-                "per_guest": 1.0,
-                "category": "🌶️ Chiles, Condimentos e Infusiones"
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
               }
             ],
             "steps": [
-              "Cortar la cebolla blanca de alacena en rodajas gruesas y asar en plancha caliente por 3 minutos.",
-              "Terminar con cilantro de la granja picado, jugo de limón, orégano, sal de mar y aceite VEVO."
+              "Cortar las calabacitas en bastones o medias lunas de 1 cm y asar en plancha caliente con aceite de oliva.",
+              "Sazonar con orégano, sal de mar y jugo de limón real al retirar del fuego."
             ]
           }
         },
@@ -1920,44 +1969,51 @@
           "protein_g": 34.5,
           "net_carbs_g": 3.8,
           "fiber_g": 6.0,
-          "starter_name": "Abanico de Aguacate Hass de Alacena con Limón Real, Sal Marina y Aceite VEVO",
-          "main_dish_name": "Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Nopales de la Granja",
-          "dish_name": "Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Nopales de la Granja",
+          "starter_name": "Abanico de Aguacate Hass y Láminas de Pepino con Limón Real, Sal Marina y Aceite VEVO",
+          "main_dish_name": "Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor",
+          "dish_name": "Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor",
           "side_dish_name": "Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Abanico de Aguacate Hass de Alacena con Limón Real, Sal Marina y Aceite VEVO",
-            "technique": "raw_assembly",
-            "note": "Entrada rica en ácido oleico y potasio biodisponible (única aparición de aguacate del día).",
+            "title": "Abanico de Aguacate Hass y Láminas de Pepino con Limón Real, Sal Marina y Aceite VEVO",
+            "technique": "cold_fan_plating",
+            "note": "Gajos cremosos de aguacate Hass acompañados de medias lunas crujientes de pepino con aceite de oliva extra virgen y limón de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Corte al momento en frío para evitar oxidación enzimática de la polifenol oxidasa.",
-              "flavor_and_aromatics": "Cremosidad de aguacate Hass realzada con limón de la granja y aceite VEVO.",
-              "textural_architecture": "Gajos sedosos con cristales de sal de mar.",
-              "critical_control_points": "Bañar inmediatamente con jugo de limón de la granja tras laminar el aguacate."
+              "thermodynamics": "Servicio en frío a 12°C que protege los ácidos grasos monoinsaturados y fitoesteroles del aguacate.",
+              "flavor_and_aromatics": "Equilibrio entre la grasa limpia del aguacate, la frescura del pepino y la acidez del limón real.",
+              "textural_architecture": "Doble textura: untuosidad del aguacate y crocancia hidratante del pepino.",
+              "critical_control_points": "Rociar el limón real inmediatamente después de cortar el aguacate para evitar oxidación enzimática."
             },
             "ingredients": [
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aguacate",
                 "per_guest": 0.5,
-                "amount": 3.0,
+                "amount": 3,
                 "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 5,
-                "amount": 30,
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
                 "amount": 6,
@@ -1965,75 +2021,83 @@
               }
             ],
             "steps": [
-              "Cortar el aguacate de alacena en láminas y desplegar en abanico sobre plato frío.",
-              "Rociar con jugo de limón de la granja, aceite de oliva VEVO y sal de mar."
+              "Cortar el aguacate Hass en abanico y disponer junto a láminas crujientes de pepino.",
+              "Aderezar con jugo de limón real, aceite de oliva extra virgen y sal de mar."
             ]
           },
           "main": {
-            "title": "Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Nopales de la Granja",
-            "technique": "pan_seared_tataki",
-            "note": "Filete de atún sellado al sartén en costra aromática de Nuez pecana recién cosechada de la Granja El Herami, montado sobre nopales tiernos de la granja al limón y aceite VEVO.",
+            "title": "Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor",
+            "technique": "tataki_pecan_sear",
+            "archetype": "medallones",
+            "note": "Medallones de filete de atún sellados tipo tataki en costra de nuez pecana de la granja, servidos sobre espárragos verdes tiernos al vapor con limón real y cilantro.",
             "coct_reasoning": {
-              "thermodynamics": "Sellado rápido a 195°C por 90 segundos por lado que dora el ajonjolí manteniendo el centro jugoso a 50°C.",
-              "flavor_and_aromatics": "Notas tostadas de las semillas y nueces mixtas en armonía con la acidez del limón real de la granja.",
-              "textural_architecture": "Costra exterior crujiente de semillas sobre lomo de atún tierno y bastones de nopal al dente.",
-              "critical_control_points": "No sobrecocer el atún para conservar su suavidad y ácidos grasos esenciales."
+              "thermodynamics": "Sellado periférico de alta intensidad a 210°C durante 60 segundos por cara que tuesta la nuez pecana y conserva el centro rubí a 48°C.",
+              "flavor_and_aromatics": "Notas tostadas de nuez pecana de la granja con el perfil limpio del atún, el espárrago verde y el limón real.",
+              "textural_architecture": "Costra crujiente de nuez pecana, corazón tierno de atún y tallos al dente de espárrago verde.",
+              "critical_control_points": "No sobrecocer el medallón de atún para mantener su jugosidad y digestibilidad nocturna."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Filete de atún",
-                "per_guest": 115,
-                "amount": 690.0,
+                "per_guest": 200,
+                "amount": 1200,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Nuez pecana",
-                "per_guest": 6.0,
-                "amount": 36.0,
+                "per_guest": 15,
+                "amount": 90,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Nopales",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espárragos",
                 "per_guest": 80,
-                "amount": 480.0,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 10,
-                "amount": 60.0,
+                "amount": 480,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48.0,
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 12,
-                "amount": 72.0,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "g"
               }
             ],
             "steps": [
-              "1. Costra de Nuez Pecana de la Granja: Picar finamente la nuez pecana de la granja con sal de mar y presionar sobre los bordes de los medallones de filete de atún.",
-              "2. Salteado de Nopales de la Granja: Saltear los nopales en bastones con la mitad de la mantequilla y jugo de limón real hasta que estén tiernos y brillantes.",
-              "3. Sellado Rápido de los Medallones: Sellar los medallones de atún en sartén caliente con la mantequilla restante durante 90 segundos por cara, montar sobre los nopales y bañar con aceite de oliva VEVO."
+              "Cocer los espárragos verdes al vapor por 4 minutos hasta que estén tiernos pero firmes.",
+              "Cubrir los bordes de los medallones de atún con nuez pecana finamente picada, sal de mar y pimienta negra, y sellar 60 segundos por lado en aceite de oliva.",
+              "Emplatar sobre los espárragos y bañar con jugo de limón real y cilantro picado de la granja."
             ]
           },
           "side": {
@@ -2248,173 +2312,188 @@
           "protein_g": 42.0,
           "net_carbs_g": 4.5,
           "fiber_g": 6.4,
-          "starter_name": "Consomé Clarificado de Pollo con Nopales de la Granja al Cilantro",
-          "main_dish_name": "Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Acelgas de la Granja en Emulsión VEVO",
-          "dish_name": "Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Acelgas de la Granja en Emulsión VEVO",
-          "side_dish_name": "Cebolla Blanca de Alacena Rostizada al Romero de la Granja con Aceite de Oliva VEVO",
+          "starter_name": "Crema Caliente de Champiñones y Tomillo con Aceite de Oliva VEVO",
+          "main_dish_name": "Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
+          "dish_name": "Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
+          "side_dish_name": "Coliflor Rostizada al Horno con Cúrcuma, Limón Real y Aceite de Oliva VEVO",
           "starter": {
-            "title": "Consomé Clarificado de Pollo con Nopales de la Granja al Cilantro",
-            "technique": "simmer_broth",
-            "note": "Consomé digestivo de mediodía con tiras de nopal y cilantro recién cosechados de la granja.",
+            "title": "Crema Caliente de Champiñones y Tomillo con Aceite de Oliva VEVO",
+            "technique": "mushroom_veloute",
+            "note": "Crema reconfortante de champiñones salteados con tomillo de alacena y fondo claro de ave, emulsionada con aceite de oliva extra virgen sin lácteos añadidos.",
             "coct_reasoning": {
-              "thermodynamics": "Hervor suave a 90°C por 5 minutos que integra los minerales del nopal en el fondo claro.",
-              "flavor_and_aromatics": "Sabor reconfortante de caldo clarificado con notas herbales de cilantro y limón de la granja.",
-              "textural_architecture": "Caldo ligero con tiras tiernas de nopal.",
-              "critical_control_points": "Añadir el cilantro de la granja justo al apagar el fuego."
+              "thermodynamics": "Dorado previo de los champiñones a 180°C por 5 minutos antes de hervir en fondo claro y emulsionar a alta velocidad.",
+              "flavor_and_aromatics": "Umami terroso del champiñón realzado con las notas aromáticas del tomillo y el aceite de oliva.",
+              "textural_architecture": "Velouté sedoso y ligero libre de crema láctea.",
+              "critical_control_points": "Dorar bien los champiñones antes de agregar el caldo para desarrollar profundidad aromática."
             },
             "ingredients": [
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Champiñón",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Fondo claro de pollo",
-                "per_guest": 180,
-                "amount": 1080.0,
+                "per_guest": 200,
+                "amount": 1200,
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Nopales",
-                "per_guest": 60,
-                "amount": 360.0,
-                "unit": "g"
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48.0,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones",
-                "per_guest": 10,
-                "amount": 60.0,
-                "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Tomillo",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Calentar el fondo claro de pollo e incorporar los nopales de la granja previamente blanqueados por 4 minutos.",
-              "Servir con cilantro de la granja picado, jugo de limón y sal de mar."
+              "Saltear los champiñones fileteados con el tomillo y sal con ajo durante 5 minutos.",
+              "Verter el fondo claro de pollo, hervir 4 minutos y licuar hasta lograr una crema homogénea.",
+              "Terminar con el aceite de oliva extra virgen en crudo."
             ]
           },
           "main": {
-            "title": "Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Acelgas de la Granja en Emulsión VEVO",
-            "technique": "stuffed_supreme_bake",
-            "note": "Aprovecha al 100% el Pollo entero disponible en Alacena (1 pieza, $0 compra), horneado en su jugo con Romero y Acelgas de la Granja El Herami y gratinado suave de Queso Ricotta de Alacena.",
+            "title": "Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO",
+            "technique": "herb_roasted_whole_poultry",
+            "archetype": "supremas",
+            "note": "Pollo entero de alacena porcionado y horneado al romero de la granja sobre cama de espinacas tiernas y queso ricotta cremoso con aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Horneado del pollo entero porcionado a 185°C con mantequilla y romero de la granja hasta alcanzar 74°C internos, integrando al final el queso ricotta y las acelgas salteadas.",
-              "flavor_and_aromatics": "Jugos naturales del pollo entero de alacena perfumados con los aceites esenciales del romero de la granja y la suavidad láctea de la ricotta.",
-              "textural_architecture": "Carne de ave jugosa y tierna con guarnición integrada cremosa de acelgas y queso ricotta.",
-              "critical_control_points": "Bañar las piezas con los jugos de cocción y mantequilla de romero a mitad del horneado para máxima jugosidad."
+              "thermodynamics": "Asado al horno a 190°C por 25 minutos que dora la piel y mantiene las piezas jugosas a 74°C internos.",
+              "flavor_and_aromatics": "Aroma pino-cítrico del romero de la granja y limón real fundido con el queso ricotta y las espinacas.",
+              "textural_architecture": "Supremas tiernas y jugosas sobre base cremosa de espinacas y queso ricotta.",
+              "critical_control_points": "Reposar 5 minutos fuera del horno antes de trinchar sobre la cama de espinacas y ricotta."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Pollo entero",
                 "per_guest": 0.1667,
-                "amount": 1.0,
+                "amount": 1,
                 "unit": "piezas"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso ricotta",
                 "per_guest": 40,
-                "amount": 240.0,
+                "amount": 240,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Acelgas",
-                "per_guest": 60,
-                "amount": 360.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 75,
+                "amount": 450,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Romero",
-                "per_guest": 2,
-                "amount": 12.0,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 10,
-                "amount": 60.0,
+                "per_guest": 4,
+                "amount": 24,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48.0,
+                "per_guest": 7.5,
+                "amount": 45,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "g"
               }
             ],
             "steps": [
-              "1. Porcionado y Adobo al Romero de la Granja: Porcionar el pollo entero de alacena en piezas nobles (supremas, muslos y contramuslos), secar y frotar con sal de mar, mantequilla y romero picado de la granja.",
-              "2. Horneado Jugoso: Hornear a 185°C durante 28 minutos bañando con sus propios jugos hasta alcanzar 74°C en el núcleo.",
-              "3. Integración de Acelgas y Ricotta: En los últimos 5 minutos, disponer alrededor las acelgas de la granja salteadas y copos de queso ricotta de alacena; terminar en mesa con emulsión de aceite de oliva VEVO."
+              "Porcionar el pollo entero de alacena en 6 piezas generosas y marinar con romero de la granja, jugo de limón, aceite de oliva, sal con ajo y pimienta negra.",
+              "Hornear a 190°C durante 25 minutos bañando con sus propios jugos.",
+              "Saltear brevemente las espinacas tiernas con el queso ricotta en los jugos de cocción y servir las piezas de pollo encima."
             ]
           },
           "side": {
-            "title": "Cebolla Blanca de Alacena Rostizada al Romero de la Granja con Aceite de Oliva VEVO",
-            "technique": "pan_roast_strips",
-            "note": "Gajos tiernos de cebolla blanca de alacena rostizados al sartén de hierro con hojas de romero de la Granja El Herami y aceite de oliva extra virgen.",
+            "title": "Coliflor Rostizada al Horno con Cúrcuma, Limón Real y Aceite de Oliva VEVO",
+            "technique": "turmeric_oven_roast",
+            "note": "Floretes de coliflor dorados al horno con cúrcuma antiinflamatoria de alacena, limón real de la granja y aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Rostizado lento en sartén de hierro a 150°C para suavizar las fibras de la cebolla sin quemar los compuestos volátiles del romero.",
-              "flavor_and_aromatics": "Notas dulces de cebolla caramelizada entrelazadas con el perfume herbal del romero de la granja.",
-              "textural_architecture": "Gajos carnosos y brillantes con bordes ligeramente dorados.",
-              "critical_control_points": "Mantener fuego medio para lograr traslucidez uniforme antes de añadir el aceite de oliva VEVO al cierre."
+              "thermodynamics": "Rostizado en seco con aceite de oliva a 200°C durante 15 minutos para caramelizar bordes sin usar lácteos.",
+              "flavor_and_aromatics": "Color dorado y perfil terroso-especiado de la cúrcuma con el toque cítrico del limón real.",
+              "textural_architecture": "Bordes crujientes y centro tierno.",
+              "critical_control_points": "Distribuir en una sola capa en la charola para lograr dorado uniforme."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cebolla",
-                "per_guest": 0.1667,
-                "amount": 1.0,
-                "unit": "piezas"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Romero",
-                "per_guest": 2.0,
-                "amount": 12.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Coliflor",
+                "per_guest": 90,
+                "amount": 540,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Cúrcuma",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "1. Corte en Gajos: Pelar y cortar la cebolla blanca de alacena en gajos longitudinales uniformes.",
-              "2. Rostizado al Romero de la Granja: Rostizar los gajos en sartén caliente con las hojitas de romero de la granja durante 5 minutos volteando con pinzas.",
-              "3. Emulsión de Cierre: Retirar del fuego, bañar con el aceite de oliva extra virgen y sazonar con sal de mar."
+              "Mezclar los floretes de coliflor con aceite de oliva, cúrcuma y sal de mar.",
+              "Hornear a 200°C durante 15 minutos hasta dorar y rociar con jugo de limón real al servir."
             ]
           }
         },
@@ -2426,26 +2505,40 @@
           "net_carbs_g": 4.1,
           "fiber_g": 6.1,
           "starter_name": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
-          "main_dish_name": "Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Cilantro y Nuez Pecana de la Granja",
-          "dish_name": "Timbal de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga",
+          "main_dish_name": "Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja",
+          "dish_name": "Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja",
           "side_dish_name": "Infusión Digestiva de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano",
-            "technique": "emulsified_soup",
-            "note": "Emulsión aterciopelada de jitomate de alacena rico en licopeno con aceite de oliva extra virgen.",
+            "technique": "warm_lycopene_emulsion",
+            "note": "Emulsión templada de jitomate de alacena y cebolla blanca con orégano y aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Templado suave a 45°C que potencia la biodisponibilidad del licopeno disuelto en lípidos VEVO.",
-              "flavor_and_aromatics": "Acidez equilibrada del jitomate maduro con perfume de orégano y aceite de oliva virgen.",
-              "textural_architecture": "Textura sedosa y ligera.",
-              "critical_control_points": "Emulsionar el aceite de oliva en hilo fino al final del licuado."
+              "thermodynamics": "Templado suave a 55°C que incrementa la biodisponibilidad del licopeno en presencia de los lípidos del aceite de oliva.",
+              "flavor_and_aromatics": "Umami natural del jitomate maduro con el aroma mediterráneo del orégano.",
+              "textural_architecture": "Textura aterciopelada y ligera.",
+              "critical_control_points": "Licuar con el aceite de oliva en hilo para formar emulsión brillante."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Jitomate",
                 "per_guest": 0.1667,
-                "amount": 1.0,
+                "amount": 1,
                 "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "ml"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
@@ -2455,41 +2548,35 @@
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Orégano",
-                "per_guest": 0.5,
-                "amount": 3.0,
-                "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Agua purificada",
-                "per_guest": 80,
-                "amount": 480,
-                "unit": "ml"
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
               }
             ],
             "steps": [
-              "Licuar el jitomate con agua purificada, sal de mar y orégano hasta obtener una textura fina.",
-              "Emulsionar en hilo el aceite de oliva VEVO y servir templado."
+              "Asar ligeramente el jitomate de alacena y la cebolla blanca, y licuar con el fondo claro tibio, orégano y sal de mar.",
+              "Emulsionar con aceite de oliva extra virgen al servir."
             ]
           },
           "main": {
-            "title": "Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Cilantro y Nuez Pecana de la Granja",
-            "technique": "chilled_timbale_mold",
-            "note": "Plato fuerte nocturno ligero y circadiano elaborado con el stock exacto de Queso Cottage (480 g de 500 g en Alacena, $0 compra) y Yogur Griego (3,880 g en Alacena), coronado con Aguacate Hass, Cilantro y Nuez pecana de la Granja El Herami.",
+            "title": "Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja",
+            "technique": "ring_mold_timbale",
+            "archetype": "timbal",
+            "note": "Timbal frío de proteína láctea ligera (queso cottage y yogur griego de alacena) con dados de pepino crujiente, aguacate Hass, cilantro y nuez pecana de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje en frío (6°C–8°C) integrando el queso cottage con yogur griego de alacena para formar una estructura cremosa que sostiene el aguacate y la nuez pecana.",
-              "flavor_and_aromatics": "Cremosidad láctea suave del queso cottage y yogur griego realzada por el cilantro de la granja, el aceite VEVO y la nuez pecana tostada.",
-              "textural_architecture": "Contraste entre las perlas cremosas del cottage, la untuosidad del aguacate Hass y la crocancia de la nuez pecana.",
-              "critical_control_points": "Drenar ligeramente el suero del queso cottage e integrar con el yogur griego justo antes de moldear en aro de acero."
+              "thermodynamics": "Ensamblaje en frío a 8°C en aro metálico que preserva probióticos y caseína micelar de liberación lenta nocturna.",
+              "flavor_and_aromatics": "Frescura láctea ácida del yogur griego y cottage con el pepino, el cilantro y la nuez pecana.",
+              "textural_architecture": "Contraste triple entre la cremosidad del timbal, el crujido del pepino y la nuez pecana.",
+              "critical_control_points": "Desmoldar justo antes de llevar a la mesa y coronar con aceite de oliva extra virgen."
             },
             "ingredients": [
               {
@@ -2502,16 +2589,30 @@
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Yogur griego",
-                "per_guest": 40,
-                "amount": 240,
+                "per_guest": 60,
+                "amount": 360,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aguacate",
                 "per_guest": 0.5,
-                "amount": 3.0,
+                "amount": 3,
                 "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
@@ -2521,21 +2622,21 @@
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
+                "per_guest": 7.5,
+                "amount": 45,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
                 "amount": 6,
@@ -2543,9 +2644,9 @@
               }
             ],
             "steps": [
-              "1. Emulsión Láctea de Alacena: En un bol frío, integrar los 480 g de queso cottage y 240 g de yogur griego de alacena con el cilantro picado de la granja y sal de mar.",
-              "2. Moldeado del Timbal con Aguacate: En aros de emplatar individuales, formar la base de aguacate Hass en dados y cubrir con la mezcla cremosa de queso cottage y yogur griego.",
-              "3. Coronación de Nuez Pecana de la Granja: Desmoldar con cuidado, coronar con la nuez pecana troceada de la granja y bañar con aceite de oliva extra virgen."
+              "Mezclar el queso cottage y el yogur griego de alacena con cilantro picado, jugo de limón real y sal de mar.",
+              "Montar en aro de emplatar alternando con dados de pepino y aguacate Hass.",
+              "Coronar con nuez pecana de la granja y aceite de oliva extra virgen."
             ]
           },
           "side": {
@@ -2612,8 +2713,8 @@
           "net_carbs_g": 4.3,
           "fiber_g": 6.1,
           "starter_name": "Tazón de Zarzamoras con Semillas de Chía, Canela y Nuez Pecana de la Granja",
-          "main_dish_name": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena y Cilantro de la Granja",
-          "dish_name": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Cilantro de la Granja",
+          "main_dish_name": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena, Espinacas Tiernas y Cilantro de la Granja",
+          "dish_name": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena, Espinacas Tiernas y Cilantro de la Granja",
           "side_dish_name": "Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Tazón de Zarzamoras con Semillas de Chía, Canela y Nuez Pecana de la Granja",
@@ -2662,63 +2763,64 @@
             ]
           },
           "main": {
-            "title": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena y Cilantro de la Granja",
-            "technique": "french_baveuse_omelette",
-            "note": "3 huevos enteros por comensal batidos y emulsionados en mantequilla de pastoreo con corazón fundente de Queso Ricotta de Alacena (1,920 g en stock) y cilantro de la Granja El Herami.",
+            "title": "Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena, Espinacas Tiernas y Cilantro de la Granja",
+            "technique": "french_baveuse_fold",
+            "archetype": "omelette",
+            "note": "Omelette francés de exterior liso sin dorar e interior cremoso baveuse, relleno de queso ricotta de alacena, espinacas tiernas y cilantro de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Coagulación controlada de proteínas de huevo a 125°C en mantequilla espumosa conservando el centro húmedo baveuse a 64°C al envolver el queso ricotta.",
-              "flavor_and_aromatics": "Notas lácteas dulces de mantequilla y queso ricotta de alacena realzadas por los aceites esenciales del cilantro de la granja.",
-              "textural_architecture": "Exterior liso y sedoso sin dorado excesivo con interior cremoso de queso ricotta tibio.",
-              "critical_control_points": "Retirar del fuego cuando la superficie aún luzca húmeda y enrollar en tercios."
+              "thermodynamics": "Coagulación controlada en sartén a 140°C con agitación continua en mantequilla para formar micro-cuajada sedosa.",
+              "flavor_and_aromatics": "Delicadeza láctea de la mantequilla y el queso ricotta con las espinacas tiernas y el cilantro.",
+              "textural_architecture": "Envoltura elástica y tierna con corazón fundente de ricotta y hojas suaves de espinaca.",
+              "critical_control_points": "Enrollar cuando la superficie aún conserve brillo húmedo baveuse."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Huevo",
                 "per_guest": 3,
-                "amount": 18.0,
+                "amount": 18,
                 "unit": "piezas"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso ricotta",
-                "per_guest": 80,
-                "amount": 480.0,
+                "per_guest": 40,
+                "amount": 240,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 6,
-                "amount": 36.0,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Mantequilla",
-                "per_guest": 15,
-                "amount": 90.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 50,
+                "amount": 300,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 5,
-                "amount": 30.0,
-                "unit": "ml"
+                "name": "Mantequilla",
+                "per_guest": 7.5,
+                "amount": 45,
+                "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "1. Emulsión de Huevos: Batir los 18 huevos con sal de mar hasta integrar claras y yemas sin incorporar espuma excesiva.",
-              "2. Cocción Baveuse en Mantequilla: Fundir la mantequilla en sartén antiadherente a fuego medio-bajo, verter el huevo y remover continuamente con espátula hasta obtener cuajada cremosa.",
-              "3. Relleno de Ricotta y Enrollado: Disponer en el centro el queso ricotta de alacena y el cilantro picado de la granja, doblar en tres pliegues y abrillantar con aceite de oliva VEVO."
+              "Saltear las espinacas tiernas 1 minuto en mantequilla y reservar con el queso ricotta y el cilantro picado.",
+              "Batir los 3 huevos por comensal con sal de mar y verter en sartén a fuego medio-bajo moviendo constantemente.",
+              "Rellenar con el queso ricotta y las espinacas, doblar en tres pliegues y servir de inmediato."
             ]
           },
           "side": {
@@ -2782,215 +2884,84 @@
           "protein_g": 41.5,
           "net_carbs_g": 4.6,
           "fiber_g": 6.4,
-          "starter_name": "Consomé Templado de Cilantro de la Granja y Limón Real con Aceite de Oliva VEVO",
-          "main_dish_name": "Juliana de Flat Steak de Res Salteada al Wok con Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO",
-          "dish_name": "Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO",
-          "side_dish_name": "Acelgas de la Granja Salteadas al Ajo con Aceite VEVO y Orégano",
+          "starter_name": "Ensalada Crujiente de Pepino y Cilantro de la Granja al Limón Real con Aceite VEVO",
+          "main_dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
+          "dish_name": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
+          "side_dish_name": "Espárragos Verdes Asados al Horno con Cebolla Blanca de Alacena, Limón Real y Aceite de Oliva VEVO",
           "starter": {
-            "title": "Consomé Templado de Cilantro de la Granja y Limón Real con Aceite de Oliva VEVO",
-            "technique": "simmer_broth",
-            "note": "Consomé digestivo de mediodía con fondo claro, cilantro de la granja y aceite de oliva extra virgen.",
+            "title": "Ensalada Crujiente de Pepino y Cilantro de la Granja al Limón Real con Aceite VEVO",
+            "technique": "crisp_citrus_salad",
+            "note": "Ensalada verde refrescante de láminas crujientes de pepino y hojas de cilantro de la granja con vinagreta de limón real y aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Infusión a 85°C por 4 minutos que extrae los compuestos aromáticos del cilantro de la granja.",
-              "flavor_and_aromatics": "Notas herbales limpias de cilantro y limón de la granja con aceite VEVO.",
-              "textural_architecture": "Caldo claro, sedoso y ligero.",
-              "critical_control_points": "Incorporar el cilantro picado y el jugo de limón justo al momento de servir."
+              "thermodynamics": "Ensamblaje en frío a 10°C que aporta enzimas e hidratación mineral previa al corte de res a la parrilla.",
+              "flavor_and_aromatics": "Frescura herbal del cilantro de la granja y pepino con acidez brillante de limón real.",
+              "textural_architecture": "Rodajas crujientes de pepino con hojas aromáticas de cilantro.",
+              "critical_control_points": "Aliñar al momento de servir para preservar toda la crocancia."
             },
             "ingredients": [
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Fondo claro de pollo",
-                "per_guest": 150,
-                "amount": 900.0,
-                "unit": "ml"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 70,
+                "amount": 420,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones",
-                "per_guest": 10,
-                "amount": 60.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Calentar el fondo claro de pollo a fuego medio con sal de mar.",
-              "Servir en tazón con el cilantro de la granja finamente picado, jugo de limón y aceite de oliva VEVO."
+              "Cortar el pepino en medias lunas crujientes y mezclar con hojas de cilantro de la granja.",
+              "Aderezar con jugo de limón real, aceite de oliva extra virgen y sal de mar."
             ]
           },
           "main": {
-            "title": "Juliana de Flat Steak de Res Salteada al Wok con Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO",
-            "technique": "high_heat_wok_saute",
-            "note": "Tiras jugosas de Flat Steak de res salteadas a fuego vivo en wok con plumas de cebolla blanca de alacena, romero aromático de la Granja El Herami, mantequilla y aceite VEVO.",
+            "title": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
+            "technique": "cast_iron_grill_sear",
+            "archetype": "corte_parrilla",
+            "note": "Corte magro de flat steak de res sellado a la parrilla de hierro y terminado con mantequilla compuesta de finas hierbas y ajo.",
             "coct_reasoning": {
-              "thermodynamics": "Salteado relámpago al wok a 180°C durante 3 minutos para lograr reacción de Maillard externa en las tiras de Flat Steak conservando su centro jugoso.",
-              "flavor_and_aromatics": "Notas cárnicas intensas de res al wok perfumadas con romero de la granja, pimienta negra y dulzor de cebolla blanca salteada.",
-              "textural_architecture": "Juliana de res tierna acompañada de plumas de cebolla al dente con glaseado brillante de mantequilla y aceite de oliva.",
-              "critical_control_points": "Sellar la carne en una sola tanda sin saturar el wok antes de incorporar la cebolla y el romero."
+              "thermodynamics": "Reacción de Maillard en parrilla a 230°C durante 3.5 minutos por lado y reposo térmico de 5 minutos con mantequilla aromática.",
+              "flavor_and_aromatics": "Notas tostadas de parrilla fundidas con la mantequilla de finas hierbas.",
+              "textural_architecture": "Costra exterior dorada e interior jugoso cortado en contra de la fibra muscular.",
+              "critical_control_points": "Reposar el corte 5 minutos antes de rebanar para redistribuir los jugos miofibrilares."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Flat steak",
-                "per_guest": 150,
-                "amount": 900,
+                "per_guest": 210,
+                "amount": 1260,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cebolla",
-                "per_guest": 0.1667,
-                "amount": 1.0,
-                "unit": "piezas"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Romero",
-                "per_guest": 2.0,
-                "amount": 12.0,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Mantequilla",
-                "per_guest": 14,
-                "amount": 84,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "ml"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
-                "per_guest": 1.5,
-                "amount": 9.0,
-                "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Pimienta negra",
-                "per_guest": 0.5,
-                "amount": 3.0,
-                "unit": "g"
-              }
-            ],
-            "steps": [
-              "1. Corte en Juliana y Plumas: Cortar el Flat Steak en tiras contra la fibra y la cebolla blanca de alacena en plumas gruesas.",
-              "2. Salteado al Wok con Romero de la Granja: Calentar el wok a fuego alto, fundir la mantequilla y sellar las tiras de res con las hojitas de romero de la granja durante 2 minutos.",
-              "3. Integración de Cebolla y Emulsión VEVO: Añadir las plumas de cebolla, saltear 90 segundos adicionales, sazonar con sal de mar y pimienta negra, y terminar fuera del fuego con aceite de oliva VEVO."
-            ]
-          },
-          "side": {
-            "title": "Acelgas de la Granja Salteadas al Ajo con Aceite VEVO y Orégano",
-            "technique": "quick_saute_greens",
-            "note": "Guarnición verde de acelgas de la granja salteadas brevemente con aceite de oliva VEVO, sal con ajo y orégano.",
-            "coct_reasoning": {
-              "thermodynamics": "Salteado rápido a 170°C durante 3 minutos que mantiene la integridad de los tallos y hojas.",
-              "flavor_and_aromatics": "Sabor mineral de las acelgas de la granja con orégano aromático y aceite VEVO.",
-              "textural_architecture": "Tallos crujientes y hojas tiernas brillantes.",
-              "critical_control_points": "Cocer primero los tallos picados 1 minuto antes de incorporar las hojas."
-            },
-            "ingredients": [
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Acelgas",
-                "per_guest": 90,
-                "amount": 540.0,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 6,
-                "amount": 36.0,
-                "unit": "ml"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Orégano",
-                "per_guest": 0.5,
-                "amount": 3.0,
-                "unit": "g"
-              },
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
-                "per_guest": 1,
-                "amount": 6.0,
-                "unit": "g"
-              }
-            ],
-            "steps": [
-              "Lavar y trocear las acelgas de la granja separando tallos y hojas.",
-              "Saltear en sartén con aceite de oliva VEVO durante 3 minutos.",
-              "Sazonar con orégano y sal de mar al servir."
-            ]
-          }
-        },
-        {
-          "meal_type": "Cena",
-          "time": "20:00",
-          "fat_g": 52.5,
-          "protein_g": 35.0,
-          "net_carbs_g": 3.8,
-          "fiber_g": 5.8,
-          "starter_name": "Caldo Clarificado de Pollo al Limón Real y Cilantro de la Granja",
-          "main_dish_name": "Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja, Limón Real y Aceite VEVO",
-          "dish_name": "Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO",
-          "side_dish_name": "Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
-          "starter": {
-            "title": "Caldo Clarificado de Pollo al Limón Real y Cilantro de la Granja",
-            "technique": "simmer_broth",
-            "note": "Caldo ligero de noche con cilantro de la granja para hidratar y aportar electrolitos.",
-            "coct_reasoning": {
-              "thermodynamics": "Infusión suave a 88°C.",
-              "flavor_and_aromatics": "Aroma limpio de cilantro de la granja y limón.",
-              "textural_architecture": "Caldo claro y reconfortante.",
-              "critical_control_points": "Servir caliente con gotas de limón al momento."
-            },
-            "ingredients": [
-              {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Fondo claro de pollo",
-                "per_guest": 180,
-                "amount": 1080,
-                "unit": "ml"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
@@ -3003,7 +2974,74 @@
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Hierbas finas",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Temperar el flat steak, barnizar con aceite de oliva y sazonar con sal con ajo y pimienta negra.",
+              "Asar en parrilla de hierro bien caliente 3.5 minutos por lado.",
+              "Coronar fuera del fuego con la mantequilla mezclada con finas hierbas, reposar 5 minutos y filetear."
+            ]
+          },
+          "side": {
+            "title": "Espárragos Verdes Asados al Horno con Cebolla Blanca de Alacena, Limón Real y Aceite de Oliva VEVO",
+            "technique": "sheet_pan_roast",
+            "note": "Tallos tiernos de espárrago verde asados junto con gajos de cebolla blanca de alacena, limón de la granja y aceite de oliva extra virgen.",
+            "coct_reasoning": {
+              "thermodynamics": "Asado a 200°C por 10 minutos sin lácteos ni mantequilla para respetar el balance metabólico del corte de res.",
+              "flavor_and_aromatics": "Dulzor de la cebolla asada con las notas verdes tostadas del espárrago y el limón real.",
+              "textural_architecture": "Puntas de espárrago crujientes y tallos tiernos con gajos suaves de cebolla.",
+              "critical_control_points": "Retirar a los 10 minutos para conservar turgencia."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espárragos",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
                 "amount": 6,
@@ -3011,75 +3049,161 @@
               }
             ],
             "steps": [
-              "Hervir suavemente el fondo claro de pollo por 4 minutos.",
-              "Servir con cilantro de la granja, jugo de limón y aceite de oliva VEVO."
+              "Disponer los espárragos verdes y la cebolla en gajos en una charola con aceite de oliva y sal de mar.",
+              "Asar a 200°C durante 10 minutos y terminar con jugo de limón real."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 52.5,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.8,
+          "fiber_g": 5.8,
+          "starter_name": "Caldo Clarificado de Pollo con Calabacitas Tiernas, Limón Real y Cilantro de la Granja",
+          "main_dish_name": "Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO",
+          "dish_name": "Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO",
+          "side_dish_name": "Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Caldo Clarificado de Pollo con Calabacitas Tiernas, Limón Real y Cilantro de la Granja",
+            "technique": "clear_simmer_infusion",
+            "note": "Consomé ligero nocturno de ave con dados tiernos de calabacita, jugo de limón real y hojas de cilantro de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión a 88°C durante 4 minutos que cuece suavemente los dados de calabacita manteniendo el caldo cristalino.",
+              "flavor_and_aromatics": "Claridad aromática de ave con calabacita tierna, limón real y cilantro.",
+              "textural_architecture": "Caldo limpio con dados al dente de calabacita.",
+              "critical_control_points": "Perfumar con el cilantro y el limón real al momento de servir."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 250,
+                "amount": 1500,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Hervir suavemente los dados de calabacita en el fondo claro de pollo por 4 minutos con sal de mar.",
+              "Servir caliente con cilantro picado de la granja, jugo de limón real y aceite de oliva extra virgen."
             ]
           },
           "main": {
-            "title": "Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja, Limón Real y Aceite VEVO",
-            "technique": "steam_roulade",
-            "note": "Roulades suaves de pechuga de pollo cocidos al vapor con alcaparras y aceitunas manzanilla de alacena, bañados en emulsión de limón real, cilantro de la Granja El Herami y aceite de oliva VEVO.",
+            "title": "Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO",
+            "technique": "steamed_roulade",
+            "archetype": "rollitos",
+            "note": "Roulades suaves de pechuga de pollo cocidos al vapor y rellenos de julianas de pimiento morrón, alcaparras y aceitunas manzanilla de alacena en emulsión de limón y aceite VEVO.",
             "coct_reasoning": {
-              "thermodynamics": "Cocción al vapor húmedo a 85°C durante 14 minutos hasta alcanzar 74°C internos sin resecar las fibras magras de la pechuga de pollo.",
-              "flavor_and_aromatics": "Contraste mediterráneo entre la salinidad de las alcaparras y aceitunas manzanilla de alacena con el perfume cítrico del limón real y cilantro de la granja.",
-              "textural_architecture": "Medallones de pollo tiernos y jugosos con relleno firme de aceitunas y alcaparras bañados en emulsión brillante de aceite VEVO.",
-              "critical_control_points": "Enrollar con firmeza las láminas de pechuga y emulsionar en frío el jugo de limón con el aceite de oliva VEVO antes de bañar los medallones."
+              "thermodynamics": "Cocción húmeda al vapor a 94°C durante 12 minutos que conserva la pechuga blanca tierna sin generar productos de glicación.",
+              "flavor_and_aromatics": "Contraste mediterráneo entre el dulzor del pimiento morrón y la salinidad de las alcaparras y aceitunas manzanilla.",
+              "textural_architecture": "Medallones de pechuga jugosa con centro colorido de morrón, aceituna y alcaparra.",
+              "critical_control_points": "Reposar los rollitos 2 minutos antes de cortar en medallones diagonales."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Pechuga de pollo",
-                "per_guest": 150,
-                "amount": 900,
+                "per_guest": 200,
+                "amount": 1200,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Alcaparras",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceitunas manzanilla",
                 "per_guest": 15,
                 "amount": 90,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cilantro",
                 "per_guest": 10,
                 "amount": 60,
                 "unit": "g"
               },
               {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "ml"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 12,
-                "amount": 72,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
-                "name": "Sal de mar",
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
                 "per_guest": 1,
                 "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "g"
               }
             ],
             "steps": [
-              "1. Formado de los Rollitos Mediterráneos: Extender las láminas de pechuga de pollo, rellenar con alcaparras, aceitunas manzanilla fileteadas de alacena y cilantro picado de la granja, y enrollar firmemente.",
-              "2. Cocción Suave al Vapor: Cocinar al vapor a 85°C durante 14 minutos hasta alcanzar 74°C internos conservando toda su jugosidad.",
-              "3. Emulsión Cítrica de Cierre: Cortar en medallones sesgados y bañar con la emulsión de jugo de limón real de la granja, aceite de oliva extra virgen y sal de mar."
+              "Extender las milanesas de pechuga de pollo, sazonar con sal con ajo y pimienta, y rellenar con tiras de pimiento morrón, aceitunas manzanilla fileteadas y alcaparras.",
+              "Enrollar firmemente, cocer al vapor durante 12 minutos y rebanar en medallones.",
+              "Bañar con emulsión de aceite de oliva extra virgen, jugo de limón real y cilantro de la granja."
             ]
           },
           "side": {
@@ -3208,8 +3332,8 @@
               {
                 "category": "🥬 Verduras, Hortalizas y Frescos",
                 "name": "Jitomate",
-                "per_guest": 0.1666,
-                "amount": 1.0,
+                "per_guest": 0.3333,
+                "amount": 2,
                 "unit": "piezas"
               },
               {
@@ -3308,61 +3432,60 @@
           "protein_g": 42.0,
           "net_carbs_g": 4.6,
           "fiber_g": 6.7,
-          "starter_name": "Ensalada Crujiente de Lechuga Romana y Cilantro de la Granja al Limón con VEVO",
+          "starter_name": "Ensalada Romana de Alacena y Cilantro de la Granja al Limón Real con Aceite VEVO",
           "main_dish_name": "Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Queso Philadelphia Fundido y Guacamole Rústico",
-          "dish_name": "Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Costra de Queso Manchego y Guacamole Rústico",
-          "side_dish_name": "Acelgas de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO",
+          "dish_name": "Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Queso Philadelphia Fundido y Guacamole Rústico",
+          "side_dish_name": "Floretes de Coliflor al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO",
           "starter": {
-            "title": "Ensalada Crujiente de Lechuga Romana y Cilantro de la Granja al Limón con VEVO",
-            "technique": "raw_assembly",
-            "note": "Entrada verde y alcalinizante con lechuga de alacena y cilantro de la granja para equilibrar la hamburguesa de res.",
+            "title": "Ensalada Romana de Alacena y Cilantro de la Granja al Limón Real con Aceite VEVO",
+            "technique": "crisp_leaf_emulsion",
+            "note": "Corazones crujientes de lechuga romana de alacena y hojas de cilantro de la granja aderezados con limón real y aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje en frío a 8°C sin tratamiento térmico.",
-              "flavor_and_aromatics": "Frescura cítrica de limón de la granja y cilantro con aceite de oliva extra virgen.",
-              "textural_architecture": "Hojas de lechuga romana crujientes sin lácteos ni aderezos pesados.",
-              "critical_control_points": "Aliñar al momento de emplatar."
+              "thermodynamics": "Ensamblaje en frío a 8°C que conserva la turgencia celular de las hojas de lechuga romana.",
+              "flavor_and_aromatics": "Frescura vegetal de la lechuga romana con notas cítricas de limón real y cilantro.",
+              "textural_architecture": "Hojas crujientes con película ligera de aceite de oliva extra virgen.",
+              "critical_control_points": "Secar perfectamente las hojas antes de aliñar."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Lechuga",
-                "per_guest": 0.1666,
-                "amount": 1.0,
+                "per_guest": 0.1667,
+                "amount": 1,
                 "unit": "piezas"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cilantro",
                 "per_guest": 8,
-                "amount": 48.0,
-                "unit": "g"
-              },
-              {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Limones",
-                "per_guest": 10,
-                "amount": 60.0,
+                "amount": 48,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Trocear la lechuga romana desinfectada y mezclar con hojas de cilantro de la granja.",
-              "Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.",
-              "Aderezar y servir de inmediato."
+              "Trocear las hojas de lechuga romana de alacena y mezclar con el cilantro de la granja.",
+              "Emulsionar el jugo de limón real con el aceite de oliva extra virgen y sal de mar, y aliñar al momento."
             ]
           },
           "main": {
@@ -3419,48 +3542,55 @@
             ]
           },
           "side": {
-            "title": "Acelgas de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO",
-            "technique": "gentle_steam",
-            "note": "Guarnición verde limpia de acelgas de la granja al vapor con limón real y aceite VEVO.",
+            "title": "Floretes de Coliflor al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO",
+            "technique": "aromatic_steam_toss",
+            "note": "Guarnición crucífera ligera sin lácteos ni mantequilla: floretes de coliflor al vapor con orégano de alacena, limón real y aceite de oliva extra virgen.",
             "coct_reasoning": {
-              "thermodynamics": "Cocción al vapor a 98°C por 4 minutos que preserva clorofila y textura firme.",
-              "flavor_and_aromatics": "Sabor vegetal puro de acelga de la granja con limón y aceite VEVO.",
-              "textural_architecture": "Hojas y tallos tiernos libres de lácteos para acompañar el corte de res.",
-              "critical_control_points": "Retirar del vapor a los 4 minutos exactos."
+              "thermodynamics": "Cocción al vapor a 98°C por 5 minutos para lograr textura al dente y preservar glucosinolatos.",
+              "flavor_and_aromatics": "Suavidad de la coliflor al vapor con el perfume del orégano y el limón real.",
+              "textural_architecture": "Floretes firmes y ligeros que equilibran la densidad de la hamburguesa de res.",
+              "critical_control_points": "Aliñar en tibio inmediatamente al salir de la vaporera."
             },
             "ingredients": [
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Acelgas",
-                "per_guest": 90,
-                "amount": 540.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Coliflor",
+                "per_guest": 80,
+                "amount": 480,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 6,
-                "amount": 36.0,
+                "amount": 36,
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
                 "per_guest": 10,
-                "amount": 60.0,
+                "amount": 60,
                 "unit": "g"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Cocer las acelgas de la granja al vapor durante 4 minutos.",
-              "Servir calientes bañadas con jugo de limón de la granja, aceite de oliva VEVO y sal de mar."
+              "Cocer los floretes de coliflor al vapor durante 5 minutos hasta que estén tiernos pero firmes.",
+              "Aderezar con aceite de oliva extra virgen, jugo de limón real, orégano y sal de mar."
             ]
           }
         },
@@ -3471,120 +3601,142 @@
           "protein_g": 34.0,
           "net_carbs_g": 3.9,
           "fiber_g": 5.8,
-          "starter_name": "Consomé Nocturno Clarificado de Cilantro de la Granja y Limón Real",
+          "starter_name": "Consomé Nocturno Clarificado de Champiñones Laminados y Cilantro de la Granja al Limón Real",
           "main_dish_name": "Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja",
-          "dish_name": "Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas",
+          "dish_name": "Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja",
           "side_dish_name": "Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Consomé Nocturno Clarificado de Cilantro de la Granja y Limón Real",
-            "technique": "simmer_broth",
-            "note": "Consomé ligero y digestivo con fondo claro, cilantro de la granja y toque de limón.",
+            "title": "Consomé Nocturno Clarificado de Champiñones Laminados y Cilantro de la Granja al Limón Real",
+            "technique": "mushroom_clear_infusion",
+            "note": "Caldo cristalino nocturno infundido con láminas de champiñón, cilantro de la granja y limón real, libre de lácteos.",
             "coct_reasoning": {
-              "thermodynamics": "Infusión aromática a 85°C durante 4 minutos que preserva aceites esenciales del cilantro.",
-              "flavor_and_aromatics": "Caldo limpio con cilantro de la granja y acidez brillante de limón.",
-              "textural_architecture": "Consomé reconfortante y ligero.",
-              "critical_control_points": "Incorporar el cilantro picado y el limón al momento de servir."
+              "thermodynamics": "Infusión suave a 90°C por 5 minutos que extrae los ribonucleótidos umami del champiñón sin enturbiar el fondo.",
+              "flavor_and_aromatics": "Umami limpio de champiñón laminado con el frescor del cilantro y el limón de la granja.",
+              "textural_architecture": "Caldo ligero con láminas tiernas de champiñón.",
+              "critical_control_points": "Añadir el jugo de limón real y el cilantro al momento de servir."
             },
             "ingredients": [
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Fondo claro de pollo",
-                "per_guest": 180,
-                "amount": 1080.0,
+                "per_guest": 250,
+                "amount": 1500,
                 "unit": "ml"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
-                "name": "Cilantro",
-                "per_guest": 10,
-                "amount": 60.0,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Champiñón",
+                "per_guest": 60,
+                "amount": 360,
                 "unit": "g"
               },
               {
-                "category": "🥬 Verduras, Hortalizas y Frescos",
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
-                "per_guest": 10,
-                "amount": 60.0,
+                "per_guest": 15,
+                "amount": 90,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
                 "per_guest": 5,
-                "amount": 30.0,
+                "amount": 30,
                 "unit": "ml"
               },
               {
-                "category": "🌶️ Chiles, Condimentos e Infusiones",
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
                 "per_guest": 1,
-                "amount": 6.0,
+                "amount": 6,
                 "unit": "g"
               }
             ],
             "steps": [
-              "Calentar el fondo claro de pollo a fuego suave con sal de mar.",
-              "Servir caliente con el cilantro de la granja picado, jugo de limón y aceite de oliva VEVO."
+              "Filetear finamente los champiñones y cocer en el fondo claro de pollo con sal de mar durante 5 minutos.",
+              "Servir caliente con cilantro de la granja, jugo de limón real y aceite de oliva extra virgen."
             ]
           },
           "main": {
             "title": "Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja",
-            "technique": "Cocción al vapor corto y salteado tibio en emulsión de mantequilla y aceite VEVO",
-            "note": "Aprovecha los 500 g de Ejotes y el Queso Ricotta en Alacena, coronados con Nuez pecana recién cosechada de la Granja El Herami ($0 compra).",
+            "technique": "warm_carpaccio_emulsion",
+            "archetype": "carpaccio",
+            "note": "Cama de ejotes tiernos de alacena al vapor, bañados en mantequilla dorada y coronados con copos de queso ricotta cremoso y nuez pecana tostada de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "El vapor corto de 4 minutos fija la clorofila de los ejotes y el salteado rápido en mantequilla a 65°C integra los lípidos sin sobrecocer la vaina.",
-              "flavor_and_aromatics": "Dulzor vegetal limpio del ejote realzado por las notas lácteas del queso ricotta cremoso y el tostado de las semillas y nueces mixtas.",
-              "textural_architecture": "Contraste tripartito entre la vaina crujiente de ejote, la suavidad aterciopelada del queso ricotta y el crocante de semillas mixtas.",
-              "critical_control_points": "Retirar los ejotes del vapor a los 4 minutos exactos para preservar su firmeza estructural."
+              "thermodynamics": "Cocción al vapor a 98°C por 5 minutos seguida de glaseado rápido a 140°C con mantequilla.",
+              "flavor_and_aromatics": "Notas verdes de los ejotes con mantequilla avellanada, queso ricotta y nuez pecana tostada.",
+              "textural_architecture": "Ejotes crujientes al diente, cremosidad de ricotta y crocancia de nuez pecana.",
+              "critical_control_points": "Agregar el queso ricotta fuera del fuego para mantener su estructura cremosa."
             },
             "ingredients": [
               {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Ejotes",
-                "amount": 480.0,
-                "unit": "g",
-                "per_guest": 80.0,
-                "category": "🥬 Verduras, Hortalizas y Frescos"
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
               },
               {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso ricotta",
-                "amount": 300.0,
-                "unit": "g",
-                "per_guest": 50.0,
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)"
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
               },
               {
-                "name": "Nuez pecana",
-                "amount": 90.0,
-                "unit": "g",
-                "per_guest": 15.0,
-                "category": "🥑 Grasas, Aceites y Semillas"
-              },
-              {
+                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Mantequilla",
-                "amount": 72.0,
-                "unit": "g",
-                "per_guest": 12.0,
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)"
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
               },
               {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Aceite de oliva",
-                "amount": 48.0,
-                "unit": "ml",
-                "per_guest": 8.0,
-                "category": "🥑 Grasas, Aceites y Semillas"
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "ml"
               },
               {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Sal de mar",
-                "amount": 6.0,
-                "unit": "g",
-                "per_guest": 1.0,
-                "category": "🌶️ Chiles, Condimentos e Infusiones"
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
-              "1. Cocción al Vapor Al Dente: Cocer los ejotes de alacena al vapor durante 4 minutos hasta lograr un verde brillante y textura crujiente.",
-              "2. Salteado Templado en Mantequilla: Pasar los ejotes por sartén tibia con mantequilla de pastoreo y sal de mar durante 60 segundos.",
-              "3. Montaje con Ricotta y Nuez Pecana de la Granja: Disponer en plato extendido tipo carpaccio, distribuir copos de queso ricotta de alacena, coronar con la nuez pecana tostada de la granja y rociar aceite de oliva VEVO."
+              "Cocer los ejotes de alacena al vapor por 5 minutos hasta que estén al dente y brillantes.",
+              "Saltear brevemente en la mantequilla fundida con aceite de oliva, jugo de limón real, sal de mar y pimienta negra.",
+              "Extender en plato amplio tipo carpaccio y coronar con el queso ricotta y la nuez pecana tostada de la granja."
             ]
           },
           "side": {

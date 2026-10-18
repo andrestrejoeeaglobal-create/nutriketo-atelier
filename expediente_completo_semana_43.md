@@ -1,8 +1,10 @@
-# 📄 Expediente Técnico Canónico Semanal — Semana 43
-**Semana 43 (18 al 24 de Octubre de 2026)**  
-**Ecosistema:** NutriKeto Atelier T.I.L.O.® — Cosecha Activa Sincronizada (`Acelgas`, `Cilantro`, `Limones`, `Nopales`, `Nuez pecana` — Hard-Gate Validated)  
-**Comensales Activos:** 6 Personas | **Ratio de Huevo:** 3 Huevos Enteros al Desayuno (Leucina $\ge 2.5\text{ g}$)  
-**Proporción Energética Auditada:** 75.1% Lípidos Saludables | 22.3% Proteína AVB | 2.6% Carbohidratos Netos ($\le 4.6\text{ g}$ por servicio)  
+# 📋 EXPEDIENTE MAESTRO CANÓNICO — SEMANA 43 (18 AL 24 DE OCTUBRE DE 2026)
+
+> **Arquitectura Herami / Atelier T.I.L.O.® V16.0 — Generación 100% Determinista desde `semana_43_master.json` (`0 Split-Brain`)**
+> - **Comensales Activos:** `6 Personas` (`Factor de Escala Exacto = 6x`)
+> - **Auditoría Hard-Gate (`[R1]`–`[R11]`):** `0 Violaciones` (`assert_zero_violations = PASSED`)
+> - **Tope de Hortalizas de Granja:** `Acelgas = 2 veces/semana (810 g)` | `Nopales = 2 veces/semana (960 g)`
+> - **Variedad de Hortalizas Compradas en Mercado (Tabla 3.3):** `Brócoli (1,080 g)`, `Coliflor (1,560 g)`, `Calabacitas (1,740 g)`, `Espárragos (1,440 g)`, `Espinacas (1,110 g)`, `Champiñón (2,220 g)`, `Morrón (8 piezas)`, `Pepino (1,560 g)`
 
 ---
 
@@ -10,1506 +12,1466 @@
 
 | Día | Desayuno (Huevo Orgánico, Nuez Pecana & MultiSinergix®) | Comida (3 Tiempos Atwater & Balance Metabólico) | Cena (Proteína Ligera & AminoSinergix®) |
 |---|---|---|---|
-| **Domingo 18 Oct** | **Entrada:** Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso de Cabra<br>**Acomp:** Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Consomé Aterciopelado de Cilantro de la Granja con Aceite de Oliva VEVO<br>**Principal:** Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO<br>**Acomp:** Nopales de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja | **Entrada:** Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja<br>**Principal:** Champiñones Portobello al Horno Rellenos de Queso Ricotta, Cilantro de la Granja y Nuez de la India<br>**Acomp:** Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Lunes 19 Oct** | **Entrada:** Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>**Principal:** Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Manchego Gratinado<br>**Acomp:** Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO<br>**Principal:** Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja<br>**Acomp:** Bastones de Nopales de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO | **Entrada:** Consomé Nocturno Clarificado de Cilantro de la Granja al Limón Real con Sal de Mar<br>**Principal:** Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro<br>**Acomp:** Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Martes 20 Oct** | **Entrada:** Tazón de Frambuesas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas<br>**Acomp:** Infusión Nootrópica de Té Chai Especiado de Alacena (42°C) con Fórmula 33Plus® | **Entrada:** Crema Aterciopelada de Acelgas de la Granja con Aceite de Oliva VEVO<br>**Principal:** Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO<br>**Acomp:** Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar | **Entrada:** Ensalada Verde de Lechuga Romana y Cilantro de la Granja con Aceite VEVO y Limón<br>**Principal:** Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja<br>**Acomp:** Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Miércoles 21 Oct** | **Entrada:** Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla y Queso Ricotta<br>**Acomp:** Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada Verde de Acelgas de la Granja al Limón con Aceite VEVO<br>**Principal:** Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo<br>**Acomp:** Cebolla Blanca Asada de Alacena al Orégano con Cilantro de la Granja, Limón Real y Aceite VEVO | **Entrada:** Abanico de Aguacate Hass de Alacena con Limón Real, Sal Marina y Aceite VEVO<br>**Principal:** Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Nopales de la Granja<br>**Acomp:** Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Jueves 22 Oct** | **Entrada:** Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo<br>**Acomp:** Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Consomé Clarificado de Pollo con Nopales de la Granja al Cilantro<br>**Principal:** Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Acelgas de la Granja en Emulsión VEVO<br>**Acomp:** Pimiento Morrón Dulce Asado al Sartén con Aceite de Oliva VEVO y Orégano | **Entrada:** Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano<br>**Principal:** Timbal de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga<br>**Acomp:** Infusión Digestiva de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Viernes 23 Oct** | **Entrada:** Tazón de Frambuesas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Cilantro de la Granja<br>**Acomp:** Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Consomé Templado de Cilantro de la Granja y Limón Real con Aceite de Oliva VEVO<br>**Principal:** Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO<br>**Acomp:** Acelgas de la Granja Salteadas al Ajo con Aceite VEVO y Orégano | **Entrada:** Caldo Clarificado de Pollo al Limón Real y Cilantro de la Granja<br>**Principal:** Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO<br>**Acomp:** Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Sábado 24 Oct** | **Entrada:** Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja<br>**Principal:** Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano<br>**Acomp:** Gelatina Cítrica de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada Crujiente de Lechuga Romana y Cilantro de la Granja al Limón con VEVO<br>**Principal:** Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Costra de Queso Manchego y Guacamole Rústico<br>**Acomp:** Acelgas de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO | **Entrada:** Consomé Nocturno Clarificado de Cilantro de la Granja y Limón Real<br>**Principal:** Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas<br>**Acomp:** Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Domingo 18 Oct** | **Entrada:** Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella<br>**Acomp:** Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Crema Aterciopelada de Espárragos Verdes con Aceite de Oliva VEVO<br>**Principal:** Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO<br>**Acomp:** Nopales de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja | **Entrada:** Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO<br>**Principal:** Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana<br>**Acomp:** Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Lunes 19 Oct** | **Entrada:** Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>**Principal:** Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso<br>**Acomp:** Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO<br>**Principal:** Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja<br>**Acomp:** Floretes de Brócoli al Vapor con Limón Real, Sal de Mar y Aceite de Oliva VEVO | **Entrada:** Sopa Juliana de Calabacitas Tiernas al Limón Real y Cilantro de la Granja con Aceite VEVO<br>**Principal:** Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro<br>**Acomp:** Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Martes 20 Oct** | **Entrada:** Tazón de Fresas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas<br>**Acomp:** Infusión Nootrópica de Té Chai Especiado de Alacena (42°C) con Fórmula 33Plus® | **Entrada:** Crema Aterciopelada de Brócoli al Ajo Tostado con Aceite de Oliva VEVO<br>**Principal:** Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO<br>**Acomp:** Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar | **Entrada:** Carpaccio de Pepino y Aguacate Hass al Limón Real con Aceite de Oliva VEVO<br>**Principal:** Filete de Mojarra al Vapor en Papillote Abierto con Calabacitas Tiernas, Limón Real, Finas Hierbas y Cilantro de la Granja<br>**Acomp:** Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Miércoles 21 Oct** | **Entrada:** Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla, Cilantro de la Granja y Queso Ricotta<br>**Acomp:** Gelatina Artesanal de Jamaica de la Granja (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada de Espinacas Baby con Vinagreta de Limón Real y Aceite de Oliva VEVO<br>**Principal:** Juliana de Flat Steak de Res Salteada al Wok con Champiñones, Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO<br>**Acomp:** Calabacitas Tiernas Asadas al Orégano con Limón Real y Aceite de Oliva VEVO | **Entrada:** Abanico de Aguacate Hass y Láminas de Pepino con Limón Real, Sal Marina y Aceite VEVO<br>**Principal:** Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor<br>**Acomp:** Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Jueves 22 Oct** | **Entrada:** Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo<br>**Acomp:** Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Crema Caliente de Champiñones y Tomillo con Aceite de Oliva VEVO<br>**Principal:** Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO<br>**Acomp:** Coliflor Rostizada al Horno con Cúrcuma, Limón Real y Aceite de Oliva VEVO | **Entrada:** Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano<br>**Principal:** Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja<br>**Acomp:** Infusión Digestiva de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Viernes 23 Oct** | **Entrada:** Tazón de Zarzamoras con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>**Principal:** Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena, Espinacas Tiernas y Cilantro de la Granja<br>**Acomp:** Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada Crujiente de Pepino y Cilantro de la Granja al Limón Real con Aceite VEVO<br>**Principal:** Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo<br>**Acomp:** Espárragos Verdes Asados al Horno con Cebolla Blanca de Alacena, Limón Real y Aceite de Oliva VEVO | **Entrada:** Caldo Clarificado de Pollo con Calabacitas Tiernas, Limón Real y Cilantro de la Granja<br>**Principal:** Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO<br>**Acomp:** Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Sábado 24 Oct** | **Entrada:** Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja<br>**Principal:** Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano<br>**Acomp:** Gelatina Cítrica de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada Romana de Alacena y Cilantro de la Granja al Limón Real con Aceite VEVO<br>**Principal:** Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Queso Philadelphia Fundido y Guacamole Rústico<br>**Acomp:** Floretes de Coliflor al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO | **Entrada:** Consomé Nocturno Clarificado de Champiñones Laminados y Cilantro de la Granja al Limón Real<br>**Principal:** Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja<br>**Acomp:** Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus® |
 
 ---
 
-## 2. Recetario Técnico y Gastronómico Día por Día (63 Recetas — 6 Comensales)
+## 2. Recetario Maestro de Precisión — Las 63 Recetas Canónicas (21 Servicios × 3 Tiempos)
 
-### 📅 DOMINGO 18 DE OCTUBRE DE 2026
+### 📅 DOMINGO 18 DE OCTUBRE DE 2026 — Menú Completo para el Domingo 18 Oct
 
-#### 🍽️ Servicio: DESAYUNO (603 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `49.5g` | Proteína: `35.0g` | Carbs Netos: `4.4g` ($\le 5.0\text{g}$ ✅)  
+#### 🍽️ Domingo — Desayuno (08:30 hrs) | `603 kcal` · `Grasa: 49.5 g` · `Proteína: 35.0 g` · `Carbs Netos: 4.4 g` · `Fibra: 6.2 g`
 
-##### 🥗 ENTRADA: Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja
+##### Receta #01 [Domingo · Desayuno · Tiempo 1 — Entrada]: Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada antioxidante de polifenoles vivos con fresas de alacena, ácido alfa-linolénico de chía y ácidos grasos monoinsaturados de nuez pecana cosechada en la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Entrada antioxidante de polifenoles vivos con fresas de alacena, ácido alfa-linolénico de chía y ácidos grasos monoinsaturados de nuez pecana cosechada en la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Ensamblaje en frío a 4°C que preserva intacta la vitamina C y las antocianinas.
-  - *Construcción de Sabor:* Acidez brillante de fresa equilibrada con notas tostadas y mantecosas de la nuez pecana de la granja.
-  - *Arquitectura de Textura:* Contraste entre la pulpa firme de la fresa y el crujido oleoso de la nuez pecana y chía.
-  - *Puntos Críticos de Control:* Servir sin lácteos añadidos para optimizar la absorción de polifenoles.
+  - *Aromática y Sabor:* Acidez brillante de fresa equilibrada con notas tostadas y mantecosas de la nuez pecana de la granja.
+  - *Arquitectura Textural:* Contraste entre la pulpa firme de la fresa y el crujido oleoso de la nuez pecana y chía.
+  - *Punto Crítico de Control:* Servir sin lácteos añadidos para optimizar la absorción de polifenoles.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Fresas: **180 g** (30 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas de chía orgánicas: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **90 g** (15 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 30 | **180** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Desinfectar y laminar las fresas a 4°C.
 2. Disponer en tazón frío y espolvorear las semillas de chía orgánicas.
 3. Coronar con nuez pecana de la granja troceada al momento.
 
----
-
-##### 🥩 PLATILLO PRINCIPAL: Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso de Cabra
+##### Receta #02 [Domingo · Desayuno · Tiempo 2 — Plato Fuerte]: Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella
 - **Técnica Culinaria:** `baked_cocotte`
-- **Nota Organoléptica y Bioquímica:** *"Plato matutino horneado en cazuelas individuales: 3 huevos enteros por comensal sobre reducción de jitomate de alacena, acelgas de la granja, mantequilla y queso de cabra."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** El horneado suave coagula las claras alrededor de las acelgas tiernas de la granja mientras las yemas permanecen cremosas y el queso mozzarella se funde en hilos lácteos.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Cocción radiante en refractario a 180°C: coagulación de albúmina a 72°C conservando la yema cremosa a 62°C.
-  - *Construcción de Sabor:* Umami de jitomate reducido con mantequilla, acelgas de la granja y acidez láctica suave del queso de cabra de alacena.
-  - *Arquitectura de Textura:* Base vegetal jugosa, clara tierna y yema fluida emulsionada con aceite de oliva VEVO.
-  - *Puntos Críticos de Control:* Retirar del horno a los 9-10 minutos para evitar sobrecocer los fosfolípidos de la yema.
+  - *Aromática y Sabor:* El dulzor natural del jitomate asado equilibra la mineralidad de las acelgas de la granja y la suavidad láctea del queso mozzarella fundido.
+  - *Arquitectura Textural:* Contraste entre la clara firme, la yema líquida aterciopelada y el gratinado elástico de queso mozzarella.
+  - *Punto Crítico de Control:* Retirar del horno a los 9-10 minutos para evitar sobrecocer los fosfolípidos de la yema.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **270 g** (45 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Jitomate: **2 piezas** (0.33 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso de cabra: **120 g** (20 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **90 g** (15 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Acelgas** | 75 | **450** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Jitomate** | 0.33 | **2** | piezas |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso mozzarella** | 17 | **102** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 5 | **30** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Procedimiento Paso a Paso:**
-1. En sartén con la mantequilla, saltear el jitomate en cubos y las acelgas de la granja durante 3 minutos.
-2. Repartir la cama vegetal en 6 cazuelas refractarias y cascar 3 huevos enteros en cada una.
-3. Desmoronar el queso de cabra encima, hornear a 180°C por 9 minutos y terminar con un hilo de aceite de oliva VEVO y sal de mar.
+**Protocolo de Ejecución Paso a Paso:**
+1. Precalentar el horno a 180°C y engrasar ligeramente cazuelas individuales con aceite de oliva.
+2. Saltear brevemente las acelgas de la granja con el jitomate en cubos por 2 minutos para evaporar exceso de humedad.
+3. Disponer la cama vegetal en las cazuelas, cascar 3 huevos enteros por comensal y coronar con queso mozzarella rallado.
+4. Hornear de 9 a 10 minutos hasta que la clara cuaje y el queso mozzarella funda conservando las yemas cremosas.
 
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®
+##### Receta #03 [Domingo · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica y Bioquímica:** *"Matriz colagénica fría con zarzamoras de alacena (distinta a la fruta de la entrada) y adaptógenos nootrópicos de la Toma 2 matutina."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Matriz colagénica fría con zarzamoras de alacena (distinta a la fruta de la entrada) y adaptógenos nootrópicos de la Toma 2 matutina.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Incorporación de la Fórmula 33Plus® a ≤42°C para blindar la CoQ10, L-Teanina y extractos herbales.
-  - *Construcción de Sabor:* Notas profundas de zarzamora con perfil cítrico limpio.
-  - *Arquitectura de Textura:* Gel firme, brillante y elástico a 4°C.
-  - *Puntos Críticos de Control:* Verificar con termómetro que la mezcla descienda a 42°C antes de añadir MultiSinergix®.
+  - *Aromática y Sabor:* Notas profundas de zarzamora con perfil cítrico limpio.
+  - *Arquitectura Textural:* Gel firme, brillante y elástico a 4°C.
+  - *Punto Crítico de Control:* Verificar con termómetro que la mezcla descienda a 42°C antes de añadir MultiSinergix®.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Zarzamora: **150 g** (25 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: Grenetina: **42 g** (7 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: MultiSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **720 ml** (120 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 25 | **150** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 7 | **42** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 120 | **720** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Hidratar la grenetina en 40 ml de agua fría por persona durante 8 minutos y disolver con los 80 ml restantes a 60°C.
 2. Templar hasta 40-42°C e incorporar la dosis de MultiSinergix® (33Plus®) junto con las zarzamoras.
 3. Verter en moldes individuales y refrigerar a 4°C durante 3 horas.
 
----
+#### 🍽️ Domingo — Comida (14:30 hrs) | `762 kcal` · `Grasa: 64.5 g` · `Proteína: 41.0 g` · `Carbs Netos: 4.5 g` · `Fibra: 6.6 g`
 
-#### 🍽️ Servicio: COMIDA (762 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `64.5g` | Proteína: `41.0g` | Carbs Netos: `4.5g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #04 [Domingo · Comida · Tiempo 1 — Entrada]: Crema Aterciopelada de Espárragos Verdes con Aceite de Oliva VEVO
+- **Técnica Culinaria:** `veloute_emulsion`
+- **Nota Organoléptica y Clínica:** Emulsión sedosa de espárragos verdes tiernos en fondo claro de ave con aceite de oliva extra virgen en crudo, libre de lácteos para equilibrar la riqueza omega-3 del salmón.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Cocción breve a 92°C por 6 minutos para preservar la clorofila brillante de los espárragos antes de emulsionar en licuadora de alta velocidad.
+  - *Aromática y Sabor:* Notas herbáceas elegantes de espárrago verde realzadas con ajo suave y el frutado del aceite de oliva extra virgen.
+  - *Arquitectura Textural:* Microemulsión vegetal aterciopelada sin necesidad de crema láctea.
+  - *Punto Crítico de Control:* Incorporar el aceite de oliva en hilo al final fuera del fuego para conservar sus polifenoles.
 
-##### 🥗 ENTRADA: Consomé Aterciopelado de Cilantro de la Granja con Aceite de Oliva VEVO
-- **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica y Bioquímica:** *"Entrada templada elaborada con cilantro de la granja y fondo claro emulsionado en aceite de oliva extra virgen."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción en fondo claro y emulsión suave a 72°C.
-  - *Construcción de Sabor:* Notas herbales de cilantro de la granja con sal con ajo y aceite VEVO.
-  - *Arquitectura de Textura:* Textura sedosa y reconfortante libre de lácteos pesados.
-  - *Puntos Críticos de Control:* Incorporar el cilantro de la granja al final para conservar sus aceites esenciales.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Espárragos** | 80 | **480** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Fondo claro de pollo** | 200 | **1,200** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **60 g** (10 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **600 ml** (100 ml/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal con ajo: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Trocear los espárragos verdes retirando el extremo fibroso y cocer en el fondo claro de pollo hirviendo durante 6 minutos.
+2. Procesar en caliente con sal con ajo y pimienta negra hasta obtener una textura completamente tersa.
+3. Emulsionar en hilo con el aceite de oliva extra virgen al momento de emplatar.
 
-**Procedimiento Paso a Paso:**
-1. Calentar el fondo claro de pollo durante 5 minutos.
-2. Emulsionar con el cilantro de la granja incorporando el aceite de oliva VEVO en hilo y sal con ajo.
+##### Receta #05 [Domingo · Comida · Tiempo 2 — Plato Fuerte]: Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO
+- **Técnica Culinaria:** `crusted_pan_sear`
+- **Nota Organoléptica y Clínica:** Lomo de salmón rico en EPA y DHA sellado en sartén con costra crujiente de pistaches de alacena y emulsión cítrica de limón real de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Sellado unilateral en sartén de hierro a 195°C por 3 minutos del lado de la piel y 2 minutos por el lado de la costra para mantener el centro jugoso a 52°C.
+  - *Aromática y Sabor:* Contraste entre la untuosidad marina del salmón, el tostado dulce del pistache y el destello ácido del limón de la granja.
+  - *Arquitectura Textural:* Piel crujiente inferior, centro meloso y costra superior crocante de pistaches triturados.
+  - *Punto Crítico de Control:* No superar los 54°C internos para proteger los ácidos grasos poliinsaturados omega-3.
 
----
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Lomo de salmón** | 220 | **1,320** | g |
+| 🥑 Grasas, Aceites y Semillas | **Pistaches** | 15 | **90** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 10 | **60** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 20 | **120** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1.5 | **9** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-##### 🥩 PLATILLO PRINCIPAL: Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO
-- **Técnica Culinaria:** `unilateral_skin_sear`
-- **Nota Organoléptica y Bioquímica:** *"Único servicio semanal de salmón rico en EPA/DHA, cubierto al 100% con el stock de alacena y coronado con pistaches tostados de alacena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Sellado unilateral en sartén a 190°C del lado de la piel (70% del tiempo) y volteo breve para conservar centro a 52°C y proteger los Omega-3.
-  - *Construcción de Sabor:* Riqueza marina del salmón, notas tostadas de pistache y frescura cítrica de la granja.
-  - *Arquitectura de Textura:* Piel crujiente dorada con lomo interior mantecoso y costra crocante de pistache.
-  - *Puntos Críticos de Control:* No sobrecocer el salmón para evitar la oxidación de los ácidos grasos poliinsaturados EPA y DHA.
+**Protocolo de Ejecución Paso a Paso:**
+1. Secar los lomos de salmón, salpimentar y presionar la cara superior sobre los pistaches finamente triturados.
+2. Sellar en sartén caliente con la mitad del aceite de oliva por 3 minutos del lado de la piel y voltear 90 segundos para dorar el pistache.
+3. Bañar fuera del fuego con la emulsión de jugo de limón de la granja y el resto del aceite de oliva extra virgen.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Lomo de salmón: **900 g** (150 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Pistaches: **90 g** (15 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **60 g** (10 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **9 g** (1.5 g/persona)
+##### Receta #06 [Domingo · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Nopales de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja
+- **Técnica Culinaria:** `high_heat_saute`
+- **Nota Organoléptica y Clínica:** Guarnición prebiótica de nopales cosechados en la granja salteados a fuego vivo en mantequilla con trozos crocantes de nuez pecana.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Salteado en seco inicial a 200°C para sellar mucílagos, seguido de glaseado rápido con mantequilla a 150°C.
+  - *Aromática y Sabor:* Acidez vegetal del nopal armonizada con las notas avellanadas de la mantequilla dorada y la nuez pecana.
+  - *Arquitectura Textural:* Bastones de nopal firmes al diente con el crujido tostado de la nuez pecana.
+  - *Punto Crítico de Control:* Agregar la nuez pecana en los últimos 30 segundos para evitar amargor por sobretostado.
 
-**Procedimiento Paso a Paso:**
-1. Secar los lomos de salmón de alacena y sazonar con sal de mar.
-2. Sellar del lado de la piel en sartén con aceite VEVO y mantequilla durante 4 minutos hasta lograr costra crujiente; voltear 1 minuto adicional.
-3. Coronar con los pistaches de alacena troceados y bañar con jugo de limón de la granja.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Nopales** | 80 | **480** | g |
+| 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 7.5 | **45** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 8 | **48** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar los nopales de la granja en bastones y asar en sartén caliente sin grasa hasta evaporar su humedad natural.
+2. Incorporar la mantequilla, sazonar con sal con ajo y saltear 2 minutos a fuego medio-alto.
+3. Añadir la nuez pecana tostada troceada y servir de inmediato.
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Nopales de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja
-- **Técnica Culinaria:** `quick_saute`
-- **Nota Organoléptica y Bioquímica:** *"Nopales recién cosechados de la granja salteados al dente con mantequilla y trozos de nuez pecana de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Blanqueado previo de 3 minutos y salteado rápido en mantequilla a 160°C.
-  - *Construcción de Sabor:* Sabor vegetal limpio del nopal con mantequilla avellanada y nuez pecana tostada.
-  - *Arquitectura de Textura:* Tiras verdes firmes con trozos crocantes de nuez pecana.
-  - *Puntos Críticos de Control:* Escurrir perfectamente los nopales tras el blanqueado para fijar la clorofila.
+#### 🍽️ Domingo — Cena (20:00 hrs) | `623 kcal` · `Grasa: 52.5 g` · `Proteína: 33.5 g` · `Carbs Netos: 4.1 g` · `Fibra: 5.8 g`
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **510 g** (85 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+##### Receta #07 [Domingo · Cena · Tiempo 1 — Entrada]: Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO
+- **Técnica Culinaria:** `roasted_veloute`
+- **Nota Organoléptica y Clínica:** Velouté digestiva nocturna de coliflor rostizada emulsionada con fondo claro de ave y aceite de oliva extra virgen, sin lácteos añadidos.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Rostizado previo de los floretes a 200°C para activar reacción de Maillard suave antes de licuar con fondo caliente a 85°C.
+  - *Aromática y Sabor:* Dulzor tostado de la coliflor rostizada con notas de ajo y aceite de oliva extra virgen.
+  - *Arquitectura Textural:* Cremosidad sedosa lograda por los polisacáridos naturales de la coliflor emulsionados con lípidos de oliva.
+  - *Punto Crítico de Control:* Emulsionar a alta velocidad para lograr textura aterciopelada sin añadir crema ni mantequilla.
 
-**Procedimiento Paso a Paso:**
-1. Cortar los nopales de la granja en tiras y cocerlos al vapor por 4 minutos.
-2. Saltear en sartén con mantequilla y la nuez pecana de la granja picada durante 2 minutos; sazonar con sal de mar.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Coliflor** | 90 | **540** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Fondo claro de pollo** | 200 | **1,200** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Dorar los floretes de coliflor al horno o sartén de hierro durante 8 minutos hasta que tomen notas doradas.
+2. Hervir 4 minutos en el fondo claro de pollo con sal con ajo y pimienta negra.
+3. Licuar hasta obtener una crema tersa y terminar con aceite de oliva extra virgen en hilo.
 
-#### 🍽️ Servicio: CENA (623 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `52.5g` | Proteína: `33.5g` | Carbs Netos: `4.1g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #08 [Domingo · Cena · Tiempo 2 — Plato Fuerte]: Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana
+- **Técnica Culinaria:** `stuffed_portobello_gratin`
+- **Nota Organoléptica y Clínica:** Sombreros carnosos de champiñón portobello horneados y rellenos de queso ricotta cremoso, gratinados con queso parmesano de alacena, romero de la granja y nuez pecana.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Horneado a 190°C por 14 minutos: deshidratación parcial de la matriz fúngica concentrando el glutamato natural mientras se gratina la capa superior de parmesano.
+  - *Aromática y Sabor:* Umami profundo del champiñón portobello entrelazado con el aroma resinoso del romero de la granja y el perfil lácteo maduro del parmesano.
+  - *Arquitectura Textural:* Base carnosa y jugosa de portobello, interior cremoso de ricotta y corteza dorada con nuez pecana crujiente.
+  - *Punto Crítico de Control:* Hornear primero los sombreros 5 minutos boca abajo para drenar exceso de agua antes de rellenar.
 
-##### 🥗 ENTRADA: Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja
-- **Técnica Culinaria:** `simmer_broth`
-- **Nota Organoléptica y Bioquímica:** *"Consomé nocturno reconfortante rico en glicina y electrolitos para preparar el sistema digestivo."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Infusión suave a 85°C que extrae compuestos aromáticos del cilantro sin oxidarlos.
-  - *Construcción de Sabor:* Notas limpias de caldo clarificado, cítrico y cilantro de la granja.
-  - *Arquitectura de Textura:* Caldo cristalino y sedoso en boca.
-  - *Puntos Críticos de Control:* Añadir el cilantro y el jugo de limón justo al servir.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Champiñón** | 150 | **900** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso parmesano** | 15 | **90** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Romero** | 3 | **18** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 7.5 | **45** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **1080 ml** (180 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Limpiar los champiñones portobello, barnizar con aceite de oliva y pre-hornear a 190°C por 5 minutos.
+2. Mezclar el queso ricotta con el romero de la granja finamente picado, sal con ajo y pimienta negra.
+3. Rellenar los sombreros, espolvorear el queso parmesano y la nuez pecana troceada, y gratinar 9 minutos adicionales.
 
-**Procedimiento Paso a Paso:**
-1. Calentar el fondo claro de pollo a fuego suave con una pizca de sal de mar.
-2. Servir en tazón caliente y añadir el cilantro de la granja picado, jugo de limón y un hilo de aceite VEVO.
-
----
-
-##### 🥩 PLATILLO PRINCIPAL: Champiñones Portobello al Horno Rellenos de Queso Ricotta, Cilantro de la Granja y Nuez de la India
-- **Técnica Culinaria:** `stuffed_cap_roast`
-- **Nota Organoléptica y Bioquímica:** *"Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena con cilantro de la granja ($0)."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Horneado corto a 185°C durante 12 minutos que concentra el umami fúngico y funde suavemente el ricotta.
-  - *Construcción de Sabor:* Umami terroso del champiñón, cremosidad láctica suave, cilantro de la granja y toque tostado de la nuez de la India.
-  - *Arquitectura de Textura:* Sombrero carnoso y jugoso con relleno cremoso y superficie crujiente de nuez.
-  - *Puntos Críticos de Control:* Pre-hornear los sombreros 5 minutos para evaporar exceso de humedad antes de rellenar.
-
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Champiñón: **900 g** (150 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso ricotta: **300 g** (50 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez de la India: **90 g** (15 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Limpiar los champiñones grandes de alacena, barnizar con aceite de oliva VEVO y pre-hornear 5 minutos a 185°C.
-2. Mezclar el cilantro de la granja finamente picado con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.
-3. Hornear 7 minutos adicionales hasta dorar ligeramente y servir templado.
-
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus®
+##### Receta #09 [Domingo · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `herbal_infusion`
-- **Nota Organoléptica y Bioquímica:** *"Elixir nocturno calmante con péptidos bioactivos y glicinato de magnesio de la Toma 3 en la cena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Elixir nocturno calmante con péptidos bioactivos y glicinato de magnesio de la Toma 3 en la cena.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Infusión floral a 85°C templada a ≤60°C antes de disolver AminoSinergix® (34Plus®).
-  - *Construcción de Sabor:* Aroma floral sedante de manzanilla con final limpio.
-  - *Arquitectura de Textura:* Líquido tibio y reconfortante libre de teína.
-  - *Puntos Críticos de Control:* No incorporar la fórmula 34Plus® por encima de 60°C para proteger sus aminoácidos cristalinos.
+  - *Aromática y Sabor:* Aroma floral sedante de manzanilla con final limpio.
+  - *Arquitectura Textural:* Líquido tibio y reconfortante libre de teína.
+  - *Punto Crítico de Control:* No incorporar la fórmula 34Plus® por encima de 60°C para proteger sus aminoácidos cristalinos.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Manzanilla: **12 g** (2 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: AminoSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **1200 ml** (200 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🌶️ Chiles, Condimentos e Infusiones | **Manzanilla** | 2 | **12** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 200 | **1,200** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Infusionar la manzanilla en agua a 85°C durante 5 minutos y colar.
 2. Dejar descender la temperatura a 55-60°C y disolver la dosis de AminoSinergix® (34Plus®).
 3. Beber pausadamente al finalizar la cena.
 
 ---
 
-### 📅 LUNES 19 DE OCTUBRE DE 2026
+### 📅 LUNES 19 DE OCTUBRE DE 2026 — Menú Completo para el Lunes 19 Oct
 
-#### 🍽️ Servicio: DESAYUNO (610 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `35.5g` | Carbs Netos: `4.5g` ($\le 5.0\text{g}$ ✅)  
+#### 🍽️ Lunes — Desayuno (08:30 hrs) | `610 kcal` · `Grasa: 50.0 g` · `Proteína: 35.5 g` · `Carbs Netos: 4.5 g` · `Fibra: 6.4 g`
 
-##### 🥗 ENTRADA: Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja
+##### Receta #10 [Lunes · Desayuno · Tiempo 1 — Entrada]: Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada matutina rica en antocianinas de zarzamora de alacena con chía, toque aromático de canela molida y nuez pecana de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Entrada matutina rica en antocianinas de zarzamora de alacena con chía, toque aromático de canela molida y nuez pecana de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Ensamblaje en frío a 4°C sin tratamiento térmico.
-  - *Construcción de Sabor:* Acidez silvestre de la zarzamora armonizada con la canela de alacena y la nuez pecana de la granja.
-  - *Arquitectura de Textura:* Textura jugosa de bayas con crujido de chía y nuez pecana.
-  - *Puntos Críticos de Control:* Servir sin lácteos mezclados en la entrada.
+  - *Aromática y Sabor:* Acidez silvestre de la zarzamora armonizada con la canela de alacena y la nuez pecana de la granja.
+  - *Arquitectura Textural:* Textura jugosa de bayas con crujido de chía y nuez pecana.
+  - *Punto Crítico de Control:* Servir sin lácteos mezclados en la entrada.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Zarzamora: **210 g** (35 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas de chía orgánicas: **48 g** (8 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Canela molida: **3 g** (0.5 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **90 g** (15 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 35 | **210** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Canela molida** | 0.5 | **3** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Disponer las zarzamoras desinfectadas en un tazón frío.
 2. Espolvorear las semillas de chía orgánicas y una pizca de canela molida.
 3. Terminar con la nuez pecana de la granja troceada.
 
----
+##### Receta #11 [Lunes · Desayuno · Tiempo 2 — Plato Fuerte]: Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso
+- **Técnica Culinaria:** `skillet_frittata`
+- **Nota Organoléptica y Clínica:** Frittata esponjosa de 3 huevos por comensal horneada lentamente en sartén de hierro con tiras de pimiento morrón asado, cebolla blanca y medallones de queso Philadelphia.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Sellado inicial de base en sartén a 160°C y finalización radiante a 175°C para lograr estructura uniforme sin resecar la red proteica.
+  - *Aromática y Sabor:* El dulzor capsantino del pimiento morrón salteado en mantequilla contrasta con la ligera acidez láctea del queso Philadelphia.
+  - *Arquitectura Textural:* Matriz aireada de huevo con inserciones fundentes de queso crema y julianas tiernas de morrón.
+  - *Punto Crítico de Control:* Retirar cuando el centro alcance 70°C para preservar jugosidad.
 
-##### 🥩 PLATILLO PRINCIPAL: Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Manchego Gratinado
-- **Técnica Culinaria:** `pan_frittata`
-- **Nota Organoléptica y Bioquímica:** *"Frittata dorada de 3 huevos enteros por comensal con tiras de pimiento morrón de alacena y queso manchego fundido."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cuajado lento en sartén de hierro a 150°C con gratinado final del queso manchego.
-  - *Construcción de Sabor:* Dulzor natural del pimiento morrón asado, mantequilla y riqueza láctica del queso manchego de alacena.
-  - *Arquitectura de Textura:* Estructura esponjosa y firme con cubierta fundente de queso manchego.
-  - *Puntos Críticos de Control:* Mantener fuego medio-bajo con tapa para que cuaje uniformemente sin resecar la base.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.5 | **3** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.17 | **1** | piezas |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 30 | **180** | g |
+| 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 7.5 | **45** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Morrón: **2 piezas** (0.33 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso manchego: **210 g** (35 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **84 g** (14 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar el pimiento morrón y la cebolla blanca en julianas finas y sofreír en mantequilla durante 4 minutos.
+2. Batir ligeramente los huevos con sal de mar y pimienta negra, verter sobre las verduras y distribuir dados de queso Philadelphia.
+3. Cocinar a fuego bajo tapado por 6 minutos y gratinar 2 minutos finales hasta cuajar.
 
-**Procedimiento Paso a Paso:**
-1. Saltear en mantequilla y aceite VEVO el pimiento morrón en juliana durante 3 minutos.
-2. Verter los huevos batidos con sal de mar, cubrir con el queso manchego rallado y tapar a fuego bajo por 6 minutos hasta cuajar.
-3. Cortar en triángulos calientes y servir de inmediato.
-
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®
+##### Receta #12 [Lunes · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica y Bioquímica:** *"Vehículo colagénico de fresa (distinta a la zarzamora de la entrada) enriquecido con los adaptógenos de la Fórmula 33Plus®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Vehículo colagénico de fresa (distinta a la zarzamora de la entrada) enriquecido con los adaptógenos de la Fórmula 33Plus®.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Mezcla a ≤42°C y gelificación a 4°C para preservar la bioactividad nootrópica.
-  - *Construcción de Sabor:* Perfume natural de fresa natural con acidez equilibrada.
-  - *Arquitectura de Textura:* Gel cristalino y firme de corte limpio.
-  - *Puntos Críticos de Control:* Controlar la temperatura del colágeno antes de añadir MultiSinergix®.
+  - *Aromática y Sabor:* Perfume natural de fresa natural con acidez equilibrada.
+  - *Arquitectura Textural:* Gel cristalino y firme de corte limpio.
+  - *Punto Crítico de Control:* Controlar la temperatura del colágeno antes de añadir MultiSinergix®.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Fresas: **120 g** (20 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: Grenetina: **42 g** (7 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: MultiSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **720 ml** (120 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 20 | **120** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 7 | **42** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 120 | **720** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Hidratar la grenetina en agua fría 8 minutos y disolver a baño María suave (60°C).
 2. Enfriar a 42°C, incorporar MultiSinergix® (33Plus®) y las fresas finamente picadas.
 3. Refrigerar a 4°C por 3 horas hasta cuajar.
 
----
+#### 🍽️ Lunes — Comida (14:30 hrs) | `752 kcal` · `Grasa: 63.5 g` · `Proteína: 41.0 g` · `Carbs Netos: 4.2 g` · `Fibra: 6.3 g`
 
-#### 🍽️ Servicio: COMIDA (752 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `63.5g` | Proteína: `41.0g` | Carbs Netos: `4.2g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #13 [Lunes · Comida · Tiempo 1 — Entrada]: Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO
+- **Técnica Culinaria:** `citrus_maceration`
+- **Nota Organoléptica y Clínica:** Hojas jóvenes de acelga cosechadas en la granja masajeadas con emulsión cítrica de limón real y aceite de oliva extra virgen para preparar la digestión de las albóndigas de res.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Maceración en frío a 12°C con ácido cítrico natural que ablanda las fibras de celulosa sin aplicar calor.
+  - *Aromática y Sabor:* Frescura clorofílica y mineral de la acelga equilibrada con la acidez aromática del limón de la granja.
+  - *Arquitectura Textural:* Hojas sedosas pero turgentes recubiertas por una película brillante de aceite de oliva.
+  - *Punto Crítico de Control:* Aliñar 3 minutos antes de servir para mantener volumen y crocancia.
 
-##### 🥗 ENTRADA: Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada verde de hojas jóvenes de acelga de la granja con emulsión cítrica para equilibrar las albóndigas de res."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Servicio en frío a 8°C que preserva folatos, clorofila y enzimas.
-  - *Construcción de Sabor:* Notas minerales suaves de acelga tierna con acidez brillante de limón de la granja y aceite VEVO.
-  - *Arquitectura de Textura:* Hojas verdes turgentes y ligeras sin lácteos añadidos.
-  - *Puntos Críticos de Control:* Aliñar justo al momento de servir para mantener la firmeza de las hojas.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Acelgas** | 60 | **360** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **450 g** (75 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **90 g** (15 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Seleccionar las hojas tiernas de acelga de la granja, desinfectar y cortar en chiffonnade ancha.
+2. Emulsionar el jugo de limón real con el aceite de oliva extra virgen y la sal de mar.
+3. Bañar las hojas al momento de servir.
 
-**Procedimiento Paso a Paso:**
-1. Lavar, desinfectar y trocear las hojas tiernas de acelga de la granja.
-2. Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.
-3. Bañar la ensalada justo antes de llevar a la mesa.
+##### Receta #14 [Lunes · Comida · Tiempo 2 — Plato Fuerte]: Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja
+- **Técnica Culinaria:** `oven_braised_meatballs`
+- **Nota Organoléptica y Clínica:** Albóndigas jugosas de res horneadas y bañadas en salsa aterciopelada de tomate de alacena emulsionada con crema ácida, queso Philadelphia y cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Sellado en horno a 200°C por 10 minutos seguido de braseado suave en la salsa a 165°C por 8 minutos.
+  - *Aromática y Sabor:* Acidez frutal del tomate verde amortiguada por la untuosidad láctea de la crema ácida y el queso Philadelphia con perfume de cilantro.
+  - *Arquitectura Textural:* Albóndigas tiernas de miga húmeda cubiertas por un velouté espeso y sedoso.
+  - *Punto Crítico de Control:* Integrar el queso Philadelphia y la crema ácida fuera del hervor intenso para evitar separación de fases.
 
----
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 200 | **1,200** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Tomate** | 60 | **360** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Crema ácida** | 30 | **180** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 25 | **150** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.17 | **1** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 5 | **30** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Orégano** | 1 | **6** | g |
 
-##### 🥩 PLATILLO PRINCIPAL: Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja
-- **Técnica Culinaria:** `roast_simmer`
-- **Nota Organoléptica y Bioquímica:** *"Albóndigas jugosas elaboradas con carne molida de alacena bañadas en emulsión 100% suave (cero picante irritante) de crema ácida, queso Philadelphia y cilantro de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Sellado al horno a 190°C por 12 minutos y baño en salsa láctea emulsionada a 75°C.
-  - *Construcción de Sabor:* Riqueza láctica aterciopelada de la crema ácida y el queso Philadelphia con notas herbales de cilantro de la granja.
-  - *Arquitectura de Textura:* Albóndigas tiernas y jugosas cubiertas por una salsa cremosa y sedosa libre de capsaicina.
-  - *Puntos Críticos de Control:* No hervir la salsa una vez incorporada la crema ácida y el queso Philadelphia para mantener su tersura.
+**Protocolo de Ejecución Paso a Paso:**
+1. Sazonar la carne molida de res con sal con ajo, orégano y mitad del cilantro picado; formar albóndigas y hornear a 200°C por 10 minutos.
+2. Cocer el tomate de alacena con la cebolla y licuar con la crema ácida, el queso Philadelphia y el resto del cilantro de la granja.
+3. Bañar las albóndigas con la salsa tibia y hornear 5 minutos más para integrar sabores.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Carne molida: **840 g** (140 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Crema ácida: **180 g** (30 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso Philadelphia: **90 g** (15 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal con ajo: **9 g** (1.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Pimienta negra: **3 g** (0.5 g/persona)
+##### Receta #15 [Lunes · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Floretes de Brócoli al Vapor con Limón Real, Sal de Mar y Aceite de Oliva VEVO
+- **Técnica Culinaria:** `crisp_tender_steam`
+- **Nota Organoléptica y Clínica:** Guarnición crucífera ligera libre de lácteos: floretes de brócoli cocidos al vapor al punto al dente con aceite de oliva extra virgen y limón de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Cocción al vapor a 98°C durante exactamente 4 minutos para activar la enzima mirosinasa y maximizar la biodisponibilidad de sulforafano.
+  - *Aromática y Sabor:* Perfil limpio de brócoli verde realzado por el cítrico del limón real y el aceite de oliva.
+  - *Arquitectura Textural:* Tallos crujientes y copas tiernas que limpian el paladar frente a la salsa cremosa de las albóndigas.
+  - *Punto Crítico de Control:* Retirar del vapor a los 4 minutos para conservar color verde esmeralda y textura firme.
 
-**Procedimiento Paso a Paso:**
-1. Sazonar la carne molida de alacena con sal con ajo y pimienta negra, formar las albóndigas y hornearlas a 190°C durante 12 minutos.
-2. Licuar la crema ácida con el queso Philadelphia y el cilantro de la granja; calentar suavemente en sartén con la mantequilla a fuego mínimo.
-3. Bañar las albóndigas calientes con la salsa cremosa suave y servir.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Brócoli** | 90 | **540** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Separar el brócoli en floretes uniformes y cocer al vapor durante 4 minutos.
+2. Aderezar en tibio con aceite de oliva extra virgen, jugo de limón de la granja y sal de mar.
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Bastones de Nopales de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO
-- **Técnica Culinaria:** `steam_and_dress`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición rica en fibra soluble de la granja cocida al vapor con limón real y aceite VEVO."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción al vapor a 98°C durante 5 minutos que conserva la turgencia celular del nopal.
-  - *Construcción de Sabor:* Perfil herbal limpio del nopal de la granja realzado con limón y aceite VEVO.
-  - *Arquitectura de Textura:* Bastones tiernos pero firmes al corte.
-  - *Puntos Críticos de Control:* Retirar del vapor al alcanzar color verde brillante.
+#### 🍽️ Lunes — Cena (20:00 hrs) | `620 kcal` · `Grasa: 52.0 g` · `Proteína: 34.0 g` · `Carbs Netos: 3.9 g` · `Fibra: 5.9 g`
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **510 g** (85 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+##### Receta #16 [Lunes · Cena · Tiempo 1 — Entrada]: Sopa Juliana de Calabacitas Tiernas al Limón Real y Cilantro de la Granja con Aceite VEVO
+- **Técnica Culinaria:** `julienne_infusion_broth`
+- **Nota Organoléptica y Clínica:** Caldo reconfortante con julianas finas de calabacita tierna escalfadas al momento, perfumado con cilantro y limón de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Escalfado rápido de las julianas de calabacita a 90°C por 3 minutos para conservar su estructura al dente.
+  - *Aromática y Sabor:* Sabor delicado y dulce de la calabacita tierna en fondo claro con notas cítricas y herbales.
+  - *Arquitectura Textural:* Cintas vegetales firmes en caldo cristalino con perlas de aceite de oliva extra virgen.
+  - *Punto Crítico de Control:* Añadir las julianas de calabacita justo antes de servir para evitar que se sobrehidraten.
 
-**Procedimiento Paso a Paso:**
-1. Cortar los nopales de la granja en bastones y cocer al vapor por 5 minutos.
-2. Disponer en plato caliente y bañar con aceite de oliva VEVO, jugo de limón de la granja y sal de mar.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Calabacitas** | 80 | **480** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Fondo claro de pollo** | 200 | **1,200** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 6 | **36** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 5 | **30** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar las calabacitas en julianas finas.
+2. Calentar el fondo claro de pollo con sal de mar y escalfar las julianas de calabacita durante 3 minutos.
+3. Servir con cilantro picado de la granja, jugo de limón real y aceite de oliva extra virgen.
 
-#### 🍽️ Servicio: CENA (620 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `52.0g` | Proteína: `34.0g` | Carbs Netos: `3.9g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #17 [Lunes · Cena · Tiempo 2 — Plato Fuerte]: Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro
+- **Técnica Culinaria:** `cold_boat_assembly`
+- **Nota Organoléptica y Clínica:** Hojas enteras y crujientes de lechuga de alacena rellenas de lomo de atún en agua emulsionado con aceite de oliva extra virgen, dados de aguacate Hass y cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Ensamblaje en frío a 10°C que preserva intactos los ácidos grasos monoinsaturados del aguacate y del aceite de oliva.
+  - *Aromática y Sabor:* Frescura marina limpia del atún con el perfume herbal del cilantro y la acidez del limón real.
+  - *Arquitectura Textural:* Barquita vegetal crujiente de lechuga romana con relleno cremoso de aguacate y láminas firmes de atún.
+  - *Punto Crítico de Control:* Drenar completamente el atún y montar sobre las hojas secas al momento de llevar a la mesa.
 
-##### 🥗 ENTRADA: Consomé Nocturno Clarificado de Cilantro de la Granja al Limón Real con Sal de Mar
-- **Técnica Culinaria:** `simmer_broth`
-- **Nota Organoléptica y Bioquímica:** *"Consomé ligero y alcalinizante de cilantro de la granja con toque de limón real."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Infusión suave a 85°C por 5 minutos que extrae aceites esenciales sin oxidarlos.
-  - *Construcción de Sabor:* Acidez cítrica de limón de la granja sobre notas limpias de cilantro.
-  - *Arquitectura de Textura:* Caldo reconfortante, ligero y cristalino.
-  - *Puntos Críticos de Control:* Incorporar el cilantro picado y el jugo de limón justo al servir.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Atún en agua** | 115 | **690** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Lechuga** | 0.33 | **2** | piezas |
+| 🥑 Grasas, Aceites y Semillas | **Aguacate** | 0.5 | **3** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 10 | **60** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 20 | **120** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **1080 ml** (180 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Lavar, desinfectar y secar perfectamente las hojas enteras de lechuga romana para formar las barquitas.
+2. Mezclar el lomo de atún drenado con dados de aguacate Hass, cilantro picado, jugo de limón real y aceite de oliva extra virgen.
+3. Servir la mezcla dentro de las barquitas de lechuga y sazonar con sal de mar y pimienta negra.
 
-**Procedimiento Paso a Paso:**
-1. Calentar el fondo claro de pollo por 5 minutos con sal de mar.
-2. Servir caliente con cilantro de la granja picado y jugo de limón.
-
----
-
-##### 🥩 PLATILLO PRINCIPAL: Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro
-- **Técnica Culinaria:** `cold_tartare_boats`
-- **Nota Organoléptica y Bioquímica:** *"Cena marina magra de rápido vaciamiento gástrico que amortiza al 100% el atún en agua, la lechuga y el aguacate de alacena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Ensamblaje en frío que preserva intactos los ácidos grasos monoinsaturados del aguacate y el VEVO.
-  - *Construcción de Sabor:* Perfil marino limpio del atún con cremosidad de aguacate Hass, cilantro de la granja y limón.
-  - *Arquitectura de Textura:* Lomos firmes de atún, dados sedosos de aguacate y barquitas crujientes de lechuga.
-  - *Puntos Críticos de Control:* Única aparición de aguacate del día; escurrir perfectamente el atún antes de emulsionar.
-
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Atún en agua: **690 g** (115 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aguacate: **3 piezas** (0.5 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Lechuga: **2 piezas** (0.33 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **60 g** (10 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mayonesa: **90 g** (15 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Drenar el atún en agua de alacena y mezclar suavemente con mayonesa, jugo de limón, cilantro de la granja picado y sal de mar.
-2. Incorporar el aguacate en cubos medianos sin batir.
-3. Servir sobre hojas enteras y crujientes de lechuga.
-
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®
+##### Receta #18 [Lunes · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `herbal_infusion`
-- **Nota Organoléptica y Bioquímica:** *"Tisana floral relajante enriquecida con la Toma 3 de AminoSinergix® para inducir la reparación tisular nocturna."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Tisana floral relajante enriquecida con la Toma 3 de AminoSinergix® para inducir la reparación tisular nocturna.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Extracción aromática a 85°C y enfriamiento a ≤60°C antes de añadir el complejo 34Plus®.
-  - *Construcción de Sabor:* Notas melosas de manzanilla y perfume cálido de canela.
-  - *Arquitectura de Textura:* Infusión tibia y aterciopelada.
-  - *Puntos Críticos de Control:* Respetar el umbral térmico de ≤60°C al disolver la fórmula.
+  - *Aromática y Sabor:* Notas melosas de manzanilla y perfume cálido de canela.
+  - *Arquitectura Textural:* Infusión tibia y aterciopelada.
+  - *Punto Crítico de Control:* Respetar el umbral térmico de ≤60°C al disolver la fórmula.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Manzanilla: **12 g** (2 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Canela molida: **3 g** (0.5 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: AminoSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **1200 ml** (200 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🌶️ Chiles, Condimentos e Infusiones | **Manzanilla** | 2 | **12** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Canela molida** | 0.5 | **3** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 200 | **1,200** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Infusionar la manzanilla y canela en agua caliente por 5 minutos y colar.
 2. Templar a 58°C e incorporar la dosis de AminoSinergix® (34Plus®) agitando suavemente.
 3. Servir caliente al cierre de la cena.
 
 ---
 
-### 📅 MARTES 20 DE OCTUBRE DE 2026
+### 📅 MARTES 20 DE OCTUBRE DE 2026 — Menú Completo para el Martes 20 Oct
 
-#### 🍽️ Servicio: DESAYUNO (598 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `49.0g` | Proteína: `35.0g` | Carbs Netos: `4.3g` ($\le 5.0\text{g}$ ✅)  
+#### 🍽️ Martes — Desayuno (08:30 hrs) | `598 kcal` · `Grasa: 49.0 g` · `Proteína: 35.0 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.1 g`
 
-##### 🥗 ENTRADA: Tazón de Frambuesas con Semillas de Chía y Nuez Pecana de la Granja
+##### Receta #19 [Martes · Desayuno · Tiempo 1 — Entrada]: Tazón de Fresas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada de frambuesas de alacena ricas en ácido elágico acompañadas de chía y nuez pecana de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Entrada matutina antioxidante de bajo índice glucémico con fresas, zarzamoras, chía orgánica y nuez pecana recién cosechada de la Granja El Herami.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Servicio en frío a 4°C para máxima biodisponibilidad antioxidante.
-  - *Construcción de Sabor:* Perfume floral ácido de la frambuesa con el tostado natural de la nuez pecana.
-  - *Arquitectura de Textura:* Drupeolas delicadas de frambuesa con textura crujiente de semillas y nueces.
-  - *Puntos Críticos de Control:* Manipular las frambuesas con delicadeza al lavar para no romper su estructura.
+  - *Aromática y Sabor:* Perfume floral ácido de la frambuesa con el tostado natural de la nuez pecana.
+  - *Arquitectura Textural:* Drupeolas delicadas de frambuesa con textura crujiente de semillas y nueces.
+  - *Punto Crítico de Control:* Manipular las frambuesas con delicadeza al lavar para no romper su estructura.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Frambuesas: **150 g** (25 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas de chía orgánicas: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **90 g** (15 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 15 | **90** | g |
+| 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
-**Procedimiento Paso a Paso:**
-1. Colocar las frambuesas en tazón enfriado.
-2. Espolvorear las semillas de chía orgánicas y la nuez pecana de la granja troceada.
-3. Servir inmediatamente.
+**Protocolo de Ejecución Paso a Paso:**
+1. 1. Selección en Frío: Higienizar y escurrir las fresas y zarzamoras manteniendo la cadena de frío (4°C); cortar las fresas en cuartos uniformes.
+2. 2. Troceado de Nuez Pecana de la Granja: Cascar y trocear las mitades de nuez pecana de la granja para liberar sus aceites esenciales.
+3. 3. Montaje Activo: Servir las bayas en cuencos fríos, coronar con la nuez pecana y espolvorear las semillas de chía orgánicas al momento de despachar.
 
----
-
-##### 🥩 PLATILLO PRINCIPAL: Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas
+##### Receta #20 [Martes · Desayuno · Tiempo 2 — Plato Fuerte]: Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas
 - **Técnica Culinaria:** `rolled_omelette`
-- **Nota Organoléptica y Bioquímica:** *"Omelette japonés laminado en capas sucesivas con mantequilla, relleno de queso Philadelphia de alacena y cilantro de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Omelette japonés laminado en capas sucesivas con mantequilla, relleno de queso Philadelphia de alacena y cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Coagulación secuencial en sartén a 145°C formando láminas delgadas que atrapan vapor y mantequilla.
-  - *Construcción de Sabor:* Sabor delicado de huevo a la mantequilla con cremosidad del queso Philadelphia y hierbas.
-  - *Arquitectura de Textura:* Capas suaves y esponjosas con centro fundente de queso crema.
-  - *Puntos Críticos de Control:* Engrasar ligeramente el sartén entre cada capa con mantequilla.
+  - *Aromática y Sabor:* Sabor delicado de huevo a la mantequilla con cremosidad del queso Philadelphia y hierbas.
+  - *Arquitectura Textural:* Capas suaves y esponjosas con centro fundente de queso crema.
+  - *Punto Crítico de Control:* Engrasar ligeramente el sartén entre cada capa con mantequilla.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso Philadelphia: **210 g** (35 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **84 g** (14 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **36 g** (6 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 35 | **210** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Mantequilla** | 14 | **84** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 5 | **30** | ml |
+| 🥬 Verduras, Hortalizas y Frescos | **Cilantro** | 6 | **36** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Batir los 3 huevos por comensal con sal de mar y cilantro fino de la granja.
 2. Verter una primera capa fina en sartén con mantequilla, colocar bastones de queso Philadelphia e ir enrollando en 3 capas sucesivas.
 3. Rebanar en medallones gruesos y terminar con un hilo de aceite VEVO.
 
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Infusión Nootrópica de Té Chai Especiado de Alacena (42°C) con Fórmula 33Plus®
+##### Receta #21 [Martes · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Nootrópica de Té Chai Especiado de Alacena (42°C) con Fórmula 33Plus®
 - **Técnica Culinaria:** `nootropic_infusion`
-- **Nota Organoléptica y Bioquímica:** *"Elixir antioxidante de especias de té chai de alacena en sinergia con la Toma 2 de MultiSinergix®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Elixir antioxidante de especias de té chai de alacena en sinergia con la Toma 2 de MultiSinergix®.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Infusión a 80°C y enfriamiento a 42°C antes de disolver la Fórmula 33Plus®.
-  - *Construcción de Sabor:* Notas aromáticas de cardamomo, canela y clavo del té chai con adaptógenos.
-  - *Arquitectura de Textura:* Bebida ligera y aromática.
-  - *Puntos Críticos de Control:* Templar a 42°C antes de añadir MultiSinergix®.
+  - *Aromática y Sabor:* Notas aromáticas de cardamomo, canela y clavo del té chai con adaptógenos.
+  - *Arquitectura Textural:* Bebida ligera y aromática.
+  - *Punto Crítico de Control:* Templar a 42°C antes de añadir MultiSinergix®.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Té chai: **18 g** (3 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: MultiSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **1080 ml** (180 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🌶️ Chiles, Condimentos e Infusiones | **Té chai** | 3 | **18** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 180 | **1,080** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Infusionar el té chai de alacena en agua a 80°C durante 3 minutos y colar.
 2. Templar a 42°C, disolver la dosis de MultiSinergix® (33Plus®) y servir.
 
----
+#### 🍽️ Martes — Comida (14:30 hrs) | `742 kcal` · `Grasa: 62.5 g` · `Proteína: 40.5 g` · `Carbs Netos: 4.4 g` · `Fibra: 6.5 g`
 
-#### 🍽️ Servicio: COMIDA (742 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `62.5g` | Proteína: `40.5g` | Carbs Netos: `4.4g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #22 [Martes · Comida · Tiempo 1 — Entrada]: Crema Aterciopelada de Brócoli al Ajo Tostado con Aceite de Oliva VEVO
+- **Técnica Culinaria:** `cruciferous_veloute`
+- **Nota Organoléptica y Clínica:** Crema verde esmeralda de floretes de brócoli emulsionada con fondo claro y aceite de oliva extra virgen, libre de lácteos para acompañar las sardinas del Pacífico.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Blanqueado corto de 5 minutos en hervor suave seguido de licuado a alta cizalla para crear emulsión vegetal estable.
+  - *Aromática y Sabor:* Notas verdes de brócoli equilibradas con ajo tostado y el amargor noble del aceite de oliva extra virgen.
+  - *Arquitectura Textural:* Cuerpo sedoso y ligero que prepara el tracto digestivo sin sobrecarga lipídica.
+  - *Punto Crítico de Control:* No prolongar la cocción más de 5 minutos para evitar formación de compuestos azufrados volátiles.
 
-##### 🥗 ENTRADA: Crema Aterciopelada de Acelgas de la Granja con Aceite de Oliva VEVO
-- **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica y Bioquímica:** *"Crema verde sedosa elaborada con acelgas de la granja emulsionadas en fondo claro y aceite de oliva extra virgen."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Blanqueado corto y licuado de alta velocidad a 72°C para preservar clorofila y magnesio.
-  - *Construcción de Sabor:* Sabor vegetal redondo de acelgas de la granja con sal con ajo y aceite VEVO.
-  - *Arquitectura de Textura:* Emulsión verde aterciopelada sin harinas ni espesantes.
-  - *Puntos Críticos de Control:* No hervir tras licuar para mantener el color verde esmeralda.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Brócoli** | 90 | **540** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Fondo claro de pollo** | 200 | **1,200** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **480 g** (80 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **600 ml** (100 ml/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal con ajo: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Cocer los floretes de brócoli en el fondo claro de pollo durante 5 minutos.
+2. Licuar en caliente con sal con ajo y pimienta negra hasta lograr una textura aterciopelada.
+3. Servir coronando con el aceite de oliva extra virgen en crudo.
 
-**Procedimiento Paso a Paso:**
-1. Cocer las acelgas de la granja en el fondo claro de pollo durante 5 minutos.
-2. Licuar a máxima velocidad con el aceite de oliva VEVO y sal con ajo hasta lograr textura cremosa.
+##### Receta #23 [Martes · Comida · Tiempo 2 — Plato Fuerte]: Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO
+- **Técnica Culinaria:** `mediterranean_oven_roast`
+- **Nota Organoléptica y Clínica:** Lomos de sardina de alacena horneados al estilo mediterráneo sobre cama de jitomate asado y cebolla blanca caramelizada con orégano, limón y cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Horneado a 185°C por 12 minutos que funde el colágeno marino con los jugos licopénicos del jitomate asado.
+  - *Aromática y Sabor:* Sabor marino intenso de la sardina equilibrado por la acidez del jitomate asado, el limón real y el orégano.
+  - *Arquitectura Textural:* Lomos firmes y jugosos sobre cama tierna de cebolla y jitomate rostizados.
+  - *Punto Crítico de Control:* Bañar con jugo de limón real y cilantro picado al salir del horno.
 
----
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Sardinas** | 140 | **840** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Jitomate** | 0.33 | **2** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.17 | **1** | piezas |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 10 | **60** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 20 | **120** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Orégano** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-##### 🥩 PLATILLO PRINCIPAL: Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO
-- **Técnica Culinaria:** `mediterranean_oven_bake`
-- **Nota Organoléptica y Bioquímica:** *"Único servicio semanal de sardina rico en Omega-3 EPA/DHA y calcio biodisponible, cubierto al 100% con el stock de alacena (reduciendo el pollo a solo 2 servicios semanales)."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Horneado corto a 185°C durante 10 minutos con jitomate y cebolla de alacena que concentra el licopeno sin oxidar los lípidos marinos.
-  - *Construcción de Sabor:* Umami marino profundo equilibrado con el dulzor ácido del jitomate asado, cebolla tierna, orégano y aceite VEVO.
-  - *Arquitectura de Textura:* Lomos enteros firmes y jugosos sobre cama aromática de jitomate y cebolla.
-  - *Puntos Críticos de Control:* Hornear solo 10 minutos para preservar intactos los ácidos grasos poliinsaturados Omega-3.
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar el jitomate y la cebolla blanca en rodajas, disponer en refractario con aceite de oliva y orégano y asar 8 minutos a 185°C.
+2. Colocar los lomos de sardina sobre la cama asada y hornear 6 minutos adicionales.
+3. Terminar con jugo de limón real y cilantro de la granja.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Sardinas: **840 g** (140 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Jitomate: **3 piezas** (0.5 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cebolla: **2 piezas** (0.33 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **72 g** (12 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Pimienta negra: **3 g** (0.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **9 g** (1.5 g/persona)
+##### Receta #24 [Martes · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar
+- **Técnica Culinaria:** `dry_griddle_roast`
+- **Nota Organoléptica y Clínica:** Pencas tiernas de nopal de la granja asadas al comal con orégano aromático y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Asado por contacto en plancha de hierro a 210°C que carameliza la superficie exterior y sella la fibra soluble interna.
+  - *Aromática y Sabor:* Notas ahumadas del comal con el perfume terroso del orégano de alacena.
+  - *Arquitectura Textural:* Exterior ligeramente tostado e interior tierno sin mucílago libre.
+  - *Punto Crítico de Control:* Salpimentar al final del asado para mantener turgencia.
 
-**Procedimiento Paso a Paso:**
-1. Disponer los lomos de sardina de alacena en refractario sobre rodajas finas de jitomate y cebolla blanca de alacena.
-2. Bañar con mantequilla y aceite VEVO, sazonar con sal de mar y pimienta negra, y hornear a 185°C durante 10 minutos.
-3. Terminar con cilantro de la granja picado al servir.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Nopales** | 80 | **480** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Orégano** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Asar los nopales de la granja en plancha de hierro bien caliente por 4 minutos por lado.
+2. Sazonar con orégano y sal de mar, y rociar con aceite de oliva extra virgen al emplatar.
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar
-- **Técnica Culinaria:** `pan_roast`
-- **Nota Organoléptica y Bioquímica:** *"Nopales de la granja asados en plancha con aceite de oliva VEVO y orégano de alacena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Asado en plancha a 180°C por 4 minutos por lado para evaporar mucílago y concentrar sabor.
-  - *Construcción de Sabor:* Notas herbales de orégano y nopal asado con aceite de oliva extra virgen.
-  - *Arquitectura de Textura:* Pencas tiernas con exterior ligeramente dorado.
-  - *Puntos Críticos de Control:* Asar en seco los primeros 2 minutos antes de añadir el aceite de oliva VEVO.
+#### 🍽️ Martes — Cena (20:00 hrs) | `630 kcal` · `Grasa: 53.0 g` · `Proteína: 34.0 g` · `Carbs Netos: 4.2 g` · `Fibra: 5.7 g`
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **540 g** (90 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+##### Receta #25 [Martes · Cena · Tiempo 1 — Entrada]: Carpaccio de Pepino y Aguacate Hass al Limón Real con Aceite de Oliva VEVO
+- **Técnica Culinaria:** `mandoline_carpaccio`
+- **Nota Organoléptica y Clínica:** Láminas translúcidas de pepino y abanicos de aguacate Hass aderezados con emulsión cítrica de limón de la granja y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Corte en frío con mandolina a 2 mm que maximiza la superficie de contacto con la vinagreta cítrica.
+  - *Aromática y Sabor:* Hidratación mineral del pepino combinada con la untuosidad de avellana del aguacate Hass y el destello de limón real.
+  - *Arquitectura Textural:* Contraste entre el crujido acuoso del pepino laminado y la mantecosidad sedosa del aguacate.
+  - *Punto Crítico de Control:* Emplatar y aliñar al momento para evitar plasmólisis excesiva del pepino.
 
-**Procedimiento Paso a Paso:**
-1. Asar los nopales de la granja en plancha caliente durante 4 minutos por lado.
-2. Terminar con aceite de oliva VEVO, orégano y sal de mar.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Pepino** | 70 | **420** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aguacate** | 0.33 | **2** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Laminar el pepino finamente en rodajas y disponer en espiral sobre plato frío alternando con láminas de aguacate Hass.
+2. Rociar con jugo de limón real de la granja, aceite de oliva extra virgen y escamas de sal de mar.
 
-#### 🍽️ Servicio: CENA (630 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `53.0g` | Proteína: `34.0g` | Carbs Netos: `4.2g` ($\le 5.0\text{g}$ ✅)  
-
-##### 🥗 ENTRADA: Ensalada Verde de Lechuga Romana y Cilantro de la Granja con Aceite VEVO y Limón
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada verde de lechuga romana de alacena y cilantro de la granja aderezada con aceite VEVO y limón."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Ensamblaje en frío a 8°C sin aplicar calor.
-  - *Construcción de Sabor:* Notas herbáceas de cilantro de la granja y lechuga equilibradas con acidez cítrica y aceite VEVO.
-  - *Arquitectura de Textura:* Hojas verdes crujientes y turgentes.
-  - *Puntos Críticos de Control:* Emulsionar el aceite de oliva con el limón justo antes de servir.
-
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Lechuga: **2 piezas** (0.33 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Lavar, desinfectar y trocear la lechuga romana junto con hojas de cilantro de la granja.
-2. Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.
-3. Aliñar las hojas verdes justo al emplatar.
-
----
-
-##### 🥩 PLATILLO PRINCIPAL: Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja
+##### Receta #26 [Martes · Cena · Tiempo 2 — Plato Fuerte]: Filete de Mojarra al Vapor en Papillote Abierto con Calabacitas Tiernas, Limón Real, Finas Hierbas y Cilantro de la Granja
 - **Técnica Culinaria:** `open_papillote_steam`
-- **Nota Organoléptica y Bioquímica:** *"Proteína marina blanca de digestión ultraligera para la noche, aromatizada con finas hierbas, limón y cilantro de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción al vapor en papillote abierto a 95°C por 8 minutos que preserva la humedad de las miofibrillas.
-  - *Construcción de Sabor:* Aroma herbal de finas hierbas, cilantro de la granja, mantequilla y limón real.
-  - *Arquitectura de Textura:* Lomo blanco suave y jugoso que se deshace en láminas.
-  - *Puntos Críticos de Control:* Retirar a los 8 minutos exactos cuando la proteína alcance 60°C internos.
+- **Nota Organoléptica y Clínica:** Fajitas de mojarra blanca cocidas al vapor suave en papillote con medias lunas de calabacita tierna, finas hierbas, limón real y cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Cocción por convección húmeda a 95°C durante 8 minutos que preserva la estructura miofibrilar delicada del pescado blanco.
+  - *Aromática y Sabor:* Infusión aromática de finas hierbas, cilantro y cáscara cítrica de limón sobre el pescado blanco y las calabacitas.
+  - *Arquitectura Textural:* Lasca blanca jugosa y suave acompañada de medias lunas de calabacita al dente.
+  - *Punto Crítico de Control:* Retirar a los 8 minutos en cuanto la proteína alcance 60°C internos.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Fajitas de mojarra: **900 g** (150 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **90 g** (15 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Hierbas finas: **6 g** (1 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **9 g** (1.5 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Fajitas de mojarra** | 220 | **1,320** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Calabacitas** | 70 | **420** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 10 | **60** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 20 | **120** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Hierbas finas** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
 
-**Procedimiento Paso a Paso:**
-1. Disponer las fajitas de mojarra de alacena sobre cama aromática con mantequilla, finas hierbas y sal de mar.
-2. Cocer al vapor en papillote abierto durante 8 minutos.
-3. Terminar con cilantro de la granja picado, jugo de limón y un hilo de aceite de oliva VEVO.
+**Protocolo de Ejecución Paso a Paso:**
+1. Disponer las fajitas de mojarra sobre cama de calabacitas en medias lunas dentro de papillote.
+2. Sazonar con sal con ajo, hierbas finas, jugo de limón real y cilantro de la granja.
+3. Cocer al vapor durante 8 minutos y terminar con aceite de oliva extra virgen.
 
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®
+##### Receta #27 [Martes · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `herbal_infusion`
-- **Nota Organoléptica y Bioquímica:** *"Tisana nocturna digestiva y ansiolítica natural enriquecida con la Toma 3 de AminoSinergix®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Tisana nocturna digestiva y ansiolítica natural enriquecida con la Toma 3 de AminoSinergix®.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Infusión a 85°C templada a ≤60°C para proteger los aminoácidos y péptidos bioactivos.
-  - *Construcción de Sabor:* Dulzor floral de la manzanilla con destello cítrico de la granja.
-  - *Arquitectura de Textura:* Infusión cálida y cristalina.
-  - *Puntos Críticos de Control:* Verificar que la temperatura sea ≤60°C antes de disolver AminoSinergix®.
+  - *Aromática y Sabor:* Dulzor floral de la manzanilla con destello cítrico de la granja.
+  - *Arquitectura Textural:* Infusión cálida y cristalina.
+  - *Punto Crítico de Control:* Verificar que la temperatura sea ≤60°C antes de disolver AminoSinergix®.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Manzanilla: **12 g** (2 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **48 g** (8 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: AminoSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **1200 ml** (200 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🌶️ Chiles, Condimentos e Infusiones | **Manzanilla** | 2 | **12** | g |
+| 🥬 Verduras, Hortalizas y Frescos | **Limones** | 8 | **48** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 200 | **1,200** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Infusionar la manzanilla en agua a 85°C por 5 minutos y colar.
 2. Templar a 58°C, agregar gotas de limón, disolver la dosis de AminoSinergix® (34Plus®) y servir.
 
 ---
 
-### 📅 MIÉRCOLES 21 DE OCTUBRE DE 2026
+### 📅 MIÉRCOLES 21 DE OCTUBRE DE 2026 — Menú Completo para el Miércoles 21 Oct
 
-#### 🍽️ Servicio: DESAYUNO (601 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `49.5g` | Proteína: `34.5g` | Carbs Netos: `4.4g` ($\le 5.0\text{g}$ ✅)  
+#### 🍽️ Miércoles — Desayuno (08:30 hrs) | `601 kcal` · `Grasa: 49.5 g` · `Proteína: 34.5 g` · `Carbs Netos: 4.4 g` · `Fibra: 6.3 g`
 
-##### 🥗 ENTRADA: Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja
+##### Receta #28 [Miércoles · Desayuno · Tiempo 1 — Entrada]: Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada de fresas de alacena de bajo índice glucémico con fibra soluble de chía y nuez pecana recién recolectada de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Entrada de fresas de alacena de bajo índice glucémico con fibra soluble de chía y nuez pecana recién recolectada de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Preparación en frío a 4°C que conserva intactos los polifenoles.
-  - *Construcción de Sabor:* Dulzor ácido de la fresa con el carácter oleoso y tostado de la nuez pecana de la granja.
-  - *Arquitectura de Textura:* Láminas jugosas con crujido de nuez pecana.
-  - *Puntos Críticos de Control:* Servir sin lácteos en la entrada para máxima biodisponibilidad antioxidante.
+  - *Aromática y Sabor:* Dulzor ácido de la fresa con el carácter oleoso y tostado de la nuez pecana de la granja.
+  - *Arquitectura Textural:* Láminas jugosas con crujido de nuez pecana.
+  - *Punto Crítico de Control:* Servir sin lácteos en la entrada para máxima biodisponibilidad antioxidante.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Fresas: **180 g** (30 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas de chía orgánicas: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **90 g** (15 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 30 | **180** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Cortar las fresas en láminas y colocarlas en tazón frío.
 2. Añadir las semillas de chía orgánicas y la nuez pecana de la granja troceada.
 
----
+##### Receta #29 [Miércoles · Desayuno · Tiempo 2 — Plato Fuerte]: Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla, Cilantro de la Granja y Queso Ricotta
+- **Técnica Culinaria:** `bell_pepper_ring_pan_fry`
+- **Nota Organoléptica y Clínica:** Huevos enteros cocinados a fuego lento dentro de aros de pimiento morrón dulce en mantequilla, coronados con queso ricotta de alacena y cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Conducción controlada a 145°C en sartén: el aro de pimiento morrón actúa como barrera térmica que permite cuajar la clara suavemente.
+  - *Aromática y Sabor:* Dulzor vegetal del morrón dorado en mantequilla con la cremosidad láctea del ricotta y el cilantro.
+  - *Arquitectura Textural:* Aro exterior crujiente-tierno de morrón, clara sedosa, yema cremosa y copos suaves de ricotta.
+  - *Punto Crítico de Control:* Tapar la sartén 3 minutos a fuego mínimo para cuajar la superficie sin voltear.
 
-##### 🥩 PLATILLO PRINCIPAL: Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla y Queso Ricotta
-- **Técnica Culinaria:** `pan_ring_sear`
-- **Nota Organoléptica y Bioquímica:** *"Tres huevos enteros por comensal cocinados a fuego suave dentro de aros de pimiento morrón de alacena con mantequilla y copos de queso ricotta."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Conducción suave a 145°C en sartén que cuaja la clara dentro del aro vegetal manteniendo la yema fluida.
-  - *Construcción de Sabor:* Dulzor herbal del pimiento morrón asado en mantequilla y suavidad cremosa del ricotta.
-  - *Arquitectura de Textura:* Aro vegetal al dente con clara tierna y yema líquida.
-  - *Puntos Críticos de Control:* Tapar el sartén 3 minutos a fuego mínimo para cuajar la superficie sin voltear el huevo.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.5 | **3** | piezas |
+| 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 7.5 | **45** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 30 | **180** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 8 | **48** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Morrón: **2 piezas** (0.33 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso ricotta: **180 g** (30 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **84 g** (14 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar los pimientos morrones en aros gruesos de 1.5 cm y dorar 1 minuto por lado en mantequilla.
+2. Cascar los huevos dentro de los aros, sazonar con sal de mar y cocinar a fuego bajo.
+3. Coronar con queso ricotta de alacena y hojas de cilantro de la granja.
 
-**Procedimiento Paso a Paso:**
-1. Cortar los pimientos morrones de alacena en aros de 1.5 cm y dorarlos 1 minuto por lado en mantequilla.
-2. Cascar los huevos dentro de los aros, sazonar con sal de mar y disponer copos de queso ricotta alrededor.
-3. Tapar a fuego bajo por 3-4 minutos hasta que la clara cuaje y servir con un hilo de aceite VEVO.
+##### Receta #30 [Miércoles · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina Artesanal de Jamaica de la Granja (4°C) con Fórmula Nootrópica 33Plus®
+- **Técnica Culinaria:** `cold_collagen_bloom`
+- **Nota Organoléptica y Clínica:** Matriz colagénica rubí elaborada con infusión de cáliz de jamaica cosechada en la granja, enriquecida a baja temperatura con MultiSinergix® (33Plus®).
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Extracción acuosa de antocianinas de jamaica a 75°C, enfriamiento a 38°C para incorporar 33Plus® sin degradar cofactores y gelificación a 4°C.
+  - *Aromática y Sabor:* Acidez floral rubí de la jamaica de la granja con notas cítricas de limón real.
+  - *Arquitectura Textural:* Gel firme y cristalino de colágeno biodisponible.
+  - *Punto Crítico de Control:* Añadir MultiSinergix® únicamente cuando la mezcla descienda por debajo de 40°C.
 
----
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 250 | **1,500** | ml |
+| 🥩 Carnes, Pescados y Proteínas | **Grenetina** | 7 | **42** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Jamaica** | 5 | **30** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
+| 🧬 Suplementación Biotecnológica Sinergix® | **MultiSinergix®** | 5 | **30** | g |
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus®
-- **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica y Bioquímica:** *"Gel colagénico de frambuesa (distinta a la fresa de la entrada) con los adaptógenos de la Toma 2 de MultiSinergix®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Incorporación a ≤42°C y cuajado en frío a 4°C.
-  - *Construcción de Sabor:* Notas vibrantes de frambuesa.
-  - *Arquitectura de Textura:* Gel firme y brillante.
-  - *Puntos Críticos de Control:* Cuidar estrictamente el límite térmico de 42°C al integrar 33Plus®.
+**Protocolo de Ejecución Paso a Paso:**
+1. Infusionar la jamaica de la granja en mitad del agua purificada tibia y colar.
+2. Hidratar la grenetina en el resto del agua fría, disolver en la infusión tibia y dejar templar a 38°C.
+3. Incorporar el jugo de limón y MultiSinergix® (33Plus®), verter en moldes y refrigerar a 4°C hasta cuajar.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Frambuesas: **90 g** (15 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: Grenetina: **42 g** (7 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: MultiSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **720 ml** (120 ml/persona)
+#### 🍽️ Miércoles — Comida (14:30 hrs) | `759 kcal` · `Grasa: 64.0 g` · `Proteína: 41.5 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.5 g`
 
-**Procedimiento Paso a Paso:**
-1. Hidratar la grenetina en agua fría 8 minutos y disolver a 60°C.
-2. Templar a 42°C, incorporar MultiSinergix® (33Plus®) y las frambuesas.
-3. Refrigerar a 4°C durante 3 horas.
+##### Receta #31 [Miércoles · Comida · Tiempo 1 — Entrada]: Ensalada de Espinacas Baby con Vinagreta de Limón Real y Aceite de Oliva VEVO
+- **Técnica Culinaria:** `raw_emulsion_toss`
+- **Nota Organoléptica y Clínica:** Hojas tiernas de espinaca baby aderezadas al momento con emulsión cítrica de limón de la granja y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Servicio en frío a 10°C que conserva intactos el folato natural, la luteína y la vitamina C de la espinaca.
+  - *Aromática y Sabor:* Notas herbáceas limpias de espinaca baby equilibradas con la acidez del limón real.
+  - *Arquitectura Textural:* Hojas turgentes y crujientes con recubrimiento ligero de aceite de oliva.
+  - *Punto Crítico de Control:* Aderezar justo al emplatar para evitar pérdida de volumen.
 
----
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Espinacas** | 60 | **360** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-#### 🍽️ Servicio: COMIDA (759 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `64.0g` | Proteína: `41.5g` | Carbs Netos: `4.3g` ($\le 5.0\text{g}$ ✅)  
+**Protocolo de Ejecución Paso a Paso:**
+1. Desinfectar y centrifugar las hojas de espinaca baby hasta secarlas por completo.
+2. Emulsionar el jugo de limón real con el aceite de oliva extra virgen y sal de mar, y mezclar suavemente.
 
-##### 🥗 ENTRADA: Ensalada Verde de Acelgas de la Granja al Limón con Aceite VEVO
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada ligera de hojas verdes de acelga de la granja que equilibra la carga metabólica del corte de res."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Servicio en frío a 8°C que activa enzimas digestivas mediante acidez cítrica natural.
-  - *Construcción de Sabor:* Notas verdes de acelga tierna con perfil frutal de aceite de oliva extra virgen y limón de la granja.
-  - *Arquitectura de Textura:* Hojas turgentes y crujientes sin lácteos ni grasas pesadas.
-  - *Puntos Críticos de Control:* Emulsionar el aderezo justo al momento de emplatar para mantener la textura crujiente.
+##### Receta #32 [Miércoles · Comida · Tiempo 2 — Plato Fuerte]: Juliana de Flat Steak de Res Salteada al Wok con Champiñones, Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO
+- **Técnica Culinaria:** `high_heat_wok_stir_fry`
+- **Nota Organoléptica y Clínica:** Tiras jugosas de flat steak de res salteadas a fuego vivo en wok con láminas de champiñón, plumas de cebolla blanca de alacena y agujas de romero de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Salteado rápido en wok a 220°C durante 3 minutos que dora la superficie de las tiras de res conservando su interior rosado y tierno.
+  - *Aromática y Sabor:* Sinergia umami entre la carne de res sellada, los champiñones dorados, la cebolla caramelizada y el romero de la granja.
+  - *Arquitectura Textural:* Tiras de corte magro suaves con láminas carnosas de champiñón y cebolla al dente.
+  - *Punto Crítico de Control:* Saltear en tandas cortas sin sobrecargar el wok para evitar que la carne hierva en su jugo.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **450 g** (75 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **90 g** (15 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Flat steak** | 200 | **1,200** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Champiñón** | 80 | **480** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.33 | **2** | piezas |
+| 🧂 Condimentos, Especias e Infusiones | **Romero** | 3 | **18** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 10 | **60** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-**Procedimiento Paso a Paso:**
-1. Lavar y centrifugar las hojas tiernas de acelga de la granja.
-2. Batir el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.
-3. Aliñar suavemente y servir de inmediato como entrada ligera.
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar el flat steak en julianas transversales a la fibra y sazonar con sal con ajo, pimienta negra y romero picado de la granja.
+2. Saltear a fuego alto en wok con aceite de oliva durante 2 minutos; retirar y reservar.
+3. En el mismo wok saltear los champiñones laminados y la cebolla en plumas por 3 minutos, reincorporar la carne 30 segundos y servir.
 
----
+##### Receta #33 [Miércoles · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Calabacitas Tiernas Asadas al Orégano con Limón Real y Aceite de Oliva VEVO
+- **Técnica Culinaria:** `griddle_char_roast`
+- **Nota Organoléptica y Clínica:** Medias lunas de calabacita tierna asadas a la plancha con orégano aromático, jugo de limón de la granja y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Asado en plancha a 195°C por 3 minutos por lado para dorar los azúcares superficiales manteniendo el centro firme.
+  - *Aromática y Sabor:* Dulzor vegetal de la calabacita con notas mediterráneas de orégano y limón real.
+  - *Arquitectura Textural:* Superficie marcada a la parrilla con interior jugoso.
+  - *Punto Crítico de Control:* Cortar en grosor uniforme de 1 cm para evitar sobrecocción.
 
-##### 🥩 PLATILLO PRINCIPAL: Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo
-- **Técnica Culinaria:** `chargrill_sear`
-- **Nota Organoléptica y Bioquímica:** *"Corte selecto de Flat Steak de alacena sellado al hierro con mantequilla infusionada en hierbas finas de alacena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Reacción de Maillard a 210°C en superficie durante 3 minutos por lado, reposando a 56°C internos.
-  - *Construcción de Sabor:* Aromas tostados de carne asada, mantequilla avellanada y hierbas aromáticas.
-  - *Arquitectura de Textura:* Costra exterior caramelizada con centro jugoso y tierno.
-  - *Puntos Críticos de Control:* Reposar el corte 4 minutos sobre tabla templada antes de trinchar para redistribuir los jugos.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Calabacitas** | 80 | **480** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Orégano** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Flat steak: **900 g** (150 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **108 g** (18 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Hierbas finas: **6 g** (1 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal con ajo: **9 g** (1.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Pimienta negra: **3 g** (0.5 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar las calabacitas en bastones o medias lunas de 1 cm y asar en plancha caliente con aceite de oliva.
+2. Sazonar con orégano, sal de mar y jugo de limón real al retirar del fuego.
 
-**Procedimiento Paso a Paso:**
-1. Atemperar los cortes de Flat Steak de alacena y sazonar con sal con ajo y pimienta negra.
-2. Sellar en sartén de hierro candente 3 minutos por lado y agregar la mantequilla con las hierbas finas para bañar el corte.
-3. Reposar 4 minutos fuera del fuego y servir con sus jugos.
+#### 🍽️ Miércoles — Cena (20:00 hrs) | `621 kcal` · `Grasa: 52.0 g` · `Proteína: 34.5 g` · `Carbs Netos: 3.8 g` · `Fibra: 6.0 g`
 
----
+##### Receta #34 [Miércoles · Cena · Tiempo 1 — Entrada]: Abanico de Aguacate Hass y Láminas de Pepino con Limón Real, Sal Marina y Aceite VEVO
+- **Técnica Culinaria:** `cold_fan_plating`
+- **Nota Organoléptica y Clínica:** Gajos cremosos de aguacate Hass acompañados de medias lunas crujientes de pepino con aceite de oliva extra virgen y limón de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Servicio en frío a 12°C que protege los ácidos grasos monoinsaturados y fitoesteroles del aguacate.
+  - *Aromática y Sabor:* Equilibrio entre la grasa limpia del aguacate, la frescura del pepino y la acidez del limón real.
+  - *Arquitectura Textural:* Doble textura: untuosidad del aguacate y crocancia hidratante del pepino.
+  - *Punto Crítico de Control:* Rociar el limón real inmediatamente después de cortar el aguacate para evitar oxidación enzimática.
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Cebolla Blanca Asada de Alacena al Orégano con Cilantro de la Granja, Limón Real y Aceite VEVO
-- **Técnica Culinaria:** `pan_sear_veg`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición aromática de cebolla blanca de alacena asada con cilantro de la granja, limón real y aceite VEVO."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Asado rápido en plancha a 185°C por 3 minutos que suaviza los compuestos sulfurados conservando textura al dente.
-  - *Construcción de Sabor:* Notas dulces de cebolla asada con orégano, cilantro de la granja y limón.
-  - *Arquitectura de Textura:* Aros jugosos y dorados libres de lácteos pesados.
-  - *Puntos Críticos de Control:* Asar a fuego vivo durante 3 minutos sin sobrecocer.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥑 Grasas, Aceites y Semillas | **Aguacate** | 0.5 | **3** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Pepino** | 60 | **360** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Cebolla: **2 piezas** (0.33 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar el aguacate Hass en abanico y disponer junto a láminas crujientes de pepino.
+2. Aderezar con jugo de limón real, aceite de oliva extra virgen y sal de mar.
 
-**Procedimiento Paso a Paso:**
-1. Cortar la cebolla blanca de alacena en rodajas gruesas y asar en plancha caliente por 3 minutos.
-2. Terminar con cilantro de la granja picado, jugo de limón, orégano, sal de mar y aceite VEVO.
+##### Receta #35 [Miércoles · Cena · Tiempo 2 — Plato Fuerte]: Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor
+- **Técnica Culinaria:** `tataki_pecan_sear`
+- **Nota Organoléptica y Clínica:** Medallones de filete de atún sellados tipo tataki en costra de nuez pecana de la granja, servidos sobre espárragos verdes tiernos al vapor con limón real y cilantro.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Sellado periférico de alta intensidad a 210°C durante 60 segundos por cara que tuesta la nuez pecana y conserva el centro rubí a 48°C.
+  - *Aromática y Sabor:* Notas tostadas de nuez pecana de la granja con el perfil limpio del atún, el espárrago verde y el limón real.
+  - *Arquitectura Textural:* Costra crujiente de nuez pecana, corazón tierno de atún y tallos al dente de espárrago verde.
+  - *Punto Crítico de Control:* No sobrecocer el medallón de atún para mantener su jugosidad y digestibilidad nocturna.
 
----
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Filete de atún** | 200 | **1,200** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Espárragos** | 80 | **480** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 10 | **60** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 20 | **120** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-#### 🍽️ Servicio: CENA (621 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `52.0g` | Proteína: `34.5g` | Carbs Netos: `3.8g` ($\le 5.0\text{g}$ ✅)  
+**Protocolo de Ejecución Paso a Paso:**
+1. Cocer los espárragos verdes al vapor por 4 minutos hasta que estén tiernos pero firmes.
+2. Cubrir los bordes de los medallones de atún con nuez pecana finamente picada, sal de mar y pimienta negra, y sellar 60 segundos por lado en aceite de oliva.
+3. Emplatar sobre los espárragos y bañar con jugo de limón real y cilantro picado de la granja.
 
-##### 🥗 ENTRADA: Abanico de Aguacate Hass de Alacena con Limón Real, Sal Marina y Aceite VEVO
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada rica en ácido oleico y potasio biodisponible (única aparición de aguacate del día)."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Corte al momento en frío para evitar oxidación enzimática de la polifenol oxidasa.
-  - *Construcción de Sabor:* Cremosidad de aguacate Hass realzada con limón de la granja y aceite VEVO.
-  - *Arquitectura de Textura:* Gajos sedosos con cristales de sal de mar.
-  - *Puntos Críticos de Control:* Bañar inmediatamente con jugo de limón de la granja tras laminar el aguacate.
-
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥑 Grasas, Aceites y Semillas*: Aguacate: **3 piezas** (0.5 piezas/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Cortar el aguacate de alacena en láminas y desplegar en abanico sobre plato frío.
-2. Rociar con jugo de limón de la granja, aceite de oliva VEVO y sal de mar.
-
----
-
-##### 🥩 PLATILLO PRINCIPAL: Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Nopales de la Granja
-- **Técnica Culinaria:** `sesame_crust_tataki`
-- **Nota Organoléptica y Bioquímica:** *"Cena marina rica en Omega-3 y proteína magra con costra de ajonjolí de alacena y nopales de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Sellado rápido a 195°C por 90 segundos por lado que dora el ajonjolí manteniendo el centro jugoso a 50°C.
-  - *Construcción de Sabor:* Notas tostadas de ajonjolí, atún sellado, limón de la granja y nopales tiernos.
-  - *Arquitectura de Textura:* Costra crujiente de semillas con medallón tierno y bastones de nopal al dente.
-  - *Puntos Críticos de Control:* No sobrecocer el atún para conservar su suavidad y ácidos grasos esenciales.
-
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Filete de atún: **690 g** (115 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Ajonjolí: **30 g** (5 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **480 g** (80 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Cubrir los medallones de filete de atún de alacena con el ajonjolí y sal de mar.
-2. Sellar en sartén con aceite VEVO y mantequilla durante 90 segundos por lado.
-3. Servir acompañados de los nopales de la granja salteados y jugo de limón.
-
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus®
+##### Receta #36 [Miércoles · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `herbal_infusion`
-- **Nota Organoléptica y Bioquímica:** *"Infusión botánica sedante libre de diuréticos elaborada con manzanilla y canela molida de alacena, enriquecida con la Toma 3 de AminoSinergix®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Infusión botánica sedante libre de diuréticos elaborada con manzanilla y canela molida de alacena, enriquecida con la Toma 3 de AminoSinergix®.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Extracción herbal a 85°C y descenso térmico a ≤60°C antes de añadir AminoSinergix®.
-  - *Construcción de Sabor:* Notas cálidas y aromáticas de canela en armonía con el dulzor floral sedante de la manzanilla.
-  - *Arquitectura de Textura:* Tisana cálida, reconfortante y no diurética para proteger el sueño profundo.
-  - *Puntos Críticos de Control:* Mantener la temperatura ≤60°C al disolver 34Plus®.
+  - *Aromática y Sabor:* Notas cálidas y aromáticas de canela en armonía con el dulzor floral sedante de la manzanilla.
+  - *Arquitectura Textural:* Tisana cálida, reconfortante y no diurética para proteger el sueño profundo.
+  - *Punto Crítico de Control:* Mantener la temperatura ≤60°C al disolver 34Plus®.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Manzanilla: **12 g** (2 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Canela molida: **6 g** (1 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: AminoSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **1200 ml** (200 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🌶️ Chiles, Condimentos e Infusiones | **Manzanilla** | 2 | **12** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Canela molida** | 1 | **6** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 200 | **1,200** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Infusionar la manzanilla y la canela molida de alacena en agua a 85°C por 5 minutos y colar.
 2. Templar a 58°C, disolver la dosis de AminoSinergix® (34Plus®) y servir.
 
 ---
 
-### 📅 JUEVES 22 DE OCTUBRE DE 2026
+### 📅 JUEVES 22 DE OCTUBRE DE 2026 — Menú Completo para el Jueves 22 Oct
 
-#### 🍽️ Servicio: DESAYUNO (610 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `35.5g` | Carbs Netos: `4.5g` ($\le 5.0\text{g}$ ✅)  
+#### 🍽️ Jueves — Desayuno (08:30 hrs) | `610 kcal` · `Grasa: 50.0 g` · `Proteína: 35.5 g` · `Carbs Netos: 4.5 g` · `Fibra: 6.2 g`
 
-##### 🥗 ENTRADA: Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja
+##### Receta #37 [Jueves · Desayuno · Tiempo 1 — Entrada]: Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada de polifenoles vivos de zarzamora con semillas de chía y nuez pecana de la granja, libre de lácteos para cumplir la compatibilidad digestiva."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Entrada de polifenoles vivos de zarzamora con semillas de chía y nuez pecana de la granja, libre de lácteos para cumplir la compatibilidad digestiva.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Servicio en frío a 4°C que preserva las antocianinas.
-  - *Construcción de Sabor:* Acidez frutal de zarzamora con el perfil tostado de la nuez pecana de la granja.
-  - *Arquitectura de Textura:* Bayas turgentes con crujido de chía y nuez pecana.
-  - *Puntos Críticos de Control:* Servir sin mezclar lácteos en la fruta (cumpliendo validateNoFruitDairyMix).
+  - *Aromática y Sabor:* Acidez frutal de zarzamora con el perfil tostado de la nuez pecana de la granja.
+  - *Arquitectura Textural:* Bayas turgentes con crujido de chía y nuez pecana.
+  - *Punto Crítico de Control:* Servir sin mezclar lácteos en la fruta (cumpliendo validateNoFruitDairyMix).
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Zarzamora: **210 g** (35 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas de chía orgánicas: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **90 g** (15 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 35 | **210** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Disponer las zarzamoras desinfectadas en tazón frío.
 2. Espolvorear las semillas de chía orgánicas y la nuez pecana de la granja troceada.
 
----
-
-##### 🥩 PLATILLO PRINCIPAL: Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo
+##### Receta #38 [Jueves · Desayuno · Tiempo 2 — Plato Fuerte]: Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo
 - **Técnica Culinaria:** `poach_emulsion`
-- **Nota Organoléptica y Bioquímica:** *"Receta mediterránea clásica de 3 huevos enteros pochados sobre cama templada de yogur griego de alacena y mantequilla dorada."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Receta mediterránea clásica de 3 huevos enteros pochados sobre cama templada de yogur griego de alacena y mantequilla dorada.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Escalfado suave en agua a 82°C por 3 minutos y cama de yogur griego atemperado a 25°C.
-  - *Construcción de Sabor:* Cremosidad ácida del yogur griego con mantequilla avellanada, toque de ajo y yema líquida.
-  - *Arquitectura de Textura:* Base sedosa de yogur griego coronada con huevos pochados de yema fluida.
-  - *Puntos Críticos de Control:* Atemperar el yogur griego fuera del refrigerador 15 minutos antes de emplatar los huevos calientes.
+  - *Aromática y Sabor:* Cremosidad ácida del yogur griego con mantequilla avellanada, toque de ajo y yema líquida.
+  - *Arquitectura Textural:* Base sedosa de yogur griego coronada con huevos pochados de yema fluida.
+  - *Punto Crítico de Control:* Atemperar el yogur griego fuera del refrigerador 15 minutos antes de emplatar los huevos calientes.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Yogur griego: **480 g** (80 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **96 g** (16 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal con ajo: **6 g** (1 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Yogur griego** | 80 | **480** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Mantequilla** | 16 | **96** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🌶️ Chiles, Condimentos e Infusiones | **Sal con ajo** | 1 | **6** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Mezclar el yogur griego atemperado con la sal con ajo y extenderlo en el fondo del plato.
 2. Pochar los 3 huevos por comensal en agua a 82°C durante 3 minutos y colocarlos sobre la cama de yogur.
 3. Bañar con la mantequilla fundida y un hilo de aceite de oliva VEVO.
 
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®
+##### Receta #39 [Jueves · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica y Bioquímica:** *"Matriz de colágeno con fresa (distinta a la zarzamora de la entrada) y la Toma 2 de MultiSinergix®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Matriz de colágeno con fresa (distinta a la zarzamora de la entrada) y la Toma 2 de MultiSinergix®.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Incorporación a ≤42°C y gelificación a 4°C.
-  - *Construcción de Sabor:* Aroma limpio de fresa con notas cítricas.
-  - *Arquitectura de Textura:* Gel firme y elástico.
-  - *Puntos Críticos de Control:* Añadir MultiSinergix® únicamente cuando la mezcla esté a ≤42°C.
+  - *Aromática y Sabor:* Aroma limpio de fresa con notas cítricas.
+  - *Arquitectura Textural:* Gel firme y elástico.
+  - *Punto Crítico de Control:* Añadir MultiSinergix® únicamente cuando la mezcla esté a ≤42°C.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Fresas: **120 g** (20 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: Grenetina: **42 g** (7 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: MultiSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **720 ml** (120 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 20 | **120** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 7 | **42** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 120 | **720** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Hidratar la grenetina en agua fría por 8 minutos y disolver a 60°C.
 2. Templar a 42°C, agregar MultiSinergix® (33Plus®) y las fresas picadas.
 3. Refrigerar a 4°C por 3 horas.
 
----
+#### 🍽️ Jueves — Comida (14:30 hrs) | `753 kcal` · `Grasa: 63.0 g` · `Proteína: 42.0 g` · `Carbs Netos: 4.5 g` · `Fibra: 6.4 g`
 
-#### 🍽️ Servicio: COMIDA (753 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `63.0g` | Proteína: `42.0g` | Carbs Netos: `4.5g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #40 [Jueves · Comida · Tiempo 1 — Entrada]: Crema Caliente de Champiñones y Tomillo con Aceite de Oliva VEVO
+- **Técnica Culinaria:** `mushroom_veloute`
+- **Nota Organoléptica y Clínica:** Crema reconfortante de champiñones salteados con tomillo de alacena y fondo claro de ave, emulsionada con aceite de oliva extra virgen sin lácteos añadidos.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Dorado previo de los champiñones a 180°C por 5 minutos antes de hervir en fondo claro y emulsionar a alta velocidad.
+  - *Aromática y Sabor:* Umami terroso del champiñón realzado con las notas aromáticas del tomillo y el aceite de oliva.
+  - *Arquitectura Textural:* Velouté sedoso y ligero libre de crema láctea.
+  - *Punto Crítico de Control:* Dorar bien los champiñones antes de agregar el caldo para desarrollar profundidad aromática.
 
-##### 🥗 ENTRADA: Consomé Clarificado de Pollo con Nopales de la Granja al Cilantro
-- **Técnica Culinaria:** `simmer_broth`
-- **Nota Organoléptica y Bioquímica:** *"Consomé digestivo de mediodía con tiras de nopal y cilantro recién cosechados de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Hervor suave a 90°C por 5 minutos que integra los minerales del nopal en el fondo claro.
-  - *Construcción de Sabor:* Sabor reconfortante de caldo clarificado con notas herbales de cilantro y limón de la granja.
-  - *Arquitectura de Textura:* Caldo ligero con tiras tiernas de nopal.
-  - *Puntos Críticos de Control:* Añadir el cilantro de la granja justo al apagar el fuego.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Champiñón** | 80 | **480** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Fondo claro de pollo** | 200 | **1,200** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Tomillo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **1080 ml** (180 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **360 g** (60 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Saltear los champiñones fileteados con el tomillo y sal con ajo durante 5 minutos.
+2. Verter el fondo claro de pollo, hervir 4 minutos y licuar hasta lograr una crema homogénea.
+3. Terminar con el aceite de oliva extra virgen en crudo.
 
-**Procedimiento Paso a Paso:**
-1. Calentar el fondo claro de pollo e incorporar los nopales de la granja previamente blanqueados por 4 minutos.
-2. Servir con cilantro de la granja picado, jugo de limón y sal de mar.
+##### Receta #41 [Jueves · Comida · Tiempo 2 — Plato Fuerte]: Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO
+- **Técnica Culinaria:** `herb_roasted_whole_poultry`
+- **Nota Organoléptica y Clínica:** Pollo entero de alacena porcionado y horneado al romero de la granja sobre cama de espinacas tiernas y queso ricotta cremoso con aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Asado al horno a 190°C por 25 minutos que dora la piel y mantiene las piezas jugosas a 74°C internos.
+  - *Aromática y Sabor:* Aroma pino-cítrico del romero de la granja y limón real fundido con el queso ricotta y las espinacas.
+  - *Arquitectura Textural:* Supremas tiernas y jugosas sobre base cremosa de espinacas y queso ricotta.
+  - *Punto Crítico de Control:* Reposar 5 minutos fuera del horno antes de trinchar sobre la cama de espinacas y ricotta.
 
----
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Pollo entero** | 0.17 | **1** | piezas |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Espinacas** | 75 | **450** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Romero** | 4 | **24** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 7.5 | **45** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-##### 🥩 PLATILLO PRINCIPAL: Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Acelgas de la Granja en Emulsión VEVO
-- **Técnica Culinaria:** `stuffed_supreme_bake`
-- **Nota Organoléptica y Bioquímica:** *"Pechuga de pollo de alacena rellena de queso ricotta cremoso y acelgas de la granja horneada a jugo retenido."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Sellado inicial en sartén y horneado a 180°C hasta alcanzar 74°C internos sin resecar las fibras.
-  - *Construcción de Sabor:* Suavidad láctica del ricotta con acelgas de la granja, mantequilla y aceite de oliva VEVO.
-  - *Arquitectura de Textura:* Exterior dorado y jugoso con centro cremoso de ricotta y hojas verdes.
-  - *Puntos Críticos de Control:* Reposar las supremas 4 minutos antes de trinchar para estabilizar los jugos internos.
+**Protocolo de Ejecución Paso a Paso:**
+1. Porcionar el pollo entero de alacena en 6 piezas generosas y marinar con romero de la granja, jugo de limón, aceite de oliva, sal con ajo y pimienta negra.
+2. Hornear a 190°C durante 25 minutos bañando con sus propios jugos.
+3. Saltear brevemente las espinacas tiernas con el queso ricotta en los jugos de cocción y servir las piezas de pollo encima.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Pechuga de pollo: **900 g** (150 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso ricotta: **240 g** (40 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **360 g** (60 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+##### Receta #42 [Jueves · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Coliflor Rostizada al Horno con Cúrcuma, Limón Real y Aceite de Oliva VEVO
+- **Técnica Culinaria:** `turmeric_oven_roast`
+- **Nota Organoléptica y Clínica:** Floretes de coliflor dorados al horno con cúrcuma antiinflamatoria de alacena, limón real de la granja y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Rostizado en seco con aceite de oliva a 200°C durante 15 minutos para caramelizar bordes sin usar lácteos.
+  - *Aromática y Sabor:* Color dorado y perfil terroso-especiado de la cúrcuma con el toque cítrico del limón real.
+  - *Arquitectura Textural:* Bordes crujientes y centro tierno.
+  - *Punto Crítico de Control:* Distribuir en una sola capa en la charola para lograr dorado uniforme.
 
-**Procedimiento Paso a Paso:**
-1. Abrir las pechugas de pollo en corte mariposa y rellenar con la mezcla de queso ricotta y acelgas de la granja picadas.
-2. Sellar en sartén con mantequilla y aceite VEVO por 2 minutos por lado y hornear 10 minutos a 180°C.
-3. Servir bañadas con sus jugos y un hilo de aceite de oliva VEVO.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Coliflor** | 90 | **540** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Cúrcuma** | 1 | **6** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Mezclar los floretes de coliflor con aceite de oliva, cúrcuma y sal de mar.
+2. Hornear a 200°C durante 15 minutos hasta dorar y rociar con jugo de limón real al servir.
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Pimiento Morrón Dulce Asado al Sartén con Aceite de Oliva VEVO y Orégano
-- **Técnica Culinaria:** `pan_roast_strips`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición aromática de tiras de pimiento morrón de alacena salteadas al aceite de oliva VEVO y orégano."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Salteado a 175°C por 4 minutos que carameliza ligeramente la superficie conservando vitamina C.
-  - *Construcción de Sabor:* Notas dulces naturales del morrón con orégano de alacena y aceite VEVO.
-  - *Arquitectura de Textura:* Tiras jugosas y firmes libres de lácteos pesados.
-  - *Puntos Críticos de Control:* Retirar del fuego cuando las tiras aún conserven firmeza al dente.
+#### 🍽️ Jueves — Cena (20:00 hrs) | `631 kcal` · `Grasa: 53.0 g` · `Proteína: 34.5 g` · `Carbs Netos: 4.1 g` · `Fibra: 6.1 g`
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Morrón: **1 piezas** (0.17 piezas/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+##### Receta #43 [Jueves · Cena · Tiempo 1 — Entrada]: Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano
+- **Técnica Culinaria:** `warm_lycopene_emulsion`
+- **Nota Organoléptica y Clínica:** Emulsión templada de jitomate de alacena y cebolla blanca con orégano y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Templado suave a 55°C que incrementa la biodisponibilidad del licopeno en presencia de los lípidos del aceite de oliva.
+  - *Aromática y Sabor:* Umami natural del jitomate maduro con el aroma mediterráneo del orégano.
+  - *Arquitectura Textural:* Textura aterciopelada y ligera.
+  - *Punto Crítico de Control:* Licuar con el aceite de oliva en hilo para formar emulsión brillante.
 
-**Procedimiento Paso a Paso:**
-1. Cortar el pimiento morrón de alacena en julianas gruesas.
-2. Saltear en sartén caliente con aceite de oliva VEVO durante 4 minutos.
-3. Sazonar con orégano y sal de mar al servir.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Jitomate** | 0.17 | **1** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.17 | **1** | piezas |
+| 🧂 Condimentos, Especias e Infusiones | **Fondo claro de pollo** | 150 | **900** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Orégano** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Asar ligeramente el jitomate de alacena y la cebolla blanca, y licuar con el fondo claro tibio, orégano y sal de mar.
+2. Emulsionar con aceite de oliva extra virgen al servir.
 
-#### 🍽️ Servicio: CENA (631 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `53.0g` | Proteína: `34.5g` | Carbs Netos: `4.1g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #44 [Jueves · Cena · Tiempo 2 — Plato Fuerte]: Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja
+- **Técnica Culinaria:** `ring_mold_timbale`
+- **Nota Organoléptica y Clínica:** Timbal frío de proteína láctea ligera (queso cottage y yogur griego de alacena) con dados de pepino crujiente, aguacate Hass, cilantro y nuez pecana de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Ensamblaje en frío a 8°C en aro metálico que preserva probióticos y caseína micelar de liberación lenta nocturna.
+  - *Aromática y Sabor:* Frescura láctea ácida del yogur griego y cottage con el pepino, el cilantro y la nuez pecana.
+  - *Arquitectura Textural:* Contraste triple entre la cremosidad del timbal, el crujido del pepino y la nuez pecana.
+  - *Punto Crítico de Control:* Desmoldar justo antes de llevar a la mesa y coronar con aceite de oliva extra virgen.
 
-##### 🥗 ENTRADA: Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano
-- **Técnica Culinaria:** `emulsified_soup`
-- **Nota Organoléptica y Bioquímica:** *"Emulsión aterciopelada de jitomate de alacena rico en licopeno con aceite de oliva extra virgen."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Templado suave a 45°C que potencia la biodisponibilidad del licopeno disuelto en lípidos VEVO.
-  - *Construcción de Sabor:* Acidez equilibrada del jitomate maduro con perfume de orégano y aceite de oliva virgen.
-  - *Arquitectura de Textura:* Textura sedosa y ligera.
-  - *Puntos Críticos de Control:* Emulsionar el aceite de oliva en hilo fino al final del licuado.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 80 | **480** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Yogur griego** | 60 | **360** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aguacate** | 0.5 | **3** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Pepino** | 60 | **360** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 7.5 | **45** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Jitomate: **3 piezas** (0.5 piezas/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **480 ml** (80 ml/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Mezclar el queso cottage y el yogur griego de alacena con cilantro picado, jugo de limón real y sal de mar.
+2. Montar en aro de emplatar alternando con dados de pepino y aguacate Hass.
+3. Coronar con nuez pecana de la granja y aceite de oliva extra virgen.
 
-**Procedimiento Paso a Paso:**
-1. Licuar el jitomate con agua purificada, sal de mar y orégano hasta obtener una textura fina.
-2. Emulsionar en hilo el aceite de oliva VEVO y servir templado.
-
----
-
-##### 🥩 PLATILLO PRINCIPAL: Timbal de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga
-- **Técnica Culinaria:** `chilled_timbale_mold`
-- **Nota Organoléptica y Bioquímica:** *"Cena ligera proteica láctea-vegetal de rápido vaciamiento gástrico que amortiza el queso cottage, el aguacate, las semillas mixtas y la lechuga de alacena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Ensamblaje en frío a 8°C que preserva los ácidos grasos esenciales de las semillas y el aguacate.
-  - *Construcción de Sabor:* Frescura láctica del queso cottage con cremosidad de aguacate Hass, aceite VEVO y crujido de semillas mixtas.
-  - *Arquitectura de Textura:* Cama crujiente de lechuga con timbal cremoso de cottage, dados de aguacate y toque crocante.
-  - *Puntos Críticos de Control:* Única aparición de aguacate del día; drenar ligeramente el queso cottage antes de moldear.
-
-**Ingredientes (Escalado para 6 Comensales):**
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso cottage: **720 g** (120 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aguacate: **3 piezas** (0.5 piezas/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas y nueces mixtas: **90 g** (15 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Lechuga: **2 piezas** (0.33 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Mezclar el queso cottage de alacena con cilantro de la granja, aceite de oliva VEVO y sal de mar.
-2. Coronar con cubos de aguacate Hass y las semillas y nueces mixtas de alacena.
-3. Servir sobre hojas enteras de lechuga romana.
-
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Infusión Digestiva de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus®
+##### Receta #45 [Jueves · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Digestiva de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `herbal_infusion`
-- **Nota Organoléptica y Bioquímica:** *"Tisana carminativa y relajante con la Toma 3 de AminoSinergix® para optimizar el descanso."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Tisana carminativa y relajante con la Toma 3 de AminoSinergix® para optimizar el descanso.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Infusión a 85°C templada a ≤60°C antes de integrar 34Plus®.
-  - *Construcción de Sabor:* Aroma herbal limpio de manzanilla y tomillo de alacena.
-  - *Arquitectura de Textura:* Infusión limpia y cálida.
-  - *Puntos Críticos de Control:* Respetar el límite de ≤60°C al disolver AminoSinergix®.
+  - *Aromática y Sabor:* Aroma herbal limpio de manzanilla y tomillo de alacena.
+  - *Arquitectura Textural:* Infusión limpia y cálida.
+  - *Punto Crítico de Control:* Respetar el límite de ≤60°C al disolver AminoSinergix®.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Manzanilla: **12 g** (2 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Tomillo: **3 g** (0.5 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: AminoSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **1200 ml** (200 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🌶️ Chiles, Condimentos e Infusiones | **Manzanilla** | 2 | **12** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Tomillo** | 0.5 | **3** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 200 | **1,200** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Infusionar la manzanilla y el tomillo de alacena en agua a 85°C durante 5 minutos y colar.
 2. Templar a 58°C, disolver AminoSinergix® (34Plus®) y servir.
 
 ---
 
-### 📅 VIERNES 23 DE OCTUBRE DE 2026
+### 📅 VIERNES 23 DE OCTUBRE DE 2026 — Menú Completo para el Viernes 23 Oct
 
-#### 🍽️ Servicio: DESAYUNO (605 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `49.5g` | Proteína: `35.5g` | Carbs Netos: `4.3g` ($\le 5.0\text{g}$ ✅)  
+#### 🍽️ Viernes — Desayuno (08:30 hrs) | `605 kcal` · `Grasa: 49.5 g` · `Proteína: 35.5 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.1 g`
 
-##### 🥗 ENTRADA: Tazón de Frambuesas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja
+##### Receta #46 [Viernes · Desayuno · Tiempo 1 — Entrada]: Tazón de Zarzamoras con Semillas de Chía, Canela y Nuez Pecana de la Granja
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada de frutos del bosque ricos en polifenoles con semillas de chía y nuez pecana de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Zarzamoras de bajo índice glucémico servidas en frío con chía orgánica, canela de alacena y nuez pecana de la Granja El Herami.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Ensamblaje en frío a 4°C.
-  - *Construcción de Sabor:* Contraste ácido-dulce de frambuesa y zarzamora con la nuez pecana de la granja.
-  - *Arquitectura de Textura:* Frutos rojos enteros con textura crujiente de semillas y nueces.
-  - *Puntos Críticos de Control:* No repetir frambuesa ni zarzamora en la gelatina del acompañamiento.
+  - *Aromática y Sabor:* Contraste ácido-dulce de frambuesa y zarzamora con la nuez pecana de la granja.
+  - *Arquitectura Textural:* Frutos rojos enteros con textura crujiente de semillas y nueces.
+  - *Punto Crítico de Control:* No repetir frambuesa ni zarzamora en la gelatina del acompañamiento.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Frambuesas: **90 g** (15 g/persona)
-- *🍓 Frutas de Bajo Índice Glucémico*: Zarzamora: **120 g** (20 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas de chía orgánicas: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **90 g** (15 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 30 | **180** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Canela molida** | 0.5 | **3** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
-**Procedimiento Paso a Paso:**
-1. Combinar las frambuesas y zarzamoras en tazón frío.
-2. Espolvorear las semillas de chía orgánicas y la nuez pecana de la granja.
+**Protocolo de Ejecución Paso a Paso:**
+1. 1. Acondicionamiento en Frío: Seleccionar y secar suavemente las zarzamoras a 4°C.
+2. 2. Troceado de Nuez Pecana de la Granja: Partir las nueces pecana de la granja en mitades.
+3. 3. Servicio con Chía y Canela: Disponer en cuencos fríos con las semillas de chía orgánicas y un toque aromático de canela molida de alacena.
 
----
-
-##### 🥩 PLATILLO PRINCIPAL: Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Cilantro de la Granja
+##### Receta #47 [Viernes · Desayuno · Tiempo 2 — Plato Fuerte]: Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena, Espinacas Tiernas y Cilantro de la Granja
 - **Técnica Culinaria:** `french_baveuse_fold`
-- **Nota Organoléptica y Bioquímica:** *"Omelette clásico francés de 3 huevos por comensal relleno de queso cottage de alacena y cilantro de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción controlada en sartén a 155°C con mantequilla logrando exterior liso y centro baveuse cremoso a 68°C.
-  - *Construcción de Sabor:* Notas lácticas de mantequilla y queso cottage realzadas con cilantro recién cortado de la granja.
-  - *Arquitectura de Textura:* Envoltura sedosa de huevo con interior cremoso y aromático.
-  - *Puntos Críticos de Control:* Plegar el omelette cuando la superficie aún conserve humedad brillante.
+- **Nota Organoléptica y Clínica:** Omelette francés de exterior liso sin dorar e interior cremoso baveuse, relleno de queso ricotta de alacena, espinacas tiernas y cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Coagulación controlada en sartén a 140°C con agitación continua en mantequilla para formar micro-cuajada sedosa.
+  - *Aromática y Sabor:* Delicadeza láctea de la mantequilla y el queso ricotta con las espinacas tiernas y el cilantro.
+  - *Arquitectura Textural:* Envoltura elástica y tierna con corazón fundente de ricotta y hojas suaves de espinaca.
+  - *Punto Crítico de Control:* Enrollar cuando la superficie aún conserve brillo húmedo baveuse.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso cottage: **480 g** (80 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **36 g** (6 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **90 g** (15 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Espinacas** | 50 | **300** | g |
+| 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 7.5 | **45** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 8 | **48** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Procedimiento Paso a Paso:**
-1. Batir 3 huevos enteros por persona con una pizca de sal de mar.
-2. Cuajar suavemente en sartén con mantequilla y aceite de oliva VEVO.
-3. Rellenar con el queso cottage drenado y el cilantro de la granja picado; plegar en tres y servir.
+**Protocolo de Ejecución Paso a Paso:**
+1. Saltear las espinacas tiernas 1 minuto en mantequilla y reservar con el queso ricotta y el cilantro picado.
+2. Batir los 3 huevos por comensal con sal de mar y verter en sartén a fuego medio-bajo moviendo constantemente.
+3. Rellenar con el queso ricotta y las espinacas, doblar en tres pliegues y servir de inmediato.
 
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus®
+##### Receta #48 [Viernes · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica y Bioquímica:** *"Gel colagénico de fresa y limón de la granja (distinta a las bayas de la entrada) con la Toma 2 de MultiSinergix®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Gel colagénico de fresa y limón de la granja (distinta a las bayas de la entrada) con la Toma 2 de MultiSinergix®.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Incorporación a ≤42°C y refrigeración a 4°C.
-  - *Construcción de Sabor:* Perfume de fresa con destello cítrico de limón de la granja.
-  - *Arquitectura de Textura:* Gel firme y refrescante.
-  - *Puntos Críticos de Control:* Verificar temperatura ≤42°C antes de añadir MultiSinergix®.
+  - *Aromática y Sabor:* Perfume de fresa con destello cítrico de limón de la granja.
+  - *Arquitectura Textural:* Gel firme y refrescante.
+  - *Punto Crítico de Control:* Verificar temperatura ≤42°C antes de añadir MultiSinergix®.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Fresas: **120 g** (20 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **48 g** (8 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: Grenetina: **42 g** (7 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: MultiSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **720 ml** (120 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 20 | **120** | g |
+| 🥬 Verduras, Hortalizas y Frescos | **Limones** | 8 | **48** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 7 | **42** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 120 | **720** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Hidratar la grenetina en agua fría por 8 minutos y fundir a 60°C.
 2. Templar a 42°C, incorporar MultiSinergix® (33Plus®), jugo de limón de la granja y las fresas picadas.
 3. Refrigerar a 4°C por 3 horas.
 
----
+#### 🍽️ Viernes — Comida (14:30 hrs) | `756 kcal` · `Grasa: 63.5 g` · `Proteína: 41.5 g` · `Carbs Netos: 4.6 g` · `Fibra: 6.4 g`
 
-#### 🍽️ Servicio: COMIDA (756 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `63.5g` | Proteína: `41.5g` | Carbs Netos: `4.6g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #49 [Viernes · Comida · Tiempo 1 — Entrada]: Ensalada Crujiente de Pepino y Cilantro de la Granja al Limón Real con Aceite VEVO
+- **Técnica Culinaria:** `crisp_citrus_salad`
+- **Nota Organoléptica y Clínica:** Ensalada verde refrescante de láminas crujientes de pepino y hojas de cilantro de la granja con vinagreta de limón real y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Ensamblaje en frío a 10°C que aporta enzimas e hidratación mineral previa al corte de res a la parrilla.
+  - *Aromática y Sabor:* Frescura herbal del cilantro de la granja y pepino con acidez brillante de limón real.
+  - *Arquitectura Textural:* Rodajas crujientes de pepino con hojas aromáticas de cilantro.
+  - *Punto Crítico de Control:* Aliñar al momento de servir para preservar toda la crocancia.
 
-##### 🥗 ENTRADA: Consomé Templado de Cilantro de la Granja y Limón Real con Aceite de Oliva VEVO
-- **Técnica Culinaria:** `simmer_broth`
-- **Nota Organoléptica y Bioquímica:** *"Consomé digestivo de mediodía con fondo claro, cilantro de la granja y aceite de oliva extra virgen."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Infusión a 85°C por 4 minutos que extrae los compuestos aromáticos del cilantro de la granja.
-  - *Construcción de Sabor:* Notas herbales limpias de cilantro y limón de la granja con aceite VEVO.
-  - *Arquitectura de Textura:* Caldo claro, sedoso y ligero.
-  - *Puntos Críticos de Control:* Incorporar el cilantro picado y el jugo de limón justo al momento de servir.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Pepino** | 70 | **420** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 8 | **48** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **900 ml** (150 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Cortar el pepino en medias lunas crujientes y mezclar con hojas de cilantro de la granja.
+2. Aderezar con jugo de limón real, aceite de oliva extra virgen y sal de mar.
 
-**Procedimiento Paso a Paso:**
-1. Calentar el fondo claro de pollo a fuego medio con sal de mar.
-2. Servir en tazón con el cilantro de la granja finamente picado, jugo de limón y aceite de oliva VEVO.
+##### Receta #50 [Viernes · Comida · Tiempo 2 — Plato Fuerte]: Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo
+- **Técnica Culinaria:** `cast_iron_grill_sear`
+- **Nota Organoléptica y Clínica:** Corte magro de flat steak de res sellado a la parrilla de hierro y terminado con mantequilla compuesta de finas hierbas y ajo.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Reacción de Maillard en parrilla a 230°C durante 3.5 minutos por lado y reposo térmico de 5 minutos con mantequilla aromática.
+  - *Aromática y Sabor:* Notas tostadas de parrilla fundidas con la mantequilla de finas hierbas.
+  - *Arquitectura Textural:* Costra exterior dorada e interior jugoso cortado en contra de la fibra muscular.
+  - *Punto Crítico de Control:* Reposar el corte 5 minutos antes de rebanar para redistribuir los jugos miofibrilares.
 
----
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Flat steak** | 210 | **1,260** | g |
+| 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 5 | **30** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Hierbas finas** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-##### 🥩 PLATILLO PRINCIPAL: Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO
-- **Técnica Culinaria:** `high_heat_wok_saute`
-- **Nota Organoléptica y Bioquímica:** *"Juliana de Flat Steak que amortiza el resto del stock de alacena, salteada a fuego vivo tipo wok con pimientos morrones y cebolla de alacena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Salteado rápido al wok a 210°C durante 3 minutos que sella las tiras de res conservando su terneza.
-  - *Construcción de Sabor:* Caramelización de la carne de res con dulzor de pimiento morrón y cebolla asada.
-  - *Arquitectura de Textura:* Tiras de carne jugosas con bastones de pimiento al dente.
-  - *Puntos Críticos de Control:* Cortar el Flat Steak en contra de la fibra muscular antes de saltear.
+**Protocolo de Ejecución Paso a Paso:**
+1. Temperar el flat steak, barnizar con aceite de oliva y sazonar con sal con ajo y pimienta negra.
+2. Asar en parrilla de hierro bien caliente 3.5 minutos por lado.
+3. Coronar fuera del fuego con la mantequilla mezclada con finas hierbas, reposar 5 minutos y filetear.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Flat steak: **900 g** (150 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Morrón: **2 piezas** (0.33 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cebolla: **2 piezas** (0.33 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **84 g** (14 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **9 g** (1.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Pimienta negra: **3 g** (0.5 g/persona)
+##### Receta #51 [Viernes · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Espárragos Verdes Asados al Horno con Cebolla Blanca de Alacena, Limón Real y Aceite de Oliva VEVO
+- **Técnica Culinaria:** `sheet_pan_roast`
+- **Nota Organoléptica y Clínica:** Tallos tiernos de espárrago verde asados junto con gajos de cebolla blanca de alacena, limón de la granja y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Asado a 200°C por 10 minutos sin lácteos ni mantequilla para respetar el balance metabólico del corte de res.
+  - *Aromática y Sabor:* Dulzor de la cebolla asada con las notas verdes tostadas del espárrago y el limón real.
+  - *Arquitectura Textural:* Puntas de espárrago crujientes y tallos tiernos con gajos suaves de cebolla.
+  - *Punto Crítico de Control:* Retirar a los 10 minutos para conservar turgencia.
 
-**Procedimiento Paso a Paso:**
-1. Cortar el Flat Steak de alacena en juliana gruesa en contra de la hebra y sazonar con sal de mar y pimienta negra.
-2. Saltear a fuego alto en wok con aceite VEVO y mantequilla durante 2 minutos, añadir el pimiento morrón y la cebolla en juliana y saltear 2 minutos más.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Espárragos** | 80 | **480** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.33 | **2** | piezas |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Disponer los espárragos verdes y la cebolla en gajos en una charola con aceite de oliva y sal de mar.
+2. Asar a 200°C durante 10 minutos y terminar con jugo de limón real.
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Acelgas de la Granja Salteadas al Ajo con Aceite VEVO y Orégano
-- **Técnica Culinaria:** `quick_saute_greens`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición verde de acelgas de la granja salteadas brevemente con aceite de oliva VEVO, sal con ajo y orégano."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Salteado rápido a 170°C durante 3 minutos que mantiene la integridad de los tallos y hojas.
-  - *Construcción de Sabor:* Sabor mineral de las acelgas de la granja con orégano aromático y aceite VEVO.
-  - *Arquitectura de Textura:* Tallos crujientes y hojas tiernas brillantes.
-  - *Puntos Críticos de Control:* Cocer primero los tallos picados 1 minuto antes de incorporar las hojas.
+#### 🍽️ Viernes — Cena (20:00 hrs) | `628 kcal` · `Grasa: 52.5 g` · `Proteína: 35.0 g` · `Carbs Netos: 3.8 g` · `Fibra: 5.8 g`
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **540 g** (90 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+##### Receta #52 [Viernes · Cena · Tiempo 1 — Entrada]: Caldo Clarificado de Pollo con Calabacitas Tiernas, Limón Real y Cilantro de la Granja
+- **Técnica Culinaria:** `clear_simmer_infusion`
+- **Nota Organoléptica y Clínica:** Consomé ligero nocturno de ave con dados tiernos de calabacita, jugo de limón real y hojas de cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Infusión a 88°C durante 4 minutos que cuece suavemente los dados de calabacita manteniendo el caldo cristalino.
+  - *Aromática y Sabor:* Claridad aromática de ave con calabacita tierna, limón real y cilantro.
+  - *Arquitectura Textural:* Caldo limpio con dados al dente de calabacita.
+  - *Punto Crítico de Control:* Perfumar con el cilantro y el limón real al momento de servir.
 
-**Procedimiento Paso a Paso:**
-1. Lavar y trocear las acelgas de la granja separando tallos y hojas.
-2. Saltear en sartén con aceite de oliva VEVO durante 3 minutos.
-3. Sazonar con orégano y sal de mar al servir.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🧂 Condimentos, Especias e Infusiones | **Fondo claro de pollo** | 250 | **1,500** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Calabacitas** | 60 | **360** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 8 | **48** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 5 | **30** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Hervir suavemente los dados de calabacita en el fondo claro de pollo por 4 minutos con sal de mar.
+2. Servir caliente con cilantro picado de la granja, jugo de limón real y aceite de oliva extra virgen.
 
-#### 🍽️ Servicio: CENA (628 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `52.5g` | Proteína: `35.0g` | Carbs Netos: `3.8g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #53 [Viernes · Cena · Tiempo 2 — Plato Fuerte]: Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO
+- **Técnica Culinaria:** `steamed_roulade`
+- **Nota Organoléptica y Clínica:** Roulades suaves de pechuga de pollo cocidos al vapor y rellenos de julianas de pimiento morrón, alcaparras y aceitunas manzanilla de alacena en emulsión de limón y aceite VEVO.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Cocción húmeda al vapor a 94°C durante 12 minutos que conserva la pechuga blanca tierna sin generar productos de glicación.
+  - *Aromática y Sabor:* Contraste mediterráneo entre el dulzor del pimiento morrón y la salinidad de las alcaparras y aceitunas manzanilla.
+  - *Arquitectura Textural:* Medallones de pechuga jugosa con centro colorido de morrón, aceituna y alcaparra.
+  - *Punto Crítico de Control:* Reposar los rollitos 2 minutos antes de cortar en medallones diagonales.
 
-##### 🥗 ENTRADA: Caldo Clarificado de Pollo al Limón Real y Cilantro de la Granja
-- **Técnica Culinaria:** `simmer_broth`
-- **Nota Organoléptica y Bioquímica:** *"Caldo ligero de noche con cilantro de la granja para hidratar y aportar electrolitos."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Infusión suave a 88°C.
-  - *Construcción de Sabor:* Aroma limpio de cilantro de la granja y limón.
-  - *Arquitectura de Textura:* Caldo claro y reconfortante.
-  - *Puntos Críticos de Control:* Servir caliente con gotas de limón al momento.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 200 | **1,200** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.33 | **2** | piezas |
+| 🧂 Condimentos, Especias e Infusiones | **Alcaparras** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceitunas manzanilla** | 15 | **90** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 10 | **60** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 20 | **120** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 10 | **60** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **1080 ml** (180 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Extender las milanesas de pechuga de pollo, sazonar con sal con ajo y pimienta, y rellenar con tiras de pimiento morrón, aceitunas manzanilla fileteadas y alcaparras.
+2. Enrollar firmemente, cocer al vapor durante 12 minutos y rebanar en medallones.
+3. Bañar con emulsión de aceite de oliva extra virgen, jugo de limón real y cilantro de la granja.
 
-**Procedimiento Paso a Paso:**
-1. Hervir suavemente el fondo claro de pollo por 4 minutos.
-2. Servir con cilantro de la granja, jugo de limón y aceite de oliva VEVO.
-
----
-
-##### 🥩 PLATILLO PRINCIPAL: Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO
-- **Técnica Culinaria:** `steam_roulade`
-- **Nota Organoléptica y Bioquímica:** *"Única cena semanal de pechuga de pollo de rápido vaciamiento gástrico, amortizando la pechuga de pollo, las alcaparras, las aceitunas y la lechuga de alacena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción suave en roulade al vapor a 95°C que preserva la humedad fibrilar y facilita una digestión nocturna ligera.
-  - *Construcción de Sabor:* Pollo jugoso al vapor con el toque mediterráneo de las alcaparras, aceitunas manzanilla de alacena, limón de la granja y aceite VEVO.
-  - *Arquitectura de Textura:* Medallones de rollito tiernos servidos sobre cama de lechuga romana.
-  - *Puntos Críticos de Control:* Enjuagar ligeramente las alcaparras para equilibrar el sodio.
-
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Pechuga de pollo: **900 g** (150 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Alcaparras: **60 g** (10 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Aceitunas manzanilla: **90 g** (15 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Lechuga: **2 piezas** (0.33 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Laminar las pechugas de pollo de alacena, enrollarlas con cilantro de la granja y cocerlas al vapor por 8 minutos.
-2. Rebanar en medallones sobre cama de lechuga romana y bañar con emulsión de aceite VEVO, jugo de limón, alcaparras y aceitunas manzanilla.
-
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®
+##### Receta #54 [Viernes · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `herbal_infusion`
-- **Nota Organoléptica y Bioquímica:** *"Elixir nocturno con la Toma 3 de AminoSinergix® para la regeneración celular durante el sueño."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Elixir nocturno con la Toma 3 de AminoSinergix® para la regeneración celular durante el sueño.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Infusión a 85°C enfriada a ≤60°C antes de añadir AminoSinergix®.
-  - *Construcción de Sabor:* Frescura floral de manzanilla con toque cítrico de la granja.
-  - *Arquitectura de Textura:* Infusión tibia y limpia.
-  - *Puntos Críticos de Control:* Disolver la fórmula únicamente a ≤60°C.
+  - *Aromática y Sabor:* Frescura floral de manzanilla con toque cítrico de la granja.
+  - *Arquitectura Textural:* Infusión tibia y limpia.
+  - *Punto Crítico de Control:* Disolver la fórmula únicamente a ≤60°C.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Manzanilla: **12 g** (2 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **48 g** (8 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: AminoSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **1200 ml** (200 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🌶️ Chiles, Condimentos e Infusiones | **Manzanilla** | 2 | **12** | g |
+| 🥬 Verduras, Hortalizas y Frescos | **Limones** | 8 | **48** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 200 | **1,200** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Infusionar la manzanilla en agua a 85°C por 5 minutos y colar.
 2. Templar a 58°C, añadir las gotas de limón y disolver la dosis de AminoSinergix® (34Plus®).
 
 ---
 
-### 📅 SÁBADO 24 DE OCTUBRE DE 2026
+### 📅 SÁBADO 24 DE OCTUBRE DE 2026 — Menú Completo para el Sábado 24 Oct
 
-#### 🍽️ Servicio: DESAYUNO (606 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `50.0g` | Proteína: `34.5g` | Carbs Netos: `4.4g` ($\le 5.0\text{g}$ ✅)  
+#### 🍽️ Sábado — Desayuno (08:30 hrs) | `606 kcal` · `Grasa: 50.0 g` · `Proteína: 34.5 g` · `Carbs Netos: 4.4 g` · `Fibra: 6.2 g`
 
-##### 🥗 ENTRADA: Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja
+##### Receta #55 [Sábado · Desayuno · Tiempo 1 — Entrada]: Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada de fresas de alacena con mucílago prebiótico de chía y nuez pecana recién cosechada de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Entrada de fresas de alacena con mucílago prebiótico de chía y nuez pecana recién cosechada de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Ensamblaje en frío a 4°C.
-  - *Construcción de Sabor:* Acidez natural de la fresa con la riqueza oleosa de la nuez pecana de la granja.
-  - *Arquitectura de Textura:* Gajos firmes de fresa con crujido de nuez pecana.
-  - *Puntos Críticos de Control:* No mezclar lácteos en la fruta de entrada.
+  - *Aromática y Sabor:* Acidez natural de la fresa con la riqueza oleosa de la nuez pecana de la granja.
+  - *Arquitectura Textural:* Gajos firmes de fresa con crujido de nuez pecana.
+  - *Punto Crítico de Control:* No mezclar lácteos en la fruta de entrada.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Fresas: **180 g** (30 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Semillas de chía orgánicas: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **90 g** (15 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 30 | **180** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Cortar las fresas en cuartos y disponer en tazón frío.
 2. Añadir las semillas de chía orgánicas y la nuez pecana de la granja troceada.
 
----
-
-##### 🥩 PLATILLO PRINCIPAL: Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano
+##### Receta #56 [Sábado · Desayuno · Tiempo 2 — Plato Fuerte]: Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano
 - **Técnica Culinaria:** `cast_iron_sunny_side`
-- **Nota Organoléptica y Bioquímica:** *"3 huevos enteros por comensal estrellados en sartén de hierro sobre cama de jitomate de alacena asado al orégano y cilantro de la granja."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** 3 huevos enteros por comensal estrellados en sartén de hierro sobre cama de jitomate de alacena asado al orégano y cilantro de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Conducción térmica en hierro fundido a 165°C que cuaja la clara con bordes dorados manteniendo la yema líquida a 62°C.
-  - *Construcción de Sabor:* Yema rica emulsionada con jitomate asado al orégano, mantequilla y cilantro de la granja.
-  - *Arquitectura de Textura:* Clara firme con bordes crujientes y yema cremosa sobre cama jugosa de jitomate.
-  - *Puntos Críticos de Control:* Tapar la sartén los últimos 45 segundos para sellar el velo superior de la clara sin endurecer la yema.
+  - *Aromática y Sabor:* Yema rica emulsionada con jitomate asado al orégano, mantequilla y cilantro de la granja.
+  - *Arquitectura Textural:* Clara firme con bordes crujientes y yema cremosa sobre cama jugosa de jitomate.
+  - *Punto Crítico de Control:* Tapar la sartén los últimos 45 segundos para sellar el velo superior de la clara sin endurecer la yema.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Jitomate: **1 piezas** (0.17 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **36 g** (6 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **90 g** (15 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
+| 🥬 Verduras, Hortalizas y Frescos | **Jitomate** | 0.33 | **2** | piezas |
+| 🥬 Verduras, Hortalizas y Frescos | **Cilantro** | 6 | **36** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Mantequilla** | 15 | **90** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🌶️ Chiles, Condimentos e Infusiones | **Orégano** | 0.5 | **3** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Asar rebanadas de jitomate de alacena en sartén de hierro con aceite VEVO y orégano durante 2 minutos.
 2. Añadir la mantequilla y estrellar 3 huevos enteros por comensal a fuego medio-bajo.
 3. Servir con la yema tierna espolvoreando cilantro de la granja picado y sal de mar.
 
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Gelatina Cítrica de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®
+##### Receta #57 [Sábado · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina Cítrica de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `gelatin_molding`
-- **Nota Organoléptica y Bioquímica:** *"Matriz de colágeno con zarzamora de alacena (distinta a la fresa de la entrada) y la Toma 2 de MultiSinergix®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Matriz de colágeno con zarzamora de alacena (distinta a la fresa de la entrada) y la Toma 2 de MultiSinergix®.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Incorporación a ≤42°C para proteger los activos termolábiles y gelificación a 4°C.
-  - *Construcción de Sabor:* Acidez limpia de zarzamora y limón de la granja con notas adaptogénicas.
-  - *Arquitectura de Textura:* Gel firme y brillante.
-  - *Puntos Críticos de Control:* Incorporar la Fórmula 33Plus® estrictamente a ≤42°C.
+  - *Aromática y Sabor:* Acidez limpia de zarzamora y limón de la granja con notas adaptogénicas.
+  - *Arquitectura Textural:* Gel firme y brillante.
+  - *Punto Crítico de Control:* Incorporar la Fórmula 33Plus® estrictamente a ≤42°C.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🍓 Frutas de Bajo Índice Glucémico*: Zarzamora: **150 g** (25 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: Grenetina: **42 g** (7 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: MultiSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **720 ml** (120 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 25 | **150** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 7 | **42** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 120 | **720** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Hidratar la grenetina en agua fría 8 minutos y disolver a 60°C.
 2. Templar a 42°C, integrar la dosis de MultiSinergix® (33Plus®) y las zarzamoras.
 3. Refrigerar a 4°C por 3 horas.
 
----
+#### 🍽️ Sábado — Comida (14:30 hrs) | `771 kcal` · `Grasa: 65.0 g` · `Proteína: 42.0 g` · `Carbs Netos: 4.6 g` · `Fibra: 6.7 g`
 
-#### 🍽️ Servicio: COMIDA (771 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `65.0g` | Proteína: `42.0g` | Carbs Netos: `4.6g` ($\le 5.0\text{g}$ ✅)  
+##### Receta #58 [Sábado · Comida · Tiempo 1 — Entrada]: Ensalada Romana de Alacena y Cilantro de la Granja al Limón Real con Aceite VEVO
+- **Técnica Culinaria:** `crisp_leaf_emulsion`
+- **Nota Organoléptica y Clínica:** Corazones crujientes de lechuga romana de alacena y hojas de cilantro de la granja aderezados con limón real y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Ensamblaje en frío a 8°C que conserva la turgencia celular de las hojas de lechuga romana.
+  - *Aromática y Sabor:* Frescura vegetal de la lechuga romana con notas cítricas de limón real y cilantro.
+  - *Arquitectura Textural:* Hojas crujientes con película ligera de aceite de oliva extra virgen.
+  - *Punto Crítico de Control:* Secar perfectamente las hojas antes de aliñar.
 
-##### 🥗 ENTRADA: Ensalada Crujiente de Lechuga Romana y Cilantro de la Granja al Limón con VEVO
-- **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada verde y alcalinizante con lechuga de alacena y cilantro de la granja para equilibrar la hamburguesa de res."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Ensamblaje en frío a 8°C sin tratamiento térmico.
-  - *Construcción de Sabor:* Frescura cítrica de limón de la granja y cilantro con aceite de oliva extra virgen.
-  - *Arquitectura de Textura:* Hojas de lechuga romana crujientes sin lácteos ni aderezos pesados.
-  - *Puntos Críticos de Control:* Aliñar al momento de emplatar.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Lechuga** | 0.17 | **1** | piezas |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 8 | **48** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Lechuga: **1 piezas** (0.17 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Trocear las hojas de lechuga romana de alacena y mezclar con el cilantro de la granja.
+2. Emulsionar el jugo de limón real con el aceite de oliva extra virgen y sal de mar, y aliñar al momento.
 
-**Procedimiento Paso a Paso:**
-1. Trocear la lechuga romana desinfectada y mezclar con hojas de cilantro de la granja.
-2. Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.
-3. Aderezar y servir de inmediato.
-
----
-
-##### 🥩 PLATILLO PRINCIPAL: Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Costra de Queso Manchego y Guacamole Rústico
+##### Receta #59 [Sábado · Comida · Tiempo 2 — Plato Fuerte]: Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Queso Philadelphia Fundido y Guacamole Rústico
 - **Técnica Culinaria:** `open_flame_patty_gratin`
-- **Nota Organoléptica y Bioquímica:** *"Plato principal que amortiza el resto de la carne molida, el queso manchego y el aguacate de alacena, coronado con el único aguacate del día."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Medallón grueso de res a la parrilla coronado con queso Philadelphia fundido y guacamole rústico al limón real.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Asado a la parrilla a 200°C durante 4 minutos por lado y fundido del queso manchego con calor residual.
-  - *Construcción de Sabor:* Carne de res asada, queso manchego fundido y guacamole al limón de la granja.
-  - *Arquitectura de Textura:* Medallón jugoso de res con capa fundente de manchego y cremosidad de aguacate.
-  - *Puntos Críticos de Control:* Única aparición de aguacate del día (cumpliendo enforceFatSourceUniqueness).
+  - *Aromática y Sabor:* Reacción de Maillard en la carne de res equilibrada por la cremosidad láctea del queso Philadelphia y el aguacate Hass.
+  - *Arquitectura Textural:* Exterior sellado a la parrilla, interior jugoso, capa fundente de queso Philadelphia y emulsión rústica de aguacate.
+  - *Punto Crítico de Control:* Única aparición de aguacate del día (cumpliendo enforceFatSourceUniqueness).
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥩 Carnes, Pescados y Proteínas*: Carne molida: **840 g** (140 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso manchego: **180 g** (30 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aguacate: **3 piezas** (0.5 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 140 | **840** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 30 | **180** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aguacate** | 0.5 | **3** | piezas |
+| 🥬 Verduras, Hortalizas y Frescos | **Limones** | 10 | **60** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Formar los medallones de hamburguesa con la carne molida de alacena y asarlos en parrilla caliente durante 4 minutos por lado.
-2. Colocar el queso manchego encima en el último minuto para gratinar.
+2. Colocar el queso Philadelphia encima en el último minuto para gratinar.
 3. Servir coronando con el aguacate machacado con jugo de limón de la granja y sal de mar.
 
----
+##### Receta #60 [Sábado · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Floretes de Coliflor al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO
+- **Técnica Culinaria:** `aromatic_steam_toss`
+- **Nota Organoléptica y Clínica:** Guarnición crucífera ligera sin lácteos ni mantequilla: floretes de coliflor al vapor con orégano de alacena, limón real y aceite de oliva extra virgen.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Cocción al vapor a 98°C por 5 minutos para lograr textura al dente y preservar glucosinolatos.
+  - *Aromática y Sabor:* Suavidad de la coliflor al vapor con el perfume del orégano y el limón real.
+  - *Arquitectura Textural:* Floretes firmes y ligeros que equilibran la densidad de la hamburguesa de res.
+  - *Punto Crítico de Control:* Aliñar en tibio inmediatamente al salir de la vaporera.
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Acelgas de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO
-- **Técnica Culinaria:** `gentle_steam`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición verde limpia de acelgas de la granja al vapor con limón real y aceite VEVO."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción al vapor a 98°C por 4 minutos que preserva clorofila y textura firme.
-  - *Construcción de Sabor:* Sabor vegetal puro de acelga de la granja con limón y aceite VEVO.
-  - *Arquitectura de Textura:* Hojas y tallos tiernos libres de lácteos para acompañar el corte de res.
-  - *Puntos Críticos de Control:* Retirar del vapor a los 4 minutos exactos.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Coliflor** | 80 | **480** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 6 | **36** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Orégano** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **540 g** (90 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+**Protocolo de Ejecución Paso a Paso:**
+1. Cocer los floretes de coliflor al vapor durante 5 minutos hasta que estén tiernos pero firmes.
+2. Aderezar con aceite de oliva extra virgen, jugo de limón real, orégano y sal de mar.
 
-**Procedimiento Paso a Paso:**
-1. Cocer las acelgas de la granja al vapor durante 4 minutos.
-2. Servir calientes bañadas con jugo de limón de la granja, aceite de oliva VEVO y sal de mar.
+#### 🍽️ Sábado — Cena (20:00 hrs) | `620 kcal` · `Grasa: 52.0 g` · `Proteína: 34.0 g` · `Carbs Netos: 3.9 g` · `Fibra: 5.8 g`
 
----
+##### Receta #61 [Sábado · Cena · Tiempo 1 — Entrada]: Consomé Nocturno Clarificado de Champiñones Laminados y Cilantro de la Granja al Limón Real
+- **Técnica Culinaria:** `mushroom_clear_infusion`
+- **Nota Organoléptica y Clínica:** Caldo cristalino nocturno infundido con láminas de champiñón, cilantro de la granja y limón real, libre de lácteos.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Infusión suave a 90°C por 5 minutos que extrae los ribonucleótidos umami del champiñón sin enturbiar el fondo.
+  - *Aromática y Sabor:* Umami limpio de champiñón laminado con el frescor del cilantro y el limón de la granja.
+  - *Arquitectura Textural:* Caldo ligero con láminas tiernas de champiñón.
+  - *Punto Crítico de Control:* Añadir el jugo de limón real y el cilantro al momento de servir.
 
-#### 🍽️ Servicio: CENA (620 kcal / comensal)
-**Macros 3 Tiempos:** Grasa: `52.0g` | Proteína: `34.0g` | Carbs Netos: `3.9g` ($\le 5.0\text{g}$ ✅)  
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🧂 Condimentos, Especias e Infusiones | **Fondo claro de pollo** | 250 | **1,500** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Champiñón** | 60 | **360** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 8 | **48** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 5 | **30** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
-##### 🥗 ENTRADA: Consomé Nocturno Clarificado de Cilantro de la Granja y Limón Real
-- **Técnica Culinaria:** `simmer_broth`
-- **Nota Organoléptica y Bioquímica:** *"Consomé ligero y digestivo con fondo claro, cilantro de la granja y toque de limón."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Infusión aromática a 85°C durante 4 minutos que preserva aceites esenciales del cilantro.
-  - *Construcción de Sabor:* Caldo limpio con cilantro de la granja y acidez brillante de limón.
-  - *Arquitectura de Textura:* Consomé reconfortante y ligero.
-  - *Puntos Críticos de Control:* Incorporar el cilantro picado y el limón al momento de servir.
+**Protocolo de Ejecución Paso a Paso:**
+1. Filetear finamente los champiñones y cocer en el fondo claro de pollo con sal de mar durante 5 minutos.
+2. Servir caliente con cilantro de la granja, jugo de limón real y aceite de oliva extra virgen.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **1080 ml** (180 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **60 g** (10 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+##### Receta #62 [Sábado · Cena · Tiempo 2 — Plato Fuerte]: Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja
+- **Técnica Culinaria:** `warm_carpaccio_emulsion`
+- **Nota Organoléptica y Clínica:** Cama de ejotes tiernos de alacena al vapor, bañados en mantequilla dorada y coronados con copos de queso ricotta cremoso y nuez pecana tostada de la granja.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
+  - *Termodinámica:* Cocción al vapor a 98°C por 5 minutos seguida de glaseado rápido a 140°C con mantequilla.
+  - *Aromática y Sabor:* Notas verdes de los ejotes con mantequilla avellanada, queso ricotta y nuez pecana tostada.
+  - *Arquitectura Textural:* Ejotes crujientes al diente, cremosidad de ricotta y crocancia de nuez pecana.
+  - *Punto Crítico de Control:* Agregar el queso ricotta fuera del fuego para mantener su estructura cremosa.
 
-**Procedimiento Paso a Paso:**
-1. Calentar el fondo claro de pollo a fuego suave con sal de mar.
-2. Servir caliente con el cilantro de la granja picado, jugo de limón y aceite de oliva VEVO.
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🥦 Hortalizas, Vegetales y Hongos | **Ejotes** | 80 | **480** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 50 | **300** | g |
+| 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 10 | **60** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 5 | **30** | ml |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 15 | **90** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
----
+**Protocolo de Ejecución Paso a Paso:**
+1. Cocer los ejotes de alacena al vapor por 5 minutos hasta que estén al dente y brillantes.
+2. Saltear brevemente en la mantequilla fundida con aceite de oliva, jugo de limón real, sal de mar y pimienta negra.
+3. Extender en plato amplio tipo carpaccio y coronar con el queso ricotta y la nuez pecana tostada de la granja.
 
-##### 🥩 PLATILLO PRINCIPAL: Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas
-- **Técnica Culinaria:** `warm_carpaccio_saute`
-- **Nota Organoléptica y Bioquímica:** *"Cena ligera fúngica-láctea de rápido vaciamiento gástrico que amortiza al 100% los champiñones, la flor de calabaza (1 manojo en alacena), el queso de cabra y las almendras fileteadas de alacena."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Salteado a 175°C durante 4 minutos que dora los champiñones laminados y funde suavemente el queso de cabra.
-  - *Construcción de Sabor:* Umami de champiñón y flor de calabaza con acidez cremosa de queso de cabra y almendras tostadas.
-  - *Arquitectura de Textura:* Láminas carnosas de champiñón con pétalos suaves de flor de calabaza y crujido de almendra.
-  - *Puntos Críticos de Control:* Incorporar la flor de calabaza en el último minuto de cocción para conservar su textura.
-
-**Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Champiñón: **900 g** (150 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Flor de calabaza: **1 manojo** (0.17 manojo/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso de cabra: **210 g** (35 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Almendras fileteadas: **90 g** (15 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **72 g** (12 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
-
-**Procedimiento Paso a Paso:**
-1. Laminar los champiñones de alacena y saltearlos en aceite VEVO y mantequilla durante 3 minutos.
-2. Incorporar la flor de calabaza limpia y saltear 1 minuto adicional con sal de mar.
-3. Servir templado coronando con el queso de cabra desmoronado y las almendras fileteadas tostadas de alacena.
-
----
-
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus®
+##### Receta #63 [Sábado · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `herbal_infusion`
-- **Nota Organoléptica y Bioquímica:** *"Elixir nocturno sedante libre de diuréticos con manzanilla, tomillo aromático de alacena, gotas de limón de la granja y la Toma 3 de AminoSinergix®."*
-- **Razonamiento Culinario CoCT (Física del Bocado):**
+- **Nota Organoléptica y Clínica:** Elixir nocturno sedante libre de diuréticos con manzanilla, tomillo aromático de alacena, gotas de limón de la granja y la Toma 3 de AminoSinergix®.
+- **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Infusión floral y herbal a 85°C templada a ≤60°C.
-  - *Construcción de Sabor:* Aroma relajante de manzanilla, tomillo suave y toque cítrico de la granja.
-  - *Arquitectura de Textura:* Infusión cálida y sedosa sin efecto diurético nocturno.
-  - *Puntos Críticos de Control:* Disolver AminoSinergix® estrictamente a ≤60°C.
+  - *Aromática y Sabor:* Aroma relajante de manzanilla, tomillo suave y toque cítrico de la granja.
+  - *Arquitectura Textural:* Infusión cálida y sedosa sin efecto diurético nocturno.
+  - *Punto Crítico de Control:* Disolver AminoSinergix® estrictamente a ≤60°C.
 
-**Ingredientes (Escalado para 6 Comensales):**
-- *🌶️ Chiles, Condimentos e Infusiones*: Manzanilla: **12 g** (2 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Tomillo: **3 g** (0.5 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **48 g** (8 g/persona)
-- *💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA*: AminoSinergix®: **30 g** (5 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Agua purificada: **1200 ml** (200 ml/persona)
+| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
+|---|---|---|---|---|
+| 🌶️ Chiles, Condimentos e Infusiones | **Manzanilla** | 2 | **12** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Tomillo** | 0.5 | **3** | g |
+| 🥬 Verduras, Hortalizas y Frescos | **Limones** | 8 | **48** | g |
+| 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 5 | **30** | g |
+| 🌶️ Chiles, Condimentos e Infusiones | **Agua purificada** | 200 | **1,200** | ml |
 
-**Procedimiento Paso a Paso:**
+**Protocolo de Ejecución Paso a Paso:**
 1. Infusionar la manzanilla y el tomillo de alacena en agua a 85°C durante 5 minutos y colar.
 2. Templar a 58°C, añadir las gotas de limón de la granja, disolver la dosis de AminoSinergix® (34Plus®) y servir.
 
@@ -1517,163 +1479,252 @@
 
 ## 3. Abastecimiento Tridimensional Exacto (6 Comensales — Semana 43)
 
-### 3.1 Cosecha Directa de la Granja El Herami (Suministro Propio a \$0.00 MXN)
+### 3.1 Cosecha Directa de la Granja El Herami + Insumo Libre de Cocina (Suministro Propio a \$0.00 MXN)
 | # | Cultivo / Insumo Activo en Huerto | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |
 |---|---|---|---|---|
-| 1 | **Acelgas** | 3090 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 2 | **Cilantro** | 972 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 3 | **Limones** | 1548 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 4 | **Nopales** | 2400 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 5 | **Nuez pecana** | 702 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
+| 1 | **Acelgas** | 810 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
+| 2 | **Agua purificada** | 14,580 ml | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
+| 3 | **Cilantro** | 816 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
+| 4 | **Fondo claro de pollo** | 9,900 ml | 🌿 Insumo Base de Cocina ($0) | **\$0.00 MXN** |
+| 5 | **Jamaica** | 30 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
+| 6 | **Limones** | 2,352 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
+| 7 | **Nopales** | 960 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
+| 8 | **Nuez pecana** | 1,008 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
+| 9 | **Romero** | 60 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
 
-### 3.2 Existencias Consolidadas en Alacena y Refrigerador (Amortización Exacta contra `PANTRY_STOCK_INVENTORY`)
-| Insumo Canónico | Stock en Alacena | Demanda Semanal (6p) | Saldo en Alacena | Estado de Cobertura |
-|---|---|---|---|---|
-| **Huevo** | 105 piezas | 126 piezas | 0 piezas | 🔄 Amortiza 105 piezas (Comprar 21 piezas) |
-| **Pechuga de pollo** | 3454 g | 1800 g | 1654 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Flat steak** | 1885 g | 1800 g | 85 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Carne molida** | 1680 g | 1680 g | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Lomo de salmón** | 1385 g | 900 g | 485 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Fajitas de mojarra** | 907 g | 900 g | 7 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Filete de atún** | 700 g | 690 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Atún en agua** | 700 g | 690 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Sardinas** | 1700 g | 840 g | 860 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Queso cottage** | 3880 g | 1200 g | 2680 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Yogur griego** | 3880 g | 480 g | 3400 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Queso ricotta** | 1920 g | 720 g | 1200 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Queso manchego** | 1200 g | 390 g | 810 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Queso Philadelphia** | 720 g | 300 g | 420 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Queso de cabra** | 500 g | 330 g | 170 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Crema ácida** | 960 g | 180 g | 780 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Mayonesa** | 1000 g | 90 g | 910 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Mantequilla** | 290 g | 1356 g | 0 g | 🔄 Amortiza 290 g (Comprar 1066 g) |
-| **Fresas** | 1000 g | 900 g | 100 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Zarzamora** | 1010 g | 840 g | 170 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Frambuesas** | 340 g | 330 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Champiñón** | 2200 g | 1800 g | 400 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Lechuga** | 9 piezas | 9 piezas | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Jitomate** | 9 piezas | 9 piezas | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Morrón** | 7 piezas | 7 piezas | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Cebolla** | 9 piezas | 6 piezas | 3 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Flor de calabaza** | 1 manojo | 1 manojo | 0 manojo | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Aguacate** | 13 piezas | 12 piezas | 1 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Semillas y nueces mixtas** | 960 g | 90 g | 870 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Almendras fileteadas** | 200 g | 90 g | 110 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Pistaches** | 100 g | 90 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Nuez de la India** | 100 g | 90 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Ajonjolí** | 50 g | 30 g | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Aceite de oliva** | 400 ml | 1326 ml | 0 ml | 🔄 Amortiza 400 ml (Comprar 926 ml) |
-| **Alcaparras** | 200 g | 60 g | 140 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Aceitunas manzanilla** | 175 g | 90 g | 85 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Sal de mar** | 3000 g | 234 g | 2766 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Sal con ajo** | 100 g | 36 g | 64 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Orégano** | 150 g | 18 g | 132 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Pimienta negra** | 70 g | 12 g | 58 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Canela molida** | 750 g | 12 g | 738 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Hierbas finas** | 25 g | 12 g | 13 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Tomillo** | 20 g | 6 g | 14 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Manzanilla** | 50 g | 84 g | 0 g | 🔄 Amortiza 50 g (Comprar 34 g) |
-| **Té chai** | 70 g | 18 g | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Grenetina** | 112 g | 252 g | 0 g | 🔄 Amortiza 112 g (Comprar 140 g) |
-| **MultiSinergix®** | 300 g | 420 g | 0 g | 🔄 Amortiza 300 g (Comprar 120 g) |
-| **AminoSinergix®** | 200 g | 420 g | 0 g | 🔄 Amortiza 200 g (Comprar 220 g) |
+### 3.2 Existencias Consolidadas en Alacena y Refrigerador (Amortización Exacta con \$0.00 MXN de Compra)
+| # | Insumo Canónico | Stock en Alacena | Demanda Semanal (6p) | Saldo en Alacena | Estado de Cobertura |
+|---|---|---|---|---|---|
+| 1 | **Aceitunas manzanilla** | 175 g | **90 g** | 85 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 2 | **Alcaparras** | 200 g | **60 g** | 140 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 3 | **Atún en agua** | 700 g | **690 g** | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 4 | **Canela molida** | 750 g | **15 g** | 735 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 5 | **Cebolla** | 8 piezas | **8 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 6 | **Crema ácida** | 960 g | **180 g** | 780 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 7 | **Cúrcuma** | 100 g | **6 g** | 94 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 8 | **Ejotes** | 500 g | **480 g** | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 9 | **Hierbas finas** | 25 g | **12 g** | 13 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 10 | **Jitomate** | 7 piezas | **7 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 11 | **Lechuga** | 3 piezas | **3 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 12 | **Orégano** | 150 g | **39 g** | 111 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 13 | **Pimienta negra** | 70 g | **39 g** | 31 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 14 | **Pistaches** | 100 g | **90 g** | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 15 | **Pollo entero** | 1 piezas | **1 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 16 | **Queso cottage** | 500 g | **480 g** | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 17 | **Queso mozzarella** | 105 g | **102 g** | 3 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 18 | **Queso parmesano** | 100 g | **90 g** | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 19 | **Queso Philadelphia** | 720 g | **720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 20 | **Queso ricotta** | 1,920 g | **1,200 g** | 720 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 21 | **Sal con ajo** | 100 g | **78 g** | 22 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 22 | **Sal de mar** | 3,000 g | **177 g** | 2,823 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 23 | **Sardinas** | 1,700 g | **840 g** | 860 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 24 | **Té chai** | 70 g | **18 g** | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 25 | **Tomate** | 400 g | **360 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 26 | **Tomillo** | 20 g | **12 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 27 | **Yogur griego** | 3,880 g | **840 g** | 3,040 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 
-> **Nota sobre Biotecnología Sinergix® (4 Tomas Diarias):** La demanda semanal de **MultiSinergix® (33Plus®)** y **AminoSinergix® (34Plus®)** contempla las **4 tomas diarias completas** ($2\text{ tomas/día} \times 5\text{ g} \times 6\text{ comensales} \times 7\text{ días} = 420\text{ g}$ semanales de cada fórmula: $210\text{ g}$ integrados en las gelatinas/infusiones del menú + $210\text{ g}$ de las tomas en ayunas y antes de dormir).
+### 3.3 Lista de Compras Netas de Mercado (Proteínas, Hortalizas de Variedad, Frutas, Grasas y Sinergix®)
+| # | Insumo a Comprar en Mercado | Demanda Total Semanal (6p) | Stock en Alacena | Compra Neta Exacta a Realizar | Unidad |
+|---|---|---|---|---|---|
+| 1 | **Aceite de oliva** | 1,479 ml | 400 ml | **1,079 ml** | ml |
+| 2 | **Aguacate** | 14 piezas | 1 piezas | **13 piezas** | piezas |
+| 3 | **AminoSinergix®** | 420 g | 200 g | **220 g** | g |
+| 4 | **Brócoli** | 1,080 g | 0 g | **1,080 g** | g |
+| 5 | **Calabacitas** | 1,740 g | 0 g | **1,740 g** | g |
+| 6 | **Carne molida** | 2,040 g | 0 g | **2,040 g** | g |
+| 7 | **Champiñón** | 2,220 g | 0 g | **2,220 g** | g |
+| 8 | **Coliflor** | 1,560 g | 0 g | **1,560 g** | g |
+| 9 | **Espárragos** | 1,440 g | 0 g | **1,440 g** | g |
+| 10 | **Espinacas** | 1,110 g | 0 g | **1,110 g** | g |
+| 11 | **Fajitas de mojarra** | 1,320 g | 0 g | **1,320 g** | g |
+| 12 | **Filete de atún** | 1,200 g | 0 g | **1,200 g** | g |
+| 13 | **Flat steak** | 2,460 g | 0 g | **2,460 g** | g |
+| 14 | **Fresas** | 990 g | 0 g | **990 g** | g |
+| 15 | **Grenetina** | 252 g | 112 g | **140 g** | g |
+| 16 | **Huevo** | 126 piezas | 26 piezas | **100 piezas** | piezas |
+| 17 | **Lomo de salmón** | 1,320 g | 0 g | **1,320 g** | g |
+| 18 | **Mantequilla** | 570 g | 290 g | **280 g** | g |
+| 19 | **Manzanilla** | 84 g | 50 g | **34 g** | g |
+| 20 | **Morrón** | 8 piezas | 0 piezas | **8 piezas** | piezas |
+| 21 | **MultiSinergix®** | 420 g | 300 g | **120 g** | g |
+| 22 | **Pechuga de pollo** | 1,200 g | 0 g | **1,200 g** | g |
+| 23 | **Pepino** | 1,560 g | 0 g | **1,560 g** | g |
+| 24 | **Semillas de chía orgánicas** | 336 g | 0 g | **336 g** | g |
+| 25 | **Zarzamora** | 960 g | 0 g | **960 g** | g |
 
-### 3.3 Compras Netas de Mercado (100% Derivadas de las 63 Recetas — Cero Compras de Proteínas Cárnicas/Marinas)
-| Insumo a Adquirir en Mercado | Demanda Bruta Semanal (6p) | Stock Amortizado de Alacena | Compra Neta Exacta | Categoría Clínica |
-|---|---|---|---|---|
-| **Huevo** | 126 piezas | 105 piezas | **21 piezas** | 🥩 Carnes, Pescados y Proteínas |
-| **Mantequilla** | 1356 g | 290 g | **1066 g** | 🧀 Lácteos y Quesos (Sin Gluten — Keto) |
-| **Aceite de oliva** | 1326 ml | 400 ml | **926 ml** | 🥑 Grasas, Aceites y Semillas |
-| **Manzanilla** | 84 g | 50 g | **34 g** | 🌶️ Chiles, Condimentos e Infusiones |
-| **Grenetina** | 252 g | 112 g | **140 g** | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
-| **MultiSinergix®** | 420 g | 300 g | **120 g** | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
-| **AminoSinergix®** | 420 g | 200 g | **220 g** | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
-| **Semillas de chía orgánicas** | 336 g | 0 g | **336 g** | 🥑 Grasas, Aceites y Semillas |
-
-### 3.4 Cuarentena Clínica Normativa (NOM-004 — Exclusión Estricta del Menú Cetogénico)
-| Insumo en Cuarentena | Existencia Física | Motivo Clínico de Bloqueo (Hard-Constraint) |
+### 3.4 Registro de Cuarentena Normativa y Exclusión Activa (`NOM-004` / `deletedPantryItems` / `deletedFarmItems`)
+| Origen | Insumos Excluidos / Eliminados por el Usuario | Estado en las 63 Recetas |
 |---|---|---|
-| **Chile chipotle en adobo** | 1,320 g | 🚫 Prohibido (Regla 3.4): Capsaicina y picante irritante de mucosa gástrica |
-| **Harina de trigo / Harina Power Cakes** | 2,500 g | 🚫 Prohibido: Carga glucémica amilácea + gluten proinflamatorio |
-| **Hojuelas de avena / Granola** | 200 g | 🚫 Prohibido: Excede umbral de carbohidratos netos por porción |
-| **Frijol pinto / Lentejas** | 1 costal + 100 g | 🚫 Prohibido: Almidones de alta densidad insulínica (>15 g carbs netos) |
-| **Higos / Cerezas / Pulpa de arándano** | 1 domo + 4,100 g | 🚫 Prohibido: Alta carga de fructosa libre incompatible con cetosis |
-| **Zanahoria / Elote** | 7 pz + 2 pz | 🚫 Prohibido: Vegetales amiláceos de alto índice glucémico |
-| **Leche / Leche evaporada / Salsa cátsup / BBQ** | 1,920 ml + 3,150 g | 🚫 Prohibido: Lactosa y jarabes azucarados que bloquean la cetosis |
+| **Alacena (`deletedPantryItems`)** | `Elote`, `Higos`, `Nogada`, `Zanahoria`, `Agua mineral` | 🚫 **0.00 g / 0 apariciones** (Erradicados al 100%) |
+| **Granja (`deletedFarmItems`)** | `Zarzamoras`, `Frambuesas`, `Fresas`, `Menta`, `Arándanos`, `Epazote`, `Calabacitas`, `Coliflor`, `Espinacas`, `Ejotes`, `Espárragos`, `Arúgula`, `Brócoli` | 🔄 **Reclasificados de Granja a Alacena/Mercado** según disponibilidad real |
 
 ---
 
-## 4. Métricas Culinarias y Matriz Nutricional Cuantitativa (Nutrition Facts — Semana 43)
+## 4. Métricas Culinarias y Matriz Nutricional (Nutrition Facts — Semana 43)
 
-### 4.1 Resumen Semanal de Macronutrientes por Día (Por Comensal)
-| Día | Kcal / Comensal | Grasa Total (g / % Kcal) | Proteína AVB (g / % Kcal) | Carbs Netos (g / % Kcal) | Fibra Prebiótica (g) | Estado Cetogénico |
-|---|---|---|---|---|---|---|
-| **Domingo 18 Oct** | 1988 kcal | 166.5 g (75.4%) | 109.5 g (22.0%) | 13.0 g (2.6%) | 18.6 g | ✅ Cetosis Terapéutica |
-| **Lunes 19 Oct** | 1982 kcal | 165.5 g (75.2%) | 110.5 g (22.3%) | 12.6 g (2.5%) | 18.6 g | ✅ Cetosis Terapéutica |
-| **Martes 20 Oct** | 1970 kcal | 164.5 g (75.2%) | 109.5 g (22.2%) | 12.9 g (2.6%) | 18.3 g | ✅ Cetosis Terapéutica |
-| **Miércoles 21 Oct** | 1982 kcal | 165.5 g (75.2%) | 110.5 g (22.3%) | 12.5 g (2.5%) | 18.8 g | ✅ Cetosis Terapéutica |
-| **Jueves 22 Oct** | 1994 kcal | 166.0 g (74.9%) | 112.0 g (22.5%) | 13.1 g (2.6%) | 18.7 g | ✅ Cetosis Terapéutica |
-| **Viernes 23 Oct** | 1988 kcal | 165.5 g (74.9%) | 112.0 g (22.5%) | 12.7 g (2.6%) | 18.3 g | ✅ Cetosis Terapéutica |
-| **Sábado 24 Oct** | 1997 kcal | 167.0 g (75.3%) | 110.5 g (22.1%) | 12.9 g (2.6%) | 18.7 g | ✅ Cetosis Terapéutica |
-| **PROMEDIO DIARIO** | **1986 kcal** | **165.8 g (75.1%)** | **110.6 g (22.3%)** | **12.8 g (2.6%)** | **18.6 g** | **✅ Ratio 75 / 22 / 3 Activo** |
+### 4.1 Balance Energético y Proporción Cetogénica Diaria (Promedio por Comensal)
+| Día | Calorías Totales | Grasas Totales (% Kcal) | Proteína AVB (% Kcal) | Carbs Netos (% Kcal) | Fibra Prebiótica |
+|---|---|---|---|---|---|
+| **Domingo 18 Oct** | **1,988 kcal** | 166.5 g (`75.4%`) | 109.5 g (`22.0%`) | 13.0 g (`2.6%`) | 18.6 g |
+| **Lunes 19 Oct** | **1,982 kcal** | 165.5 g (`75.2%`) | 110.5 g (`22.3%`) | 12.6 g (`2.5%`) | 18.6 g |
+| **Martes 20 Oct** | **1,970 kcal** | 164.5 g (`75.1%`) | 109.5 g (`22.2%`) | 12.9 g (`2.6%`) | 18.3 g |
+| **Miércoles 21 Oct** | **1,982 kcal** | 165.5 g (`75.2%`) | 110.5 g (`22.3%`) | 12.5 g (`2.5%`) | 18.8 g |
+| **Jueves 22 Oct** | **1,994 kcal** | 166.0 g (`74.9%`) | 112.0 g (`22.5%`) | 13.1 g (`2.6%`) | 18.7 g |
+| **Viernes 23 Oct** | **1,988 kcal** | 165.5 g (`74.9%`) | 112.0 g (`22.5%`) | 12.7 g (`2.6%`) | 18.3 g |
+| **Sábado 24 Oct** | **1,997 kcal** | 167.0 g (`75.3%`) | 110.5 g (`22.1%`) | 12.9 g (`2.6%`) | 18.7 g |
+| **PROMEDIO SEMANAL** | **1,986 kcal/día** | **165.8 g (`75.1%`)** | **110.6 g (`22.3%`)** | **12.8 g (`2.6%`)** | **18.6 g/día** |
 
-### 4.2 Desglose Servicio por Servicio (Nutrition Facts Atwater)
+### 4.2 Desglose por Servicio (Los 21 Servicios Canónicos)
 
 #### 📊 DOMINGO 18 DE OCTUBRE DE 2026
-| Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
+| Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso de Cabra | 603 kcal | 49.5 g (71%) | 35.0 g (70%) | 4.4 g (18%) | 6.2 g (25%) |
-| **Comida** | Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO | 762 kcal | 64.5 g (92%) | 41.0 g (82%) | 4.5 g (18%) | 6.6 g (26%) |
-| **Cena** | Champiñones Portobello al Horno Rellenos de Queso Ricotta, Cilantro de la Granja y Nuez de la India | 623 kcal | 52.5 g (75%) | 33.5 g (67%) | 4.1 g (16%) | 5.8 g (23%) |
+| **Desayuno** | Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella | 603 kcal | 49.5 g | 35.0 g | 4.4 g | 6.2 g |
+| **Comida** | Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO | 762 kcal | 64.5 g | 41.0 g | 4.5 g | 6.6 g |
+| **Cena** | Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana | 623 kcal | 52.5 g | 33.5 g | 4.1 g | 5.8 g |
 
 #### 📊 LUNES 19 DE OCTUBRE DE 2026
-| Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
+| Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Manchego Gratinado | 610 kcal | 50.0 g (71%) | 35.5 g (71%) | 4.5 g (18%) | 6.4 g (26%) |
-| **Comida** | Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja | 752 kcal | 63.5 g (91%) | 41.0 g (82%) | 4.2 g (17%) | 6.3 g (25%) |
-| **Cena** | Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro | 620 kcal | 52.0 g (74%) | 34.0 g (68%) | 3.9 g (16%) | 5.9 g (24%) |
+| **Desayuno** | Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso | 610 kcal | 50.0 g | 35.5 g | 4.5 g | 6.4 g |
+| **Comida** | Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja | 752 kcal | 63.5 g | 41.0 g | 4.2 g | 6.3 g |
+| **Cena** | Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro | 620 kcal | 52.0 g | 34.0 g | 3.9 g | 5.9 g |
 
 #### 📊 MARTES 20 DE OCTUBRE DE 2026
-| Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
+| Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas | 598 kcal | 49.0 g (70%) | 35.0 g (70%) | 4.3 g (17%) | 6.1 g (24%) |
-| **Comida** | Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO | 742 kcal | 62.5 g (89%) | 40.5 g (81%) | 4.4 g (18%) | 6.5 g (26%) |
-| **Cena** | Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja | 630 kcal | 53.0 g (76%) | 34.0 g (68%) | 4.2 g (17%) | 5.7 g (23%) |
+| **Desayuno** | Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas | 598 kcal | 49.0 g | 35.0 g | 4.3 g | 6.1 g |
+| **Comida** | Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO | 742 kcal | 62.5 g | 40.5 g | 4.4 g | 6.5 g |
+| **Cena** | Filete de Mojarra al Vapor en Papillote Abierto con Calabacitas Tiernas, Limón Real, Finas Hierbas y Cilantro de la Granja | 630 kcal | 53.0 g | 34.0 g | 4.2 g | 5.7 g |
 
 #### 📊 MIÉRCOLES 21 DE OCTUBRE DE 2026
-| Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
+| Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla y Queso Ricotta | 601 kcal | 49.5 g (71%) | 34.5 g (69%) | 4.4 g (18%) | 6.3 g (25%) |
-| **Comida** | Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo | 759 kcal | 64.0 g (91%) | 41.5 g (83%) | 4.3 g (17%) | 6.5 g (26%) |
-| **Cena** | Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Nopales de la Granja | 621 kcal | 52.0 g (74%) | 34.5 g (69%) | 3.8 g (15%) | 6.0 g (24%) |
+| **Desayuno** | Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla, Cilantro de la Granja y Queso Ricotta | 601 kcal | 49.5 g | 34.5 g | 4.4 g | 6.3 g |
+| **Comida** | Juliana de Flat Steak de Res Salteada al Wok con Champiñones, Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO | 759 kcal | 64.0 g | 41.5 g | 4.3 g | 6.5 g |
+| **Cena** | Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor | 621 kcal | 52.0 g | 34.5 g | 3.8 g | 6.0 g |
 
 #### 📊 JUEVES 22 DE OCTUBRE DE 2026
-| Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
+| Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo | 610 kcal | 50.0 g (71%) | 35.5 g (71%) | 4.5 g (18%) | 6.2 g (25%) |
-| **Comida** | Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Acelgas de la Granja en Emulsión VEVO | 753 kcal | 63.0 g (90%) | 42.0 g (84%) | 4.5 g (18%) | 6.4 g (26%) |
-| **Cena** | Timbal de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga | 631 kcal | 53.0 g (76%) | 34.5 g (69%) | 4.1 g (16%) | 6.1 g (24%) |
+| **Desayuno** | Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo | 610 kcal | 50.0 g | 35.5 g | 4.5 g | 6.2 g |
+| **Comida** | Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO | 753 kcal | 63.0 g | 42.0 g | 4.5 g | 6.4 g |
+| **Cena** | Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja | 631 kcal | 53.0 g | 34.5 g | 4.1 g | 6.1 g |
 
 #### 📊 VIERNES 23 DE OCTUBRE DE 2026
-| Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
+| Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Cilantro de la Granja | 605 kcal | 49.5 g (71%) | 35.5 g (71%) | 4.3 g (17%) | 6.1 g (24%) |
-| **Comida** | Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO | 756 kcal | 63.5 g (91%) | 41.5 g (83%) | 4.6 g (18%) | 6.4 g (26%) |
-| **Cena** | Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO | 628 kcal | 52.5 g (75%) | 35.0 g (70%) | 3.8 g (15%) | 5.8 g (23%) |
+| **Desayuno** | Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena, Espinacas Tiernas y Cilantro de la Granja | 605 kcal | 49.5 g | 35.5 g | 4.3 g | 6.1 g |
+| **Comida** | Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo | 756 kcal | 63.5 g | 41.5 g | 4.6 g | 6.4 g |
+| **Cena** | Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO | 628 kcal | 52.5 g | 35.0 g | 3.8 g | 5.8 g |
 
 #### 📊 SÁBADO 24 DE OCTUBRE DE 2026
-| Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
+| Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano | 606 kcal | 50.0 g (71%) | 34.5 g (69%) | 4.4 g (18%) | 6.2 g (25%) |
-| **Comida** | Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Costra de Queso Manchego y Guacamole Rústico | 771 kcal | 65.0 g (93%) | 42.0 g (84%) | 4.6 g (18%) | 6.7 g (27%) |
-| **Cena** | Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas | 620 kcal | 52.0 g (74%) | 34.0 g (68%) | 3.9 g (16%) | 5.8 g (23%) |
+| **Desayuno** | Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano | 606 kcal | 50.0 g | 34.5 g | 4.4 g | 6.2 g |
+| **Comida** | Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Queso Philadelphia Fundido y Guacamole Rústico | 771 kcal | 65.0 g | 42.0 g | 4.6 g | 6.7 g |
+| **Cena** | Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja | 620 kcal | 52.0 g | 34.0 g | 3.9 g | 5.8 g |
 
 ### 4.3 Cronograma Biotecnológico Sinergix® (4 Tomas Diarias — 420 g Semanales por Fórmula)
-| Toma | Horario / Momento | Fórmula Bioactiva | Dosis Individual | Demanda Semanal (6p) | Función Clínica y Metabólica |
+| Toma | Horario / Momento | Fórmula Bioactiva | Dosis Individual | Demanda Semanal (6p) | Ubicación en BOM |
 |---|---|---|---|---|---|
-| **TOMA 1** | ☀️ Al Despertar (Ayunas) | **MultiSinergix® (33Plus®)** | 1 Dosis Completa (5 g) | 210 g | Ignición mitocondrial matutina (CoQ10, PQQ, L-Teanina, Guaraná). |
-| **TOMA 2** | 🍳 Con el Desayuno | **MultiSinergix® (33Plus®)** | 1 Dosis Completa (5 g) | 210 g | Soporte enzimático, termogénesis cognitiva y síntesis de colágeno en gelatina/elixir a $\le 42^\circ\text{C}$. |
-| **TOMA 3** | 🥗 Con la Cena | **AminoSinergix® (34Plus®)** | 1 Dosis Completa (5 g) | 210 g | Modulación glucémica, péptidos bioactivos y electrolitos en tisana a $\le 60^\circ\text{C}$. |
-| **TOMA 4** | 🌙 Antes de Dormir | **AminoSinergix® (34Plus®)** | 1 Dosis Completa (5 g) | 210 g | Inducción circadiana GABAérgica, reparación tisular nocturna y Bisglicinato de Magnesio. |
+| **Toma 1** | `07:00 hrs` (Despertar en Agua Pura) | **MultiSinergix® (33Plus®)** | `5 g` | `210 g` | Protocolo Matutino (Sumado en Tabla 3.3) |
+| **Toma 2** | `08:30 hrs` (En Gelatina/Infusión de Desayuno) | **MultiSinergix® (33Plus®)** | `5 g` | `210 g` | Incluido en las 7 Recetas de Acompañamiento Matutino |
+| **Toma 3** | `20:00 hrs` (En Infusión de Cena ≤60°C) | **AminoSinergix® (34Plus®)** | `5 g` | `210 g` | Incluido en las 7 Recetas de Acompañamiento Nocturno |
+| **Toma 4** | `22:30 hrs` (Pre-Sueño Profundo) | **AminoSinergix® (34Plus®)** | `5 g` | `210 g` | Protocolo Nocturno (Sumado en Tabla 3.3) |
+
+---
+
+## 5. Auditoría Forense del Ciclo de 4 Semanas (`S40`, `S41`, `S42`, `S43` — Cero Colisiones en el Mismo Día)
+
+| Día y Servicio | Semana 40 (Entrada / Principal `[Arquetipo]`) | Semana 41 (Entrada / Principal `[Arquetipo]`) | Semana 42 (Entrada / Principal `[Arquetipo]`) | **Semana 43 (Entrada / Principal `[Arquetipo]`)** | Estado |
+|---|---|---|---|---|---|
+| **Domingo · Desayuno** | *E:* Tazón de Moras Frescas de la Granja con Almendras Fileteadas y Chía<br>*P:* Huevos Revueltos Rústicos con Ejotes Tiernos al Sartén en Mantequilla de Pastoreo `[scrambled_stir_fry]` | *E:* Tazón de Fresas Silvestres y Semillas de Chía con Almendras Fileteadas<br>*P:* Huevos Revueltos a la Mantequilla con Chayote Tierno Salteado y Finas Hierbas `[saute_and_sear]` | *E:* Tazón de Fresas Silvestres con Nuez de la India y Semillas de Chía<br>*P:* Huevos Revueltos a la Mantequilla con Queso Ricotta y Calabacitas Tiernas `[saute_and_sear]` | **E:** Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja<br>**P:** Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella `[cazuela]` | ✅ `0 Colisión` |
+| **Domingo · Comida** | *E:* Crema Caliente de Flor de Calabaza y Queso de Cabra<br>*P:* Corte Magro de Arrachera de Res a la Parrilla con Mantequilla de Ajo Rostizado y Tomillo `[corte_parrilla]` | *E:* Crema Sedosa de Calabacitas Tiernas al Ajo Rostizado y Aceite VEVO<br>*P:* Corte Magro de Ribeye de Res a la Parrilla con Mantequilla de Romero y Ajo `[corte_parrilla]` | *E:* Sopa de Calabacitas Verdes y Flor de Calabaza al Cilantro<br>*P:* Hamburguesa de Arrachera al Sartén con Costra de Gouda y Salsa de Aguacate `[hamburguesa]` | **E:** Crema Aterciopelada de Espárragos Verdes con Aceite de Oliva VEVO<br>**P:** Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO `[salmon_costra]` | ✅ `0 Colisión` |
+| **Domingo · Cena** | *E:* Abanico de Aguacate Hass con Sal de Mar y Aceite de Oliva Extra Virgen<br>*P:* Medallones de Pechuga de Pavo con Costra de Semillas de Sésamo y Parmesano `[medallones]` | *E:* Tazón de Caldo Claro de Huesos con Cilantro Fresco y Limón<br>*P:* Sardinas al Sartén con Salsa Rústica de Tomate Verde, Cilantro y Aguacate Hass `[saute_and_sear]` | *E:* Ensalada de Lechuga Sweet con Pepino y Vinagreta VEVO al Limón<br>*P:* Sardinas al Sartén con Salsa Rústica de Tomate Verde y Epazote `[saute_and_sear]` | **E:** Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO<br>**P:** Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana `[portobello_relleno]` | ✅ `0 Colisión` |
+| **Lunes · Desayuno** | *E:* Frambuesas Orgánicas de la Granja con Nueces Pecana y Semillas de Chía<br>*P:* Omelette Baveuse Culinario a las Finas Hierbas y Queso Gouda `[omelette]` | *E:* Copa de Yoghurt Griego Natural con Semillas de Chía y Nueces Pecanas<br>*P:* Omelette Baveuse con Espinacas Tiernas de la Granja y Queso Gouda `[omelette]` | *E:* Tazón de Moras Silvestres con Almendras Fileteadas y Chía<br>*P:* Omelette Baveuse con Espinacas Tiernas y Queso Gouda Maduro `[omelette]` | **E:** Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>**P:** Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso `[frittata]` | ✅ `0 Colisión` |
+| **Lunes · Comida** | *E:* Ensalada Verde de Arúgula y Espinacas Baby con Vinagreta de Limón<br>*P:* Pechuga de Pollo al Curry Suave y Cúrcuma en Salsa de Parmesano `[curry_aromatic_simmer]` | *E:* Crema Aterciopelada de Coliflor y Ajo Rostizado con Aceite de Oliva VEVO<br>*P:* Filete de Salmón Fresco Sellado con Costra de Ajonjolí y Salsa Emulsionada de Mayonesa y Eneldo `[saute_and_sear]` | *E:* Crema Aterciopelada de Brócoli al Queso Ricotta y Ajo Confitado<br>*P:* Filete de Mojarra Tilapia al Mojo de Ajo Dorado con Limón y Cilantro `[saute_and_sear]` | **E:** Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO<br>**P:** Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja `[albondigas]` | ✅ `0 Colisión` |
+| **Lunes · Cena** | *E:* Bastones de Pepino y Apio al Limón con Sal Mineral<br>*P:* Sashimi de Salmón Fino con Aceite de Ajonjolí, Aguacate y Limón `[raw_assembly]` | *E:* Ensalada de Pepinos Persas y Rábanos con Aliño de Limón y Aceite VEVO<br>*P:* Filete de Robalo Fresco al Horno con Costra de Almendras y Eneldo `[roast_bake]` | *E:* Bastones de Pepino y Apio Fresco con Sal Marina y Limón<br>*P:* Pechuga de Pavo Artesanal con Guacamole Rústico de Aguacate Hass `[saute_and_sear]` | **E:** Sopa Juliana de Calabacitas Tiernas al Limón Real y Cilantro de la Granja con Aceite VEVO<br>**P:** Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro `[barquitas]` | ✅ `0 Colisión` |
+| **Martes · Desayuno** | *E:* Arilos de Granada Fresca con Almendras Fileteadas y Chía<br>*P:* Huevos Revueltos con Machaca Magra de Res Artesanal y Orégano al Sartén `[scrambled_stir_fry]` | *E:* Tazón de Moras Frescas con Semillas de Girasol Tostadas<br>*P:* Huevos Pochados sobre Cama de Yoghurt Griego al Ajo (Çılbır Keto) con Mantequilla al Pimentón `[cilbir]` | *E:* Tazón de Frambuesas Frescas con Nueces de Castilla y Chía<br>*P:* Omelette de Queso Panela Artesanal con Flor de Calabaza y Epazote `[omelette]` | **E:** Tazón de Fresas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**P:** Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas `[tamagoyaki]` | ✅ `0 Colisión` |
+| **Martes · Comida** | *E:* Crema de Coliflor Rostizada al Ajo y Queso de Cabra<br>*P:* Medallones de Sirloin de Res Magro al Sartén en Salsa de Eneldo y Mantequilla Clarificada `[medallones]` | *E:* Consomé de Res Clarificado con Dientes de Ajo y Cebolla Blanca<br>*P:* Medallones de Sirloin de Res al Sartén en Salsa Cremosa de Pimienta Negra y Leche de Coco `[medallones]` | *E:* Consomé Clarificado de Pollo con Nopales Tiernos al Cilantro<br>*P:* Pechuga de Pollo Rellena de Queso Ricotta y Espinacas en Salsa Cremosa `[saute_and_sear]` | **E:** Crema Aterciopelada de Brócoli al Ajo Tostado con Aceite de Oliva VEVO<br>**P:** Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO `[lomos_horno]` | ✅ `0 Colisión` |
+| **Martes · Cena** | *E:* Bastones de Zucchini y Apio al Limón con Sal de Mar<br>*P:* Filete de Pescado Blanco al Horno con Finas Hierbas y Aceite VEVO `[skin_crisp_fish]` | *E:* Tazón de Arúgula Fresca con Aceite VEVO y Sal de Mar<br>*P:* Salpicón Rústico de Pechuga de Pavo Desmenuzada con Mayonesa Casera, Aguacate y Cebolla Blanca `[salpicon]` | *E:* Bastones de Zucchini Fresco con Sal Marina y Limón<br>*P:* Filete de Robalo Fresco al Horno con Costra de Almendras y Eneldo `[saute_and_sear]` | **E:** Carpaccio de Pepino y Aguacate Hass al Limón Real con Aceite de Oliva VEVO<br>**P:** Filete de Mojarra al Vapor en Papillote Abierto con Calabacitas Tiernas, Limón Real, Finas Hierbas y Cilantro de la Granja `[papillote]` | ✅ `0 Colisión` |
+| **Miércoles · Desayuno** | *E:* Arándanos Frescos con Nueces Pecana y Semillas de Girasol<br>*P:* Huevos Benedictinos Keto sobre Nube de Clara y Tocino de Pavo Crujiente `[poach_and_emulsion]` | *E:* Tazón de Fresas Frescas con Chía Hidratada y Láminas de Almendra<br>*P:* Huevos Estrellados en Sartén de Hierro con Aceite VEVO, Sal de Mar y Espárragos Verdes `[estrellados]` | *E:* Tazón de Fresas Silvestres con Nuez de la India y Chía<br>*P:* Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Espárragos Verdes `[estrellados]` | **E:** Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja<br>**P:** Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla, Cilantro de la Granja y Queso Ricotta `[anillo]` | ✅ `0 Colisión` |
+| **Miércoles · Comida** | *E:* Consomé Claro de Nopales y Hortalizas Tiernas<br>*P:* Pechuga de Pollo Rellena de Queso Crema y Espinacas en Salsa de Parmesano `[saute_and_sear]` | *E:* Sopa Campirana de Pollo y Verduras al Limón con Toque de Orégano<br>*P:* Pechuga de Pollo al Limón y Romero Sellada en Mantequilla con Salsa de Jitomate Saladet Rústica `[saute_and_sear]` | *E:* Crema Aterciopelada de Coliflor Rostizada con Ajo Confitado y Aceite VEVO<br>*P:* Corte Magro de Ribeye de Res a la Parrilla con Mantequilla de Romero y Ajo `[corte_parrilla]` | **E:** Ensalada de Espinacas Baby con Vinagreta de Limón Real y Aceite de Oliva VEVO<br>**P:** Juliana de Flat Steak de Res Salteada al Wok con Champiñones, Cebolla Blanca de Alacena, Romero de la Granja y Aceite VEVO `[juliana_wok]` | ✅ `0 Colisión` |
+| **Miércoles · Cena** | *E:* Bastones de Pepino y Zucchini al Limón con Sal Mineral<br>*P:* Salpicón Fresco de Pechuga de Pavo Desmenuzada con Aguacate y Limón `[salpicon]` | *E:* Caldo de Pollo Reconstituyente con Tomillo y Limón<br>*P:* Tostadas de Hoja de Lechuga con Sardinas Guisadas al Tomate Verde y Cilantro `[saute_and_sear]` | *E:* Ensalada de Lechuga Sweet con Pepino Persa y Vinagreta al Limón<br>*P:* Tostadas en Hoja de Lechuga con Atún Canónico y Aderezo Casero al Cilantro `[raw_assembly]` | **E:** Abanico de Aguacate Hass y Láminas de Pepino con Limón Real, Sal Marina y Aceite VEVO<br>**P:** Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor `[medallones]` | ✅ `0 Colisión` |
+| **Jueves · Desayuno** | *E:* Pitayas Frescas con Semillas de Chía y Coco Rallado<br>*P:* Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Tomillo Fresco `[estrellados]` | *E:* Parfait de Yoghurt Griego Natural con Chía y Canela en Polvo<br>*P:* Huevos Revueltos Rústicos con Machaca de Res y Cebolla Blanca Salteada `[saute_and_sear]` | *E:* Tazón de Arándanos Frescos con Semillas de Girasol y Chía<br>*P:* Rollo Tamagoyaki Culinario en Capas con Queso Gouda y Pavo `[tamagoyaki]` | **E:** Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**P:** Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo `[cilbir]` | ✅ `0 Colisión` |
+| **Jueves · Comida** | *E:* Ensalada de Hinojo, Arúgula y Aceite de Oliva Extra Virgen<br>*P:* Filete de Huachinango a la Parrilla con Mantequilla de Ajo y Limón `[corte_parrilla]` | *E:* Sopa de Chayote Tierno y Puerro al Aceite VEVO<br>*P:* Arrachera de Res Magra a la Parrilla con Mantequilla de Ajo y Chimichurri Fresco `[corte_parrilla]` | *E:* Crema Sedosa de Espárragos Verdes con Aceite de Oliva VEVO<br>*P:* Filete de Salmón al Horno con Costra de Nuez de la India Tostada `[saute_and_sear]` | **E:** Crema Caliente de Champiñones y Tomillo con Aceite de Oliva VEVO<br>**P:** Supremas de Pollo Entero de Alacena al Horno con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO `[supremas]` | ✅ `0 Colisión` |
+| **Jueves · Cena** | *E:* Abanico de Aguacate Hass con Sal de Mar<br>*P:* Champiñones Portobello Rellenos de Espinacas, Queso Crema y Nuez Pecana `[pan_roast]` | *E:* Ensalada Verde de Arúgula y Pepino con VEVO y Limón<br>*P:* Pechuga de Pavo en Cubos al Sartén con Curry Suave en Leche de Coco Cremosa `[saute_and_sear]` | *E:* Bastones de Pepino y Apio al Limón con Sal Marina<br>*P:* Salpicón Fresco de Pechuga de Pavo con Aguacate Hass y Cilantro `[salpicon]` | **E:** Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano<br>**P:** Timbal de Queso Cottage Cremoso y Yogur Griego de Alacena con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja `[timbal]` | ✅ `0 Colisión` |
+| **Viernes · Desayuno** | *E:* Fresas Frescas de la Granja con Nueces de Castilla y Chía<br>*P:* Rollo Tamagoyaki Culinario en Capas a la Mantequilla con Queso Panela `[tamagoyaki]` | *E:* Tazón de Frambuesas Frescas de la Huerta con Semillas de Calabaza Tostadas<br>*P:* Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Panela y Finas Hierbas `[tamagoyaki]` | *E:* Tazón de Fresas Frescas con Nueces de Castilla y Chía<br>*P:* Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla de Pastoreo `[anillo]` | **E:** Tazón de Zarzamoras con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>**P:** Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena, Espinacas Tiernas y Cilantro de la Granja `[omelette]` | ✅ `0 Colisión` |
+| **Viernes · Comida** | *E:* Crema Caliente de Champiñones Portobello y Cúrcuma al Parmesano<br>*P:* Medallón de Atún Fresco Sellado en Costra de Ajonjolí con Limón `[medallones]` | *E:* Consomé de Ave al Limón con Cilantro Fresco<br>*P:* Medallón de Atún Fresco Sellado a Fuego Vivo con Costra de Sésamo y Guacamole Rústico `[medallones]` | *E:* Sopa de Calabacitas al Queso Parmesano y Cilantro Fresco<br>*P:* Lomo de Robalo Fresco al Sartén en Mantequilla de Alcaparras y Eneldo `[saute_and_sear]` | **E:** Ensalada Crujiente de Pepino y Cilantro de la Granja al Limón Real con Aceite VEVO<br>**P:** Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo `[corte_parrilla]` | ✅ `0 Colisión` |
+| **Viernes · Cena** | *E:* Bastones de Zucchini y Apio al Limón con Sal Mineral<br>*P:* Tartar de Robalo Fresco al Limón con Aguacate Hass y Cilantro `[raw_assembly]` | *E:* Gazpacho Tibio Cetogénico de Jitomate Saladet con Aceite VEVO<br>*P:* Pechuga de Pollo Desmenuzada al Sartén con Mayonesa al Ajo y Aguacate Hass `[saute_and_sear]` | *E:* Abanico de Aguacate Hass Fresco con Sal Marina y Limón<br>*P:* Champiñones Portobello Rellenos de Espinacas, Queso Ricotta y Nuez de la India `[roast_bake]` | **E:** Caldo Clarificado de Pollo con Calabacitas Tiernas, Limón Real y Cilantro de la Granja<br>**P:** Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO `[rollitos]` | ✅ `0 Colisión` |
+| **Sábado · Desayuno** | *E:* Zarzamoras Frescas de la Granja con Almendras Fileteadas y Chía<br>*P:* Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas y Queso de Cabra `[cazuela]` | *E:* Tazón de Fresas y Moras con Semillas de Chía y Nueces<br>*P:* Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate Saladet y Queso de Cabra `[cazuela]` | *E:* Tazón de Moras Silvestres con Semillas de Chía y Coco Rallado<br>*P:* Frittata Ranchera de Huevos con Tocino de Pavo y Queso Gouda `[frittata]` | **E:** Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja<br>**P:** Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano `[estrellados]` | ✅ `0 Colisión` |
+| **Sábado · Comida** | *E:* Crema de Espinacas y Ajo Rostizado al Parmesano<br>*P:* Pechuga de Pavo Horneada al Romero y Mantequilla de Pastoreo `[saute_and_sear]` | *E:* Crema de Brócoli Rostizado al Ajo con Aceite VEVO<br>*P:* Filete de Huachinango Fresco al Sartén con Mantequilla de Ajo y Alcaparras `[saute_and_sear]` | *E:* Caldo Rústico de Hortalizas y Fondo Claro con Cilantro Fresco<br>*P:* Puntas de Filete de Res Salteadas con Pimientos y Champiñones al Jugo `[saute_and_sear]` | **E:** Ensalada Romana de Alacena y Cilantro de la Granja al Limón Real con Aceite VEVO<br>**P:** Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Queso Philadelphia Fundido y Guacamole Rústico `[hamburguesa]` | ✅ `0 Colisión` |
+| **Sábado · Cena** | *E:* Ensalada Mix de Hojas Verdes de la Granja con Vinagre VEVO<br>*P:* Taco Wrap de Hojas de Lechuga Orejona Viva con Pechuga de Pollo Desmenuzada y Aguacate `[taco_wrap]` | *E:* Caldo Purificante de Huesos con Limón y Sal de Mar<br>*P:* Champiñones Portobello Rellenos de Pechuga de Pavo, Espinacas y Queso Gouda Gratinado `[roast_bake]` | *E:* Bastones de Zucchini al Limón con Sal Marina<br>*P:* Tacos en Hoja de Lechuga Sweet con Salpicón de Pollo y Guacamole `[salpicon]` | **E:** Consomé Nocturno Clarificado de Champiñones Laminados y Cilantro de la Granja al Limón Real<br>**P:** Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja `[carpaccio]` | ✅ `0 Colisión` |
+
+---
+
+## 6. Verificación Matemática de las 63 Recetas (Sección 2) Cuadradas al Gramo contra las Tablas 3.1, 3.2 y 3.3
+
+| # | Insumo Canónico | Suma Exacta en las 63 Recetas (Sección 2) | Protocolo Extra-Receta (Tomas 1 y 4 Sinergix®) | Total Reconciliado en Tablas 3.1 / 3.2 / 3.3 | Tabla Destino | Diferencia (`|Sec.2 - Tabla 3|`) | Desglose de Apariciones en las 63 Recetas |
+|---|---|---|---|---|---|---|---|
+| 1 | **Aceite de oliva** | **1,479 ml** | 0 ml | **1,479 ml** | Tabla 3.3 (Mercado — Comprar: 1,079 ml) | **`0.00`** ✅ | R#02 (Dom Des: 30 ml); R#04 (Dom Com: 36 ml); R#05 (Dom Com: 60 ml); R#07 (Dom Cen: 36 ml); R#08 (Dom Cen: 45 ml); R#13 (Lun Com: 36 ml); R#14 (Lun Com: 30 ml); R#15 (Lun Com: 36 ml); R#16 (Lun Cen: 30 ml); R#17 (Lun Cen: 60 ml); R#20 (Mar Des: 30 ml); R#22 (Mar Com: 36 ml); R#23 (Mar Com: 60 ml); R#24 (Mar Com: 36 ml); R#25 (Mar Cen: 36 ml); R#26 (Mar Cen: 60 ml); R#31 (Mié Com: 36 ml); R#32 (Mié Com: 60 ml); R#33 (Mié Com: 36 ml); R#34 (Mié Cen: 36 ml); R#35 (Mié Cen: 60 ml); R#38 (Jue Des: 36 ml); R#40 (Jue Com: 36 ml); R#41 (Jue Com: 45 ml); R#42 (Jue Com: 36 ml); R#43 (Jue Cen: 36 ml); R#44 (Jue Cen: 45 ml); R#49 (Vie Com: 36 ml); R#50 (Vie Com: 30 ml); R#51 (Vie Com: 36 ml); R#52 (Vie Cen: 30 ml); R#53 (Vie Cen: 60 ml); R#56 (Sáb Des: 36 ml); R#58 (Sáb Com: 36 ml); R#60 (Sáb Com: 36 ml); R#61 (Sáb Cen: 30 ml); R#62 (Sáb Cen: 30 ml) |
+| 2 | **Aceitunas manzanilla** | **90 g** | 0 g | **90 g** | Tabla 3.2 (Alacena $0 — Stock: 175 g) | **`0.00`** ✅ | R#53 (Vie Cen: 90 g) |
+| 3 | **Acelgas** | **810 g** | 0 g | **810 g** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#02 (Dom Des: 450 g); R#13 (Lun Com: 360 g) |
+| 4 | **Agua purificada** | **14,580 ml** | 0 ml | **14,580 ml** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#03 (Dom Des: 720 ml); R#09 (Dom Cen: 1,200 ml); R#12 (Lun Des: 720 ml); R#18 (Lun Cen: 1,200 ml); R#21 (Mar Des: 1,080 ml); R#27 (Mar Cen: 1,200 ml); R#30 (Mié Des: 1,500 ml); R#36 (Mié Cen: 1,200 ml); R#39 (Jue Des: 720 ml); R#45 (Jue Cen: 1,200 ml); R#48 (Vie Des: 720 ml); R#54 (Vie Cen: 1,200 ml); R#57 (Sáb Des: 720 ml); R#63 (Sáb Cen: 1,200 ml) |
+| 5 | **Aguacate** | **14 piezas** | 0 piezas | **14 piezas** | Tabla 3.3 (Mercado — Comprar: 13 piezas) | **`0.00`** ✅ | R#17 (Lun Cen: 3 piezas); R#25 (Mar Cen: 2 piezas); R#34 (Mié Cen: 3 piezas); R#44 (Jue Cen: 3 piezas); R#59 (Sáb Com: 3 piezas) |
+| 6 | **Alcaparras** | **60 g** | 0 g | **60 g** | Tabla 3.2 (Alacena $0 — Stock: 200 g) | **`0.00`** ✅ | R#53 (Vie Cen: 60 g) |
+| 7 | **AminoSinergix®** | **210 g** | 210 g | **420 g** | Tabla 3.3 (Mercado — Comprar: 220 g) | **`0.00`** ✅ | R#09 (Dom Cen: 30 g); R#18 (Lun Cen: 30 g); R#27 (Mar Cen: 30 g); R#36 (Mié Cen: 30 g); R#45 (Jue Cen: 30 g); R#54 (Vie Cen: 30 g); R#63 (Sáb Cen: 30 g) |
+| 8 | **Atún en agua** | **690 g** | 0 g | **690 g** | Tabla 3.2 (Alacena $0 — Stock: 700 g) | **`0.00`** ✅ | R#17 (Lun Cen: 690 g) |
+| 9 | **Brócoli** | **1,080 g** | 0 g | **1,080 g** | Tabla 3.3 (Mercado — Comprar: 1,080 g) | **`0.00`** ✅ | R#15 (Lun Com: 540 g); R#22 (Mar Com: 540 g) |
+| 10 | **Calabacitas** | **1,740 g** | 0 g | **1,740 g** | Tabla 3.3 (Mercado — Comprar: 1,740 g) | **`0.00`** ✅ | R#16 (Lun Cen: 480 g); R#26 (Mar Cen: 420 g); R#33 (Mié Com: 480 g); R#52 (Vie Cen: 360 g) |
+| 11 | **Canela molida** | **15 g** | 0 g | **15 g** | Tabla 3.2 (Alacena $0 — Stock: 750 g) | **`0.00`** ✅ | R#10 (Lun Des: 3 g); R#18 (Lun Cen: 3 g); R#36 (Mié Cen: 6 g); R#46 (Vie Des: 3 g) |
+| 12 | **Carne molida** | **2,040 g** | 0 g | **2,040 g** | Tabla 3.3 (Mercado — Comprar: 2,040 g) | **`0.00`** ✅ | R#14 (Lun Com: 1,200 g); R#59 (Sáb Com: 840 g) |
+| 13 | **Cebolla** | **8 piezas** | 0 piezas | **8 piezas** | Tabla 3.2 (Alacena $0 — Stock: 8 piezas) | **`0.00`** ✅ | R#11 (Lun Des: 1 piezas); R#14 (Lun Com: 1 piezas); R#23 (Mar Com: 1 piezas); R#32 (Mié Com: 2 piezas); R#43 (Jue Cen: 1 piezas); R#51 (Vie Com: 2 piezas) |
+| 14 | **Champiñón** | **2,220 g** | 0 g | **2,220 g** | Tabla 3.3 (Mercado — Comprar: 2,220 g) | **`0.00`** ✅ | R#08 (Dom Cen: 900 g); R#32 (Mié Com: 480 g); R#40 (Jue Com: 480 g); R#61 (Sáb Cen: 360 g) |
+| 15 | **Cilantro** | **816 g** | 0 g | **816 g** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#14 (Lun Com: 60 g); R#16 (Lun Cen: 36 g); R#17 (Lun Cen: 60 g); R#20 (Mar Des: 36 g); R#23 (Mar Com: 60 g); R#26 (Mar Cen: 60 g); R#29 (Mié Des: 48 g); R#35 (Mié Cen: 60 g); R#44 (Jue Cen: 60 g); R#47 (Vie Des: 48 g); R#49 (Vie Com: 48 g); R#52 (Vie Cen: 48 g); R#53 (Vie Cen: 60 g); R#56 (Sáb Des: 36 g); R#58 (Sáb Com: 48 g); R#61 (Sáb Cen: 48 g) |
+| 16 | **Coliflor** | **1,560 g** | 0 g | **1,560 g** | Tabla 3.3 (Mercado — Comprar: 1,560 g) | **`0.00`** ✅ | R#07 (Dom Cen: 540 g); R#42 (Jue Com: 540 g); R#60 (Sáb Com: 480 g) |
+| 17 | **Crema ácida** | **180 g** | 0 g | **180 g** | Tabla 3.2 (Alacena $0 — Stock: 960 g) | **`0.00`** ✅ | R#14 (Lun Com: 180 g) |
+| 18 | **Cúrcuma** | **6 g** | 0 g | **6 g** | Tabla 3.2 (Alacena $0 — Stock: 100 g) | **`0.00`** ✅ | R#42 (Jue Com: 6 g) |
+| 19 | **Ejotes** | **480 g** | 0 g | **480 g** | Tabla 3.2 (Alacena $0 — Stock: 500 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 480 g) |
+| 20 | **Espárragos** | **1,440 g** | 0 g | **1,440 g** | Tabla 3.3 (Mercado — Comprar: 1,440 g) | **`0.00`** ✅ | R#04 (Dom Com: 480 g); R#35 (Mié Cen: 480 g); R#51 (Vie Com: 480 g) |
+| 21 | **Espinacas** | **1,110 g** | 0 g | **1,110 g** | Tabla 3.3 (Mercado — Comprar: 1,110 g) | **`0.00`** ✅ | R#31 (Mié Com: 360 g); R#41 (Jue Com: 450 g); R#47 (Vie Des: 300 g) |
+| 22 | **Fajitas de mojarra** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#26 (Mar Cen: 1,320 g) |
+| 23 | **Filete de atún** | **1,200 g** | 0 g | **1,200 g** | Tabla 3.3 (Mercado — Comprar: 1,200 g) | **`0.00`** ✅ | R#35 (Mié Cen: 1,200 g) |
+| 24 | **Flat steak** | **2,460 g** | 0 g | **2,460 g** | Tabla 3.3 (Mercado — Comprar: 2,460 g) | **`0.00`** ✅ | R#32 (Mié Com: 1,200 g); R#50 (Vie Com: 1,260 g) |
+| 25 | **Fondo claro de pollo** | **9,900 ml** | 0 ml | **9,900 ml** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#04 (Dom Com: 1,200 ml); R#07 (Dom Cen: 1,200 ml); R#16 (Lun Cen: 1,200 ml); R#22 (Mar Com: 1,200 ml); R#40 (Jue Com: 1,200 ml); R#43 (Jue Cen: 900 ml); R#52 (Vie Cen: 1,500 ml); R#61 (Sáb Cen: 1,500 ml) |
+| 26 | **Fresas** | **990 g** | 0 g | **990 g** | Tabla 3.3 (Mercado — Comprar: 990 g) | **`0.00`** ✅ | R#01 (Dom Des: 180 g); R#12 (Lun Des: 120 g); R#19 (Mar Des: 90 g); R#28 (Mié Des: 180 g); R#39 (Jue Des: 120 g); R#48 (Vie Des: 120 g); R#55 (Sáb Des: 180 g) |
+| 27 | **Grenetina** | **252 g** | 0 g | **252 g** | Tabla 3.3 (Mercado — Comprar: 140 g) | **`0.00`** ✅ | R#03 (Dom Des: 42 g); R#12 (Lun Des: 42 g); R#30 (Mié Des: 42 g); R#39 (Jue Des: 42 g); R#48 (Vie Des: 42 g); R#57 (Sáb Des: 42 g) |
+| 28 | **Hierbas finas** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena $0 — Stock: 25 g) | **`0.00`** ✅ | R#26 (Mar Cen: 6 g); R#50 (Vie Com: 6 g) |
+| 29 | **Huevo** | **126 piezas** | 0 piezas | **126 piezas** | Tabla 3.3 (Mercado — Comprar: 100 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 18 piezas); R#11 (Lun Des: 18 piezas); R#20 (Mar Des: 18 piezas); R#29 (Mié Des: 18 piezas); R#38 (Jue Des: 18 piezas); R#47 (Vie Des: 18 piezas); R#56 (Sáb Des: 18 piezas) |
+| 30 | **Jamaica** | **30 g** | 0 g | **30 g** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#30 (Mié Des: 30 g) |
+| 31 | **Jitomate** | **7 piezas** | 0 piezas | **7 piezas** | Tabla 3.2 (Alacena $0 — Stock: 7 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 2 piezas); R#23 (Mar Com: 2 piezas); R#43 (Jue Cen: 1 piezas); R#56 (Sáb Des: 2 piezas) |
+| 32 | **Lechuga** | **3 piezas** | 0 piezas | **3 piezas** | Tabla 3.2 (Alacena $0 — Stock: 3 piezas) | **`0.00`** ✅ | R#17 (Lun Cen: 2 piezas); R#58 (Sáb Com: 1 piezas) |
+| 33 | **Limones** | **2,352 g** | 0 g | **2,352 g** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#05 (Dom Com: 120 g); R#13 (Lun Com: 90 g); R#15 (Lun Com: 60 g); R#16 (Lun Cen: 60 g); R#17 (Lun Cen: 120 g); R#23 (Mar Com: 120 g); R#25 (Mar Cen: 90 g); R#26 (Mar Cen: 120 g); R#27 (Mar Cen: 48 g); R#30 (Mié Des: 60 g); R#31 (Mié Com: 90 g); R#33 (Mié Com: 60 g); R#34 (Mié Cen: 60 g); R#35 (Mié Cen: 120 g); R#41 (Jue Com: 90 g); R#42 (Jue Com: 60 g); R#44 (Jue Cen: 90 g); R#48 (Vie Des: 48 g); R#49 (Vie Com: 90 g); R#51 (Vie Com: 60 g); R#52 (Vie Cen: 90 g); R#53 (Vie Cen: 120 g); R#54 (Vie Cen: 48 g); R#58 (Sáb Com: 90 g); R#59 (Sáb Com: 60 g); R#60 (Sáb Com: 60 g); R#61 (Sáb Cen: 90 g); R#62 (Sáb Cen: 90 g); R#63 (Sáb Cen: 48 g) |
+| 34 | **Lomo de salmón** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#05 (Dom Com: 1,320 g) |
+| 35 | **Mantequilla** | **570 g** | 0 g | **570 g** | Tabla 3.3 (Mercado — Comprar: 280 g) | **`0.00`** ✅ | R#06 (Dom Com: 45 g); R#11 (Lun Des: 45 g); R#20 (Mar Des: 84 g); R#29 (Mié Des: 45 g); R#38 (Jue Des: 96 g); R#47 (Vie Des: 45 g); R#50 (Vie Com: 60 g); R#56 (Sáb Des: 90 g); R#62 (Sáb Cen: 60 g) |
+| 36 | **Manzanilla** | **84 g** | 0 g | **84 g** | Tabla 3.3 (Mercado — Comprar: 34 g) | **`0.00`** ✅ | R#09 (Dom Cen: 12 g); R#18 (Lun Cen: 12 g); R#27 (Mar Cen: 12 g); R#36 (Mié Cen: 12 g); R#45 (Jue Cen: 12 g); R#54 (Vie Cen: 12 g); R#63 (Sáb Cen: 12 g) |
+| 37 | **Morrón** | **8 piezas** | 0 piezas | **8 piezas** | Tabla 3.3 (Mercado — Comprar: 8 piezas) | **`0.00`** ✅ | R#11 (Lun Des: 3 piezas); R#29 (Mié Des: 3 piezas); R#53 (Vie Cen: 2 piezas) |
+| 38 | **MultiSinergix®** | **210 g** | 210 g | **420 g** | Tabla 3.3 (Mercado — Comprar: 120 g) | **`0.00`** ✅ | R#03 (Dom Des: 30 g); R#12 (Lun Des: 30 g); R#21 (Mar Des: 30 g); R#30 (Mié Des: 30 g); R#39 (Jue Des: 30 g); R#48 (Vie Des: 30 g); R#57 (Sáb Des: 30 g) |
+| 39 | **Nopales** | **960 g** | 0 g | **960 g** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#06 (Dom Com: 480 g); R#24 (Mar Com: 480 g) |
+| 40 | **Nuez pecana** | **1,008 g** | 0 g | **1,008 g** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#01 (Dom Des: 90 g); R#06 (Dom Com: 48 g); R#08 (Dom Cen: 60 g); R#10 (Lun Des: 90 g); R#19 (Mar Des: 90 g); R#28 (Mié Des: 90 g); R#35 (Mié Cen: 90 g); R#37 (Jue Des: 90 g); R#44 (Jue Cen: 90 g); R#46 (Vie Des: 90 g); R#55 (Sáb Des: 90 g); R#62 (Sáb Cen: 90 g) |
+| 41 | **Orégano** | **39 g** | 0 g | **39 g** | Tabla 3.2 (Alacena $0 — Stock: 150 g) | **`0.00`** ✅ | R#14 (Lun Com: 6 g); R#23 (Mar Com: 6 g); R#24 (Mar Com: 6 g); R#33 (Mié Com: 6 g); R#43 (Jue Cen: 6 g); R#56 (Sáb Des: 3 g); R#60 (Sáb Com: 6 g) |
+| 42 | **Pechuga de pollo** | **1,200 g** | 0 g | **1,200 g** | Tabla 3.3 (Mercado — Comprar: 1,200 g) | **`0.00`** ✅ | R#53 (Vie Cen: 1,200 g) |
+| 43 | **Pepino** | **1,560 g** | 0 g | **1,560 g** | Tabla 3.3 (Mercado — Comprar: 1,560 g) | **`0.00`** ✅ | R#25 (Mar Cen: 420 g); R#34 (Mié Cen: 360 g); R#44 (Jue Cen: 360 g); R#49 (Vie Com: 420 g) |
+| 44 | **Pimienta negra** | **39 g** | 0 g | **39 g** | Tabla 3.2 (Alacena $0 — Stock: 70 g) | **`0.00`** ✅ | R#04 (Dom Com: 3 g); R#05 (Dom Com: 3 g); R#07 (Dom Cen: 3 g); R#08 (Dom Cen: 3 g); R#11 (Lun Des: 3 g); R#17 (Lun Cen: 3 g); R#22 (Mar Com: 3 g); R#32 (Mié Com: 3 g); R#35 (Mié Cen: 3 g); R#41 (Jue Com: 3 g); R#50 (Vie Com: 3 g); R#53 (Vie Cen: 3 g); R#62 (Sáb Cen: 3 g) |
+| 45 | **Pistaches** | **90 g** | 0 g | **90 g** | Tabla 3.2 (Alacena $0 — Stock: 100 g) | **`0.00`** ✅ | R#05 (Dom Com: 90 g) |
+| 46 | **Pollo entero** | **1 piezas** | 0 piezas | **1 piezas** | Tabla 3.2 (Alacena $0 — Stock: 1 piezas) | **`0.00`** ✅ | R#41 (Jue Com: 1 piezas) |
+| 47 | **Queso cottage** | **480 g** | 0 g | **480 g** | Tabla 3.2 (Alacena $0 — Stock: 500 g) | **`0.00`** ✅ | R#44 (Jue Cen: 480 g) |
+| 48 | **Queso mozzarella** | **102 g** | 0 g | **102 g** | Tabla 3.2 (Alacena $0 — Stock: 105 g) | **`0.00`** ✅ | R#02 (Dom Des: 102 g) |
+| 49 | **Queso parmesano** | **90 g** | 0 g | **90 g** | Tabla 3.2 (Alacena $0 — Stock: 100 g) | **`0.00`** ✅ | R#08 (Dom Cen: 90 g) |
+| 50 | **Queso Philadelphia** | **720 g** | 0 g | **720 g** | Tabla 3.2 (Alacena $0 — Stock: 720 g) | **`0.00`** ✅ | R#11 (Lun Des: 180 g); R#14 (Lun Com: 150 g); R#20 (Mar Des: 210 g); R#59 (Sáb Com: 180 g) |
+| 51 | **Queso ricotta** | **1,200 g** | 0 g | **1,200 g** | Tabla 3.2 (Alacena $0 — Stock: 1,920 g) | **`0.00`** ✅ | R#08 (Dom Cen: 240 g); R#29 (Mié Des: 180 g); R#41 (Jue Com: 240 g); R#47 (Vie Des: 240 g); R#62 (Sáb Cen: 300 g) |
+| 52 | **Romero** | **60 g** | 0 g | **60 g** | Tabla 3.1 (Granja / Cocina $0) | **`0.00`** ✅ | R#08 (Dom Cen: 18 g); R#32 (Mié Com: 18 g); R#41 (Jue Com: 24 g) |
+| 53 | **Sal con ajo** | **78 g** | 0 g | **78 g** | Tabla 3.2 (Alacena $0 — Stock: 100 g) | **`0.00`** ✅ | R#04 (Dom Com: 6 g); R#06 (Dom Com: 6 g); R#07 (Dom Cen: 6 g); R#08 (Dom Cen: 6 g); R#14 (Lun Com: 6 g); R#22 (Mar Com: 6 g); R#26 (Mar Cen: 6 g); R#32 (Mié Com: 6 g); R#38 (Jue Des: 6 g); R#40 (Jue Com: 6 g); R#41 (Jue Com: 6 g); R#50 (Vie Com: 6 g); R#53 (Vie Cen: 6 g) |
+| 54 | **Sal de mar** | **177 g** | 0 g | **177 g** | Tabla 3.2 (Alacena $0 — Stock: 3,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 6 g); R#05 (Dom Com: 9 g); R#11 (Lun Des: 6 g); R#13 (Lun Com: 6 g); R#15 (Lun Com: 6 g); R#16 (Lun Cen: 6 g); R#17 (Lun Cen: 6 g); R#20 (Mar Des: 6 g); R#23 (Mar Com: 6 g); R#24 (Mar Com: 6 g); R#25 (Mar Cen: 6 g); R#29 (Mié Des: 6 g); R#31 (Mié Com: 6 g); R#33 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#35 (Mié Cen: 6 g); R#42 (Jue Com: 6 g); R#43 (Jue Cen: 6 g); R#44 (Jue Cen: 6 g); R#47 (Vie Des: 6 g); R#49 (Vie Com: 6 g); R#51 (Vie Com: 6 g); R#52 (Vie Cen: 6 g); R#56 (Sáb Des: 6 g); R#58 (Sáb Com: 6 g); R#59 (Sáb Com: 6 g); R#60 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g); R#62 (Sáb Cen: 6 g) |
+| 55 | **Sardinas** | **840 g** | 0 g | **840 g** | Tabla 3.2 (Alacena $0 — Stock: 1,700 g) | **`0.00`** ✅ | R#23 (Mar Com: 840 g) |
+| 56 | **Semillas de chía orgánicas** | **336 g** | 0 g | **336 g** | Tabla 3.3 (Mercado — Comprar: 336 g) | **`0.00`** ✅ | R#01 (Dom Des: 48 g); R#10 (Lun Des: 48 g); R#19 (Mar Des: 48 g); R#28 (Mié Des: 48 g); R#37 (Jue Des: 48 g); R#46 (Vie Des: 48 g); R#55 (Sáb Des: 48 g) |
+| 57 | **Té chai** | **18 g** | 0 g | **18 g** | Tabla 3.2 (Alacena $0 — Stock: 70 g) | **`0.00`** ✅ | R#21 (Mar Des: 18 g) |
+| 58 | **Tomate** | **360 g** | 0 g | **360 g** | Tabla 3.2 (Alacena $0 — Stock: 400 g) | **`0.00`** ✅ | R#14 (Lun Com: 360 g) |
+| 59 | **Tomillo** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena $0 — Stock: 20 g) | **`0.00`** ✅ | R#40 (Jue Com: 6 g); R#45 (Jue Cen: 3 g); R#63 (Sáb Cen: 3 g) |
+| 60 | **Yogur griego** | **840 g** | 0 g | **840 g** | Tabla 3.2 (Alacena $0 — Stock: 3,880 g) | **`0.00`** ✅ | R#38 (Jue Des: 480 g); R#44 (Jue Cen: 360 g) |
+| 61 | **Zarzamora** | **960 g** | 0 g | **960 g** | Tabla 3.3 (Mercado — Comprar: 960 g) | **`0.00`** ✅ | R#03 (Dom Des: 150 g); R#10 (Lun Des: 210 g); R#19 (Mar Des: 60 g); R#37 (Jue Des: 210 g); R#46 (Vie Des: 180 g); R#57 (Sáb Des: 150 g) |
