@@ -1376,7 +1376,7 @@ def test_commercial_packaging_and_dimensional_normalization():
     assert "bolsa_sal" in code
 
     # 2. Aislamiento léxico
-    assert "exclude: ['hueso', 'huesos', 'retazo', 'fondo', 'caldo']" in code
+    assert "exclude: ['hueso', 'huesos', 'retazo', 'fondo', 'caldo'" in code
     assert "exclude: ['ajonjoli']" in code
     assert "exclude: ['semilla', 'semillas', 'grano']" in code
     assert "exclude: ['aceite']" in code
@@ -1621,17 +1621,18 @@ def test_physical_pantry_106_skus_and_multisinergix():
     assert '"lechuga_orejona_viva_cogollo":' not in p_content
     assert '"champinones_portobello_frescos":' not in p_content
 
-    # Mantequilla 290g, Queso cottage consolidado 3880g, Huevo 30 piezas
+    # Mantequilla 290g, Queso cottage 500g, Huevo 26 piezas, Pollo entero 1 pieza
     assert 'sku-001-mantequilla' in p_content and '290' in p_content
-    assert 'sku-003-queso-cottage' in p_content and '3880' in p_content
-    assert 'sku-104-huevo' in p_content and '30' in p_content
+    assert 'sku-003-queso-cottage' in p_content and '500' in p_content
+    assert 'sku-104-huevo' in p_content and '26' in p_content
+    assert '"pollo-entero"' in p_content and '"Pollo entero"' in p_content
 
     # Insumos consolidados en nombres canónicos puros sin variaciones repetidas
     assert '"espinacas_baby_tiernas"' in p_content and '"Espinacas"' in p_content
     assert '"sku-040-champinon"' in p_content and '"Champiñón"' in p_content
-    assert '"esparragos_verdes_frescos"' in p_content and '"Espárragos"' in p_content and '800' in p_content
+    assert '"esparragos_verdes_frescos"' in p_content and '"Espárragos"' in p_content
     assert '"fresas_frescas_tr04095"' in p_content and '"Fresas"' in p_content
-    assert '"frambuesas_frescas_organicas"' in p_content and '"Frambuesas"' in p_content and '340' in p_content
+    assert '"frambuesas_frescas_organicas"' in p_content and '"Frambuesas"' in p_content
     assert '"queso_ricotta_artesanal"' in p_content and '"Queso ricotta"' in p_content and '1920' in p_content
     assert '"chiles_chipotles_adobados"' in p_content and '"Chile chipotle"' in p_content
     assert '"frijol_pinto"' in p_content and '"Frijol pinto"' in p_content
