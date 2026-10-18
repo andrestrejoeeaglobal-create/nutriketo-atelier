@@ -8,14 +8,14 @@
   <meta http-equiv="Expires" content="0" />
   <title>Arquitectura Herami — Atelier T.I.L.O.®</title>
 
-  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V44 -->
+  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V47 -->
   <script>
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(async (regs) => {
       let legacyUnregistered = false;
       for (let r of regs) {
         const sUrl = (r.active && r.active.scriptURL) || (r.installing && r.installing.scriptURL) || (r.waiting && r.waiting.scriptURL) || '';
-        if (!sUrl.includes('nutriketo-v36-6-rev16-s43-only-v44')) {
+        if (!sUrl.includes('nutriketo-v36-6-rev19-harvest-delete-v47')) {
           await r.unregister();
           legacyUnregistered = true;
         }
@@ -32,7 +32,7 @@
   }
   if ('caches' in window) {
     caches.keys().then(keys => keys.forEach(k => {
-      if (k !== 'nutriketo-v36-6-rev16-s43-only-v44') caches.delete(k);
+      if (k !== 'nutriketo-v36-6-rev19-harvest-delete-v47') caches.delete(k);
     })).catch(() => {});
   }
   </script>
@@ -2711,6 +2711,11 @@ let pantryStock = {
     }
 
     function sanitizeAndDeduplicateFarmHarvestState() {
+      if (typeof localStorage !== 'undefined' && localStorage.getItem(LOCAL_STORAGE_KEY) && localStorage.getItem('nutriketo_v47_calabacitas_purged') !== 'true') {
+        if (!Array.isArray(deletedFarmItems)) deletedFarmItems = [];
+        deletedFarmItems.push('Calabacitas verdes tiernas');
+        localStorage.setItem('nutriketo_v47_calabacitas_purged', 'true');
+      }
       const seenDelSlugs = new Set();
       const cleanDeleted = [];
       (deletedFarmItems || []).forEach(d => {
@@ -8133,14 +8138,14 @@ function renderRecipes(day, activeDiners) {
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev18-harvest-delete-fix-v46') {
+              if (k !== 'nutriketo-v36-6-rev19-harvest-delete-v47') {
                 caches.delete(k);
               }
             });
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev18-harvest-delete-fix-v46')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev19-harvest-delete-v47')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();

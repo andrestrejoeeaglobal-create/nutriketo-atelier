@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Governance Rule RULE-2026-CROSS-DEVICE-MIRROR-001
-const CACHE_NAME = 'nutriketo-v36-6-rev18-harvest-delete-fix-v46';
+const CACHE_NAME = 'nutriketo-v36-6-rev19-harvest-delete-v47';
 
 const ASSETS_TO_CACHE = [
   './',
@@ -62,9 +62,10 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Same-origin Network-First using URL string
+  // Same-origin Network-First using cache-busted URL string to bypass CDN max-age=600
+  const bustFetchUrl = reqUrl + (reqUrl.includes('?') ? '&' : '?') + '_sw_net=' + encodeURIComponent(CACHE_NAME);
   event.respondWith(
-    fetch(reqUrl, { cache: 'no-store' })
+    fetch(bustFetchUrl, { cache: 'no-store' })
       .then((networkResponse) => {
         if (networkResponse && networkResponse.status === 200) {
           const responseToCache = networkResponse.clone();
