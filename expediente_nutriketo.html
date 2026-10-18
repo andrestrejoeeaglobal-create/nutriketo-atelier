@@ -8,32 +8,17 @@
   <meta http-equiv="Expires" content="0" />
   <title>Arquitectura Herami — Atelier T.I.L.O.®</title>
 
-  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER ANTERIOR A V47 -->
+  <!-- PURGA SELECTIVA DE CACHÉ LEGACY Y SERVICE WORKER -->
   <script>
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(async (regs) => {
-      let legacyUnregistered = false;
-      for (let r of regs) {
-        const sUrl = (r.active && r.active.scriptURL) || (r.installing && r.installing.scriptURL) || (r.waiting && r.waiting.scriptURL) || '';
-        if (!sUrl.includes('nutriketo-v36-6-rev20-pure-farm-nouns-v48')) {
-          await r.unregister();
-          legacyUnregistered = true;
-        }
-      }
-      if (legacyUnregistered && typeof window.tailwind === 'undefined') {
-        const twScript = document.createElement('script');
-        twScript.src = 'https://cdn.tailwindcss.com';
-        twScript.onload = function() {
-          if (typeof applyTailwindConfig === 'function') applyTailwindConfig();
-        };
-        document.head.appendChild(twScript);
+    navigator.serviceWorker.getRegistrations().then((regs) => {
+      for (const r of regs) {
+        r.unregister().catch(() => {});
       }
     }).catch(() => {});
   }
   if ('caches' in window) {
-    caches.keys().then(keys => keys.forEach(k => {
-      if (k !== 'nutriketo-v36-6-rev20-pure-farm-nouns-v48') caches.delete(k);
-    })).catch(() => {});
+    caches.keys().then(keys => keys.forEach(k => caches.delete(k).catch(() => {}))).catch(() => {});
   }
   </script>
 
@@ -1700,182 +1685,196 @@ let pantryStock = {
       return rawName.trim();
     }
 
+    const _EQUIV_MEMO_CACHE = new Map();
+    const _PURE_PANTRY_NAME_CACHE = new Map();
+    const _ITEM_KEYWORDS_EQUIV = [
+      { stem: 'pollo', aliases: ['pechuga de pollo', 'pechuga de pollo organica', 'pechuga de pollo (kirkland signature)', 'carne de pollo', 'pollo organico'], exclude: ['hueso', 'huesos', 'retazo', 'fondo', 'caldo'] },
+      { stem: 'huesos-pollo', aliases: ['huesos y retazo de pollo', 'retazo de pollo', 'huesos de pollo', 'retazo de pollo organico'], exclude: ['pechuga'] },
+      { stem: 'tuetano', aliases: ['tuetano', 'huesos de res con tuetano', 'huesos de res', 'carne para caldo rico', 'costilla tuetano'], exclude: ['arrachera', 'sirloin', 'machaca', 'filete de res'] },
+      { stem: 'huevo', aliases: ['huevo', 'huevos', 'huevos enteros', 'huevos organicos', 'huevos frescos', 'huevos organicos de libre pastoreo', 'huevo entero'] },
+      { stem: 'mantequilla', aliases: ['mantequilla', 'mantequilla de vaca', 'mantequilla de pastoreo', 'mantequilla de pastoreo artesanal', 'mantequilla sin sal'], exclude: ['ghee', 'clarificada'] },
+      { stem: 'ghee', aliases: ['ghee', 'mantequilla clarificada'] },
+      { stem: 'sirloin', aliases: ['sirloin', 'medallones de sirloin', 'medallon de sirloin', 'medallones de sirloin de res magro', 'carne molida de sirloin'], exclude: ['tuetano', 'huesos'] },
+      { stem: 'arrachera', aliases: ['arrachera', 'arrachera de res', 'arrachera de res magra limpia', 'arrachera limpia', 'corte magro de arrachera'], exclude: ['tuetano', 'huesos', 'hamburguesa'] },
+      { stem: 'ribeye', aliases: ['ribeye', 'corte magro de ribeye', 'corte de ribeye', 'corte magro de ribeye de res premium', 'ribeye de res'] },
+      { stem: 'mojarra', aliases: ['mojarra', 'fajita de mojarra', 'fajitas de mojarra', 'tilapia', 'fajita de tilapia', 'fajitas de mojarra tilapia'] },
+      { stem: 'hamburguesa-arrachera', aliases: ['hamburguesa de arrachera', 'hamburguesas de arrachera', 'arrachburg'] },
+      { stem: 'robalo', aliases: ['robalo', 'filete de robalo', 'filete de robalo salvaje', 'filete de robalo salvaje fresco de captura', 'pescado blanco', 'filete de pescado blanco'] },
+      { stem: 'huachinango', aliases: ['huachinango', 'filetes de huachinango', 'filete de huachinango con piel'] },
+      { stem: 'salmon', aliases: ['salmon', 'lomo de salmon', 'filete de salmon', 'salmon fresco', 'salmon salvaje'], exclude: ['salsa'] },
+      { stem: 'sardina', aliases: ['sardina', 'sardinas', 'sardina enlatada', 'sardinas enlatadas', 'sardina en salsa de tomate', 'sardinas en salsa de tomate', 'sardinas en tomate', 'lata de sardinas', 'latas de sardinas'] },
+      { stem: 'atun-fresco', aliases: ['medallon de atun', 'medallones de atun', 'filete de atun', 'atun fresco', 'lomo de atun', 'medallon de atun fresco'], exclude: ['enlatado', 'en agua', 'en lata', 'lata'] },
+      { stem: 'atun-lata', aliases: ['atun enlatado', 'atun en agua', 'atun en lata', 'lata de atun'], exclude: ['fresco', 'medallon', 'filete'] },
+      { stem: 'pavo', aliases: ['pavo', 'pechuga de pavo', 'pechuga de pavo artesanal', 'jamon de pavo'], exclude: ['tocino', 'pollo'] },
+      { stem: 'tocino-pavo', aliases: ['tocino de pavo', 'tocino de pavo artesanal', 'tocino de pavo crujiente'], exclude: ['pollo'] },
+      { stem: 'machaca', aliases: ['machaca', 'carne seca machaca', 'carne seca machaca artesanal'] },
+      { stem: 'flat-steak', aliases: ['flat steak', 'flatsteak', 'bife plano', 'steak flat'] },
+      { stem: 'carne-molida', aliases: ['carne molida', 'carne molida de res', 'carne molida de sirloin'] },
+      { stem: 'gouda', aliases: ['gouda', 'queso gouda', 'queso gouda artesanal'] },
+      { stem: 'panela', aliases: ['panela', 'queso panela', 'queso panela artesanal'] },
+      { stem: 'parmesano', aliases: ['parmesano', 'queso parmesano', 'queso parmesano artesanal'] },
+      { stem: 'queso-crema', aliases: ['queso crema', 'queso crema suave', 'queso crema suave artesanal'] },
+      { stem: 'cabra', aliases: ['queso de cabra', 'queso de cabra artesanal', 'cabra artesanal', 'queso de cabra suave artesanal'] },
+      { stem: 'ricotta', aliases: ['ricotta', 'queso ricotta', 'queso ricotta (qcotta 960g)', 'queso ricotta artesanal', 'qcotta', 'requeson'] },
+      { stem: 'oikos', aliases: ['oikos', 'oikos pro', 'lacteo oikos', 'yoghurt oikos', 'yogurt oikos', 'oikos proteina', 'yogur griego', 'yoghurt griego', 'yoghurt griego natural sin azucar', 'yoghurt griego natural sin azucar (kirkland)'] },
+      { stem: 'crema', aliases: ['crema', 'crema entera', 'crema entera de rancho', 'crema para batir', 'crema acida'], exclude: ['queso crema'] },
+      { stem: 'cottage', aliases: ['queso cottage', 'cottage', 'queso cottage artesanal'] },
+      { stem: 'philadelphia', aliases: ['queso philadelphia', 'philadelphia', 'queso crema philadelphia'] },
+      { stem: 'mozzarella', aliases: ['queso mozzarella', 'mozzarella'] },
+      { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'], exclude: ['aceituna', 'aceitunas'] },
+      { stem: 'aceite-ajonjoli', aliases: ['aceite de ajonjoli', 'aceite de sesamo', 'aceite de ajonjoli tostado'], exclude: ['semilla', 'semillas', 'grano'] },
+      { stem: 'semillas-sesamo', aliases: ['semillas de sesamo', 'semillas de ajonjoli', 'ajonjoli en grano', 'semilla de ajonjoli', 'ajonjoli', 'semillas de sesamo (ajonjoli)'], exclude: ['aceite'] },
+      { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'nuex pecana', 'nuex', 'pecana', 'pecanas', 'nuez pecana fresca', 'nuez pecana de la granja', 'nuez pecana fresca de la granja', 'nueces pecanas', 'nuez pecana en mitades', 'nuez pecana pelada', 'nuez', 'nueces', 'nuez picada'], exclude: ['india', 'mixtas', 'castilla', 'macadamia'] },
+      { stem: 'nuez-castilla', aliases: ['nuez de castilla', 'nueces de castilla', 'nuez de castilla fresca'], exclude: ['pecana', 'india', 'mixtas'] },
+      { stem: 'nuez-india', aliases: ['nuez de la india', 'nueces de la india', 'nuez india', 'nueces india', 'anacardo', 'anacardos', 'maranon'], exclude: ['pecana', 'mixtas', 'castilla'] },
+      { stem: 'semillas-mixtas', aliases: ['semillas y nueces mixtas', 'mezcla de semillas y nueces'] },
+      { stem: 'almendra', aliases: ['almendra', 'almendras', 'almendras fileteadas', 'almendras fileteadas tostadas'] },
+      { stem: 'chia', aliases: ['chia', 'semillas de chia', 'semillas de chia organicas'] },
+      { stem: 'girasol', aliases: ['semillas de girasol', 'semilla de girasol', 'girasol', 'semillas de girasol tostadas'] },
+      { stem: 'coco-rallado', aliases: ['coco deshidratado', 'coco rallado', 'coco sin azucar'], exclude: ['leche de coco', 'aceite de coco'] },
+      { stem: 'leche-coco', aliases: ['leche de coco', 'leche de coco sin azucar'], exclude: ['deshidratado', 'rallado', 'aceite'] },
+      { stem: 'granada', aliases: ['granada', 'granadas', 'arilos'] },
+      { stem: 'pitaya', aliases: ['pitaya', 'pitayas', 'pitahaya', 'pitahayas'] },
+      { stem: 'fresa', aliases: ['fresa', 'fresas', 'fresas frescas', 'fresas frescas (costco 907g)', 'fresas silvestres'] },
+      { stem: 'frambuesa', aliases: ['frambuesa', 'frambuesas', 'frambuesas frescas', 'frambuesas frescas organicas'] },
+      { stem: 'zarzamora', aliases: ['zarzamora', 'zarzamoras', 'zarzamoras frescas', 'zarzamoras frescas (costco 510g)'] },
+      { stem: 'arandano', aliases: ['arandano', 'arandanos'] },
+      { stem: 'mora', aliases: ['mora', 'moras'], exclude: ['morada'] },
+      { stem: 'espinaca', aliases: ['espinaca', 'espinacas', 'espinacas baby', 'espinacas baby tiernas', 'espinacas frescas'] },
+      { stem: 'calabacita', aliases: ['calabacita', 'calabacitas', 'calabaza', 'zucchini', 'calabacitas verdes tiernas'], exclude: ['semilla', 'semillas', 'pepita', 'pepitas', 'flor'] },
+      { stem: 'flor-calabaza', aliases: ['flor de calabaza', 'flores de calabaza'] },
+      { stem: 'semillas-calabaza', aliases: ['semillas de calabaza', 'semilla de calabaza', 'pepitas de calabaza', 'pepita de calabaza', 'pepitas'], exclude: ['calabacita', 'calabacitas'] },
+      { stem: 'brocoli', aliases: ['brocoli', 'brocolis'] },
+      { stem: 'esparrago', aliases: ['esparrago', 'esparragos', 'esparragos verdes', 'esparragos verdes frescos'] },
+      { stem: 'nopal', aliases: ['nopal', 'nopales'] },
+      { stem: 'ejote', aliases: ['ejote', 'ejotes', 'ejotes verdes', 'ejotes verdes tiernos'] },
+      { stem: 'cilantro', aliases: ['cilantro'] },
+      { stem: 'arugula', aliases: ['arugula'] },
+      { stem: 'coliflor', aliases: ['coliflor'] },
+      { stem: 'menta', aliases: ['menta'] },
+      { stem: 'toronjil', aliases: ['toronjil'] },
+      { stem: 'manzanilla-te', aliases: ['manzanilla', 'flores de manzanilla', 'flores de manzanilla seca', 'te de manzanilla'], exclude: ['aceituna', 'aceitunas'] },
+      { stem: 'aceitunas', aliases: ['aceitunas manzanilla', 'aceitunas', 'aceituna'] },
+      { stem: 'jamaica', aliases: ['jamaica', 'flor de jamaica', 'flor de jamaica molida en polvo'] },
+      { stem: 'apio', aliases: ['apio'] },
+      { stem: 'chayote', aliases: ['chayote', 'chayotes', 'chayote tierno', 'chayotes tiernos', 'chayotes tiernos pelados'] },
+      { stem: 'hinojo', aliases: ['hinojo'] },
+      { stem: 'aguacate', aliases: ['aguacate', 'aguacates', 'aguacate hass', 'aguacate hass fresco'] },
+      { stem: 'morron', aliases: ['morron', 'morrones', 'pimiento morron', 'pimientos morrones', 'pimientos morrones dulces', 'pimiento morron dulce'] },
+      { stem: 'cebolla-fresca', aliases: ['cebolla blanca', 'cebolla blanca fresca', 'cebolla', 'cebollas', 'cebolla morada'], exclude: ['en polvo'] },
+      { stem: 'cebolla-polvo', aliases: ['cebolla en polvo'] },
+      { stem: 'jitomate', aliases: ['jitomate', 'jitomates', 'saladet', 'jitomate saladet', 'jitomate saladet fresco', 'jitomate bola'], exclude: ['tomate verde', 'tomatillo'] },
+      { stem: 'tomate-verde', aliases: ['tomate verde', 'tomate verde fresco', 'tomatillo', 'tomate'], exclude: ['jitomate', 'saladet', 'salsa'] },
+      { stem: 'champinon', aliases: ['champinon', 'champinones', 'portobello', 'champinones portobello', 'champinones portobello frescos', 'hongo portobello', 'sombreros portobello'] },
+      { stem: 'chipotle', aliases: ['chipotle', 'chipotles', 'chiles chipotles', 'chiles chipotles adobados', 'chipotles en conserva'] },
+      { stem: 'lechuga-sweet', aliases: ['lechuga sweet', 'sweet lettuce', 'lechuga', 'lechugas', 'lechuga orejona', 'hojas de lechuga', 'hojas de lechuga orejona viva', 'lechuga sucrine', 'cogollos vivos', 'lechuga orejona viva cogollo'] },
+      { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'limon agrio', 'limones agrios', 'limones agrios frescos', 'limones agrios frescos de la granja', 'jugo de limon', 'jugo de limon fresco', 'jugo de limon fresco de la granja', 'jugo de limon recien exprimido', 'limon agrio fresco con semilla'] },
+      { stem: 'ajo', aliases: ['ajo', 'ajos', 'ajo fresco', 'dientes de ajo'], exclude: ['ajonjoli'] },
+      { stem: 'sal-con-ajo', aliases: ['sal con ajo'] },
+      { stem: 'sal', aliases: ['sal de mar', 'sal de colima', 'sal mineral', 'sal de mar mineral de colima', 'sal marina de grano', 'sal fina'], exclude: ['salsa', 'ajo', 'salmon', 'apio'] },
+      { stem: 'canela', aliases: ['canela', 'canela molida', 'canela en polvo'] },
+      { stem: 'oregano', aliases: ['oregano', 'oregano seco', 'oregano delgado', 'oregano grueso'] },
+      { stem: 'tomillo', aliases: ['tomillo', 'tomillo fresco', 'tomillo seco'] },
+      { stem: 'pimienta-negra', aliases: ['pimienta negra', 'pimienta negra molida', 'pimienta negra recien molida'] },
+      { stem: 'curcuma', aliases: ['curcuma', 'curcuma en polvo', 'curry suave en polvo / curcuma'] },
+      { stem: 'alcaparras', aliases: ['alcaparras', 'alcaparra'] },
+      { stem: 'agua-purificada', aliases: ['agua purificada', 'agua pura', 'botellas de agua purificada', 'botella de agua purificada', 'botella de agua', 'botellas de agua'], exclude: ['mineral'] },
+      { stem: 'agua-mineral', aliases: ['agua mineral', 'aguamin', 'botellas de agua mineral', 'botella de agua mineral'] },
+      { stem: 'multisinergix', aliases: ['multisinergix', 'multi sinergix', '33plus', '33 plus', 'formula nootropica 33plus', 'formula biotecnologica nootropica 33plus', 'formula nootropica multisinergix'] },
+      { stem: 'aminosinergix', aliases: ['aminosinergix', 'amino sinergix', '34plus', '34 plus', 'formula reparadora 34plus', 'formula biotecnologica reparadora 34plus', 'formula reparadora aminosinergix'] },
+      { stem: 'nogada', aliases: ['nogada'] },
+      { stem: 'grenetina', aliases: ['grenetina', 'grenetina natural', 'grenetina natural pura', 'grenetina natural en polvo', 'colageno hidrolizado'] },
+      { stem: 'romero', aliases: ['romero', 'romero fresco', 'romero fresco de la granja', 'ramitas de romero', 'ramita de romero', 'hojas de romero', 'romero recien cortado'] },
+      { stem: 'epazote', aliases: ['epazote', 'epazote fresco', 'epazote fresco de la granja', 'hojas de epazote', 'epazote morado', 'epazote verde'] },
+      { stem: 'eneldo', aliases: ['eneldo', 'eneldo fresco', 'eneldo fresco de la granja', 'hojas de eneldo', 'ramitas de eneldo'] },
+      { stem: 'albahaca', aliases: ['albahaca', 'albahaca fresca', 'albahaca fresca de la granja', 'hojas de albahaca'] },
+      { stem: 'hierbas-botanicas', aliases: ['hierbas botanicas', 'hierbas botanicas (toronjil y menta)', 'hierbas botanicas toronjil y menta', 'toronjil y menta'] }
+    ];
+
     function areInsumosEquivalent(aName, bName) {
       if (!aName || !bName) return false;
-      const a = aName.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/nuex/g, "nuez").trim();
-      const b = bName.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/nuex/g, "nuez").trim();
+      if (aName === bName) return true;
+      const cacheKey = aName < bName ? `${aName}||${bName}` : `${bName}||${aName}`;
+      const cached = _EQUIV_MEMO_CACHE.get(cacheKey);
+      if (cached !== undefined) return cached;
 
-      if (a === b) return true;
+      const a = String(aName).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/nuex/g, "nuez").trim();
+      const b = String(bName).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/nuex/g, "nuez").trim();
 
-      // Desacoplamiento explícito de insumos compuestos (Sal con ajo != Ajo fresco puro)
+      if (a === b) {
+        _EQUIV_MEMO_CACHE.set(cacheKey, true);
+        return true;
+      }
+
       if ((a.includes('sal con ajo') && (b === 'ajo' || b.includes('ajo fresco') || b.includes('dientes de ajo'))) ||
           (b.includes('sal con ajo') && (a === 'ajo' || a.includes('ajo fresco') || a.includes('dientes de ajo')))) {
+        _EQUIV_MEMO_CACHE.set(cacheKey, false);
         return false;
       }
 
-      // Stems y alias canónicos con coincidencia léxica multi-categoría y discriminación estricta
-      const itemKeywords = [
-        { stem: 'pollo', aliases: ['pechuga de pollo', 'pechuga de pollo organica', 'pechuga de pollo (kirkland signature)', 'carne de pollo', 'pollo organico'], exclude: ['hueso', 'huesos', 'retazo', 'fondo', 'caldo'] },
-        { stem: 'huesos-pollo', aliases: ['huesos y retazo de pollo', 'retazo de pollo', 'huesos de pollo', 'retazo de pollo organico'], exclude: ['pechuga'] },
-        { stem: 'tuetano', aliases: ['tuetano', 'huesos de res con tuetano', 'huesos de res', 'carne para caldo rico', 'costilla tuetano'], exclude: ['arrachera', 'sirloin', 'machaca', 'filete de res'] },
-        { stem: 'huevo', aliases: ['huevo', 'huevos', 'huevos enteros', 'huevos organicos', 'huevos frescos', 'huevos organicos de libre pastoreo', 'huevo entero'] },
-        { stem: 'mantequilla', aliases: ['mantequilla', 'mantequilla de vaca', 'mantequilla de pastoreo', 'mantequilla de pastoreo artesanal', 'mantequilla sin sal'], exclude: ['ghee', 'clarificada'] },
-        { stem: 'ghee', aliases: ['ghee', 'mantequilla clarificada'] },
-        { stem: 'sirloin', aliases: ['sirloin', 'medallones de sirloin', 'medallon de sirloin', 'medallones de sirloin de res magro', 'carne molida de sirloin'], exclude: ['tuetano', 'huesos'] },
-        { stem: 'arrachera', aliases: ['arrachera', 'arrachera de res', 'arrachera de res magra limpia', 'arrachera limpia', 'corte magro de arrachera'], exclude: ['tuetano', 'huesos', 'hamburguesa'] },
-        { stem: 'ribeye', aliases: ['ribeye', 'corte magro de ribeye', 'corte de ribeye', 'corte magro de ribeye de res premium', 'ribeye de res'] },
-        { stem: 'mojarra', aliases: ['mojarra', 'fajita de mojarra', 'fajitas de mojarra', 'tilapia', 'fajita de tilapia', 'fajitas de mojarra tilapia'] },
-        { stem: 'hamburguesa-arrachera', aliases: ['hamburguesa de arrachera', 'hamburguesas de arrachera', 'arrachburg'] },
-        { stem: 'robalo', aliases: ['robalo', 'filete de robalo', 'filete de robalo salvaje', 'filete de robalo salvaje fresco de captura', 'pescado blanco', 'filete de pescado blanco'] },
-        { stem: 'huachinango', aliases: ['huachinango', 'filetes de huachinango', 'filete de huachinango con piel'] },
-        { stem: 'salmon', aliases: ['salmon', 'lomo de salmon', 'filete de salmon', 'salmon fresco', 'salmon salvaje'], exclude: ['salsa'] },
-        { stem: 'sardina', aliases: ['sardina', 'sardinas', 'sardina enlatada', 'sardinas enlatadas', 'sardina en salsa de tomate', 'sardinas en salsa de tomate', 'sardinas en tomate', 'lata de sardinas', 'latas de sardinas'] },
-        { stem: 'atun-fresco', aliases: ['medallon de atun', 'medallones de atun', 'filete de atun', 'atun fresco', 'lomo de atun', 'medallon de atun fresco'], exclude: ['enlatado', 'en agua', 'en lata', 'lata'] },
-        { stem: 'atun-lata', aliases: ['atun enlatado', 'atun en agua', 'atun en lata', 'lata de atun'], exclude: ['fresco', 'medallon', 'filete'] },
-        { stem: 'pavo', aliases: ['pavo', 'pechuga de pavo', 'pechuga de pavo artesanal', 'jamon de pavo'], exclude: ['tocino', 'pollo'] },
-        { stem: 'tocino-pavo', aliases: ['tocino de pavo', 'tocino de pavo artesanal', 'tocino de pavo crujiente'], exclude: ['pollo'] },
-        { stem: 'machaca', aliases: ['machaca', 'carne seca machaca', 'carne seca machaca artesanal'] },
-        { stem: 'flat-steak', aliases: ['flat steak', 'flatsteak', 'bife plano', 'steak flat'] },
-        { stem: 'carne-molida', aliases: ['carne molida', 'carne molida de res', 'carne molida de sirloin'] },
-        // Lácteos y Quesos
-        { stem: 'gouda', aliases: ['gouda', 'queso gouda', 'queso gouda artesanal'] },
-        { stem: 'panela', aliases: ['panela', 'queso panela', 'queso panela artesanal'] },
-        { stem: 'parmesano', aliases: ['parmesano', 'queso parmesano', 'queso parmesano artesanal'] },
-        { stem: 'queso-crema', aliases: ['queso crema', 'queso crema suave', 'queso crema suave artesanal'] },
-        { stem: 'cabra', aliases: ['queso de cabra', 'queso de cabra artesanal', 'cabra artesanal', 'queso de cabra suave artesanal'] },
-        { stem: 'ricotta', aliases: ['ricotta', 'queso ricotta', 'queso ricotta (qcotta 960g)', 'queso ricotta artesanal', 'qcotta', 'requeson'] },
-        { stem: 'oikos', aliases: ['oikos', 'oikos pro', 'lacteo oikos', 'yoghurt oikos', 'yogurt oikos', 'oikos proteina', 'yogur griego', 'yoghurt griego', 'yoghurt griego natural sin azucar', 'yoghurt griego natural sin azucar (kirkland)'] },
-        { stem: 'crema', aliases: ['crema', 'crema entera', 'crema entera de rancho', 'crema para batir', 'crema acida'], exclude: ['queso crema'] },
-        { stem: 'cottage', aliases: ['queso cottage', 'cottage', 'queso cottage artesanal'] },
-        { stem: 'philadelphia', aliases: ['queso philadelphia', 'philadelphia', 'queso crema philadelphia'] },
-        { stem: 'mozzarella', aliases: ['queso mozzarella', 'mozzarella'] },
-        // Grasas, Aceites y Semillas
-        { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'], exclude: ['aceituna', 'aceitunas'] },
-        { stem: 'aceite-ajonjoli', aliases: ['aceite de ajonjoli', 'aceite de sesamo', 'aceite de ajonjoli tostado'], exclude: ['semilla', 'semillas', 'grano'] },
-        { stem: 'semillas-sesamo', aliases: ['semillas de sesamo', 'semillas de ajonjoli', 'ajonjoli en grano', 'semilla de ajonjoli', 'ajonjoli', 'semillas de sesamo (ajonjoli)'], exclude: ['aceite'] },
-        { stem: 'nuez-pecana', aliases: ['nuez pecana', 'nueces pecana', 'nuex pecana', 'nuex', 'pecana', 'pecanas', 'nuez pecana fresca', 'nuez pecana de la granja', 'nuez pecana fresca de la granja', 'nueces pecanas', 'nuez pecana en mitades', 'nuez pecana pelada', 'nuez', 'nueces', 'nuez picada'], exclude: ['india', 'mixtas', 'castilla', 'macadamia'] },
-        { stem: 'nuez-castilla', aliases: ['nuez de castilla', 'nueces de castilla', 'nuez de castilla fresca'], exclude: ['pecana', 'india', 'mixtas'] },
-        { stem: 'nuez-india', aliases: ['nuez de la india', 'nueces de la india', 'nuez india', 'nueces india', 'anacardo', 'anacardos', 'maranon'], exclude: ['pecana', 'mixtas', 'castilla'] },
-        { stem: 'semillas-mixtas', aliases: ['semillas y nueces mixtas', 'mezcla de semillas y nueces'] },
-        { stem: 'almendra', aliases: ['almendra', 'almendras', 'almendras fileteadas', 'almendras fileteadas tostadas'] },
-        { stem: 'chia', aliases: ['chia', 'semillas de chia', 'semillas de chia organicas'] },
-        { stem: 'girasol', aliases: ['semillas de girasol', 'semilla de girasol', 'girasol', 'semillas de girasol tostadas'] },
-        { stem: 'coco-rallado', aliases: ['coco deshidratado', 'coco rallado', 'coco sin azucar'], exclude: ['leche de coco', 'aceite de coco'] },
-        { stem: 'leche-coco', aliases: ['leche de coco', 'leche de coco sin azucar'], exclude: ['deshidratado', 'rallado', 'aceite'] },
-        // Frutas
-        { stem: 'granada', aliases: ['granada', 'granadas', 'arilos'] },
-        { stem: 'pitaya', aliases: ['pitaya', 'pitayas', 'pitahaya', 'pitahayas'] },
-        { stem: 'fresa', aliases: ['fresa', 'fresas', 'fresas frescas', 'fresas frescas (costco 907g)', 'fresas silvestres'] },
-        { stem: 'frambuesa', aliases: ['frambuesa', 'frambuesas', 'frambuesas frescas', 'frambuesas frescas organicas'] },
-        { stem: 'zarzamora', aliases: ['zarzamora', 'zarzamoras', 'zarzamoras frescas', 'zarzamoras frescas (costco 510g)'] },
-        { stem: 'arandano', aliases: ['arandano', 'arandanos'] },
-        { stem: 'mora', aliases: ['mora', 'moras'], exclude: ['morada'] },
-        // Verduras
-        { stem: 'espinaca', aliases: ['espinaca', 'espinacas', 'espinacas baby', 'espinacas baby tiernas', 'espinacas frescas'] },
-        { stem: 'calabacita', aliases: ['calabacita', 'calabacitas', 'calabaza', 'zucchini', 'calabacitas verdes tiernas'], exclude: ['semilla', 'semillas', 'pepita', 'pepitas', 'flor'] },
-        { stem: 'flor-calabaza', aliases: ['flor de calabaza', 'flores de calabaza'] },
-        { stem: 'semillas-calabaza', aliases: ['semillas de calabaza', 'semilla de calabaza', 'pepitas de calabaza', 'pepita de calabaza', 'pepitas'], exclude: ['calabacita', 'calabacitas'] },
-        { stem: 'brocoli', aliases: ['brocoli', 'brocolis'] },
-        { stem: 'esparrago', aliases: ['esparrago', 'esparragos', 'esparragos verdes', 'esparragos verdes frescos'] },
-        { stem: 'nopal', aliases: ['nopal', 'nopales'] },
-        { stem: 'ejote', aliases: ['ejote', 'ejotes', 'ejotes verdes', 'ejotes verdes tiernos'] },
-        { stem: 'cilantro', aliases: ['cilantro'] },
-        { stem: 'arugula', aliases: ['arugula'] },
-        { stem: 'coliflor', aliases: ['coliflor'] },
-        { stem: 'menta', aliases: ['menta'] },
-        { stem: 'toronjil', aliases: ['toronjil'] },
-        { stem: 'manzanilla-te', aliases: ['manzanilla', 'flores de manzanilla', 'flores de manzanilla seca', 'te de manzanilla'], exclude: ['aceituna', 'aceitunas'] },
-        { stem: 'aceitunas', aliases: ['aceitunas manzanilla', 'aceitunas', 'aceituna'] },
-        { stem: 'jamaica', aliases: ['jamaica', 'flor de jamaica', 'flor de jamaica molida en polvo'] },
-        { stem: 'apio', aliases: ['apio'] },
-        { stem: 'chayote', aliases: ['chayote', 'chayotes', 'chayote tierno', 'chayotes tiernos', 'chayotes tiernos pelados'] },
-        { stem: 'hinojo', aliases: ['hinojo'] },
-        { stem: 'aguacate', aliases: ['aguacate', 'aguacates', 'aguacate hass', 'aguacate hass fresco'] },
-        { stem: 'morron', aliases: ['morron', 'morrones', 'pimiento morron', 'pimientos morrones', 'pimientos morrones dulces', 'pimiento morron dulce'] },
-        { stem: 'cebolla-fresca', aliases: ['cebolla blanca', 'cebolla blanca fresca', 'cebolla', 'cebollas', 'cebolla morada'], exclude: ['en polvo'] },
-        { stem: 'cebolla-polvo', aliases: ['cebolla en polvo'] },
-        { stem: 'jitomate', aliases: ['jitomate', 'jitomates', 'saladet', 'jitomate saladet', 'jitomate saladet fresco', 'jitomate bola'], exclude: ['tomate verde', 'tomatillo'] },
-        { stem: 'tomate-verde', aliases: ['tomate verde', 'tomate verde fresco', 'tomatillo', 'tomate'], exclude: ['jitomate', 'saladet', 'salsa'] },
-        { stem: 'champinon', aliases: ['champinon', 'champinones', 'portobello', 'champinones portobello', 'champinones portobello frescos', 'hongo portobello', 'sombreros portobello'] },
-        { stem: 'chipotle', aliases: ['chipotle', 'chipotles', 'chiles chipotles', 'chiles chipotles adobados', 'chipotles en conserva'] },
-        { stem: 'lechuga-sweet', aliases: ['lechuga sweet', 'sweet lettuce', 'lechuga', 'lechugas', 'lechuga orejona', 'hojas de lechuga', 'hojas de lechuga orejona viva', 'lechuga sucrine', 'cogollos vivos', 'lechuga orejona viva cogollo'] },
-        { stem: 'limon', aliases: ['limon', 'limones', 'limones frescos', 'limon agrio', 'limones agrios', 'limones agrios frescos', 'limones agrios frescos de la granja', 'jugo de limon', 'jugo de limon fresco', 'jugo de limon fresco de la granja', 'jugo de limon recien exprimido', 'limon agrio fresco con semilla'] },
-        { stem: 'ajo', aliases: ['ajo', 'ajos', 'ajo fresco', 'dientes de ajo'], exclude: ['ajonjoli'] },
-        { stem: 'sal-con-ajo', aliases: ['sal con ajo'] },
-        { stem: 'sal', aliases: ['sal de mar', 'sal de colima', 'sal mineral', 'sal de mar mineral de colima', 'sal marina de grano', 'sal fina'], exclude: ['salsa', 'ajo', 'salmon', 'apio'] },
-        { stem: 'canela', aliases: ['canela', 'canela molida', 'canela en polvo'] },
-        { stem: 'oregano', aliases: ['oregano', 'oregano seco', 'oregano delgado', 'oregano grueso'] },
-        { stem: 'tomillo', aliases: ['tomillo', 'tomillo fresco', 'tomillo seco'] },
-        { stem: 'pimienta-negra', aliases: ['pimienta negra', 'pimienta negra molida', 'pimienta negra recien molida'] },
-        { stem: 'curcuma', aliases: ['curcuma', 'curcuma en polvo', 'curry suave en polvo / curcuma'] },
-        { stem: 'alcaparras', aliases: ['alcaparras', 'alcaparra'] },
-        { stem: 'agua-purificada', aliases: ['agua purificada', 'agua pura', 'botellas de agua purificada', 'botella de agua purificada', 'botella de agua', 'botellas de agua'], exclude: ['mineral'] },
-        { stem: 'agua-mineral', aliases: ['agua mineral', 'aguamin', 'botellas de agua mineral', 'botella de agua mineral'] },
-        { stem: 'multisinergix', aliases: ['multisinergix', 'multi sinergix', '33plus', '33 plus', 'formula nootropica 33plus', 'formula biotecnologica nootropica 33plus', 'formula nootropica multisinergix'] },
-        { stem: 'aminosinergix', aliases: ['aminosinergix', 'amino sinergix', '34plus', '34 plus', 'formula reparadora 34plus', 'formula biotecnologica reparadora 34plus', 'formula reparadora aminosinergix'] },
-        { stem: 'nogada', aliases: ['nogada'] },
-        { stem: 'grenetina', aliases: ['grenetina', 'grenetina natural', 'grenetina natural pura', 'grenetina natural en polvo', 'colageno hidrolizado'] },
-        { stem: 'romero', aliases: ['romero', 'romero fresco', 'romero fresco de la granja', 'ramitas de romero', 'ramita de romero', 'hojas de romero', 'romero recien cortado'] },
-        { stem: 'epazote', aliases: ['epazote', 'epazote fresco', 'epazote fresco de la granja', 'hojas de epazote', 'epazote morado', 'epazote verde'] },
-        { stem: 'eneldo', aliases: ['eneldo', 'eneldo fresco', 'eneldo fresco de la granja', 'hojas de eneldo', 'ramitas de eneldo'] },
-        { stem: 'albahaca', aliases: ['albahaca', 'albahaca fresca', 'albahaca fresca de la granja', 'hojas de albahaca'] },
-        { stem: 'hierbas-botanicas', aliases: ['hierbas botanicas', 'hierbas botanicas (toronjil y menta)', 'hierbas botanicas toronjil y menta', 'toronjil y menta'] }
-      ];
-
-      for (const entry of itemKeywords) {
+      for (const entry of _ITEM_KEYWORDS_EQUIV) {
         if (entry.exclude && (entry.exclude.some(ex => a.includes(ex)) || entry.exclude.some(ex => b.includes(ex)))) {
           continue;
         }
         const aMatch = entry.aliases.some(alias => a.includes(alias));
+        if (!aMatch) continue;
         const bMatch = entry.aliases.some(alias => b.includes(alias));
-        if (aMatch && bMatch) return true;
+        if (bMatch) {
+          _EQUIV_MEMO_CACHE.set(cacheKey, true);
+          return true;
+        }
       }
 
-      // Comparación léxica de despojo botánico/fresco (ej. "Romero" vs "Romero fresco", "Epazote" vs "Epazote fresco")
       const cleanHerbA = a.replace(/\b(fresco|fresca|frescos|frescas|organico|organica|organicos|organicas|de la granja|tiernos|tiernas|recien cortado|recien cortada|en rama|en hojas|ramitas de|ramita de|hojas de|dientes de)\b/g, '').replace(/\s+/g, ' ').trim();
       const cleanHerbB = b.replace(/\b(fresco|fresca|frescos|frescas|organico|organica|organicos|organicas|de la granja|tiernos|tiernas|recien cortado|recien cortada|en rama|en hojas|ramitas de|ramita de|hojas de|dientes de)\b/g, '').replace(/\s+/g, ' ').trim();
       if (cleanHerbA.length >= 3 && cleanHerbA === cleanHerbB) {
+        _EQUIV_MEMO_CACHE.set(cacheKey, true);
         return true;
       }
 
       const slugA = normalizeToCanonicalSlug(aName);
       const slugB = normalizeToCanonicalSlug(bName);
-      if (slugA && slugB && slugA === slugB) return true;
-
-      return false;
+      const res = Boolean(slugA && slugB && slugA === slugB);
+      _EQUIV_MEMO_CACHE.set(cacheKey, res);
+      return res;
     }
 
     function getPureCanonicalPantryName(rawName) {
       if (!rawName || typeof rawName !== 'string') return '';
+      const cached = _PURE_PANTRY_NAME_CACHE.get(rawName);
+      if (cached !== undefined) return cached;
       const trimmed = rawName.trim();
       if (!trimmed) return '';
       const norm = trimmed.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
-      if (/\bfresas?\b/.test(norm)) return 'Fresas';
-      if (/\bframbuesas?\b/.test(norm)) return 'Frambuesas';
-      if (/\bzarzamoras?\b/.test(norm)) return 'Zarzamora';
-      if (/\bcottage\b/.test(norm)) return 'Queso cottage';
-      if (/\b(yogur|yoghurt|oikos)\b/.test(norm)) return 'Yogur griego';
-      if (/\b(ricotta|qcotta|requeson)\b/.test(norm)) return 'Queso ricotta';
-      if (/\bpechuga de pollo\b/.test(norm)) return 'Pechuga de pollo';
-      if (/\b(lechugas?|cogollos?|sucrine)\b/.test(norm)) return 'Lechuga';
-      if (/\b(champinon|champinones|portobello)\b/.test(norm) && !norm.includes('crema')) return 'Champiñón';
-      if (/\bespinacas?\b/.test(norm)) return 'Espinacas';
-      if (/\besparragos?\b/.test(norm)) return 'Espárragos';
-      if (/\bchipotles?\b/.test(norm)) return 'Chile chipotle';
-      if (/\bhigos?\b/.test(norm)) return 'Higos';
-      if (/\bfrijol pinto\b/.test(norm)) return 'Frijol pinto';
-      if (/\bagua mineral\b/.test(norm)) return 'Agua mineral';
-      if (/\bflat steak\b/.test(norm)) return 'Flat steak';
-      if (/\boregano\b/.test(norm)) return 'Orégano';
-      if (/\bpimienta (negra|molida)\b/.test(norm)) return 'Pimienta negra';
-      if (/\b(sal marina de grano|sal fina|sal de mar|sal mineral|sal de colima)\b/.test(norm) || norm === 'sal') return 'Sal de mar';
-      if (/\b(multi\s*sinergix|33\s*plus|formula nootropica)\b/.test(norm)) return 'MultiSinergix®';
-      if (/\b(amino\s*sinergix|34\s*plus|formula reparadora)\b/.test(norm)) return 'AminoSinergix®';
-
-      // Eliminar etiquetas comerciales o sufijos redundantes entre paréntesis
-      let cleaned = trimmed.replace(/\s*\((?:costco|kirkland|sams|sam's|qcotta|pack|paquete|\d+\s*(?:botellas?|pzas|piezas|g|kg|ml))[^)]*\)/gi, '').trim();
-      return cleaned || trimmed;
+      let out = '';
+      if (/\bfresas?\b/.test(norm)) out = 'Fresas';
+      else if (/\bframbuesas?\b/.test(norm)) out = 'Frambuesas';
+      else if (/\bzarzamoras?\b/.test(norm)) out = 'Zarzamora';
+      else if (/\bcottage\b/.test(norm)) out = 'Queso cottage';
+      else if (/\b(yogur|yoghurt|oikos)\b/.test(norm)) out = 'Yogur griego';
+      else if (/\b(ricotta|qcotta|requeson)\b/.test(norm)) out = 'Queso ricotta';
+      else if (/\bpechuga de pollo\b/.test(norm)) out = 'Pechuga de pollo';
+      else if (/\b(lechugas?|cogollos?|sucrine)\b/.test(norm)) out = 'Lechuga';
+      else if (/\b(champinon|champinones|portobello)\b/.test(norm) && !norm.includes('crema')) out = 'Champiñón';
+      else if (/\bespinacas?\b/.test(norm)) out = 'Espinacas';
+      else if (/\besparragos?\b/.test(norm)) out = 'Espárragos';
+      else if (/\bchipotles?\b/.test(norm)) out = 'Chile chipotle';
+      else if (/\bhigos?\b/.test(norm)) out = 'Higos';
+      else if (/\bfrijol pinto\b/.test(norm)) out = 'Frijol pinto';
+      else if (/\bagua mineral\b/.test(norm)) out = 'Agua mineral';
+      else if (/\bflat steak\b/.test(norm)) out = 'Flat steak';
+      else if (/\boregano\b/.test(norm)) out = 'Orégano';
+      else if (/\bpimienta (negra|molida)\b/.test(norm)) out = 'Pimienta negra';
+      else if (/\b(sal marina de grano|sal fina|sal de mar|sal mineral|sal de colima)\b/.test(norm) || norm === 'sal') out = 'Sal de mar';
+      else if (/\b(multi\s*sinergix|33\s*plus|formula nootropica)\b/.test(norm)) out = 'MultiSinergix®';
+      else if (/\b(amino\s*sinergix|34\s*plus|formula reparadora)\b/.test(norm)) out = 'AminoSinergix®';
+      else {
+        const cleaned = trimmed.replace(/\s*\((?:costco|kirkland|sams|sam's|qcotta|pack|paquete|\d+\s*(?:botellas?|pzas|piezas|g|kg|ml))[^)]*\)/gi, '').trim();
+        out = cleaned || trimmed;
+      }
+      _PURE_PANTRY_NAME_CACHE.set(rawName, out);
+      return out;
     }
 
     function isPantryItemDeleted(nameOrKey) {
@@ -3079,6 +3078,14 @@ let pantryStock = {
     function saveAppState() {
       try {
         const customShopItems = rawShopBase.filter(i => i.id > 100);
+        const lightweightCustomWeeks = {};
+        if (window.customGeneratedWeeks && typeof window.customGeneratedWeeks === 'object') {
+          Object.keys(window.customGeneratedWeeks).forEach(wk => {
+            if (wk !== CANONICAL_WEEK_43_TITLE && (!datasets || !datasets[wk])) {
+              lightweightCustomWeeks[wk] = window.customGeneratedWeeks[wk];
+            }
+          });
+        }
         const state = {
           activeWeek,
           activeDiners,
@@ -3089,7 +3096,7 @@ let pantryStock = {
           pantryStock,
           pantryCardUnits: window.pantryCardUnits || {},
           pantryStockInventory: window.PANTRY_STOCK_INVENTORY || {},
-          customGeneratedWeeks: window.customGeneratedWeeks || {},
+          customGeneratedWeeks: lightweightCustomWeeks,
           samsReceiptProcessed_20261003: true,
           checkedRows,
           customShopItems,
@@ -4581,42 +4588,58 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "chiles-chipotles": ["chipotle", "chipotles", "chiles chipotles adobados", "chipotles en conserva (pack 6x220g)", "chipotles en conserva"]
 };
 
-function normalizeToCanonicalSlug(rawName) {
-  if (!rawName) return "";
-  const clean = rawName.trim().toLowerCase();
-  const cleanNoAcc = stripAccents(clean);
+const _SLUG_MEMO_CACHE = new Map();
+const _EXACT_ALIAS_TO_SLUG_MAP = new Map();
+const _COMPILED_SLUG_MATCHERS = [];
 
-  // 1. Coincidencia exacta
+(function _initCanonicalSlugMaps() {
   for (const slug in INGREDIENT_CANONICAL_MAP_JS) {
     const aliases = INGREDIENT_CANONICAL_MAP_JS[slug];
     for (const alias of aliases) {
       const aliasClean = stripAccents(alias.trim().toLowerCase());
-      if (cleanNoAcc === aliasClean) {
-        return slug;
+      if (!_EXACT_ALIAS_TO_SLUG_MAP.has(aliasClean)) {
+        _EXACT_ALIAS_TO_SLUG_MAP.set(aliasClean, slug);
       }
-    }
-  }
-
-  // 2. Coincidencia con frase multi-palabra o límite de palabra estricto
-  for (const slug in INGREDIENT_CANONICAL_MAP_JS) {
-    const aliases = INGREDIENT_CANONICAL_MAP_JS[slug];
-    for (const alias of aliases) {
-      const aliasClean = stripAccents(alias.trim().toLowerCase());
       if (aliasClean.includes(" ")) {
-        if (cleanNoAcc.includes(aliasClean)) {
-          return slug;
-        }
+        _COMPILED_SLUG_MATCHERS.push({ slug, isMulti: true, phrase: aliasClean });
       } else {
         const wordRegex = new RegExp('(?:^|\\s|_)' + aliasClean.replace(/[-\/\\^$*+?.()|\[\]{}]/g, '\\$&') + '(?:\\s|_|$)', 'i');
-        if (wordRegex.test(cleanNoAcc)) {
-          return slug;
-        }
+        _COMPILED_SLUG_MATCHERS.push({ slug, isMulti: false, regex: wordRegex });
       }
     }
   }
+})();
 
-  const sanitized = cleanNoAcc.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '');
-  return sanitized || "insumo-general";
+function normalizeToCanonicalSlug(rawName) {
+  if (!rawName) return "";
+  const cached = _SLUG_MEMO_CACHE.get(rawName);
+  if (cached !== undefined) return cached;
+
+  const clean = String(rawName).trim().toLowerCase();
+  const cleanNoAcc = stripAccents(clean);
+
+  const exactSlug = _EXACT_ALIAS_TO_SLUG_MAP.get(cleanNoAcc);
+  if (exactSlug !== undefined) {
+    _SLUG_MEMO_CACHE.set(rawName, exactSlug);
+    return exactSlug;
+  }
+
+  for (let i = 0; i < _COMPILED_SLUG_MATCHERS.length; i++) {
+    const m = _COMPILED_SLUG_MATCHERS[i];
+    if (m.isMulti) {
+      if (cleanNoAcc.includes(m.phrase)) {
+        _SLUG_MEMO_CACHE.set(rawName, m.slug);
+        return m.slug;
+      }
+    } else if (m.regex.test(cleanNoAcc)) {
+      _SLUG_MEMO_CACHE.set(rawName, m.slug);
+      return m.slug;
+    }
+  }
+
+  const sanitized = cleanNoAcc.replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/^-+|-+$/g, '') || "insumo-general";
+  _SLUG_MEMO_CACHE.set(rawName, sanitized);
+  return sanitized;
 }
 
 function getPieceGramWeight(itemName) {
@@ -8031,11 +8054,6 @@ function renderRecipes(day, activeDiners) {
       }
     }
 
-    // Inicialización al cargar la aplicación: Cargar inventario registrado y desplegar pantalla de inicio
-    loadAppState();
-    ensureSundayServiceDispatched();
-    initSetupPanel();
-
     // La Fase Previa se muestra como pantalla de inicio con el inventario recuperado y los botones de acción inmediata
     document.getElementById('setup-overlay').style.display = 'none';
     document.getElementById('main-app-content').style.display = 'block';
@@ -8273,31 +8291,14 @@ function renderRecipes(day, activeDiners) {
       <script>
     document.addEventListener('DOMContentLoaded', () => {
       try {
+        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev20-pure-farm-nouns-v48';
         if ('caches' in window) {
           caches.keys().then((keys) => {
-            keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev20-pure-farm-nouns-v48') {
-                caches.delete(k);
-              }
-            });
+            keys.forEach((k) => caches.delete(k).catch(() => {}));
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev20-pure-farm-nouns-v48')
-            .then((reg) => {
-              console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
-              if (reg.update) reg.update();
-            })
-            .catch((err) => console.error('[ServiceWorker] Error en registro:', err));
-
-          let isReloading = false;
-          navigator.serviceWorker.addEventListener('controllerchange', () => {
-            if (!isReloading) {
-              isReloading = true;
-              console.log('[ServiceWorker] Nuevo controlador activo. Recargando...');
-              window.location.reload();
-            }
-          });
+          navigator.serviceWorker.register('./sw.js?v=' + ACTIVE_SW_REV).catch(() => {});
         }
         if (typeof loadAppState === 'function') loadAppState();
         if (typeof initSetupPanel === 'function') initSetupPanel();
