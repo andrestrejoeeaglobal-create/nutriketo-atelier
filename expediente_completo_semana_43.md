@@ -1,6 +1,6 @@
 # 📄 Expediente Técnico Canónico Semanal — Semana 43
 **Semana 43 (18 al 24 de Octubre de 2026)**  
-**Ecosistema:** NutriKeto Atelier T.I.L.O.® — Arquitectura Bioquímica SSOT V36.6 REV3 (Hard-Gate Validated)  
+**Ecosistema:** NutriKeto Atelier T.I.L.O.® — Cosecha Activa Sincronizada (`Acelgas`, `Cilantro`, `Limones`, `Nopales`, `Nuez pecana` — Hard-Gate Validated)  
 **Comensales Activos:** 6 Personas | **Ratio de Huevo:** 3 Huevos Enteros al Desayuno (Leucina $\ge 2.5\text{ g}$)  
 **Proporción Energética Auditada:** 75.1% Lípidos Saludables | 22.3% Proteína AVB | 2.6% Carbohidratos Netos ($\le 4.6\text{ g}$ por servicio)  
 
@@ -10,13 +10,13 @@
 
 | Día | Desayuno (Huevo Orgánico, Nuez Pecana & MultiSinergix®) | Comida (3 Tiempos Atwater & Balance Metabólico) | Cena (Proteína Ligera & AminoSinergix®) |
 |---|---|---|---|
-| **Domingo 18 Oct** | **Entrada:** Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate y Queso de Cabra<br>**Acomp:** Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Crema Aterciopelada de Coliflor de la Granja con Aceite de Oliva VEVO<br>**Principal:** Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO<br>**Acomp:** Ejotes de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja | **Entrada:** Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja<br>**Principal:** Champiñones Portobello al Horno Rellenos de Queso Ricotta, Brócoli Tierno de la Granja y Nuez de la India<br>**Acomp:** Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Lunes 19 Oct** | **Entrada:** Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>**Principal:** Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Manchego Gratinado<br>**Acomp:** Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada de Espinacas Tiernas y Arúgula de la Granja con Vinagreta Cítrica VEVO<br>**Principal:** Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja<br>**Acomp:** Espárragos Verdes de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO | **Entrada:** Bastones de Nopales de la Granja al Limón Real con Sal de Mar<br>**Principal:** Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro<br>**Acomp:** Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Martes 20 Oct** | **Entrada:** Tazón de Frambuesas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas<br>**Acomp:** Infusión Nootrópica de Té Chai Especiado de Alacena (42°C) con Fórmula 33Plus® | **Entrada:** Crema Aterciopelada de Brócoli de la Granja con Aceite de Oliva VEVO<br>**Principal:** Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO<br>**Acomp:** Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar | **Entrada:** Ensalada Verde de Arúgula de la Granja con Aceite VEVO y Limón<br>**Principal:** Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Ejotes Tiernos de la Granja<br>**Acomp:** Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Miércoles 21 Oct** | **Entrada:** Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla y Queso Ricotta<br>**Acomp:** Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada Verde de Arúgula de la Granja al Limón con Aceite VEVO<br>**Principal:** Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo<br>**Acomp:** Coliflor de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO | **Entrada:** Abanico de Aguacate Hass de Alacena con Limón Real, Sal Marina y Aceite VEVO<br>**Principal:** Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Espárragos de la Granja<br>**Acomp:** Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Jueves 22 Oct** | **Entrada:** Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo<br>**Acomp:** Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Consomé Clarificado de Pollo con Nopales Tiernos de la Granja al Cilantro<br>**Principal:** Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO<br>**Acomp:** Floretes de Coliflor de la Granja Rostizados al Sartén con Aceite de Oliva VEVO y Orégano | **Entrada:** Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano<br>**Principal:** Timbal de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga<br>**Acomp:** Infusión Digestiva de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Viernes 23 Oct** | **Entrada:** Tazón de Frambuesas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Espinacas de la Granja<br>**Acomp:** Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Crema Sedosa de Espárragos Verdes de la Granja con Aceite de Oliva VEVO<br>**Principal:** Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO<br>**Acomp:** Floretes de Brócoli de la Granja Asados a la Parrilla con Aceite VEVO y Orégano | **Entrada:** Caldo Clarificado de Pollo al Limón Real y Cilantro de la Granja<br>**Principal:** Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO<br>**Acomp:** Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Sábado 24 Oct** | **Entrada:** Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja<br>**Principal:** Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Ejotes Tiernos de la Granja al Orégano<br>**Acomp:** Gelatina Cítrica de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada Crujiente de Lechuga Romana y Arúgula de la Granja al Limón con VEVO<br>**Principal:** Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Costra de Queso Manchego y Guacamole Rústico<br>**Acomp:** Brócoli de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO | **Entrada:** Consomé Nocturno Clarificado de Cilantro de la Granja y Limón Real<br>**Principal:** Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas<br>**Acomp:** Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Domingo 18 Oct** | **Entrada:** Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso de Cabra<br>**Acomp:** Gelatina Artesanal de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Consomé Aterciopelado de Cilantro de la Granja con Aceite de Oliva VEVO<br>**Principal:** Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO<br>**Acomp:** Nopales de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja | **Entrada:** Caldo Purificante de Pollo Clarificado con Limón Real y Cilantro de la Granja<br>**Principal:** Champiñones Portobello al Horno Rellenos de Queso Ricotta, Cilantro de la Granja y Nuez de la India<br>**Acomp:** Infusión Crepuscular de Manzanilla de Alacena (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Lunes 19 Oct** | **Entrada:** Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>**Principal:** Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Manchego Gratinado<br>**Acomp:** Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO<br>**Principal:** Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Crema Ácida, Queso Philadelphia y Cilantro de la Granja<br>**Acomp:** Bastones de Nopales de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO | **Entrada:** Consomé Nocturno Clarificado de Cilantro de la Granja al Limón Real con Sal de Mar<br>**Principal:** Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro<br>**Acomp:** Infusión Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Martes 20 Oct** | **Entrada:** Tazón de Frambuesas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas<br>**Acomp:** Infusión Nootrópica de Té Chai Especiado de Alacena (42°C) con Fórmula 33Plus® | **Entrada:** Crema Aterciopelada de Acelgas de la Granja con Aceite de Oliva VEVO<br>**Principal:** Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO<br>**Acomp:** Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar | **Entrada:** Ensalada Verde de Lechuga Romana y Cilantro de la Granja con Aceite VEVO y Limón<br>**Principal:** Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja<br>**Acomp:** Infusión de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Miércoles 21 Oct** | **Entrada:** Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla y Queso Ricotta<br>**Acomp:** Gelatina Artesanal de Frambuesa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada Verde de Acelgas de la Granja al Limón con Aceite VEVO<br>**Principal:** Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo<br>**Acomp:** Cebolla Blanca Asada de Alacena al Orégano con Cilantro de la Granja, Limón Real y Aceite VEVO | **Entrada:** Abanico de Aguacate Hass de Alacena con Limón Real, Sal Marina y Aceite VEVO<br>**Principal:** Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Nopales de la Granja<br>**Acomp:** Infusión Relajante de Manzanilla y Canela de Alacena (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Jueves 22 Oct** | **Entrada:** Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo<br>**Acomp:** Gelatina Artesanal de Fresa Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Consomé Clarificado de Pollo con Nopales de la Granja al Cilantro<br>**Principal:** Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Acelgas de la Granja en Emulsión VEVO<br>**Acomp:** Pimiento Morrón Dulce Asado al Sartén con Aceite de Oliva VEVO y Orégano | **Entrada:** Gazpacho Templado Cetogénico de Jitomate de Alacena con Aceite de Oliva VEVO y Orégano<br>**Principal:** Timbal de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga<br>**Acomp:** Infusión Digestiva de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Viernes 23 Oct** | **Entrada:** Tazón de Frambuesas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>**Principal:** Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Cilantro de la Granja<br>**Acomp:** Gelatina Artesanal de Fresa y Limón Real (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Consomé Templado de Cilantro de la Granja y Limón Real con Aceite de Oliva VEVO<br>**Principal:** Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO<br>**Acomp:** Acelgas de la Granja Salteadas al Ajo con Aceite VEVO y Orégano | **Entrada:** Caldo Clarificado de Pollo al Limón Real y Cilantro de la Granja<br>**Principal:** Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO<br>**Acomp:** Infusión Nocturna Digestiva de Manzanilla y Limón (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Sábado 24 Oct** | **Entrada:** Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja<br>**Principal:** Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano<br>**Acomp:** Gelatina Cítrica de Zarzamora Viva (4°C) con Fórmula Nootrópica 33Plus® | **Entrada:** Ensalada Crujiente de Lechuga Romana y Cilantro de la Granja al Limón con VEVO<br>**Principal:** Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Costra de Queso Manchego y Guacamole Rústico<br>**Acomp:** Acelgas de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO | **Entrada:** Consomé Nocturno Clarificado de Cilantro de la Granja y Limón Real<br>**Principal:** Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas<br>**Acomp:** Infusión Nocturna de Manzanilla, Tomillo y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus® |
 
 ---
 
@@ -48,26 +48,26 @@
 
 ---
 
-##### 🥩 PLATILLO PRINCIPAL: Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate y Queso de Cabra
+##### 🥩 PLATILLO PRINCIPAL: Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso de Cabra
 - **Técnica Culinaria:** `baked_cocotte`
-- **Nota Organoléptica y Bioquímica:** *"Plato matutino horneado en cazuelas individuales: 3 huevos enteros por comensal sobre reducción de jitomate de alacena, espinacas de la granja, mantequilla y queso de cabra."*
+- **Nota Organoléptica y Bioquímica:** *"Plato matutino horneado en cazuelas individuales: 3 huevos enteros por comensal sobre reducción de jitomate de alacena, acelgas de la granja, mantequilla y queso de cabra."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
   - *Termodinámica:* Cocción radiante en refractario a 180°C: coagulación de albúmina a 72°C conservando la yema cremosa a 62°C.
-  - *Construcción de Sabor:* Umami de jitomate reducido con mantequilla y acidez láctica suave del queso de cabra de alacena.
+  - *Construcción de Sabor:* Umami de jitomate reducido con mantequilla, acelgas de la granja y acidez láctica suave del queso de cabra de alacena.
   - *Arquitectura de Textura:* Base vegetal jugosa, clara tierna y yema fluida emulsionada con aceite de oliva VEVO.
   - *Puntos Críticos de Control:* Retirar del horno a los 9-10 minutos para evitar sobrecocer los fosfolípidos de la yema.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Espinacas: **270 g** (45 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Jitomate: **3 piezas** (0.5 piezas/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **270 g** (45 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Jitomate: **2 piezas** (0.33 piezas/persona)
 - *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso de cabra: **120 g** (20 g/persona)
 - *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **90 g** (15 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. En sartén con la mantequilla, saltear el jitomate en cubos y las espinacas de la granja durante 3 minutos.
+1. En sartén con la mantequilla, saltear el jitomate en cubos y las acelgas de la granja durante 3 minutos.
 2. Repartir la cama vegetal en 6 cazuelas refractarias y cascar 3 huevos enteros en cada una.
 3. Desmoronar el queso de cabra encima, hornear a 180°C por 9 minutos y terminar con un hilo de aceite de oliva VEVO y sal de mar.
 
@@ -98,24 +98,24 @@
 #### 🍽️ Servicio: COMIDA (762 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `64.5g` | Proteína: `41.0g` | Carbs Netos: `4.5g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Crema Aterciopelada de Coliflor de la Granja con Aceite de Oliva VEVO
+##### 🥗 ENTRADA: Consomé Aterciopelado de Cilantro de la Granja con Aceite de Oliva VEVO
 - **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica y Bioquímica:** *"Crema sedosa elaborada con coliflor de la granja emulsionada en aceite de oliva extra virgen."*
+- **Nota Organoléptica y Bioquímica:** *"Entrada templada elaborada con cilantro de la granja y fondo claro emulsionado en aceite de oliva extra virgen."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción en fondo claro y emulsión mecánica a alta velocidad a 72°C.
-  - *Construcción de Sabor:* Notas suaves de coliflor de la granja con sal con ajo y aceite VEVO.
-  - *Arquitectura de Textura:* Terciopelo homogéneo y reconfortante.
-  - *Puntos Críticos de Control:* Emulsionar durante 90 segundos a máxima potencia para lograr textura de crema sin harina.
+  - *Termodinámica:* Cocción en fondo claro y emulsión suave a 72°C.
+  - *Construcción de Sabor:* Notas herbales de cilantro de la granja con sal con ajo y aceite VEVO.
+  - *Arquitectura de Textura:* Textura sedosa y reconfortante libre de lácteos pesados.
+  - *Puntos Críticos de Control:* Incorporar el cilantro de la granja al final para conservar sus aceites esenciales.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Coliflor: **480 g** (80 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **60 g** (10 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **600 ml** (100 ml/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal con ajo: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cocer los floretes de coliflor de la granja en el fondo claro de pollo por 10 minutos.
-2. Licuar a máxima velocidad incorporando el aceite de oliva VEVO en hilo y sal con ajo.
+1. Calentar el fondo claro de pollo durante 5 minutos.
+2. Emulsionar con el cilantro de la granja incorporando el aceite de oliva VEVO en hilo y sal con ajo.
 
 ---
 
@@ -143,23 +143,23 @@
 
 ---
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Ejotes de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja
+##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Nopales de la Granja Salteados con Mantequilla y Nuez Pecana Tostada de la Granja
 - **Técnica Culinaria:** `quick_saute`
-- **Nota Organoléptica y Bioquímica:** *"Ejotes verdes recién cosechados de la granja salteados al dente con mantequilla y trozos de nuez pecana de la granja."*
+- **Nota Organoléptica y Bioquímica:** *"Nopales recién cosechados de la granja salteados al dente con mantequilla y trozos de nuez pecana de la granja."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
   - *Termodinámica:* Blanqueado previo de 3 minutos y salteado rápido en mantequilla a 160°C.
-  - *Construcción de Sabor:* Sabor vegetal limpio con mantequilla avellanada y nuez pecana tostada.
-  - *Arquitectura de Textura:* Vainas verdes crujientes con trozos crocantes de nuez pecana.
-  - *Puntos Críticos de Control:* Pasar los ejotes por choque térmico tras el blanqueado para fijar la clorofila.
+  - *Construcción de Sabor:* Sabor vegetal limpio del nopal con mantequilla avellanada y nuez pecana tostada.
+  - *Arquitectura de Textura:* Tiras verdes firmes con trozos crocantes de nuez pecana.
+  - *Puntos Críticos de Control:* Escurrir perfectamente los nopales tras el blanqueado para fijar la clorofila.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Ejotes: **510 g** (85 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **510 g** (85 g/persona)
 - *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **60 g** (10 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Nuez pecana: **72 g** (12 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Despuntar los ejotes de la granja y cocerlos al vapor por 4 minutos.
+1. Cortar los nopales de la granja en tiras y cocerlos al vapor por 4 minutos.
 2. Saltear en sartén con mantequilla y la nuez pecana de la granja picada durante 2 minutos; sazonar con sal de mar.
 
 ---
@@ -189,18 +189,18 @@
 
 ---
 
-##### 🥩 PLATILLO PRINCIPAL: Champiñones Portobello al Horno Rellenos de Queso Ricotta, Brócoli Tierno de la Granja y Nuez de la India
+##### 🥩 PLATILLO PRINCIPAL: Champiñones Portobello al Horno Rellenos de Queso Ricotta, Cilantro de la Granja y Nuez de la India
 - **Técnica Culinaria:** `stuffed_cap_roast`
-- **Nota Organoléptica y Bioquímica:** *"Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena con brócoli de la granja ($0)."*
+- **Nota Organoléptica y Bioquímica:** *"Cena ligera de rápido vaciamiento gástrico que amortiza los champiñones, el queso ricotta y la nuez de la India de alacena con cilantro de la granja ($0)."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
   - *Termodinámica:* Horneado corto a 185°C durante 12 minutos que concentra el umami fúngico y funde suavemente el ricotta.
-  - *Construcción de Sabor:* Umami terroso del champiñón, cremosidad láctica suave, brócoli tierno de la granja y toque tostado de la nuez de la India.
+  - *Construcción de Sabor:* Umami terroso del champiñón, cremosidad láctica suave, cilantro de la granja y toque tostado de la nuez de la India.
   - *Arquitectura de Textura:* Sombrero carnoso y jugoso con relleno cremoso y superficie crujiente de nuez.
   - *Puntos Críticos de Control:* Pre-hornear los sombreros 5 minutos para evaporar exceso de humedad antes de rellenar.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥬 Verduras, Hortalizas y Frescos*: Champiñón: **900 g** (150 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Brócoli: **270 g** (45 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
 - *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso ricotta: **300 g** (50 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Nuez de la India: **90 g** (15 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
@@ -208,7 +208,7 @@
 
 **Procedimiento Paso a Paso:**
 1. Limpiar los champiñones grandes de alacena, barnizar con aceite de oliva VEVO y pre-hornear 5 minutos a 185°C.
-2. Mezclar el brócoli tierno de la granja finamente picado con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.
+2. Mezclar el cilantro de la granja finamente picado con el queso ricotta y sal de mar; rellenar los sombreros y coronar con nuez de la India picada.
 3. Hornear 7 minutos adicionales hasta dorar ligeramente y servir templado.
 
 ---
@@ -310,26 +310,25 @@
 #### 🍽️ Servicio: COMIDA (752 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `63.5g` | Proteína: `41.0g` | Carbs Netos: `4.2g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Ensalada de Espinacas Tiernas y Arúgula de la Granja con Vinagreta Cítrica VEVO
+##### 🥗 ENTRADA: Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada verde de espinacas y arúgula de la granja ($0) diseñada para equilibrar la carga metabólica del plato principal de res."*
+- **Nota Organoléptica y Bioquímica:** *"Entrada verde de hojas jóvenes de acelga de la granja con emulsión cítrica para equilibrar las albóndigas de res."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Ensamblaje en frío que preserva los glucosinolatos de la arúgula y los folatos de la espinaca de la granja.
-  - *Construcción de Sabor:* Notas herbáceas de la arúgula de la granja equilibradas con espinaca tierna, acidez cítrica de limón real y aceite de oliva VEVO.
-  - *Arquitectura de Textura:* Hojas crujientes y ligeras con emulsión cítrica brillante.
-  - *Puntos Críticos de Control:* Secar perfectamente las hojas tras el lavado para que el aceite VEVO se adhiera.
+  - *Termodinámica:* Servicio en frío a 8°C que preserva folatos, clorofila y enzimas.
+  - *Construcción de Sabor:* Notas minerales suaves de acelga tierna con acidez brillante de limón de la granja y aceite VEVO.
+  - *Arquitectura de Textura:* Hojas verdes turgentes y ligeras sin lácteos añadidos.
+  - *Puntos Críticos de Control:* Aliñar justo al momento de servir para mantener la firmeza de las hojas.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Espinacas: **270 g** (45 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Arúgula: **210 g** (35 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **450 g** (75 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Limones: **90 g** (15 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Lavar y centrifugar las hojas de espinaca tierna y mezclar con la arúgula de la granja.
-2. Emulsionar el aceite de oliva VEVO con el jugo de limón de la granja y sal de mar.
-3. Bañar las hojas al momento de pasar a la mesa.
+1. Lavar, desinfectar y trocear las hojas tiernas de acelga de la granja.
+2. Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.
+3. Bañar la ensalada justo antes de llevar a la mesa.
 
 ---
 
@@ -358,49 +357,48 @@
 
 ---
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Espárragos Verdes de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO
-- **Técnica Culinaria:** `steam_gentle`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición ligera rica en folatos y fibra prebiótica que cumple el balance metabólico junto al plato de res."*
+##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Bastones de Nopales de la Granja al Vapor con Limón Real y Aceite de Oliva VEVO
+- **Técnica Culinaria:** `steam_and_dress`
+- **Nota Organoléptica y Bioquímica:** *"Guarnición rica en fibra soluble de la granja cocida al vapor con limón real y aceite VEVO."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción al vapor durante 5 minutos que fija la clorofila verde esmeralda.
-  - *Construcción de Sabor:* Notas herbáceas dulces del espárrago tierno con limón de la granja y aceite VEVO.
-  - *Arquitectura de Textura:* Tallos crujientes y tiernos sin lácteos ni gratinados pesados.
-  - *Puntos Críticos de Control:* No sobrecocer más de 5 minutos para evitar pérdida de turgencia.
+  - *Termodinámica:* Cocción al vapor a 98°C durante 5 minutos que conserva la turgencia celular del nopal.
+  - *Construcción de Sabor:* Perfil herbal limpio del nopal de la granja realzado con limón y aceite VEVO.
+  - *Arquitectura de Textura:* Bastones tiernos pero firmes al corte.
+  - *Puntos Críticos de Control:* Retirar del vapor al alcanzar color verde brillante.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Espárragos: **510 g** (85 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **60 ml** (10 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **510 g** (85 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cortar la base fibrosa de los espárragos verdes de la granja.
-2. Cocer al vapor durante 5 minutos hasta que estén verde brillante y al dente.
-3. Aliñar con aceite de oliva VEVO, jugo de limón de la granja y sal de mar.
+1. Cortar los nopales de la granja en bastones y cocer al vapor por 5 minutos.
+2. Disponer en plato caliente y bañar con aceite de oliva VEVO, jugo de limón de la granja y sal de mar.
 
 ---
 
 #### 🍽️ Servicio: CENA (620 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `52.0g` | Proteína: `34.0g` | Carbs Netos: `3.9g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Bastones de Nopales de la Granja al Limón Real con Sal de Mar
-- **Técnica Culinaria:** `blanch_and_dress`
-- **Nota Organoléptica y Bioquímica:** *"Entrada nocturna alcalinizante y rica en fibra soluble con nopales de la granja y limón real."*
+##### 🥗 ENTRADA: Consomé Nocturno Clarificado de Cilantro de la Granja al Limón Real con Sal de Mar
+- **Técnica Culinaria:** `simmer_broth`
+- **Nota Organoléptica y Bioquímica:** *"Consomé ligero y alcalinizante de cilantro de la granja con toque de limón real."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Blanqueado corto a 95°C por 3 minutos y enfriado rápido para fijar clorofila y eliminar mucílago.
-  - *Construcción de Sabor:* Acidez cítrica de limón de la granja sobre notas herbales limpias del nopal.
-  - *Arquitectura de Textura:* Bastones firmes y turgentes al bocado.
-  - *Puntos Críticos de Control:* Escurrir perfectamente tras el choque térmico antes de aliñar con limón.
+  - *Termodinámica:* Infusión suave a 85°C por 5 minutos que extrae aceites esenciales sin oxidarlos.
+  - *Construcción de Sabor:* Acidez cítrica de limón de la granja sobre notas limpias de cilantro.
+  - *Arquitectura de Textura:* Caldo reconfortante, ligero y cristalino.
+  - *Puntos Críticos de Control:* Incorporar el cilantro picado y el jugo de limón justo al servir.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **480 g** (80 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **1080 ml** (180 ml/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cortar los nopales de la granja en bastones delgados y blanquear 3 minutos en agua hirviendo con una pizca de sal.
-2. Escurrir en frío para preservar textura firme.
-3. Aliñar al momento de servir con jugo de limón de la granja y sal de mar.
+1. Calentar el fondo claro de pollo por 5 minutos con sal de mar.
+2. Servir caliente con cilantro de la granja picado y jugo de limón.
 
 ---
 
@@ -524,24 +522,24 @@
 #### 🍽️ Servicio: COMIDA (742 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `62.5g` | Proteína: `40.5g` | Carbs Netos: `4.4g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Crema Aterciopelada de Brócoli de la Granja con Aceite de Oliva VEVO
+##### 🥗 ENTRADA: Crema Aterciopelada de Acelgas de la Granja con Aceite de Oliva VEVO
 - **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica y Bioquímica:** *"Crema verde esmeralda de brócoli de la granja emulsionada con aceite de oliva VEVO (100% ligera sin lácteos, cumpliendo enforceMetabolicLoadBalance)."*
+- **Nota Organoléptica y Bioquímica:** *"Crema verde sedosa elaborada con acelgas de la granja emulsionadas en fondo claro y aceite de oliva extra virgen."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción breve de 6 minutos para preservar el sulforafano y licuado a alta velocidad a 70°C.
-  - *Construcción de Sabor:* Sabor vegetal limpio de brócoli realzado con aceite de oliva VEVO y sal con ajo.
-  - *Arquitectura de Textura:* Crema sedosa y ligera.
-  - *Puntos Críticos de Control:* No sobrecocer el brócoli para conservar su color verde vibrante y sus fitonutrientes.
+  - *Termodinámica:* Blanqueado corto y licuado de alta velocidad a 72°C para preservar clorofila y magnesio.
+  - *Construcción de Sabor:* Sabor vegetal redondo de acelgas de la granja con sal con ajo y aceite VEVO.
+  - *Arquitectura de Textura:* Emulsión verde aterciopelada sin harinas ni espesantes.
+  - *Puntos Críticos de Control:* No hervir tras licuar para mantener el color verde esmeralda.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Brócoli: **510 g** (85 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **480 g** (80 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **600 ml** (100 ml/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal con ajo: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cocer los floretes de brócoli de la granja en el fondo claro de pollo por 6 minutos.
-2. Licuar con el aceite de oliva VEVO en hilo y sal con ajo hasta obtener una crema tersa.
+1. Cocer las acelgas de la granja en el fondo claro de pollo durante 5 minutos.
+2. Licuar a máxima velocidad con el aceite de oliva VEVO y sal con ajo hasta lograr textura cremosa.
 
 ---
 
@@ -571,14 +569,14 @@
 
 ---
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Nopales Tiernos de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar
-- **Técnica Culinaria:** `grill_sear`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición prebiótica de nopales recién cortados de la granja asados a la plancha con orégano y aceite VEVO."*
+##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Nopales de la Granja Asados al Orégano con Aceite de Oliva VEVO y Sal de Mar
+- **Técnica Culinaria:** `pan_roast`
+- **Nota Organoléptica y Bioquímica:** *"Nopales de la granja asados en plancha con aceite de oliva VEVO y orégano de alacena."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Asado en seco a 190°C que evapora el mucílago superficial y concentra el sabor.
-  - *Construcción de Sabor:* Notas herbales de orégano de alacena y nopal asado con aceite VEVO.
-  - *Arquitectura de Textura:* Pencos tiernos y firmes sin baba.
-  - *Puntos Críticos de Control:* Asar sin grasa hasta sellar y añadir el aceite VEVO al retirar del fuego.
+  - *Termodinámica:* Asado en plancha a 180°C por 4 minutos por lado para evaporar mucílago y concentrar sabor.
+  - *Construcción de Sabor:* Notas herbales de orégano y nopal asado con aceite de oliva extra virgen.
+  - *Arquitectura de Textura:* Pencas tiernas con exterior ligeramente dorado.
+  - *Puntos Críticos de Control:* Asar en seco los primeros 2 minutos antes de añadir el aceite de oliva VEVO.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥬 Verduras, Hortalizas y Frescos*: Nopales: **540 g** (90 g/persona)
@@ -587,57 +585,59 @@
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cortar los nopales tiernos de la granja en bastones y asarlos en plancha caliente por 5 minutos.
-2. Sazonar con sal de mar, orégano y bañar con aceite de oliva VEVO al servir.
+1. Asar los nopales de la granja en plancha caliente durante 4 minutos por lado.
+2. Terminar con aceite de oliva VEVO, orégano y sal de mar.
 
 ---
 
 #### 🍽️ Servicio: CENA (630 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `53.0g` | Proteína: `34.0g` | Carbs Netos: `4.2g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Ensalada Verde de Arúgula de la Granja con Aceite VEVO y Limón
+##### 🥗 ENTRADA: Ensalada Verde de Lechuga Romana y Cilantro de la Granja con Aceite VEVO y Limón
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada verde viva de arúgula de la granja aderezada con aceite de oliva extra virgen y limón."*
+- **Nota Organoléptica y Bioquímica:** *"Entrada verde de lechuga romana de alacena y cilantro de la granja aderezada con aceite VEVO y limón."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
   - *Termodinámica:* Ensamblaje en frío a 8°C sin aplicar calor.
-  - *Construcción de Sabor:* Notas herbáceas intensas de la arúgula equilibradas con acidez cítrica y aceite VEVO.
+  - *Construcción de Sabor:* Notas herbáceas de cilantro de la granja y lechuga equilibradas con acidez cítrica y aceite VEVO.
   - *Arquitectura de Textura:* Hojas verdes crujientes y turgentes.
   - *Puntos Críticos de Control:* Emulsionar el aceite de oliva con el limón justo antes de servir.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Arúgula: **390 g** (65 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Lechuga: **2 piezas** (0.33 piezas/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Lavar y centrifugar las hojas de arúgula de la granja.
+1. Lavar, desinfectar y trocear la lechuga romana junto con hojas de cilantro de la granja.
 2. Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.
 3. Aliñar las hojas verdes justo al emplatar.
 
 ---
 
-##### 🥩 PLATILLO PRINCIPAL: Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Ejotes Tiernos de la Granja
-- **Técnica Culinaria:** `steam_papillote`
-- **Nota Organoléptica y Bioquímica:** *"Único servicio semanal de mojarra que amortiza al 100% los 900 g de alacena en una cena marina blanca de rapidísimo vaciamiento gástrico con ejotes de la granja ($0)."*
+##### 🥩 PLATILLO PRINCIPAL: Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja
+- **Técnica Culinaria:** `open_papillote_steam`
+- **Nota Organoléptica y Bioquímica:** *"Proteína marina blanca de digestión ultraligera para la noche, aromatizada con finas hierbas, limón y cilantro de la granja."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción suave al vapor en papillote abierto a 95°C durante 6 minutos que preserva la delicadeza del pescado blanco.
-  - *Construcción de Sabor:* Sabor marino limpio con hierbas finas de alacena, jugo de limón de la granja, ejotes tiernos de la granja y aceite VEVO.
-  - *Arquitectura de Textura:* Lomos blancos jugosos acompañados de vainas tiernas de ejote al vapor.
-  - *Puntos Críticos de Control:* Retirar del vapor en cuanto el pescado esté blanco opaco y bañar en frío con aceite VEVO.
+  - *Termodinámica:* Cocción al vapor en papillote abierto a 95°C por 8 minutos que preserva la humedad de las miofibrillas.
+  - *Construcción de Sabor:* Aroma herbal de finas hierbas, cilantro de la granja, mantequilla y limón real.
+  - *Arquitectura de Textura:* Lomo blanco suave y jugoso que se deshace en láminas.
+  - *Puntos Críticos de Control:* Retirar a los 8 minutos exactos cuando la proteína alcance 60°C internos.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥩 Carnes, Pescados y Proteínas*: Fajitas de mojarra: **900 g** (150 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Ejotes: **390 g** (65 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **72 g** (12 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **90 g** (15 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Hierbas finas: **6 g** (1 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **9 g** (1.5 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Disponer los filetes de mojarra de alacena y los ejotes tiernos de la granja en vaporera con sal de mar y hierbas finas.
-2. Cocer al vapor durante 6 minutos y emplatar bañando con mantequilla fundida, aceite VEVO y jugo de limón de la granja.
+1. Disponer las fajitas de mojarra de alacena sobre cama aromática con mantequilla, finas hierbas y sal de mar.
+2. Cocer al vapor en papillote abierto durante 8 minutos.
+3. Terminar con cilantro de la granja picado, jugo de limón y un hilo de aceite de oliva VEVO.
 
 ---
 
@@ -736,23 +736,23 @@
 #### 🍽️ Servicio: COMIDA (759 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `64.0g` | Proteína: `41.5g` | Carbs Netos: `4.3g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Ensalada Verde de Arúgula de la Granja al Limón con Aceite VEVO
+##### 🥗 ENTRADA: Ensalada Verde de Acelgas de la Granja al Limón con Aceite VEVO
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada ligera de hojas verdes de arúgula de la granja que equilibra la carga metabólica del corte de res."*
+- **Nota Organoléptica y Bioquímica:** *"Entrada ligera de hojas verdes de acelga de la granja que equilibra la carga metabólica del corte de res."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
   - *Termodinámica:* Servicio en frío a 8°C que activa enzimas digestivas mediante acidez cítrica natural.
-  - *Construcción de Sabor:* Notas herbáceas de arúgula con perfil frutal de aceite de oliva extra virgen y limón de la granja.
+  - *Construcción de Sabor:* Notas verdes de acelga tierna con perfil frutal de aceite de oliva extra virgen y limón de la granja.
   - *Arquitectura de Textura:* Hojas turgentes y crujientes sin lácteos ni grasas pesadas.
   - *Puntos Críticos de Control:* Emulsionar el aderezo justo al momento de emplatar para mantener la textura crujiente.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Arúgula: **450 g** (75 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **450 g** (75 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Limones: **90 g** (15 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Lavar y centrifugar la arúgula de la granja.
+1. Lavar y centrifugar las hojas tiernas de acelga de la granja.
 2. Batir el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.
 3. Aliñar suavemente y servir de inmediato como entrada ligera.
 
@@ -781,25 +781,26 @@
 
 ---
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Coliflor de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO
-- **Técnica Culinaria:** `steam_gentle`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición crucífera ligera de la granja al vapor, aderezada en frío con aceite de oliva extra virgen y limón real."*
+##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Cebolla Blanca Asada de Alacena al Orégano con Cilantro de la Granja, Limón Real y Aceite VEVO
+- **Técnica Culinaria:** `pan_sear_veg`
+- **Nota Organoléptica y Bioquímica:** *"Guarnición aromática de cebolla blanca de alacena asada con cilantro de la granja, limón real y aceite VEVO."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción por convección de vapor a 98°C durante 5 minutos conservando firmeza celular.
-  - *Construcción de Sabor:* Sabor vegetal limpio realzado con limón de la granja y aceite de oliva VEVO.
-  - *Arquitectura de Textura:* Floretes al dente, jugosos y ligeros.
-  - *Puntos Críticos de Control:* Retirar del vapor a los 5 minutos para preservar la clorofila y los glucosinolatos.
+  - *Termodinámica:* Asado rápido en plancha a 185°C por 3 minutos que suaviza los compuestos sulfurados conservando textura al dente.
+  - *Construcción de Sabor:* Notas dulces de cebolla asada con orégano, cilantro de la granja y limón.
+  - *Arquitectura de Textura:* Aros jugosos y dorados libres de lácteos pesados.
+  - *Puntos Críticos de Control:* Asar a fuego vivo durante 3 minutos sin sobrecocer.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Coliflor: **510 g** (85 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cebolla: **2 piezas** (0.33 piezas/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cortar la coliflor de la granja en floretes medianos uniformes.
-2. Cocer al vapor durante 5 minutos manteniendo textura al dente.
-3. Aderezar al momento de servir con aceite de oliva VEVO, jugo de limón y sal de mar.
+1. Cortar la cebolla blanca de alacena en rodajas gruesas y asar en plancha caliente por 3 minutos.
+2. Terminar con cilantro de la granja picado, jugo de limón, orégano, sal de mar y aceite VEVO.
 
 ---
 
@@ -827,28 +828,28 @@
 
 ---
 
-##### 🥩 PLATILLO PRINCIPAL: Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Espárragos de la Granja
+##### 🥩 PLATILLO PRINCIPAL: Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Nopales de la Granja
 - **Técnica Culinaria:** `sesame_crust_tataki`
-- **Nota Organoléptica y Bioquímica:** *"Cena marina magra de rapidísimo vaciamiento gástrico que amortiza al 100% los 700 g de filete de atún y el ajonjolí de alacena (sin forzar compra de róbalo)."*
+- **Nota Organoléptica y Bioquímica:** *"Cena marina rica en Omega-3 y proteína magra con costra de ajonjolí de alacena y nopales de la granja."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Sellado rápido en sartén a 195°C por 90 segundos por lado conservando el centro jugoso.
-  - *Construcción de Sabor:* Notas tostadas de ajonjolí de alacena con frescura cítrica y espárragos verdes de la granja.
-  - *Arquitectura de Textura:* Medallón firme de atún con costra de ajonjolí y tallos al dente de espárrago.
-  - *Puntos Críticos de Control:* Sellar brevemente para no resecar la fibra magra del atún.
+  - *Termodinámica:* Sellado rápido a 195°C por 90 segundos por lado que dora el ajonjolí manteniendo el centro jugoso a 50°C.
+  - *Construcción de Sabor:* Notas tostadas de ajonjolí, atún sellado, limón de la granja y nopales tiernos.
+  - *Arquitectura de Textura:* Costra crujiente de semillas con medallón tierno y bastones de nopal al dente.
+  - *Puntos Críticos de Control:* No sobrecocer el atún para conservar su suavidad y ácidos grasos esenciales.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥩 Carnes, Pescados y Proteínas*: Filete de atún: **690 g** (115 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Ajonjolí: **30 g** (5 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Espárragos: **390 g** (65 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **72 g** (12 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **480 g** (80 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **60 g** (10 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cubrir los bordes del filete de atún de alacena con ajonjolí y sal de mar.
-2. Sellar en sartén caliente con aceite VEVO y mantequilla durante 90 segundos por lado junto con los espárragos de la granja.
-3. Emplatar y bañar con jugo de limón de la granja.
+1. Cubrir los medallones de filete de atún de alacena con el ajonjolí y sal de mar.
+2. Sellar en sartén con aceite VEVO y mantequilla durante 90 segundos por lado.
+3. Servir acompañados de los nopales de la granja salteados y jugo de limón.
 
 ---
 
@@ -946,71 +947,71 @@
 #### 🍽️ Servicio: COMIDA (753 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `63.0g` | Proteína: `42.0g` | Carbs Netos: `4.5g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Consomé Clarificado de Pollo con Nopales Tiernos de la Granja al Cilantro
+##### 🥗 ENTRADA: Consomé Clarificado de Pollo con Nopales de la Granja al Cilantro
 - **Técnica Culinaria:** `simmer_broth`
-- **Nota Organoléptica y Bioquímica:** *"Caldo limpio enriquecido con fibra soluble mucilaginosa de nopales tiernos de la granja y cilantro."*
+- **Nota Organoléptica y Bioquímica:** *"Consomé digestivo de mediodía con tiras de nopal y cilantro recién cosechados de la granja."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Hervor suave a 90°C con nopales previamente asados en seco para textura limpia.
-  - *Construcción de Sabor:* Sabor tradicional reconfortante de caldo de ave, nopal tierno y cilantro recién cortado.
-  - *Arquitectura de Textura:* Caldo fluido con dados firmes de nopal tierno.
-  - *Puntos Críticos de Control:* Asar los nopales por separado antes de integrarlos al consomé.
+  - *Termodinámica:* Hervor suave a 90°C por 5 minutos que integra los minerales del nopal en el fondo claro.
+  - *Construcción de Sabor:* Sabor reconfortante de caldo clarificado con notas herbales de cilantro y limón de la granja.
+  - *Arquitectura de Textura:* Caldo ligero con tiras tiernas de nopal.
+  - *Puntos Críticos de Control:* Añadir el cilantro de la granja justo al apagar el fuego.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **1080 ml** (180 ml/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **330 g** (55 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Nopales: **360 g** (60 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cortar los nopales tiernos de la granja en cubos pequeños y asarlos en sartén seco por 4 minutos.
-2. Integrar al fondo claro de pollo caliente con sal de mar, cilantro y aceite VEVO.
+1. Calentar el fondo claro de pollo e incorporar los nopales de la granja previamente blanqueados por 4 minutos.
+2. Servir con cilantro de la granja picado, jugo de limón y sal de mar.
 
 ---
 
-##### 🥩 PLATILLO PRINCIPAL: Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO
-- **Técnica Culinaria:** `stuffed_pan_roast`
-- **Nota Organoléptica y Bioquímica:** *"Supremas jugosas de pechuga de pollo de alacena rellenas de queso ricotta cremoso y espinacas tiernas de la granja."*
+##### 🥩 PLATILLO PRINCIPAL: Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Acelgas de la Granja en Emulsión VEVO
+- **Técnica Culinaria:** `stuffed_supreme_bake`
+- **Nota Organoléptica y Bioquímica:** *"Pechuga de pollo de alacena rellena de queso ricotta cremoso y acelgas de la granja horneada a jugo retenido."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Sellado exterior a 180°C y cocción tapada a 150°C hasta alcanzar 74°C internos sin perder humedad.
-  - *Construcción de Sabor:* Suavidad láctica del ricotta con espinaca y jugo dorado de mantequilla.
-  - *Arquitectura de Textura:* Corte exterior dorado con corazón cremoso de ricotta y espinaca.
-  - *Puntos Críticos de Control:* No sobrepasar los 74°C en el centro de la pechuga para preservar su jugosidad.
+  - *Termodinámica:* Sellado inicial en sartén y horneado a 180°C hasta alcanzar 74°C internos sin resecar las fibras.
+  - *Construcción de Sabor:* Suavidad láctica del ricotta con acelgas de la granja, mantequilla y aceite de oliva VEVO.
+  - *Arquitectura de Textura:* Exterior dorado y jugoso con centro cremoso de ricotta y hojas verdes.
+  - *Puntos Críticos de Control:* Reposar las supremas 4 minutos antes de trinchar para estabilizar los jugos internos.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥩 Carnes, Pescados y Proteínas*: Pechuga de pollo: **900 g** (150 g/persona)
 - *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso ricotta: **240 g** (40 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Espinacas: **270 g** (45 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **84 g** (14 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **360 g** (60 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **60 g** (10 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **48 ml** (8 ml/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **9 g** (1.5 g/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Abrir las pechugas de pollo en mariposa, sazonar con sal de mar y rellenar con la mezcla de queso ricotta y espinacas de la granja picadas.
-2. Sellar en sartén con aceite VEVO y mantequilla durante 4 minutos por lado, tapando los últimos 3 minutos.
-3. Rebanar en medallones diagonales y bañar con la emulsión del sartén.
+1. Abrir las pechugas de pollo en corte mariposa y rellenar con la mezcla de queso ricotta y acelgas de la granja picadas.
+2. Sellar en sartén con mantequilla y aceite VEVO por 2 minutos por lado y hornear 10 minutos a 180°C.
+3. Servir bañadas con sus jugos y un hilo de aceite de oliva VEVO.
 
 ---
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Floretes de Coliflor de la Granja Rostizados al Sartén con Aceite de Oliva VEVO y Orégano
-- **Técnica Culinaria:** `pan_roast_florets`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición ligera de coliflor de la granja salteada con aceite de oliva VEVO y orégano aromático."*
+##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Pimiento Morrón Dulce Asado al Sartén con Aceite de Oliva VEVO y Orégano
+- **Técnica Culinaria:** `pan_roast_strips`
+- **Nota Organoléptica y Bioquímica:** *"Guarnición aromática de tiras de pimiento morrón de alacena salteadas al aceite de oliva VEVO y orégano."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Dorado rápido en sartén de hierro a 175°C por 5 minutos que conserva la textura al dente.
-  - *Construcción de Sabor:* Notas tostadas de la coliflor con aroma herbal del orégano de alacena y aceite VEVO.
-  - *Arquitectura de Textura:* Floretes firmes por dentro y ligeramente dorados por fuera.
-  - *Puntos Críticos de Control:* Salar al final del salteado para mantener los floretes turgentes.
+  - *Termodinámica:* Salteado a 175°C por 4 minutos que carameliza ligeramente la superficie conservando vitamina C.
+  - *Construcción de Sabor:* Notas dulces naturales del morrón con orégano de alacena y aceite VEVO.
+  - *Arquitectura de Textura:* Tiras jugosas y firmes libres de lácteos pesados.
+  - *Puntos Críticos de Control:* Retirar del fuego cuando las tiras aún conserven firmeza al dente.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Coliflor: **540 g** (90 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Morrón: **1 piezas** (0.17 piezas/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cortar la coliflor de la granja en floretes pequeños.
-2. Saltear en sartén caliente con aceite de oliva VEVO durante 4-5 minutos.
-3. Sazonar al retirar del fuego con orégano y sal de mar.
+1. Cortar el pimiento morrón de alacena en julianas gruesas.
+2. Saltear en sartén caliente con aceite de oliva VEVO durante 4 minutos.
+3. Sazonar con orégano y sal de mar al servir.
 
 ---
 
@@ -1111,27 +1112,27 @@
 
 ---
 
-##### 🥩 PLATILLO PRINCIPAL: Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Espinacas de la Granja
-- **Técnica Culinaria:** `french_omelette`
-- **Nota Organoléptica y Bioquímica:** *"Omelette francés clásico relleno de queso cottage de alacena y espinacas tiernas de la granja."*
+##### 🥩 PLATILLO PRINCIPAL: Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Cilantro de la Granja
+- **Técnica Culinaria:** `french_baveuse_fold`
+- **Nota Organoléptica y Bioquímica:** *"Omelette clásico francés de 3 huevos por comensal relleno de queso cottage de alacena y cilantro de la granja."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Emulsión de huevo y mantequilla en sartén a 140°C logrando exterior liso y centro baveuse cremoso.
-  - *Construcción de Sabor:* Mantequilla suave, frescura láctica del queso cottage y espinacas tiernas.
-  - *Arquitectura de Textura:* Exterior sedoso y envolvente con interior jugoso de cottage y espinaca.
-  - *Puntos Críticos de Control:* Retirar del fuego cuando el centro aún esté ligeramente húmedo para que termine de cuajar con el calor residual.
+  - *Termodinámica:* Cocción controlada en sartén a 155°C con mantequilla logrando exterior liso y centro baveuse cremoso a 68°C.
+  - *Construcción de Sabor:* Notas lácticas de mantequilla y queso cottage realzadas con cilantro recién cortado de la granja.
+  - *Arquitectura de Textura:* Envoltura sedosa de huevo con interior cremoso y aromático.
+  - *Puntos Críticos de Control:* Plegar el omelette cuando la superficie aún conserve humedad brillante.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso cottage: **360 g** (60 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Espinacas: **240 g** (40 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **84 g** (14 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Queso cottage: **480 g** (80 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **36 g** (6 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **90 g** (15 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Batir los 3 huevos por comensal con sal de mar hasta integrar sin generar espuma excesiva.
-2. Cuajar en sartén con mantequilla moviendo constantemente, rellenar con las espinacas de la granja y el queso cottage escurrido, y doblar en tres.
-3. Servir caliente con un hilo de aceite de oliva VEVO.
+1. Batir 3 huevos enteros por persona con una pizca de sal de mar.
+2. Cuajar suavemente en sartén con mantequilla y aceite de oliva VEVO.
+3. Rellenar con el queso cottage drenado y el cilantro de la granja picado; plegar en tres y servir.
 
 ---
 
@@ -1161,24 +1162,25 @@
 #### 🍽️ Servicio: COMIDA (756 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `63.5g` | Proteína: `41.5g` | Carbs Netos: `4.6g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Crema Sedosa de Espárragos Verdes de la Granja con Aceite de Oliva VEVO
-- **Técnica Culinaria:** `boil_and_blend`
-- **Nota Organoléptica y Bioquímica:** *"Crema fina de espárragos verdes recién cosechados de la granja emulsionada con aceite de oliva VEVO."*
+##### 🥗 ENTRADA: Consomé Templado de Cilantro de la Granja y Limón Real con Aceite de Oliva VEVO
+- **Técnica Culinaria:** `simmer_broth`
+- **Nota Organoléptica y Bioquímica:** *"Consomé digestivo de mediodía con fondo claro, cilantro de la granja y aceite de oliva extra virgen."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Cocción corta de 6 minutos y licuado de alta velocidad a 72°C.
-  - *Construcción de Sabor:* Notas vegetales elegantes del espárrago tierno con el frutado del aceite VEVO.
-  - *Arquitectura de Textura:* Textura aterciopelada y ligera.
-  - *Puntos Críticos de Control:* Reservar las puntas tiernas para decorar el plato al servir.
+  - *Termodinámica:* Infusión a 85°C por 4 minutos que extrae los compuestos aromáticos del cilantro de la granja.
+  - *Construcción de Sabor:* Notas herbales limpias de cilantro y limón de la granja con aceite VEVO.
+  - *Arquitectura de Textura:* Caldo claro, sedoso y ligero.
+  - *Puntos Críticos de Control:* Incorporar el cilantro picado y el jugo de limón justo al momento de servir.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Espárragos: **510 g** (85 g/persona)
-- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **660 ml** (110 ml/persona)
+- *🌶️ Chiles, Condimentos e Infusiones*: Fondo claro de pollo: **900 ml** (150 ml/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cocer los espárragos verdes de la granja en el fondo claro de pollo durante 6 minutos.
-2. Licuar con el aceite de oliva VEVO y sal de mar hasta obtener una emulsión sedosa.
+1. Calentar el fondo claro de pollo a fuego medio con sal de mar.
+2. Servir en tazón con el cilantro de la granja finamente picado, jugo de limón y aceite de oliva VEVO.
 
 ---
 
@@ -1206,25 +1208,25 @@
 
 ---
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Floretes de Brócoli de la Granja Asados a la Parrilla con Aceite VEVO y Orégano
-- **Técnica Culinaria:** `char_grill_veg`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición vegetal de la granja asada a la parrilla con aceite de oliva VEVO y orégano."*
+##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Acelgas de la Granja Salteadas al Ajo con Aceite VEVO y Orégano
+- **Técnica Culinaria:** `quick_saute_greens`
+- **Nota Organoléptica y Bioquímica:** *"Guarnición verde de acelgas de la granja salteadas brevemente con aceite de oliva VEVO, sal con ajo y orégano."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Marcado directo en parrilla a 190°C por 3 minutos por lado conservando el centro firme.
-  - *Construcción de Sabor:* Notas ahumadas de parrilla sobre el brócoli con orégano y aceite VEVO.
-  - *Arquitectura de Textura:* Exterior marcado a la parrilla con tallo tierno y crujiente.
-  - *Puntos Críticos de Control:* Cortar floretes de grosor uniforme para cocción pareja.
+  - *Termodinámica:* Salteado rápido a 170°C durante 3 minutos que mantiene la integridad de los tallos y hojas.
+  - *Construcción de Sabor:* Sabor mineral de las acelgas de la granja con orégano aromático y aceite VEVO.
+  - *Arquitectura de Textura:* Tallos crujientes y hojas tiernas brillantes.
+  - *Puntos Críticos de Control:* Cocer primero los tallos picados 1 minuto antes de incorporar las hojas.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Brócoli: **540 g** (90 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **540 g** (90 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Cortar el brócoli de la granja en floretes longitudinales y barnizar con aceite de oliva VEVO.
-2. Asar en parrilla caliente durante 3 minutos por lado.
-3. Espolvorear orégano y sal de mar al servir.
+1. Lavar y trocear las acelgas de la granja separando tallos y hojas.
+2. Saltear en sartén con aceite de oliva VEVO durante 3 minutos.
+3. Sazonar con orégano y sal de mar al servir.
 
 ---
 
@@ -1324,27 +1326,28 @@
 
 ---
 
-##### 🥩 PLATILLO PRINCIPAL: Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Ejotes Tiernos de la Granja al Orégano
-- **Técnica Culinaria:** `cast_iron_sunny_fry`
-- **Nota Organoléptica y Bioquímica:** *"Tres huevos enteros por comensal estrellados en sartén de hierro con aceite VEVO y mantequilla sobre cama de ejotes tiernos de la granja ($0)."*
+##### 🥩 PLATILLO PRINCIPAL: Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano
+- **Técnica Culinaria:** `cast_iron_sunny_side`
+- **Nota Organoléptica y Bioquímica:** *"3 huevos enteros por comensal estrellados en sartén de hierro sobre cama de jitomate de alacena asado al orégano y cilantro de la granja."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Conducción en hierro a 165°C que dora sutilmente la orilla de la clara manteniendo la yema líquida a 60°C.
-  - *Construcción de Sabor:* Riqueza de la yema líquida emulsionada con aceite de oliva VEVO, mantequilla y ejotes al orégano.
-  - *Arquitectura de Textura:* Claras tiernas de borde dorado, yema fluida y vainas crujientes de ejote.
-  - *Puntos Críticos de Control:* No sobrecocer la yema para preservar la colina y lecitina biodisponibles.
+  - *Termodinámica:* Conducción térmica en hierro fundido a 165°C que cuaja la clara con bordes dorados manteniendo la yema líquida a 62°C.
+  - *Construcción de Sabor:* Yema rica emulsionada con jitomate asado al orégano, mantequilla y cilantro de la granja.
+  - *Arquitectura de Textura:* Clara firme con bordes crujientes y yema cremosa sobre cama jugosa de jitomate.
+  - *Puntos Críticos de Control:* Tapar la sartén los últimos 45 segundos para sellar el velo superior de la clara sin endurecer la yema.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥩 Carnes, Pescados y Proteínas*: Huevo: **18 piezas** (3 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Ejotes: **390 g** (65 g/persona)
-- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **84 g** (14 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Jitomate: **1 piezas** (0.17 piezas/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **36 g** (6 g/persona)
+- *🧀 Lácteos y Quesos (Sin Gluten — Keto)*: Mantequilla: **90 g** (15 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Orégano: **3 g** (0.5 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Saltear los ejotes tiernos de la granja previamente blanqueados con mantequilla y orégano durante 3 minutos y disponer como base.
-2. Estrellar los 3 huevos por comensal en el sartén de hierro con aceite VEVO hasta cuajar la clara dejando la yema líquida.
-3. Servir sobre la cama de ejotes de la granja y sazonar con sal de mar.
+1. Asar rebanadas de jitomate de alacena en sartén de hierro con aceite VEVO y orégano durante 2 minutos.
+2. Añadir la mantequilla y estrellar 3 huevos enteros por comensal a fuego medio-bajo.
+3. Servir con la yema tierna espolvoreando cilantro de la granja picado y sal de mar.
 
 ---
 
@@ -1373,26 +1376,26 @@
 #### 🍽️ Servicio: COMIDA (771 kcal / comensal)
 **Macros 3 Tiempos:** Grasa: `65.0g` | Proteína: `42.0g` | Carbs Netos: `4.6g` ($\le 5.0\text{g}$ ✅)  
 
-##### 🥗 ENTRADA: Ensalada Crujiente de Lechuga Romana y Arúgula de la Granja al Limón con VEVO
+##### 🥗 ENTRADA: Ensalada Crujiente de Lechuga Romana y Cilantro de la Granja al Limón con VEVO
 - **Técnica Culinaria:** `raw_assembly`
-- **Nota Organoléptica y Bioquímica:** *"Entrada verde ligera obligatoria por balance de carga metabólica ante la hamburguesa principal."*
+- **Nota Organoléptica y Bioquímica:** *"Entrada verde y alcalinizante con lechuga de alacena y cilantro de la granja para equilibrar la hamburguesa de res."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Ensamblaje en frío a 8°C.
-  - *Construcción de Sabor:* Frescura cítrica y herbal que limpia el paladar.
-  - *Arquitectura de Textura:* Hojas crujientes de lechuga romana y arúgula sin quesos ni grasas pesadas.
-  - *Puntos Críticos de Control:* Aliñar justo antes de servir.
+  - *Termodinámica:* Ensamblaje en frío a 8°C sin tratamiento térmico.
+  - *Construcción de Sabor:* Frescura cítrica de limón de la granja y cilantro con aceite de oliva extra virgen.
+  - *Arquitectura de Textura:* Hojas de lechuga romana crujientes sin lácteos ni aderezos pesados.
+  - *Puntos Críticos de Control:* Aliñar al momento de emplatar.
 
 **Ingredientes (Escalado para 6 Comensales):**
 - *🥬 Verduras, Hortalizas y Frescos*: Lechuga: **1 piezas** (0.17 piezas/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Arúgula: **240 g** (40 g/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Cilantro: **48 g** (8 g/persona)
-- *🥬 Verduras, Hortalizas y Frescos*: Limones: **72 g** (12 g/persona)
-- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **30 ml** (5 ml/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
+- *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Trozar la lechuga romana y mezclar con la arúgula y el cilantro de la granja.
-2. Aderezar con jugo de limón de la granja, aceite de oliva VEVO y sal de mar.
+1. Trocear la lechuga romana desinfectada y mezclar con hojas de cilantro de la granja.
+2. Emulsionar el jugo de limón de la granja con el aceite de oliva VEVO y sal de mar.
+3. Aderezar y servir de inmediato.
 
 ---
 
@@ -1419,24 +1422,24 @@
 
 ---
 
-##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Brócoli de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO
-- **Técnica Culinaria:** `steam_gentle`
-- **Nota Organoléptica y Bioquímica:** *"Guarnición ligera de floretes de brócoli de la granja al vapor (sin lácteos ni aguacate, cumpliendo enforceMetabolicLoadBalance)."*
+##### 🌿 ACOMPAÑAMIENTO / ELIXIR BIOACTIVO: Acelgas de la Granja al Vapor con Limón Real, Sal de Mar y Aceite VEVO
+- **Técnica Culinaria:** `gentle_steam`
+- **Nota Organoléptica y Bioquímica:** *"Guarnición verde limpia de acelgas de la granja al vapor con limón real y aceite VEVO."*
 - **Razonamiento Culinario CoCT (Física del Bocado):**
-  - *Termodinámica:* Vapor suave a 98°C por 5 minutos para preservar glucosinolatos y textura al dente.
-  - *Construcción de Sabor:* Sabor verde limpio con aceite VEVO y limón de la granja.
-  - *Arquitectura de Textura:* Floretes firmes y crujientes.
-  - *Puntos Críticos de Control:* Retirar a los 5 minutos exactos para mantener el color verde intenso.
+  - *Termodinámica:* Cocción al vapor a 98°C por 4 minutos que preserva clorofila y textura firme.
+  - *Construcción de Sabor:* Sabor vegetal puro de acelga de la granja con limón y aceite VEVO.
+  - *Arquitectura de Textura:* Hojas y tallos tiernos libres de lácteos para acompañar el corte de res.
+  - *Puntos Críticos de Control:* Retirar del vapor a los 4 minutos exactos.
 
 **Ingredientes (Escalado para 6 Comensales):**
-- *🥬 Verduras, Hortalizas y Frescos*: Brócoli: **510 g** (85 g/persona)
+- *🥬 Verduras, Hortalizas y Frescos*: Acelgas: **540 g** (90 g/persona)
 - *🥑 Grasas, Aceites y Semillas*: Aceite de oliva: **36 ml** (6 ml/persona)
 - *🥬 Verduras, Hortalizas y Frescos*: Limones: **60 g** (10 g/persona)
 - *🌶️ Chiles, Condimentos e Infusiones*: Sal de mar: **6 g** (1 g/persona)
 
 **Procedimiento Paso a Paso:**
-1. Separar el brócoli de la granja en arbolitos uniformes y cocer al vapor por 5 minutos.
-2. Aderezar con aceite de oliva VEVO, jugo de limón de la granja y sal de mar.
+1. Cocer las acelgas de la granja al vapor durante 4 minutos.
+2. Servir calientes bañadas con jugo de limón de la granja, aceite de oliva VEVO y sal de mar.
 
 ---
 
@@ -1517,16 +1520,11 @@
 ### 3.1 Cosecha Directa de la Granja El Herami (Suministro Propio a \$0.00 MXN)
 | # | Cultivo / Insumo Activo en Huerto | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |
 |---|---|---|---|---|
-| 1 | **Arúgula** | 1290 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 2 | **Brócoli** | 1830 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 3 | **Cilantro** | 552 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 4 | **Coliflor** | 1530 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 5 | **Ejotes** | 1290 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 6 | **Espinacas** | 1050 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 7 | **Espárragos** | 1410 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 8 | **Limones** | 1428 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 9 | **Nopales** | 1350 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
-| 10 | **Nuez pecana** | 702 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
+| 1 | **Acelgas** | 3090 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
+| 2 | **Cilantro** | 972 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
+| 3 | **Limones** | 1548 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
+| 4 | **Nopales** | 2400 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
+| 5 | **Nuez pecana** | 702 g | 🌿 Cosecha Propia Activa | **\$0.00 MXN** |
 
 ### 3.2 Existencias Consolidadas en Alacena y Refrigerador (Amortización Exacta contra `PANTRY_STOCK_INVENTORY`)
 | Insumo Canónico | Stock en Alacena | Demanda Semanal (6p) | Saldo en Alacena | Estado de Cobertura |
@@ -1540,7 +1538,7 @@
 | **Filete de atún** | 700 g | 690 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Atún en agua** | 700 g | 690 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Sardinas** | 1700 g | 840 g | 860 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Queso cottage** | 3880 g | 1080 g | 2800 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| **Queso cottage** | 3880 g | 1200 g | 2680 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Yogur griego** | 3880 g | 480 g | 3400 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Queso ricotta** | 1920 g | 720 g | 1200 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Queso manchego** | 1200 g | 390 g | 810 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
@@ -1548,15 +1546,15 @@
 | **Queso de cabra** | 500 g | 330 g | 170 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Crema ácida** | 960 g | 180 g | 780 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Mayonesa** | 1000 g | 90 g | 910 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Mantequilla** | 290 g | 1362 g | 0 g | 🔄 Amortiza 290 g (Comprar 1072 g) |
+| **Mantequilla** | 290 g | 1356 g | 0 g | 🔄 Amortiza 290 g (Comprar 1066 g) |
 | **Fresas** | 1000 g | 900 g | 100 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Zarzamora** | 1010 g | 840 g | 170 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Frambuesas** | 340 g | 330 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Champiñón** | 2200 g | 1800 g | 400 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Lechuga** | 9 piezas | 7 piezas | 2 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| **Lechuga** | 9 piezas | 9 piezas | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Jitomate** | 9 piezas | 9 piezas | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Morrón** | 7 piezas | 6 piezas | 1 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Cebolla** | 9 piezas | 4 piezas | 5 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| **Morrón** | 7 piezas | 7 piezas | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| **Cebolla** | 9 piezas | 6 piezas | 3 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Flor de calabaza** | 1 manojo | 1 manojo | 0 manojo | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Aguacate** | 13 piezas | 12 piezas | 1 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Semillas y nueces mixtas** | 960 g | 90 g | 870 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
@@ -1564,12 +1562,12 @@
 | **Pistaches** | 100 g | 90 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Nuez de la India** | 100 g | 90 g | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Ajonjolí** | 50 g | 30 g | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Aceite de oliva** | 400 ml | 1374 ml | 0 ml | 🔄 Amortiza 400 ml (Comprar 974 ml) |
+| **Aceite de oliva** | 400 ml | 1326 ml | 0 ml | 🔄 Amortiza 400 ml (Comprar 926 ml) |
 | **Alcaparras** | 200 g | 60 g | 140 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Aceitunas manzanilla** | 175 g | 90 g | 85 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Sal de mar** | 3000 g | 234 g | 2766 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Sal con ajo** | 100 g | 36 g | 64 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| **Orégano** | 150 g | 15 g | 135 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| **Orégano** | 150 g | 18 g | 132 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Pimienta negra** | 70 g | 12 g | 58 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Canela molida** | 750 g | 12 g | 738 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | **Hierbas finas** | 25 g | 12 g | 13 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
@@ -1586,8 +1584,8 @@
 | Insumo a Adquirir en Mercado | Demanda Bruta Semanal (6p) | Stock Amortizado de Alacena | Compra Neta Exacta | Categoría Clínica |
 |---|---|---|---|---|
 | **Huevo** | 126 piezas | 105 piezas | **21 piezas** | 🥩 Carnes, Pescados y Proteínas |
-| **Mantequilla** | 1362 g | 290 g | **1072 g** | 🧀 Lácteos y Quesos (Sin Gluten — Keto) |
-| **Aceite de oliva** | 1374 ml | 400 ml | **974 ml** | 🥑 Grasas, Aceites y Semillas |
+| **Mantequilla** | 1356 g | 290 g | **1066 g** | 🧀 Lácteos y Quesos (Sin Gluten — Keto) |
+| **Aceite de oliva** | 1326 ml | 400 ml | **926 ml** | 🥑 Grasas, Aceites y Semillas |
 | **Manzanilla** | 84 g | 50 g | **34 g** | 🌶️ Chiles, Condimentos e Infusiones |
 | **Grenetina** | 252 g | 112 g | **140 g** | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
 | **MultiSinergix®** | 420 g | 300 g | **120 g** | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA |
@@ -1626,9 +1624,9 @@
 #### 📊 DOMINGO 18 DE OCTUBRE DE 2026
 | Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Cazuela de Huevos al Horno sobre Cama de Espinacas Tiernas, Jitomate y Queso de Cabra | 603 kcal | 49.5 g (71%) | 35.0 g (70%) | 4.4 g (18%) | 6.2 g (25%) |
+| **Desayuno** | Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso de Cabra | 603 kcal | 49.5 g (71%) | 35.0 g (70%) | 4.4 g (18%) | 6.2 g (25%) |
 | **Comida** | Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO | 762 kcal | 64.5 g (92%) | 41.0 g (82%) | 4.5 g (18%) | 6.6 g (26%) |
-| **Cena** | Champiñones Portobello al Horno Rellenos de Queso Ricotta, Brócoli Tierno de la Granja y Nuez de la India | 623 kcal | 52.5 g (75%) | 33.5 g (67%) | 4.1 g (16%) | 5.8 g (23%) |
+| **Cena** | Champiñones Portobello al Horno Rellenos de Queso Ricotta, Cilantro de la Granja y Nuez de la India | 623 kcal | 52.5 g (75%) | 33.5 g (67%) | 4.1 g (16%) | 5.8 g (23%) |
 
 #### 📊 LUNES 19 DE OCTUBRE DE 2026
 | Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
@@ -1642,33 +1640,33 @@
 |---|---|---|---|---|---|---|
 | **Desayuno** | Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas | 598 kcal | 49.0 g (70%) | 35.0 g (70%) | 4.3 g (17%) | 6.1 g (24%) |
 | **Comida** | Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO | 742 kcal | 62.5 g (89%) | 40.5 g (81%) | 4.4 g (18%) | 6.5 g (26%) |
-| **Cena** | Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Ejotes Tiernos de la Granja | 630 kcal | 53.0 g (76%) | 34.0 g (68%) | 4.2 g (17%) | 5.7 g (23%) |
+| **Cena** | Filete de Mojarra de Alacena al Vapor en Papillote Abierto con Limón Real, Finas Hierbas y Cilantro de la Granja | 630 kcal | 53.0 g (76%) | 34.0 g (68%) | 4.2 g (17%) | 5.7 g (23%) |
 
 #### 📊 MIÉRCOLES 21 DE OCTUBRE DE 2026
 | Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
 |---|---|---|---|---|---|---|
 | **Desayuno** | Huevos al Sartén en Anillo de Pimiento Morrón Dulce con Mantequilla y Queso Ricotta | 601 kcal | 49.5 g (71%) | 34.5 g (69%) | 4.4 g (18%) | 6.3 g (25%) |
 | **Comida** | Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo | 759 kcal | 64.0 g (91%) | 41.5 g (83%) | 4.3 g (17%) | 6.5 g (26%) |
-| **Cena** | Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Espárragos de la Granja | 621 kcal | 52.0 g (74%) | 34.5 g (69%) | 3.8 g (15%) | 6.0 g (24%) |
+| **Cena** | Medallones de Filete de Atún Sellados al Ajonjolí con Limón Real y Nopales de la Granja | 621 kcal | 52.0 g (74%) | 34.5 g (69%) | 3.8 g (15%) | 6.0 g (24%) |
 
 #### 📊 JUEVES 22 DE OCTUBRE DE 2026
 | Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
 |---|---|---|---|---|---|---|
 | **Desayuno** | Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo | 610 kcal | 50.0 g (71%) | 35.5 g (71%) | 4.5 g (18%) | 6.2 g (25%) |
-| **Comida** | Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Espinacas de la Granja en Emulsión VEVO | 753 kcal | 63.0 g (90%) | 42.0 g (84%) | 4.5 g (18%) | 6.4 g (26%) |
+| **Comida** | Supremas de Pechuga de Pollo Rellenas de Queso Ricotta y Acelgas de la Granja en Emulsión VEVO | 753 kcal | 63.0 g (90%) | 42.0 g (84%) | 4.5 g (18%) | 6.4 g (26%) |
 | **Cena** | Timbal de Queso Cottage Cremoso, Aguacate Hass y Semillas Mixtas sobre Hojas de Lechuga | 631 kcal | 53.0 g (76%) | 34.5 g (69%) | 4.1 g (16%) | 6.1 g (24%) |
 
 #### 📊 VIERNES 23 DE OCTUBRE DE 2026
 | Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Espinacas de la Granja | 605 kcal | 49.5 g (71%) | 35.5 g (71%) | 4.3 g (17%) | 6.1 g (24%) |
+| **Desayuno** | Omelette Francés Baveuse de 3 Huevos Relleno de Queso Cottage Cremoso y Cilantro de la Granja | 605 kcal | 49.5 g (71%) | 35.5 g (71%) | 4.3 g (17%) | 6.1 g (24%) |
 | **Comida** | Juliana de Flat Steak de Res Salteada al Wok con Pimiento Morrón, Cebolla y Aceite VEVO | 756 kcal | 63.5 g (91%) | 41.5 g (83%) | 4.6 g (18%) | 6.4 g (26%) |
 | **Cena** | Rollitos de Pechuga de Pollo al Vapor con Alcaparras, Aceitunas Manzanilla, Limón Real y Aceite VEVO | 628 kcal | 52.5 g (75%) | 35.0 g (70%) | 3.8 g (15%) | 5.8 g (23%) |
 
 #### 📊 SÁBADO 24 DE OCTUBRE DE 2026
 | Servicio | Platillo Principal | Calorías | Grasas (% VD) | Proteína (% VD) | Carbs Netos (% VD) | Fibra (% VD) |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Ejotes Tiernos de la Granja al Orégano | 606 kcal | 50.0 g (71%) | 34.5 g (69%) | 4.4 g (18%) | 6.2 g (25%) |
+| **Desayuno** | Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano | 606 kcal | 50.0 g (71%) | 34.5 g (69%) | 4.4 g (18%) | 6.2 g (25%) |
 | **Comida** | Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Costra de Queso Manchego y Guacamole Rústico | 771 kcal | 65.0 g (93%) | 42.0 g (84%) | 4.6 g (18%) | 6.7 g (27%) |
 | **Cena** | Carpaccio Templado de Champiñones Laminados, Flor de Calabaza y Queso de Cabra con Almendras Fileteadas | 620 kcal | 52.0 g (74%) | 34.0 g (68%) | 3.9 g (16%) | 5.8 g (23%) |
 

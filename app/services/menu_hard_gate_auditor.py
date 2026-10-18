@@ -25,15 +25,10 @@ def _strip_accents(text: str) -> str:
 # INVENTARIO CANÓNICO BASE (ALACENA Y GRANJA EL HERAMI)
 # ---------------------------------------------------------------------------
 DEFAULT_FARM_HARVEST: List[str] = [
-    "Espinacas",
-    "Brócoli",
-    "Espárragos",
-    "Nopales",
-    "Ejotes",
+    "Acelgas",
     "Cilantro",
-    "Arúgula",
-    "Coliflor",
     "Limones",
+    "Nopales",
     "Nuez pecana",
 ]
 
@@ -163,6 +158,7 @@ VEGETABLE_FAMILIES: Dict[str, List[str]] = {
     "calabacitas": ["calabacita", "calabacitas", "zucchini", "zoodles"],
     "chayote": ["chayote", "chayotes"],
     "nopales": ["nopal", "nopales"],
+    "acelgas": ["acelga", "acelgas"],
     "espinacas": ["espinaca", "espinacas"],
     "arugula": ["arugula"],
     "morron": ["morron", "pimiento"],
@@ -901,6 +897,7 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
         ("ejote", "ejote"),
         ("esparrago", "esparrago"),
         ("nopal", "nopal"),
+        ("acelga", "acelga"),
         ("flor de calabaza", "flor de calabaza"),
         ("aguacate", "aguacate"),
         ("guacamole", "aguacate"),

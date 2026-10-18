@@ -3497,6 +3497,7 @@ window.PANTRY_STOCK_INVENTORY = {
       if (!cleaned) return '';
       const norm = cleaned.toLowerCase().normalize("NFD").replace(/[\\u0300-\\u036f]/g, "").replace(/\\bnuex\\b/g, "nuez").trim();
 
+      if (/\\bacelgas?\\b/.test(norm)) return 'Acelgas';
       if (/\\bespinacas?\\b/.test(norm)) return 'Espinacas';
       if (/\\b(calabacitas?|calabazas?|zucchini)\\b/.test(norm) && !norm.includes('flor') && !norm.includes('semilla') && !norm.includes('pepita')) return 'Calabacitas';
       if (/\\bbrocolis?\\b/.test(norm)) return 'Brócoli';
@@ -3532,40 +3533,28 @@ window.PANTRY_STOCK_INVENTORY = {
     }
 
     const FARM_MASTER_CATALOG = [
-      "Espinacas",
-      "Calabacitas",
-      "Brócoli",
-      "Espárragos",
-      "Nopales",
-      "Ejotes",
+      "Acelgas",
+      "Agua purificada",
       "Cilantro",
-      "Arúgula",
-      "Coliflor",
+      "Granadas",
+      "Jamaica",
       "Limones",
+      "Manzanilla",
+      "Moras",
+      "Nopales",
       "Nuez pecana",
       "Pitayas",
-      "Granadas",
-      "Fresas",
-      "Frambuesas",
-      "Moras",
-      "Zarzamoras",
-      "Arándanos",
-      "Menta",
-      "Toronjil",
-      "Manzanilla",
-      "Jamaica",
       "Romero",
-      "Epazote",
-      "Agua purificada"
+      "Toronjil"
     ];
     let customFarmItems = [];
-    let deletedFarmItems = ["Calabacitas"];
+    let deletedFarmItems = ["Calabacitas", "Espinacas", "Brócoli", "Espárragos", "Ejotes", "Arúgula", "Coliflor", "Fresas", "Frambuesas", "Zarzamoras", "Arándanos", "Menta", "Epazote"];
     let deletedPantryItems = [];
 
     let activeWeek = "Semana 43 (18 al 24 de Octubre de 2026)";
     let selectedIdx = 0;
     let activeDiners = 6;
-    let selectedHarvest = ["Espinacas", "Brócoli", "Espárragos", "Nopales", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones", "Nuez pecana"];
+    let selectedHarvest = ["Acelgas", "Cilantro", "Limones", "Nopales", "Nuez pecana"];
 let pantryStock = {
       "Mantequilla": 290,
       "Mostaza": 150,
@@ -6442,6 +6431,7 @@ const INGREDIENT_CANONICAL_MAP_JS = {
   "morron": ["morrón", "morron", "morrones", "pimiento morrón", "pimiento morron", "pimientos morrones", "pimientos morrones dulces"],
   "flor-calabaza": ["flor de calabaza", "flores de calabaza"],
   "calabaza": ["calabaza", "calabazas", "calabacita", "calabacitas", "calabacitas verdes tiernas", "calabacitas tiernas"],
+  "acelga": ["acelga", "acelgas", "acelgas de la granja", "hojas de acelga", "acelga tierna", "acelgas tiernas"],
   "espinaca": ["espinaca", "espinacas", "espinacas baby", "espinacas tiernas"],
   "brocoli": ["brócoli", "brocoli", "brócolis", "brocolis"],
   "esparrago": ["espárrago", "esparrago", "espárragos", "esparragos", "espárragos verdes", "esparragos verdes"],

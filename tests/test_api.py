@@ -1248,7 +1248,7 @@ def test_harvest_pantry_reactivity_and_purity():
     farm_catalog_content = farm_catalog_match.group(1).lower()
     assert "higo" not in farm_catalog_content, "Higos presentes en FARM_MASTER_CATALOG"
     assert '"granadas"' in farm_catalog_content, "Granadas ausentes en FARM_MASTER_CATALOG"
-    assert '"fresas"' in farm_catalog_content, "Fresas ausentes en FARM_MASTER_CATALOG"
+    assert '"acelgas"' in farm_catalog_content, "Acelgas ausentes en FARM_MASTER_CATALOG"
 
     # Presencia de función areInsumosEquivalent
     assert "function areInsumosEquivalent(aName, bName)" in code
