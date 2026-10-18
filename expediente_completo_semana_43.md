@@ -1477,20 +1477,20 @@
 
 ---
 
-## 3. Abastecimiento Tridimensional Exacto (6 Comensales — Semana 43)
+## 3. Abastecimiento Tridimensional Exacto (Extraído Directamente del Motor JS `calculateNetShoppingList(6)` de `atelier.html`)
 
 ### 3.1 Cosecha Directa de la Granja El Herami + Insumo Libre de Cocina (Suministro Propio a \$0.00 MXN)
 | # | Cultivo / Insumo Activo en Huerto | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |
 |---|---|---|---|---|
-| 1 | **Acelgas** | 810 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
-| 2 | **Agua purificada** | 14,580 ml | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
-| 3 | **Cilantro** | 816 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
-| 4 | **Fondo claro de pollo** | 9,900 ml | 🌿 Insumo Base de Cocina ($0) | **\$0.00 MXN** |
-| 5 | **Jamaica** | 30 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
-| 6 | **Limones** | 2,352 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
-| 7 | **Nopales** | 960 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
-| 8 | **Nuez pecana** | 1,008 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
-| 9 | **Romero** | 60 g | 🌿 Granja El Herami ($0) | **\$0.00 MXN** |
+| 1 | **Acelgas** | 810 g | 🌿 Cosecha Propia Activa ($0 Granja El Herami) | **\$0.00 MXN** |
+| 2 | **Agua purificada** | 14,580 ml | 🌿 Cosecha Propia Activa ($0 Granja El Herami) | **\$0.00 MXN** |
+| 3 | **Cilantro** | 816 g | 🌿 Cosecha Propia Activa ($0 Granja El Herami) | **\$0.00 MXN** |
+| 4 | **Fondo claro de pollo** | 9,900 ml | 🌿 Insumo Libre de Cocina (Elaboración Interna $0) | **\$0.00 MXN** |
+| 5 | **Jamaica** | 30 g | 🌿 Cosecha Propia Activa ($0 Granja El Herami) | **\$0.00 MXN** |
+| 6 | **Limones** | 2,352 g | 🌿 Cosecha Propia Activa ($0 Granja El Herami) | **\$0.00 MXN** |
+| 7 | **Nopales** | 960 g | 🌿 Cosecha Propia Activa ($0 Granja El Herami) | **\$0.00 MXN** |
+| 8 | **Nuez pecana** | 1,008 g | 🌿 Cosecha Propia Activa ($0 Granja El Herami) | **\$0.00 MXN** |
+| 9 | **Romero** | 60 g | 🌿 Cosecha Propia Activa ($0 Granja El Herami) | **\$0.00 MXN** |
 
 ### 3.2 Existencias Consolidadas en Alacena y Refrigerador (Amortización Exacta con \$0.00 MXN de Compra)
 | # | Insumo Canónico | Stock en Alacena | Demanda Semanal (6p) | Saldo en Alacena | Estado de Cobertura |
@@ -1510,47 +1510,57 @@
 | 13 | **Pimienta negra** | 70 g | **39 g** | 31 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 14 | **Pistaches** | 100 g | **90 g** | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 15 | **Pollo entero** | 1 piezas | **1 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 16 | **Queso cottage** | 500 g | **480 g** | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 17 | **Queso mozzarella** | 105 g | **102 g** | 3 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 18 | **Queso parmesano** | 100 g | **90 g** | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 19 | **Queso Philadelphia** | 720 g | **720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 16 | **Queso Philadelphia** | 720 g | **720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 17 | **Queso cottage** | 500 g | **480 g** | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 18 | **Queso mozzarella** | 105 g | **102 g** | 3 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 19 | **Queso parmesano** | 100 g | **90 g** | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 20 | **Queso ricotta** | 1,920 g | **1,200 g** | 720 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 21 | **Sal con ajo** | 100 g | **78 g** | 22 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 22 | **Sal de mar** | 3,000 g | **177 g** | 2,823 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 23 | **Sardinas** | 1,700 g | **840 g** | 860 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 24 | **Té chai** | 70 g | **18 g** | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 25 | **Tomate** | 400 g | **360 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 26 | **Tomillo** | 20 g | **12 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 24 | **Tomate** | 400 g | **360 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 25 | **Tomillo** | 20 g | **12 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 26 | **Té chai** | 70 g | **18 g** | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 27 | **Yogur griego** | 3,880 g | **840 g** | 3,040 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 
-### 3.3 Lista de Compras Netas de Mercado (Proteínas, Hortalizas de Variedad, Frutas, Grasas y Sinergix®)
-| # | Insumo a Comprar en Mercado | Demanda Total Semanal (6p) | Stock en Alacena | Compra Neta Exacta a Realizar | Unidad |
-|---|---|---|---|---|---|
-| 1 | **Aceite de oliva** | 1,479 ml | 400 ml | **1,079 ml** | ml |
-| 2 | **Aguacate** | 14 piezas | 1 piezas | **13 piezas** | piezas |
-| 3 | **AminoSinergix®** | 420 g | 200 g | **220 g** | g |
-| 4 | **Brócoli** | 1,080 g | 0 g | **1,080 g** | g |
-| 5 | **Calabacitas** | 1,740 g | 0 g | **1,740 g** | g |
-| 6 | **Carne molida** | 2,040 g | 0 g | **2,040 g** | g |
-| 7 | **Champiñón** | 2,220 g | 0 g | **2,220 g** | g |
-| 8 | **Coliflor** | 1,560 g | 0 g | **1,560 g** | g |
-| 9 | **Espárragos** | 1,440 g | 0 g | **1,440 g** | g |
-| 10 | **Espinacas** | 1,110 g | 0 g | **1,110 g** | g |
-| 11 | **Fajitas de mojarra** | 1,320 g | 0 g | **1,320 g** | g |
-| 12 | **Filete de atún** | 1,200 g | 0 g | **1,200 g** | g |
-| 13 | **Flat steak** | 2,460 g | 0 g | **2,460 g** | g |
-| 14 | **Fresas** | 990 g | 0 g | **990 g** | g |
-| 15 | **Grenetina** | 252 g | 112 g | **140 g** | g |
-| 16 | **Huevo** | 126 piezas | 26 piezas | **100 piezas** | piezas |
-| 17 | **Lomo de salmón** | 1,320 g | 0 g | **1,320 g** | g |
-| 18 | **Mantequilla** | 570 g | 290 g | **280 g** | g |
-| 19 | **Manzanilla** | 84 g | 50 g | **34 g** | g |
-| 20 | **Morrón** | 8 piezas | 0 piezas | **8 piezas** | piezas |
-| 21 | **MultiSinergix®** | 420 g | 300 g | **120 g** | g |
-| 22 | **Pechuga de pollo** | 1,200 g | 0 g | **1,200 g** | g |
-| 23 | **Pepino** | 1,560 g | 0 g | **1,560 g** | g |
-| 24 | **Semillas de chía orgánicas** | 336 g | 0 g | **336 g** | g |
-| 25 | **Zarzamora** | 960 g | 0 g | **960 g** | g |
+### 3.3 Lista de Compras Netas de Mercado (Extraída Directamente del Motor JS y DOM `#v-shop` de `atelier.html`)
+| # | Categoría en UI (`#v-shop`) | Insumo a Comprar en Mercado | Demanda Total Semanal (6p) | Stock en Alacena | Compra Neta Exacta (`#v-shop`) | Unidad |
+|---|---|---|---|---|---|---|
+| 1 | 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 1,479 ml | 400 ml | **`1079 ml`** | ml |
+| 2 | 🥑 Grasas, Aceites y Semillas | **Aguacate** | 14 piezas | 1 piezas | **`13 piezas`** | piezas |
+| 3 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 420 g | 200 g | **`220 g`** | g |
+| 4 | 🥬 Verduras, Hortalizas y Frescos | **Brócoli** | 1,080 g | 0 g | **`1080 g`** | g |
+| 5 | 🥬 Verduras, Hortalizas y Frescos | **Calabacitas** | 1,740 g | 0 g | **`1740 g`** | g |
+| 6 | 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 2,040 g | 0 g | **`2040 g`** | g |
+| 7 | 🥬 Verduras, Hortalizas y Frescos | **Champiñón** | 2,220 g | 0 g | **`2220 g`** | g |
+| 8 | 🥬 Verduras, Hortalizas y Frescos | **Coliflor** | 1,560 g | 0 g | **`1560 g`** | g |
+| 9 | 🥬 Verduras, Hortalizas y Frescos | **Espinacas** | 1,110 g | 0 g | **`1110 g`** | g |
+| 10 | 🥬 Verduras, Hortalizas y Frescos | **Espárragos** | 1,440 g | 0 g | **`1440 g`** | g |
+| 11 | 🥩 Carnes, Pescados y Proteínas | **Fajitas de mojarra** | 1,320 g | 0 g | **`1320 g`** | g |
+| 12 | 🥩 Carnes, Pescados y Proteínas | **Filete de atún** | 1,200 g | 0 g | **`1200 g`** | g |
+| 13 | 🥩 Carnes, Pescados y Proteínas | **Flat steak** | 2,460 g | 0 g | **`2460 g`** | g |
+| 14 | 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 990 g | 0 g | **`990 g`** | g |
+| 15 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 252 g | 112 g | **`140 g`** | g |
+| 16 | 🥩 Carnes, Pescados y Proteínas | **Huevo** | 126 piezas | 26 piezas | **`100 piezas`** | piezas |
+| 17 | 🥩 Carnes, Pescados y Proteínas | **Lomo de salmón** | 1,320 g | 0 g | **`1320 g`** | g |
+| 18 | 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 570 g | 290 g | **`280 g`** | g |
+| 19 | 🌶️ Chiles, Condimentos e Infusiones | **Manzanilla** | 84 g | 50 g | **`34 g`** | g |
+| 20 | 🥬 Verduras, Hortalizas y Frescos | **Morrón** | 8 piezas | 0 piezas | **`8 piezas`** | piezas |
+| 21 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 420 g | 300 g | **`120 g`** | g |
+| 22 | 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 1,200 g | 0 g | **`1200 g`** | g |
+| 23 | 🥬 Verduras, Hortalizas y Frescos | **Pepino** | 1,560 g | 0 g | **`1560 g`** | g |
+| 24 | 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 336 g | 0 g | **`336 g`** | g |
+| 25 | 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 960 g | 0 g | **`960 g`** | g |
+
+#### 3.3.1 Espejo Exacto por Tarjeta de Categoría en el DOM Real de `#v-shop` (`render3DShoppingList()`)
+| Categoría Renderizada en `#v-shop` | Badge de Conteo en UI | Ítems Renderizados Carácter por Carácter en Pantalla |
+|---|---|---|
+| **🍓 Frutas de Bajo Índice Glucémico** | **`2 POR COMPRAR`** | • **Fresas**: `990 g`<br>• **Zarzamora**: `960 g` |
+| **🥑 Grasas, Aceites y Semillas** | **`4 POR COMPRAR`** | • **Aceite de oliva**: `1079 ml` *(Alacena: 400 ml (~400 ml) | Bruto: 1479 ml)*<br>• **Aguacate**: `13 piezas` *(Alacena: 1 piezas (~1 piezas) | Bruto: 14 piezas)*<br>• **Mantequilla**: `280 g` *(Alacena: 290 g (~290 g) | Bruto: 570 g)*<br>• **Semillas de chía orgánicas**: `336 g` |
+| **🥩 Carnes, Pescados y Proteínas** | **`7 POR COMPRAR`** | • **Carne molida**: `2040 g`<br>• **Fajitas de mojarra**: `1320 g`<br>• **Filete de atún**: `1200 g`<br>• **Flat steak**: `2460 g`<br>• **Huevo**: `100 piezas` *(Alacena: 26 piezas (~26 piezas) | Bruto: 126 piezas)*<br>• **Lomo de salmón**: `1320 g`<br>• **Pechuga de pollo**: `1200 g` |
+| **🌶️ Chiles, Condimentos e Infusiones** | **`1 POR COMPRAR`** | • **Manzanilla**: `34 g` *(Alacena: 50 g (~50 g) | Bruto: 84 g)* |
+| **💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA** | **`3 POR COMPRAR`** | • **AminoSinergix®**: `220 g` *(Alacena: 200 g (~200 g) | Bruto: 420 g)*<br>• **Grenetina**: `140 g` *(Alacena: 4 envases de 28 g (~112 g) | Bruto: 252 g)*<br>• **MultiSinergix®**: `120 g` *(Alacena: 300 g (~300 g) | Bruto: 420 g)* |
+| **🥬 Verduras, Hortalizas y Frescos** | **`8 POR COMPRAR`** | • **Brócoli**: `1080 g`<br>• **Calabacitas**: `1740 g`<br>• **Champiñón**: `2220 g`<br>• **Coliflor**: `1560 g`<br>• **Espárragos**: `1440 g`<br>• **Espinacas**: `1110 g`<br>• **Morrón**: `8 piezas`<br>• **Pepino**: `1560 g` |
 
 ### 3.4 Registro de Cuarentena Normativa y Exclusión Activa (`NOM-004` / `deletedPantryItems` / `deletedFarmItems`)
 | Origen | Insumos Excluidos / Eliminados por el Usuario | Estado en las 63 Recetas |

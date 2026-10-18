@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Lightweight Pass-Through & Legacy Cache Cleanup
-const CACHE_NAME = 'nutriketo-v36-6-rev20-pure-farm-nouns-v48';
+const CACHE_NAME = 'nutriketo-v36-6-rev21-unified-bom-v50';
 
 self.addEventListener('install', () => {
   self.skipWaiting();

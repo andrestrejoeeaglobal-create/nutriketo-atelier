@@ -1844,7 +1844,7 @@ def generate_standalone():
             cat = ing.get("category", "Ingredientes")
             if cat not in cat_map:
                 cat_map[cat] = []
-            per_person = ing.get("per_guest", round(ing.get("amount", 0) / 6.0, 2))
+            per_person = round(float(ing.get("amount", 0)) / 6.0, 6)
             cat_map[cat].append({
                 "name": ing.get("name"),
                 "base_qty_per_person": per_person,
@@ -4657,8 +4657,8 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v43_canonical_dedup_ready', 'true');
         }
 
-        // Sincronización V49: inventario actualizado por el usuario (Pollo entero, Queso cottage 500g, Cebolla 8, Jitomate 7, Lechuga 3, Huevo 26, Agua mineral eliminada, Granja 8 ítems)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v49_user_inventory_sync') !== 'true') {
+        // Sincronización V50: inventario actualizado por el usuario (Pollo entero, Queso cottage 500g, Cebolla 8, Jitomate 7, Lechuga 3, Huevo 26, Agua mineral eliminada, Granja 8 ítems)
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v50_user_inventory_sync') !== 'true') {
           const v49Edits = {
             "Fresas": { stock: 0, unit: "g", sku: "fresas_frescas_tr04095" },
             "Frambuesas": { stock: 0, unit: "g", sku: "frambuesas_frescas_organicas" },
@@ -4725,6 +4725,7 @@ let pantryStock = {
           selectedHarvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica"];
           localStorage.setItem('nutriketo_v48_restored_user_inventory_sync', 'true');
           localStorage.setItem('nutriketo_v49_user_inventory_sync', 'true');
+          localStorage.setItem('nutriketo_v50_user_inventory_sync', 'true');
         }
 
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
@@ -6538,11 +6539,12 @@ function normalizeQuantity(qty, unit) {
   const num = parseFloat(qty);
   if (isNaN(num)) return qty;
 
+  const cleanNum = Math.round((num + Number.EPSILON) * 100) / 100;
   const u = (unit || "").toLowerCase();
   if (u.includes("piez") || u.includes("huevo") || u.includes("unidad") || u.includes("hoja")) {
-    return Math.ceil(num).toString();
+    return Math.ceil(cleanNum - 1e-6).toString();
   }
-  const rounded = Math.round(num * 10) / 10;
+  const rounded = Math.round(cleanNum * 10) / 10;
   return rounded.toString();
 }
 
@@ -6764,16 +6766,15 @@ function getYieldFactor(category, slug) {
 }
 
 function formatBaseQuantity(val, type, origUnit) {
-  const roundedVal = Math.round(val * 10) / 10;
+  const cleanVal = Math.round((val + Number.EPSILON) * 100) / 100;
+  const roundedVal = Math.round(cleanVal * 10) / 10;
   if (type === "mass") {
-    if (val >= 1000) return `${(val / 1000).toFixed(1)} kg`;
     return `${roundedVal} g`;
   }
   if (type === "vol") {
-    if (val >= 1000) return `${(val / 1000).toFixed(1)} L`;
     return `${roundedVal} ml`;
   }
-  return `${Math.ceil(val)} ${origUnit || 'piezas'}`;
+  return `${Math.ceil(cleanVal - 1e-6)} ${origUnit || 'piezas'}`;
 }
 
 function sanitizeMarketRawMaterial(rawName) {
@@ -6994,12 +6995,14 @@ function calculateActiveMenuBOM(weekKey, diners) {
               if (!rawName) return;
 
               const cleanLower = rawName.toLowerCase();
-              if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol|agua purificada/i.test(cleanLower)) {
+              if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLower)) {
                 return;
               }
 
+              const total6 = parseFloat(ing.total_qty !== undefined ? ing.total_qty : (ing.qty !== undefined ? ing.qty : NaN));
               const perPersonQty = parseFloat(ing.base_qty_per_person !== undefined ? ing.base_qty_per_person : (ing.quantity || ing.qty || 1)) || 0;
-              const mealQty = perPersonQty * mealDiners;
+              const rawMealQty = !isNaN(total6) ? (total6 * (mealDiners / 6.0)) : (perPersonQty * mealDiners);
+              const mealQty = Math.round((rawMealQty + Number.EPSILON) * 100) / 100;
               const ingUnit = (ing.unit || 'g').trim();
 
               const processedItems = processMarketItem(rawName, mealQty, ingUnit);
@@ -7081,8 +7084,9 @@ function calculateActiveMenuBOM(weekKey, diners) {
 
   const resultList = Object.values(bomMap);
   resultList.forEach(item => {
+    item.quantity = Math.round((item.quantity + Number.EPSILON) * 100) / 100;
     if (item.unit === 'piezas' || item.unit === 'pz' || item.unit === 'pieza' || item.unit === 'manojo') {
-      item.quantity = Math.ceil(item.quantity - 1e-9);
+      item.quantity = Math.ceil(item.quantity - 1e-6);
     }
   });
 
@@ -7107,6 +7111,7 @@ function calculateNetShoppingList(diners) {
 
   const shoppingCategories = {};
   const farmItems = [];
+  const kitchenStockItems = [];
   const pantryCoveredItems = [];
 
   let totalCount = 0;
@@ -7236,6 +7241,17 @@ function calculateNetShoppingList(diners) {
 
     // Regla culinaria de taller: Los caldos y fondos (fondo claro de pollo, caldo de res, etc.) no se compran comercialmente, se preparan en cocina
     if (/(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(cleanLower) && !cleanLower.includes('polvo') && !cleanLower.includes('concentrado')) {
+      const kQty = Math.round(((parseFloat(item.quantity) || 0) + Number.EPSILON) * 100) / 100;
+      const kUnit = item.unit || 'ml';
+      kitchenStockItems.push({
+        name: cleanName,
+        slug: normalizeToCanonicalSlug(cleanName),
+        grossVal: kQty,
+        unit: kUnit,
+        grossStr: formatBaseQuantity(kQty, 'vol', kUnit),
+        reason: "🍲 Insumo Libre de Cocina (Elaboración Interna $0)",
+        category: item.category || "🍲 Bases Culinarias y Fondos"
+      });
       return;
     }
 
@@ -7255,14 +7271,24 @@ function calculateNetShoppingList(diners) {
 
     if (isHarvest) {
       const pureFarmName = getPureCanonicalFarmName(item.item_name) || item.item_name;
-      if (!farmItems.some(f => f.slug === slug || f.name.toLowerCase() === pureFarmName.toLowerCase())) {
+      const itemQty = Math.round(((parseFloat(item.quantity) || 0) + Number.EPSILON) * 100) / 100;
+      const itemUnit = item.unit || 'g';
+      const fBase = parseQuantityInBaseUnit(itemQty, itemUnit);
+      const existingFarm = farmItems.find(f => f.slug === slug || f.name.toLowerCase() === pureFarmName.toLowerCase());
+      if (!existingFarm) {
         farmCount++;
         farmItems.push({
           name: pureFarmName,
           slug: slug,
+          grossVal: fBase.val,
+          unit: itemUnit,
+          grossStr: formatBaseQuantity(fBase.val, fBase.type, itemUnit),
           reason: "🌿 Cubierto a $0 (Granja El Herami)",
           category: cat
         });
+      } else {
+        existingFarm.grossVal = (existingFarm.grossVal || 0) + fBase.val;
+        existingFarm.grossStr = formatBaseQuantity(existingFarm.grossVal, fBase.type, existingFarm.unit || itemUnit);
       }
       return;
     }
@@ -7371,6 +7397,14 @@ function calculateNetShoppingList(diners) {
       pantryCoveredItems.push({
         name: item.item_name,
         slug: slug,
+        grossVal: baseInfo.val,
+        stockInBase: stockInBase,
+        remInBase: stockInBase - baseInfo.val,
+        unit: item.unit,
+        baseType: baseInfo.type,
+        grossStr: formatBaseQuantity(baseInfo.val, baseInfo.type, item.unit),
+        pantryStr: formatBaseQuantity(stockInBase, baseInfo.type, item.unit),
+        remStr: formatBaseQuantity(stockInBase - baseInfo.val, baseInfo.type, item.unit),
         reason: coveredReason,
         category: cat
       });
@@ -7397,10 +7431,14 @@ function calculateNetShoppingList(diners) {
         id: `bought_v36_${slug}`,
         slug: slug,
         name: item.item_name,
+        grossVal: baseInfo.val,
+        stockInBase: stockInBase,
+        netVal: netInBase,
+        unit: item.unit,
+        baseType: baseInfo.type,
         qtyStr: netStr,
         grossStr: grossStr,
         pantryStr: pantryStr,
-        stockInBase: stockInBase,
         note: note
       });
     }
@@ -7445,6 +7483,7 @@ function calculateNetShoppingList(diners) {
   return {
     categories: shoppingCategories,
     farmItems: farmItems,
+    kitchenStockItems: kitchenStockItems,
     pantryCoveredItems: pantryCoveredItems,
     totalCount: totalCount,
     farmCount: farmCount,
@@ -7895,8 +7934,9 @@ function renderCourseCard(courseData, diners, badgeText) {
   const groups = (recipeObj.ingredient_groups || courseData.ingredient_groups || []).map(grp => ({
     category: grp.category || "Ingredientes",
     items: (grp.items || grp.ingredients || []).map(item => {
+      const total6 = parseFloat(item.total_qty !== undefined ? item.total_qty : (item.qty !== undefined ? item.qty : NaN));
       const baseQty = parseFloat(item.base_qty_per_person !== undefined ? item.base_qty_per_person : (item.qty || item.quantity || 1));
-      const totalQty = baseQty * activeDiners;
+      const totalQty = !isNaN(total6) ? Math.round((total6 * (activeDiners / 6.0) + Number.EPSILON) * 100) / 100 : Math.round((baseQty * activeDiners + Number.EPSILON) * 100) / 100;
       return {
         name: item.name || item.item_name || "Insumo",
         qty: normalizeQuantity(totalQty, item.unit),
@@ -10325,7 +10365,7 @@ function renderRecipes(day, activeDiners) {
       <script>
     document.addEventListener('DOMContentLoaded', () => {
       try {
-        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev20-pure-farm-nouns-v48';
+        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev21-unified-bom-v50';
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => caches.delete(k).catch(() => {}));
