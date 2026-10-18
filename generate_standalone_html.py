@@ -3342,40 +3342,37 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-005-queso-philadelphia": { item_num: 5, name: "Queso Philadelphia", stock: 720, unit: "g", packaging: "4 envases de 180 g", status: "canonical" },
       "sku-006-crema-acida": { item_num: 6, name: "Crema ácida", stock: 960, unit: "g", packaging: "960 g", status: "canonical" },
       "sku-007-mayonesa": { item_num: 7, name: "Mayonesa", stock: 1000, unit: "g", packaging: "1000 g", status: "canonical" },
-      "sku-008-queso-manchego": { item_num: 8, name: "Queso manchego", stock: 1200, unit: "g", packaging: "1200 g", status: "canonical" },
-      "sku-009-queso-de-cabra": { item_num: 9, name: "Queso de cabra", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
+      "sku-008-queso-manchego": { item_num: 8, name: "Queso manchego", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+      "sku-009-queso-de-cabra": { item_num: 9, name: "Queso de cabra", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
       "sku-010-salsa-bbq": { item_num: 10, name: "Salsa BBQ", stock: 550, unit: "g", packaging: "550 g", status: "prohibited", reason: "Alta en azúcares libres y jarabe de maíz de alta fructosa; rompe cetosis." },
       "sku-011-leche-de-coco": { item_num: 11, name: "Leche de coco", stock: 960, unit: "ml", packaging: "960 ml", status: "canonical" },
       "sku-012-leche-evaporada": { item_num: 12, name: "Leche evaporada", stock: 960, unit: "ml", packaging: "960 ml", status: "prohibited", reason: "Alta concentración de lactosa y azúcares lácteos simples; rompe cetosis." },
       "sku-013-leche": { item_num: 13, name: "Leche", stock: 960, unit: "ml", packaging: "960 ml", status: "prohibited", reason: "Lactosa no cetogénica (~12g carbs netos por porción); eleva glucemia." },
       "sku-014-salsa-catsup": { item_num: 14, name: "Salsa cátsup", stock: 2600, unit: "g", packaging: "2 envases de 1300 g", status: "prohibited", reason: "Elevado aporte de azúcar añadida y jarabe de fructosa; fuera de protocolo keto." },
       "sku-015-queso-mozzarella": { item_num: 15, name: "Queso mozzarella", stock: 105, unit: "g", packaging: "105 g", status: "canonical" },
-      "sku-016-nogada": { item_num: 16, name: "Nogada", stock: 960, unit: "ml", packaging: "960 ml", status: "prohibited", reason: "Preparación dulce tradicional con azúcar y leche condensada; rompe cetosis." },
       "sku-017-agua-mineral": { item_num: 17, name: "Agua mineral", stock: 9355, unit: "ml", packaging: "9,355 ml (6 de 1.5 L + 1 de 355 ml)", status: "canonical" },
       "sku-019-botella-de-agua": { item_num: 19, name: "Botella de agua", stock: 120, unit: "botellas (355 ml)", packaging: "120 botellas de 355 ml", status: "canonical" },
       "sku-020-queso-parmesano": { item_num: 20, name: "Queso parmesano", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
-      "sku-021-flat-steak": { item_num: 21, name: "Flat steak", stock: 1885, unit: "g", packaging: "1,885 g", status: "canonical" },
-      "sku-023-lomo-de-salmon": { item_num: 23, name: "Lomo de salmón", stock: 1385, unit: "g", packaging: "1385 g", status: "canonical" },
-      "sku-024-carne-molida": { item_num: 24, name: "Carne molida", stock: 1680, unit: "g", packaging: "1680 g", status: "canonical" },
-      "sku-025-fajitas-de-mojarra": { item_num: 25, name: "Fajitas de mojarra", stock: 907, unit: "g", packaging: "907 g", status: "canonical" },
-      "sku-026-filete-de-atun": { item_num: 26, name: "Filete de atún", stock: 700, unit: "g", packaging: "700 g", status: "canonical" },
-      "sku-027-jitomate": { item_num: 27, name: "Jitomate", stock: 9, unit: "piezas", packaging: "9 piezas", status: "canonical" },
+      "sku-021-flat-steak": { item_num: 21, name: "Flat steak", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+      "sku-023-lomo-de-salmon": { item_num: 23, name: "Lomo de salmón", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+      "sku-024-carne-molida": { item_num: 24, name: "Carne molida", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+      "sku-025-fajitas-de-mojarra": { item_num: 25, name: "Fajitas de mojarra", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+      "sku-026-filete-de-atun": { item_num: 26, name: "Filete de atún", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+      "sku-027-jitomate": { item_num: 27, name: "Jitomate", stock: 1, unit: "piezas", packaging: "1 pieza", status: "canonical" },
       "sku-028-morron": { item_num: 28, name: "Morrón", stock: 7, unit: "piezas", packaging: "7 piezas", status: "canonical" },
-      "sku-029-pechuga-de-pollo": { item_num: 29, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo", stock: 3454, unit: "g", packaging: "3,454 g", status: "canonical" },
-      "sku-030-zanahoria": { item_num: 30, name: "Zanahoria", stock: 7, unit: "piezas", packaging: "7 piezas", status: "prohibited", reason: "Tubérculo amiláceo con alto índice glucémico; fuera de protocolo cetogénico estricto." },
-      "sku-031-flor-de-calabaza": { item_num: 31, name: "Flor de calabaza", stock: 1, unit: "manojo", packaging: "1 manojo", status: "canonical" },
-      "sku-032-calabaza": { item_num: 32, name: "Calabaza", stock: 6, unit: "piezas", packaging: "6 piezas", status: "canonical" },
-      "sku-033-cebolla": { item_num: 33, name: "Cebolla", stock: 9, unit: "piezas", packaging: "9 piezas", status: "canonical" },
+      "sku-029-pechuga-de-pollo": { item_num: 29, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+      "sku-031-flor-de-calabaza": { item_num: 31, name: "Flor de calabaza", stock: 0, unit: "manojo", packaging: "0 manojo", status: "canonical" },
+      "sku-032-calabaza": { item_num: 32, name: "Calabaza", stock: 0, unit: "piezas", packaging: "0 piezas", status: "canonical" },
+      "sku-033-cebolla": { item_num: 33, name: "Cebolla", stock: 1, unit: "piezas", packaging: "1 pieza", status: "canonical" },
       "sku-034-lechuga": { item_num: 34, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga", stock: 9, unit: "piezas", packaging: "9 piezas", status: "canonical" },
       "sku-035-ejotes": { item_num: 35, name: "Ejotes", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
       "sku-036-tomate": { item_num: 36, name: "Tomate", stock: 400, unit: "g", packaging: "400 g", status: "canonical" },
-      "sku-037-elote": { item_num: 37, name: "Elote", stock: 2, unit: "piezas", packaging: "2 piezas", status: "prohibited", reason: "Grano entero amiláceo con altísima carga glucémica y carbohidratos netos." },
-      "sku-038-aguacate": { item_num: 38, name: "Aguacate", stock: 13, unit: "piezas", packaging: "13 piezas", status: "canonical" },
-      "sku-039-zarzamora": { item_num: 39, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamora", stock: 1010, unit: "g", packaging: "1,010 g", status: "canonical" },
-      "sku-040-champinon": { item_num: 40, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñón", stock: 2200, unit: "g", packaging: "2,200 g", status: "canonical" },
+      "sku-038-aguacate": { item_num: 38, name: "Aguacate", stock: 2, unit: "piezas", packaging: "2 piezas", status: "canonical" },
+      "sku-039-zarzamora": { item_num: 39, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamora", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+      "sku-040-champinon": { item_num: 40, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñón", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
       "sku-041-pulpa-de-arandano": { item_num: 41, name: "Pulpa de arándano", stock: 3840, unit: "g", packaging: "4 envases de 960 g", status: "prohibited", reason: "Concentrado de fruta con azúcar añadida y alta fructosa; rompe cetosis." },
       "sku-042-pistaches": { item_num: 42, name: "Pistaches", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
-      "sku-043-nuez-de-la-india": { item_num: 43, name: "Nuez de la India", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
+      "sku-043-nuez-de-la-india": { item_num: 43, name: "Nuez de la India", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
       "sku-044-cacahuate-enchilado": { item_num: 44, name: "Cacahuate enchilado", stock: 1200, unit: "g", packaging: "1200 g", status: "prohibited", reason: "Leguminosa proinflamatoria con aceites refinados y almidón en cobertura." },
       "sku-045-semillas-y-nueces-mixtas": { item_num: 45, name: "Semillas y nueces mixtas", stock: 960, unit: "g", packaging: "960 g", status: "canonical" },
       "sku-046-granola": { item_num: 46, name: "Granola", stock: 100, unit: "g", packaging: "100 g", status: "prohibited", reason: "Mezcla de avena, miel y azúcares refinados; alto impacto insulínico." },
@@ -3407,14 +3404,14 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-072-vinagre-de-vino-tinto": { item_num: 72, name: "Vinagre de vino tinto", stock: 250, unit: "ml", packaging: "250 ml", status: "canonical" },
       "sku-073-aceite-de-oliva": { item_num: 73, name: "Aceite de oliva", stock: 400, unit: "ml", packaging: "400 ml", status: "canonical" },
       "sku-074-flor-de-jamaica-molida-en-polvo": { item_num: 74, name: "Flor de Jamaica molida en polvo", stock: 200, unit: "g", packaging: "200 g", status: "canonical" },
-      "sku-075-almendras-fileteadas": { item_num: 75, name: "Almendras fileteadas", stock: 200, unit: "g", packaging: "200 g", status: "canonical" },
+      "sku-075-almendras-fileteadas": { item_num: 75, name: "Almendras fileteadas", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
       "sku-076-hojas-de-laurel": { item_num: 76, name: "Hojas de laurel", stock: 20, unit: "g", packaging: "20 g", status: "canonical" },
       "sku-077-oregano-delgado": { item_num: 77, name: "Orégano", stock: 150, unit: "g", packaging: "150 g", status: "canonical" },
       "sku-079-tomillo": { item_num: 79, name: "Tomillo", stock: 20, unit: "g", packaging: "20 g", status: "canonical" },
       "sku-080-pimienta-negra": { item_num: 80, name: "Pimienta negra", stock: 70, unit: "g", packaging: "70 g", status: "canonical" },
       "sku-081-comino": { item_num: 81, name: "Comino", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
       "sku-082-clavo-de-olor": { item_num: 82, name: "Clavo de olor", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
-      "sku-084-ajonjoli": { item_num: 84, name: "Ajonjolí", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
+      "sku-084-ajonjoli": { item_num: 84, name: "Ajonjolí", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
       "sku-085-manzanilla": { item_num: 85, name: "Manzanilla", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
       "sku-086-curcuma": { item_num: 86, name: "Cúrcuma", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
       "sku-087-sal-marina-de-grano": { item_num: 87, name: "Sal de mar", stock: 3000, unit: "g", packaging: "3,000 g", status: "canonical" },
@@ -3433,17 +3430,16 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-101-palomitas-para-microondas": { item_num: 101, name: "Palomitas para microondas", stock: 600, unit: "g", packaging: "6 envases de 100 g", status: "prohibited", reason: "Maíz procesado con grasas de palma y carbohidratos de alto impacto glucémico." },
       "sku-102-grenetina": { item_num: 102, name: "Grenetina", stock: 112, unit: "g", packaging: "4 envases de 28 g", status: "canonical" },
       "sku-103-saborizante-para-arroz": { item_num: 103, name: "Saborizante para arroz", stock: 48, unit: "g", packaging: "4 envases de 12 g", status: "prohibited", reason: "Sazonador industrial con maltodextrina y almidones para cereales." },
-      "sku-104-huevo": { item_num: 104, name: "Huevo", stock: 105, unit: "piezas", packaging: "105 piezas", status: "canonical" },
+      "sku-104-huevo": { item_num: 104, name: "Huevo", stock: 30, unit: "piezas", packaging: "30 piezas", status: "canonical" },
       "sku-105-multisinergix": { item_num: 105, name: "MultiSinergix®", stock: 300, unit: "g", packaging: "300 g", status: "canonical" },
       "sku-106-aminosinergix": { item_num: 106, name: "AminoSinergix®", stock: 200, unit: "g", packaging: "200 g", status: "canonical" },
       // --- INSUMOS ADICIONALES CONSOLIDADOS EN UN SOLO NOMBRE CANÓNICO SIN VARIACIONES ---
-      "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas", stock: 500, quantity_commercial: 1, commercial_unit: "domo_500", unit: "g", packaging: "500 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+      "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas", stock: 0, quantity_commercial: 0, commercial_unit: "domo_500", unit: "g", packaging: "0 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
       "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos", stock: 800, quantity_commercial: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "800 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
-      "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1,000 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
+      "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas", stock: 0, quantity_commercial: 0, commercial_unit: "caja_1000", unit: "g", packaging: "0 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
       "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "340 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
       "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso ricotta", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "1,920 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
       "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
-      "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
       "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
@@ -3549,7 +3545,7 @@ window.PANTRY_STOCK_INVENTORY = {
     ];
     let customFarmItems = [];
     let deletedFarmItems = ["Calabacitas", "Espinacas", "Brócoli", "Espárragos", "Ejotes", "Arúgula", "Coliflor", "Fresas", "Frambuesas", "Zarzamoras", "Arándanos", "Menta", "Epazote"];
-    let deletedPantryItems = [];
+    let deletedPantryItems = ["Elote", "Higos", "Nogada", "Zanahoria"];
 
     let activeWeek = "Semana 43 (18 al 24 de Octubre de 2026)";
     let selectedIdx = 0;
@@ -3563,40 +3559,37 @@ let pantryStock = {
       "Queso Philadelphia": 720,
       "Crema ácida": 960,
       "Mayonesa": 1000,
-      "Queso manchego": 1200,
-      "Queso de cabra": 500,
+      "Queso manchego": 0,
+      "Queso de cabra": 0,
       "Salsa BBQ": 550,
       "Leche de coco": 960,
       "Leche evaporada": 960,
       "Leche": 960,
       "Salsa cátsup": 2600,
       "Queso mozzarella": 105,
-      "Nogada": 960,
       "Agua mineral": 9355,
       "Botella de agua": 120,
       "Queso parmesano": 100,
-      "Flat steak": 1885,
-      "Lomo de salmón": 1385,
-      "Carne molida": 1680,
-      "Fajitas de mojarra": 907,
-      "Filete de atún": 700,
-      "Jitomate": 9,
+      "Flat steak": 0,
+      "Lomo de salmón": 0,
+      "Carne molida": 0,
+      "Fajitas de mojarra": 0,
+      "Filete de atún": 0,
+      "Jitomate": 1,
       "Morrón": 7,
-      "Pechuga de pollo": 3454,
-      "Zanahoria": 7,
-      "Flor de calabaza": 1,
-      "Calabaza": 6,
-      "Cebolla": 9,
+      "Pechuga de pollo": 0,
+      "Flor de calabaza": 0,
+      "Calabaza": 0,
+      "Cebolla": 1,
       "Lechuga": 9,
       "Ejotes": 500,
       "Tomate": 400,
-      "Elote": 2,
-      "Aguacate": 13,
-      "Zarzamora": 1010,
-      "Champiñón": 2200,
+      "Aguacate": 2,
+      "Zarzamora": 0,
+      "Champiñón": 0,
       "Pulpa de arándano": 3840,
       "Pistaches": 100,
-      "Nuez de la India": 100,
+      "Nuez de la India": 0,
       "Cacahuate enchilado": 1200,
       "Semillas y nueces mixtas": 960,
       "Granola": 100,
@@ -3628,14 +3621,14 @@ let pantryStock = {
       "Vinagre de vino tinto": 250,
       "Aceite de oliva": 400,
       "Flor de Jamaica molida en polvo": 200,
-      "Almendras fileteadas": 200,
+      "Almendras fileteadas": 0,
       "Hojas de laurel": 20,
       "Orégano": 150,
       "Tomillo": 20,
       "Pimienta negra": 70,
       "Comino": 50,
       "Clavo de olor": 50,
-      "Ajonjolí": 50,
+      "Ajonjolí": 0,
       "Manzanilla": 50,
       "Cúrcuma": 100,
       "Sal de mar": 3000,
@@ -3654,16 +3647,15 @@ let pantryStock = {
       "Palomitas para microondas": 600,
       "Grenetina": 112,
       "Saborizante para arroz": 48,
-      "Huevo": 105,
+      "Huevo": 30,
       "MultiSinergix®": 300,
       "AminoSinergix®": 200,
-      "Espinacas": 500,
+      "Espinacas": 0,
       "Espárragos": 800,
-      "Fresas": 1000,
+      "Fresas": 0,
       "Frambuesas": 340,
       "Queso ricotta": 1920,
       "Chile chipotle": 1320,
-      "Higos": 1,
       "Frijol pinto": 1
     };
     let checkedRows = {};
@@ -4197,11 +4189,20 @@ let pantryStock = {
       }
 
       // 12b. Jitomate, Cebolla, Tomate verde
-      if (/jitomate|cebolla|tomate/i.test(name)) {
+      if (/jitomate|cebolla/i.test(name) && !/en polvo/i.test(name)) {
         return [
+          { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' },
           { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
           { id: 'paquete_500', label: 'Bolsa (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+        ];
+      }
+      if (/tomate/i.test(name)) {
+        return [
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'paquete_500', label: 'Bolsa (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' }
         ];
       }
 
@@ -4450,8 +4451,8 @@ let pantryStock = {
 
       const name = (itemName || '').toLowerCase().trim();
 
-      // 0.0 Inmunidad Taxonómica Estricta: Aceites vegetales, VEVO, ajonjolí, mantequilla y ghee son grasas puras (NUNCA lácteos ni quesos)
-      if (/aceite|vevo|ajonjolí|ajonjoli|mantequilla|ghee/i.test(name)) {
+      // 0.0 Inmunidad Taxonómica Estricta: Aceites vegetales, VEVO, ajonjolí, mantequilla, manteca y ghee son grasas puras (NUNCA lácteos ni quesos)
+      if (/aceite|vevo|ajonjolí|ajonjoli|mantequilla|manteca|ghee/i.test(name)) {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
@@ -4460,9 +4461,14 @@ let pantryStock = {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
-      // 0.05 Prioridad Taxonómica Estricta: Hongos y Setas (NUNCA Grasas, NUNCA Carnes)
-      if (/portobello|champiñon|champiñones|champinon|champinones|setas|hongos/i.test(name)) {
+      // 0.05 Prioridad Taxonómica Estricta: Hongos y Setas (NUNCA Grasas, NUNCA Carnes; evita falso positivo con 'piñón' en 'champiñón')
+      if (/portobello|champiñon|champiñones|champinon|champinones|champiñón|setas|hongos/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
+      }
+
+      // 0.08 Prioridad Taxonómica Estricta: Sales compuestas y Cebolla en polvo (Condimentos, NUNCA Verduras)
+      if (/sal con ajo|cebolla en polvo/i.test(name)) {
+        return '🌶️ Chiles, Condimentos e Infusiones';
       }
 
       // 0.1 Prioridad Taxonómica Estricta: Cebollas (Verduras, Hortalizas y Frescos — NUNCA frutas)
@@ -4470,13 +4476,13 @@ let pantryStock = {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
-      // 0.15 Prioridad Taxonómica Estricta: Grasas, Aceites y Semillas (Almendras, nueces, chía, etc. — NUNCA carnes aun si dicen fileteadas)
-      if (/almendra|almendras|nuez|nueces|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli|aguacate|aceituna/i.test(name)) {
+      // 0.15 Prioridad Taxonómica Estricta: Grasas, Aceites y Semillas (Almendras, nueces, pistaches, chía, etc.)
+      if (/almendra|almendras|nuez|nueces|pistache|pistaches|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|\\bpiñón|\\bpiñones|pepita|pepitas|ajonjolí|ajonjoli|aguacate|aceituna/i.test(name)) {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
-      // 0.2 Prioridad Taxonómica Estricta: Carnes / Proteínas (Arrachera, Sirloin, Pechuga, Pescado, Sardinas, etc.)
-      if (/arrachera|corte|cortes|ribeye|sirloin|\bres\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|mojarra|tilapia|salmón|salmon|atún|atun|sardina|sardinas|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
+      // 0.2 Prioridad Taxonómica Estricta: Carnes / Proteínas (Arrachera, Sirloin, Flat steak, Carne molida, Pechuga, Pescado, Sardinas, etc.)
+      if (/arrachera|flat steak|carne molida|corte|cortes|ribeye|sirloin|\\bres\\b|pollo|pollos|pechuga|pechugas|pavo|pavos|tocino|jamón|jamon|pescado|pescados|mojarra|tilapia|salmón|salmon|atún|atun|sardina|sardinas|huevo|huevos|clara|claras|lomo|lomos|medallón|medallon|medallones|huachinango|robalo|róbalo|filete|filetes|machaca|tuétano|tuetano|costilla/i.test(name)) {
         return '🥩 Carnes, Pescados y Proteínas';
       }
 
@@ -4492,27 +4498,27 @@ let pantryStock = {
       }
 
       // 0.5 Prioridad Taxonómica Estricta: Hongos y Setas
-      if (/portobello|champiñon|champiñones|champinon|champinones|setas|hongos/i.test(name)) {
+      if (/portobello|champiñon|champiñones|champinon|champinones|champiñón|setas|hongos/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
       // 0.6 Prioridad Taxonómica Estricta: Jitomate / Tomate
-      if (/jitomate|tomate bola|\btomate\b/i.test(name) && !name.includes('tomillo')) {
+      if (/jitomate|tomate bola|\\btomate\\b/i.test(name) && !name.includes('tomillo')) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
       // 1. Suplementación Celular — Biotecnología
-      if (/33plus|34plus|sinergix|suplemento|suplementos|vitamina|vitaminas|colágeno|colageno|electrolitos|fórmula nootrópica|formula nootropica|fórmula reparadora|formula reparadora/i.test(name)) {
+      if (/33plus|34plus|sinergix|grenetina|suplemento|suplementos|vitamina|vitaminas|colágeno|colageno|electrolitos|fórmula nootrópica|formula nootropica|fórmula reparadora|formula reparadora/i.test(name)) {
         return '💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA';
       }
 
       // 3. Grasas, Aceites y Semillas
-      if (/aceite|mct|leche de coco|mantequilla|ghee|aguacate|aguacates|aceituna|aceitunas|nuez|nueces|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|piñón|piñones|pepita|pepitas|ajonjolí|ajonjoli|mayonesa/i.test(name)) {
+      if (/aceite|mct|leche de coco|mantequilla|manteca|ghee|aguacate|aguacates|aceituna|aceitunas|nuez|nueces|pistache|pistaches|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|\\bpiñón|\\bpiñones|pepita|pepitas|ajonjolí|ajonjoli|mayonesa/i.test(name)) {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
       // 4. Lácteos y Quesos
-      if (/queso|quesos|ricotta|qcotta|cottage|leche|crema|gouda|panela|parmesano|manchego|mascarpone|mozzarella|yoghurt|yogurt/i.test(name)) {
+      if (/queso|quesos|ricotta|qcotta|cottage|leche|crema|gouda|panela|parmesano|manchego|mascarpone|mozzarella|yoghurt|yogurt|\\byogur\\b/i.test(name)) {
         return '🧀 Lácteos y Quesos (Sin Gluten — Keto)';
       }
 
@@ -4522,12 +4528,12 @@ let pantryStock = {
       }
 
       // 6. Chiles, Condimentos e Infusiones
-      if (/\bsal\b|\bsal de\b|\bsal mineral\b|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|chipotle|chipotles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|jengibre|agua|infusión|infusion|\bté\b|\bte\b|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
+      if (/\\bsal\\b|\\bsal de\\b|\\bsal mineral\\b|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|chipotle|chipotles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|jengibre|agua|infusión|infusion|\\bté\\b|\\bte\\b|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
         return '🌶️ Chiles, Condimentos e Infusiones';
       }
 
       // 7. Verduras, Hortalizas y Frescos
-      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espárrago|esparrago|esparragos|espárragos|espinaca|espinacas|flor de calabaza|hinojo|jitomate|jitomates|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|ajo|dientes de ajo|champiñones|champinon|champinones|portobello|setas/i.test(name)) {
+      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|\\bcalabaza\\b|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espárrago|esparrago|esparragos|espárragos|espinaca|espinacas|flor de calabaza|hinojo|jitomate|jitomates|morrón|morron|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|\\bajo\\b|dientes de ajo|champiñones|champinon|champinones|champiñón|portobello|setas/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
@@ -4611,21 +4617,20 @@ let pantryStock = {
             "sku-003-queso-cottage": { item_num: 3, sku_code: "Costco-9636-COTTAGE", ticket_id: "9636", name: "Queso cottage", stock: 3880, unit: "g", packaging: "3,880 g", status: "canonical" },
             "sku-004-yogur-griego": { item_num: 4, sku_code: "Costco-9636-YOGHURT", ticket_id: "9636", name: "Yogur griego", stock: 3880, unit: "g", packaging: "3,880 g", status: "canonical" },
             "sku-017-agua-mineral": { item_num: 17, name: "Agua mineral", stock: 9355, unit: "ml", packaging: "9,355 ml (6 de 1.5 L + 1 de 355 ml)", status: "canonical" },
-            "sku-021-flat-steak": { item_num: 21, name: "Flat steak", stock: 1885, unit: "g", packaging: "1,885 g", status: "canonical" },
-            "sku-029-pechuga-de-pollo": { item_num: 29, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo", stock: 3454, unit: "g", packaging: "3,454 g", status: "canonical" },
+            "sku-021-flat-steak": { item_num: 21, name: "Flat steak", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+            "sku-029-pechuga-de-pollo": { item_num: 29, sku_code: "Costco-9636-POLLO", ticket_id: "9636", name: "Pechuga de pollo", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
             "sku-034-lechuga": { item_num: 34, sku_code: "Costco-9636-LECHUGA", ticket_id: "9636", name: "Lechuga", stock: 9, unit: "piezas", packaging: "9 piezas", status: "canonical" },
-            "sku-039-zarzamora": { item_num: 39, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamora", stock: 1010, unit: "g", packaging: "1,010 g", status: "canonical" },
-            "sku-040-champinon": { item_num: 40, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñón", stock: 2200, unit: "g", packaging: "2,200 g", status: "canonical" },
+            "sku-039-zarzamora": { item_num: 39, sku_code: "Costco-9636-ZARZ", ticket_id: "9636", name: "Zarzamora", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
+            "sku-040-champinon": { item_num: 40, sku_code: "98971", ticket_desc: "HONGO PORTO", name: "Champiñón", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
             "sku-077-oregano-delgado": { item_num: 77, name: "Orégano", stock: 150, unit: "g", packaging: "150 g", status: "canonical" },
             "sku-080-pimienta-negra": { item_num: 80, name: "Pimienta negra", stock: 70, unit: "g", packaging: "70 g", status: "canonical" },
             "sku-087-sal-marina-de-grano": { item_num: 87, name: "Sal de mar", stock: 3000, unit: "g", packaging: "3,000 g", status: "canonical" },
-            "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas", stock: 500, quantity_commercial: 1, commercial_unit: "domo_500", unit: "g", packaging: "500 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
+            "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas", stock: 0, quantity_commercial: 0, commercial_unit: "domo_500", unit: "g", packaging: "0 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
             "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos", stock: 800, quantity_commercial: 1, commercial_unit: "manojo_comercial", unit: "g", packaging: "800 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
-            "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas", stock: 1000, quantity_commercial: 1, commercial_unit: "caja_1000", unit: "g", packaging: "1,000 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
+            "fresas_frescas_tr04095": { item_num: 110, sku_code: "88587", ticket_desc: "FRESA", name: "Fresas", stock: 0, quantity_commercial: 0, commercial_unit: "caja_1000", unit: "g", packaging: "0 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
             "frambuesas_frescas_organicas": { item_num: 111, sku_code: "72612", ticket_desc: "FRAMBUESA", name: "Frambuesas", stock: 340, quantity_commercial: 1, commercial_unit: "domo_340", unit: "g", packaging: "340 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical" },
             "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso ricotta", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "1,920 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
-            "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical" },
-            "higos_frescos": { item_num: 114, sku_code: "73520", ticket_desc: "HIGO", name: "Higos", stock: 1, quantity_commercial: 1, commercial_unit: "paquete / domo", unit: "paquete / domo", packaging: "1 paquete / domo", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Fructosa Alta / Carga Glucémica Elevada (Proscrito de Protocolo Keto SSOT V36.6)" },
+            "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
             "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" }
           };
 
@@ -4641,6 +4646,51 @@ let pantryStock = {
           });
 
           localStorage.setItem('nutriketo_v43_canonical_dedup_ready', 'true');
+        }
+
+        // Restauración única V48: sincronizar las 21 ediciones de Alacena y 4 eliminaciones de Cuarentena del usuario
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v48_restored_user_inventory_sync') !== 'true') {
+          const restoredUserEdits = {
+            "Fresas": { stock: 0, unit: "g", sku: "fresas_frescas_tr04095" },
+            "Zarzamora": { stock: 0, unit: "g", sku: "sku-039-zarzamora" },
+            "Aguacate": { stock: 2, unit: "piezas", sku: "sku-038-aguacate" },
+            "Ajonjolí": { stock: 0, unit: "g", sku: "sku-084-ajonjoli" },
+            "Almendras fileteadas": { stock: 0, unit: "g", sku: "sku-075-almendras-fileteadas" },
+            "Champiñón": { stock: 0, unit: "g", sku: "sku-040-champinon" },
+            "Nuez de la India": { stock: 0, unit: "g", sku: "sku-043-nuez-de-la-india" },
+            "Fajitas de mojarra": { stock: 0, unit: "g", sku: "sku-025-fajitas-de-mojarra" },
+            "Filete de atún": { stock: 0, unit: "g", sku: "sku-026-filete-de-atun" },
+            "Huevo": { stock: 30, unit: "piezas", sku: "sku-104-huevo" },
+            "Lomo de salmón": { stock: 0, unit: "g", sku: "sku-023-lomo-de-salmon" },
+            "Pechuga de pollo": { stock: 0, unit: "g", sku: "sku-029-pechuga-de-pollo" },
+            "Calabaza": { stock: 0, unit: "piezas", sku: "sku-032-calabaza" },
+            "Carne molida": { stock: 0, unit: "g", sku: "sku-024-carne-molida" },
+            "Flat steak": { stock: 0, unit: "g", sku: "sku-021-flat-steak" },
+            "Queso de cabra": { stock: 0, unit: "g", sku: "sku-009-queso-de-cabra" },
+            "Queso manchego": { stock: 0, unit: "g", sku: "sku-008-queso-manchego" },
+            "Cebolla": { stock: 1, unit: "piezas", sku: "sku-033-cebolla" },
+            "Espinacas": { stock: 0, unit: "g", sku: "espinacas_baby_tiernas" },
+            "Flor de calabaza": { stock: 0, unit: "manojo", sku: "sku-031-flor-de-calabaza" },
+            "Jitomate": { stock: 1, unit: "piezas", sku: "sku-027-jitomate" }
+          };
+          Object.keys(restoredUserEdits).forEach(itemName => {
+            const ed = restoredUserEdits[itemName];
+            pantryStock[itemName] = ed.stock;
+            if (window.pantryCardUnits) {
+              window.pantryCardUnits[itemName] = ed.unit;
+            }
+            if (window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[ed.sku]) {
+              window.PANTRY_STOCK_INVENTORY[ed.sku].stock = ed.stock;
+              window.PANTRY_STOCK_INVENTORY[ed.sku].unit = ed.unit;
+              window.PANTRY_STOCK_INVENTORY[ed.sku].packaging = `${ed.stock} ${ed.unit}`;
+            }
+          });
+          ["Elote", "Higos", "Nogada", "Zanahoria"].forEach(delItem => {
+            if (!deletedPantryItems.some(d => (typeof d === 'string' ? d : '').toLowerCase() === delItem.toLowerCase())) {
+              deletedPantryItems.push(delItem);
+            }
+          });
+          localStorage.setItem('nutriketo_v48_restored_user_inventory_sync', 'true');
         }
 
         if (typeof sanitizeAndDeduplicateFarmHarvestState === 'function') {
@@ -4812,10 +4862,10 @@ let pantryStock = {
 
     function loadAppState() {
       try {
-        const defaultS43Harvest = ["Espinacas", "Brócoli", "Espárragos", "Nopales", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones", "Nuez pecana"];
+        const defaultS43Harvest = ["Acelgas", "Cilantro", "Limones", "Nopales", "Nuez pecana"];
         const storedVersion = localStorage.getItem('nutriketo_app_version');
         if (storedVersion !== CURRENT_APP_VERSION) {
-          console.warn('Detectada versión anterior de localStorage. Migrando a V43.2 con sustantivos puros de cosecha...');
+          console.warn('Detectada versión anterior de localStorage. Migrando sin pérdida de Alacena ni Cosecha...');
           const oldDataStr = localStorage.getItem(LOCAL_STORAGE_KEY) || localStorage.getItem('nutriketo_app_state_v40_2_ssot');
           let oldState = null;
           try { if (oldDataStr) oldState = JSON.parse(oldDataStr); } catch(e){}
@@ -4837,6 +4887,10 @@ let pantryStock = {
             if (Array.isArray(oldState.selectedHarvest)) selectedHarvest = oldState.selectedHarvest;
             if (Array.isArray(oldState.customFarmItems)) customFarmItems = oldState.customFarmItems;
             if (Array.isArray(oldState.deletedFarmItems) && oldState.deletedFarmItems.length > 0) deletedFarmItems = oldState.deletedFarmItems;
+            if (Array.isArray(oldState.deletedPantryItems) && oldState.deletedPantryItems.length > 0) deletedPantryItems = oldState.deletedPantryItems;
+            if (oldState.pantryStock && typeof oldState.pantryStock === 'object') pantryStock = Object.assign({}, pantryStock, oldState.pantryStock);
+            if (oldState.pantryCardUnits && typeof oldState.pantryCardUnits === 'object') window.pantryCardUnits = Object.assign(window.pantryCardUnits || {}, oldState.pantryCardUnits);
+            if (oldState.pantryStockInventory && typeof oldState.pantryStockInventory === 'object') window.PANTRY_STOCK_INVENTORY = Object.assign(window.PANTRY_STOCK_INVENTORY || {}, oldState.pantryStockInventory);
             if (oldState.mealDinersState) mealDinersState = oldState.mealDinersState;
             if (oldState.dispatchedMeals) dispatchedMeals = oldState.dispatchedMeals;
             if (Array.isArray(oldState.mealFeedbackLedger)) mealFeedbackLedger = oldState.mealFeedbackLedger;
@@ -5041,6 +5095,23 @@ let pantryStock = {
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
         localStorage.setItem('nutriketo_app_version', CURRENT_APP_VERSION);
+        if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location && /^https?:/i.test(window.location.protocol)) {
+          fetch('/api/v1/inventory/live-sync', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              updatedAt: new Date().toISOString(),
+              activeWeek,
+              activeDiners,
+              selectedHarvest,
+              customFarmItems,
+              deletedFarmItems,
+              deletedPantryItems,
+              pantryStock,
+              pantryCardUnits: window.pantryCardUnits || {}
+            })
+          }).catch(() => {});
+        }
       } catch(e) {
         console.error("Error al guardar localStorage:", e);
       }

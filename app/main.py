@@ -190,3 +190,21 @@ def compile_phases(request: CompilePhasesRequest):
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@app.post("/api/v1/inventory/live-sync", status_code=status.HTTP_200_OK)
+async def live_sync_inventory_snapshot(payload: dict):
+    """
+    Persiste en tiempo real cualquier cambio de inventario realizado en el navegador
+    (Alacena, Cuarentena y Cosecha Activa en Granja El Herami) hacia `live_inventory_state.json`.
+    """
+    import json
+    try:
+        root_dir = os.path.dirname(os.path.dirname(__file__))
+        target_path = os.path.join(root_dir, "live_inventory_state.json")
+        with open(target_path, "w", encoding="utf-8") as f:
+            json.dump(payload, f, ensure_ascii=False, indent=2)
+        return {"status": "synced", "path": "live_inventory_state.json"}
+    except Exception as e:
+        logger.error(f"Error en live_sync_inventory_snapshot: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
