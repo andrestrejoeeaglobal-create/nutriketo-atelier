@@ -25,18 +25,19 @@ def _strip_accents(text: str) -> str:
 # INVENTARIO CANÓNICO BASE (ALACENA Y GRANJA EL HERAMI)
 # ---------------------------------------------------------------------------
 DEFAULT_FARM_HARVEST: List[str] = [
-    "Espinacas frescas",
+    "Espinacas",
     "Calabacitas verdes tiernas",
-    "Brócoli fresco",
+    "Brócoli",
     "Espárragos verdes",
     "Nopales tiernos",
-    "Ejotes frescos",
-    "Cilantro fresco",
-    "Arúgula fresca",
-    "Coliflor fresca",
-    "Limones agrios frescos de la granja",
-    "Nuez pecana fresca de la granja",
+    "Ejotes",
+    "Cilantro",
+    "Arúgula",
+    "Coliflor",
+    "Limones agrios de la granja",
+    "Nuez pecana de la granja",
 ]
+
 
 DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
     "Huevo": (105.0, "piezas"),
@@ -391,7 +392,12 @@ def audit_week_plan(
     pantry = pantry_stock if pantry_stock is not None else DEFAULT_PANTRY_STOCK
     harvest = farm_harvest if farm_harvest is not None else DEFAULT_FARM_HARVEST
 
-    harvest_norm_set = {_strip_accents(h) for h in harvest}
+    harvest_norm_set = set()
+    for h in harvest:
+        hn = _strip_accents(h)
+        harvest_norm_set.add(hn)
+        harvest_norm_set.add(re.sub(r"\s*\bfresc[oa]s?\b", "", hn).strip())
+
     pantry_norm_map: Dict[str, Tuple[str, float, str]] = {
         _strip_accents(k): (k, float(v[0]), v[1]) for k, v in pantry.items()
     }
@@ -534,7 +540,7 @@ def audit_week_plan(
                     )
                 if super_dense_beef and "ensalada" not in _strip_accents(starter.get("title", "")):
                     violations.append(
-                        f"[R2] {loc_label}: Corte denso de res ('{main.get('title')}') exige obligatoriamente Ensalada Verde Fresca en la Entrada (encontrado: '{starter.get('title')}')."
+                        f"[R2] {loc_label}: Corte denso de res ('{main.get('title')}') exige obligatoriamente Ensalada Verde en la Entrada (encontrado: '{starter.get('title')}')."
                     )
 
             # [R3] Unicidad de Arquetipo Culinario y Técnica en Plato Principal
@@ -594,11 +600,11 @@ def audit_week_plan(
 
             # Reglas específicas por tipo de servicio (Desayuno / Comida / Cena)
             if m_type_norm == "desayuno":
-                # Exigencia de Nuez pecana fresca de la granja y Semillas de chía en las 7 entradas de desayuno
+                # Exigencia de Nuez pecana de la granja y Semillas de chía en las 7 entradas de desayuno
                 starter_ings_norm = {_strip_accents(i.get("name", "")): i for i in starter.get("ingredients", [])}
                 if not any("nuez pecana" in k for k in starter_ings_norm):
                     violations.append(
-                        f"[R8] {loc_label}: La entrada del desayuno debe incluir obligatoriamente 'Nuez pecana fresca de la granja'."
+                        f"[R8] {loc_label}: La entrada del desayuno debe incluir obligatoriamente 'Nuez pecana de la granja'."
                     )
                 if not any("chia" in k for k in starter_ings_norm):
                     violations.append(
@@ -967,6 +973,14 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
                 violations.append(
                     f"[R6] {c_label}: El ingrediente '{ing.get('name')}' ({amt_val} {ing.get('unit')}) debe tener una cantidad entera para 6 comensales."
                 )
+
+    # Prohibición del adjetivo 'fresco/fresca/frescos/frescas' en títulos, notas, CoCT, pasos e ingredientes
+    full_dish_text = f"{title_norm} {title_and_note_norm} {coct_and_steps_norm} {ings_norm_str}"
+    if re.search(r"\bfresc[oa]s?\b", full_dish_text):
+        violations.append(
+            f"[R7] {c_label}: Prohibido usar el adjetivo 'fresco/fresca/frescos/frescas' en recetas o insumos."
+        )
+
 
 
 

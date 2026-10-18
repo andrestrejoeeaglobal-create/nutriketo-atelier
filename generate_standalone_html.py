@@ -2280,6 +2280,10 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
         if (weekdayRe.test(String(dish.note || ''))) {
           violations.push(`[R7] ${loc} (${role}): Nota contiene nombre de día de la semana.`);
         }
+        const fullDishTextNorm = `${dishTextNorm} ${_normTextHardGate(dish.note || '')} ${_normTextHardGate(JSON.stringify(dish.coct_reasoning || {}))} ${_normTextHardGate((dish.steps || []).join(' '))}`;
+        if (/\\bfresc[oa]s?\\b/i.test(fullDishTextNorm)) {
+          violations.push(`[R7] ${loc} (${role}): Prohibido usar el adjetivo 'fresco/fresca/frescos/frescas'.`);
+        }
         const fbMod = _getFeedbackWeightModifierForDish(dish.title || '');
         if (fbMod <= 0.50) {
           violations.push(`[R11] ${loc} (${role}): Platillo penalizado en MEAL_FEEDBACK_LEDGER (${fbMod}x).`);
@@ -2292,7 +2296,7 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
       if (mNorm.includes('desayuno')) {
         const stIngs = Array.isArray((meal.starter || {}).ingredients) ? meal.starter.ingredients.map(i => _normTextHardGate(i.name)) : [];
         if (!stIngs.some(k => k.includes('nuez pecana'))) {
-          violations.push(`[R8] ${loc}: Entrada de desayuno sin 'Nuez pecana fresca de la granja'.`);
+          violations.push(`[R8] ${loc}: Entrada de desayuno sin 'Nuez pecana de la granja'.`);
         }
         if (!stIngs.some(k => k.includes('chia'))) {
           violations.push(`[R8] ${loc}: Entrada de desayuno sin 'Semillas de chía orgánicas'.`);
@@ -2315,7 +2319,7 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
         if (isSuperDenseBeef) {
           const stTitleNorm = _normTextHardGate((meal.starter || {}).title || '');
           if (!stTitleNorm.includes('ensalada')) {
-            violations.push(`[R2] ${loc}: Corte denso de res exige Ensalada Verde Fresca en Entrada.`);
+            violations.push(`[R2] ${loc}: Corte denso de res exige Ensalada Verde en Entrada.`);
           }
           ['starter', 'side'].forEach(rKey => {
             const rIngs = Array.isArray((meal[rKey] || {}).ingredients) ? meal[rKey].ingredients.map(i => _normTextHardGate(i.name)) : [];
@@ -3125,7 +3129,7 @@ function selectWeek(weekKey) {
 
           <!-- Añadir Nuevo Insumo a Cosecha -->
           <div class="add-custom-box">
-            <input type="text" id="new-harvest-name" class="add-input" placeholder="Ej. Romero fresco, Epazote fresco..." onkeypress="if(event.key==='Enter') addNewHarvestItem()">
+            <input type="text" id="new-harvest-name" class="add-input" placeholder="Ej. Romero, Epazote..." onkeypress="if(event.key==='Enter') addNewHarvestItem()">
             <button type="button" class="btn-add-item" onclick="addNewHarvestItem()">➕ Añadir Insumo a Cosecha</button>
           </div>
         </div>
@@ -3443,16 +3447,16 @@ window.PANTRY_STOCK_INVENTORY = {
       "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
-      "arilos-granada": { name: "Arilos de granada fresca", stock: 0, unit: "g", status: "canonical" },
-      "moras-frescas": { name: "Moras frescas", stock: 0, unit: "g", status: "canonical" },
+      "arilos-granada": { name: "Arilos de granada", stock: 0, unit: "g", status: "canonical" },
+      "moras-frescas": { name: "Moras", stock: 0, unit: "g", status: "canonical" },
       "frambuesas-frescas": { name: "Frambuesas", stock: 0, unit: "g", status: "canonical" },
-      "arandanos-frescos": { name: "Arándanos frescos", stock: 0, unit: "g", status: "canonical" },
-      "pitaya-fresca": { name: "Pitaya fresca", stock: 0, unit: "g", status: "canonical" },
+      "arandanos-frescos": { name: "Arándanos", stock: 0, unit: "g", status: "canonical" },
+      "pitaya-fresca": { name: "Pitaya", stock: 0, unit: "g", status: "canonical" },
       "multisinergix": { name: "MultiSinergix®", stock: 0, unit: "g", status: "canonical" },
       "aminosinergix": { name: "AminoSinergix®", stock: 0, unit: "g", status: "canonical" },
       "33plus": { name: "MultiSinergix®", stock: 0, unit: "g", status: "canonical" },
       "34plus": { name: "AminoSinergix®", stock: 0, unit: "g", status: "canonical" },
-      "ajo-fresco": { name: "Ajo fresco", stock: 0, unit: "g", status: "canonical" }
+      "ajo-fresco": { name: "Ajo", stock: 0, unit: "g", status: "canonical" }
     };
 
     window.LAST_PANTRY_INTAKE_EVENT = {
@@ -3473,31 +3477,45 @@ window.PANTRY_STOCK_INVENTORY = {
       }
     };
 
+    function stripFrescoAdjective(str) {
+      if (!str || typeof str !== 'string') return str;
+      if (str === '🥬 Verduras, Hortalizas y Frescos' || str === '🛒 Abarrotes y Frescos') return str;
+      return str
+        .replace(/\\bEntrada\\s+fresca\\s+y\\b/gi, 'Entrada ligera y')
+        .replace(/\\bcama\\s+fresca\\s+de\\b/gi, 'cama de')
+        .replace(/\\s+\\bfresc[oa]s?\\b/gi, '')
+        .replace(/\\bfresc[oa]s?\\b\\s+/gi, '')
+        .replace(/\\bfresc[oa]s?\\b/gi, '')
+        .replace(/\\s{2,}/g, ' ')
+        .replace(/\\s+([,.;:)])/g, '$1')
+        .trim();
+    }
+
     const FARM_MASTER_CATALOG = [
-      "Espinacas frescas",
+      "Espinacas",
       "Calabacitas verdes tiernas",
-      "Brócoli fresco",
+      "Brócoli",
       "Espárragos verdes",
       "Nopales tiernos",
-      "Ejotes frescos",
-      "Cilantro fresco",
-      "Arúgula fresca",
-      "Coliflor fresca",
-      "Limones agrios frescos de la granja",
-      "Nuez pecana fresca de la granja",
-      "Pitayas frescas",
-      "Granadas frescas",
-      "Fresas frescas",
-      "Frambuesas frescas",
-      "Moras frescas",
-      "Zarzamoras frescas",
-      "Arándanos frescos",
-      "Hojas de menta fresca",
-      "Toronjil fresco",
-      "Manzanilla fresca",
-      "Jamaica fresca",
-      "Romero fresco",
-      "Epazote fresco",
+      "Ejotes",
+      "Cilantro",
+      "Arúgula",
+      "Coliflor",
+      "Limones agrios de la granja",
+      "Nuez pecana de la granja",
+      "Pitayas",
+      "Granadas",
+      "Fresas",
+      "Frambuesas",
+      "Moras",
+      "Zarzamoras",
+      "Arándanos",
+      "Hojas de menta",
+      "Toronjil",
+      "Manzanilla",
+      "Jamaica",
+      "Romero",
+      "Epazote",
       "Agua purificada de manantial"
     ];
     let customFarmItems = [];
@@ -3507,7 +3525,7 @@ window.PANTRY_STOCK_INVENTORY = {
     let activeWeek = "Semana 43 (18 al 24 de Octubre de 2026)";
     let selectedIdx = 0;
     let activeDiners = 6;
-    let selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja", "Nuez pecana fresca de la granja"];
+    let selectedHarvest = ["Espinacas", "Calabacitas verdes tiernas", "Brócoli", "Espárragos verdes", "Nopales tiernos", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones agrios de la granja", "Nuez pecana de la granja"];
 let pantryStock = {
       "Mantequilla": 290,
       "Mostaza": 150,
@@ -4596,6 +4614,33 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v43_canonical_dedup_ready', 'true');
         }
 
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v43_harvest_no_fresco_sync') !== 'true') {
+          const s43RequiredHarvest = ["Espinacas", "Calabacitas verdes tiernas", "Brócoli", "Espárragos verdes", "Nopales tiernos", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones agrios de la granja", "Nuez pecana de la granja"];
+          const s43ReqSlugs = new Set(s43RequiredHarvest.map(n => normalizeToCanonicalSlug(n)));
+          deletedFarmItems = (deletedFarmItems || []).map(d => stripFrescoAdjective(typeof d === 'string' ? d : '')).filter(d => d && !s43ReqSlugs.has(normalizeToCanonicalSlug(d)));
+          const seenC = new Set(FARM_MASTER_CATALOG.map(n => normalizeToCanonicalSlug(n)));
+          customFarmItems = (customFarmItems || []).map(c => stripFrescoAdjective(typeof c === 'string' ? c : '')).filter(c => {
+            if (!c) return false;
+            const sl = normalizeToCanonicalSlug(c);
+            if (!sl || seenC.has(sl)) return false;
+            seenC.add(sl);
+            return true;
+          });
+          const seenS = new Set();
+          const mergedSel = [];
+          [...s43RequiredHarvest, ...(selectedHarvest || [])].forEach(h => {
+            const cleanH = stripFrescoAdjective(typeof h === 'string' ? h : (h.item_name || h.name || ''));
+            if (!cleanH) return;
+            const sl = normalizeToCanonicalSlug(cleanH);
+            if (sl && !seenS.has(sl)) {
+              seenS.add(sl);
+              mergedSel.push(cleanH);
+            }
+          });
+          selectedHarvest = mergedSel;
+          localStorage.setItem('nutriketo_v43_harvest_no_fresco_sync', 'true');
+        }
+
         // 1. Eliminar siempre llaves secundarias obsoletas o duplicadas
         OBSOLETE_DUPLICATE_KEYS.forEach(dupKey => {
           delete window.PANTRY_STOCK_INVENTORY[dupKey];
@@ -4776,7 +4821,7 @@ let pantryStock = {
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
 
           if (Array.isArray(state.deletedFarmItems)) {
-            deletedFarmItems = state.deletedFarmItems;
+            deletedFarmItems = state.deletedFarmItems.map(d => stripFrescoAdjective(typeof d === 'string' ? d : ''));
           } else {
             deletedFarmItems = [];
           }
@@ -4788,27 +4833,35 @@ let pantryStock = {
           }
 
           if (Array.isArray(state.customFarmItems)) {
-            customFarmItems = state.customFarmItems.filter(f => {
-              const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
-              return !/miel|durazno|higo|frijol/i.test(fStr);
-            }).map(f => {
-              const fStr = typeof f === 'string' ? f : (f.item_name || f.name || '');
-              if (/nuex.*pecan|nuez.*pecan/i.test(fStr)) return "Nuez pecana fresca de la granja";
-              return f;
+            const seenCustSlugs = new Set();
+            customFarmItems = [];
+            state.customFarmItems.forEach(f => {
+              const fStr = stripFrescoAdjective(typeof f === 'string' ? f : (f.item_name || f.name || ''));
+              if (!fStr || /miel|durazno|higo|frijol/i.test(fStr)) return;
+              const mapped = (/nuex.*pecan|nuez.*pecan/i.test(fStr)) ? "Nuez pecana de la granja" : fStr;
+              const sl = normalizeToCanonicalSlug(mapped);
+              if (sl && !seenCustSlugs.has(sl)) {
+                seenCustSlugs.add(sl);
+                customFarmItems.push(mapped);
+              }
             });
           }
 
           if (Array.isArray(state.selectedHarvest)) {
-            selectedHarvest = state.selectedHarvest.filter(h => {
-              const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
-              return !/miel|durazno|higo|frijol/i.test(hStr);
-            }).map(h => {
-              const hStr = typeof h === 'string' ? h : (h.item_name || h.name || '');
-              if (/nuex.*pecan|nuez.*pecan/i.test(hStr)) return "Nuez pecana fresca de la granja";
-              return h;
+            const seenSelSlugs = new Set();
+            selectedHarvest = [];
+            state.selectedHarvest.forEach(h => {
+              const hStr = stripFrescoAdjective(typeof h === 'string' ? h : (h.item_name || h.name || ''));
+              if (!hStr || /miel|durazno|higo|frijol/i.test(hStr)) return;
+              const mapped = (/nuex.*pecan|nuez.*pecan/i.test(hStr)) ? "Nuez pecana de la granja" : hStr;
+              const sl = normalizeToCanonicalSlug(mapped);
+              if (sl && !seenSelSlugs.has(sl)) {
+                seenSelSlugs.add(sl);
+                selectedHarvest.push(mapped);
+              }
             });
           } else {
-            selectedHarvest = ["Espinacas frescas", "Calabacitas verdes tiernas", "Brócoli fresco", "Espárragos verdes", "Nopales tiernos", "Ejotes frescos", "Cilantro fresco", "Arúgula fresca", "Coliflor fresca", "Limones agrios frescos de la granja", "Nuez pecana fresca de la granja"];
+            selectedHarvest = ["Espinacas", "Calabacitas verdes tiernas", "Brócoli", "Espárragos verdes", "Nopales tiernos", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones agrios de la granja", "Nuez pecana de la granja"];
           }
 
           if (state.pantryStock && typeof state.pantryStock === 'object') {
@@ -5308,16 +5361,26 @@ let pantryStock = {
       const hGrid = document.getElementById('harvest-checklist-grid');
       if (hGrid) {
         hGrid.innerHTML = '';
-        const activeFarmMaster = FARM_MASTER_CATALOG.filter(name => {
+        const activeFarmMaster = FARM_MASTER_CATALOG.map(n => stripFrescoAdjective(n)).filter(name => {
           const slug = normalizeToCanonicalSlug(name);
           return !deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === name.toLowerCase());
         });
-        const activeCustomFarm = customFarmItems.filter(name => {
+        const activeCustomFarm = customFarmItems.map(n => stripFrescoAdjective(n)).filter(name => {
           const slug = normalizeToCanonicalSlug(name);
           return !deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === slug || d.toLowerCase() === name.toLowerCase());
         });
 
-        const allFarmNames = [...new Set([...activeFarmMaster, ...activeCustomFarm])];
+        const seenFarmSlugs = new Set();
+        const allFarmNames = [];
+        [...activeFarmMaster, ...activeCustomFarm].forEach(rawName => {
+          const cleanName = stripFrescoAdjective(rawName);
+          if (!cleanName) return;
+          const slug = normalizeToCanonicalSlug(cleanName);
+          if (!seenFarmSlugs.has(slug)) {
+            seenFarmSlugs.add(slug);
+            allFarmNames.push(cleanName);
+          }
+        });
         allFarmNames.sort((a, b) => a.localeCompare(b));
 
         allFarmNames.forEach((itemName, idx) => {
@@ -5533,11 +5596,12 @@ let pantryStock = {
         return;
       }
 
+      val = stripFrescoAdjective(val);
       if (/nuex/i.test(val)) {
         val = val.replace(/nuex/gi, 'nuez');
       }
       if (/^nuez\\s+pecana$/i.test(val.trim())) {
-        val = "Nuez pecana fresca de la granja";
+        val = "Nuez pecana de la granja";
       }
 
       const slug = normalizeToCanonicalSlug(val);
@@ -6542,9 +6606,9 @@ function sanitizeMarketRawMaterial(rawName) {
     .trim();
 
   const lower = clean.toLowerCase();
-  if (lower.includes('portobello') || lower.includes('champiñon') || lower.includes('champiñones') || lower.includes('champinon') || lower.includes('champinones') || lower.includes('setas') || lower.includes('hongos')) return 'Champiñones Portobello frescos';
-  if (lower.includes('jitomate') || (lower.includes('tomate') && !lower.includes('tomillo'))) return 'Jitomate bola fresco';
-  if (lower.includes('aguacate')) return 'Aguacate Hass fresco';
+  if (lower.includes('portobello') || lower.includes('champiñon') || lower.includes('champiñones') || lower.includes('champinon') || lower.includes('champinones') || lower.includes('setas') || lower.includes('hongos')) return 'Champiñones Portobello';
+  if (lower.includes('jitomate') || (lower.includes('tomate') && !lower.includes('tomillo'))) return 'Jitomate bola';
+  if (lower.includes('aguacate')) return 'Aguacate Hass';
 
   // Disolver disyunciones culinarias de lácteos hacia SKUs canónicos deterministas
   if (lower.includes('parmesano o de cabra') || (lower.includes('parmesano') && !lower.includes('nube'))) return 'Queso Parmesano artesanal';
@@ -6553,29 +6617,29 @@ function sanitizeMarketRawMaterial(rawName) {
   if (lower.includes('queso crema') || lower.includes('crema suave')) return 'Queso crema suave artesanal';
   if (lower.includes('panela')) return 'Queso Panela artesanal';
 
-  if (lower.includes('pepino')) return 'Pepino blanco fresco';
-  if (lower.includes('apio')) return 'Apio fresco de la granja';
+  if (lower.includes('pepino')) return 'Pepino blanco';
+  if (lower.includes('apio')) return 'Apio de la granja';
   if (lower.includes('zucchini')) return 'Calabacita Zucchini';
   if (lower.includes('calabacita')) return 'Calabacitas tiernas';
-  if (lower.includes('hinojo')) return 'Hinojo fresco';
+  if (lower.includes('hinojo')) return 'Hinojo';
   if (lower.includes('chayote')) return 'Chayotes tiernos';
-  if (lower.includes('esparragos') || lower.includes('espárragos')) return 'Espárragos verdes frescos de la granja';
-  if (lower.includes('cilantro')) return 'Cilantro fresco de la granja';
-  if (lower.includes('cebollín') || lower.includes('cebollin')) return 'Cebollín fresco de la granja';
-  if (lower.includes('dientes de ajo') || lower === 'ajo' || lower.includes('ajo fresco')) return 'Ajo fresco';
+  if (lower.includes('esparragos') || lower.includes('espárragos')) return 'Espárragos verdes de la granja';
+  if (lower.includes('cilantro')) return 'Cilantro de la granja';
+  if (lower.includes('cebollín') || lower.includes('cebollin')) return 'Cebollín de la granja';
+  if (lower.includes('dientes de ajo') || lower === 'ajo' || lower.includes('ajo fresco')) return 'Ajo';
   if (lower.includes('semillas de chía') || lower.includes('semillas de chia')) return 'Semillas de chía orgánicas';
-  if (lower.includes('limón') || lower.includes('limon')) return 'Jugo de limón fresco recién exprimido';
+  if (lower.includes('limón') || lower.includes('limon')) return 'Jugo de limón recién exprimido';
   if (lower.includes('pimienta negra')) return 'Pimienta negra recién molida';
   if (lower.includes('sal de mar') || lower.includes('sal mineral') || lower.includes('sal de colima') || lower === 'sal') return 'Sal de mar';
-  if (lower.includes('cebolla blanca') && !lower.includes('morada') && !lower.includes('romero')) return 'Cebolla blanca fresca';
+  if (lower.includes('cebolla blanca') && !lower.includes('morada') && !lower.includes('romero')) return 'Cebolla blanca';
   if (lower === 'agua' || lower.includes('agua purificada')) return 'Agua purificada';
-  return clean;
+  return stripFrescoAdjective(clean);
 }
 
 function processMarketItem(rawName, totalQty, unit) {
   if (!rawName) return [];
   if (typeof activeWeek !== 'undefined' && activeWeek && activeWeek.includes('43')) {
-    return [{ name: rawName.trim(), qty: totalQty, unit: unit }];
+    return [{ name: stripFrescoAdjective(rawName.trim()), qty: totalQty, unit: unit }];
   }
 
   let cleanStr = rawName
@@ -6595,26 +6659,26 @@ function processMarketItem(rawName, totalQty, unit) {
 
   if (lower.includes('romero') && lower.includes('cebolla')) {
     return [
-      { name: 'Romero fresco', qty: totalQty * 0.4, unit: 'g' },
-      { name: 'Cebolla blanca fresca', qty: totalQty * 0.6, unit: 'g' }
+      { name: 'Romero', qty: totalQty * 0.4, unit: 'g' },
+      { name: 'Cebolla blanca', qty: totalQty * 0.6, unit: 'g' }
     ];
   }
 
   if (lower.includes('jitomate') && lower.includes('cebolla')) {
     return [
-      { name: 'Jitomate bola fresco', qty: totalQty * 0.6, unit: 'g' },
-      { name: 'Cebolla morada fresca', qty: totalQty * 0.4, unit: 'g' }
+      { name: 'Jitomate bola', qty: totalQty * 0.6, unit: 'g' },
+      { name: 'Cebolla morada', qty: totalQty * 0.4, unit: 'g' }
     ];
   }
   if (lower.includes('ajo') && lower.includes('cebolla')) {
     return [
-      { name: 'Ajo fresco', qty: totalQty * 0.4, unit: 'g' },
-      { name: 'Cebolla blanca fresca', qty: totalQty * 0.6, unit: 'g' }
+      { name: 'Ajo', qty: totalQty * 0.4, unit: 'g' },
+      { name: 'Cebolla blanca', qty: totalQty * 0.6, unit: 'g' }
     ];
   }
   if (lower.includes('jugo de limón') && lower.includes('sal marina')) {
     return [
-      { name: 'Jugo de limón fresco recién exprimido', qty: totalQty * 0.7, unit: 'ml' },
+      { name: 'Jugo de limón recién exprimido', qty: totalQty * 0.7, unit: 'ml' },
       { name: 'Sal de mar mineral en escamas', qty: totalQty * 0.3, unit: 'g' }
     ];
   }
@@ -6627,7 +6691,7 @@ function processMarketItem(rawName, totalQty, unit) {
   if (lower.includes('sal de mar') && lower.includes('tomillo')) {
     return [
       { name: 'Sal de mar mineral en escamas', qty: totalQty * 0.7, unit: 'g' },
-      { name: 'Tomillo fresco', qty: totalQty * 0.3, unit: 'g' }
+      { name: 'Tomillo', qty: totalQty * 0.3, unit: 'g' }
     ];
   }
   if (lower.includes('sal de mar') && lower.includes('pimienta')) {
@@ -6638,7 +6702,7 @@ function processMarketItem(rawName, totalQty, unit) {
   }
   if (lower.includes('cilantro') && lower.includes('orégano')) {
     return [
-      { name: 'Cilantro fresco de la granja', qty: totalQty * 0.6, unit: 'g' },
+      { name: 'Cilantro de la granja', qty: totalQty * 0.6, unit: 'g' },
       { name: 'Orégano seco', qty: totalQty * 0.4, unit: 'g' }
     ];
   }
@@ -6749,7 +6813,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
                 const itemQty = itemObj.qty;
                 const itemUnit = itemObj.unit;
 
-                if (canonicalName === 'Aguacate Hass fresco') {
+                if (canonicalName === 'Aguacate Hass' || canonicalName === 'Aguacate' || canonicalName === 'Aguacate Hass fresco') {
                   let pieces = 0;
                   if (itemUnit === 'piezas' || itemUnit === 'pz' || itemUnit === 'pieza') {
                     pieces = itemQty;
@@ -6872,7 +6936,7 @@ function calculateNetShoppingList(diners) {
 
   // === INTERCEPTOR FORZADO DE PUREZA ATÓMICA DE MERCADO ===
   let itemsToMutate = rawItemsToProcess.map(it => {
-    let name = it.name || it.item_name || '';
+    let name = stripFrescoAdjective(it.name || it.item_name || '');
     let cat = it.category || '';
 
     if (typeof activeWeek !== 'undefined' && activeWeek && (activeWeek.includes('40') || activeWeek.includes('43'))) {
@@ -6894,15 +6958,15 @@ function calculateNetShoppingList(diners) {
     }
     // 4. Homologar cebolla blanca
     if (/cebolla blanca/i.test(name) && !/morada/i.test(name) && !/romero/i.test(name)) {
-      name = 'Cebolla blanca fresca';
+      name = 'Cebolla blanca';
       cat = '🥬 Verduras, Hortalizas y Frescos';
     }
     // 5. Homologar alcaparras y ajo
     if (/alcaparra/i.test(name)) {
       name = 'Alcaparras en salmuera';
     }
-    if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
-      name = 'Ajo fresco';
+    if (/dientes de ajo/i.test(name) || /ajo/i.test(name) && name.toLowerCase() === 'ajo') {
+      name = 'Ajo';
     }
     if (/ch[ií]a/i.test(name)) {
       name = 'Semillas de chía orgánicas';
@@ -6925,8 +6989,8 @@ function calculateNetShoppingList(diners) {
     let name = it.name || it.item_name || '';
     if (/romero.*cebolla/i.test(name)) {
       let totalQty = parseFloat(it.quantity) || 99;
-      expandedItemsList.push({ ...it, name: 'Romero fresco', item_name: 'Romero fresco', quantity: totalQty * 0.4, category: '🌶️ Chiles, Condimentos e Infusiones' });
-      expandedItemsList.push({ ...it, name: 'Cebolla blanca fresca', item_name: 'Cebolla blanca fresca', quantity: totalQty * 0.6, category: '🥬 Verduras, Hortalizas y Frescos' });
+      expandedItemsList.push({ ...it, name: 'Romero', item_name: 'Romero', quantity: totalQty * 0.4, category: '🌶️ Chiles, Condimentos e Infusiones' });
+      expandedItemsList.push({ ...it, name: 'Cebolla blanca', item_name: 'Cebolla blanca', quantity: totalQty * 0.6, category: '🥬 Verduras, Hortalizas y Frescos' });
     } else {
       expandedItemsList.push(it);
     }
@@ -7268,7 +7332,7 @@ function render3DShoppingList() {
     });
 
     allMarketItems = allMarketItems.map(it => {
-      let name = it.name || it.item_name || '';
+      let name = stripFrescoAdjective(it.name || it.item_name || '');
       let cat = it.category || it.originalCat || '';
 
       // 1. Reubicar almendras en grasas
@@ -7280,7 +7344,7 @@ function render3DShoppingList() {
       }
       // 2. Homologar todas las variantes de limón
       if (/lim[oó]n/i.test(name)) {
-        name = 'Jugo de limón fresco recién exprimido';
+        name = 'Jugo de limón recién exprimido';
         cat = '🌶️ Chiles, Condimentos e Infusiones';
       }
       // 3. Homologar pimienta negra
@@ -7290,15 +7354,15 @@ function render3DShoppingList() {
       }
       // 4. Homologar cebolla blanca
       if (/cebolla blanca/i.test(name) && !/morada/i.test(name) && !/romero/i.test(name)) {
-        name = 'Cebolla blanca fresca';
+        name = 'Cebolla blanca';
         cat = '🥬 Verduras, Hortalizas y Frescos';
       }
       // 5. Homologar alcaparras, ajo, chía
       if (/alcaparra/i.test(name)) {
         name = 'Alcaparras en salmuera';
       }
-      if (/dientes de ajo/i.test(name) || /ajo fresco/i.test(name) || name.toLowerCase() === 'ajo') {
-        name = 'Ajo fresco';
+      if (/dientes de ajo/i.test(name) || name.toLowerCase() === 'ajo') {
+        name = 'Ajo';
       }
       if (/ch[ií]a/i.test(name)) {
         name = 'Semillas de chía orgánicas';
@@ -7319,8 +7383,8 @@ function render3DShoppingList() {
     allMarketItems.forEach(it => {
       let name = it.name || it.item_name || '';
       if (/romero.*cebolla/i.test(name)) {
-        expandedMarketItems.push({ ...it, name: 'Romero fresco', item_name: 'Romero fresco', category: '🌶️ Chiles, Condimentos e Infusiones', slug: 'romero_fresco' });
-        expandedMarketItems.push({ ...it, name: 'Cebolla blanca fresca', item_name: 'Cebolla blanca fresca', category: '🥬 Verduras, Hortalizas y Frescos', slug: 'cebolla_blanca_fresca' });
+        expandedMarketItems.push({ ...it, name: 'Romero', item_name: 'Romero', category: '🌶️ Chiles, Condimentos e Infusiones', slug: 'romero' });
+        expandedMarketItems.push({ ...it, name: 'Cebolla blanca', item_name: 'Cebolla blanca', category: '🥬 Verduras, Hortalizas y Frescos', slug: 'cebolla_blanca' });
       } else {
         expandedMarketItems.push(it);
       }
