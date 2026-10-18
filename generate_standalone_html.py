@@ -3660,8 +3660,8 @@ let pantryStock = {
     const currentDayNum = (new Date().getDay() >= 0 && new Date().getDay() <= 6) ? new Date().getDay() : 0;
     selectedIdx = currentDayNum;
 
-    // SSOT Heritage & Migration: v40_2_ssot_canonical_skus -> v42_pantry_106_canonical_skus
-    const CURRENT_APP_VERSION = 'v42_2_pantry_exact_packaging_units';
+    // SSOT Heritage & Migration: v40_2_ssot_canonical_skus -> v42_pantry_106_canonical_skus -> v43_1_no_fresco_canonical
+    const CURRENT_APP_VERSION = 'v43_1_no_fresco_canonical';
     const LOCAL_STORAGE_KEY = 'nutriketo_app_state_v42_2_exact_units';
 
     function toggleTheme() {
@@ -4753,12 +4753,47 @@ let pantryStock = {
       }
     }
 
+    function sanitizeAndDeduplicateFarmHarvestState() {
+      const s43RequiredHarvest = ["Espinacas", "Calabacitas verdes tiernas", "Brócoli", "Espárragos verdes", "Nopales tiernos", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones agrios de la granja", "Nuez pecana de la granja"];
+      const s43ReqSlugs = new Set(s43RequiredHarvest.map(n => normalizeToCanonicalSlug(n)));
+      deletedFarmItems = (deletedFarmItems || []).map(d => stripFrescoAdjective(typeof d === 'string' ? d : '')).filter(d => d && !s43ReqSlugs.has(normalizeToCanonicalSlug(d)));
+      const masterSlugs = new Set(FARM_MASTER_CATALOG.map(n => normalizeToCanonicalSlug(n)));
+      const seenCustSlugs = new Set(masterSlugs);
+      const cleanCustom = [];
+      (customFarmItems || []).forEach(f => {
+        const fStr = stripFrescoAdjective(typeof f === 'string' ? f : (f && (f.item_name || f.name) ? (f.item_name || f.name) : ''));
+        if (!fStr || /miel|durazno|higo|frijol/i.test(fStr)) return;
+        const mapped = (/nuex.*pecan|nuez.*pecan/i.test(fStr)) ? "Nuez pecana de la granja" : fStr;
+        const sl = normalizeToCanonicalSlug(mapped);
+        if (sl && !seenCustSlugs.has(sl)) {
+          seenCustSlugs.add(sl);
+          cleanCustom.push(mapped);
+        }
+      });
+      customFarmItems = cleanCustom;
+
+      const seenSelSlugs = new Set();
+      const cleanSelected = [];
+      const rawSel = (Array.isArray(selectedHarvest) && selectedHarvest.length > 0) ? selectedHarvest : s43RequiredHarvest;
+      [...s43RequiredHarvest, ...rawSel].forEach(h => {
+        const hStr = stripFrescoAdjective(typeof h === 'string' ? h : (h && (h.item_name || h.name) ? (h.item_name || h.name) : ''));
+        if (!hStr || /miel|durazno|higo|frijol/i.test(hStr)) return;
+        const mapped = (/nuex.*pecan|nuez.*pecan/i.test(hStr)) ? "Nuez pecana de la granja" : hStr;
+        const sl = normalizeToCanonicalSlug(mapped);
+        if (sl && !seenSelSlugs.has(sl) && !deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === sl)) {
+          seenSelSlugs.add(sl);
+          cleanSelected.push(mapped);
+        }
+      });
+      selectedHarvest = cleanSelected;
+    }
+
     function loadAppState() {
       try {
         const storedVersion = localStorage.getItem('nutriketo_app_version');
         if (storedVersion !== CURRENT_APP_VERSION) {
-          console.warn('Detectada versión anterior de localStorage. Migrando a V42 106 insumos canónicos...');
-          const oldDataStr = localStorage.getItem('nutriketo_app_state_v40_2_ssot') || localStorage.getItem(LOCAL_STORAGE_KEY);
+          console.warn('Detectada versión anterior de localStorage. Migrando a V43.1 sin adjetivo fresco...');
+          const oldDataStr = localStorage.getItem(LOCAL_STORAGE_KEY) || localStorage.getItem('nutriketo_app_state_v40_2_ssot');
           let oldState = null;
           try { if (oldDataStr) oldState = JSON.parse(oldDataStr); } catch(e){}
           const legacyKeys = [
@@ -4783,6 +4818,7 @@ let pantryStock = {
             if (oldState.dispatchedMeals) dispatchedMeals = oldState.dispatchedMeals;
             if (Array.isArray(oldState.mealFeedbackLedger)) mealFeedbackLedger = oldState.mealFeedbackLedger;
           }
+          sanitizeAndDeduplicateFarmHarvestState();
           ensureCanonicalTicketIntakesApplied();
           saveAppState();
           return true;
@@ -4820,49 +4856,11 @@ let pantryStock = {
           }
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
 
-          if (Array.isArray(state.deletedFarmItems)) {
-            deletedFarmItems = state.deletedFarmItems.map(d => stripFrescoAdjective(typeof d === 'string' ? d : ''));
-          } else {
-            deletedFarmItems = [];
-          }
-
-          if (Array.isArray(state.deletedPantryItems)) {
-            deletedPantryItems = state.deletedPantryItems;
-          } else {
-            deletedPantryItems = [];
-          }
-
-          if (Array.isArray(state.customFarmItems)) {
-            const seenCustSlugs = new Set();
-            customFarmItems = [];
-            state.customFarmItems.forEach(f => {
-              const fStr = stripFrescoAdjective(typeof f === 'string' ? f : (f.item_name || f.name || ''));
-              if (!fStr || /miel|durazno|higo|frijol/i.test(fStr)) return;
-              const mapped = (/nuex.*pecan|nuez.*pecan/i.test(fStr)) ? "Nuez pecana de la granja" : fStr;
-              const sl = normalizeToCanonicalSlug(mapped);
-              if (sl && !seenCustSlugs.has(sl)) {
-                seenCustSlugs.add(sl);
-                customFarmItems.push(mapped);
-              }
-            });
-          }
-
-          if (Array.isArray(state.selectedHarvest)) {
-            const seenSelSlugs = new Set();
-            selectedHarvest = [];
-            state.selectedHarvest.forEach(h => {
-              const hStr = stripFrescoAdjective(typeof h === 'string' ? h : (h.item_name || h.name || ''));
-              if (!hStr || /miel|durazno|higo|frijol/i.test(hStr)) return;
-              const mapped = (/nuex.*pecan|nuez.*pecan/i.test(hStr)) ? "Nuez pecana de la granja" : hStr;
-              const sl = normalizeToCanonicalSlug(mapped);
-              if (sl && !seenSelSlugs.has(sl)) {
-                seenSelSlugs.add(sl);
-                selectedHarvest.push(mapped);
-              }
-            });
-          } else {
-            selectedHarvest = ["Espinacas", "Calabacitas verdes tiernas", "Brócoli", "Espárragos verdes", "Nopales tiernos", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones agrios de la granja", "Nuez pecana de la granja"];
-          }
+          deletedFarmItems = Array.isArray(state.deletedFarmItems) ? state.deletedFarmItems : [];
+          deletedPantryItems = Array.isArray(state.deletedPantryItems) ? state.deletedPantryItems : [];
+          customFarmItems = Array.isArray(state.customFarmItems) ? state.customFarmItems : [];
+          selectedHarvest = Array.isArray(state.selectedHarvest) ? state.selectedHarvest : [];
+          sanitizeAndDeduplicateFarmHarvestState();
 
           if (state.pantryStock && typeof state.pantryStock === 'object') {
             pantryStock = {};
@@ -5354,6 +5352,9 @@ let pantryStock = {
     }
 
     function initSetupPanel() {
+      if (typeof sanitizeAndDeduplicateFarmHarvestState === 'function') {
+        sanitizeAndDeduplicateFarmHarvestState();
+      }
       if (typeof ensureCanonicalTicketIntakesApplied === 'function') {
         ensureCanonicalTicketIntakesApplied();
       }
@@ -10130,14 +10131,14 @@ function renderRecipes(day, activeDiners) {
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev16-s43-only-v44') {
+              if (k !== 'nutriketo-v36-6-rev17-no-fresco-v45') {
                 caches.delete(k);
               }
             });
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev16-s43-only-v44')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev17-no-fresco-v45')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();
@@ -10148,12 +10149,13 @@ function renderRecipes(day, activeDiners) {
           navigator.serviceWorker.addEventListener('controllerchange', () => {
             if (!isReloading) {
               isReloading = true;
-              console.log('[ServiceWorker] Nuevo controlador activo. Recargando con versión fresca...');
+              console.log('[ServiceWorker] Nuevo controlador activo. Recargando...');
               window.location.reload();
             }
           });
         }
         if (typeof loadAppState === 'function') loadAppState();
+        if (typeof initSetupPanel === 'function') initSetupPanel();
         if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
         if (typeof ensureSundayServiceDispatched === 'function') ensureSundayServiceDispatched();
 
