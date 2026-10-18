@@ -4614,31 +4614,8 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v43_canonical_dedup_ready', 'true');
         }
 
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v43_harvest_no_fresco_sync') !== 'true') {
-          const s43RequiredHarvest = ["Espinacas", "Calabacitas verdes tiernas", "Brócoli", "Espárragos verdes", "Nopales tiernos", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones agrios de la granja", "Nuez pecana de la granja"];
-          const s43ReqSlugs = new Set(s43RequiredHarvest.map(n => normalizeToCanonicalSlug(n)));
-          deletedFarmItems = (deletedFarmItems || []).map(d => stripFrescoAdjective(typeof d === 'string' ? d : '')).filter(d => d && !s43ReqSlugs.has(normalizeToCanonicalSlug(d)));
-          const seenC = new Set(FARM_MASTER_CATALOG.map(n => normalizeToCanonicalSlug(n)));
-          customFarmItems = (customFarmItems || []).map(c => stripFrescoAdjective(typeof c === 'string' ? c : '')).filter(c => {
-            if (!c) return false;
-            const sl = normalizeToCanonicalSlug(c);
-            if (!sl || seenC.has(sl)) return false;
-            seenC.add(sl);
-            return true;
-          });
-          const seenS = new Set();
-          const mergedSel = [];
-          [...s43RequiredHarvest, ...(selectedHarvest || [])].forEach(h => {
-            const cleanH = stripFrescoAdjective(typeof h === 'string' ? h : (h.item_name || h.name || ''));
-            if (!cleanH) return;
-            const sl = normalizeToCanonicalSlug(cleanH);
-            if (sl && !seenS.has(sl)) {
-              seenS.add(sl);
-              mergedSel.push(cleanH);
-            }
-          });
-          selectedHarvest = mergedSel;
-          localStorage.setItem('nutriketo_v43_harvest_no_fresco_sync', 'true');
+        if (typeof sanitizeAndDeduplicateFarmHarvestState === 'function') {
+          sanitizeAndDeduplicateFarmHarvestState();
         }
 
         // 1. Eliminar siempre llaves secundarias obsoletas o duplicadas
@@ -4754,9 +4731,19 @@ let pantryStock = {
     }
 
     function sanitizeAndDeduplicateFarmHarvestState() {
-      const s43RequiredHarvest = ["Espinacas", "Calabacitas verdes tiernas", "Brócoli", "Espárragos verdes", "Nopales tiernos", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones agrios de la granja", "Nuez pecana de la granja"];
-      const s43ReqSlugs = new Set(s43RequiredHarvest.map(n => normalizeToCanonicalSlug(n)));
-      deletedFarmItems = (deletedFarmItems || []).map(d => stripFrescoAdjective(typeof d === 'string' ? d : '')).filter(d => d && !s43ReqSlugs.has(normalizeToCanonicalSlug(d)));
+      const seenDelSlugs = new Set();
+      const cleanDeleted = [];
+      (deletedFarmItems || []).forEach(d => {
+        const dStr = stripFrescoAdjective(typeof d === 'string' ? d : '');
+        if (!dStr) return;
+        const sl = normalizeToCanonicalSlug(dStr);
+        if (sl && !seenDelSlugs.has(sl)) {
+          seenDelSlugs.add(sl);
+          cleanDeleted.push(dStr);
+        }
+      });
+      deletedFarmItems = cleanDeleted;
+
       const masterSlugs = new Set(FARM_MASTER_CATALOG.map(n => normalizeToCanonicalSlug(n)));
       const seenCustSlugs = new Set(masterSlugs);
       const cleanCustom = [];
@@ -4765,7 +4752,7 @@ let pantryStock = {
         if (!fStr || /miel|durazno|higo|frijol/i.test(fStr)) return;
         const mapped = (/nuex.*pecan|nuez.*pecan/i.test(fStr)) ? "Nuez pecana de la granja" : fStr;
         const sl = normalizeToCanonicalSlug(mapped);
-        if (sl && !seenCustSlugs.has(sl)) {
+        if (sl && !seenCustSlugs.has(sl) && !seenDelSlugs.has(sl)) {
           seenCustSlugs.add(sl);
           cleanCustom.push(mapped);
         }
@@ -4774,13 +4761,12 @@ let pantryStock = {
 
       const seenSelSlugs = new Set();
       const cleanSelected = [];
-      const rawSel = (Array.isArray(selectedHarvest) && selectedHarvest.length > 0) ? selectedHarvest : s43RequiredHarvest;
-      [...s43RequiredHarvest, ...rawSel].forEach(h => {
+      (Array.isArray(selectedHarvest) ? selectedHarvest : []).forEach(h => {
         const hStr = stripFrescoAdjective(typeof h === 'string' ? h : (h && (h.item_name || h.name) ? (h.item_name || h.name) : ''));
         if (!hStr || /miel|durazno|higo|frijol/i.test(hStr)) return;
         const mapped = (/nuex.*pecan|nuez.*pecan/i.test(hStr)) ? "Nuez pecana de la granja" : hStr;
         const sl = normalizeToCanonicalSlug(mapped);
-        if (sl && !seenSelSlugs.has(sl) && !deletedFarmItems.some(d => normalizeToCanonicalSlug(d) === sl)) {
+        if (sl && !seenSelSlugs.has(sl) && !seenDelSlugs.has(sl)) {
           seenSelSlugs.add(sl);
           cleanSelected.push(mapped);
         }
@@ -4790,6 +4776,7 @@ let pantryStock = {
 
     function loadAppState() {
       try {
+        const defaultS43Harvest = ["Espinacas", "Calabacitas verdes tiernas", "Brócoli", "Espárragos verdes", "Nopales tiernos", "Ejotes", "Cilantro", "Arúgula", "Coliflor", "Limones agrios de la granja", "Nuez pecana de la granja"];
         const storedVersion = localStorage.getItem('nutriketo_app_version');
         if (storedVersion !== CURRENT_APP_VERSION) {
           console.warn('Detectada versión anterior de localStorage. Migrando a V43.1 sin adjetivo fresco...');
@@ -4817,6 +4804,8 @@ let pantryStock = {
             if (oldState.mealDinersState) mealDinersState = oldState.mealDinersState;
             if (oldState.dispatchedMeals) dispatchedMeals = oldState.dispatchedMeals;
             if (Array.isArray(oldState.mealFeedbackLedger)) mealFeedbackLedger = oldState.mealFeedbackLedger;
+          } else {
+            selectedHarvest = [...defaultS43Harvest];
           }
           sanitizeAndDeduplicateFarmHarvestState();
           ensureCanonicalTicketIntakesApplied();
@@ -4859,7 +4848,7 @@ let pantryStock = {
           deletedFarmItems = Array.isArray(state.deletedFarmItems) ? state.deletedFarmItems : [];
           deletedPantryItems = Array.isArray(state.deletedPantryItems) ? state.deletedPantryItems : [];
           customFarmItems = Array.isArray(state.customFarmItems) ? state.customFarmItems : [];
-          selectedHarvest = Array.isArray(state.selectedHarvest) ? state.selectedHarvest : [];
+          selectedHarvest = Array.isArray(state.selectedHarvest) ? state.selectedHarvest : [...defaultS43Harvest];
           sanitizeAndDeduplicateFarmHarvestState();
 
           if (state.pantryStock && typeof state.pantryStock === 'object') {
@@ -10131,14 +10120,14 @@ function renderRecipes(day, activeDiners) {
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => {
-              if (k !== 'nutriketo-v36-6-rev17-no-fresco-v45') {
+              if (k !== 'nutriketo-v36-6-rev18-harvest-delete-fix-v46') {
                 caches.delete(k);
               }
             });
           }).catch(() => {});
         }
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev17-no-fresco-v45')
+          navigator.serviceWorker.register('./sw.js?v=nutriketo-v36-6-rev18-harvest-delete-fix-v46')
             .then((reg) => {
               console.log('[ServiceWorker] Registrado exitosamente en alcance:', reg.scope);
               if (reg.update) reg.update();
