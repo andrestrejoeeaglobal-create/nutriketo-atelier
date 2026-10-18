@@ -1123,10 +1123,10 @@
             "technique": "raw_assembly",
             "note": "Entrada matutina antioxidante de bajo índice glucémico con fresas, zarzamoras, chía orgánica y nuez pecana recién cosechada de la Granja El Herami.",
             "coct_reasoning": {
-              "thermodynamics": "Servicio en frío a 4°C para máxima biodisponibilidad antioxidante.",
-              "flavor_and_aromatics": "Perfume floral ácido de la frambuesa con el tostado natural de la nuez pecana.",
-              "textural_architecture": "Drupeolas delicadas de frambuesa con textura crujiente de semillas y nueces.",
-              "critical_control_points": "Manipular las frambuesas con delicadeza al lavar para no romper su estructura."
+              "thermodynamics": "Servicio en frío a 4°C para máxima biodisponibilidad antioxidante de antocianinas y ácido elágico.",
+              "flavor_and_aromatics": "Perfume frutal de las fresas y zarzamoras con el tostado natural de la nuez pecana de la granja.",
+              "textural_architecture": "Drupeolas delicadas de zarzamora y cuartos de fresa con textura crujiente de semillas de chía y nuez pecana.",
+              "critical_control_points": "Manipular las fresas y zarzamoras con delicadeza al lavar para conservar intacta su estructura celular."
             },
             "ingredients": [
               {
@@ -1159,9 +1159,9 @@
               }
             ],
             "steps": [
-              "1. Selección en Frío: Higienizar y escurrir las fresas y zarzamoras manteniendo la cadena de frío (4°C); cortar las fresas en cuartos uniformes.",
-              "2. Troceado de Nuez Pecana de la Granja: Cascar y trocear las mitades de nuez pecana de la granja para liberar sus aceites esenciales.",
-              "3. Montaje Activo: Servir las bayas en cuencos fríos, coronar con la nuez pecana y espolvorear las semillas de chía orgánicas al momento de despachar."
+              "Selección en Frío: Higienizar y escurrir las fresas y zarzamoras manteniendo la cadena de frío (4°C); cortar las fresas en cuartos uniformes.",
+              "Troceado de Nuez Pecana de la Granja: Cascar y trocear las mitades de nuez pecana de la granja para liberar sus aceites esenciales.",
+              "Montaje Activo: Servir las bayas en cuencos fríos, coronar con la nuez pecana y espolvorear las semillas de chía orgánicas al momento de despachar."
             ]
           },
           "main": {
@@ -2749,10 +2749,10 @@
             "technique": "raw_assembly",
             "note": "Zarzamoras de bajo índice glucémico servidas en frío con chía orgánica, canela de alacena y nuez pecana de la Granja El Herami.",
             "coct_reasoning": {
-              "thermodynamics": "Ensamblaje en frío a 4°C.",
-              "flavor_and_aromatics": "Contraste ácido-dulce de frambuesa y zarzamora con la nuez pecana de la granja.",
-              "textural_architecture": "Frutos rojos enteros con textura crujiente de semillas y nueces.",
-              "critical_control_points": "No repetir frambuesa ni zarzamora en la gelatina del acompañamiento."
+              "thermodynamics": "Ensamblaje en frío a 4°C para proteger los polifenoles de la zarzamora y los ácidos grasos omega-3 de la chía.",
+              "flavor_and_aromatics": "Contraste ácido-dulce de la zarzamora con el perfume cálido de la canela molida y la nuez pecana de la granja.",
+              "textural_architecture": "Zarzamoras enteras turgentes con textura crujiente de semillas de chía y nuez pecana.",
+              "critical_control_points": "No repetir zarzamora en la gelatina del acompañamiento (elaborada con fresa y limón real)."
             },
             "ingredients": [
               {
@@ -2785,9 +2785,9 @@
               }
             ],
             "steps": [
-              "1. Acondicionamiento en Frío: Seleccionar y secar suavemente las zarzamoras a 4°C.",
-              "2. Troceado de Nuez Pecana de la Granja: Partir las nueces pecana de la granja en mitades.",
-              "3. Servicio con Chía y Canela: Disponer en cuencos fríos con las semillas de chía orgánicas y un toque aromático de canela molida de alacena."
+              "Acondicionamiento en Frío: Seleccionar y secar suavemente las zarzamoras a 4°C.",
+              "Troceado de Nuez Pecana de la Granja: Partir las nueces pecana de la granja en mitades.",
+              "Servicio con Chía y Canela: Disponer en cuencos fríos con las semillas de chía orgánicas y un toque aromático de canela molida de alacena."
             ]
           },
           "main": {

@@ -454,10 +454,10 @@
 - **Técnica Culinaria:** `raw_assembly`
 - **Nota Organoléptica y Clínica:** Entrada matutina antioxidante de bajo índice glucémico con fresas, zarzamoras, chía orgánica y nuez pecana recién cosechada de la Granja El Herami.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
-  - *Termodinámica:* Servicio en frío a 4°C para máxima biodisponibilidad antioxidante.
-  - *Aromática y Sabor:* Perfume floral ácido de la frambuesa con el tostado natural de la nuez pecana.
-  - *Arquitectura Textural:* Drupeolas delicadas de frambuesa con textura crujiente de semillas y nueces.
-  - *Punto Crítico de Control:* Manipular las frambuesas con delicadeza al lavar para no romper su estructura.
+  - *Termodinámica:* Servicio en frío a 4°C para máxima biodisponibilidad antioxidante de antocianinas y ácido elágico.
+  - *Aromática y Sabor:* Perfume frutal de las fresas y zarzamoras con el tostado natural de la nuez pecana de la granja.
+  - *Arquitectura Textural:* Drupeolas delicadas de zarzamora y cuartos de fresa con textura crujiente de semillas de chía y nuez pecana.
+  - *Punto Crítico de Control:* Manipular las fresas y zarzamoras con delicadeza al lavar para conservar intacta su estructura celular.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
@@ -467,9 +467,9 @@
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. 1. Selección en Frío: Higienizar y escurrir las fresas y zarzamoras manteniendo la cadena de frío (4°C); cortar las fresas en cuartos uniformes.
-2. 2. Troceado de Nuez Pecana de la Granja: Cascar y trocear las mitades de nuez pecana de la granja para liberar sus aceites esenciales.
-3. 3. Montaje Activo: Servir las bayas en cuencos fríos, coronar con la nuez pecana y espolvorear las semillas de chía orgánicas al momento de despachar.
+1. Selección en Frío: Higienizar y escurrir las fresas y zarzamoras manteniendo la cadena de frío (4°C); cortar las fresas en cuartos uniformes.
+2. Troceado de Nuez Pecana de la Granja: Cascar y trocear las mitades de nuez pecana de la granja para liberar sus aceites esenciales.
+3. Montaje Activo: Servir las bayas en cuencos fríos, coronar con la nuez pecana y espolvorear las semillas de chía orgánicas al momento de despachar.
 
 ##### Receta #20 [Martes · Desayuno · Tiempo 2 — Plato Fuerte]: Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas
 - **Técnica Culinaria:** `rolled_omelette`
@@ -1074,10 +1074,10 @@
 - **Técnica Culinaria:** `raw_assembly`
 - **Nota Organoléptica y Clínica:** Zarzamoras de bajo índice glucémico servidas en frío con chía orgánica, canela de alacena y nuez pecana de la Granja El Herami.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
-  - *Termodinámica:* Ensamblaje en frío a 4°C.
-  - *Aromática y Sabor:* Contraste ácido-dulce de frambuesa y zarzamora con la nuez pecana de la granja.
-  - *Arquitectura Textural:* Frutos rojos enteros con textura crujiente de semillas y nueces.
-  - *Punto Crítico de Control:* No repetir frambuesa ni zarzamora en la gelatina del acompañamiento.
+  - *Termodinámica:* Ensamblaje en frío a 4°C para proteger los polifenoles de la zarzamora y los ácidos grasos omega-3 de la chía.
+  - *Aromática y Sabor:* Contraste ácido-dulce de la zarzamora con el perfume cálido de la canela molida y la nuez pecana de la granja.
+  - *Arquitectura Textural:* Zarzamoras enteras turgentes con textura crujiente de semillas de chía y nuez pecana.
+  - *Punto Crítico de Control:* No repetir zarzamora en la gelatina del acompañamiento (elaborada con fresa y limón real).
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
@@ -1087,9 +1087,9 @@
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. 1. Acondicionamiento en Frío: Seleccionar y secar suavemente las zarzamoras a 4°C.
-2. 2. Troceado de Nuez Pecana de la Granja: Partir las nueces pecana de la granja en mitades.
-3. 3. Servicio con Chía y Canela: Disponer en cuencos fríos con las semillas de chía orgánicas y un toque aromático de canela molida de alacena.
+1. Acondicionamiento en Frío: Seleccionar y secar suavemente las zarzamoras a 4°C.
+2. Troceado de Nuez Pecana de la Granja: Partir las nueces pecana de la granja en mitades.
+3. Servicio con Chía y Canela: Disponer en cuencos fríos con las semillas de chía orgánicas y un toque aromático de canela molida de alacena.
 
 ##### Receta #47 [Viernes · Desayuno · Tiempo 2 — Plato Fuerte]: Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso de Alacena, Espinacas Tiernas y Cilantro de la Granja
 - **Técnica Culinaria:** `french_baveuse_fold`
@@ -1577,7 +1577,7 @@
 ### 3.4 Registro de Cuarentena Normativa y Exclusión Activa (`NOM-004` / `deletedPantryItems` / `deletedFarmItems`)
 | Origen | Insumos Excluidos / Bloqueados en Cuarentena | Estado en las 63 Recetas |
 |---|---|---|
-| **Cuarentena Normativa (`NOM-004`, `status: prohibited`)** | `Concentrado de caldo de pollo en polvo` (`sku-066`, `250 g` — contiene maltodextrina, glutamato monosódico y almidones), `Salsa BBQ`, `Salsa cátsup`, `Harina de trigo`, `Harina para hot cakes`, `Granola`, `Cerezas`, `Miguelito`, `Chamoy`, `Cacahuate enchilado`, `Chocolate para cobertura`, `Jugo Maggi`, `Salsa inglesa`, `Pulpa de arándano`, `Té chai` | 🚫 **0.00 g / 0 apariciones** (Bloqueados en Cuarentena Estricta) |
+| **Cuarentena Normativa (`NOM-004`, `status: prohibited`)** | `Concentrado de caldo de pollo en polvo` (`sku-066`, `250 g` — contiene maltodextrina, glutamato monosódico y almidones), `Salsa BBQ`, `Salsa cátsup`, `Harina de trigo`, `Harina para hot cakes`, `Granola`, `Cerezas`, `Miguelito`, `Chamoy`, `Cacahuate enchilado`, `Chocolate para cobertura`, `Jugo Maggi`, `Pulpa de arándano` | 🚫 **0.00 g / 0 apariciones** (Bloqueados en Cuarentena Estricta) |
 | **Alacena (`deletedPantryItems`)** | `Elote`, `Higos`, `Nogada`, `Zanahoria`, `Agua mineral` | 🚫 **0.00 g / 0 apariciones** (Erradicados al 100%) |
 | **Granja (`deletedFarmItems`)** | `Zarzamoras`, `Frambuesas`, `Fresas`, `Menta`, `Arándanos`, `Epazote`, `Calabacitas`, `Coliflor`, `Espinacas`, `Ejotes`, `Espárragos`, `Arúgula`, `Brócoli` | 🔄 **Reclasificados de Granja a Alacena/Mercado** según disponibilidad real |
 
