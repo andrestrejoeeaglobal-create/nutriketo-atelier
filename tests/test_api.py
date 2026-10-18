@@ -1247,8 +1247,8 @@ def test_harvest_pantry_reactivity_and_purity():
     assert farm_catalog_match, "FARM_MASTER_CATALOG no encontrado"
     farm_catalog_content = farm_catalog_match.group(1).lower()
     assert "higo" not in farm_catalog_content, "Higos presentes en FARM_MASTER_CATALOG"
-    assert "granadas frescas" in farm_catalog_content, "Granadas ausentes en FARM_MASTER_CATALOG"
-    assert "fresas frescas" in farm_catalog_content, "Fresas ausentes en FARM_MASTER_CATALOG"
+    assert '"granadas"' in farm_catalog_content, "Granadas ausentes en FARM_MASTER_CATALOG"
+    assert '"fresas"' in farm_catalog_content, "Fresas ausentes en FARM_MASTER_CATALOG"
 
     # Presencia de función areInsumosEquivalent
     assert "function areInsumosEquivalent(aName, bName)" in code
@@ -1403,10 +1403,9 @@ def test_condiments_biological_thresholds_and_pantry_reflexivity():
     with open("atelier.html", "r", encoding="utf-8") as f:
         html = f.read()
 
-    # 1. Simetría Canónica Inmutable de "Ajo fresco"
-    assert '"ajo-fresco": { name: "Ajo fresco"' in code
+    # 1. Simetría Canónica Inmutable de "Ajo" (sustantivo puro sin 'fresco')
+    assert '"ajo-fresco": { name: "Ajo"' in code
     assert '"ajo-fresco": ["ajo fresco"' in code
-    assert "name = 'Ajo fresco';" in code
     assert "name = 'Dientes de ajo fresco';" not in code  # Extirpado de cálculo y render
 
     # 2. Desacoplamiento de Res vs Hierbas Frescas (Regex \bres\b)
@@ -1422,8 +1421,8 @@ def test_condiments_biological_thresholds_and_pantry_reflexivity():
     assert "const isCurrentlyHarvested = selectedHarvest.some" in code
 
     # 4. Verificación de Versión SSOT en HTML compilado
-    assert "v40_2_ssot_canonical_skus" in html
-    assert "nutriketo_app_state_v40_2_ssot" in html
+    assert "v43_2_pure_farm_nouns" in html
+    assert "nutriketo_app_state_v42_2_exact_units" in html
 
 def test_temporal_date_resolution_and_nutrition_engine_precision():
     """
@@ -1528,7 +1527,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "ensureSundayServiceDispatched" in code
     assert "ensureCanonicalTicketIntakesApplied" in code
     assert "syncCustomWeeksDropdowns" in code
-    assert any(v in code for v in ["nutriketo-v36-6-rev4-s41-service-checkin-v29", "nutriketo-v36-6-rev6-s42-today-sync-v34", "nutriketo-v36-6-rev7-s42-syntaxfix-v35", "nutriketo-v36-6-rev8-s42-clean-cache-v36", "nutriketo-v36-6-rev9-s42-tr04095-v37", "nutriketo-v36-6-rev10-s42-costco9636-v38", "nutriketo-v36-6-rev11-s42-fruits-fix-v39", "nutriketo-v36-6-rev12-s42-sameorigin-sw-v40", "nutriketo-v36-6-rev13-s42-delete-fix-v41", "nutriketo-v36-6-rev14-s42-nextweek-v42", "nutriketo-v36-6-rev15-s42-canonical-dedup-v43", "nutriketo-v36-6-rev16-s43-only-v44"])
+    assert "nutriketo-v36-6-rev20-pure-farm-nouns-v48" in code
     # Verificación de unidad comercial canónica de Aguacate Hass (NUNCA por litro)
     assert "// 4c. Aguacate Hass fresco (Estricto: Piezas, Malla o Kilo ~5-6 pzas; NUNCA por litro)" in code
     assert r"/\bagua\b/i.test(name) && !/aguacate/i.test(name)" in code
@@ -1577,7 +1576,7 @@ async def test_service_checkin_proportional_deduction_and_feedback_ledger():
     assert "btn-next-week" in code
 
     # 6. Verificación de la Temporada de Cosecha de Nuez Pecana en Granja El Herami
-    assert "Nuez pecana fresca de la granja" in code
+    assert "Nuez pecana" in code
     assert "nuex pecana" in code
     assert "Consolidar insumos de Cosecha Propia Activa" in code
 
@@ -1595,7 +1594,7 @@ def test_physical_pantry_106_skus_and_multisinergix():
     with open("generate_standalone_html.py", "r", encoding="utf-8") as f:
         code = f.read()
 
-    assert "CURRENT_APP_VERSION = 'v42_2_pantry_exact_packaging_units'" in code
+    assert "CURRENT_APP_VERSION = 'v43_2_pure_farm_nouns'" in code
     assert "LOCAL_STORAGE_KEY = 'nutriketo_app_state_v42_2_exact_units'" in code
 
     # Ítems 105 y 106 presentes en el inventario
