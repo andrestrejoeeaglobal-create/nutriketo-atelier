@@ -42,7 +42,7 @@ const FORBIDDEN_INGREDIENTS = {
   azucares: ["azucar", "jarabe", "miel", "sacarosa", "maltitol", "higo"]
 };
 
-const MAX_ALLOWED_WEEK_NUM = 43;
+const MAX_VISIBLE_WEEKS_IN_MENU = 4;
 const CANONICAL_WEEK_43_TITLE = "Semana 43 (18 al 24 de Octubre de 2026)";
 
 function validateCulinaryImmunity(text) {
@@ -65,7 +65,7 @@ function getWeekNumberFromKey(wKey) {
 }
 
 function _normTextHardGate(s) {
-  return String(s || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
+  return String(s || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
 }
 
 const _HG_VEG_FAMILIES = {
@@ -77,11 +77,13 @@ const _HG_VEG_FAMILIES = {
   calabacitas: ['calabacita', 'calabacitas', 'zucchini', 'zoodles'],
   chayote: ['chayote', 'chayotes'],
   nopales: ['nopal', 'nopales'],
+  acelgas: ['acelga', 'acelgas'],
   espinacas: ['espinaca', 'espinacas'],
   arugula: ['arugula'],
   morron: ['morron', 'pimiento'],
   lechuga: ['lechuga'],
-  champinon: ['champinon', 'portobello']
+  champinon: ['champinon', 'portobello'],
+  pepino: ['pepino', 'pepinos']
 };
 
 const _HG_FRUIT_FAMILIES = {
@@ -111,48 +113,62 @@ function _extractDishVegsAndFruits(dish) {
 
 function _classifyMainProteinHardGate(mainDish) {
   const ings = (mainDish && Array.isArray(mainDish.ingredients)) ? mainDish.ingredients : [];
-  const joined = (ings.map(i => _normTextHardGate(i.name)).join(' | ') + ' ' + _normTextHardGate((mainDish && mainDish.title) || '')).trim();
-  if (joined.includes('flat steak') || (/res/.test(joined) && !joined.includes('molida'))) {
+  const joined = ings.map(i => _normTextHardGate(i.name)).join(' | ').trim();
+  if (joined.includes('flat steak') || (/\bres\b/.test(joined) && !joined.includes('molida'))) {
     return { key: 'flat_steak', family: 'res', circadianDinnerOk: false };
   }
   if (joined.includes('carne molida')) return { key: 'carne_molida', family: 'res', circadianDinnerOk: false };
   if (joined.includes('salmon')) return { key: 'salmon', family: 'pescado_azul', circadianDinnerOk: false };
   if (joined.includes('sardina')) return { key: 'sardinas', family: 'pescado_azul', circadianDinnerOk: false };
-  if (joined.includes('pechuga de pollo') || /pollo/.test(joined)) return { key: 'pechuga_pollo', family: 'ave_blanca', circadianDinnerOk: true };
-  if (/pavo/.test(joined)) return { key: 'pavo', family: 'ave_blanca', circadianDinnerOk: true };
+  if (joined.includes('pechuga de pollo') || /\bpollo\b/.test(joined)) return { key: 'pechuga_pollo', family: 'pollo', circadianDinnerOk: true };
+  if (/\bpavo\b/.test(joined)) return { key: 'pavo', family: 'pavo', circadianDinnerOk: true };
   if (joined.includes('mojarra') || joined.includes('robalo') || joined.includes('huachinango') || joined.includes('pescado blanco')) {
     return { key: 'mojarra', family: 'pescado_blanco', circadianDinnerOk: true };
   }
-  if (joined.includes('atun en agua')) return { key: 'atun_agua', family: 'marina_ligera', circadianDinnerOk: true };
-  if (joined.includes('filete de atun') || /atun/.test(joined)) return { key: 'filete_atun', family: 'marina_ligera', circadianDinnerOk: true };
-  if (joined.includes('champinon') || joined.includes('portobello')) return { key: 'champinon', family: 'vegetal_lacteo', circadianDinnerOk: true };
-  if (joined.includes('queso cottage')) return { key: 'queso_cottage', family: 'vegetal_lacteo', circadianDinnerOk: true };
+  if (joined.includes('atun en agua')) return { key: 'atun_agua', family: 'atun', circadianDinnerOk: true };
+  if (joined.includes('filete de atun') || /\batun\b/.test(joined)) return { key: 'filete_atun', family: 'atun', circadianDinnerOk: true };
+  if (joined.includes('champinon') || joined.includes('portobello')) return { key: 'champinon', family: 'fungica', circadianDinnerOk: true };
+  if (joined.includes('queso cottage')) return { key: 'queso_cottage', family: 'lactea_ligera', circadianDinnerOk: true };
   if (joined.includes('huevo')) return { key: 'huevo', family: 'huevo', circadianDinnerOk: true };
   return { key: 'otra', family: 'otra', circadianDinnerOk: true };
 }
 
+const _HG_ARCHETYPE_PATTERNS = [
+  ['fajitas', ['fajita', 'fajitas']],
+  ['tamagoyaki', ['tamagoyaki', 'rollo tamagoyaki']],
+  ['omelette', ['omelette']],
+  ['frittata', ['frittata']],
+  ['cazuela', ['cazuela', 'cocotte', 'shakshuka']],
+  ['anillo', ['en anillo', 'anillo de']],
+  ['cilbir', ['cilbir', 'turcos pochados']],
+  ['estrellados', ['estrellado', 'estrellados', 'sunny']],
+  ['albondigas', ['albondiga', 'albondigas']],
+  ['hamburguesa', ['hamburguesa', 'hamburguesas']],
+  ['carpaccio', ['carpaccio']],
+  ['timbal', ['timbal']],
+  ['salpicon', ['salpicon']],
+  ['barquitas', ['barquita', 'barquitas', 'barcas']],
+  ['piezas_pollo_horno', ['piezas de pollo entero', 'suprema', 'supremas']],
+  ['papillote', ['papillote']],
+  ['rollitos', ['rollito', 'rollitos', 'roulade']],
+  ['medallones', ['medallon', 'medallones', 'tataki']],
+  ['juliana_wok', ['juliana', 'wok']],
+  ['corte_parrilla', ['corte de', 'a la parrilla']],
+  ['portobello_relleno', ['portobello al horno', 'champinones portobello al horno']],
+  ['salmon_costra', ['lomo de salmon', 'costra de pistaches']],
+  ['lomos_horno', ['lomos de sardina', 'sardina del pacifico']]
+];
+
 function _extractDishArchetypeHardGate(dish) {
   if (dish && dish.archetype) return _normTextHardGate(dish.archetype);
-  const t = _normTextHardGate((dish && dish.title) || '');
-  if (t.includes('omelette')) return 'omelette';
-  if (t.includes('frittata')) return 'frittata';
-  if (t.includes('cazuela') || t.includes('shakshuka')) return 'cazuela_huevos';
-  if (t.includes('pochados')) return 'huevos_pochados';
-  if (t.includes('revueltos')) return 'huevos_revueltos';
-  if (t.includes('estrellados')) return 'huevos_estrellados';
-  if (t.includes('horneados')) return 'huevos_horneados';
-  if (t.includes('fajitas')) return 'fajitas';
-  if (t.includes('albondigas')) return 'albondigas';
-  if (t.includes('hamburguesa')) return 'hamburguesa';
-  if (t.includes('tacos') || t.includes('envueltos en hoja de lechuga')) return 'tacos_lechuga';
-  if (t.includes('carpaccio')) return 'carpaccio';
-  if (t.includes('tartar') || t.includes('timbal')) return 'tartar_timbal';
-  if (t.includes('brochetas')) return 'brochetas';
-  if (t.includes('rollitos')) return 'rollitos';
-  if (t.includes('medallones')) return 'medallones';
-  if (t.includes('supremas')) return 'supremas_rellenas';
-  if (t.includes('ensalada templada')) return 'ensalada_templada';
-  return (dish && dish.technique) ? _normTextHardGate(dish.technique) : t.slice(0, 32);
+  const t = _normTextHardGate((dish && (dish.title || dish.name)) || '');
+  const tech = _normTextHardGate((dish && (dish.technique || dish.cooking_technique)) || '');
+  for (const [archKey, patterns] of _HG_ARCHETYPE_PATTERNS) {
+    for (const pat of patterns) {
+      if (t.includes(_normTextHardGate(pat))) return archKey;
+    }
+  }
+  return tech || t.slice(0, 24);
 }
 
 function _getFeedbackWeightModifierForDish(dishTitle) {
@@ -667,25 +683,8 @@ function buildWeekPlanForNumber(targetWeekNum, prevWeekPlanOverride) {
 function purgeWeeksAfter43() {
   try {
     window.customGeneratedWeeks = window.customGeneratedWeeks || {};
-
-    // 1. Eliminar de customGeneratedWeeks cualquier semana > 43
-    Object.keys(window.customGeneratedWeeks).forEach(wKey => {
-      const wNum = getWeekNumberFromKey(wKey);
-      if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) {
-        delete window.customGeneratedWeeks[wKey];
-      }
-    });
-
-    // 2. Eliminar de datasets cualquier semana > 43
+    // Garantizar que Semana 43 use siempre la versión canónica Hard-Gate validada (semana_43_master.json)
     if (typeof datasets === 'object' && datasets) {
-      Object.keys(datasets).forEach(wKey => {
-        const wNum = getWeekNumberFromKey(wKey);
-        if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) {
-          delete datasets[wKey];
-        }
-      });
-
-      // 3. Garantizar que Semana 43 use siempre la versión canónica Hard-Gate validada (semana_43_master.json)
       if (datasets[CANONICAL_WEEK_43_TITLE]) {
         window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] = datasets[CANONICAL_WEEK_43_TITLE];
       } else {
@@ -696,114 +695,111 @@ function purgeWeeksAfter43() {
         }
       }
     }
-
-    // 4. Purgar estados asociados a semanas > 43 (dispatchedMeals, mealDinersState, customDishesState, mealFeedbackLedger)
-    if (typeof dispatchedMeals === 'object' && dispatchedMeals) {
-      Object.keys(dispatchedMeals).forEach(k => {
-        const wNum = getWeekNumberFromKey(k);
-        if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) delete dispatchedMeals[k];
-      });
-    }
-    if (typeof mealDinersState === 'object' && mealDinersState) {
-      Object.keys(mealDinersState).forEach(k => {
-        const wNum = getWeekNumberFromKey(k);
-        if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) delete mealDinersState[k];
-      });
-    }
-    if (typeof customDishesState === 'object' && customDishesState) {
-      Object.keys(customDishesState).forEach(k => {
-        const wNum = getWeekNumberFromKey(k);
-        if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) delete customDishesState[k];
-      });
-    }
-    if (typeof mealFeedbackLedger !== 'undefined' && Array.isArray(mealFeedbackLedger)) {
-      mealFeedbackLedger = mealFeedbackLedger.filter(fb => {
-        const wNum = getWeekNumberFromKey(fb && fb.week_key);
-        return wNum === null || wNum <= MAX_ALLOWED_WEEK_NUM;
-      });
-      window.MEAL_FEEDBACK_LEDGER = mealFeedbackLedger;
-    }
-
-    // 5. Si activeWeek apuntaba a una semana > 43, fijar en Semana 43
-    if (typeof activeWeek === 'string') {
-      const curNum = getWeekNumberFromKey(activeWeek);
-      if (curNum !== null && curNum > MAX_ALLOWED_WEEK_NUM) {
-        activeWeek = CANONICAL_WEEK_43_TITLE;
-      }
-    }
   } catch (err) {
     console.warn("Error en purgeWeeksAfter43:", err);
   }
 }
 
-function syncCustomWeeksDropdowns() {
+function syncCustomWeeksDropdowns(preferredWeekKey) {
   purgeWeeksAfter43();
+
+  if (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks && typeof datasets === 'object' && datasets) {
+    Object.keys(window.customGeneratedWeeks).forEach(wKey => {
+      const wNum = getWeekNumberFromKey(wKey);
+      if (wNum === 43) {
+        if (datasets[CANONICAL_WEEK_43_TITLE]) {
+          window.customGeneratedWeeks[wKey] = datasets[CANONICAL_WEEK_43_TITLE];
+        }
+      } else if (wNum !== null && wNum > 43 && !datasets[wKey] && window.customGeneratedWeeks[wKey]) {
+        datasets[wKey] = window.customGeneratedWeeks[wKey];
+      }
+    });
+  }
+
+  // Obtener todas las semanas disponibles ordenadas cronológicamente y mostrar SOLO 4 en el menú
+  const allWeekKeys = (typeof datasets === 'object' && datasets) ? Object.keys(datasets) : [];
+  const sortedWeekKeys = allWeekKeys
+    .filter(k => getWeekNumberFromKey(k) !== null)
+    .sort((a, b) => (getWeekNumberFromKey(a) || 0) - (getWeekNumberFromKey(b) || 0));
+
+  let visibleWeeks = sortedWeekKeys.slice(-MAX_VISIBLE_WEEKS_IN_MENU);
+  const currentTarget = preferredWeekKey || (typeof activeWeek === 'string' ? activeWeek : '');
+  if (currentTarget && sortedWeekKeys.includes(currentTarget) && !visibleWeeks.includes(currentTarget)) {
+    visibleWeeks = [...visibleWeeks.slice(1), currentTarget].sort(
+      (a, b) => (getWeekNumberFromKey(a) || 0) - (getWeekNumberFromKey(b) || 0)
+    );
+  }
 
   ['header-week-select', 'setup-week'].forEach(selId => {
     const sel = document.getElementById(selId);
     if (!sel) return;
-    // Eliminar del DOM cualquier opción de semana > 43
-    Array.from(sel.options).forEach(opt => {
-      const wNum = getWeekNumberFromKey(opt.value || opt.textContent);
-      if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) {
-        sel.removeChild(opt);
-      }
+    const prevVal = currentTarget || sel.value;
+    sel.innerHTML = '';
+    visibleWeeks.forEach(wKey => {
+      const opt = document.createElement('option');
+      opt.value = wKey;
+      opt.textContent = wKey;
+      if (wKey === prevVal) opt.selected = true;
+      sel.appendChild(opt);
     });
+    if (prevVal && visibleWeeks.includes(prevVal)) {
+      sel.value = prevVal;
+    } else if (visibleWeeks.length > 0) {
+      sel.value = visibleWeeks[visibleWeeks.length - 1];
+    }
   });
-
-  if (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks) {
-    Object.keys(window.customGeneratedWeeks).forEach(wKey => {
-      const wNum = getWeekNumberFromKey(wKey);
-      if (wNum !== null && wNum > MAX_ALLOWED_WEEK_NUM) return;
-      if (typeof datasets !== 'undefined' && !datasets[wKey]) {
-        datasets[wKey] = window.customGeneratedWeeks[wKey];
-      }
-      ['header-week-select', 'setup-week'].forEach(selId => {
-        const sel = document.getElementById(selId);
-        if (sel && !Array.from(sel.options).some(o => o.value === wKey)) {
-          const opt = document.createElement('option');
-          opt.value = wKey;
-          opt.textContent = wKey;
-          sel.appendChild(opt);
-        }
-      });
-    });
-  }
 }
 
 function generateNextWeekMenu() {
   try {
     if (typeof datasets === 'undefined' || !datasets) return;
+    window.customGeneratedWeeks = window.customGeneratedWeeks || {};
     purgeWeeksAfter43();
-    syncCustomWeeksDropdowns();
 
-    const weekTitle = CANONICAL_WEEK_43_TITLE;
-    if (!datasets[weekTitle]) {
-      const plan43 = buildWeekPlanForNumber(43);
-      if (plan43) {
-        datasets[weekTitle] = plan43;
-        window.customGeneratedWeeks[weekTitle] = plan43;
-      }
-      syncCustomWeeksDropdowns();
+    const curWeekNum = getWeekNumberFromKey(typeof activeWeek === 'string' ? activeWeek : '') || 43;
+    const allWeekNums = [
+      ...Object.keys(datasets),
+      ...Object.keys(window.customGeneratedWeeks)
+    ].map(k => getWeekNumberFromKey(k)).filter(n => n !== null);
+    const maxWeekNum = allWeekNums.length > 0 ? Math.max(...allWeekNums) : 43;
+    const nextWeekNum = Math.max(curWeekNum + 1, maxWeekNum + 1);
+
+    const prevWeekKey = Object.keys(datasets).find(k => getWeekNumberFromKey(k) === (nextWeekNum - 1));
+    const prevWeekPlan = prevWeekKey ? datasets[prevWeekKey] : buildWeekPlanForNumber(nextWeekNum - 1);
+    const nextPlan = buildWeekPlanForNumber(nextWeekNum, prevWeekPlan);
+    if (!nextPlan || !nextPlan.week_label) {
+      throw new Error(`No se pudo compilar la Semana ${nextWeekNum}.`);
     }
 
-    selectedIdx = 0;
+    const weekTitle = nextPlan.week_label;
+    datasets[weekTitle] = nextPlan;
+    window.customGeneratedWeeks[weekTitle] = nextPlan;
+
+    activeWeek = weekTitle;
+    syncCustomWeeksDropdowns(weekTitle);
+
+    let targetDayIdx = 0;
+    if (Array.isArray(nextPlan.days) && typeof isCalendarToday === 'function') {
+      const todayIdx = nextPlan.days.findIndex(d => isCalendarToday(d, nextPlan));
+      if (todayIdx >= 0) targetDayIdx = todayIdx;
+    }
+    selectedIdx = targetDayIdx;
+
     if (typeof onHeaderWeekChange === 'function') {
       onHeaderWeekChange(weekTitle);
     } else {
-      activeWeek = weekTitle;
       if (typeof saveAppState === 'function') saveAppState();
       if (typeof renderDateBar === 'function') renderDateBar();
-      if (typeof renderDay === 'function') renderDay(0);
+      if (typeof renderDay === 'function') renderDay(selectedIdx);
     }
 
     if (typeof showToast === 'function') {
-      showToast(`✨ ${weekTitle} activa (semanas posteriores eliminadas).`);
+      showToast(`✨ ${weekTitle} generada y compilada con éxito.`);
     }
   } catch (err) {
     console.error("Error al generar nueva semana:", err);
     if (typeof showToast === 'function') {
-      showToast("⚠️ Error al activar la Semana 43: " + (err.message || err), "warning");
+      showToast("⚠️ Error al generar nueva semana: " + (err.message || err), "warning");
     }
   }
 }
@@ -1068,16 +1064,10 @@ function selectWeek(weekKey) {
             <div>
               <label for="setup-week" style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Semana a Planificar:</label>
               <select id="setup-week" onchange="onHeaderWeekChange(this.value)" style="width: 100%; padding: 0.6rem; border: 1px solid var(--border-clinical); border-radius: 8px; font-weight: 700; background: var(--surface-card); color: var(--text-main); min-height: 44px;">
-                <option value="Semana 33 (09 al 15 de Agosto de 2026)">Semana 33 (09 al 15 de Agosto de 2026)</option>
-                <option value="Semana 34 (16 al 22 de Agosto de 2026)">Semana 34 (16 al 22 de Agosto de 2026)</option>
-                <option value="Semana 35 (23 al 29 de Agosto de 2026)">Semana 35 (23 al 29 de Agosto de 2026)</option>
-                <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)">Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
-                <option value="Semana 37 (06 al 12 de Septiembre de 2026)">Semana 37 (06 al 12 de Septiembre de 2026)</option>
-                <option value="Semana 38 (13 al 19 de Septiembre de 2026)">Semana 38 (13 al 19 de Septiembre de 2026)</option>
-                <option value="Semana 39 (20 al 26 de Septiembre de 2026)">Semana 39 (20 al 26 de Septiembre de 2026)</option>
                 <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
                 <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
-                <option value="Semana 42 (11 al 17 de Octubre de 2026)" selected>Semana 42 (11 al 17 de Octubre de 2026)</option>
+                <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
+                <option value="Semana 43 (18 al 24 de Octubre de 2026)" selected>Semana 43 (18 al 24 de Octubre de 2026)</option>
               </select>
             </div>
             <div>
@@ -1191,16 +1181,10 @@ function selectWeek(weekKey) {
           <span style="color: var(--border-clinical);">|</span>
           <span style="color: var(--text-muted); font-weight: 700;">Semana:</span>
           <select id="header-week-select" onchange="onHeaderWeekChange(this.value)" style="padding: 0.35rem 0.75rem; border-radius: 8px; border: 1.5px solid var(--color-34plus); background: var(--surface-card); color: var(--color-34plus); font-weight: 800; font-size: 0.88rem; cursor: pointer; min-height: 38px; outline: none; transition: all 0.2s ease;">
-            <option value="Semana 33 (09 al 15 de Agosto de 2026)">Semana 33 (09 al 15 de Agosto de 2026)</option>
-            <option value="Semana 34 (16 al 22 de Agosto de 2026)">Semana 34 (16 al 22 de Agosto de 2026)</option>
-            <option value="Semana 35 (23 al 29 de Agosto de 2026)">Semana 35 (23 al 29 de Agosto de 2026)</option>
-            <option value="Semana 36 (30 de Agosto al 05 de Septiembre de 2026)">Semana 36 (30 de Agosto al 05 de Septiembre de 2026)</option>
-            <option value="Semana 37 (06 al 12 de Septiembre de 2026)">Semana 37 (06 al 12 de Septiembre de 2026)</option>
-            <option value="Semana 38 (13 al 19 de Septiembre de 2026)">Semana 38 (13 al 19 de Septiembre de 2026)</option>
-            <option value="Semana 39 (20 al 26 de Septiembre de 2026)">Semana 39 (20 al 26 de Septiembre de 2026)</option>
             <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
             <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
-            <option value="Semana 42 (11 al 17 de Octubre de 2026)" selected>Semana 42 (11 al 17 de Octubre de 2026)</option>
+            <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
+            <option value="Semana 43 (18 al 24 de Octubre de 2026)" selected>Semana 43 (18 al 24 de Octubre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
@@ -3001,19 +2985,35 @@ let pantryStock = {
           const state = JSON.parse(saved);
           if (state.customGeneratedWeeks && typeof state.customGeneratedWeeks === 'object') {
             window.customGeneratedWeeks = {};
+            Object.keys(state.customGeneratedWeeks).forEach(wKey => {
+              const wNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(wKey) : null;
+              if (wNum !== null && wNum > 43 && state.customGeneratedWeeks[wKey]) {
+                window.customGeneratedWeeks[wKey] = state.customGeneratedWeeks[wKey];
+                if (typeof datasets === 'object' && datasets) {
+                  datasets[wKey] = state.customGeneratedWeeks[wKey];
+                }
+              }
+            });
             if (typeof datasets !== 'undefined' && datasets[CANONICAL_WEEK_43_TITLE]) {
               window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] = datasets[CANONICAL_WEEK_43_TITLE];
             }
           }
-          if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
           if (state.activeWeek) {
-            const stateWNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(state.activeWeek) : null;
-            if (stateWNum !== null && stateWNum >= 43) {
-              activeWeek = "Semana 43 (18 al 24 de Octubre de 2026)";
-            } else if (datasets[state.activeWeek]) {
+            if (datasets[state.activeWeek]) {
               activeWeek = state.activeWeek;
+            } else {
+              const stateWNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(state.activeWeek) : null;
+              if (stateWNum !== null && stateWNum > 43 && typeof buildWeekPlanForNumber === 'function') {
+                const rebuilt = buildWeekPlanForNumber(stateWNum);
+                if (rebuilt && rebuilt.week_label) {
+                  datasets[rebuilt.week_label] = rebuilt;
+                  window.customGeneratedWeeks[rebuilt.week_label] = rebuilt;
+                  activeWeek = rebuilt.week_label;
+                }
+              }
             }
           }
+          if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns(activeWeek);
           if (state.activeDiners) activeDiners = parseInt(state.activeDiners) || 6;
 
           deletedFarmItems = Array.isArray(state.deletedFarmItems) ? state.deletedFarmItems : [];
@@ -4308,6 +4308,7 @@ let pantryStock = {
       const targetPlan = getPlanForWeek(newWeek);
       if (!targetPlan) return;
       activeWeek = newWeek;
+      if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns(newWeek);
 
       const setupWeekSelect = document.getElementById('setup-week');
       if (setupWeekSelect) setupWeekSelect.value = newWeek;
@@ -8443,6 +8444,7 @@ function renderRecipes(day, activeDiners) {
         if (overlay) overlay.style.display = 'none';
         if (mainContent) mainContent.style.display = 'block';
 
+        if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns(activeWeek);
         const setupWeekSelect = document.getElementById('setup-week');
         if (setupWeekSelect && activeWeek) setupWeekSelect.value = activeWeek;
 
