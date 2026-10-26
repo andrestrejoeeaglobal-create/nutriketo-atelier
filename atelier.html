@@ -1685,7 +1685,7 @@ let pantryStock = {
       { stem: 'sirloin', aliases: ['sirloin', 'medallones de sirloin', 'medallon de sirloin', 'medallones de sirloin de res magro', 'carne molida de sirloin'], exclude: ['tuetano', 'huesos'] },
       { stem: 'arrachera', aliases: ['arrachera', 'arrachera de res', 'arrachera de res magra limpia', 'arrachera limpia', 'corte magro de arrachera'], exclude: ['tuetano', 'huesos', 'hamburguesa'] },
       { stem: 'ribeye', aliases: ['ribeye', 'corte magro de ribeye', 'corte de ribeye', 'corte magro de ribeye de res premium', 'ribeye de res'] },
-      { stem: 'mojarra', aliases: ['mojarra', 'fajita de mojarra', 'fajitas de mojarra', 'tilapia', 'fajita de tilapia', 'fajitas de mojarra tilapia'] },
+      { stem: 'mojarra', aliases: ['mojarra', 'mojarra entera', 'mojarra ente', 'fajita de mojarra', 'fajitas de mojarra', 'tilapia', 'fajita de tilapia', 'fajitas de mojarra tilapia'] },
       { stem: 'hamburguesa-arrachera', aliases: ['hamburguesa de arrachera', 'hamburguesas de arrachera', 'arrachburg'] },
       { stem: 'robalo', aliases: ['robalo', 'filete de robalo', 'filete de robalo salvaje', 'filete de robalo salvaje fresco de captura', 'pescado blanco', 'filete de pescado blanco'] },
       { stem: 'huachinango', aliases: ['huachinango', 'filetes de huachinango', 'filete de huachinango con piel'] },
@@ -1693,11 +1693,12 @@ let pantryStock = {
       { stem: 'sardina', aliases: ['sardina', 'sardinas', 'sardina enlatada', 'sardinas enlatadas', 'sardina en salsa de tomate', 'sardinas en salsa de tomate', 'sardinas en tomate', 'lata de sardinas', 'latas de sardinas'] },
       { stem: 'atun-fresco', aliases: ['medallon de atun', 'medallones de atun', 'filete de atun', 'atun fresco', 'lomo de atun', 'medallon de atun fresco'], exclude: ['enlatado', 'en agua', 'en lata', 'lata'] },
       { stem: 'atun-lata', aliases: ['atun enlatado', 'atun en agua', 'atun en lata', 'lata de atun'], exclude: ['fresco', 'medallon', 'filete'] },
-      { stem: 'pavo', aliases: ['pavo', 'pechuga de pavo', 'pechuga de pavo artesanal', 'jamon de pavo'], exclude: ['tocino', 'pollo'] },
+      { stem: 'pavo', aliases: ['pavo', 'pechuga de pavo', 'pechuga de pavo artesanal', 'jamon de pavo', 'fajitas de pavo', 'fajita de pavo', 'fajitas pavo'], exclude: ['tocino', 'pollo'] },
+      { stem: 'germinado', aliases: ['germinado', 'germinados', 'germinado de alfalfa', 'germinado de soya', 'germinado (alfalfa / soya)'] },
       { stem: 'tocino-pavo', aliases: ['tocino de pavo', 'tocino de pavo artesanal', 'tocino de pavo crujiente'], exclude: ['pollo'] },
       { stem: 'machaca', aliases: ['machaca', 'carne seca machaca', 'carne seca machaca artesanal'] },
-      { stem: 'flat-steak', aliases: ['flat steak', 'flatsteak', 'bife plano', 'steak flat'] },
-      { stem: 'carne-molida', aliases: ['carne molida', 'carne molida de res', 'carne molida de sirloin'] },
+      { stem: 'flat-steak', aliases: ['flat steak', 'flatsteak', 'bife plano', 'steak flat', 'top sirloin', 'mm top sirlo'] },
+      { stem: 'carne-molida', aliases: ['carne molida', 'carne molida de res', 'carne molida de sirloin', 'hamburguesa de sirloin', 'hamb sirloin'] },
       { stem: 'gouda', aliases: ['gouda', 'queso gouda', 'queso gouda artesanal'] },
       { stem: 'panela', aliases: ['panela', 'queso panela', 'queso panela artesanal'] },
       { stem: 'parmesano', aliases: ['parmesano', 'queso parmesano', 'queso parmesano artesanal'] },
@@ -1836,7 +1837,20 @@ let pantryStock = {
       const norm = trimmed.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 
       let out = '';
-      if (/\bfresas?\b/.test(norm)) out = 'Fresas';
+      if (/\b(top sirlo|top sirloin|flat steak|bife plano)\b/.test(norm)) out = 'Flat steak';
+      else if (/\b(hamb sirloin|hamburguesa de sirloin|carne molida)\b/.test(norm)) out = 'Carne molida';
+      else if (/\b(lomo salm|lomo de salmon|filete de salmon|salmon)\b/.test(norm) && !norm.includes('salsa')) out = 'Lomo de salmón';
+      else if (/\b(mojarra ente|mojarra entera|fajitas? de mojarra|mojarra)\b/.test(norm)) out = 'Fajitas de mojarra';
+      else if (/\b(fajitas? pavo|fajitas? de pavo|pechuga de pavo)\b/.test(norm)) out = 'Pechuga de pavo';
+      else if (/\b(180 hue bla|huevos?|huevo blanco)\b/.test(norm)) out = 'Huevo';
+      else if (/\b(lala manche|queso manchego|manchego)\b/.test(norm)) out = 'Queso manchego';
+      else if (/\b(cabrarandano|queso de cabra con arandano|queso de cabra)\b/.test(norm)) out = 'Queso de cabra';
+      else if (/\b(12\/90 manteq|mantequilla)\b/.test(norm) && !norm.includes('ghee') && !norm.includes('clarificada')) out = 'Mantequilla';
+      else if (/\b(mm nuez indi|nuez de la india|nueces de la india|nuez india)\b/.test(norm)) out = 'Nuez de la India';
+      else if (/\b(mm aceite co|aceite de coco)\b/.test(norm)) out = 'Aceite de coco';
+      else if (/\b(germinado|germinados)\b/.test(norm)) out = 'Germinado';
+      else if (/\b(mm 40\/355ml|botellas? de agua)\b/.test(norm)) out = 'Botella de agua';
+      else if (/\bfresas?\b/.test(norm)) out = 'Fresas';
       else if (/\bframbuesas?\b/.test(norm)) out = 'Frambuesas';
       else if (/\bzarzamoras?\b/.test(norm)) out = 'Zarzamora';
       else if (/\bcottage\b/.test(norm)) out = 'Queso cottage';
@@ -2707,6 +2721,61 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v51_user_inventory_sync', 'true');
         }
 
+        // Sincronización V52: Ticket Sam's Club Scan & Go (18 Insumos Canónicos Puros)
+        window.SAMS_SCAN_AND_GO_TICKET_BATCH = [
+          { row: 1, ticket_desc: "MM TOP SIRLO (2200G)", qty_ticket: 1, price: 594.00, name: "Flat steak", add_qty: 2200, target_stock: 2200, unit: "g", sku: "sku-021-flat-steak", item_num: 21, category: "🥩 Carnes, Pescados y Proteínas" },
+          { row: 2, ticket_desc: "HAMB SIRLOIN", qty_ticket: 1, price: 299.00, name: "Carne molida", add_qty: 1360, target_stock: 1360, unit: "g", sku: "sku-024-carne-molida", item_num: 24, category: "🥩 Carnes, Pescados y Proteínas" },
+          { row: 3, ticket_desc: "MM LOMO SALM (1250G)", qty_ticket: 1, price: 405.00, name: "Lomo de salmón", add_qty: 1250, target_stock: 1250, unit: "g", sku: "sku-023-lomo-de-salmon", item_num: 23, category: "🥩 Carnes, Pescados y Proteínas" },
+          { row: 4, ticket_desc: "MOJARRA ENTE", qty_ticket: 2, price: 240.00, name: "Fajitas de mojarra", add_qty: 2000, target_stock: 2000, unit: "g", sku: "sku-025-fajitas-de-mojarra", item_num: 25, category: "🥩 Carnes, Pescados y Proteínas" },
+          { row: 5, ticket_desc: "FAJITAS PAVO", qty_ticket: 1, price: 214.00, name: "Pechuga de pavo", add_qty: 1000, target_stock: 1000, unit: "g", sku: "sku-318-pechuga-de-pavo", item_num: 318, category: "🥩 Carnes, Pescados y Proteínas" },
+          { row: 6, ticket_desc: "180 HUE BLA", qty_ticket: 1, price: 375.00, name: "Huevo", add_qty: 180, target_stock: 206, unit: "piezas", sku: "sku-104-huevo", item_num: 104, category: "🥩 Carnes, Pescados y Proteínas" },
+          { row: 7, ticket_desc: "960GR QCOTTA", qty_ticket: 2, price: 212.00, name: "Queso ricotta", add_qty: 1920, target_stock: 1920, unit: "g", sku: "queso_ricotta_artesanal", item_num: 112, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
+          { row: 8, ticket_desc: "LALA MANCHE", qty_ticket: 1, price: 265.00, name: "Queso manchego", add_qty: 1000, target_stock: 1000, unit: "g", sku: "sku-008-queso-manchego", item_num: 8, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
+          { row: 9, ticket_desc: "OIKOS PROT (2 pcs)", qty_ticket: 1, price: 182.00, name: "Yogur griego", add_qty: 1800, target_stock: 5680, unit: "g", sku: "sku-004-yogur-griego", item_num: 4, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
+          { row: 10, ticket_desc: "CABRARANDANO", qty_ticket: 1, price: 176.00, name: "Queso de cabra", add_qty: 400, target_stock: 400, unit: "g", sku: "sku-009-queso-de-cabra", item_num: 9, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
+          { row: 11, ticket_desc: "12/90 MANTEQ", qty_ticket: 1, price: 251.00, name: "Mantequilla", add_qty: 1080, target_stock: 1370, unit: "g", sku: "sku-001-mantequilla", item_num: 1, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
+          { row: 12, ticket_desc: "MM NUEZ INDI", qty_ticket: 1, price: 350.00, name: "Nuez de la India", add_qty: 907, target_stock: 907, unit: "g", sku: "sku-043-nuez-de-la-india", item_num: 43, category: "🥑 Grasas, Aceites y Semillas" },
+          { row: 13, ticket_desc: "MM ACEITE CO", qty_ticket: 1, price: 235.00, name: "Aceite de coco", add_qty: 1500, target_stock: 2000, unit: "g", sku: "sku-090-aceite-de-coco", item_num: 90, category: "🥑 Grasas, Aceites y Semillas" },
+          { row: 14, ticket_desc: "FRAMBUESA", qty_ticket: 1, price: 122.00, name: "Frambuesas", add_qty: 340, target_stock: 340, unit: "g", sku: "frambuesas_frescas_organicas", item_num: 111, category: "🍓 Frutas de Bajo Índice Glucémico" },
+          { row: 15, ticket_desc: "ZARZAMORA", qty_ticket: 1, price: 124.00, name: "Zarzamora", add_qty: 340, target_stock: 340, unit: "g", sku: "sku-039-zarzamora", item_num: 39, category: "🍓 Frutas de Bajo Índice Glucémico" },
+          { row: 16, ticket_desc: "ESPARRAGO", qty_ticket: 1, price: 186.00, name: "Espárragos", add_qty: 907, target_stock: 907, unit: "g", sku: "esparragos_verdes_frescos", item_num: 109, category: "🥬 Verduras, Hortalizas y Frescos" },
+          { row: 17, ticket_desc: "GERMINADO", qty_ticket: 1, price: 59.00, name: "Germinado", add_qty: 500, target_stock: 500, unit: "g", sku: "sku-319-germinado", item_num: 319, category: "🥬 Verduras, Hortalizas y Frescos" },
+          { row: 18, ticket_desc: "MM 40/355ML", qty_ticket: 3, price: 282.00, name: "Botella de agua", add_qty: 120, target_stock: 150, unit: "botellas (355 ml)", sku: "sku-019-botella-de-agua", item_num: 19, category: "🌶️ Chiles, Condimentos e Infusiones" }
+        ];
+
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v52_sams_scan_go_18_items_sync') !== 'true') {
+          window.SAMS_SCAN_AND_GO_TICKET_BATCH.forEach(entry => {
+            deletedPantryItems = (deletedPantryItems || []).filter(d => (typeof d === 'string' ? d : '').toLowerCase() !== entry.name.toLowerCase());
+            pantryStock[entry.name] = entry.target_stock;
+            if (window.pantryCardUnits) {
+              window.pantryCardUnits[entry.name] = entry.unit;
+            }
+            if (window.PANTRY_STOCK_INVENTORY) {
+              if (!window.PANTRY_STOCK_INVENTORY[entry.sku]) {
+                window.PANTRY_STOCK_INVENTORY[entry.sku] = {
+                  item_num: entry.item_num,
+                  ticket_desc: entry.ticket_desc,
+                  name: entry.name,
+                  stock: entry.target_stock,
+                  unit: entry.unit,
+                  packaging: `${entry.target_stock} ${entry.unit}`,
+                  category: entry.category,
+                  status: "canonical",
+                  reason: null
+                };
+              } else {
+                window.PANTRY_STOCK_INVENTORY[entry.sku].name = entry.name;
+                window.PANTRY_STOCK_INVENTORY[entry.sku].stock = entry.target_stock;
+                window.PANTRY_STOCK_INVENTORY[entry.sku].unit = entry.unit;
+                window.PANTRY_STOCK_INVENTORY[entry.sku].packaging = `${entry.target_stock} ${entry.unit}`;
+                window.PANTRY_STOCK_INVENTORY[entry.sku].category = entry.category;
+                window.PANTRY_STOCK_INVENTORY[entry.sku].status = "canonical";
+              }
+            }
+          });
+          localStorage.setItem('nutriketo_v52_sams_scan_go_18_items_sync', 'true');
+        }
+
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
         if (!isPantryItemDeleted("Leche") && !isPantryItemDeleted("sku-013-leche") && !window.PANTRY_STOCK_INVENTORY["sku-013-leche"]) {
           const lecheStock = pantryStock["Leche"] !== undefined ? pantryStock["Leche"] : 960;
@@ -2753,6 +2822,34 @@ let pantryStock = {
             unit: "ml",
             packaging: `${fondoStock} ml`,
             category: "🌶️ Chiles, Condimentos e Infusiones",
+            status: "canonical",
+            reason: null
+          };
+        }
+        if (!isPantryItemDeleted("Pechuga de pavo") && !isPantryItemDeleted("sku-318-pechuga-de-pavo") && !window.PANTRY_STOCK_INVENTORY["sku-318-pechuga-de-pavo"]) {
+          const pavoStock = pantryStock["Pechuga de pavo"] !== undefined ? pantryStock["Pechuga de pavo"] : 1000;
+          window.PANTRY_STOCK_INVENTORY["sku-318-pechuga-de-pavo"] = {
+            item_num: 318,
+            ticket_desc: "FAJITAS PAVO",
+            name: "Pechuga de pavo",
+            stock: pavoStock,
+            unit: "g",
+            packaging: `${pavoStock} g`,
+            category: "🥩 Carnes, Pescados y Proteínas",
+            status: "canonical",
+            reason: null
+          };
+        }
+        if (!isPantryItemDeleted("Germinado") && !isPantryItemDeleted("sku-319-germinado") && !window.PANTRY_STOCK_INVENTORY["sku-319-germinado"]) {
+          const germStock = pantryStock["Germinado"] !== undefined ? pantryStock["Germinado"] : 500;
+          window.PANTRY_STOCK_INVENTORY["sku-319-germinado"] = {
+            item_num: 319,
+            ticket_desc: "GERMINADO",
+            name: "Germinado",
+            stock: germStock,
+            unit: "g",
+            packaging: `${germStock} g`,
+            category: "🥬 Verduras, Hortalizas y Frescos",
             status: "canonical",
             reason: null
           };
@@ -8039,6 +8136,34 @@ function renderRecipes(day, activeDiners) {
       updateIntakeDatalist();
     }
 
+    function applySamsScanAndGoTicketBatch(mode = 'target') {
+      try {
+        if (typeof localStorage !== 'undefined') {
+          localStorage.removeItem('nutriketo_v52_sams_scan_go_18_items_sync');
+        }
+        consolidateAndPurgePantryInventory();
+        if (mode === 'additive' && Array.isArray(window.SAMS_SCAN_AND_GO_TICKET_BATCH)) {
+          window.SAMS_SCAN_AND_GO_TICKET_BATCH.forEach(entry => {
+            const cur = parseFloat(pantryStock[entry.name]) || 0;
+            const nextVal = cur + entry.add_qty;
+            pantryStock[entry.name] = nextVal;
+            if (window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[entry.sku]) {
+              window.PANTRY_STOCK_INVENTORY[entry.sku].stock = nextVal;
+              window.PANTRY_STOCK_INVENTORY[entry.sku].packaging = `${nextVal} ${entry.unit}`;
+            }
+          });
+        }
+        saveAppState();
+        if (typeof initSetupPanel === 'function') initSetupPanel();
+        if (typeof render3DShoppingList === 'function') render3DShoppingList();
+        closeInventoryIntakeModal();
+        showToast("📦 ¡Ticket Sam's Club Scan & Go (18 insumos canónicos) consolidado en Alacena!");
+      } catch (err) {
+        console.error("Error en applySamsScanAndGoTicketBatch:", err);
+        showToast("⚠️ Error al consolidar lote Scan & Go: " + (err.message || err), "warning");
+      }
+    }
+
     function openInventoryIntakeModal() {
       const todayStr = new Date().toISOString().split('T')[0];
       const dateInput = document.getElementById('intake-date');
@@ -8302,6 +8427,24 @@ function renderRecipes(day, activeDiners) {
           <div style="font-size:0.78rem; color:var(--text-muted); margin-top:0.2rem;">Arquitectura Herami: Atelier T.I.L.O.® — Control de Calidad & Longevidad</div>
         </div>
         <button onclick="closeInventoryIntakeModal()" style="background:none; border:none; font-size:1.6rem; cursor:pointer; color:var(--text-muted); line-height:1;">&times;</button>
+      </div>
+
+      <!-- LOTE PRE-PREPARADO: TICKET SAM'S CLUB SCAN & GO (18 INSUMOS CANÓNICOS) -->
+      <div style="background:rgba(58, 170, 53, 0.08); border:1.5px solid var(--color-34plus); border-radius:12px; padding:0.9rem; margin-bottom:0.95rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.45rem;">
+          <div style="font-size:0.86rem; font-weight:800; color:var(--color-34plus); display:flex; align-items:center; gap:0.4rem;">
+            <span>🧾</span> <span>Ticket Sam's Club Scan & Go (18 Insumos Canónicos — $4,472.00)</span>
+          </div>
+          <span style="font-size:0.72rem; font-weight:800; background:var(--color-34plus); color:#fff; padding:0.2rem 0.55rem; border-radius:999px;">SSOT 100% Canónico</span>
+        </div>
+        <div style="font-size:0.76rem; color:var(--text-muted); line-height:1.4; margin-bottom:0.65rem;">
+          Incluye: <strong>Flat steak</strong> (+2,200 g), <strong>Carne molida</strong> (+1,360 g), <strong>Lomo de salmón</strong> (+1,250 g), <strong>Fajitas de mojarra</strong> (+2,000 g), <strong>Pechuga de pavo</strong> (+1,000 g), <strong>Huevo</strong> (+180 pzas), <strong>Queso ricotta</strong> (+1,920 g), <strong>Queso manchego</strong> (+1,000 g), <strong>Yogur griego</strong> (+1,800 g), <strong>Queso de cabra</strong> (+400 g), <strong>Mantequilla</strong> (+1,080 g), <strong>Nuez de la India</strong> (+907 g), <strong>Aceite de coco</strong> (+1,500 g), <strong>Frambuesas</strong> (+340 g), <strong>Zarzamora</strong> (+340 g), <strong>Espárragos</strong> (+907 g), <strong>Germinado</strong> (+500 g) y <strong>Botella de agua</strong> (+120 botellas).
+        </div>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button type="button" onclick="applySamsScanAndGoTicketBatch('target')" style="flex:1; background:var(--color-34plus); color:#fff; border:none; padding:0.55rem 0.9rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer; min-height:42px;">
+            ✅ Verificar / Fijar Stock Canónico del Ticket (18 Insumos)
+          </button>
+        </div>
       </div>
 
       <!-- FASE 1: PROCEDENCIA -->
