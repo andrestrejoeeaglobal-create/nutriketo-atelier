@@ -37,32 +37,33 @@ DEFAULT_FARM_HARVEST: List[str] = [
 
 
 DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
-    "Huevo": (26.0, "piezas"),
+    "Huevo": (206.0, "piezas"),
     "Pollo entero": (1.0, "piezas"),
     "Pechuga de pollo": (0.0, "g"),
-    "Flat steak": (0.0, "g"),
-    "Carne molida": (0.0, "g"),
-    "Lomo de salmón": (0.0, "g"),
-    "Fajitas de mojarra": (0.0, "g"),
+    "Pechuga de pavo": (1000.0, "g"),
+    "Flat steak": (2200.0, "g"),
+    "Carne molida": (1360.0, "g"),
+    "Lomo de salmón": (1250.0, "g"),
+    "Fajitas de mojarra": (2000.0, "g"),
     "Filete de atún": (0.0, "g"),
     "Atún en agua": (700.0, "g"),
     "Sardinas": (1700.0, "g"),
     "Queso cottage": (500.0, "g"),
-    "Yogur griego": (3880.0, "g"),
+    "Yogur griego": (5680.0, "g"),
     "Queso ricotta": (1920.0, "g"),
-    "Queso manchego": (0.0, "g"),
+    "Queso manchego": (1000.0, "g"),
     "Queso Philadelphia": (720.0, "g"),
-    "Queso de cabra": (0.0, "g"),
+    "Queso de cabra": (400.0, "g"),
     "Queso mozzarella": (105.0, "g"),
     "Queso parmesano": (100.0, "g"),
     "Crema ácida": (960.0, "g"),
     "Mayonesa": (1000.0, "g"),
     "Leche de coco": (960.0, "ml"),
-    "Mantequilla": (290.0, "g"),
-    "Aceite de coco": (500.0, "g"),
+    "Mantequilla": (1370.0, "g"),
+    "Aceite de coco": (2000.0, "g"),
     "Fresas": (0.0, "g"),
-    "Zarzamora": (0.0, "g"),
-    "Frambuesas": (0.0, "g"),
+    "Zarzamora": (340.0, "g"),
+    "Frambuesas": (340.0, "g"),
     "Champiñón": (0.0, "g"),
     "Lechuga": (3.0, "piezas"),
     "Jitomate": (7.0, "piezas"),
@@ -71,14 +72,15 @@ DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
     "Flor de calabaza": (0.0, "manojo"),
     "Calabaza": (0.0, "piezas"),
     "Espinacas": (0.0, "g"),
-    "Espárragos": (0.0, "g"),
+    "Espárragos": (907.0, "g"),
+    "Germinado": (500.0, "g"),
     "Ejotes": (500.0, "g"),
     "Tomate": (400.0, "g"),
     "Aguacate": (1.0, "piezas"),
     "Semillas y nueces mixtas": (0.0, "g"),
     "Almendras fileteadas": (0.0, "g"),
     "Pistaches": (100.0, "g"),
-    "Nuez de la India": (0.0, "g"),
+    "Nuez de la India": (907.0, "g"),
     "Ajonjolí": (0.0, "g"),
     "Aceite de oliva": (400.0, "ml"),
     "Alcaparras": (200.0, "g"),
@@ -98,7 +100,7 @@ DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
     "Manzanilla": (50.0, "g"),
     "Té chai": (70.0, "g"),
     "Flor de Jamaica molida en polvo": (200.0, "g"),
-    "Botella de agua": (30.0, "botellas (355 ml)"),
+    "Botella de agua": (150.0, "botellas (355 ml)"),
     "Grenetina": (112.0, "g"),
     "MultiSinergix®": (300.0, "g"),
     "AminoSinergix®": (200.0, "g"),
@@ -1005,8 +1007,10 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
         ("salmon", "salmon"),
         ("mojarra", "mojarra"),
         ("sardina", "sardina"),
+        ("pavo", "pavo"),
         ("flat steak", "flat steak"),
         ("carne molida", "carne molida"),
+        ("germinado", "germinado"),
         ("ricotta", "ricotta"),
         ("cottage", "cottage"),
         ("manchego", "manchego"),
@@ -1135,7 +1139,7 @@ def generate_validated_week_plan(
     from datetime import date, timedelta
 
     next_week_num = int(target_week_num)
-    if next_week_num == 43 and "43" in str(base_week_data.get("week_label", "")):
+    if next_week_num in (43, 44) and str(next_week_num) in str(base_week_data.get("week_label", "")) and not feedback_ledger:
         assert_zero_violations(
             base_week_data,
             pantry_stock,
@@ -1144,6 +1148,22 @@ def generate_validated_week_plan(
             feedback_ledger=feedback_ledger,
         )
         return copy.deepcopy(base_week_data)
+    if next_week_num == 44 and not feedback_ledger:
+        from pathlib import Path
+        s44_file = Path(__file__).resolve().parents[2] / "semana_44_master.json"
+        if s44_file.exists():
+            try:
+                s44_data = json.loads(s44_file.read_text(encoding="utf-8"))
+                assert_zero_violations(
+                    s44_data,
+                    pantry_stock,
+                    farm_harvest,
+                    prev_week_data=prev_week_data or base_week_data,
+                    feedback_ledger=feedback_ledger,
+                )
+                return s44_data
+            except Exception:
+                pass
 
     # Si no se pasó prev_week_data explícitamente para W >= 44, encadenamos desde la semana W-1
     if prev_week_data is None and next_week_num > 43:

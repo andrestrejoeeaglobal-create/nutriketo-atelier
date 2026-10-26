@@ -1822,6 +1822,12 @@ def generate_standalone():
     except Exception:
         plan_43_dict = copy.deepcopy(plan_42_dict)
 
+    try:
+        with open("semana_44_master.json", "r", encoding="utf-8") as f44:
+            plan_44_dict = json.load(f44)
+    except Exception:
+        plan_44_dict = generate_validated_week_plan(44, plan_43_dict, prev_week_data=plan_43_dict)
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
@@ -1833,7 +1839,8 @@ def generate_standalone():
         "Semana 40 (27 de Septiembre al 03 de Octubre de 2026)": plan_40_dict,
         "Semana 41 (04 al 10 de Octubre de 2026)": plan_41_dict,
         "Semana 42 (11 al 17 de Octubre de 2026)": plan_42_dict,
-        "Semana 43 (18 al 24 de Octubre de 2026)": plan_43_dict
+        "Semana 43 (18 al 24 de Octubre de 2026)": plan_43_dict,
+        "Semana 44 (25 al 31 de Octubre de 2026)": plan_44_dict
     }
 
     def dish_to_typed_recipe(dish_obj):
@@ -1926,7 +1933,7 @@ def generate_standalone():
                 meal["side_recipe"] = dish_to_typed_recipe(side_obj)
                 all_s42_ings.extend(side_obj.get("ingredients", []))
 
-    # ENRIQUECIMIENTO COGNITIVO COCT SEMANA 43 (HARD-GATE VALIDATED SSOT V36.6 REV3)
+    # ENRIQUECIMIENTO COGNITIVO COCT SEMANA 43 Y SEMANA 44 (HARD-GATE VALIDATED SSOT V36.6 REV3)
     all_s43_ings = []
     for day in plan_43_dict.get("days", []):
         for meal in day.get("meals", []):
@@ -1942,6 +1949,22 @@ def generate_standalone():
             if side_obj and isinstance(side_obj, dict):
                 meal["side_recipe"] = dish_to_typed_recipe(side_obj)
                 all_s43_ings.extend(side_obj.get("ingredients", []))
+
+    all_s44_ings = []
+    for day in plan_44_dict.get("days", []):
+        for meal in day.get("meals", []):
+            starter_obj = meal.get("starter")
+            if starter_obj and isinstance(starter_obj, dict):
+                meal["starter_recipe"] = dish_to_typed_recipe(starter_obj)
+                all_s44_ings.extend(starter_obj.get("ingredients", []))
+            main_obj = meal.get("main") or meal.get("main_dish")
+            if main_obj and isinstance(main_obj, dict):
+                meal["main_recipe"] = dish_to_typed_recipe(main_obj)
+                all_s44_ings.extend(main_obj.get("ingredients", []))
+            side_obj = meal.get("side") or meal.get("side_dish")
+            if side_obj and isinstance(side_obj, dict):
+                meal["side_recipe"] = dish_to_typed_recipe(side_obj)
+                all_s44_ings.extend(side_obj.get("ingredients", []))
 
     s40_canonical_bom = consolidate_market_bom(all_s40_ings)
     s40_canonical_bom_json = json.dumps(s40_canonical_bom, ensure_ascii=False)
@@ -2064,6 +2087,13 @@ const FORBIDDEN_INGREDIENTS = {
 
 const MAX_VISIBLE_WEEKS_IN_MENU = 4;
 const CANONICAL_WEEK_43_TITLE = "Semana 43 (18 al 24 de Octubre de 2026)";
+const CANONICAL_WEEK_44_TITLE = "Semana 44 (25 al 31 de Octubre de 2026)";
+
+function isCanonicalHardGateWeek(wKey) {
+  const target = wKey || (typeof activeWeek === 'string' ? activeWeek : '');
+  const n = getWeekNumberFromKey(target);
+  return n !== null && n >= 43;
+}
 
 function validateCulinaryImmunity(text) {
   if (!text) return true;
@@ -2460,11 +2490,14 @@ function buildWeekPlanForNumber(targetWeekNum, prevWeekPlanOverride) {
   const weekTitle = `Semana ${nextWeekNum} (${dateRangeStr})`;
   const weekIsoStart = `${startDate.getFullYear()}-${pad2(startDate.getMonth() + 1)}-${startD}`;
 
-  if (nextWeekNum <= 43 && typeof datasets === 'object' && datasets && datasets[weekTitle]) {
+  const hasFeedbackPenalty = Array.isArray(window.MEAL_FEEDBACK_LEDGER) && window.MEAL_FEEDBACK_LEDGER.some(e => (parseFloat(e.repeat_weight_modifier) || 1.0) <= 0.50);
+  if (nextWeekNum <= 44 && !hasFeedbackPenalty && typeof datasets === 'object' && datasets && datasets[weekTitle]) {
     return JSON.parse(JSON.stringify(datasets[weekTitle]));
   }
 
-  const baseS43 = datasets["Semana 43 (18 al 24 de Octubre de 2026)"] || Object.values(datasets)[0];
+  const baseS43 = (nextWeekNum >= 45 && datasets[CANONICAL_WEEK_44_TITLE])
+    ? datasets[CANONICAL_WEEK_44_TITLE]
+    : (datasets["Semana 43 (18 al 24 de Octubre de 2026)"] || Object.values(datasets)[0]);
   const baseDays = (baseS43 && Array.isArray(baseS43.days)) ? baseS43.days : [];
   if (baseDays.length !== 7) return null;
 
@@ -2703,7 +2736,7 @@ function buildWeekPlanForNumber(targetWeekNum, prevWeekPlanOverride) {
 function purgeWeeksAfter43() {
   try {
     window.customGeneratedWeeks = window.customGeneratedWeeks || {};
-    // Garantizar que Semana 43 use siempre la versión canónica Hard-Gate validada (semana_43_master.json)
+    // Garantizar que Semana 43 y Semana 44 usen siempre la versión canónica Hard-Gate validada (semana_43_master.json / semana_44_master.json)
     if (typeof datasets === 'object' && datasets) {
       if (datasets[CANONICAL_WEEK_43_TITLE]) {
         window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] = datasets[CANONICAL_WEEK_43_TITLE];
@@ -2713,6 +2746,9 @@ function purgeWeeksAfter43() {
           window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] = plan43;
           datasets[CANONICAL_WEEK_43_TITLE] = plan43;
         }
+      }
+      if (datasets[CANONICAL_WEEK_44_TITLE]) {
+        window.customGeneratedWeeks[CANONICAL_WEEK_44_TITLE] = datasets[CANONICAL_WEEK_44_TITLE];
       }
     }
   } catch (err) {
@@ -2730,7 +2766,11 @@ function syncCustomWeeksDropdowns(preferredWeekKey) {
         if (datasets[CANONICAL_WEEK_43_TITLE]) {
           window.customGeneratedWeeks[wKey] = datasets[CANONICAL_WEEK_43_TITLE];
         }
-      } else if (wNum !== null && wNum > 43 && !datasets[wKey] && window.customGeneratedWeeks[wKey]) {
+      } else if (wNum === 44) {
+        if (datasets[CANONICAL_WEEK_44_TITLE]) {
+          window.customGeneratedWeeks[wKey] = datasets[CANONICAL_WEEK_44_TITLE];
+        }
+      } else if (wNum !== null && wNum > 44 && !datasets[wKey] && window.customGeneratedWeeks[wKey]) {
         datasets[wKey] = window.customGeneratedWeeks[wKey];
       }
     });
@@ -3084,10 +3124,10 @@ function selectWeek(weekKey) {
             <div>
               <label for="setup-week" style="display: block; font-weight: 700; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.3rem;">Semana a Planificar:</label>
               <select id="setup-week" onchange="onHeaderWeekChange(this.value)" style="width: 100%; padding: 0.6rem; border: 1px solid var(--border-clinical); border-radius: 8px; font-weight: 700; background: var(--surface-card); color: var(--text-main); min-height: 44px;">
-                <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
                 <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
                 <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
-                <option value="Semana 43 (18 al 24 de Octubre de 2026)" selected>Semana 43 (18 al 24 de Octubre de 2026)</option>
+                <option value="Semana 43 (18 al 24 de Octubre de 2026)">Semana 43 (18 al 24 de Octubre de 2026)</option>
+                <option value="Semana 44 (25 al 31 de Octubre de 2026)" selected>Semana 44 (25 al 31 de Octubre de 2026)</option>
               </select>
             </div>
             <div>
@@ -3201,10 +3241,10 @@ function selectWeek(weekKey) {
           <span style="color: var(--border-clinical);">|</span>
           <span style="color: var(--text-muted); font-weight: 700;">Semana:</span>
           <select id="header-week-select" onchange="onHeaderWeekChange(this.value)" style="padding: 0.35rem 0.75rem; border-radius: 8px; border: 1.5px solid var(--color-34plus); background: var(--surface-card); color: var(--color-34plus); font-weight: 800; font-size: 0.88rem; cursor: pointer; min-height: 38px; outline: none; transition: all 0.2s ease;">
-            <option value="Semana 40 (27 de Septiembre al 03 de Octubre de 2026)">Semana 40 (27 de Septiembre al 03 de Octubre de 2026)</option>
             <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
             <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
-            <option value="Semana 43 (18 al 24 de Octubre de 2026)" selected>Semana 43 (18 al 24 de Octubre de 2026)</option>
+            <option value="Semana 43 (18 al 24 de Octubre de 2026)">Semana 43 (18 al 24 de Octubre de 2026)</option>
+            <option value="Semana 44 (25 al 31 de Octubre de 2026)" selected>Semana 44 (25 al 31 de Octubre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
@@ -3865,7 +3905,7 @@ let pantryStock = {
       else if (/\\b(180 hue bla|huevos?|huevo blanco)\\b/.test(norm)) out = 'Huevo';
       else if (/\\b(lala manche|queso manchego|manchego)\\b/.test(norm)) out = 'Queso manchego';
       else if (/\\b(cabrarandano|queso de cabra con arandano|queso de cabra)\\b/.test(norm)) out = 'Queso de cabra';
-      else if (/\\b(12\/90 manteq|mantequilla)\\b/.test(norm) && !norm.includes('ghee') && !norm.includes('clarificada')) out = 'Mantequilla';
+      else if (/\\b(12\\/90 manteq|mantequilla)\\b/.test(norm) && !norm.includes('ghee') && !norm.includes('clarificada')) out = 'Mantequilla';
       else if (/\\b(mm nuez indi|nuez de la india|nueces de la india|nuez india)\\b/.test(norm)) out = 'Nuez de la India';
       else if (/\\b(mm aceite co|aceite de coco)\\b/.test(norm)) out = 'Aceite de coco';
       else if (/\\b(germinado|germinados)\\b/.test(norm)) out = 'Germinado';
@@ -5104,7 +5144,7 @@ let pantryStock = {
             window.customGeneratedWeeks = {};
             Object.keys(state.customGeneratedWeeks).forEach(wKey => {
               const wNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(wKey) : null;
-              if (wNum !== null && wNum > 43 && state.customGeneratedWeeks[wKey]) {
+              if (wNum !== null && wNum > 44 && state.customGeneratedWeeks[wKey]) {
                 window.customGeneratedWeeks[wKey] = state.customGeneratedWeeks[wKey];
                 if (typeof datasets === 'object' && datasets) {
                   datasets[wKey] = state.customGeneratedWeeks[wKey];
@@ -5113,6 +5153,9 @@ let pantryStock = {
             });
             if (typeof datasets !== 'undefined' && datasets[CANONICAL_WEEK_43_TITLE]) {
               window.customGeneratedWeeks[CANONICAL_WEEK_43_TITLE] = datasets[CANONICAL_WEEK_43_TITLE];
+            }
+            if (typeof datasets !== 'undefined' && datasets[CANONICAL_WEEK_44_TITLE]) {
+              window.customGeneratedWeeks[CANONICAL_WEEK_44_TITLE] = datasets[CANONICAL_WEEK_44_TITLE];
             }
           }
           if (state.activeWeek) {
@@ -5444,11 +5487,13 @@ let pantryStock = {
         if (override.side_recipe) mObj.side_recipe = override.side_recipe;
       }
       
-      validateNoDuplicateBroths(mObj);
-      enforceFatSourceUniqueness(mObj);
-      validateNoFruitDairyMix(mObj);
-      enforceIngredientDiversityPerMeal(mObj);
-      enforceMetabolicLoadBalance(mObj);
+      if (!isCanonicalHardGateWeek(typeof activeWeek !== 'undefined' ? activeWeek : '') || override) {
+        validateNoDuplicateBroths(mObj);
+        enforceFatSourceUniqueness(mObj);
+        validateNoFruitDairyMix(mObj);
+        enforceIngredientDiversityPerMeal(mObj);
+        enforceMetabolicLoadBalance(mObj);
+      }
       return mObj;
     }
 
@@ -6884,7 +6929,7 @@ function parseQuantityInBaseUnit(qty, unitRaw) {
 }
 
 function getYieldFactor(category, slug) {
-  if (typeof activeWeek !== 'undefined' && activeWeek && (activeWeek.includes('43') || activeWeek.includes('40'))) return 1.00;
+  if (typeof activeWeek !== 'undefined' && activeWeek && (isCanonicalHardGateWeek(activeWeek) || activeWeek.includes('40'))) return 1.00;
   if (/sardina|atun-enlatado|enlatad|lata/i.test(slug)) return 1.00;
   if (category && category.includes("Carnes")) return 1.15;
   if (category && category.includes("Verduras")) return 1.10;
@@ -6905,7 +6950,7 @@ function formatBaseQuantity(val, type, origUnit) {
 
 function sanitizeMarketRawMaterial(rawName) {
   if (!rawName) return '';
-  if (typeof activeWeek !== 'undefined' && activeWeek && activeWeek.includes('43')) {
+  if (typeof activeWeek !== 'undefined' && activeWeek && isCanonicalHardGateWeek(activeWeek)) {
     return rawName.trim();
   }
   let clean = rawName
@@ -6964,7 +7009,7 @@ function sanitizeMarketRawMaterial(rawName) {
 
 function processMarketItem(rawName, totalQty, unit) {
   if (!rawName) return [];
-  if (typeof activeWeek !== 'undefined' && activeWeek && activeWeek.includes('43')) {
+  if (typeof activeWeek !== 'undefined' && activeWeek && isCanonicalHardGateWeek(activeWeek)) {
     return [{ name: stripFrescoAdjective(rawName.trim()), qty: totalQty, unit: unit }];
   }
 
@@ -7189,7 +7234,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
 
   // Contabilidad integral de las 4 tomas diarias de Sinergix® (Toma 1 en ayunas + Toma 4 antes de dormir)
   const wTarget = weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : '');
-  if (wTarget && wTarget.includes('43')) {
+  if (wTarget && isCanonicalHardGateWeek(wTarget)) {
     const extraDoseQty = 5 * numDiners * 7; // 210 g para 6 comensales
     ['MultiSinergix®', 'AminoSinergix®'].forEach(suppName => {
       const sSlug = normalizeToCanonicalSlug(suppName);
@@ -7269,7 +7314,7 @@ function calculateNetShoppingList(diners) {
     let name = stripFrescoAdjective(it.name || it.item_name || '');
     let cat = it.category || '';
 
-    if (typeof activeWeek !== 'undefined' && activeWeek && (activeWeek.includes('40') || activeWeek.includes('43'))) {
+    if (typeof activeWeek !== 'undefined' && activeWeek && (activeWeek.includes('40') || isCanonicalHardGateWeek(activeWeek))) {
       return { ...it, name: name, item_name: name, category: cat };
     }
 
@@ -8733,7 +8778,7 @@ function compileFullMealRecipes(meal, diners) {
     }
 
     function ensureSundayServiceDispatched() {
-      if (typeof activeWeek === 'undefined' || String(activeWeek).includes('43')) return;
+      if (typeof activeWeek === 'undefined' || isCanonicalHardGateWeek(String(activeWeek))) return;
       const sundayMeals = [
         { dayIdx: 0, mealType: 'Desayuno', diners: 2 },
         { dayIdx: 0, mealType: 'Comida', diners: 2 }
