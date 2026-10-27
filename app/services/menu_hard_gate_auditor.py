@@ -342,7 +342,7 @@ ARCHETYPE_PATTERNS: List[Tuple[str, List[str]]] = [
     ("corte_parrilla", ["corte de", "a la parrilla"]),
     ("portobello_relleno", ["portobello al horno", "champinones portobello al horno"]),
     ("salmon_costra", ["lomo de salmon", "costra de pistaches"]),
-    ("lomos_horno", ["lomos de sardina", "sardina del pacifico"]),
+    ("lomos_horno", ["lomos de sardina del pacifico al horno", "sardina del pacifico al horno"]),
 ]
 
 # Vegetales secundarios/base monitoreados para [R4] (intra-servicio e intra-día)
@@ -655,6 +655,8 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
     for m_key, m_tokens in [
         ("shakshuka", ["shakshuka"]),
         ("benedictino", ["benedictin"]),
+        ("flan_bano_maria", ["flan salado", "bano maria"]),
+        ("clafoutis", ["clafoutis"]),
         ("souffle", ["souffle"]),
         ("oeufs_plat", ["al plato", "sur le plat"]),
         ("nube_orsini", ["nube", "orsini"]),
@@ -666,12 +668,18 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
         ("anillo", ["anillo"]),
         ("cilbir", ["cilbir"]),
         ("estrellados", ["estrellad"]),
+        ("compota", ["compota"]),
+        ("reduccion_fruta", ["reduccion templada"]),
+        ("coulis", ["coulis"]),
+        ("macerado_brunoise", ["macerado"]),
         ("glaseado", ["glasead", "glaze"]),
         ("tagliata", ["tagliata"]),
         ("veracruzana", ["veracruzana"]),
-        ("kofta", ["kofta"]),
+        ("kofta", ["kofta", "kefta"]),
         ("fondue_cazuela", ["fondue"]),
+        ("terrina", ["terrina"]),
         ("pipian", ["enpipianad", "pipian"]),
+        ("blanquette", ["blanquette"]),
         ("meuniere", ["meuniere"]),
         ("pastel_carne", ["pastel de carne", "meatloaf"]),
         ("croquetas", ["croqueta"]),
@@ -683,12 +691,23 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
         ("hamburguesa", ["hamburguesa"]),
         ("barquitas", ["barquita", "tostada", "taco"]),
         ("salpicon", ["salpicon"]),
+        ("tiradito", ["tiradito"]),
+        ("cazuelita_salteada", ["cazuelita tibia"]),
+        ("medallones_braseados", ["medallones de calabacita"]),
+        ("mosaico_vapor", ["mosaico templado"]),
+        ("cuscus", ["cuscus"]),
+        ("duxelles", ["duxelles"]),
+        ("milhojas", ["milhojas"]),
+        ("puntas_braseadas", ["puntas de esparragos"]),
         ("juliana_wok", ["juliana"]),
         ("tartar_brunoise", ["tartar", "brunoise"]),
         ("carpaccio", ["carpaccio", "abanico"]),
         ("potaje_trozos", ["potaje", "floretes de coliflor enteros"]),
         ("crema_veloute", ["crema", "veloute", "cappuccino"]),
         ("consome_caldo", ["consome", "caldo", "sopa"]),
+        ("ensalada_griega", ["ensalada griega"]),
+        ("ensalada_mediterranea", ["ensalada mediterranea"]),
+        ("ensalada_corazones_plancha", ["corazones de lechuga"]),
         ("ensalada", ["ensalada"]),
         ("bastones", ["bastones"]),
     ]:
@@ -1348,11 +1367,11 @@ def audit_week_plan(
                             )
 
     # [R10-DNA] Bloqueo por Huella Física Inmutable (`compute_dish_structural_dna`) y Similitud de Jaccard (< 0.60)
-    # en Ventana Móvil de 4 Semanas ([W-3, W-2, W-1, W])
+    # en Ventana Móvil de 5 Semanas ([W-4, W-3, W-2, W-1, W] = S40, S41, S42, S43 y S44)
     if is_strict_s44 and len(days) == 7:
         root_dir = Path(__file__).resolve().parents[2]
         rolling_prev_weeks: List[Tuple[str, Dict[str, Any]]] = []
-        for w_num in (41, 42, 43):
+        for w_num in (40, 41, 42, 43):
             w_path = root_dir / f"semana_{w_num}_master.json"
             if w_path.exists():
                 try:
@@ -1371,18 +1390,22 @@ def audit_week_plan(
                     sig_main = extract_structural_signature(c_main)
                     if sig_main:
                         violations.append(
-                            f"[R10-DNA] Huella Estructural Repetida de S41-S43 ({d_label} - {m_label}): '{c_main.get('title')}' colisiona con huella '{sig_main}'."
+                            f"[R10-DNA] Huella Estructural Repetida de S40-S43 ({d_label} - {m_label}): '{c_main.get('title')}' colisiona con huella '{sig_main}'."
                         )
                     sig_starter = extract_structural_signature(c_starter)
                     if sig_starter:
                         violations.append(
-                            f"[R10-DNA] Huella Estructural de Entrada Repetida de S41-S43 ({d_label} - {m_label}): '{c_starter.get('title')}' colisiona con huella '{sig_starter}'."
+                            f"[R10-DNA] Huella Estructural de Entrada Repetida de S40-S43 ({d_label} - {m_label}): '{c_starter.get('title')}' colisiona con huella '{sig_starter}'."
                         )
 
                     dna_main_c = compute_dish_structural_dna(c_main)
                     dna_st_c = compute_dish_structural_dna(c_starter)
 
                     for w_tag, pw_data in rolling_prev_weeks:
+                        # Para S40 comparamos estrictamente los días regenerados (Martes 27 a Sábado 31, d_idx >= 2);
+                        # para S41-S43 comparamos los 7 días completos
+                        if w_tag == "S40" and d_idx < 2:
+                            continue
                         for pd_obj in pw_data.get("days", []):
                             pd_name = pd_obj.get("day", "")
                             for pm_idx, pm_obj in enumerate(pd_obj.get("meals", [])):
@@ -1403,7 +1426,7 @@ def audit_week_plan(
                                 if m_idx in (1, 2) and pm_idx in (1, 2):
                                     p_st = pm_obj.get("starter") or {}
                                     dna_st_p = compute_dish_structural_dna(p_st)
-                                    if dna_st_c[0] == dna_st_p[0] and dna_st_c[2] != "ensalada":
+                                    if dna_st_c[0] == dna_st_p[0] and not dna_st_c[2].startswith("ensalada"):
                                         if dna_st_c == dna_st_p:
                                             violations.append(
                                                 f"[R10-DNA] Colisión de ADN Estructural de Entrada {dna_st_c} en {d_label} {m_label} ('{c_starter.get('title')}') contra {w_tag} {pd_name} {pm_type} ('{p_st.get('title')}')."

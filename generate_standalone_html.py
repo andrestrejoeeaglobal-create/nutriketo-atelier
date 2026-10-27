@@ -2229,7 +2229,7 @@ const _HG_ARCHETYPE_PATTERNS = [
   ['corte_parrilla', ['corte de', 'a la parrilla']],
   ['portobello_relleno', ['portobello al horno', 'champinones portobello al horno']],
   ['salmon_costra', ['lomo de salmon', 'costra de pistaches']],
-  ['lomos_horno', ['lomos de sardina', 'sardina del pacifico']]
+  ['lomos_horno', ['lomos de sardina del pacifico al horno', 'sardina del pacifico']]
 ];
 
 function _extractDishArchetypeHardGate(dish) {
@@ -2364,6 +2364,25 @@ function _computeDishStructuralDnaHardGate(dish) {
     ['salpicon', ['salpicon']], ['juliana_wok', ['juliana']], ['tartar_brunoise', ['tartar', 'brunoise']],
     ['carpaccio', ['carpaccio', 'abanico']], ['potaje_trozos', ['potaje', 'floretes de coliflor enteros']],
     ['crema_veloute', ['crema', 'veloute', 'cappuccino']], ['consome_caldo', ['consome', 'caldo', 'sopa']],
+    ['flan_bano_maria', ['flan salado', 'bano maria', 'baño maria']],
+    ['clafoutis', ['clafoutis']],
+    ['compota', ['compota']],
+    ['reduccion_fruta', ['reduccion templada', 'reduccion de']],
+    ['coulis', ['coulis']],
+    ['macerado_brunoise', ['macerado', 'brunoise']],
+    ['terrina', ['terrina']],
+    ['blanquette', ['blanquette']],
+    ['tiradito', ['tiradito']],
+    ['cazuelita_salteada', ['cazuelita tibia']],
+    ['medallones_braseados', ['medallones de calabacita']],
+    ['mosaico_vapor', ['mosaico templado']],
+    ['cuscus', ['cuscus', 'cuscús']],
+    ['duxelles', ['duxelles']],
+    ['milhojas', ['milhojas']],
+    ['puntas_braseadas', ['puntas de esparragos']],
+    ['ensalada_griega', ['ensalada griega']],
+    ['ensalada_mediterranea', ['ensalada mediterranea']],
+    ['ensalada_corazones_plancha', ['corazones de lechuga', 'a la plancha']],
     ['ensalada', ['ensalada']], ['bastones', ['bastones']]
   ];
   for (const [mKey, mTokens] of morfRules) {
