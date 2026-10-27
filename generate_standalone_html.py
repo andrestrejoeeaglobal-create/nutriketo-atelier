@@ -1826,7 +1826,8 @@ def generate_standalone():
         with open("semana_44_master.json", "r", encoding="utf-8") as f44:
             plan_44_dict = json.load(f44)
     except Exception:
-        plan_44_dict = generate_validated_week_plan(44, plan_43_dict, prev_week_data=plan_43_dict)
+        from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
+        plan_44_dict = generate_week_with_tilo_cortex(44, history_weeks=[plan_43_dict])
 
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
@@ -2163,7 +2164,7 @@ function _extractDishVegsAndFruits(dish) {
 
 function _classifyMainProteinHardGate(mainDish) {
   const ings = (mainDish && Array.isArray(mainDish.ingredients)) ? mainDish.ingredients : [];
-  const joined = ings.map(i => _normTextHardGate(i.name)).join(' | ').trim();
+  const joined = ings.map(i => _normTextHardGate(i.name)).filter(nm => !['fondo claro', 'caldo concentrado', 'caldo de'].some(b => nm.includes(b))).join(' | ').trim();
   if (joined.includes('flat steak') || (/\\bres\\b/.test(joined) && !joined.includes('molida'))) {
     return { key: 'flat_steak', family: 'res', circadianDinnerOk: false };
   }
@@ -2184,6 +2185,28 @@ function _classifyMainProteinHardGate(mainDish) {
 }
 
 const _HG_ARCHETYPE_PATTERNS = [
+  ['huevo_souffle_manchego', ['souffle de huevo', 'soufflé de huevo']],
+  ['huevo_nido_esparragos', ['nidos de huevo', 'nido de huevo']],
+  ['huevo_nube_orsini', ['huevos en nube', 'a la orsini']],
+  ['huevo_al_plato_philadelphia_ricotta', ['huevos al plato', 'al plato sobre espejo']],
+  ['huevo_roulade_ricotta', ['roulade de huevo']],
+  ['huevo_mollet_aguacate', ['huevos mollet', 'huevo mollet']],
+  ['huevo_crepa_rellena_acelgas', ['crepas finas de huevo', 'crepa fina de huevo']],
+  ['salmon_glaseado_mostaza_sarten', ['lomo de salmon glaseado', 'lomo de salmón glaseado']],
+  ['salmon_horno_limon_romero', ['lomo de salmon al horno con mantequilla', 'lomo de salmón al horno con mantequilla']],
+  ['pavo_medallones_mantequilla_ajo', ['medallones de pechuga de pavo dorados', 'pechuga de pavo dorados en mantequilla']],
+  ['flat_steak_tagliata_romero', ['tagliata de flat steak']],
+  ['flat_steak_chimichurri_cilantro', ['medallones de flat steak al sarten con chimichurri', 'chimichurri de cilantro']],
+  ['mojarra_meuniere_alcaparras', ['fajitas de mojarra a la meuniere', 'a la meunière']],
+  ['mojarra_veracruzana_sarten', ['fajitas de mojarra a la veracruzana']],
+  ['res_koftas_especiadas', ['koftas de carne molida', 'koftas']],
+  ['res_picadillo_seco_aceitunas', ['picadillo seco gourmet', 'picadillo seco']],
+  ['champinon_fondue_manchego_ricotta', ['cazuela de champinones al sarten', 'fondue de queso manchego']],
+  ['sardina_pipian_nuez_india', ['lomos de sardina al sarten en salsa cremosa', 'sardina al sarten en salsa']],
+  ['atun_croquetas_ricotta_sarten', ['croquetas doradas de atun', 'croquetas doradas de atún']],
+  ['pollo_cacciatora_cazadora', ['piezas de pollo entero de alacena braseadas a la cazadora', 'a la cazadora']],
+  ['res_involtini_braseado', ['involtini de flat steak', 'involtini']],
+  ['quenelles_ricotta_cottage_espejo_yogur', ['quenelles templadas de queso ricotta', 'quenelles templadas']],
   ['fajitas', ['fajita', 'fajitas']],
   ['tamagoyaki', ['tamagoyaki', 'rollo tamagoyaki']],
   ['omelette', ['omelette']],
@@ -2219,6 +2242,160 @@ function _extractDishArchetypeHardGate(dish) {
     }
   }
   return tech || t.slice(0, 24);
+}
+
+const _HG_JACCARD_CANON_INGS = [
+  ['calabacitas', ['calabacita', 'zucchini', 'zoodles']],
+  ['coliflor', ['coliflor']],
+  ['brocoli', ['brocoli']],
+  ['esparragos', ['esparrago']],
+  ['espinacas', ['espinaca']],
+  ['acelgas', ['acelga']],
+  ['nopales', ['nopal']],
+  ['ejotes', ['ejote']],
+  ['pepino', ['pepino']],
+  ['lechuga', ['lechuga']],
+  ['champinon', ['champinon', 'portobello']],
+  ['morron', ['morron', 'pimiento']],
+  ['jitomate', ['jitomate']],
+  ['tomate', ['tomate verde', 'tomate']],
+  ['cebolla', ['cebolla']],
+  ['aguacate', ['aguacate']],
+  ['queso_ricotta', ['ricotta']],
+  ['queso_manchego', ['manchego']],
+  ['queso_philadelphia', ['philadelphia']],
+  ['queso_cottage', ['cottage']],
+  ['queso_gouda', ['gouda']],
+  ['queso_panela', ['panela']],
+  ['queso_parmesano', ['parmesano']],
+  ['queso_mozzarella', ['mozzarella']],
+  ['yogur_griego', ['yogur', 'yoghurt']],
+  ['crema_acida', ['crema acida']],
+  ['mantequilla', ['mantequilla']],
+  ['leche_coco', ['leche de coco']],
+  ['aceite_coco', ['aceite de coco']],
+  ['nuez_india', ['nuez de la india']],
+  ['nuez_pecana', ['nuez pecana', 'nueces pecanas']],
+  ['almendras', ['almendra']],
+  ['pistaches', ['pistache']],
+  ['ajonjoli', ['ajonjoli', 'sesamo']],
+  ['aceitunas', ['aceituna']],
+  ['alcaparras', ['alcaparra']],
+  ['mostaza', ['mostaza']],
+  ['germinado', ['germinado']],
+  ['cilantro', ['cilantro']],
+  ['romero', ['romero']],
+  ['tomillo', ['tomillo']],
+  ['oregano', ['oregano']],
+  ['laurel', ['laurel']],
+  ['comino', ['comino']],
+  ['hierbas_finas', ['hierbas finas', 'finas hierbas']]
+];
+
+function _computeDishStructuralDnaHardGate(dish) {
+  const t = _normTextHardGate((dish && (dish.title || dish.name)) || '');
+  const tech = _normTextHardGate((dish && (dish.technique || dish.cooking_technique)) || '');
+  const stepsTxt = ((dish && dish.steps) || []).map(s => _normTextHardGate(s)).join(' ');
+  const ingsTxt = ((dish && dish.ingredients) || []).map(i => _normTextHardGate(i.name)).join(' ');
+  const full = t + ' ' + tech + ' ' + ingsTxt + ' ' + stepsTxt;
+  const tTech = t + ' ' + tech;
+
+  if (ingsTxt.includes('huevo') && (ingsTxt.includes('acelga') || ingsTxt.includes('espinaca')) && ['horno', 'hornead', 'cazuela', 'florentina', 'cocotte'].some(w => tTech.includes(w))) {
+    return 'huevo|horno|cama_hoja_verde|cazuela_florentina';
+  }
+  if (ingsTxt.includes('salmon') && (tTech + ' ' + stepsTxt).includes('costra')) {
+    return 'salmon|sellado_horno|costra|semilla_nuez';
+  }
+  if (ingsTxt.includes('atun') && ['costra', 'medallon', 'tataki'].some(w => tTech.includes(w))) {
+    return 'atun|sellado|costra_tataki|semilla_nuez';
+  }
+  if ((ingsTxt.includes('champinon') || full.includes('portobello')) && (t.includes('portobello') || t.includes('relleno') || (tTech.includes('horno') && (ingsTxt.includes('ricotta') || t.includes('gratinad') || ingsTxt.includes('queso'))))) {
+    return 'champinon|horno|relleno_gratinado|queso';
+  }
+  if (['flat steak', 'ribeye', 'arrachera', 'sirloin'].some(k => ingsTxt.includes(k)) && !ingsTxt.includes('molida')) {
+    if (['parrilla', 'brasas', 'bife', 'corte'].some(w => tTech.includes(w)) && ingsTxt.includes('mantequilla') && !t.includes('involtini')) {
+      return 'res_corte|parrilla|mantequilla_hierbas|corte_bife';
+    }
+  }
+  if (ingsTxt.includes('sardina') && ['horno', 'hornead'].some(w => tTech.includes(w)) && (ingsTxt.includes('tomate') || ingsTxt.includes('jitomate'))) {
+    return 'sardina|horno|tomate|lomos_enteros';
+  }
+  if (ingsTxt.includes('cottage') && ingsTxt.includes('yogur') && (tTech.includes('timbal') || t.includes('molde'))) {
+    return 'lacteo_frio|ensamblaje|timbal|cottage_yogur';
+  }
+  if (ingsTxt.includes('huevo') && (tTech.includes('revuelto') || (tTech.includes('baveuse') && !t.includes('omelette')))) {
+    return 'huevo|sarten|revuelto|cremoso_vegetal';
+  }
+  if (ingsTxt.includes('mojarra') && full.includes('ajo') && full.includes('cilantro') && ['grill', 'mojo', 'plancha'].some(w => tTech.includes(w)) && !['veracruzana', 'meuniere', 'aceituna', 'alcaparra'].some(w => full.includes(w))) {
+    return 'mojarra|plancha|ajo_cilantro_limon|mojo';
+  }
+
+  let prot = _classifyMainProteinHardGate(dish).key;
+  if (prot === 'otra') {
+    const vf = _extractDishVegsAndFruits(dish);
+    if (vf.vegs.length > 0) prot = 'veg_' + vf.vegs[0];
+    else if (vf.fruits.length > 0) prot = 'fruit_' + vf.fruits[0];
+    else prot = 'caldo_base';
+  }
+  let metodo = 'frio_ensamblaje';
+  if (['pochad', 'escalfad', 'poach'].some(w => tTech.includes(w))) metodo = 'pochado';
+  else if (['horno', 'hornead', 'rostizad', 'gratinad', 'bake', 'roast', 'souffle'].some(w => tTech.includes(w))) metodo = 'horno';
+  else if (['vapor', 'papillote', 'steam'].some(w => tTech.includes(w))) metodo = 'vapor_papillote';
+  else if (['brasead', 'cazadora', 'cacciatora', 'braise', 'involtini'].some(w => tTech.includes(w))) metodo = 'braseado';
+  else if (['parrilla', 'plancha', 'grill', 'brasas'].some(w => tTech.includes(w))) metodo = 'parrilla_plancha';
+  else if (tTech.includes('wok')) metodo = 'wok';
+  else if (['crema', 'veloute', 'cappuccino', 'gazpacho', 'emulsified'].some(w => tTech.includes(w))) metodo = 'licuado_emulsion';
+  else if (['consome', 'caldo', 'sopa', 'potaje', 'potage', 'broth'].some(w => tTech.includes(w))) metodo = 'caldo_hervido';
+  else if (['sarten', 'saltead', 'dorad', 'meuniere', 'sellad', 'skillet', 'sear', 'pan'].some(w => tTech.includes(w))) metodo = 'sarten';
+
+  let morf = 'estandar';
+  const morfRules = [
+    ['shakshuka', ['shakshuka']], ['benedictino', ['benedictin']], ['souffle', ['souffle']],
+    ['oeufs_plat', ['al plato', 'sur le plat']], ['nube_orsini', ['nube', 'orsini']],
+    ['roulade', ['roulade']], ['crepa', ['crepa', 'crepe']], ['tamagoyaki', ['tamagoyaki']],
+    ['omelette', ['omelette']], ['frittata', ['frittata']], ['anillo', ['anillo']],
+    ['cilbir', ['cilbir']], ['estrellados', ['estrellad']], ['glaseado', ['glasead', 'glaze']],
+    ['tagliata', ['tagliata']], ['veracruzana', ['veracruzana']], ['kofta', ['kofta']],
+    ['fondue_cazuela', ['fondue']], ['pipian', ['enpipianad', 'pipian']], ['meuniere', ['meuniere']],
+    ['pastel_carne', ['pastel de carne', 'meatloaf']], ['croquetas', ['croqueta']],
+    ['veloute_horno', ['salsa cremosa de queso ricotta']], ['cacciatora', ['cazadora', 'cacciatora']],
+    ['involtini', ['involtini']], ['quenelles', ['quenelle']], ['albondigas', ['albondiga']],
+    ['hamburguesa', ['hamburguesa']], ['barquitas', ['barquita', 'tostada', 'taco']],
+    ['salpicon', ['salpicon']], ['juliana_wok', ['juliana']], ['tartar_brunoise', ['tartar', 'brunoise']],
+    ['carpaccio', ['carpaccio', 'abanico']], ['potaje_trozos', ['potaje', 'floretes de coliflor enteros']],
+    ['crema_veloute', ['crema', 'veloute', 'cappuccino']], ['consome_caldo', ['consome', 'caldo', 'sopa']],
+    ['ensalada', ['ensalada']], ['bastones', ['bastones']]
+  ];
+  for (const [mKey, mTokens] of morfRules) {
+    if (mTokens.some(tok => tTech.includes(tok))) { morf = mKey; break; }
+  }
+  const camaTokens = [];
+  for (const [cKey, cPats] of _HG_JACCARD_CANON_INGS) {
+    if (cPats.some(p => ingsTxt.includes(p))) camaTokens.push(cKey);
+  }
+  camaTokens.sort();
+  return prot + '|' + metodo + '|' + morf + '|' + (camaTokens.slice(0, 4).join('+') || 'natural');
+}
+
+function _computeDishJaccardSimilarityHardGate(dishA, dishB) {
+  const getFeats = (d) => {
+    const ingsTxt = ((d && d.ingredients) || []).map(i => _normTextHardGate(i.name)).join(' | ');
+    const s = new Set();
+    for (const [cKey, cPats] of _HG_JACCARD_CANON_INGS) {
+      if (cPats.some(p => ingsTxt.includes(p))) s.add('ing:' + cKey);
+    }
+    const dnaParts = _computeDishStructuralDnaHardGate(d).split('|');
+    s.add('metodo:' + dnaParts[1]);
+    s.add('morfo:' + dnaParts[2]);
+    return s;
+  };
+  const fa = getFeats(dishA);
+  const fb = getFeats(dishB);
+  if (!fa.size || !fb.size) return 0.0;
+  let inter = 0;
+  fa.forEach(x => { if (fb.has(x)) inter++; });
+  const union = fa.size + fb.size - inter;
+  return union > 0 ? inter / union : 0.0;
 }
 
 function _getFeedbackWeightModifierForDish(dishTitle) {
@@ -2367,6 +2544,19 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
             seenLunchSides[sideTitleNorm] = loc;
           }
         }
+        const wLabelNormCheck = _normTextHardGate(weekPlan.week_name || weekPlan.week_label || '');
+        if (wLabelNormCheck.includes('semana 44')) {
+          window._hgSeenLunchSideVegs = window._hgSeenLunchSideVegs || {};
+          const sdVegs = _extractDishVegsAndFruits(meal.side || {}).vegs;
+          const primarySideVeg = sdVegs.length > 0 ? sdVegs[0] : '';
+          if (!primarySideVeg) {
+            violations.push(`[R4-SIDE] ${loc}: La guarnición de comida ('${(meal.side || {}).title || ''}') no contiene un vegetal principal reconocible.`);
+          } else if (window._hgSeenLunchSideVegs[primarySideVeg]) {
+            violations.push(`[R4-SIDE] ${loc}: El vegetal de guarnición de comida '${primarySideVeg}' se repite en la misma semana (ya usado en ${window._hgSeenLunchSideVegs[primarySideVeg]}). Se exigen 7/7 vegetales distintos.`);
+          } else {
+            window._hgSeenLunchSideVegs[primarySideVeg] = loc;
+          }
+        }
       } else if (mNorm.includes('cena')) {
         dProt = pInfo.key;
         dinnerProts.push(pInfo.key);
@@ -2397,6 +2587,7 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
     violations.push(`[R8] La semana debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® en el desayuno (encontradas: ${window._hgWeeklyGelatinasCount || 0}).`);
   }
   window._hgWeeklyGelatinasCount = 0;
+  window._hgSeenLunchSideVegs = {};
 
   for (let i = 0; i < lunchProts.length - 1; i++) {
     if (lunchProts[i] === lunchProts[i + 1]) violations.push(`[R6] Comidas consecutivas repiten ${lunchProts[i]}.`);
@@ -2432,6 +2623,24 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
         }
       });
     }
+    const prevAllMainTitles = {};
+    const prevAllMainArchs = {};
+    const prevAllStarterTitles = {};
+    for (let pdIdx = 0; pdIdx < 7; pdIdx++) {
+      const pdLabel = prevWeekPlan.days[pdIdx].day || `Día ${pdIdx + 1}`;
+      const pMeals = prevWeekPlan.days[pdIdx].meals || [];
+      pMeals.forEach((pMeal, pmIdx) => {
+        const pmLabel = ['Desayuno', 'Comida', 'Cena'][pmIdx] || `Servicio ${pmIdx + 1}`;
+        const pmMain = pMeal.main || {};
+        const pmTitle = _normTextHardGate(pmMain.title || '');
+        const pmArch = _extractDishArchetypeHardGate(pmMain);
+        const pmSt = _normTextHardGate((pMeal.starter || {}).title || '');
+        if (pmTitle) prevAllMainTitles[pmTitle] = `${pdLabel} (${pmLabel})`;
+        if (pmArch) prevAllMainArchs[pmArch] = `${pdLabel} (${pmLabel})`;
+        if (pmSt) prevAllStarterTitles[pmSt] = `${pdLabel} (${pmLabel})`;
+      });
+    }
+
     for (let dIdx = 0; dIdx < 7; dIdx++) {
       const pMeals = prevWeekPlan.days[dIdx].meals || [];
       const cMeals = weekPlan.days[dIdx].meals || [];
@@ -2456,9 +2665,49 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
           if (pmSt && pmSd && pmSt === cmSt && pmSd === cmSd) {
             violations.push(`[R10] Anti-Clonación Inter-Semanal (${dLabel} - ${mLabel}): Repite combinación Entrada+Guarnición el mismo día de la semana.`);
           }
+          if (cmTitle && prevAllMainTitles[cmTitle]) {
+            violations.push(`[R10] Disyunción Cruzada Global 7x7 (${dLabel} - ${mLabel}): Plato principal '${cmMain.title}' clonado/permutado desde W-1 (${prevAllMainTitles[cmTitle]}).`);
+          }
+          if (cmArch && prevAllMainArchs[cmArch]) {
+            violations.push(`[R10] Disyunción Cruzada Global 7x7 (${dLabel} - ${mLabel}): Arquetipo '${cmArch}' clonado/permutado desde W-1 (${prevAllMainArchs[cmArch]}).`);
+          }
+          if (cmSt && prevAllStarterTitles[cmSt]) {
+            violations.push(`[R10] Disyunción Cruzada Global 7x7 (${dLabel} - ${mLabel}): Entrada clonada/permutada desde W-1 (${prevAllStarterTitles[cmSt]}).`);
+          }
+          const dnaMainC = _computeDishStructuralDnaHardGate(cmMain);
+          for (let pdIdx = 0; pdIdx < 7; pdIdx++) {
+            const pDayMeals = prevWeekPlan.days[pdIdx].meals || [];
+            pDayMeals.forEach((pDayMeal, pmIdx) => {
+              const pMainObj = pDayMeal.main || {};
+              const dnaMainP = _computeDishStructuralDnaHardGate(pMainObj);
+              if (dnaMainC === dnaMainP) {
+                violations.push(`[R10-DNA] Colisión de ADN Estructural (${dnaMainC}) en ${dLabel} - ${mLabel} contra W-1.`);
+              } else if (dnaMainC.split('|')[0] === dnaMainP.split('|')[0]) {
+                const jac = _computeDishJaccardSimilarityHardGate(cmMain, pMainObj);
+                if (jac >= 0.60) {
+                  violations.push(`[R10-DNA] Violación de Compuerta Jaccard (J=${jac.toFixed(2)} >= 0.60) en ${dLabel} - ${mLabel} contra W-1.`);
+                }
+              }
+            });
+          }
         });
       }
     }
+  }
+
+  let totalWeeklyEggs = 0;
+  weekPlan.days.forEach(d => {
+    (d.meals || []).forEach(m => {
+      ['starter', 'main', 'side'].forEach(r => {
+        ((m[r] || {}).ingredients || []).forEach(i => {
+          if (_normTextHardGate(i.name) === 'huevo') totalWeeklyEggs += (parseFloat(i.amount) || 0);
+        });
+      });
+    });
+  });
+  const wNumAudit = getWeekNumberFromKey(weekPlan.week_name || weekPlan.week_label || '');
+  if (wNumAudit === 44 && Math.abs(totalWeeklyEggs - 126.0) > 1e-6) {
+    violations.push(`[R12.1] Exactitud de Huevos Semanales: ${totalWeeklyEggs} piezas != 126 piezas.`);
   }
 
   return { passed: violations.length === 0, violations };
@@ -2495,7 +2744,8 @@ function buildWeekPlanForNumber(targetWeekNum, prevWeekPlanOverride) {
     return JSON.parse(JSON.stringify(datasets[weekTitle]));
   }
 
-  const baseS43 = (nextWeekNum >= 45 && datasets[CANONICAL_WEEK_44_TITLE])
+  // Rotación Disjunta de Ciclos para N >= 45: Semanas impares (45, 47...) usan el banco opuesto a Semanas pares (44, 46...)
+  const baseS43 = (nextWeekNum % 2 === 0 && datasets[CANONICAL_WEEK_44_TITLE])
     ? datasets[CANONICAL_WEEK_44_TITLE]
     : (datasets["Semana 43 (18 al 24 de Octubre de 2026)"] || Object.values(datasets)[0]);
   const baseDays = (baseS43 && Array.isArray(baseS43.days)) ? baseS43.days : [];
@@ -3450,7 +3700,6 @@ window.PANTRY_STOCK_INVENTORY = {
       "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
       "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
       "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 1, unit: "piezas", packaging: "1 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null },
-      "fondo-claro-de-pollo": { item_num: 317, name: "Fondo claro de pollo", stock: 2000, unit: "ml", packaging: "2,000 ml", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada", stock: 0, unit: "g", status: "canonical" },
@@ -3557,7 +3806,7 @@ window.PANTRY_STOCK_INVENTORY = {
     let deletedFarmItems = ["Calabacitas", "Espinacas", "Brócoli", "Espárragos", "Ejotes", "Arúgula", "Coliflor", "Fresas", "Frambuesas", "Zarzamoras", "Arándanos", "Menta", "Epazote"];
     let deletedPantryItems = ["Elote", "Higos", "Nogada", "Zanahoria", "Agua mineral"];
 
-    let activeWeek = "Semana 43 (18 al 24 de Octubre de 2026)";
+    let activeWeek = "Semana 44 (25 al 31 de Octubre de 2026)";
     let selectedIdx = 0;
     let activeDiners = 6;
     let selectedHarvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica"];
@@ -3666,8 +3915,7 @@ let pantryStock = {
       "Queso ricotta": 1920,
       "Chile chipotle": 1320,
       "Frijol pinto": 1,
-      "Pollo entero": 1,
-      "Fondo claro de pollo": 2000
+      "Pollo entero": 1
     };
     let checkedRows = {};
     let mealDinersState = {};
@@ -3904,7 +4152,8 @@ let pantryStock = {
       else if (/\\b(fajitas? pavo|fajitas? de pavo|pechuga de pavo)\\b/.test(norm)) out = 'Pechuga de pavo';
       else if (/\\b(180 hue bla|huevos?|huevo blanco)\\b/.test(norm)) out = 'Huevo';
       else if (/\\b(lala manche|queso manchego|manchego)\\b/.test(norm)) out = 'Queso manchego';
-      else if (/\\b(cabrarandano|queso de cabra con arandano|queso de cabra)\\b/.test(norm)) out = 'Queso de cabra';
+      else if (/\\b(cabrarandano|queso de cabra con arandano)\\b/.test(norm)) out = 'Queso de cabra con arándano';
+      else if (/\\b(queso de cabra)\\b/.test(norm)) out = 'Queso de cabra';
       else if (/\\b(12\\/90 manteq|mantequilla)\\b/.test(norm) && !norm.includes('ghee') && !norm.includes('clarificada')) out = 'Mantequilla';
       else if (/\\b(mm nuez indi|nuez de la india|nueces de la india|nuez india)\\b/.test(norm)) out = 'Nuez de la India';
       else if (/\\b(mm aceite co|aceite de coco)\\b/.test(norm)) out = 'Aceite de coco';
@@ -4627,7 +4876,11 @@ let pantryStock = {
           "ks_guante_gde_400p",
           "miel-pura",
           "duraznos-frescos",
-          "higos-frescos"
+          "higos-frescos",
+          "fondo-claro-de-pollo",
+          "fondo-de-res",
+          "caldo-de-pollo",
+          "caldo-de-res"
         ];
 
         const OBSOLETE_PANTRY_STOCK_NAMES = [
@@ -4658,7 +4911,14 @@ let pantryStock = {
           "MultiSinergix",
           "AminoSinergix",
           "Fórmula Nootrópica 33Plus®",
-          "Fórmula Reparadora 34Plus®"
+          "Fórmula Reparadora 34Plus®",
+          "Fondo claro de pollo",
+          "Fondo de res",
+          "Fondo oscuro de res",
+          "Caldo claro de pollo",
+          "Caldo de pollo",
+          "Caldo de res",
+          "Caldo de huesos"
         ];
 
         // Migración única V43: unificar variaciones en un solo insumo canónico y purgar el duplicado de Costco 907g
@@ -4690,8 +4950,7 @@ let pantryStock = {
             "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso ricotta", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "1,920 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
             "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
             "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
-            "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 1, unit: "piezas", packaging: "1 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null },
-            "fondo-claro-de-pollo": { item_num: 317, name: "Fondo claro de pollo", stock: 2000, unit: "ml", packaging: "2,000 ml", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null }
+            "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 1, unit: "piezas", packaging: "1 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null }
           };
 
           Object.keys(canonicalConsolidatedUpdates).forEach(k => {
@@ -4726,7 +4985,6 @@ let pantryStock = {
             "Lomo de salmón": { stock: 0, unit: "g", sku: "sku-023-lomo-de-salmon" },
             "Pechuga de pollo": { stock: 0, unit: "g", sku: "sku-029-pechuga-de-pollo" },
             "Pollo entero": { stock: 1, unit: "piezas", sku: "pollo-entero", item_num: 316, category: "🥩 Carnes, Pescados y Proteínas" },
-            "Fondo claro de pollo": { stock: 2000, unit: "ml", sku: "fondo-claro-de-pollo", item_num: 317, category: "🌶️ Chiles, Condimentos e Infusiones" },
             "Calabaza": { stock: 0, unit: "piezas", sku: "sku-032-calabaza" },
             "Carne molida": { stock: 0, unit: "g", sku: "sku-024-carne-molida" },
             "Flat steak": { stock: 0, unit: "g", sku: "sku-021-flat-steak" },
@@ -4789,10 +5047,10 @@ let pantryStock = {
           { row: 4, ticket_desc: "MOJARRA ENTE", qty_ticket: 2, price: 240.00, name: "Fajitas de mojarra", add_qty: 2000, target_stock: 2000, unit: "g", sku: "sku-025-fajitas-de-mojarra", item_num: 25, category: "🥩 Carnes, Pescados y Proteínas" },
           { row: 5, ticket_desc: "FAJITAS PAVO", qty_ticket: 1, price: 214.00, name: "Pechuga de pavo", add_qty: 1000, target_stock: 1000, unit: "g", sku: "sku-318-pechuga-de-pavo", item_num: 318, category: "🥩 Carnes, Pescados y Proteínas" },
           { row: 6, ticket_desc: "180 HUE BLA", qty_ticket: 1, price: 375.00, name: "Huevo", add_qty: 180, target_stock: 206, unit: "piezas", sku: "sku-104-huevo", item_num: 104, category: "🥩 Carnes, Pescados y Proteínas" },
-          { row: 7, ticket_desc: "960GR QCOTTA", qty_ticket: 2, price: 212.00, name: "Queso ricotta", add_qty: 1920, target_stock: 1920, unit: "g", sku: "queso_ricotta_artesanal", item_num: 112, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
+          { row: 7, ticket_desc: "960GR QCOTTA", qty_ticket: 2, price: 212.00, name: "Queso ricotta", add_qty: 1920, target_stock: 3840, unit: "g", sku: "queso_ricotta_artesanal", item_num: 112, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
           { row: 8, ticket_desc: "LALA MANCHE", qty_ticket: 1, price: 265.00, name: "Queso manchego", add_qty: 1000, target_stock: 1000, unit: "g", sku: "sku-008-queso-manchego", item_num: 8, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
           { row: 9, ticket_desc: "OIKOS PROT (2 pcs)", qty_ticket: 1, price: 182.00, name: "Yogur griego", add_qty: 1800, target_stock: 5680, unit: "g", sku: "sku-004-yogur-griego", item_num: 4, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
-          { row: 10, ticket_desc: "CABRARANDANO", qty_ticket: 1, price: 176.00, name: "Queso de cabra", add_qty: 400, target_stock: 400, unit: "g", sku: "sku-009-queso-de-cabra", item_num: 9, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
+          { row: 10, ticket_desc: "CABRARANDANO", qty_ticket: 1, price: 176.00, name: "Queso de cabra con arándano", add_qty: 350, target_stock: 350, unit: "g", sku: "sku-320-cabrarandano", item_num: 320, category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Cubierta de arándano azucarado; fuera de protocolo cetogénico estricto" },
           { row: 11, ticket_desc: "12/90 MANTEQ", qty_ticket: 1, price: 251.00, name: "Mantequilla", add_qty: 1080, target_stock: 1370, unit: "g", sku: "sku-001-mantequilla", item_num: 1, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
           { row: 12, ticket_desc: "MM NUEZ INDI", qty_ticket: 1, price: 350.00, name: "Nuez de la India", add_qty: 907, target_stock: 907, unit: "g", sku: "sku-043-nuez-de-la-india", item_num: 43, category: "🥑 Grasas, Aceites y Semillas" },
           { row: 13, ticket_desc: "MM ACEITE CO", qty_ticket: 1, price: 235.00, name: "Aceite de coco", add_qty: 1500, target_stock: 2000, unit: "g", sku: "sku-090-aceite-de-coco", item_num: 90, category: "🥑 Grasas, Aceites y Semillas" },
@@ -4803,13 +5061,31 @@ let pantryStock = {
           { row: 18, ticket_desc: "MM 40/355ML", qty_ticket: 3, price: 282.00, name: "Botella de agua", add_qty: 120, target_stock: 150, unit: "botellas (355 ml)", sku: "sku-019-botella-de-agua", item_num: 19, category: "🌶️ Chiles, Condimentos e Infusiones" }
         ];
 
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v52_sams_scan_go_18_items_sync') !== 'true') {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v55_broth_prepared_and_sams_consolidated_sync') !== 'true') {
+          pantryStock["Queso de cabra"] = 0;
+          if (window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY["sku-009-queso-de-cabra"]) {
+            window.PANTRY_STOCK_INVENTORY["sku-009-queso-de-cabra"].stock = 0;
+            window.PANTRY_STOCK_INVENTORY["sku-009-queso-de-cabra"].packaging = "0 g";
+          }
+          delete pantryStock["Fondo claro de pollo"];
+          delete pantryStock["Fondo de res"];
+          delete pantryStock["Caldo claro de pollo"];
+          delete pantryStock["Caldo de pollo"];
+          delete pantryStock["Caldo de res"];
+          if (window.PANTRY_STOCK_INVENTORY) {
+            delete window.PANTRY_STOCK_INVENTORY["fondo-claro-de-pollo"];
+            delete window.PANTRY_STOCK_INVENTORY["fondo-de-res"];
+            delete window.PANTRY_STOCK_INVENTORY["caldo-de-pollo"];
+            delete window.PANTRY_STOCK_INVENTORY["caldo-de-res"];
+          }
           window.SAMS_SCAN_AND_GO_TICKET_BATCH.forEach(entry => {
             deletedPantryItems = (deletedPantryItems || []).filter(d => (typeof d === 'string' ? d : '').toLowerCase() !== entry.name.toLowerCase());
             pantryStock[entry.name] = entry.target_stock;
             if (window.pantryCardUnits) {
               window.pantryCardUnits[entry.name] = entry.unit;
             }
+            const itemStatus = entry.status || "canonical";
+            const itemReason = entry.reason || null;
             if (window.PANTRY_STOCK_INVENTORY) {
               if (!window.PANTRY_STOCK_INVENTORY[entry.sku]) {
                 window.PANTRY_STOCK_INVENTORY[entry.sku] = {
@@ -4820,8 +5096,8 @@ let pantryStock = {
                   unit: entry.unit,
                   packaging: `${entry.target_stock} ${entry.unit}`,
                   category: entry.category,
-                  status: "canonical",
-                  reason: null
+                  status: itemStatus,
+                  reason: itemReason
                 };
               } else {
                 window.PANTRY_STOCK_INVENTORY[entry.sku].name = entry.name;
@@ -4829,11 +5105,17 @@ let pantryStock = {
                 window.PANTRY_STOCK_INVENTORY[entry.sku].unit = entry.unit;
                 window.PANTRY_STOCK_INVENTORY[entry.sku].packaging = `${entry.target_stock} ${entry.unit}`;
                 window.PANTRY_STOCK_INVENTORY[entry.sku].category = entry.category;
-                window.PANTRY_STOCK_INVENTORY[entry.sku].status = "canonical";
+                window.PANTRY_STOCK_INVENTORY[entry.sku].status = itemStatus;
+                window.PANTRY_STOCK_INVENTORY[entry.sku].reason = itemReason;
               }
             }
           });
+          if (typeof CANONICAL_WEEK_44_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_44_TITLE]) {
+            activeWeek = CANONICAL_WEEK_44_TITLE;
+          }
           localStorage.setItem('nutriketo_v52_sams_scan_go_18_items_sync', 'true');
+          localStorage.setItem('nutriketo_v53_sams_scan_go_consolidated_sync', 'true');
+          localStorage.setItem('nutriketo_v55_broth_prepared_and_sams_consolidated_sync', 'true');
         }
 
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
@@ -4869,19 +5151,6 @@ let pantryStock = {
             unit: "piezas",
             packaging: `${polloEnteroStock} piezas`,
             category: "🥩 Carnes, Pescados y Proteínas",
-            status: "canonical",
-            reason: null
-          };
-        }
-        if (!isPantryItemDeleted("Fondo claro de pollo") && !isPantryItemDeleted("fondo-claro-de-pollo") && !window.PANTRY_STOCK_INVENTORY["fondo-claro-de-pollo"]) {
-          const fondoStock = pantryStock["Fondo claro de pollo"] !== undefined ? pantryStock["Fondo claro de pollo"] : 2000;
-          window.PANTRY_STOCK_INVENTORY["fondo-claro-de-pollo"] = {
-            item_num: 317,
-            name: "Fondo claro de pollo",
-            stock: fondoStock,
-            unit: "ml",
-            packaging: `${fondoStock} ml`,
-            category: "🌶️ Chiles, Condimentos e Infusiones",
             status: "canonical",
             reason: null
           };
@@ -4976,6 +5245,7 @@ let pantryStock = {
         const cleanPantryStock = {};
         Object.keys(pantryStock).forEach(k => {
           if (/miel|durazno/i.test(k)) return;
+          if (/(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+|concentrado\s+y\s+fondo\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(k) && !/polvo/i.test(k)) return;
           const canonName = getPureCanonicalPantryName(k);
           if (!canonName) return;
           if (isPantryItemDeleted(k) || isPantryItemDeleted(canonName)) return;
@@ -7410,13 +7680,8 @@ function calculateNetShoppingList(diners) {
       return;
     }
 
-    // Regla culinaria de taller: Los caldos y fondos (fondo claro de pollo, caldo de res, etc.) no se compran comercialmente; si están en Alacena se amortizan en Tabla 3.2 y si no, en Tabla 3.1
-    const hasExplicitPantryStockForBroth = (typeof pantryStock !== 'undefined' && pantryStock && (parseFloat(pantryStock[cleanName]) || 0) > 0) ||
-      (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && Object.keys(window.PANTRY_STOCK_INVENTORY).some(pk => {
-        const po = window.PANTRY_STOCK_INVENTORY[pk];
-        return po && po.status === 'canonical' && (parseFloat(po.stock) || 0) > 0 && areInsumosEquivalent(po.name || pk, cleanName);
-      }));
-    if (!hasExplicitPantryStockForBroth && /(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(cleanLower) && !cleanLower.includes('polvo') && !cleanLower.includes('concentrado')) {
+    // Regla culinaria de taller: Los caldos y fondos (fondo claro de pollo, fondo de res, caldo de pollo, caldo de res, etc.) NUNCA se compran ni figuran como stock comercial; se preparan internamente en cocina ($0 en Tabla 3.1)
+    if (/(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+|concentrado\s+y\s+fondo\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(cleanLower) && !cleanLower.includes('polvo')) {
       const kQty = Math.round(((parseFloat(item.quantity) || 0) + Number.EPSILON) * 100) / 100;
       const kUnit = item.unit || 'ml';
       kitchenStockItems.push({
@@ -7684,6 +7949,7 @@ function render3DShoppingList() {
     const netData = calculateNetShoppingList(numDiners);
     const marketCategories = netData.categories || {};
     const farmItems = netData.farmItems || [];
+    const kitchenStockItems = netData.kitchenStockItems || [];
     const pantryCoveredItems = netData.pantryCoveredItems || [];
 
     const totalCount = netData.totalCount || 69;
@@ -8003,9 +8269,9 @@ function render3DShoppingList() {
           </div>
         </div>
 
-        <!-- 3. COSECHA PROPIA ($0 GRANJA EL HERAMI) -->
+        <!-- 3. COSECHA PROPIA ($0 GRANJA EL HERAMI) Y FONDOS DE COCINA ($0 ELABORACIÓN INTERNA) -->
         <h4 class="text-base font-bold text-[#3AAA35] mb-3 font-brand-title flex items-center gap-2">
-          <span>🌿 Abastecimiento de Cosecha Propia ($0 Granja El Herami)</span>
+          <span>🌿 Abastecimiento de Cosecha Propia ($0 Granja El Herami) y Fondos de Cocina ($0 Elaboración Interna)</span>
         </h4>
         <div class="bg-emerald-50/40 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-800/60 p-4 rounded-xl mb-4">
           <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2.5 text-xs">
@@ -8018,6 +8284,18 @@ function render3DShoppingList() {
           <div class="flex-1">
             <div class="font-bold text-slate-900 dark:text-slate-100">${c.name}</div>
             <div class="text-[10px] text-emerald-600 dark:text-emerald-400">${c.reason}</div>
+          </div>
+        </li>
+      `;
+    });
+
+    kitchenStockItems.forEach((k) => {
+      html += `
+        <li class="flex items-center gap-2 p-1.5 bg-white dark:bg-slate-900 rounded-md border border-emerald-100 dark:border-emerald-900/40">
+          <span class="text-emerald-600 font-bold text-sm">🍲</span>
+          <div class="flex-1">
+            <div class="font-bold text-slate-900 dark:text-slate-100">${k.name} <span class="text-[#3AAA35] font-mono">(${k.grossStr})</span></div>
+            <div class="text-[10px] text-emerald-600 dark:text-emerald-400">${k.reason}</div>
           </div>
         </li>
       `;
@@ -10172,6 +10450,7 @@ function renderRecipes(day, activeDiners) {
       try {
         if (typeof localStorage !== 'undefined') {
           localStorage.removeItem('nutriketo_v52_sams_scan_go_18_items_sync');
+          localStorage.removeItem('nutriketo_v53_sams_scan_go_consolidated_sync');
         }
         consolidateAndPurgePantryInventory();
         if (mode === 'additive' && Array.isArray(window.SAMS_SCAN_AND_GO_TICKET_BATCH)) {
@@ -10470,7 +10749,7 @@ function renderRecipes(day, activeDiners) {
           <span style="font-size:0.72rem; font-weight:800; background:var(--color-34plus); color:#fff; padding:0.2rem 0.55rem; border-radius:999px;">SSOT 100% Canónico</span>
         </div>
         <div style="font-size:0.76rem; color:var(--text-muted); line-height:1.4; margin-bottom:0.65rem;">
-          Incluye: <strong>Flat steak</strong> (+2,200 g), <strong>Carne molida</strong> (+1,360 g), <strong>Lomo de salmón</strong> (+1,250 g), <strong>Fajitas de mojarra</strong> (+2,000 g), <strong>Pechuga de pavo</strong> (+1,000 g), <strong>Huevo</strong> (+180 pzas), <strong>Queso ricotta</strong> (+1,920 g), <strong>Queso manchego</strong> (+1,000 g), <strong>Yogur griego</strong> (+1,800 g), <strong>Queso de cabra</strong> (+400 g), <strong>Mantequilla</strong> (+1,080 g), <strong>Nuez de la India</strong> (+907 g), <strong>Aceite de coco</strong> (+1,500 g), <strong>Frambuesas</strong> (+340 g), <strong>Zarzamora</strong> (+340 g), <strong>Espárragos</strong> (+907 g), <strong>Germinado</strong> (+500 g) y <strong>Botella de agua</strong> (+120 botellas).
+          Incluye: <strong>Flat steak</strong> (+2,200 g), <strong>Carne molida</strong> (+1,360 g), <strong>Lomo de salmón</strong> (+1,250 g), <strong>Fajitas de mojarra</strong> (+2,000 g), <strong>Pechuga de pavo</strong> (+1,000 g), <strong>Huevo</strong> (+180 pzas &rarr; 206 pzas), <strong>Queso ricotta</strong> (+1,920 g &rarr; 3,840 g), <strong>Queso manchego</strong> (+1,000 g), <strong>Yogur griego</strong> (+1,800 g &rarr; 5,680 g), <strong>Queso de cabra con arándano</strong> (+350 g en Cuarentena), <strong>Mantequilla</strong> (+1,080 g &rarr; 1,370 g), <strong>Nuez de la India</strong> (+907 g), <strong>Aceite de coco</strong> (+1,500 g &rarr; 2,000 g), <strong>Frambuesas</strong> (+340 g), <strong>Zarzamora</strong> (+340 g), <strong>Espárragos</strong> (+907 g), <strong>Germinado</strong> (+500 g) y <strong>Botella de agua</strong> (+120 botellas &rarr; 150 botellas).
         </div>
         <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
           <button type="button" onclick="applySamsScanAndGoTicketBatch('target')" style="flex:1; background:var(--color-34plus); color:#fff; border:none; padding:0.55rem 0.9rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer; min-height:42px;">
@@ -10609,7 +10888,7 @@ function renderRecipes(day, activeDiners) {
             activeWeek = todayMatch.weekKey;
             selectedIdx = todayMatch.dayIndex;
           } else if (!activeWeek || !datasets[activeWeek]) {
-            activeWeek = "Semana 42 (11 al 17 de Octubre de 2026)";
+            activeWeek = "Semana 44 (25 al 31 de Octubre de 2026)";
             selectedIdx = 0;
           }
         }

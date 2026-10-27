@@ -9,7 +9,8 @@ contra las 8 Reglas Duras Canónicas [R1]–[R8] y reconciliando matemáticament
 import json
 import re
 import unicodedata
-from typing import Dict, List, Any, Optional, Tuple
+from pathlib import Path
+from typing import Dict, List, Any, Optional, Set, Tuple
 
 
 def _strip_accents(text: str) -> str:
@@ -50,10 +51,10 @@ DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
     "Sardinas": (1700.0, "g"),
     "Queso cottage": (500.0, "g"),
     "Yogur griego": (5680.0, "g"),
-    "Queso ricotta": (1920.0, "g"),
+    "Queso ricotta": (3840.0, "g"),
     "Queso manchego": (1000.0, "g"),
     "Queso Philadelphia": (720.0, "g"),
-    "Queso de cabra": (400.0, "g"),
+    "Queso de cabra": (0.0, "g"),
     "Queso mozzarella": (105.0, "g"),
     "Queso parmesano": (100.0, "g"),
     "Crema ácida": (960.0, "g"),
@@ -116,12 +117,19 @@ DEFAULT_PANTRY_STOCK: Dict[str, Tuple[float, str]] = {
     "Vinagre de vino tinto": (250.0, "ml"),
     "Rajas de jalapeño": (314.0, "g"),
     "Chile güero": (840.0, "g"),
-    "Fondo claro de pollo": (2000.0, "ml"),
 }
 
-# Insumos de cocina libre (0 costo mercado) o de compra neta planificada en Mercado
+# Insumos de cocina libre (0 costo mercado; se preparan internamente) o de compra neta planificada en Mercado
 FREE_KITCHEN_STAPLES = {
     "agua purificada",
+    "fondo claro de pollo",
+    "fondo de res",
+    "fondo oscuro de res",
+    "caldo claro de pollo",
+    "caldo de pollo",
+    "caldo de res",
+    "caldo concentrado y fondo de res casero",
+    "caldo de huesos",
 }
 
 KNOWN_MARKET_PURCHASE_ITEMS = {
@@ -173,8 +181,145 @@ WEEKDAY_NAMES_REGEX = re.compile(
     re.IGNORECASE,
 )
 
-# Diccionario de raíces de arquetipos culinarios [R3]
+# Banco Canónico de 4 Ciclos (4 x 21 = 84 Arquetipos Maestros: 28 de Huevo + 56 de Comida/Cena)
+CYCLE_ARCHETYPE_BANK: Dict[str, Dict[str, List[str]]] = {
+    "A": {  # Semanas 41, 45, 49, 53, 57...
+        "breakfast": [
+            "huevo_revuelto_mantequilla",
+            "huevo_pochado_esparragos",
+            "huevo_horno_portobello",
+            "huevo_sarten_hierbas",
+            "huevo_cocotte_crema",
+            "huevo_estrellado_aguacate",
+            "huevo_revuelto_flor_calabaza",
+        ],
+        "lunch_dinner": [
+            "salmon_plancha_limon",
+            "pollo_limon_finas_hierbas",
+            "res_medallones_sirloin",
+            "robalo_vapor_hierbas",
+            "res_machaca_sarten",
+            "pavo_fajitas_salteadas",
+            "atun_sellado_costra",
+            "mojarra_horno_epazote",
+            "res_arrachera_brasas",
+            "pollo_rollo_espinaca",
+            "salmon_mantequilla_eneldo",
+            "pavo_albondigas_caldo",
+            "res_ribeye_romero",
+            "portobello_gratinado_cabra",
+        ],
+    },
+    "B": {  # Semanas 42, 46, 50, 54, 58...
+        "breakfast": [
+            "huevo_pochado_aguacate",
+            "huevo_tortilla_espanola_keto",
+            "huevo_revuelto_salmon",
+            "huevo_cazuela_espinaca",
+            "huevo_omelette_champinon",
+            "huevo_frittata_mediterranea",
+            "huevo_revuelto_ejotes",
+        ],
+        "lunch_dinner": [
+            "res_hamburguesa_arrachera",
+            "mojarra_fajitas_sarten",
+            "pollo_suprema_mostaza",
+            "salmon_glaseado_limon",
+            "res_cortadillo_sirloin",
+            "pavo_medallones_salvia",
+            "atun_ensalada_nicoise",
+            "sardina_escabeche_tibio",
+            "res_bife_plancha",
+            "pollo_fajitas_morron",
+            "salmon_papillote_hierbas",
+            "mojarra_vapor_cilantro",
+            "res_albondigas_tomate",
+            "cottage_tazon_proteico",
+        ],
+    },
+    "C": {  # Semanas 43, 47, 51, 55, 59...
+        "breakfast": [
+            "frittata",
+            "tamagoyaki",
+            "anillo",
+            "cilbir",
+            "estrellados",
+            "cazuela",
+            "omelette",
+        ],
+        "lunch_dinner": [
+            "fajitas",
+            "albondigas",
+            "hamburguesa",
+            "carpaccio",
+            "timbal",
+            "salpicon",
+            "barquitas",
+            "piezas_pollo_horno",
+            "papillote",
+            "rollitos",
+            "medallones",
+            "juliana_wok",
+            "corte_parrilla",
+            "portobello_relleno",
+            "salmon_costra",
+            "lomos_horno",
+        ],
+    },
+    "D": {  # Semanas 44, 48, 52, 56, 60...
+        "breakfast": [
+            "huevo_shakshuka_verde",
+            "huevo_benedictino_holandesa",
+            "huevo_souffle_gratinado",
+            "huevo_al_plato_philadelphia_ricotta",
+            "huevo_nube_montado",
+            "huevo_roulade_ricotta",
+            "huevo_crepa_rellena_acelgas",
+        ],
+        "lunch_dinner": [
+            "salmon_glaseado_mostaza_sarten",
+            "pavo_medallones_mantequilla_ajo",
+            "res_tagliata_romero",
+            "mojarra_veracruzana_sarten",
+            "res_kofta_tzatziki",
+            "champinon_fondue_manchego_ricotta",
+            "sardina_pipian_nuez_india",
+            "mojarra_meuniere_limon",
+            "res_pastel_horno_manchego",
+            "atun_croquetas_ricotta_sarten",
+            "salmon_veloute_ricotta_romero",
+            "pollo_cacciatora_cazadora",
+            "res_involtini_braseado",
+            "quenelles_ricotta_cottage_espejo_yogur",
+        ],
+    },
+}
+
+# Diccionario de raíces de arquetipos culinarios [R3] y [R10]
 ARCHETYPE_PATTERNS: List[Tuple[str, List[str]]] = [
+    # --- Arquetipos Específicos Ciclo D (Semana 44, 48, 52, 56, 60+) ---
+    ("huevo_shakshuka_verde", ["shakshuka verde"]),
+    ("huevo_benedictino_holandesa", ["estilo benedictino", "benedictino sobre nopal", "benedictinos sobre"]),
+    ("huevo_souffle_gratinado", ["souffle dorado de huevos", "souffle de huevos"]),
+    ("huevo_al_plato_philadelphia_ricotta", ["huevos al plato", "oeufs sur le plat"]),
+    ("huevo_nube_montado", ["huevos nube al horno", "huevos en nube"]),
+    ("huevo_roulade_ricotta", ["roulade de huevo", "roulade relleno de huevo"]),
+    ("huevo_crepa_rellena_acelgas", ["crepas sin harina de huevo", "crepa gruesa de huevo"]),
+    ("salmon_glaseado_mostaza_sarten", ["lomo de salmon glaseado a la mostaza", "salmon glaseado a la mostaza"]),
+    ("pavo_medallones_mantequilla_ajo", ["medallones de pechuga de pavo dorados", "medallones de pechuga de pavo"]),
+    ("res_tagliata_romero", ["tagliata de flat steak", "tagliata de top sirloin"]),
+    ("mojarra_veracruzana_sarten", ["a la veracruzana cetogenica", "mojarra salteadas a la veracruzana"]),
+    ("res_kofta_tzatziki", ["koftas arabes", "koftas de carne molida"]),
+    ("champinon_fondue_manchego_ricotta", ["en fondue cremoso de queso manchego", "cazuela de champinones salteados al ajillo"]),
+    ("sardina_pipian_nuez_india", ["enpipianados cetogenicos en salsa espesa de nuez de la india", "sardina enpipianados"]),
+    ("mojarra_meuniere_limon", ["mojarra blanca a la meuniere", "a la meuniere"]),
+    ("res_pastel_horno_manchego", ["pastel de carne", "pastel horno de carne molida"]),
+    ("atun_croquetas_ricotta_sarten", ["croquetas doradas de lomo de atun", "croquetas doradas de atun"]),
+    ("salmon_veloute_ricotta_romero", ["salmon al horno en salsa cremosa de queso ricotta", "salsa cremosa de queso ricotta"]),
+    ("pollo_cacciatora_cazadora", ["braseadas a la cazadora", "pollo entero de alacena braseado a la cazadora"]),
+    ("res_involtini_braseado", ["rollos involtini de flat steak", "involtini de flat steak"]),
+    ("quenelles_ricotta_cottage_espejo_yogur", ["quenelles templadas de queso ricotta", "espejo de yogur griego"]),
+    # --- Arquetipos Ciclo C (Semana 43, 47, 51, 55, 59+) y Base ---
     ("fajitas", ["fajita", "fajitas"]),
     ("tamagoyaki", ["tamagoyaki", "rollo tamagoyaki"]),
     ("omelette", ["omelette"]),
@@ -258,7 +403,11 @@ def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
     Inspecciona `main_dish['ingredients']` para determinar la proteína principal real,
     su familia biológica y si es circadiana (apta para cena).
     """
-    ing_names = [_strip_accents(i.get("name", "")) for i in main_dish.get("ingredients", [])]
+    ing_names = [
+        _strip_accents(i.get("name", ""))
+        for i in main_dish.get("ingredients", [])
+        if not any(b in _strip_accents(i.get("name", "")) for b in ("fondo claro", "caldo concentrado", "caldo de"))
+    ]
     joined = " | ".join(ing_names)
 
     if "flat steak" in joined or (re.search(r"\bres\b", joined) and "molida" not in joined):
@@ -360,6 +509,266 @@ def validate_no_fruit_dairy_mix(dish: Dict[str, Any]) -> Tuple[List[str], List[s
         if any(k in nm for k in ["yogur", "cottage", "ricotta", "queso", "crema acida", "leche de vaca"]):
             dairy_found.append(ing.get("name", nm))
     return fruits_found, dairy_found
+
+
+_JACCARD_CANON_ING_TOKENS: List[Tuple[str, List[str]]] = [
+    ("calabacitas", ["calabacita", "zucchini", "zoodles"]),
+    ("coliflor", ["coliflor"]),
+    ("brocoli", ["brocoli"]),
+    ("esparragos", ["esparrago"]),
+    ("espinacas", ["espinaca"]),
+    ("acelgas", ["acelga"]),
+    ("nopales", ["nopal"]),
+    ("ejotes", ["ejote"]),
+    ("pepino", ["pepino"]),
+    ("lechuga", ["lechuga"]),
+    ("champinon", ["champinon", "portobello"]),
+    ("morron", ["morron", "pimiento"]),
+    ("chayote", ["chayote"]),
+    ("arugula", ["arugula"]),
+    ("apio", ["apio"]),
+    ("rabano", ["rabano"]),
+    ("jitomate", ["jitomate"]),
+    ("tomate", ["tomate verde", "tomate"]),
+    ("cebolla", ["cebolla", "cebollin", "puerro"]),
+    ("aguacate", ["aguacate"]),
+    ("queso_ricotta", ["ricotta"]),
+    ("queso_manchego", ["manchego"]),
+    ("queso_philadelphia", ["philadelphia"]),
+    ("queso_cottage", ["cottage"]),
+    ("queso_gouda", ["gouda"]),
+    ("queso_panela", ["panela"]),
+    ("queso_parmesano", ["parmesano"]),
+    ("queso_mozzarella", ["mozzarella"]),
+    ("queso_cabra", ["queso de cabra"]),
+    ("yogur_griego", ["yogur", "yoghurt"]),
+    ("crema_acida", ["crema acida"]),
+    ("mayonesa", ["mayonesa"]),
+    ("mantequilla", ["mantequilla"]),
+    ("leche_coco", ["leche de coco"]),
+    ("aceite_coco", ["aceite de coco"]),
+    ("nuez_india", ["nuez de la india"]),
+    ("nuez_pecana", ["nuez pecana", "nueces pecanas", "nuez de castilla"]),
+    ("almendras", ["almendra"]),
+    ("pistaches", ["pistache"]),
+    ("ajonjoli", ["ajonjoli", "sesamo"]),
+    ("aceitunas", ["aceituna"]),
+    ("alcaparras", ["alcaparra"]),
+    ("mostaza", ["mostaza"]),
+    ("germinado", ["germinado"]),
+    ("cilantro", ["cilantro"]),
+    ("romero", ["romero"]),
+    ("tomillo", ["tomillo"]),
+    ("oregano", ["oregano"]),
+    ("laurel", ["laurel"]),
+    ("comino", ["comino"]),
+    ("eneldo", ["eneldo"]),
+    ("epazote", ["epazote"]),
+    ("hierbas_finas", ["hierbas finas", "finas hierbas"]),
+]
+
+
+def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, str]:
+    """
+    [R10-DNA] Calcula la Huella Física Inmutable de 4 Dimensiones:
+    `(proteina_base, metodo_termico, morfologia, familia_salsa_o_cama)`
+    inspeccionando `ingredients[]`, `technique`, `title` y `steps[]` (sin confiar en `archetype_id`).
+    """
+    t = _strip_accents(dish.get("title") or dish.get("name") or "")
+    tech = _strip_accents(dish.get("technique") or dish.get("cooking_technique") or "")
+    steps_txt = " ".join(_strip_accents(s) for s in (dish.get("steps") or []))
+    ings_txt = " ".join(_strip_accents(i.get("name") or "") for i in (dish.get("ingredients") or []))
+    full = f"{t} {tech} {ings_txt} {steps_txt}"
+
+    # --- 9 Reglas Físicas Canónicas Anti-Camuflaje ---
+    # 1. Huevo + (Acelgas o Espinacas) + cocción al horno / cazuela / florentina
+    if "huevo" in ings_txt and ("acelga" in ings_txt or "espinaca" in ings_txt) and any(
+        w in f"{t} {tech}" for w in ("horno", "hornead", "cazuela", "florentina", "cocotte")
+    ):
+        return ("huevo", "horno", "cama_hoja_verde", "cazuela_florentina")
+    # 2. Salmón + costra (Nuez / Pistaches / Ajonjolí / Almendra adherida)
+    if "salmon" in ings_txt and "costra" in f"{t} {tech} {steps_txt}":
+        return ("salmon", "sellado_horno", "costra", "semilla_nuez")
+    # 3. Atún + costra o medallón sellado / tataki
+    if "atun" in ings_txt and any(w in f"{t} {tech}" for w in ("costra", "medallon", "tataki")):
+        return ("atun", "sellado", "costra_tataki", "semilla_nuez")
+    # 4. Champiñón + relleno / portobello / gratinado al horno con queso
+    if ("champinon" in ings_txt or "portobello" in f"{t} {ings_txt}") and (
+        "portobello" in t or "relleno" in t or ("horno" in f"{t} {tech}" and ("ricotta" in ings_txt or "gratinad" in t or "queso" in ings_txt))
+    ):
+        return ("champinon", "horno", "relleno_gratinado", "queso")
+    # 5. Corte de Res (Flat steak / Ribeye / Arrachera) + parrilla / brasas / bife + Mantequilla
+    if any(k in ings_txt for k in ("flat steak", "ribeye", "arrachera", "sirloin")) and "molida" not in ings_txt:
+        if any(w in f"{t} {tech}" for w in ("parrilla", "brasas", "bife", "corte")) and "mantequilla" in ings_txt and "involtini" not in t:
+            return ("res_corte", "parrilla", "mantequilla_hierbas", "corte_bife")
+    # 6. Sardinas + horno + Tomate/Jitomate
+    if "sardina" in ings_txt and any(w in f"{t} {tech}" for w in ("horno", "hornead")) and ("tomate" in ings_txt or "jitomate" in ings_txt):
+        return ("sardina", "horno", "tomate", "lomos_enteros")
+    # 7. Queso cottage + Yogur griego + timbal / molde frío
+    if "cottage" in ings_txt and "yogur" in ings_txt and ("timbal" in f"{t} {tech}" or "molde" in t):
+        return ("lacteo_frio", "ensamblaje", "timbal", "cottage_yogur")
+    # 8. Huevo + revuelto / baveuse al sartén (no omelette)
+    if "huevo" in ings_txt and ("revuelto" in f"{t} {tech}" or ("baveuse" in f"{t} {tech}" and "omelette" not in t)):
+        return ("huevo", "sarten", "revuelto", "cremoso_vegetal")
+    # 9. Mojarra + grill/plancha/sartén + ajo + cilantro + limón (mojo)
+    if "mojarra" in ings_txt and ("ajo" in full and "cilantro" in full) and any(
+        w in f"{t} {tech}" for w in ("grill", "mojo", "plancha")
+    ) and not any(w in full for w in ("veracruzana", "meuniere", "aceituna", "alcaparra")):
+        return ("mojarra", "plancha", "ajo_cilantro_limon", "mojo")
+
+    # --- Extracción General Determinista de 4 Dimensiones ---
+    prot = classify_main_protein(dish)["key"]
+    if prot == "otra":
+        vegs, fruits = extract_veg_and_fruit_families(dish)
+        if vegs:
+            prot = f"veg_{vegs[0]}"
+        elif fruits:
+            prot = f"fruit_{fruits[0]}"
+        elif "caldo" in full or "fondo" in full:
+            prot = "caldo_base"
+
+    # Dimensión 2: Método Térmico
+    t_tech = f"{t} {tech}"
+    if any(w in t_tech for w in ("pochad", "escalfad", "poach")):
+        metodo = "pochado"
+    elif any(w in t_tech for w in ("horno", "hornead", "rostizad", "gratinad", "bake", "roast", "souffle")):
+        metodo = "horno"
+    elif any(w in t_tech for w in ("vapor", "papillote", "steam")):
+        metodo = "vapor_papillote"
+    elif any(w in t_tech for w in ("brasead", "cazadora", "cacciatora", "braise", "involtini")):
+        metodo = "braseado"
+    elif any(w in t_tech for w in ("parrilla", "plancha", "grill", "brasas")):
+        metodo = "parrilla_plancha"
+    elif "wok" in t_tech:
+        metodo = "wok"
+    elif any(w in t_tech for w in ("crema", "veloute", "cappuccino", "gazpacho", "emulsified")):
+        metodo = "licuado_emulsion"
+    elif any(w in t_tech for w in ("consome", "caldo", "sopa", "potaje", "potage", "broth")):
+        metodo = "caldo_hervido"
+    elif any(w in t_tech for w in ("sarten", "saltead", "dorad", "meuniere", "sellad", "skillet", "sear", "pan")):
+        metodo = "sarten"
+    else:
+        metodo = "frio_ensamblaje"
+
+    # Dimensión 3: Morfología Culinaria
+    morf = "estandar"
+    for m_key, m_tokens in [
+        ("shakshuka", ["shakshuka"]),
+        ("benedictino", ["benedictin"]),
+        ("souffle", ["souffle"]),
+        ("oeufs_plat", ["al plato", "sur le plat"]),
+        ("nube_orsini", ["nube", "orsini"]),
+        ("roulade", ["roulade"]),
+        ("crepa", ["crepa", "crepe"]),
+        ("tamagoyaki", ["tamagoyaki"]),
+        ("omelette", ["omelette"]),
+        ("frittata", ["frittata"]),
+        ("anillo", ["anillo"]),
+        ("cilbir", ["cilbir"]),
+        ("estrellados", ["estrellad"]),
+        ("glaseado", ["glasead", "glaze"]),
+        ("tagliata", ["tagliata"]),
+        ("veracruzana", ["veracruzana"]),
+        ("kofta", ["kofta"]),
+        ("fondue_cazuela", ["fondue"]),
+        ("pipian", ["enpipianad", "pipian"]),
+        ("meuniere", ["meuniere"]),
+        ("pastel_carne", ["pastel de carne", "meatloaf"]),
+        ("croquetas", ["croqueta"]),
+        ("veloute_horno", ["salsa cremosa de queso ricotta"]),
+        ("cacciatora", ["cazadora", "cacciatora"]),
+        ("involtini", ["involtini"]),
+        ("quenelles", ["quenelle"]),
+        ("albondigas", ["albondiga"]),
+        ("hamburguesa", ["hamburguesa"]),
+        ("barquitas", ["barquita", "tostada", "taco"]),
+        ("salpicon", ["salpicon"]),
+        ("juliana_wok", ["juliana"]),
+        ("tartar_brunoise", ["tartar", "brunoise"]),
+        ("carpaccio", ["carpaccio", "abanico"]),
+        ("potaje_trozos", ["potaje", "floretes de coliflor enteros"]),
+        ("crema_veloute", ["crema", "veloute", "cappuccino"]),
+        ("consome_caldo", ["consome", "caldo", "sopa"]),
+        ("ensalada", ["ensalada"]),
+        ("bastones", ["bastones"]),
+    ]:
+        if any(tok in t_tech for tok in m_tokens):
+            morf = m_key
+            break
+
+    # Dimensión 4: Familia de Salsa o Cama
+    cama_tokens = []
+    for c_key, c_pats in _JACCARD_CANON_ING_TOKENS:
+        if any(p in ings_txt for p in c_pats):
+            cama_tokens.append(c_key)
+    familia_cama = "+".join(sorted(cama_tokens)[:4]) if cama_tokens else "natural"
+    return (prot, metodo, morf, familia_cama)
+
+
+def compute_dish_jaccard_features(dish: Dict[str, Any]) -> Set[str]:
+    """
+    [R10-DNA] Extrae el conjunto de características físico-culinarias de un platillo:
+    Ingredientes canónicos significativos (excluyendo comodines universales de aderezo/salmuera)
+    + tokens del ADN estructural (`metodo_termico` y `morfologia`).
+    """
+    ings_txt = " | ".join(_strip_accents(i.get("name") or "") for i in (dish.get("ingredients") or []))
+    features: Set[str] = set()
+    for c_key, c_pats in _JACCARD_CANON_ING_TOKENS:
+        if any(p in ings_txt for p in c_pats):
+            features.add(f"ing:{c_key}")
+    dna = compute_dish_structural_dna(dish)
+    features.add(f"metodo:{dna[1]}")
+    features.add(f"morfo:{dna[2]}")
+    return features
+
+
+def compute_dish_jaccard_similarity(dish_a: Dict[str, Any], dish_b: Dict[str, Any]) -> float:
+    """
+    Calcula el índice de similitud de Jaccard [0.0, 1.0] entre dos platillos.
+    """
+    fa = compute_dish_jaccard_features(dish_a)
+    fb = compute_dish_jaccard_features(dish_b)
+    if not fa or not fb:
+        return 0.0
+    union_len = len(fa | fb)
+    if union_len == 0:
+        return 0.0
+    return len(fa & fb) / float(union_len)
+
+
+def extract_structural_signature(dish: Dict[str, Any]) -> Optional[str]:
+    """
+    [R10] Wrapper de compatibilidad hacia atrás que retorna la firma si el platillo
+    cae en cualquiera de las 9 huellas físicas canónicas de S41-S43 o cremas/caldos repetidos.
+    """
+    dna = compute_dish_structural_dna(dish)
+    t = _strip_accents(dish.get("title") or "")
+    ings = " ".join(_strip_accents(i.get("name") or "") for i in dish.get("ingredients", []))
+    full = f"{t} {ings}"
+
+    if dna[:3] == ("salmon", "sellado_horno", "costra"):
+        return "sig_salmon_costra"
+    if dna[:3] == ("champinon", "horno", "relleno_gratinado"):
+        return "sig_portobello_relleno_horno"
+    if dna[:3] == ("sardina", "horno", "tomate"):
+        return "sig_sardina_horno"
+    if dna[:3] == ("atun", "sellado", "costra_tataki"):
+        return "sig_atun_costra_medallon"
+    if dna[:3] == ("res_corte", "parrilla", "mantequilla_hierbas"):
+        return "sig_res_parrilla_mantequilla"
+    if dna[:3] == ("lacteo_frio", "ensamblaje", "timbal"):
+        return "sig_timbal_cottage_yogur"
+    if dna[:3] == ("huevo", "horno", "cama_hoja_verde"):
+        return "sig_huevo_horno_hojas_verdes"
+    if dna[:3] == ("huevo", "sarten", "revuelto"):
+        return "sig_huevo_revuelto"
+    if dna[:3] == ("mojarra", "plancha", "ajo_cilantro_limon"):
+        return "sig_mojarra_ajo_cilantro"
+    if "coliflor" in full and ("crema" in t or "veloute" in t):
+        return "sig_starter_crema_coliflor"
+    if "calabacita" in full and ("juliana" in t or ("caldo" in t and "laurel" in full and "cilantro" in full)):
+        return "sig_starter_caldo_calabacitas_laurel"
+    return None
 
 
 
@@ -470,6 +879,7 @@ def audit_week_plan(
     lunch_dinner_protein_counts: Dict[str, int] = {}
     weekly_breakfast_gelatinas_count = 0
     weekly_veg_family_counts: Dict[str, int] = {}
+    seen_lunch_side_vegs: Dict[str, str] = {}
 
     bom_totals: Dict[str, Dict[str, Any]] = {}
 
@@ -712,6 +1122,21 @@ def audit_week_plan(
                         )
                     else:
                         seen_lunch_side_titles[side_title_norm] = loc_label
+
+                    # [R4-SIDE] Diversidad estricta de las 7 guarniciones de Comida (7/7 vegetales principales distintos)
+                    w_lbl_check = _strip_accents(week_data.get("week_name") or week_data.get("week_label") or "")
+                    if "semana 44" in w_lbl_check:
+                        primary_side_veg = sd_vegs[0] if sd_vegs else ""
+                        if not primary_side_veg:
+                            violations.append(
+                                f"[R4-SIDE] {loc_label}: La guarnición de comida ('{side.get('title')}') no contiene un vegetal principal reconocible."
+                            )
+                        elif primary_side_veg in seen_lunch_side_vegs:
+                            violations.append(
+                                f"[R4-SIDE] {loc_label}: El vegetal de guarnición de comida '{primary_side_veg}' ('{side.get('title')}') se repite en la misma semana (ya usado en {seen_lunch_side_vegs[primary_side_veg]}). Se exigen 7/7 vegetales distintos."
+                            )
+                        else:
+                            seen_lunch_side_vegs[primary_side_veg] = loc_label
                 elif m_type_norm == "cena":
                     day_dinner_prot_key = p_key
                     dinner_proteins_by_day.append((day_name, p_key))
@@ -816,6 +1241,10 @@ def audit_week_plan(
                 f"[R6] La proteína '{p_key}' aparece {cnt} veces en las 14 comidas/cenas (máximo permitido: 2)."
             )
 
+    w_label_norm = _strip_accents(week_data.get("week_name") or week_data.get("week_label") or "")
+    is_week_44_plus = "semana 43" not in w_label_norm
+    is_strict_s44 = "semana 44" in w_label_norm
+
     # [R9] y [R10] Validaciones Inter-Semanales Hacia Adelante (contra prev_week_data en modo Read-Only)
     if prev_week_data and isinstance(prev_week_data, dict):
         prev_days = prev_week_data.get("days", [])
@@ -853,7 +1282,27 @@ def audit_week_plan(
                             f"[R9] Frontera Sábado(W-1)->Domingo(W) ({m_label}): Repite el mismo arquetipo culinario ('{c_arch}')."
                         )
 
-            # [R10] Anti-Clonación Inter-Semanal (Día d de Semana W-1 vs Día d de Semana W)
+            # [R10] Anti-Clonación Inter-Semanal Global (Disjunción 7x7 contra toda la Semana W-1)
+            prev_all_main_titles: Dict[str, str] = {}
+            prev_all_main_archs: Dict[str, str] = {}
+            prev_all_starter_titles: Dict[str, str] = {}
+            for pd_idx in range(7):
+                pd_label = prev_days[pd_idx].get("day", f"Día {pd_idx + 1}")
+                for pm_idx, pm_label in [(0, "Desayuno"), (1, "Comida"), (2, "Cena")]:
+                    p_meals_list = prev_days[pd_idx].get("meals", [])
+                    if len(p_meals_list) == 3:
+                        pm_obj = p_meals_list[pm_idx]
+                        pm_m = pm_obj.get("main") or {}
+                        pm_t = _strip_accents(pm_m.get("title") or "")
+                        pm_a = extract_dish_archetype(pm_m)
+                        pm_s = _strip_accents((pm_obj.get("starter") or {}).get("title") or "")
+                        if pm_t:
+                            prev_all_main_titles[pm_t] = f"{pd_label} {pm_label}"
+                        if pm_a:
+                            prev_all_main_archs[pm_a] = f"{pd_label} {pm_label}"
+                        if pm_s:
+                            prev_all_starter_titles[pm_s] = f"{pd_label} {pm_label}"
+
             for d_idx in range(7):
                 p_meals = prev_days[d_idx].get("meals", [])
                 c_meals = days[d_idx].get("meals", [])
@@ -873,15 +1322,105 @@ def audit_week_plan(
                         pm_sd = _strip_accents((pm.get("side") or {}).get("title") or "")
                         cm_sd = _strip_accents((cm.get("side") or {}).get("title") or "")
                         same_main_title = bool(pm_title and pm_title == cm_title)
-                        same_arch_on_same_weekday = bool(pm_arch and pm_arch == cm_arch)
+                        same_arch_on_same_weekday = bool(
+                            pm_arch and pm_arch == cm_arch and (is_week_44_plus or pm_st == cm_st or pm_sd == cm_sd)
+                        )
                         if same_main_title or same_arch_on_same_weekday:
                             violations.append(
                                 f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite el mismo plato fuerte o arquetipo ('{cm_main.get('title')}') en el mismo día de la semana que en la semana inmediata anterior."
                             )
                         if pm_st and pm_sd and pm_st == cm_st and pm_sd == cm_sd:
                             violations.append(
-                                f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite la misma combinación Entrada+Guarnición en el mismo día de la semana que en la semana inmediata anterior."
+                                f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite el misma combinación Entrada+Guarnición en el mismo día de la semana que en la semana inmediata anterior."
                             )
+                        # Chequeo Global 7x7 contra permutación de días de la semana anterior
+                        if cm_title in prev_all_main_titles:
+                            violations.append(
+                                f"[R10] Permutación Inter-Semanal Prohibida ({d_label} - {m_label}): El plato fuerte '{cm_main.get('title')}' ya se sirvió en {prev_all_main_titles[cm_title]} de la semana anterior."
+                            )
+                        if is_week_44_plus and cm_arch in prev_all_main_archs:
+                            violations.append(
+                                f"[R10] Permutación de Arquetipo Prohibida ({d_label} - {m_label}): El arquetipo '{cm_arch}' ya se usó en {prev_all_main_archs[cm_arch]} de la semana anterior."
+                            )
+                        if cm_st in prev_all_starter_titles:
+                            violations.append(
+                                f"[R10] Permutación de Entrada Prohibida ({d_label} - {m_label}): La entrada '{(cm.get('starter') or {}).get('title')}' ya se sirvió en {prev_all_starter_titles[cm_st]} de la semana anterior."
+                            )
+
+    # [R10-DNA] Bloqueo por Huella Física Inmutable (`compute_dish_structural_dna`) y Similitud de Jaccard (< 0.60)
+    # en Ventana Móvil de 4 Semanas ([W-3, W-2, W-1, W])
+    if is_strict_s44 and len(days) == 7:
+        root_dir = Path(__file__).resolve().parents[2]
+        rolling_prev_weeks: List[Tuple[str, Dict[str, Any]]] = []
+        for w_num in (41, 42, 43):
+            w_path = root_dir / f"semana_{w_num}_master.json"
+            if w_path.exists():
+                try:
+                    rolling_prev_weeks.append((f"S{w_num}", json.loads(w_path.read_text(encoding="utf-8"))))
+                except Exception:
+                    pass
+
+        for d_idx in range(7):
+            d_label = days[d_idx].get("day", f"Día {d_idx + 1}")
+            c_meals = days[d_idx].get("meals", [])
+            if len(c_meals) == 3:
+                for m_idx, m_label in [(0, "Desayuno"), (1, "Comida"), (2, "Cena")]:
+                    cm = c_meals[m_idx]
+                    c_main = cm.get("main") or {}
+                    c_starter = cm.get("starter") or {}
+                    sig_main = extract_structural_signature(c_main)
+                    if sig_main:
+                        violations.append(
+                            f"[R10-DNA] Huella Estructural Repetida de S41-S43 ({d_label} - {m_label}): '{c_main.get('title')}' colisiona con huella '{sig_main}'."
+                        )
+                    sig_starter = extract_structural_signature(c_starter)
+                    if sig_starter:
+                        violations.append(
+                            f"[R10-DNA] Huella Estructural de Entrada Repetida de S41-S43 ({d_label} - {m_label}): '{c_starter.get('title')}' colisiona con huella '{sig_starter}'."
+                        )
+
+                    dna_main_c = compute_dish_structural_dna(c_main)
+                    dna_st_c = compute_dish_structural_dna(c_starter)
+
+                    for w_tag, pw_data in rolling_prev_weeks:
+                        for pd_obj in pw_data.get("days", []):
+                            pd_name = pd_obj.get("day", "")
+                            for pm_idx, pm_obj in enumerate(pd_obj.get("meals", [])):
+                                pm_type = pm_obj.get("meal_type", "")
+                                p_main = pm_obj.get("main") or {}
+                                dna_main_p = compute_dish_structural_dna(p_main)
+                                if dna_main_c == dna_main_p:
+                                    violations.append(
+                                        f"[R10-DNA] Colisión de ADN Estructural {dna_main_c} en {d_label} {m_label} ('{c_main.get('title')}') contra {w_tag} {pd_name} {pm_type} ('{p_main.get('title')}')."
+                                    )
+                                elif dna_main_c[0] == dna_main_p[0]:
+                                    jac_m = compute_dish_jaccard_similarity(c_main, p_main)
+                                    if jac_m >= 0.60:
+                                        violations.append(
+                                            f"[R10-DNA] Violación de Compuerta Jaccard (J={jac_m:.2f} >= 0.60) en {d_label} {m_label} ('{c_main.get('title')}') contra {w_tag} {pd_name} {pm_type} ('{p_main.get('title')}')."
+                                        )
+
+                                if m_idx in (1, 2) and pm_idx in (1, 2):
+                                    p_st = pm_obj.get("starter") or {}
+                                    dna_st_p = compute_dish_structural_dna(p_st)
+                                    if dna_st_c[0] == dna_st_p[0] and dna_st_c[2] != "ensalada":
+                                        if dna_st_c == dna_st_p:
+                                            violations.append(
+                                                f"[R10-DNA] Colisión de ADN Estructural de Entrada {dna_st_c} en {d_label} {m_label} ('{c_starter.get('title')}') contra {w_tag} {pd_name} {pm_type} ('{p_st.get('title')}')."
+                                            )
+                                        else:
+                                            jac_s = compute_dish_jaccard_similarity(c_starter, p_st)
+                                            if jac_s >= 0.60:
+                                                violations.append(
+                                                    f"[R10-DNA] Violación de Compuerta Jaccard en Entrada (J={jac_s:.2f} >= 0.60) en {d_label} {m_label} ('{c_starter.get('title')}') contra {w_tag} {pd_name} {pm_type} ('{p_st.get('title')}')."
+                                                )
+
+    # [R12] Compuerta de Invariante Estricta de 126 Huevos Semanales (7 desayunos x 18 huevos; 0 en comida/cena)
+    total_weekly_eggs = bom_totals.get("huevo", {}).get("total", 0.0)
+    if is_strict_s44 and abs(total_weekly_eggs - 126.0) > 0.01:
+        violations.append(
+            f"[R12] Invariante semanal de Huevo violada: total={total_weekly_eggs} piezas (debe ser exactamente 126 piezas = 7 desayunos x 18 huevos, con 0 huevos en comidas y cenas)."
+        )
 
 
     # [R8] Reconciliación matemática exacta del BOM (incluyendo las 4 tomas diarias de Sinergix®)
@@ -905,6 +1444,13 @@ def audit_week_plan(
         "market_purchases": [],
     }
 
+    STRICT_NO_OVERDRAFT_S44_PLUS = {
+        "flat steak", "carne molida", "lomo de salmon", "fajitas de mojarra",
+        "pechuga de pavo", "huevo", "queso ricotta", "queso manchego",
+        "yogur griego", "mantequilla", "aceite de coco", "nuez de la india",
+        "frambuesas", "zarzamora", "esparragos", "germinado",
+    }
+
     for b_key, info in sorted(bom_totals.items()):
         total_req = info.get("total_with_protocol_4_tomas", info["total"])
         raw_name = info["name"]
@@ -923,9 +1469,11 @@ def audit_week_plan(
             diff = round(total_req - stock_val, 2)
             if diff > 0:
                 is_authorized_partial = any(km in b_key for km in KNOWN_MARKET_PURCHASE_ITEMS)
+                if is_strict_s44 and b_key in STRICT_NO_OVERDRAFT_S44_PLUS and stock_val > 0:
+                    is_authorized_partial = False
                 if enforce_pantry_overdraft and not is_authorized_partial:
                     violations.append(
-                        f"[R8] Sobregiro de stock en Alacena para '{canon_name}': requerido={total_req} {unit}, stock={stock_val} {stock_unit} (faltante={diff} {unit})."
+                        f"[R8/R12] Sobregiro de stock en Alacena para '{canon_name}': requerido={total_req} {unit}, stock={stock_val} {stock_unit} (faltante={diff} {unit})."
                     )
                 bom_reconciliation["market_purchases"].append({
                     "name": canon_name,

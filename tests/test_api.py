@@ -1648,3 +1648,66 @@ def test_physical_pantry_106_skus_and_multisinergix():
     assert 'isPantryItemDeleted' in code
     assert 'consolidateAndPurgePantryInventory' in code
 
+
+
+def test_r10_dna_fingerprinting_jaccard_and_r4_side_7_of_7():
+    """
+    Verifica que:
+    1. `compute_dish_structural_dna` detecte el camuflaje semántico (ej. 'Huevos a la Florentina' vs 'Cazuela de Huevos al Horno sobre Acelgas',
+       'Bife de Flat Steak a la Parrilla con Mantequilla' vs 'Corte de Ribeye a la Parrilla con Mantequilla').
+    2. `compute_dish_jaccard_similarity` bloquee platillos con similitud >= 0.60 en la ventana de 4 semanas [S41, S42, S43, S44].
+    3. `[R4-SIDE]` verifique que las 7 guarniciones de Comida de la Semana 44 usen 7 vegetales principales distintos (7/7).
+    """
+    import json
+    from pathlib import Path
+    from app.services.menu_hard_gate_auditor import (
+        compute_dish_structural_dna,
+        extract_veg_and_fruit_families,
+        assert_zero_violations,
+    )
+
+    florentina_camuflada = {
+        "title": "Huevos a la Florentina al Horno sobre Cama de Acelgas y Queso Ricotta",
+        "technique": "oven_florentine_bake",
+        "ingredients": [{"name": "Huevo"}, {"name": "Acelgas"}, {"name": "Queso ricotta"}],
+        "steps": ["Hornear sobre cama de acelgas."],
+    }
+    cazuela_s43 = {
+        "title": "Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella",
+        "technique": "oven_casserole",
+        "ingredients": [{"name": "Huevo"}, {"name": "Acelgas"}, {"name": "Jitomate"}, {"name": "Queso mozzarella"}],
+        "steps": ["Hornear en cazuela."],
+    }
+    assert compute_dish_structural_dna(florentina_camuflada) == compute_dish_structural_dna(cazuela_s43) == (
+        "huevo", "horno", "cama_hoja_verde", "cazuela_florentina"
+    )
+
+    bife_camuflado = {
+        "title": "Bife de Flat Steak a la Parrilla con Mantequilla de Ajo y Romero",
+        "technique": "chargrill_sear",
+        "ingredients": [{"name": "Flat steak"}, {"name": "Mantequilla"}, {"name": "Romero"}],
+        "steps": ["Asar a la parrilla."],
+    }
+    corte_s43 = {
+        "title": "Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo",
+        "technique": "grill_sear",
+        "ingredients": [{"name": "Flat steak"}, {"name": "Mantequilla"}, {"name": "Hierbas finas"}],
+        "steps": ["Asar a la parrilla."],
+    }
+    assert compute_dish_structural_dna(bife_camuflado) == compute_dish_structural_dna(corte_s43) == (
+        "res_corte", "parrilla", "mantequilla_hierbas", "corte_bife"
+    )
+
+    root = Path(__file__).resolve().parents[1]
+    s44 = json.loads((root / "semana_44_master.json").read_text(encoding="utf-8"))
+    s43 = json.loads((root / "semana_43_master.json").read_text(encoding="utf-8"))
+    report = assert_zero_violations(s44, prev_week_data=s43)
+    assert report["passed"] is True
+    assert report["violations_count"] == 0
+
+    lunch_side_vegs = []
+    for d in s44["days"]:
+        vegs, _ = extract_veg_and_fruit_families(d["meals"][1]["side"])
+        assert len(vegs) >= 1
+        lunch_side_vegs.append(vegs[0])
+    assert len(set(lunch_side_vegs)) == 7, f"Las 7 guarniciones de Comida deben usar 7 vegetales distintos, obtenidos: {lunch_side_vegs}"
