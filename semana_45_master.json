@@ -1,0 +1,4446 @@
+{
+  "week_name": "Semana 45",
+  "week_label": "Semana 45 (01 al 07 de Noviembre de 2026)",
+  "week_start": "2026-11-01",
+  "date_range": "01 al 07 de Noviembre de 2026",
+  "diners_count": 6,
+  "cycle_id": "A",
+  "heptagon_v17": true,
+  "culinary_schools": [
+    "escuela_1_nizu_mexicano_autor",
+    "escuela_2_ihop_brunch_grill",
+    "escuela_3_teapaneco_sureste",
+    "escuela_4_asador_castellano",
+    "escuela_5_alda_bistro_europeo",
+    "escuela_6_pacifico_oriente",
+    "escuela_7_mare_nostrum"
+  ],
+  "days": [
+    {
+      "day": "Domingo",
+      "day_num": "01",
+      "date_str": "01 Nov",
+      "iso_date": "2026-11-01",
+      "full_date_title": "Menú Completo para el Domingo 01 Nov",
+      "date_full": "Domingo 01 de Noviembre de 2026",
+      "culinary_school_id": "escuela_1_nizu_mexicano_autor",
+      "culinary_school_name": "🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.4,
+          "starter_name": "Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana",
+          "main_dish_name": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
+          "dish_name": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
+          "side_dish_name": "Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana",
+            "technique": "citrus_blackberry_maceration",
+            "note": "Entrada matutina 0% lácteos ([R4.6]) con zarzamora macerada al limón de la granja, semillas de chía orgánicas, nuez de la India y nuez pecana.",
+            "coct_reasoning": {
+              "thermodynamics": "Maceración en frío a 6°C para preservar antocianinas.",
+              "flavor_and_aromatics": "Contraste ácido de zarzamora y limón real con nuez pecana y nuez de la India.",
+              "textural_architecture": "Fruta firme con crocancia de semillas y nueces.",
+              "critical_control_points": "Cero lácteos en la entrada frutal ([R4.6])."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Zarzamora",
+                "per_guest": 28.3333,
+                "amount": 170,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Disponer la zarzamora desinfectada en copas frías y rociar con jugo de limón de la granja.",
+              "Coronar con las semillas de chía orgánicas, la nuez de la India y la nuez pecana."
+            ]
+          },
+          "main": {
+            "title": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
+            "technique": "peyis_three_cheese_skillet",
+            "note": "Escuela 1 (Inspiración Nizú): 3 huevos estrellados por comensal (18 piezas) bañados en salsa fundente de queso manchego, queso ricotta y queso Philadelphia con juliana de pimiento morrón asado.",
+            "coct_reasoning": {
+              "thermodynamics": "Fusión lenta de los 3 quesos a 78°C y fritura limpia de los huevos en mantequilla a 145°C con yema cremosa.",
+              "flavor_and_aromatics": "Riqueza láctea triple (manchego, ricotta y Philadelphia) con el dulzor ahumado del pimiento morrón asado.",
+              "textural_architecture": "Yemas líquidas y claras tiernas cubiertas por emulsión aterciopelada de 3 quesos.",
+              "critical_control_points": "No hervir la salsa de 3 quesos para evitar separación lipídica."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso Philadelphia",
+                "per_guest": 20,
+                "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Asar y cortar el pimiento morrón en juliana fina y saltear en mantequilla.",
+              "Fundir a fuego suave el queso manchego, el queso ricotta y el queso Philadelphia hasta obtener una salsa tersa.",
+              "Estrellar los 18 huevos en sartén con mantequilla, sazonar con sal de mar y bañar con la salsa caliente de 3 quesos y la juliana de morrón."
+            ],
+            "archetype": "huevo_peyis_tres_quesos"
+          },
+          "side": {
+            "title": "Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "collagen_hibiscus_gel",
+            "note": "Primera gelatina matutina semanal ([R8]) de flor de Jamaica y canela con colágeno hidrolizado y la Toma 2 de MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Hidratación y fusión a 60°C, templado a ≤42°C y gelificación a 4°C.",
+              "flavor_and_aromatics": "Notas florales de Jamaica y canela.",
+              "textural_architecture": "Gel firme y cristalino a 4°C.",
+              "critical_control_points": "Incorporar MultiSinergix® a ≤42°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Flor de Jamaica molida en polvo",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina",
+                "per_guest": 2.6667,
+                "amount": 16,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la flor de Jamaica y la canela en agua purificada e hidratar la grenetina.",
+              "Templar a 40°C, disolver MultiSinergix® (33Plus®) y refrigerar en moldes a 4°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 65.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 4.3,
+          "fiber_g": 6.8,
+          "starter_name": "Consomé Tatemado de Jitomate, Cebolla y Cilantro de la Granja en Fondo Claro de Pollo al Aceite de Oliva",
+          "main_dish_name": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego",
+          "dish_name": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego",
+          "side_dish_name": "Ejotes Tiernos al Vapor Salteados al Limón Real, Orégano y Aceite de Oliva VEVO",
+          "starter": {
+            "title": "Consomé Tatemado de Jitomate, Cebolla y Cilantro de la Granja en Fondo Claro de Pollo al Aceite de Oliva",
+            "technique": "charred_tomato_clear_consomme",
+            "note": "Entrada ligera y desinflamatoria sin lácteos ([R2]) que prepara el paladar para las Enchiladas Espuma de la Escuela 1.",
+            "coct_reasoning": {
+              "thermodynamics": "Asado de jitomate y cebolla e infusión suave en fondo claro de pollo a 90°C.",
+              "flavor_and_aromatics": "Caldo limpio con notas tatemadas de jitomate y cilantro de la granja.",
+              "textural_architecture": "Consomé diáfano y reconfortante.",
+              "critical_control_points": "Servir a 72°C libre de cremas y quesos ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Tatemar el jitomate y la cebolla e infusionar en el fondo claro de pollo caliente por 8 minutos.",
+              "Perfumar con cilantro de la granja picado, aceite de oliva extra virgen y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego",
+            "technique": "avocado_foam_keto_enchiladas",
+            "note": "Escuela 1 (Inspiración Nizú): sustitución cetogénica de tortilla de maíz por láminas tiernas de calabacita y pechuga de pavo enrolladas, bañadas en salsa emulsionada de aguacate Hass, tomate verde y cilantro con gratinado de queso manchego (0 huevos en comida [R12]).",
+            "coct_reasoning": {
+              "thermodynamics": "Horneado y gratinado corto a 185°C por 6 minutos sobre la salsa aterciopelada de aguacate y tomate.",
+              "flavor_and_aromatics": "Cremosidad herbácea de aguacate Hass, tomate y cilantro de la granja con costra fundida de queso manchego.",
+              "textural_architecture": "Rollos jugosos de pavo y calabacita bajo cubierta gratinada.",
+              "critical_control_points": "Única presencia diaria de aguacate ([R5]) y centro térmico de 74°C."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pavo",
+                "per_guest": 83.3333,
+                "amount": 500,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Tomate",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Sellar las láminas de pechuga de pavo y calabacita en aceite de oliva y formar rollos tipo enchilada.",
+              "Emulsionar el tomate cocido con la pulpa de aguacate Hass, cilantro de la granja y sal de mar hasta obtener una salsa espuma.",
+              "Bañar los rollos con la salsa, cubrir con queso manchego rallado y gratinar 6 minutos."
+            ],
+            "archetype": "pavo_enchiladas_espuma_aguacate"
+          },
+          "side": {
+            "title": "Ejotes Tiernos al Vapor Salteados al Limón Real, Orégano y Aceite de Oliva VEVO",
+            "technique": "steamed_citrus_green_beans",
+            "note": "Primera guarnición de Comida ([R4-SIDE] 1/7: ejotes) libre de lácteos ([R2]).",
+            "coct_reasoning": {
+              "thermodynamics": "Vapor a 96°C por 5 minutos y salteado rápido en aceite de oliva.",
+              "flavor_and_aromatics": "Frescura herbal de ejotes con limón real y orégano.",
+              "textural_architecture": "Ejotes crujientes al dente.",
+              "critical_control_points": "Cero lácteos en la guarnición ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Ejotes",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cocer los ejotes al vapor durante 5 minutos manteniendo su firmeza.",
+              "Aliñar con aceite de oliva extra virgen, jugo de limón de la granja, orégano y sal de mar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 51.0,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.9,
+          "fiber_g": 6.2,
+          "starter_name": "Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva",
+          "main_dish_name": "Dobladitas Keto en Costra de Queso Manchego al Comal Rellenas de Champiñones Salteados, Espinacas, Cilantro y Orégano al Aceite de Oliva",
+          "dish_name": "Dobladitas Keto en Costra de Queso Manchego al Comal Rellenas de Champiñones Salteados, Espinacas, Cilantro y Orégano al Aceite de Oliva",
+          "side_dish_name": "Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva",
+            "technique": "crisp_cucumber_oregano_salad",
+            "note": "Ensalada crujiente y alcalina sin lácteos ([R2]) con pepino en rodajas, limón real y orégano.",
+            "coct_reasoning": {
+              "thermodynamics": "Emplatado en frío a 8°C.",
+              "flavor_and_aromatics": "Acidez limpia de limón real con notas herbales de orégano.",
+              "textural_architecture": "Rodajas crujientes e hidratantes de pepino.",
+              "critical_control_points": "Laminar y aderezar al momento de servir."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar el pepino en rodajas delgadas.",
+              "Aderezar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Dobladitas Keto en Costra de Queso Manchego al Comal Rellenas de Champiñones Salteados, Espinacas, Cilantro y Orégano al Aceite de Oliva",
+            "technique": "cheese_crust_keto_dobladitas",
+            "note": "Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego al comal, rellenas de champiñones salteados en aceite de oliva con espinacas, cilantro de la granja y orégano.",
+            "coct_reasoning": {
+              "thermodynamics": "Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente.",
+              "flavor_and_aromatics": "Umami de champiñón salteado, espinacas y cilantro envuelto en costra dorada de queso manchego.",
+              "textural_architecture": "Exterior crujiente de queso dorado al comal con interior jugoso de hongos.",
+              "critical_control_points": "Doblar la costra de queso manchego en caliente sobre el relleno de champiñones y espinacas."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Champiñón",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 23.3333,
+                "amount": 140,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Saltear los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar.",
+              "Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con los champiñones y doblar en media luna."
+            ],
+            "archetype": "dobladitas_ines_champinon"
+          },
+          "side": {
+            "title": "Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "chamomile_cinnamon_infusion",
+            "note": "Primera tisana nocturna libre de teína con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión a 85°C templada a ≤60°C.",
+              "flavor_and_aromatics": "Notas suaves de manzanilla y canela.",
+              "textural_architecture": "Infusión cálida y sedante.",
+              "critical_control_points": "Disolver AminoSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Manzanilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la manzanilla y la canela en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 58°C e incorporar AminoSinergix® (34Plus®)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Lunes",
+      "day_num": "02",
+      "date_str": "02 Nov",
+      "iso_date": "2026-11-02",
+      "full_date_title": "Menú Completo para el Lunes 02 Nov",
+      "date_full": "Lunes 02 de Noviembre de 2026",
+      "culinary_school_id": "escuela_2_ihop_brunch_grill",
+      "culinary_school_name": "🇺🇸 Escuela 2: Brunch & Grill Americano Clásico",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.1,
+          "fiber_g": 6.3,
+          "starter_name": "Copa de Frambuesas Maceradas a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana",
+          "main_dish_name": "Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real",
+          "dish_name": "Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real",
+          "side_dish_name": "Gelatina Cítrica de Limón Real y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Copa de Frambuesas Maceradas a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana",
+            "technique": "vanilla_raspberry_maceration",
+            "note": "Frambuesas con extracto de vainilla, semillas de chía orgánicas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
+            "coct_reasoning": {
+              "thermodynamics": "Servicio en frío a 6°C.",
+              "flavor_and_aromatics": "Aroma de vainilla y frambuesa con nueces tostadas.",
+              "textural_architecture": "Bayas enteras con semillas de chía y nuez pecana.",
+              "critical_control_points": "Cero lácteos en la entrada frutal."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Frambuesas",
+                "per_guest": 28.3333,
+                "amount": 170,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Extracto de vainilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Perfumar las frambuesas con extracto de vainilla en tazones individuales.",
+              "Añadir las semillas de chía orgánicas, la nuez de la India y la nuez pecana de la granja."
+            ]
+          },
+          "main": {
+            "title": "Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real",
+            "technique": "florentine_egg_crepe_hollandaise",
+            "note": "Escuela 2 (Inspiración IHOP): crepas elaboradas 100% con huevo batido sin harinas, rellenas de champiñones salteados, espinacas y cebolla, bañadas en emulsión holandesa de mantequilla y limón real.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción de láminas finas de huevo a 140°C y emulsión holandesa tibia a 58°C.",
+              "flavor_and_aromatics": "Clásico brunch americano florentino con acidez cítrica de holandesa en mantequilla.",
+              "textural_architecture": "Crepa elástica y sedosa rellena de champiñones y espinacas.",
+              "critical_control_points": "Emulsionar la mantequilla con el limón real a baja temperatura."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Champiñón",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 12,
+                "amount": 72,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Extender porciones de huevo batido en sartén antiadherente para formar crepas finas sin harina.",
+              "Saltear los champiñones, las espinacas y la cebolla picada en la mitad de la mantequilla y rellenar las crepas.",
+              "Emulsionar el resto de la mantequilla tibia con jugo de limón de la granja y sal de mar, y napar las crepas florentinas."
+            ],
+            "archetype": "huevo_crepa_florentina_holandesa"
+          },
+          "side": {
+            "title": "Gelatina Cítrica de Limón Real y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "citrus_rosemary_collagen_gel",
+            "note": "Segunda gelatina matutina ([R8]) con limón de la granja, romero y la Toma 2 de MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Gelificación a 4°C tras integrar MultiSinergix® a ≤42°C.",
+              "flavor_and_aromatics": "Cítrico herbal de limón real y romero.",
+              "textural_architecture": "Gel firme a 4°C.",
+              "critical_control_points": "Proteger termolabilidad a ≤42°C."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Romero",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina",
+                "per_guest": 2.6667,
+                "amount": 16,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar el romero en agua purificada, hidratar la grenetina y templar a 40°C.",
+              "Añadir el jugo de limón real y MultiSinergix® (33Plus®), y refrigerar a 4°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 65.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.5,
+          "starter_name": "Ensalada House Grill de Lechuga Romana con Jitomate, Alcaparras, Limón Real y Aceite de Oliva",
+          "main_dish_name": "Philly Cheese Steak Keto al Skillet de Hierro con Tiras de Flat Steak, Juliana de Pimiento Morrón, Cebolla Asada y Costra Fundida de Queso Manchego",
+          "dish_name": "Philly Cheese Steak Keto al Skillet de Hierro con Tiras de Flat Steak, Juliana de Pimiento Morrón, Cebolla Asada y Costra Fundida de Queso Manchego",
+          "side_dish_name": "Floretes de Brócoli al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO",
+          "starter": {
+            "title": "Ensalada House Grill de Lechuga Romana con Jitomate, Alcaparras, Limón Real y Aceite de Oliva",
+            "technique": "american_house_green_salad",
+            "note": "Ensalada crujiente sin lácteos ([R2]) con hojas de lechuga romana, jitomate, alcaparras y vinagreta cítrica.",
+            "coct_reasoning": {
+              "thermodynamics": "Ensamble en frío a 8°C.",
+              "flavor_and_aromatics": "Acidez vibrante de alcaparras y limón real sobre lechuga crujiente.",
+              "textural_architecture": "Hojas enteras crujientes.",
+              "critical_control_points": "Aderezar al momento de emplatar."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Lechuga",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Alcaparras",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Trocear la lechuga romana y el jitomate en gajos.",
+              "Aliñar con las alcaparras, jugo de limón de la granja, aceite de oliva extra virgen y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Philly Cheese Steak Keto al Skillet de Hierro con Tiras de Flat Steak, Juliana de Pimiento Morrón, Cebolla Asada y Costra Fundida de Queso Manchego",
+            "technique": "philly_cheese_steak_skillet",
+            "note": "Escuela 2 (Inspiración IHOP): clásico Philly Cheese Steak servido en sartén de hierro sin pan, con tiras jugosas de flat steak, pimiento morrón, cebolla caramelizada y queso manchego fundido.",
+            "coct_reasoning": {
+              "thermodynamics": "Sellado a 195°C en hierro fundido y gratinado del queso manchego a 180°C.",
+              "flavor_and_aromatics": "Jugos tostados de res con pimiento morrón, cebolla asada y queso manchego fundido.",
+              "textural_architecture": "Tiras tiernas de flat steak cubiertas por manto fundente de queso.",
+              "critical_control_points": "Sellar a fuego vivo para conservar los jugos internos de la res (68°C)."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Flat steak",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Saltear en el skillet con mantequilla la cebolla fileteada y la juliana de pimiento morrón hasta dorar.",
+              "Incorporar las tiras de flat steak sazonadas con sal con ajo y pimienta negra, sellar a fuego alto y cubrir con el queso manchego hasta fundir."
+            ],
+            "archetype": "res_philly_cheese_steak_skillet"
+          },
+          "side": {
+            "title": "Floretes de Brócoli al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO",
+            "technique": "steamed_oregano_broccoli",
+            "note": "Segunda guarnición de Comida ([R4-SIDE] 2/7: brócoli) libre de lácteos ([R2]).",
+            "coct_reasoning": {
+              "thermodynamics": "Vapor corto a 96°C por 4 minutos.",
+              "flavor_and_aromatics": "Brócoli al dente con notas herbales de orégano y limón real.",
+              "textural_architecture": "Floretes firmes y crujientes.",
+              "critical_control_points": "Cero lácteos ni mantequilla ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Brócoli",
+                "per_guest": 90,
+                "amount": 540,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cocer los floretes de brócoli al vapor durante 4 minutos.",
+              "Aderezar con aceite de oliva extra virgen, jugo de limón de la granja, orégano y sal de mar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 51.0,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.8,
+          "fiber_g": 6.0,
+          "starter_name": "Caldo Claro Americano de Fondo de Pollo al Orégano y Limón Real",
+          "main_dish_name": "Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo",
+          "dish_name": "Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo",
+          "side_dish_name": "Tisana Nocturna de Manzanilla, Limón Real y Clavo de Olor (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Caldo Claro Americano de Fondo de Pollo al Orégano y Limón Real",
+            "technique": "clear_american_poultry_broth",
+            "note": "Caldo reconfortante sin lácteos ([R2]) que antecede a los Zoodles Alfredo.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión suave a 90°C.",
+              "flavor_and_aromatics": "Fondo claro de pollo con orégano y limón de la granja.",
+              "textural_architecture": "Caldo limpio y ligero.",
+              "critical_control_points": "Servir caliente a 72°C sin grasas pesadas."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Calentar el fondo claro de pollo con orégano y sal de mar.",
+              "Servir con unas gotas de limón de la granja y aceite de oliva."
+            ]
+          },
+          "main": {
+            "title": "Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo",
+            "technique": "alfredo_turkey_zoodles_skillet",
+            "note": "Escuela 2 (Inspiración IHOP): sustitución cetogénica de fettuccine por espirales (zoodles) de calabacita al dente con fajitas de pechuga de pavo en salsa Alfredo de queso ricotta, crema ácida y mantequilla.",
+            "coct_reasoning": {
+              "thermodynamics": "Salteado de pechuga de pavo a 74°C y ligado de la salsa Alfredo a 75°C sobre zoodles tiernos.",
+              "flavor_and_aromatics": "Salsa Alfredo cremosa de ricotta y mantequilla al ajo envolviendo los zoodles de calabacita.",
+              "textural_architecture": "Fajitas jugosas de pavo sobre espirales firmes de calabacita.",
+              "critical_control_points": "Saltear los zoodles solo 90 segundos para evitar que suelten agua."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pavo",
+                "per_guest": 83.3333,
+                "amount": 500,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Crema ácida",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar las calabacitas en espirales tipo zoodles y dorar las fajitas de pechuga de pavo en mantequilla con sal con ajo.",
+              "Integrar el queso ricotta y la crema ácida a fuego bajo para formar la salsa Alfredo y envolver los zoodles por 90 segundos."
+            ],
+            "archetype": "pavo_alfredo_mushroom_zoodles"
+          },
+          "side": {
+            "title": "Tisana Nocturna de Manzanilla, Limón Real y Clavo de Olor (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "chamomile_clove_infusion",
+            "note": "Segunda tisana nocturna con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión templada a ≤60°C.",
+              "flavor_and_aromatics": "Manzanilla aromática con toque especiado de clavo y limón real.",
+              "textural_architecture": "Infusión cálida.",
+              "critical_control_points": "Disolver AminoSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Manzanilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Clavo de olor",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la manzanilla y el clavo de olor en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 58°C, añadir jugo de limón real y disolver AminoSinergix® (34Plus®)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Martes",
+      "day_num": "03",
+      "date_str": "03 Nov",
+      "iso_date": "2026-11-03",
+      "full_date_title": "Menú Completo para el Martes 03 Nov",
+      "date_full": "Martes 03 de Noviembre de 2026",
+      "culinary_school_id": "escuela_3_teapaneco_sureste",
+      "culinary_school_name": "🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.4,
+          "starter_name": "Carpaccio de Fresas a la Canela con Semillas de Chía, Nuez de la India y Nuez Pecana",
+          "main_dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
+          "dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
+          "side_dish_name": "Gelatina Cristalina de Limón Real y Vainilla (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Carpaccio de Fresas a la Canela con Semillas de Chía, Nuez de la India y Nuez Pecana",
+            "technique": "cinnamon_strawberry_carpaccio",
+            "note": "Láminas de fresa sin lácteos ([R4.6]) con canela molida, semillas de chía orgánicas, nuez de la India y nuez pecana.",
+            "coct_reasoning": {
+              "thermodynamics": "Emplatado en frío a 6°C.",
+              "flavor_and_aromatics": "Fresas aromáticas a la canela con nuez pecana de la granja.",
+              "textural_architecture": "Láminas finas de fresa con crocancia de semillas y nueces.",
+              "critical_control_points": "Cero lácteos en la entrada frutal."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Filetear las fresas en láminas tipo carpaccio y espolvorear con canela molida.",
+              "Distribuir las semillas de chía orgánicas, la nuez de la India y la nuez pecana."
+            ]
+          },
+          "main": {
+            "title": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
+            "technique": "yucatecan_motulenos_cheese_crust",
+            "note": "Escuela 3 (Inspiración El Teapaneco): versión cetogénica de los Huevos Motuleños sustituyendo la tortilla frita por una costra crujiente de queso manchego al comal, coronada con 3 huevos por comensal y salsa tatemada de jitomate, cebolla y cilantro.",
+            "coct_reasoning": {
+              "thermodynamics": "Costra de queso manchego dorada a 175°C y huevos estrellados en mantequilla a 145°C.",
+              "flavor_and_aromatics": "Sazón yucateca de jitomate asado y cilantro sobre costra dorada de queso manchego.",
+              "textural_architecture": "Base crujiente de queso con yema cremosa y salsa roja.",
+              "critical_control_points": "Dorar la costra de queso manchego hasta que sea autosoportante."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 18.3333,
+                "amount": 110,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Fundir y dorar el queso manchego en el comal formando 6 costras circulares crujientes.",
+              "Asar el jitomate y la cebolla y moler con cilantro de la granja y sal de mar para la salsa motuleña.",
+              "Estrellar los 18 huevos en mantequilla, montar sobre las costras de queso manchego y bañar con la salsa caliente."
+            ],
+            "archetype": "huevo_motulenos_costra_queso"
+          },
+          "side": {
+            "title": "Gelatina Cristalina de Limón Real y Vainilla (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "lemon_vanilla_collagen_gel",
+            "note": "Tercera gelatina matutina ([R8]) con limón de la granja, vainilla y MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Gelificación a 4°C tras incorporación a ≤42°C.",
+              "flavor_and_aromatics": "Cítrico suave a la vainilla.",
+              "textural_architecture": "Gel terso a 4°C.",
+              "critical_control_points": "Integrar MultiSinergix® a ≤42°C."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Extracto de vainilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "ml"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina",
+                "per_guest": 2.6667,
+                "amount": 16,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Hidratar y fundir la grenetina en agua purificada y templar a 40°C.",
+              "Agregar el jugo de limón real, el extracto de vainilla y MultiSinergix® (33Plus®), y refrigerar a 4°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 65.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 4.3,
+          "fiber_g": 6.6,
+          "starter_name": "Ensalada Sureste de Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva",
+          "main_dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Ricotta Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
+          "dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Ricotta Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
+          "side_dish_name": "Pencas de Nopal de la Granja Asadas al Comal con Orégano, Cilantro y Aceite de Oliva VEVO",
+          "starter": {
+            "title": "Ensalada Sureste de Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva",
+            "technique": "southeast_cucumber_herb_salad",
+            "note": "Ensalada verde obligatoria para plato denso de carne molida ([R2]), 100% libre de lácteos y mantequilla.",
+            "coct_reasoning": {
+              "thermodynamics": "Servicio en frío a 8°C.",
+              "flavor_and_aromatics": "Frescura cítrica de pepino, cilantro de la granja y aceite de oliva.",
+              "textural_architecture": "Medias lunas crujientes de pepino.",
+              "critical_control_points": "Cero mantequilla ni lácteos ([R2] Regla 2.3)."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar el pepino en medias lunas y mezclar con el cilantro de la granja finamente picado.",
+              "Aliñar con jugo de limón real, aceite de oliva extra virgen y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Ricotta Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
+            "technique": "yucatecan_queso_relleno_casserole",
+            "note": "Escuela 3 (Inspiración El Teapaneco): clásico Queso Relleno Yucateco elaborado en cazuela con queso manchego y queso ricotta rellenos de picadillo de carne molida de res, aceitunas manzanilla, alcaparras y pimiento morrón sobre salsa roja de jitomate.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción del picadillo de res a 72°C y gratinado en cazuela a 180°C.",
+              "flavor_and_aromatics": "Contraste barroco del sureste entre el queso fundido, las alcaparras, las aceitunas y la carne de res.",
+              "textural_architecture": "Picadillo jugoso coronado por capa fundente de queso manchego y ricotta.",
+              "critical_control_points": "Escurrir la salmuera de aceitunas y alcaparras antes de integrar al picadillo."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Carne molida",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Aceitunas manzanilla",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Alcaparras",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cocinar la carne molida de res con el pimiento morrón picado, las aceitunas manzanilla, las alcaparras, el jitomate asado y el orégano.",
+              "Disponer en cazuela con el queso ricotta y cubrir con el queso manchego para gratinar al horno."
+            ],
+            "archetype": "res_queso_relleno_yucateco"
+          },
+          "side": {
+            "title": "Pencas de Nopal de la Granja Asadas al Comal con Orégano, Cilantro y Aceite de Oliva VEVO",
+            "technique": "griddled_farm_cactus_paddles",
+            "note": "Tercera guarnición de Comida ([R4-SIDE] 3/7: nopales) libre de mantequilla y lácteos ([R2]).",
+            "coct_reasoning": {
+              "thermodynamics": "Asado en seco al comal a 185°C por 4 minutos por lado.",
+              "flavor_and_aromatics": "Notas herbales de nopal de la granja al orégano y aceite de oliva.",
+              "textural_architecture": "Pencas tiernas y asadas sin mucílago.",
+              "critical_control_points": "Cero mantequilla ni lácteos ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Nopales",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Asar las pencas de nopal de la granja en el comal caliente con sal de mar y orégano.",
+              "Terminar con cilantro picado y aceite de oliva extra virgen."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 51.0,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.9,
+          "fiber_g": 6.1,
+          "starter_name": "Sopa de Lima Yucateca en Fondo Claro de Pollo con Jitomate, Cilantro de la Granja y Limón Real",
+          "main_dish_name": "Milanesa de Pechuga de Pollo en Costra Crujiente de Nuez Pecana y Nuez de la India al Horno sobre Cama de Espinacas al Aceite de Coco",
+          "dish_name": "Milanesa de Pechuga de Pollo en Costra Crujiente de Nuez Pecana y Nuez de la India al Horno sobre Cama de Espinacas al Aceite de Coco",
+          "side_dish_name": "Tisana Nocturna de Manzanilla y Hierbas Finas (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Sopa de Lima Yucateca en Fondo Claro de Pollo con Jitomate, Cilantro de la Granja y Limón Real",
+            "technique": "yucatecan_lime_clear_soup",
+            "note": "Escuela 3 (Inspiración El Teapaneco): aromática Sopa de Lima elaborada en fondo claro de pollo con jitomate asado, orégano, cilantro y limón de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión aromática a 90°C sin frituras ni harinas.",
+              "flavor_and_aromatics": "Perfume cítrico del sureste con fondo claro de ave y cilantro.",
+              "textural_architecture": "Caldo cristalino y sedoso.",
+              "critical_control_points": "Añadir el jugo cítrico al final para evitar amargor."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Infusionar el fondo claro de pollo con jitomate asado, orégano y aceite de oliva durante 8 minutos.",
+              "Perfumar fuera del fuego con jugo de limón de la granja y hojas de cilantro."
+            ],
+            "archetype": "entrada_sopa_lima_yucateca"
+          },
+          "main": {
+            "title": "Milanesa de Pechuga de Pollo en Costra Crujiente de Nuez Pecana y Nuez de la India al Horno sobre Cama de Espinacas al Aceite de Coco",
+            "technique": "pecan_cashew_crusted_chicken_cutlet",
+            "note": "Escuela 3 (Inspiración El Teapaneco): milanesa cetogénica sin pan molido ni huevo ([R12]), empanizada en polvo tostado de nuez pecana y nuez de la India al horno sobre espinacas.",
+            "coct_reasoning": {
+              "thermodynamics": "Horneado por convección a 190°C hasta alcanzar 74°C en centro térmico.",
+              "flavor_and_aromatics": "Dorado de nuez pecana de la granja y nuez de la India con espinacas tiernas.",
+              "textural_architecture": "Costra crujiente de frutos secos con pechuga jugosa.",
+              "critical_control_points": "Verificar 74°C internos sin usar huevo en el rebozado ([R12])."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de coco",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Triturar la nuez pecana y la nuez de la India con sal con ajo y orégano, y adherir a las milanesas de pechuga de pollo barnizadas con aceite de coco.",
+              "Hornear a 190°C durante 14 minutos y servir sobre cama de espinacas salteadas."
+            ],
+            "archetype": "pollo_milanesa_costra_nuez"
+          },
+          "side": {
+            "title": "Tisana Nocturna de Manzanilla y Hierbas Finas (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "chamomile_herbs_infusion",
+            "note": "Tercera tisana nocturna con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión templada a ≤60°C.",
+              "flavor_and_aromatics": "Manzanilla floral y hierbas finas.",
+              "textural_architecture": "Infusión cálida.",
+              "critical_control_points": "Disolver AminoSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Manzanilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Hierbas finas",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la manzanilla y las hierbas finas en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 58°C y disolver AminoSinergix® (34Plus®)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Miércoles",
+      "day_num": "04",
+      "date_str": "04 Nov",
+      "iso_date": "2026-11-04",
+      "full_date_title": "Menú Completo para el Miércoles 04 Nov",
+      "date_full": "Miércoles 04 de Noviembre de 2026",
+      "culinary_school_id": "escuela_4_asador_castellano",
+      "culinary_school_name": "🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.1,
+          "fiber_g": 6.3,
+          "starter_name": "Tartar de Zarzamora a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana",
+          "main_dish_name": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva",
+          "dish_name": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva",
+          "side_dish_name": "Gelatina de Flor de Jamaica y Limón Real (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Tartar de Zarzamora a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana",
+            "technique": "blackberry_vanilla_tartare",
+            "note": "Zarzamora con vainilla, semillas de chía orgánicas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
+            "coct_reasoning": {
+              "thermodynamics": "Servicio en frío a 6°C.",
+              "flavor_and_aromatics": "Zarzamora perfumada a la vainilla con nuez pecana.",
+              "textural_architecture": "Dado fino de fruta con semillas.",
+              "critical_control_points": "Cero lácteos en la entrada frutal."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Zarzamora",
+                "per_guest": 28.3333,
+                "amount": 170,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Extracto de vainilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Mezclar la zarzamora con el extracto de vainilla en moldes individuales.",
+              "Coronar con las semillas de chía orgánicas, la nuez de la India y la nuez pecana."
+            ]
+          },
+          "main": {
+            "title": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva",
+            "technique": "castilian_asparagus_spanish_tortilla",
+            "note": "Escuela 4 (Inspiración Asador Castellano): tortilla española cetogénica sustituyendo la papa por puntas de espárragos trigueros y cebolla confitada en aceite de oliva extra virgen.",
+            "coct_reasoning": {
+              "thermodynamics": "Confitado lento en aceite de oliva a 130°C y cuajado jugoso de la tortilla española a 145°C.",
+              "flavor_and_aromatics": "Tradición de taberna castellana con aceite de oliva, cebolla confitada y espárragos.",
+              "textural_architecture": "Exterior dorado y centro jugoso estilo Betanzos.",
+              "critical_control_points": "Voltear la tortilla española con plato tibio manteniendo el corazón tierno."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espárragos",
+                "per_guest": 70,
+                "amount": 420,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Confitar la cebolla fileteada y los espárragos troceados en el aceite de oliva a fuego suave durante 6 minutos.",
+              "Integrar los 18 huevos batidos con sal de mar y cuajar la tortilla española en sartén por ambos lados."
+            ],
+            "archetype": "huevo_tortilla_espanola_calabacita"
+          },
+          "side": {
+            "title": "Gelatina de Flor de Jamaica y Limón Real (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "hibiscus_citrus_collagen_gel",
+            "note": "Cuarta gelatina matutina ([R8]) con flor de Jamaica, limón real y MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Gelificación a 4°C tras integrar a ≤42°C.",
+              "flavor_and_aromatics": "Acidez equilibrada de Jamaica y limón de la granja.",
+              "textural_architecture": "Gel firme a 4°C.",
+              "critical_control_points": "Proteger MultiSinergix® a ≤42°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Flor de Jamaica molida en polvo",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina",
+                "per_guest": 2.6667,
+                "amount": 16,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la flor de Jamaica en agua purificada, hidratar la grenetina y templar a 40°C.",
+              "Incorporar el jugo de limón real y MultiSinergix® (33Plus®) y refrigerar a 4°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 65.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.4,
+          "starter_name": "Sopa Castellana de Cebolla Caramelizada en Fondo de Res con Tomillo y Aceite de Oliva",
+          "main_dish_name": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva",
+          "dish_name": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva",
+          "side_dish_name": "Láminas de Calabacitas Asadas al Comal con Romero de la Granja y Aceite de Oliva VEVO",
+          "starter": {
+            "title": "Sopa Castellana de Cebolla Caramelizada en Fondo de Res con Tomillo y Aceite de Oliva",
+            "technique": "castilian_caramelized_onion_soup",
+            "note": "Escuela 4 (Inspiración Asador Castellano): sopa de cebolla de asador español elaborada en fondo de res casero con tomillo y aceite de oliva sin pan ni lácteos ([R2]).",
+            "coct_reasoning": {
+              "thermodynamics": "Caramelización lenta de la cebolla a 140°C y hervor suave en fondo de res.",
+              "flavor_and_aromatics": "Dulzor natural de cebolla dorada con fondo de res y tomillo.",
+              "textural_architecture": "Caldo ambarino con hebras tiernas de cebolla.",
+              "critical_control_points": "Caramelizar la cebolla sin azúcares añadidos."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo de res",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Tomillo",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Rehogar la cebolla en pluma fina con el aceite de oliva y tomillo hasta que adquiera tono dorado.",
+              "Verter el fondo de res casero, sazonar con sal de mar y hervir suavemente 8 minutos."
+            ],
+            "archetype": "entrada_sopa_cebolla_castellana"
+          },
+          "main": {
+            "title": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva",
+            "technique": "murcian_fish_claypot_braise",
+            "note": "Escuela 4 (Inspiración Asador Castellano): pescado a la murciana cocinado en cazuela con jitomate asado, alcaparras, aceitunas manzanilla, orégano y aceite de oliva.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción suave en cazuela a 155°C por 8 minutos hasta alcanzar 63°C en el pescado.",
+              "flavor_and_aromatics": "Salsa mediterránea española de jitomate, alcaparras y aceitunas manzanilla.",
+              "textural_architecture": "Fajitas de mojarra jugosas en su jugo de cazuela.",
+              "critical_control_points": "No sobrecocinar la mojarra para preservar su textura firme."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Fajitas de mojarra",
+                "per_guest": 160,
+                "amount": 960,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Alcaparras",
+                "per_guest": 7,
+                "amount": 42,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Aceitunas manzanilla",
+                "per_guest": 9.1667,
+                "amount": 55,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Sofreír el jitomate troceado en aceite de oliva con las alcaparras, las aceitunas manzanilla y el orégano.",
+              "Incorporar las fajitas de mojarra en la cazuela, tapar y cocinar 7 minutos a fuego medio."
+            ],
+            "archetype": "pescado_a_la_murciana_cazuela"
+          },
+          "side": {
+            "title": "Láminas de Calabacitas Asadas al Comal con Romero de la Granja y Aceite de Oliva VEVO",
+            "technique": "griddled_rosemary_zucchini_ribbons",
+            "note": "Cuarta guarnición de Comida ([R4-SIDE] 4/7: calabacitas) libre de lácteos.",
+            "coct_reasoning": {
+              "thermodynamics": "Sellado en comal a 180°C por 2 minutos por lado.",
+              "flavor_and_aromatics": "Calabacitas asadas perfumadas con romero de la granja.",
+              "textural_architecture": "Láminas tiernas con marcas de asado.",
+              "critical_control_points": "Cortar longitudinalmente de grosor uniforme."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 90,
+                "amount": 540,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Romero",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Laminar las calabacitas a lo largo y asar en el comal con aceite de oliva.",
+              "Perfumar con romero de la granja y sal de mar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 51.0,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.9,
+          "fiber_g": 6.2,
+          "starter_name": "Ensalada de Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva",
+          "main_dish_name": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Ricotta y Cebolla con Costra Gratinada de Queso Manchego al Horno",
+          "dish_name": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Ricotta y Cebolla con Costra Gratinada de Queso Manchego al Horno",
+          "side_dish_name": "Tisana Nocturna de Manzanilla, Canela y Limón Real (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Ensalada de Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva",
+            "technique": "castilian_spinach_citrus_salad",
+            "note": "Entrada verde sin lácteos ([R2]) que equilibra los Pimientos Rellenos Gratinados.",
+            "coct_reasoning": {
+              "thermodynamics": "Emplatado en frío a 8°C.",
+              "flavor_and_aromatics": "Hojas de espinaca con limón de la granja y orégano.",
+              "textural_architecture": "Hojas enteras y tiernas.",
+              "critical_control_points": "Cero lácteos en la entrada ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Disponer las hojas de espinaca desinfectadas en platos fríos.",
+              "Aliñar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Ricotta y Cebolla con Costra Gratinada de Queso Manchego al Horno",
+            "technique": "castilian_stuffed_peppers_bake",
+            "note": "Escuela 4 (Inspiración Asador Castellano): pimientos morrones enteros asados y rellenos de lomo de atún en agua, queso ricotta y cebolla al orégano, gratinados con queso manchego.",
+            "coct_reasoning": {
+              "thermodynamics": "Asado de los pimientos morrones y gratinado al horno a 185°C por 8 minutos.",
+              "flavor_and_aromatics": "Dulzor del pimiento morrón asado con relleno cremoso de atún, ricotta y manchego.",
+              "textural_architecture": "Pimiento tierno con corazón proteico y costra dorada.",
+              "critical_control_points": "Drenar completamente el atún en agua antes de mezclar con el queso ricotta."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Atún en agua",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Asar los pimientos morrones cortados en mitades y retirar las semillas.",
+              "Mezclar el atún en agua drenado con la cebolla acitronada en aceite de oliva, el queso ricotta, orégano y sal de mar.",
+              "Rellenar los pimientos morrones, cubrir con el queso manchego y gratinar al horno por 8 minutos."
+            ],
+            "archetype": "atun_pimientos_rellenos_gratinados"
+          },
+          "side": {
+            "title": "Tisana Nocturna de Manzanilla, Canela y Limón Real (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "chamomile_lemon_infusion",
+            "note": "Cuarta tisana nocturna con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión templada a ≤60°C.",
+              "flavor_and_aromatics": "Manzanilla, canela y limón real.",
+              "textural_architecture": "Infusión cálida.",
+              "critical_control_points": "Disolver AminoSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Manzanilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la manzanilla y la canela en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 58°C, agregar jugo de limón real y disolver AminoSinergix® (34Plus®)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Jueves",
+      "day_num": "05",
+      "date_str": "05 Nov",
+      "iso_date": "2026-11-05",
+      "full_date_title": "Menú Completo para el Jueves 05 Nov",
+      "date_full": "Jueves 05 de Noviembre de 2026",
+      "culinary_school_id": "escuela_5_alda_bistro_europeo",
+      "culinary_school_name": "🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.4,
+          "starter_name": "Compota Fría de Frambuesas y Canela con Semillas de Chía, Nuez de la India y Nuez Pecana",
+          "main_dish_name": "Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Huevos al Plato y Romero de la Granja",
+          "dish_name": "Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Huevos al Plato y Romero de la Granja",
+          "side_dish_name": "Infusión Matutina de Té Chai, Canela y Aceite de Coco (≤60°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Compota Fría de Frambuesas y Canela con Semillas de Chía, Nuez de la India y Nuez Pecana",
+            "technique": "cold_raspberry_cinnamon_compote",
+            "note": "Frambuesas maceradas con canela, semillas de chía orgánicas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
+            "coct_reasoning": {
+              "thermodynamics": "Maceración en frío a 6°C.",
+              "flavor_and_aromatics": "Frambuesa y canela con frutos secos.",
+              "textural_architecture": "Compota rústica con semillas y nueces.",
+              "critical_control_points": "Cero lácteos en la entrada frutal."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Frambuesas",
+                "per_guest": 28.3333,
+                "amount": 170,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Macerar ligeramente las frambuesas con la canela molida.",
+              "Servir con las semillas de chía orgánicas, la nuez de la India y la nuez pecana."
+            ]
+          },
+          "main": {
+            "title": "Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Huevos al Plato y Romero de la Granja",
+            "technique": "bistro_three_cheese_keto_focaccia",
+            "note": "Escuela 5 (Inspiración Alda Café): pan focaccia cetogénico horneado con base de coliflor prensada, queso manchego, queso ricotta y queso Philadelphia al romero, coronado con 3 huevos por comensal.",
+            "coct_reasoning": {
+              "thermodynamics": "Horneado de la masa de focaccia keto a 190°C por 12 minutos y cuajado de los huevos a 175°C.",
+              "flavor_and_aromatics": "Aroma de bistró europeo con romero de la granja y 3 quesos fundidos.",
+              "textural_architecture": "Base alveolada de focaccia keto dorada con huevos tiernos.",
+              "critical_control_points": "Prensar los floretes de coliflor para lograr una focaccia firme y crujiente."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Coliflor",
+                "per_guest": 70,
+                "amount": 420,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso Philadelphia",
+                "per_guest": 20,
+                "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Romero",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Rallar la coliflor, mezclar con el queso manchego, el queso ricotta, el queso Philadelphia y el romero, y hornear formando una focaccia dorada.",
+              "Cascar los 18 huevos sobre la focaccia con mantequilla y sal de mar, y hornear 6 minutos hasta cuajar las claras."
+            ],
+            "archetype": "focaccia_keto_tres_quesos_esparragos"
+          },
+          "side": {
+            "title": "Infusión Matutina de Té Chai, Canela y Aceite de Coco (≤60°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "chai_mct_emulsion",
+            "note": "Infusión especiada matutina con té chai, canela, aceite de coco y la Toma 2 de MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión a 85°C templada a ≤60°C.",
+              "flavor_and_aromatics": "Especias chai con cuerpo lipídico de coco.",
+              "textural_architecture": "Bebida sedosa.",
+              "critical_control_points": "Integrar MultiSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Té chai",
+                "per_guest": 2,
+                "amount": 12,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de coco",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar el té chai y la canela en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 55°C, emulsionar con el aceite de coco y MultiSinergix® (33Plus®)."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 65.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 4.1,
+          "fiber_g": 6.3,
+          "starter_name": "Ensalada Bistró de Lechuga Romana y Pepino al Limón Real, Orégano y Aceite de Oliva",
+          "main_dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+          "dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+          "side_dish_name": "Espárragos Verdes Asados a la Plancha con Limón Real, Sal con Ajo y Aceite de Oliva VEVO",
+          "starter": {
+            "title": "Ensalada Bistró de Lechuga Romana y Pepino al Limón Real, Orégano y Aceite de Oliva",
+            "technique": "european_bistro_cucumber_salad",
+            "note": "Ensalada europea crujiente sin lácteos ([R2]) para acompañar el Salmón Estilo Alda.",
+            "coct_reasoning": {
+              "thermodynamics": "Emplatado en frío a 8°C.",
+              "flavor_and_aromatics": "Vinagreta de limón real, orégano y aceite de oliva sobre lechuga y pepino.",
+              "textural_architecture": "Hojas crujientes y rodajas de pepino.",
+              "critical_control_points": "Cero lácteos en la entrada ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Lechuga",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Cortar la lechuga romana y el pepino en rodajas finas.",
+              "Aderezar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+            "technique": "alda_bistro_salmon_philadelphia_mirror",
+            "note": "Escuela 5 (Inspiración Alda Café): lomo de salmón sellado en mantequilla servido sobre espejo cremoso de queso Philadelphia, alcaparras, limón real y hierbas finas.",
+            "coct_reasoning": {
+              "thermodynamics": "Sellado del salmón por el lado de la piel a 175°C hasta 63°C internos sobre espejo templado de Philadelphia.",
+              "flavor_and_aromatics": "Armonía bistró entre el salmón en mantequilla, la acidez de las alcaparras y el queso Philadelphia.",
+              "textural_architecture": "Piel crujiente y lomo jugoso sobre espejo untuoso.",
+              "critical_control_points": "No sobrecocinar el salmón (63°C internos) para preservar sus ácidos grasos Omega-3."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Lomo de salmón",
+                "per_guest": 100,
+                "amount": 600,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso Philadelphia",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Alcaparras",
+                "per_guest": 7,
+                "amount": 42,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Hierbas finas",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Acremar el queso Philadelphia tibio con jugo de limón real y hierbas finas para formar el espejo en el plato.",
+              "Sellar el lomo de salmón en sartén con la mantequilla y sal de mar, montar sobre el espejo y coronar con las alcaparras."
+            ],
+            "archetype": "salmon_estilo_alda_philadelphia_alcaparras"
+          },
+          "side": {
+            "title": "Espárragos Verdes Asados a la Plancha con Limón Real, Sal con Ajo y Aceite de Oliva VEVO",
+            "technique": "chargrilled_citrus_asparagus",
+            "note": "Quinta guarnición de Comida ([R4-SIDE] 5/7: espárragos) libre de lácteos ([R2]).",
+            "coct_reasoning": {
+              "thermodynamics": "Asado en plancha a 185°C durante 4 minutos.",
+              "flavor_and_aromatics": "Notas tostadas de espárrago verde con limón real y sal con ajo.",
+              "textural_architecture": "Tallos tiernos y puntas crujientes.",
+              "critical_control_points": "Cero lácteos en la guarnición ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espárragos",
+                "per_guest": 70,
+                "amount": 420,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Asar los espárragos verdes en plancha caliente con aceite de oliva y sal con ajo.",
+              "Terminar con jugo de limón de la granja al servir."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 51.0,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.9,
+          "fiber_g": 6.1,
+          "starter_name": "Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real",
+          "main_dish_name": "Focaccia Keto de Champiñones Salteados, Espinacas, Queso Ricotta y Queso Manchego Dorada al Sartén de Hierro con Romero",
+          "dish_name": "Focaccia Keto de Champiñones Salteados, Espinacas, Queso Ricotta y Queso Manchego Dorada al Sartén de Hierro con Romero",
+          "side_dish_name": "Tisana Nocturna de Manzanilla y Orégano (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real",
+            "technique": "bistro_thyme_clear_consomme",
+            "note": "Consomé ligero sin lácteos ([R2]) con tomillo y limón de la granja.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión a 90°C.",
+              "flavor_and_aromatics": "Aroma herbal de tomillo en fondo claro de ave.",
+              "textural_architecture": "Caldo diáfano.",
+              "critical_control_points": "Servir caliente sin cremas ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Tomillo",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Hervir suavemente el fondo claro de pollo con el tomillo y sal de mar por 6 minutos.",
+              "Servir con jugo de limón real y aceite de oliva."
+            ]
+          },
+          "main": {
+            "title": "Focaccia Keto de Champiñones Salteados, Espinacas, Queso Ricotta y Queso Manchego Dorada al Sartén de Hierro con Romero",
+            "technique": "iron_skillet_mushroom_keto_focaccia",
+            "note": "Escuela 5 (Inspiración Alda Café): focaccia cetogénica dorada en sartén de hierro con cubierta de champiñones salteados, espinacas, queso ricotta, queso manchego y romero de la granja (0 huevos en cena [R12]).",
+            "coct_reasoning": {
+              "thermodynamics": "Dorado de la base en sartén de hierro a 170°C y fundido superior con tapa a 150°C.",
+              "flavor_and_aromatics": "Umami de champiñones y romero sobre base dorada de queso manchego y ricotta.",
+              "textural_architecture": "Base crujiente de sartén con topping jugoso de hongos y espinacas.",
+              "critical_control_points": "Dorar en sartén de hierro sin usar huevo en la cena ([R12])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Champiñón",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 16.6667,
+                "amount": 100,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Romero",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Formar la base en el sartén de hierro con queso manchego y queso ricotta hasta que dore por debajo.",
+              "Cubrir con los champiñones y las espinacas salteados en mantequilla con romero y sal de mar, y tapar 3 minutos para fundir."
+            ],
+            "archetype": "focaccia_keto_hongos_gratinados"
+          },
+          "side": {
+            "title": "Tisana Nocturna de Manzanilla y Orégano (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "chamomile_oregano_infusion",
+            "note": "Quinta tisana nocturna con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión templada a ≤60°C.",
+              "flavor_and_aromatics": "Manzanilla suave con toque de orégano.",
+              "textural_architecture": "Infusión cálida.",
+              "critical_control_points": "Disolver AminoSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Manzanilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la manzanilla y el orégano en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 58°C y disolver AminoSinergix® (34Plus®)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Viernes",
+      "day_num": "06",
+      "date_str": "06 Nov",
+      "iso_date": "2026-11-06",
+      "full_date_title": "Menú Completo para el Viernes 06 Nov",
+      "date_full": "Viernes 06 de Noviembre de 2026",
+      "culinary_school_id": "escuela_6_pacifico_oriente",
+      "culinary_school_name": "🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.5,
+          "starter_name": "Coulis Rústico de Fresas al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana",
+          "main_dish_name": "Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla y Aceite de Coco)",
+          "dish_name": "Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla y Aceite de Coco)",
+          "side_dish_name": "Gelatina de Flor de Jamaica y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Coulis Rústico de Fresas al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana",
+            "technique": "citrus_strawberry_coulis_bowl",
+            "note": "Fresas machacadas en frío con limón real, semillas de chía orgánicas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
+            "coct_reasoning": {
+              "thermodynamics": "Preparación en frío a 6°C.",
+              "flavor_and_aromatics": "Fresas vibrantes con limón de la granja y nueces.",
+              "textural_architecture": "Coulis rústico con crocancia de semillas y nuez pecana.",
+              "critical_control_points": "Cero lácteos en la entrada frutal."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Trocear las fresas con jugo de limón de la granja formando un coulis rústico.",
+              "Añadir las semillas de chía orgánicas, la nuez de la India y la nuez pecana."
+            ]
+          },
+          "main": {
+            "title": "Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla y Aceite de Coco)",
+            "technique": "japanese_keto_omurice_wok",
+            "note": "Escuela 6 (Pacífico & Oriente): versión cetogénica del clásico Omurice japonés empleando grano fino de coliflor salteado al wok con germinado, cebolla y aceite de coco, envuelto en manto terso de 3 huevos por comensal.",
+            "coct_reasoning": {
+              "thermodynamics": "Salteado de la coliflor al wok a 185°C y omelette japonés a 140°C.",
+              "flavor_and_aromatics": "Notas orientales tostadas del wok con coliflor, germinado y huevo sedoso.",
+              "textural_architecture": "Interior granulado al dente de coliflor y exterior aterciopelado de huevo.",
+              "critical_control_points": "Rallar la coliflor en grano fino y saltear en seco antes de añadir el aceite de coco."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Coliflor",
+                "per_guest": 70,
+                "amount": 420,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Germinado",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de coco",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Rallar la coliflor en grano fino y saltear al wok con el aceite de coco, la cebolla picada y el germinado.",
+              "Cuajar los 18 huevos batidos en mantos finos y envolver la coliflor salteada al estilo Omurice japonés."
+            ],
+            "archetype": "huevo_omurice_keto_coliflor"
+          },
+          "side": {
+            "title": "Gelatina de Flor de Jamaica y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "hibiscus_rosemary_collagen_gel",
+            "note": "Quinta gelatina matutina semanal ([R8] >= 5 gelatinas cumplidas) con flor de Jamaica, romero y MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Gelificación a 4°C tras integrar MultiSinergix® a ≤42°C.",
+              "flavor_and_aromatics": "Jamaica herbal al romero de la granja.",
+              "textural_architecture": "Gel cristalino a 4°C.",
+              "critical_control_points": "Incorporar MultiSinergix® a ≤42°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Flor de Jamaica molida en polvo",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Romero",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "Grenetina",
+                "per_guest": 2.6667,
+                "amount": 16,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 120,
+                "amount": 720,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la flor de Jamaica y el romero en agua purificada, hidratar la grenetina y templar a 40°C.",
+              "Incorporar MultiSinergix® (33Plus®) y refrigerar en moldes a 4°C."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 65.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.5,
+          "starter_name": "Ensalada Oriental Sunomono de Pepino en Láminas con Nuez de la India, Limón Real y Aceite de Oliva",
+          "main_dish_name": "Teppanyaki de Flat Steak a la Plancha con Pimiento Morrón, Cebolla Asada y Germinado en Aceite de Coco",
+          "dish_name": "Teppanyaki de Flat Steak a la Plancha con Pimiento Morrón, Cebolla Asada y Germinado en Aceite de Coco",
+          "side_dish_name": "Acelgas de la Granja Salteadas al Wok con Limón Real, Orégano y Aceite de Oliva VEVO",
+          "starter": {
+            "title": "Ensalada Oriental Sunomono de Pepino en Láminas con Nuez de la India, Limón Real y Aceite de Oliva",
+            "technique": "japanese_sunomono_cucumber_salad",
+            "note": "Escuela 6 (Pacífico & Oriente): ensalada japonesa Sunomono de pepino laminado con nuez de la India y limón real sin lácteos ([R2]).",
+            "coct_reasoning": {
+              "thermodynamics": "Maceración rápida en frío a 8°C.",
+              "flavor_and_aromatics": "Frescura cítrica oriental con nuez de la India tostada.",
+              "textural_architecture": "Cintas crujientes de pepino.",
+              "critical_control_points": "Cero lácteos ni mantequilla ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Laminar el pepino finamente y drenar el exceso de humedad con una pizca de sal de mar.",
+              "Aliñar con jugo de limón real, aceite de oliva extra virgen y nuez de la India picada."
+            ]
+          },
+          "main": {
+            "title": "Teppanyaki de Flat Steak a la Plancha con Pimiento Morrón, Cebolla Asada y Germinado en Aceite de Coco",
+            "technique": "japanese_teppanyaki_flat_steak",
+            "note": "Escuela 6 (Pacífico & Oriente): cubos de flat steak sellados a la plancha estilo Teppanyaki con pimiento morrón, cebolla asada y germinado en aceite de coco.",
+            "coct_reasoning": {
+              "thermodynamics": "Plancha de hierro a 200°C para sellado rápido Maillard (68°C internos).",
+              "flavor_and_aromatics": "Umami de plancha japonesa con germinado crujiente y aceite de coco.",
+              "textural_architecture": "Bocados jugosos de res con vegetales al dente.",
+              "critical_control_points": "Añadir el germinado en los últimos 45 segundos para mantener su crocancia."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Flat steak",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Germinado",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de coco",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Calentar la plancha con el aceite de coco y sellar el flat steak cortado en cubos junto con la cebolla y el pimiento morrón.",
+              "Incorporar el germinado y sazonar con sal con ajo antes de retirar de la plancha."
+            ],
+            "archetype": "res_teppanyaki_plancha_germinado"
+          },
+          "side": {
+            "title": "Acelgas de la Granja Salteadas al Wok con Limón Real, Orégano y Aceite de Oliva VEVO",
+            "technique": "wok_sauteed_oregano_chard",
+            "note": "Sexta guarnición de Comida ([R4-SIDE] 6/7: acelgas) libre de lácteos ([R2]).",
+            "coct_reasoning": {
+              "thermodynamics": "Salteado rápido al wok a 180°C por 3 minutos.",
+              "flavor_and_aromatics": "Hojas de acelga de la granja con orégano y limón real.",
+              "textural_architecture": "Tallos tiernos y hojas sedosas.",
+              "critical_control_points": "Cero lácteos en la guarnición ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Acelgas",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Saltear las acelgas de la granja troceadas en el wok con aceite de oliva durante 3 minutos.",
+              "Perfumar con jugo de limón real, orégano y sal de mar."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 51.0,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.9,
+          "fiber_g": 6.1,
+          "starter_name": "Caldo Oriental Claro de Fondo de Pollo al Cilantro de la Granja y Limón Real",
+          "main_dish_name": "Fajitas de Mojarra Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas",
+          "dish_name": "Fajitas de Mojarra Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas",
+          "side_dish_name": "Tisana Nocturna de Manzanilla y Canela Molida (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Caldo Oriental Claro de Fondo de Pollo al Cilantro de la Granja y Limón Real",
+            "technique": "oriental_cilantro_clear_broth",
+            "note": "Caldo ligero y digestivo sin lácteos.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión a 90°C.",
+              "flavor_and_aromatics": "Fondo claro de ave con cilantro de la granja y limón real.",
+              "textural_architecture": "Caldo limpio.",
+              "critical_control_points": "Servir a 72°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Calentar el fondo claro de pollo con sal de mar y aceite de oliva.",
+              "Perfumar al servir con cilantro de la granja y jugo de limón real."
+            ]
+          },
+          "main": {
+            "title": "Fajitas de Mojarra Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas",
+            "technique": "contramar_bicolor_grilled_fish",
+            "note": "Escuela 6 (Pacífico & Oriente — Inspiración Contramar): pescado bicolor sin chiles irritantes ([R1]), mitad marinado en adobo rojo de achiote y jitomate asado y mitad en salsa verde de cilantro y tomate sobre calabacitas asadas.",
+            "coct_reasoning": {
+              "thermodynamics": "Asado a la plancha/brasas a 185°C hasta 63°C en centro térmico.",
+              "flavor_and_aromatics": "Doble perfil costero mexicano: tierra especiada de achiote y frescura herbal de cilantro.",
+              "textural_architecture": "Lomos firmes de mojarra sobre cama de calabacitas.",
+              "critical_control_points": "Elaborar el adobo rojo con achiote y jitomate 0% capsaicina ([R1])."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Fajitas de mojarra",
+                "per_guest": 160,
+                "amount": 960,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 70,
+                "amount": 420,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Achiote",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Tomate",
+                "per_guest": 30,
+                "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cilantro",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Preparar el adobo rojo moliendo el achiote con el jitomate asado, y la emulsión verde moliendo el tomate con el cilantro de la granja.",
+              "Untar la mitad de las fajitas de mojarra con el adobo rojo y la otra mitad con la emulsión verde, y asar a la plancha sobre láminas de calabacitas."
+            ],
+            "archetype": "mojarra_bicolor_estilo_contramar"
+          },
+          "side": {
+            "title": "Tisana Nocturna de Manzanilla y Canela Molida (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "night_chamomile_infusion",
+            "note": "Sexta tisana nocturna con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión templada a ≤60°C.",
+              "flavor_and_aromatics": "Manzanilla y canela.",
+              "textural_architecture": "Infusión cálida.",
+              "critical_control_points": "Disolver AminoSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Manzanilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la manzanilla y la canela en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 58°C y disolver AminoSinergix® (34Plus®)."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "day": "Sábado",
+      "day_num": "07",
+      "date_str": "07 Nov",
+      "iso_date": "2026-11-07",
+      "full_date_title": "Menú Completo para el Sábado 07 Nov",
+      "date_full": "Sábado 07 de Noviembre de 2026",
+      "culinary_school_id": "escuela_7_mare_nostrum",
+      "culinary_school_name": "🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)",
+      "meals": [
+        {
+          "meal_type": "Desayuno",
+          "time": "08:30",
+          "fat_g": 49.0,
+          "protein_g": 34.5,
+          "net_carbs_g": 4.2,
+          "fiber_g": 6.4,
+          "starter_name": "Macerado Mediterráneo de Fresas con Semillas de Chía, Nuez de la India, Nuez Pecana y Vainilla",
+          "main_dish_name": "Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Ricotta, Hierbas Finas y Aceite de Oliva)",
+          "dish_name": "Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Ricotta, Hierbas Finas y Aceite de Oliva)",
+          "side_dish_name": "Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus®",
+          "starter": {
+            "title": "Macerado Mediterráneo de Fresas con Semillas de Chía, Nuez de la India, Nuez Pecana y Vainilla",
+            "technique": "mediterranean_strawberry_maceration",
+            "note": "Fresas sin lácteos ([R4.6]) con vainilla, semillas de chía orgánicas, nuez de la India y nuez pecana.",
+            "coct_reasoning": {
+              "thermodynamics": "Servicio en frío a 6°C.",
+              "flavor_and_aromatics": "Fresas a la vainilla con nuez pecana de la granja.",
+              "textural_architecture": "Bayas en cuartos con semillas de chía.",
+              "critical_control_points": "Cero lácteos en la entrada frutal."
+            },
+            "ingredients": [
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Semillas de chía orgánicas",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez de la India",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Extracto de vainilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Perfumar las fresas con el extracto de vainilla.",
+              "Distribuir las semillas de chía orgánicas, la nuez de la India y la nuez pecana."
+            ]
+          },
+          "main": {
+            "title": "Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Ricotta, Hierbas Finas y Aceite de Oliva)",
+            "technique": "neapolitan_uova_in_purgatorio",
+            "note": "Escuela 7 (Mare Nostrum — Trattoria Italiana): 3 huevos por comensal escalfados directamente sobre reducción napolitana de jitomate asado, rosetones de queso ricotta, hierbas finas y aceite de oliva.",
+            "coct_reasoning": {
+              "thermodynamics": "Reducción del sugo de jitomate a 92°C y escalfado de los huevos a 85°C por 4 minutos.",
+              "flavor_and_aromatics": "Sugo italiano de jitomate asado y hierbas finas con cremosidad de queso ricotta.",
+              "textural_architecture": "Claras cuajadas en el sugo y yemas líquidas con ricotta.",
+              "critical_control_points": "Mantener las yemas cremosas al retirar del fuego."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Huevo",
+                "per_guest": 3,
+                "amount": 18,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Hierbas finas",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Asar y triturar el jitomate con el aceite de oliva, las hierbas finas y la sal con ajo formando un sugo rústico en sartén amplia.",
+              "Formar 18 cavidades en la salsa, cascar los huevos y escalfar tapados por 4 minutos; terminar con rosetones de queso ricotta."
+            ],
+            "archetype": "huevo_uova_in_purgatorio"
+          },
+          "side": {
+            "title": "Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus®",
+            "technique": "hibiscus_cinnamon_morning_infusion",
+            "note": "Infusión matutina antioxidante con la Toma 2 de MultiSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión templada a ≤60°C.",
+              "flavor_and_aromatics": "Flor de Jamaica, canela y limón de la granja.",
+              "textural_architecture": "Infusión cálida.",
+              "critical_control_points": "Integrar MultiSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Flor de Jamaica molida en polvo",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "MultiSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la flor de Jamaica y la canela en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 55°C, añadir jugo de limón real y disolver MultiSinergix® (33Plus®)."
+            ]
+          }
+        },
+        {
+          "meal_type": "Comida",
+          "time": "14:30",
+          "fat_g": 65.0,
+          "protein_g": 43.0,
+          "net_carbs_g": 4.3,
+          "fiber_g": 6.7,
+          "starter_name": "Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Orégano y Limón Real al Aceite de Oliva",
+          "main_dish_name": "Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Ricotta y Queso Manchego",
+          "dish_name": "Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Ricotta y Queso Manchego",
+          "side_dish_name": "Champiñones Silvestres Salteados al Ajillo con Tomillo, Limón Real y Aceite de Oliva VEVO",
+          "starter": {
+            "title": "Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Orégano y Limón Real al Aceite de Oliva",
+            "technique": "mare_nostrum_olive_salad",
+            "note": "Ensalada verde obligatoria para plato denso de carne molida ([R2]), libre de mantequilla y lácteos.",
+            "coct_reasoning": {
+              "thermodynamics": "Emplatado en frío a 8°C.",
+              "flavor_and_aromatics": "Perfil griego de aceitunas manzanilla, orégano y limón real.",
+              "textural_architecture": "Hojas crujientes de lechuga romana.",
+              "critical_control_points": "Cero lácteos ni mantequilla ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Lechuga",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Aceitunas manzanilla",
+                "per_guest": 9.1667,
+                "amount": 55,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Trocear la lechuga romana y disponer en tazones con las aceitunas manzanilla.",
+              "Aliñar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar."
+            ]
+          },
+          "main": {
+            "title": "Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Ricotta y Queso Manchego",
+            "technique": "greek_keto_zucchini_moussaka",
+            "note": "Escuela 7 (Mare Nostrum — Islas Griegas): Moussaka tradicional helénica adaptada con láminas de calabacita asada, ragú especiado de carne molida de res con toque de canela y orégano, y cobertura gratinada de queso ricotta y queso manchego.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción del ragú a 75°C y horneado en capas a 185°C por 12 minutos.",
+              "flavor_and_aromatics": "Perfume cálido del Egeo con canela, orégano, carne de res y gratinado de ricotta y manchego.",
+              "textural_architecture": "Capas tiernas de calabacita y ragú bajo costra dorada.",
+              "critical_control_points": "Asar previamente las láminas de calabacita para evitar humedad excesiva en la Moussaka."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Carne molida",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Calabacitas",
+                "per_guest": 80,
+                "amount": 480,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso ricotta",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 16.6667,
+                "amount": 100,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Cebolla",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Canela molida",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Asar las calabacitas en láminas longitudinales y cocinar el ragú de carne molida con cebolla, canela molida, orégano y sal de mar.",
+              "Armar capas alternadas de calabacita y ragú, cubrir con mezcla de queso ricotta y queso manchego, y gratinar al horno."
+            ],
+            "archetype": "res_moussaka_griega_horno"
+          },
+          "side": {
+            "title": "Champiñones Silvestres Salteados al Ajillo con Tomillo, Limón Real y Aceite de Oliva VEVO",
+            "technique": "garlic_thyme_sauteed_mushrooms",
+            "note": "Séptima guarnición de Comida ([R4-SIDE] 7/7: champiñón) libre de mantequilla y lácteos ([R2]).",
+            "coct_reasoning": {
+              "thermodynamics": "Salteado a 180°C en aceite de oliva por 5 minutos.",
+              "flavor_and_aromatics": "Champiñones al ajillo y tomillo con toque de limón real.",
+              "textural_architecture": "Láminas carnosas y doradas.",
+              "critical_control_points": "Cero mantequilla ni lácteos ([R2])."
+            },
+            "ingredients": [
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Champiñón",
+                "per_guest": 110,
+                "amount": 660,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Tomillo",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Filetear los champiñones y saltear a fuego vivo en aceite de oliva con sal con ajo y tomillo.",
+              "Terminar con jugo de limón de la granja."
+            ]
+          }
+        },
+        {
+          "meal_type": "Cena",
+          "time": "20:00",
+          "fat_g": 51.0,
+          "protein_g": 35.0,
+          "net_carbs_g": 3.9,
+          "fiber_g": 6.1,
+          "starter_name": "Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Espinacas, Limón Real y Orégano",
+          "main_dish_name": "Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino",
+          "dish_name": "Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino",
+          "side_dish_name": "Tisana Nocturna de Manzanilla, Tomillo y Limón Real (≤60°C) con Fórmula Reparadora 34Plus®",
+          "starter": {
+            "title": "Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Espinacas, Limón Real y Orégano",
+            "technique": "trattoria_spinach_clear_broth",
+            "note": "Caldo italiano ligero con hojas de espinaca y limón real.",
+            "coct_reasoning": {
+              "thermodynamics": "Cocción suave a 90°C por 4 minutos.",
+              "flavor_and_aromatics": "Fondo claro de pollo con espinacas tiernas y orégano.",
+              "textural_architecture": "Caldo sedoso con hojas de espinaca.",
+              "critical_control_points": "Incorporar las espinacas 1 minuto antes de servir."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Fondo claro de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Espinacas",
+                "per_guest": 50,
+                "amount": 300,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal de mar",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Hervir el fondo claro de pollo con orégano y sal de mar, e incorporar las hojas de espinaca por 1 minuto.",
+              "Servir con jugo de limón real y aceite de oliva."
+            ]
+          },
+          "main": {
+            "title": "Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino",
+            "technique": "greek_chicken_shawarma_tzatziki",
+            "note": "Escuela 7 (Mare Nostrum — Islas Griegas): fajitas de pechuga de pollo marinadas al limón real, comino y orégano doradas a la plancha, servidas con salsa Tzatziki fría de yogur griego y pepino.",
+            "coct_reasoning": {
+              "thermodynamics": "Sellado a la plancha a 180°C hasta 74°C internos y salsa Tzatziki a 8°C.",
+              "flavor_and_aromatics": "Especias mediterráneas (comino, orégano y limón) con la acidez láctea del Tzatziki de pepino.",
+              "textural_architecture": "Tiras doradas de ave sobre crema fría de yogur griego y pepino.",
+              "critical_control_points": "Drenar el pepino rallado antes de integrarlo al yogur griego."
+            },
+            "ingredients": [
+              {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pollo",
+                "per_guest": 150,
+                "amount": 900,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Yogur griego",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Pepino",
+                "per_guest": 60,
+                "amount": 360,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Comino",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de oliva",
+                "per_guest": 4,
+                "amount": 24,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Sal con ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              }
+            ],
+            "steps": [
+              "Marinar las fajitas de pechuga de pollo con jugo de limón real, comino, orégano, sal con ajo y aceite de oliva, y asar en plancha caliente.",
+              "Mezclar el yogur griego con el pepino en dados finos y servir acompañando el shawarma caliente."
+            ],
+            "archetype": "pavo_shawarma_griego_tzatziki"
+          },
+          "side": {
+            "title": "Tisana Nocturna de Manzanilla, Tomillo y Limón Real (≤60°C) con Fórmula Reparadora 34Plus®",
+            "technique": "chamomile_thyme_night_infusion",
+            "note": "Séptima tisana nocturna con la Toma 3 de AminoSinergix®.",
+            "coct_reasoning": {
+              "thermodynamics": "Infusión templada a ≤60°C.",
+              "flavor_and_aromatics": "Manzanilla floral con tomillo y limón de la granja.",
+              "textural_architecture": "Infusión cálida.",
+              "critical_control_points": "Disolver AminoSinergix® a ≤60°C."
+            },
+            "ingredients": [
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Manzanilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Tomillo",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
+              },
+              {
+                "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
+                "name": "AminoSinergix®",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 200,
+                "amount": 1200,
+                "unit": "ml"
+              }
+            ],
+            "steps": [
+              "Infusionar la manzanilla y el tomillo en agua purificada a 85°C por 5 minutos y colar.",
+              "Templar a 58°C, añadir jugo de limón real y disolver AminoSinergix® (34Plus®)."
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "selected_harvest": [
+    "Nopales",
+    "Cilantro",
+    "Limones",
+    "Nuez pecana",
+    "Acelgas",
+    "Romero",
+    "Agua purificada",
+    "Jamaica"
+  ],
+  "hard_gate_audit": {
+    "passed": true,
+    "violations_count": 0,
+    "violations": [],
+    "bom_summary": {
+      "farm_harvest_items": [
+        {
+          "name": "Acelgas",
+          "required": 480.0,
+          "unit": "g",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Agua purificada",
+          "required": 14400.0,
+          "unit": "ml",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Cilantro",
+          "required": 204.0,
+          "unit": "g",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Fondo claro de pollo",
+          "required": 5400.0,
+          "unit": "ml",
+          "source": "Insumo Base de Cocina ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Fondo de res",
+          "required": 900.0,
+          "unit": "ml",
+          "source": "Insumo Base de Cocina ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Limones",
+          "required": 1476.0,
+          "unit": "g",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Nopales",
+          "required": 480.0,
+          "unit": "g",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Nuez pecana",
+          "required": 510.0,
+          "unit": "g",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Romero",
+          "required": 30.0,
+          "unit": "g",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        }
+      ],
+      "pantry_covered_items": [
+        {
+          "name": "Aceite de coco",
+          "required": 174.0,
+          "stock": 2000.0,
+          "remaining_stock": 1826.0,
+          "unit": "g"
+        },
+        {
+          "name": "Aceitunas manzanilla",
+          "required": 170.0,
+          "stock": 175.0,
+          "remaining_stock": 5.0,
+          "unit": "g"
+        },
+        {
+          "name": "Achiote",
+          "required": 18.0,
+          "stock": 110.0,
+          "remaining_stock": 92.0,
+          "unit": "g"
+        },
+        {
+          "name": "Aguacate",
+          "required": 1.0,
+          "stock": 1.0,
+          "remaining_stock": 0.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Alcaparras",
+          "required": 156.0,
+          "stock": 200.0,
+          "remaining_stock": 44.0,
+          "unit": "g"
+        },
+        {
+          "name": "Atún en agua",
+          "required": 660.0,
+          "stock": 700.0,
+          "remaining_stock": 40.0,
+          "unit": "g"
+        },
+        {
+          "name": "Canela molida",
+          "required": 27.0,
+          "stock": 750.0,
+          "remaining_stock": 723.0,
+          "unit": "g"
+        },
+        {
+          "name": "Carne molida",
+          "required": 1320.0,
+          "stock": 1360.0,
+          "remaining_stock": 40.0,
+          "unit": "g"
+        },
+        {
+          "name": "Clavo de olor",
+          "required": 2.0,
+          "stock": 50.0,
+          "remaining_stock": 48.0,
+          "unit": "g"
+        },
+        {
+          "name": "Comino",
+          "required": 3.0,
+          "stock": 50.0,
+          "remaining_stock": 47.0,
+          "unit": "g"
+        },
+        {
+          "name": "Crema ácida",
+          "required": 180.0,
+          "stock": 960.0,
+          "remaining_stock": 780.0,
+          "unit": "g"
+        },
+        {
+          "name": "Ejotes",
+          "required": 240.0,
+          "stock": 500.0,
+          "remaining_stock": 260.0,
+          "unit": "g"
+        },
+        {
+          "name": "Espárragos",
+          "required": 840.0,
+          "stock": 907.0,
+          "remaining_stock": 67.0,
+          "unit": "g"
+        },
+        {
+          "name": "Extracto de vainilla",
+          "required": 24.0,
+          "stock": 400.0,
+          "remaining_stock": 376.0,
+          "unit": "ml"
+        },
+        {
+          "name": "Fajitas de mojarra",
+          "required": 1920.0,
+          "stock": 2000.0,
+          "remaining_stock": 80.0,
+          "unit": "g"
+        },
+        {
+          "name": "Flat steak",
+          "required": 1320.0,
+          "stock": 2200.0,
+          "remaining_stock": 880.0,
+          "unit": "g"
+        },
+        {
+          "name": "Flor de Jamaica molida en polvo",
+          "required": 96.0,
+          "stock": 200.0,
+          "remaining_stock": 104.0,
+          "unit": "g"
+        },
+        {
+          "name": "Frambuesas",
+          "required": 340.0,
+          "stock": 340.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
+          "name": "Germinado",
+          "required": 360.0,
+          "stock": 500.0,
+          "remaining_stock": 140.0,
+          "unit": "g"
+        },
+        {
+          "name": "Grenetina",
+          "required": 80.0,
+          "stock": 112.0,
+          "remaining_stock": 32.0,
+          "unit": "g"
+        },
+        {
+          "name": "Hierbas finas",
+          "required": 12.0,
+          "stock": 25.0,
+          "remaining_stock": 13.0,
+          "unit": "g"
+        },
+        {
+          "name": "Huevo",
+          "required": 126.0,
+          "stock": 206.0,
+          "remaining_stock": 80.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Lechuga",
+          "required": 3.0,
+          "stock": 3.0,
+          "remaining_stock": 0.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Lomo de salmón",
+          "required": 600.0,
+          "stock": 1250.0,
+          "remaining_stock": 650.0,
+          "unit": "g"
+        },
+        {
+          "name": "Mantequilla",
+          "required": 372.0,
+          "stock": 1370.0,
+          "remaining_stock": 998.0,
+          "unit": "g"
+        },
+        {
+          "name": "Manzanilla",
+          "required": 42.0,
+          "stock": 50.0,
+          "remaining_stock": 8.0,
+          "unit": "g"
+        },
+        {
+          "name": "Nuez de la India",
+          "required": 546.0,
+          "stock": 907.0,
+          "remaining_stock": 361.0,
+          "unit": "g"
+        },
+        {
+          "name": "Orégano",
+          "required": 57.0,
+          "stock": 150.0,
+          "remaining_stock": 93.0,
+          "unit": "g"
+        },
+        {
+          "name": "Pechuga de pavo",
+          "required": 1000.0,
+          "stock": 1000.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
+          "name": "Pimienta negra",
+          "required": 3.0,
+          "stock": 70.0,
+          "remaining_stock": 67.0,
+          "unit": "g"
+        },
+        {
+          "name": "Queso manchego",
+          "required": 990.0,
+          "stock": 1000.0,
+          "remaining_stock": 10.0,
+          "unit": "g"
+        },
+        {
+          "name": "Queso Philadelphia",
+          "required": 420.0,
+          "stock": 720.0,
+          "remaining_stock": 300.0,
+          "unit": "g"
+        },
+        {
+          "name": "Queso ricotta",
+          "required": 1800.0,
+          "stock": 3840.0,
+          "remaining_stock": 2040.0,
+          "unit": "g"
+        },
+        {
+          "name": "Sal con ajo",
+          "required": 48.0,
+          "stock": 100.0,
+          "remaining_stock": 52.0,
+          "unit": "g"
+        },
+        {
+          "name": "Sal de mar",
+          "required": 204.0,
+          "stock": 3000.0,
+          "remaining_stock": 2796.0,
+          "unit": "g"
+        },
+        {
+          "name": "Té chai",
+          "required": 12.0,
+          "stock": 70.0,
+          "remaining_stock": 58.0,
+          "unit": "g"
+        },
+        {
+          "name": "Tomate",
+          "required": 360.0,
+          "stock": 400.0,
+          "remaining_stock": 40.0,
+          "unit": "g"
+        },
+        {
+          "name": "Tomillo",
+          "required": 12.0,
+          "stock": 20.0,
+          "remaining_stock": 8.0,
+          "unit": "g"
+        },
+        {
+          "name": "Yogur griego",
+          "required": 360.0,
+          "stock": 5680.0,
+          "remaining_stock": 5320.0,
+          "unit": "g"
+        },
+        {
+          "name": "Zarzamora",
+          "required": 340.0,
+          "stock": 340.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        }
+      ],
+      "market_purchases": [
+        {
+          "name": "Aceite de oliva",
+          "required": 768.0,
+          "stock": 400.0,
+          "net_to_buy": 368.0,
+          "unit": "ml"
+        },
+        {
+          "name": "AminoSinergix®",
+          "required": 420.0,
+          "stock": 200.0,
+          "net_to_buy": 220.0,
+          "unit": "g"
+        },
+        {
+          "name": "Brócoli",
+          "required": 540.0,
+          "stock": 0.0,
+          "net_to_buy": 540.0,
+          "unit": "g"
+        },
+        {
+          "name": "Calabacitas",
+          "required": 2280.0,
+          "stock": 0.0,
+          "net_to_buy": 2280.0,
+          "unit": "g"
+        },
+        {
+          "name": "Cebolla",
+          "required": 10.0,
+          "stock": 8.0,
+          "net_to_buy": 2.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Champiñón",
+          "required": 2340.0,
+          "stock": 0.0,
+          "net_to_buy": 2340.0,
+          "unit": "g"
+        },
+        {
+          "name": "Coliflor",
+          "required": 840.0,
+          "stock": 0.0,
+          "net_to_buy": 840.0,
+          "unit": "g"
+        },
+        {
+          "name": "Espinacas",
+          "required": 1860.0,
+          "stock": 0.0,
+          "net_to_buy": 1860.0,
+          "unit": "g"
+        },
+        {
+          "name": "Fresas",
+          "required": 720.0,
+          "stock": 0.0,
+          "net_to_buy": 720.0,
+          "unit": "g"
+        },
+        {
+          "name": "Jitomate",
+          "required": 8.0,
+          "stock": 7.0,
+          "net_to_buy": 1.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Morrón",
+          "required": 9.0,
+          "stock": 0.0,
+          "net_to_buy": 9.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "MultiSinergix®",
+          "required": 420.0,
+          "stock": 300.0,
+          "net_to_buy": 120.0,
+          "unit": "g"
+        },
+        {
+          "name": "Pechuga de pollo",
+          "required": 1800.0,
+          "stock": 0.0,
+          "net_to_buy": 1800.0,
+          "unit": "g"
+        },
+        {
+          "name": "Pepino",
+          "required": 1740.0,
+          "stock": 0.0,
+          "net_to_buy": 1740.0,
+          "unit": "g"
+        },
+        {
+          "name": "Semillas de chía orgánicas",
+          "required": 336.0,
+          "stock": 0.0,
+          "net_to_buy": 336.0,
+          "unit": "g"
+        }
+      ]
+    }
+  }
+}

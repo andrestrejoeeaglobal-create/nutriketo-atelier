@@ -1829,6 +1829,13 @@ def generate_standalone():
         from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
         plan_44_dict = generate_week_with_tilo_cortex(44, history_weeks=[plan_43_dict])
 
+    try:
+        with open("semana_45_master.json", "r", encoding="utf-8") as f45:
+            plan_45_dict = json.load(f45)
+    except Exception:
+        from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
+        plan_45_dict = generate_week_with_tilo_cortex(45, history_weeks=[plan_41_dict, plan_42_dict, plan_43_dict, plan_44_dict])
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
@@ -1841,7 +1848,8 @@ def generate_standalone():
         "Semana 41 (04 al 10 de Octubre de 2026)": plan_41_dict,
         "Semana 42 (11 al 17 de Octubre de 2026)": plan_42_dict,
         "Semana 43 (18 al 24 de Octubre de 2026)": plan_43_dict,
-        "Semana 44 (25 al 31 de Octubre de 2026)": plan_44_dict
+        "Semana 44 (25 al 31 de Octubre de 2026)": plan_44_dict,
+        "Semana 45 (01 al 07 de Noviembre de 2026)": plan_45_dict
     }
 
     def dish_to_typed_recipe(dish_obj):
@@ -1967,6 +1975,22 @@ def generate_standalone():
                 meal["side_recipe"] = dish_to_typed_recipe(side_obj)
                 all_s44_ings.extend(side_obj.get("ingredients", []))
 
+    all_s45_ings = []
+    for day in plan_45_dict.get("days", []):
+        for meal in day.get("meals", []):
+            starter_obj = meal.get("starter")
+            if starter_obj and isinstance(starter_obj, dict):
+                meal["starter_recipe"] = dish_to_typed_recipe(starter_obj)
+                all_s45_ings.extend(starter_obj.get("ingredients", []))
+            main_obj = meal.get("main") or meal.get("main_dish")
+            if main_obj and isinstance(main_obj, dict):
+                meal["main_recipe"] = dish_to_typed_recipe(main_obj)
+                all_s45_ings.extend(main_obj.get("ingredients", []))
+            side_obj = meal.get("side") or meal.get("side_dish")
+            if side_obj and isinstance(side_obj, dict):
+                meal["side_recipe"] = dish_to_typed_recipe(side_obj)
+                all_s45_ings.extend(side_obj.get("ingredients", []))
+
     s40_canonical_bom = consolidate_market_bom(all_s40_ings)
     s40_canonical_bom_json = json.dumps(s40_canonical_bom, ensure_ascii=False)
 
@@ -1997,18 +2021,6 @@ def generate_standalone():
         export_heptagon_exchange_pool,
         generate_week_with_tilo_cortex,
     )
-    plan_45_dict = generate_week_with_tilo_cortex(45, history_weeks=[plan_44_dict])
-    for day in plan_45_dict.get("days", []):
-        for meal in day.get("meals", []):
-            starter_obj = meal.get("starter")
-            if starter_obj and isinstance(starter_obj, dict):
-                meal["starter_recipe"] = dish_to_typed_recipe(starter_obj)
-            main_obj = meal.get("main") or meal.get("main_dish")
-            if main_obj and isinstance(main_obj, dict):
-                meal["main_recipe"] = dish_to_typed_recipe(main_obj)
-            side_obj = meal.get("side") or meal.get("side_dish")
-            if side_obj and isinstance(side_obj, dict):
-                meal["side_recipe"] = dish_to_typed_recipe(side_obj)
 
     seven_schools_json = json.dumps(SEVEN_CULINARY_SCHOOLS, ensure_ascii=False)
     plan_45_json = json.dumps(plan_45_dict, ensure_ascii=False)
@@ -2130,9 +2142,10 @@ const FORBIDDEN_INGREDIENTS = {
   azucares: ["azucar", "jarabe", "miel", "sacarosa", "maltitol", "higo"]
 };
 
-const MAX_VISIBLE_WEEKS_IN_MENU = 4;
+const MAX_VISIBLE_WEEKS_IN_MENU = 5;
 const CANONICAL_WEEK_43_TITLE = "Semana 43 (18 al 24 de Octubre de 2026)";
 const CANONICAL_WEEK_44_TITLE = "Semana 44 (25 al 31 de Octubre de 2026)";
+const CANONICAL_WEEK_45_TITLE = "Semana 45 (01 al 07 de Noviembre de 2026)";
 
 function isCanonicalHardGateWeek(wKey) {
   const target = wKey || (typeof activeWeek === 'string' ? activeWeek : '');
@@ -3163,6 +3176,9 @@ function purgeWeeksAfter43() {
       if (datasets[CANONICAL_WEEK_44_TITLE]) {
         window.customGeneratedWeeks[CANONICAL_WEEK_44_TITLE] = datasets[CANONICAL_WEEK_44_TITLE];
       }
+      if (datasets[CANONICAL_WEEK_45_TITLE]) {
+        window.customGeneratedWeeks[CANONICAL_WEEK_45_TITLE] = datasets[CANONICAL_WEEK_45_TITLE];
+      }
     }
   } catch (err) {
     console.warn("Error en purgeWeeksAfter43:", err);
@@ -3183,7 +3199,11 @@ function syncCustomWeeksDropdowns(preferredWeekKey) {
         if (datasets[CANONICAL_WEEK_44_TITLE]) {
           window.customGeneratedWeeks[wKey] = datasets[CANONICAL_WEEK_44_TITLE];
         }
-      } else if (wNum !== null && wNum > 44 && !datasets[wKey] && window.customGeneratedWeeks[wKey]) {
+      } else if (wNum === 45) {
+        if (datasets[CANONICAL_WEEK_45_TITLE]) {
+          window.customGeneratedWeeks[wKey] = datasets[CANONICAL_WEEK_45_TITLE];
+        }
+      } else if (wNum !== null && wNum > 45 && !datasets[wKey] && window.customGeneratedWeeks[wKey]) {
         datasets[wKey] = window.customGeneratedWeeks[wKey];
       }
     });
@@ -3541,6 +3561,7 @@ function selectWeek(weekKey) {
                 <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
                 <option value="Semana 43 (18 al 24 de Octubre de 2026)">Semana 43 (18 al 24 de Octubre de 2026)</option>
                 <option value="Semana 44 (25 al 31 de Octubre de 2026)" selected>Semana 44 (25 al 31 de Octubre de 2026)</option>
+                <option value="Semana 45 (01 al 07 de Noviembre de 2026)">Semana 45 (01 al 07 de Noviembre de 2026)</option>
               </select>
             </div>
             <div>
@@ -3658,6 +3679,7 @@ function selectWeek(weekKey) {
             <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
             <option value="Semana 43 (18 al 24 de Octubre de 2026)">Semana 43 (18 al 24 de Octubre de 2026)</option>
             <option value="Semana 44 (25 al 31 de Octubre de 2026)" selected>Semana 44 (25 al 31 de Octubre de 2026)</option>
+            <option value="Semana 45 (01 al 07 de Noviembre de 2026)">Semana 45 (01 al 07 de Noviembre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
