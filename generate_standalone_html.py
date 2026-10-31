@@ -1992,9 +1992,53 @@ def generate_standalone():
     canonical_bom_json = json.dumps(canonical_bom_data, ensure_ascii=False)
 
     # CONSTRUCCIÓN DEL CATÁLOGO CANÓNICO DE PLATILLOS (DISH_EXCHANGE_POOL)
+    from app.services.tilo_menu_cortex import (
+        SEVEN_CULINARY_SCHOOLS,
+        export_heptagon_exchange_pool,
+        generate_week_with_tilo_cortex,
+    )
+    plan_45_dict = generate_week_with_tilo_cortex(45, history_weeks=[plan_44_dict])
+    for day in plan_45_dict.get("days", []):
+        for meal in day.get("meals", []):
+            starter_obj = meal.get("starter")
+            if starter_obj and isinstance(starter_obj, dict):
+                meal["starter_recipe"] = dish_to_typed_recipe(starter_obj)
+            main_obj = meal.get("main") or meal.get("main_dish")
+            if main_obj and isinstance(main_obj, dict):
+                meal["main_recipe"] = dish_to_typed_recipe(main_obj)
+            side_obj = meal.get("side") or meal.get("side_dish")
+            if side_obj and isinstance(side_obj, dict):
+                meal["side_recipe"] = dish_to_typed_recipe(side_obj)
+
+    seven_schools_json = json.dumps(SEVEN_CULINARY_SCHOOLS, ensure_ascii=False)
+    plan_45_json = json.dumps(plan_45_dict, ensure_ascii=False)
+
     starters_map = {}
     mains_map = {}
     sides_map = {}
+
+    heptagon_pool = export_heptagon_exchange_pool()
+    for s_item in heptagon_pool.get("starters", []):
+        s_name = s_item.get("name", "")
+        if s_name and s_name not in starters_map:
+            starters_map[s_name] = {
+                **s_item,
+                "recipe": dish_to_typed_recipe(s_item.get("recipe")) or s_item.get("recipe"),
+            }
+    for m_item in heptagon_pool.get("mains", []):
+        m_name = m_item.get("name", "")
+        if m_name and m_name not in mains_map:
+            mains_map[m_name] = {
+                **m_item,
+                "recipe": dish_to_typed_recipe(m_item.get("recipe")) or m_item.get("recipe"),
+            }
+    for sd_item in heptagon_pool.get("sides", []):
+        sd_name = sd_item.get("name", "")
+        if sd_name and sd_name not in sides_map:
+            sides_map[sd_name] = {
+                **sd_item,
+                "recipe": dish_to_typed_recipe(sd_item.get("recipe")) or sd_item.get("recipe"),
+            }
 
     for day in plan_38_dict.get("days", []):
         for meal in day.get("meals", []):
@@ -2185,6 +2229,55 @@ function _classifyMainProteinHardGate(mainDish) {
 }
 
 const _HG_ARCHETYPE_PATTERNS = [
+  ['huevo_peyis_tres_quesos', ['huevos peyis', 'salsa fundente de 3 quesos']],
+  ['huevo_nopal_macaria', ['nopal macaria', 'macaria asado']],
+  ['huevo_divorciados_nopal', ['huevos divorciados', 'divorciados sobre pencas']],
+  ['huevo_omelette_ericka_salmon', ['omelette ericka', 'lajas de salmon']],
+  ['pavo_enchiladas_espuma_aguacate', ['enchiladas espuma', 'salsa cremosa de aguacate']],
+  ['pollo_enchiladas_suizas_keto', ['rollos suizos', 'enchiladas suizas']],
+  ['dobladitas_ines_champinon', ['dobladitas keto', 'dobladitas ines']],
+  ['huevo_crepa_florentina_holandesa', ['crepas florentinas', 'crepa florentina']],
+  ['huevo_southwest_scramble', ['southwest scramble']],
+  ['huevo_country_omelette_pavo', ['country omelette']],
+  ['huevo_garden_omelette_vegetales', ['garden omelette']],
+  ['res_philly_cheese_steak_skillet', ['philly cheese steak']],
+  ['pavo_alfredo_mushroom_zoodles', ['zoodles alfredo', 'espirales de calabacita al dente']],
+  ['res_smothered_meatballs_gravy', ['albondigas americanas', 'gravy cremoso']],
+  ['huevo_motulenos_costra_queso', ['huevos motulenos', 'huevos motuleños']],
+  ['huevo_encamisados_hoja_acelga', ['huevos encamisados', 'encamisados al comal']],
+  ['huevo_rancheros_salsa_verde_tomate', ['huevos del sureste', 'rancheros del sureste']],
+  ['huevo_revuelto_platanito_keto_calabaza', ['revuelto tabasqueno', 'revuelto tabasqueño']],
+  ['res_queso_relleno_yucateco', ['queso relleno yucateco']],
+  ['mojarra_pibil_achiote_nopal', ['tikin xic', 'adobo yucateco de achiote']],
+  ['pollo_puchero_tabasqueno_blanco', ['puchero blanco tabasqueno', 'puchero blanco tabasqueño']],
+  ['huevo_estrellados_pisto_manchego', ['pisto manchego']],
+  ['huevo_tortilla_espanola_coliflor', ['tortilla espanola keto', 'tortilla española keto']],
+  ['huevo_flamenca_cazuela_barro', ['huevos a la flamenca']],
+  ['huevo_revuelto_setas_ajillo', ['revuelto castellano']],
+  ['res_chuletillas_asador_ajo_romero', ['asador castellano', 'laminas de ajo dorado y romero']],
+  ['salmon_bilbaina_sarten', ['a la bilbaina', 'a la bilbaína']],
+  ['atun_pimientos_piquillo_rellenos', ['pimientos morrones asados rellenos de atun', 'pimientos del piquillo']],
+  ['focaccia_keto_tres_quesos_esparragos', ['focaccia keto horneada de coliflor', 'focaccia keto de 3 quesos']],
+  ['huevo_croque_madame_keto_waffle', ['croque madame keto', 'gofre salado']],
+  ['huevo_cocotte_parisino_crema', ['oeufs en cocotte', 'cocotte parisinos']],
+  ['huevo_quiche_lorraine_sin_costra', ['quiche lorraine keto']],
+  ['salmon_estilo_alda_philadelphia_alcaparras', ['salmon estilo alda', 'salmón estilo alda']],
+  ['pollo_marsala_champinones_crema', ['al marsala keto', 'reduccion bistro de champinones']],
+  ['focaccia_keto_hongos_gratinados', ['focaccia keto de champinones', 'focaccia keto de champiñones']],
+  ['huevo_omurice_keto_coliflor', ['omurice keto japones', 'omurice keto japonés']],
+  ['huevo_tamagoyaki_relleno_alga', ['tamagoyaki imperial']],
+  ['huevo_chawanmushi_flan_imperial', ['chawanmushi imperial']],
+  ['huevo_wok_germinado_oriental', ['huevos al wok oriental']],
+  ['res_teppanyaki_plancha_germinado', ['teppanyaki de flat steak', 'teppanyaki']],
+  ['mojarra_bicolor_estilo_contramar', ['mojarra bicolor', 'estilo contramar']],
+  ['pollo_curry_dorado_coco', ['curry dorado tailandes', 'curry dorado tailandés']],
+  ['huevo_strapatsada_griega_feta', ['strapatsada de las islas griegas', 'strapatsada']],
+  ['huevo_uova_in_purgatorio', ['uova in purgatorio']],
+  ['huevo_frittata_caprese_albahaca', ['frittata caprese']],
+  ['huevo_sfaks_mediterraneo_aceitunas', ['huevos mediterraneos', 'huevos mediterráneos']],
+  ['res_moussaka_griega_calabaza', ['moussaka griega']],
+  ['sardina_beccafico_siciliana', ['a la beccafico siciliana', 'beccafico']],
+  ['pollo_souvlaki_griego_tzatziki', ['souvlaki griego']],
   ['huevo_souffle_manchego', ['souffle de huevo', 'soufflé de huevo']],
   ['huevo_nido_esparragos', ['nidos de huevo', 'nido de huevo']],
   ['huevo_nube_orsini', ['huevos en nube', 'a la orsini']],
@@ -2300,13 +2393,13 @@ function _computeDishStructuralDnaHardGate(dish) {
   const full = t + ' ' + tech + ' ' + ingsTxt + ' ' + stepsTxt;
   const tTech = t + ' ' + tech;
 
-  if (ingsTxt.includes('huevo') && (ingsTxt.includes('acelga') || ingsTxt.includes('espinaca')) && ['horno', 'hornead', 'cazuela', 'florentina', 'cocotte'].some(w => tTech.includes(w))) {
+  if (ingsTxt.includes('huevo') && (ingsTxt.includes('acelga') || ingsTxt.includes('espinaca')) && ['horno', 'hornead', 'cazuela', 'florentina', 'cocotte'].some(w => tTech.includes(w)) && !t.includes('crepa')) {
     return 'huevo|horno|cama_hoja_verde|cazuela_florentina';
   }
   if (ingsTxt.includes('salmon') && (tTech + ' ' + stepsTxt).includes('costra')) {
     return 'salmon|sellado_horno|costra|semilla_nuez';
   }
-  if (ingsTxt.includes('atun') && ['costra', 'medallon', 'tataki'].some(w => tTech.includes(w))) {
+  if (ingsTxt.includes('atun') && ['costra', 'medallon', 'tataki'].some(w => tTech.includes(w)) && !t.includes('pimiento')) {
     return 'atun|sellado|costra_tataki|semilla_nuez';
   }
   if ((ingsTxt.includes('champinon') || full.includes('portobello')) && (t.includes('portobello') || t.includes('relleno') || (tTech.includes('horno') && (ingsTxt.includes('ricotta') || t.includes('gratinad') || ingsTxt.includes('queso'))))) {
@@ -2350,6 +2443,54 @@ function _computeDishStructuralDnaHardGate(dish) {
 
   let morf = 'estandar';
   const morfRules = [
+    ['peyis_tres_quesos', ['peyis', '3 quesos']],
+    ['nopal_macaria', ['macaria']],
+    ['divorciados', ['divorciados']],
+    ['omelette_ericka', ['ericka']],
+    ['enchiladas_espuma', ['enchiladas espuma', 'salsa cremosa de aguacate']],
+    ['enchiladas_suizas', ['rollos suizos', 'enchiladas suizas']],
+    ['dobladitas_queso', ['dobladitas keto', 'dobladitas ines']],
+    ['crepa_florentina', ['crepas florentinas']],
+    ['southwest_scramble', ['southwest scramble']],
+    ['country_omelette', ['country omelette']],
+    ['garden_omelette', ['garden omelette']],
+    ['philly_cheese_steak', ['philly cheese steak']],
+    ['zoodles_alfredo', ['zoodles alfredo', 'espirales de calabacita al dente']],
+    ['smothered_meatballs', ['albondigas americanas', 'gravy cremoso']],
+    ['motulenos', ['motulenos', 'motuleños']],
+    ['encamisados', ['encamisados']],
+    ['rancheros_sureste', ['huevos del sureste', 'rancheros del sureste']],
+    ['platanito_keto', ['revuelto tabasqueno', 'revuelto tabasqueño']],
+    ['queso_relleno_yucateco', ['queso relleno yucateco']],
+    ['tikin_xic_pibil', ['tikin xic', 'adobo yucateco de achiote']],
+    ['puchero_tabasqueno', ['puchero blanco']],
+    ['pisto_manchego', ['pisto manchego']],
+    ['tortilla_espanola_coliflor', ['tortilla espanola', 'tortilla española']],
+    ['huevos_flamenca', ['a la flamenca']],
+    ['setas_ajillo', ['revuelto castellano']],
+    ['asador_castellano', ['asador castellano']],
+    ['bilbaina', ['a la bilbaina', 'a la bilbaína']],
+    ['pimientos_piquillo_rellenos', ['pimientos morrones asados rellenos', 'pimientos del piquillo']],
+    ['focaccia_keto', ['focaccia keto']],
+    ['croque_madame_keto', ['croque madame']],
+    ['cocotte_parisino', ['oeufs en cocotte', 'cocotte parisinos']],
+    ['quiche_lorraine_keto', ['quiche lorraine']],
+    ['salmon_estilo_alda', ['estilo alda']],
+    ['pollo_marsala', ['al marsala']],
+    ['omurice_keto', ['omurice keto']],
+    ['tamagoyaki_imperial', ['tamagoyaki imperial']],
+    ['chawanmushi', ['chawanmushi']],
+    ['wok_germinado', ['al wok oriental']],
+    ['teppanyaki', ['teppanyaki']],
+    ['bicolor_contramar', ['bicolor', 'contramar']],
+    ['curry_dorado_coco', ['curry dorado']],
+    ['strapatsada', ['strapatsada']],
+    ['uova_in_purgatorio', ['uova in purgatorio']],
+    ['frittata_caprese', ['frittata caprese']],
+    ['sfaks_mediterraneo', ['huevos mediterraneos', 'huevos mediterráneos']],
+    ['moussaka_griega', ['moussaka']],
+    ['beccafico_siciliana', ['beccafico']],
+    ['souvlaki_tzatziki', ['souvlaki']],
     ['shakshuka', ['shakshuka']], ['benedictino', ['benedictin']], ['souffle', ['souffle']],
     ['oeufs_plat', ['al plato', 'sur le plat']], ['nube_orsini', ['nube', 'orsini']],
     ['roulade', ['roulade']], ['crepa', ['crepa', 'crepe']], ['tamagoyaki', ['tamagoyaki']],
@@ -2564,7 +2705,7 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
           }
         }
         const wLabelNormCheck = _normTextHardGate(weekPlan.week_name || weekPlan.week_label || '');
-        if (wLabelNormCheck.includes('semana 44')) {
+        if (wLabelNormCheck.includes('semana 44') || weekPlan.heptagon_v17) {
           window._hgSeenLunchSideVegs = window._hgSeenLunchSideVegs || {};
           const sdVegs = _extractDishVegsAndFruits(meal.side || {}).vegs;
           const primarySideVeg = sdVegs.length > 0 ? sdVegs[0] : '';
@@ -2725,7 +2866,7 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
     });
   });
   const wNumAudit = getWeekNumberFromKey(weekPlan.week_name || weekPlan.week_label || '');
-  if (wNumAudit === 44 && Math.abs(totalWeeklyEggs - 126.0) > 1e-6) {
+  if ((wNumAudit === 44 || weekPlan.heptagon_v17) && Math.abs(totalWeeklyEggs - 126.0) > 1e-6) {
     violations.push(`[R12.1] Exactitud de Huevos Semanales: ${totalWeeklyEggs} piezas != 126 piezas.`);
   }
 
@@ -2762,11 +2903,14 @@ function buildWeekPlanForNumber(targetWeekNum, prevWeekPlanOverride) {
   if (nextWeekNum <= 44 && !hasFeedbackPenalty && typeof datasets === 'object' && datasets && datasets[weekTitle]) {
     return JSON.parse(JSON.stringify(datasets[weekTitle]));
   }
+  if (nextWeekNum === 45 && !hasFeedbackPenalty && typeof window !== 'undefined' && window.CANONICAL_WEEK_45_PLAN) {
+    return JSON.parse(JSON.stringify(window.CANONICAL_WEEK_45_PLAN));
+  }
 
-  // Rotación Disjunta de Ciclos para N >= 45: Semanas impares (45, 47...) usan el banco opuesto a Semanas pares (44, 46...)
+  // Rotación Disjunta de Ciclos para N >= 45: Semanas impares (45, 47...) usan el Heptágono Culinario V17.0 (S45) y Semanas pares (44, 46...) usan S44
   const baseS43 = (nextWeekNum % 2 === 0 && datasets[CANONICAL_WEEK_44_TITLE])
     ? datasets[CANONICAL_WEEK_44_TITLE]
-    : (datasets["Semana 43 (18 al 24 de Octubre de 2026)"] || Object.values(datasets)[0]);
+    : ((typeof window !== 'undefined' && window.CANONICAL_WEEK_45_PLAN) ? window.CANONICAL_WEEK_45_PLAN : (datasets["Semana 43 (18 al 24 de Octubre de 2026)"] || Object.values(datasets)[0]));
   const baseDays = (baseS43 && Array.isArray(baseS43.days)) ? baseS43.days : [];
   if (baseDays.length !== 7) return null;
 
@@ -3612,6 +3756,8 @@ function selectWeek(weekKey) {
     const ACTIVE_WEEK_40_WEEKEND_BOM = """ + s40_weekend_bom_json + """;
     window.shoppingListDayFilter = 'all'; // Canónico por defecto: Ciclo Completo (7 Días)
     window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
+    window.SEVEN_CULINARY_SCHOOLS = """ + seven_schools_json + """;
+    window.CANONICAL_WEEK_45_PLAN = """ + plan_45_json + """;
 window.PANTRY_STOCK_INVENTORY = {
       "sku-001-mantequilla": { item_num: 1, name: "Mantequilla", stock: 290, unit: "g", packaging: "290 g", status: "canonical" },
       "sku-002-mostaza": { item_num: 2, name: "Mostaza", stock: 150, unit: "g", packaging: "3 envases de 50 g", status: "canonical" },

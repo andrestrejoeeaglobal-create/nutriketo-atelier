@@ -181,64 +181,235 @@ WEEKDAY_NAMES_REGEX = re.compile(
     re.IGNORECASE,
 )
 
-# Banco Canónico de 4 Ciclos (4 x 21 = 84 Arquetipos Maestros: 28 de Huevo + 56 de Comida/Cena)
-CYCLE_ARCHETYPE_BANK: Dict[str, Dict[str, List[str]]] = {
-    "A": {  # Semanas 41, 45, 49, 53, 57...
+# ---------------------------------------------------------------------------
+# V17.0 — MATRIZ DE LAS 7 ESCUELAS CULINARIAS CANÓNICAS (HEPTÁGONO T.I.L.O.®)
+# ---------------------------------------------------------------------------
+SEVEN_CULINARY_SCHOOLS: Dict[str, Dict[str, Any]] = {
+    "escuela_1_nizu_mexicano_autor": {
+        "school_index": 1,
+        "name": "🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor",
+        "inspiration": "Nizú",
+        "keto_vehicles": [
+            "Penca de nopal asado al comal",
+            "Costra dorada de queso manchego al comal",
+            "Láminas tiernas de calabacita o pechuga para enchiladas sin maíz",
+        ],
         "breakfast": [
-            "huevo_revuelto_mantequilla",
-            "huevo_pochado_esparragos",
-            "huevo_horno_portobello",
-            "huevo_sarten_hierbas",
-            "huevo_cocotte_crema",
-            "huevo_estrellado_aguacate",
-            "huevo_revuelto_flor_calabaza",
+            "huevo_peyis_tres_quesos",
+            "huevo_nopal_macaria",
+            "huevo_divorciados_nopal",
+            "huevo_omelette_ericka_salmon",
+        ],
+        "starters": [
+            "entrada_consome_nopal_cilantro",
+            "entrada_ensalada_mexicana_pepino",
         ],
         "lunch_dinner": [
-            "salmon_plancha_limon",
-            "pollo_limon_finas_hierbas",
-            "res_medallones_sirloin",
-            "robalo_vapor_hierbas",
-            "res_machaca_sarten",
-            "pavo_fajitas_salteadas",
-            "atun_sellado_costra",
-            "mojarra_horno_epazote",
-            "res_arrachera_brasas",
-            "pollo_rollo_espinaca",
-            "salmon_mantequilla_eneldo",
-            "pavo_albondigas_caldo",
-            "res_ribeye_romero",
-            "portobello_gratinado_cabra",
+            "pavo_enchiladas_espuma_aguacate",
+            "pollo_enchiladas_suizas_keto",
+            "dobladitas_ines_champinon",
         ],
     },
-    "B": {  # Semanas 42, 46, 50, 54, 58...
+    "escuela_2_ihop_brunch_grill": {
+        "school_index": 2,
+        "name": "🇺🇸 Escuela 2: Brunch & Grill Americano Clásico",
+        "inspiration": "IHOP",
+        "keto_vehicles": [
+            "Crepa 100% de huevo sin harina",
+            "Zoodles de calabacita a la mantequilla",
+            "Skillet de hierro fundido y hojas de lechuga orejona",
+        ],
         "breakfast": [
-            "huevo_pochado_aguacate",
-            "huevo_tortilla_espanola_keto",
-            "huevo_revuelto_salmon",
-            "huevo_cazuela_espinaca",
-            "huevo_omelette_champinon",
-            "huevo_frittata_mediterranea",
-            "huevo_revuelto_ejotes",
+            "huevo_crepa_florentina_holandesa",
+            "huevo_southwest_scramble",
+            "huevo_crepa_ricotta_limon",
+        ],
+        "starters": [
+            "entrada_ensalada_house_ranch_keto",
+            "entrada_consome_americano_apio",
         ],
         "lunch_dinner": [
-            "res_hamburguesa_arrachera",
-            "mojarra_fajitas_sarten",
-            "pollo_suprema_mostaza",
+            "res_philly_cheese_steak_skillet",
+            "res_garlic_burger_parrilla",
+            "pavo_alfredo_mushroom_zoodles",
+        ],
+    },
+    "escuela_3_teapaneco_sureste": {
+        "school_index": 3,
+        "name": "🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño",
+        "inspiration": "El Teapaneco",
+        "keto_vehicles": [
+            "Costra crujiente de queso manchego",
+            "Penca de nopal asado",
+            "Empanizado cetogénico de nuez pecana y nuez de la india",
+        ],
+        "breakfast": [
+            "huevo_motulenos_costra_queso",
+            "huevo_tortilla_embarazada_keto",
+        ],
+        "starters": [
+            "entrada_sopa_lima_yucateca",
+        ],
+        "lunch_dinner": [
+            "res_queso_relleno_yucateco",
+            "res_sabanita_gratinada_nopal",
+            "pollo_milanesa_costra_nuez",
+        ],
+    },
+    "escuela_4_asador_castellano": {
+        "school_index": 4,
+        "name": "🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela",
+        "inspiration": "Asador Castellano",
+        "keto_vehicles": [
+            "Pimientos morrones enteros asados y rellenos",
+            "Láminas de calabacita confitada en aceite de oliva",
+            "Cazuela de hierro al ajillo y pimentón",
+        ],
+        "breakfast": [
+            "huevo_revuelto_castellano_esparragos",
+            "huevo_tortilla_espanola_calabacita",
+        ],
+        "starters": [
+            "entrada_sopa_cebolla_castellana",
+        ],
+        "lunch_dinner": [
+            "atun_pimientos_rellenos_gratinados",
+            "pescado_tronco_asador_esparragos",
+            "pescado_a_la_murciana_cazuela",
+            "res_puntas_al_albanil_champinon",
+        ],
+    },
+    "escuela_5_alda_bistro_europeo": {
+        "school_index": 5,
+        "name": "🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas",
+        "inspiration": "Alda Café",
+        "keto_vehicles": [
+            "Focaccia horneada de coliflor, queso manchego y queso ricotta",
+            "Espejo de queso philadelphia y alcaparras",
+            "Bouquet de hojas verdes con aderezo de ajonjolí y jengibre",
+        ],
+        "breakfast": [
+            "focaccia_keto_tres_quesos_esparragos",
+        ],
+        "starters": [
+            "entrada_veloute_bistro_coliflor",
+            "entrada_ensalada_bistro_europea",
+        ],
+        "lunch_dinner": [
+            "salmon_estilo_alda_philadelphia_alcaparras",
+            "focaccia_keto_hongos_gratinados",
+            "res_roast_beef_cebolla_caramelizada",
+            "pavo_ensalada_asiatica_alda",
+        ],
+    },
+    "escuela_6_pacifico_oriente": {
+        "school_index": 6,
+        "name": "🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)",
+        "inspiration": "Contramar & Teppanyaki",
+        "keto_vehicles": [
+            "Arroz de coliflor salteado al wok",
+            "Barquitas de lechuga fresca para lettuce wraps",
+            "Plancha teppanyaki con germinado y aceite de ajonjolí",
+        ],
+        "breakfast": [
+            "huevo_omurice_keto_coliflor",
+        ],
+        "starters": [
+            "entrada_caldo_oriental_jengibre_germinado",
+            "entrada_pepino_sunomono_ajonjoli",
+        ],
+        "lunch_dinner": [
+            "salmon_curry_dorado_coco_curcuma",
+            "res_teppanyaki_plancha_germinado",
+            "mojarra_bicolor_estilo_contramar",
+            "res_lettuce_wraps_orientales",
+        ],
+    },
+    "escuela_7_mare_nostrum": {
+        "school_index": 7,
+        "name": "🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)",
+        "inspiration": "Trattoria Italiana & Taverna Griega",
+        "keto_vehicles": [
+            "Láminas de calabacita asada en capas tipo lasaña/moussaka",
+            "Salsa tzatziki de yogur griego, pepino y eneldo",
+            "Caldo acqua pazza de jitomate, aceitunas y alcaparras",
+        ],
+        "breakfast": [
+            "huevo_uova_in_purgatorio",
+            "huevo_strapatsada_griega",
+        ],
+        "starters": [
+            "entrada_stracciatella_trattoria_espinaca",
+            "entrada_ensalada_mare_nostrum_aceitunas",
+        ],
+        "lunch_dinner": [
+            "res_moussaka_griega_horno",
+            "res_lasana_bolognesa_calabacita",
+            "pavo_shawarma_griego_tzatziki",
+            "mojarra_all_acqua_pazza",
+        ],
+    },
+}
+
+# Banco Canónico de 4 Ciclos (Actualizado V17.0 con el Heptágono Culinario de 7 Escuelas + Retrocompatibilidad S41-S44)
+CYCLE_ARCHETYPE_BANK: Dict[str, Dict[str, List[str]]] = {
+    "A": {  # Semanas 45, 49, 53, 57... (Heptágono Rotación A — 1 Escuela por Día)
+        "breakfast": [
+            "huevo_peyis_tres_quesos",
+            "huevo_crepa_florentina_holandesa",
+            "huevo_motulenos_costra_queso",
+            "huevo_revuelto_castellano_esparragos",
+            "focaccia_keto_tres_quesos_esparragos",
+            "huevo_omurice_keto_coliflor",
+            "huevo_uova_in_purgatorio",
+        ],
+        "lunch_dinner": [
+            "pavo_enchiladas_espuma_aguacate",
+            "dobladitas_ines_champinon",
+            "res_philly_cheese_steak_skillet",
+            "pavo_alfredo_mushroom_zoodles",
+            "res_queso_relleno_yucateco",
+            "pollo_milanesa_costra_nuez",
+            "atun_pimientos_rellenos_gratinados",
+            "pescado_tronco_asador_esparragos",
+            "salmon_estilo_alda_philadelphia_alcaparras",
+            "focaccia_keto_hongos_gratinados",
+            "salmon_curry_dorado_coco_curcuma",
+            "mojarra_bicolor_estilo_contramar",
+            "res_moussaka_griega_horno",
+            "pavo_shawarma_griego_tzatziki",
+        ],
+    },
+    "B": {  # Semanas 46, 50, 54, 58... (Heptágono Rotación B — 1 Escuela por Día)
+        "breakfast": [
+            "huevo_nopal_macaria",
+            "huevo_southwest_scramble",
+            "huevo_tortilla_embarazada_keto",
+            "huevo_tortilla_espanola_calabacita",
+            "huevo_omelette_ericka_salmon",
+            "huevo_crepa_ricotta_limon",
+            "huevo_strapatsada_griega",
+        ],
+        "lunch_dinner": [
+            "pollo_enchiladas_suizas_keto",
+            "res_garlic_burger_parrilla",
+            "res_sabanita_gratinada_nopal",
+            "pescado_a_la_murciana_cazuela",
+            "res_puntas_al_albanil_champinon",
+            "res_roast_beef_cebolla_caramelizada",
+            "pavo_ensalada_asiatica_alda",
+            "res_teppanyaki_plancha_germinado",
+            "res_lettuce_wraps_orientales",
+            "res_lasana_bolognesa_calabacita",
+            "mojarra_all_acqua_pazza",
             "salmon_glaseado_limon",
-            "res_cortadillo_sirloin",
-            "pavo_medallones_salvia",
             "atun_ensalada_nicoise",
-            "sardina_escabeche_tibio",
-            "res_bife_plancha",
-            "pollo_fajitas_morron",
-            "salmon_papillote_hierbas",
-            "mojarra_vapor_cilantro",
-            "res_albondigas_tomate",
             "cottage_tazon_proteico",
         ],
     },
     "C": {  # Semanas 43, 47, 51, 55, 59...
         "breakfast": [
+            "huevo_divorciados_nopal",
             "frittata",
             "tamagoyaki",
             "anillo",
@@ -297,21 +468,76 @@ CYCLE_ARCHETYPE_BANK: Dict[str, Dict[str, List[str]]] = {
 
 # Diccionario de raíces de arquetipos culinarios [R3] y [R10]
 ARCHETYPE_PATTERNS: List[Tuple[str, List[str]]] = [
+    # --- V17.0 Arquetipos del Heptágono Culinario (7 Escuelas de Restaurante) ---
+    # Escuela 1: Nizú (Mexicano de Autor)
+    ("huevo_peyis_tres_quesos", ["huevos peyis", "salsa fundente de 3 quesos", "salsa de 3 quesos"]),
+    ("huevo_nopal_macaria", ["nopal macaria", "macaria asado al comal"]),
+    ("huevo_divorciados_nopal", ["huevos divorciados sobre pencas", "huevos divorciados"]),
+    ("huevo_omelette_ericka_salmon", ["omelette ericka", "ericka relleno de lajas de salmon"]),
+    ("pavo_enchiladas_espuma_aguacate", ["enchiladas espuma", "rollos estilo enchiladas espuma"]),
+    ("pollo_enchiladas_suizas_keto", ["rollos suizos", "enchiladas suizas keto"]),
+    ("dobladitas_ines_champinon", ["dobladitas keto en costra", "dobladitas ines"]),
+    # Escuela 2: IHOP (Brunch & Grill Americano)
+    ("huevo_crepa_florentina_holandesa", ["crepas florentinas", "crepa florentina"]),
+    ("huevo_southwest_scramble", ["southwest scramble", "scramble de huevos"]),
+    ("huevo_crepa_ricotta_limon", ["crepas batidas de queso ricotta", "crepa de queso ricotta y limon"]),
+    ("res_philly_cheese_steak_skillet", ["philly cheese steak", "cheese steak keto"]),
+    ("res_garlic_burger_parrilla", ["garlic butter steakhouse burger", "steakhouse burger"]),
+    ("pavo_alfredo_mushroom_zoodles", ["creamy mushroom alfredo", "zoodles alfredo"]),
+    # Escuela 3: El Teapaneco (Sureste Yucateco-Tabasqueño)
+    ("huevo_motulenos_costra_queso", ["huevos motulenos keto", "huevos motulenos"]),
+    ("huevo_tortilla_embarazada_keto", ["tortilla embarazada tabasquena", "tortilla embarazada"]),
+    ("entrada_sopa_lima_yucateca", ["sopa de lima yucateca"]),
+    ("res_queso_relleno_yucateco", ["queso relleno yucateco", "cazuela de queso relleno"]),
+    ("res_sabanita_gratinada_nopal", ["sabanita de flat steak", "sabanita de res"]),
+    ("pollo_milanesa_costra_nuez", ["milanesa de pechuga en costra", "milanesa en costra crujiente de nuez"]),
+    # Escuela 4: Asador Castellano (Asador Español y Tapas)
+    ("huevo_revuelto_castellano_esparragos", ["revuelto castellano de huevos", "revuelto castellano"]),
+    ("huevo_tortilla_espanola_calabacita", ["tortilla espanola cetogenica", "tortilla espanola de calabacita"]),
+    ("entrada_sopa_cebolla_castellana", ["sopa castellana de cebolla", "sopa de cebolla castellana"]),
+    ("atun_pimientos_rellenos_gratinados", ["pimientos morrones asados rellenos de atun", "pimientos rellenos de atun"]),
+    ("pescado_tronco_asador_esparragos", ["pescado al tronco estilo asador", "al tronco estilo asador"]),
+    ("pescado_a_la_murciana_cazuela", ["a la murciana en cazuela", "pescado a la murciana"]),
+    ("res_puntas_al_albanil_champinon", ["puntas de flat steak al albanil", "puntas al albanil"]),
+    # Escuela 5: Alda Café (Bistró Europeo)
+    ("salmon_estilo_alda_philadelphia_alcaparras", ["lomo de salmon estilo alda", "salmon estilo alda"]),
+    ("focaccia_keto_tres_quesos_esparragos", ["focaccia keto horneada de coliflor y 3 quesos", "focaccia keto de 3 quesos"]),
+    ("focaccia_keto_hongos_gratinados", ["focaccia keto de champinones", "focaccia horneada de coliflor y hongos"]),
+    ("res_roast_beef_cebolla_caramelizada", ["roast beef de flat steak", "roast beef con cebolla caramelizada"]),
+    ("pavo_ensalada_asiatica_alda", ["ensalada asiatica tibia estilo alda", "ensalada asiatica alda"]),
+    # Escuela 6: Pacífico & Oriente
+    ("huevo_omurice_keto_coliflor", ["omurice keto japones", "omurice keto"]),
+    ("salmon_curry_dorado_coco_curcuma", ["salmon en curry dorado", "curry dorado tailandes"]),
+    ("res_teppanyaki_plancha_germinado", ["teppanyaki de flat steak", "teppanyaki a la plancha"]),
+    ("mojarra_bicolor_estilo_contramar", ["mojarra bicolor a las brasas estilo contramar", "bicolor estilo contramar"]),
+    ("res_lettuce_wraps_orientales", ["lettuce wraps orientales", "lettuce wraps de carne molida"]),
+    # Escuela 7: Mare Nostrum (Trattoria Italiana & Islas Griegas)
+    ("huevo_uova_in_purgatorio", ["uova in purgatorio", "huevos en el purgatorio"]),
+    ("huevo_strapatsada_griega", ["strapatsada de las islas griegas", "strapatsada griega"]),
+    ("res_moussaka_griega_horno", ["moussaka griega al horno", "moussaka griega"]),
+    ("res_lasana_bolognesa_calabacita", ["lasana cetogenica en capas", "lasana bolognesa de calabacita"]),
+    ("pavo_shawarma_griego_tzatziki", ["shawarma griego de pechuga", "shawarma griego"]),
+    ("mojarra_all_acqua_pazza", ["all'acqua pazza", "acqua pazza"]),
     # --- Arquetipos Específicos Ciclo D (Semana 44, 48, 52, 56, 60+) ---
     ("huevo_shakshuka_verde", ["shakshuka verde"]),
     ("huevo_benedictino_holandesa", ["estilo benedictino", "benedictino sobre nopal", "benedictinos sobre"]),
-    ("huevo_souffle_gratinado", ["souffle dorado de huevos", "souffle de huevos"]),
+    ("huevo_souffle_gratinado", ["souffle dorado de huevos", "souffle de huevos", "souffle de huevo"]),
+    ("huevo_nido_esparragos", ["nidos de huevo", "nido de huevo"]),
     ("huevo_al_plato_philadelphia_ricotta", ["huevos al plato", "oeufs sur le plat"]),
-    ("huevo_nube_montado", ["huevos nube al horno", "huevos en nube"]),
+    ("huevo_nube_montado", ["huevos nube al horno", "huevos en nube", "a la orsini"]),
     ("huevo_roulade_ricotta", ["roulade de huevo", "roulade relleno de huevo"]),
-    ("huevo_crepa_rellena_acelgas", ["crepas sin harina de huevo", "crepa gruesa de huevo"]),
+    ("huevo_mollet_aguacate", ["huevos mollet", "huevo mollet"]),
+    ("huevo_crepa_rellena_acelgas", ["crepas sin harina de huevo", "crepa gruesa de huevo", "crepas finas de huevo"]),
     ("salmon_glaseado_mostaza_sarten", ["lomo de salmon glaseado a la mostaza", "salmon glaseado a la mostaza"]),
+    ("salmon_horno_limon_romero", ["lomo de salmon al horno con mantequilla"]),
     ("pavo_medallones_mantequilla_ajo", ["medallones de pechuga de pavo dorados", "medallones de pechuga de pavo"]),
     ("res_tagliata_romero", ["tagliata de flat steak", "tagliata de top sirloin"]),
-    ("mojarra_veracruzana_sarten", ["a la veracruzana cetogenica", "mojarra salteadas a la veracruzana"]),
+    ("flat_steak_chimichurri_cilantro", ["medallones de flat steak al sarten con chimichurri"]),
+    ("mojarra_veracruzana_sarten", ["a la veracruzana cetogenica", "mojarra salteadas a la veracruzana", "fajitas de mojarra a la veracruzana"]),
     ("res_kofta_tzatziki", ["koftas arabes", "koftas de carne molida"]),
-    ("champinon_fondue_manchego_ricotta", ["en fondue cremoso de queso manchego", "cazuela de champinones salteados al ajillo"]),
-    ("sardina_pipian_nuez_india", ["enpipianados cetogenicos en salsa espesa de nuez de la india", "sardina enpipianados"]),
+    ("res_picadillo_seco_aceitunas", ["picadillo seco gourmet", "picadillo seco"]),
+    ("champinon_fondue_manchego_ricotta", ["en fondue cremoso de queso manchego", "cazuela de champinones salteados al ajillo", "cazuela de champinones al sarten"]),
+    ("sardina_pipian_nuez_india", ["enpipianados cetogenicos en salsa espesa de nuez de la india", "sardina enpipianados", "lomos de sardina al sarten en salsa cremosa"]),
     ("mojarra_meuniere_limon", ["mojarra blanca a la meuniere", "a la meuniere"]),
     ("res_pastel_horno_manchego", ["pastel de carne", "pastel horno de carne molida"]),
     ("atun_croquetas_ricotta_sarten", ["croquetas doradas de lomo de atun", "croquetas doradas de atun"]),
@@ -581,16 +807,16 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
     full = f"{t} {tech} {ings_txt} {steps_txt}"
 
     # --- 9 Reglas Físicas Canónicas Anti-Camuflaje ---
-    # 1. Huevo + (Acelgas o Espinacas) + cocción al horno / cazuela / florentina
-    if "huevo" in ings_txt and ("acelga" in ings_txt or "espinaca" in ings_txt) and any(
+    # 1. Huevo + (Acelgas o Espinacas) + cocción al horno / cazuela / florentina (excluyendo crepas al sartén)
+    if "huevo" in ings_txt and ("acelga" in ings_txt or "espinaca" in ings_txt) and "crepa" not in t and any(
         w in f"{t} {tech}" for w in ("horno", "hornead", "cazuela", "florentina", "cocotte")
     ):
         return ("huevo", "horno", "cama_hoja_verde", "cazuela_florentina")
     # 2. Salmón + costra (Nuez / Pistaches / Ajonjolí / Almendra adherida)
     if "salmon" in ings_txt and "costra" in f"{t} {tech} {steps_txt}":
         return ("salmon", "sellado_horno", "costra", "semilla_nuez")
-    # 3. Atún + costra o medallón sellado / tataki
-    if "atun" in ings_txt and any(w in f"{t} {tech}" for w in ("costra", "medallon", "tataki")):
+    # 3. Atún + costra o medallón sellado / tataki (excluyendo pimientos morrones rellenos al horno)
+    if "atun" in ings_txt and "pimiento" not in t and any(w in f"{t} {tech}" for w in ("costra", "medallon", "tataki")):
         return ("atun", "sellado", "costra_tataki", "semilla_nuez")
     # 4. Champiñón + relleno / portobello / gratinado al horno con queso
     if ("champinon" in ings_txt or "portobello" in f"{t} {ings_txt}") and (
@@ -653,6 +879,50 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
     # Dimensión 3: Morfología Culinaria
     morf = "estandar"
     for m_key, m_tokens in [
+        # --- V17.0 Morfologías del Heptágono Culinario (7 Escuelas) ---
+        ("peyis_tres_quesos", ["huevos peyis", "salsa fundente de 3 quesos"]),
+        ("nopal_macaria", ["nopal macaria"]),
+        ("divorciados_nopal", ["huevos divorciados"]),
+        ("omelette_ericka", ["omelette ericka"]),
+        ("enchiladas_espuma", ["enchiladas espuma"]),
+        ("enchiladas_suizas", ["rollos suizos", "enchiladas suizas"]),
+        ("dobladitas_ines", ["dobladitas keto", "dobladitas ines"]),
+        ("crepa_florentina_holandesa", ["crepas florentinas", "crepa florentina"]),
+        ("southwest_scramble", ["southwest scramble"]),
+        ("crepa_ricotta_limon", ["crepas batidas de queso ricotta"]),
+        ("philly_cheese_steak", ["philly cheese steak"]),
+        ("garlic_burger", ["garlic butter steakhouse burger", "steakhouse burger"]),
+        ("zoodles_alfredo", ["creamy mushroom alfredo", "zoodles alfredo"]),
+        ("motulenos_costra", ["huevos motulenos"]),
+        ("tortilla_embarazada", ["tortilla embarazada"]),
+        ("sopa_lima_yucateca", ["sopa de lima yucateca"]),
+        ("queso_relleno_yucateco", ["queso relleno yucateco"]),
+        ("sabanita_gratinada", ["sabanita de flat steak", "sabanita de res"]),
+        ("milanesa_costra_nuez", ["milanesa de pechuga en costra"]),
+        ("revuelto_castellano", ["revuelto castellano"]),
+        ("tortilla_espanola_calabacita", ["tortilla espanola cetogenica", "tortilla espanola de calabacita"]),
+        ("sopa_cebolla_castellana", ["sopa castellana de cebolla", "sopa de cebolla castellana"]),
+        ("pimientos_rellenos_atun", ["pimientos morrones asados rellenos de atun", "pimientos rellenos de atun"]),
+        ("tronco_asador", ["al tronco estilo asador"]),
+        ("a_la_murciana", ["a la murciana"]),
+        ("puntas_al_albanil", ["puntas de flat steak al albanil", "puntas al albanil"]),
+        ("salmon_estilo_alda", ["lomo de salmon estilo alda", "salmon estilo alda"]),
+        ("focaccia_tres_quesos", ["focaccia keto horneada de coliflor y 3 quesos", "focaccia keto de 3 quesos"]),
+        ("focaccia_hongos", ["focaccia keto de champinones", "focaccia horneada de coliflor y hongos"]),
+        ("roast_beef_caramelizado", ["roast beef de flat steak", "roast beef con cebolla caramelizada"]),
+        ("ensalada_asiatica_alda", ["ensalada asiatica tibia estilo alda", "ensalada asiatica alda"]),
+        ("omurice_keto", ["omurice keto"]),
+        ("curry_dorado_coco", ["curry dorado tailandes", "salmon en curry dorado"]),
+        ("teppanyaki_plancha", ["teppanyaki de flat steak", "teppanyaki a la plancha"]),
+        ("bicolor_contramar", ["bicolor a las brasas estilo contramar", "bicolor estilo contramar"]),
+        ("lettuce_wraps", ["lettuce wraps"]),
+        ("uova_in_purgatorio", ["uova in purgatorio"]),
+        ("strapatsada_griega", ["strapatsada"]),
+        ("moussaka_griega", ["moussaka griega"]),
+        ("lasana_calabacita", ["lasana cetogenica en capas", "lasana bolognesa de calabacita"]),
+        ("shawarma_tzatziki", ["shawarma griego"]),
+        ("acqua_pazza", ["acqua pazza"]),
+        # --- Morfologías Ciclo C/D (S41-S44) ---
         ("shakshuka", ["shakshuka"]),
         ("benedictino", ["benedictin"]),
         ("flan_bano_maria", ["flan salado", "bano maria"]),
@@ -1144,7 +1414,7 @@ def audit_week_plan(
 
                     # [R4-SIDE] Diversidad estricta de las 7 guarniciones de Comida (7/7 vegetales principales distintos)
                     w_lbl_check = _strip_accents(week_data.get("week_name") or week_data.get("week_label") or "")
-                    if "semana 44" in w_lbl_check:
+                    if "semana 44" in w_lbl_check or bool(week_data.get("heptagon_v17")):
                         primary_side_veg = sd_vegs[0] if sd_vegs else ""
                         if not primary_side_veg:
                             violations.append(
@@ -1262,7 +1532,7 @@ def audit_week_plan(
 
     w_label_norm = _strip_accents(week_data.get("week_name") or week_data.get("week_label") or "")
     is_week_44_plus = "semana 43" not in w_label_norm
-    is_strict_s44 = "semana 44" in w_label_norm
+    is_strict_s44 = "semana 44" in w_label_norm or bool(week_data.get("heptagon_v17"))
 
     # [R9] y [R10] Validaciones Inter-Semanales Hacia Adelante (contra prev_week_data en modo Read-Only)
     if prev_week_data and isinstance(prev_week_data, dict):
@@ -1371,7 +1641,8 @@ def audit_week_plan(
     if is_strict_s44 and len(days) == 7:
         root_dir = Path(__file__).resolve().parents[2]
         rolling_prev_weeks: List[Tuple[str, Dict[str, Any]]] = []
-        for w_num in (40, 41, 42, 43):
+        w_nums_to_check = (41, 42, 43, 44) if bool(week_data.get("heptagon_v17")) else (40, 41, 42, 43)
+        for w_num in w_nums_to_check:
             w_path = root_dir / f"semana_{w_num}_master.json"
             if w_path.exists():
                 try:
@@ -1403,7 +1674,7 @@ def audit_week_plan(
 
                     for w_tag, pw_data in rolling_prev_weeks:
                         # Para S40 comparamos estrictamente los días regenerados (Martes 27 a Sábado 31, d_idx >= 2);
-                        # para S41-S43 comparamos los 7 días completos
+                        # para S41-S44 comparamos los 7 días completos
                         if w_tag == "S40" and d_idx < 2:
                             continue
                         for pd_obj in pw_data.get("days", []):
@@ -1426,7 +1697,11 @@ def audit_week_plan(
                                 if m_idx in (1, 2) and pm_idx in (1, 2):
                                     p_st = pm_obj.get("starter") or {}
                                     dna_st_p = compute_dish_structural_dna(p_st)
-                                    if dna_st_c[0] == dna_st_p[0] and not dna_st_c[2].startswith("ensalada"):
+                                    if (
+                                        dna_st_c[0] == dna_st_p[0]
+                                        and not dna_st_c[2].startswith("ensalada")
+                                        and dna_st_c[2] != "consome_caldo"
+                                    ):
                                         if dna_st_c == dna_st_p:
                                             violations.append(
                                                 f"[R10-DNA] Colisión de ADN Estructural de Entrada {dna_st_c} en {d_label} {m_label} ('{c_starter.get('title')}') contra {w_tag} {pd_name} {pm_type} ('{p_st.get('title')}')."
@@ -1735,6 +2010,19 @@ def generate_validated_week_plan(
                 return s44_data
             except Exception:
                 pass
+    if next_week_num == 45 and not feedback_ledger and pantry_stock is None:
+        try:
+            from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
+            s44_prev = prev_week_data
+            if s44_prev is None:
+                s44_file = Path(__file__).resolve().parents[2] / "semana_44_master.json"
+                if s44_file.exists():
+                    s44_prev = json.loads(s44_file.read_text(encoding="utf-8"))
+                else:
+                    s44_prev = base_week_data
+            return generate_week_with_tilo_cortex(45, history_weeks=[s44_prev] if s44_prev else [])
+        except Exception:
+            pass
 
     # Si no se pasó prev_week_data explícitamente para W >= 44, encadenamos desde la semana W-1
     if prev_week_data is None and next_week_num > 43:

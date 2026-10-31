@@ -1711,3 +1711,68 @@ def test_r10_dna_fingerprinting_jaccard_and_r4_side_7_of_7():
         assert len(vegs) >= 1
         lunch_side_vegs.append(vegs[0])
     assert len(set(lunch_side_vegs)) == 7, f"Las 7 guarniciones de Comida deben usar 7 vegetales distintos, obtenidos: {lunch_side_vegs}"
+
+
+def test_heptagon_v17_seven_culinary_schools_and_s45_generation():
+    """
+    Valida la Orden de Arquitectura Gastronómica V17.0 (Heptágono Culinario T.I.L.O.®):
+    1. Existencia de las 7 Escuelas Culinarias Canónicas (`SEVEN_CULINARY_SCHOOLS`).
+    2. Inmutabilidad absoluta de `semana_44_master.json` (incluyendo Sábado 31 de Octubre).
+    3. Síntesis y auditoría de `Semana 45 (01 al 07 de Noviembre de 2026)` con 0 violaciones [R1]-[R12]
+       y 0 colisiones de ADN Estructural / Jaccard (< 0.60) contra [S41, S42, S43, S44].
+    4. Inyección de `window.SEVEN_CULINARY_SCHOOLS`, `window.CANONICAL_WEEK_45_PLAN` y `export_heptagon_exchange_pool` en `atelier.html`.
+    """
+    import json
+    from pathlib import Path
+    from app.services.menu_hard_gate_auditor import (
+        SEVEN_CULINARY_SCHOOLS,
+        assert_zero_violations,
+        extract_veg_and_fruit_families,
+    )
+    from app.services.tilo_menu_cortex import (
+        export_heptagon_exchange_pool,
+        generate_week_with_tilo_cortex,
+    )
+
+    assert len(SEVEN_CULINARY_SCHOOLS) == 7
+    expected_schools = [
+        "escuela_1_nizu_mexicano_autor",
+        "escuela_2_ihop_brunch_grill",
+        "escuela_3_teapaneco_sureste",
+        "escuela_4_asador_castellano",
+        "escuela_5_alda_bistro_europeo",
+        "escuela_6_pacifico_oriente",
+        "escuela_7_mare_nostrum",
+    ]
+    assert list(SEVEN_CULINARY_SCHOOLS.keys()) == expected_schools
+
+    root = Path(__file__).resolve().parents[1]
+    s44 = json.loads((root / "semana_44_master.json").read_text(encoding="utf-8"))
+    # Sábado 31 de Octubre en Semana 44 permanece congelado
+    assert s44["days"][6]["day"] == "Sábado"
+    assert "Flan Salado de Huevos" in s44["days"][6]["meals"][0]["main"]["title"]
+    assert "Involtini de Flat Steak" in s44["days"][6]["meals"][1]["main"]["title"]
+    assert "Quenelles Templadas de Queso Ricotta" in s44["days"][6]["meals"][2]["main"]["title"]
+
+    s45 = generate_week_with_tilo_cortex(45, history_weeks=[s44])
+    assert s45["week_label"] == "Semana 45 (01 al 07 de Noviembre de 2026)"
+    assert s45["heptagon_v17"] is True
+    assert s45["culinary_schools"] == expected_schools
+    report_s45 = assert_zero_violations(s45, prev_week_data=s44)
+    assert report_s45["passed"] is True
+    assert report_s45["violations_count"] == 0
+
+    s45_lunch_side_vegs = [extract_veg_and_fruit_families(d["meals"][1]["side"])[0][0] for d in s45["days"]]
+    assert len(set(s45_lunch_side_vegs)) == 7
+
+    pool = export_heptagon_exchange_pool()
+    assert len(pool["starters"]) == 21
+    assert len(pool["mains"]) == 21
+    assert len(pool["sides"]) == 21
+
+    html = (root / "atelier.html").read_text(encoding="utf-8")
+    assert "window.SEVEN_CULINARY_SCHOOLS" in html
+    assert "window.CANONICAL_WEEK_45_PLAN" in html
+    assert "Huevos Peyis Estrellados" in html
+    assert "Philly Cheese Steak Keto" in html
+    assert "Uova in Purgatorio" in html
