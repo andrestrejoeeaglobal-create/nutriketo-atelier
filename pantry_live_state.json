@@ -1,0 +1,1347 @@
+{
+  "ssot_version": "v56_chrome_leveldb_synced",
+  "extracted_from": "C:\\Users\\andre\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Local Storage\\leveldb\\015745.ldb (seq=270082) + 015749.ldb (seq=270423)",
+  "updated_at": "2026-10-31T05:49:03.178970",
+  "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
+  "activeDiners": 6,
+  "selectedHarvest": [
+    "Nopales",
+    "Cilantro",
+    "Limones",
+    "Nuez pecana",
+    "Acelgas",
+    "Romero",
+    "Agua purificada",
+    "Jamaica"
+  ],
+  "customFarmItems": [],
+  "deletedFarmItems": [
+    "Zarzamoras",
+    "Frambuesas",
+    "Fresas",
+    "Menta",
+    "Arándanos",
+    "Epazote",
+    "Calabacitas",
+    "Coliflor",
+    "Espinacas",
+    "Ejotes",
+    "Espárragos",
+    "Arúgula",
+    "Brócoli"
+  ],
+  "deletedPantryItems": [
+    "Elote",
+    "Higos",
+    "Nogada",
+    "Zanahoria",
+    "Agua mineral"
+  ],
+  "pantryStock": {
+    "Mantequilla": 500,
+    "Mostaza": 150,
+    "Queso cottage": 0,
+    "Yogur griego": 1200,
+    "Queso Philadelphia": 720,
+    "Crema ácida": 960,
+    "Mayonesa": 1000,
+    "Queso manchego": 0,
+    "Queso de cabra": 0,
+    "Salsa BBQ": 550,
+    "Leche de coco": 960,
+    "Leche evaporada": 960,
+    "Leche": 960,
+    "Salsa cátsup": 2600,
+    "Queso mozzarella": 0,
+    "Botella de agua": 70,
+    "Queso parmesano": 150,
+    "Flat steak": 0,
+    "Lomo de salmón": 0,
+    "Carne molida": 1200,
+    "Fajitas de mojarra": 900,
+    "Filete de atún": 0,
+    "Jitomate": 0,
+    "Morrón": 4,
+    "Pechuga de pollo": 0,
+    "Flor de calabaza": 0,
+    "Calabaza": 4,
+    "Cebolla": 2,
+    "Lechuga": 1,
+    "Ejotes": 0,
+    "Tomate": 0,
+    "Aguacate": 0,
+    "Zarzamora": 0,
+    "Champiñón": 0.05,
+    "Pulpa de arándano": 3840,
+    "Pistaches": 100,
+    "Nuez de la India": 600,
+    "Cacahuate enchilado": 1200,
+    "Semillas y nueces mixtas": 0,
+    "Granola": 100,
+    "Té chai": 50,
+    "Hierbas finas": 25,
+    "Harina de trigo": 1500,
+    "Harina para hot cakes": 500,
+    "Cebolla en polvo": 50,
+    "Sal con ajo": 100,
+    "Canela molida": 750,
+    "Alcaparras": 200,
+    "Extracto de vainilla": 400,
+    "Microdyn": 200,
+    "Cerezas": 260,
+    "Tajín": 200,
+    "Miguelito": 100,
+    "Chamoy": 300,
+    "Bicarbonato de sodio": 227,
+    "Achiote": 110,
+    "Polvo para hornear": 100,
+    "Aceitunas manzanilla": 175,
+    "Chocolate para cobertura": 165,
+    "Concentrado de caldo de pollo en polvo": 250,
+    "Café colombiano": 100,
+    "Vinagre balsámico": 200,
+    "Jugo Maggi": 200,
+    "Salsa inglesa": 200,
+    "Salsa de soya": 250,
+    "Vinagre de vino tinto": 250,
+    "Aceite de oliva": 400,
+    "Flor de Jamaica molida en polvo": 200,
+    "Almendras fileteadas": 100,
+    "Hojas de laurel": 20,
+    "Orégano": 150,
+    "Tomillo": 20,
+    "Pimienta negra": 70,
+    "Comino": 50,
+    "Clavo de olor": 50,
+    "Ajonjolí": 0,
+    "Manzanilla": 50,
+    "Cúrcuma": 100,
+    "Sal de mar": 3000,
+    "Manteca de cerdo": 0,
+    "Aceite de coco": 1700,
+    "Tang": 104,
+    "Atún en agua": 700,
+    "Sardinas": 4,
+    "Rajas de jalapeño": 314,
+    "Harina Power Cakes": 1000,
+    "Hojuelas de avena": 100,
+    "Maíz palomero": 100,
+    "Lentejas": 100,
+    "Quinoa": 100,
+    "Chile güero": 840,
+    "Palomitas para microondas": 600,
+    "Grenetina": 0,
+    "Saborizante para arroz": 48,
+    "Huevo": 206,
+    "MultiSinergix®": 300,
+    "AminoSinergix®": 200,
+    "Espinacas": 150,
+    "Espárragos": 0,
+    "Fresas": 900,
+    "Frambuesas": 250,
+    "Queso ricotta": 0,
+    "Chile chipotle": 1320,
+    "Frijol pinto": 1,
+    "Pollo entero": 0,
+    "Pechuga de pavo": 1400,
+    "Germinado": 0,
+    "Coliflor": 500,
+    "Pepino": 3,
+    "Brócoli": 1500,
+    "Queso de cabra con arándano": 350
+  },
+  "pantryCardUnits": {
+    "Mantequilla": "g",
+    "Mostaza": "g",
+    "Queso cottage": "g",
+    "Yogur griego": "g",
+    "Queso Philadelphia": "g",
+    "Crema ácida": "g",
+    "Mayonesa": "g",
+    "Queso manchego": "g",
+    "Queso de cabra": "g",
+    "Salsa BBQ": "g",
+    "Leche de coco": "ml",
+    "Leche evaporada": "ml",
+    "Leche": "ml",
+    "Salsa cátsup": "g",
+    "Queso mozzarella": "g",
+    "Botella de agua": "botellas (355 ml)",
+    "Queso parmesano": "g",
+    "Flat steak": "g",
+    "Lomo de salmón": "g",
+    "Carne molida": "g",
+    "Fajitas de mojarra": "g",
+    "Filete de atún": "g",
+    "Jitomate": "piezas",
+    "Morrón": "piezas",
+    "Pechuga de pollo": "g",
+    "Flor de calabaza": "manojo",
+    "Calabaza": "piezas",
+    "Cebolla": "piezas",
+    "Lechuga": "piezas",
+    "Ejotes": "g",
+    "Tomate": "g",
+    "Aguacate": "piezas",
+    "Zarzamora": "g",
+    "Champiñón": "g",
+    "Pulpa de arándano": "g",
+    "Pistaches": "g",
+    "Nuez de la India": "g",
+    "Cacahuate enchilado": "g",
+    "Semillas y nueces mixtas": "g",
+    "Granola": "g",
+    "Té chai": "g",
+    "Hierbas finas": "g",
+    "Harina de trigo": "g",
+    "Harina para hot cakes": "g",
+    "Cebolla en polvo": "g",
+    "Sal con ajo": "g",
+    "Canela molida": "g",
+    "Alcaparras": "g",
+    "Extracto de vainilla": "ml",
+    "Microdyn": "ml",
+    "Cerezas": "g",
+    "Tajín": "g",
+    "Miguelito": "g",
+    "Chamoy": "ml",
+    "Bicarbonato de sodio": "g",
+    "Achiote": "g",
+    "Polvo para hornear": "g",
+    "Aceitunas manzanilla": "g",
+    "Chocolate para cobertura": "g",
+    "Concentrado de caldo de pollo en polvo": "g",
+    "Café colombiano": "g",
+    "Vinagre balsámico": "ml",
+    "Jugo Maggi": "ml",
+    "Salsa inglesa": "ml",
+    "Salsa de soya": "ml",
+    "Vinagre de vino tinto": "ml",
+    "Aceite de oliva": "ml",
+    "Flor de Jamaica molida en polvo": "g",
+    "Almendras fileteadas": "g",
+    "Hojas de laurel": "g",
+    "Orégano": "g",
+    "Tomillo": "g",
+    "Pimienta negra": "g",
+    "Comino": "g",
+    "Clavo de olor": "g",
+    "Ajonjolí": "g",
+    "Manzanilla": "g",
+    "Cúrcuma": "g",
+    "Sal de mar": "g",
+    "Manteca de cerdo": "g",
+    "Aceite de coco": "g",
+    "Tang": "g",
+    "Atún en agua": "g",
+    "Sardinas": "latas de 425 g",
+    "Rajas de jalapeño": "g",
+    "Harina Power Cakes": "g",
+    "Hojuelas de avena": "g",
+    "Maíz palomero": "g",
+    "Lentejas": "g",
+    "Quinoa": "g",
+    "Chile güero": "g",
+    "Palomitas para microondas": "g",
+    "Grenetina": "g",
+    "Saborizante para arroz": "g",
+    "Huevo": "piezas",
+    "MultiSinergix®": "g",
+    "AminoSinergix®": "g",
+    "Espinacas": "g",
+    "Espárragos": "g",
+    "Fresas": "g",
+    "Frambuesas": "g",
+    "Queso ricotta": "g",
+    "Chile chipotle": "g",
+    "Frijol pinto": "costal / bolsa institucional",
+    "Pollo entero": "piezas",
+    "Pechuga de pavo": "g",
+    "Germinado": "g",
+    "Coliflor": "g",
+    "Pepino": "piezas",
+    "Brócoli": "g",
+    "Queso de cabra con arándano": "g"
+  },
+  "auditorPantryStock": {
+    "Mantequilla": [
+      500.0,
+      "g"
+    ],
+    "Mostaza": [
+      150.0,
+      "g"
+    ],
+    "Queso cottage": [
+      0.0,
+      "g"
+    ],
+    "Yogur griego": [
+      1200.0,
+      "g"
+    ],
+    "Queso Philadelphia": [
+      720.0,
+      "g"
+    ],
+    "Crema ácida": [
+      960.0,
+      "g"
+    ],
+    "Mayonesa": [
+      1000.0,
+      "g"
+    ],
+    "Queso manchego": [
+      0.0,
+      "g"
+    ],
+    "Queso de cabra": [
+      0.0,
+      "g"
+    ],
+    "Leche de coco": [
+      960.0,
+      "ml"
+    ],
+    "Queso mozzarella": [
+      0.0,
+      "g"
+    ],
+    "Botella de agua": [
+      70.0,
+      "botellas (355 ml)"
+    ],
+    "Queso parmesano": [
+      150.0,
+      "g"
+    ],
+    "Flat steak": [
+      0.0,
+      "g"
+    ],
+    "Lomo de salmón": [
+      0.0,
+      "g"
+    ],
+    "Carne molida": [
+      1200.0,
+      "g"
+    ],
+    "Fajitas de mojarra": [
+      900.0,
+      "g"
+    ],
+    "Filete de atún": [
+      0.0,
+      "g"
+    ],
+    "Jitomate": [
+      0.0,
+      "piezas"
+    ],
+    "Morrón": [
+      4.0,
+      "piezas"
+    ],
+    "Pechuga de pollo": [
+      0.0,
+      "g"
+    ],
+    "Flor de calabaza": [
+      0.0,
+      "manojo"
+    ],
+    "Calabaza": [
+      4.0,
+      "piezas"
+    ],
+    "Cebolla": [
+      2.0,
+      "piezas"
+    ],
+    "Lechuga": [
+      1.0,
+      "piezas"
+    ],
+    "Ejotes": [
+      0.0,
+      "g"
+    ],
+    "Tomate": [
+      0.0,
+      "g"
+    ],
+    "Aguacate": [
+      0.0,
+      "piezas"
+    ],
+    "Zarzamora": [
+      0.0,
+      "g"
+    ],
+    "Champiñón": [
+      0.0,
+      "g"
+    ],
+    "Pistaches": [
+      100.0,
+      "g"
+    ],
+    "Nuez de la India": [
+      600.0,
+      "g"
+    ],
+    "Semillas y nueces mixtas": [
+      0.0,
+      "g"
+    ],
+    "Té chai": [
+      50.0,
+      "g"
+    ],
+    "Hierbas finas": [
+      25.0,
+      "g"
+    ],
+    "Cebolla en polvo": [
+      50.0,
+      "g"
+    ],
+    "Sal con ajo": [
+      100.0,
+      "g"
+    ],
+    "Canela molida": [
+      750.0,
+      "g"
+    ],
+    "Alcaparras": [
+      200.0,
+      "g"
+    ],
+    "Extracto de vainilla": [
+      400.0,
+      "ml"
+    ],
+    "Microdyn": [
+      200.0,
+      "ml"
+    ],
+    "Tajín": [
+      200.0,
+      "g"
+    ],
+    "Bicarbonato de sodio": [
+      227.0,
+      "g"
+    ],
+    "Achiote": [
+      110.0,
+      "g"
+    ],
+    "Polvo para hornear": [
+      100.0,
+      "g"
+    ],
+    "Aceitunas manzanilla": [
+      175.0,
+      "g"
+    ],
+    "Salsa inglesa": [
+      200.0,
+      "ml"
+    ],
+    "Salsa de soya": [
+      250.0,
+      "ml"
+    ],
+    "Vinagre de vino tinto": [
+      250.0,
+      "ml"
+    ],
+    "Aceite de oliva": [
+      400.0,
+      "ml"
+    ],
+    "Flor de Jamaica molida en polvo": [
+      200.0,
+      "g"
+    ],
+    "Almendras fileteadas": [
+      100.0,
+      "g"
+    ],
+    "Hojas de laurel": [
+      20.0,
+      "g"
+    ],
+    "Orégano": [
+      150.0,
+      "g"
+    ],
+    "Tomillo": [
+      20.0,
+      "g"
+    ],
+    "Pimienta negra": [
+      70.0,
+      "g"
+    ],
+    "Comino": [
+      50.0,
+      "g"
+    ],
+    "Clavo de olor": [
+      50.0,
+      "g"
+    ],
+    "Ajonjolí": [
+      0.0,
+      "g"
+    ],
+    "Manzanilla": [
+      50.0,
+      "g"
+    ],
+    "Cúrcuma": [
+      100.0,
+      "g"
+    ],
+    "Sal de mar": [
+      3000.0,
+      "g"
+    ],
+    "Aceite de coco": [
+      1700.0,
+      "g"
+    ],
+    "Atún en agua": [
+      700.0,
+      "g"
+    ],
+    "Sardinas": [
+      1700.0,
+      "g"
+    ],
+    "Rajas de jalapeño": [
+      314.0,
+      "g"
+    ],
+    "Chile güero": [
+      840.0,
+      "g"
+    ],
+    "Grenetina": [
+      0.0,
+      "g"
+    ],
+    "Huevo": [
+      206.0,
+      "piezas"
+    ],
+    "MultiSinergix®": [
+      300.0,
+      "g"
+    ],
+    "AminoSinergix®": [
+      200.0,
+      "g"
+    ],
+    "Espinacas": [
+      150.0,
+      "g"
+    ],
+    "Espárragos": [
+      0.0,
+      "g"
+    ],
+    "Fresas": [
+      900.0,
+      "g"
+    ],
+    "Frambuesas": [
+      250.0,
+      "g"
+    ],
+    "Queso ricotta": [
+      0.0,
+      "g"
+    ],
+    "Pollo entero": [
+      0.0,
+      "piezas"
+    ],
+    "Pechuga de pavo": [
+      1400.0,
+      "g"
+    ],
+    "Germinado": [
+      0.0,
+      "g"
+    ],
+    "Coliflor": [
+      500.0,
+      "g"
+    ],
+    "Pepino": [
+      3.0,
+      "piezas"
+    ],
+    "Brócoli": [
+      1500.0,
+      "g"
+    ]
+  },
+  "quarantineItems": {
+    "Salsa BBQ": {
+      "packaging": "550 g",
+      "reason": "Alta en azúcares libres y jarabe de maíz de alta fructosa; rompe cetosis.",
+      "stock": 550,
+      "unit": "g"
+    },
+    "Leche evaporada": {
+      "packaging": "960 ml",
+      "reason": "Alta concentración de lactosa y azúcares lácteos simples; rompe cetosis.",
+      "stock": 960,
+      "unit": "ml"
+    },
+    "Leche": {
+      "packaging": "960 ml",
+      "reason": "Lactosa no cetogénica (~12g carbs netos por porción); eleva glucemia.",
+      "stock": 960,
+      "unit": "ml"
+    },
+    "Salsa cátsup": {
+      "packaging": "2600 g",
+      "reason": "Elevado aporte de azúcar añadida y jarabe de fructosa; fuera de protocolo keto.",
+      "stock": 2600,
+      "unit": "g"
+    },
+    "Pulpa de arándano": {
+      "packaging": "3840 g",
+      "reason": "Concentrado de fruta con azúcar añadida y alta fructosa; rompe cetosis.",
+      "stock": 3840,
+      "unit": "g"
+    },
+    "Cacahuate enchilado": {
+      "packaging": "1200 g",
+      "reason": "Leguminosa proinflamatoria con aceites refinados y almidón en cobertura.",
+      "stock": 1200,
+      "unit": "g"
+    },
+    "Granola": {
+      "packaging": "100 g",
+      "reason": "Mezcla de avena, miel y azúcares refinados; alto impacto insulínico.",
+      "stock": 100,
+      "unit": "g"
+    },
+    "Harina de trigo": {
+      "packaging": "1500 g",
+      "reason": "Cereal refinado con gluten y altísima carga amilácea; rompe cetosis.",
+      "stock": 1500,
+      "unit": "g"
+    },
+    "Harina para hot cakes": {
+      "packaging": "500 g",
+      "reason": "Harina procesada con azúcares añadidos, dextrosa y leudantes glucémicos.",
+      "stock": 500,
+      "unit": "g"
+    },
+    "Cerezas": {
+      "packaging": "260 g",
+      "reason": "Fruta con alto contenido de fructosa y azúcares simples; proscrita en inducción keto.",
+      "stock": 260,
+      "unit": "g"
+    },
+    "Miguelito": {
+      "packaging": "100 g",
+      "reason": "Dulce en polvo compuesto por azúcar pura y chile; eleva glucosa de inmediato.",
+      "stock": 100,
+      "unit": "g"
+    },
+    "Chamoy": {
+      "packaging": "300 ml",
+      "reason": "Salsa agridulce ultraprocesada con azúcar, almidón y jarabe de maíz.",
+      "stock": 300,
+      "unit": "ml"
+    },
+    "Chocolate para cobertura": {
+      "packaging": "165 g",
+      "reason": "Chocolate comercial con alto contenido de sacarosa y grasas vegetales hidrogenadas.",
+      "stock": 165,
+      "unit": "g"
+    },
+    "Concentrado de caldo de pollo en polvo": {
+      "packaging": "250 g",
+      "reason": "Sazonador industrial con maltodextrina, glutamato monosódico y almidones.",
+      "stock": 250,
+      "unit": "g"
+    },
+    "Café colombiano": {
+      "packaging": "100 g",
+      "reason": "Excluido de recetas culinarias por regla clínica [R3].",
+      "stock": 100,
+      "unit": "g"
+    },
+    "Vinagre balsámico": {
+      "packaging": "200 ml",
+      "reason": "Vinagre con reducción de mosto concentrado en azúcares simples residuales.",
+      "stock": 200,
+      "unit": "ml"
+    },
+    "Jugo Maggi": {
+      "packaging": "200 ml",
+      "reason": "Ultraprocesado con trigo hidrolizado, colorante caramelo y glutamato monosódico.",
+      "stock": 200,
+      "unit": "ml"
+    },
+    "Manteca de cerdo": {
+      "packaging": "0 g",
+      "reason": "Derivado porcino proscrito por regla clínica [R3].",
+      "stock": 0,
+      "unit": "g"
+    },
+    "Tang": {
+      "packaging": "104 g",
+      "reason": "Polvo industrial para bebidas con azúcar y aditivos sintéticos no cetogénicos.",
+      "stock": 104,
+      "unit": "g"
+    },
+    "Harina Power Cakes": {
+      "packaging": "1000 g",
+      "reason": "Mezcla para panqueques con carbohidratos de rápida absorción; fuera de cetosis.",
+      "stock": 1000,
+      "unit": "g"
+    },
+    "Hojuelas de avena": {
+      "packaging": "100 g",
+      "reason": "Cereal alto en carbohidratos netos y almidones; rompe cetosis.",
+      "stock": 100,
+      "unit": "g"
+    },
+    "Maíz palomero": {
+      "packaging": "100 g",
+      "reason": "Grano de maíz entero con elevada carga glucémica amilácea.",
+      "stock": 100,
+      "unit": "g"
+    },
+    "Lentejas": {
+      "packaging": "100 g",
+      "reason": "Leguminosa alta en carbohidratos netos y lectinas; rompe cetosis.",
+      "stock": 100,
+      "unit": "g"
+    },
+    "Quinoa": {
+      "packaging": "100 g",
+      "reason": "Pseudocereal amiláceo con elevada carga de carbohidratos netos.",
+      "stock": 100,
+      "unit": "g"
+    },
+    "Palomitas para microondas": {
+      "packaging": "600 g",
+      "reason": "Maíz procesado con grasas de palma y carbohidratos de alto impacto glucémico.",
+      "stock": 600,
+      "unit": "g"
+    },
+    "Saborizante para arroz": {
+      "packaging": "48 g",
+      "reason": "Sazonador industrial con maltodextrina y almidones para cereales.",
+      "stock": 48,
+      "unit": "g"
+    },
+    "Chile chipotle": {
+      "packaging": "1320 g",
+      "reason": "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4).",
+      "stock": 1320,
+      "unit": "g"
+    },
+    "Frijol pinto": {
+      "packaging": "1 costal / bolsa institucional",
+      "reason": "Almidón / Leguminosa fuera de protocolo cetogénico.",
+      "stock": 1,
+      "unit": "costal / bolsa institucional"
+    },
+    "Queso de cabra con arándano": {
+      "packaging": "350 g",
+      "reason": "Cubierta de arándano azucarado; fuera de protocolo cetogénico estricto.",
+      "stock": 350,
+      "unit": "g"
+    }
+  },
+  "dispatchedMeals": {
+    "Semana 41 (04 al 10 de Octubre de 2026)_day_0_Desayuno": {
+      "dayIdx": 0,
+      "mealType": "Desayuno",
+      "dispatchedAt": "11/10/2026 01:24 p.m.",
+      "headcount": 2,
+      "ratingStars": 5,
+      "digestionTolerance": "optima",
+      "sensoryTags": [
+        "✨ Sabor Excelente"
+      ],
+      "notes": "Servicio registrado conforme a disponibilidad real en Alacena.",
+      "repeatWeightModifier": 1.35,
+      "itemsDeducted": [
+        {
+          "name": "Fresas frescas",
+          "theoreticalQty": 420,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Semillas de chía orgánicas",
+          "theoreticalQty": 48,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Almendras fileteadas tostadas",
+          "theoreticalQty": 90,
+          "realQty": 30,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Huevos orgánicos de pastoreo",
+          "theoreticalQty": 18,
+          "realQty": 6,
+          "unit": "piezas",
+          "isFarm": false
+        },
+        {
+          "name": "Chayotes tiernos",
+          "theoreticalQty": 1,
+          "realQty": 0,
+          "unit": "piezas",
+          "isFarm": false
+        },
+        {
+          "name": "Cebollín fresco de la granja",
+          "theoreticalQty": 30,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Mantequilla de pastoreo",
+          "theoreticalQty": 90,
+          "realQty": 30,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Sal de mar",
+          "theoreticalQty": 6,
+          "realQty": 2,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Grenetina natural en polvo",
+          "theoreticalQty": 42,
+          "realQty": 14,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Fórmula Nootrópica 33Plus®",
+          "theoreticalQty": 30,
+          "realQty": 10,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Hojas de menta fresca",
+          "theoreticalQty": 15,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Agua purificada",
+          "theoreticalQty": 720,
+          "realQty": 0,
+          "unit": "ml",
+          "isFarm": false
+        }
+      ]
+    },
+    "Semana 41 (04 al 10 de Octubre de 2026)_day_0_Comida": {
+      "dayIdx": 0,
+      "mealType": "Comida",
+      "dispatchedAt": "11/10/2026 01:24 p.m.",
+      "headcount": 2,
+      "ratingStars": 5,
+      "digestionTolerance": "optima",
+      "sensoryTags": [
+        "✨ Sabor Excelente"
+      ],
+      "notes": "Servicio registrado conforme a disponibilidad real en Alacena.",
+      "repeatWeightModifier": 1.35,
+      "itemsDeducted": [
+        {
+          "name": "Calabacitas verdes tiernas de la granja",
+          "theoreticalQty": 600,
+          "realQty": 200,
+          "unit": "g",
+          "isFarm": true
+        },
+        {
+          "name": "Ajo fresco",
+          "theoreticalQty": 18,
+          "realQty": 6,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Aceite de oliva extra virgen VEVO",
+          "theoreticalQty": 90,
+          "realQty": 30,
+          "unit": "ml",
+          "isFarm": false
+        },
+        {
+          "name": "Fondo claro de pollo casero",
+          "theoreticalQty": 480,
+          "realQty": 0,
+          "unit": "ml",
+          "isFarm": false
+        },
+        {
+          "name": "Sal de mar",
+          "theoreticalQty": 17.4,
+          "realQty": 5.8,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Corte magro de Ribeye de res premium",
+          "theoreticalQty": 900,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Mantequilla de pastoreo",
+          "theoreticalQty": 79.8,
+          "realQty": 26.6,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Romero fresco",
+          "theoreticalQty": 9.6,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Ajo fresco machacado",
+          "theoreticalQty": 12,
+          "realQty": 4,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Espárragos verdes frescos de la granja",
+          "theoreticalQty": 480,
+          "realQty": 160,
+          "unit": "g",
+          "isFarm": true
+        },
+        {
+          "name": "Queso Parmesano artesanal",
+          "theoreticalQty": 60,
+          "realQty": 20,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Jugo de limón fresco de la granja",
+          "theoreticalQty": 24.6,
+          "realQty": 8.2,
+          "unit": "ml",
+          "isFarm": true
+        }
+      ]
+    },
+    "Semana 42 (11 al 17 de Octubre de 2026)_day_0_Desayuno": {
+      "dayIdx": 0,
+      "mealType": "Desayuno",
+      "dispatchedAt": "11/10/2026 04:07 p.m.",
+      "headcount": 2,
+      "ratingStars": 5,
+      "digestionTolerance": "optima",
+      "sensoryTags": [
+        "✨ Sabor Excelente"
+      ],
+      "notes": "Servicio registrado conforme a disponibilidad real en Alacena.",
+      "repeatWeightModifier": 1.35,
+      "itemsDeducted": [
+        {
+          "name": "Fresas frescas",
+          "theoreticalQty": 420,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Nuez de la India",
+          "theoreticalQty": 90,
+          "realQty": 30,
+          "unit": "g",
+          "isFarm": true
+        },
+        {
+          "name": "Semillas de chía orgánicas",
+          "theoreticalQty": 48,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Huevos orgánicos de pastoreo",
+          "theoreticalQty": 18,
+          "realQty": 6,
+          "unit": "piezas",
+          "isFarm": false
+        },
+        {
+          "name": "Queso Ricotta",
+          "theoreticalQty": 180,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Calabacitas verdes tiernas",
+          "theoreticalQty": 240,
+          "realQty": 6,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Cilantro fresco",
+          "theoreticalQty": 24,
+          "realQty": 8,
+          "unit": "g",
+          "isFarm": true
+        },
+        {
+          "name": "Mantequilla de pastoreo",
+          "theoreticalQty": 79.8,
+          "realQty": 26.6,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Sal de mar",
+          "theoreticalQty": 6,
+          "realQty": 2,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Grenetina natural en polvo",
+          "theoreticalQty": 42,
+          "realQty": 14,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Fórmula Nootrópica 33Plus®",
+          "theoreticalQty": 30,
+          "realQty": 10,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Agua purificada",
+          "theoreticalQty": 720,
+          "realQty": 120,
+          "unit": "ml",
+          "isFarm": false
+        }
+      ]
+    },
+    "Semana 42 (11 al 17 de Octubre de 2026)_day_0_Comida": {
+      "dayIdx": 0,
+      "mealType": "Comida",
+      "dispatchedAt": "11/10/2026 04:07 p.m.",
+      "headcount": 2,
+      "ratingStars": 5,
+      "digestionTolerance": "optima",
+      "sensoryTags": [
+        "✨ Sabor Excelente"
+      ],
+      "notes": "Servicio registrado conforme a disponibilidad real en Alacena.",
+      "repeatWeightModifier": 1.35,
+      "itemsDeducted": [
+        {
+          "name": "Calabacitas verdes tiernas",
+          "theoreticalQty": 360,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Cilantro fresco",
+          "theoreticalQty": 24,
+          "realQty": 8,
+          "unit": "g",
+          "isFarm": true
+        },
+        {
+          "name": "Fondo claro de pollo",
+          "theoreticalQty": 600,
+          "realQty": 0,
+          "unit": "ml",
+          "isFarm": false
+        },
+        {
+          "name": "Sal de mar",
+          "theoreticalQty": 15.6,
+          "realQty": 5.2,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Jugo de limón fresco",
+          "theoreticalQty": 24.6,
+          "realQty": 8.2,
+          "unit": "ml",
+          "isFarm": true
+        },
+        {
+          "name": "Hamburguesa de arrachera",
+          "theoreticalQty": 900,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Queso Gouda",
+          "theoreticalQty": 180,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Aguacate Hass fresco",
+          "theoreticalQty": 3,
+          "realQty": 1,
+          "unit": "piezas",
+          "isFarm": false
+        },
+        {
+          "name": "Mantequilla de pastoreo",
+          "theoreticalQty": 60,
+          "realQty": 20,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Espárragos verdes",
+          "theoreticalQty": 480,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Aceite de oliva extra virgen VEVO",
+          "theoreticalQty": 39.6,
+          "realQty": 13.2,
+          "unit": "ml",
+          "isFarm": false
+        }
+      ]
+    },
+    "Semana 43 (18 al 24 de Octubre de 2026)_day_0_Desayuno": {
+      "dayIdx": 0,
+      "mealType": "Desayuno",
+      "dispatchedAt": "16/10/2026 07:05 p.m.",
+      "headcount": 2,
+      "ratingStars": 5,
+      "digestionTolerance": "optima",
+      "sensoryTags": [
+        "✨ Sabor Excelente"
+      ],
+      "notes": "Servicio registrado conforme a disponibilidad real en Alacena.",
+      "repeatWeightModifier": 1.35,
+      "itemsDeducted": [
+        {
+          "name": "Fresas frescas",
+          "theoreticalQty": 240,
+          "realQty": 80,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Moras frescas",
+          "theoreticalQty": 180,
+          "realQty": 60,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Semillas de chía orgánicas",
+          "theoreticalQty": 48,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Nueces de Castilla",
+          "theoreticalQty": 60,
+          "realQty": 20,
+          "unit": "g",
+          "isFarm": true
+        },
+        {
+          "name": "Huevos orgánicos de pastoreo",
+          "theoreticalQty": 18,
+          "realQty": 5,
+          "unit": "piezas",
+          "isFarm": false
+        },
+        {
+          "name": "Espinacas frescas de la granja",
+          "theoreticalQty": 240,
+          "realQty": 80,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Jitomate Saladet fresco",
+          "theoreticalQty": 480,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Queso de cabra suave artesanal",
+          "theoreticalQty": 120,
+          "realQty": 40,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Mantequilla de pastoreo",
+          "theoreticalQty": 60,
+          "realQty": 20,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Sal de mar",
+          "theoreticalQty": 6,
+          "realQty": 2,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Grenetina natural en polvo",
+          "theoreticalQty": 42,
+          "realQty": 14,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Fórmula Nootrópica 33Plus®",
+          "theoreticalQty": 30,
+          "realQty": 10,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Agua purificada",
+          "theoreticalQty": 720,
+          "realQty": 60,
+          "unit": "ml",
+          "isFarm": false
+        }
+      ]
+    },
+    "Semana 43 (18 al 24 de Octubre de 2026)_day_0_Comida": {
+      "dayIdx": 0,
+      "mealType": "Comida",
+      "dispatchedAt": "16/10/2026 07:05 p.m.",
+      "headcount": 2,
+      "ratingStars": 5,
+      "digestionTolerance": "optima",
+      "sensoryTags": [
+        "✨ Sabor Excelente"
+      ],
+      "notes": "Servicio registrado conforme a disponibilidad real en Alacena.",
+      "repeatWeightModifier": 1.35,
+      "itemsDeducted": [
+        {
+          "name": "Coliflor fresca",
+          "theoreticalQty": 480,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Ajo fresco",
+          "theoreticalQty": 36,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Fondo claro de pollo",
+          "theoreticalQty": 480,
+          "realQty": 0,
+          "unit": "ml",
+          "isFarm": false
+        },
+        {
+          "name": "Sal de mar",
+          "theoreticalQty": 15.6,
+          "realQty": 5.2,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Aceite de oliva extra virgen VEVO",
+          "theoreticalQty": 34.8,
+          "realQty": 11.6,
+          "unit": "ml",
+          "isFarm": false
+        },
+        {
+          "name": "Corte magro de Ribeye de res premium",
+          "theoreticalQty": 900,
+          "realQty": 0,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Mantequilla de pastoreo",
+          "theoreticalQty": 109.2,
+          "realQty": 36.4,
+          "unit": "g",
+          "isFarm": false
+        },
+        {
+          "name": "Romero fresco",
+          "theoreticalQty": 9.6,
+          "realQty": 3.2,
+          "unit": "g",
+          "isFarm": true
+        },
+        {
+          "name": "Chayotes tiernos",
+          "theoreticalQty": 2,
+          "realQty": 0,
+          "unit": "piezas",
+          "isFarm": false
+        }
+      ]
+    }
+  }
+}

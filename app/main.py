@@ -2,6 +2,7 @@ import os
 from typing import Optional
 from contextlib import asynccontextmanager
 from fastapi import FastAPI, HTTPException, status
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 from app.database import init_db
@@ -30,6 +31,14 @@ app = FastAPI(
     description="Backend API RESTful con soporte multivista (Diseño Paramétrico, Fichas de Ensamblaje, Abastecimiento Tridimensional, Métricas Culinarias) e integración T.I.L.O. Cortex.",
     version="2.0.0",
     lifespan=lifespan
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 architect = KetoAIArchitect()
@@ -191,20 +200,39 @@ def compile_phases(request: CompilePhasesRequest):
 
 
 @app.post("/api/v1/inventory/live-sync", status_code=status.HTTP_200_OK)
+@app.post("/api/pantry/save-ssot", status_code=status.HTTP_200_OK)
 async def live_sync_inventory_snapshot(payload: dict):
     """
     Persiste en tiempo real cualquier cambio de inventario realizado en el navegador
-    (Alacena, Cuarentena y Cosecha Activa en Granja El Herami) hacia `live_inventory_state.json`.
+    (Alacena, Cuarentena y Cosecha Activa en Granja El Herami) hacia `pantry_live_state.json`
+    y actualiza en vivo `DEFAULT_PANTRY_STOCK` en `menu_hard_gate_auditor.py`.
     """
     import json
+    from app.services.menu_hard_gate_auditor import save_live_pantry_ssot
     try:
         root_dir = os.path.dirname(os.path.dirname(__file__))
         target_path = os.path.join(root_dir, "live_inventory_state.json")
         with open(target_path, "w", encoding="utf-8") as f:
             json.dump(payload, f, ensure_ascii=False, indent=2)
-        return {"status": "synced", "path": "live_inventory_state.json"}
+        ssot_res = save_live_pantry_ssot(payload)
+        return {
+            "status": "synced",
+            "path": "pantry_live_state.json",
+            "items_count": len(ssot_res.get("auditor_pantry", {})),
+        }
     except Exception as e:
         logger.error(f"Error en live_sync_inventory_snapshot: {e}")
         raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/pantry/live-state", status_code=status.HTTP_200_OK)
+async def get_live_pantry_ssot():
+    """
+    Retorna el estado SSOT vivo almacenado en `pantry_live_state.json`.
+    """
+    from app.services.menu_hard_gate_auditor import load_live_pantry_ssot
+    res = load_live_pantry_ssot()
+    return res.get("raw_state", {})
+
 
 

@@ -2025,6 +2025,14 @@ def generate_standalone():
     seven_schools_json = json.dumps(SEVEN_CULINARY_SCHOOLS, ensure_ascii=False)
     plan_45_json = json.dumps(plan_45_dict, ensure_ascii=False)
 
+    live_pantry_ssot_path = os.path.join(os.path.dirname(__file__), "pantry_live_state.json")
+    if os.path.exists(live_pantry_ssot_path):
+        with open(live_pantry_ssot_path, "r", encoding="utf-8") as f_ssot:
+            live_pantry_ssot_data = json.load(f_ssot)
+    else:
+        live_pantry_ssot_data = {}
+    live_pantry_ssot_json = json.dumps(live_pantry_ssot_data, ensure_ascii=False)
+
     starters_map = {}
     mains_map = {}
     sides_map = {}
@@ -3585,8 +3593,13 @@ function selectWeek(weekKey) {
 
         <!-- PASO 3: Auditoría de Alacena y Refrigerador con Registro Ergonómico y Selección de Sección -->
         <div class="setup-step">
-          <div class="setup-step-title">3. Inventario Disponible en Alacena y Refrigerador</div>
-          <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem;">Registra los insumos existentes (individuales) para descontarlos automáticamente:</div>
+          <div class="setup-step-title" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <span>3. Inventario Disponible en Alacena y Refrigerador</span>
+            <button type="button" onclick="syncPantrySSOTWithCortex(true)" style="background: #0F172A; border: 1.5px solid #3AAA35; color: #fff; padding: 0.38rem 0.85rem; border-radius: 8px; font-weight: 800; cursor: pointer; font-size: 0.78rem; min-height: 38px; display: inline-flex; align-items: center; gap: 0.35rem;" title="Guardar y exportar el estado físico exacto a pantry_live_state.json para tilo_menu_cortex.py y menu_hard_gate_auditor.py">
+              <span>💾</span> <span>Sincronizar SSOT con Córtex (<code>pantry_live_state.json</code>)</span>
+            </button>
+          </div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem;">Registra los insumos existentes (individuales) para descontarlos automáticamente (conectado bidireccionalmente con <code>pantry_live_state.json</code>):</div>
           <div class="grid-options" id="pantry-stock-grid"></div>
 
           <!-- Módulo Ergonómico para Registrar Nuevo Insumo en Alacena -->
@@ -3689,6 +3702,9 @@ function selectWeek(weekKey) {
           <button onclick="reopenSetupPanel()" style="background: var(--color-accent-light); border: 1.5px solid var(--color-34plus); color: var(--color-34plus); padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; cursor: pointer; font-size: 0.8rem; min-height: 44px; display: flex; align-items: center; gap: 0.3rem;" title="Reconfigurar Parámetros Operativos">
             <span>⚙️</span> <span>Reconfigurar Parámetros</span>
           </button>
+          <button type="button" id="btn-sync-pantry-ssot" onclick="syncPantrySSOTWithCortex(true)" style="background: #0F172A; border: 1.5px solid #3AAA35; color: #fff; padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 800; cursor: pointer; font-size: 0.8rem; min-height: 44px; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" title="Sincronizar Inventario Físico de Pantalla con pantry_live_state.json (SSOT Córtex)">
+            <span>💾</span> <span>Sincronizar SSOT con Córtex</span>
+          </button>
           <button type="button" id="btn-next-week" onclick="generateNextWeekMenu()" style="background: #1C75BC; border: 1.5px solid #1C75BC; color: #fff; padding: 0.4rem 0.9rem; border-radius: 9999px; font-weight: 700; cursor: pointer; font-size: 0.8rem; min-height: 44px; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" title="Generar Nueva Semana">
             <span>✨</span> <span id="btn-next-week-text">Generar Nueva Semana</span>
           </button>
@@ -3780,6 +3796,7 @@ function selectWeek(weekKey) {
     window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
     window.SEVEN_CULINARY_SCHOOLS = """ + seven_schools_json + """;
     window.CANONICAL_WEEK_45_PLAN = """ + plan_45_json + """;
+    window.LIVE_PANTRY_SSOT = """ + live_pantry_ssot_json + """;
 window.PANTRY_STOCK_INVENTORY = {
       "sku-001-mantequilla": { item_num: 1, name: "Mantequilla", stock: 290, unit: "g", packaging: "290 g", status: "canonical" },
       "sku-002-mostaza": { item_num: 2, name: "Mostaza", stock: 150, unit: "g", packaging: "3 envases de 50 g", status: "canonical" },
@@ -5249,11 +5266,6 @@ let pantryStock = {
         ];
 
         if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v55_broth_prepared_and_sams_consolidated_sync') !== 'true') {
-          pantryStock["Queso de cabra"] = 0;
-          if (window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY["sku-009-queso-de-cabra"]) {
-            window.PANTRY_STOCK_INVENTORY["sku-009-queso-de-cabra"].stock = 0;
-            window.PANTRY_STOCK_INVENTORY["sku-009-queso-de-cabra"].packaging = "0 g";
-          }
           delete pantryStock["Fondo claro de pollo"];
           delete pantryStock["Fondo de res"];
           delete pantryStock["Caldo claro de pollo"];
@@ -5265,44 +5277,36 @@ let pantryStock = {
             delete window.PANTRY_STOCK_INVENTORY["caldo-de-pollo"];
             delete window.PANTRY_STOCK_INVENTORY["caldo-de-res"];
           }
-          window.SAMS_SCAN_AND_GO_TICKET_BATCH.forEach(entry => {
-            deletedPantryItems = (deletedPantryItems || []).filter(d => (typeof d === 'string' ? d : '').toLowerCase() !== entry.name.toLowerCase());
-            pantryStock[entry.name] = entry.target_stock;
-            if (window.pantryCardUnits) {
-              window.pantryCardUnits[entry.name] = entry.unit;
-            }
-            const itemStatus = entry.status || "canonical";
-            const itemReason = entry.reason || null;
-            if (window.PANTRY_STOCK_INVENTORY) {
-              if (!window.PANTRY_STOCK_INVENTORY[entry.sku]) {
-                window.PANTRY_STOCK_INVENTORY[entry.sku] = {
-                  item_num: entry.item_num,
-                  ticket_desc: entry.ticket_desc,
-                  name: entry.name,
-                  stock: entry.target_stock,
-                  unit: entry.unit,
-                  packaging: `${entry.target_stock} ${entry.unit}`,
-                  category: entry.category,
-                  status: itemStatus,
-                  reason: itemReason
-                };
-              } else {
-                window.PANTRY_STOCK_INVENTORY[entry.sku].name = entry.name;
-                window.PANTRY_STOCK_INVENTORY[entry.sku].stock = entry.target_stock;
-                window.PANTRY_STOCK_INVENTORY[entry.sku].unit = entry.unit;
-                window.PANTRY_STOCK_INVENTORY[entry.sku].packaging = `${entry.target_stock} ${entry.unit}`;
-                window.PANTRY_STOCK_INVENTORY[entry.sku].category = entry.category;
-                window.PANTRY_STOCK_INVENTORY[entry.sku].status = itemStatus;
-                window.PANTRY_STOCK_INVENTORY[entry.sku].reason = itemReason;
-              }
-            }
-          });
-          if (typeof CANONICAL_WEEK_44_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_44_TITLE]) {
-            activeWeek = CANONICAL_WEEK_44_TITLE;
-          }
           localStorage.setItem('nutriketo_v52_sams_scan_go_18_items_sync', 'true');
           localStorage.setItem('nutriketo_v53_sams_scan_go_consolidated_sync', 'true');
           localStorage.setItem('nutriketo_v55_broth_prepared_and_sams_consolidated_sync', 'true');
+        }
+
+        // Sincronización V56 ZERO LOST WORK: Restaurar el inventario físico real capturado por el usuario en Chrome (LevelDB seq #270082 -> pantry_live_state.json)
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v56_restore_chrome_user_ssot') !== 'true' && window.LIVE_PANTRY_SSOT && typeof window.LIVE_PANTRY_SSOT === 'object') {
+          const ssot = window.LIVE_PANTRY_SSOT;
+          if (ssot.pantryStock && typeof ssot.pantryStock === 'object') {
+            pantryStock = Object.assign({}, ssot.pantryStock);
+          }
+          if (ssot.pantryCardUnits && typeof ssot.pantryCardUnits === 'object') {
+            window.pantryCardUnits = Object.assign(window.pantryCardUnits || {}, ssot.pantryCardUnits);
+          }
+          if (ssot.pantryStockInventory && typeof ssot.pantryStockInventory === 'object') {
+            window.PANTRY_STOCK_INVENTORY = Object.assign(window.PANTRY_STOCK_INVENTORY || {}, ssot.pantryStockInventory);
+          }
+          if (Array.isArray(ssot.selectedHarvest) && ssot.selectedHarvest.length > 0) {
+            selectedHarvest = [...ssot.selectedHarvest];
+          }
+          if (Array.isArray(ssot.deletedFarmItems) && ssot.deletedFarmItems.length > 0) {
+            deletedFarmItems = [...ssot.deletedFarmItems];
+          }
+          if (Array.isArray(ssot.deletedPantryItems) && ssot.deletedPantryItems.length > 0) {
+            deletedPantryItems = [...ssot.deletedPantryItems];
+          }
+          if (typeof CANONICAL_WEEK_45_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_45_TITLE]) {
+            activeWeek = CANONICAL_WEEK_45_TITLE;
+          }
+          localStorage.setItem('nutriketo_v56_restore_chrome_user_ssot', 'true');
         }
 
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
@@ -5801,25 +5805,133 @@ let pantryStock = {
         };
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
         localStorage.setItem('nutriketo_app_version', CURRENT_APP_VERSION);
-        if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
-          fetch('/api/v1/inventory/live-sync', {
+        const ssotPayload = {
+          updatedAt: new Date().toISOString(),
+          activeWeek,
+          activeDiners,
+          selectedHarvest,
+          customFarmItems,
+          deletedFarmItems,
+          deletedPantryItems,
+          pantryStock,
+          pantryCardUnits: window.pantryCardUnits || {},
+          pantryStockInventory: window.PANTRY_STOCK_INVENTORY || {},
+          dispatchedMeals: window.DISPATCHED_MEALS || dispatchedMeals || {}
+        };
+        if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location) {
+          const isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+          const syncEndpoint = isLocal ? '/api/pantry/save-ssot' : 'http://127.0.0.1:8000/api/pantry/save-ssot';
+          fetch(syncEndpoint, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              updatedAt: new Date().toISOString(),
-              activeWeek,
-              activeDiners,
-              selectedHarvest,
-              customFarmItems,
-              deletedFarmItems,
-              deletedPantryItems,
-              pantryStock,
-              pantryCardUnits: window.pantryCardUnits || {}
-            })
+            body: JSON.stringify(ssotPayload)
           }).catch(() => {});
         }
       } catch(e) {
         console.error("Error al guardar localStorage:", e);
+      }
+    }
+
+    async function syncPantrySSOTWithCortex(promptFileSave = true) {
+      try {
+        saveAppState();
+        const auditorPantry = {};
+        const canonicalPantryList = [];
+        const quarantineList = [];
+        const inv = window.PANTRY_STOCK_INVENTORY || {};
+        const seenNames = new Set();
+
+        Object.entries(pantryStock || {}).forEach(([name, rawVal]) => {
+          const stockNum = parseFloat(rawVal) || 0;
+          const unitStr = (window.pantryCardUnits && window.pantryCardUnits[name]) ? window.pantryCardUnits[name] : 'g';
+          const skuEntry = Object.entries(inv).find(([, v]) => v && v.name === name);
+          const status = (skuEntry && skuEntry[1] && skuEntry[1].status) ? skuEntry[1].status : 'canonical';
+          if (status === 'prohibited') {
+            quarantineList.push({
+              name,
+              stock: stockNum,
+              unit: unitStr,
+              reason: (skuEntry && skuEntry[1] && skuEntry[1].reason) || 'NOM-004'
+            });
+          } else {
+            const effVal = (name === 'Sardinas' && unitStr.includes('425')) ? stockNum * 425.0 : stockNum;
+            const effUnit = (name === 'Sardinas' && unitStr.includes('425')) ? 'g' : unitStr;
+            auditorPantry[name] = [effVal, effUnit];
+            canonicalPantryList.push({
+              name,
+              stock_ui: stockNum,
+              unit_ui: unitStr,
+              effective_stock: effVal,
+              effective_unit: effUnit
+            });
+          }
+          seenNames.add(name);
+        });
+
+        const fullSSOT = {
+          ssot_version: 'v56_live_user_ssot',
+          synced_at: new Date().toISOString(),
+          activeWeek,
+          activeDiners,
+          selectedHarvest,
+          deletedFarmItems,
+          deletedPantryItems,
+          pantryStock,
+          pantryCardUnits: window.pantryCardUnits || {},
+          pantryStockInventory: window.PANTRY_STOCK_INVENTORY || {},
+          auditor_pantry: auditorPantry,
+          canonical_pantry_items: canonicalPantryList,
+          quarantine_items: quarantineList,
+          dispatchedMeals: window.DISPATCHED_MEALS || dispatchedMeals || {}
+        };
+        window.LIVE_PANTRY_SSOT = fullSSOT;
+
+        let backendSaved = false;
+        if (typeof fetch === 'function') {
+          const isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
+          const url = isLocal ? '/api/pantry/save-ssot' : 'http://127.0.0.1:8000/api/pantry/save-ssot';
+          try {
+            const res = await fetch(url, {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(fullSSOT)
+            });
+            if (res && res.ok) backendSaved = true;
+          } catch (_) {}
+        }
+
+        if (promptFileSave && !backendSaved) {
+          const jsonText = JSON.stringify(fullSSOT, null, 2);
+          if (typeof window.showSaveFilePicker === 'function') {
+            const handle = await window.showSaveFilePicker({
+              suggestedName: 'pantry_live_state.json',
+              types: [{ description: 'NutriKeto Pantry SSOT JSON', accept: { 'application/json': ['.json'] } }]
+            });
+            const writable = await handle.createWritable();
+            await writable.write(jsonText);
+            await writable.close();
+          } else {
+            const blob = new Blob([jsonText], { type: 'application/json;charset=utf-8' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'pantry_live_state.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+          }
+        }
+
+        if (typeof showToast === 'function') {
+          showToast(backendSaved
+            ? '💾 SSOT sincronizado en tiempo real con pantry_live_state.json y Córtex Python.'
+            : '💾 Archivo pantry_live_state.json exportado y sincronizado con éxito.');
+        }
+      } catch (err) {
+        if (err && err.name === 'AbortError') return;
+        console.error('Error en syncPantrySSOTWithCortex:', err);
+        if (typeof showToast === 'function') {
+          showToast('⚠️ Error al sincronizar SSOT: ' + (err.message || err), 'warning');
+        }
       }
     }
 
@@ -11053,7 +11165,7 @@ function renderRecipes(day, activeDiners) {
       <script>
     document.addEventListener('DOMContentLoaded', () => {
       try {
-        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev22-s45-heptagon-v17';
+        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev23-live-pantry-ssot';
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => caches.delete(k).catch(() => {}));
@@ -11067,15 +11179,16 @@ function renderRecipes(day, activeDiners) {
         if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
         if (typeof ensureSundayServiceDispatched === 'function') ensureSundayServiceDispatched();
 
-        // Enforce today's calendar date detection to select and highlight green on boot (unless viewing a generated week)
+        // Enforce today's calendar date detection to select and highlight green on boot (unless viewing Semana 45+ or a generated week)
         if (typeof findTodayWeekAndDayIndex === 'function') {
           const todayMatch = findTodayWeekAndDayIndex();
-          const isViewingCustomWeek = (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks && window.customGeneratedWeeks[activeWeek]);
-          if (todayMatch && !isViewingCustomWeek) {
+          const curWNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(activeWeek) : null;
+          const isViewingFutureOrCustomWeek = (curWNum !== null && curWNum >= 45) || (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks && window.customGeneratedWeeks[activeWeek]);
+          if (todayMatch && !isViewingFutureOrCustomWeek) {
             activeWeek = todayMatch.weekKey;
             selectedIdx = todayMatch.dayIndex;
           } else if (!activeWeek || !datasets[activeWeek]) {
-            activeWeek = "Semana 44 (25 al 31 de Octubre de 2026)";
+            activeWeek = "Semana 45 (01 al 07 de Noviembre de 2026)";
             selectedIdx = 0;
           }
         }

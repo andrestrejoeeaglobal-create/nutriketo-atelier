@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Lightweight Pass-Through & Legacy Cache Cleanup
-const CACHE_NAME = 'nutriketo-v36-6-rev22-s45-heptagon-v17';
+const CACHE_NAME = 'nutriketo-v36-6-rev23-live-pantry-ssot';
 
 self.addEventListener('install', () => {
   self.skipWaiting();

@@ -4,8 +4,9 @@
 - **Arquitectura Culinaria Activa:** **Heptágono Culinario T.I.L.O.® V17.0 (`SEVEN_CULINARY_SCHOOLS`)** — 1 Escuela Gastronómica Canónica por Día de la Semana con sustitución cetogénica de vehículos (penca de nopal asado, costra dorada de queso manchego, crepa 100% de huevo sin harina, láminas/zoodles de calabacita y coliflor rostizada).
 - **Auditoría de Huella Física Inmutable (`[R10-DNA]`):** **0 colisiones de ADN estructural (`compute_dish_structural_dna`)** y **Compuerta de Similitud de Ingredientes de Jaccard (`Jaccard < 0.60`)** verificada contra la ventana móvil de 4 semanas (`Semanas 41, 42, 43 y 44`).
 - **Inmunidad de Semana 44:** El archivo maestro `semana_44_master.json` (incluyendo el menú del Sábado 31 de Octubre) permanece **100% intacto e inmutable**.
+- **Fuente Única de Verdad (`pantry_live_state.json`):** Conectado en tiempo real al inventario físico capturado por el usuario en Chrome (`Local Storage LevelDB seq #270082`).
 - **Comensales Activos:** `6 personas` (`18 Huevos Exactos por Desayuno = 126 Huevos/Semana`).
-- **Caldo y Fondo Libre de Cocina (`$0.00 MXN`):** `Fondo claro de pollo` reclasificado permanentemente como **Insumo Libre de Cocina (Elaboración Interna a $0.00 MXN)** en la Tabla 3.1 (`2,000 ml` semanales).
+- **Separación Estricta de Fondos Caseros:** `Fondo claro de pollo` (`2,000 ml`) y `Fondo de res` (`600 ml`) se elaboran internamente en cocina (`$0.00 MXN`) y están **100% separados de la Tabla 3.1 de Cosecha Agrícola de la Granja**.
 
 ---
 
@@ -265,7 +266,7 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🍓 Frutas de Bajo Índice Glucémico | **Frambuesas** | 28.33 | **170** | g |
+| 🍓 Frutas de Bajo Índice Glucémico | **Frambuesas** | 20.83 | **125** | g |
 | 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez de la India** | 10 | **60** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 10 | **60** | g |
@@ -565,7 +566,7 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 110 | **660** | g |
+| 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 100 | **600** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 15 | **90** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Aceitunas manzanilla** | 10 | **60** | g |
@@ -895,7 +896,7 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🍓 Frutas de Bajo Índice Glucémico | **Frambuesas** | 28.33 | **170** | g |
+| 🍓 Frutas de Bajo Índice Glucémico | **Frambuesas** | 20.83 | **125** | g |
 | 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 8 | **48** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez de la India** | 10 | **60** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 10 | **60** | g |
@@ -1505,114 +1506,119 @@
 
 ---
 
-## 3. Abastecimiento Tridimensional Exacto (Sincronizado con `calculateNetShoppingList(6)` de `atelier.html`)
+## 3. Abastecimiento Tridimensional Exacto (Sincronizado con `pantry_live_state.json` y `calculateNetShoppingList(6)` de `atelier.html`)
 
-### 3.0 Trazabilidad de Amortización del Ticket Sam's Club Scan & Go (`18 Insumos Canónicos — \$4,472.00 MXN`)
-| # | Descripción en Ticket (Scan & Go) | Insumo Canónico Puro (SSOT) | Stock Consolidado en Alacena | Demanda Semanal S45 (6p) | Saldo Remanente | Compra Neta S45 |
+### 3.0 Estado Real en Alacena de los 18 Insumos del Ticket Sam's Club Scan & Go (`pantry_live_state.json`)
+| # | Descripción en Ticket (Scan & Go) | Insumo Canónico Puro (SSOT) | Stock Real Actual en Alacena (`pantry_live_state.json`) | Demanda Semanal S45 (6p) | Saldo Remanente Post-S45 | Compra Neta S45 |
 |---|---|---|---|---|---|---|
-| 1 | `MM TOP SIRLO (2200G)` | **Flat steak** | 2,200 g | 1,320 g (R#14, R#50) | 880 g | **0 g (\$0.00)** |
-| 2 | `HAMB SIRLOIN` | **Carne molida** | 1,360 g | 1,320 g (R#23, R#59) | 40 g | **0 g (\$0.00)** |
-| 3 | `MM LOMO SALM (1250G)` | **Lomo de salmón** | 1,250 g | 600 g (R#41) | 650 g | **0 g (\$0.00)** |
-| 4 | `MOJARRA ENTE (2 pzas)` | **Fajitas de mojarra** | 2,000 g | 1,920 g (R#32, R#53) | 80 g | **0 g (\$0.00)** |
-| 5 | `FAJITAS PAVO` | **Pechuga de pavo** | 1,000 g | 1,000 g (R#05, R#17) | 0 g | **0 g (\$0.00)** |
+| 1 | `MM TOP SIRLO (2200G)` | **Flat steak** | 0 g (Consumido en S44) | 1,320 g (R#14, R#50) | 0 g | **`1,320 g` (Mercado)** |
+| 2 | `HAMB SIRLOIN` | **Carne molida** | 1,200 g | 1,260 g (R#23, R#59) | 0 g | **`60 g` (Mercado)** |
+| 3 | `MM LOMO SALM (1250G)` | **Lomo de salmón** | 0 g (Consumido en S44) | 600 g (R#41) | 0 g | **`600 g` (Mercado)** |
+| 4 | `MOJARRA ENTE (2 pzas)` | **Fajitas de mojarra** | 900 g | 1,920 g (R#32, R#53) | 0 g | **`1,020 g` (Mercado)** |
+| 5 | `FAJITAS PAVO` | **Pechuga de pavo** | 1,400 g | 1,000 g (R#05, R#17) | 400 g | **0 g (\$0.00)** |
 | 6 | `180 HUE BLA (+26 previos)` | **Huevo** | 206 piezas | 126 piezas (7 recetas) | 80 piezas | **0 pzas (\$0.00)** |
-| 7 | `960GR QCOTTA (2 pzas + 1,920 g previos)` | **Queso ricotta** | 3,840 g | 1,800 g (8 recetas) | 2,040 g | **0 g (\$0.00)** |
-| 8 | `LALA MANCHE` | **Queso manchego** | 1,000 g | 990 g (10 recetas) | 10 g | **0 g (\$0.00)** |
-| 9 | `OIKOS PROT (2 pcs + 3,880 g previos)` | **Yogur griego** | 5,680 g | 360 g (R#62) | 5,320 g | **0 g (\$0.00)** |
+| 7 | `960GR QCOTTA` | **Queso ricotta** | 0 g (Agotado en Alacena) | 1,800 g (8 recetas) | 0 g | **`1,800 g` (Mercado)** |
+| 8 | `LALA MANCHE` | **Queso manchego** | 0 g (Agotado en Alacena) | 990 g (10 recetas) | 0 g | **`990 g` (Mercado)** |
+| 9 | `OIKOS PROT` | **Yogur griego** | 1,200 g | 360 g (R#62) | 840 g | **0 g (\$0.00)** |
 | 10 | `CABRARANDANO (Cubierta azucarada)` | **Queso de cabra con arándano** | 350 g (En Cuarentena NOM-004) | 0 g (Bloqueado en Recetas) | 350 g (En Cuarentena) | **0 g (\$0.00)** |
-| 11 | `12/90 MANTEQ (+290 g previos)` | **Mantequilla** | 1,370 g | 372 g (8 recetas) | 998 g | **0 g (\$0.00)** |
-| 12 | `MM NUEZ INDI` | **Nuez de la India** | 907 g | 546 g (9 recetas) | 361 g | **0 g (\$0.00)** |
-| 13 | `MM ACEITE CO (+500 g previos)` | **Aceite de coco** | 2,000 g | 174 g (R#26, R#39, R#47, R#50) | 1,826 g | **0 g (\$0.00)** |
-| 14 | `FRAMBUESA` | **Frambuesas** | 340 g | 340 g (R#10, R#37) | 0 g | **0 g (\$0.00)** |
-| 15 | `ZARZAMORA` | **Zarzamora** | 340 g | 340 g (R#01, R#28) | 0 g | **0 g (\$0.00)** |
-| 16 | `ESPARRAGO` | **Espárragos** | 907 g | 840 g (R#29, R#42) | 67 g | **0 g (\$0.00)** |
-| 17 | `GERMINADO` | **Germinado** | 500 g | 360 g (R#47, R#50) | 140 g | **0 g (\$0.00)** |
-| 18 | `MM 40/355ML (3 packs + 30 prev)` | **Botella de agua** | 150 botellas (355 ml) | Reserva Hidratación Portátil | 150 botellas | **0 bot. (\$0.00)** |
+| 11 | `12/90 MANTEQ` | **Mantequilla** | 500 g | 372 g (8 recetas) | 128 g | **0 g (\$0.00)** |
+| 12 | `MM NUEZ INDI` | **Nuez de la India** | 600 g | 546 g (9 recetas) | 54 g | **0 g (\$0.00)** |
+| 13 | `MM ACEITE CO` | **Aceite de coco** | 1,700 g | 174 g (R#26, R#39, R#47, R#50) | 1,526 g | **0 g (\$0.00)** |
+| 14 | `FRAMBUESA` | **Frambuesas** | 250 g | 250 g (R#10, R#37) | 0 g | **0 g (\$0.00)** |
+| 15 | `ZARZAMORA` | **Zarzamora** | 0 g (Agotado en Alacena) | 340 g (R#01, R#28) | 0 g | **`340 g` (Mercado)** |
+| 16 | `ESPARRAGO` | **Espárragos** | 0 g (Agotado en Alacena) | 840 g (R#29, R#42) | 0 g | **`840 g` (Mercado)** |
+| 17 | `GERMINADO` | **Germinado** | 0 g (Agotado en Alacena) | 360 g (R#47, R#50) | 0 g | **`360 g` (Mercado)** |
+| 18 | `MM 40/355ML` | **Botella de agua** | 70 botellas (355 ml) | Reserva Hidratación Portátil | 70 botellas | **0 bot. (\$0.00)** |
 
-### 3.1 Cosecha Directa de la Granja El Herami + Insumo Libre de Cocina (Suministro Propio a \$0.00 MXN)
-| # | Cultivo / Insumo Activo en Huerto | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |
+### 3.1 Cosecha Activa en Granja El Herami (Exclusivamente Cultivos Agrícolas Propios a \$0.00 MXN)
+| # | Cultivo Activo en Granja El Herami | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |
 |---|---|---|---|---|
 | 1 | **Acelgas** | 480 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 2 | **Agua purificada** | 14,400 ml | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 3 | **Cilantro** | 204 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 4 | **Fondo claro de pollo** | 5,400 ml | 🌿 Insumo Libre de Cocina (Elaboración Interna \$0) | **\$0.00 MXN** |
-| 5 | **Fondo de res** | 900 ml | 🌿 Insumo Libre de Cocina (Elaboración Interna \$0) | **\$0.00 MXN** |
-| 6 | **Limones** | 1,476 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 7 | **Nopales** | 480 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 8 | **Nuez pecana** | 510 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 9 | **Romero** | 30 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 4 | **Limones** | 1,476 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 5 | **Nopales** | 480 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 6 | **Nuez pecana** | 510 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 7 | **Romero** | 30 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+
+#### 3.1.1 Preparaciones Internas de Cocina (Fondos Claros Elaborados en Casa — No se Compran ni son de Granja)
+| # | Preparación Culinaria Interna | Volumen Semanal Requerido (6p) | Origen Operativo | Costo Mercado |
+|---|---|---|---|---|
+| 1 | **Fondo claro de pollo** | 5,400 ml | 🍲 Preparación Casera en Cocina (No se compra) | **\$0.00 MXN** |
+| 2 | **Fondo de res** | 900 ml | 🍲 Preparación Casera en Cocina (No se compra) | **\$0.00 MXN** |
 
 ### 3.2 Existencias Consolidadas en Alacena y Refrigerador (Amortización Exacta con \$0.00 MXN de Compra)
 | # | Insumo Canónico | Stock en Alacena | Demanda Semanal (6p) | Saldo en Alacena | Estado de Cobertura |
 |---|---|---|---|---|---|
-| 1 | **Aceite de coco** | 2,000 g | **174 g** | 1,826 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 1 | **Aceite de coco** | 1,700 g | **174 g** | 1,526 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 2 | **Aceitunas manzanilla** | 175 g | **170 g** | 5 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 3 | **Achiote** | 110 g | **18 g** | 92 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 4 | **Aguacate** | 1 piezas | **1 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 5 | **Alcaparras** | 200 g | **156 g** | 44 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 6 | **Atún en agua** | 700 g | **660 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 4 | **Alcaparras** | 200 g | **156 g** | 44 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 5 | **Atún en agua** | 700 g | **660 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 6 | **Brócoli** | 1,500 g | **540 g** | 960 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 7 | **Canela molida** | 750 g | **27 g** | 723 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 8 | **Carne molida** | 1,360 g | **1,320 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 9 | **Clavo de olor** | 50 g | **2 g** | 48 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 10 | **Comino** | 50 g | **3 g** | 47 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 11 | **Crema ácida** | 960 g | **180 g** | 780 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 12 | **Ejotes** | 500 g | **240 g** | 260 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 13 | **Espárragos** | 907 g | **840 g** | 67 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 14 | **Extracto de vainilla** | 400 ml | **24 ml** | 376 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 15 | **Fajitas de mojarra** | 2,000 g | **1,920 g** | 80 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 16 | **Flat steak** | 2,200 g | **1,320 g** | 880 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 17 | **Flor de Jamaica molida en polvo** | 200 g | **96 g** | 104 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 18 | **Frambuesas** | 340 g | **340 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 19 | **Germinado** | 500 g | **360 g** | 140 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 20 | **Grenetina** | 112 g | **80 g** | 32 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 21 | **Hierbas finas** | 25 g | **12 g** | 13 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 22 | **Huevo** | 206 piezas | **126 piezas** | 80 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 23 | **Lechuga** | 3 piezas | **3 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 24 | **Lomo de salmón** | 1,250 g | **600 g** | 650 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 25 | **Mantequilla** | 1,370 g | **372 g** | 998 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 26 | **Manzanilla** | 50 g | **42 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 27 | **Nuez de la India** | 907 g | **546 g** | 361 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 28 | **Orégano** | 150 g | **57 g** | 93 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 29 | **Pechuga de pavo** | 1,000 g | **1,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 30 | **Pimienta negra** | 70 g | **3 g** | 67 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 31 | **Queso manchego** | 1,000 g | **990 g** | 10 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 32 | **Queso Philadelphia** | 720 g | **420 g** | 300 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 33 | **Queso ricotta** | 3,840 g | **1,800 g** | 2,040 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 34 | **Sal con ajo** | 100 g | **48 g** | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 35 | **Sal de mar** | 3,000 g | **204 g** | 2,796 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 36 | **Té chai** | 70 g | **12 g** | 58 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 37 | **Tomate** | 400 g | **360 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 38 | **Tomillo** | 20 g | **12 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 39 | **Yogur griego** | 5,680 g | **360 g** | 5,320 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 40 | **Zarzamora** | 340 g | **340 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 8 | **Clavo de olor** | 50 g | **2 g** | 48 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 9 | **Comino** | 50 g | **3 g** | 47 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 10 | **Crema ácida** | 960 g | **180 g** | 780 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 11 | **Extracto de vainilla** | 400 ml | **24 ml** | 376 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 12 | **Flor de Jamaica molida en polvo** | 200 g | **96 g** | 104 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 13 | **Frambuesas** | 250 g | **250 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 14 | **Fresas** | 900 g | **720 g** | 180 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 15 | **Hierbas finas** | 25 g | **12 g** | 13 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 16 | **Huevo** | 206 piezas | **126 piezas** | 80 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 17 | **Mantequilla** | 500 g | **372 g** | 128 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 18 | **Manzanilla** | 50 g | **42 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 19 | **Nuez de la India** | 600 g | **546 g** | 54 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 20 | **Orégano** | 150 g | **57 g** | 93 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 21 | **Pechuga de pavo** | 1,400 g | **1,000 g** | 400 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 22 | **Pimienta negra** | 70 g | **3 g** | 67 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 23 | **Queso Philadelphia** | 720 g | **420 g** | 300 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 24 | **Sal con ajo** | 100 g | **48 g** | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 25 | **Sal de mar** | 3,000 g | **204 g** | 2,796 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 26 | **Té chai** | 50 g | **12 g** | 38 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 27 | **Tomillo** | 20 g | **12 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 28 | **Yogur griego** | 1,200 g | **360 g** | 840 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 
 ### 3.3 Lista de Compras Netas de Mercado (Extraída Directamente del Motor JS y DOM `#v-shop` de `atelier.html`)
 | # | Categoría en UI (`#v-shop`) | Insumo a Comprar en Mercado | Demanda Total Semanal (6p) | Stock en Alacena | Compra Neta Exacta (`#v-shop`) | Unidad |
 |---|---|---|---|---|---|---|
 | 1 | 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 768 ml | 400 ml | **`368 ml`** | ml |
-| 2 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 420 g | 200 g | **`220 g`** | g |
-| 3 | 🥬 Verduras, Hortalizas y Frescos | **Brócoli** | 540 g | 0 g | **`540 g`** | g |
+| 2 | 🥑 Grasas, Aceites y Semillas | **Aguacate** | 1 piezas | 0 piezas | **`1 piezas`** | piezas |
+| 3 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 420 g | 200 g | **`220 g`** | g |
 | 4 | 🥬 Verduras, Hortalizas y Frescos | **Calabacitas** | 2,280 g | 0 g | **`2280 g`** | g |
-| 5 | 🥬 Verduras, Hortalizas y Frescos | **Cebolla** | 10 piezas | 8 piezas | **`2 piezas`** | piezas |
-| 6 | 🥬 Verduras, Hortalizas y Frescos | **Champiñón** | 2,340 g | 0 g | **`2340 g`** | g |
-| 7 | 🥬 Verduras, Hortalizas y Frescos | **Coliflor** | 840 g | 0 g | **`840 g`** | g |
-| 8 | 🥬 Verduras, Hortalizas y Frescos | **Espinacas** | 1,860 g | 0 g | **`1860 g`** | g |
-| 9 | 🍓 Frutas de Bajo Índice Glucémico | **Fresas** | 720 g | 0 g | **`720 g`** | g |
-| 10 | 🥬 Verduras, Hortalizas y Frescos | **Jitomate** | 8 piezas | 7 piezas | **`1 piezas`** | piezas |
-| 11 | 🥬 Verduras, Hortalizas y Frescos | **Morrón** | 9 piezas | 0 piezas | **`9 piezas`** | piezas |
-| 12 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 420 g | 300 g | **`120 g`** | g |
-| 13 | 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 1,800 g | 0 g | **`1800 g`** | g |
-| 14 | 🥬 Verduras, Hortalizas y Frescos | **Pepino** | 1,740 g | 0 g | **`1740 g`** | g |
-| 15 | 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 336 g | 0 g | **`336 g`** | g |
+| 5 | 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 1,260 g | 1,200 g | **`60 g`** | g |
+| 6 | 🥬 Verduras, Hortalizas y Frescos | **Cebolla** | 10 piezas | 2 piezas | **`8 piezas`** | piezas |
+| 7 | 🥬 Verduras, Hortalizas y Frescos | **Champiñón** | 2,340 g | 0 g | **`2340 g`** | g |
+| 8 | 🥬 Verduras, Hortalizas y Frescos | **Coliflor** | 840 g | 500 g | **`340 g`** | g |
+| 9 | 🥬 Verduras, Hortalizas y Frescos | **Ejotes** | 240 g | 0 g | **`240 g`** | g |
+| 10 | 🥬 Verduras, Hortalizas y Frescos | **Espárragos** | 840 g | 0 g | **`840 g`** | g |
+| 11 | 🥬 Verduras, Hortalizas y Frescos | **Espinacas** | 1,860 g | 150 g | **`1710 g`** | g |
+| 12 | 🥩 Carnes, Pescados y Proteínas | **Fajitas de mojarra** | 1,920 g | 900 g | **`1020 g`** | g |
+| 13 | 🥩 Carnes, Pescados y Proteínas | **Flat steak** | 1,320 g | 0 g | **`1320 g`** | g |
+| 14 | 🥬 Verduras, Hortalizas y Frescos | **Germinado** | 360 g | 0 g | **`360 g`** | g |
+| 15 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 80 g | 0 g | **`80 g`** | g |
+| 16 | 🥬 Verduras, Hortalizas y Frescos | **Jitomate** | 8 piezas | 0 piezas | **`8 piezas`** | piezas |
+| 17 | 🥬 Verduras, Hortalizas y Frescos | **Lechuga** | 3 piezas | 1 piezas | **`2 piezas`** | piezas |
+| 18 | 🥩 Carnes, Pescados y Proteínas | **Lomo de salmón** | 600 g | 0 g | **`600 g`** | g |
+| 19 | 🥬 Verduras, Hortalizas y Frescos | **Morrón** | 9 piezas | 4 piezas | **`5 piezas`** | piezas |
+| 20 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 420 g | 300 g | **`120 g`** | g |
+| 21 | 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 1,800 g | 0 g | **`1800 g`** | g |
+| 22 | 🥬 Verduras, Hortalizas y Frescos | **Pepino** | 1,740 g | 3 g | **`1737 g`** | g |
+| 23 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 990 g | 0 g | **`990 g`** | g |
+| 24 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 1,800 g | 0 g | **`1800 g`** | g |
+| 25 | 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 336 g | 0 g | **`336 g`** | g |
+| 26 | 🥬 Verduras, Hortalizas y Frescos | **Tomate** | 360 g | 0 g | **`360 g`** | g |
+| 27 | 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 340 g | 0 g | **`340 g`** | g |
 
 #### 3.3.1 Espejo Exacto por Tarjeta de Categoría en el DOM Real de `#v-shop` (`render3DShoppingList()`)
 | Categoría Renderizada en `#v-shop` | Badge de Conteo en UI | Ítems Renderizados Carácter por Carácter en Pantalla |
 |---|---|---|
-| **🍓 Frutas de Bajo Índice Glucémico** | **`1 POR COMPRAR`** | • **Fresas**: `720 g` |
-| **💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA** | **`2 POR COMPRAR`** | • **AminoSinergix®**: `220 g` *(Alacena: 200 g | Bruto: 420 g)*<br>• **MultiSinergix®**: `120 g` *(Alacena: 300 g | Bruto: 420 g)* |
-| **🥑 Grasas, Aceites y Semillas** | **`2 POR COMPRAR`** | • **Aceite de oliva**: `368 ml` *(Alacena: 400 ml | Bruto: 768 ml)*<br>• **Semillas de chía orgánicas**: `336 g` |
-| **🥩 Carnes, Pescados y Proteínas** | **`1 POR COMPRAR`** | • **Pechuga de pollo**: `1800 g` |
-| **🥬 Verduras, Hortalizas y Frescos** | **`9 POR COMPRAR`** | • **Brócoli**: `540 g`<br>• **Calabacitas**: `2280 g`<br>• **Cebolla**: `2 piezas` *(Alacena: 8 piezas | Bruto: 10 piezas)*<br>• **Champiñón**: `2340 g`<br>• **Coliflor**: `840 g`<br>• **Espinacas**: `1860 g`<br>• **Jitomate**: `1 piezas` *(Alacena: 7 piezas | Bruto: 8 piezas)*<br>• **Morrón**: `9 piezas`<br>• **Pepino**: `1740 g` |
+| **🍓 Frutas de Bajo Índice Glucémico** | **`1 POR COMPRAR`** | • **Zarzamora**: `340 g` |
+| **💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA** | **`3 POR COMPRAR`** | • **AminoSinergix®**: `220 g` *(Alacena: 200 g | Bruto: 420 g)*<br>• **Grenetina**: `80 g`<br>• **MultiSinergix®**: `120 g` *(Alacena: 300 g | Bruto: 420 g)* |
+| **🥑 Grasas, Aceites y Semillas** | **`3 POR COMPRAR`** | • **Aceite de oliva**: `368 ml` *(Alacena: 400 ml | Bruto: 768 ml)*<br>• **Aguacate**: `1 piezas`<br>• **Semillas de chía orgánicas**: `336 g` |
+| **🥩 Carnes, Pescados y Proteínas** | **`5 POR COMPRAR`** | • **Carne molida**: `60 g` *(Alacena: 1200 g | Bruto: 1260 g)*<br>• **Fajitas de mojarra**: `1020 g` *(Alacena: 900 g | Bruto: 1920 g)*<br>• **Flat steak**: `1320 g`<br>• **Lomo de salmón**: `600 g`<br>• **Pechuga de pollo**: `1800 g` |
+| **🥬 Verduras, Hortalizas y Frescos** | **`13 POR COMPRAR`** | • **Calabacitas**: `2280 g`<br>• **Cebolla**: `8 piezas` *(Alacena: 2 piezas | Bruto: 10 piezas)*<br>• **Champiñón**: `2340 g`<br>• **Coliflor**: `340 g` *(Alacena: 500 g | Bruto: 840 g)*<br>• **Ejotes**: `240 g`<br>• **Espárragos**: `840 g`<br>• **Espinacas**: `1710 g` *(Alacena: 150 g | Bruto: 1860 g)*<br>• **Germinado**: `360 g`<br>• **Jitomate**: `8 piezas`<br>• **Lechuga**: `2 piezas` *(Alacena: 1 piezas | Bruto: 3 piezas)*<br>• **Morrón**: `5 piezas` *(Alacena: 4 piezas | Bruto: 9 piezas)*<br>• **Pepino**: `1737 g` *(Alacena: 3 g | Bruto: 1740 g)*<br>• **Tomate**: `360 g` |
+| **🧀 Lácteos y Quesos (Sin Gluten — Keto)** | **`2 POR COMPRAR`** | • **Queso manchego**: `990 g`<br>• **Queso ricotta**: `1800 g` |
 
 ### 3.4 Registro de Cuarentena Normativa y Exclusión Activa (`NOM-004` / `deletedPantryItems` / `deletedFarmItems`)
 | Origen | Insumos Excluidos / Bloqueados en Cuarentena | Estado en las 63 Recetas |
@@ -1730,67 +1736,67 @@
 
 | # | Insumo Canónico | Suma Exacta en las 63 Recetas (Sección 2) | Protocolo Extra-Receta (Tomas 1 y 4 Sinergix®) | Total Reconciliado en Tablas 3.1 / 3.2 / 3.3 | Tabla Destino | Diferencia (`|Sec.2 - Tabla 3|`) | Desglose de Apariciones en las 63 Recetas |
 |---|---|---|---|---|---|---|---|
-| 1 | **Aceite de coco** | **174 g** | 0 g | **174 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,000 g) | **`0.00`** ✅ | R#26 (Mar Cen: 48 g); R#39 (Jue Des: 30 g); R#47 (Vie Des: 48 g); R#50 (Vie Com: 48 g) |
+| 1 | **Aceite de coco** | **174 g** | 0 g | **174 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,700 g) | **`0.00`** ✅ | R#26 (Mar Cen: 48 g); R#39 (Jue Des: 30 g); R#47 (Vie Des: 48 g); R#50 (Vie Com: 48 g) |
 | 2 | **Aceite de oliva** | **768 ml** | 0 ml | **768 ml** | Tabla 3.3 (Mercado — Comprar: 368 ml) | **`0.00`** ✅ | R#04 (Dom Com: 24 ml); R#05 (Dom Com: 24 ml); R#06 (Dom Com: 24 ml); R#07 (Dom Cen: 24 ml); R#08 (Dom Cen: 36 ml); R#13 (Lun Com: 24 ml); R#15 (Lun Com: 24 ml); R#16 (Lun Cen: 24 ml); R#22 (Mar Com: 24 ml); R#24 (Mar Com: 24 ml); R#25 (Mar Cen: 24 ml); R#29 (Mié Des: 48 ml); R#31 (Mié Com: 24 ml); R#32 (Mié Com: 36 ml); R#33 (Mié Com: 24 ml); R#34 (Mié Cen: 24 ml); R#35 (Mié Cen: 24 ml); R#40 (Jue Com: 24 ml); R#42 (Jue Com: 24 ml); R#43 (Jue Cen: 24 ml); R#49 (Vie Com: 24 ml); R#51 (Vie Com: 24 ml); R#52 (Vie Cen: 24 ml); R#53 (Vie Cen: 36 ml); R#56 (Sáb Des: 36 ml); R#58 (Sáb Com: 24 ml); R#60 (Sáb Com: 24 ml); R#61 (Sáb Cen: 24 ml); R#62 (Sáb Cen: 24 ml) |
 | 3 | **Aceitunas manzanilla** | **170 g** | 0 g | **170 g** | Tabla 3.2 (Alacena \$0 — Stock: 175 g) | **`0.00`** ✅ | R#23 (Mar Com: 60 g); R#32 (Mié Com: 55 g); R#58 (Sáb Com: 55 g) |
-| 4 | **Acelgas** | **480 g** | 0 g | **480 g** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#51 (Vie Com: 480 g) |
+| 4 | **Acelgas** | **480 g** | 0 g | **480 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#51 (Vie Com: 480 g) |
 | 5 | **Achiote** | **18 g** | 0 g | **18 g** | Tabla 3.2 (Alacena \$0 — Stock: 110 g) | **`0.00`** ✅ | R#53 (Vie Cen: 18 g) |
-| 6 | **Agua purificada** | **14,400 ml** | 0 ml | **14,400 ml** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#03 (Dom Des: 720 ml); R#09 (Dom Cen: 1,200 ml); R#12 (Lun Des: 720 ml); R#18 (Lun Cen: 1,200 ml); R#21 (Mar Des: 720 ml); R#27 (Mar Cen: 1,200 ml); R#30 (Mié Des: 720 ml); R#36 (Mié Cen: 1,200 ml); R#39 (Jue Des: 1,200 ml); R#45 (Jue Cen: 1,200 ml); R#48 (Vie Des: 720 ml); R#54 (Vie Cen: 1,200 ml); R#57 (Sáb Des: 1,200 ml); R#63 (Sáb Cen: 1,200 ml) |
-| 7 | **Aguacate** | **1 piezas** | 0 piezas | **1 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 1 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas) |
+| 6 | **Agua purificada** | **14,400 ml** | 0 ml | **14,400 ml** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#03 (Dom Des: 720 ml); R#09 (Dom Cen: 1,200 ml); R#12 (Lun Des: 720 ml); R#18 (Lun Cen: 1,200 ml); R#21 (Mar Des: 720 ml); R#27 (Mar Cen: 1,200 ml); R#30 (Mié Des: 720 ml); R#36 (Mié Cen: 1,200 ml); R#39 (Jue Des: 1,200 ml); R#45 (Jue Cen: 1,200 ml); R#48 (Vie Des: 720 ml); R#54 (Vie Cen: 1,200 ml); R#57 (Sáb Des: 1,200 ml); R#63 (Sáb Cen: 1,200 ml) |
+| 7 | **Aguacate** | **1 piezas** | 0 piezas | **1 piezas** | Tabla 3.3 (Mercado — Comprar: 1 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas) |
 | 8 | **Alcaparras** | **156 g** | 0 g | **156 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#13 (Lun Com: 36 g); R#23 (Mar Com: 36 g); R#32 (Mié Com: 42 g); R#41 (Jue Com: 42 g) |
 | 9 | **AminoSinergix®** | **210 g** | 210 g | **420 g** | Tabla 3.3 (Mercado — Comprar: 220 g) | **`0.00`** ✅ | R#09 (Dom Cen: 30 g); R#18 (Lun Cen: 30 g); R#27 (Mar Cen: 30 g); R#36 (Mié Cen: 30 g); R#45 (Jue Cen: 30 g); R#54 (Vie Cen: 30 g); R#63 (Sáb Cen: 30 g) |
 | 10 | **Atún en agua** | **660 g** | 0 g | **660 g** | Tabla 3.2 (Alacena \$0 — Stock: 700 g) | **`0.00`** ✅ | R#35 (Mié Cen: 660 g) |
-| 11 | **Brócoli** | **540 g** | 0 g | **540 g** | Tabla 3.3 (Mercado — Comprar: 540 g) | **`0.00`** ✅ | R#15 (Lun Com: 540 g) |
+| 11 | **Brócoli** | **540 g** | 0 g | **540 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,500 g) | **`0.00`** ✅ | R#15 (Lun Com: 540 g) |
 | 12 | **Calabacitas** | **2,280 g** | 0 g | **2,280 g** | Tabla 3.3 (Mercado — Comprar: 2,280 g) | **`0.00`** ✅ | R#05 (Dom Com: 360 g); R#17 (Lun Cen: 480 g); R#33 (Mié Com: 540 g); R#53 (Vie Cen: 420 g); R#59 (Sáb Com: 480 g) |
 | 13 | **Canela molida** | **27 g** | 0 g | **27 g** | Tabla 3.2 (Alacena \$0 — Stock: 750 g) | **`0.00`** ✅ | R#03 (Dom Des: 3 g); R#09 (Dom Cen: 3 g); R#19 (Mar Des: 3 g); R#36 (Mié Cen: 3 g); R#37 (Jue Des: 3 g); R#39 (Jue Des: 3 g); R#54 (Vie Cen: 3 g); R#57 (Sáb Des: 3 g); R#59 (Sáb Com: 3 g) |
-| 14 | **Carne molida** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,360 g) | **`0.00`** ✅ | R#23 (Mar Com: 660 g); R#59 (Sáb Com: 660 g) |
-| 15 | **Cebolla** | **10 piezas** | 0 piezas | **10 piezas** | Tabla 3.3 (Mercado — Comprar: 2 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#11 (Lun Des: 1 piezas); R#14 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#29 (Mié Des: 1 piezas); R#31 (Mié Com: 1 piezas); R#35 (Mié Cen: 1 piezas); R#47 (Vie Des: 1 piezas); R#50 (Vie Com: 1 piezas); R#59 (Sáb Com: 1 piezas) |
+| 14 | **Carne molida** | **1,260 g** | 0 g | **1,260 g** | Tabla 3.3 (Mercado — Comprar: 60 g) | **`0.00`** ✅ | R#23 (Mar Com: 600 g); R#59 (Sáb Com: 660 g) |
+| 15 | **Cebolla** | **10 piezas** | 0 piezas | **10 piezas** | Tabla 3.3 (Mercado — Comprar: 8 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#11 (Lun Des: 1 piezas); R#14 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#29 (Mié Des: 1 piezas); R#31 (Mié Com: 1 piezas); R#35 (Mié Cen: 1 piezas); R#47 (Vie Des: 1 piezas); R#50 (Vie Com: 1 piezas); R#59 (Sáb Com: 1 piezas) |
 | 16 | **Champiñón** | **2,340 g** | 0 g | **2,340 g** | Tabla 3.3 (Mercado — Comprar: 2,340 g) | **`0.00`** ✅ | R#08 (Dom Cen: 660 g); R#11 (Lun Des: 360 g); R#44 (Jue Cen: 660 g); R#60 (Sáb Com: 660 g) |
-| 17 | **Cilantro** | **204 g** | 0 g | **204 g** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#04 (Dom Com: 18 g); R#05 (Dom Com: 24 g); R#08 (Dom Cen: 24 g); R#20 (Mar Des: 24 g); R#22 (Mar Com: 24 g); R#24 (Mar Com: 18 g); R#25 (Mar Cen: 24 g); R#52 (Vie Cen: 24 g); R#53 (Vie Cen: 24 g) |
+| 17 | **Cilantro** | **204 g** | 0 g | **204 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#04 (Dom Com: 18 g); R#05 (Dom Com: 24 g); R#08 (Dom Cen: 24 g); R#20 (Mar Des: 24 g); R#22 (Mar Com: 24 g); R#24 (Mar Com: 18 g); R#25 (Mar Cen: 24 g); R#52 (Vie Cen: 24 g); R#53 (Vie Cen: 24 g) |
 | 18 | **Clavo de olor** | **2 g** | 0 g | **2 g** | Tabla 3.2 (Alacena \$0 — Stock: 50 g) | **`0.00`** ✅ | R#18 (Lun Cen: 2 g) |
-| 19 | **Coliflor** | **840 g** | 0 g | **840 g** | Tabla 3.3 (Mercado — Comprar: 840 g) | **`0.00`** ✅ | R#38 (Jue Des: 420 g); R#47 (Vie Des: 420 g) |
+| 19 | **Coliflor** | **840 g** | 0 g | **840 g** | Tabla 3.3 (Mercado — Comprar: 340 g) | **`0.00`** ✅ | R#38 (Jue Des: 420 g); R#47 (Vie Des: 420 g) |
 | 20 | **Comino** | **3 g** | 0 g | **3 g** | Tabla 3.2 (Alacena \$0 — Stock: 50 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 3 g) |
 | 21 | **Crema ácida** | **180 g** | 0 g | **180 g** | Tabla 3.2 (Alacena \$0 — Stock: 960 g) | **`0.00`** ✅ | R#17 (Lun Cen: 180 g) |
-| 22 | **Ejotes** | **240 g** | 0 g | **240 g** | Tabla 3.2 (Alacena \$0 — Stock: 500 g) | **`0.00`** ✅ | R#06 (Dom Com: 240 g) |
-| 23 | **Espinacas** | **1,860 g** | 0 g | **1,860 g** | Tabla 3.3 (Mercado — Comprar: 1,860 g) | **`0.00`** ✅ | R#08 (Dom Cen: 300 g); R#11 (Lun Des: 300 g); R#26 (Mar Cen: 360 g); R#34 (Mié Cen: 300 g); R#44 (Jue Cen: 300 g); R#61 (Sáb Cen: 300 g) |
-| 24 | **Espárragos** | **840 g** | 0 g | **840 g** | Tabla 3.2 (Alacena \$0 — Stock: 907 g) | **`0.00`** ✅ | R#29 (Mié Des: 420 g); R#42 (Jue Com: 420 g) |
+| 22 | **Ejotes** | **240 g** | 0 g | **240 g** | Tabla 3.3 (Mercado — Comprar: 240 g) | **`0.00`** ✅ | R#06 (Dom Com: 240 g) |
+| 23 | **Espinacas** | **1,860 g** | 0 g | **1,860 g** | Tabla 3.3 (Mercado — Comprar: 1,710 g) | **`0.00`** ✅ | R#08 (Dom Cen: 300 g); R#11 (Lun Des: 300 g); R#26 (Mar Cen: 360 g); R#34 (Mié Cen: 300 g); R#44 (Jue Cen: 300 g); R#61 (Sáb Cen: 300 g) |
+| 24 | **Espárragos** | **840 g** | 0 g | **840 g** | Tabla 3.3 (Mercado — Comprar: 840 g) | **`0.00`** ✅ | R#29 (Mié Des: 420 g); R#42 (Jue Com: 420 g) |
 | 25 | **Extracto de vainilla** | **24 ml** | 0 ml | **24 ml** | Tabla 3.2 (Alacena \$0 — Stock: 400 ml) | **`0.00`** ✅ | R#10 (Lun Des: 6 ml); R#21 (Mar Des: 6 ml); R#28 (Mié Des: 6 ml); R#55 (Sáb Des: 6 ml) |
-| 26 | **Fajitas de mojarra** | **1,920 g** | 0 g | **1,920 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,000 g) | **`0.00`** ✅ | R#32 (Mié Com: 960 g); R#53 (Vie Cen: 960 g) |
-| 27 | **Flat steak** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,200 g) | **`0.00`** ✅ | R#14 (Lun Com: 660 g); R#50 (Vie Com: 660 g) |
+| 26 | **Fajitas de mojarra** | **1,920 g** | 0 g | **1,920 g** | Tabla 3.3 (Mercado — Comprar: 1,020 g) | **`0.00`** ✅ | R#32 (Mié Com: 960 g); R#53 (Vie Cen: 960 g) |
+| 27 | **Flat steak** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#14 (Lun Com: 660 g); R#50 (Vie Com: 660 g) |
 | 28 | **Flor de Jamaica molida en polvo** | **96 g** | 0 g | **96 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#03 (Dom Des: 24 g); R#30 (Mié Des: 24 g); R#48 (Vie Des: 24 g); R#57 (Sáb Des: 24 g) |
-| 29 | **Fondo claro de pollo** | **5,400 ml** | 0 ml | **5,400 ml** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#04 (Dom Com: 900 ml); R#16 (Lun Cen: 900 ml); R#25 (Mar Cen: 900 ml); R#43 (Jue Cen: 900 ml); R#52 (Vie Cen: 900 ml); R#61 (Sáb Cen: 900 ml) |
-| 30 | **Fondo de res** | **900 ml** | 0 ml | **900 ml** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#31 (Mié Com: 900 ml) |
-| 31 | **Frambuesas** | **340 g** | 0 g | **340 g** | Tabla 3.2 (Alacena \$0 — Stock: 340 g) | **`0.00`** ✅ | R#10 (Lun Des: 170 g); R#37 (Jue Des: 170 g) |
-| 32 | **Fresas** | **720 g** | 0 g | **720 g** | Tabla 3.3 (Mercado — Comprar: 720 g) | **`0.00`** ✅ | R#19 (Mar Des: 240 g); R#46 (Vie Des: 240 g); R#55 (Sáb Des: 240 g) |
-| 33 | **Germinado** | **360 g** | 0 g | **360 g** | Tabla 3.2 (Alacena \$0 — Stock: 500 g) | **`0.00`** ✅ | R#47 (Vie Des: 180 g); R#50 (Vie Com: 180 g) |
-| 34 | **Grenetina** | **80 g** | 0 g | **80 g** | Tabla 3.2 (Alacena \$0 — Stock: 112 g) | **`0.00`** ✅ | R#03 (Dom Des: 16 g); R#12 (Lun Des: 16 g); R#21 (Mar Des: 16 g); R#30 (Mié Des: 16 g); R#48 (Vie Des: 16 g) |
+| 29 | **Fondo claro de pollo** | **5,400 ml** | 0 ml | **5,400 ml** | Tabla 3.1.1 (Preparación Interna de Cocina \$0) | **`0.00`** ✅ | R#04 (Dom Com: 900 ml); R#16 (Lun Cen: 900 ml); R#25 (Mar Cen: 900 ml); R#43 (Jue Cen: 900 ml); R#52 (Vie Cen: 900 ml); R#61 (Sáb Cen: 900 ml) |
+| 30 | **Fondo de res** | **900 ml** | 0 ml | **900 ml** | Tabla 3.1.1 (Preparación Interna de Cocina \$0) | **`0.00`** ✅ | R#31 (Mié Com: 900 ml) |
+| 31 | **Frambuesas** | **250 g** | 0 g | **250 g** | Tabla 3.2 (Alacena \$0 — Stock: 250 g) | **`0.00`** ✅ | R#10 (Lun Des: 125 g); R#37 (Jue Des: 125 g) |
+| 32 | **Fresas** | **720 g** | 0 g | **720 g** | Tabla 3.2 (Alacena \$0 — Stock: 900 g) | **`0.00`** ✅ | R#19 (Mar Des: 240 g); R#46 (Vie Des: 240 g); R#55 (Sáb Des: 240 g) |
+| 33 | **Germinado** | **360 g** | 0 g | **360 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#47 (Vie Des: 180 g); R#50 (Vie Com: 180 g) |
+| 34 | **Grenetina** | **80 g** | 0 g | **80 g** | Tabla 3.3 (Mercado — Comprar: 80 g) | **`0.00`** ✅ | R#03 (Dom Des: 16 g); R#12 (Lun Des: 16 g); R#21 (Mar Des: 16 g); R#30 (Mié Des: 16 g); R#48 (Vie Des: 16 g) |
 | 35 | **Hierbas finas** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 25 g) | **`0.00`** ✅ | R#27 (Mar Cen: 3 g); R#41 (Jue Com: 3 g); R#56 (Sáb Des: 6 g) |
 | 36 | **Huevo** | **126 piezas** | 0 piezas | **126 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 206 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 18 piezas); R#11 (Lun Des: 18 piezas); R#20 (Mar Des: 18 piezas); R#29 (Mié Des: 18 piezas); R#38 (Jue Des: 18 piezas); R#47 (Vie Des: 18 piezas); R#56 (Sáb Des: 18 piezas) |
-| 37 | **Jitomate** | **8 piezas** | 0 piezas | **8 piezas** | Tabla 3.3 (Mercado — Comprar: 1 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#13 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#23 (Mar Com: 1 piezas); R#25 (Mar Cen: 1 piezas); R#32 (Mié Com: 1 piezas); R#53 (Vie Cen: 1 piezas); R#56 (Sáb Des: 1 piezas) |
-| 38 | **Lechuga** | **3 piezas** | 0 piezas | **3 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 3 piezas) | **`0.00`** ✅ | R#13 (Lun Com: 1 piezas); R#40 (Jue Com: 1 piezas); R#58 (Sáb Com: 1 piezas) |
-| 39 | **Limones** | **1,476 g** | 0 g | **1,476 g** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#01 (Dom Des: 30 g); R#06 (Dom Com: 48 g); R#07 (Dom Cen: 48 g); R#11 (Lun Des: 48 g); R#12 (Lun Des: 90 g); R#13 (Lun Com: 48 g); R#15 (Lun Com: 48 g); R#16 (Lun Cen: 48 g); R#18 (Lun Cen: 48 g); R#21 (Mar Des: 90 g); R#22 (Mar Com: 48 g); R#25 (Mar Cen: 60 g); R#30 (Mié Des: 60 g); R#34 (Mié Cen: 48 g); R#36 (Mié Cen: 48 g); R#40 (Jue Com: 48 g); R#41 (Jue Com: 48 g); R#42 (Jue Com: 48 g); R#43 (Jue Cen: 48 g); R#46 (Vie Des: 30 g); R#49 (Vie Com: 48 g); R#51 (Vie Com: 48 g); R#52 (Vie Cen: 48 g); R#57 (Sáb Des: 60 g); R#58 (Sáb Com: 48 g); R#60 (Sáb Com: 48 g); R#61 (Sáb Cen: 48 g); R#62 (Sáb Cen: 48 g); R#63 (Sáb Cen: 48 g) |
-| 40 | **Lomo de salmón** | **600 g** | 0 g | **600 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,250 g) | **`0.00`** ✅ | R#41 (Jue Com: 600 g) |
-| 41 | **Mantequilla** | **372 g** | 0 g | **372 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,370 g) | **`0.00`** ✅ | R#02 (Dom Des: 48 g); R#11 (Lun Des: 72 g); R#14 (Lun Com: 48 g); R#17 (Lun Cen: 36 g); R#20 (Mar Des: 48 g); R#38 (Jue Des: 36 g); R#41 (Jue Com: 48 g); R#44 (Jue Cen: 36 g) |
+| 37 | **Jitomate** | **8 piezas** | 0 piezas | **8 piezas** | Tabla 3.3 (Mercado — Comprar: 8 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#13 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#23 (Mar Com: 1 piezas); R#25 (Mar Cen: 1 piezas); R#32 (Mié Com: 1 piezas); R#53 (Vie Cen: 1 piezas); R#56 (Sáb Des: 1 piezas) |
+| 38 | **Lechuga** | **3 piezas** | 0 piezas | **3 piezas** | Tabla 3.3 (Mercado — Comprar: 2 piezas) | **`0.00`** ✅ | R#13 (Lun Com: 1 piezas); R#40 (Jue Com: 1 piezas); R#58 (Sáb Com: 1 piezas) |
+| 39 | **Limones** | **1,476 g** | 0 g | **1,476 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 30 g); R#06 (Dom Com: 48 g); R#07 (Dom Cen: 48 g); R#11 (Lun Des: 48 g); R#12 (Lun Des: 90 g); R#13 (Lun Com: 48 g); R#15 (Lun Com: 48 g); R#16 (Lun Cen: 48 g); R#18 (Lun Cen: 48 g); R#21 (Mar Des: 90 g); R#22 (Mar Com: 48 g); R#25 (Mar Cen: 60 g); R#30 (Mié Des: 60 g); R#34 (Mié Cen: 48 g); R#36 (Mié Cen: 48 g); R#40 (Jue Com: 48 g); R#41 (Jue Com: 48 g); R#42 (Jue Com: 48 g); R#43 (Jue Cen: 48 g); R#46 (Vie Des: 30 g); R#49 (Vie Com: 48 g); R#51 (Vie Com: 48 g); R#52 (Vie Cen: 48 g); R#57 (Sáb Des: 60 g); R#58 (Sáb Com: 48 g); R#60 (Sáb Com: 48 g); R#61 (Sáb Cen: 48 g); R#62 (Sáb Cen: 48 g); R#63 (Sáb Cen: 48 g) |
+| 40 | **Lomo de salmón** | **600 g** | 0 g | **600 g** | Tabla 3.3 (Mercado — Comprar: 600 g) | **`0.00`** ✅ | R#41 (Jue Com: 600 g) |
+| 41 | **Mantequilla** | **372 g** | 0 g | **372 g** | Tabla 3.2 (Alacena \$0 — Stock: 500 g) | **`0.00`** ✅ | R#02 (Dom Des: 48 g); R#11 (Lun Des: 72 g); R#14 (Lun Com: 48 g); R#17 (Lun Cen: 36 g); R#20 (Mar Des: 48 g); R#38 (Jue Des: 36 g); R#41 (Jue Com: 48 g); R#44 (Jue Cen: 36 g) |
 | 42 | **Manzanilla** | **42 g** | 0 g | **42 g** | Tabla 3.2 (Alacena \$0 — Stock: 50 g) | **`0.00`** ✅ | R#09 (Dom Cen: 6 g); R#18 (Lun Cen: 6 g); R#27 (Mar Cen: 6 g); R#36 (Mié Cen: 6 g); R#45 (Jue Cen: 6 g); R#54 (Vie Cen: 6 g); R#63 (Sáb Cen: 6 g) |
-| 43 | **Morrón** | **9 piezas** | 0 piezas | **9 piezas** | Tabla 3.3 (Mercado — Comprar: 9 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 2 piezas); R#14 (Lun Com: 2 piezas); R#23 (Mar Com: 1 piezas); R#35 (Mié Cen: 2 piezas); R#50 (Vie Com: 2 piezas) |
+| 43 | **Morrón** | **9 piezas** | 0 piezas | **9 piezas** | Tabla 3.3 (Mercado — Comprar: 5 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 2 piezas); R#14 (Lun Com: 2 piezas); R#23 (Mar Com: 1 piezas); R#35 (Mié Cen: 2 piezas); R#50 (Vie Com: 2 piezas) |
 | 44 | **MultiSinergix®** | **210 g** | 210 g | **420 g** | Tabla 3.3 (Mercado — Comprar: 120 g) | **`0.00`** ✅ | R#03 (Dom Des: 30 g); R#12 (Lun Des: 30 g); R#21 (Mar Des: 30 g); R#30 (Mié Des: 30 g); R#39 (Jue Des: 30 g); R#48 (Vie Des: 30 g); R#57 (Sáb Des: 30 g) |
-| 45 | **Nopales** | **480 g** | 0 g | **480 g** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#24 (Mar Com: 480 g) |
-| 46 | **Nuez de la India** | **546 g** | 0 g | **546 g** | Tabla 3.2 (Alacena \$0 — Stock: 907 g) | **`0.00`** ✅ | R#01 (Dom Des: 60 g); R#10 (Lun Des: 60 g); R#19 (Mar Des: 60 g); R#26 (Mar Cen: 90 g); R#28 (Mié Des: 60 g); R#37 (Jue Des: 60 g); R#46 (Vie Des: 60 g); R#49 (Vie Com: 36 g); R#55 (Sáb Des: 60 g) |
-| 47 | **Nuez pecana** | **510 g** | 0 g | **510 g** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#01 (Dom Des: 60 g); R#10 (Lun Des: 60 g); R#19 (Mar Des: 60 g); R#26 (Mar Cen: 90 g); R#28 (Mié Des: 60 g); R#37 (Jue Des: 60 g); R#46 (Vie Des: 60 g); R#55 (Sáb Des: 60 g) |
+| 45 | **Nopales** | **480 g** | 0 g | **480 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#24 (Mar Com: 480 g) |
+| 46 | **Nuez de la India** | **546 g** | 0 g | **546 g** | Tabla 3.2 (Alacena \$0 — Stock: 600 g) | **`0.00`** ✅ | R#01 (Dom Des: 60 g); R#10 (Lun Des: 60 g); R#19 (Mar Des: 60 g); R#26 (Mar Cen: 90 g); R#28 (Mié Des: 60 g); R#37 (Jue Des: 60 g); R#46 (Vie Des: 60 g); R#49 (Vie Com: 36 g); R#55 (Sáb Des: 60 g) |
+| 47 | **Nuez pecana** | **510 g** | 0 g | **510 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 60 g); R#10 (Lun Des: 60 g); R#19 (Mar Des: 60 g); R#26 (Mar Cen: 90 g); R#28 (Mié Des: 60 g); R#37 (Jue Des: 60 g); R#46 (Vie Des: 60 g); R#55 (Sáb Des: 60 g) |
 | 48 | **Orégano** | **57 g** | 0 g | **57 g** | Tabla 3.2 (Alacena \$0 — Stock: 150 g) | **`0.00`** ✅ | R#06 (Dom Com: 3 g); R#07 (Dom Cen: 3 g); R#08 (Dom Cen: 3 g); R#15 (Lun Com: 3 g); R#16 (Lun Cen: 3 g); R#23 (Mar Com: 3 g); R#24 (Mar Com: 3 g); R#25 (Mar Cen: 3 g); R#26 (Mar Cen: 3 g); R#32 (Mié Com: 3 g); R#34 (Mié Cen: 3 g); R#35 (Mié Cen: 3 g); R#40 (Jue Com: 3 g); R#45 (Jue Cen: 3 g); R#51 (Vie Com: 3 g); R#58 (Sáb Com: 3 g); R#59 (Sáb Com: 3 g); R#61 (Sáb Cen: 3 g); R#62 (Sáb Cen: 3 g) |
-| 49 | **Pechuga de pavo** | **1,000 g** | 0 g | **1,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#05 (Dom Com: 500 g); R#17 (Lun Cen: 500 g) |
+| 49 | **Pechuga de pavo** | **1,000 g** | 0 g | **1,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,400 g) | **`0.00`** ✅ | R#05 (Dom Com: 500 g); R#17 (Lun Cen: 500 g) |
 | 50 | **Pechuga de pollo** | **1,800 g** | 0 g | **1,800 g** | Tabla 3.3 (Mercado — Comprar: 1,800 g) | **`0.00`** ✅ | R#26 (Mar Cen: 900 g); R#62 (Sáb Cen: 900 g) |
-| 51 | **Pepino** | **1,740 g** | 0 g | **1,740 g** | Tabla 3.3 (Mercado — Comprar: 1,740 g) | **`0.00`** ✅ | R#07 (Dom Cen: 360 g); R#22 (Mar Com: 360 g); R#40 (Jue Com: 300 g); R#49 (Vie Com: 360 g); R#62 (Sáb Cen: 360 g) |
+| 51 | **Pepino** | **1,740 g** | 0 g | **1,740 g** | Tabla 3.3 (Mercado — Comprar: 1,737 g) | **`0.00`** ✅ | R#07 (Dom Cen: 360 g); R#22 (Mar Com: 360 g); R#40 (Jue Com: 300 g); R#49 (Vie Com: 360 g); R#62 (Sáb Cen: 360 g) |
 | 52 | **Pimienta negra** | **3 g** | 0 g | **3 g** | Tabla 3.2 (Alacena \$0 — Stock: 70 g) | **`0.00`** ✅ | R#14 (Lun Com: 3 g) |
 | 53 | **Queso Philadelphia** | **420 g** | 0 g | **420 g** | Tabla 3.2 (Alacena \$0 — Stock: 720 g) | **`0.00`** ✅ | R#02 (Dom Des: 120 g); R#38 (Jue Des: 120 g); R#41 (Jue Com: 180 g) |
-| 54 | **Queso manchego** | **990 g** | 0 g | **990 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 90 g); R#05 (Dom Com: 90 g); R#08 (Dom Cen: 140 g); R#14 (Lun Com: 90 g); R#20 (Mar Des: 110 g); R#23 (Mar Com: 90 g); R#35 (Mié Cen: 90 g); R#38 (Jue Des: 90 g); R#44 (Jue Cen: 100 g); R#59 (Sáb Com: 100 g) |
-| 55 | **Queso ricotta** | **1,800 g** | 0 g | **1,800 g** | Tabla 3.2 (Alacena \$0 — Stock: 3,840 g) | **`0.00`** ✅ | R#02 (Dom Des: 180 g); R#17 (Lun Cen: 240 g); R#23 (Mar Com: 240 g); R#35 (Mié Cen: 240 g); R#38 (Jue Des: 180 g); R#44 (Jue Cen: 240 g); R#56 (Sáb Des: 240 g); R#59 (Sáb Com: 240 g) |
-| 56 | **Romero** | **30 g** | 0 g | **30 g** | Tabla 3.1 (Granja / Cocina \$0) | **`0.00`** ✅ | R#12 (Lun Des: 6 g); R#33 (Mié Com: 6 g); R#38 (Jue Des: 6 g); R#44 (Jue Cen: 6 g); R#48 (Vie Des: 6 g) |
+| 54 | **Queso manchego** | **990 g** | 0 g | **990 g** | Tabla 3.3 (Mercado — Comprar: 990 g) | **`0.00`** ✅ | R#02 (Dom Des: 90 g); R#05 (Dom Com: 90 g); R#08 (Dom Cen: 140 g); R#14 (Lun Com: 90 g); R#20 (Mar Des: 110 g); R#23 (Mar Com: 90 g); R#35 (Mié Cen: 90 g); R#38 (Jue Des: 90 g); R#44 (Jue Cen: 100 g); R#59 (Sáb Com: 100 g) |
+| 55 | **Queso ricotta** | **1,800 g** | 0 g | **1,800 g** | Tabla 3.3 (Mercado — Comprar: 1,800 g) | **`0.00`** ✅ | R#02 (Dom Des: 180 g); R#17 (Lun Cen: 240 g); R#23 (Mar Com: 240 g); R#35 (Mié Cen: 240 g); R#38 (Jue Des: 180 g); R#44 (Jue Cen: 240 g); R#56 (Sáb Des: 240 g); R#59 (Sáb Com: 240 g) |
+| 56 | **Romero** | **30 g** | 0 g | **30 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#12 (Lun Des: 6 g); R#33 (Mié Com: 6 g); R#38 (Jue Des: 6 g); R#44 (Jue Cen: 6 g); R#48 (Vie Des: 6 g) |
 | 57 | **Sal con ajo** | **48 g** | 0 g | **48 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#14 (Lun Com: 6 g); R#17 (Lun Cen: 6 g); R#26 (Mar Cen: 6 g); R#42 (Jue Com: 6 g); R#50 (Vie Com: 6 g); R#56 (Sáb Des: 6 g); R#60 (Sáb Com: 6 g); R#62 (Sáb Cen: 6 g) |
 | 58 | **Sal de mar** | **204 g** | 0 g | **204 g** | Tabla 3.2 (Alacena \$0 — Stock: 3,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 6 g); R#04 (Dom Com: 6 g); R#05 (Dom Com: 6 g); R#06 (Dom Com: 6 g); R#07 (Dom Cen: 6 g); R#08 (Dom Cen: 6 g); R#11 (Lun Des: 6 g); R#13 (Lun Com: 6 g); R#15 (Lun Com: 6 g); R#16 (Lun Cen: 6 g); R#20 (Mar Des: 6 g); R#22 (Mar Com: 6 g); R#23 (Mar Com: 6 g); R#24 (Mar Com: 6 g); R#25 (Mar Cen: 6 g); R#29 (Mié Des: 6 g); R#31 (Mié Com: 6 g); R#32 (Mié Com: 6 g); R#33 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#35 (Mié Cen: 6 g); R#38 (Jue Des: 6 g); R#40 (Jue Com: 6 g); R#41 (Jue Com: 6 g); R#43 (Jue Cen: 6 g); R#44 (Jue Cen: 6 g); R#47 (Vie Des: 6 g); R#49 (Vie Com: 6 g); R#51 (Vie Com: 6 g); R#52 (Vie Cen: 6 g); R#53 (Vie Cen: 6 g); R#58 (Sáb Com: 6 g); R#59 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g) |
 | 59 | **Semillas de chía orgánicas** | **336 g** | 0 g | **336 g** | Tabla 3.3 (Mercado — Comprar: 336 g) | **`0.00`** ✅ | R#01 (Dom Des: 48 g); R#10 (Lun Des: 48 g); R#19 (Mar Des: 48 g); R#28 (Mié Des: 48 g); R#37 (Jue Des: 48 g); R#46 (Vie Des: 48 g); R#55 (Sáb Des: 48 g) |
-| 60 | **Tomate** | **360 g** | 0 g | **360 g** | Tabla 3.2 (Alacena \$0 — Stock: 400 g) | **`0.00`** ✅ | R#05 (Dom Com: 180 g); R#53 (Vie Cen: 180 g) |
+| 60 | **Tomate** | **360 g** | 0 g | **360 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#05 (Dom Com: 180 g); R#53 (Vie Cen: 180 g) |
 | 61 | **Tomillo** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 20 g) | **`0.00`** ✅ | R#31 (Mié Com: 3 g); R#43 (Jue Cen: 3 g); R#60 (Sáb Com: 3 g); R#63 (Sáb Cen: 3 g) |
-| 62 | **Té chai** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 70 g) | **`0.00`** ✅ | R#39 (Jue Des: 12 g) |
-| 63 | **Yogur griego** | **360 g** | 0 g | **360 g** | Tabla 3.2 (Alacena \$0 — Stock: 5,680 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 360 g) |
-| 64 | **Zarzamora** | **340 g** | 0 g | **340 g** | Tabla 3.2 (Alacena \$0 — Stock: 340 g) | **`0.00`** ✅ | R#01 (Dom Des: 170 g); R#28 (Mié Des: 170 g) |
+| 62 | **Té chai** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 50 g) | **`0.00`** ✅ | R#39 (Jue Des: 12 g) |
+| 63 | **Yogur griego** | **360 g** | 0 g | **360 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,200 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 360 g) |
+| 64 | **Zarzamora** | **340 g** | 0 g | **340 g** | Tabla 3.3 (Mercado — Comprar: 340 g) | **`0.00`** ✅ | R#01 (Dom Des: 170 g); R#28 (Mié Des: 170 g) |

@@ -621,8 +621,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Frambuesas",
-                "per_guest": 28.3333,
-                "amount": 170,
+                "per_guest": 20.8333,
+                "amount": 125,
                 "unit": "g"
               },
               {
@@ -1419,8 +1419,8 @@
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Carne molida",
-                "per_guest": 110,
-                "amount": 660,
+                "per_guest": 100,
+                "amount": 600,
                 "unit": "g"
               },
               {
@@ -2316,8 +2316,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Frambuesas",
-                "per_guest": 28.3333,
-                "amount": 170,
+                "per_guest": 20.8333,
+                "amount": 125,
                 "unit": "g"
               },
               {
@@ -4010,20 +4010,6 @@
           "net_to_buy": 0.0
         },
         {
-          "name": "Fondo claro de pollo",
-          "required": 5400.0,
-          "unit": "ml",
-          "source": "Insumo Base de Cocina ($0)",
-          "net_to_buy": 0.0
-        },
-        {
-          "name": "Fondo de res",
-          "required": 900.0,
-          "unit": "ml",
-          "source": "Insumo Base de Cocina ($0)",
-          "net_to_buy": 0.0
-        },
-        {
           "name": "Limones",
           "required": 1476.0,
           "unit": "g",
@@ -4056,8 +4042,8 @@
         {
           "name": "Aceite de coco",
           "required": 174.0,
-          "stock": 2000.0,
-          "remaining_stock": 1826.0,
+          "stock": 1700.0,
+          "remaining_stock": 1526.0,
           "unit": "g"
         },
         {
@@ -4075,13 +4061,6 @@
           "unit": "g"
         },
         {
-          "name": "Aguacate",
-          "required": 1.0,
-          "stock": 1.0,
-          "remaining_stock": 0.0,
-          "unit": "piezas"
-        },
-        {
           "name": "Alcaparras",
           "required": 156.0,
           "stock": 200.0,
@@ -4096,17 +4075,17 @@
           "unit": "g"
         },
         {
+          "name": "Brócoli",
+          "required": 540.0,
+          "stock": 1500.0,
+          "remaining_stock": 960.0,
+          "unit": "g"
+        },
+        {
           "name": "Canela molida",
           "required": 27.0,
           "stock": 750.0,
           "remaining_stock": 723.0,
-          "unit": "g"
-        },
-        {
-          "name": "Carne molida",
-          "required": 1320.0,
-          "stock": 1360.0,
-          "remaining_stock": 40.0,
           "unit": "g"
         },
         {
@@ -4131,39 +4110,11 @@
           "unit": "g"
         },
         {
-          "name": "Ejotes",
-          "required": 240.0,
-          "stock": 500.0,
-          "remaining_stock": 260.0,
-          "unit": "g"
-        },
-        {
-          "name": "Espárragos",
-          "required": 840.0,
-          "stock": 907.0,
-          "remaining_stock": 67.0,
-          "unit": "g"
-        },
-        {
           "name": "Extracto de vainilla",
           "required": 24.0,
           "stock": 400.0,
           "remaining_stock": 376.0,
           "unit": "ml"
-        },
-        {
-          "name": "Fajitas de mojarra",
-          "required": 1920.0,
-          "stock": 2000.0,
-          "remaining_stock": 80.0,
-          "unit": "g"
-        },
-        {
-          "name": "Flat steak",
-          "required": 1320.0,
-          "stock": 2200.0,
-          "remaining_stock": 880.0,
-          "unit": "g"
         },
         {
           "name": "Flor de Jamaica molida en polvo",
@@ -4174,23 +4125,16 @@
         },
         {
           "name": "Frambuesas",
-          "required": 340.0,
-          "stock": 340.0,
+          "required": 250.0,
+          "stock": 250.0,
           "remaining_stock": 0.0,
           "unit": "g"
         },
         {
-          "name": "Germinado",
-          "required": 360.0,
-          "stock": 500.0,
-          "remaining_stock": 140.0,
-          "unit": "g"
-        },
-        {
-          "name": "Grenetina",
-          "required": 80.0,
-          "stock": 112.0,
-          "remaining_stock": 32.0,
+          "name": "Fresas",
+          "required": 720.0,
+          "stock": 900.0,
+          "remaining_stock": 180.0,
           "unit": "g"
         },
         {
@@ -4208,24 +4152,10 @@
           "unit": "piezas"
         },
         {
-          "name": "Lechuga",
-          "required": 3.0,
-          "stock": 3.0,
-          "remaining_stock": 0.0,
-          "unit": "piezas"
-        },
-        {
-          "name": "Lomo de salmón",
-          "required": 600.0,
-          "stock": 1250.0,
-          "remaining_stock": 650.0,
-          "unit": "g"
-        },
-        {
           "name": "Mantequilla",
           "required": 372.0,
-          "stock": 1370.0,
-          "remaining_stock": 998.0,
+          "stock": 500.0,
+          "remaining_stock": 128.0,
           "unit": "g"
         },
         {
@@ -4238,8 +4168,8 @@
         {
           "name": "Nuez de la India",
           "required": 546.0,
-          "stock": 907.0,
-          "remaining_stock": 361.0,
+          "stock": 600.0,
+          "remaining_stock": 54.0,
           "unit": "g"
         },
         {
@@ -4252,8 +4182,8 @@
         {
           "name": "Pechuga de pavo",
           "required": 1000.0,
-          "stock": 1000.0,
-          "remaining_stock": 0.0,
+          "stock": 1400.0,
+          "remaining_stock": 400.0,
           "unit": "g"
         },
         {
@@ -4264,24 +4194,10 @@
           "unit": "g"
         },
         {
-          "name": "Queso manchego",
-          "required": 990.0,
-          "stock": 1000.0,
-          "remaining_stock": 10.0,
-          "unit": "g"
-        },
-        {
           "name": "Queso Philadelphia",
           "required": 420.0,
           "stock": 720.0,
           "remaining_stock": 300.0,
-          "unit": "g"
-        },
-        {
-          "name": "Queso ricotta",
-          "required": 1800.0,
-          "stock": 3840.0,
-          "remaining_stock": 2040.0,
           "unit": "g"
         },
         {
@@ -4301,15 +4217,8 @@
         {
           "name": "Té chai",
           "required": 12.0,
-          "stock": 70.0,
-          "remaining_stock": 58.0,
-          "unit": "g"
-        },
-        {
-          "name": "Tomate",
-          "required": 360.0,
-          "stock": 400.0,
-          "remaining_stock": 40.0,
+          "stock": 50.0,
+          "remaining_stock": 38.0,
           "unit": "g"
         },
         {
@@ -4322,15 +4231,8 @@
         {
           "name": "Yogur griego",
           "required": 360.0,
-          "stock": 5680.0,
-          "remaining_stock": 5320.0,
-          "unit": "g"
-        },
-        {
-          "name": "Zarzamora",
-          "required": 340.0,
-          "stock": 340.0,
-          "remaining_stock": 0.0,
+          "stock": 1200.0,
+          "remaining_stock": 840.0,
           "unit": "g"
         }
       ],
@@ -4343,17 +4245,17 @@
           "unit": "ml"
         },
         {
+          "name": "Aguacate",
+          "required": 1.0,
+          "stock": 0.0,
+          "net_to_buy": 1.0,
+          "unit": "piezas"
+        },
+        {
           "name": "AminoSinergix®",
           "required": 420.0,
           "stock": 200.0,
           "net_to_buy": 220.0,
-          "unit": "g"
-        },
-        {
-          "name": "Brócoli",
-          "required": 540.0,
-          "stock": 0.0,
-          "net_to_buy": 540.0,
           "unit": "g"
         },
         {
@@ -4364,10 +4266,17 @@
           "unit": "g"
         },
         {
+          "name": "Carne molida",
+          "required": 1260.0,
+          "stock": 1200.0,
+          "net_to_buy": 60.0,
+          "unit": "g"
+        },
+        {
           "name": "Cebolla",
           "required": 10.0,
-          "stock": 8.0,
-          "net_to_buy": 2.0,
+          "stock": 2.0,
+          "net_to_buy": 8.0,
           "unit": "piezas"
         },
         {
@@ -4380,6 +4289,20 @@
         {
           "name": "Coliflor",
           "required": 840.0,
+          "stock": 500.0,
+          "net_to_buy": 340.0,
+          "unit": "g"
+        },
+        {
+          "name": "Ejotes",
+          "required": 240.0,
+          "stock": 0.0,
+          "net_to_buy": 240.0,
+          "unit": "g"
+        },
+        {
+          "name": "Espárragos",
+          "required": 840.0,
           "stock": 0.0,
           "net_to_buy": 840.0,
           "unit": "g"
@@ -4387,29 +4310,64 @@
         {
           "name": "Espinacas",
           "required": 1860.0,
-          "stock": 0.0,
-          "net_to_buy": 1860.0,
+          "stock": 150.0,
+          "net_to_buy": 1710.0,
           "unit": "g"
         },
         {
-          "name": "Fresas",
-          "required": 720.0,
+          "name": "Fajitas de mojarra",
+          "required": 1920.0,
+          "stock": 900.0,
+          "net_to_buy": 1020.0,
+          "unit": "g"
+        },
+        {
+          "name": "Flat steak",
+          "required": 1320.0,
           "stock": 0.0,
-          "net_to_buy": 720.0,
+          "net_to_buy": 1320.0,
+          "unit": "g"
+        },
+        {
+          "name": "Germinado",
+          "required": 360.0,
+          "stock": 0.0,
+          "net_to_buy": 360.0,
+          "unit": "g"
+        },
+        {
+          "name": "Grenetina",
+          "required": 80.0,
+          "stock": 0.0,
+          "net_to_buy": 80.0,
           "unit": "g"
         },
         {
           "name": "Jitomate",
           "required": 8.0,
-          "stock": 7.0,
-          "net_to_buy": 1.0,
+          "stock": 0.0,
+          "net_to_buy": 8.0,
           "unit": "piezas"
+        },
+        {
+          "name": "Lechuga",
+          "required": 3.0,
+          "stock": 1.0,
+          "net_to_buy": 2.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Lomo de salmón",
+          "required": 600.0,
+          "stock": 0.0,
+          "net_to_buy": 600.0,
+          "unit": "g"
         },
         {
           "name": "Morrón",
           "required": 9.0,
-          "stock": 0.0,
-          "net_to_buy": 9.0,
+          "stock": 4.0,
+          "net_to_buy": 5.0,
           "unit": "piezas"
         },
         {
@@ -4429,8 +4387,22 @@
         {
           "name": "Pepino",
           "required": 1740.0,
+          "stock": 3.0,
+          "net_to_buy": 1737.0,
+          "unit": "g"
+        },
+        {
+          "name": "Queso manchego",
+          "required": 990.0,
           "stock": 0.0,
-          "net_to_buy": 1740.0,
+          "net_to_buy": 990.0,
+          "unit": "g"
+        },
+        {
+          "name": "Queso ricotta",
+          "required": 1800.0,
+          "stock": 0.0,
+          "net_to_buy": 1800.0,
           "unit": "g"
         },
         {
@@ -4439,6 +4411,36 @@
           "stock": 0.0,
           "net_to_buy": 336.0,
           "unit": "g"
+        },
+        {
+          "name": "Tomate",
+          "required": 360.0,
+          "stock": 0.0,
+          "net_to_buy": 360.0,
+          "unit": "g"
+        },
+        {
+          "name": "Zarzamora",
+          "required": 340.0,
+          "stock": 0.0,
+          "net_to_buy": 340.0,
+          "unit": "g"
+        }
+      ],
+      "kitchen_prepared_items": [
+        {
+          "name": "Fondo claro de pollo",
+          "required": 5400.0,
+          "unit": "ml",
+          "source": "Insumo Base de Cocina Preparado en Casa ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Fondo de res",
+          "required": 900.0,
+          "unit": "ml",
+          "source": "Insumo Base de Cocina Preparado en Casa ($0)",
+          "net_to_buy": 0.0
         }
       ]
     }

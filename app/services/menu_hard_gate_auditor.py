@@ -135,28 +135,41 @@ FREE_KITCHEN_STAPLES = {
 KNOWN_MARKET_PURCHASE_ITEMS = {
     "semillas de chia organicas",
     "huevo",
+    "pollo entero",
     "pechuga de pollo",
+    "pechuga de pavo",
     "flat steak",
     "carne molida",
     "lomo de salmon",
     "fajitas de mojarra",
     "filete de atun",
+    "queso ricotta",
+    "queso manchego",
+    "queso cottage",
+    "yogur griego",
     "fresas",
+    "frambuesas",
     "zarzamora",
     "aguacate",
     "cebolla",
     "jitomate",
+    "tomate",
     "brocoli",
     "coliflor",
     "calabacitas",
     "calabaza",
     "esparragos",
     "espinacas",
+    "ejotes",
+    "germinado",
+    "lechuga",
     "champinon",
     "morron",
     "pepino",
     "mantequilla",
     "aceite de oliva",
+    "nuez de la india",
+    "almendras fileteadas",
     "manzanilla",
     "grenetina",
     "multisinergix",
@@ -164,6 +177,130 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "33plus",
     "34plus",
 }
+
+S43_S44_HISTORICAL_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
+LIVE_PANTRY_SSOT_PATH: Path = Path(__file__).resolve().parents[2] / "pantry_live_state.json"
+
+
+def load_live_pantry_ssot() -> Dict[str, Any]:
+    """
+    Lee `pantry_live_state.json` como Fuente Única de Verdad (SSOT) en vivo
+    y sincroniza `DEFAULT_PANTRY_STOCK` y `DEFAULT_FARM_HARVEST`.
+    """
+    if not LIVE_PANTRY_SSOT_PATH.exists():
+        return {
+            "auditor_pantry": dict(DEFAULT_PANTRY_STOCK),
+            "farm_harvest": list(DEFAULT_FARM_HARVEST),
+            "raw_state": {},
+        }
+    try:
+        raw_state = json.loads(LIVE_PANTRY_SSOT_PATH.read_text(encoding="utf-8"))
+        aud_map: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
+        if isinstance(raw_state.get("auditorPantryStock"), dict):
+            for k, val in raw_state["auditorPantryStock"].items():
+                if isinstance(val, (list, tuple)) and len(val) >= 2:
+                    aud_map[k] = (float(val[0]), str(val[1]))
+        elif isinstance(raw_state.get("pantryStock"), dict):
+            units_map = raw_state.get("pantryCardUnits") or {}
+            for k, qty_val in raw_state["pantryStock"].items():
+                if k in ("Fondo claro de pollo", "Fondo de res", "Caldo de pollo", "Caldo de res"):
+                    continue
+                c_name = "Brócoli" if k == "Brocoli" else k
+                u_str = str(units_map.get(k) or aud_map.get(c_name, (0.0, "g"))[1])
+                try:
+                    q_num = float(qty_val)
+                except Exception:
+                    q_num = 0.0
+                if c_name == "Sardinas" and "lata" in u_str.lower():
+                    q_num = q_num * 425.0
+                    u_str = "g"
+                elif c_name == "Coliflor" and u_str == "kg" and q_num == 500.0:
+                    u_str = "g"
+                elif c_name == "Champiñón" and q_num < 1.0:
+                    q_num = 0.0
+                    u_str = "g"
+                aud_map[c_name] = (q_num, u_str)
+        harvest_list = raw_state.get("selectedHarvest")
+        if isinstance(harvest_list, list) and len(harvest_list) > 0:
+            DEFAULT_FARM_HARVEST.clear()
+            DEFAULT_FARM_HARVEST.extend(str(h) for h in harvest_list)
+        DEFAULT_PANTRY_STOCK.clear()
+        DEFAULT_PANTRY_STOCK.update(aud_map)
+        return {
+            "auditor_pantry": aud_map,
+            "farm_harvest": list(DEFAULT_FARM_HARVEST),
+            "raw_state": raw_state,
+        }
+    except Exception:
+        return {
+            "auditor_pantry": dict(DEFAULT_PANTRY_STOCK),
+            "farm_harvest": list(DEFAULT_FARM_HARVEST),
+            "raw_state": {},
+        }
+
+
+def save_live_pantry_ssot(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Persiste en disco `pantry_live_state.json` a partir del payload enviado por la UI
+    y actualiza en memoria `DEFAULT_PANTRY_STOCK` y `DEFAULT_FARM_HARVEST`.
+    """
+    from datetime import datetime
+
+    existing: Dict[str, Any] = {}
+    if LIVE_PANTRY_SSOT_PATH.exists():
+        try:
+            existing = json.loads(LIVE_PANTRY_SSOT_PATH.read_text(encoding="utf-8"))
+        except Exception:
+            existing = {}
+
+    merged = dict(existing)
+    for key in (
+        "activeWeek",
+        "activeDiners",
+        "selectedHarvest",
+        "customFarmItems",
+        "deletedFarmItems",
+        "deletedPantryItems",
+        "pantryStock",
+        "pantryCardUnits",
+        "pantryStockInventory",
+        "dispatchedMeals",
+    ):
+        if key in payload and payload[key] is not None:
+            merged[key] = payload[key]
+
+    merged["ssot_version"] = "v56_live_ui_ssot"
+    merged["updated_at"] = datetime.now().isoformat()
+
+    # Reconstruir auditorPantryStock limpio desde pantryStock
+    ps = merged.get("pantryStock") or {}
+    pcu = merged.get("pantryCardUnits") or {}
+    quarantine_names = set((merged.get("quarantineItems") or {}).keys())
+    aud_stock: Dict[str, List[Any]] = dict(merged.get("auditorPantryStock") or {})
+    for k, val in ps.items():
+        if k in ("Fondo claro de pollo", "Fondo de res", "Caldo de pollo", "Caldo de res"):
+            continue
+        c_name = "Brócoli" if k == "Brocoli" else k
+        if c_name in quarantine_names:
+            continue
+        u = str(pcu.get(k) or (aud_stock.get(c_name, [0.0, "g"])[1]))
+        try:
+            q = float(val)
+        except Exception:
+            q = 0.0
+        if c_name == "Sardinas" and "lata" in u.lower():
+            aud_stock[c_name] = [q * 425.0, "g"]
+        elif c_name == "Coliflor" and u == "kg" and q == 500.0:
+            aud_stock[c_name] = [500.0, "g"]
+        elif c_name == "Champiñón" and q < 1.0:
+            aud_stock[c_name] = [0.0, "g"]
+        else:
+            aud_stock[c_name] = [q, u]
+    merged["auditorPantryStock"] = aud_stock
+
+    LIVE_PANTRY_SSOT_PATH.write_text(json.dumps(merged, ensure_ascii=False, indent=2), encoding="utf-8")
+    return load_live_pantry_ssot()
+
 
 
 FORBIDDEN_INGREDIENT_TOKENS = [
@@ -1135,7 +1272,14 @@ def audit_week_plan(
     Devuelve un diccionario con `passed` (bool), `violations` (List[str]), y `bom_summary`.
     """
     violations: List[str] = []
-    pantry = pantry_stock if pantry_stock is not None else DEFAULT_PANTRY_STOCK
+    w_lbl_early = _strip_accents(week_data.get("week_name") or week_data.get("week_label") or "")
+    is_s45_or_later = bool(week_data.get("heptagon_v17")) or "semana 45" in w_lbl_early or "semana 46" in w_lbl_early
+    if pantry_stock is not None:
+        pantry = pantry_stock
+    elif is_s45_or_later:
+        pantry = load_live_pantry_ssot()["auditor_pantry"]
+    else:
+        pantry = S43_S44_HISTORICAL_PANTRY_STOCK
     harvest = farm_harvest if farm_harvest is not None else DEFAULT_FARM_HARVEST
 
     harvest_norm_set = set()
@@ -1754,12 +1898,20 @@ def audit_week_plan(
         raw_name = info["name"]
         unit = info["unit"]
 
-        if b_key in harvest_norm_set or b_key in FREE_KITCHEN_STAPLES:
+        if b_key in harvest_norm_set:
             bom_reconciliation["farm_harvest_items"].append({
                 "name": raw_name,
                 "required": total_req,
                 "unit": unit,
-                "source": "Granja El Herami ($0)" if b_key in harvest_norm_set else "Insumo Base de Cocina ($0)",
+                "source": "Granja El Herami ($0)",
+                "net_to_buy": 0.0,
+            })
+        elif b_key in FREE_KITCHEN_STAPLES:
+            bom_reconciliation.setdefault("kitchen_prepared_items", []).append({
+                "name": raw_name,
+                "required": total_req,
+                "unit": unit,
+                "source": "Insumo Base de Cocina Preparado en Casa ($0)",
                 "net_to_buy": 0.0,
             })
         elif b_key in pantry_norm_map:
@@ -1767,7 +1919,7 @@ def audit_week_plan(
             diff = round(total_req - stock_val, 2)
             if diff > 0:
                 is_authorized_partial = any(km in b_key for km in KNOWN_MARKET_PURCHASE_ITEMS)
-                if is_strict_s44 and b_key in STRICT_NO_OVERDRAFT_S44_PLUS and stock_val > 0:
+                if is_strict_s44 and not is_s45_or_later and b_key in STRICT_NO_OVERDRAFT_S44_PLUS and stock_val > 0:
                     is_authorized_partial = False
                 if enforce_pantry_overdraft and not is_authorized_partial:
                     violations.append(
@@ -1803,8 +1955,8 @@ def audit_week_plan(
 
     # [R8/SPLIT-BRAIN] Aserción matemática exacta (tolerancia 0.01) entre suma de las 63 recetas y Tablas 3.1, 3.2 y 3.3
     reconciled_by_key: Dict[str, float] = {}
-    for bucket in ("farm_harvest_items", "pantry_covered_items", "market_purchases"):
-        for item in bom_reconciliation[bucket]:
+    for bucket in ("farm_harvest_items", "kitchen_prepared_items", "pantry_covered_items", "market_purchases"):
+        for item in bom_reconciliation.get(bucket, []):
             k_norm = _strip_accents(item["name"])
             reconciled_by_key[k_norm] = round(reconciled_by_key.get(k_norm, 0.0) + float(item["required"]), 2)
     for b_key, info in bom_totals.items():

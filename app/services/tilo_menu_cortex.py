@@ -1907,7 +1907,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             texture="Bayas enteras con semillas de chía y nuez pecana.",
             ccp="Cero lácteos en la entrada frutal.",
             ingredients=[
-                _ing("Frambuesas", 170, "g", CAT_FRUIT),
+                _ing("Frambuesas", 125, "g", CAT_FRUIT),
                 _ing("Semillas de chía orgánicas", 48, "g", CAT_FAT),
                 _ing("Nuez de la India", 60, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
@@ -2202,7 +2202,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Escurrir la salmuera de aceitunas y alcaparras antes de integrar al picadillo.",
             archetype="res_queso_relleno_yucateco",
             ingredients=[
-                _ing("Carne molida", 660, "g", CAT_PROT),
+                _ing("Carne molida", 600, "g", CAT_PROT),
                 _ing("Queso manchego", 90, "g", CAT_DAIRY),
                 _ing("Queso ricotta", 240, "g", CAT_DAIRY),
                 _ing("Aceitunas manzanilla", 60, "g", CAT_SPICE),
@@ -2528,7 +2528,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             texture="Compota rústica con semillas y nueces.",
             ccp="Cero lácteos en la entrada frutal.",
             ingredients=[
-                _ing("Frambuesas", 170, "g", CAT_FRUIT),
+                _ing("Frambuesas", 125, "g", CAT_FRUIT),
                 _ing("Semillas de chía orgánicas", 48, "g", CAT_FAT),
                 _ing("Nuez de la India", 60, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
@@ -3217,8 +3217,15 @@ def generate_week_with_tilo_cortex(
       (7 Escuelas de Restaurante, 1 Escuela por día de la semana) y ejecuta la Compuerta
       Hard-Gate [R1]–[R12] garantizando 0% de repetición en ventanas móviles de 4 semanas.
     """
-    harvest = farm_harvest if farm_harvest is not None else DEFAULT_FARM_HARVEST
-    pantry = pantry_stock if pantry_stock is not None else DEFAULT_PANTRY_STOCK
+    from app.services.menu_hard_gate_auditor import S43_S44_HISTORICAL_PANTRY_STOCK, load_live_pantry_ssot
+
+    if int(target_week) >= 45:
+        live_ssot = load_live_pantry_ssot()
+        harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
+        pantry = pantry_stock if pantry_stock is not None else live_ssot["auditor_pantry"]
+    else:
+        harvest = farm_harvest if farm_harvest is not None else DEFAULT_FARM_HARVEST
+        pantry = pantry_stock if pantry_stock is not None else S43_S44_HISTORICAL_PANTRY_STOCK
     meta = compute_week_dates(target_week)
     cycle_id = get_cycle_id_for_week(target_week)
 
