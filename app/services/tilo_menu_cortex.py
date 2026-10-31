@@ -1771,7 +1771,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Jitomate", 1, "piezas", CAT_VEG),
                 _ing("Cebolla", 1, "piezas", CAT_VEG),
                 _ing("Cilantro", 18, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -1789,13 +1789,13 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Única presencia diaria de aguacate ([R5]) y centro térmico de 74°C.",
             archetype="pavo_enchiladas_espuma_aguacate",
             ingredients=[
-                _ing("Pechuga de pavo", 500, "g", CAT_PROT),
+                _ing("Pechuga de pavo", 700, "g", CAT_PROT),
                 _ing("Calabacitas", 360, "g", CAT_VEG),
                 _ing("Aguacate", 1, "piezas", CAT_FAT),
                 _ing("Tomate", 180, "g", CAT_VEG),
                 _ing("Queso manchego", 90, "g", CAT_DAIRY),
                 _ing("Cilantro", 24, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -1815,7 +1815,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ingredients=[
                 _ing("Ejotes", 240, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Orégano", 3, "g", CAT_SPICE),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
@@ -1840,7 +1840,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Pepino", 360, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -1849,26 +1849,29 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Dobladitas Keto en Costra de Queso Manchego al Comal Rellenas de Champiñones Salteados, Espinacas, Cilantro y Orégano al Aceite de Oliva",
+            title="Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
             technique="cheese_crust_keto_dobladitas",
-            note="Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego al comal, rellenas de champiñones salteados en aceite de oliva con espinacas, cilantro de la granja y orégano.",
-            thermo="Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente.",
-            flavor="Umami de champiñón salteado, espinacas y cilantro envuelto en costra dorada de queso manchego.",
-            texture="Exterior crujiente de queso dorado al comal con interior jugoso de hongos.",
-            ccp="Doblar la costra de queso manchego en caliente sobre el relleno de champiñones y espinacas.",
+            note="Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (240 g) al comal, rellenas de champiñones salteados, queso ricotta (300 g), queso Philadelphia (180 g), espinacas, nuez pecana de la granja y cilantro (35 g de proteína AVB láctea/vegetal por comensal).",
+            thermo="Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno cremoso de ricotta y Philadelphia.",
+            flavor="Umami de champiñón salteado, 3 quesos (manchego, ricotta y Philadelphia), espinacas, nuez pecana y cilantro.",
+            texture="Exterior crujiente de queso dorado al comal con interior cremoso de hongos y nuez pecana.",
+            ccp="Doblar la costra de queso manchego en caliente sobre el relleno proteico de 3 quesos y champiñones.",
             archetype="dobladitas_ines_champinon",
             ingredients=[
                 _ing("Champiñón", 660, "g", CAT_VEG),
                 _ing("Espinacas", 300, "g", CAT_VEG),
-                _ing("Queso manchego", 140, "g", CAT_DAIRY),
+                _ing("Queso ricotta", 300, "g", CAT_DAIRY),
+                _ing("Queso manchego", 240, "g", CAT_DAIRY),
+                _ing("Queso Philadelphia", 180, "g", CAT_DAIRY),
+                _ing("Nuez pecana", 90, "g", CAT_FAT),
                 _ing("Cilantro", 24, "g", CAT_VEG),
-                _ing("Aceite de oliva", 36, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Orégano", 3, "g", CAT_SPICE),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
-                "Saltear los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar.",
-                "Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con los champiñones y doblar en media luna.",
+                "Saltear los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar, e integrar el queso ricotta, el queso Philadelphia y la nuez pecana picada.",
+                "Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con los champiñones a los 3 quesos y doblar en media luna.",
             ],
         ),
         side=_course(
@@ -1979,7 +1982,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Jitomate", 1, "piezas", CAT_VEG),
                 _ing("Alcaparras", 36, "g", CAT_SPICE),
                 _ing("Limones", 48, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2022,7 +2025,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Brócoli", 540, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2046,7 +2049,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2064,7 +2067,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Saltear los zoodles solo 90 segundos para evitar que suelten agua.",
             archetype="pavo_alfredo_mushroom_zoodles",
             ingredients=[
-                _ing("Pechuga de pavo", 500, "g", CAT_PROT),
+                _ing("Pechuga de pavo", 700, "g", CAT_PROT),
                 _ing("Calabacitas", 480, "g", CAT_VEG),
                 _ing("Queso ricotta", 240, "g", CAT_DAIRY),
                 _ing("Crema ácida", 180, "g", CAT_DAIRY),
@@ -2113,7 +2116,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             texture="Láminas finas de fresa con crocancia de semillas y nueces.",
             ccp="Cero lácteos en la entrada frutal.",
             ingredients=[
-                _ing("Fresas", 240, "g", CAT_FRUIT),
+                _ing("Fresas", 300, "g", CAT_FRUIT),
                 _ing("Semillas de chía orgánicas", 48, "g", CAT_FAT),
                 _ing("Nuez de la India", 60, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
@@ -2184,7 +2187,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Pepino", 360, "g", CAT_VEG),
                 _ing("Cilantro", 24, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2229,7 +2232,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Nopales", 480, "g", CAT_VEG),
                 _ing("Cilantro", 18, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2256,7 +2259,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Cilantro", 24, "g", CAT_VEG),
                 _ing("Limones", 60, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2347,7 +2350,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Huevo", 18, "piezas", CAT_PROT),
                 _ing("Espárragos", 420, "g", CAT_VEG),
                 _ing("Cebolla", 1, "piezas", CAT_VEG),
-                _ing("Aceite de oliva", 48, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2392,7 +2395,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Fondo de res", 900, "ml", CAT_SPICE),
                 _ing("Cebolla", 1, "piezas", CAT_VEG),
                 _ing("Tomillo", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2410,12 +2413,12 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="No sobrecocinar la mojarra para preservar su textura firme.",
             archetype="pescado_a_la_murciana_cazuela",
             ingredients=[
-                _ing("Fajitas de mojarra", 960, "g", CAT_PROT),
+                _ing("Fajitas de mojarra", 450, "g", CAT_PROT),
                 _ing("Jitomate", 1, "piezas", CAT_VEG),
                 _ing("Alcaparras", 42, "g", CAT_SPICE),
                 _ing("Aceitunas manzanilla", 55, "g", CAT_SPICE),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 36, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2434,7 +2437,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ingredients=[
                 _ing("Calabacitas", 540, "g", CAT_VEG),
                 _ing("Romero", 6, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2458,7 +2461,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Espinacas", 300, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2481,7 +2484,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Queso ricotta", 240, "g", CAT_DAIRY),
                 _ing("Queso manchego", 90, "g", CAT_DAIRY),
                 _ing("Cebolla", 1, "piezas", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Orégano", 3, "g", CAT_SPICE),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
@@ -2550,7 +2553,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             archetype="focaccia_keto_tres_quesos_esparragos",
             ingredients=[
                 _ing("Huevo", 18, "piezas", CAT_PROT),
-                _ing("Coliflor", 420, "g", CAT_VEG),
+                _ing("Coliflor", 250, "g", CAT_VEG),
                 _ing("Queso manchego", 90, "g", CAT_DAIRY),
                 _ing("Queso ricotta", 180, "g", CAT_DAIRY),
                 _ing("Queso Philadelphia", 120, "g", CAT_DAIRY),
@@ -2600,7 +2603,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Pepino", 300, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2642,7 +2645,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ingredients=[
                 _ing("Espárragos", 420, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal con ajo", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2666,7 +2669,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Tomillo", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2733,7 +2736,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             texture="Coulis rústico con crocancia de semillas y nuez pecana.",
             ccp="Cero lácteos en la entrada frutal.",
             ingredients=[
-                _ing("Fresas", 240, "g", CAT_FRUIT),
+                _ing("Fresas", 300, "g", CAT_FRUIT),
                 _ing("Limones", 30, "g", CAT_VEG),
                 _ing("Semillas de chía orgánicas", 48, "g", CAT_FAT),
                 _ing("Nuez de la India", 60, "g", CAT_FAT),
@@ -2755,7 +2758,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             archetype="huevo_omurice_keto_coliflor",
             ingredients=[
                 _ing("Huevo", 18, "piezas", CAT_PROT),
-                _ing("Coliflor", 420, "g", CAT_VEG),
+                _ing("Coliflor", 250, "g", CAT_VEG),
                 _ing("Germinado", 180, "g", CAT_VEG),
                 _ing("Cebolla", 1, "piezas", CAT_VEG),
                 _ing("Aceite de coco", 48, "g", CAT_FAT),
@@ -2802,7 +2805,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Pepino", 360, "g", CAT_VEG),
                 _ing("Nuez de la India", 36, "g", CAT_FAT),
                 _ing("Limones", 48, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2844,7 +2847,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Acelgas", 480, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2868,7 +2871,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
                 _ing("Cilantro", 24, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2886,13 +2889,13 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Elaborar el adobo rojo con achiote y jitomate 0% capsaicina ([R1]).",
             archetype="mojarra_bicolor_estilo_contramar",
             ingredients=[
-                _ing("Fajitas de mojarra", 960, "g", CAT_PROT),
+                _ing("Fajitas de mojarra", 450, "g", CAT_PROT),
                 _ing("Calabacitas", 420, "g", CAT_VEG),
                 _ing("Achiote", 18, "g", CAT_SPICE),
                 _ing("Jitomate", 1, "piezas", CAT_VEG),
                 _ing("Tomate", 180, "g", CAT_VEG),
                 _ing("Cilantro", 24, "g", CAT_VEG),
-                _ing("Aceite de oliva", 36, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -2936,7 +2939,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             texture="Bayas en cuartos con semillas de chía.",
             ccp="Cero lácteos en la entrada frutal.",
             ingredients=[
-                _ing("Fresas", 240, "g", CAT_FRUIT),
+                _ing("Fresas", 300, "g", CAT_FRUIT),
                 _ing("Semillas de chía orgánicas", 48, "g", CAT_FAT),
                 _ing("Nuez de la India", 60, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
@@ -2961,7 +2964,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Jitomate", 1, "piezas", CAT_VEG),
                 _ing("Queso ricotta", 240, "g", CAT_DAIRY),
                 _ing("Hierbas finas", 6, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 36, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal con ajo", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -3006,7 +3009,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Aceitunas manzanilla", 55, "g", CAT_SPICE),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -3024,7 +3027,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Asar previamente las láminas de calabacita para evitar humedad excesiva en la Moussaka.",
             archetype="res_moussaka_griega_horno",
             ingredients=[
-                _ing("Carne molida", 660, "g", CAT_PROT),
+                _ing("Carne molida", 600, "g", CAT_PROT),
                 _ing("Calabacitas", 480, "g", CAT_VEG),
                 _ing("Queso ricotta", 240, "g", CAT_DAIRY),
                 _ing("Queso manchego", 100, "g", CAT_DAIRY),
@@ -3048,7 +3051,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Cero mantequilla ni lácteos ([R2]).",
             ingredients=[
                 _ing("Champiñón", 660, "g", CAT_VEG),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Tomillo", 3, "g", CAT_SPICE),
                 _ing("Sal con ajo", 6, "g", CAT_SPICE),
@@ -3075,7 +3078,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Espinacas", 300, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
@@ -3099,7 +3102,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Comino", 3, "g", CAT_SPICE),
                 _ing("Orégano", 3, "g", CAT_SPICE),
-                _ing("Aceite de oliva", 24, "ml", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal con ajo", 6, "g", CAT_SPICE),
             ],
             steps=[

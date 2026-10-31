@@ -45,7 +45,18 @@ architect = KetoAIArchitect()
 
 @app.middleware("http")
 async def disable_browser_cache(request, call_next):
+    if request.method == "OPTIONS":
+        from fastapi.responses import Response
+        preflight = Response(status_code=204)
+        preflight.headers["Access-Control-Allow-Origin"] = request.headers.get("origin") or "*"
+        preflight.headers["Access-Control-Allow-Methods"] = "GET, POST, PUT, DELETE, OPTIONS"
+        preflight.headers["Access-Control-Allow-Headers"] = request.headers.get("access-control-request-headers") or "*"
+        preflight.headers["Access-Control-Allow-Private-Network"] = "true"
+        preflight.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+        return preflight
     response = await call_next(request)
+    response.headers["Access-Control-Allow-Origin"] = request.headers.get("origin") or "*"
+    response.headers["Access-Control-Allow-Private-Network"] = "true"
     response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
     response.headers["Pragma"] = "no-cache"
     response.headers["Expires"] = "0"

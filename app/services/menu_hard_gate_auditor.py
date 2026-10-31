@@ -185,8 +185,16 @@ LIVE_PANTRY_SSOT_PATH: Path = Path(__file__).resolve().parents[2] / "pantry_live
 def load_live_pantry_ssot() -> Dict[str, Any]:
     """
     Lee `pantry_live_state.json` como Fuente Única de Verdad (SSOT) en vivo
+    (sincronizando antes contra el LevelDB de Chrome local en modo lectura compartida)
     y sincroniza `DEFAULT_PANTRY_STOCK` y `DEFAULT_FARM_HARVEST`.
     """
+    try:
+        from app.services.pantry_ssot_sync import sync_pantry_ssot_from_chrome
+
+        sync_pantry_ssot_from_chrome(force=False)
+    except Exception:
+        pass
+
     if not LIVE_PANTRY_SSOT_PATH.exists():
         return {
             "auditor_pantry": dict(DEFAULT_PANTRY_STOCK),

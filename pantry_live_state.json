@@ -1,7 +1,8 @@
 {
   "ssot_version": "v56_chrome_leveldb_synced",
-  "extracted_from": "C:\\Users\\andre\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Local Storage\\leveldb\\015745.ldb (seq=270082) + 015749.ldb (seq=270423)",
-  "updated_at": "2026-10-31T05:49:03.178970",
+  "extracted_from": "Google Chrome LocalStorage LevelDB (015745.ldb, seq=270423)",
+  "leveldb_seq": 270423,
+  "updated_at": "2026-10-31T07:29:55.180604",
   "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
