@@ -1,7 +1,7 @@
 {
-  "ssot_version": "v61_cierre_s45_granada_coco_sync",
+  "ssot_version": "v62_s45_sunday_diners_6_4_2_sync",
   "extracted_from": "Google Chrome LocalStorage LevelDB (015793.log, seq=270858)",
-  "leveldb_seq": 271000,
+  "leveldb_seq": 272000,
   "updated_at": "2026-11-01T14:02:01.909660",
   "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
   "activeDiners": 6,
@@ -1363,5 +1363,10 @@
         }
       ]
     }
+  },
+  "mealDinersState": {
+    "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Desayuno": 6,
+    "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Comida": 4,
+    "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Cena": 2
   }
 }

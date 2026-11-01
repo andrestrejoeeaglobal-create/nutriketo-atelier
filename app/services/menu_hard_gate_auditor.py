@@ -291,12 +291,14 @@ def load_live_pantry_ssot() -> Dict[str, Any]:
         return {
             "auditor_pantry": aud_map,
             "farm_harvest": list(DEFAULT_FARM_HARVEST),
+            "meal_diners_state": raw_state.get("mealDinersState") or {},
             "raw_state": raw_state,
         }
     except Exception:
         return {
             "auditor_pantry": dict(DEFAULT_PANTRY_STOCK),
             "farm_harvest": list(DEFAULT_FARM_HARVEST),
+            "meal_diners_state": {},
             "raw_state": {},
         }
 
@@ -327,6 +329,7 @@ def save_live_pantry_ssot(payload: Dict[str, Any]) -> Dict[str, Any]:
         "pantryCardUnits",
         "pantryStockInventory",
         "dispatchedMeals",
+        "mealDinersState",
     ):
         if key in payload and payload[key] is not None:
             merged[key] = payload[key]
@@ -1319,6 +1322,46 @@ def compute_repeat_weight_modifier(
     return round(modifier, 2)
 
 
+def scale_ing_for_diners(amt6: float, unit: str, diners: int) -> float:
+    """
+    Escala la cantidad base de 6 comensales (`amt6`) al número de comensales del servicio (`diners`),
+    aplicando la misma regla de redondeo que `normalizeQuantity` y `calculateActiveMenuBOM` en `atelier.html`:
+      - Si `diners == 6`, retorna `round(float(amt6), 2)`.
+      - Si `unit` es conteo físico (`piezas`, `manojo`, `huevo`, `unidad`), aplica `math.ceil`.
+      - En masa/volumen (`g`, `ml`), redondea a 1 decimal (`round(clean_raw, 1)`).
+    """
+    if int(diners) == 6:
+        return round(float(amt6), 2)
+    import math
+    raw = float(amt6) * (float(diners) / 6.0)
+    clean_raw = round(raw + 1e-12, 2)
+    u_low = str(unit or "").lower()
+    if any(k in u_low for k in ("piez", "huevo", "unidad", "hoja", "manojo")):
+        return float(math.ceil(clean_raw - 1e-6))
+    return round(clean_raw, 1)
+
+
+def resolve_meal_diners(
+    week_label: str,
+    day_idx: int,
+    meal_type: str,
+    meal_diners_state: Optional[Dict[str, Any]] = None,
+    default_diners: int = 6,
+) -> int:
+    if not meal_diners_state or not isinstance(meal_diners_state, dict):
+        return int(default_diners)
+    k1 = f"{week_label}_day_{day_idx}_{meal_type}"
+    k2 = f"day_{day_idx}_{meal_type}"
+    if k1 in meal_diners_state and meal_diners_state[k1] is not None:
+        return int(meal_diners_state[k1])
+    if k2 in meal_diners_state and meal_diners_state[k2] is not None:
+        return int(meal_diners_state[k2])
+    for mk, mv in meal_diners_state.items():
+        if mk.endswith(f"_day_{day_idx}_{meal_type}") and mv is not None:
+            return int(mv)
+    return int(default_diners)
+
+
 # ---------------------------------------------------------------------------
 # AUDITOR UNIVERSAL DE LAS REGLAS DURAS [R1] - [R11]
 # ---------------------------------------------------------------------------
@@ -1329,6 +1372,7 @@ def audit_week_plan(
     enforce_pantry_overdraft: bool = True,
     prev_week_data: Optional[Dict[str, Any]] = None,
     feedback_ledger: Optional[List[Dict[str, Any]]] = None,
+    meal_diners_state: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """
     Ejecuta la auditoría forense completa [R1]–[R11] sobre `week_data`.
@@ -1340,15 +1384,26 @@ def audit_week_plan(
     Devuelve un diccionario con `passed` (bool), `violations` (List[str]), y `bom_summary`.
     """
     violations: List[str] = []
-    w_lbl_early = _strip_accents(week_data.get("week_name") or week_data.get("week_label") or "")
+    w_full_label = str(week_data.get("week_label") or week_data.get("week_name") or "")
+    w_lbl_early = _strip_accents(w_full_label)
     is_s45_or_later = bool(week_data.get("heptagon_v17")) or "semana 45" in w_lbl_early or "semana 46" in w_lbl_early
+    live_ssot_loaded = load_live_pantry_ssot() if is_s45_or_later else None
     if pantry_stock is not None:
         pantry = pantry_stock
-    elif is_s45_or_later:
-        pantry = load_live_pantry_ssot()["auditor_pantry"]
+    elif is_s45_or_later and live_ssot_loaded is not None:
+        pantry = live_ssot_loaded["auditor_pantry"]
     else:
         pantry = S43_S44_HISTORICAL_PANTRY_STOCK
     harvest = farm_harvest if farm_harvest is not None else DEFAULT_FARM_HARVEST
+    active_meal_diners_state: Dict[str, Any] = (
+        meal_diners_state
+        if meal_diners_state is not None
+        else (
+            week_data.get("meal_diners_state")
+            or (live_ssot_loaded.get("meal_diners_state") if (is_s45_or_later and "semana 45" in w_lbl_early and live_ssot_loaded) else {})
+            or {}
+        )
+    )
 
     harvest_norm_set = set()
     for h in harvest:
@@ -1474,10 +1529,12 @@ def audit_week_plan(
                     if "aguacate" in ing_nm_norm:
                         day_avocado_locations.append(c_label)
 
-                    # Acumular BOM
+                    # Acumular BOM (escalado según comensales activos del servicio)
                     raw_name = ing.get("name", "").strip()
                     unit = ing.get("unit", "g").strip()
-                    amt = float(ing.get("amount", round(float(ing.get("per_guest", 0.0)) * 6, 2)))
+                    amt6 = float(ing.get("amount", round(float(ing.get("per_guest", 0.0)) * 6, 2)))
+                    m_diners = resolve_meal_diners(w_full_label, d_idx, m_type, active_meal_diners_state, default_diners=6)
+                    amt = scale_ing_for_diners(amt6, unit, m_diners)
                     b_key = _strip_accents(raw_name)
                     if b_key not in bom_totals:
                         bom_totals[b_key] = {
@@ -1935,15 +1992,26 @@ def audit_week_plan(
 
 
     # [R8] Reconciliación matemática exacta del BOM (incluyendo las 4 tomas diarias de Sinergix®)
-    # En recetas están incluidas Toma 2 (210g MultiSinergix®) y Toma 3 (210g AminoSinergix®).
-    # Sumamos Toma 1 (07:00 = 210g MultiSinergix®) y Toma 4 (22:30 = 210g AminoSinergix®) para el BOM total (420g + 420g).
-    for s_key, s_display in [("multisinergix", "MultiSinergix®"), ("aminosinergix", "AminoSinergix®")]:
+    # En recetas están incluidas Toma 2 (MultiSinergix® en Desayunos) y Toma 3 (AminoSinergix® en Cenas).
+    # Sumamos Toma 1 (07:00 = 210g MultiSinergix®) y Toma 4 (22:30 = 210g AminoSinergix®) para el BOM total.
+    expected_multi_recipe_qty = sum(
+        5.0 * resolve_meal_diners(w_full_label, d_i, "Desayuno", active_meal_diners_state, default_diners=6)
+        for d_i in range(len(days))
+    )
+    expected_amino_recipe_qty = sum(
+        5.0 * resolve_meal_diners(w_full_label, d_i, "Cena", active_meal_diners_state, default_diners=6)
+        for d_i in range(len(days))
+    )
+    for s_key, s_display, exp_qty in [
+        ("multisinergix", "MultiSinergix®", expected_multi_recipe_qty),
+        ("aminosinergix", "AminoSinergix®", expected_amino_recipe_qty),
+    ]:
         matched_bom_key = next((k for k in bom_totals if s_key in k), None)
         if matched_bom_key:
             recipe_qty = bom_totals[matched_bom_key]["total"]
-            if abs(recipe_qty - 210.0) > 0.5:
+            if abs(recipe_qty - exp_qty) > 0.5:
                 violations.append(
-                    f"[R8] {s_display}: La suma en recetas de los 7 días es {recipe_qty}g (debe ser exactamente 210g = 5g x 6 comensales x 7 días)."
+                    f"[R8] {s_display}: La suma en recetas de los 7 días es {recipe_qty}g (debe ser exactamente {exp_qty}g según comensales por servicio)."
                 )
             bom_totals[matched_bom_key]["total_with_protocol_4_tomas"] = round(recipe_qty + 210.0, 2)
         else:
@@ -2158,6 +2226,7 @@ def assert_zero_violations(
     enforce_pantry_overdraft: bool = True,
     prev_week_data: Optional[Dict[str, Any]] = None,
     feedback_ledger: Optional[List[Dict[str, Any]]] = None,
+    meal_diners_state: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     """
     Compuerta Dura (Hard-Gate) de Compilación:
@@ -2170,6 +2239,7 @@ def assert_zero_violations(
         enforce_pantry_overdraft=enforce_pantry_overdraft,
         prev_week_data=prev_week_data,
         feedback_ledger=feedback_ledger,
+        meal_diners_state=meal_diners_state,
     )
     if not report["passed"]:
         w_label = week_data.get("week_label") or week_data.get("week_name") or "Semana Desconocida"

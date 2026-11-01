@@ -18,6 +18,8 @@ from app.services.menu_hard_gate_auditor import (
     assert_zero_violations,
     compute_dish_structural_dna,
     load_live_pantry_ssot,
+    resolve_meal_diners,
+    scale_ing_for_diners,
 )
 from app.services.tilo_menu_cortex import SEVEN_CULINARY_SCHOOLS, generate_week_with_tilo_cortex
 
@@ -69,18 +71,25 @@ def compile_s45_dossier() -> Dict[str, Any]:
         s44 = json.load(f)
 
     live_ssot = load_live_pantry_ssot()
+    meal_diners_state = live_ssot.get("meal_diners_state") or {
+        "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Desayuno": 6,
+        "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Comida": 4,
+        "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Cena": 2,
+    }
     s45 = generate_week_with_tilo_cortex(
         45,
         history_weeks=[s44],
         pantry_stock=live_ssot["auditor_pantry"],
         farm_harvest=live_ssot["farm_harvest"],
     )
+    s45["meal_diners_state"] = meal_diners_state
     schools_list = sorted(SEVEN_CULINARY_SCHOOLS.values(), key=lambda x: x["school_index"])
     audit = assert_zero_violations(
         s45,
         prev_week_data=s44,
         pantry_stock=live_ssot["auditor_pantry"],
         farm_harvest=live_ssot["farm_harvest"],
+        meal_diners_state=meal_diners_state,
     )
     assert audit["passed"], f"Audit failed: {audit['violations']}"
 
@@ -99,18 +108,22 @@ def compile_s45_dossier() -> Dict[str, Any]:
     rec_num = 0
     day_short = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"]
     meal_short = ["Des", "Com", "Cen"]
+    w_lbl_full = s45["week_label"]
 
     for d_idx, day in enumerate(s45["days"]):
         for m_idx, meal in enumerate(day["meals"]):
+            m_diners = resolve_meal_diners(w_lbl_full, d_idx, meal["meal_type"], meal_diners_state, default_diners=6)
+            diners_tag = f" [{m_diners}p]" if m_diners != 6 else ""
             for role in ["starter", "main", "side"]:
                 rec_num += 1
                 dish = meal[role]
                 for ing in dish["ingredients"]:
                     nm = ing["name"]
-                    amt = float(ing["amount"])
                     unit = ing["unit"]
+                    amt6 = float(ing["amount"])
+                    amt = scale_ing_for_diners(amt6, unit, m_diners)
                     ing_occurrences.setdefault(nm, []).append(
-                        (rec_num, f"R#{rec_num:02d} ({day_short[d_idx]} {meal_short[m_idx]}: {fmt_num(amt)} {unit})", amt, unit)
+                        (rec_num, f"R#{rec_num:02d} ({day_short[d_idx]} {meal_short[m_idx]}{diners_tag}: {fmt_num(amt)} {unit})", amt, unit)
                     )
 
     lines: List[str] = []
@@ -120,9 +133,9 @@ def compile_s45_dossier() -> Dict[str, Any]:
     lines.append("- **Arquitectura Culinaria Activa:** **Heptágono Culinario T.I.L.O.® V17.0 (`SEVEN_CULINARY_SCHOOLS`)** — 1 Escuela Gastronómica Canónica por Día de la Semana con sustitución cetogénica de vehículos (penca de nopal asado, costra dorada de queso manchego, crepa 100% de huevo sin harina, láminas/zoodles de calabacita y coliflor rostizada).")
     lines.append("- **Auditoría de Huella Física Inmutable (`[R10-DNA]`):** **0 colisiones de ADN estructural (`compute_dish_structural_dna`)** y **Compuerta de Similitud de Ingredientes de Jaccard (`Jaccard < 0.60`)** verificada contra la ventana móvil de 4 semanas (`Semanas 41, 42, 43 y 44`).")
     lines.append("- **Inmunidad de Semana 44:** El archivo maestro `semana_44_master.json` (incluyendo el menú del Sábado 31 de Octubre) permanece **100% intacto e inmutable**.")
-    lines.append("- **Fuente Única de Verdad (`pantry_live_state.json`):** Conectado en tiempo real al inventario físico capturado por el usuario en Chrome (`Local Storage LevelDB seq #270082`).")
-    lines.append("- **Comensales Activos:** `6 personas` (`18 Huevos Exactos por Desayuno = 126 Huevos/Semana`).")
-    lines.append("- **Separación Estricta de Fondos Caseros:** `Fondo claro de pollo` (`5,400 ml`) y `Fondo de res` (`900 ml`) se elaboran internamente en cocina (`\\$0.00 MXN`) y están **100% separados de la Tabla 3.1 de Cosecha Agrícola de la Granja**.")
+    lines.append("- **Fuente Única de Verdad (`pantry_live_state.json`):** Conectado en tiempo real al inventario físico y ajuste de comensales capturado por el usuario en Chrome (`Local Storage LevelDB seq #270915`).")
+    lines.append("- **Comensales Activos por Servicio (`mealDinersState`):** **Domingo 01 Nov:** Desayuno `6 comensales`, **Comida `4 comensales` (`R#04, R#05, R#06`)**, **Cena `2 comensales` (`R#07, R#08, R#09`)** · **Lunes 02 al Sábado 07 Nov:** `6 comensales` en los 3 servicios (`18 Huevos Exactos por Desayuno = 126 Huevos/Semana`).")
+    lines.append("- **Separación Estricta de Fondos Caseros:** `Fondo claro de pollo` (`5,100 ml` ajustado a `4p` en Dom Comida) y `Fondo de res` (`900 ml`) se elaboran internamente en cocina (`\\$0.00 MXN`) y están **100% separados de la Tabla 3.1 de Cosecha Agrícola de la Granja**.")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -164,6 +177,8 @@ def compile_s45_dossier() -> Dict[str, Any]:
         lines.append("")
         for m_idx, meal in enumerate(day["meals"]):
             m_type = meal["meal_type"]
+            m_diners = resolve_meal_diners(w_lbl_full, d_idx, m_type, meal_diners_state, default_diners=6)
+            m_diners_badge = f" · **`👥 {m_diners} Comensales Activos`**" if m_diners != 6 else f" · `👥 {m_diners} Comensales`"
             icon = meal_icons.get(m_type, "🍽️")
             hr = meal_hours.get(m_type, "")
             fat = float(meal["fat_g"])
@@ -171,7 +186,7 @@ def compile_s45_dossier() -> Dict[str, Any]:
             carbs = float(meal["net_carbs_g"])
             fib = float(meal.get("fiber_g", 6.0))
             kcal = int(round(fat * 9.0 + prot * 4.0 + carbs * 4.0))
-            lines.append(f"#### {icon} {day['day']} — {m_type} ({hr}) | `{kcal} kcal` · `Grasa: {fat} g` · `Proteína: {prot} g` · `Carbs Netos: {carbs} g` · `Fibra: {fib} g`")
+            lines.append(f"#### {icon} {day['day']} — {m_type} ({hr}){m_diners_badge} | `{kcal} kcal` · `Grasa: {fat} g` · `Proteína: {prot} g` · `Carbs Netos: {carbs} g` · `Fibra: {fib} g`")
             lines.append("")
 
             # --- 👩‍🍳 MODO COCINERO (COMANDA PRÁCTICA UNIFICADA DEL SERVICIO) ---
@@ -182,7 +197,7 @@ def compile_s45_dossier() -> Dict[str, Any]:
                 for ing_m in meal[r_key]["ingredients"]:
                     inm = ing_m["name"]
                     iunit = ing_m["unit"]
-                    iamt = float(ing_m["amount"])
+                    iamt = scale_ing_for_diners(float(ing_m["amount"]), iunit, m_diners)
                     icat = ing_m["category"]
                     m_key = f"{inm}__{iunit}"
                     if m_key not in service_mise:
@@ -199,11 +214,11 @@ def compile_s45_dossier() -> Dict[str, Any]:
             shared_items = [v for v in service_mise.values() if len(v["usages"]) > 1]
             has_cottage = any("queso cottage" in v["name"].lower() for v in service_mise.values())
 
-            lines.append(f"##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada ({day['day']} · {m_type} · 6 Comensales · `{len(shared_items)} insumos unificados en 1 solo pesaje`)")
+            lines.append(f"##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada ({day['day']} · {m_type} · {m_diners} Comensales · `{len(shared_items)} insumos unificados en 1 solo pesaje`)")
             if has_cottage:
                 lines.append("> **🥣 Preparación Previa del Queso Cottage (Textura Pasta Tipo Ricotta):** Coloca el **Queso cottage** en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.")
                 lines.append("")
-            lines.append("| Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |")
+            lines.append(f"| Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio ({m_diners}p) | Distribución por Tiempo (Mise en Place) |")
             lines.append("|---|---|---|")
             for m_val in service_mise.values():
                 dist_txt = " + ".join(m_val["usages"]) if len(m_val["usages"]) > 1 else m_val["usages"][0]
@@ -252,7 +267,7 @@ def compile_s45_dossier() -> Dict[str, Any]:
                 rec_counter += 1
                 dish = meal[role]
                 r_label = role_labels[role]
-                lines.append(f"##### Receta #{rec_counter:02d} [{day['day']} · {m_type} · {r_label}]: {dish['title']}")
+                lines.append(f"##### Receta #{rec_counter:02d} [{day['day']} · {m_type} ({m_diners}p) · {r_label}]: {dish['title']}")
                 lines.append(f"- **Técnica Culinaria:** `{dish['technique']}`")
                 if dish.get("archetype"):
                     lines.append(f"- **Arquetipo Heptágono V17.0:** `{dish['archetype']}` · **Huella ADN:** `{'|'.join(compute_dish_structural_dna(dish))}`")
@@ -265,12 +280,13 @@ def compile_s45_dossier() -> Dict[str, Any]:
                     lines.append(f"  - *Arquitectura Textural:* {coct.get('textural_architecture', coct.get('texture_balance', ''))}")
                     lines.append(f"  - *Punto Crítico de Control:* {coct.get('critical_control_points', coct.get('critical_control', ''))}")
                 lines.append("")
-                lines.append("| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |")
+                lines.append(f"| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio ({m_diners}p) | Unidad |")
                 lines.append("|---|---|---|---|---|")
                 for ing in dish["ingredients"]:
                     amt6 = float(ing["amount"])
+                    amt_scaled = scale_ing_for_diners(amt6, ing["unit"], m_diners)
                     amt1 = amt6 / 6.0
-                    lines.append(f"| {ing['category']} | **{ing['name']}** | {fmt_num_plain(amt1)} | **{fmt_num(amt6)}** | {ing['unit']} |")
+                    lines.append(f"| {ing['category']} | **{ing['name']}** | {fmt_num_plain(amt1)} | **{fmt_num(amt_scaled)}** | {ing['unit']} |")
                 lines.append("")
                 lines.append("**Protocolo de Ejecución Paso a Paso:**")
                 for s_i, step_txt in enumerate(dish.get("steps", []), start=1):
@@ -494,12 +510,12 @@ def compile_s45_dossier() -> Dict[str, Any]:
             lines.append(f"| **{meal['meal_type']}** | {meal['main']['title']} | {mkcal} kcal | {meal['fat_g']:.1f} g | {meal['protein_g']:.1f} g | {meal['net_carbs_g']:.1f} g | {meal.get('fiber_g', 6.0):.1f} g |")
         lines.append("")
 
-    lines.append("### 4.3 Cronograma Biotecnológico Sinergix® (4 Tomas Diarias — 420 g Semanales por Fórmula)")
-    lines.append("| Toma | Horario / Momento | Fórmula Bioactiva | Dosis Individual | Demanda Semanal (6p) | Ubicación en BOM |")
+    lines.append("### 4.3 Cronograma Biotecnológico Sinergix® (4 Tomas Diarias — MultiSinergix® 420 g / AminoSinergix® 400 g Semanales)")
+    lines.append("| Toma | Horario / Momento | Fórmula Bioactiva | Dosis Individual | Demanda Semanal Ajustada | Ubicación en BOM |")
     lines.append("|---|---|---|---|---|---|")
     lines.append("| **Toma 1** | `07:00 hrs` (Despertar en Agua Pura) | **MultiSinergix® (33Plus®)** | `5 g` | `210 g` | Protocolo Matutino (Sumado en Tabla 3.3) |")
-    lines.append("| **Toma 2** | `08:30 hrs` (En Gelatina/Infusión de Desayuno) | **MultiSinergix® (33Plus®)** | `5 g` | `210 g` | Incluido en las 7 Recetas de Acompañamiento Matutino |")
-    lines.append("| **Toma 3** | `20:00 hrs` (En Infusión de Cena ≤60°C) | **AminoSinergix® (34Plus®)** | `5 g` | `210 g` | Incluido en las 7 Recetas de Acompañamiento Nocturno |")
+    lines.append("| **Toma 2** | `08:30 hrs` (En Gelatina/Infusión de Desayuno) | **MultiSinergix® (33Plus®)** | `5 g` | `210 g` | Incluido en las 7 Recetas de Acompañamiento Matutino (7 días × 6p) |")
+    lines.append("| **Toma 3** | `20:00 hrs` (En Infusión de Cena ≤60°C) | **AminoSinergix® (34Plus®)** | `5 g` | `190 g` | Incluido en las 7 Recetas Nocturnas (`10 g` Dom Cena 2p + `180 g` Lun–Sáb 6p) |")
     lines.append("| **Toma 4** | `22:30 hrs` (Pre-Sueño Profundo) | **AminoSinergix® (34Plus®)** | `5 g` | `210 g` | Protocolo Nocturno (Sumado en Tabla 3.3) |")
     lines.append("")
     lines.append("---")

@@ -553,6 +553,14 @@ def build_ssot_document_from_ui_state(
             for k, v in PROHIBITED_ITEMS.items()
         },
         "dispatchedMeals": ui_state.get("dispatchedMeals", {}),
+        "mealDinersState": ui_state.get(
+            "mealDinersState",
+            {
+                "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Desayuno": 6,
+                "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Comida": 4,
+                "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Cena": 2,
+            },
+        ),
     }
 
 

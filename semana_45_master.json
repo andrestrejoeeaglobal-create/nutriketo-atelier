@@ -4490,14 +4490,14 @@
         },
         {
           "name": "Agua purificada",
-          "required": 14400.0,
+          "required": 13600.0,
           "unit": "ml",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
         },
         {
           "name": "Cilantro",
-          "required": 204.0,
+          "required": 174.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4518,7 +4518,7 @@
         },
         {
           "name": "Limones",
-          "required": 1476.0,
+          "required": 1428.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4532,7 +4532,7 @@
         },
         {
           "name": "Nuez pecana",
-          "required": 600.0,
+          "required": 540.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4548,16 +4548,16 @@
       "pantry_covered_items": [
         {
           "name": "Aceite de coco",
-          "required": 390.0,
+          "required": 372.0,
           "stock": 1700.0,
-          "remaining_stock": 1310.0,
+          "remaining_stock": 1328.0,
           "unit": "g"
         },
         {
           "name": "Aceite de oliva",
-          "required": 306.0,
+          "required": 282.0,
           "stock": 400.0,
-          "remaining_stock": 94.0,
+          "remaining_stock": 118.0,
           "unit": "ml"
         },
         {
@@ -4583,9 +4583,9 @@
         },
         {
           "name": "Ajo",
-          "required": 120.0,
+          "required": 113.0,
           "stock": 120.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 7.0,
           "unit": "g"
         },
         {
@@ -4611,16 +4611,16 @@
         },
         {
           "name": "Calabacitas",
-          "required": 1400.0,
+          "required": 1306.7,
           "stock": 1400.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 93.3,
           "unit": "g"
         },
         {
           "name": "Canela molida",
-          "required": 27.0,
+          "required": 25.0,
           "stock": 750.0,
-          "remaining_stock": 723.0,
+          "remaining_stock": 725.0,
           "unit": "g"
         },
         {
@@ -4639,9 +4639,9 @@
         },
         {
           "name": "Champiñón",
-          "required": 1000.0,
+          "required": 833.3,
           "stock": 1000.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 166.7,
           "unit": "g"
         },
         {
@@ -4681,9 +4681,9 @@
         },
         {
           "name": "Ejotes",
-          "required": 500.0,
+          "required": 420.0,
           "stock": 500.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 80.0,
           "unit": "g"
         },
         {
@@ -4786,9 +4786,9 @@
         },
         {
           "name": "Manzanilla",
-          "required": 42.0,
+          "required": 38.0,
           "stock": 50.0,
-          "remaining_stock": 8.0,
+          "remaining_stock": 12.0,
           "unit": "g"
         },
         {
@@ -4814,30 +4814,30 @@
         },
         {
           "name": "Orégano",
-          "required": 57.0,
+          "required": 52.0,
           "stock": 150.0,
-          "remaining_stock": 93.0,
+          "remaining_stock": 98.0,
           "unit": "g"
         },
         {
           "name": "Pechuga de pavo",
-          "required": 1400.0,
+          "required": 1166.7,
           "stock": 1400.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 233.3,
           "unit": "g"
         },
         {
           "name": "Pechuga de pollo",
-          "required": 1670.0,
+          "required": 1356.7,
           "stock": 1670.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 313.3,
           "unit": "g"
         },
         {
           "name": "Pimienta negra",
-          "required": 48.0,
+          "required": 46.0,
           "stock": 170.0,
-          "remaining_stock": 122.0,
+          "remaining_stock": 124.0,
           "unit": "g"
         },
         {
@@ -4856,23 +4856,23 @@
         },
         {
           "name": "Queso cottage",
-          "required": 2040.0,
+          "required": 1880.0,
           "stock": 3840.0,
-          "remaining_stock": 1800.0,
+          "remaining_stock": 1960.0,
           "unit": "g"
         },
         {
           "name": "Queso doble crema",
-          "required": 1000.0,
+          "required": 860.0,
           "stock": 1000.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 140.0,
           "unit": "g"
         },
         {
           "name": "Queso manchego",
-          "required": 1000.0,
+          "required": 870.0,
           "stock": 1000.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 130.0,
           "unit": "g"
         },
         {
@@ -4891,9 +4891,9 @@
         },
         {
           "name": "Queso Philadelphia",
-          "required": 540.0,
+          "required": 460.0,
           "stock": 720.0,
-          "remaining_stock": 180.0,
+          "remaining_stock": 260.0,
           "unit": "g"
         },
         {
@@ -4905,9 +4905,9 @@
         },
         {
           "name": "Sal de mar",
-          "required": 204.0,
+          "required": 190.0,
           "stock": 3000.0,
-          "remaining_stock": 2796.0,
+          "remaining_stock": 2810.0,
           "unit": "g"
         },
         {
@@ -4933,9 +4933,9 @@
         },
         {
           "name": "Tomate",
-          "required": 360.0,
+          "required": 300.0,
           "stock": 500.0,
-          "remaining_stock": 140.0,
+          "remaining_stock": 200.0,
           "unit": "g"
         },
         {
@@ -4947,9 +4947,9 @@
         },
         {
           "name": "Yogur griego",
-          "required": 1320.0,
+          "required": 1160.0,
           "stock": 3000.0,
-          "remaining_stock": 1680.0,
+          "remaining_stock": 1840.0,
           "unit": "g"
         },
         {
@@ -4963,16 +4963,16 @@
       "market_purchases": [
         {
           "name": "AminoSinergix®",
-          "required": 420.0,
+          "required": 400.0,
           "stock": 200.0,
-          "net_to_buy": 220.0,
+          "net_to_buy": 200.0,
           "unit": "g"
         },
         {
           "name": "Espinacas",
-          "required": 1260.0,
+          "required": 1060.0,
           "stock": 150.0,
-          "net_to_buy": 1110.0,
+          "net_to_buy": 910.0,
           "unit": "g"
         },
         {
@@ -4984,16 +4984,16 @@
         },
         {
           "name": "Pepino",
-          "required": 1740.0,
+          "required": 1500.0,
           "stock": 2.0,
-          "net_to_buy": 1738.0,
+          "net_to_buy": 1498.0,
           "unit": "g"
         }
       ],
       "kitchen_prepared_items": [
         {
           "name": "Fondo claro de pollo",
-          "required": 5400.0,
+          "required": 5100.0,
           "unit": "ml",
           "source": "Insumo Base de Cocina Preparado en Casa ($0)",
           "net_to_buy": 0.0
@@ -5007,5 +5007,10 @@
         }
       ]
     }
+  },
+  "meal_diners_state": {
+    "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Desayuno": 6,
+    "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Comida": 4,
+    "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Cena": 2
   }
 }

@@ -4020,52 +4020,52 @@ window.PANTRY_STOCK_INVENTORY = {
     let deletedFarmItems = ["Calabacitas", "Espinacas", "Brócoli", "Espárragos", "Ejotes", "Arúgula", "Coliflor", "Fresas", "Frambuesas", "Zarzamoras", "Arándanos", "Menta", "Epazote"];
     let deletedPantryItems = ["Elote", "Higos", "Nogada", "Zanahoria", "Agua mineral"];
 
-    let activeWeek = "Semana 44 (25 al 31 de Octubre de 2026)";
+    let activeWeek = "Semana 45 (01 al 07 de Noviembre de 2026)";
     let selectedIdx = 0;
     let activeDiners = 6;
     let selectedHarvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica", "Granadas"];
 let pantryStock = {
-      "Mantequilla": 290,
-      "Mostaza": 150,
-      "Queso cottage": 500,
-      "Yogur griego": 3880,
+      "Mantequilla": 500,
+      "Mostaza": 120,
+      "Queso cottage": 3840,
+      "Yogur griego": 3000,
       "Queso Philadelphia": 720,
-      "Crema ácida": 960,
-      "Mayonesa": 1000,
-      "Queso manchego": 0,
+      "Crema ácida": 1100,
+      "Mayonesa": 200,
+      "Queso manchego": 1000,
       "Queso de cabra": 0,
       "Salsa BBQ": 550,
-      "Leche de coco": 960,
+      "Leche de coco": 480,
       "Leche evaporada": 960,
       "Leche": 960,
       "Salsa cátsup": 2600,
       "Queso mozzarella": 105,
-      "Botella de agua": 30,
+      "Botella de agua": 150,
       "Queso parmesano": 100,
-      "Flat steak": 0,
-      "Lomo de salmón": 0,
-      "Carne molida": 0,
-      "Fajitas de mojarra": 0,
+      "Flat steak": 1290,
+      "Lomo de salmón": 980,
+      "Carne molida": 2315,
+      "Fajitas de mojarra": 900,
       "Filete de atún": 0,
-      "Jitomate": 7,
-      "Morrón": 0,
-      "Pechuga de pollo": 0,
+      "Jitomate": 8,
+      "Morrón": 8,
+      "Pechuga de pollo": 1670,
       "Flor de calabaza": 0,
-      "Calabaza": 0,
-      "Cebolla": 8,
-      "Lechuga": 3,
+      "Calabacitas": 1400,
+      "Cebolla": 13,
+      "Lechuga": 7,
       "Ejotes": 500,
-      "Tomate": 400,
-      "Aguacate": 1,
-      "Zarzamora": 0,
-      "Champiñón": 0,
+      "Tomate": 500,
+      "Aguacate": 5,
+      "Zarzamora": 510,
+      "Champiñón": 1000,
       "Pulpa de arándano": 3840,
       "Pistaches": 100,
-      "Nuez de la India": 0,
+      "Nuez de la India": 1700,
       "Cacahuate enchilado": 1200,
-      "Semillas y nueces mixtas": 0,
+      "Semillas y nueces mixtas": 1020,
       "Granola": 100,
-      "Té chai": 70,
+      "Té chai": 50,
       "Hierbas finas": 25,
       "Harina de trigo": 1500,
       "Harina para hot cakes": 500,
@@ -4093,22 +4093,22 @@ let pantryStock = {
       "Vinagre de vino tinto": 250,
       "Aceite de oliva": 400,
       "Flor de Jamaica molida en polvo": 200,
-      "Almendras fileteadas": 0,
-      "Hojas de laurel": 20,
+      "Almendras fileteadas": 100,
+      "Hojas de laurel": 9,
       "Orégano": 150,
       "Tomillo": 20,
-      "Pimienta negra": 70,
+      "Pimienta negra": 170,
       "Comino": 50,
       "Clavo de olor": 50,
       "Ajonjolí": 0,
       "Manzanilla": 50,
       "Cúrcuma": 100,
       "Sal de mar": 3000,
-      "Manteca de cerdo": 500,
-      "Aceite de coco": 500,
+      "Manteca de cerdo": 0,
+      "Aceite de coco": 1700,
       "Tang": 104,
       "Atún en agua": 700,
-      "Sardinas": 4,
+      "Sardinas": 860,
       "Rajas de jalapeño": 314,
       "Harina Power Cakes": 1000,
       "Hojuelas de avena": 100,
@@ -4119,23 +4119,33 @@ let pantryStock = {
       "Palomitas para microondas": 600,
       "Grenetina": 112,
       "Saborizante para arroz": 48,
-      "Huevo": 26,
+      "Huevo": 170,
       "MultiSinergix®": 300,
       "AminoSinergix®": 200,
-      "Espinacas": 0,
+      "Espinacas": 150,
       "Espárragos": 0,
-      "Fresas": 0,
+      "Fresas": 907,
       "Frambuesas": 0,
-      "Queso ricotta": 1920,
+      "Queso ricotta": 0,
       "Chile chipotle": 1320,
       "Frijol pinto": 1,
       "Pollo entero": 1,
+      "Pechuga de pavo": 1400,
+      "Germinado": 500,
+      "Coliflor": 500,
+      "Pepino": 2,
+      "Brócoli": 1500,
+      "Queso de cabra con arándano": 350,
       "Queso doble crema": 1000,
-      "Calabacitas": 1400,
-      "Ajo": 120
+      "Ajo": 120,
+      "Nueces mixtas": 1020
     };
     let checkedRows = {};
-    let mealDinersState = {};
+    let mealDinersState = {
+      "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Desayuno": 6,
+      "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Comida": 4,
+      "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Cena": 2
+    };
     let dispatchedMeals = {};
     let customDishesState = {};
     let mealFeedbackLedger = [];
@@ -5601,7 +5611,7 @@ let pantryStock = {
         const cleanPantryStock = {};
         Object.keys(pantryStock).forEach(k => {
           if (/miel|durazno/i.test(k)) return;
-          if (/(?:fondo|caldo)\s+(?:claro\s+|oscuro\s+|concentrado\s+y\s+fondo\s+)?de\s+(?:pollo|res|huesos?|pescado)/i.test(k) && !/polvo/i.test(k)) return;
+          if (/(?:fondo|caldo)\\s+(?:claro\\s+|oscuro\\s+|concentrado\\s+y\\s+fondo\\s+)?de\\s+(?:pollo|res|huesos?|pescado)/i.test(k) && !/polvo/i.test(k)) return;
           const canonName = getPureCanonicalPantryName(k);
           if (!canonName) return;
           if (isPantryItemDeleted(k) || isPantryItemDeleted(canonName)) return;
@@ -5644,6 +5654,28 @@ let pantryStock = {
 
     function ensureCanonicalTicketIntakesApplied() {
       try {
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v62_s45_mercado_cierre_applied') !== 'true') {
+          const s45SyncedStocks = {
+            "Mantequilla": 500, "Mostaza": 120, "Queso cottage": 3840, "Yogur griego": 3000,
+            "Queso Philadelphia": 720, "Crema ácida": 1100, "Mayonesa": 200, "Queso manchego": 1000,
+            "Leche de coco": 480, "Queso mozzarella": 105, "Botella de agua": 150, "Queso parmesano": 100,
+            "Flat steak": 1290, "Lomo de salmón": 980, "Carne molida": 2315, "Fajitas de mojarra": 900,
+            "Jitomate": 8, "Morrón": 8, "Pechuga de pollo": 1670, "Calabacitas": 1400, "Cebolla": 13,
+            "Lechuga": 7, "Ejotes": 500, "Tomate": 500, "Aguacate": 5, "Zarzamora": 510,
+            "Champiñón": 1000, "Nuez de la India": 1700, "Semillas y nueces mixtas": 1020,
+            "Té chai": 50, "Aceite de oliva": 400, "Almendras fileteadas": 100, "Hojas de laurel": 9,
+            "Pimienta negra": 170, "Manteca de cerdo": 0, "Aceite de coco": 1700, "Sardinas": 860,
+            "Huevo": 170, "Espinacas": 150, "Espárragos": 0, "Fresas": 907, "Frambuesas": 0,
+            "Queso ricotta": 0, "Pollo entero": 1, "Pechuga de pavo": 1400, "Germinado": 500,
+            "Coliflor": 500, "Pepino": 2, "Brócoli": 1500, "Queso de cabra con arándano": 350,
+            "Queso doble crema": 1000, "Ajo": 120, "Nueces mixtas": 1020
+          };
+          pantryStock = Object.assign(pantryStock || {}, s45SyncedStocks);
+          if (window.pantryCardUnits && typeof window.pantryCardUnits === 'object') {
+            window.pantryCardUnits["Sardinas"] = "g";
+          }
+          localStorage.setItem('nutriketo_v62_s45_mercado_cierre_applied', 'true');
+        }
         consolidateAndPurgePantryInventory();
         if (typeof localStorage !== 'undefined') {
           localStorage.setItem('nutriketo_intake_tr04095_applied', 'true');
@@ -5736,10 +5768,14 @@ let pantryStock = {
             if (Array.isArray(oldState.customFarmItems)) customFarmItems = oldState.customFarmItems;
             if (Array.isArray(oldState.deletedFarmItems) && oldState.deletedFarmItems.length > 0) deletedFarmItems = oldState.deletedFarmItems;
             if (Array.isArray(oldState.deletedPantryItems) && oldState.deletedPantryItems.length > 0) deletedPantryItems = oldState.deletedPantryItems;
-            if (oldState.pantryStock && typeof oldState.pantryStock === 'object') pantryStock = Object.assign({}, pantryStock, oldState.pantryStock);
-            if (oldState.pantryCardUnits && typeof oldState.pantryCardUnits === 'object') window.pantryCardUnits = Object.assign(window.pantryCardUnits || {}, oldState.pantryCardUnits);
-            if (oldState.pantryStockInventory && typeof oldState.pantryStockInventory === 'object') window.PANTRY_STOCK_INVENTORY = Object.assign(window.PANTRY_STOCK_INVENTORY || {}, oldState.pantryStockInventory);
-            if (oldState.mealDinersState) mealDinersState = oldState.mealDinersState;
+            const canonicalS45Baseline = Object.assign({}, pantryStock);
+            if (oldState.pantryStock && typeof oldState.pantryStock === 'object') {
+              pantryStock = Object.assign({}, oldState.pantryStock, canonicalS45Baseline);
+            }
+            if (oldState.pantryCardUnits && typeof oldState.pantryCardUnits === 'object') window.pantryCardUnits = Object.assign(window.pantryCardUnits || {}, oldState.pantryCardUnits, { "Sardinas": "g" });
+            if (oldState.mealDinersState && typeof oldState.mealDinersState === 'object') {
+              mealDinersState = Object.assign({}, mealDinersState, oldState.mealDinersState);
+            }
             if (oldState.dispatchedMeals) dispatchedMeals = oldState.dispatchedMeals;
             if (Array.isArray(oldState.mealFeedbackLedger)) mealFeedbackLedger = oldState.mealFeedbackLedger;
           } else {
@@ -5852,7 +5888,13 @@ let pantryStock = {
           consolidateAndPurgePantryInventory();
 
           if (state.checkedRows) checkedRows = state.checkedRows;
-          if (state.mealDinersState) mealDinersState = state.mealDinersState;
+          if (state.mealDinersState && typeof state.mealDinersState === 'object') {
+            mealDinersState = Object.assign({
+              "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Desayuno": 6,
+              "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Comida": 4,
+              "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Cena": 2
+            }, state.mealDinersState);
+          }
           if (state.dispatchedMeals && typeof state.dispatchedMeals === 'object') {
             dispatchedMeals = state.dispatchedMeals;
           } else {
@@ -5987,6 +6029,7 @@ let pantryStock = {
           pantryStock,
           pantryCardUnits: window.pantryCardUnits || {},
           pantryStockInventory: window.PANTRY_STOCK_INVENTORY || {},
+          mealDinersState: mealDinersState || {},
           dispatchedMeals: window.DISPATCHED_MEALS || dispatchedMeals || {}
         };
         if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location) {
@@ -6053,6 +6096,7 @@ let pantryStock = {
           auditor_pantry: auditorPantry,
           canonical_pantry_items: canonicalPantryList,
           quarantine_items: quarantineList,
+          mealDinersState: mealDinersState || {},
           dispatchedMeals: window.DISPATCHED_MEALS || dispatchedMeals || {}
         };
         window.LIVE_PANTRY_SSOT = fullSSOT;
@@ -7913,8 +7957,11 @@ function calculateActiveMenuBOM(weekKey, diners) {
               const total6 = parseFloat(ing.total_qty !== undefined ? ing.total_qty : (ing.qty !== undefined ? ing.qty : NaN));
               const perPersonQty = parseFloat(ing.base_qty_per_person !== undefined ? ing.base_qty_per_person : (ing.quantity || ing.qty || 1)) || 0;
               const rawMealQty = !isNaN(total6) ? (total6 * (mealDiners / 6.0)) : (perPersonQty * mealDiners);
-              const mealQty = Math.round((rawMealQty + Number.EPSILON) * 100) / 100;
               const ingUnit = (ing.unit || 'g').trim();
+              const uLower = ingUnit.toLowerCase();
+              const isPieceUnit = uLower.includes('piez') || uLower.includes('huevo') || uLower.includes('unidad') || uLower.includes('hoja') || uLower.includes('manojo');
+              const cleanRawQty = Math.round((rawMealQty + Number.EPSILON) * 100) / 100;
+              const mealQty = isPieceUnit ? Math.ceil(cleanRawQty - 1e-6) : (Math.round(cleanRawQty * 10) / 10);
 
               const processedItems = processMarketItem(rawName, mealQty, ingUnit);
 
