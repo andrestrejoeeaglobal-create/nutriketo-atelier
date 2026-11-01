@@ -76,6 +76,7 @@ V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Queso manchego": (1000.0, "g"),
     "Queso cottage": (3840.0, "g"),
     "Queso ricotta": (0.0, "g"),
+    "Queso doble crema": (1000.0, "g"),
     "Queso mozzarella": (105.0, "g"),
     "Queso parmesano": (100.0, "g"),
     "Yogur griego": (3000.0, "g"),
@@ -89,6 +90,7 @@ V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Flat steak": (1290.0, "g"),
     "Lomo de salmón": (980.0, "g"),
     "Huevo": (170.0, "piezas"),
+    "Pollo entero": (1.0, "piezas"),
     "Fresas": (907.0, "g"),
     "Frambuesas": (250.0, "g"),
     "Coliflor": (500.0, "g"),
@@ -106,8 +108,16 @@ V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Fajitas de mojarra": (900.0, "g"),
     "Aceite de oliva": (400.0, "ml"),
     "Espinacas": (150.0, "g"),
-    "Cebolla": (2.0, "piezas"),
-    "Morrón": (4.0, "piezas"),
+    "Aguacate": (5.0, "piezas"),
+    "Champiñón": (1000.0, "g"),
+    "Ejotes": (500.0, "g"),
+    "Calabacitas": (1400.0, "g"),
+    "Jitomate": (8.0, "piezas"),
+    "Tomate": (500.0, "g"),
+    "Cebolla": (13.0, "piezas"),
+    "Morrón": (8.0, "piezas"),
+    "Ajo": (120.0, "g"),
+    "Pimienta negra": (170.0, "g"),
 }
 
 
@@ -483,7 +493,7 @@ def build_ssot_document_from_ui_state(
 
     meta = source_meta or {}
     is_chrome_extract = "Chrome LocalStorage" in str(meta.get("extracted_from", ""))
-    if is_chrome_extract and not ui_state.get("v58_tickets_sams_costco_nov01_sync"):
+    if not ui_state.get("v60_mercado_local_fresco_nov01_sync"):
         for t_name, (t_qty, t_unit) in V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES.items():
             ui_pantry_stock[t_name] = int(t_qty) if t_qty == int(t_qty) else t_qty
             ui_pantry_units[t_name] = t_unit

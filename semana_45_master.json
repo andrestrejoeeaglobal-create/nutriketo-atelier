@@ -34,8 +34,8 @@
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
           "starter_name": "Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-          "main_dish_name": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
-          "dish_name": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
+          "main_dish_name": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
+          "dish_name": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
           "side_dish_name": "Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
@@ -97,14 +97,14 @@
             ]
           },
           "main": {
-            "title": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
+            "title": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
             "technique": "peyis_three_cheese_skillet",
-            "note": "Escuela 1 (Inspiración Nizú): 3 huevos estrellados por comensal (18 piezas) bañados en salsa fundente de queso manchego, queso cottage procesado en pasta tersa y queso Philadelphia con juliana de pimiento morrón asado.",
+            "note": "Escuela 1 (Inspiración Nizú): 3 huevos estrellados por comensal (18 piezas) bañados en salsa fundente de queso manchego, queso cottage procesado en pasta tersa, queso doble crema y queso Philadelphia con juliana de pimiento morrón asado.",
             "coct_reasoning": {
-              "thermodynamics": "Fusión lenta de los 3 quesos a 78°C y fritura limpia de los huevos en mantequilla a 145°C con yema cremosa.",
-              "flavor_and_aromatics": "Riqueza láctea triple (manchego, cottage procesado y Philadelphia) con el dulzor ahumado del pimiento morrón asado.",
-              "textural_architecture": "Yemas líquidas y claras tiernas cubiertas por emulsión aterciopelada de 3 quesos.",
-              "critical_control_points": "No hervir la salsa de 3 quesos para evitar separación lipídica."
+              "thermodynamics": "Fusión lenta de los 4 quesos a 78°C y fritura limpia de los huevos en mantequilla a 145°C con yema cremosa.",
+              "flavor_and_aromatics": "Riqueza láctea cuádruple (manchego, cottage procesado, doble crema y Philadelphia) con el dulzor ahumado del pimiento morrón asado y pimienta negra.",
+              "textural_architecture": "Yemas líquidas y claras tiernas cubiertas por emulsión aterciopelada de 4 quesos.",
+              "critical_control_points": "No hervir la salsa de quesos para evitar separación lipídica."
             },
             "ingredients": [
               {
@@ -130,6 +130,13 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso doble crema",
+                "per_guest": 26.6667,
+                "amount": 160,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso Philadelphia",
                 "per_guest": 20,
                 "amount": 120,
@@ -138,8 +145,8 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Morrón",
-                "per_guest": 0.3333,
-                "amount": 2,
+                "per_guest": 0.1667,
+                "amount": 1,
                 "unit": "piezas"
               },
               {
@@ -155,13 +162,20 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
               "Asar y cortar el pimiento morrón en juliana fina y saltear en mantequilla.",
-              "Fundir a fuego suave el queso manchego, la pasta tersa de queso cottage y el queso Philadelphia hasta obtener una salsa tersa.",
-              "Estrellar los 18 huevos en sartén con mantequilla, sazonar con sal de mar y bañar con la salsa caliente de 3 quesos y la juliana de morrón."
+              "Fundir a fuego suave el queso manchego, la pasta tersa de queso cottage, el queso doble crema y el queso Philadelphia hasta obtener una salsa tersa.",
+              "Estrellar los 18 huevos en sartén con mantequilla, sazonar con sal de mar y pimienta negra recién molida, y bañar con la salsa caliente de 4 quesos y la juliana de morrón."
             ],
             "archetype": "huevo_peyis_tres_quesos"
           },
@@ -226,8 +240,8 @@
           "net_carbs_g": 4.3,
           "fiber_g": 6.8,
           "starter_name": "Consomé Tatemado de Jitomate, Cebolla, Ajo y Cilantro de la Granja en Fondo Claro de Pollo al Aceite de Oliva",
-          "main_dish_name": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego",
-          "dish_name": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego",
+          "main_dish_name": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego y Queso Doble Crema",
+          "dish_name": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego y Queso Doble Crema",
           "side_dish_name": "Ejotes Tiernos al Vapor Salteados al Limón Real, Orégano y Aceite de Oliva VEVO",
           "starter": {
             "title": "Consomé Tatemado de Jitomate, Cebolla, Ajo y Cilantro de la Granja en Fondo Claro de Pollo al Aceite de Oliva",
@@ -264,8 +278,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1.5,
+                "amount": 9,
                 "unit": "g"
               },
               {
@@ -296,12 +310,12 @@
             ]
           },
           "main": {
-            "title": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego",
+            "title": "Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego y Queso Doble Crema",
             "technique": "avocado_foam_keto_enchiladas",
-            "note": "Escuela 1 (Inspiración Nizú): sustitución cetogénica de tortilla de maíz por láminas tiernas de calabacita y pechuga de pavo enrolladas, bañadas en salsa emulsionada de aguacate Hass, tomate verde y cilantro con gratinado de queso manchego (0 huevos en comida [R12]).",
+            "note": "Escuela 1 (Inspiración Nizú): sustitución cetogénica de tortilla de maíz por láminas tiernas de calabacita y pechuga de pavo enrolladas, bañadas en salsa emulsionada de aguacate Hass, tomate verde y cilantro con gratinado de queso manchego y queso doble crema (0 huevos en comida [R12]).",
             "coct_reasoning": {
               "thermodynamics": "Horneado y gratinado corto a 185°C por 6 minutos sobre la salsa aterciopelada de aguacate y tomate.",
-              "flavor_and_aromatics": "Cremosidad herbácea de aguacate Hass, tomate y cilantro de la granja con costra fundida de queso manchego.",
+              "flavor_and_aromatics": "Cremosidad herbácea de aguacate Hass, tomate y cilantro de la granja con costra fundida de queso manchego y queso doble crema.",
               "textural_architecture": "Rollos jugosos de pavo y calabacita bajo cubierta gratinada.",
               "critical_control_points": "Única presencia diaria de aguacate ([R5]) y centro térmico de 74°C."
             },
@@ -316,8 +330,8 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Calabacitas",
-                "per_guest": 60,
-                "amount": 360,
+                "per_guest": 46.6667,
+                "amount": 280,
                 "unit": "g"
               },
               {
@@ -332,6 +346,13 @@
                 "name": "Tomate",
                 "per_guest": 30,
                 "amount": 180,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso doble crema",
+                "per_guest": 23.3333,
+                "amount": 140,
                 "unit": "g"
               },
               {
@@ -366,7 +387,7 @@
             "steps": [
               "Sellar las láminas de pechuga de pavo y calabacita en aceite de oliva y formar rollos tipo enchilada.",
               "Emulsionar el tomate cocido con la pulpa de aguacate Hass, cilantro de la granja y sal de mar hasta obtener una salsa espuma.",
-              "Bañar los rollos con la salsa, cubrir con queso manchego rallado y gratinar 6 minutos."
+              "Bañar los rollos con la salsa, cubrir con queso manchego y queso doble crema desmoronado, y gratinar 6 minutos."
             ],
             "archetype": "pavo_enchiladas_espuma_aguacate"
           },
@@ -431,8 +452,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.2,
           "starter_name": "Ensalada Nocturna de Lechuga Romana y Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva",
-          "main_dish_name": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Cottage, Queso Philadelphia, Yogur Griego, Espinacas, Nuez Pecana y Cilantro",
-          "dish_name": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Cottage, Queso Philadelphia, Yogur Griego, Espinacas, Nuez Pecana y Cilantro",
+          "main_dish_name": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados al Ajo, Queso Cottage, Queso Doble Crema, Queso Philadelphia, Yogur Griego, Espinacas, Nuez Pecana y Cilantro",
+          "dish_name": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados al Ajo, Queso Cottage, Queso Doble Crema, Queso Philadelphia, Yogur Griego, Espinacas, Nuez Pecana y Cilantro",
           "side_dish_name": "Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Ensalada Nocturna de Lechuga Romana y Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva",
@@ -494,12 +515,12 @@
             ]
           },
           "main": {
-            "title": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Cottage, Queso Philadelphia, Yogur Griego, Espinacas, Nuez Pecana y Cilantro",
+            "title": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados al Ajo, Queso Cottage, Queso Doble Crema, Queso Philadelphia, Yogur Griego, Espinacas, Nuez Pecana y Cilantro",
             "technique": "cheese_crust_keto_dobladitas",
-            "note": "Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (150 g) al comal, rellenas de pechuga de pollo deshebrada (470 g), champiñones salteados, queso cottage procesado en pasta tersa (240 g), queso Philadelphia (120 g), emulsión de yogur griego (240 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).",
+            "note": "Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (150 g) al comal, rellenas de pechuga de pollo deshebrada (470 g), champiñones salteados al ajo, queso cottage procesado en pasta tersa (240 g), queso doble crema (140 g), queso Philadelphia (120 g), emulsión de yogur griego (240 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).",
             "coct_reasoning": {
-              "thermodynamics": "Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno de pechuga de pollo, cottage procesado, Philadelphia y yogur griego.",
-              "flavor_and_aromatics": "Umami de pechuga de pollo dorada y champiñón salteado con quesos (manchego, cottage procesado y Philadelphia), yogur griego, espinacas, nuez pecana y cilantro.",
+              "thermodynamics": "Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno de pechuga de pollo, cottage procesado, doble crema, Philadelphia y yogur griego.",
+              "flavor_and_aromatics": "Umami de pechuga de pollo dorada y champiñón salteado al ajo con quesos (manchego, cottage procesado, doble crema y Philadelphia), yogur griego, espinacas, nuez pecana y cilantro.",
               "textural_architecture": "Exterior crujiente de queso dorado al comal con interior jugoso de pollo deshebrado, hongos y nuez pecana.",
               "critical_control_points": "Doblar la costra de queso manchego en caliente sobre el relleno de pollo (74°C) y champiñones."
             },
@@ -514,8 +535,8 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Champiñón",
-                "per_guest": 70,
-                "amount": 420,
+                "per_guest": 41.6667,
+                "amount": 250,
                 "unit": "g"
               },
               {
@@ -548,6 +569,13 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso doble crema",
+                "per_guest": 23.3333,
+                "amount": 140,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso Philadelphia",
                 "per_guest": 20,
                 "amount": 120,
@@ -576,6 +604,13 @@
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Orégano",
                 "per_guest": 0.5,
                 "amount": 3,
@@ -587,11 +622,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Saltear la pechuga de pollo deshebrada junto con los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar, e integrar la pasta tersa de queso cottage, el queso Philadelphia, el yogur griego y la nuez pecana picada.",
+              "Saltear la pechuga de pollo deshebrada junto con el ajo picado, los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano, sal de mar y pimienta negra, e integrar la pasta tersa de queso cottage, el queso doble crema, el queso Philadelphia, el yogur griego y la nuez pecana picada.",
               "Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con el guiso de pollo, champiñones y quesos, y doblar en media luna."
             ],
             "archetype": "dobladitas_ines_champinon"
@@ -745,8 +787,8 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Champiñón",
-                "per_guest": 60,
-                "amount": 360,
+                "per_guest": 36.6667,
+                "amount": 220,
                 "unit": "g"
               },
               {
@@ -783,11 +825,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "Extender porciones de huevo batido en sartén antiadherente para formar crepas finas sin harina.",
-              "Saltear los champiñones, las espinacas y la cebolla picada en la mitad de la mantequilla y rellenar las crepas.",
+              "Saltear los champiñones, las espinacas y la cebolla picada en la mitad de la mantequilla con pimienta negra recién molida y rellenar las crepas.",
               "Emulsionar el resto de la mantequilla tibia con jugo de limón de la granja y sal de mar, y napar las crepas florentinas."
             ],
             "archetype": "huevo_crepa_florentina_holandesa"
@@ -964,8 +1013,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1.5,
+                "amount": 9,
                 "unit": "g"
               },
               {
@@ -1133,8 +1182,8 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Calabacitas",
-                "per_guest": 80,
-                "amount": 480,
+                "per_guest": 46.6667,
+                "amount": 280,
                 "unit": "g"
               },
               {
@@ -1161,8 +1210,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1.5,
+                "amount": 9,
                 "unit": "g"
               },
               {
@@ -1171,11 +1220,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Cortar las calabacitas en espirales tipo zoodles y dorar las fajitas de pechuga de pavo en mantequilla con ajo finamente picado y sal con ajo.",
+              "Cortar las calabacitas en espirales tipo zoodles y dorar las fajitas de pechuga de pavo en mantequilla con ajo finamente picado, sal con ajo y pimienta negra.",
               "Integrar la pasta tersa de queso cottage y la crema ácida a fuego bajo para formar la salsa Alfredo al ajo y envolver los zoodles por 90 segundos."
             ],
             "archetype": "pavo_alfredo_mushroom_zoodles"
@@ -1253,8 +1309,8 @@
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
           "starter_name": "Carpaccio de Fresas a la Canela con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-          "main_dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
-          "dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
+          "main_dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla, Cilantro y Abanico de Aguacate Hass",
+          "dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla, Cilantro y Abanico de Aguacate Hass",
           "side_dish_name": "Gelatina Cristalina de Limón Real y Vainilla (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Carpaccio de Fresas a la Canela con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
@@ -1316,14 +1372,14 @@
             ]
           },
           "main": {
-            "title": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
+            "title": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla, Cilantro y Abanico de Aguacate Hass",
             "technique": "yucatecan_motulenos_cheese_crust",
-            "note": "Escuela 3 (Inspiración El Teapaneco): versión cetogénica de los Huevos Motuleños sustituyendo la tortilla frita por una costra crujiente de queso manchego al comal, coronada con 3 huevos por comensal y salsa tatemada de jitomate, cebolla y cilantro.",
+            "note": "Escuela 3 (Inspiración El Teapaneco): versión cetogénica de los Huevos Motuleños sustituyendo la tortilla frita por una costra crujiente de queso manchego y queso doble crema al comal, coronada con 3 huevos por comensal, salsa tatemada de jitomate, cebolla y cilantro, y abanico de aguacate Hass ([R5]).",
             "coct_reasoning": {
               "thermodynamics": "Costra de queso manchego dorada a 175°C y huevos estrellados en mantequilla a 145°C.",
-              "flavor_and_aromatics": "Sazón yucateca de jitomate asado y cilantro sobre costra dorada de queso manchego.",
-              "textural_architecture": "Base crujiente de queso con yema cremosa y salsa roja.",
-              "critical_control_points": "Dorar la costra de queso manchego hasta que sea autosoportante."
+              "flavor_and_aromatics": "Sazón yucateca de jitomate asado, cilantro y aguacate Hass sobre costra dorada de queso manchego y queso doble crema.",
+              "textural_architecture": "Base crujiente de queso con yema cremosa, salsa roja y aguacate Hass.",
+              "critical_control_points": "Dorar la costra de queso manchego hasta que sea autosoportante y única presencia diaria de aguacate ([R5])."
             },
             "ingredients": [
               {
@@ -1335,10 +1391,24 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso doble crema",
+                "per_guest": 23.3333,
+                "amount": 140,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso manchego",
                 "per_guest": 18.3333,
                 "amount": 110,
                 "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
@@ -1379,7 +1449,7 @@
             "steps": [
               "Fundir y dorar el queso manchego en el comal formando 6 costras circulares crujientes.",
               "Asar el jitomate y la cebolla y moler con cilantro de la granja y sal de mar para la salsa motuleña.",
-              "Estrellar los 18 huevos en mantequilla, montar sobre las costras de queso manchego y bañar con la salsa caliente."
+              "Estrellar los 18 huevos en mantequilla, montar sobre las costras de queso manchego, bañar con la salsa caliente y coronar con queso doble crema desmoronado y abanico de aguacate Hass."
             ],
             "archetype": "huevo_motulenos_costra_queso"
           },
@@ -1444,8 +1514,8 @@
           "net_carbs_g": 4.3,
           "fiber_g": 6.6,
           "starter_name": "Ensalada Sureste de Lechuga Romana, Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva",
-          "main_dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
-          "dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
+          "main_dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
+          "dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
           "side_dish_name": "Pencas de Nopal de la Granja Asadas al Comal con Orégano, Cilantro y Aceite de Oliva VEVO",
           "starter": {
             "title": "Ensalada Sureste de Lechuga Romana, Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva",
@@ -1507,13 +1577,13 @@
             ]
           },
           "main": {
-            "title": "Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
+            "title": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
             "technique": "yucatecan_queso_relleno_casserole",
-            "note": "Escuela 3 (Inspiración El Teapaneco): clásico Queso Relleno Yucateco elaborado en cazuela con queso manchego y queso cottage procesado en pasta tersa rellenos de picadillo de carne molida de res, aceitunas manzanilla, alcaparras y pimiento morrón sobre salsa roja de jitomate.",
+            "note": "Escuela 3 (Inspiración El Teapaneco): clásico Queso Relleno Yucateco elaborado en cazuela con queso manchego, queso doble crema y queso cottage procesado en pasta tersa rellenos de picadillo de carne molida de res al ajo, aceitunas manzanilla, alcaparras y pimiento morrón sobre salsa roja de jitomate.",
             "coct_reasoning": {
               "thermodynamics": "Cocción del picadillo de res a 72°C y gratinado en cazuela a 180°C.",
-              "flavor_and_aromatics": "Contraste barroco del sureste entre el queso fundido, las alcaparras, las aceitunas y la carne de res.",
-              "textural_architecture": "Picadillo jugoso coronado por capa fundente de queso manchego y cottage procesado.",
+              "flavor_and_aromatics": "Contraste barroco del sureste entre el queso fundido (manchego, doble crema y cottage procesado), las alcaparras, las aceitunas, el ajo y la carne de res.",
+              "textural_architecture": "Picadillo jugoso coronado por capa fundente de queso manchego, doble crema y cottage procesado.",
               "critical_control_points": "Escurrir la salmuera de aceitunas y alcaparras antes de integrar al picadillo."
             },
             "ingredients": [
@@ -1526,16 +1596,23 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso manchego",
-                "per_guest": 15,
-                "amount": 90,
+                "name": "Queso cottage",
+                "per_guest": 40,
+                "amount": 240,
                 "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso cottage",
-                "per_guest": 40,
-                "amount": 240,
+                "name": "Queso doble crema",
+                "per_guest": 26.6667,
+                "amount": 160,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
                 "unit": "g"
               },
               {
@@ -1568,6 +1645,13 @@
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Orégano",
                 "per_guest": 0.5,
                 "amount": 3,
@@ -1579,12 +1663,19 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Cocinar la carne molida de res con el pimiento morrón picado, las aceitunas manzanilla, las alcaparras, el jitomate asado y el orégano.",
-              "Disponer en cazuela con la pasta tersa de queso cottage y cubrir con el queso manchego para gratinar al horno."
+              "Cocinar la carne molida de res con el ajo finamente picado, el pimiento morrón picado, las aceitunas manzanilla, las alcaparras, el jitomate asado, orégano, sal de mar y pimienta negra.",
+              "Disponer en cazuela con la pasta tersa de queso cottage y el queso doble crema, y cubrir con el queso manchego para gratinar al horno."
             ],
             "archetype": "res_queso_relleno_yucateco"
           },
@@ -1680,8 +1771,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1.5,
+                "amount": 9,
                 "unit": "g"
               },
               {
@@ -1806,10 +1897,17 @@
                 "per_guest": 0.5,
                 "amount": 3,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
-              "Triturar las semillas y nueces mixtas, la nuez pecana y la nuez de la India con sal con ajo y orégano, y adherir a las milanesas de pechuga de pollo barnizadas con aceite de coco.",
+              "Triturar las semillas y nueces mixtas, la nuez pecana y la nuez de la India con sal con ajo, orégano y pimienta negra, y adherir a las milanesas de pechuga de pollo barnizadas con aceite de coco.",
               "Hornear a 190°C durante 14 minutos y servir sobre cama de espinacas y floretes de brócoli salteados."
             ],
             "archetype": "pollo_milanesa_costra_nuez"
@@ -2087,8 +2185,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1.5,
+                "amount": 9,
                 "unit": "g"
               },
               {
@@ -2129,7 +2227,7 @@
           "main": {
             "title": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Ajo, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva",
             "technique": "murcian_fish_claypot_braise",
-            "note": "Escuela 4 (Inspiración Asador Castellano): porción clínica completa de fajitas de mojarra de alacena (900 g = 150 g/comensal) a la murciana cocinada en cazuela con jitomate asado, ajo, alcaparras, aceitunas manzanilla, orégano y aceite de oliva.",
+            "note": "Escuela 4 (Inspiración Asador Castellano): porción clínica completa de fajitas de mojarra de alacena (900 g = 150 g/comensal) a la murciana cocinada en cazuela con jitomate asado, ajo, alcaparras, aceitunas manzanilla, orégano, pimienta negra y aceite de oliva.",
             "coct_reasoning": {
               "thermodynamics": "Cocción suave en cazuela a 155°C por 8 minutos hasta alcanzar 63°C en el pescado.",
               "flavor_and_aromatics": "Salsa mediterránea española de jitomate, ajo, alcaparras y aceitunas manzanilla.",
@@ -2154,8 +2252,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1.5,
+                "amount": 9,
                 "unit": "g"
               },
               {
@@ -2192,10 +2290,17 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
-              "Sofreír el ajo laminado y el jitomate troceado en aceite de oliva con las alcaparras, las aceitunas manzanilla y el orégano.",
+              "Sofreír el ajo laminado y el jitomate troceado en aceite de oliva con las alcaparras, las aceitunas manzanilla, el orégano y la pimienta negra.",
               "Incorporar las fajitas de mojarra en la cazuela, tapar y cocinar 7 minutos a fuego medio."
             ],
             "archetype": "pescado_a_la_murciana_cazuela"
@@ -2214,8 +2319,8 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Calabacitas",
-                "per_guest": 90,
-                "amount": 540,
+                "per_guest": 46.6667,
+                "amount": 280,
                 "unit": "g"
               },
               {
@@ -2254,8 +2359,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.2,
           "starter_name": "Ensalada de Lechuga Romana y Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva",
-          "main_dish_name": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno",
-          "dish_name": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno",
+          "main_dish_name": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno y Gajos de Aguacate Hass",
+          "dish_name": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno y Gajos de Aguacate Hass",
           "side_dish_name": "Tisana Nocturna de Manzanilla, Canela y Limón Real (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Ensalada de Lechuga Romana y Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva",
@@ -2317,14 +2422,14 @@
             ]
           },
           "main": {
-            "title": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno",
+            "title": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno y Gajos de Aguacate Hass",
             "technique": "castilian_stuffed_peppers_bake",
-            "note": "Escuela 4 (Inspiración Asador Castellano): pimientos morrones enteros asados y rellenos de lomo de atún en agua, queso cottage procesado en pasta tersa, yogur griego y cebolla al orégano, gratinados con queso manchego.",
+            "note": "Escuela 4 (Inspiración Asador Castellano): pimientos morrones enteros asados y rellenos de lomo de atún en agua, queso cottage procesado en pasta tersa, yogur griego y cebolla al orégano, gratinados con queso manchego y servidos con gajos de aguacate Hass ([R5]).",
             "coct_reasoning": {
               "thermodynamics": "Asado de los pimientos morrones y gratinado al horno a 185°C por 8 minutos.",
-              "flavor_and_aromatics": "Dulzor del pimiento morrón asado con relleno cremoso de atún, cottage procesado, yogur griego y manchego.",
-              "textural_architecture": "Pimiento tierno con corazón proteico y costra dorada.",
-              "critical_control_points": "Drenar completamente el atún en agua antes de mezclar con la pasta tersa de queso cottage y el yogur griego."
+              "flavor_and_aromatics": "Dulzor del pimiento morrón asado con relleno cremoso de atún, cottage procesado, yogur griego, manchego y aguacate Hass.",
+              "textural_architecture": "Pimiento tierno con corazón proteico, costra dorada y gajos cremosos de aguacate.",
+              "critical_control_points": "Drenar completamente el atún en agua antes de mezclar con la pasta tersa de queso cottage y el yogur griego; única presencia diaria de aguacate ([R5])."
             },
             "ingredients": [
               {
@@ -2339,6 +2444,13 @@
                 "name": "Morrón",
                 "per_guest": 0.3333,
                 "amount": 2,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate",
+                "per_guest": 0.1667,
+                "amount": 1,
                 "unit": "piezas"
               },
               {
@@ -2395,7 +2507,7 @@
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
               "Asar los pimientos morrones cortados en mitades y retirar las semillas.",
               "Mezclar el atún en agua drenado con la cebolla acitronada en aceite de oliva, la pasta tersa de queso cottage, el yogur griego, orégano y sal de mar.",
-              "Rellenar los pimientos morrones, cubrir con el queso manchego y gratinar al horno por 8 minutos."
+              "Rellenar los pimientos morrones, cubrir con el queso manchego, gratinar al horno por 8 minutos y servir con gajos de aguacate Hass."
             ],
             "archetype": "atun_pimientos_rellenos_gratinados"
           },
@@ -2472,8 +2584,8 @@
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
           "starter_name": "Compota Fría de Frambuesas y Canela con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-          "main_dish_name": "Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja",
-          "dish_name": "Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja",
+          "main_dish_name": "Focaccia Keto Horneada de Coliflor y 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja",
+          "dish_name": "Focaccia Keto Horneada de Coliflor y 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja",
           "side_dish_name": "Infusión Matutina de Té Chai, Canela y Aceite de Coco (≤60°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Compota Fría de Frambuesas y Canela con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
@@ -2535,12 +2647,12 @@
             ]
           },
           "main": {
-            "title": "Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja",
+            "title": "Focaccia Keto Horneada de Coliflor y 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja",
             "technique": "bistro_three_cheese_keto_focaccia",
-            "note": "Escuela 5 (Inspiración Alda Café): pan focaccia cetogénico horneado con base de coliflor prensada, queso manchego, queso cottage procesado en pasta tersa, queso Philadelphia y queso mozzarella al romero, coronado con 3 huevos por comensal.",
+            "note": "Escuela 5 (Inspiración Alda Café): pan focaccia cetogénico horneado con base de coliflor prensada, queso manchego, queso cottage procesado en pasta tersa, queso doble crema, queso Philadelphia y queso mozzarella al romero, coronado con 3 huevos por comensal.",
             "coct_reasoning": {
               "thermodynamics": "Horneado de la masa de focaccia keto a 190°C por 12 minutos y cuajado de los huevos a 175°C.",
-              "flavor_and_aromatics": "Aroma de bistró europeo con romero de la granja y 4 quesos fundidos.",
+              "flavor_and_aromatics": "Aroma de bistró europeo con romero de la granja y 5 quesos fundidos.",
               "textural_architecture": "Base alveolada de focaccia keto dorada con huevos tiernos.",
               "critical_control_points": "Prensar los floretes de coliflor para lograr una focaccia firme y crujiente."
             },
@@ -2561,13 +2673,6 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso manchego",
-                "per_guest": 15,
-                "amount": 90,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso cottage",
                 "per_guest": 30,
                 "amount": 180,
@@ -2575,9 +2680,23 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso doble crema",
+                "per_guest": 21.6667,
+                "amount": 130,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso Philadelphia",
                 "per_guest": 20,
                 "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
                 "unit": "g"
               },
               {
@@ -2611,7 +2730,7 @@
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Rallar la coliflor, mezclar con el queso manchego, la pasta tersa de queso cottage, el queso Philadelphia, el queso mozzarella y el romero, y hornear formando una focaccia dorada.",
+              "Rallar la coliflor, mezclar con el queso manchego, la pasta tersa de queso cottage, el queso doble crema, el queso Philadelphia, el queso mozzarella y el romero, y hornear formando una focaccia dorada.",
               "Cascar los 18 huevos sobre la focaccia con mantequilla y sal de mar, y hornear 6 minutos hasta cuajar las claras."
             ],
             "archetype": "focaccia_keto_tres_quesos_esparragos"
@@ -2677,8 +2796,8 @@
           "net_carbs_g": 4.1,
           "fiber_g": 6.3,
           "starter_name": "Ensalada Bistró de Lechuga Romana, Pepino y Pistaches Tostados con Vinagreta Francesa de Mostaza, Limón Real, Orégano y Aceite de Oliva",
-          "main_dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
-          "dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+          "main_dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+          "dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
           "side_dish_name": "Espárragos Verdes Asados a la Plancha con Limón Real, Sal con Ajo y Aceite de Oliva VEVO",
           "starter": {
             "title": "Ensalada Bistró de Lechuga Romana, Pepino y Pistaches Tostados con Vinagreta Francesa de Mostaza, Limón Real, Orégano y Aceite de Oliva",
@@ -2754,14 +2873,14 @@
             ]
           },
           "main": {
-            "title": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+            "title": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
             "technique": "alda_bistro_salmon_philadelphia_mirror",
-            "note": "Escuela 5 (Inspiración Alda Café): lomo de salmón sellado en mantequilla servido sobre espejo cremoso de queso Philadelphia, alcaparras, limón real y hierbas finas.",
+            "note": "Escuela 5 (Inspiración Alda Café): lomo de salmón sellado en mantequilla con pimienta negra servido sobre espejo cremoso de queso Philadelphia, láminas de aguacate Hass ([R5]), alcaparras, limón real y hierbas finas.",
             "coct_reasoning": {
               "thermodynamics": "Sellado del salmón por el lado de la piel a 175°C hasta 63°C internos sobre espejo templado de Philadelphia.",
-              "flavor_and_aromatics": "Armonía bistró entre el salmón en mantequilla, la acidez de las alcaparras y el queso Philadelphia.",
-              "textural_architecture": "Piel crujiente y lomo jugoso sobre espejo untuoso.",
-              "critical_control_points": "No sobrecocinar el salmón (63°C internos) para preservar sus ácidos grasos Omega-3."
+              "flavor_and_aromatics": "Armonía bistró entre el salmón en mantequilla, el aguacate Hass, la acidez de las alcaparras y el queso Philadelphia.",
+              "textural_architecture": "Piel crujiente y lomo jugoso sobre espejo untuoso con láminas de aguacate.",
+              "critical_control_points": "No sobrecocinar el salmón (63°C internos) para preservar sus ácidos grasos Omega-3; única presencia diaria de aguacate ([R5])."
             },
             "ingredients": [
               {
@@ -2777,6 +2896,13 @@
                 "per_guest": 30,
                 "amount": 180,
                 "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2812,11 +2938,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "Acremar el queso Philadelphia tibio con jugo de limón real y hierbas finas para formar el espejo en el plato.",
-              "Sellar el lomo de salmón en sartén con la mantequilla y sal de mar, montar sobre el espejo y coronar con las alcaparras."
+              "Sellar el lomo de salmón en sartén con la mantequilla, sal de mar y pimienta negra, montar sobre el espejo y coronar con las alcaparras y láminas de aguacate Hass."
             ],
             "archetype": "salmon_estilo_alda_philadelphia_alcaparras"
           },
@@ -2874,8 +3007,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real",
-          "main_dish_name": "Focaccia Keto de Champiñones Salteados, Espinacas, Queso Cottage, Queso Manchego y Queso Mozzarella Dorada al Sartén de Hierro con Romero",
-          "dish_name": "Focaccia Keto de Champiñones Salteados, Espinacas, Queso Cottage, Queso Manchego y Queso Mozzarella Dorada al Sartén de Hierro con Romero",
+          "main_dish_name": "Focaccia Keto de Pollo Entero en Piezas Deshebradas (Pechuga, Muslo y Pierna), Champiñones Salteados, Espinacas, Queso Cottage, Queso Doble Crema, Queso Manchego y Queso Mozzarella Dorada al Sartén de Hierro con Romero",
+          "dish_name": "Focaccia Keto de Pollo Entero en Piezas Deshebradas (Pechuga, Muslo y Pierna), Champiñones Salteados, Espinacas, Queso Cottage, Queso Doble Crema, Queso Manchego y Queso Mozzarella Dorada al Sartén de Hierro con Romero",
           "side_dish_name": "Tisana Nocturna de Manzanilla y Orégano (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real",
@@ -2930,21 +3063,28 @@
             ]
           },
           "main": {
-            "title": "Focaccia Keto de Champiñones Salteados, Espinacas, Queso Cottage, Queso Manchego y Queso Mozzarella Dorada al Sartén de Hierro con Romero",
+            "title": "Focaccia Keto de Pollo Entero en Piezas Deshebradas (Pechuga, Muslo y Pierna), Champiñones Salteados, Espinacas, Queso Cottage, Queso Doble Crema, Queso Manchego y Queso Mozzarella Dorada al Sartén de Hierro con Romero",
             "technique": "iron_skillet_mushroom_keto_focaccia",
-            "note": "Escuela 5 (Inspiración Alda Café): focaccia cetogénica dorada en sartén de hierro con cubierta de champiñones salteados, espinacas, queso cottage procesado en pasta tersa, queso manchego, queso mozzarella y romero de la granja (0 huevos en cena [R12]).",
+            "note": "Escuela 5 (Inspiración Alda Café): focaccia cetogénica dorada en sartén de hierro coronada con las piezas nobles deshebradas (pechuga, muslos y piernas) del pollo entero de mercado local (cuyo huacal, cuello, molleja, hígado y corazón sustentan los 5,400 ml de Fondo claro de pollo casero), champiñones salteados, espinacas, queso cottage procesado en pasta tersa, queso doble crema, queso manchego, queso mozzarella y romero de la granja (0 huevos en cena [R12]).",
             "coct_reasoning": {
-              "thermodynamics": "Dorado de la base en sartén de hierro a 170°C y fundido superior con tapa a 150°C.",
-              "flavor_and_aromatics": "Umami de champiñones y romero sobre base dorada de queso manchego, mozzarella y cottage procesado.",
-              "textural_architecture": "Base crujiente de sartén con topping jugoso de hongos y espinacas.",
-              "critical_control_points": "Dorar en sartén de hierro sin usar huevo en la cena ([R12])."
+              "thermodynamics": "Dorado de la base en sartén de hierro a 170°C, salteado de las piezas nobles de pollo entero a 74°C y fundido superior con tapa a 150°C.",
+              "flavor_and_aromatics": "Umami de pollo en piezas doradas, champiñones y romero sobre base dorada de queso manchego, doble crema, mozzarella y cottage procesado.",
+              "textural_architecture": "Base crujiente de sartén con topping jugoso de pollo deshebrado, hongos y espinacas.",
+              "critical_control_points": "Aprovechar huacal y menudencias del pollo entero para el fondo claro casero y dorar las piezas nobles en la focaccia sin usar huevo en la cena ([R12])."
             },
             "ingredients": [
               {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pollo entero",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Champiñón",
-                "per_guest": 110,
-                "amount": 660,
+                "per_guest": 41.6667,
+                "amount": 250,
                 "unit": "g"
               },
               {
@@ -2959,6 +3099,13 @@
                 "name": "Queso cottage",
                 "per_guest": 40,
                 "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso doble crema",
+                "per_guest": 21.6667,
+                "amount": 130,
                 "unit": "g"
               },
               {
@@ -2995,12 +3142,19 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Formar la base en el sartén de hierro con queso manchego, queso mozzarella y la pasta tersa de queso cottage hasta que dore por debajo.",
-              "Cubrir con los champiñones y las espinacas salteados en mantequilla con romero y sal de mar, y tapar 3 minutos para fundir."
+              "Cocer y deshebrar las piezas nobles del pollo entero (pechuga, muslos y piernas; reservando huacal, cuello, molleja, hígado y corazón para el fondo claro de pollo casero) y saltearlas en mantequilla con los champiñones, las espinacas, el romero, sal de mar y pimienta negra.",
+              "Formar la base en el sartén de hierro con queso manchego, queso mozzarella, queso doble crema y la pasta tersa de queso cottage hasta que dore por debajo, cubrir con el pollo y los champiñones salteados, y tapar 3 minutos para fundir."
             ],
             "archetype": "focaccia_keto_hongos_gratinados"
           },
@@ -3198,10 +3352,17 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
-              "Rallar la coliflor en grano fino y saltear al wok con el aceite de coco, la cebolla picada y el germinado.",
+              "Rallar la coliflor en grano fino y saltear al wok con el aceite de coco, la cebolla picada, el germinado y pimienta negra.",
               "Cuajar los 18 huevos batidos en mantos finos, envolver la coliflor salteada al estilo Omurice japonés y bañar con reducción tibia de leche de coco y cúrcuma."
             ],
             "archetype": "huevo_omurice_keto_coliflor"
@@ -3371,8 +3532,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1.5,
+                "amount": 9,
                 "unit": "g"
               },
               {
@@ -3388,11 +3549,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "Calentar la plancha con el aceite de coco y sellar el flat steak cortado en cubos junto con el ajo laminado, la cebolla, los floretes de brócoli y el pimiento morrón.",
-              "Incorporar el germinado y sazonar con sal con ajo antes de retirar de la plancha."
+              "Incorporar el germinado y sazonar con sal con ajo y pimienta negra recién molida antes de retirar de la plancha."
             ],
             "archetype": "res_teppanyaki_plancha_germinado"
           },
@@ -3457,8 +3625,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Caldo Oriental al Curry Dorado de Fondo de Pollo, Leche de Coco, Cúrcuma, Cilantro de la Granja y Limón Real",
-          "main_dish_name": "Lomos de Sardina Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas",
-          "dish_name": "Lomos de Sardina Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas",
+          "main_dish_name": "Lomos de Sardina Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro, Tomate y Aguacate Hass) sobre Calabacitas",
+          "dish_name": "Lomos de Sardina Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro, Tomate y Aguacate Hass) sobre Calabacitas",
           "side_dish_name": "Tisana Nocturna de Manzanilla y Canela Molida (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Caldo Oriental al Curry Dorado de Fondo de Pollo, Leche de Coco, Cúrcuma, Cilantro de la Granja y Limón Real",
@@ -3527,14 +3695,14 @@
             ]
           },
           "main": {
-            "title": "Lomos de Sardina Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas",
+            "title": "Lomos de Sardina Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro, Tomate y Aguacate Hass) sobre Calabacitas",
             "technique": "contramar_bicolor_grilled_fish",
-            "note": "Escuela 6 (Pacífico & Oriente — Inspiración Contramar): porción completa de lomos de sardinas de alacena (860 g = 143.3 g/comensal) bicolor sin chiles irritantes ([R1]), mitad marinada en adobo rojo de achiote y jitomate asado y mitad en salsa verde de cilantro y tomate sobre calabacitas asadas.",
+            "note": "Escuela 6 (Pacífico & Oriente — Inspiración Contramar): porción completa de lomos de sardinas de alacena (860 g = 143.3 g/comensal) bicolor sin chiles irritantes ([R1]), mitad marinada en adobo rojo de achiote y jitomate asado y mitad en emulsión verde de cilantro, tomate y aguacate Hass ([R5]) sobre calabacitas asadas.",
             "coct_reasoning": {
               "thermodynamics": "Asado a la plancha/brasas a 185°C hasta 63°C en centro térmico.",
-              "flavor_and_aromatics": "Doble perfil costero mexicano: tierra especiada de achiote y frescura herbal de cilantro sobre lomos de sardina.",
+              "flavor_and_aromatics": "Doble perfil costero mexicano: tierra especiada de achiote y frescura herbal de cilantro y aguacate Hass sobre lomos de sardina.",
               "textural_architecture": "Lomos firmes de sardina sobre cama de calabacitas.",
-              "critical_control_points": "Elaborar el adobo rojo con achiote y jitomate 0% capsaicina ([R1])."
+              "critical_control_points": "Elaborar el adobo rojo con achiote y jitomate 0% capsaicina ([R1]); única presencia diaria de aguacate ([R5])."
             },
             "ingredients": [
               {
@@ -3547,9 +3715,16 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Calabacitas",
-                "per_guest": 70,
-                "amount": 420,
+                "per_guest": 46.6667,
+                "amount": 280,
                 "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -3592,11 +3767,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
-              "Preparar el adobo rojo moliendo el achiote con el jitomate asado, y la emulsión verde moliendo el tomate con el cilantro de la granja.",
-              "Untar la mitad de los lomos de sardina con el adobo rojo y la otra mitad con la emulsión verde, y asar a la plancha sobre láminas de calabacitas."
+              "Preparar el adobo rojo moliendo el achiote con el jitomate asado y pimienta negra, y la emulsión verde moliendo el tomate con el cilantro de la granja y la pulpa de aguacate Hass.",
+              "Untar la mitad de los lomos de sardina con el adobo rojo y la otra mitad con la emulsión verde de aguacate, y asar a la plancha sobre láminas de calabacitas."
             ],
             "archetype": "mojarra_bicolor_estilo_contramar"
           },
@@ -3770,8 +3952,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1.5,
+                "amount": 9,
                 "unit": "g"
               },
               {
@@ -3794,11 +3976,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Sofreír el ajo picado y triturar el jitomate asado con el aceite de oliva, las hierbas finas y la sal con ajo formando un sugo rústico en sartén amplia.",
+              "Sofreír el ajo picado y triturar el jitomate asado con el aceite de oliva, las hierbas finas, la sal con ajo y la pimienta negra formando un sugo rústico en sartén amplia.",
               "Formar 18 cavidades en la salsa, cascar los huevos y escalfar tapados por 4 minutos; terminar con rosetones de la pasta tersa de queso cottage y queso parmesano rallado."
             ],
             "archetype": "huevo_uova_in_purgatorio"
@@ -3954,8 +4143,8 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Calabacitas",
-                "per_guest": 80,
-                "amount": 480,
+                "per_guest": 46.6667,
+                "amount": 280,
                 "unit": "g"
               },
               {
@@ -3996,8 +4185,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               },
               {
@@ -4027,11 +4216,18 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Asar las calabacitas en láminas longitudinales y cocinar el ragú de carne molida con cebolla, ajo picado, hojas de laurel, canela molida, orégano y sal de mar.",
+              "Asar las calabacitas en láminas longitudinales y cocinar el ragú de carne molida con cebolla, ajo picado, hojas de laurel, canela molida, orégano, sal de mar y pimienta negra.",
               "Armar capas alternadas de calabacita y ragú, cubrir con mezcla de yogur griego, la pasta tersa de queso cottage, queso manchego y queso parmesano, y gratinar al horno."
             ],
             "archetype": "res_moussaka_griega_horno"
@@ -4039,7 +4235,7 @@
           "side": {
             "title": "Champiñones Silvestres Salteados al Ajillo con Ajo Laminado, Tomillo, Limón Real y Aceite de Oliva VEVO",
             "technique": "garlic_thyme_sauteed_mushrooms",
-            "note": "Séptima guarnición de Comida ([R4-SIDE] 7/7: champiñón) con ajo laminado dorado libre de mantequilla y lácteos ([R2]).",
+            "note": "Séptima guarnición de Comida ([R4-SIDE] 7/7: champiñón) con generosa dosis de ajo laminado dorado (24 g = 4 dientes grandes) libre de mantequilla y lácteos ([R2]).",
             "coct_reasoning": {
               "thermodynamics": "Salteado a 180°C en aceite de oliva por 5 minutos.",
               "flavor_and_aromatics": "Champiñones al ajillo con dientes de ajo laminados, tomillo y toque de limón real.",
@@ -4050,15 +4246,15 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Champiñón",
-                "per_guest": 110,
-                "amount": 660,
+                "per_guest": 46.6667,
+                "amount": 280,
                 "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 3,
-                "amount": 18,
+                "per_guest": 4,
+                "amount": 24,
                 "unit": "g"
               },
               {
@@ -4208,8 +4404,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Ajo",
-                "per_guest": 2,
-                "amount": 12,
+                "per_guest": 1,
+                "amount": 6,
                 "unit": "g"
               },
               {
@@ -4239,10 +4435,17 @@
                 "per_guest": 1,
                 "amount": 6,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Pimienta negra",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               }
             ],
             "steps": [
-              "Marinar las fajitas de pechuga de pollo con jugo de limón real, ajo picado, comino, orégano, sal con ajo y aceite de oliva, y asar en plancha caliente.",
+              "Marinar las fajitas de pechuga de pollo con jugo de limón real, ajo picado, comino, orégano, sal con ajo, pimienta negra y aceite de oliva, y asar en plancha caliente.",
               "Mezclar el yogur griego con el pepino en dados finos y servir acompañando el shawarma caliente."
             ],
             "archetype": "pavo_shawarma_griego_tzatziki"
@@ -4311,7 +4514,8 @@
     "Acelgas",
     "Romero",
     "Agua purificada",
-    "Jamaica"
+    "Jamaica",
+    "Granadas"
   ],
   "hard_gate_audit": {
     "passed": true,
@@ -4399,6 +4603,20 @@
           "unit": "g"
         },
         {
+          "name": "Aguacate",
+          "required": 5.0,
+          "stock": 5.0,
+          "remaining_stock": 0.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Ajo",
+          "required": 120.0,
+          "stock": 120.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
           "name": "Alcaparras",
           "required": 156.0,
           "stock": 200.0,
@@ -4420,6 +4638,13 @@
           "unit": "g"
         },
         {
+          "name": "Calabacitas",
+          "required": 1400.0,
+          "stock": 1400.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
           "name": "Canela molida",
           "required": 27.0,
           "stock": 750.0,
@@ -4431,6 +4656,20 @@
           "required": 1200.0,
           "stock": 2315.0,
           "remaining_stock": 1115.0,
+          "unit": "g"
+        },
+        {
+          "name": "Cebolla",
+          "required": 10.0,
+          "stock": 13.0,
+          "remaining_stock": 3.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Champiñón",
+          "required": 1000.0,
+          "stock": 1000.0,
+          "remaining_stock": 0.0,
           "unit": "g"
         },
         {
@@ -4457,8 +4696,8 @@
         {
           "name": "Crema ácida",
           "required": 180.0,
-          "stock": 960.0,
-          "remaining_stock": 780.0,
+          "stock": 1100.0,
+          "remaining_stock": 920.0,
           "unit": "g"
         },
         {
@@ -4466,6 +4705,13 @@
           "required": 18.0,
           "stock": 100.0,
           "remaining_stock": 82.0,
+          "unit": "g"
+        },
+        {
+          "name": "Ejotes",
+          "required": 240.0,
+          "stock": 500.0,
+          "remaining_stock": 260.0,
           "unit": "g"
         },
         {
@@ -4511,6 +4757,13 @@
           "unit": "g"
         },
         {
+          "name": "Grenetina",
+          "required": 80.0,
+          "stock": 112.0,
+          "remaining_stock": 32.0,
+          "unit": "g"
+        },
+        {
           "name": "Hierbas finas",
           "required": 12.0,
           "stock": 25.0,
@@ -4529,6 +4782,13 @@
           "required": 126.0,
           "stock": 170.0,
           "remaining_stock": 44.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Jitomate",
+          "required": 8.0,
+          "stock": 8.0,
+          "remaining_stock": 0.0,
           "unit": "piezas"
         },
         {
@@ -4567,6 +4827,13 @@
           "unit": "g"
         },
         {
+          "name": "Morrón",
+          "required": 8.0,
+          "stock": 8.0,
+          "remaining_stock": 0.0,
+          "unit": "piezas"
+        },
+        {
           "name": "Mostaza",
           "required": 120.0,
           "stock": 120.0,
@@ -4603,9 +4870,9 @@
         },
         {
           "name": "Pimienta negra",
-          "required": 3.0,
-          "stock": 70.0,
-          "remaining_stock": 67.0,
+          "required": 48.0,
+          "stock": 170.0,
+          "remaining_stock": 122.0,
           "unit": "g"
         },
         {
@@ -4616,10 +4883,24 @@
           "unit": "g"
         },
         {
+          "name": "Pollo entero",
+          "required": 1.0,
+          "stock": 1.0,
+          "remaining_stock": 0.0,
+          "unit": "piezas"
+        },
+        {
           "name": "Queso cottage",
           "required": 2040.0,
           "stock": 3840.0,
           "remaining_stock": 1800.0,
+          "unit": "g"
+        },
+        {
+          "name": "Queso doble crema",
+          "required": 1000.0,
+          "stock": 1000.0,
+          "remaining_stock": 0.0,
           "unit": "g"
         },
         {
@@ -4686,6 +4967,13 @@
           "unit": "g"
         },
         {
+          "name": "Tomate",
+          "required": 360.0,
+          "stock": 500.0,
+          "remaining_stock": 140.0,
+          "unit": "g"
+        },
+        {
           "name": "Tomillo",
           "required": 12.0,
           "stock": 20.0,
@@ -4716,52 +5004,10 @@
           "unit": "ml"
         },
         {
-          "name": "Aguacate",
-          "required": 1.0,
-          "stock": 0.0,
-          "net_to_buy": 1.0,
-          "unit": "piezas"
-        },
-        {
-          "name": "Ajo",
-          "required": 138.0,
-          "stock": 0.0,
-          "net_to_buy": 138.0,
-          "unit": "g"
-        },
-        {
           "name": "AminoSinergix®",
           "required": 420.0,
           "stock": 200.0,
           "net_to_buy": 220.0,
-          "unit": "g"
-        },
-        {
-          "name": "Calabacitas",
-          "required": 2280.0,
-          "stock": 0.0,
-          "net_to_buy": 2280.0,
-          "unit": "g"
-        },
-        {
-          "name": "Cebolla",
-          "required": 10.0,
-          "stock": 2.0,
-          "net_to_buy": 8.0,
-          "unit": "piezas"
-        },
-        {
-          "name": "Champiñón",
-          "required": 2100.0,
-          "stock": 0.0,
-          "net_to_buy": 2100.0,
-          "unit": "g"
-        },
-        {
-          "name": "Ejotes",
-          "required": 240.0,
-          "stock": 0.0,
-          "net_to_buy": 240.0,
           "unit": "g"
         },
         {
@@ -4779,27 +5025,6 @@
           "unit": "g"
         },
         {
-          "name": "Grenetina",
-          "required": 80.0,
-          "stock": 0.0,
-          "net_to_buy": 80.0,
-          "unit": "g"
-        },
-        {
-          "name": "Jitomate",
-          "required": 8.0,
-          "stock": 0.0,
-          "net_to_buy": 8.0,
-          "unit": "piezas"
-        },
-        {
-          "name": "Morrón",
-          "required": 9.0,
-          "stock": 4.0,
-          "net_to_buy": 5.0,
-          "unit": "piezas"
-        },
-        {
           "name": "MultiSinergix®",
           "required": 420.0,
           "stock": 300.0,
@@ -4809,8 +5034,8 @@
         {
           "name": "Pepino",
           "required": 1740.0,
-          "stock": 3.0,
-          "net_to_buy": 1737.0,
+          "stock": 2.0,
+          "net_to_buy": 1738.0,
           "unit": "g"
         },
         {
@@ -4818,13 +5043,6 @@
           "required": 336.0,
           "stock": 0.0,
           "net_to_buy": 336.0,
-          "unit": "g"
-        },
-        {
-          "name": "Tomate",
-          "required": 360.0,
-          "stock": 0.0,
-          "net_to_buy": 360.0,
           "unit": "g"
         }
       ],

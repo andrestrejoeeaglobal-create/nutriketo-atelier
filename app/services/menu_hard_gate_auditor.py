@@ -146,6 +146,7 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "queso ricotta",
     "queso manchego",
     "queso cottage",
+    "queso doble crema",
     "yogur griego",
     "fresas",
     "frambuesas",
@@ -215,6 +216,18 @@ DEFAULT_PANTRY_STOCK.update(
         "Lechuga": (7.0, "piezas"),
         "Pechuga de pavo": (1400.0, "g"),
         "Fajitas de mojarra": (900.0, "g"),
+        "Pollo entero": (1.0, "piezas"),
+        "Queso doble crema": (1000.0, "g"),
+        "Aguacate": (5.0, "piezas"),
+        "Champiñón": (1000.0, "g"),
+        "Ejotes": (500.0, "g"),
+        "Calabacitas": (1400.0, "g"),
+        "Jitomate": (8.0, "piezas"),
+        "Tomate": (500.0, "g"),
+        "Cebolla": (13.0, "piezas"),
+        "Morrón": (8.0, "piezas"),
+        "Ajo": (120.0, "g"),
+        "Pimienta negra": (170.0, "g"),
     }
 )
 
@@ -685,8 +698,8 @@ ARCHETYPE_PATTERNS: List[Tuple[str, List[str]]] = [
     ("res_puntas_al_albanil_champinon", ["puntas de flat steak al albanil", "puntas al albanil"]),
     # Escuela 5: Alda Café (Bistró Europeo)
     ("salmon_estilo_alda_philadelphia_alcaparras", ["lomo de salmon estilo alda", "salmon estilo alda"]),
-    ("focaccia_keto_tres_quesos_esparragos", ["focaccia keto horneada de coliflor y 3 quesos", "focaccia keto de 3 quesos"]),
-    ("focaccia_keto_hongos_gratinados", ["focaccia keto de champinones", "focaccia horneada de coliflor y hongos"]),
+    ("focaccia_keto_tres_quesos_esparragos", ["focaccia keto horneada de coliflor", "focaccia keto de 3 quesos"]),
+    ("focaccia_keto_hongos_gratinados", ["focaccia keto de pollo entero", "focaccia keto de champinones", "focaccia horneada de coliflor y hongos"]),
     ("res_roast_beef_cebolla_caramelizada", ["roast beef de flat steak", "roast beef con cebolla caramelizada"]),
     ("pavo_ensalada_asiatica_alda", ["ensalada asiatica tibia estilo alda", "ensalada asiatica alda"]),
     # Escuela 6: Pacífico & Oriente
@@ -820,7 +833,7 @@ def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
     ]
     joined = " | ".join(ing_names)
 
-    if str(main_dish.get("archetype", "")) == "dobladitas_ines_champinon":
+    if str(main_dish.get("archetype", "")) in ("dobladitas_ines_champinon", "focaccia_keto_hongos_gratinados"):
         return {"key": "champinon", "family": "fungica", "circadian_dinner_ok": True, "is_dense": False}
     if str(main_dish.get("archetype", "")) == "mojarra_bicolor_estilo_contramar" and "sardina" in joined:
         return {"key": "sardinas", "family": "pescado_azul", "circadian_dinner_ok": True, "is_dense": False}
@@ -951,6 +964,7 @@ _JACCARD_CANON_ING_TOKENS: List[Tuple[str, List[str]]] = [
     ("queso_manchego", ["manchego"]),
     ("queso_philadelphia", ["philadelphia"]),
     ("queso_cottage", ["cottage"]),
+    ("queso_doble_crema", ["doble crema"]),
     ("queso_gouda", ["gouda"]),
     ("queso_panela", ["panela"]),
     ("queso_parmesano", ["parmesano"]),
@@ -1096,8 +1110,8 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
         ("a_la_murciana", ["a la murciana"]),
         ("puntas_al_albanil", ["puntas de flat steak al albanil", "puntas al albanil"]),
         ("salmon_estilo_alda", ["lomo de salmon estilo alda", "salmon estilo alda"]),
-        ("focaccia_tres_quesos", ["focaccia keto horneada de coliflor y 3 quesos", "focaccia keto de 3 quesos"]),
-        ("focaccia_hongos", ["focaccia keto de champinones", "focaccia horneada de coliflor y hongos"]),
+        ("focaccia_tres_quesos", ["focaccia keto horneada de coliflor", "focaccia keto de 3 quesos"]),
+        ("focaccia_hongos", ["focaccia keto de pollo entero", "focaccia keto de champinones", "focaccia horneada de coliflor y hongos"]),
         ("roast_beef_caramelizado", ["roast beef de flat steak", "roast beef con cebolla caramelizada"]),
         ("ensalada_asiatica_alda", ["ensalada asiatica tibia estilo alda", "ensalada asiatica alda"]),
         ("omurice_keto", ["omurice keto"]),
@@ -1242,7 +1256,7 @@ def extract_structural_signature(dish: Dict[str, Any]) -> Optional[str]:
         return "sig_huevo_revuelto"
     if dna[:3] == ("mojarra", "plancha", "ajo_cilantro_limon"):
         return "sig_mojarra_ajo_cilantro"
-    if "coliflor" in full and ("crema" in t or "veloute" in t):
+    if "coliflor" in full and ("crema" in t.replace("doble crema", "").replace("crema acida", "") or "veloute" in t):
         return "sig_starter_crema_coliflor"
     if "calabacita" in full and ("juliana" in t or ("caldo" in t and "laurel" in full and "cilantro" in full)):
         return "sig_starter_caldo_calabacitas_laurel"
@@ -2063,6 +2077,7 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
         ("germinado", "germinado"),
         ("ricotta", "ricotta"),
         ("cottage", "cottage"),
+        ("doble crema", "doble crema"),
         ("manchego", "manchego"),
         ("cabra", "cabra"),
         ("philadelphia", "philadelphia"),

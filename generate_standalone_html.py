@@ -2144,7 +2144,7 @@ function getDeconstructedRecipeForDish(dishTitle, courseRole) {
 
 // --- MOTOR DE AUTO-GENERACIÓN DE LA SEMANA 43 CANÓNICA CON TOPE ESTRICTO (V15.23.3) ---
 const FORBIDDEN_INGREDIENTS = {
-  picante: ["chile", "serrano", "jalapeño", "habanero", "chipotle", "pimienta negra", "paprika picante"],
+  picante: ["chile", "serrano", "jalapeño", "habanero", "chipotle", "paprika picante"],
   cerdo: ["cerdo", "puerco", "tocino de cerdo", "jamon de cerdo", "manteca", "chicharron"],
   gluten_granos: ["trigo", "maiz", "arroz", "harina refinada", "avena", "frijol"],
   azucares: ["azucar", "jarabe", "miel", "sacarosa", "maltitol", "higo"]
@@ -2228,8 +2228,15 @@ function _extractDishVegsAndFruits(dish) {
 }
 
 function _classifyMainProteinHardGate(mainDish) {
+  const arch = _normTextHardGate((mainDish && mainDish.archetype) || '');
   const ings = (mainDish && Array.isArray(mainDish.ingredients)) ? mainDish.ingredients : [];
   const joined = ings.map(i => _normTextHardGate(i.name)).filter(nm => !['fondo claro', 'caldo concentrado', 'caldo de'].some(b => nm.includes(b))).join(' | ').trim();
+  if (arch === 'dobladitas_ines_champinon' || arch === 'focaccia_keto_hongos_gratinados') {
+    return { key: 'champinon', family: 'fungica', circadianDinnerOk: true };
+  }
+  if (arch === 'mojarra_bicolor_estilo_contramar' && joined.includes('sardina')) {
+    return { key: 'sardinas', family: 'pescado_azul', circadianDinnerOk: true };
+  }
   if (joined.includes('flat steak') || (/\\bres\\b/.test(joined) && !joined.includes('molida'))) {
     return { key: 'flat_steak', family: 'res', circadianDinnerOk: false };
   }
@@ -2284,7 +2291,7 @@ const _HG_ARCHETYPE_PATTERNS = [
   ['huevo_quiche_lorraine_sin_costra', ['quiche lorraine keto']],
   ['salmon_estilo_alda_philadelphia_alcaparras', ['salmon estilo alda', 'salmón estilo alda']],
   ['pollo_marsala_champinones_crema', ['al marsala keto', 'reduccion bistro de champinones']],
-  ['focaccia_keto_hongos_gratinados', ['focaccia keto de champinones', 'focaccia keto de champiñones']],
+  ['focaccia_keto_hongos_gratinados', ['focaccia keto de pollo entero', 'focaccia keto de champinones', 'focaccia keto de champiñones']],
   ['huevo_omurice_keto_coliflor', ['omurice keto japones', 'omurice keto japonés']],
   ['huevo_tamagoyaki_relleno_alga', ['tamagoyaki imperial']],
   ['huevo_chawanmushi_flan_imperial', ['chawanmushi imperial']],
@@ -3904,6 +3911,9 @@ window.PANTRY_STOCK_INVENTORY = {
       "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
       "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
       "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 1, unit: "piezas", packaging: "1 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null },
+      "sku-321-queso-doble-crema": { item_num: 321, name: "Queso doble crema", stock: 1000, unit: "g", packaging: "1,000 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", reason: null },
+      "sku-322-calabacitas": { item_num: 322, name: "Calabacitas", stock: 1400, unit: "g", packaging: "1,400 g (7 piezas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", reason: null },
+      "sku-323-ajo": { item_num: 323, name: "Ajo", stock: 120, unit: "g", packaging: "120 g (2 cabezas)", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada", stock: 0, unit: "g", status: "canonical" },
@@ -4119,7 +4129,10 @@ let pantryStock = {
       "Queso ricotta": 1920,
       "Chile chipotle": 1320,
       "Frijol pinto": 1,
-      "Pollo entero": 1
+      "Pollo entero": 1,
+      "Queso doble crema": 1000,
+      "Calabacitas": 1400,
+      "Ajo": 120
     };
     let checkedRows = {};
     let mealDinersState = {};
@@ -4220,6 +4233,7 @@ let pantryStock = {
       { stem: 'oikos', aliases: ['oikos', 'oikos pro', 'lacteo oikos', 'yoghurt oikos', 'yogurt oikos', 'oikos proteina', 'yogur griego', 'yoghurt griego', 'yoghurt griego natural sin azucar', 'yoghurt griego natural sin azucar (kirkland)'] },
       { stem: 'crema', aliases: ['crema', 'crema entera', 'crema entera de rancho', 'crema para batir', 'crema acida'], exclude: ['queso crema'] },
       { stem: 'cottage', aliases: ['queso cottage', 'cottage', 'queso cottage artesanal'] },
+      { stem: 'queso-doble-crema', aliases: ['queso doble crema', 'doble crema'] },
       { stem: 'philadelphia', aliases: ['queso philadelphia', 'philadelphia', 'queso crema philadelphia'] },
       { stem: 'mozzarella', aliases: ['queso mozzarella', 'mozzarella'] },
       { stem: 'oliva', aliases: ['aceite de oliva', 'vevo', 'aceite de oliva extra virgen', 'aceite de oliva virgen extra', 'aceite de oliva extra virgen (vevo)'], exclude: ['aceituna', 'aceitunas'] },
@@ -4367,6 +4381,9 @@ let pantryStock = {
       else if (/\\bframbuesas?\\b/.test(norm)) out = 'Frambuesas';
       else if (/\\bzarzamoras?\\b/.test(norm)) out = 'Zarzamora';
       else if (/\\bcottage\\b/.test(norm)) out = 'Queso cottage';
+      else if (/\\bdoble crema\\b/.test(norm)) out = 'Queso doble crema';
+      else if (/\\b(calabacitas?|calabaza)\\b/.test(norm) && !norm.includes('flor') && !norm.includes('semilla')) out = 'Calabacitas';
+      else if (/\\b(ajo|dientes de ajo)\\b/.test(norm) && !norm.includes('sal con ajo') && !norm.includes('ajonjoli')) out = 'Ajo';
       else if (/\\b(yogur|yoghurt|oikos)\\b/.test(norm)) out = 'Yogur griego';
       else if (/\\b(ricotta|qcotta|requeson)\\b/.test(norm)) out = 'Queso ricotta';
       else if (/\\b(fondo claro de pollo|caldo claro de pollo)\\b/.test(norm)) out = 'Fondo claro de pollo';
@@ -5346,6 +5363,50 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v59_cottage_3840_sams_costco_sync', 'true');
         }
 
+        // Sincronización V60: Alta de Mercado Local Fresco (Pollo entero 1 pza, Queso doble crema 1000g, Aguacate 5 pzas, Champiñón 1000g, Ejotes 500g, Calabacitas 1400g, Jitomate 8 pzas, Tomate 500g, Cebolla 13 pzas, Morrón 8 pzas, Ajo 120g, Pimienta negra 170g)
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v60_mercado_local_fresco_nov01_sync') !== 'true') {
+          const v60MercadoUpdates = {
+            "Pollo entero": { stock: 1, unit: "piezas", sku: "pollo-entero", item_num: 316, category: "🥩 Carnes, Pescados y Proteínas" },
+            "Queso doble crema": { stock: 1000, unit: "g", sku: "sku-321-queso-doble-crema", item_num: 321, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
+            "Aguacate": { stock: 5, unit: "piezas", sku: "sku-038-aguacate", item_num: 38, category: "🥑 Grasas, Aceites y Semillas" },
+            "Champiñón": { stock: 1000, unit: "g", sku: "sku-040-champinon", item_num: 40, category: "🥬 Verduras, Hortalizas y Frescos" },
+            "Ejotes": { stock: 500, unit: "g", sku: "sku-035-ejotes", item_num: 35, category: "🥬 Verduras, Hortalizas y Frescos" },
+            "Calabacitas": { stock: 1400, unit: "g", sku: "sku-322-calabacitas", item_num: 322, category: "🥬 Verduras, Hortalizas y Frescos" },
+            "Jitomate": { stock: 8, unit: "piezas", sku: "sku-027-jitomate", item_num: 27, category: "🥬 Verduras, Hortalizas y Frescos" },
+            "Tomate": { stock: 500, unit: "g", sku: "sku-036-tomate", item_num: 36, category: "🥬 Verduras, Hortalizas y Frescos" },
+            "Cebolla": { stock: 13, unit: "piezas", sku: "sku-033-cebolla", item_num: 33, category: "🥬 Verduras, Hortalizas y Frescos" },
+            "Morrón": { stock: 8, unit: "piezas", sku: "sku-028-morron", item_num: 28, category: "🥬 Verduras, Hortalizas y Frescos" },
+            "Ajo": { stock: 120, unit: "g", sku: "sku-323-ajo", item_num: 323, category: "🌶️ Chiles, Condimentos e Infusiones" },
+            "Pimienta negra": { stock: 170, unit: "g", sku: "sku-080-pimienta-negra", item_num: 80, category: "🌶️ Chiles, Condimentos e Infusiones" }
+          };
+          Object.keys(v60MercadoUpdates).forEach(itemName => {
+            const up = v60MercadoUpdates[itemName];
+            pantryStock[itemName] = up.stock;
+            if (window.pantryCardUnits) {
+              window.pantryCardUnits[itemName] = up.unit;
+            }
+            if (window.PANTRY_STOCK_INVENTORY) {
+              if (!window.PANTRY_STOCK_INVENTORY[up.sku]) {
+                window.PANTRY_STOCK_INVENTORY[up.sku] = {
+                  item_num: up.item_num || 321,
+                  name: itemName,
+                  stock: up.stock,
+                  unit: up.unit,
+                  packaging: `${up.stock} ${up.unit}`,
+                  category: up.category,
+                  status: "canonical",
+                  reason: null
+                };
+              } else {
+                window.PANTRY_STOCK_INVENTORY[up.sku].stock = up.stock;
+                window.PANTRY_STOCK_INVENTORY[up.sku].unit = up.unit;
+                window.PANTRY_STOCK_INVENTORY[up.sku].packaging = `${up.stock} ${up.unit}`;
+              }
+            }
+          });
+          localStorage.setItem('nutriketo_v60_mercado_local_fresco_nov01_sync', 'true');
+        }
+
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
         if (!isPantryItemDeleted("Leche") && !isPantryItemDeleted("sku-013-leche") && !window.PANTRY_STOCK_INVENTORY["sku-013-leche"]) {
           const lecheStock = pantryStock["Leche"] !== undefined ? pantryStock["Leche"] : 960;
@@ -5393,6 +5454,45 @@ let pantryStock = {
             unit: "g",
             packaging: `${pavoStock} g`,
             category: "🥩 Carnes, Pescados y Proteínas",
+            status: "canonical",
+            reason: null
+          };
+        }
+        if (!isPantryItemDeleted("Queso doble crema") && !isPantryItemDeleted("sku-321-queso-doble-crema") && !window.PANTRY_STOCK_INVENTORY["sku-321-queso-doble-crema"]) {
+          const dcStock = pantryStock["Queso doble crema"] !== undefined ? pantryStock["Queso doble crema"] : 1000;
+          window.PANTRY_STOCK_INVENTORY["sku-321-queso-doble-crema"] = {
+            item_num: 321,
+            name: "Queso doble crema",
+            stock: dcStock,
+            unit: "g",
+            packaging: `${dcStock} g`,
+            category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+            status: "canonical",
+            reason: null
+          };
+        }
+        if (!isPantryItemDeleted("Calabacitas") && !isPantryItemDeleted("sku-322-calabacitas") && !window.PANTRY_STOCK_INVENTORY["sku-322-calabacitas"]) {
+          const calStock = pantryStock["Calabacitas"] !== undefined ? pantryStock["Calabacitas"] : 1400;
+          window.PANTRY_STOCK_INVENTORY["sku-322-calabacitas"] = {
+            item_num: 322,
+            name: "Calabacitas",
+            stock: calStock,
+            unit: "g",
+            packaging: `${calStock} g`,
+            category: "🥬 Verduras, Hortalizas y Frescos",
+            status: "canonical",
+            reason: null
+          };
+        }
+        if (!isPantryItemDeleted("Ajo") && !isPantryItemDeleted("sku-323-ajo") && !window.PANTRY_STOCK_INVENTORY["sku-323-ajo"]) {
+          const ajoStock = pantryStock["Ajo"] !== undefined ? pantryStock["Ajo"] : 120;
+          window.PANTRY_STOCK_INVENTORY["sku-323-ajo"] = {
+            item_num: 323,
+            name: "Ajo",
+            stock: ajoStock,
+            unit: "g",
+            packaging: `${ajoStock} g`,
+            category: "🌶️ Chiles, Condimentos e Infusiones",
             status: "canonical",
             reason: null
           };
@@ -5833,6 +5933,7 @@ let pantryStock = {
           customGeneratedWeeks: lightweightCustomWeeks,
           samsReceiptProcessed_20261003: true,
           v58_tickets_sams_costco_nov01_sync: true,
+          v60_mercado_local_fresco_nov01_sync: true,
           checkedRows,
           customShopItems,
           selectedIdx,

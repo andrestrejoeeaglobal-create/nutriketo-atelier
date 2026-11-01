@@ -282,8 +282,8 @@ def compile_s45_dossier() -> Dict[str, Any]:
     # Section 3
     lines.append("## 3. Abastecimiento Tridimensional Exacto (Sincronizado con `pantry_live_state.json` y `calculateNetShoppingList(6)` de `atelier.html`)")
     lines.append("")
-    lines.append("### 3.0 Estado Real en Alacena Consolidado con Tickets Sam's Club (`1566264040064745472`) y Costco (`4362`) (`pantry_live_state.json`)")
-    lines.append("| # | Descripción en Ticket (Sam's Scan & Go / Costco) | Insumo Canónico Puro (SSOT) | Stock Real Actual en Alacena (`pantry_live_state.json`) | Demanda Semanal S45 (6p) | Saldo Remanente Post-S45 | Compra Neta S45 |")
+    lines.append("### 3.0 Estado Real en Alacena Consolidado con Tickets Sam's Club (`1566264040064745472`), Costco (`4362`) y Mercado Local Fresco (`pantry_live_state.json`)")
+    lines.append("| # | Descripción en Ticket (Sam's / Costco / Mercado Local) | Insumo Canónico Puro (SSOT) | Stock Real Actual en Alacena (`pantry_live_state.json`) | Demanda Semanal S45 (6p) | Saldo Remanente Post-S45 | Compra Neta S45 |")
     lines.append("|---|---|---|---|---|---|---|")
 
     sams_rows = [
@@ -295,8 +295,10 @@ def compile_s45_dossier() -> Dict[str, Any]:
         ("ATÚN EN AGUA (Saldo Alacena)", "Atún en agua", "700 g", "g"),
         ("FAJITAS PAVO (Saldo Alacena)", "Pechuga de pavo", "1,400 g", "g"),
         ("KS PECHUGA D 1.670KG (Costco #4362)", "Pechuga de pollo", "1,670 g", "g"),
+        ("POLLO ENTERO EN PIEZAS + MENUDENCIAS (Mercado Local 1.8 kg)", "Pollo entero", "1 piezas", "piezas"),
         ("90PZ HUEVO (+80 pzas post-S44)", "Huevo", "170 piezas", "piezas"),
         ("960GR QCOTTA (4 pzas × 960 g Sam's)", "Queso cottage", "3,840 g", "g"),
+        ("QSO DOBLE CREMA (Mercado Local 1 kg)", "Queso doble crema", "1,000 g", "g"),
         ("QSO MANCH RA (Sam's #1566264040064745472)", "Queso manchego", "1,000 g", "g"),
         ("QSO MOZZARELLA (Saldo Alacena)", "Queso mozzarella", "105 g", "g"),
         ("QSO PARMESANO (Saldo Alacena)", "Queso parmesano", "100 g", "g"),
@@ -304,6 +306,7 @@ def compile_s45_dossier() -> Dict[str, Any]:
         ("CABRARANDANO (Cubierta azucarada)", "Queso de cabra con arándano", "350 g (En Cuarentena NOM-004)", "g"),
         ("12/90 MANTEQ (Saldo Alacena)", "Mantequilla", "500 g", "g"),
         ("LECHE DE COCO (Saldo Alacena)", "Leche de coco", "480 ml", "ml"),
+        ("AGUACATE HASS (Mercado Local 1 kg = 5 pzas)", "Aguacate", "5 piezas", "piezas"),
         ("KS NUEZ INDIA 1.1K (+600 g previos)", "Nuez de la India", "1,700 g", "g"),
         ("KS MIX NUT 1.02KG (Costco #4362)", "Semillas y nueces mixtas", "1,020 g", "g"),
         ("PISTACHES (Saldo Alacena)", "Pistaches", "100 g", "g"),
@@ -311,10 +314,19 @@ def compile_s45_dossier() -> Dict[str, Any]:
         ("FRESA (1 domo Sam's 907 g)", "Fresas", "907 g", "g"),
         ("FRAMBUESA (Saldo Alacena)", "Frambuesas", "250 g", "g"),
         ("ZARZAMORA 510 G (Costco #4362)", "Zarzamora", "510 g", "g"),
+        ("CHAMPIÑÓN FRESCO (Mercado Local 1 kg)", "Champiñón", "1,000 g", "g"),
+        ("CALABACITAS TIERNAS (Mercado Local 1.4 kg = 7 pzas)", "Calabacitas", "1,400 g", "g"),
+        ("EJOTES VERDES (Mercado Local 500 g)", "Ejotes", "500 g", "g"),
+        ("JITOMATE SALADET (Mercado Local 8 pzas)", "Jitomate", "8 piezas", "piezas"),
+        ("TOMATE VERDE (Mercado Local 500 g)", "Tomate", "500 g", "g"),
+        ("CEBOLLA BLANCA (+11 Mercado Local + 2 previas)", "Cebolla", "13 piezas", "piezas"),
+        ("PIMIENTO MORRÓN (+4 Mercado Local + 4 previos)", "Morrón", "8 piezas", "piezas"),
         ("BRÓCOLI REFRIGERADOR (Saldo Fresco)", "Brócoli", "1,500 g", "g"),
         ("COLIFLOR REFRIGERADOR (Saldo Fresco)", "Coliflor", "500 g", "g"),
         ("GERMINADO (1 domo Sam's 500 g)", "Germinado", "500 g", "g"),
         ("LECHUGA SUCRINE 6P (+1 previa)", "Lechuga", "7 piezas", "piezas"),
+        ("AJO NATURAL (Mercado Local 2 cabezas = 120 g)", "Ajo", "120 g", "g"),
+        ("PIMIENTA NEGRA (+100 g Mercado Local + 70 g previos)", "Pimienta negra", "170 g", "g"),
         ("CÚRCUMA MOLIDA (Saldo Alacena)", "Cúrcuma", "100 g", "g"),
         ("MOSTAZA DIJON (Saldo Alacena)", "Mostaza", "120 g", "g"),
         ("HOJAS DE LAUREL (Saldo Alacena)", "Hojas de laurel", "9 g", "g"),
@@ -364,7 +376,12 @@ def compile_s45_dossier() -> Dict[str, Any]:
         lines.append("| # | Preparación Culinaria Interna | Volumen Semanal Requerido (6p) | Origen Operativo | Costo Mercado |")
         lines.append("|---|---|---|---|---|")
         for idx_k, k_item in enumerate(bom_summary["kitchen_prepared_items"], start=1):
-            lines.append(f"| {idx_k} | **{k_item['name']}** | {fmt_num(k_item['required'])} {k_item['unit']} | 🍲 Preparación Casera en Cocina (No se compra) | **\\$0.00 MXN** |")
+            origin_txt = (
+                "🍲 Elaborado en casa con el huacal, cuello, molleja, hígado y corazón del **Pollo entero** (`1,800 g`) de Mercado Local"
+                if "pollo" in k_item["name"].lower()
+                else "🍲 Preparación Casera en Cocina (No se compra)"
+            )
+            lines.append(f"| {idx_k} | **{k_item['name']}** | {fmt_num(k_item['required'])} {k_item['unit']} | {origin_txt} | **\\$0.00 MXN** |")
 
     lines.append("")
     lines.append("### 3.2 Existencias Consolidadas en Alacena y Refrigerador (Amortización Exacta con \\$0.00 MXN de Compra)")

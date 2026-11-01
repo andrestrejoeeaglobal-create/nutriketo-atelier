@@ -1,8 +1,8 @@
 {
-  "ssot_version": "v61_s45_alacena_optimization_synced",
-  "extracted_from": "Google Chrome LocalStorage LevelDB (015756.ldb, seq=270647)",
-  "leveldb_seq": 270999,
-  "updated_at": "2026-11-01T11:29:48.994101",
+  "ssot_version": "v58_sams_costco_tickets_synced",
+  "extracted_from": "Google Chrome LocalStorage LevelDB (015794.ldb, seq=270738)",
+  "leveldb_seq": 270738,
+  "updated_at": "2026-11-01T13:29:04.219973",
   "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
@@ -13,7 +13,8 @@
     "Acelgas",
     "Romero",
     "Agua purificada",
-    "Jamaica"
+    "Jamaica",
+    "Granadas"
   ],
   "customFarmItems": [],
   "deletedFarmItems": [
@@ -44,8 +45,8 @@
     "Queso cottage": 3840,
     "Yogur griego": 3000,
     "Queso Philadelphia": 720,
-    "Crema ácida": 960,
-    "Mayonesa": 1000,
+    "Crema ácida": 1100,
+    "Mayonesa": 200,
     "Queso manchego": 1000,
     "Queso de cabra": 0,
     "Salsa BBQ": 550,
@@ -61,18 +62,18 @@
     "Carne molida": 2315,
     "Fajitas de mojarra": 900,
     "Filete de atún": 0,
-    "Jitomate": 0,
-    "Morrón": 4,
+    "Jitomate": 8,
+    "Morrón": 8,
     "Pechuga de pollo": 1670,
     "Flor de calabaza": 0,
-    "Calabaza": 4,
-    "Cebolla": 2,
+    "Calabaza": 2,
+    "Cebolla": 13,
     "Lechuga": 7,
-    "Ejotes": 0,
-    "Tomate": 0,
-    "Aguacate": 0,
+    "Ejotes": 500,
+    "Tomate": 500,
+    "Aguacate": 5,
     "Zarzamora": 510,
-    "Champiñón": 0.05,
+    "Champiñón": 1000,
     "Pulpa de arándano": 3840,
     "Pistaches": 100,
     "Nuez de la India": 1700,
@@ -111,7 +112,7 @@
     "Hojas de laurel": 9,
     "Orégano": 150,
     "Tomillo": 20,
-    "Pimienta negra": 70,
+    "Pimienta negra": 170,
     "Comino": 50,
     "Clavo de olor": 50,
     "Ajonjolí": 0,
@@ -131,7 +132,7 @@
     "Quinoa": 100,
     "Chile güero": 840,
     "Palomitas para microondas": 600,
-    "Grenetina": 0,
+    "Grenetina": 112,
     "Saborizante para arroz": 48,
     "Huevo": 170,
     "MultiSinergix®": 300,
@@ -143,14 +144,17 @@
     "Queso ricotta": 0,
     "Chile chipotle": 1320,
     "Frijol pinto": 1,
-    "Pollo entero": 0,
+    "Pollo entero": 1,
     "Pechuga de pavo": 1400,
     "Germinado": 500,
     "Coliflor": 500,
-    "Pepino": 3,
+    "Pepino": 2,
     "Brócoli": 1500,
     "Queso de cabra con arándano": 350,
-    "Nueces mixtas": 1020
+    "Queso doble crema": 1000,
+    "Nueces mixtas": 1020,
+    "Calabacitas": 1400,
+    "Ajo": 120
   },
   "pantryCardUnits": {
     "Mantequilla": "g",
@@ -264,7 +268,10 @@
     "Pepino": "piezas",
     "Brócoli": "g",
     "Queso de cabra con arándano": "g",
-    "Nueces mixtas": "g"
+    "Queso doble crema": "g",
+    "Nueces mixtas": "g",
+    "Calabacitas": "g",
+    "Ajo": "g"
   },
   "auditorPantryStock": {
     "Mantequilla": [
@@ -288,11 +295,11 @@
       "g"
     ],
     "Crema ácida": [
-      960.0,
+      1100.0,
       "g"
     ],
     "Mayonesa": [
-      1000.0,
+      200.0,
       "g"
     ],
     "Queso manchego": [
@@ -340,11 +347,11 @@
       "g"
     ],
     "Jitomate": [
-      0.0,
+      8.0,
       "piezas"
     ],
     "Morrón": [
-      4.0,
+      8.0,
       "piezas"
     ],
     "Pechuga de pollo": [
@@ -356,11 +363,11 @@
       "manojo"
     ],
     "Calabaza": [
-      4.0,
+      2.0,
       "piezas"
     ],
     "Cebolla": [
-      2.0,
+      13.0,
       "piezas"
     ],
     "Lechuga": [
@@ -368,15 +375,15 @@
       "piezas"
     ],
     "Ejotes": [
-      0.0,
+      500.0,
       "g"
     ],
     "Tomate": [
-      0.0,
+      500.0,
       "g"
     ],
     "Aguacate": [
-      0.0,
+      5.0,
       "piezas"
     ],
     "Zarzamora": [
@@ -384,7 +391,7 @@
       "g"
     ],
     "Champiñón": [
-      0.0,
+      1000.0,
       "g"
     ],
     "Pistaches": [
@@ -488,7 +495,7 @@
       "g"
     ],
     "Pimienta negra": [
-      70.0,
+      170.0,
       "g"
     ],
     "Comino": [
@@ -536,7 +543,7 @@
       "g"
     ],
     "Grenetina": [
-      0.0,
+      112.0,
       "g"
     ],
     "Huevo": [
@@ -572,7 +579,7 @@
       "g"
     ],
     "Pollo entero": [
-      0.0,
+      1.0,
       "piezas"
     ],
     "Pechuga de pavo": [
@@ -588,15 +595,27 @@
       "g"
     ],
     "Pepino": [
-      3.0,
+      2.0,
       "piezas"
     ],
     "Brócoli": [
       1500.0,
       "g"
     ],
+    "Queso doble crema": [
+      1000.0,
+      "g"
+    ],
     "Nueces mixtas": [
       1020.0,
+      "g"
+    ],
+    "Calabacitas": [
+      1400.0,
+      "g"
+    ],
+    "Ajo": [
+      120.0,
       "g"
     ]
   },
