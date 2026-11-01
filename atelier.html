@@ -7413,6 +7413,300 @@ function compileFullMealRecipes(meal, diners) {
     }
 
 
+window.recipeViewMode = window.recipeViewMode || 'cook';
+
+function setRecipeViewMode(mode) {
+  window.recipeViewMode = (mode === 'auditor') ? 'auditor' : 'cook';
+  const plan = typeof getPlanForWeek === 'function' ? getPlanForWeek(activeWeek) : null;
+  if (plan && plan.days && plan.days[selectedIdx]) {
+    renderRecipes(plan.days[selectedIdx], activeDiners);
+  }
+}
+
+function stripAuditJargonForCook(text) {
+  if (!text) return '';
+  return String(text)
+    .replace(/\[R\d+[A-Z0-9\-\.]*\]\s*:?\s*/gi, '')
+    .replace(/\(Regla\s+[^\)]+\)/gi, '')
+    .replace(/Termodinámica\s+CoCT\s*:?\s*/gi, '')
+    .replace(/Física\s+del\s+Bocado\s*:?\s*/gi, '')
+    .replace(/\s{2,}/g, ' ')
+    .trim();
+}
+
+function classifyCookStationCategory(itemName, rawCategory) {
+  const n = String(itemName || '').toLowerCase();
+  const c = String(rawCategory || '').toLowerCase();
+  if (/huevo|pollo|pavo|res|arrachera|sirloin|machaca|tuetano|tuétano|salmon|salmón|atun|atún|robalo|huachinango|pescado|queso|ricotta|manchego|philadelphia|crema|yogurt|requeson/i.test(n) || /prote[ií]na|l[aá]cteo/i.test(c)) {
+    return '🥩 1. Proteínas, Huevos y Quesos';
+  }
+  if (/aceite|mantequilla|ghee|aguacate|nuez|almendra|pistache|macadamia|pecana|semilla|chia|chía|linaza|ajonjol[ií]|cacao|coco/i.test(n) || /grasa|l[ií]pido|semilla|oleaginosa/i.test(c)) {
+    return '🫒 3. Grasas de Cocción, Aceites y Semillas';
+  }
+  if (/sal|pimienta|ajo|cebolla\s+en\s+polvo|or[eé]gano|romero|tomillo|comino|canela|vainilla|caldo|fondo|vinagre|mostaza|grenetina|33plus|34plus|stevia|monk|eritritol|jamaica|manzanilla|toronjil|t[eé]\s+verde/i.test(n)) {
+    return '🧂 4. Sazonadores, Fondos y Fórmulas Funcionales';
+  }
+  return '🥬 2. Vegetales, Frutas y Hierbas Frescas';
+}
+
+function consolidateServiceMiseEnPlace(fullMeal) {
+  const courseShortLabels = ['Entrada', 'Principal', 'Guarnición/Bebida'];
+  const map = new Map();
+
+  (fullMeal.courses || []).forEach((course, cIdx) => {
+    const cLabel = courseShortLabels[cIdx] || `Tiempo ${cIdx + 1}`;
+    (course.ingredient_groups || []).forEach(grp => {
+      (grp.items || []).forEach(item => {
+        const cleanName = stripAuditJargonForCook(item.name || 'Insumo');
+        const normName = cleanName
+          .toLowerCase()
+          .normalize('NFD').replace(/[̀-ͯ]/g, '')
+          .replace(/\s*\([^\)]*\)\s*/g, ' ')
+          .replace(/(fresco|fresca|frescos|frescas|de la granja|artesanal|extra virgen|vevo|al gusto)/g, '')
+          .replace(/\s+/g, ' ')
+          .trim();
+        const unitNorm = String(item.unit || 'g').toLowerCase().trim();
+        const key = `${normName}__${unitNorm}`;
+        const numQty = parseFloat(String(item.qty).replace(/[^0-9.]/g, '')) || 0;
+        const station = classifyCookStationCategory(cleanName, grp.category);
+
+        if (!map.has(key)) {
+          map.set(key, {
+            name: cleanName,
+            unit: item.unit || 'g',
+            totalQty: 0,
+            station,
+            usages: []
+          });
+        }
+        const entry = map.get(key);
+        entry.totalQty = Math.round((entry.totalQty + numQty + Number.EPSILON) * 100) / 100;
+        const existingCourse = entry.usages.find(u => u.course === cLabel);
+        if (existingCourse) {
+          existingCourse.qty = Math.round((existingCourse.qty + numQty + Number.EPSILON) * 100) / 100;
+        } else {
+          entry.usages.push({ course: cLabel, qty: numQty, unit: item.unit || 'g' });
+        }
+      });
+    });
+  });
+
+  const stationsOrder = [
+    '🥩 1. Proteínas, Huevos y Quesos',
+    '🥬 2. Vegetales, Frutas y Hierbas Frescas',
+    '🫒 3. Grasas de Cocción, Aceites y Semillas',
+    '🧂 4. Sazonadores, Fondos y Fórmulas Funcionales'
+  ];
+
+  const grouped = {};
+  stationsOrder.forEach(s => { grouped[s] = []; });
+
+  map.forEach(val => {
+    if (!grouped[val.station]) grouped[val.station] = [];
+    grouped[val.station].push(val);
+  });
+
+  return { stationsOrder, grouped, allItems: Array.from(map.values()) };
+}
+
+function renderCookModeView(fullMeal) {
+  const courses = fullMeal.courses || [];
+  const starter = courses[0] || { title: 'Entrada', steps: [] };
+  const main = courses[1] || { title: 'Plato Principal', steps: [] };
+  const side = courses[2] || { title: 'Acompañamiento', steps: [] };
+
+  const mise = consolidateServiceMiseEnPlace(fullMeal);
+  const sharedCount = mise.allItems.filter(i => i.usages.length > 1).length;
+
+  let stationsHtml = '';
+  mise.stationsOrder.forEach(stName => {
+    const items = mise.grouped[stName] || [];
+    if (!items.length) return;
+
+    const rowsHtml = items.map(item => {
+      const isShared = item.usages.length > 1;
+      const splitBadge = isShared
+        ? `<div class="mt-1 text-[11px] font-semibold text-amber-800 dark:text-amber-300 bg-amber-100/80 dark:bg-amber-950/60 border border-amber-300 dark:border-amber-800 px-2 py-0.5 rounded-md inline-block">
+             ⚖️ Pesar 1 sola vez y dividir: ${item.usages.map(u => `<strong>${u.qty} ${u.unit}</strong> en ${u.course}`).join(' + ')}
+           </div>`
+        : `<span class="text-[10px] font-semibold px-1.5 py-0.5 rounded bg-slate-200/70 dark:bg-slate-700 text-slate-600 dark:text-slate-300 ml-1.5">${item.usages[0]?.course || 'Servicio'}</span>`;
+
+      return `
+        <li class="py-2 border-b border-slate-100 dark:border-slate-800 last:border-0 flex flex-col">
+          <div class="flex items-center justify-between gap-2">
+            <span class="font-medium text-slate-800 dark:text-slate-200 text-xs">
+              ${item.name}
+              ${!isShared ? splitBadge : ''}
+            </span>
+            <span class="font-mono font-extrabold text-xs px-2 py-0.5 rounded ${isShared ? 'bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700' : 'text-slate-900 dark:text-slate-100'}">
+              ${item.totalQty} ${item.unit}
+            </span>
+          </div>
+          ${isShared ? splitBadge : ''}
+        </li>
+      `;
+    }).join('');
+
+    stationsHtml += `
+      <div class="bg-slate-50 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-700 p-3.5 rounded-xl">
+        <h6 class="font-bold text-[#1C75BC] text-xs font-brand-title uppercase mb-2 border-b border-slate-200 dark:border-slate-800 pb-1.5">
+          ${stName}
+        </h6>
+        <ul class="divide-y divide-slate-100 dark:divide-slate-800">
+          ${rowsHtml}
+        </ul>
+      </div>
+    `;
+  });
+
+  const cleanStarterSteps = (starter.steps || []).map(stripAuditJargonForCook);
+  const cleanMainSteps = (main.steps || []).map(stripAuditJargonForCook);
+  const cleanSideSteps = (side.steps || []).map(stripAuditJargonForCook);
+
+  const phase1Steps = [
+    cleanStarterSteps[0] ? `<strong>Entrada (${stripAuditJargonForCook(starter.title)}):</strong> ${cleanStarterSteps[0]}` : null,
+    cleanSideSteps[0] ? `<strong>Guarnición/Bebida (${stripAuditJargonForCook(side.title)}):</strong> ${cleanSideSteps[0]}` : null
+  ].filter(Boolean);
+
+  const phase2Steps = [
+    cleanMainSteps[0] ? `<strong>Base Principal (${stripAuditJargonForCook(main.title)}):</strong> ${cleanMainSteps[0]}` : null,
+    cleanStarterSteps[1] ? `<strong>Aderezo/Caldo de Entrada:</strong> ${cleanStarterSteps[1]}` : null
+  ].filter(Boolean);
+
+  const phase3Steps = [
+    cleanMainSteps[1] ? `<strong>Fuego Principal (Proteína):</strong> ${cleanMainSteps[1]}` : null,
+    cleanSideSteps[1] ? `<strong>Fuego Lateral (Acompañamiento):</strong> ${cleanSideSteps[1]}` : null
+  ].filter(Boolean);
+
+  const phase4Steps = [
+    cleanStarterSteps.slice(2).join(' ') ? `<strong>Pase de Entrada:</strong> ${cleanStarterSteps.slice(2).join(' ')}` : null,
+    cleanMainSteps.slice(2).join(' ') ? `<strong>Pase de Plato Fuerte:</strong> ${cleanMainSteps.slice(2).join(' ')}` : null,
+    cleanSideSteps.slice(2).join(' ') ? `<strong>Pase de Acompañamiento/Bebida:</strong> ${cleanSideSteps.slice(2).join(' ')}` : null
+  ].filter(Boolean);
+
+  return `
+    <div class="mt-4 space-y-5 CookModeCommandContainer">
+      <!-- Banner Resumen de Comanda Práctica -->
+      <div class="bg-gradient-to-r from-emerald-50 via-teal-50 to-blue-50 dark:from-emerald-950/40 dark:via-slate-900 dark:to-blue-950/40 border border-emerald-200 dark:border-emerald-800/80 rounded-xl p-4">
+        <div class="flex items-center justify-between flex-wrap gap-2 mb-2">
+          <div class="flex items-center gap-2">
+            <span class="text-base">👩‍🍳</span>
+            <h4 class="text-sm font-extrabold font-brand-title text-emerald-900 dark:text-emerald-200 uppercase tracking-wide" style="margin:0;">
+              Comanda Práctica Unificada en Barra (${fullMeal.diners} Comensales)
+            </h4>
+          </div>
+          <span class="px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-600 text-white">
+            ✓ ${sharedCount} insumos unificados en 1 solo pesaje
+          </span>
+        </div>
+        <p class="text-xs text-slate-700 dark:text-slate-300 font-brand-body leading-relaxed">
+          Pesa todos los ingredientes del servicio <strong>una sola vez</strong> en la tabla inferior y sigue el <strong>Orden Sincronizado de Fuegos</strong> para que los 3 tiempos salgan a la mesa al mismo tiempo.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 mt-3 text-xs">
+          <div class="bg-white/90 dark:bg-slate-800/90 p-2.5 rounded-lg border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-[#1C75BC] block text-[10px] uppercase">1. Entrada</span>
+            <span class="font-bold text-slate-900 dark:text-slate-100">${stripAuditJargonForCook(starter.title)}</span>
+          </div>
+          <div class="bg-white/90 dark:bg-slate-800/90 p-2.5 rounded-lg border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-[#3AAA35] block text-[10px] uppercase">2. Plato Principal</span>
+            <span class="font-bold text-slate-900 dark:text-slate-100">${stripAuditJargonForCook(main.title)}</span>
+          </div>
+          <div class="bg-white/90 dark:bg-slate-800/90 p-2.5 rounded-lg border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-amber-600 dark:text-amber-400 block text-[10px] uppercase">3. Acompañamiento / Bebida</span>
+            <span class="font-bold text-slate-900 dark:text-slate-100">${stripAuditJargonForCook(side.title)}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paso 1: Mise en Place Unificada (Cero Doble Pesaje) -->
+      <div>
+        <div class="flex items-center justify-between mb-2.5 flex-wrap gap-2">
+          <h5 class="text-xs font-extrabold font-brand-title text-slate-900 dark:text-slate-100 uppercase flex items-center gap-1.5">
+            <span>⚖️</span> 1. Mise en Place Unificada del Servicio (Pesar 1 Sola Vez en Barra)
+          </h5>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400">
+            Cantidades totales ya escaladas para <strong>${fullMeal.diners} comensales</strong>
+          </span>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+          ${stationsHtml}
+        </div>
+      </div>
+
+      <!-- Paso 2: Cronograma Sincronizado de Fuegos -->
+      <div class="bg-slate-50/80 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 rounded-xl p-4">
+        <h5 class="text-xs font-extrabold font-brand-title text-slate-900 dark:text-slate-100 uppercase mb-3 flex items-center gap-1.5">
+          <span>🔥</span> 2. Orden Cronológico de Fuegos (Sincronización de 3 Tiempos en Mesa)
+        </h5>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+          <div class="bg-white dark:bg-slate-800 border-l-4 border-l-blue-500 border border-slate-200 dark:border-slate-700 p-3 rounded-lg">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-extrabold text-blue-700 dark:text-blue-400 font-brand-title uppercase text-[11px]">⏱️ Fase 1 — Mise en Place, Fríos e Infusiones</span>
+              <span class="px-2 py-0.5 rounded bg-blue-50 dark:bg-blue-950 text-blue-700 dark:text-blue-300 font-mono font-bold text-[10px]">T-20 min</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+              ${phase1Steps.map(s => `<li>• ${s}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="bg-white dark:bg-slate-800 border-l-4 border-l-amber-500 border border-slate-200 dark:border-slate-700 p-3 rounded-lg">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-extrabold text-amber-700 dark:text-amber-400 font-brand-title uppercase text-[11px]">🍲 Fase 2 — Precalentado, Fondos y Salsas</span>
+              <span class="px-2 py-0.5 rounded bg-amber-50 dark:bg-amber-950 text-amber-700 dark:text-amber-300 font-mono font-bold text-[10px]">T-15 min</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+              ${phase2Steps.map(s => `<li>• ${s}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="bg-white dark:bg-slate-800 border-l-4 border-l-rose-500 border border-slate-200 dark:border-slate-700 p-3 rounded-lg">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-extrabold text-rose-700 dark:text-rose-400 font-brand-title uppercase text-[11px]">🍳 Fase 3 — Fuego Fuerte: Proteína + Guarnición</span>
+              <span class="px-2 py-0.5 rounded bg-rose-50 dark:bg-rose-950 text-rose-700 dark:text-rose-300 font-mono font-bold text-[10px]">T-8 min</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+              ${phase3Steps.map(s => `<li>• ${s}</li>`).join('')}
+            </ul>
+          </div>
+
+          <div class="bg-white dark:bg-slate-800 border-l-4 border-l-emerald-500 border border-slate-200 dark:border-slate-700 p-3 rounded-lg">
+            <div class="flex items-center justify-between mb-1.5">
+              <span class="font-extrabold text-emerald-700 dark:text-emerald-400 font-brand-title uppercase text-[11px]">🍽️ Fase 4 — Emplatado Sincronizado y Pase Caliente</span>
+              <span class="px-2 py-0.5 rounded bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 font-mono font-bold text-[10px]">T-0 min</span>
+            </div>
+            <ul class="space-y-1.5 text-slate-700 dark:text-slate-300">
+              ${phase4Steps.map(s => `<li>• ${s}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Paso 3: Detalle Práctico de Preparación por Platillo (Sin Tecnicismos) -->
+      <div>
+        <h5 class="text-xs font-extrabold font-brand-title text-slate-900 dark:text-slate-100 uppercase mb-2.5 flex items-center gap-1.5">
+          <span>📋</span> 3. Guía Paso a Paso por Platillo (Instrucciones Limpias de Cocina)
+        </h5>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          ${courses.map(c => `
+            <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-3.5 rounded-xl">
+              <div class="text-[10px] font-bold text-[#1C75BC] uppercase font-brand-title mb-0.5">${c.badge}</div>
+              <div class="text-xs font-bold text-slate-900 dark:text-slate-100 font-brand-title mb-2 pb-1.5 border-b border-slate-200 dark:border-slate-800">${stripAuditJargonForCook(c.title)}</div>
+              <ol class="space-y-2 text-xs text-slate-700 dark:text-slate-300">
+                ${(c.steps || []).map((st, sIdx) => `
+                  <li class="flex gap-2 items-start">
+                    <span class="flex-shrink-0 w-4 h-4 rounded-full bg-emerald-600 text-white font-bold text-[10px] flex items-center justify-center mt-0.5">${sIdx + 1}</span>
+                    <span class="leading-relaxed">${stripAuditJargonForCook(st)}</span>
+                  </li>
+                `).join('')}
+              </ol>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function renderRecipes(day, activeDiners) {
   const prepContainer = document.getElementById('v-prep');
   if (!prepContainer) return;
@@ -7426,6 +7720,8 @@ function renderRecipes(day, activeDiners) {
     `;
     return;
   }
+
+  const currentMode = (window.recipeViewMode === 'auditor') ? 'auditor' : 'cook';
 
   day.meals.forEach((m) => {
     const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(selectedIdx, m.meal_type) : activeDiners;
@@ -7534,15 +7830,33 @@ function renderRecipes(day, activeDiners) {
       `;
     });
 
+    const cookModeHtml = renderCookModeView(fullMeal);
+
+    const viewToggleHtml = `
+      <div class="recipe-view-mode-toggle inline-flex items-center p-1 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 gap-1">
+        <button type="button"
+                onclick="setRecipeViewMode('cook')"
+                class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${currentMode === 'cook' ? 'bg-emerald-600 text-white shadow-sm' : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'}">
+          👩‍🍳 Modo Cocinero (Guía Práctica Paso a Paso)
+        </button>
+        <button type="button"
+                onclick="setRecipeViewMode('auditor')"
+                class="px-3 py-1.5 rounded-lg text-xs font-bold transition-all cursor-pointer ${currentMode === 'auditor' ? 'bg-[#1C75BC] text-white shadow-sm' : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'}">
+          🔬 Modo Auditoría Clínica (Ficha Técnica CoCT)
+        </button>
+      </div>
+    `;
+
     mealCard.innerHTML = `
       <div class="flex items-center justify-between pb-3 border-b border-slate-200 dark:border-slate-700 flex-wrap gap-2">
-        <div class="flex items-center gap-3">
+        <div class="flex items-center gap-3 flex-wrap">
           <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-50 dark:bg-blue-950/40 text-[#1C75BC] border border-blue-200 dark:border-blue-800 font-brand-title">
             ${fullMeal.meal_type}
           </span>
           <span class="text-sm font-bold font-brand-title text-slate-700 dark:text-slate-300">
             Ficha Completa de Ensamblaje (3 Tiempos)
           </span>
+          ${viewToggleHtml}
         </div>
         <div class="flex items-center gap-2">
           ${recipeDispatchHtml}
@@ -7554,7 +7868,12 @@ function renderRecipes(day, activeDiners) {
           </div>
         </div>
       </div>
-      ${coursesHtml}
+      <div class="cook-mode-panel" style="display: ${currentMode === 'cook' ? 'block' : 'none'};">
+        ${cookModeHtml}
+      </div>
+      <div class="auditor-mode-panel" style="display: ${currentMode === 'auditor' ? 'block' : 'none'};">
+        ${coursesHtml}
+      </div>
     `;
 
     prepContainer.appendChild(mealCard);

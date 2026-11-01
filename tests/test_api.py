@@ -1776,3 +1776,31 @@ def test_heptagon_v17_seven_culinary_schools_and_s45_generation():
     assert "Huevos Peyis Estrellados" in html
     assert "Philly Cheese Steak Keto" in html
     assert "Uova in Purgatorio" in html
+
+
+def test_cook_mode_vs_auditor_mode_toggle_in_atelier_html():
+    """
+    Valida la Orden de Ingeniería UI/UX del interruptor '👩‍🍳 Modo Cocinero' vs '🔬 Modo Auditoría Clínica':
+    1. 'cook' es la vista activa por defecto (window.recipeViewMode = window.recipeViewMode || 'cook').
+    2. El selector segmentado incluye ambas vistas ('👩‍🍳 Modo Cocinero (Guía Práctica Paso a Paso)' y '🔬 Modo Auditoría Clínica (Ficha Técnica CoCT)').
+    3. La vista Modo Cocinero consolida el Mise en Place en una sola tabla por servicio (consolidateServiceMiseEnPlace)
+       sin tecnicismos ([R1]-[R12] purgados vía stripAuditJargonForCook) y con las 4 fases de sincronización de fuegos.
+    4. La vista Modo Auditoría Clínica conserva intacto el Razonamiento Culinario CoCT y el desglose individual por receta.
+    """
+    from pathlib import Path
+
+    root = Path(__file__).resolve().parents[1]
+    for fname in ["atelier.html", "index.html"]:
+        html = (root / fname).read_text(encoding="utf-8")
+        assert "window.recipeViewMode = window.recipeViewMode || 'cook';" in html
+        assert "function setRecipeViewMode(mode)" in html
+        assert "function consolidateServiceMiseEnPlace(fullMeal)" in html
+        assert "function stripAuditJargonForCook(text)" in html
+        assert "function renderCookModeView(fullMeal)" in html
+        assert "👩‍🍳 Modo Cocinero (Guía Práctica Paso a Paso)" in html
+        assert "🔬 Modo Auditoría Clínica (Ficha Técnica CoCT)" in html
+        assert "1. Mise en Place Unificada del Servicio (Pesar 1 Sola Vez en Barra)" in html
+        assert "2. Orden Cronológico de Fuegos (Sincronización de 3 Tiempos en Mesa)" in html
+        assert "cook-mode-panel" in html
+        assert "auditor-mode-panel" in html
+
