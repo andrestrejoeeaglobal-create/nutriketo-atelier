@@ -781,6 +781,9 @@ def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
     ]
     joined = " | ".join(ing_names)
 
+    if str(main_dish.get("archetype", "")) == "dobladitas_ines_champinon":
+        return {"key": "champinon", "family": "fungica", "circadian_dinner_ok": True, "is_dense": False}
+
     if "flat steak" in joined or (re.search(r"\bres\b", joined) and "molida" not in joined):
         return {"key": "flat_steak", "family": "res", "circadian_dinner_ok": False, "is_dense": True}
     if "carne molida" in joined:

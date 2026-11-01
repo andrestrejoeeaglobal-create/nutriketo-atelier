@@ -217,7 +217,7 @@ def compile_s45_dossier() -> Dict[str, Any]:
         ("MM LOMO SALM (1250G)", "Lomo de salmón", "0 g (Consumido en S44)", "g"),
         ("MOJARRA ENTE (2 pzas)", "Fajitas de mojarra", "900 g", "g"),
         ("FAJITAS PAVO", "Pechuga de pavo", "1,400 g", "g"),
-        ("180 HUE BLA (+26 previos)", "Huevo", "206 piezas", "piezas"),
+        ("180 HUE BLA (+26 previos - 126 S44)", "Huevo", "80 piezas", "piezas"),
         ("960GR QCOTTA", "Queso ricotta", "0 g (Agotado en Alacena)", "g"),
         ("LALA MANCHE", "Queso manchego", "0 g (Agotado en Alacena)", "g"),
         ("OIKOS PROT", "Yogur griego", "1,200 g", "g"),

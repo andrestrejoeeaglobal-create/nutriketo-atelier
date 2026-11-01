@@ -16,7 +16,7 @@
 |---|---|---|---|---|---|
 | **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Desayuno** | Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana | **Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado** `[huevo_peyis_tres_quesos]` `<huevo|sarten|peyis_tres_quesos|mantequilla+morron+queso_manchego+queso_philadelphia>` | Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus® |
 | **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Comida** | Consomé Tatemado de Jitomate, Cebolla y Cilantro de la Granja en Fondo Claro de Pollo al Aceite de Oliva | **Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego** `[pavo_enchiladas_espuma_aguacate]` `<pavo|horno|enchiladas_espuma|aguacate+calabacitas+cilantro+queso_manchego>` | Ejotes Tiernos al Vapor Salteados al Limón Real, Orégano y Aceite de Oliva VEVO |
-| **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Cena** | Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva | **Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro** `[dobladitas_ines_champinon]` `<champinon|sarten|dobladitas_ines|champinon+cilantro+espinacas+nuez_pecana>` | Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Cena** | Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva | **Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro** `[dobladitas_ines_champinon]` `<champinon|sarten|dobladitas_ines|champinon+cilantro+espinacas+nuez_pecana>` | Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus® |
 | **Lunes 02 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Desayuno** | Copa de Frambuesas Maceradas a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana | **Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real** `[huevo_crepa_florentina_holandesa]` `<champinon|sarten|crepa_florentina_holandesa|cebolla+champinon+espinacas+mantequilla>` | Gelatina Cítrica de Limón Real y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus® |
 | **Lunes 02 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Comida** | Ensalada House Grill de Lechuga Romana con Jitomate, Alcaparras, Limón Real y Aceite de Oliva | **Philly Cheese Steak Keto al Skillet de Hierro con Tiras de Flat Steak, Juliana de Pimiento Morrón, Cebolla Asada y Costra Fundida de Queso Manchego** `[res_philly_cheese_steak_skillet]` `<flat_steak|sarten|philly_cheese_steak|cebolla+mantequilla+morron+queso_manchego>` | Floretes de Brócoli al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO |
 | **Lunes 02 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Cena** | Caldo Claro Americano de Fondo de Pollo al Orégano y Limón Real | **Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo** `[pavo_alfredo_mushroom_zoodles]` `<pavo|licuado_emulsion|zoodles_alfredo|calabacitas+crema_acida+mantequilla+queso_ricotta>` | Tisana Nocturna de Manzanilla, Limón Real y Clavo de Olor (≤60°C) con Fórmula Reparadora 34Plus® |
@@ -92,7 +92,7 @@
 
 ##### Receta #03 [Domingo · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `collagen_hibiscus_gel`
-- **Nota Organoléptica y Clínica:** Primera gelatina matutina semanal ([R8]) de flor de Jamaica y canela con colágeno hidrolizado y la Toma 2 de MultiSinergix®.
+- **Nota Organoléptica y Clínica:** Primera gelatina matutina semanal ([R8]) de Jamaica de Granja El Herami y canela con colágeno hidrolizado y la Toma 2 de MultiSinergix®.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Hidratación y fusión a 60°C, templado a ≤42°C y gelificación a 4°C.
   - *Aromática y Sabor:* Notas florales de Jamaica y canela.
@@ -101,14 +101,14 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🧂 Condimentos, Especias e Infusiones | **Flor de Jamaica molida en polvo** | 4 | **24** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Jamaica** | 4 | **24** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Canela molida** | 0.5 | **3** | g |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 2.67 | **16** | g |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 120 | **720** | ml |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Infusionar la flor de Jamaica y la canela en agua purificada e hidratar la grenetina.
+1. Infusionar la Jamaica de la granja y la canela en agua purificada e hidratar la grenetina.
 2. Templar a 40°C, disolver MultiSinergix® (33Plus®) y refrigerar en moldes a 4°C.
 
 #### 🍲 Domingo — Comida (14:30 hrs) | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.8 g`
@@ -205,23 +205,24 @@
 1. Cortar el pepino en rodajas delgadas.
 2. Aderezar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar.
 
-##### Receta #08 [Domingo · Cena · Tiempo 2 — Plato Fuerte]: Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro
+##### Receta #08 [Domingo · Cena · Tiempo 2 — Plato Fuerte]: Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro
 - **Técnica Culinaria:** `cheese_crust_keto_dobladitas`
 - **Arquetipo Heptágono V17.0:** `dobladitas_ines_champinon` · **Huella ADN:** `champinon|sarten|dobladitas_ines|champinon+cilantro+espinacas+nuez_pecana`
-- **Nota Organoléptica y Clínica:** Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (240 g) al comal, rellenas de champiñones salteados, queso ricotta (300 g), queso Philadelphia (180 g), espinacas, nuez pecana de la granja y cilantro (35 g de proteína AVB láctea/vegetal por comensal).
+- **Nota Organoléptica y Clínica:** Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (120 g) al comal, rellenas de pechuga de pollo deshebrada (600 g = 100 g/comensal), champiñones salteados, queso ricotta (180 g), queso Philadelphia (120 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
-  - *Termodinámica:* Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno cremoso de ricotta y Philadelphia.
-  - *Aromática y Sabor:* Umami de champiñón salteado, 3 quesos (manchego, ricotta y Philadelphia), espinacas, nuez pecana y cilantro.
-  - *Arquitectura Textural:* Exterior crujiente de queso dorado al comal con interior cremoso de hongos y nuez pecana.
-  - *Punto Crítico de Control:* Doblar la costra de queso manchego en caliente sobre el relleno proteico de 3 quesos y champiñones.
+  - *Termodinámica:* Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno de pechuga de pollo, ricotta y Philadelphia.
+  - *Aromática y Sabor:* Umami de pechuga de pollo dorada y champiñón salteado con 3 quesos (manchego, ricotta y Philadelphia), espinacas, nuez pecana y cilantro.
+  - *Arquitectura Textural:* Exterior crujiente de queso dorado al comal con interior jugoso de pollo deshebrado, hongos y nuez pecana.
+  - *Punto Crítico de Control:* Doblar la costra de queso manchego en caliente sobre el relleno de pollo (74°C) y champiñones.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🥦 Hortalizas, Vegetales y Hongos | **Champiñón** | 110 | **660** | g |
+| 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 100 | **600** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Champiñón** | 70 | **420** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Espinacas** | 50 | **300** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 50 | **300** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 40 | **240** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 30 | **180** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 30 | **180** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 20 | **120** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 20 | **120** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 4 | **24** | g |
 | 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
@@ -229,8 +230,8 @@
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Saltear los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar, e integrar el queso ricotta, el queso Philadelphia y la nuez pecana picada.
-2. Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con los champiñones a los 3 quesos y doblar en media luna.
+1. Saltear la pechuga de pollo deshebrada junto con los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar, e integrar el queso ricotta, el queso Philadelphia y la nuez pecana picada.
+2. Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con el guiso de pollo, champiñones y quesos, y doblar en media luna.
 
 ##### Receta #09 [Domingo · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `chamomile_cinnamon_infusion`
@@ -725,7 +726,7 @@
 
 ##### Receta #30 [Miércoles · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina de Flor de Jamaica y Limón Real (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `hibiscus_citrus_collagen_gel`
-- **Nota Organoléptica y Clínica:** Cuarta gelatina matutina ([R8]) con flor de Jamaica, limón real y MultiSinergix®.
+- **Nota Organoléptica y Clínica:** Cuarta gelatina matutina ([R8]) con Jamaica de Granja El Herami, limón real y MultiSinergix®.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Gelificación a 4°C tras integrar a ≤42°C.
   - *Aromática y Sabor:* Acidez equilibrada de Jamaica y limón de la granja.
@@ -734,14 +735,14 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🧂 Condimentos, Especias e Infusiones | **Flor de Jamaica molida en polvo** | 4 | **24** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Jamaica** | 4 | **24** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 2.67 | **16** | g |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 120 | **720** | ml |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Infusionar la flor de Jamaica en agua purificada, hidratar la grenetina y templar a 40°C.
+1. Infusionar la Jamaica de la granja en agua purificada, hidratar la grenetina y templar a 40°C.
 2. Incorporar el jugo de limón real y MultiSinergix® (33Plus®) y refrigerar a 4°C.
 
 #### 🍲 Miércoles — Comida (14:30 hrs) | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.2 g` · `Fibra: 6.4 g`
@@ -771,7 +772,7 @@
 ##### Receta #32 [Miércoles · Comida · Tiempo 2 — Plato Fuerte]: Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva
 - **Técnica Culinaria:** `murcian_fish_claypot_braise`
 - **Arquetipo Heptágono V17.0:** `pescado_a_la_murciana_cazuela` · **Huella ADN:** `mojarra|braseado|a_la_murciana|aceitunas+alcaparras+jitomate+oregano`
-- **Nota Organoléptica y Clínica:** Escuela 4 (Inspiración Asador Castellano): pescado a la murciana cocinado en cazuela con jitomate asado, alcaparras, aceitunas manzanilla, orégano y aceite de oliva.
+- **Nota Organoléptica y Clínica:** Escuela 4 (Inspiración Asador Castellano): porción clínica completa de fajitas de mojarra de alacena (900 g = 150 g/comensal) a la murciana cocinada en cazuela con jitomate asado, alcaparras, aceitunas manzanilla, orégano y aceite de oliva.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Cocción suave en cazuela a 155°C por 8 minutos hasta alcanzar 63°C en el pescado.
   - *Aromática y Sabor:* Salsa mediterránea española de jitomate, alcaparras y aceitunas manzanilla.
@@ -780,7 +781,7 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🥩 Carnes, Pescados y Proteínas | **Fajitas de mojarra** | 75 | **450** | g |
+| 🥩 Carnes, Pescados y Proteínas | **Fajitas de mojarra** | 150 | **900** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Jitomate** | 0.17 | **1** | piezas |
 | 🧂 Condimentos, Especias e Infusiones | **Alcaparras** | 7 | **42** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Aceitunas manzanilla** | 9.17 | **55** | g |
@@ -1142,7 +1143,7 @@
 
 ##### Receta #48 [Viernes · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina de Flor de Jamaica y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `hibiscus_rosemary_collagen_gel`
-- **Nota Organoléptica y Clínica:** Quinta gelatina matutina semanal ([R8] >= 5 gelatinas cumplidas) con flor de Jamaica, romero y MultiSinergix®.
+- **Nota Organoléptica y Clínica:** Quinta gelatina matutina semanal ([R8] >= 5 gelatinas cumplidas) con Jamaica de Granja El Herami, romero y MultiSinergix®.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Gelificación a 4°C tras integrar MultiSinergix® a ≤42°C.
   - *Aromática y Sabor:* Jamaica herbal al romero de la granja.
@@ -1151,14 +1152,14 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🧂 Condimentos, Especias e Infusiones | **Flor de Jamaica molida en polvo** | 4 | **24** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Jamaica** | 4 | **24** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Romero** | 1 | **6** | g |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 2.67 | **16** | g |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 120 | **720** | ml |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Infusionar la flor de Jamaica y el romero en agua purificada, hidratar la grenetina y templar a 40°C.
+1. Infusionar la Jamaica de la granja y el romero en agua purificada, hidratar la grenetina y templar a 40°C.
 2. Incorporar MultiSinergix® (33Plus®) y refrigerar en moldes a 4°C.
 
 #### 🍲 Viernes — Comida (14:30 hrs) | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.2 g` · `Fibra: 6.5 g`
@@ -1254,7 +1255,7 @@
 ##### Receta #53 [Viernes · Cena · Tiempo 2 — Plato Fuerte]: Fajitas de Mojarra Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas
 - **Técnica Culinaria:** `contramar_bicolor_grilled_fish`
 - **Arquetipo Heptágono V17.0:** `mojarra_bicolor_estilo_contramar` · **Huella ADN:** `mojarra|parrilla_plancha|bicolor_contramar|calabacitas+cilantro+jitomate+tomate`
-- **Nota Organoléptica y Clínica:** Escuela 6 (Pacífico & Oriente — Inspiración Contramar): pescado bicolor sin chiles irritantes ([R1]), mitad marinado en adobo rojo de achiote y jitomate asado y mitad en salsa verde de cilantro y tomate sobre calabacitas asadas.
+- **Nota Organoléptica y Clínica:** Escuela 6 (Pacífico & Oriente — Inspiración Contramar): porción clínica completa de fajitas de mojarra (900 g = 150 g/comensal) bicolor sin chiles irritantes ([R1]), mitad marinada en adobo rojo de achiote y jitomate asado y mitad en salsa verde de cilantro y tomate sobre calabacitas asadas.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Asado a la plancha/brasas a 185°C hasta 63°C en centro térmico.
   - *Aromática y Sabor:* Doble perfil costero mexicano: tierra especiada de achiote y frescura herbal de cilantro.
@@ -1263,7 +1264,7 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🥩 Carnes, Pescados y Proteínas | **Fajitas de mojarra** | 75 | **450** | g |
+| 🥩 Carnes, Pescados y Proteínas | **Fajitas de mojarra** | 150 | **900** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Calabacitas** | 70 | **420** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Achiote** | 3 | **18** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Jitomate** | 0.17 | **1** | piezas |
@@ -1348,23 +1349,23 @@
 
 ##### Receta #57 [Sábado · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `hibiscus_cinnamon_morning_infusion`
-- **Nota Organoléptica y Clínica:** Infusión matutina antioxidante con la Toma 2 de MultiSinergix®.
+- **Nota Organoléptica y Clínica:** Infusión matutina antioxidante de Jamaica de Granja El Herami con la Toma 2 de MultiSinergix®.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Infusión templada a ≤60°C.
-  - *Aromática y Sabor:* Flor de Jamaica, canela y limón de la granja.
+  - *Aromática y Sabor:* Jamaica de la granja, canela y limón real.
   - *Arquitectura Textural:* Infusión cálida.
   - *Punto Crítico de Control:* Integrar MultiSinergix® a ≤60°C.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🧂 Condimentos, Especias e Infusiones | **Flor de Jamaica molida en polvo** | 4 | **24** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Jamaica** | 4 | **24** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Canela molida** | 0.5 | **3** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 5 | **30** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 200 | **1,200** | ml |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Infusionar la flor de Jamaica y la canela en agua purificada a 85°C por 5 minutos y colar.
+1. Infusionar la Jamaica de la granja y la canela en agua purificada a 85°C por 5 minutos y colar.
 2. Templar a 55°C, añadir jugo de limón real y disolver MultiSinergix® (33Plus®).
 
 #### 🍲 Sábado — Comida (14:30 hrs) | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.7 g`
@@ -1517,11 +1518,11 @@
 | 1 | `MM TOP SIRLO (2200G)` | **Flat steak** | 0 g (Consumido en S44) | 1,320 g (R#14, R#50) | 0 g | **`1,320 g` (Mercado)** |
 | 2 | `HAMB SIRLOIN` | **Carne molida** | 1,200 g | 1,200 g (R#23, R#59) | 0 g | **0 g (\$0.00)** |
 | 3 | `MM LOMO SALM (1250G)` | **Lomo de salmón** | 0 g (Consumido en S44) | 600 g (R#41) | 0 g | **`600 g` (Mercado)** |
-| 4 | `MOJARRA ENTE (2 pzas)` | **Fajitas de mojarra** | 900 g | 900 g (R#32, R#53) | 0 g | **0 g (\$0.00)** |
+| 4 | `MOJARRA ENTE (2 pzas)` | **Fajitas de mojarra** | 900 g | 1,800 g (R#32, R#53) | 0 g | **`900 g` (Mercado)** |
 | 5 | `FAJITAS PAVO` | **Pechuga de pavo** | 1,400 g | 1,400 g (R#05, R#17) | 0 g | **0 g (\$0.00)** |
-| 6 | `180 HUE BLA (+26 previos)` | **Huevo** | 206 piezas | 126 piezas (7 recetas) | 80 piezas | **0 pzas (\$0.00)** |
-| 7 | `960GR QCOTTA` | **Queso ricotta** | 0 g (Agotado en Alacena) | 2,100 g (9 recetas) | 0 g | **`2,100 g` (Mercado)** |
-| 8 | `LALA MANCHE` | **Queso manchego** | 0 g (Agotado en Alacena) | 1,090 g (10 recetas) | 0 g | **`1,090 g` (Mercado)** |
+| 6 | `180 HUE BLA (+26 previos - 126 S44)` | **Huevo** | 80 piezas | 126 piezas (7 recetas) | 0 piezas | **`46 pzas` (Mercado)** |
+| 7 | `960GR QCOTTA` | **Queso ricotta** | 0 g (Agotado en Alacena) | 1,980 g (9 recetas) | 0 g | **`1,980 g` (Mercado)** |
+| 8 | `LALA MANCHE` | **Queso manchego** | 0 g (Agotado en Alacena) | 970 g (10 recetas) | 0 g | **`970 g` (Mercado)** |
 | 9 | `OIKOS PROT` | **Yogur griego** | 1,200 g | 360 g (R#62) | 840 g | **0 g (\$0.00)** |
 | 10 | `CABRARANDANO (Cubierta azucarada)` | **Queso de cabra con arándano** | 350 g (En Cuarentena NOM-004) | 0 g (Bloqueado en Recetas) | 350 g (En Cuarentena) | **0 g (\$0.00)** |
 | 11 | `12/90 MANTEQ` | **Mantequilla** | 500 g | 372 g (8 recetas) | 128 g | **0 g (\$0.00)** |
@@ -1539,10 +1540,11 @@
 | 1 | **Acelgas** | 480 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 2 | **Agua purificada** | 14,400 ml | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 3 | **Cilantro** | 204 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 4 | **Limones** | 1,476 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 5 | **Nopales** | 480 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 6 | **Nuez pecana** | 600 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 7 | **Romero** | 30 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 4 | **Jamaica** | 96 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 5 | **Limones** | 1,476 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 6 | **Nopales** | 480 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 7 | **Nuez pecana** | 600 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 8 | **Romero** | 30 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 
 #### 3.1.1 Preparaciones Internas de Cocina (Fondos Claros Elaborados en Casa — No se Compran ni son de Granja)
 | # | Preparación Culinaria Interna | Volumen Semanal Requerido (6p) | Origen Operativo | Costo Mercado |
@@ -1566,24 +1568,21 @@
 | 11 | **Comino** | 50 g | **3 g** | 47 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 12 | **Crema ácida** | 960 g | **180 g** | 780 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 13 | **Extracto de vainilla** | 400 ml | **24 ml** | 376 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 14 | **Fajitas de mojarra** | 900 g | **900 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 15 | **Flor de Jamaica molida en polvo** | 200 g | **96 g** | 104 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 16 | **Frambuesas** | 250 g | **250 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 17 | **Fresas** | 900 g | **900 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 18 | **Hierbas finas** | 25 g | **12 g** | 13 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 19 | **Huevo** | 206 piezas | **126 piezas** | 80 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 20 | **Mantequilla** | 500 g | **372 g** | 128 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 21 | **Manzanilla** | 50 g | **42 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 22 | **Nuez de la India** | 600 g | **546 g** | 54 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 23 | **Orégano** | 150 g | **57 g** | 93 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 24 | **Pechuga de pavo** | 1,400 g | **1,400 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 25 | **Pimienta negra** | 70 g | **3 g** | 67 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 26 | **Queso Philadelphia** | 720 g | **600 g** | 120 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 27 | **Sal con ajo** | 100 g | **48 g** | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 28 | **Sal de mar** | 3,000 g | **204 g** | 2,796 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 29 | **Té chai** | 50 g | **12 g** | 38 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 30 | **Tomillo** | 20 g | **12 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 31 | **Yogur griego** | 1,200 g | **360 g** | 840 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 14 | **Frambuesas** | 250 g | **250 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 15 | **Fresas** | 900 g | **900 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 16 | **Hierbas finas** | 25 g | **12 g** | 13 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 17 | **Mantequilla** | 500 g | **372 g** | 128 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 18 | **Manzanilla** | 50 g | **42 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 19 | **Nuez de la India** | 600 g | **546 g** | 54 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 20 | **Orégano** | 150 g | **57 g** | 93 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 21 | **Pechuga de pavo** | 1,400 g | **1,400 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 22 | **Pimienta negra** | 70 g | **3 g** | 67 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 23 | **Queso Philadelphia** | 720 g | **540 g** | 180 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 24 | **Sal con ajo** | 100 g | **48 g** | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 25 | **Sal de mar** | 3,000 g | **204 g** | 2,796 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 26 | **Té chai** | 50 g | **12 g** | 38 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 27 | **Tomillo** | 20 g | **12 g** | 8 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 28 | **Yogur griego** | 1,200 g | **360 g** | 840 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 
 ### 3.3 Lista de Compras Netas de Mercado (Extraída Directamente del Motor JS y DOM `#v-shop` de `atelier.html`)
 | # | Categoría en UI (`#v-shop`) | Insumo a Comprar en Mercado | Demanda Total Semanal (6p) | Stock en Alacena | Compra Neta Exacta (`#v-shop`) | Unidad |
@@ -1593,25 +1592,27 @@
 | 3 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **AminoSinergix®** | 420 g | 200 g | **`220 g`** | g |
 | 4 | 🥬 Verduras, Hortalizas y Frescos | **Calabacitas** | 2,280 g | 0 g | **`2280 g`** | g |
 | 5 | 🥬 Verduras, Hortalizas y Frescos | **Cebolla** | 10 piezas | 2 piezas | **`8 piezas`** | piezas |
-| 6 | 🥬 Verduras, Hortalizas y Frescos | **Champiñón** | 2,340 g | 0 g | **`2340 g`** | g |
+| 6 | 🥬 Verduras, Hortalizas y Frescos | **Champiñón** | 2,100 g | 0 g | **`2100 g`** | g |
 | 7 | 🥬 Verduras, Hortalizas y Frescos | **Ejotes** | 240 g | 0 g | **`240 g`** | g |
 | 8 | 🥬 Verduras, Hortalizas y Frescos | **Espárragos** | 840 g | 0 g | **`840 g`** | g |
 | 9 | 🥬 Verduras, Hortalizas y Frescos | **Espinacas** | 1,860 g | 150 g | **`1710 g`** | g |
-| 10 | 🥩 Carnes, Pescados y Proteínas | **Flat steak** | 1,320 g | 0 g | **`1320 g`** | g |
-| 11 | 🥬 Verduras, Hortalizas y Frescos | **Germinado** | 360 g | 0 g | **`360 g`** | g |
-| 12 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 80 g | 0 g | **`80 g`** | g |
-| 13 | 🥬 Verduras, Hortalizas y Frescos | **Jitomate** | 8 piezas | 0 piezas | **`8 piezas`** | piezas |
-| 14 | 🥬 Verduras, Hortalizas y Frescos | **Lechuga** | 3 piezas | 1 piezas | **`2 piezas`** | piezas |
-| 15 | 🥩 Carnes, Pescados y Proteínas | **Lomo de salmón** | 600 g | 0 g | **`600 g`** | g |
-| 16 | 🥬 Verduras, Hortalizas y Frescos | **Morrón** | 9 piezas | 4 piezas | **`5 piezas`** | piezas |
-| 17 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 420 g | 300 g | **`120 g`** | g |
-| 18 | 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 1,800 g | 0 g | **`1800 g`** | g |
-| 19 | 🥬 Verduras, Hortalizas y Frescos | **Pepino** | 1,740 g | 3 g | **`1737 g`** | g |
-| 20 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 1,090 g | 0 g | **`1090 g`** | g |
-| 21 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 2,100 g | 0 g | **`2100 g`** | g |
-| 22 | 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 336 g | 0 g | **`336 g`** | g |
-| 23 | 🥬 Verduras, Hortalizas y Frescos | **Tomate** | 360 g | 0 g | **`360 g`** | g |
-| 24 | 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 340 g | 0 g | **`340 g`** | g |
+| 10 | 🥩 Carnes, Pescados y Proteínas | **Fajitas de mojarra** | 1,800 g | 900 g | **`900 g`** | g |
+| 11 | 🥩 Carnes, Pescados y Proteínas | **Flat steak** | 1,320 g | 0 g | **`1320 g`** | g |
+| 12 | 🥬 Verduras, Hortalizas y Frescos | **Germinado** | 360 g | 0 g | **`360 g`** | g |
+| 13 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **Grenetina** | 80 g | 0 g | **`80 g`** | g |
+| 14 | 🥩 Carnes, Pescados y Proteínas | **Huevo** | 126 piezas | 80 piezas | **`46 piezas`** | piezas |
+| 15 | 🥬 Verduras, Hortalizas y Frescos | **Jitomate** | 8 piezas | 0 piezas | **`8 piezas`** | piezas |
+| 16 | 🥬 Verduras, Hortalizas y Frescos | **Lechuga** | 3 piezas | 1 piezas | **`2 piezas`** | piezas |
+| 17 | 🥩 Carnes, Pescados y Proteínas | **Lomo de salmón** | 600 g | 0 g | **`600 g`** | g |
+| 18 | 🥬 Verduras, Hortalizas y Frescos | **Morrón** | 9 piezas | 4 piezas | **`5 piezas`** | piezas |
+| 19 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **MultiSinergix®** | 420 g | 300 g | **`120 g`** | g |
+| 20 | 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 2,400 g | 0 g | **`2400 g`** | g |
+| 21 | 🥬 Verduras, Hortalizas y Frescos | **Pepino** | 1,740 g | 3 g | **`1737 g`** | g |
+| 22 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 970 g | 0 g | **`970 g`** | g |
+| 23 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 1,980 g | 0 g | **`1980 g`** | g |
+| 24 | 🥑 Grasas, Aceites y Semillas | **Semillas de chía orgánicas** | 336 g | 0 g | **`336 g`** | g |
+| 25 | 🥬 Verduras, Hortalizas y Frescos | **Tomate** | 360 g | 0 g | **`360 g`** | g |
+| 26 | 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 340 g | 0 g | **`340 g`** | g |
 
 #### 3.3.1 Espejo Exacto por Tarjeta de Categoría en el DOM Real de `#v-shop` (`render3DShoppingList()`)
 | Categoría Renderizada en `#v-shop` | Badge de Conteo en UI | Ítems Renderizados Carácter por Carácter en Pantalla |
@@ -1619,9 +1620,9 @@
 | **🍓 Frutas de Bajo Índice Glucémico** | **`1 POR COMPRAR`** | • **Zarzamora**: `340 g` |
 | **💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA** | **`3 POR COMPRAR`** | • **AminoSinergix®**: `220 g` *(Alacena: 200 g | Bruto: 420 g)*<br>• **Grenetina**: `80 g`<br>• **MultiSinergix®**: `120 g` *(Alacena: 300 g | Bruto: 420 g)* |
 | **🥑 Grasas, Aceites y Semillas** | **`3 POR COMPRAR`** | • **Aceite de oliva**: `122 ml` *(Alacena: 400 ml | Bruto: 522 ml)*<br>• **Aguacate**: `1 piezas`<br>• **Semillas de chía orgánicas**: `336 g` |
-| **🥩 Carnes, Pescados y Proteínas** | **`3 POR COMPRAR`** | • **Flat steak**: `1320 g`<br>• **Lomo de salmón**: `600 g`<br>• **Pechuga de pollo**: `1800 g` |
-| **🥬 Verduras, Hortalizas y Frescos** | **`12 POR COMPRAR`** | • **Calabacitas**: `2280 g`<br>• **Cebolla**: `8 piezas` *(Alacena: 2 piezas | Bruto: 10 piezas)*<br>• **Champiñón**: `2340 g`<br>• **Ejotes**: `240 g`<br>• **Espárragos**: `840 g`<br>• **Espinacas**: `1710 g` *(Alacena: 150 g | Bruto: 1860 g)*<br>• **Germinado**: `360 g`<br>• **Jitomate**: `8 piezas`<br>• **Lechuga**: `2 piezas` *(Alacena: 1 piezas | Bruto: 3 piezas)*<br>• **Morrón**: `5 piezas` *(Alacena: 4 piezas | Bruto: 9 piezas)*<br>• **Pepino**: `1737 g` *(Alacena: 3 g | Bruto: 1740 g)*<br>• **Tomate**: `360 g` |
-| **🧀 Lácteos y Quesos (Sin Gluten — Keto)** | **`2 POR COMPRAR`** | • **Queso manchego**: `1090 g`<br>• **Queso ricotta**: `2100 g` |
+| **🥩 Carnes, Pescados y Proteínas** | **`5 POR COMPRAR`** | • **Fajitas de mojarra**: `900 g` *(Alacena: 900 g | Bruto: 1800 g)*<br>• **Flat steak**: `1320 g`<br>• **Huevo**: `46 piezas` *(Alacena: 80 piezas | Bruto: 126 piezas)*<br>• **Lomo de salmón**: `600 g`<br>• **Pechuga de pollo**: `2400 g` |
+| **🥬 Verduras, Hortalizas y Frescos** | **`12 POR COMPRAR`** | • **Calabacitas**: `2280 g`<br>• **Cebolla**: `8 piezas` *(Alacena: 2 piezas | Bruto: 10 piezas)*<br>• **Champiñón**: `2100 g`<br>• **Ejotes**: `240 g`<br>• **Espárragos**: `840 g`<br>• **Espinacas**: `1710 g` *(Alacena: 150 g | Bruto: 1860 g)*<br>• **Germinado**: `360 g`<br>• **Jitomate**: `8 piezas`<br>• **Lechuga**: `2 piezas` *(Alacena: 1 piezas | Bruto: 3 piezas)*<br>• **Morrón**: `5 piezas` *(Alacena: 4 piezas | Bruto: 9 piezas)*<br>• **Pepino**: `1737 g` *(Alacena: 3 g | Bruto: 1740 g)*<br>• **Tomate**: `360 g` |
+| **🧀 Lácteos y Quesos (Sin Gluten — Keto)** | **`2 POR COMPRAR`** | • **Queso manchego**: `970 g`<br>• **Queso ricotta**: `1980 g` |
 
 ### 3.4 Registro de Cuarentena Normativa y Exclusión Activa (`NOM-004` / `deletedPantryItems` / `deletedFarmItems`)
 | Origen | Insumos Excluidos / Bloqueados en Cuarentena | Estado en las 63 Recetas |
@@ -1653,7 +1654,7 @@
 |---|---|---|---|---|---|---|
 | **Desayuno** | Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
 | **Comida** | Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.8 g |
-| **Cena** | Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.2 g |
+| **Cena** | Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.2 g |
 
 #### 📊 Lunes 02 Nov de 2026 — 🇺🇸 Escuela 2: Brunch & Grill Americano Clásico
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
@@ -1713,7 +1714,7 @@
 |---|---|---|---|---|---|
 | **Domingo · Desayuno** | *E:* Tazón de Fresas Silvestres con Nuez de la India y Semillas de Chía<br>*P:* Huevos Revueltos a la Mantequilla con Queso Ricotta y Calabacitas Tiernas `[saute_and_sear]` | *E:* Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella `[cazuela]` | *E:* Copa de Zarzamoras con Semillas de Chía, Nuez de la India, Nuez Pecana de la Granja y Canela<br>*P:* Shakshuka Verde de Huevos Pochados en Salsa de Espinacas, Tomate y Queso Ricotta `[huevo_shakshuka_verde]` | **E:** Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado `[huevo_peyis_tres_quesos]` | ✅ `0 Colisión` |
 | **Domingo · Comida** | *E:* Sopa de Calabacitas Verdes y Flor de Calabaza al Cilantro<br>*P:* Hamburguesa de Arrachera al Sartén con Costra de Gouda y Salsa de Aguacate `[saute_and_sear]` | *E:* Crema Aterciopelada de Espárragos Verdes con Aceite de Oliva VEVO<br>*P:* Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO `[salmon_costra]` | *E:* Consomé Dorado de Floretes de Coliflor y Cilantro de la Granja al Fondo Claro de Pollo<br>*P:* Lomo de Salmón Glaseado a la Mostaza de Dijon y Aceite de Coco al Sartén con Espárragos Tiernos y Limón Real `[salmon_glaseado_mostaza_sarten]` | **E:** Consomé Tatemado de Jitomate, Cebolla y Cilantro de la Granja en Fondo Claro de Pollo al Aceite de Oliva<br>**P:** Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego `[pavo_enchiladas_espuma_aguacate]` | ✅ `0 Colisión` |
-| **Domingo · Cena** | *E:* Ensalada de Lechuga Sweet con Pepino y Vinagreta VEVO al Limón<br>*P:* Sardinas al Sartén con Salsa Rústica de Tomate Verde y Epazote `[saute_and_sear]` | *E:* Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO<br>*P:* Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana `[portobello_relleno]` | *E:* Velouté Nocturno de Champiñones Silvestres y Queso Ricotta al Fondo Claro de Pollo<br>*P:* Medallones de Pechuga de Pavo Dorados en Mantequilla con Sal con Ajo, Limón Real y Germinado de Alfalfa `[pavo_medallones_mantequilla_ajo]` | **E:** Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva<br>**P:** Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro `[dobladitas_ines_champinon]` | ✅ `0 Colisión` |
+| **Domingo · Cena** | *E:* Ensalada de Lechuga Sweet con Pepino y Vinagreta VEVO al Limón<br>*P:* Sardinas al Sartén con Salsa Rústica de Tomate Verde y Epazote `[saute_and_sear]` | *E:* Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO<br>*P:* Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana `[portobello_relleno]` | *E:* Velouté Nocturno de Champiñones Silvestres y Queso Ricotta al Fondo Claro de Pollo<br>*P:* Medallones de Pechuga de Pavo Dorados en Mantequilla con Sal con Ajo, Limón Real y Germinado de Alfalfa `[pavo_medallones_mantequilla_ajo]` | **E:** Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva<br>**P:** Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro `[dobladitas_ines_champinon]` | ✅ `0 Colisión` |
 | **Lunes · Desayuno** | *E:* Tazón de Moras Silvestres con Almendras Fileteadas y Chía<br>*P:* Omelette Baveuse con Espinacas Tiernas y Queso Gouda Maduro `[saute_and_sear]` | *E:* Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>*P:* Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso `[frittata]` | *E:* Tazón Matutino de Frambuesas con Semillas de Chía, Nuez Pecana de la Granja y Vainilla<br>*P:* Huevos Pochados Estilo Benedictino sobre Nopal Asado de la Granja con Emulsión de Mantequilla y Germinado `[huevo_benedictino_holandesa]` | **E:** Copa de Frambuesas Maceradas a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real `[huevo_crepa_florentina_holandesa]` | ✅ `0 Colisión` |
 | **Lunes · Comida** | *E:* Crema Aterciopelada de Brócoli al Queso Ricotta y Ajo Confitado<br>*P:* Filete de Mojarra Tilapia al Mojo de Ajo Dorado con Limón y Cilantro `[saute_and_sear]` | *E:* Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO<br>*P:* Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja `[albondigas]` | *E:* Ensalada Provenzal de Espinacas, Jitomate y Romero de la Granja al Limón Real y Aceite de Oliva<br>*P:* Tagliata de Flat Steak Sellada al Romero de la Granja con Láminas de Queso Manchego y Pimiento Morrón `[res_tagliata_romero]` | **E:** Ensalada House Grill de Lechuga Romana con Jitomate, Alcaparras, Limón Real y Aceite de Oliva<br>**P:** Philly Cheese Steak Keto al Skillet de Hierro con Tiras de Flat Steak, Juliana de Pimiento Morrón, Cebolla Asada y Costra Fundida de Queso Manchego `[res_philly_cheese_steak_skillet]` | ✅ `0 Colisión` |
 | **Lunes · Cena** | *E:* Bastones de Pepino y Apio Fresco con Sal Marina y Limón<br>*P:* Pechuga de Pavo Artesanal con Guacamole Rústico de Aguacate Hass `[saute_and_sear]` | *E:* Sopa Juliana de Calabacitas Tiernas en Caldo Vegetal Aromático al Laurel, Limón Real y Cilantro de la Granja con Aceite VEVO<br>*P:* Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro `[barquitas]` | *E:* Tartar Vegetal Nocturno de Pepino en Brunoise, Germinado de Alfalfa y Dados de Aguacate Hass al Limón Real<br>*P:* Fajitas de Mojarra Salteadas a la Veracruzana con Jitomate, Aceitunas Manzanilla, Alcaparras, Laurel y Orégano `[mojarra_veracruzana_sarten]` | **E:** Caldo Claro Americano de Fondo de Pollo al Orégano y Limón Real<br>**P:** Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo `[pavo_alfredo_mushroom_zoodles]` | ✅ `0 Colisión` |
@@ -1754,7 +1755,7 @@
 | 13 | **Canela molida** | **27 g** | 0 g | **27 g** | Tabla 3.2 (Alacena \$0 — Stock: 750 g) | **`0.00`** ✅ | R#03 (Dom Des: 3 g); R#09 (Dom Cen: 3 g); R#19 (Mar Des: 3 g); R#36 (Mié Cen: 3 g); R#37 (Jue Des: 3 g); R#39 (Jue Des: 3 g); R#54 (Vie Cen: 3 g); R#57 (Sáb Des: 3 g); R#59 (Sáb Com: 3 g) |
 | 14 | **Carne molida** | **1,200 g** | 0 g | **1,200 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,200 g) | **`0.00`** ✅ | R#23 (Mar Com: 600 g); R#59 (Sáb Com: 600 g) |
 | 15 | **Cebolla** | **10 piezas** | 0 piezas | **10 piezas** | Tabla 3.3 (Mercado — Comprar: 8 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#11 (Lun Des: 1 piezas); R#14 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#29 (Mié Des: 1 piezas); R#31 (Mié Com: 1 piezas); R#35 (Mié Cen: 1 piezas); R#47 (Vie Des: 1 piezas); R#50 (Vie Com: 1 piezas); R#59 (Sáb Com: 1 piezas) |
-| 16 | **Champiñón** | **2,340 g** | 0 g | **2,340 g** | Tabla 3.3 (Mercado — Comprar: 2,340 g) | **`0.00`** ✅ | R#08 (Dom Cen: 660 g); R#11 (Lun Des: 360 g); R#44 (Jue Cen: 660 g); R#60 (Sáb Com: 660 g) |
+| 16 | **Champiñón** | **2,100 g** | 0 g | **2,100 g** | Tabla 3.3 (Mercado — Comprar: 2,100 g) | **`0.00`** ✅ | R#08 (Dom Cen: 420 g); R#11 (Lun Des: 360 g); R#44 (Jue Cen: 660 g); R#60 (Sáb Com: 660 g) |
 | 17 | **Cilantro** | **204 g** | 0 g | **204 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#04 (Dom Com: 18 g); R#05 (Dom Com: 24 g); R#08 (Dom Cen: 24 g); R#20 (Mar Des: 24 g); R#22 (Mar Com: 24 g); R#24 (Mar Com: 18 g); R#25 (Mar Cen: 24 g); R#52 (Vie Cen: 24 g); R#53 (Vie Cen: 24 g) |
 | 18 | **Clavo de olor** | **2 g** | 0 g | **2 g** | Tabla 3.2 (Alacena \$0 — Stock: 50 g) | **`0.00`** ✅ | R#18 (Lun Cen: 2 g) |
 | 19 | **Coliflor** | **500 g** | 0 g | **500 g** | Tabla 3.2 (Alacena \$0 — Stock: 500 g) | **`0.00`** ✅ | R#38 (Jue Des: 250 g); R#47 (Vie Des: 250 g) |
@@ -1764,17 +1765,17 @@
 | 23 | **Espinacas** | **1,860 g** | 0 g | **1,860 g** | Tabla 3.3 (Mercado — Comprar: 1,710 g) | **`0.00`** ✅ | R#08 (Dom Cen: 300 g); R#11 (Lun Des: 300 g); R#26 (Mar Cen: 360 g); R#34 (Mié Cen: 300 g); R#44 (Jue Cen: 300 g); R#61 (Sáb Cen: 300 g) |
 | 24 | **Espárragos** | **840 g** | 0 g | **840 g** | Tabla 3.3 (Mercado — Comprar: 840 g) | **`0.00`** ✅ | R#29 (Mié Des: 420 g); R#42 (Jue Com: 420 g) |
 | 25 | **Extracto de vainilla** | **24 ml** | 0 ml | **24 ml** | Tabla 3.2 (Alacena \$0 — Stock: 400 ml) | **`0.00`** ✅ | R#10 (Lun Des: 6 ml); R#21 (Mar Des: 6 ml); R#28 (Mié Des: 6 ml); R#55 (Sáb Des: 6 ml) |
-| 26 | **Fajitas de mojarra** | **900 g** | 0 g | **900 g** | Tabla 3.2 (Alacena \$0 — Stock: 900 g) | **`0.00`** ✅ | R#32 (Mié Com: 450 g); R#53 (Vie Cen: 450 g) |
+| 26 | **Fajitas de mojarra** | **1,800 g** | 0 g | **1,800 g** | Tabla 3.3 (Mercado — Comprar: 900 g) | **`0.00`** ✅ | R#32 (Mié Com: 900 g); R#53 (Vie Cen: 900 g) |
 | 27 | **Flat steak** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#14 (Lun Com: 660 g); R#50 (Vie Com: 660 g) |
-| 28 | **Flor de Jamaica molida en polvo** | **96 g** | 0 g | **96 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#03 (Dom Des: 24 g); R#30 (Mié Des: 24 g); R#48 (Vie Des: 24 g); R#57 (Sáb Des: 24 g) |
-| 29 | **Fondo claro de pollo** | **5,400 ml** | 0 ml | **5,400 ml** | Tabla 3.1.1 (Preparación Interna de Cocina \$0) | **`0.00`** ✅ | R#04 (Dom Com: 900 ml); R#16 (Lun Cen: 900 ml); R#25 (Mar Cen: 900 ml); R#43 (Jue Cen: 900 ml); R#52 (Vie Cen: 900 ml); R#61 (Sáb Cen: 900 ml) |
-| 30 | **Fondo de res** | **900 ml** | 0 ml | **900 ml** | Tabla 3.1.1 (Preparación Interna de Cocina \$0) | **`0.00`** ✅ | R#31 (Mié Com: 900 ml) |
-| 31 | **Frambuesas** | **250 g** | 0 g | **250 g** | Tabla 3.2 (Alacena \$0 — Stock: 250 g) | **`0.00`** ✅ | R#10 (Lun Des: 125 g); R#37 (Jue Des: 125 g) |
-| 32 | **Fresas** | **900 g** | 0 g | **900 g** | Tabla 3.2 (Alacena \$0 — Stock: 900 g) | **`0.00`** ✅ | R#19 (Mar Des: 300 g); R#46 (Vie Des: 300 g); R#55 (Sáb Des: 300 g) |
-| 33 | **Germinado** | **360 g** | 0 g | **360 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#47 (Vie Des: 180 g); R#50 (Vie Com: 180 g) |
-| 34 | **Grenetina** | **80 g** | 0 g | **80 g** | Tabla 3.3 (Mercado — Comprar: 80 g) | **`0.00`** ✅ | R#03 (Dom Des: 16 g); R#12 (Lun Des: 16 g); R#21 (Mar Des: 16 g); R#30 (Mié Des: 16 g); R#48 (Vie Des: 16 g) |
-| 35 | **Hierbas finas** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 25 g) | **`0.00`** ✅ | R#27 (Mar Cen: 3 g); R#41 (Jue Com: 3 g); R#56 (Sáb Des: 6 g) |
-| 36 | **Huevo** | **126 piezas** | 0 piezas | **126 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 206 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 18 piezas); R#11 (Lun Des: 18 piezas); R#20 (Mar Des: 18 piezas); R#29 (Mié Des: 18 piezas); R#38 (Jue Des: 18 piezas); R#47 (Vie Des: 18 piezas); R#56 (Sáb Des: 18 piezas) |
+| 28 | **Fondo claro de pollo** | **5,400 ml** | 0 ml | **5,400 ml** | Tabla 3.1.1 (Preparación Interna de Cocina \$0) | **`0.00`** ✅ | R#04 (Dom Com: 900 ml); R#16 (Lun Cen: 900 ml); R#25 (Mar Cen: 900 ml); R#43 (Jue Cen: 900 ml); R#52 (Vie Cen: 900 ml); R#61 (Sáb Cen: 900 ml) |
+| 29 | **Fondo de res** | **900 ml** | 0 ml | **900 ml** | Tabla 3.1.1 (Preparación Interna de Cocina \$0) | **`0.00`** ✅ | R#31 (Mié Com: 900 ml) |
+| 30 | **Frambuesas** | **250 g** | 0 g | **250 g** | Tabla 3.2 (Alacena \$0 — Stock: 250 g) | **`0.00`** ✅ | R#10 (Lun Des: 125 g); R#37 (Jue Des: 125 g) |
+| 31 | **Fresas** | **900 g** | 0 g | **900 g** | Tabla 3.2 (Alacena \$0 — Stock: 900 g) | **`0.00`** ✅ | R#19 (Mar Des: 300 g); R#46 (Vie Des: 300 g); R#55 (Sáb Des: 300 g) |
+| 32 | **Germinado** | **360 g** | 0 g | **360 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#47 (Vie Des: 180 g); R#50 (Vie Com: 180 g) |
+| 33 | **Grenetina** | **80 g** | 0 g | **80 g** | Tabla 3.3 (Mercado — Comprar: 80 g) | **`0.00`** ✅ | R#03 (Dom Des: 16 g); R#12 (Lun Des: 16 g); R#21 (Mar Des: 16 g); R#30 (Mié Des: 16 g); R#48 (Vie Des: 16 g) |
+| 34 | **Hierbas finas** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 25 g) | **`0.00`** ✅ | R#27 (Mar Cen: 3 g); R#41 (Jue Com: 3 g); R#56 (Sáb Des: 6 g) |
+| 35 | **Huevo** | **126 piezas** | 0 piezas | **126 piezas** | Tabla 3.3 (Mercado — Comprar: 46 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 18 piezas); R#11 (Lun Des: 18 piezas); R#20 (Mar Des: 18 piezas); R#29 (Mié Des: 18 piezas); R#38 (Jue Des: 18 piezas); R#47 (Vie Des: 18 piezas); R#56 (Sáb Des: 18 piezas) |
+| 36 | **Jamaica** | **96 g** | 0 g | **96 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#03 (Dom Des: 24 g); R#30 (Mié Des: 24 g); R#48 (Vie Des: 24 g); R#57 (Sáb Des: 24 g) |
 | 37 | **Jitomate** | **8 piezas** | 0 piezas | **8 piezas** | Tabla 3.3 (Mercado — Comprar: 8 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#13 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#23 (Mar Com: 1 piezas); R#25 (Mar Cen: 1 piezas); R#32 (Mié Com: 1 piezas); R#53 (Vie Cen: 1 piezas); R#56 (Sáb Des: 1 piezas) |
 | 38 | **Lechuga** | **3 piezas** | 0 piezas | **3 piezas** | Tabla 3.3 (Mercado — Comprar: 2 piezas) | **`0.00`** ✅ | R#13 (Lun Com: 1 piezas); R#40 (Jue Com: 1 piezas); R#58 (Sáb Com: 1 piezas) |
 | 39 | **Limones** | **1,476 g** | 0 g | **1,476 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 30 g); R#06 (Dom Com: 48 g); R#07 (Dom Cen: 48 g); R#11 (Lun Des: 48 g); R#12 (Lun Des: 90 g); R#13 (Lun Com: 48 g); R#15 (Lun Com: 48 g); R#16 (Lun Cen: 48 g); R#18 (Lun Cen: 48 g); R#21 (Mar Des: 90 g); R#22 (Mar Com: 48 g); R#25 (Mar Cen: 60 g); R#30 (Mié Des: 60 g); R#34 (Mié Cen: 48 g); R#36 (Mié Cen: 48 g); R#40 (Jue Com: 48 g); R#41 (Jue Com: 48 g); R#42 (Jue Com: 48 g); R#43 (Jue Cen: 48 g); R#46 (Vie Des: 30 g); R#49 (Vie Com: 48 g); R#51 (Vie Com: 48 g); R#52 (Vie Cen: 48 g); R#57 (Sáb Des: 60 g); R#58 (Sáb Com: 48 g); R#60 (Sáb Com: 48 g); R#61 (Sáb Cen: 48 g); R#62 (Sáb Cen: 48 g); R#63 (Sáb Cen: 48 g) |
@@ -1788,12 +1789,12 @@
 | 47 | **Nuez pecana** | **600 g** | 0 g | **600 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 60 g); R#08 (Dom Cen: 90 g); R#10 (Lun Des: 60 g); R#19 (Mar Des: 60 g); R#26 (Mar Cen: 90 g); R#28 (Mié Des: 60 g); R#37 (Jue Des: 60 g); R#46 (Vie Des: 60 g); R#55 (Sáb Des: 60 g) |
 | 48 | **Orégano** | **57 g** | 0 g | **57 g** | Tabla 3.2 (Alacena \$0 — Stock: 150 g) | **`0.00`** ✅ | R#06 (Dom Com: 3 g); R#07 (Dom Cen: 3 g); R#08 (Dom Cen: 3 g); R#15 (Lun Com: 3 g); R#16 (Lun Cen: 3 g); R#23 (Mar Com: 3 g); R#24 (Mar Com: 3 g); R#25 (Mar Cen: 3 g); R#26 (Mar Cen: 3 g); R#32 (Mié Com: 3 g); R#34 (Mié Cen: 3 g); R#35 (Mié Cen: 3 g); R#40 (Jue Com: 3 g); R#45 (Jue Cen: 3 g); R#51 (Vie Com: 3 g); R#58 (Sáb Com: 3 g); R#59 (Sáb Com: 3 g); R#61 (Sáb Cen: 3 g); R#62 (Sáb Cen: 3 g) |
 | 49 | **Pechuga de pavo** | **1,400 g** | 0 g | **1,400 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,400 g) | **`0.00`** ✅ | R#05 (Dom Com: 700 g); R#17 (Lun Cen: 700 g) |
-| 50 | **Pechuga de pollo** | **1,800 g** | 0 g | **1,800 g** | Tabla 3.3 (Mercado — Comprar: 1,800 g) | **`0.00`** ✅ | R#26 (Mar Cen: 900 g); R#62 (Sáb Cen: 900 g) |
+| 50 | **Pechuga de pollo** | **2,400 g** | 0 g | **2,400 g** | Tabla 3.3 (Mercado — Comprar: 2,400 g) | **`0.00`** ✅ | R#08 (Dom Cen: 600 g); R#26 (Mar Cen: 900 g); R#62 (Sáb Cen: 900 g) |
 | 51 | **Pepino** | **1,740 g** | 0 g | **1,740 g** | Tabla 3.3 (Mercado — Comprar: 1,737 g) | **`0.00`** ✅ | R#07 (Dom Cen: 360 g); R#22 (Mar Com: 360 g); R#40 (Jue Com: 300 g); R#49 (Vie Com: 360 g); R#62 (Sáb Cen: 360 g) |
 | 52 | **Pimienta negra** | **3 g** | 0 g | **3 g** | Tabla 3.2 (Alacena \$0 — Stock: 70 g) | **`0.00`** ✅ | R#14 (Lun Com: 3 g) |
-| 53 | **Queso Philadelphia** | **600 g** | 0 g | **600 g** | Tabla 3.2 (Alacena \$0 — Stock: 720 g) | **`0.00`** ✅ | R#02 (Dom Des: 120 g); R#08 (Dom Cen: 180 g); R#38 (Jue Des: 120 g); R#41 (Jue Com: 180 g) |
-| 54 | **Queso manchego** | **1,090 g** | 0 g | **1,090 g** | Tabla 3.3 (Mercado — Comprar: 1,090 g) | **`0.00`** ✅ | R#02 (Dom Des: 90 g); R#05 (Dom Com: 90 g); R#08 (Dom Cen: 240 g); R#14 (Lun Com: 90 g); R#20 (Mar Des: 110 g); R#23 (Mar Com: 90 g); R#35 (Mié Cen: 90 g); R#38 (Jue Des: 90 g); R#44 (Jue Cen: 100 g); R#59 (Sáb Com: 100 g) |
-| 55 | **Queso ricotta** | **2,100 g** | 0 g | **2,100 g** | Tabla 3.3 (Mercado — Comprar: 2,100 g) | **`0.00`** ✅ | R#02 (Dom Des: 180 g); R#08 (Dom Cen: 300 g); R#17 (Lun Cen: 240 g); R#23 (Mar Com: 240 g); R#35 (Mié Cen: 240 g); R#38 (Jue Des: 180 g); R#44 (Jue Cen: 240 g); R#56 (Sáb Des: 240 g); R#59 (Sáb Com: 240 g) |
+| 53 | **Queso Philadelphia** | **540 g** | 0 g | **540 g** | Tabla 3.2 (Alacena \$0 — Stock: 720 g) | **`0.00`** ✅ | R#02 (Dom Des: 120 g); R#08 (Dom Cen: 120 g); R#38 (Jue Des: 120 g); R#41 (Jue Com: 180 g) |
+| 54 | **Queso manchego** | **970 g** | 0 g | **970 g** | Tabla 3.3 (Mercado — Comprar: 970 g) | **`0.00`** ✅ | R#02 (Dom Des: 90 g); R#05 (Dom Com: 90 g); R#08 (Dom Cen: 120 g); R#14 (Lun Com: 90 g); R#20 (Mar Des: 110 g); R#23 (Mar Com: 90 g); R#35 (Mié Cen: 90 g); R#38 (Jue Des: 90 g); R#44 (Jue Cen: 100 g); R#59 (Sáb Com: 100 g) |
+| 55 | **Queso ricotta** | **1,980 g** | 0 g | **1,980 g** | Tabla 3.3 (Mercado — Comprar: 1,980 g) | **`0.00`** ✅ | R#02 (Dom Des: 180 g); R#08 (Dom Cen: 180 g); R#17 (Lun Cen: 240 g); R#23 (Mar Com: 240 g); R#35 (Mié Cen: 240 g); R#38 (Jue Des: 180 g); R#44 (Jue Cen: 240 g); R#56 (Sáb Des: 240 g); R#59 (Sáb Com: 240 g) |
 | 56 | **Romero** | **30 g** | 0 g | **30 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#12 (Lun Des: 6 g); R#33 (Mié Com: 6 g); R#38 (Jue Des: 6 g); R#44 (Jue Cen: 6 g); R#48 (Vie Des: 6 g) |
 | 57 | **Sal con ajo** | **48 g** | 0 g | **48 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#14 (Lun Com: 6 g); R#17 (Lun Cen: 6 g); R#26 (Mar Cen: 6 g); R#42 (Jue Com: 6 g); R#50 (Vie Com: 6 g); R#56 (Sáb Des: 6 g); R#60 (Sáb Com: 6 g); R#62 (Sáb Cen: 6 g) |
 | 58 | **Sal de mar** | **204 g** | 0 g | **204 g** | Tabla 3.2 (Alacena \$0 — Stock: 3,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 6 g); R#04 (Dom Com: 6 g); R#05 (Dom Com: 6 g); R#06 (Dom Com: 6 g); R#07 (Dom Cen: 6 g); R#08 (Dom Cen: 6 g); R#11 (Lun Des: 6 g); R#13 (Lun Com: 6 g); R#15 (Lun Com: 6 g); R#16 (Lun Cen: 6 g); R#20 (Mar Des: 6 g); R#22 (Mar Com: 6 g); R#23 (Mar Com: 6 g); R#24 (Mar Com: 6 g); R#25 (Mar Cen: 6 g); R#29 (Mié Des: 6 g); R#31 (Mié Com: 6 g); R#32 (Mié Com: 6 g); R#33 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#35 (Mié Cen: 6 g); R#38 (Jue Des: 6 g); R#40 (Jue Com: 6 g); R#41 (Jue Com: 6 g); R#43 (Jue Cen: 6 g); R#44 (Jue Cen: 6 g); R#47 (Vie Des: 6 g); R#49 (Vie Com: 6 g); R#51 (Vie Com: 6 g); R#52 (Vie Cen: 6 g); R#53 (Vie Cen: 6 g); R#58 (Sáb Com: 6 g); R#59 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g) |

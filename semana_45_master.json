@@ -160,7 +160,7 @@
           "side": {
             "title": "Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus®",
             "technique": "collagen_hibiscus_gel",
-            "note": "Primera gelatina matutina semanal ([R8]) de flor de Jamaica y canela con colágeno hidrolizado y la Toma 2 de MultiSinergix®.",
+            "note": "Primera gelatina matutina semanal ([R8]) de Jamaica de Granja El Herami y canela con colágeno hidrolizado y la Toma 2 de MultiSinergix®.",
             "coct_reasoning": {
               "thermodynamics": "Hidratación y fusión a 60°C, templado a ≤42°C y gelificación a 4°C.",
               "flavor_and_aromatics": "Notas florales de Jamaica y canela.",
@@ -170,7 +170,7 @@
             "ingredients": [
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Flor de Jamaica molida en polvo",
+                "name": "Jamaica",
                 "per_guest": 4,
                 "amount": 24,
                 "unit": "g"
@@ -205,7 +205,7 @@
               }
             ],
             "steps": [
-              "Infusionar la flor de Jamaica y la canela en agua purificada e hidratar la grenetina.",
+              "Infusionar la Jamaica de la granja y la canela en agua purificada e hidratar la grenetina.",
               "Templar a 40°C, disolver MultiSinergix® (33Plus®) y refrigerar en moldes a 4°C."
             ]
           }
@@ -416,8 +416,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.2,
           "starter_name": "Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva",
-          "main_dish_name": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
-          "dish_name": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
+          "main_dish_name": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
+          "dish_name": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
           "side_dish_name": "Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
             "title": "Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva",
@@ -472,21 +472,28 @@
             ]
           },
           "main": {
-            "title": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
+            "title": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
             "technique": "cheese_crust_keto_dobladitas",
-            "note": "Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (240 g) al comal, rellenas de champiñones salteados, queso ricotta (300 g), queso Philadelphia (180 g), espinacas, nuez pecana de la granja y cilantro (35 g de proteína AVB láctea/vegetal por comensal).",
+            "note": "Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (120 g) al comal, rellenas de pechuga de pollo deshebrada (600 g = 100 g/comensal), champiñones salteados, queso ricotta (180 g), queso Philadelphia (120 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).",
             "coct_reasoning": {
-              "thermodynamics": "Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno cremoso de ricotta y Philadelphia.",
-              "flavor_and_aromatics": "Umami de champiñón salteado, 3 quesos (manchego, ricotta y Philadelphia), espinacas, nuez pecana y cilantro.",
-              "textural_architecture": "Exterior crujiente de queso dorado al comal con interior cremoso de hongos y nuez pecana.",
-              "critical_control_points": "Doblar la costra de queso manchego en caliente sobre el relleno proteico de 3 quesos y champiñones."
+              "thermodynamics": "Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno de pechuga de pollo, ricotta y Philadelphia.",
+              "flavor_and_aromatics": "Umami de pechuga de pollo dorada y champiñón salteado con 3 quesos (manchego, ricotta y Philadelphia), espinacas, nuez pecana y cilantro.",
+              "textural_architecture": "Exterior crujiente de queso dorado al comal con interior jugoso de pollo deshebrado, hongos y nuez pecana.",
+              "critical_control_points": "Doblar la costra de queso manchego en caliente sobre el relleno de pollo (74°C) y champiñones."
             },
             "ingredients": [
               {
+                "category": "🥩 Carnes, Pescados y Proteínas",
+                "name": "Pechuga de pollo",
+                "per_guest": 100,
+                "amount": 600,
+                "unit": "g"
+              },
+              {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Champiñón",
-                "per_guest": 110,
-                "amount": 660,
+                "per_guest": 70,
+                "amount": 420,
                 "unit": "g"
               },
               {
@@ -499,22 +506,22 @@
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso ricotta",
-                "per_guest": 50,
-                "amount": 300,
+                "per_guest": 30,
+                "amount": 180,
                 "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso manchego",
-                "per_guest": 40,
-                "amount": 240,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso Philadelphia",
-                "per_guest": 30,
-                "amount": 180,
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
@@ -554,8 +561,8 @@
               }
             ],
             "steps": [
-              "Saltear los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar, e integrar el queso ricotta, el queso Philadelphia y la nuez pecana picada.",
-              "Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con los champiñones a los 3 quesos y doblar en media luna."
+              "Saltear la pechuga de pollo deshebrada junto con los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar, e integrar el queso ricotta, el queso Philadelphia y la nuez pecana picada.",
+              "Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con el guiso de pollo, champiñones y quesos, y doblar en media luna."
             ],
             "archetype": "dobladitas_ines_champinon"
           },
@@ -1882,7 +1889,7 @@
           "side": {
             "title": "Gelatina de Flor de Jamaica y Limón Real (4°C) con Fórmula Nootrópica 33Plus®",
             "technique": "hibiscus_citrus_collagen_gel",
-            "note": "Cuarta gelatina matutina ([R8]) con flor de Jamaica, limón real y MultiSinergix®.",
+            "note": "Cuarta gelatina matutina ([R8]) con Jamaica de Granja El Herami, limón real y MultiSinergix®.",
             "coct_reasoning": {
               "thermodynamics": "Gelificación a 4°C tras integrar a ≤42°C.",
               "flavor_and_aromatics": "Acidez equilibrada de Jamaica y limón de la granja.",
@@ -1892,7 +1899,7 @@
             "ingredients": [
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Flor de Jamaica molida en polvo",
+                "name": "Jamaica",
                 "per_guest": 4,
                 "amount": 24,
                 "unit": "g"
@@ -1927,7 +1934,7 @@
               }
             ],
             "steps": [
-              "Infusionar la flor de Jamaica en agua purificada, hidratar la grenetina y templar a 40°C.",
+              "Infusionar la Jamaica de la granja en agua purificada, hidratar la grenetina y templar a 40°C.",
               "Incorporar el jugo de limón real y MultiSinergix® (33Plus®) y refrigerar a 4°C."
             ]
           }
@@ -1999,7 +2006,7 @@
           "main": {
             "title": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva",
             "technique": "murcian_fish_claypot_braise",
-            "note": "Escuela 4 (Inspiración Asador Castellano): pescado a la murciana cocinado en cazuela con jitomate asado, alcaparras, aceitunas manzanilla, orégano y aceite de oliva.",
+            "note": "Escuela 4 (Inspiración Asador Castellano): porción clínica completa de fajitas de mojarra de alacena (900 g = 150 g/comensal) a la murciana cocinada en cazuela con jitomate asado, alcaparras, aceitunas manzanilla, orégano y aceite de oliva.",
             "coct_reasoning": {
               "thermodynamics": "Cocción suave en cazuela a 155°C por 8 minutos hasta alcanzar 63°C en el pescado.",
               "flavor_and_aromatics": "Salsa mediterránea española de jitomate, alcaparras y aceitunas manzanilla.",
@@ -2010,8 +2017,8 @@
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Fajitas de mojarra",
-                "per_guest": 75,
-                "amount": 450,
+                "per_guest": 150,
+                "amount": 900,
                 "unit": "g"
               },
               {
@@ -2999,7 +3006,7 @@
           "side": {
             "title": "Gelatina de Flor de Jamaica y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
             "technique": "hibiscus_rosemary_collagen_gel",
-            "note": "Quinta gelatina matutina semanal ([R8] >= 5 gelatinas cumplidas) con flor de Jamaica, romero y MultiSinergix®.",
+            "note": "Quinta gelatina matutina semanal ([R8] >= 5 gelatinas cumplidas) con Jamaica de Granja El Herami, romero y MultiSinergix®.",
             "coct_reasoning": {
               "thermodynamics": "Gelificación a 4°C tras integrar MultiSinergix® a ≤42°C.",
               "flavor_and_aromatics": "Jamaica herbal al romero de la granja.",
@@ -3009,7 +3016,7 @@
             "ingredients": [
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Flor de Jamaica molida en polvo",
+                "name": "Jamaica",
                 "per_guest": 4,
                 "amount": 24,
                 "unit": "g"
@@ -3044,7 +3051,7 @@
               }
             ],
             "steps": [
-              "Infusionar la flor de Jamaica y el romero en agua purificada, hidratar la grenetina y templar a 40°C.",
+              "Infusionar la Jamaica de la granja y el romero en agua purificada, hidratar la grenetina y templar a 40°C.",
               "Incorporar MultiSinergix® (33Plus®) y refrigerar en moldes a 4°C."
             ]
           }
@@ -3291,7 +3298,7 @@
           "main": {
             "title": "Fajitas de Mojarra Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas",
             "technique": "contramar_bicolor_grilled_fish",
-            "note": "Escuela 6 (Pacífico & Oriente — Inspiración Contramar): pescado bicolor sin chiles irritantes ([R1]), mitad marinado en adobo rojo de achiote y jitomate asado y mitad en salsa verde de cilantro y tomate sobre calabacitas asadas.",
+            "note": "Escuela 6 (Pacífico & Oriente — Inspiración Contramar): porción clínica completa de fajitas de mojarra (900 g = 150 g/comensal) bicolor sin chiles irritantes ([R1]), mitad marinada en adobo rojo de achiote y jitomate asado y mitad en salsa verde de cilantro y tomate sobre calabacitas asadas.",
             "coct_reasoning": {
               "thermodynamics": "Asado a la plancha/brasas a 185°C hasta 63°C en centro térmico.",
               "flavor_and_aromatics": "Doble perfil costero mexicano: tierra especiada de achiote y frescura herbal de cilantro.",
@@ -3302,8 +3309,8 @@
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Fajitas de mojarra",
-                "per_guest": 75,
-                "amount": 450,
+                "per_guest": 150,
+                "amount": 900,
                 "unit": "g"
               },
               {
@@ -3546,17 +3553,17 @@
           "side": {
             "title": "Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus®",
             "technique": "hibiscus_cinnamon_morning_infusion",
-            "note": "Infusión matutina antioxidante con la Toma 2 de MultiSinergix®.",
+            "note": "Infusión matutina antioxidante de Jamaica de Granja El Herami con la Toma 2 de MultiSinergix®.",
             "coct_reasoning": {
               "thermodynamics": "Infusión templada a ≤60°C.",
-              "flavor_and_aromatics": "Flor de Jamaica, canela y limón de la granja.",
+              "flavor_and_aromatics": "Jamaica de la granja, canela y limón real.",
               "textural_architecture": "Infusión cálida.",
               "critical_control_points": "Integrar MultiSinergix® a ≤60°C."
             },
             "ingredients": [
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Flor de Jamaica molida en polvo",
+                "name": "Jamaica",
                 "per_guest": 4,
                 "amount": 24,
                 "unit": "g"
@@ -3591,7 +3598,7 @@
               }
             ],
             "steps": [
-              "Infusionar la flor de Jamaica y la canela en agua purificada a 85°C por 5 minutos y colar.",
+              "Infusionar la Jamaica de la granja y la canela en agua purificada a 85°C por 5 minutos y colar.",
               "Templar a 55°C, añadir jugo de limón real y disolver MultiSinergix® (33Plus®)."
             ]
           }
@@ -4031,6 +4038,13 @@
           "net_to_buy": 0.0
         },
         {
+          "name": "Jamaica",
+          "required": 96.0,
+          "unit": "g",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        },
+        {
           "name": "Limones",
           "required": 1476.0,
           "unit": "g",
@@ -4152,20 +4166,6 @@
           "unit": "ml"
         },
         {
-          "name": "Fajitas de mojarra",
-          "required": 900.0,
-          "stock": 900.0,
-          "remaining_stock": 0.0,
-          "unit": "g"
-        },
-        {
-          "name": "Flor de Jamaica molida en polvo",
-          "required": 96.0,
-          "stock": 200.0,
-          "remaining_stock": 104.0,
-          "unit": "g"
-        },
-        {
           "name": "Frambuesas",
           "required": 250.0,
           "stock": 250.0,
@@ -4185,13 +4185,6 @@
           "stock": 25.0,
           "remaining_stock": 13.0,
           "unit": "g"
-        },
-        {
-          "name": "Huevo",
-          "required": 126.0,
-          "stock": 206.0,
-          "remaining_stock": 80.0,
-          "unit": "piezas"
         },
         {
           "name": "Mantequilla",
@@ -4237,9 +4230,9 @@
         },
         {
           "name": "Queso Philadelphia",
-          "required": 600.0,
+          "required": 540.0,
           "stock": 720.0,
-          "remaining_stock": 120.0,
+          "remaining_stock": 180.0,
           "unit": "g"
         },
         {
@@ -4316,9 +4309,9 @@
         },
         {
           "name": "Champiñón",
-          "required": 2340.0,
+          "required": 2100.0,
           "stock": 0.0,
-          "net_to_buy": 2340.0,
+          "net_to_buy": 2100.0,
           "unit": "g"
         },
         {
@@ -4343,6 +4336,13 @@
           "unit": "g"
         },
         {
+          "name": "Fajitas de mojarra",
+          "required": 1800.0,
+          "stock": 900.0,
+          "net_to_buy": 900.0,
+          "unit": "g"
+        },
+        {
           "name": "Flat steak",
           "required": 1320.0,
           "stock": 0.0,
@@ -4362,6 +4362,13 @@
           "stock": 0.0,
           "net_to_buy": 80.0,
           "unit": "g"
+        },
+        {
+          "name": "Huevo",
+          "required": 126.0,
+          "stock": 80.0,
+          "net_to_buy": 46.0,
+          "unit": "piezas"
         },
         {
           "name": "Jitomate",
@@ -4400,9 +4407,9 @@
         },
         {
           "name": "Pechuga de pollo",
-          "required": 1800.0,
+          "required": 2400.0,
           "stock": 0.0,
-          "net_to_buy": 1800.0,
+          "net_to_buy": 2400.0,
           "unit": "g"
         },
         {
@@ -4414,16 +4421,16 @@
         },
         {
           "name": "Queso manchego",
-          "required": 1090.0,
+          "required": 970.0,
           "stock": 0.0,
-          "net_to_buy": 1090.0,
+          "net_to_buy": 970.0,
           "unit": "g"
         },
         {
           "name": "Queso ricotta",
-          "required": 2100.0,
+          "required": 1980.0,
           "stock": 0.0,
-          "net_to_buy": 2100.0,
+          "net_to_buy": 1980.0,
           "unit": "g"
         },
         {

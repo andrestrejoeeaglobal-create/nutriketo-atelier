@@ -1,8 +1,8 @@
 {
   "ssot_version": "v56_chrome_leveldb_synced",
-  "extracted_from": "Google Chrome LocalStorage LevelDB (015745.ldb, seq=270423)",
-  "leveldb_seq": 270423,
-  "updated_at": "2026-10-31T07:29:55.180604",
+  "extracted_from": "Google Chrome LocalStorage LevelDB (015751.ldb, seq=270568)",
+  "leveldb_seq": 270568,
+  "updated_at": "2026-11-01T11:00:21.915432",
   "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
@@ -133,7 +133,7 @@
     "Palomitas para microondas": 600,
     "Grenetina": 0,
     "Saborizante para arroz": 48,
-    "Huevo": 206,
+    "Huevo": 80,
     "MultiSinergix®": 300,
     "AminoSinergix®": 200,
     "Espinacas": 150,
@@ -538,7 +538,7 @@
       "g"
     ],
     "Huevo": [
-      206.0,
+      80.0,
       "piezas"
     ],
     "MultiSinergix®": [

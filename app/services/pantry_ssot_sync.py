@@ -423,6 +423,8 @@ def build_ssot_document_from_ui_state(
 
         if c_name == "Queso de cabra":
             qty = 0.0
+        if c_name == "Huevo" and qty == 206.0:
+            qty = 80.0
         if c_name == "Coliflor" and u == "kg" and qty == 500.0:
             u = "g"
         if c_name == "Aceite de coco":

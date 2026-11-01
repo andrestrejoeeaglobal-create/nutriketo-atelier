@@ -5309,6 +5309,18 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v56_restore_chrome_user_ssot', 'true');
         }
 
+        // Sincronización V57: Descuento de las 126 piezas de Huevo consumidas en Semana 44 (206 -> 80 piezas restantes para Semana 45)
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v57_s44_eggs_80_sync') !== 'true') {
+          if (pantryStock["Huevo"] === undefined || Number(pantryStock["Huevo"]) === 206) {
+            pantryStock["Huevo"] = 80;
+            if (window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY["sku-104-huevo"]) {
+              window.PANTRY_STOCK_INVENTORY["sku-104-huevo"].stock = 80;
+              window.PANTRY_STOCK_INVENTORY["sku-104-huevo"].packaging = "80 piezas";
+            }
+          }
+          localStorage.setItem('nutriketo_v57_s44_eggs_80_sync', 'true');
+        }
+
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
         if (!isPantryItemDeleted("Leche") && !isPantryItemDeleted("sku-013-leche") && !window.PANTRY_STOCK_INVENTORY["sku-013-leche"]) {
           const lecheStock = pantryStock["Leche"] !== undefined ? pantryStock["Leche"] : 960;
