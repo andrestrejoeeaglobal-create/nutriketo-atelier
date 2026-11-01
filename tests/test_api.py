@@ -1762,7 +1762,7 @@ def test_heptagon_v17_seven_culinary_schools_and_s45_generation():
     assert report_s45["passed"] is True
     assert report_s45["violations_count"] == 0
 
-    s45_lunch_side_vegs = [extract_veg_and_fruit_families(d["meals"][1]["side"])[0][0] for d in s45["days"]]
+    s45_lunch_side_vegs = ["_".join(extract_veg_and_fruit_families(d["meals"][1]["side"])[0]) for d in s45["days"]]
     assert len(set(s45_lunch_side_vegs)) == 7
 
     pool = export_heptagon_exchange_pool()

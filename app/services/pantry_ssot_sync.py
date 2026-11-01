@@ -92,7 +92,8 @@ V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Huevo": (170.0, "piezas"),
     "Pollo entero": (1.0, "piezas"),
     "Fresas": (907.0, "g"),
-    "Frambuesas": (250.0, "g"),
+    "Frambuesas": (0.0, "g"),
+    "Aceite de coco": (1700.0, "g"),
     "Coliflor": (500.0, "g"),
     "Brócoli": (1500.0, "g"),
     "Mantequilla": (500.0, "g"),
@@ -493,7 +494,7 @@ def build_ssot_document_from_ui_state(
 
     meta = source_meta or {}
     is_chrome_extract = "Chrome LocalStorage" in str(meta.get("extracted_from", ""))
-    if not ui_state.get("v60_mercado_local_fresco_nov01_sync"):
+    if not ui_state.get("v61_cierre_s45_granada_coco_sync"):
         for t_name, (t_qty, t_unit) in V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES.items():
             ui_pantry_stock[t_name] = int(t_qty) if t_qty == int(t_qty) else t_qty
             ui_pantry_units[t_name] = t_unit
@@ -512,10 +513,10 @@ def build_ssot_document_from_ui_state(
         "updated_at": datetime.now().isoformat(),
         "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
         "activeDiners": ui_state.get("activeDiners", 6),
-        "selectedHarvest": ui_state.get(
+        "selectedHarvest": list(dict.fromkeys(ui_state.get(
             "selectedHarvest",
-            ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica"],
-        ),
+            ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica", "Granadas"],
+        ) + ["Granadas"])),
         "customFarmItems": ui_state.get("customFarmItems", []),
         "deletedFarmItems": ui_state.get(
             "deletedFarmItems",

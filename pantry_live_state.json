@@ -1,8 +1,8 @@
 {
-  "ssot_version": "v58_sams_costco_tickets_synced",
-  "extracted_from": "Google Chrome LocalStorage LevelDB (015794.ldb, seq=270738)",
-  "leveldb_seq": 270738,
-  "updated_at": "2026-11-01T13:29:04.219973",
+  "ssot_version": "v61_cierre_s45_granada_coco_sync",
+  "extracted_from": "Google Chrome LocalStorage LevelDB (015793.log, seq=270858)",
+  "leveldb_seq": 271000,
+  "updated_at": "2026-11-01T14:02:01.909660",
   "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
@@ -66,7 +66,7 @@
     "Morrón": 8,
     "Pechuga de pollo": 1670,
     "Flor de calabaza": 0,
-    "Calabaza": 2,
+    "Calabacitas": 1400,
     "Cebolla": 13,
     "Lechuga": 7,
     "Ejotes": 500,
@@ -140,7 +140,7 @@
     "Espinacas": 150,
     "Espárragos": 0,
     "Fresas": 907,
-    "Frambuesas": 250,
+    "Frambuesas": 0,
     "Queso ricotta": 0,
     "Chile chipotle": 1320,
     "Frijol pinto": 1,
@@ -152,9 +152,8 @@
     "Brócoli": 1500,
     "Queso de cabra con arándano": 350,
     "Queso doble crema": 1000,
-    "Nueces mixtas": 1020,
-    "Calabacitas": 1400,
-    "Ajo": 120
+    "Ajo": 120,
+    "Nueces mixtas": 1020
   },
   "pantryCardUnits": {
     "Mantequilla": "g",
@@ -183,7 +182,7 @@
     "Morrón": "piezas",
     "Pechuga de pollo": "g",
     "Flor de calabaza": "manojo",
-    "Calabaza": "piezas",
+    "Calabacitas": "g",
     "Cebolla": "piezas",
     "Lechuga": "piezas",
     "Ejotes": "g",
@@ -269,9 +268,8 @@
     "Brócoli": "g",
     "Queso de cabra con arándano": "g",
     "Queso doble crema": "g",
-    "Nueces mixtas": "g",
-    "Calabacitas": "g",
-    "Ajo": "g"
+    "Ajo": "g",
+    "Nueces mixtas": "g"
   },
   "auditorPantryStock": {
     "Mantequilla": [
@@ -362,9 +360,9 @@
       0.0,
       "manojo"
     ],
-    "Calabaza": [
-      2.0,
-      "piezas"
+    "Calabacitas": [
+      1400.0,
+      "g"
     ],
     "Cebolla": [
       13.0,
@@ -571,7 +569,7 @@
       "g"
     ],
     "Frambuesas": [
-      250.0,
+      0.0,
       "g"
     ],
     "Queso ricotta": [
@@ -606,16 +604,12 @@
       1000.0,
       "g"
     ],
-    "Nueces mixtas": [
-      1020.0,
-      "g"
-    ],
-    "Calabacitas": [
-      1400.0,
-      "g"
-    ],
     "Ajo": [
       120.0,
+      "g"
+    ],
+    "Nueces mixtas": [
+      1020.0,
       "g"
     ]
   },

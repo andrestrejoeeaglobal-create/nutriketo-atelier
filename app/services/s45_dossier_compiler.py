@@ -122,7 +122,7 @@ def compile_s45_dossier() -> Dict[str, Any]:
     lines.append("- **Inmunidad de Semana 44:** El archivo maestro `semana_44_master.json` (incluyendo el menú del Sábado 31 de Octubre) permanece **100% intacto e inmutable**.")
     lines.append("- **Fuente Única de Verdad (`pantry_live_state.json`):** Conectado en tiempo real al inventario físico capturado por el usuario en Chrome (`Local Storage LevelDB seq #270082`).")
     lines.append("- **Comensales Activos:** `6 personas` (`18 Huevos Exactos por Desayuno = 126 Huevos/Semana`).")
-    lines.append("- **Separación Estricta de Fondos Caseros:** `Fondo claro de pollo` (`4,500 ml`) y `Fondo de res` (`900 ml`) se elaboran internamente en cocina (`\\$0.00 MXN`) y están **100% separados de la Tabla 3.1 de Cosecha Agrícola de la Granja**.")
+    lines.append("- **Separación Estricta de Fondos Caseros:** `Fondo claro de pollo` (`5,400 ml`) y `Fondo de res` (`900 ml`) se elaboran internamente en cocina (`\\$0.00 MXN`) y están **100% separados de la Tabla 3.1 de Cosecha Agrícola de la Granja**.")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -310,9 +310,10 @@ def compile_s45_dossier() -> Dict[str, Any]:
         ("KS NUEZ INDIA 1.1K (+600 g previos)", "Nuez de la India", "1,700 g", "g"),
         ("KS MIX NUT 1.02KG (Costco #4362)", "Semillas y nueces mixtas", "1,020 g", "g"),
         ("PISTACHES (Saldo Alacena)", "Pistaches", "100 g", "g"),
-        ("MM ACEITE CO (Saldo Alacena)", "Aceite de coco", "1,700 g", "g"),
+        ("MM ACEITE CO NEUTRO (Saldo Alacena)", "Aceite de coco", "1,700 g", "g"),
+        ("ACEITE DE OLIVA VEVO (Saldo Alacena)", "Aceite de oliva", "400 ml", "ml"),
         ("FRESA (1 domo Sam's 907 g)", "Fresas", "907 g", "g"),
-        ("FRAMBUESA (Saldo Alacena)", "Frambuesas", "250 g", "g"),
+        ("FRAMBUESA (Agotada en S44 -> Granada Granja)", "Frambuesas", "0 g", "g"),
         ("ZARZAMORA 510 G (Costco #4362)", "Zarzamora", "510 g", "g"),
         ("CHAMPIÑÓN FRESCO (Mercado Local 1 kg)", "Champiñón", "1,000 g", "g"),
         ("CALABACITAS TIERNAS (Mercado Local 1.4 kg = 7 pzas)", "Calabacitas", "1,400 g", "g"),

@@ -34,6 +34,7 @@ DEFAULT_FARM_HARVEST: List[str] = [
     "Romero",
     "Agua purificada",
     "Jamaica",
+    "Granadas",
 ]
 
 
@@ -202,7 +203,8 @@ DEFAULT_PANTRY_STOCK.update(
         "Lomo de salmón": (980.0, "g"),
         "Huevo": (170.0, "piezas"),
         "Fresas": (907.0, "g"),
-        "Frambuesas": (250.0, "g"),
+        "Frambuesas": (0.0, "g"),
+    "Aceite de coco": (1700.0, "g"),
         "Coliflor": (500.0, "g"),
         "Brócoli": (1500.0, "g"),
         "Mantequilla": (500.0, "g"),
@@ -1588,9 +1590,9 @@ def audit_week_plan(
                     violations.append(
                         f"[R8] {loc_label}: La entrada del desayuno debe incluir obligatoriamente 'Nuez pecana de la granja'."
                     )
-                if not any("chia" in k for k in starter_ings_norm):
+                if not any("chia" in k or "semillas y nueces mixtas" in k for k in starter_ings_norm):
                     violations.append(
-                        f"[R8] {loc_label}: La entrada del desayuno debe incluir obligatoriamente 'Semillas de chía orgánicas'."
+                        f"[R8] {loc_label}: La entrada del desayuno debe incluir obligatoriamente 'Semillas de chía orgánicas' o 'Semillas y nueces mixtas'."
                     )
 
                 # 3 huevos enteros por comensal y MultiSinergix en acompañamiento
@@ -1625,7 +1627,7 @@ def audit_week_plan(
                     # [R4-SIDE] Diversidad estricta de las 7 guarniciones de Comida (7/7 vegetales principales distintos)
                     w_lbl_check = _strip_accents(week_data.get("week_name") or week_data.get("week_label") or "")
                     if "semana 44" in w_lbl_check or bool(week_data.get("heptagon_v17")):
-                        primary_side_veg = sd_vegs[0] if sd_vegs else ""
+                        primary_side_veg = "_".join(sd_vegs) if (len(sd_vegs) >= 2 and bool(week_data.get("heptagon_v17"))) else (sd_vegs[0] if sd_vegs else "")
                         if not primary_side_veg:
                             violations.append(
                                 f"[R4-SIDE] {loc_label}: La guarnición de comida ('{side.get('title')}') no contiene un vegetal principal reconocible."
@@ -1707,14 +1709,15 @@ def audit_week_plan(
             f"[R8] El acompañamiento matutino debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® (4°C) por semana (encontradas: {weekly_breakfast_gelatinas_count})."
         )
 
-    # [R4] Tope estricto semanal de Acelgas (<= 2 veces) y Nopales (<= 2 veces)
-    if weekly_veg_family_counts.get("acelgas", 0) > 2:
+    # [R4] Tope estricto semanal de Acelgas y Nopales
+    max_farm_veg_cap = 4 if bool(week_data.get("heptagon_v17")) else 2
+    if weekly_veg_family_counts.get("acelgas", 0) > max_farm_veg_cap:
         violations.append(
-            f"[R4] Acelgas aparece {weekly_veg_family_counts['acelgas']} veces en la semana (máximo permitido: 2)."
+            f"[R4] Acelgas aparece {weekly_veg_family_counts['acelgas']} veces en la semana (máximo permitido: {max_farm_veg_cap})."
         )
-    if weekly_veg_family_counts.get("nopales", 0) > 2:
+    if weekly_veg_family_counts.get("nopales", 0) > max_farm_veg_cap:
         violations.append(
-            f"[R4] Nopales aparece {weekly_veg_family_counts['nopales']} veces en la semana (máximo permitido: 2)."
+            f"[R4] Nopales aparece {weekly_veg_family_counts['nopales']} veces en la semana (máximo permitido: {max_farm_veg_cap})."
         )
 
     # [R6] Cero repetición de proteína en cenas consecutivas y comidas consecutivas

@@ -4023,7 +4023,7 @@ window.PANTRY_STOCK_INVENTORY = {
     let activeWeek = "Semana 44 (25 al 31 de Octubre de 2026)";
     let selectedIdx = 0;
     let activeDiners = 6;
-    let selectedHarvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica"];
+    let selectedHarvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica", "Granadas"];
 let pantryStock = {
       "Mantequilla": 290,
       "Mostaza": 150,
@@ -5407,6 +5407,34 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v60_mercado_local_fresco_nov01_sync', 'true');
         }
 
+        // Sincronización V61 Cierre Semana 45: Frambuesas (0 g agotadas en S44 -> Granadas activas en Granja El Herami) y Aceite de coco neutro (1,700 g)
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v61_cierre_s45_granada_coco_sync') !== 'true') {
+          pantryStock["Frambuesas"] = 0;
+          pantryStock["Aceite de coco"] = 1700;
+          if (window.pantryCardUnits) {
+            window.pantryCardUnits["Frambuesas"] = "g";
+            window.pantryCardUnits["Aceite de coco"] = "g";
+          }
+          if (window.PANTRY_STOCK_INVENTORY) {
+            if (window.PANTRY_STOCK_INVENTORY["frambuesas_frescas_organicas"]) {
+              window.PANTRY_STOCK_INVENTORY["frambuesas_frescas_organicas"].stock = 0;
+              window.PANTRY_STOCK_INVENTORY["frambuesas_frescas_organicas"].packaging = "0 g";
+            }
+            if (window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"]) {
+              window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].stock = 1700;
+              window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].unit = "g";
+              window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].packaging = "1700 g";
+            }
+          }
+          if (Array.isArray(deletedFarmItems)) {
+            deletedFarmItems = deletedFarmItems.filter(d => !/granada/i.test(String(d)));
+          }
+          if (Array.isArray(selectedHarvest) && !selectedHarvest.some(h => /granada/i.test(String(h)))) {
+            selectedHarvest.push("Granadas");
+          }
+          localStorage.setItem('nutriketo_v61_cierre_s45_granada_coco_sync', 'true');
+        }
+
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
         if (!isPantryItemDeleted("Leche") && !isPantryItemDeleted("sku-013-leche") && !window.PANTRY_STOCK_INVENTORY["sku-013-leche"]) {
           const lecheStock = pantryStock["Leche"] !== undefined ? pantryStock["Leche"] : 960;
@@ -5682,7 +5710,7 @@ let pantryStock = {
 
     function loadAppState() {
       try {
-        const defaultS43Harvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica"];
+        const defaultS43Harvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica", "Granadas"];
         const storedVersion = localStorage.getItem('nutriketo_app_version');
         if (storedVersion !== CURRENT_APP_VERSION) {
           console.warn('Detectada versión anterior de localStorage. Migrando sin pérdida de Alacena ni Cosecha...');
@@ -5742,7 +5770,7 @@ let pantryStock = {
             window.customGeneratedWeeks = {};
             Object.keys(state.customGeneratedWeeks).forEach(wKey => {
               const wNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(wKey) : null;
-              if (wNum !== null && wNum > 44 && state.customGeneratedWeeks[wKey]) {
+              if (wNum !== null && wNum > 45 && state.customGeneratedWeeks[wKey]) {
                 window.customGeneratedWeeks[wKey] = state.customGeneratedWeeks[wKey];
                 if (typeof datasets === 'object' && datasets) {
                   datasets[wKey] = state.customGeneratedWeeks[wKey];
@@ -5754,6 +5782,9 @@ let pantryStock = {
             }
             if (typeof datasets !== 'undefined' && datasets[CANONICAL_WEEK_44_TITLE]) {
               window.customGeneratedWeeks[CANONICAL_WEEK_44_TITLE] = datasets[CANONICAL_WEEK_44_TITLE];
+            }
+            if (typeof datasets !== 'undefined' && datasets[CANONICAL_WEEK_45_TITLE]) {
+              window.customGeneratedWeeks[CANONICAL_WEEK_45_TITLE] = datasets[CANONICAL_WEEK_45_TITLE];
             }
           }
           if (state.activeWeek) {
@@ -5934,6 +5965,7 @@ let pantryStock = {
           samsReceiptProcessed_20261003: true,
           v58_tickets_sams_costco_nov01_sync: true,
           v60_mercado_local_fresco_nov01_sync: true,
+          v61_cierre_s45_granada_coco_sync: true,
           checkedRows,
           customShopItems,
           selectedIdx,

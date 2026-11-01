@@ -33,14 +33,14 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
-          "starter_name": "Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "starter_name": "Espejo de Zarzamora Macerada al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
           "dish_name": "Huevos Peyis Estrellados Bañados en Salsa Fundente de 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) con Juliana de Pimiento Morrón Asado",
           "side_dish_name": "Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
-            "title": "Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "title": "Espejo de Zarzamora Macerada al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "citrus_blackberry_maceration",
-            "note": "Entrada matutina 0% lácteos ([R4.6]) con zarzamora macerada al limón de la granja, semillas de chía orgánicas, semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            "note": "Entrada matutina 0% lácteos ([R4.6]) con zarzamora macerada al limón de la granja, semillas y nueces mixtas, nuez de la India y nuez pecana.",
             "coct_reasoning": {
               "thermodynamics": "Maceración en frío a 6°C para preservar antocianinas.",
               "flavor_and_aromatics": "Contraste ácido de zarzamora y limón real con semillas y nueces mixtas, nuez pecana y nuez de la India.",
@@ -64,16 +64,9 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Semillas de chía orgánicas",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 16.6667,
+                "amount": 100,
                 "unit": "g"
               },
               {
@@ -93,7 +86,7 @@
             ],
             "steps": [
               "Disponer la zarzamora desinfectada en copas frías y rociar con jugo de limón de la granja.",
-              "Coronar con las semillas de chía orgánicas, las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
+              "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
           "main": {
@@ -371,10 +364,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -385,7 +378,7 @@
               }
             ],
             "steps": [
-              "Sellar las láminas de pechuga de pavo y calabacita en aceite de oliva y formar rollos tipo enchilada.",
+              "Sellar las láminas de pechuga de pavo y calabacita en aceite de coco neutro y formar rollos tipo enchilada.",
               "Emulsionar el tomate cocido con la pulpa de aguacate Hass, cilantro de la granja y sal de mar hasta obtener una salsa espuma.",
               "Bañar los rollos con la salsa, cubrir con queso manchego y queso doble crema desmoronado, y gratinar 6 minutos."
             ],
@@ -597,10 +590,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -633,7 +626,7 @@
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Saltear la pechuga de pollo deshebrada junto con el ajo picado, los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano, sal de mar y pimienta negra, e integrar la pasta tersa de queso cottage, el queso doble crema, el queso Philadelphia, el yogur griego y la nuez pecana picada.",
+              "Saltear la pechuga de pollo deshebrada junto con el ajo picado, los champiñones fileteados y las espinacas en aceite de coco neutro con cilantro de la granja, orégano, sal de mar y pimienta negra, e integrar la pasta tersa de queso cottage, el queso doble crema, el queso Philadelphia, el yogur griego y la nuez pecana picada.",
               "Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con el guiso de pollo, champiñones y quesos, y doblar en media luna."
             ],
             "archetype": "dobladitas_ines_champinon"
@@ -703,40 +696,33 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.1,
           "fiber_g": 6.3,
-          "starter_name": "Copa de Frambuesas Maceradas a la Vainilla con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "starter_name": "Copa de Granadas de la Granja Maceradas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real",
           "dish_name": "Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real",
           "side_dish_name": "Gelatina Cítrica de Limón Real y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
-            "title": "Copa de Frambuesas Maceradas a la Vainilla con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-            "technique": "vanilla_raspberry_maceration",
-            "note": "Frambuesas con extracto de vainilla, semillas de chía orgánicas, semillas y nueces mixtas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
+            "title": "Copa de Granadas de la Granja Maceradas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "technique": "vanilla_pomegranate_maceration",
+            "note": "Arilos de granada de la granja con extracto de vainilla, semillas y nueces mixtas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 6°C.",
-              "flavor_and_aromatics": "Aroma de vainilla y frambuesa con semillas y nueces mixtas tostadas.",
-              "textural_architecture": "Bayas enteras con semillas de chía y nuez pecana.",
+              "flavor_and_aromatics": "Aroma de vainilla y granada rubí de la granja con semillas y nueces mixtas tostadas.",
+              "textural_architecture": "Arilos jugosos de granada con semillas y nuez pecana.",
               "critical_control_points": "Cero lácteos en la entrada frutal."
             },
             "ingredients": [
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
-                "name": "Frambuesas",
-                "per_guest": 20.8333,
-                "amount": 125,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Semillas de chía orgánicas",
-                "per_guest": 8,
-                "amount": 48,
+                "name": "Granadas",
+                "per_guest": 25,
+                "amount": 150,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 16.6667,
+                "amount": 100,
                 "unit": "g"
               },
               {
@@ -762,8 +748,8 @@
               }
             ],
             "steps": [
-              "Perfumar las frambuesas con extracto de vainilla en tazones individuales.",
-              "Añadir las semillas de chía orgánicas, las semillas y nueces mixtas, la nuez de la India y la nuez pecana de la granja."
+              "Desgranar las granadas de la granja y perfumar los arilos con extracto de vainilla en tazones individuales.",
+              "Añadir las semillas y nueces mixtas, la nuez de la India y la nuez pecana de la granja."
             ]
           },
           "main": {
@@ -1308,14 +1294,14 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
-          "starter_name": "Carpaccio de Fresas a la Canela con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "starter_name": "Carpaccio de Fresas a la Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla, Cilantro y Abanico de Aguacate Hass",
           "dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla, Cilantro y Abanico de Aguacate Hass",
           "side_dish_name": "Gelatina Cristalina de Limón Real y Vainilla (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
-            "title": "Carpaccio de Fresas a la Canela con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "title": "Carpaccio de Fresas a la Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "cinnamon_strawberry_carpaccio",
-            "note": "Láminas de fresa sin lácteos ([R4.6]) con canela molida, semillas de chía orgánicas, semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            "note": "Láminas de fresa sin lácteos ([R4.6]) con canela molida, semillas y nueces mixtas, nuez de la India y nuez pecana.",
             "coct_reasoning": {
               "thermodynamics": "Emplatado en frío a 6°C.",
               "flavor_and_aromatics": "Fresas aromáticas a la canela con semillas y nueces mixtas y nuez pecana de la granja.",
@@ -1332,16 +1318,9 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Semillas de chía orgánicas",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 16.6667,
+                "amount": 100,
                 "unit": "g"
               },
               {
@@ -1368,7 +1347,7 @@
             ],
             "steps": [
               "Filetear las fresas en láminas tipo carpaccio y espolvorear con canela molida.",
-              "Distribuir las semillas de chía orgánicas, las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
+              "Distribuir las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
           "main": {
@@ -1977,14 +1956,14 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.1,
           "fiber_g": 6.3,
-          "starter_name": "Tartar de Zarzamora a la Vainilla con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-          "main_dish_name": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva",
-          "dish_name": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva",
+          "starter_name": "Tartar de Zarzamora a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "main_dish_name": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Nopales Tiernos de la Granja y Triple Cebolla Confitada en Aceite de Coco Neutro",
+          "dish_name": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Nopales Tiernos de la Granja y Triple Cebolla Confitada en Aceite de Coco Neutro",
           "side_dish_name": "Gelatina de Flor de Jamaica y Limón Real (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
-            "title": "Tartar de Zarzamora a la Vainilla con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "title": "Tartar de Zarzamora a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "blackberry_vanilla_tartare",
-            "note": "Zarzamora con vainilla, semillas de chía orgánicas, semillas y nueces mixtas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
+            "note": "Zarzamora con vainilla, semillas y nueces mixtas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 6°C.",
               "flavor_and_aromatics": "Zarzamora perfumada a la vainilla con semillas y nueces mixtas y nuez pecana.",
@@ -2001,16 +1980,9 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Semillas de chía orgánicas",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 16.6667,
+                "amount": 100,
                 "unit": "g"
               },
               {
@@ -2037,16 +2009,16 @@
             ],
             "steps": [
               "Mezclar la zarzamora con el extracto de vainilla en moldes individuales.",
-              "Coronar con las semillas de chía orgánicas, las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
+              "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
           "main": {
-            "title": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva",
-            "technique": "castilian_asparagus_spanish_tortilla",
-            "note": "Escuela 4 (Inspiración Asador Castellano): tortilla española cetogénica sustituyendo la papa por puntas de espárragos trigueros y cebolla confitada en aceite de oliva extra virgen.",
+            "title": "Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Nopales Tiernos de la Granja y Triple Cebolla Confitada en Aceite de Coco Neutro",
+            "technique": "castilian_nopales_onion_spanish_tortilla",
+            "note": "Escuela 4 (Inspiración Asador Castellano): tortilla española cetogénica sustituyendo la papa por bastones de nopales tiernos de la granja y triple cebolla confitada en aceite de coco neutro.",
             "coct_reasoning": {
-              "thermodynamics": "Confitado lento en aceite de oliva a 130°C y cuajado jugoso de la tortilla española a 145°C.",
-              "flavor_and_aromatics": "Tradición de taberna castellana con aceite de oliva, cebolla confitada y espárragos.",
+              "thermodynamics": "Confitado lento en aceite de coco neutro (punto de humo 204°C) a 130°C y cuajado jugoso de la tortilla española a 145°C.",
+              "flavor_and_aromatics": "Tradición de taberna castellana con triple cebolla confitada y nopales tiernos de la granja.",
               "textural_architecture": "Exterior dorado y centro jugoso estilo Betanzos.",
               "critical_control_points": "Voltear la tortilla española con plato tibio manteniendo el corazón tierno."
             },
@@ -2060,24 +2032,24 @@
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Espárragos",
-                "per_guest": 70,
-                "amount": 420,
+                "name": "Nopales",
+                "per_guest": 33.3333,
+                "amount": 200,
                 "unit": "g"
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Cebolla",
-                "per_guest": 0.1667,
-                "amount": 1,
+                "per_guest": 0.5,
+                "amount": 3,
                 "unit": "piezas"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2088,8 +2060,8 @@
               }
             ],
             "steps": [
-              "Confitar la cebolla fileteada y los espárragos troceados en el aceite de oliva a fuego suave durante 6 minutos.",
-              "Integrar los 18 huevos batidos con sal de mar y cuajar la tortilla española en sartén por ambos lados."
+              "Asar previamente los bastones de nopales de la granja en comal seco y confitar las 3 cebollas fileteadas en el aceite de coco neutro a fuego suave durante 6 minutos.",
+              "Integrar los 18 huevos batidos con sal de mar, la cebolla confitada y los nopales, y cuajar la tortilla española en sartén por ambos lados."
             ],
             "archetype": "huevo_tortilla_espanola_calabacita"
           },
@@ -2153,14 +2125,14 @@
           "protein_g": 43.0,
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
-          "starter_name": "Sopa Castellana de Cebolla Caramelizada y Ajo en Fondo de Res con Hojas de Laurel, Tomillo y Aceite de Oliva",
-          "main_dish_name": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Ajo, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva",
-          "dish_name": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Ajo, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva",
-          "side_dish_name": "Láminas de Calabacitas Asadas al Comal con Romero de la Granja y Aceite de Oliva VEVO",
+          "starter_name": "Sopa Castellana de Cebolla Caramelizada y Ajo en Fondo de Res con Hojas de Laurel, Tomillo y Aceite de Coco Neutro",
+          "main_dish_name": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Ajo, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Coco Neutro",
+          "dish_name": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Ajo, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Coco Neutro",
+          "side_dish_name": "Láminas de Calabacitas Asadas al Comal con Romero de la Granja y Aceite de Coco Neutro",
           "starter": {
-            "title": "Sopa Castellana de Cebolla Caramelizada y Ajo en Fondo de Res con Hojas de Laurel, Tomillo y Aceite de Oliva",
+            "title": "Sopa Castellana de Cebolla Caramelizada y Ajo en Fondo de Res con Hojas de Laurel, Tomillo y Aceite de Coco Neutro",
             "technique": "castilian_caramelized_onion_soup",
-            "note": "Escuela 4 (Inspiración Asador Castellano): sopa de cebolla y ajo de asador español elaborada en fondo de res casero con hojas de laurel, tomillo y aceite de oliva sin pan ni lácteos ([R2]).",
+            "note": "Escuela 4 (Inspiración Asador Castellano): sopa de cebolla y ajo de asador español elaborada en fondo de res casero con hojas de laurel, tomillo y aceite de coco neutro sin pan ni lácteos ([R2]).",
             "coct_reasoning": {
               "thermodynamics": "Caramelización lenta de la cebolla y ajo a 140°C y hervor suave en fondo de res.",
               "flavor_and_aromatics": "Dulzor natural de cebolla dorada y ajo con fondo de res, hojas de laurel y tomillo.",
@@ -2205,10 +2177,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2219,15 +2191,15 @@
               }
             ],
             "steps": [
-              "Rehogar la cebolla en pluma fina y el ajo laminado con el aceite de oliva, hojas de laurel y tomillo hasta que adquieran tono dorado.",
+              "Rehogar la cebolla en pluma fina y el ajo laminado con el aceite de coco neutro, hojas de laurel y tomillo hasta que adquieran tono dorado.",
               "Verter el fondo de res casero, sazonar con sal de mar y hervir suavemente 8 minutos."
             ],
             "archetype": "entrada_sopa_cebolla_castellana"
           },
           "main": {
-            "title": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Ajo, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva",
+            "title": "Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Ajo, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Coco Neutro",
             "technique": "murcian_fish_claypot_braise",
-            "note": "Escuela 4 (Inspiración Asador Castellano): porción clínica completa de fajitas de mojarra de alacena (900 g = 150 g/comensal) a la murciana cocinada en cazuela con jitomate asado, ajo, alcaparras, aceitunas manzanilla, orégano, pimienta negra y aceite de oliva.",
+            "note": "Escuela 4 (Inspiración Asador Castellano): porción clínica completa de fajitas de mojarra de alacena (900 g = 150 g/comensal) a la murciana cocinada en cazuela con jitomate asado, ajo, alcaparras, aceitunas manzanilla, orégano, pimienta negra y aceite de coco neutro.",
             "coct_reasoning": {
               "thermodynamics": "Cocción suave en cazuela a 155°C por 8 minutos hasta alcanzar 63°C en el pescado.",
               "flavor_and_aromatics": "Salsa mediterránea española de jitomate, ajo, alcaparras y aceitunas manzanilla.",
@@ -2279,10 +2251,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2300,13 +2272,13 @@
               }
             ],
             "steps": [
-              "Sofreír el ajo laminado y el jitomate troceado en aceite de oliva con las alcaparras, las aceitunas manzanilla, el orégano y la pimienta negra.",
+              "Sofreír el ajo laminado y el jitomate troceado en aceite de coco neutro con las alcaparras, las aceitunas manzanilla, el orégano y la pimienta negra.",
               "Incorporar las fajitas de mojarra en la cazuela, tapar y cocinar 7 minutos a fuego medio."
             ],
             "archetype": "pescado_a_la_murciana_cazuela"
           },
           "side": {
-            "title": "Láminas de Calabacitas Asadas al Comal con Romero de la Granja y Aceite de Oliva VEVO",
+            "title": "Láminas de Calabacitas Asadas al Comal con Romero de la Granja y Aceite de Coco Neutro",
             "technique": "griddled_rosemary_zucchini_ribbons",
             "note": "Cuarta guarnición de Comida ([R4-SIDE] 4/7: calabacitas) libre de lácteos.",
             "coct_reasoning": {
@@ -2332,10 +2304,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2346,7 +2318,7 @@
               }
             ],
             "steps": [
-              "Laminar las calabacitas a lo largo y asar en el comal con aceite de oliva.",
+              "Laminar las calabacitas a lo largo y asar en el comal con aceite de coco neutro.",
               "Perfumar con romero de la granja y sal de mar."
             ]
           }
@@ -2358,17 +2330,17 @@
           "protein_g": 35.0,
           "net_carbs_g": 3.9,
           "fiber_g": 6.2,
-          "starter_name": "Ensalada de Lechuga Romana y Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva",
+          "starter_name": "Ensalada de Lechuga Romana y Hojas de Acelgas de la Granja con Limón Real, Orégano y Aceite de Oliva",
           "main_dish_name": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno y Gajos de Aguacate Hass",
           "dish_name": "Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno y Gajos de Aguacate Hass",
           "side_dish_name": "Tisana Nocturna de Manzanilla, Canela y Limón Real (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Ensalada de Lechuga Romana y Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva",
-            "technique": "castilian_spinach_citrus_salad",
-            "note": "Entrada verde sin lácteos ([R2]) con hojas de lechuga romana y espinacas que equilibra los Pimientos Rellenos Gratinados.",
+            "title": "Ensalada de Lechuga Romana y Hojas de Acelgas de la Granja con Limón Real, Orégano y Aceite de Oliva",
+            "technique": "castilian_chard_citrus_salad",
+            "note": "Entrada verde sin lácteos ([R2]) con doble porción de hojas de lechuga romana y acelgas tiernas de la granja que equilibra los Pimientos Rellenos Gratinados.",
             "coct_reasoning": {
               "thermodynamics": "Emplatado en frío a 8°C.",
-              "flavor_and_aromatics": "Hojas de lechuga romana y espinaca con limón de la granja y orégano.",
+              "flavor_and_aromatics": "Hojas de lechuga romana y acelga tierna de la granja con limón de la granja y orégano.",
               "textural_architecture": "Hojas enteras y tiernas.",
               "critical_control_points": "Cero lácteos en la entrada ([R2])."
             },
@@ -2376,13 +2348,13 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Lechuga",
-                "per_guest": 0.1667,
-                "amount": 1,
+                "per_guest": 0.3333,
+                "amount": 2,
                 "unit": "piezas"
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Espinacas",
+                "name": "Acelgas",
                 "per_guest": 50,
                 "amount": 300,
                 "unit": "g"
@@ -2417,7 +2389,7 @@
               }
             ],
             "steps": [
-              "Disponer la lechuga romana troceada y las hojas de espinaca desinfectadas en platos fríos.",
+              "Disponer las 2 piezas de lechuga romana troceadas y las hojas de acelga de la granja en chiffonnade fina en platos fríos.",
               "Aliñar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar."
             ]
           },
@@ -2483,10 +2455,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2506,7 +2478,7 @@
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
               "Asar los pimientos morrones cortados en mitades y retirar las semillas.",
-              "Mezclar el atún en agua drenado con la cebolla acitronada en aceite de oliva, la pasta tersa de queso cottage, el yogur griego, orégano y sal de mar.",
+              "Mezclar el atún en agua drenado con la cebolla acitronada en aceite de coco neutro, la pasta tersa de queso cottage, el yogur griego, orégano y sal de mar.",
               "Rellenar los pimientos morrones, cubrir con el queso manchego, gratinar al horno por 8 minutos y servir con gajos de aguacate Hass."
             ],
             "archetype": "atun_pimientos_rellenos_gratinados"
@@ -2583,40 +2555,33 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
-          "starter_name": "Compota Fría de Frambuesas y Canela con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "starter_name": "Compota Fría de Granadas de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Focaccia Keto Horneada de Coliflor y 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja",
           "dish_name": "Focaccia Keto Horneada de Coliflor y 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja",
           "side_dish_name": "Infusión Matutina de Té Chai, Canela y Aceite de Coco (≤60°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
-            "title": "Compota Fría de Frambuesas y Canela con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-            "technique": "cold_raspberry_cinnamon_compote",
-            "note": "Frambuesas maceradas con canela, semillas de chía orgánicas, semillas y nueces mixtas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
+            "title": "Compota Fría de Granadas de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "technique": "cold_pomegranate_cinnamon_compote",
+            "note": "Arilos de granada de la granja macerados con canela, semillas y nueces mixtas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
             "coct_reasoning": {
               "thermodynamics": "Maceración en frío a 6°C.",
-              "flavor_and_aromatics": "Frambuesa y canela con semillas y nueces mixtas y frutos secos.",
-              "textural_architecture": "Compota rústica con semillas y nueces.",
+              "flavor_and_aromatics": "Granada de la granja y canela con semillas y nueces mixtas y frutos secos.",
+              "textural_architecture": "Arilos rubí con semillas y nueces.",
               "critical_control_points": "Cero lácteos en la entrada frutal."
             },
             "ingredients": [
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
-                "name": "Frambuesas",
-                "per_guest": 20.8333,
-                "amount": 125,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Semillas de chía orgánicas",
-                "per_guest": 8,
-                "amount": 48,
+                "name": "Granadas",
+                "per_guest": 25,
+                "amount": 150,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 16.6667,
+                "amount": 100,
                 "unit": "g"
               },
               {
@@ -2642,8 +2607,8 @@
               }
             ],
             "steps": [
-              "Macerar ligeramente las frambuesas con la canela molida.",
-              "Servir con las semillas de chía orgánicas, las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
+              "Desgranar las granadas de la granja y macerar ligeramente los arilos con la canela molida.",
+              "Servir con las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
           "main": {
@@ -2798,7 +2763,7 @@
           "starter_name": "Ensalada Bistró de Lechuga Romana, Pepino y Pistaches Tostados con Vinagreta Francesa de Mostaza, Limón Real, Orégano y Aceite de Oliva",
           "main_dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
           "dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
-          "side_dish_name": "Espárragos Verdes Asados a la Plancha con Limón Real, Sal con Ajo y Aceite de Oliva VEVO",
+          "side_dish_name": "Ejotes Tiernos y Acelgas de la Granja Salteados a la Plancha con Limón Real, Sal con Ajo y Aceite de Coco Neutro",
           "starter": {
             "title": "Ensalada Bistró de Lechuga Romana, Pepino y Pistaches Tostados con Vinagreta Francesa de Mostaza, Limón Real, Orégano y Aceite de Oliva",
             "technique": "european_bistro_cucumber_salad",
@@ -2954,21 +2919,28 @@
             "archetype": "salmon_estilo_alda_philadelphia_alcaparras"
           },
           "side": {
-            "title": "Espárragos Verdes Asados a la Plancha con Limón Real, Sal con Ajo y Aceite de Oliva VEVO",
-            "technique": "chargrilled_citrus_asparagus",
-            "note": "Quinta guarnición de Comida ([R4-SIDE] 5/7: espárragos) libre de lácteos ([R2]).",
+            "title": "Ejotes Tiernos y Acelgas de la Granja Salteados a la Plancha con Limón Real, Sal con Ajo y Aceite de Coco Neutro",
+            "technique": "chargrilled_citrus_green_beans_chard",
+            "note": "Quinta guarnición de Comida ([R4-SIDE] 5/7: ejotes y acelgas) libre de lácteos ([R2]).",
             "coct_reasoning": {
-              "thermodynamics": "Asado en plancha a 185°C durante 4 minutos.",
-              "flavor_and_aromatics": "Notas tostadas de espárrago verde con limón real y sal con ajo.",
-              "textural_architecture": "Tallos tiernos y puntas crujientes.",
+              "thermodynamics": "Salteado en plancha a 185°C con aceite de coco neutro durante 4 minutos.",
+              "flavor_and_aromatics": "Notas tostadas de ejotes tiernos y acelgas de la granja con limón real y sal con ajo.",
+              "textural_architecture": "Vainas tiernas al dente y cintas sedosas de acelga.",
               "critical_control_points": "Cero lácteos en la guarnición ([R2])."
             },
             "ingredients": [
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Espárragos",
-                "per_guest": 70,
-                "amount": 420,
+                "name": "Ejotes",
+                "per_guest": 43.3333,
+                "amount": 260,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Acelgas",
+                "per_guest": 40,
+                "amount": 240,
                 "unit": "g"
               },
               {
@@ -2980,10 +2952,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2994,7 +2966,7 @@
               }
             ],
             "steps": [
-              "Asar los espárragos verdes en plancha caliente con aceite de oliva y sal con ajo.",
+              "Saltear los ejotes despuntados y las acelgas de la granja en cintas en plancha caliente con aceite de coco neutro y sal con ajo.",
               "Terminar con jugo de limón de la granja al servir."
             ]
           }
@@ -3223,14 +3195,14 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.2,
           "fiber_g": 6.5,
-          "starter_name": "Coulis Rústico de Fresas al Limón Real con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "starter_name": "Coulis Rústico de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla, Aceite de Coco y Emulsión de Curry Dorado con Leche de Coco y Cúrcuma)",
           "dish_name": "Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla, Aceite de Coco y Emulsión de Curry Dorado con Leche de Coco y Cúrcuma)",
           "side_dish_name": "Gelatina de Flor de Jamaica y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
-            "title": "Coulis Rústico de Fresas al Limón Real con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "title": "Coulis Rústico de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "citrus_strawberry_coulis_bowl",
-            "note": "Fresas machacadas en frío con limón real, semillas de chía orgánicas, semillas y nueces mixtas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
+            "note": "Fresas machacadas en frío con limón real, semillas y nueces mixtas, nuez de la India y nuez pecana sin lácteos ([R4.6]).",
             "coct_reasoning": {
               "thermodynamics": "Preparación en frío a 6°C.",
               "flavor_and_aromatics": "Fresas vibrantes con limón de la granja, semillas y nueces mixtas y nueces.",
@@ -3254,16 +3226,9 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Semillas de chía orgánicas",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 16.6667,
+                "amount": 100,
                 "unit": "g"
               },
               {
@@ -3283,7 +3248,7 @@
             ],
             "steps": [
               "Trocear las fresas con jugo de limón de la granja formando un coulis rústico.",
-              "Añadir las semillas de chía orgánicas, las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
+              "Añadir las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
           "main": {
@@ -3430,7 +3395,7 @@
           "starter_name": "Ensalada Oriental Sunomono de Pepino en Láminas con Nuez de la India, Limón Real y Aceite de Oliva",
           "main_dish_name": "Teppanyaki de Flat Steak a la Plancha con Floretes de Brócoli al Wok, Pimiento Morrón, Cebolla Asada, Ajo y Germinado en Aceite de Coco",
           "dish_name": "Teppanyaki de Flat Steak a la Plancha con Floretes de Brócoli al Wok, Pimiento Morrón, Cebolla Asada, Ajo y Germinado en Aceite de Coco",
-          "side_dish_name": "Acelgas de la Granja Salteadas al Wok con Limón Real, Orégano y Aceite de Oliva VEVO",
+          "side_dish_name": "Acelgas de la Granja Salteadas al Wok con Limón Real, Orégano y Aceite de Coco Neutro",
           "starter": {
             "title": "Ensalada Oriental Sunomono de Pepino en Láminas con Nuez de la India, Limón Real y Aceite de Oliva",
             "technique": "japanese_sunomono_cucumber_salad",
@@ -3565,7 +3530,7 @@
             "archetype": "res_teppanyaki_plancha_germinado"
           },
           "side": {
-            "title": "Acelgas de la Granja Salteadas al Wok con Limón Real, Orégano y Aceite de Oliva VEVO",
+            "title": "Acelgas de la Granja Salteadas al Wok con Limón Real, Orégano y Aceite de Coco Neutro",
             "technique": "wok_sauteed_oregano_chard",
             "note": "Sexta guarnición de Comida ([R4-SIDE] 6/7: acelgas) libre de lácteos ([R2]).",
             "coct_reasoning": {
@@ -3598,10 +3563,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -3612,7 +3577,7 @@
               }
             ],
             "steps": [
-              "Saltear las acelgas de la granja troceadas en el wok con aceite de oliva durante 3 minutos.",
+              "Saltear las acelgas de la granja troceadas en el wok con aceite de coco neutro durante 3 minutos.",
               "Perfumar con jugo de limón real, orégano y sal de mar."
             ]
           }
@@ -3756,10 +3721,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -3847,18 +3812,18 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
-          "starter_name": "Macerado Mediterráneo de Fresas con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India, Nuez Pecana y Vainilla",
+          "starter_name": "Macerado Mediterráneo de Fresas con Semillas y Nueces Mixtas, Nuez de la India, Nuez Pecana y Vainilla",
           "main_dish_name": "Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Ajo, Queso Cottage, Queso Parmesano, Hierbas Finas y Aceite de Oliva)",
           "dish_name": "Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Ajo, Queso Cottage, Queso Parmesano, Hierbas Finas y Aceite de Oliva)",
           "side_dish_name": "Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
-            "title": "Macerado Mediterráneo de Fresas con Semillas de Chía, Semillas y Nueces Mixtas, Nuez de la India, Nuez Pecana y Vainilla",
+            "title": "Macerado Mediterráneo de Fresas con Semillas y Nueces Mixtas, Nuez de la India, Nuez Pecana y Vainilla",
             "technique": "mediterranean_strawberry_maceration",
-            "note": "Fresas sin lácteos ([R4.6]) con vainilla, semillas de chía orgánicas, semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            "note": "Fresas sin lácteos ([R4.6]) con vainilla, semillas y nueces mixtas, nuez de la India y nuez pecana.",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 6°C.",
               "flavor_and_aromatics": "Fresas a la vainilla con semillas y nueces mixtas y nuez pecana de la granja.",
-              "textural_architecture": "Bayas en cuartos con semillas de chía.",
+              "textural_architecture": "Bayas en cuartos con semillas y nueces mixtas.",
               "critical_control_points": "Cero lácteos en la entrada frutal."
             },
             "ingredients": [
@@ -3871,16 +3836,9 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Semillas de chía orgánicas",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 16.6667,
+                "amount": 100,
                 "unit": "g"
               },
               {
@@ -3907,7 +3865,7 @@
             ],
             "steps": [
               "Perfumar las fresas con el extracto de vainilla.",
-              "Distribuir las semillas de chía orgánicas, las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
+              "Distribuir las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
           "main": {
@@ -4055,7 +4013,7 @@
           "starter_name": "Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Pistaches, Orégano y Limón Real al Aceite de Oliva",
           "main_dish_name": "Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res al Ajo, Hojas de Laurel y Canela, y Gratinado de Yogur Griego, Queso Cottage, Queso Manchego y Queso Parmesano",
           "dish_name": "Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res al Ajo, Hojas de Laurel y Canela, y Gratinado de Yogur Griego, Queso Cottage, Queso Manchego y Queso Parmesano",
-          "side_dish_name": "Champiñones Silvestres Salteados al Ajillo con Ajo Laminado, Tomillo, Limón Real y Aceite de Oliva VEVO",
+          "side_dish_name": "Champiñones Silvestres Salteados al Ajillo con Ajo Laminado, Tomillo, Limón Real y Aceite de Coco Neutro",
           "starter": {
             "title": "Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Pistaches, Orégano y Limón Real al Aceite de Oliva",
             "technique": "mare_nostrum_olive_salad",
@@ -4233,11 +4191,11 @@
             "archetype": "res_moussaka_griega_horno"
           },
           "side": {
-            "title": "Champiñones Silvestres Salteados al Ajillo con Ajo Laminado, Tomillo, Limón Real y Aceite de Oliva VEVO",
+            "title": "Champiñones Silvestres Salteados al Ajillo con Ajo Laminado, Tomillo, Limón Real y Aceite de Coco Neutro",
             "technique": "garlic_thyme_sauteed_mushrooms",
             "note": "Séptima guarnición de Comida ([R4-SIDE] 7/7: champiñón) con generosa dosis de ajo laminado dorado (24 g = 4 dientes grandes) libre de mantequilla y lácteos ([R2]).",
             "coct_reasoning": {
-              "thermodynamics": "Salteado a 180°C en aceite de oliva por 5 minutos.",
+              "thermodynamics": "Salteado a 180°C en aceite de coco neutro por 5 minutos.",
               "flavor_and_aromatics": "Champiñones al ajillo con dientes de ajo laminados, tomillo y toque de limón real.",
               "textural_architecture": "Láminas carnosas y doradas.",
               "critical_control_points": "Cero mantequilla ni lácteos ([R2])."
@@ -4259,10 +4217,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
@@ -4287,7 +4245,7 @@
               }
             ],
             "steps": [
-              "Dorar el ajo laminado en aceite de oliva, incorporar los champiñones fileteados y saltear a fuego vivo con sal con ajo y tomillo.",
+              "Dorar el ajo laminado en aceite de coco neutro, incorporar los champiñones fileteados y saltear a fuego vivo con sal con ajo y tomillo.",
               "Terminar con jugo de limón de la granja."
             ]
           }
@@ -4299,19 +4257,19 @@
           "protein_g": 35.0,
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
-          "starter_name": "Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Espinacas, Limón Real y Orégano",
+          "starter_name": "Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Acelgas de la Granja, Limón Real y Orégano",
           "main_dish_name": "Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Ajo, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino",
           "dish_name": "Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Ajo, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino",
           "side_dish_name": "Tisana Nocturna de Manzanilla, Tomillo y Limón Real (≤60°C) con Fórmula Reparadora 34Plus®",
           "starter": {
-            "title": "Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Espinacas, Limón Real y Orégano",
-            "technique": "trattoria_spinach_clear_broth",
-            "note": "Caldo italiano ligero con hojas de espinaca y limón real.",
+            "title": "Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Acelgas de la Granja, Limón Real y Orégano",
+            "technique": "trattoria_chard_clear_broth",
+            "note": "Caldo italiano ligero con hojas de acelgas tiernas de la granja y limón real.",
             "coct_reasoning": {
               "thermodynamics": "Cocción suave a 90°C por 4 minutos.",
-              "flavor_and_aromatics": "Fondo claro de pollo con espinacas tiernas y orégano.",
-              "textural_architecture": "Caldo sedoso con hojas de espinaca.",
-              "critical_control_points": "Incorporar las espinacas 1 minuto antes de servir."
+              "flavor_and_aromatics": "Fondo claro de pollo con acelgas tiernas de la granja y orégano.",
+              "textural_architecture": "Caldo sedoso con hojas de acelga.",
+              "critical_control_points": "Incorporar las acelgas de la granja 1 minuto antes de servir."
             },
             "ingredients": [
               {
@@ -4323,7 +4281,7 @@
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Espinacas",
+                "name": "Acelgas",
                 "per_guest": 50,
                 "amount": 300,
                 "unit": "g"
@@ -4358,7 +4316,7 @@
               }
             ],
             "steps": [
-              "Hervir el fondo claro de pollo con orégano y sal de mar, e incorporar las hojas de espinaca por 1 minuto.",
+              "Hervir el fondo claro de pollo con orégano y sal de mar, e incorporar las hojas de acelga de la granja por 1 minuto.",
               "Servir con jugo de limón real y aceite de oliva."
             ]
           },
@@ -4424,10 +4382,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -4445,7 +4403,7 @@
               }
             ],
             "steps": [
-              "Marinar las fajitas de pechuga de pollo con jugo de limón real, ajo picado, comino, orégano, sal con ajo, pimienta negra y aceite de oliva, y asar en plancha caliente.",
+              "Marinar las fajitas de pechuga de pollo con jugo de limón real, ajo picado, comino, orégano, sal con ajo, pimienta negra y aceite de coco neutro, y asar en plancha caliente.",
               "Mezclar el yogur griego con el pepino en dados finos y servir acompañando el shawarma caliente."
             ],
             "archetype": "pavo_shawarma_griego_tzatziki"
@@ -4525,7 +4483,7 @@
       "farm_harvest_items": [
         {
           "name": "Acelgas",
-          "required": 480.0,
+          "required": 1320.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4540,6 +4498,13 @@
         {
           "name": "Cilantro",
           "required": 204.0,
+          "unit": "g",
+          "source": "Granja El Herami ($0)",
+          "net_to_buy": 0.0
+        },
+        {
+          "name": "Granadas",
+          "required": 300.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4560,7 +4525,7 @@
         },
         {
           "name": "Nopales",
-          "required": 480.0,
+          "required": 680.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4583,10 +4548,17 @@
       "pantry_covered_items": [
         {
           "name": "Aceite de coco",
-          "required": 174.0,
+          "required": 390.0,
           "stock": 1700.0,
-          "remaining_stock": 1526.0,
+          "remaining_stock": 1310.0,
           "unit": "g"
+        },
+        {
+          "name": "Aceite de oliva",
+          "required": 306.0,
+          "stock": 400.0,
+          "remaining_stock": 94.0,
+          "unit": "ml"
         },
         {
           "name": "Aceitunas manzanilla",
@@ -4660,9 +4632,9 @@
         },
         {
           "name": "Cebolla",
-          "required": 10.0,
+          "required": 12.0,
           "stock": 13.0,
-          "remaining_stock": 3.0,
+          "remaining_stock": 1.0,
           "unit": "piezas"
         },
         {
@@ -4709,9 +4681,9 @@
         },
         {
           "name": "Ejotes",
-          "required": 240.0,
+          "required": 500.0,
           "stock": 500.0,
-          "remaining_stock": 260.0,
+          "remaining_stock": 0.0,
           "unit": "g"
         },
         {
@@ -4732,13 +4704,6 @@
           "name": "Flat steak",
           "required": 1290.0,
           "stock": 1290.0,
-          "remaining_stock": 0.0,
-          "unit": "g"
-        },
-        {
-          "name": "Frambuesas",
-          "required": 250.0,
-          "stock": 250.0,
           "remaining_stock": 0.0,
           "unit": "g"
         },
@@ -4800,9 +4765,9 @@
         },
         {
           "name": "Lechuga",
-          "required": 6.0,
+          "required": 7.0,
           "stock": 7.0,
-          "remaining_stock": 1.0,
+          "remaining_stock": 0.0,
           "unit": "piezas"
         },
         {
@@ -4954,9 +4919,9 @@
         },
         {
           "name": "Semillas y nueces mixtas",
-          "required": 540.0,
+          "required": 820.0,
           "stock": 1020.0,
-          "remaining_stock": 480.0,
+          "remaining_stock": 200.0,
           "unit": "g"
         },
         {
@@ -4997,13 +4962,6 @@
       ],
       "market_purchases": [
         {
-          "name": "Aceite de oliva",
-          "required": 522.0,
-          "stock": 400.0,
-          "net_to_buy": 122.0,
-          "unit": "ml"
-        },
-        {
           "name": "AminoSinergix®",
           "required": 420.0,
           "stock": 200.0,
@@ -5011,17 +4969,10 @@
           "unit": "g"
         },
         {
-          "name": "Espárragos",
-          "required": 840.0,
-          "stock": 0.0,
-          "net_to_buy": 840.0,
-          "unit": "g"
-        },
-        {
           "name": "Espinacas",
-          "required": 1860.0,
+          "required": 1260.0,
           "stock": 150.0,
-          "net_to_buy": 1710.0,
+          "net_to_buy": 1110.0,
           "unit": "g"
         },
         {
@@ -5036,13 +4987,6 @@
           "required": 1740.0,
           "stock": 2.0,
           "net_to_buy": 1738.0,
-          "unit": "g"
-        },
-        {
-          "name": "Semillas de chía orgánicas",
-          "required": 336.0,
-          "stock": 0.0,
-          "net_to_buy": 336.0,
           "unit": "g"
         }
       ],
