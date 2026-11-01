@@ -474,7 +474,7 @@
           "main": {
             "title": "Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
             "technique": "cheese_crust_keto_dobladitas",
-            "note": "Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (120 g) al comal, rellenas de pechuga de pollo deshebrada (600 g = 100 g/comensal), champiñones salteados, queso ricotta (180 g), queso Philadelphia (120 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).",
+            "note": "Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (150 g) al comal, rellenas de pechuga de pollo deshebrada (470 g), champiñones salteados, queso ricotta (180 g), queso Philadelphia (120 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).",
             "coct_reasoning": {
               "thermodynamics": "Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno de pechuga de pollo, ricotta y Philadelphia.",
               "flavor_and_aromatics": "Umami de pechuga de pollo dorada y champiñón salteado con 3 quesos (manchego, ricotta y Philadelphia), espinacas, nuez pecana y cilantro.",
@@ -485,8 +485,8 @@
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Pechuga de pollo",
-                "per_guest": 100,
-                "amount": 600,
+                "per_guest": 78.3333,
+                "amount": 470,
                 "unit": "g"
               },
               {
@@ -513,8 +513,8 @@
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Queso manchego",
-                "per_guest": 20,
-                "amount": 120,
+                "per_guest": 25,
+                "amount": 150,
                 "unit": "g"
               },
               {
@@ -892,8 +892,8 @@
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Flat steak",
-                "per_guest": 110,
-                "amount": 660,
+                "per_guest": 107.5,
+                "amount": 645,
                 "unit": "g"
               },
               {
@@ -1659,8 +1659,8 @@
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Pechuga de pollo",
-                "per_guest": 150,
-                "amount": 900,
+                "per_guest": 100,
+                "amount": 600,
                 "unit": "g"
               },
               {
@@ -3133,8 +3133,8 @@
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Flat steak",
-                "per_guest": 110,
-                "amount": 660,
+                "per_guest": 107.5,
+                "amount": 645,
                 "unit": "g"
               },
               {
@@ -3884,8 +3884,8 @@
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Pechuga de pollo",
-                "per_guest": 150,
-                "amount": 900,
+                "per_guest": 100,
+                "amount": 600,
                 "unit": "g"
               },
               {
@@ -4126,8 +4126,8 @@
         {
           "name": "Carne molida",
           "required": 1200.0,
-          "stock": 1200.0,
-          "remaining_stock": 0.0,
+          "stock": 2315.0,
+          "remaining_stock": 1115.0,
           "unit": "g"
         },
         {
@@ -4166,6 +4166,13 @@
           "unit": "ml"
         },
         {
+          "name": "Flat steak",
+          "required": 1290.0,
+          "stock": 1290.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
           "name": "Frambuesas",
           "required": 250.0,
           "stock": 250.0,
@@ -4175,8 +4182,15 @@
         {
           "name": "Fresas",
           "required": 900.0,
-          "stock": 900.0,
-          "remaining_stock": 0.0,
+          "stock": 907.0,
+          "remaining_stock": 7.0,
+          "unit": "g"
+        },
+        {
+          "name": "Germinado",
+          "required": 360.0,
+          "stock": 500.0,
+          "remaining_stock": 140.0,
           "unit": "g"
         },
         {
@@ -4184,6 +4198,27 @@
           "required": 12.0,
           "stock": 25.0,
           "remaining_stock": 13.0,
+          "unit": "g"
+        },
+        {
+          "name": "Huevo",
+          "required": 126.0,
+          "stock": 170.0,
+          "remaining_stock": 44.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Lechuga",
+          "required": 3.0,
+          "stock": 7.0,
+          "remaining_stock": 4.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Lomo de salmón",
+          "required": 600.0,
+          "stock": 980.0,
+          "remaining_stock": 380.0,
           "unit": "g"
         },
         {
@@ -4203,8 +4238,8 @@
         {
           "name": "Nuez de la India",
           "required": 546.0,
-          "stock": 600.0,
-          "remaining_stock": 54.0,
+          "stock": 1700.0,
+          "remaining_stock": 1154.0,
           "unit": "g"
         },
         {
@@ -4222,6 +4257,13 @@
           "unit": "g"
         },
         {
+          "name": "Pechuga de pollo",
+          "required": 1670.0,
+          "stock": 1670.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
           "name": "Pimienta negra",
           "required": 3.0,
           "stock": 70.0,
@@ -4229,10 +4271,24 @@
           "unit": "g"
         },
         {
+          "name": "Queso manchego",
+          "required": 1000.0,
+          "stock": 1000.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
           "name": "Queso Philadelphia",
           "required": 540.0,
           "stock": 720.0,
           "remaining_stock": 180.0,
+          "unit": "g"
+        },
+        {
+          "name": "Queso ricotta",
+          "required": 1980.0,
+          "stock": 3840.0,
+          "remaining_stock": 1860.0,
           "unit": "g"
         },
         {
@@ -4266,8 +4322,15 @@
         {
           "name": "Yogur griego",
           "required": 360.0,
-          "stock": 1200.0,
-          "remaining_stock": 840.0,
+          "stock": 3000.0,
+          "remaining_stock": 2640.0,
+          "unit": "g"
+        },
+        {
+          "name": "Zarzamora",
+          "required": 340.0,
+          "stock": 510.0,
+          "remaining_stock": 170.0,
           "unit": "g"
         }
       ],
@@ -4343,20 +4406,6 @@
           "unit": "g"
         },
         {
-          "name": "Flat steak",
-          "required": 1320.0,
-          "stock": 0.0,
-          "net_to_buy": 1320.0,
-          "unit": "g"
-        },
-        {
-          "name": "Germinado",
-          "required": 360.0,
-          "stock": 0.0,
-          "net_to_buy": 360.0,
-          "unit": "g"
-        },
-        {
           "name": "Grenetina",
           "required": 80.0,
           "stock": 0.0,
@@ -4364,32 +4413,11 @@
           "unit": "g"
         },
         {
-          "name": "Huevo",
-          "required": 126.0,
-          "stock": 80.0,
-          "net_to_buy": 46.0,
-          "unit": "piezas"
-        },
-        {
           "name": "Jitomate",
           "required": 8.0,
           "stock": 0.0,
           "net_to_buy": 8.0,
           "unit": "piezas"
-        },
-        {
-          "name": "Lechuga",
-          "required": 3.0,
-          "stock": 1.0,
-          "net_to_buy": 2.0,
-          "unit": "piezas"
-        },
-        {
-          "name": "Lomo de salmón",
-          "required": 600.0,
-          "stock": 0.0,
-          "net_to_buy": 600.0,
-          "unit": "g"
         },
         {
           "name": "Morrón",
@@ -4406,31 +4434,10 @@
           "unit": "g"
         },
         {
-          "name": "Pechuga de pollo",
-          "required": 2400.0,
-          "stock": 0.0,
-          "net_to_buy": 2400.0,
-          "unit": "g"
-        },
-        {
           "name": "Pepino",
           "required": 1740.0,
           "stock": 3.0,
           "net_to_buy": 1737.0,
-          "unit": "g"
-        },
-        {
-          "name": "Queso manchego",
-          "required": 970.0,
-          "stock": 0.0,
-          "net_to_buy": 970.0,
-          "unit": "g"
-        },
-        {
-          "name": "Queso ricotta",
-          "required": 1980.0,
-          "stock": 0.0,
-          "net_to_buy": 1980.0,
           "unit": "g"
         },
         {
@@ -4445,13 +4452,6 @@
           "required": 360.0,
           "stock": 0.0,
           "net_to_buy": 360.0,
-          "unit": "g"
-        },
-        {
-          "name": "Zarzamora",
-          "required": 340.0,
-          "stock": 0.0,
-          "net_to_buy": 340.0,
           "unit": "g"
         }
       ],

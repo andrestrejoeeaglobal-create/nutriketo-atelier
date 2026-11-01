@@ -72,6 +72,25 @@ CANONICAL_NAME_FIX: Dict[str, str] = {
     "Brocoli": "Brócoli",
 }
 
+V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
+    "Queso manchego": (1000.0, "g"),
+    "Queso ricotta": (3840.0, "g"),
+    "Yogur griego": (3000.0, "g"),
+    "Carne molida": (2315.0, "g"),
+    "Flat steak": (1290.0, "g"),
+    "Lomo de salmón": (980.0, "g"),
+    "Huevo": (170.0, "piezas"),
+    "Fresas": (907.0, "g"),
+    "Germinado": (500.0, "g"),
+    "Botella de agua": (150.0, "botellas (355 ml)"),
+    "Pechuga de pollo": (1670.0, "g"),
+    "Zarzamora": (510.0, "g"),
+    "Nuez de la India": (1700.0, "g"),
+    "Semillas y nueces mixtas": (1020.0, "g"),
+    "Nueces mixtas": (1020.0, "g"),
+    "Lechuga": (7.0, "piezas"),
+}
+
 
 def _win32_shared_read_bytes(src_path: str) -> bytes:
     """
@@ -423,8 +442,6 @@ def build_ssot_document_from_ui_state(
 
         if c_name == "Queso de cabra":
             qty = 0.0
-        if c_name == "Huevo" and qty == 206.0:
-            qty = 80.0
         if c_name == "Coliflor" and u == "kg" and qty == 500.0:
             u = "g"
         if c_name == "Aceite de coco":
@@ -445,12 +462,19 @@ def build_ssot_document_from_ui_state(
                 aud_unit = u
             canonical_pantry_for_auditor[c_name] = [aud_qty, aud_unit]
 
+    meta = source_meta or {}
+    is_chrome_extract = "Chrome LocalStorage" in str(meta.get("extracted_from", ""))
+    if is_chrome_extract and not ui_state.get("v58_tickets_sams_costco_nov01_sync"):
+        for t_name, (t_qty, t_unit) in V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES.items():
+            ui_pantry_stock[t_name] = int(t_qty) if t_qty == int(t_qty) else t_qty
+            ui_pantry_units[t_name] = t_unit
+            canonical_pantry_for_auditor[t_name] = [float(t_qty), t_unit]
+
     ui_pantry_stock["Queso de cabra con arándano"] = 350
     ui_pantry_units["Queso de cabra con arándano"] = "g"
 
-    meta = source_meta or {}
     return {
-        "ssot_version": "v56_chrome_leveldb_synced",
+        "ssot_version": "v58_sams_costco_tickets_synced",
         "extracted_from": meta.get(
             "extracted_from",
             r"C:\Users\andre\AppData\Local\Google\Chrome\User Data\Default\Local Storage\leveldb\015745.ldb (seq=270082) + 015749.ldb (seq=270423)",

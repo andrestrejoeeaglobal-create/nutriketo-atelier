@@ -207,35 +207,38 @@ def compile_s45_dossier() -> Dict[str, Any]:
     # Section 3
     lines.append("## 3. Abastecimiento Tridimensional Exacto (Sincronizado con `pantry_live_state.json` y `calculateNetShoppingList(6)` de `atelier.html`)")
     lines.append("")
-    lines.append("### 3.0 Estado Real en Alacena de los 18 Insumos del Ticket Sam's Club Scan & Go (`pantry_live_state.json`)")
-    lines.append("| # | Descripción en Ticket (Scan & Go) | Insumo Canónico Puro (SSOT) | Stock Real Actual en Alacena (`pantry_live_state.json`) | Demanda Semanal S45 (6p) | Saldo Remanente Post-S45 | Compra Neta S45 |")
+    lines.append("### 3.0 Estado Real en Alacena Consolidado con Tickets Sam's Club (`1566264040064745472`) y Costco (`4362`) (`pantry_live_state.json`)")
+    lines.append("| # | Descripción en Ticket (Sam's Scan & Go / Costco) | Insumo Canónico Puro (SSOT) | Stock Real Actual en Alacena (`pantry_live_state.json`) | Demanda Semanal S45 (6p) | Saldo Remanente Post-S45 | Compra Neta S45 |")
     lines.append("|---|---|---|---|---|---|---|")
 
     sams_rows = [
-        ("MM TOP SIRLO (2200G)", "Flat steak", "0 g (Consumido en S44)", "g"),
-        ("HAMB SIRLOIN", "Carne molida", "1,200 g", "g"),
-        ("MM LOMO SALM (1250G)", "Lomo de salmón", "0 g (Consumido en S44)", "g"),
-        ("MOJARRA ENTE (2 pzas)", "Fajitas de mojarra", "900 g", "g"),
-        ("FAJITAS PAVO", "Pechuga de pavo", "1,400 g", "g"),
-        ("180 HUE BLA (+26 previos - 126 S44)", "Huevo", "80 piezas", "piezas"),
-        ("960GR QCOTTA", "Queso ricotta", "0 g (Agotado en Alacena)", "g"),
-        ("LALA MANCHE", "Queso manchego", "0 g (Agotado en Alacena)", "g"),
-        ("OIKOS PROT", "Yogur griego", "1,200 g", "g"),
+        ("MILANECHOICE 1290G (Sam's #1566264040064745472)", "Flat steak", "1,290 g", "g"),
+        ("MM CARNE PAR 1115G (+1,200 g previos)", "Carne molida", "2,315 g", "g"),
+        ("MM LOMO SALM 980G (Sam's #1566264040064745472)", "Lomo de salmón", "980 g", "g"),
+        ("MOJARRA ENTE (Saldo Alacena)", "Fajitas de mojarra", "900 g", "g"),
+        ("FAJITAS PAVO (Saldo Alacena)", "Pechuga de pavo", "1,400 g", "g"),
+        ("KS PECHUGA D 1.670KG (Costco #4362)", "Pechuga de pollo", "1,670 g", "g"),
+        ("90PZ HUEVO (+80 pzas post-S44)", "Huevo", "170 piezas", "piezas"),
+        ("960GR QCOTTA (4 pzas × 960 g)", "Queso ricotta", "3,840 g", "g"),
+        ("QSO MANCH RA (Sam's #1566264040064745472)", "Queso manchego", "1,000 g", "g"),
+        ("OIKOS PROT 2 (+1,200 g previos)", "Yogur griego", "3,000 g", "g"),
         ("CABRARANDANO (Cubierta azucarada)", "Queso de cabra con arándano", "350 g (En Cuarentena NOM-004)", "g"),
-        ("12/90 MANTEQ", "Mantequilla", "500 g", "g"),
-        ("MM NUEZ INDI", "Nuez de la India", "600 g", "g"),
-        ("MM ACEITE CO", "Aceite de coco", "1,700 g", "g"),
-        ("FRAMBUESA", "Frambuesas", "250 g", "g"),
-        ("ZARZAMORA", "Zarzamora", "0 g (Agotado en Alacena)", "g"),
-        ("ESPARRAGO", "Espárragos", "0 g (Agotado en Alacena)", "g"),
-        ("GERMINADO", "Germinado", "0 g (Agotado en Alacena)", "g"),
-        ("MM 40/355ML", "Botella de agua", "70 botellas (355 ml)", "botellas"),
+        ("12/90 MANTEQ (Saldo Alacena)", "Mantequilla", "500 g", "g"),
+        ("KS NUEZ INDIA 1.1K (+600 g previos)", "Nuez de la India", "1,700 g", "g"),
+        ("KS MIX NUT 1.02KG (Costco #4362)", "Semillas y nueces mixtas", "1,020 g", "g"),
+        ("MM ACEITE CO (Saldo Alacena)", "Aceite de coco", "1,700 g", "g"),
+        ("FRESA (1 domo Sam's 907 g)", "Fresas", "907 g", "g"),
+        ("FRAMBUESA (Saldo Alacena)", "Frambuesas", "250 g", "g"),
+        ("ZARZAMORA 510 G (Costco #4362)", "Zarzamora", "510 g", "g"),
+        ("GERMINADO (1 domo Sam's 500 g)", "Germinado", "500 g", "g"),
+        ("LECHUGA SUCRINE 6P (+1 previa)", "Lechuga", "7 piezas", "piezas"),
+        ("MM 40/355ML (2 packs + 70 previas)", "Botella de agua", "150 botellas (355 ml)", "botellas"),
     ]
     for idx_s, (tdesc, cname, stock_label, unit_s) in enumerate(sams_rows, start=1):
         if cname == "Queso de cabra con arándano":
             lines.append(f"| {idx_s} | `{tdesc}` | **{cname}** | {stock_label} | 0 g (Bloqueado en Recetas) | 350 g (En Cuarentena) | **0 g (\\$0.00)** |")
         elif cname == "Botella de agua":
-            lines.append(f"| {idx_s} | `{tdesc}` | **{cname}** | {stock_label} | Reserva Hidratación Portátil | 70 botellas | **0 bot. (\\$0.00)** |")
+            lines.append(f"| {idx_s} | `{tdesc}` | **{cname}** | {stock_label} | Reserva Hidratación Portátil | 150 botellas | **0 bot. (\\$0.00)** |")
         else:
             u_short = "pzas" if unit_s == "piezas" else unit_s
             occs = ing_occurrences.get(cname, [])

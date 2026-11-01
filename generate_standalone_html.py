@@ -5309,16 +5309,39 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v56_restore_chrome_user_ssot', 'true');
         }
 
-        // Sincronización V57: Descuento de las 126 piezas de Huevo consumidas en Semana 44 (206 -> 80 piezas restantes para Semana 45)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v57_s44_eggs_80_sync') !== 'true') {
-          if (pantryStock["Huevo"] === undefined || Number(pantryStock["Huevo"]) === 206) {
-            pantryStock["Huevo"] = 80;
-            if (window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY["sku-104-huevo"]) {
-              window.PANTRY_STOCK_INVENTORY["sku-104-huevo"].stock = 80;
-              window.PANTRY_STOCK_INVENTORY["sku-104-huevo"].packaging = "80 piezas";
+        // Sincronización V58: Alta de 2 Tickets de Compra Reales (Sam's Club Orden 1566264040064745472 + Costco Ticket 4362) sobre saldos post-S44
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v58_tickets_sams_costco_nov01_sync') !== 'true') {
+          const v58TicketUpdates = {
+            "Queso manchego": { stock: 1000, unit: "g", sku: "sku-008-queso-manchego" },
+            "Queso ricotta": { stock: 3840, unit: "g", sku: "queso_ricotta_artesanal" },
+            "Yogur griego": { stock: 3000, unit: "g", sku: "sku-004-yogur-griego" },
+            "Carne molida": { stock: 2315, unit: "g", sku: "sku-024-carne-molida" },
+            "Flat steak": { stock: 1290, unit: "g", sku: "sku-021-flat-steak" },
+            "Lomo de salmón": { stock: 980, unit: "g", sku: "sku-023-lomo-de-salmon" },
+            "Huevo": { stock: 170, unit: "piezas", sku: "sku-104-huevo" },
+            "Fresas": { stock: 907, unit: "g", sku: "fresas_frescas_tr04095" },
+            "Germinado": { stock: 500, unit: "g", sku: "sku-319-germinado" },
+            "Botella de agua": { stock: 150, unit: "botellas (355 ml)", sku: "sku-019-botella-de-agua" },
+            "Pechuga de pollo": { stock: 1670, unit: "g", sku: "sku-029-pechuga-de-pollo" },
+            "Zarzamora": { stock: 510, unit: "g", sku: "sku-039-zarzamora" },
+            "Nuez de la India": { stock: 1700, unit: "g", sku: "sku-043-nuez-de-la-india" },
+            "Semillas y nueces mixtas": { stock: 1020, unit: "g", sku: "sku-045-semillas-y-nueces-mixtas" },
+            "Lechuga": { stock: 7, unit: "piezas", sku: "sku-034-lechuga" }
+          };
+          Object.keys(v58TicketUpdates).forEach(itemName => {
+            const up = v58TicketUpdates[itemName];
+            pantryStock[itemName] = up.stock;
+            if (window.pantryCardUnits) {
+              window.pantryCardUnits[itemName] = up.unit;
             }
-          }
+            if (window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[up.sku]) {
+              window.PANTRY_STOCK_INVENTORY[up.sku].stock = up.stock;
+              window.PANTRY_STOCK_INVENTORY[up.sku].unit = up.unit;
+              window.PANTRY_STOCK_INVENTORY[up.sku].packaging = `${up.stock} ${up.unit}`;
+            }
+          });
           localStorage.setItem('nutriketo_v57_s44_eggs_80_sync', 'true');
+          localStorage.setItem('nutriketo_v58_tickets_sams_costco_nov01_sync', 'true');
         }
 
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
@@ -5807,6 +5830,7 @@ let pantryStock = {
           pantryStockInventory: window.PANTRY_STOCK_INVENTORY || {},
           customGeneratedWeeks: lightweightCustomWeeks,
           samsReceiptProcessed_20261003: true,
+          v58_tickets_sams_costco_nov01_sync: true,
           checkedRows,
           customShopItems,
           selectedIdx,

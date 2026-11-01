@@ -1,8 +1,8 @@
 {
-  "ssot_version": "v56_chrome_leveldb_synced",
-  "extracted_from": "Google Chrome LocalStorage LevelDB (015751.ldb, seq=270568)",
-  "leveldb_seq": 270568,
-  "updated_at": "2026-11-01T11:00:21.915432",
+  "ssot_version": "v58_sams_costco_tickets_synced",
+  "extracted_from": "Google Chrome LocalStorage LevelDB (015756.ldb, seq=270647)",
+  "leveldb_seq": 270647,
+  "updated_at": "2026-11-01T11:16:05.240012",
   "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
@@ -42,11 +42,11 @@
     "Mantequilla": 500,
     "Mostaza": 150,
     "Queso cottage": 0,
-    "Yogur griego": 1200,
+    "Yogur griego": 3000,
     "Queso Philadelphia": 720,
     "Crema ácida": 960,
     "Mayonesa": 1000,
-    "Queso manchego": 0,
+    "Queso manchego": 1000,
     "Queso de cabra": 0,
     "Salsa BBQ": 550,
     "Leche de coco": 960,
@@ -54,30 +54,30 @@
     "Leche": 960,
     "Salsa cátsup": 2600,
     "Queso mozzarella": 0,
-    "Botella de agua": 70,
+    "Botella de agua": 150,
     "Queso parmesano": 150,
-    "Flat steak": 0,
-    "Lomo de salmón": 0,
-    "Carne molida": 1200,
+    "Flat steak": 1290,
+    "Lomo de salmón": 980,
+    "Carne molida": 2315,
     "Fajitas de mojarra": 900,
     "Filete de atún": 0,
     "Jitomate": 0,
     "Morrón": 4,
-    "Pechuga de pollo": 0,
+    "Pechuga de pollo": 1670,
     "Flor de calabaza": 0,
     "Calabaza": 4,
     "Cebolla": 2,
-    "Lechuga": 1,
+    "Lechuga": 7,
     "Ejotes": 0,
     "Tomate": 0,
     "Aguacate": 0,
-    "Zarzamora": 0,
+    "Zarzamora": 510,
     "Champiñón": 0.05,
     "Pulpa de arándano": 3840,
     "Pistaches": 100,
-    "Nuez de la India": 600,
+    "Nuez de la India": 1700,
     "Cacahuate enchilado": 1200,
-    "Semillas y nueces mixtas": 0,
+    "Semillas y nueces mixtas": 1020,
     "Granola": 100,
     "Té chai": 50,
     "Hierbas finas": 25,
@@ -133,23 +133,24 @@
     "Palomitas para microondas": 600,
     "Grenetina": 0,
     "Saborizante para arroz": 48,
-    "Huevo": 80,
+    "Huevo": 170,
     "MultiSinergix®": 300,
     "AminoSinergix®": 200,
     "Espinacas": 150,
     "Espárragos": 0,
-    "Fresas": 900,
+    "Fresas": 907,
     "Frambuesas": 250,
-    "Queso ricotta": 0,
+    "Queso ricotta": 3840,
     "Chile chipotle": 1320,
     "Frijol pinto": 1,
     "Pollo entero": 0,
     "Pechuga de pavo": 1400,
-    "Germinado": 0,
+    "Germinado": 500,
     "Coliflor": 500,
     "Pepino": 3,
     "Brócoli": 1500,
-    "Queso de cabra con arándano": 350
+    "Queso de cabra con arándano": 350,
+    "Nueces mixtas": 1020
   },
   "pantryCardUnits": {
     "Mantequilla": "g",
@@ -262,7 +263,8 @@
     "Coliflor": "g",
     "Pepino": "piezas",
     "Brócoli": "g",
-    "Queso de cabra con arándano": "g"
+    "Queso de cabra con arándano": "g",
+    "Nueces mixtas": "g"
   },
   "auditorPantryStock": {
     "Mantequilla": [
@@ -278,7 +280,7 @@
       "g"
     ],
     "Yogur griego": [
-      1200.0,
+      3000.0,
       "g"
     ],
     "Queso Philadelphia": [
@@ -294,7 +296,7 @@
       "g"
     ],
     "Queso manchego": [
-      0.0,
+      1000.0,
       "g"
     ],
     "Queso de cabra": [
@@ -310,7 +312,7 @@
       "g"
     ],
     "Botella de agua": [
-      70.0,
+      150.0,
       "botellas (355 ml)"
     ],
     "Queso parmesano": [
@@ -318,15 +320,15 @@
       "g"
     ],
     "Flat steak": [
-      0.0,
+      1290.0,
       "g"
     ],
     "Lomo de salmón": [
-      0.0,
+      980.0,
       "g"
     ],
     "Carne molida": [
-      1200.0,
+      2315.0,
       "g"
     ],
     "Fajitas de mojarra": [
@@ -346,7 +348,7 @@
       "piezas"
     ],
     "Pechuga de pollo": [
-      0.0,
+      1670.0,
       "g"
     ],
     "Flor de calabaza": [
@@ -362,7 +364,7 @@
       "piezas"
     ],
     "Lechuga": [
-      1.0,
+      7.0,
       "piezas"
     ],
     "Ejotes": [
@@ -378,7 +380,7 @@
       "piezas"
     ],
     "Zarzamora": [
-      0.0,
+      510.0,
       "g"
     ],
     "Champiñón": [
@@ -390,11 +392,11 @@
       "g"
     ],
     "Nuez de la India": [
-      600.0,
+      1700.0,
       "g"
     ],
     "Semillas y nueces mixtas": [
-      0.0,
+      1020.0,
       "g"
     ],
     "Té chai": [
@@ -538,7 +540,7 @@
       "g"
     ],
     "Huevo": [
-      80.0,
+      170.0,
       "piezas"
     ],
     "MultiSinergix®": [
@@ -558,7 +560,7 @@
       "g"
     ],
     "Fresas": [
-      900.0,
+      907.0,
       "g"
     ],
     "Frambuesas": [
@@ -566,7 +568,7 @@
       "g"
     ],
     "Queso ricotta": [
-      0.0,
+      3840.0,
       "g"
     ],
     "Pollo entero": [
@@ -578,7 +580,7 @@
       "g"
     ],
     "Germinado": [
-      0.0,
+      500.0,
       "g"
     ],
     "Coliflor": [
@@ -591,6 +593,10 @@
     ],
     "Brócoli": [
       1500.0,
+      "g"
+    ],
+    "Nueces mixtas": [
+      1020.0,
       "g"
     ]
   },

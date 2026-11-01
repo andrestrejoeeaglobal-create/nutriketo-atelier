@@ -179,6 +179,31 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
 }
 
 S43_S44_HISTORICAL_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
+
+# Actualizar DEFAULT_PANTRY_STOCK con los saldos reales post-S44 + Tickets Sam's Club (1566264040064745472) y Costco (4362)
+DEFAULT_PANTRY_STOCK.update(
+    {
+        "Queso manchego": (1000.0, "g"),
+        "Queso ricotta": (3840.0, "g"),
+        "Yogur griego": (3000.0, "g"),
+        "Carne molida": (2315.0, "g"),
+        "Flat steak": (1290.0, "g"),
+        "Lomo de salmón": (980.0, "g"),
+        "Huevo": (170.0, "piezas"),
+        "Fresas": (907.0, "g"),
+        "Germinado": (500.0, "g"),
+        "Botella de agua": (150.0, "botellas (355 ml)"),
+        "Pechuga de pollo": (1670.0, "g"),
+        "Zarzamora": (510.0, "g"),
+        "Nuez de la India": (1700.0, "g"),
+        "Semillas y nueces mixtas": (1020.0, "g"),
+        "Nueces mixtas": (1020.0, "g"),
+        "Lechuga": (7.0, "piezas"),
+        "Pechuga de pavo": (1400.0, "g"),
+        "Fajitas de mojarra": (900.0, "g"),
+    }
+)
+
 LIVE_PANTRY_SSOT_PATH: Path = Path(__file__).resolve().parents[2] / "pantry_live_state.json"
 
 

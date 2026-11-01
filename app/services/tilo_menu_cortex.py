@@ -1851,18 +1851,18 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
         main=_course(
             title="Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro",
             technique="cheese_crust_keto_dobladitas",
-            note="Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (120 g) al comal, rellenas de pechuga de pollo deshebrada (600 g = 100 g/comensal), champiñones salteados, queso ricotta (180 g), queso Philadelphia (120 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).",
+            note="Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (150 g) al comal, rellenas de pechuga de pollo deshebrada (470 g), champiñones salteados, queso ricotta (180 g), queso Philadelphia (120 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).",
             thermo="Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno de pechuga de pollo, ricotta y Philadelphia.",
             flavor="Umami de pechuga de pollo dorada y champiñón salteado con 3 quesos (manchego, ricotta y Philadelphia), espinacas, nuez pecana y cilantro.",
             texture="Exterior crujiente de queso dorado al comal con interior jugoso de pollo deshebrado, hongos y nuez pecana.",
             ccp="Doblar la costra de queso manchego en caliente sobre el relleno de pollo (74°C) y champiñones.",
             archetype="dobladitas_ines_champinon",
             ingredients=[
-                _ing("Pechuga de pollo", 600, "g", CAT_PROT),
+                _ing("Pechuga de pollo", 470, "g", CAT_PROT),
                 _ing("Champiñón", 420, "g", CAT_VEG),
                 _ing("Espinacas", 300, "g", CAT_VEG),
                 _ing("Queso ricotta", 180, "g", CAT_DAIRY),
-                _ing("Queso manchego", 120, "g", CAT_DAIRY),
+                _ing("Queso manchego", 150, "g", CAT_DAIRY),
                 _ing("Queso Philadelphia", 120, "g", CAT_DAIRY),
                 _ing("Nuez pecana", 90, "g", CAT_FAT),
                 _ing("Cilantro", 24, "g", CAT_VEG),
@@ -2001,7 +2001,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Sellar a fuego vivo para conservar los jugos internos de la res (68°C).",
             archetype="res_philly_cheese_steak_skillet",
             ingredients=[
-                _ing("Flat steak", 660, "g", CAT_PROT),
+                _ing("Flat steak", 645, "g", CAT_PROT),
                 _ing("Morrón", 2, "piezas", CAT_VEG),
                 _ing("Cebolla", 1, "piezas", CAT_VEG),
                 _ing("Queso manchego", 90, "g", CAT_DAIRY),
@@ -2278,7 +2278,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Verificar 74°C internos sin usar huevo en el rebozado ([R12]).",
             archetype="pollo_milanesa_costra_nuez",
             ingredients=[
-                _ing("Pechuga de pollo", 900, "g", CAT_PROT),
+                _ing("Pechuga de pollo", 600, "g", CAT_PROT),
                 _ing("Nuez pecana", 90, "g", CAT_FAT),
                 _ing("Nuez de la India", 90, "g", CAT_FAT),
                 _ing("Espinacas", 360, "g", CAT_VEG),
@@ -2824,7 +2824,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Añadir el germinado en los últimos 45 segundos para mantener su crocancia.",
             archetype="res_teppanyaki_plancha_germinado",
             ingredients=[
-                _ing("Flat steak", 660, "g", CAT_PROT),
+                _ing("Flat steak", 645, "g", CAT_PROT),
                 _ing("Morrón", 2, "piezas", CAT_VEG),
                 _ing("Cebolla", 1, "piezas", CAT_VEG),
                 _ing("Germinado", 180, "g", CAT_VEG),
@@ -3097,7 +3097,7 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
             ccp="Drenar el pepino rallado antes de integrarlo al yogur griego.",
             archetype="pavo_shawarma_griego_tzatziki",
             ingredients=[
-                _ing("Pechuga de pollo", 900, "g", CAT_PROT),
+                _ing("Pechuga de pollo", 600, "g", CAT_PROT),
                 _ing("Yogur griego", 360, "g", CAT_DAIRY),
                 _ing("Pepino", 360, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
