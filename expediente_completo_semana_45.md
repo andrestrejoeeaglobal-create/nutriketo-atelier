@@ -14,26 +14,26 @@
 
 | Día y Fecha | Escuela Culinaria del Día | Servicio | Tiempo 1: Entrada (`starter`) | Tiempo 2: Plato Fuerte (`main`) + `[Arquetipo / ADN]` | Tiempo 3: Acompañamiento / Bebida (`side`) |
 |---|---|---|---|---|---|
-| **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Desayuno** | Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana | **Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado** `[huevo_peyis_tres_quesos]` `<huevo|sarten|peyis_tres_quesos|mantequilla+morron+queso_manchego+queso_philadelphia>` | Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus® |
+| **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Desayuno** | Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana | **Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Juliana de Pimiento Morrón Asado** `[huevo_peyis_tres_quesos]` `<huevo|sarten|peyis_tres_quesos|mantequilla+morron+queso_cottage+queso_manchego>` | Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus® |
 | **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Comida** | Consomé Tatemado de Jitomate, Cebolla y Cilantro de la Granja en Fondo Claro de Pollo al Aceite de Oliva | **Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego** `[pavo_enchiladas_espuma_aguacate]` `<pavo|horno|enchiladas_espuma|aguacate+calabacitas+cilantro+queso_manchego>` | Ejotes Tiernos al Vapor Salteados al Limón Real, Orégano y Aceite de Oliva VEVO |
-| **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Cena** | Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva | **Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro** `[dobladitas_ines_champinon]` `<champinon|sarten|dobladitas_ines|champinon+cilantro+espinacas+nuez_pecana>` | Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Domingo 01 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Cena** | Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva | **Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Cottage, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro** `[dobladitas_ines_champinon]` `<champinon|sarten|dobladitas_ines|champinon+cilantro+espinacas+nuez_pecana>` | Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus® |
 | **Lunes 02 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Desayuno** | Copa de Frambuesas Maceradas a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana | **Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real** `[huevo_crepa_florentina_holandesa]` `<champinon|sarten|crepa_florentina_holandesa|cebolla+champinon+espinacas+mantequilla>` | Gelatina Cítrica de Limón Real y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus® |
 | **Lunes 02 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Comida** | Ensalada House Grill de Lechuga Romana con Jitomate, Alcaparras, Limón Real y Aceite de Oliva | **Philly Cheese Steak Keto al Skillet de Hierro con Tiras de Flat Steak, Juliana de Pimiento Morrón, Cebolla Asada y Costra Fundida de Queso Manchego** `[res_philly_cheese_steak_skillet]` `<flat_steak|sarten|philly_cheese_steak|cebolla+mantequilla+morron+queso_manchego>` | Floretes de Brócoli al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO |
-| **Lunes 02 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Cena** | Caldo Claro Americano de Fondo de Pollo al Orégano y Limón Real | **Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo** `[pavo_alfredo_mushroom_zoodles]` `<pavo|licuado_emulsion|zoodles_alfredo|calabacitas+crema_acida+mantequilla+queso_ricotta>` | Tisana Nocturna de Manzanilla, Limón Real y Clavo de Olor (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Lunes 02 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Cena** | Caldo Claro Americano de Fondo de Pollo al Orégano y Limón Real | **Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Cottage, Crema Ácida y Mantequilla al Ajo** `[pavo_alfredo_mushroom_zoodles]` `<pavo|licuado_emulsion|zoodles_alfredo|calabacitas+crema_acida+mantequilla+queso_cottage>` | Tisana Nocturna de Manzanilla, Limón Real y Clavo de Olor (≤60°C) con Fórmula Reparadora 34Plus® |
 | **Martes 03 Nov** | **🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño** | **Desayuno** | Carpaccio de Fresas a la Canela con Semillas de Chía, Nuez de la India y Nuez Pecana | **Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro** `[huevo_motulenos_costra_queso]` `<huevo|frio_ensamblaje|motulenos_costra|cebolla+cilantro+jitomate+mantequilla>` | Gelatina Cristalina de Limón Real y Vainilla (4°C) con Fórmula Nootrópica 33Plus® |
-| **Martes 03 Nov** | **🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño** | **Comida** | Ensalada Sureste de Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva | **Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Ricotta Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate** `[res_queso_relleno_yucateco]` `<carne_molida|caldo_hervido|queso_relleno_yucateco|aceitunas+alcaparras+jitomate+morron>` | Pencas de Nopal de la Granja Asadas al Comal con Orégano, Cilantro y Aceite de Oliva VEVO |
+| **Martes 03 Nov** | **🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño** | **Comida** | Ensalada Sureste de Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva | **Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate** `[res_queso_relleno_yucateco]` `<carne_molida|caldo_hervido|queso_relleno_yucateco|aceitunas+alcaparras+jitomate+morron>` | Pencas de Nopal de la Granja Asadas al Comal con Orégano, Cilantro y Aceite de Oliva VEVO |
 | **Martes 03 Nov** | **🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño** | **Cena** | Sopa de Lima Yucateca en Fondo Claro de Pollo con Jitomate, Cilantro de la Granja y Limón Real | **Milanesa de Pechuga de Pollo en Costra Crujiente de Nuez Pecana y Nuez de la India al Horno sobre Cama de Espinacas al Aceite de Coco** `[pollo_milanesa_costra_nuez]` `<pechuga_pollo|horno|estandar|aceite_coco+espinacas+nuez_india+nuez_pecana>` | Tisana Nocturna de Manzanilla y Hierbas Finas (≤60°C) con Fórmula Reparadora 34Plus® |
 | **Miércoles 04 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Desayuno** | Tartar de Zarzamora a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana | **Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva** `[huevo_tortilla_espanola_calabacita]` `<huevo|sarten|tortilla_espanola_calabacita|cebolla+esparragos>` | Gelatina de Flor de Jamaica y Limón Real (4°C) con Fórmula Nootrópica 33Plus® |
 | **Miércoles 04 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Comida** | Sopa Castellana de Cebolla Caramelizada en Fondo de Res con Tomillo y Aceite de Oliva | **Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva** `[pescado_a_la_murciana_cazuela]` `<mojarra|braseado|a_la_murciana|aceitunas+alcaparras+jitomate+oregano>` | Láminas de Calabacitas Asadas al Comal con Romero de la Granja y Aceite de Oliva VEVO |
-| **Miércoles 04 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Cena** | Ensalada de Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva | **Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Ricotta y Cebolla con Costra Gratinada de Queso Manchego al Horno** `[atun_pimientos_rellenos_gratinados]` `<atun_agua|horno|pimientos_rellenos_atun|cebolla+morron+oregano+queso_manchego>` | Tisana Nocturna de Manzanilla, Canela y Limón Real (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Jueves 05 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Desayuno** | Compota Fría de Frambuesas y Canela con Semillas de Chía, Nuez de la India y Nuez Pecana | **Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Huevos al Plato y Romero de la Granja** `[focaccia_keto_tres_quesos_esparragos]` `<huevo|horno|focaccia_tres_quesos|coliflor+mantequilla+queso_manchego+queso_philadelphia>` | Infusión Matutina de Té Chai, Canela y Aceite de Coco (≤60°C) con Fórmula Nootrópica 33Plus® |
+| **Miércoles 04 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Cena** | Ensalada de Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva | **Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage y Cebolla con Costra Gratinada de Queso Manchego al Horno** `[atun_pimientos_rellenos_gratinados]` `<atun_agua|horno|pimientos_rellenos_atun|cebolla+morron+oregano+queso_cottage>` | Tisana Nocturna de Manzanilla, Canela y Limón Real (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Jueves 05 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Desayuno** | Compota Fría de Frambuesas y Canela con Semillas de Chía, Nuez de la India y Nuez Pecana | **Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Huevos al Plato y Romero de la Granja** `[focaccia_keto_tres_quesos_esparragos]` `<huevo|horno|focaccia_tres_quesos|coliflor+mantequilla+queso_cottage+queso_manchego>` | Infusión Matutina de Té Chai, Canela y Aceite de Coco (≤60°C) con Fórmula Nootrópica 33Plus® |
 | **Jueves 05 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Comida** | Ensalada Bistró de Lechuga Romana y Pepino al Limón Real, Orégano y Aceite de Oliva | **Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla** `[salmon_estilo_alda_philadelphia_alcaparras]` `<salmon|sarten|salmon_estilo_alda|alcaparras+hierbas_finas+mantequilla+queso_philadelphia>` | Espárragos Verdes Asados a la Plancha con Limón Real, Sal con Ajo y Aceite de Oliva VEVO |
-| **Jueves 05 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Cena** | Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real | **Focaccia Keto de Champiñones Salteados, Espinacas, Queso Ricotta y Queso Manchego Dorada al Sartén de Hierro con Romero** `[focaccia_keto_hongos_gratinados]` `<champinon|sarten|focaccia_hongos|champinon+espinacas+mantequilla+queso_manchego>` | Tisana Nocturna de Manzanilla y Orégano (≤60°C) con Fórmula Reparadora 34Plus® |
+| **Jueves 05 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Cena** | Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real | **Focaccia Keto de Champiñones Salteados, Espinacas, Queso Cottage y Queso Manchego Dorada al Sartén de Hierro con Romero** `[focaccia_keto_hongos_gratinados]` `<champinon|sarten|focaccia_hongos|champinon+espinacas+mantequilla+queso_cottage>` | Tisana Nocturna de Manzanilla y Orégano (≤60°C) con Fórmula Reparadora 34Plus® |
 | **Viernes 06 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Desayuno** | Coulis Rústico de Fresas al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana | **Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla y Aceite de Coco)** `[huevo_omurice_keto_coliflor]` `<huevo|wok|omurice_keto|aceite_coco+cebolla+coliflor+germinado>` | Gelatina de Flor de Jamaica y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus® |
 | **Viernes 06 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Comida** | Ensalada Oriental Sunomono de Pepino en Láminas con Nuez de la India, Limón Real y Aceite de Oliva | **Teppanyaki de Flat Steak a la Plancha con Pimiento Morrón, Cebolla Asada y Germinado en Aceite de Coco** `[res_teppanyaki_plancha_germinado]` `<flat_steak|parrilla_plancha|teppanyaki_plancha|aceite_coco+cebolla+germinado+morron>` | Acelgas de la Granja Salteadas al Wok con Limón Real, Orégano y Aceite de Oliva VEVO |
 | **Viernes 06 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Cena** | Caldo Oriental Claro de Fondo de Pollo al Cilantro de la Granja y Limón Real | **Fajitas de Mojarra Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas** `[mojarra_bicolor_estilo_contramar]` `<mojarra|parrilla_plancha|bicolor_contramar|calabacitas+cilantro+jitomate+tomate>` | Tisana Nocturna de Manzanilla y Canela Molida (≤60°C) con Fórmula Reparadora 34Plus® |
-| **Sábado 07 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Desayuno** | Macerado Mediterráneo de Fresas con Semillas de Chía, Nuez de la India, Nuez Pecana y Vainilla | **Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Ricotta, Hierbas Finas y Aceite de Oliva)** `[huevo_uova_in_purgatorio]` `<huevo|pochado|uova_in_purgatorio|hierbas_finas+jitomate+queso_ricotta+tomate>` | Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus® |
-| **Sábado 07 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Comida** | Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Orégano y Limón Real al Aceite de Oliva | **Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Ricotta y Queso Manchego** `[res_moussaka_griega_horno]` `<carne_molida|horno|moussaka_griega|calabacitas+cebolla+oregano+queso_manchego>` | Champiñones Silvestres Salteados al Ajillo con Tomillo, Limón Real y Aceite de Oliva VEVO |
+| **Sábado 07 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Desayuno** | Macerado Mediterráneo de Fresas con Semillas de Chía, Nuez de la India, Nuez Pecana y Vainilla | **Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Cottage, Hierbas Finas y Aceite de Oliva)** `[huevo_uova_in_purgatorio]` `<huevo|pochado|uova_in_purgatorio|hierbas_finas+jitomate+queso_cottage+tomate>` | Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus® |
+| **Sábado 07 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Comida** | Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Orégano y Limón Real al Aceite de Oliva | **Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Cottage y Queso Manchego** `[res_moussaka_griega_horno]` `<carne_molida|horno|moussaka_griega|calabacitas+cebolla+oregano+queso_cottage>` | Champiñones Silvestres Salteados al Ajillo con Tomillo, Limón Real y Aceite de Oliva VEVO |
 | **Sábado 07 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Cena** | Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Espinacas, Limón Real y Orégano | **Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino** `[pavo_shawarma_griego_tzatziki]` `<pechuga_pollo|frio_ensamblaje|shawarma_tzatziki|comino+oregano+pepino+yogur_griego>` | Tisana Nocturna de Manzanilla, Tomillo y Limón Real (≤60°C) con Fórmula Reparadora 34Plus® |
 
 ---
@@ -65,13 +65,13 @@
 1. Disponer la zarzamora desinfectada en copas frías y rociar con jugo de limón de la granja.
 2. Coronar con las semillas de chía orgánicas, la nuez de la India y la nuez pecana.
 
-##### Receta #02 [Domingo · Desayuno · Tiempo 2 — Plato Fuerte]: Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado
+##### Receta #02 [Domingo · Desayuno · Tiempo 2 — Plato Fuerte]: Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Juliana de Pimiento Morrón Asado
 - **Técnica Culinaria:** `peyis_three_cheese_skillet`
-- **Arquetipo Heptágono V17.0:** `huevo_peyis_tres_quesos` · **Huella ADN:** `huevo|sarten|peyis_tres_quesos|mantequilla+morron+queso_manchego+queso_philadelphia`
-- **Nota Organoléptica y Clínica:** Escuela 1 (Inspiración Nizú): 3 huevos estrellados por comensal (18 piezas) bañados en salsa fundente de queso manchego, queso ricotta y queso Philadelphia con juliana de pimiento morrón asado.
+- **Arquetipo Heptágono V17.0:** `huevo_peyis_tres_quesos` · **Huella ADN:** `huevo|sarten|peyis_tres_quesos|mantequilla+morron+queso_cottage+queso_manchego`
+- **Nota Organoléptica y Clínica:** Escuela 1 (Inspiración Nizú): 3 huevos estrellados por comensal (18 piezas) bañados en salsa fundente de queso manchego, queso cottage procesado en pasta tersa y queso Philadelphia con juliana de pimiento morrón asado.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Fusión lenta de los 3 quesos a 78°C y fritura limpia de los huevos en mantequilla a 145°C con yema cremosa.
-  - *Aromática y Sabor:* Riqueza láctea triple (manchego, ricotta y Philadelphia) con el dulzor ahumado del pimiento morrón asado.
+  - *Aromática y Sabor:* Riqueza láctea triple (manchego, cottage procesado y Philadelphia) con el dulzor ahumado del pimiento morrón asado.
   - *Arquitectura Textural:* Yemas líquidas y claras tiernas cubiertas por emulsión aterciopelada de 3 quesos.
   - *Punto Crítico de Control:* No hervir la salsa de 3 quesos para evitar separación lipídica.
 
@@ -79,16 +79,17 @@
 |---|---|---|---|---|
 | 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 15 | **90** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 30 | **180** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 30 | **180** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 20 | **120** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.33 | **2** | piezas |
 | 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 8 | **48** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Asar y cortar el pimiento morrón en juliana fina y saltear en mantequilla.
-2. Fundir a fuego suave el queso manchego, el queso ricotta y el queso Philadelphia hasta obtener una salsa tersa.
-3. Estrellar los 18 huevos en sartén con mantequilla, sazonar con sal de mar y bañar con la salsa caliente de 3 quesos y la juliana de morrón.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Asar y cortar el pimiento morrón en juliana fina y saltear en mantequilla.
+3. Fundir a fuego suave el queso manchego, la pasta tersa de queso cottage y el queso Philadelphia hasta obtener una salsa tersa.
+4. Estrellar los 18 huevos en sartén con mantequilla, sazonar con sal de mar y bañar con la salsa caliente de 3 quesos y la juliana de morrón.
 
 ##### Receta #03 [Domingo · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Gelatina Artesanal de Flor de Jamaica y Canela (4°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `collagen_hibiscus_gel`
@@ -205,13 +206,13 @@
 1. Cortar el pepino en rodajas delgadas.
 2. Aderezar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar.
 
-##### Receta #08 [Domingo · Cena · Tiempo 2 — Plato Fuerte]: Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro
+##### Receta #08 [Domingo · Cena · Tiempo 2 — Plato Fuerte]: Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Cottage, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro
 - **Técnica Culinaria:** `cheese_crust_keto_dobladitas`
 - **Arquetipo Heptágono V17.0:** `dobladitas_ines_champinon` · **Huella ADN:** `champinon|sarten|dobladitas_ines|champinon+cilantro+espinacas+nuez_pecana`
-- **Nota Organoléptica y Clínica:** Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (150 g) al comal, rellenas de pechuga de pollo deshebrada (470 g), champiñones salteados, queso ricotta (180 g), queso Philadelphia (120 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).
+- **Nota Organoléptica y Clínica:** Escuela 1 (Inspiración Nizú): dobladitas cetogénicas formando la tortilla con costra dorada de queso manchego (150 g) al comal, rellenas de pechuga de pollo deshebrada (470 g), champiñones salteados, queso cottage procesado en pasta tersa (240 g), queso Philadelphia (120 g), espinacas, nuez pecana de la granja y cilantro (cumpliendo [R9]: pavo en Comida -> pollo en Cena).
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
-  - *Termodinámica:* Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno de pechuga de pollo, ricotta y Philadelphia.
-  - *Aromática y Sabor:* Umami de pechuga de pollo dorada y champiñón salteado con 3 quesos (manchego, ricotta y Philadelphia), espinacas, nuez pecana y cilantro.
+  - *Termodinámica:* Fundido y dorado de la costra de queso manchego en comal a 170°C hasta lograr pliegue flexible y crujiente sobre el relleno de pechuga de pollo, cottage procesado y Philadelphia.
+  - *Aromática y Sabor:* Umami de pechuga de pollo dorada y champiñón salteado con 3 quesos (manchego, cottage procesado y Philadelphia), espinacas, nuez pecana y cilantro.
   - *Arquitectura Textural:* Exterior crujiente de queso dorado al comal con interior jugoso de pollo deshebrado, hongos y nuez pecana.
   - *Punto Crítico de Control:* Doblar la costra de queso manchego en caliente sobre el relleno de pollo (74°C) y champiñones.
 
@@ -220,7 +221,7 @@
 | 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 78.33 | **470** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Champiñón** | 70 | **420** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Espinacas** | 50 | **300** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 30 | **180** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 40 | **240** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 25 | **150** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 20 | **120** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 15 | **90** | g |
@@ -230,8 +231,9 @@
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Saltear la pechuga de pollo deshebrada junto con los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar, e integrar el queso ricotta, el queso Philadelphia y la nuez pecana picada.
-2. Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con el guiso de pollo, champiñones y quesos, y doblar en media luna.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Saltear la pechuga de pollo deshebrada junto con los champiñones fileteados y las espinacas en aceite de oliva con cilantro de la granja, orégano y sal de mar, e integrar la pasta tersa de queso cottage, el queso Philadelphia y la nuez pecana picada.
+3. Formar discos de queso manchego rallado sobre el comal caliente hasta dorar ligeramente, rellenar con el guiso de pollo, champiñones y quesos, y doblar en media luna.
 
 ##### Receta #09 [Domingo · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Tisana Nocturna de Manzanilla y Canela (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `chamomile_cinnamon_infusion`
@@ -418,13 +420,13 @@
 1. Calentar el fondo claro de pollo con orégano y sal de mar.
 2. Servir con unas gotas de limón de la granja y aceite de oliva.
 
-##### Receta #17 [Lunes · Cena · Tiempo 2 — Plato Fuerte]: Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo
+##### Receta #17 [Lunes · Cena · Tiempo 2 — Plato Fuerte]: Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Cottage, Crema Ácida y Mantequilla al Ajo
 - **Técnica Culinaria:** `alfredo_turkey_zoodles_skillet`
-- **Arquetipo Heptágono V17.0:** `pavo_alfredo_mushroom_zoodles` · **Huella ADN:** `pavo|licuado_emulsion|zoodles_alfredo|calabacitas+crema_acida+mantequilla+queso_ricotta`
-- **Nota Organoléptica y Clínica:** Escuela 2 (Inspiración IHOP): sustitución cetogénica de fettuccine por espirales (zoodles) de calabacita al dente con fajitas de pechuga de pavo en salsa Alfredo de queso ricotta, crema ácida y mantequilla.
+- **Arquetipo Heptágono V17.0:** `pavo_alfredo_mushroom_zoodles` · **Huella ADN:** `pavo|licuado_emulsion|zoodles_alfredo|calabacitas+crema_acida+mantequilla+queso_cottage`
+- **Nota Organoléptica y Clínica:** Escuela 2 (Inspiración IHOP): sustitución cetogénica de fettuccine por espirales (zoodles) de calabacita al dente con fajitas de pechuga de pavo en salsa Alfredo de queso cottage procesado en pasta tersa, crema ácida y mantequilla.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Salteado de pechuga de pavo a 74°C y ligado de la salsa Alfredo a 75°C sobre zoodles tiernos.
-  - *Aromática y Sabor:* Salsa Alfredo cremosa de ricotta y mantequilla al ajo envolviendo los zoodles de calabacita.
+  - *Aromática y Sabor:* Salsa Alfredo cremosa de queso cottage procesado y mantequilla al ajo envolviendo los zoodles de calabacita.
   - *Arquitectura Textural:* Fajitas jugosas de pavo sobre espirales firmes de calabacita.
   - *Punto Crítico de Control:* Saltear los zoodles solo 90 segundos para evitar que suelten agua.
 
@@ -432,14 +434,15 @@
 |---|---|---|---|---|
 | 🥩 Carnes, Pescados y Proteínas | **Pechuga de pavo** | 116.67 | **700** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Calabacitas** | 80 | **480** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 40 | **240** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Crema ácida** | 30 | **180** | g |
 | 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 6 | **36** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Cortar las calabacitas en espirales tipo zoodles y dorar las fajitas de pechuga de pavo en mantequilla con sal con ajo.
-2. Integrar el queso ricotta y la crema ácida a fuego bajo para formar la salsa Alfredo y envolver los zoodles por 90 segundos.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Cortar las calabacitas en espirales tipo zoodles y dorar las fajitas de pechuga de pavo en mantequilla con sal con ajo.
+3. Integrar la pasta tersa de queso cottage y la crema ácida a fuego bajo para formar la salsa Alfredo y envolver los zoodles por 90 segundos.
 
 ##### Receta #18 [Lunes · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Tisana Nocturna de Manzanilla, Limón Real y Clavo de Olor (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `chamomile_clove_infusion`
@@ -558,21 +561,21 @@
 1. Cortar el pepino en medias lunas y mezclar con el cilantro de la granja finamente picado.
 2. Aliñar con jugo de limón real, aceite de oliva extra virgen y sal de mar.
 
-##### Receta #23 [Martes · Comida · Tiempo 2 — Plato Fuerte]: Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Ricotta Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate
+##### Receta #23 [Martes · Comida · Tiempo 2 — Plato Fuerte]: Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate
 - **Técnica Culinaria:** `yucatecan_queso_relleno_casserole`
 - **Arquetipo Heptágono V17.0:** `res_queso_relleno_yucateco` · **Huella ADN:** `carne_molida|caldo_hervido|queso_relleno_yucateco|aceitunas+alcaparras+jitomate+morron`
-- **Nota Organoléptica y Clínica:** Escuela 3 (Inspiración El Teapaneco): clásico Queso Relleno Yucateco elaborado en cazuela con queso manchego y queso ricotta rellenos de picadillo de carne molida de res, aceitunas manzanilla, alcaparras y pimiento morrón sobre salsa roja de jitomate.
+- **Nota Organoléptica y Clínica:** Escuela 3 (Inspiración El Teapaneco): clásico Queso Relleno Yucateco elaborado en cazuela con queso manchego y queso cottage procesado en pasta tersa rellenos de picadillo de carne molida de res, aceitunas manzanilla, alcaparras y pimiento morrón sobre salsa roja de jitomate.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Cocción del picadillo de res a 72°C y gratinado en cazuela a 180°C.
   - *Aromática y Sabor:* Contraste barroco del sureste entre el queso fundido, las alcaparras, las aceitunas y la carne de res.
-  - *Arquitectura Textural:* Picadillo jugoso coronado por capa fundente de queso manchego y ricotta.
+  - *Arquitectura Textural:* Picadillo jugoso coronado por capa fundente de queso manchego y cottage procesado.
   - *Punto Crítico de Control:* Escurrir la salmuera de aceitunas y alcaparras antes de integrar al picadillo.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
 | 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 100 | **600** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 15 | **90** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 40 | **240** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Aceitunas manzanilla** | 10 | **60** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Alcaparras** | 6 | **36** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.17 | **1** | piezas |
@@ -581,8 +584,9 @@
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Cocinar la carne molida de res con el pimiento morrón picado, las aceitunas manzanilla, las alcaparras, el jitomate asado y el orégano.
-2. Disponer en cazuela con el queso ricotta y cubrir con el queso manchego para gratinar al horno.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Cocinar la carne molida de res con el pimiento morrón picado, las aceitunas manzanilla, las alcaparras, el jitomate asado y el orégano.
+3. Disponer en cazuela con la pasta tersa de queso cottage y cubrir con el queso manchego para gratinar al horno.
 
 ##### Receta #24 [Martes · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Pencas de Nopal de la Granja Asadas al Comal con Orégano, Cilantro y Aceite de Oliva VEVO
 - **Técnica Culinaria:** `griddled_farm_cactus_paddles`
@@ -836,21 +840,21 @@
 1. Disponer las hojas de espinaca desinfectadas en platos fríos.
 2. Aliñar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar.
 
-##### Receta #35 [Miércoles · Cena · Tiempo 2 — Plato Fuerte]: Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Ricotta y Cebolla con Costra Gratinada de Queso Manchego al Horno
+##### Receta #35 [Miércoles · Cena · Tiempo 2 — Plato Fuerte]: Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage y Cebolla con Costra Gratinada de Queso Manchego al Horno
 - **Técnica Culinaria:** `castilian_stuffed_peppers_bake`
-- **Arquetipo Heptágono V17.0:** `atun_pimientos_rellenos_gratinados` · **Huella ADN:** `atun_agua|horno|pimientos_rellenos_atun|cebolla+morron+oregano+queso_manchego`
-- **Nota Organoléptica y Clínica:** Escuela 4 (Inspiración Asador Castellano): pimientos morrones enteros asados y rellenos de lomo de atún en agua, queso ricotta y cebolla al orégano, gratinados con queso manchego.
+- **Arquetipo Heptágono V17.0:** `atun_pimientos_rellenos_gratinados` · **Huella ADN:** `atun_agua|horno|pimientos_rellenos_atun|cebolla+morron+oregano+queso_cottage`
+- **Nota Organoléptica y Clínica:** Escuela 4 (Inspiración Asador Castellano): pimientos morrones enteros asados y rellenos de lomo de atún en agua, queso cottage procesado en pasta tersa y cebolla al orégano, gratinados con queso manchego.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Asado de los pimientos morrones y gratinado al horno a 185°C por 8 minutos.
-  - *Aromática y Sabor:* Dulzor del pimiento morrón asado con relleno cremoso de atún, ricotta y manchego.
+  - *Aromática y Sabor:* Dulzor del pimiento morrón asado con relleno cremoso de atún, cottage procesado y manchego.
   - *Arquitectura Textural:* Pimiento tierno con corazón proteico y costra dorada.
-  - *Punto Crítico de Control:* Drenar completamente el atún en agua antes de mezclar con el queso ricotta.
+  - *Punto Crítico de Control:* Drenar completamente el atún en agua antes de mezclar con la pasta tersa de queso cottage.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
 | 🥩 Carnes, Pescados y Proteínas | **Atún en agua** | 110 | **660** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.33 | **2** | piezas |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 40 | **240** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 15 | **90** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.17 | **1** | piezas |
 | 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
@@ -858,9 +862,10 @@
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Asar los pimientos morrones cortados en mitades y retirar las semillas.
-2. Mezclar el atún en agua drenado con la cebolla acitronada en aceite de oliva, el queso ricotta, orégano y sal de mar.
-3. Rellenar los pimientos morrones, cubrir con el queso manchego y gratinar al horno por 8 minutos.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Asar los pimientos morrones cortados en mitades y retirar las semillas.
+3. Mezclar el atún en agua drenado con la cebolla acitronada en aceite de oliva, la pasta tersa de queso cottage, orégano y sal de mar.
+4. Rellenar los pimientos morrones, cubrir con el queso manchego y gratinar al horno por 8 minutos.
 
 ##### Receta #36 [Miércoles · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Tisana Nocturna de Manzanilla, Canela y Limón Real (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `chamomile_lemon_infusion`
@@ -910,10 +915,10 @@
 1. Macerar ligeramente las frambuesas con la canela molida.
 2. Servir con las semillas de chía orgánicas, la nuez de la India y la nuez pecana.
 
-##### Receta #38 [Jueves · Desayuno · Tiempo 2 — Plato Fuerte]: Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Huevos al Plato y Romero de la Granja
+##### Receta #38 [Jueves · Desayuno · Tiempo 2 — Plato Fuerte]: Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Huevos al Plato y Romero de la Granja
 - **Técnica Culinaria:** `bistro_three_cheese_keto_focaccia`
-- **Arquetipo Heptágono V17.0:** `focaccia_keto_tres_quesos_esparragos` · **Huella ADN:** `huevo|horno|focaccia_tres_quesos|coliflor+mantequilla+queso_manchego+queso_philadelphia`
-- **Nota Organoléptica y Clínica:** Escuela 5 (Inspiración Alda Café): pan focaccia cetogénico horneado con base de coliflor prensada, queso manchego, queso ricotta y queso Philadelphia al romero, coronado con 3 huevos por comensal.
+- **Arquetipo Heptágono V17.0:** `focaccia_keto_tres_quesos_esparragos` · **Huella ADN:** `huevo|horno|focaccia_tres_quesos|coliflor+mantequilla+queso_cottage+queso_manchego`
+- **Nota Organoléptica y Clínica:** Escuela 5 (Inspiración Alda Café): pan focaccia cetogénico horneado con base de coliflor prensada, queso manchego, queso cottage procesado en pasta tersa y queso Philadelphia al romero, coronado con 3 huevos por comensal.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Horneado de la masa de focaccia keto a 190°C por 12 minutos y cuajado de los huevos a 175°C.
   - *Aromática y Sabor:* Aroma de bistró europeo con romero de la granja y 3 quesos fundidos.
@@ -925,15 +930,16 @@
 | 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
 | 🥦 Hortalizas, Vegetales y Hongos | **Coliflor** | 41.67 | **250** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 15 | **90** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 30 | **180** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 30 | **180** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso Philadelphia** | 20 | **120** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Romero** | 1 | **6** | g |
 | 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 6 | **36** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Rallar la coliflor, mezclar con el queso manchego, el queso ricotta, el queso Philadelphia y el romero, y hornear formando una focaccia dorada.
-2. Cascar los 18 huevos sobre la focaccia con mantequilla y sal de mar, y hornear 6 minutos hasta cuajar las claras.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Rallar la coliflor, mezclar con el queso manchego, la pasta tersa de queso cottage, el queso Philadelphia y el romero, y hornear formando una focaccia dorada.
+3. Cascar los 18 huevos sobre la focaccia con mantequilla y sal de mar, y hornear 6 minutos hasta cuajar las claras.
 
 ##### Receta #39 [Jueves · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Matutina de Té Chai, Canela y Aceite de Coco (≤60°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `chai_mct_emulsion`
@@ -1047,13 +1053,13 @@
 1. Hervir suavemente el fondo claro de pollo con el tomillo y sal de mar por 6 minutos.
 2. Servir con jugo de limón real y aceite de oliva.
 
-##### Receta #44 [Jueves · Cena · Tiempo 2 — Plato Fuerte]: Focaccia Keto de Champiñones Salteados, Espinacas, Queso Ricotta y Queso Manchego Dorada al Sartén de Hierro con Romero
+##### Receta #44 [Jueves · Cena · Tiempo 2 — Plato Fuerte]: Focaccia Keto de Champiñones Salteados, Espinacas, Queso Cottage y Queso Manchego Dorada al Sartén de Hierro con Romero
 - **Técnica Culinaria:** `iron_skillet_mushroom_keto_focaccia`
-- **Arquetipo Heptágono V17.0:** `focaccia_keto_hongos_gratinados` · **Huella ADN:** `champinon|sarten|focaccia_hongos|champinon+espinacas+mantequilla+queso_manchego`
-- **Nota Organoléptica y Clínica:** Escuela 5 (Inspiración Alda Café): focaccia cetogénica dorada en sartén de hierro con cubierta de champiñones salteados, espinacas, queso ricotta, queso manchego y romero de la granja (0 huevos en cena [R12]).
+- **Arquetipo Heptágono V17.0:** `focaccia_keto_hongos_gratinados` · **Huella ADN:** `champinon|sarten|focaccia_hongos|champinon+espinacas+mantequilla+queso_cottage`
+- **Nota Organoléptica y Clínica:** Escuela 5 (Inspiración Alda Café): focaccia cetogénica dorada en sartén de hierro con cubierta de champiñones salteados, espinacas, queso cottage procesado en pasta tersa, queso manchego y romero de la granja (0 huevos en cena [R12]).
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Dorado de la base en sartén de hierro a 170°C y fundido superior con tapa a 150°C.
-  - *Aromática y Sabor:* Umami de champiñones y romero sobre base dorada de queso manchego y ricotta.
+  - *Aromática y Sabor:* Umami de champiñones y romero sobre base dorada de queso manchego y cottage procesado.
   - *Arquitectura Textural:* Base crujiente de sartén con topping jugoso de hongos y espinacas.
   - *Punto Crítico de Control:* Dorar en sartén de hierro sin usar huevo en la cena ([R12]).
 
@@ -1061,15 +1067,16 @@
 |---|---|---|---|---|
 | 🥦 Hortalizas, Vegetales y Hongos | **Champiñón** | 110 | **660** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Espinacas** | 50 | **300** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 40 | **240** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 16.67 | **100** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Romero** | 1 | **6** | g |
 | 🥑 Grasas, Aceites y Semillas | **Mantequilla** | 6 | **36** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Formar la base en el sartén de hierro con queso manchego y queso ricotta hasta que dore por debajo.
-2. Cubrir con los champiñones y las espinacas salteados en mantequilla con romero y sal de mar, y tapar 3 minutos para fundir.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Formar la base en el sartén de hierro con queso manchego y la pasta tersa de queso cottage hasta que dore por debajo.
+3. Cubrir con los champiñones y las espinacas salteados en mantequilla con romero y sal de mar, y tapar 3 minutos para fundir.
 
 ##### Receta #45 [Jueves · Cena · Tiempo 3 — Acompañamiento / Bebida Funcional]: Tisana Nocturna de Manzanilla y Orégano (≤60°C) con Fórmula Reparadora 34Plus®
 - **Técnica Culinaria:** `chamomile_oregano_infusion`
@@ -1324,28 +1331,29 @@
 1. Perfumar las fresas con el extracto de vainilla.
 2. Distribuir las semillas de chía orgánicas, la nuez de la India y la nuez pecana.
 
-##### Receta #56 [Sábado · Desayuno · Tiempo 2 — Plato Fuerte]: Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Ricotta, Hierbas Finas y Aceite de Oliva)
+##### Receta #56 [Sábado · Desayuno · Tiempo 2 — Plato Fuerte]: Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Cottage, Hierbas Finas y Aceite de Oliva)
 - **Técnica Culinaria:** `neapolitan_uova_in_purgatorio`
-- **Arquetipo Heptágono V17.0:** `huevo_uova_in_purgatorio` · **Huella ADN:** `huevo|pochado|uova_in_purgatorio|hierbas_finas+jitomate+queso_ricotta+tomate`
-- **Nota Organoléptica y Clínica:** Escuela 7 (Mare Nostrum — Trattoria Italiana): 3 huevos por comensal escalfados directamente sobre reducción napolitana de jitomate asado, rosetones de queso ricotta, hierbas finas y aceite de oliva.
+- **Arquetipo Heptágono V17.0:** `huevo_uova_in_purgatorio` · **Huella ADN:** `huevo|pochado|uova_in_purgatorio|hierbas_finas+jitomate+queso_cottage+tomate`
+- **Nota Organoléptica y Clínica:** Escuela 7 (Mare Nostrum — Trattoria Italiana): 3 huevos por comensal escalfados directamente sobre reducción napolitana de jitomate asado, rosetones de queso cottage procesado en pasta tersa, hierbas finas y aceite de oliva.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Reducción del sugo de jitomate a 92°C y escalfado de los huevos a 85°C por 4 minutos.
-  - *Aromática y Sabor:* Sugo italiano de jitomate asado y hierbas finas con cremosidad de queso ricotta.
-  - *Arquitectura Textural:* Claras cuajadas en el sugo y yemas líquidas con ricotta.
+  - *Aromática y Sabor:* Sugo italiano de jitomate asado y hierbas finas con cremosidad de queso cottage procesado.
+  - *Arquitectura Textural:* Claras cuajadas en el sugo y yemas líquidas con pasta tersa de cottage.
   - *Punto Crítico de Control:* Mantener las yemas cremosas al retirar del fuego.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
 | 🥩 Carnes, Pescados y Proteínas | **Huevo** | 3 | **18** | piezas |
 | 🥦 Hortalizas, Vegetales y Hongos | **Jitomate** | 0.17 | **1** | piezas |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 40 | **240** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Hierbas finas** | 1 | **6** | g |
 | 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
 | 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Asar y triturar el jitomate con el aceite de oliva, las hierbas finas y la sal con ajo formando un sugo rústico en sartén amplia.
-2. Formar 18 cavidades en la salsa, cascar los huevos y escalfar tapados por 4 minutos; terminar con rosetones de queso ricotta.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Asar y triturar el jitomate con el aceite de oliva, las hierbas finas y la sal con ajo formando un sugo rústico en sartén amplia.
+3. Formar 18 cavidades en la salsa, cascar los huevos y escalfar tapados por 4 minutos; terminar con rosetones de la pasta tersa de queso cottage.
 
 ##### Receta #57 [Sábado · Desayuno · Tiempo 3 — Acompañamiento / Bebida Funcional]: Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus®
 - **Técnica Culinaria:** `hibiscus_cinnamon_morning_infusion`
@@ -1392,13 +1400,13 @@
 1. Trocear la lechuga romana y disponer en tazones con las aceitunas manzanilla.
 2. Aliñar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar.
 
-##### Receta #59 [Sábado · Comida · Tiempo 2 — Plato Fuerte]: Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Ricotta y Queso Manchego
+##### Receta #59 [Sábado · Comida · Tiempo 2 — Plato Fuerte]: Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Cottage y Queso Manchego
 - **Técnica Culinaria:** `greek_keto_zucchini_moussaka`
-- **Arquetipo Heptágono V17.0:** `res_moussaka_griega_horno` · **Huella ADN:** `carne_molida|horno|moussaka_griega|calabacitas+cebolla+oregano+queso_manchego`
-- **Nota Organoléptica y Clínica:** Escuela 7 (Mare Nostrum — Islas Griegas): Moussaka tradicional helénica adaptada con láminas de calabacita asada, ragú especiado de carne molida de res con toque de canela y orégano, y cobertura gratinada de queso ricotta y queso manchego.
+- **Arquetipo Heptágono V17.0:** `res_moussaka_griega_horno` · **Huella ADN:** `carne_molida|horno|moussaka_griega|calabacitas+cebolla+oregano+queso_cottage`
+- **Nota Organoléptica y Clínica:** Escuela 7 (Mare Nostrum — Islas Griegas): Moussaka tradicional helénica adaptada con láminas de calabacita asada, ragú especiado de carne molida de res con toque de canela y orégano, y cobertura gratinada de queso cottage procesado en pasta tersa y queso manchego.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Cocción del ragú a 75°C y horneado en capas a 185°C por 12 minutos.
-  - *Aromática y Sabor:* Perfume cálido del Egeo con canela, orégano, carne de res y gratinado de ricotta y manchego.
+  - *Aromática y Sabor:* Perfume cálido del Egeo con canela, orégano, carne de res y gratinado de cottage procesado y manchego.
   - *Arquitectura Textural:* Capas tiernas de calabacita y ragú bajo costra dorada.
   - *Punto Crítico de Control:* Asar previamente las láminas de calabacita para evitar humedad excesiva en la Moussaka.
 
@@ -1406,7 +1414,7 @@
 |---|---|---|---|---|
 | 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 100 | **600** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Calabacitas** | 80 | **480** | g |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso ricotta** | 40 | **240** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso cottage** | 40 | **240** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 16.67 | **100** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.17 | **1** | piezas |
 | 🧂 Condimentos, Especias e Infusiones | **Canela molida** | 0.5 | **3** | g |
@@ -1414,8 +1422,9 @@
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Asar las calabacitas en láminas longitudinales y cocinar el ragú de carne molida con cebolla, canela molida, orégano y sal de mar.
-2. Armar capas alternadas de calabacita y ragú, cubrir con mezcla de queso ricotta y queso manchego, y gratinar al horno.
+1. 🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.
+2. Asar las calabacitas en láminas longitudinales y cocinar el ragú de carne molida con cebolla, canela molida, orégano y sal de mar.
+3. Armar capas alternadas de calabacita y ragú, cubrir con mezcla de la pasta tersa de queso cottage y queso manchego, y gratinar al horno.
 
 ##### Receta #60 [Sábado · Comida · Tiempo 3 — Acompañamiento / Bebida Funcional]: Champiñones Silvestres Salteados al Ajillo con Tomillo, Limón Real y Aceite de Oliva VEVO
 - **Técnica Culinaria:** `garlic_thyme_sauteed_mushrooms`
@@ -1522,7 +1531,7 @@
 | 5 | `FAJITAS PAVO (Saldo Alacena)` | **Pechuga de pavo** | 1,400 g | 1,400 g (R#05, R#17) | 0 g | **0 g (\$0.00)** |
 | 6 | `KS PECHUGA D 1.670KG (Costco #4362)` | **Pechuga de pollo** | 1,670 g | 1,670 g (R#08, R#26, R#62) | 0 g | **0 g (\$0.00)** |
 | 7 | `90PZ HUEVO (+80 pzas post-S44)` | **Huevo** | 170 piezas | 126 piezas (7 recetas) | 44 piezas | **0 pzas (\$0.00)** |
-| 8 | `960GR QCOTTA (4 pzas × 960 g)` | **Queso ricotta** | 3,840 g | 1,980 g (9 recetas) | 1,860 g | **0 g (\$0.00)** |
+| 8 | `960GR QCOTTA (4 pzas × 960 g Sam's)` | **Queso cottage** | 3,840 g | 2,040 g (9 recetas) | 1,800 g | **0 g (\$0.00)** |
 | 9 | `QSO MANCH RA (Sam's #1566264040064745472)` | **Queso manchego** | 1,000 g | 1,000 g (10 recetas) | 0 g | **0 g (\$0.00)** |
 | 10 | `OIKOS PROT 2 (+1,200 g previos)` | **Yogur griego** | 3,000 g | 360 g (R#62) | 2,640 g | **0 g (\$0.00)** |
 | 11 | `CABRARANDANO (Cubierta azucarada)` | **Queso de cabra con arándano** | 350 g (En Cuarentena NOM-004) | 0 g (Bloqueado en Recetas) | 350 g (En Cuarentena) | **0 g (\$0.00)** |
@@ -1586,9 +1595,9 @@
 | 26 | **Pechuga de pavo** | 1,400 g | **1,400 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 27 | **Pechuga de pollo** | 1,670 g | **1,670 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 28 | **Pimienta negra** | 70 g | **3 g** | 67 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 29 | **Queso manchego** | 1,000 g | **1,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 30 | **Queso Philadelphia** | 720 g | **540 g** | 180 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 31 | **Queso ricotta** | 3,840 g | **1,980 g** | 1,860 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 29 | **Queso cottage** | 3,840 g | **2,040 g** | 1,800 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 30 | **Queso manchego** | 1,000 g | **1,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 31 | **Queso Philadelphia** | 720 g | **540 g** | 180 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 32 | **Sal con ajo** | 100 g | **48 g** | 52 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 33 | **Sal de mar** | 3,000 g | **204 g** | 2,796 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 34 | **Té chai** | 50 g | **12 g** | 38 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
@@ -1653,22 +1662,22 @@
 #### 📊 Domingo 01 Nov de 2026 — 🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
+| **Desayuno** | Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Juliana de Pimiento Morrón Asado | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
 | **Comida** | Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.8 g |
-| **Cena** | Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.2 g |
+| **Cena** | Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Cottage, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.2 g |
 
 #### 📊 Lunes 02 Nov de 2026 — 🇺🇸 Escuela 2: Brunch & Grill Americano Clásico
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
 | **Desayuno** | Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real | 595 kcal | 49.0 g | 34.5 g | 4.1 g | 6.3 g |
 | **Comida** | Philly Cheese Steak Keto al Skillet de Hierro con Tiras de Flat Steak, Juliana de Pimiento Morrón, Cebolla Asada y Costra Fundida de Queso Manchego | 774 kcal | 65.0 g | 43.0 g | 4.2 g | 6.5 g |
-| **Cena** | Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo | 614 kcal | 51.0 g | 35.0 g | 3.8 g | 6.0 g |
+| **Cena** | Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Cottage, Crema Ácida y Mantequilla al Ajo | 614 kcal | 51.0 g | 35.0 g | 3.8 g | 6.0 g |
 
 #### 📊 Martes 03 Nov de 2026 — 🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
 | **Desayuno** | Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
-| **Comida** | Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Ricotta Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.6 g |
+| **Comida** | Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.6 g |
 | **Cena** | Milanesa de Pechuga de Pollo en Costra Crujiente de Nuez Pecana y Nuez de la India al Horno sobre Cama de Espinacas al Aceite de Coco | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
 
 #### 📊 Miércoles 04 Nov de 2026 — 🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela
@@ -1676,14 +1685,14 @@
 |---|---|---|---|---|---|---|
 | **Desayuno** | Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva | 595 kcal | 49.0 g | 34.5 g | 4.1 g | 6.3 g |
 | **Comida** | Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva | 774 kcal | 65.0 g | 43.0 g | 4.2 g | 6.4 g |
-| **Cena** | Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Ricotta y Cebolla con Costra Gratinada de Queso Manchego al Horno | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.2 g |
+| **Cena** | Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage y Cebolla con Costra Gratinada de Queso Manchego al Horno | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.2 g |
 
 #### 📊 Jueves 05 Nov de 2026 — 🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Huevos al Plato y Romero de la Granja | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
+| **Desayuno** | Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Huevos al Plato y Romero de la Granja | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
 | **Comida** | Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla | 773 kcal | 65.0 g | 43.0 g | 4.1 g | 6.3 g |
-| **Cena** | Focaccia Keto de Champiñones Salteados, Espinacas, Queso Ricotta y Queso Manchego Dorada al Sartén de Hierro con Romero | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
+| **Cena** | Focaccia Keto de Champiñones Salteados, Espinacas, Queso Cottage y Queso Manchego Dorada al Sartén de Hierro con Romero | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
 
 #### 📊 Viernes 06 Nov de 2026 — 🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
@@ -1695,8 +1704,8 @@
 #### 📊 Sábado 07 Nov de 2026 — 🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Ricotta, Hierbas Finas y Aceite de Oliva) | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
-| **Comida** | Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Ricotta y Queso Manchego | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.7 g |
+| **Desayuno** | Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Cottage, Hierbas Finas y Aceite de Oliva) | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
+| **Comida** | Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Cottage y Queso Manchego | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.7 g |
 | **Cena** | Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
 
 ### 4.3 Cronograma Biotecnológico Sinergix® (4 Tomas Diarias — 420 g Semanales por Fórmula)
@@ -1713,26 +1722,26 @@
 
 | Día y Servicio | Semana 42 (Entrada / Principal `[Arquetipo]`) | Semana 43 (Entrada / Principal `[Arquetipo]`) | Semana 44 (Entrada / Principal `[Arquetipo]`) | **Semana 45 — Heptágono V17.0 (Entrada / Principal `[Arquetipo]`)** | Estado `[R10-DNA]` |
 |---|---|---|---|---|---|
-| **Domingo · Desayuno** | *E:* Tazón de Fresas Silvestres con Nuez de la India y Semillas de Chía<br>*P:* Huevos Revueltos a la Mantequilla con Queso Ricotta y Calabacitas Tiernas `[saute_and_sear]` | *E:* Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella `[cazuela]` | *E:* Copa de Zarzamoras con Semillas de Chía, Nuez de la India, Nuez Pecana de la Granja y Canela<br>*P:* Shakshuka Verde de Huevos Pochados en Salsa de Espinacas, Tomate y Queso Ricotta `[huevo_shakshuka_verde]` | **E:** Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Juliana de Pimiento Morrón Asado `[huevo_peyis_tres_quesos]` | ✅ `0 Colisión` |
+| **Domingo · Desayuno** | *E:* Tazón de Fresas Silvestres con Nuez de la India y Semillas de Chía<br>*P:* Huevos Revueltos a la Mantequilla con Queso Ricotta y Calabacitas Tiernas `[saute_and_sear]` | *E:* Tazón de Fresas con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Cazuela de Huevos al Horno sobre Cama de Acelgas de la Granja, Jitomate y Queso Mozzarella `[cazuela]` | *E:* Copa de Zarzamoras con Semillas de Chía, Nuez de la India, Nuez Pecana de la Granja y Canela<br>*P:* Shakshuka Verde de Huevos Pochados en Salsa de Espinacas, Tomate y Queso Ricotta `[huevo_shakshuka_verde]` | **E:** Espejo de Zarzamora Macerada al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Huevos Peyis Estrellados Bañados en Salsa Fundente de 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Juliana de Pimiento Morrón Asado `[huevo_peyis_tres_quesos]` | ✅ `0 Colisión` |
 | **Domingo · Comida** | *E:* Sopa de Calabacitas Verdes y Flor de Calabaza al Cilantro<br>*P:* Hamburguesa de Arrachera al Sartén con Costra de Gouda y Salsa de Aguacate `[saute_and_sear]` | *E:* Crema Aterciopelada de Espárragos Verdes con Aceite de Oliva VEVO<br>*P:* Lomo de Salmón Sellado con Costra de Pistaches y Emulsión de Limón y Aceite VEVO `[salmon_costra]` | *E:* Consomé Dorado de Floretes de Coliflor y Cilantro de la Granja al Fondo Claro de Pollo<br>*P:* Lomo de Salmón Glaseado a la Mostaza de Dijon y Aceite de Coco al Sartén con Espárragos Tiernos y Limón Real `[salmon_glaseado_mostaza_sarten]` | **E:** Consomé Tatemado de Jitomate, Cebolla y Cilantro de la Granja en Fondo Claro de Pollo al Aceite de Oliva<br>**P:** Rollos Estilo Enchiladas Espuma de Pechuga de Pavo y Calabacitas Tiernas Bañados en Salsa Cremosa de Aguacate Hass, Tomate y Cilantro Gratinados con Queso Manchego `[pavo_enchiladas_espuma_aguacate]` | ✅ `0 Colisión` |
-| **Domingo · Cena** | *E:* Ensalada de Lechuga Sweet con Pepino y Vinagreta VEVO al Limón<br>*P:* Sardinas al Sartén con Salsa Rústica de Tomate Verde y Epazote `[saute_and_sear]` | *E:* Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO<br>*P:* Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana `[portobello_relleno]` | *E:* Velouté Nocturno de Champiñones Silvestres y Queso Ricotta al Fondo Claro de Pollo<br>*P:* Medallones de Pechuga de Pavo Dorados en Mantequilla con Sal con Ajo, Limón Real y Germinado de Alfalfa `[pavo_medallones_mantequilla_ajo]` | **E:** Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva<br>**P:** Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Ricotta, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro `[dobladitas_ines_champinon]` | ✅ `0 Colisión` |
+| **Domingo · Cena** | *E:* Ensalada de Lechuga Sweet con Pepino y Vinagreta VEVO al Limón<br>*P:* Sardinas al Sartén con Salsa Rústica de Tomate Verde y Epazote `[saute_and_sear]` | *E:* Crema Sedosa de Coliflor Rostizada al Ajo con Aceite de Oliva VEVO<br>*P:* Champiñones Portobello al Horno Gratinados con Queso Ricotta, Queso Parmesano, Romero de la Granja y Nuez Pecana `[portobello_relleno]` | *E:* Velouté Nocturno de Champiñones Silvestres y Queso Ricotta al Fondo Claro de Pollo<br>*P:* Medallones de Pechuga de Pavo Dorados en Mantequilla con Sal con Ajo, Limón Real y Germinado de Alfalfa `[pavo_medallones_mantequilla_ajo]` | **E:** Ensalada Nocturna de Pepino en Rodajas Finas con Limón Real, Orégano y Aceite de Oliva<br>**P:** Dobladitas Keto en Costra Dorada de Queso Manchego al Comal Rellenas de Pechuga de Pollo Deshebrada, Champiñones Salteados, Queso Cottage, Queso Philadelphia, Espinacas, Nuez Pecana y Cilantro `[dobladitas_ines_champinon]` | ✅ `0 Colisión` |
 | **Lunes · Desayuno** | *E:* Tazón de Moras Silvestres con Almendras Fileteadas y Chía<br>*P:* Omelette Baveuse con Espinacas Tiernas y Queso Gouda Maduro `[saute_and_sear]` | *E:* Tazón de Zarzamoras Silvestres con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>*P:* Frittata Rústica de Huevos al Sartén con Pimiento Morrón Dulce y Queso Philadelphia Cremoso `[frittata]` | *E:* Tazón Matutino de Frambuesas con Semillas de Chía, Nuez Pecana de la Granja y Vainilla<br>*P:* Huevos Pochados Estilo Benedictino sobre Nopal Asado de la Granja con Emulsión de Mantequilla y Germinado `[huevo_benedictino_holandesa]` | **E:** Copa de Frambuesas Maceradas a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Crepas Florentinas (100% Huevo sin Harina) Rellenas de Champiñones Salteados, Espinacas y Cebolla, Cubiertas en Emulsión Holandesa de Mantequilla y Limón Real `[huevo_crepa_florentina_holandesa]` | ✅ `0 Colisión` |
 | **Lunes · Comida** | *E:* Crema Aterciopelada de Brócoli al Queso Ricotta y Ajo Confitado<br>*P:* Filete de Mojarra Tilapia al Mojo de Ajo Dorado con Limón y Cilantro `[saute_and_sear]` | *E:* Ensalada de Acelgas Tiernas de la Granja con Vinagreta Cítrica VEVO<br>*P:* Albóndigas de Carne Molida de Res al Horno en Salsa Suave de Tomate, Crema Ácida, Queso Philadelphia y Cilantro de la Granja `[albondigas]` | *E:* Ensalada Provenzal de Espinacas, Jitomate y Romero de la Granja al Limón Real y Aceite de Oliva<br>*P:* Tagliata de Flat Steak Sellada al Romero de la Granja con Láminas de Queso Manchego y Pimiento Morrón `[res_tagliata_romero]` | **E:** Ensalada House Grill de Lechuga Romana con Jitomate, Alcaparras, Limón Real y Aceite de Oliva<br>**P:** Philly Cheese Steak Keto al Skillet de Hierro con Tiras de Flat Steak, Juliana de Pimiento Morrón, Cebolla Asada y Costra Fundida de Queso Manchego `[res_philly_cheese_steak_skillet]` | ✅ `0 Colisión` |
-| **Lunes · Cena** | *E:* Bastones de Pepino y Apio Fresco con Sal Marina y Limón<br>*P:* Pechuga de Pavo Artesanal con Guacamole Rústico de Aguacate Hass `[saute_and_sear]` | *E:* Sopa Juliana de Calabacitas Tiernas en Caldo Vegetal Aromático al Laurel, Limón Real y Cilantro de la Granja con Aceite VEVO<br>*P:* Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro `[barquitas]` | *E:* Tartar Vegetal Nocturno de Pepino en Brunoise, Germinado de Alfalfa y Dados de Aguacate Hass al Limón Real<br>*P:* Fajitas de Mojarra Salteadas a la Veracruzana con Jitomate, Aceitunas Manzanilla, Alcaparras, Laurel y Orégano `[mojarra_veracruzana_sarten]` | **E:** Caldo Claro Americano de Fondo de Pollo al Orégano y Limón Real<br>**P:** Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Ricotta, Crema Ácida y Mantequilla al Ajo `[pavo_alfredo_mushroom_zoodles]` | ✅ `0 Colisión` |
+| **Lunes · Cena** | *E:* Bastones de Pepino y Apio Fresco con Sal Marina y Limón<br>*P:* Pechuga de Pavo Artesanal con Guacamole Rústico de Aguacate Hass `[saute_and_sear]` | *E:* Sopa Juliana de Calabacitas Tiernas en Caldo Vegetal Aromático al Laurel, Limón Real y Cilantro de la Granja con Aceite VEVO<br>*P:* Barquitas de Lechuga Romana con Lomo de Atún en Agua Aliñado al Aceite VEVO, Aguacate Hass y Cilantro `[barquitas]` | *E:* Tartar Vegetal Nocturno de Pepino en Brunoise, Germinado de Alfalfa y Dados de Aguacate Hass al Limón Real<br>*P:* Fajitas de Mojarra Salteadas a la Veracruzana con Jitomate, Aceitunas Manzanilla, Alcaparras, Laurel y Orégano `[mojarra_veracruzana_sarten]` | **E:** Caldo Claro Americano de Fondo de Pollo al Orégano y Limón Real<br>**P:** Zoodles Alfredo de Calabacita con Fajitas de Pechuga de Pavo en Salsa Cremosa de Queso Cottage, Crema Ácida y Mantequilla al Ajo `[pavo_alfredo_mushroom_zoodles]` | ✅ `0 Colisión` |
 | **Martes · Desayuno** | *E:* Tazón de Frambuesas Frescas con Nueces de Castilla y Chía<br>*P:* Omelette de Queso Panela Artesanal con Flor de Calabaza y Epazote `[saute_and_sear]` | *E:* Tazón de Fresas y Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Rollo Tamagoyaki Culinario a la Mantequilla Relleno de Queso Philadelphia y Finas Hierbas `[rolled_omelette]` | *E:* Compota Tibia de Fresas Asadas al Horno con Semillas de Chía, Nuez de la India y Nuez Pecana de la Granja<br>*P:* Clafoutis Salado de Huevos Batidos, Queso Ricotta y Hierbas Finas con Germinado de Alfalfa `[huevo_clafoutis_ricotta]` | **E:** Carpaccio de Fresas a la Canela con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro `[huevo_motulenos_costra_queso]` | ✅ `0 Colisión` |
-| **Martes · Comida** | *E:* Consomé Clarificado de Pollo con Nopales Tiernos al Cilantro<br>*P:* Pechuga de Pollo Rellena de Queso Ricotta y Espinacas en Salsa Cremosa `[saute_and_sear]` | *E:* Crema Aterciopelada de Brócoli Emulsionada con Leche de Coco, Agua Purificada de la Granja y Aceite de Oliva VEVO<br>*P:* Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO `[lomos_horno]` | *E:* Potaje Rústico de Calabacitas Asadas al Romero de la Granja y Orégano en Caldo Aromático<br>*P:* Lomo de Salmón al Horno en Salsa Cremosa de Queso Ricotta, Limón Real y Romero de la Granja sobre Brócoli `[salmon_veloute_ricotta_romero]` | **E:** Ensalada Sureste de Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva<br>**P:** Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Ricotta Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate `[res_queso_relleno_yucateco]` | ✅ `0 Colisión` |
+| **Martes · Comida** | *E:* Consomé Clarificado de Pollo con Nopales Tiernos al Cilantro<br>*P:* Pechuga de Pollo Rellena de Queso Ricotta y Espinacas en Salsa Cremosa `[saute_and_sear]` | *E:* Crema Aterciopelada de Brócoli Emulsionada con Leche de Coco, Agua Purificada de la Granja y Aceite de Oliva VEVO<br>*P:* Lomos de Sardina del Pacífico al Horno con Jitomate Asado, Cebolla Blanca y Aceite de Oliva VEVO `[lomos_horno]` | *E:* Potaje Rústico de Calabacitas Asadas al Romero de la Granja y Orégano en Caldo Aromático<br>*P:* Lomo de Salmón al Horno en Salsa Cremosa de Queso Ricotta, Limón Real y Romero de la Granja sobre Brócoli `[salmon_veloute_ricotta_romero]` | **E:** Ensalada Sureste de Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva<br>**P:** Cazuela de Queso Relleno Yucateco (Queso Manchego y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate `[res_queso_relleno_yucateco]` | ✅ `0 Colisión` |
 | **Martes · Cena** | *E:* Bastones de Zucchini Fresco con Sal Marina y Limón<br>*P:* Filete de Robalo Fresco al Horno con Costra de Almendras y Eneldo `[saute_and_sear]` | *E:* Carpaccio de Pepino y Aguacate Hass al Limón Real con Aceite de Oliva VEVO<br>*P:* Filete de Mojarra al Vapor en Papillote Abierto con Calabacitas Tiernas, Limón Real, Finas Hierbas y Cilantro de la Granja `[papillote]` | *E:* Caldo Clarificado de Acelgas de la Granja, Tomate y Hojas de Laurel<br>*P:* Cazuela de Champiñones Salteados al Ajillo y Hierbas Finas en Fondue Cremoso de Queso Manchego y Queso Ricotta al Sartén `[champinon_fondue_manchego_ricotta]` | **E:** Sopa de Lima Yucateca en Fondo Claro de Pollo con Jitomate, Cilantro de la Granja y Limón Real<br>**P:** Milanesa de Pechuga de Pollo en Costra Crujiente de Nuez Pecana y Nuez de la India al Horno sobre Cama de Espinacas al Aceite de Coco `[pollo_milanesa_costra_nuez]` | ✅ `0 Colisión` |
 | **Miércoles · Desayuno** | *E:* Tazón de Fresas Silvestres con Nuez de la India y Chía<br>*P:* Huevos Estrellados en Sartén de Hierro con Aceite VEVO y Espárragos Verdes `[saute_and_sear]` | *E:* Tazón de Fresas en Láminas con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla, Cilantro de la Granja y Queso Ricotta `[anillo]` | *E:* Reducción Templada de Zarzamoras al Sartén con Semillas de Chía, Nuez Pecana de la Granja y Extracto de Vainilla<br>*P:* Huevos al Plato (Oeufs sur le Plat) Cuajados a Fuego Lento en Crema de Queso Philadelphia, Queso Ricotta, Ejotes Tiernos y Hierbas Finas `[huevo_al_plato_philadelphia_ricotta]` | **E:** Tartar de Zarzamora a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Puntas de Espárragos Trigueros, Cebolla Confitada y Aceite de Oliva `[huevo_tortilla_espanola_calabacita]` | ✅ `0 Colisión` |
 | **Miércoles · Comida** | *E:* Crema Aterciopelada de Coliflor Rostizada con Ajo Confitado y Aceite VEVO<br>*P:* Corte Magro de Ribeye de Res a la Parrilla con Mantequilla de Romero y Ajo `[saute_and_sear]` | *E:* Ensalada de Espinacas Baby con Vinagreta de Limón Real y Aceite de Oliva VEVO<br>*P:* Juliana de Flat Steak de Res Salteada al Wok con Champiñones, Cebolla Blanca, Romero de la Granja y Aceite VEVO `[juliana_wok]` | *E:* Ensalada Griega de Lechuga Romana, Germinado de Alfalfa y Cilantro de la Granja al Limón Real<br>*P:* Kefta Árabe de Carne Molida de Res Estofada al Sartén con Tzatziki de Yogur Griego, Pepino y Cilantro de la Granja `[res_kofta_tzatziki]` | **E:** Sopa Castellana de Cebolla Caramelizada en Fondo de Res con Tomillo y Aceite de Oliva<br>**P:** Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Oliva `[pescado_a_la_murciana_cazuela]` | ✅ `0 Colisión` |
-| **Miércoles · Cena** | *E:* Ensalada de Lechuga Sweet con Pepino Persa y Vinagreta al Limón<br>*P:* Tostadas en Hoja de Lechuga con Atún Canónico y Aderezo Casero al Cilantro `[raw_assembly]` | *E:* Abanico de Aguacate Hass y Láminas de Pepino con Limón Real, Sal Marina y Aceite VEVO<br>*P:* Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor `[medallones]` | *E:* Cazuelita Tibia de Espinacas Salteadas con Dados de Aguacate Hass, Queso Ricotta y Nuez Pecana de la Granja<br>*P:* Blanquette Francesa de Fajitas de Mojarra Pochadas en Mantequilla, Cilantro de la Granja, Pimiento Morrón, Finas Hierbas y Limón Real `[mojarra_blanquette_limon]` | **E:** Ensalada de Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva<br>**P:** Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Ricotta y Cebolla con Costra Gratinada de Queso Manchego al Horno `[atun_pimientos_rellenos_gratinados]` | ✅ `0 Colisión` |
-| **Jueves · Desayuno** | *E:* Tazón de Arándanos Frescos con Semillas de Girasol y Chía<br>*P:* Rollo Tamagoyaki Culinario en Capas con Queso Gouda y Pavo `[saute_and_sear]` | *E:* Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo `[poach_emulsion]` | *E:* Coulis Tibio de Frambuesas a la Canela con Semillas de Chía, Nuez de la India y Nuez Pecana<br>*P:* Huevos Nube al Horno con Claras Montadas, Yema Líquida, Queso Manchego y Espárragos `[huevo_nube_montado]` | **E:** Compota Fría de Frambuesas y Canela con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Ricotta y Queso Philadelphia) con Huevos al Plato y Romero de la Granja `[focaccia_keto_tres_quesos_esparragos]` | ✅ `0 Colisión` |
+| **Miércoles · Cena** | *E:* Ensalada de Lechuga Sweet con Pepino Persa y Vinagreta al Limón<br>*P:* Tostadas en Hoja de Lechuga con Atún Canónico y Aderezo Casero al Cilantro `[raw_assembly]` | *E:* Abanico de Aguacate Hass y Láminas de Pepino con Limón Real, Sal Marina y Aceite VEVO<br>*P:* Medallones de Filete de Atún Sellados en Costra de Nuez Pecana de la Granja con Limón Real y Espárragos Verdes al Vapor `[medallones]` | *E:* Cazuelita Tibia de Espinacas Salteadas con Dados de Aguacate Hass, Queso Ricotta y Nuez Pecana de la Granja<br>*P:* Blanquette Francesa de Fajitas de Mojarra Pochadas en Mantequilla, Cilantro de la Granja, Pimiento Morrón, Finas Hierbas y Limón Real `[mojarra_blanquette_limon]` | **E:** Ensalada de Hojas de Espinacas con Limón Real, Orégano y Aceite de Oliva<br>**P:** Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage y Cebolla con Costra Gratinada de Queso Manchego al Horno `[atun_pimientos_rellenos_gratinados]` | ✅ `0 Colisión` |
+| **Jueves · Desayuno** | *E:* Tazón de Arándanos Frescos con Semillas de Girasol y Chía<br>*P:* Rollo Tamagoyaki Culinario en Capas con Queso Gouda y Pavo `[saute_and_sear]` | *E:* Tazón de Zarzamoras con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Huevos Çılbır Turcos Pochados sobre Cama de Yogur Griego al Ajo y Mantequilla de Pastoreo `[poach_emulsion]` | *E:* Coulis Tibio de Frambuesas a la Canela con Semillas de Chía, Nuez de la India y Nuez Pecana<br>*P:* Huevos Nube al Horno con Claras Montadas, Yema Líquida, Queso Manchego y Espárragos `[huevo_nube_montado]` | **E:** Compota Fría de Frambuesas y Canela con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Focaccia Keto Horneada de Coliflor y 3 Quesos (Queso Manchego, Queso Cottage y Queso Philadelphia) con Huevos al Plato y Romero de la Granja `[focaccia_keto_tres_quesos_esparragos]` | ✅ `0 Colisión` |
 | **Jueves · Comida** | *E:* Crema Sedosa de Espárragos Verdes con Aceite de Oliva VEVO<br>*P:* Filete de Salmón al Horno con Costra de Nuez de la India Tostada `[saute_and_sear]` | *E:* Crema Caliente de Champiñones y Tomillo Emulsionada con Leche de Coco, Agua Purificada de la Granja y Aceite de Oliva VEVO<br>*P:* Piezas de Pollo Entero al Horno (Pechuga, Muslo y Pierna) con Romero de la Granja, Queso Ricotta y Espinacas Tiernas en Emulsión VEVO `[piezas_pollo_horno]` | *E:* Tiradito Templado de Floretes de Brócoli al Vapor con Emulsión de Aceite de Oliva, Hojas de Laurel y Cilantro de la Granja<br>*P:* Terrina Caliente de Lomos de Sardina en Salsa Espesa de Nuez de la India, Tomate Asado, Comino y Cilantro de la Granja `[sardina_pipian_nuez_india]` | **E:** Ensalada Bistró de Lechuga Romana y Pepino al Limón Real, Orégano y Aceite de Oliva<br>**P:** Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Alcaparras, Limón Real y Hierbas Finas en Mantequilla `[salmon_estilo_alda_philadelphia_alcaparras]` | ✅ `0 Colisión` |
-| **Jueves · Cena** | *E:* Bastones de Pepino y Apio al Limón con Sal Marina<br>*P:* Salpicón Fresco de Pechuga de Pavo con Aguacate Hass y Cilantro `[raw_assembly]` | *E:* Gazpacho Templado Cetogénico de Jitomate con Aceite de Oliva VEVO y Orégano<br>*P:* Timbal de Queso Cottage Cremoso y Yogur Griego con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja `[timbal]` | *E:* Mosaico Templado de Ejotes Tiernos al Vapor con Dados de Aguacate Hass y Nuez de la India al Limón Real<br>*P:* Piezas de Pollo Entero Braseadas a la Cazadora (Pechuga, Muslo y Pierna) con Jitomate, Champiñones, Pimiento Morrón, Hojas de Laurel y Tomillo `[pollo_cacciatora_cazadora]` | **E:** Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real<br>**P:** Focaccia Keto de Champiñones Salteados, Espinacas, Queso Ricotta y Queso Manchego Dorada al Sartén de Hierro con Romero `[focaccia_keto_hongos_gratinados]` | ✅ `0 Colisión` |
+| **Jueves · Cena** | *E:* Bastones de Pepino y Apio al Limón con Sal Marina<br>*P:* Salpicón Fresco de Pechuga de Pavo con Aguacate Hass y Cilantro `[raw_assembly]` | *E:* Gazpacho Templado Cetogénico de Jitomate con Aceite de Oliva VEVO y Orégano<br>*P:* Timbal de Queso Cottage Cremoso y Yogur Griego con Aguacate Hass, Pepino, Cilantro y Nuez Pecana de la Granja `[timbal]` | *E:* Mosaico Templado de Ejotes Tiernos al Vapor con Dados de Aguacate Hass y Nuez de la India al Limón Real<br>*P:* Piezas de Pollo Entero Braseadas a la Cazadora (Pechuga, Muslo y Pierna) con Jitomate, Champiñones, Pimiento Morrón, Hojas de Laurel y Tomillo `[pollo_cacciatora_cazadora]` | **E:** Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real<br>**P:** Focaccia Keto de Champiñones Salteados, Espinacas, Queso Cottage y Queso Manchego Dorada al Sartén de Hierro con Romero `[focaccia_keto_hongos_gratinados]` | ✅ `0 Colisión` |
 | **Viernes · Desayuno** | *E:* Tazón de Fresas Frescas con Nueces de Castilla y Chía<br>*P:* Huevos al Sartén en Anillo de Pimiento Morrón con Mantequilla de Pastoreo `[saute_and_sear]` | *E:* Tazón de Zarzamoras con Semillas de Chía, Canela y Nuez Pecana de la Granja<br>*P:* Omelette Francés Baveuse de 3 Huevos Relleno de Queso Ricotta Cremoso, Espinacas Tiernas y Cilantro de la Granja `[omelette]` | *E:* Fresas Glaseadas al Sartén a la Canela con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Crepas Sin Harina de Huevo al Sartén Rellenas de Acelgas de la Granja Salteadas en Crema Ácida y Queso Ricotta `[huevo_crepa_rellena_acelgas]` | **E:** Coulis Rústico de Fresas al Limón Real con Semillas de Chía, Nuez de la India y Nuez Pecana<br>**P:** Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla y Aceite de Coco) `[huevo_omurice_keto_coliflor]` | ✅ `0 Colisión` |
 | **Viernes · Comida** | *E:* Sopa de Calabacitas al Queso Parmesano y Cilantro Fresco<br>*P:* Lomo de Robalo Fresco al Sartén en Mantequilla de Alcaparras y Eneldo `[saute_and_sear]` | *E:* Ensalada Crujiente de Pepino y Cilantro de la Granja al Limón Real con Aceite VEVO<br>*P:* Corte de Flat Steak de Res a la Parrilla con Mantequilla de Finas Hierbas y Ajo `[corte_parrilla]` | *E:* Ensalada Mediterránea de Cogollos de Lechuga Romana, Jitomate y Cilantro de la Granja al Limón Real<br>*P:* Pastel de Carne Molida de Res al Horno Gratinado con Queso Manchego, Queso Ricotta y Corazón de Espinacas `[res_pastel_horno_manchego]` | **E:** Ensalada Oriental Sunomono de Pepino en Láminas con Nuez de la India, Limón Real y Aceite de Oliva<br>**P:** Teppanyaki de Flat Steak a la Plancha con Pimiento Morrón, Cebolla Asada y Germinado en Aceite de Coco `[res_teppanyaki_plancha_germinado]` | ✅ `0 Colisión` |
 | **Viernes · Cena** | *E:* Abanico de Aguacate Hass Fresco con Sal Marina y Limón<br>*P:* Champiñones Portobello Rellenos de Espinacas, Queso Ricotta y Nuez de la India `[roast_bake]` | *E:* Caldo Clarificado Aromático de Calabacitas Tiernas al Laurel, Hierbas Finas, Limón Real y Cilantro de la Granja<br>*P:* Rollitos de Pechuga de Pollo al Vapor con Pimiento Morrón, Alcaparras, Aceitunas Manzanilla, Cilantro de la Granja y Aceite VEVO `[rollitos]` | *E:* Medallones de Calabacita Tierna Braseados en Caldo de Leche de Coco y Romero de la Granja<br>*P:* Croquetas Doradas de Lomo de Atún y Queso Ricotta al Sartén en Aceite de Coco con Nuez Pecana sobre Pepino al Limón Real `[atun_croquetas_ricotta_sarten]` | **E:** Caldo Oriental Claro de Fondo de Pollo al Cilantro de la Granja y Limón Real<br>**P:** Fajitas de Mojarra Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro y Tomate) sobre Calabacitas `[mojarra_bicolor_estilo_contramar]` | ✅ `0 Colisión` |
-| **Sábado · Desayuno** | *E:* Tazón de Moras Silvestres con Semillas de Chía y Coco Rallado<br>*P:* Frittata Ranchera de Huevos con Tocino de Pavo y Queso Gouda `[saute_and_sear]` | *E:* Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja<br>*P:* Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano `[cast_iron_sunny_side]` | *E:* Macerado de Fresas en Brunoise a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana<br>*P:* Flan Salado de Huevos al Baño María Gratinado con Queso Manchego y Calabacitas Tiernas `[huevo_souffle_gratinado]` | **E:** Macerado Mediterráneo de Fresas con Semillas de Chía, Nuez de la India, Nuez Pecana y Vainilla<br>**P:** Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Ricotta, Hierbas Finas y Aceite de Oliva) `[huevo_uova_in_purgatorio]` | ✅ `0 Colisión` |
-| **Sábado · Comida** | *E:* Caldo Rústico de Hortalizas y Fondo Claro con Cilantro Fresco<br>*P:* Puntas de Filete de Res Salteadas con Pimientos y Champiñones al Jugo `[saute_and_sear]` | *E:* Ensalada Romana y Cilantro de la Granja al Limón Real con Aceite VEVO<br>*P:* Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Queso Philadelphia Fundido y Guacamole Rústico `[open_flame_patty_gratin]` | *E:* Ensalada de Corazones de Lechuga Romana a la Plancha con Alcaparras y Limón Real al Aceite de Oliva<br>*P:* Rollos Involtini de Flat Steak Rellenos de Espinacas Tiernas, Romero de la Granja y Sal con Ajo Braseados en Mantequilla al Sartén `[res_involtini_braseado]` | **E:** Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Orégano y Limón Real al Aceite de Oliva<br>**P:** Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Ricotta y Queso Manchego `[res_moussaka_griega_horno]` | ✅ `0 Colisión` |
+| **Sábado · Desayuno** | *E:* Tazón de Moras Silvestres con Semillas de Chía y Coco Rallado<br>*P:* Frittata Ranchera de Huevos con Tocino de Pavo y Queso Gouda `[saute_and_sear]` | *E:* Tazón de Fresas con Semillas de Chía Hidratadas y Nuez Pecana de la Granja<br>*P:* Huevos Estrellados en Sartén de Hierro con Aceite VEVO sobre Jitomate Asado y Cilantro al Orégano `[cast_iron_sunny_side]` | *E:* Macerado de Fresas en Brunoise a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana<br>*P:* Flan Salado de Huevos al Baño María Gratinado con Queso Manchego y Calabacitas Tiernas `[huevo_souffle_gratinado]` | **E:** Macerado Mediterráneo de Fresas con Semillas de Chía, Nuez de la India, Nuez Pecana y Vainilla<br>**P:** Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Queso Cottage, Hierbas Finas y Aceite de Oliva) `[huevo_uova_in_purgatorio]` | ✅ `0 Colisión` |
+| **Sábado · Comida** | *E:* Caldo Rústico de Hortalizas y Fondo Claro con Cilantro Fresco<br>*P:* Puntas de Filete de Res Salteadas con Pimientos y Champiñones al Jugo `[saute_and_sear]` | *E:* Ensalada Romana y Cilantro de la Granja al Limón Real con Aceite VEVO<br>*P:* Hamburguesa Artesanal de Carne Molida de Res a la Parrilla con Queso Philadelphia Fundido y Guacamole Rústico `[open_flame_patty_gratin]` | *E:* Ensalada de Corazones de Lechuga Romana a la Plancha con Alcaparras y Limón Real al Aceite de Oliva<br>*P:* Rollos Involtini de Flat Steak Rellenos de Espinacas Tiernas, Romero de la Granja y Sal con Ajo Braseados en Mantequilla al Sartén `[res_involtini_braseado]` | **E:** Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Orégano y Limón Real al Aceite de Oliva<br>**P:** Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res a la Canela y Gratinado de Queso Cottage y Queso Manchego `[res_moussaka_griega_horno]` | ✅ `0 Colisión` |
 | **Sábado · Cena** | *E:* Bastones de Zucchini al Limón con Sal Marina<br>*P:* Tacos en Hoja de Lechuga Sweet con Salpicón de Pollo y Guacamole `[raw_assembly]` | *E:* Consomé Nocturno Clarificado de Champiñones Laminados al Laurel, Orégano y Cilantro de la Granja al Limón Real<br>*P:* Carpaccio Templado de Ejotes Tiernos al Vapor con Queso Ricotta, Mantequilla de Pastoreo y Nuez Pecana Tostada de la Granja `[carpaccio]` | *E:* Potaje Templado de Floretes de Coliflor Enteros y Cebolla en Caldo de Leche de Coco al Orégano<br>*P:* Quenelles Templadas de Queso Ricotta y Queso Cottage al Orégano sobre Espejo de Yogur Griego con Nuez Pecana, Germinado y Aceite de Oliva `[quenelles_ricotta_cottage_espejo_yogur]` | **E:** Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Espinacas, Limón Real y Orégano<br>**P:** Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino `[pavo_shawarma_griego_tzatziki]` | ✅ `0 Colisión` |
 
 ---
@@ -1794,8 +1803,8 @@
 | 51 | **Pepino** | **1,740 g** | 0 g | **1,740 g** | Tabla 3.3 (Mercado — Comprar: 1,737 g) | **`0.00`** ✅ | R#07 (Dom Cen: 360 g); R#22 (Mar Com: 360 g); R#40 (Jue Com: 300 g); R#49 (Vie Com: 360 g); R#62 (Sáb Cen: 360 g) |
 | 52 | **Pimienta negra** | **3 g** | 0 g | **3 g** | Tabla 3.2 (Alacena \$0 — Stock: 70 g) | **`0.00`** ✅ | R#14 (Lun Com: 3 g) |
 | 53 | **Queso Philadelphia** | **540 g** | 0 g | **540 g** | Tabla 3.2 (Alacena \$0 — Stock: 720 g) | **`0.00`** ✅ | R#02 (Dom Des: 120 g); R#08 (Dom Cen: 120 g); R#38 (Jue Des: 120 g); R#41 (Jue Com: 180 g) |
-| 54 | **Queso manchego** | **1,000 g** | 0 g | **1,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 90 g); R#05 (Dom Com: 90 g); R#08 (Dom Cen: 150 g); R#14 (Lun Com: 90 g); R#20 (Mar Des: 110 g); R#23 (Mar Com: 90 g); R#35 (Mié Cen: 90 g); R#38 (Jue Des: 90 g); R#44 (Jue Cen: 100 g); R#59 (Sáb Com: 100 g) |
-| 55 | **Queso ricotta** | **1,980 g** | 0 g | **1,980 g** | Tabla 3.2 (Alacena \$0 — Stock: 3,840 g) | **`0.00`** ✅ | R#02 (Dom Des: 180 g); R#08 (Dom Cen: 180 g); R#17 (Lun Cen: 240 g); R#23 (Mar Com: 240 g); R#35 (Mié Cen: 240 g); R#38 (Jue Des: 180 g); R#44 (Jue Cen: 240 g); R#56 (Sáb Des: 240 g); R#59 (Sáb Com: 240 g) |
+| 54 | **Queso cottage** | **2,040 g** | 0 g | **2,040 g** | Tabla 3.2 (Alacena \$0 — Stock: 3,840 g) | **`0.00`** ✅ | R#02 (Dom Des: 180 g); R#08 (Dom Cen: 240 g); R#17 (Lun Cen: 240 g); R#23 (Mar Com: 240 g); R#35 (Mié Cen: 240 g); R#38 (Jue Des: 180 g); R#44 (Jue Cen: 240 g); R#56 (Sáb Des: 240 g); R#59 (Sáb Com: 240 g) |
+| 55 | **Queso manchego** | **1,000 g** | 0 g | **1,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 90 g); R#05 (Dom Com: 90 g); R#08 (Dom Cen: 150 g); R#14 (Lun Com: 90 g); R#20 (Mar Des: 110 g); R#23 (Mar Com: 90 g); R#35 (Mié Cen: 90 g); R#38 (Jue Des: 90 g); R#44 (Jue Cen: 100 g); R#59 (Sáb Com: 100 g) |
 | 56 | **Romero** | **30 g** | 0 g | **30 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#12 (Lun Des: 6 g); R#33 (Mié Com: 6 g); R#38 (Jue Des: 6 g); R#44 (Jue Cen: 6 g); R#48 (Vie Des: 6 g) |
 | 57 | **Sal con ajo** | **48 g** | 0 g | **48 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#14 (Lun Com: 6 g); R#17 (Lun Cen: 6 g); R#26 (Mar Cen: 6 g); R#42 (Jue Com: 6 g); R#50 (Vie Com: 6 g); R#56 (Sáb Des: 6 g); R#60 (Sáb Com: 6 g); R#62 (Sáb Cen: 6 g) |
 | 58 | **Sal de mar** | **204 g** | 0 g | **204 g** | Tabla 3.2 (Alacena \$0 — Stock: 3,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 6 g); R#04 (Dom Com: 6 g); R#05 (Dom Com: 6 g); R#06 (Dom Com: 6 g); R#07 (Dom Cen: 6 g); R#08 (Dom Cen: 6 g); R#11 (Lun Des: 6 g); R#13 (Lun Com: 6 g); R#15 (Lun Com: 6 g); R#16 (Lun Cen: 6 g); R#20 (Mar Des: 6 g); R#22 (Mar Com: 6 g); R#23 (Mar Com: 6 g); R#24 (Mar Com: 6 g); R#25 (Mar Cen: 6 g); R#29 (Mié Des: 6 g); R#31 (Mié Com: 6 g); R#32 (Mié Com: 6 g); R#33 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#35 (Mié Cen: 6 g); R#38 (Jue Des: 6 g); R#40 (Jue Com: 6 g); R#41 (Jue Com: 6 g); R#43 (Jue Cen: 6 g); R#44 (Jue Cen: 6 g); R#47 (Vie Des: 6 g); R#49 (Vie Com: 6 g); R#51 (Vie Com: 6 g); R#52 (Vie Cen: 6 g); R#53 (Vie Cen: 6 g); R#58 (Sáb Com: 6 g); R#59 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g) |

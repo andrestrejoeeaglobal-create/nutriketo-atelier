@@ -2,7 +2,7 @@
   "ssot_version": "v58_sams_costco_tickets_synced",
   "extracted_from": "Google Chrome LocalStorage LevelDB (015756.ldb, seq=270647)",
   "leveldb_seq": 270647,
-  "updated_at": "2026-11-01T11:16:05.240012",
+  "updated_at": "2026-11-01T11:29:48.994101",
   "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
@@ -41,7 +41,7 @@
   "pantryStock": {
     "Mantequilla": 500,
     "Mostaza": 150,
-    "Queso cottage": 0,
+    "Queso cottage": 3840,
     "Yogur griego": 3000,
     "Queso Philadelphia": 720,
     "Crema ácida": 960,
@@ -140,7 +140,7 @@
     "Espárragos": 0,
     "Fresas": 907,
     "Frambuesas": 250,
-    "Queso ricotta": 3840,
+    "Queso ricotta": 0,
     "Chile chipotle": 1320,
     "Frijol pinto": 1,
     "Pollo entero": 0,
@@ -276,7 +276,7 @@
       "g"
     ],
     "Queso cottage": [
-      0.0,
+      3840.0,
       "g"
     ],
     "Yogur griego": [
@@ -568,7 +568,7 @@
       "g"
     ],
     "Queso ricotta": [
-      3840.0,
+      0.0,
       "g"
     ],
     "Pollo entero": [

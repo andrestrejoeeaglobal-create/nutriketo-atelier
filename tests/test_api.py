@@ -1801,6 +1801,7 @@ def test_cook_mode_vs_auditor_mode_toggle_in_atelier_html():
         assert "🔬 Modo Auditoría Clínica (Ficha Técnica CoCT)" in html
         assert "1. Mise en Place Unificada del Servicio (Pesar 1 Sola Vez en Barra)" in html
         assert "2. Orden Cronológico de Fuegos (Sincronización de 3 Tiempos en Mesa)" in html
+        assert "Preparación del Queso Cottage (Textura Pasta Tipo Ricotta)" in html
         assert "cook-mode-panel" in html
         assert "auditor-mode-panel" in html
 

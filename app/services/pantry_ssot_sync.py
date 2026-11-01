@@ -74,7 +74,8 @@ CANONICAL_NAME_FIX: Dict[str, str] = {
 
 V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Queso manchego": (1000.0, "g"),
-    "Queso ricotta": (3840.0, "g"),
+    "Queso cottage": (3840.0, "g"),
+    "Queso ricotta": (0.0, "g"),
     "Yogur griego": (3000.0, "g"),
     "Carne molida": (2315.0, "g"),
     "Flat steak": (1290.0, "g"),

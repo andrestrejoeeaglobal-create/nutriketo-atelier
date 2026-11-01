@@ -5309,11 +5309,12 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v56_restore_chrome_user_ssot', 'true');
         }
 
-        // Sincronización V58: Alta de 2 Tickets de Compra Reales (Sam's Club Orden 1566264040064745472 + Costco Ticket 4362) sobre saldos post-S44
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v58_tickets_sams_costco_nov01_sync') !== 'true') {
-          const v58TicketUpdates = {
+        // Sincronización V59: Alta de 2 Tickets de Compra Reales (Sam's Club Orden 1566264040064745472 + Costco Ticket 4362) con Queso cottage (3,840 g = 4 × 960GR QCOTTA) y Queso ricotta (0 g)
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v59_cottage_3840_sams_costco_sync') !== 'true') {
+          const v59TicketUpdates = {
             "Queso manchego": { stock: 1000, unit: "g", sku: "sku-008-queso-manchego" },
-            "Queso ricotta": { stock: 3840, unit: "g", sku: "queso_ricotta_artesanal" },
+            "Queso cottage": { stock: 3840, unit: "g", sku: "sku-003-queso-cottage" },
+            "Queso ricotta": { stock: 0, unit: "g", sku: "queso_ricotta_artesanal" },
             "Yogur griego": { stock: 3000, unit: "g", sku: "sku-004-yogur-griego" },
             "Carne molida": { stock: 2315, unit: "g", sku: "sku-024-carne-molida" },
             "Flat steak": { stock: 1290, unit: "g", sku: "sku-021-flat-steak" },
@@ -5328,8 +5329,8 @@ let pantryStock = {
             "Semillas y nueces mixtas": { stock: 1020, unit: "g", sku: "sku-045-semillas-y-nueces-mixtas" },
             "Lechuga": { stock: 7, unit: "piezas", sku: "sku-034-lechuga" }
           };
-          Object.keys(v58TicketUpdates).forEach(itemName => {
-            const up = v58TicketUpdates[itemName];
+          Object.keys(v59TicketUpdates).forEach(itemName => {
+            const up = v59TicketUpdates[itemName];
             pantryStock[itemName] = up.stock;
             if (window.pantryCardUnits) {
               window.pantryCardUnits[itemName] = up.unit;
@@ -5342,6 +5343,7 @@ let pantryStock = {
           });
           localStorage.setItem('nutriketo_v57_s44_eggs_80_sync', 'true');
           localStorage.setItem('nutriketo_v58_tickets_sams_costco_nov01_sync', 'true');
+          localStorage.setItem('nutriketo_v59_cottage_3840_sams_costco_sync', 'true');
         }
 
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
@@ -9671,10 +9673,15 @@ function renderCookModeView(fullMeal) {
   });
 
   const cleanStarterSteps = (starter.steps || []).map(stripAuditJargonForCook);
-  const cleanMainSteps = (main.steps || []).map(stripAuditJargonForCook);
+  const rawMainSteps = (main.steps || []).map(stripAuditJargonForCook);
+  const cleanMainSteps = rawMainSteps.filter(s => !/Preparaci[oó]n del Queso Cottage/i.test(s));
   const cleanSideSteps = (side.steps || []).map(stripAuditJargonForCook);
 
+  const hasCottageCheese = miseList.some(it => /queso\s+cottage/i.test(it.name));
+  const cottagePrepInstruction = `<strong>🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta):</strong> Coloca el <strong>Queso cottage</strong> en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.`;
+
   const phase1Steps = [
+    hasCottageCheese ? cottagePrepInstruction : null,
     cleanStarterSteps[0] ? `<strong>Entrada (${stripAuditJargonForCook(starter.title)}):</strong> ${cleanStarterSteps[0]}` : null,
     cleanSideSteps[0] ? `<strong>Guarnición/Bebida (${stripAuditJargonForCook(side.title)}):</strong> ${cleanSideSteps[0]}` : null
   ].filter(Boolean);
@@ -9739,6 +9746,11 @@ function renderCookModeView(fullMeal) {
             Cantidades totales ya escaladas para <strong>${fullMeal.diners} comensales</strong>
           </span>
         </div>
+        ${hasCottageCheese ? `
+        <div class="mb-3 p-3 rounded-lg bg-amber-50/90 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-700/80 text-xs text-amber-950 dark:text-amber-100 leading-relaxed">
+          ${cottagePrepInstruction}
+        </div>
+        ` : ''}
         <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
           ${stationsHtml}
         </div>

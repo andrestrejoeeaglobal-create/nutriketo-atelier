@@ -219,7 +219,7 @@ def compile_s45_dossier() -> Dict[str, Any]:
         ("FAJITAS PAVO (Saldo Alacena)", "Pechuga de pavo", "1,400 g", "g"),
         ("KS PECHUGA D 1.670KG (Costco #4362)", "Pechuga de pollo", "1,670 g", "g"),
         ("90PZ HUEVO (+80 pzas post-S44)", "Huevo", "170 piezas", "piezas"),
-        ("960GR QCOTTA (4 pzas × 960 g)", "Queso ricotta", "3,840 g", "g"),
+        ("960GR QCOTTA (4 pzas × 960 g Sam's)", "Queso cottage", "3,840 g", "g"),
         ("QSO MANCH RA (Sam's #1566264040064745472)", "Queso manchego", "1,000 g", "g"),
         ("OIKOS PROT 2 (+1,200 g previos)", "Yogur griego", "3,000 g", "g"),
         ("CABRARANDANO (Cubierta azucarada)", "Queso de cabra con arándano", "350 g (En Cuarentena NOM-004)", "g"),

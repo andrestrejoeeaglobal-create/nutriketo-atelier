@@ -184,7 +184,8 @@ S43_S44_HISTORICAL_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PAN
 DEFAULT_PANTRY_STOCK.update(
     {
         "Queso manchego": (1000.0, "g"),
-        "Queso ricotta": (3840.0, "g"),
+        "Queso cottage": (3840.0, "g"),
+        "Queso ricotta": (0.0, "g"),
         "Yogur griego": (3000.0, "g"),
         "Carne molida": (2315.0, "g"),
         "Flat steak": (1290.0, "g"),
@@ -829,10 +830,10 @@ def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
         return {"key": "filete_atun", "family": "atun", "circadian_dinner_ok": True, "is_dense": False}
     if "champinon" in joined or "portobello" in joined:
         return {"key": "champinon", "family": "fungica", "circadian_dinner_ok": True, "is_dense": False}
-    if "queso cottage" in joined:
-        return {"key": "queso_cottage", "family": "lactea_ligera", "circadian_dinner_ok": True, "is_dense": False}
     if "huevo" in joined:
         return {"key": "huevo", "family": "huevo", "circadian_dinner_ok": True, "is_dense": False}
+    if "queso cottage" in joined:
+        return {"key": "queso_cottage", "family": "lactea_ligera", "circadian_dinner_ok": True, "is_dense": False}
 
     return {"key": "otra", "family": "otra", "circadian_dinner_ok": True, "is_dense": False}
 
