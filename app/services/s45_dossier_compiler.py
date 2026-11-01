@@ -173,6 +173,81 @@ def compile_s45_dossier() -> Dict[str, Any]:
             kcal = int(round(fat * 9.0 + prot * 4.0 + carbs * 4.0))
             lines.append(f"#### {icon} {day['day']} — {m_type} ({hr}) | `{kcal} kcal` · `Grasa: {fat} g` · `Proteína: {prot} g` · `Carbs Netos: {carbs} g` · `Fibra: {fib} g`")
             lines.append("")
+
+            # --- 👩‍🍳 MODO COCINERO (COMANDA PRÁCTICA UNIFICADA DEL SERVICIO) ---
+            role_short_map = {"starter": "Entrada", "main": "Plato Fuerte", "side": "Guarnición/Bebida"}
+            service_mise: Dict[str, Dict[str, Any]] = {}
+            for r_key in ["starter", "main", "side"]:
+                r_lbl_short = role_short_map[r_key]
+                for ing_m in meal[r_key]["ingredients"]:
+                    inm = ing_m["name"]
+                    iunit = ing_m["unit"]
+                    iamt = float(ing_m["amount"])
+                    icat = ing_m["category"]
+                    m_key = f"{inm}__{iunit}"
+                    if m_key not in service_mise:
+                        service_mise[m_key] = {
+                            "name": inm,
+                            "unit": iunit,
+                            "category": icat,
+                            "total": 0.0,
+                            "usages": [],
+                        }
+                    service_mise[m_key]["total"] = round(service_mise[m_key]["total"] + iamt, 2)
+                    service_mise[m_key]["usages"].append(f"{fmt_num_plain(iamt)} {iunit} en {r_lbl_short}")
+
+            shared_items = [v for v in service_mise.values() if len(v["usages"]) > 1]
+            has_cottage = any("queso cottage" in v["name"].lower() for v in service_mise.values())
+
+            lines.append(f"##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada ({day['day']} · {m_type} · 6 Comensales · `{len(shared_items)} insumos unificados en 1 solo pesaje`)")
+            if has_cottage:
+                lines.append("> **🥣 Preparación Previa del Queso Cottage (Textura Pasta Tipo Ricotta):** Coloca el **Queso cottage** en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.")
+                lines.append("")
+            lines.append("| Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |")
+            lines.append("|---|---|---|")
+            for m_val in service_mise.values():
+                dist_txt = " + ".join(m_val["usages"]) if len(m_val["usages"]) > 1 else m_val["usages"][0]
+                prefix_icon = "⚖️ **Dividir:** " if len(m_val["usages"]) > 1 else ""
+                lines.append(f"| **{m_val['name']}** | **`{fmt_num(m_val['total'])} {m_val['unit']}`** | {prefix_icon}{dist_txt} |")
+            lines.append("")
+
+            st_steps = meal["starter"].get("steps", [])
+            mn_steps_raw = meal["main"].get("steps", [])
+            mn_steps = [s for s in mn_steps_raw if "Preparación del Queso Cottage" not in s]
+            sd_steps = meal["side"].get("steps", [])
+
+            lines.append("**🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**")
+            f1_parts = []
+            if has_cottage:
+                f1_parts.append("Escurrir 2 min y licuar 10–15 s el **Queso cottage** hasta obtener pasta tipo ricotta.")
+            if st_steps:
+                f1_parts.append(f"*Entrada:* {st_steps[0]}")
+            if sd_steps:
+                f1_parts.append(f"*Guarnición/Bebida:* {sd_steps[0]}")
+            lines.append(f"1. **Fase 1 — Adelantos, Fríos e Infusiones:** {' | '.join(f1_parts)}")
+
+            f2_parts = []
+            if mn_steps:
+                f2_parts.append(f"*Base Principal:* {mn_steps[0]}")
+            if len(st_steps) > 1:
+                f2_parts.append(f"*Cierre de Entrada:* {st_steps[1]}")
+            lines.append(f"2. **Fase 2 — Base Caliente y Salsas:** {' | '.join(f2_parts)}")
+
+            f3_parts = []
+            if len(mn_steps) > 1:
+                f3_parts.append(f"*Fuego Principal:* {mn_steps[1]}")
+            if len(sd_steps) > 1:
+                f3_parts.append(f"*Fuego Lateral / Templado:* {sd_steps[1]}")
+            lines.append(f"3. **Fase 3 — Cocción Principal al Momento:** {' | '.join(f3_parts)}")
+
+            f4_parts = []
+            if len(mn_steps) > 2:
+                f4_parts.append(" ".join(mn_steps[2:]))
+            else:
+                f4_parts.append("Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.")
+            lines.append(f"4. **Fase 4 — Pase simultáneo a Mesa:** {' | '.join(f4_parts)}")
+            lines.append("")
+
             for role in ["starter", "main", "side"]:
                 rec_counter += 1
                 dish = meal[role]
@@ -216,22 +291,33 @@ def compile_s45_dossier() -> Dict[str, Any]:
         ("MM CARNE PAR 1115G (+1,200 g previos)", "Carne molida", "2,315 g", "g"),
         ("MM LOMO SALM 980G (Sam's #1566264040064745472)", "Lomo de salmón", "980 g", "g"),
         ("MOJARRA ENTE (Saldo Alacena)", "Fajitas de mojarra", "900 g", "g"),
+        ("SARDINAS LOMO EN ACEITE OLIVA (Saldo Alacena)", "Sardinas", "860 g", "g"),
+        ("ATÚN EN AGUA (Saldo Alacena)", "Atún en agua", "700 g", "g"),
         ("FAJITAS PAVO (Saldo Alacena)", "Pechuga de pavo", "1,400 g", "g"),
         ("KS PECHUGA D 1.670KG (Costco #4362)", "Pechuga de pollo", "1,670 g", "g"),
         ("90PZ HUEVO (+80 pzas post-S44)", "Huevo", "170 piezas", "piezas"),
         ("960GR QCOTTA (4 pzas × 960 g Sam's)", "Queso cottage", "3,840 g", "g"),
         ("QSO MANCH RA (Sam's #1566264040064745472)", "Queso manchego", "1,000 g", "g"),
+        ("QSO MOZZARELLA (Saldo Alacena)", "Queso mozzarella", "105 g", "g"),
+        ("QSO PARMESANO (Saldo Alacena)", "Queso parmesano", "100 g", "g"),
         ("OIKOS PROT 2 (+1,200 g previos)", "Yogur griego", "3,000 g", "g"),
         ("CABRARANDANO (Cubierta azucarada)", "Queso de cabra con arándano", "350 g (En Cuarentena NOM-004)", "g"),
         ("12/90 MANTEQ (Saldo Alacena)", "Mantequilla", "500 g", "g"),
+        ("LECHE DE COCO (Saldo Alacena)", "Leche de coco", "480 ml", "ml"),
         ("KS NUEZ INDIA 1.1K (+600 g previos)", "Nuez de la India", "1,700 g", "g"),
         ("KS MIX NUT 1.02KG (Costco #4362)", "Semillas y nueces mixtas", "1,020 g", "g"),
+        ("PISTACHES (Saldo Alacena)", "Pistaches", "100 g", "g"),
         ("MM ACEITE CO (Saldo Alacena)", "Aceite de coco", "1,700 g", "g"),
         ("FRESA (1 domo Sam's 907 g)", "Fresas", "907 g", "g"),
         ("FRAMBUESA (Saldo Alacena)", "Frambuesas", "250 g", "g"),
         ("ZARZAMORA 510 G (Costco #4362)", "Zarzamora", "510 g", "g"),
+        ("BRÓCOLI REFRIGERADOR (Saldo Fresco)", "Brócoli", "1,500 g", "g"),
+        ("COLIFLOR REFRIGERADOR (Saldo Fresco)", "Coliflor", "500 g", "g"),
         ("GERMINADO (1 domo Sam's 500 g)", "Germinado", "500 g", "g"),
         ("LECHUGA SUCRINE 6P (+1 previa)", "Lechuga", "7 piezas", "piezas"),
+        ("CÚRCUMA MOLIDA (Saldo Alacena)", "Cúrcuma", "100 g", "g"),
+        ("MOSTAZA DIJON (Saldo Alacena)", "Mostaza", "120 g", "g"),
+        ("HOJAS DE LAUREL (Saldo Alacena)", "Hojas de laurel", "9 g", "g"),
         ("MM 40/355ML (2 packs + 70 previas)", "Botella de agua", "150 botellas (355 ml)", "botellas"),
     ]
     for idx_s, (tdesc, cname, stock_label, unit_s) in enumerate(sams_rows, start=1):

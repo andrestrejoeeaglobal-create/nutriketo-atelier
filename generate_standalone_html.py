@@ -9677,7 +9677,7 @@ function renderCookModeView(fullMeal) {
   const cleanMainSteps = rawMainSteps.filter(s => !/Preparaci[oó]n del Queso Cottage/i.test(s));
   const cleanSideSteps = (side.steps || []).map(stripAuditJargonForCook);
 
-  const hasCottageCheese = miseList.some(it => /queso\s+cottage/i.test(it.name));
+  const hasCottageCheese = (mise.allItems || []).some(it => /queso\s+cottage/i.test(it.name));
   const cottagePrepInstruction = `<strong>🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta):</strong> Coloca el <strong>Queso cottage</strong> en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.`;
 
   const phase1Steps = [

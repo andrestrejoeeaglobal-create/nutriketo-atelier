@@ -1,0 +1,108 @@
+Aceite de oliva extra virgen VEVO | unit: ml | cat: 🥑 Grasas, Aceites y Semillas
+Agua purificada | unit: ml | cat: 🌶️ Chiles, Condimentos e Infusiones
+Aguacate Hass fresco | unit: piezas | cat: 🥑 Grasas, Aceites y Semillas
+Ajo fresco | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Ajo fresco machacado | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Alcaparras | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Almendras fileteadas tostadas | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Apio fresco | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Apio fresco de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Arándanos frescos | unit: g | cat: 🍓 Frutas de Bajo Índice Glucémico
+Atún enlatado | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Brócoli fresco | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Brócoli fresco de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Calabacitas verdes tiernas | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Calabacitas verdes tiernas de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Caldo concentrado y fondo de res casero | unit: ml | cat: 🌶️ Chiles, Condimentos e Infusiones
+Canela en polvo | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Carne molida / Filete de Sirloin magro | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Carne seca machaca artesanal de res | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Cebolla blanca fresca | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Cebollín fresco de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Champiñones Portobello | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Champiñones Portobello frescos | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Chayotes tiernos | unit: piezas | cat: 🥬 Verduras, Hortalizas y Frescos
+Cilantro fresco | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Cilantro fresco de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Coliflor fresca | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Coliflor fresca de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Corte magro de Arrachera de res | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Corte magro de Ribeye de res premium | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Crema ácida | unit: g | cat: 🧀 Lácteos y Quesos (Sin Gluten — Keto)
+Curry suave en polvo / Cúrcuma | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Ejotes verdes | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Ejotes verdes tiernos de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Eneldo fresco | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Epazote fresco | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Espinacas frescas | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Espinacas frescas de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Espárragos verdes | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Espárragos verdes frescos de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Fajitas de mojarra tilapia | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Filete de Huachinango fresco | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Filete de Robalo fresco | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Filete de Salmón fresco con piel | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Flor de calabaza | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Flores de azahar | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Flores de lavanda secas | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Flores de manzanilla seca | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Flores de manzanilla y azahar | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Fondo claro de pollo | unit: ml | cat: 🌶️ Chiles, Condimentos e Infusiones
+Fondo claro de pollo casero | unit: ml | cat: 🌶️ Chiles, Condimentos e Infusiones
+Frambuesas frescas | unit: g | cat: 🍓 Frutas de Bajo Índice Glucémico
+Frambuesas frescas orgánicas | unit: g | cat: 🍓 Frutas de Bajo Índice Glucémico
+Fresas frescas | unit: g | cat: 🍓 Frutas de Bajo Índice Glucémico
+Fórmula Nootrópica 33Plus® | unit: g | cat: 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA
+Fórmula Reparadora 34Plus® | unit: g | cat: 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA
+Grenetina natural en polvo | unit: g | cat: 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA
+Hamburguesa de arrachera | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Hierbas botánicas (toronjil y menta) | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Hojas de arúgula fresca | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Hojas de lechuga orejona viva | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Hojas de menta fresca | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Hojas de toronjil fresco | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Huevos orgánicos de pastoreo | unit: piezas | cat: 🥩 Carnes, Pescados y Proteínas
+Jitomate Saladet fresco | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Jugo de limón fresco | unit: ml | cat: 🍋 Cítricos y Ácidos Naturales
+Jugo de limón fresco de la granja | unit: ml | cat: 🍋 Cítricos y Ácidos Naturales
+Leche de coco | unit: ml | cat: 🥑 Grasas, Aceites y Semillas
+Lechuga Sweet | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Lomo de salmón fresco | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Mantequilla de pastoreo | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Mayonesa | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Medallón de Atún fresco | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Moras frescas | unit: g | cat: 🍓 Frutas de Bajo Índice Glucémico
+Nopales tiernos | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Nopales tiernos limpios de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Nueces de Castilla | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Nuez de la India | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Orégano seco | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Pechuga de pavo artesanal | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Pechuga de pollo | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Pechuga de pollo orgánica | unit: g | cat: 🥩 Carnes, Pescados y Proteínas
+Pepino fresco | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Pepino fresco de la granja | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Pimentón dulce en polvo | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Pimienta negra recién molida | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Pimientos morrones dulces | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Queso Gouda | unit: g | cat: 🧀 Lácteos y Quesos (Sin Gluten — Keto)
+Queso Gouda artesanal | unit: g | cat: 🧀 Lácteos y Quesos (Sin Gluten — Keto)
+Queso Panela artesanal | unit: g | cat: 🧀 Lácteos y Quesos (Sin Gluten — Keto)
+Queso Parmesano artesanal | unit: g | cat: 🧀 Lácteos y Quesos (Sin Gluten — Keto)
+Queso Ricotta | unit: g | cat: 🧀 Lácteos y Quesos (Sin Gluten — Keto)
+Queso de cabra suave artesanal | unit: g | cat: 🧀 Lácteos y Quesos (Sin Gluten — Keto)
+Romero fresco | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Rábanos frescos de la huerta | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Sal de mar | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Sardinas enlatadas | unit: latas | cat: 🥩 Carnes, Pescados y Proteínas
+Semillas de calabaza tostadas | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Semillas de chía orgánicas | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Semillas de girasol | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Semillas de girasol tostadas | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Semillas de sésamo | unit: g | cat: 🥑 Grasas, Aceites y Semillas
+Tomate verde fresco | unit: g | cat: 🥬 Verduras, Hortalizas y Frescos
+Tomillo fresco | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Té matcha ceremonial en polvo | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Té verde Sencha en hebras | unit: g | cat: 🌶️ Chiles, Condimentos e Infusiones
+Vinagre de manzana o balsámico | unit: ml | cat: 🍋 Cítricos y Ácidos Naturales
+Yoghurt griego natural sin azúcar | unit: g | cat: 🧀 Lácteos y Quesos (Sin Gluten — Keto)

@@ -1,7 +1,7 @@
 {
-  "ssot_version": "v58_sams_costco_tickets_synced",
+  "ssot_version": "v61_s45_alacena_optimization_synced",
   "extracted_from": "Google Chrome LocalStorage LevelDB (015756.ldb, seq=270647)",
-  "leveldb_seq": 270647,
+  "leveldb_seq": 270999,
   "updated_at": "2026-11-01T11:29:48.994101",
   "activeWeek": "Semana 45 (01 al 07 de Noviembre de 2026)",
   "activeDiners": 6,
@@ -40,7 +40,7 @@
   ],
   "pantryStock": {
     "Mantequilla": 500,
-    "Mostaza": 150,
+    "Mostaza": 120,
     "Queso cottage": 3840,
     "Yogur griego": 3000,
     "Queso Philadelphia": 720,
@@ -49,13 +49,13 @@
     "Queso manchego": 1000,
     "Queso de cabra": 0,
     "Salsa BBQ": 550,
-    "Leche de coco": 960,
+    "Leche de coco": 480,
     "Leche evaporada": 960,
     "Leche": 960,
     "Salsa cátsup": 2600,
-    "Queso mozzarella": 0,
+    "Queso mozzarella": 105,
     "Botella de agua": 150,
-    "Queso parmesano": 150,
+    "Queso parmesano": 100,
     "Flat steak": 1290,
     "Lomo de salmón": 980,
     "Carne molida": 2315,
@@ -108,7 +108,7 @@
     "Aceite de oliva": 400,
     "Flor de Jamaica molida en polvo": 200,
     "Almendras fileteadas": 100,
-    "Hojas de laurel": 20,
+    "Hojas de laurel": 9,
     "Orégano": 150,
     "Tomillo": 20,
     "Pimienta negra": 70,
@@ -122,7 +122,7 @@
     "Aceite de coco": 1700,
     "Tang": 104,
     "Atún en agua": 700,
-    "Sardinas": 4,
+    "Sardinas": 860,
     "Rajas de jalapeño": 314,
     "Harina Power Cakes": 1000,
     "Hojuelas de avena": 100,
@@ -236,7 +236,7 @@
     "Aceite de coco": "g",
     "Tang": "g",
     "Atún en agua": "g",
-    "Sardinas": "latas de 425 g",
+    "Sardinas": "g",
     "Rajas de jalapeño": "g",
     "Harina Power Cakes": "g",
     "Hojuelas de avena": "g",
@@ -272,7 +272,7 @@
       "g"
     ],
     "Mostaza": [
-      150.0,
+      120.0,
       "g"
     ],
     "Queso cottage": [
@@ -304,11 +304,11 @@
       "g"
     ],
     "Leche de coco": [
-      960.0,
+      480.0,
       "ml"
     ],
     "Queso mozzarella": [
-      0.0,
+      105.0,
       "g"
     ],
     "Botella de agua": [
@@ -316,7 +316,7 @@
       "botellas (355 ml)"
     ],
     "Queso parmesano": [
-      150.0,
+      100.0,
       "g"
     ],
     "Flat steak": [
@@ -476,7 +476,7 @@
       "g"
     ],
     "Hojas de laurel": [
-      20.0,
+      9.0,
       "g"
     ],
     "Orégano": [
@@ -524,7 +524,7 @@
       "g"
     ],
     "Sardinas": [
-      1700.0,
+      860.0,
       "g"
     ],
     "Rajas de jalapeño": [

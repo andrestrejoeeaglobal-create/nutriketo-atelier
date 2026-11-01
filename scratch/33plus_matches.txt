@@ -1,0 +1,33 @@
+456: "sensory_description": f"Postre cetogénico fresco de {clean_title} preparado con colágeno puro hidrolizado, in
+461: {"name": "Fórmula Biotecnológica Nootrópica 33Plus®", "base_qty_per_person": 5.0, "unit": "g", "source": "Atel
+481: "2. Calentamiento e Infusión Nootrópica: Calentar la infusión botánica a 65°C sin hervir; disolver la grenetin
+498: "sensory_description": f"Infusión botánica relajante e hidratante de {clean_title} infusionada a temperatura c
+503: {"name": "Fórmula Biotecnológica Reparadora 34Plus®", "base_qty_per_person": 5.0, "unit": "g", "source": "Atel
+517: "2. Infusión Botánica: Verter el agua caliente sobre las hierbas frescas e integrar la Fórmula Reparadora 34Pl
+1688: new_meals_36 = [[{"meal_type": "Desayuno", "starter_name": "Tazón de Moras Frescas de la Granja con Almendras 
+2070: showToast("📋 La planificación de semanas clínicas está gobernada por el Cortex T.I.L.O. (Balance Atwater, 33Pl
+2072: alert("📋 La planificación de semanas clínicas está gobernada por el Cortex T.I.L.O. (Balance Atwater, 33Plus/3
+2522: <!-- 1. Rojo 33Plus® (180°) -->
+2534: <!-- 4. Verde 34Plus® (180°) -->
+2593: "33plus": { name: "Fórmula Nootrópica 33Plus®", stock: 120, unit: "g", status: "canonical" },
+2594: "34plus": { name: "Fórmula Reparadora 34Plus®", stock: 120, unit: "g", status: "canonical" },
+2702: if (/multi sinergix|fórmula nootrópica|formula nootropica/i.test(lower)) return 'Fórmula Nootrópica 33Plus®';
+2703: if (/amino sinergix|fórmula reparadora|formula reparadora/i.test(lower)) return 'Fórmula Reparadora 34Plus®';
+2797: { stem: '33plus', aliases: ['33plus', 'formula nootropica 33plus', 'formula biotecnologica nootropica 33plus']
+2798: { stem: '34plus', aliases: ['34plus', 'formula reparadora 34plus', 'formula biotecnologica reparadora 34plus']
+3017: // 13. Suplementos 33Plus / 34Plus
+3018: if (/33plus|34plus/i.test(name)) {
+3259: if (/33plus|34plus|sinergix|suplemento|suplementos|vitamina|vitaminas|colágeno|colageno|electrolitos|fórmula n
+4880: "33plus": ["33plus", "33 plus", "fórmula 33plus", "elixir 33plus"],
+4881: "34plus": ["34plus", "34 plus", "fórmula 34plus", "tisana 34plus"]
+5479: if (slug === '33plus' || slug === '34plus') {
+7065: if (name.includes('33plus') || mtype.includes('desayuno')) {
+7068: if (name.includes('34plus') || mtype.includes('cena') || name.includes('tisana') || name.includes('nocturna') 
+7069: return 'Inducción circadiana del descanso mediante fitonutrientes ansiolíticos naturales (modulación GABAérgic
+7305: const filtered = sides.filter(s => /33plus/i.test(s.name));
+7308: const filtered = sides.filter(s => /34plus/i.test(s.name));
+7773: text += "  • ☀️ TOMA 1 (Al Despertar): Fórmula Nootrópica 33Plus® (CoQ10/PQQ ayunas)\\n";
+7774: text += "  • 🍳 TOMA 2 (Desayuno): Fórmula Nootrópica 33Plus® (Soporte enzimático)\\n";
+7775: text += "  • 🥗 TOMA 3 (Cena): Fórmula Reparadora 34Plus® (Péptidos y electrolitos)\\n";
+7776: text += "  • 🌙 TOMA 4 (Al Dormir): Fórmula Reparadora 34Plus® (Cross-linking & Mg)\\n\\n";
+8162: 🌿 3. Acompañamiento / Elixir Bioactivo (33Plus® Desayuno / 34Plus® Cena):

@@ -170,6 +170,7 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "aceite de oliva",
     "nuez de la india",
     "almendras fileteadas",
+    "ajo",
     "manzanilla",
     "grenetina",
     "multisinergix",
@@ -186,12 +187,24 @@ DEFAULT_PANTRY_STOCK.update(
         "Queso manchego": (1000.0, "g"),
         "Queso cottage": (3840.0, "g"),
         "Queso ricotta": (0.0, "g"),
+        "Queso mozzarella": (105.0, "g"),
+        "Queso parmesano": (100.0, "g"),
         "Yogur griego": (3000.0, "g"),
+        "Leche de coco": (480.0, "ml"),
+        "Cúrcuma": (100.0, "g"),
+        "Pistaches": (100.0, "g"),
+        "Mostaza": (120.0, "g"),
+        "Hojas de laurel": (9.0, "g"),
+        "Sardinas": (860.0, "g"),
         "Carne molida": (2315.0, "g"),
         "Flat steak": (1290.0, "g"),
         "Lomo de salmón": (980.0, "g"),
         "Huevo": (170.0, "piezas"),
         "Fresas": (907.0, "g"),
+        "Frambuesas": (250.0, "g"),
+        "Coliflor": (500.0, "g"),
+        "Brócoli": (1500.0, "g"),
+        "Mantequilla": (500.0, "g"),
         "Germinado": (500.0, "g"),
         "Botella de agua": (150.0, "botellas (355 ml)"),
         "Pechuga de pollo": (1670.0, "g"),
@@ -809,6 +822,8 @@ def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
 
     if str(main_dish.get("archetype", "")) == "dobladitas_ines_champinon":
         return {"key": "champinon", "family": "fungica", "circadian_dinner_ok": True, "is_dense": False}
+    if str(main_dish.get("archetype", "")) == "mojarra_bicolor_estilo_contramar" and "sardina" in joined:
+        return {"key": "sardinas", "family": "pescado_azul", "circadian_dinner_ok": True, "is_dense": False}
 
     if "flat steak" in joined or (re.search(r"\bres\b", joined) and "molida" not in joined):
         return {"key": "flat_steak", "family": "res", "circadian_dinner_ok": False, "is_dense": True}
