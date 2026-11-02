@@ -1295,8 +1295,8 @@
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
           "starter_name": "Carpaccio de Fresas a la Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-          "main_dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla, Cilantro y Abanico de Aguacate Hass",
-          "dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla, Cilantro y Abanico de Aguacate Hass",
+          "main_dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
+          "dish_name": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
           "side_dish_name": "Gelatina Cristalina de Limón Real y Vainilla (4°C) con Fórmula Nootrópica 33Plus®",
           "starter": {
             "title": "Carpaccio de Fresas a la Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
@@ -1351,14 +1351,14 @@
             ]
           },
           "main": {
-            "title": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla, Cilantro y Abanico de Aguacate Hass",
+            "title": "Huevos Motuleños Keto sobre Costra Crujiente de Queso Manchego y Queso Doble Crema al Comal con Salsa Yucateca de Jitomate Asado, Cebolla y Cilantro",
             "technique": "yucatecan_motulenos_cheese_crust",
-            "note": "Escuela 3 (Inspiración El Teapaneco): versión cetogénica de los Huevos Motuleños sustituyendo la tortilla frita por una costra crujiente de queso manchego y queso doble crema al comal, coronada con 3 huevos por comensal, salsa tatemada de jitomate, cebolla y cilantro, y abanico de aguacate Hass ([R5]).",
+            "note": "Escuela 3 (Inspiración El Teapaneco): versión cetogénica de los Huevos Motuleños sustituyendo la tortilla frita por una costra crujiente de queso manchego y queso doble crema al comal, coronada con 3 huevos por comensal y salsa tatemada de jitomate, cebolla y cilantro.",
             "coct_reasoning": {
               "thermodynamics": "Costra de queso manchego dorada a 175°C y huevos estrellados en mantequilla a 145°C.",
-              "flavor_and_aromatics": "Sazón yucateca de jitomate asado, cilantro y aguacate Hass sobre costra dorada de queso manchego y queso doble crema.",
-              "textural_architecture": "Base crujiente de queso con yema cremosa, salsa roja y aguacate Hass.",
-              "critical_control_points": "Dorar la costra de queso manchego hasta que sea autosoportante y única presencia diaria de aguacate ([R5])."
+              "flavor_and_aromatics": "Sazón yucateca de jitomate asado y cilantro sobre costra dorada de queso manchego y queso doble crema.",
+              "textural_architecture": "Base crujiente de queso con yema cremosa y salsa roja tatemada.",
+              "critical_control_points": "Dorar la costra de queso manchego hasta que sea autosoportante."
             },
             "ingredients": [
               {
@@ -1381,13 +1381,6 @@
                 "per_guest": 18.3333,
                 "amount": 110,
                 "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aguacate",
-                "per_guest": 0.1667,
-                "amount": 1,
-                "unit": "piezas"
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
@@ -1428,7 +1421,7 @@
             "steps": [
               "Fundir y dorar el queso manchego en el comal formando 6 costras circulares crujientes.",
               "Asar el jitomate y la cebolla y moler con cilantro de la granja y sal de mar para la salsa motuleña.",
-              "Estrellar los 18 huevos en mantequilla, montar sobre las costras de queso manchego, bañar con la salsa caliente y coronar con queso doble crema desmoronado y abanico de aguacate Hass."
+              "Estrellar los 18 huevos en mantequilla, montar sobre las costras de queso manchego, bañar con la salsa caliente y coronar con queso doble crema desmoronado."
             ],
             "archetype": "huevo_motulenos_costra_queso"
           },
@@ -1490,16 +1483,16 @@
           "time": "14:30",
           "fat_g": 65.0,
           "protein_g": 43.0,
-          "net_carbs_g": 4.3,
-          "fiber_g": 6.6,
+          "net_carbs_g": 4.1,
+          "fiber_g": 6.3,
           "starter_name": "Ensalada Sureste de Lechuga Romana, Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva",
-          "main_dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
-          "dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
+          "main_dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+          "dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
           "side_dish_name": "Pencas de Nopal de la Granja Asadas al Comal con Orégano, Cilantro y Aceite de Oliva VEVO",
           "starter": {
             "title": "Ensalada Sureste de Lechuga Romana, Pepino, Cilantro de la Granja y Limón Real al Aceite de Oliva",
             "technique": "southeast_cucumber_herb_salad",
-            "note": "Ensalada verde obligatoria para plato denso de carne molida ([R2]), con hojas de lechuga romana y pepino 100% libre de lácteos y mantequilla.",
+            "note": "Ensalada verde alcalina sin lácteos ([R2]), con hojas de lechuga romana, pepino y cilantro de la granja para acompañar el Lomo de Salmón Estilo Alda.",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 8°C.",
               "flavor_and_aromatics": "Frescura cítrica de lechuga romana, pepino, cilantro de la granja y aceite de oliva.",
@@ -1556,82 +1549,61 @@
             ]
           },
           "main": {
-            "title": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras y Pimiento Morrón en Caldo K'ool de Jitomate",
-            "technique": "yucatecan_queso_relleno_casserole",
-            "note": "Escuela 3 (Inspiración El Teapaneco): clásico Queso Relleno Yucateco elaborado en cazuela con queso manchego, queso doble crema y queso cottage procesado en pasta tersa rellenos de picadillo de carne molida de res al ajo, aceitunas manzanilla, alcaparras y pimiento morrón sobre salsa roja de jitomate.",
+            "title": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+            "technique": "alda_bistro_salmon_philadelphia_mirror",
+            "note": "Lomo de salmón descongelado en punto óptimo sellado en mantequilla con pimienta negra, servido sobre espejo cremoso de queso Philadelphia, láminas de aguacate Hass ([R5]), alcaparras, limón real y hierbas finas.",
             "coct_reasoning": {
-              "thermodynamics": "Cocción del picadillo de res a 72°C y gratinado en cazuela a 180°C.",
-              "flavor_and_aromatics": "Contraste barroco del sureste entre el queso fundido (manchego, doble crema y cottage procesado), las alcaparras, las aceitunas, el ajo y la carne de res.",
-              "textural_architecture": "Picadillo jugoso coronado por capa fundente de queso manchego, doble crema y cottage procesado.",
-              "critical_control_points": "Escurrir la salmuera de aceitunas y alcaparras antes de integrar al picadillo."
+              "thermodynamics": "Sellado del salmón por el lado de la piel a 175°C hasta 63°C internos sobre espejo templado de Philadelphia.",
+              "flavor_and_aromatics": "Armonía bistró entre el salmón en mantequilla, el aguacate Hass, la acidez de las alcaparras y el queso Philadelphia.",
+              "textural_architecture": "Piel crujiente y lomo jugoso sobre espejo untuoso con láminas de aguacate.",
+              "critical_control_points": "No sobrecocinar el salmón (63°C internos) para preservar sus ácidos grasos Omega-3; única presencia diaria de aguacate ([R5])."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
-                "name": "Carne molida",
+                "name": "Lomo de salmón",
                 "per_guest": 100,
                 "amount": 600,
                 "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso cottage",
-                "per_guest": 40,
-                "amount": 240,
+                "name": "Queso Philadelphia",
+                "per_guest": 30,
+                "amount": 180,
                 "unit": "g"
               },
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso doble crema",
-                "per_guest": 26.6667,
-                "amount": 160,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso manchego",
-                "per_guest": 15,
-                "amount": 90,
-                "unit": "g"
-              },
-              {
-                "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Aceitunas manzanilla",
-                "per_guest": 10,
-                "amount": 60,
-                "unit": "g"
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aguacate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Alcaparras",
-                "per_guest": 6,
-                "amount": 36,
+                "per_guest": 7,
+                "amount": 42,
                 "unit": "g"
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Morrón",
-                "per_guest": 0.1667,
-                "amount": 1,
-                "unit": "piezas"
+                "name": "Limones",
+                "per_guest": 8,
+                "amount": 48,
+                "unit": "g"
               },
               {
-                "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Jitomate",
-                "per_guest": 0.1667,
-                "amount": 1,
-                "unit": "piezas"
-              },
-              {
-                "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Ajo",
-                "per_guest": 1,
-                "amount": 6,
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Mantequilla",
+                "per_guest": 8,
+                "amount": 48,
                 "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Orégano",
+                "name": "Hierbas finas",
                 "per_guest": 0.5,
                 "amount": 3,
                 "unit": "g"
@@ -1652,11 +1624,10 @@
               }
             ],
             "steps": [
-              "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
-              "Cocinar la carne molida de res con el ajo finamente picado, el pimiento morrón picado, las aceitunas manzanilla, las alcaparras, el jitomate asado, orégano, sal de mar y pimienta negra.",
-              "Disponer en cazuela con la pasta tersa de queso cottage y el queso doble crema, y cubrir con el queso manchego para gratinar al horno."
+              "Acremar el queso Philadelphia tibio con jugo de limón real y hierbas finas para formar el espejo en el plato.",
+              "Sellar el lomo de salmón en sartén con la mantequilla, sal de mar y pimienta negra, montar sobre el espejo y coronar con las alcaparras y láminas de aguacate Hass."
             ],
-            "archetype": "res_queso_relleno_yucateco"
+            "archetype": "salmon_estilo_alda_philadelphia_alcaparras"
           },
           "side": {
             "title": "Pencas de Nopal de la Granja Asadas al Comal con Orégano, Cilantro y Aceite de Oliva VEVO",
@@ -2758,21 +2729,21 @@
           "time": "14:30",
           "fat_g": 65.0,
           "protein_g": 43.0,
-          "net_carbs_g": 4.1,
-          "fiber_g": 6.3,
+          "net_carbs_g": 4.3,
+          "fiber_g": 6.6,
           "starter_name": "Ensalada Bistró de Lechuga Romana, Pepino y Pistaches Tostados con Vinagreta Francesa de Mostaza, Limón Real, Orégano y Aceite de Oliva",
-          "main_dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
-          "dish_name": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
+          "main_dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras, Pimiento Morrón y Abanico de Aguacate Hass en Caldo K'ool de Jitomate",
+          "dish_name": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras, Pimiento Morrón y Abanico de Aguacate Hass en Caldo K'ool de Jitomate",
           "side_dish_name": "Ejotes Tiernos y Acelgas de la Granja Salteados a la Plancha con Limón Real, Sal con Ajo y Aceite de Coco Neutro",
           "starter": {
             "title": "Ensalada Bistró de Lechuga Romana, Pepino y Pistaches Tostados con Vinagreta Francesa de Mostaza, Limón Real, Orégano y Aceite de Oliva",
             "technique": "european_bistro_cucumber_salad",
-            "note": "Ensalada europea crujiente sin lácteos ([R2]) con pistaches tostados y vinagreta francesa de mostaza para acompañar el Salmón Estilo Alda.",
+            "note": "Ensalada verde obligatoria para plato denso de carne molida ([R2]), con pistaches tostados y vinagreta francesa de mostaza 100% libre de lácteos y mantequilla para acompañar la Cazuela de Queso Relleno Yucateco.",
             "coct_reasoning": {
               "thermodynamics": "Emplatado en frío a 8°C.",
               "flavor_and_aromatics": "Vinagreta francesa de mostaza, limón real, orégano y aceite de oliva con pistaches sobre lechuga y pepino.",
               "textural_architecture": "Hojas crujientes, rodajas de pepino y pistaches.",
-              "critical_control_points": "Cero lácteos en la entrada ([R2])."
+              "critical_control_points": "Cero lácteos ni mantequilla en la entrada ([R2])."
             },
             "ingredients": [
               {
@@ -2838,28 +2809,42 @@
             ]
           },
           "main": {
-            "title": "Lomo de Salmón Estilo Alda al Sartén sobre Espejo de Queso Philadelphia, Láminas de Aguacate Hass, Alcaparras, Limón Real y Hierbas Finas en Mantequilla",
-            "technique": "alda_bistro_salmon_philadelphia_mirror",
-            "note": "Escuela 5 (Inspiración Alda Café): lomo de salmón sellado en mantequilla con pimienta negra servido sobre espejo cremoso de queso Philadelphia, láminas de aguacate Hass ([R5]), alcaparras, limón real y hierbas finas.",
+            "title": "Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras, Pimiento Morrón y Abanico de Aguacate Hass en Caldo K'ool de Jitomate",
+            "technique": "yucatecan_queso_relleno_casserole",
+            "note": "Clásico Queso Relleno Yucateco elaborado en cazuela con queso manchego, queso doble crema y queso cottage procesado en pasta tersa rellenos de picadillo de carne molida de res al ajo, aceitunas manzanilla, alcaparras y pimiento morrón sobre salsa roja de jitomate con abanico de aguacate Hass ([R5]).",
             "coct_reasoning": {
-              "thermodynamics": "Sellado del salmón por el lado de la piel a 175°C hasta 63°C internos sobre espejo templado de Philadelphia.",
-              "flavor_and_aromatics": "Armonía bistró entre el salmón en mantequilla, el aguacate Hass, la acidez de las alcaparras y el queso Philadelphia.",
-              "textural_architecture": "Piel crujiente y lomo jugoso sobre espejo untuoso con láminas de aguacate.",
-              "critical_control_points": "No sobrecocinar el salmón (63°C internos) para preservar sus ácidos grasos Omega-3; única presencia diaria de aguacate ([R5])."
+              "thermodynamics": "Cocción del picadillo de res a 72°C y gratinado en cazuela a 180°C.",
+              "flavor_and_aromatics": "Contraste barroco del sureste entre el queso fundido (manchego, doble crema y cottage procesado), las alcaparras, las aceitunas, el ajo, la carne de res y el aguacate Hass.",
+              "textural_architecture": "Picadillo jugoso coronado por capa fundente de queso manchego, doble crema y cottage procesado con abanico de aguacate.",
+              "critical_control_points": "Escurrir la salmuera de aceitunas y alcaparras antes de integrar al picadillo; única presencia diaria de aguacate ([R5])."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
-                "name": "Lomo de salmón",
+                "name": "Carne molida",
                 "per_guest": 100,
                 "amount": 600,
                 "unit": "g"
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso Philadelphia",
-                "per_guest": 30,
-                "amount": 180,
+                "name": "Queso cottage",
+                "per_guest": 40,
+                "amount": 240,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso doble crema",
+                "per_guest": 26.6667,
+                "amount": 160,
+                "unit": "g"
+              },
+              {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso manchego",
+                "per_guest": 15,
+                "amount": 90,
                 "unit": "g"
               },
               {
@@ -2871,28 +2856,42 @@
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Alcaparras",
-                "per_guest": 7,
-                "amount": 42,
-                "unit": "g"
-              },
-              {
-                "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Limones",
-                "per_guest": 8,
-                "amount": 48,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Mantequilla",
-                "per_guest": 8,
-                "amount": 48,
+                "name": "Aceitunas manzanilla",
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Hierbas finas",
+                "name": "Alcaparras",
+                "per_guest": 6,
+                "amount": 36,
+                "unit": "g"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Morrón",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Jitomate",
+                "per_guest": 0.1667,
+                "amount": 1,
+                "unit": "piezas"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Ajo",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Orégano",
                 "per_guest": 0.5,
                 "amount": 3,
                 "unit": "g"
@@ -2913,10 +2912,11 @@
               }
             ],
             "steps": [
-              "Acremar el queso Philadelphia tibio con jugo de limón real y hierbas finas para formar el espejo en el plato.",
-              "Sellar el lomo de salmón en sartén con la mantequilla, sal de mar y pimienta negra, montar sobre el espejo y coronar con las alcaparras y láminas de aguacate Hass."
+              "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Coloca el Queso cottage en un colador fino durante 2 minutos para escurrir el exceso de suero líquido y después licúalo o procésalo durante 10 a 15 segundos. Obtendrás una pasta tersa, sin grumos e idéntica a la ricota, con mayor estructura y proteína limpia para tu platillo.",
+              "Cocinar la carne molida de res con el ajo finamente picado, el pimiento morrón picado, las aceitunas manzanilla, las alcaparras, el jitomate asado, orégano, sal de mar y pimienta negra.",
+              "Disponer en cazuela con la pasta tersa de queso cottage y el queso doble crema, cubrir con el queso manchego para gratinar al horno y servir con abanico de aguacate Hass."
             ],
-            "archetype": "salmon_estilo_alda_philadelphia_alcaparras"
+            "archetype": "res_queso_relleno_yucateco"
           },
           "side": {
             "title": "Ejotes Tiernos y Acelgas de la Granja Salteados a la Plancha con Limón Real, Sal con Ajo y Aceite de Coco Neutro",
