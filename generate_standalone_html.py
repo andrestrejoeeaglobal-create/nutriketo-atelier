@@ -5915,6 +5915,12 @@ let pantryStock = {
             Object.keys(customDishesState).forEach(k => {
               if (k.includes('Semana 43')) delete customDishesState[k];
             });
+            if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v63_s45_salmon_tuesday_swap') !== 'true') {
+              Object.keys(customDishesState).forEach(k => {
+                if (k.includes('Semana 45')) delete customDishesState[k];
+              });
+              localStorage.setItem('nutriketo_v63_s45_salmon_tuesday_swap', 'true');
+            }
           }
           if (window.MEAL_DISH_OVERRIDES) {
             delete window.MEAL_DISH_OVERRIDES['Semana 41 (04 al 10 de Octubre de 2026)_day_1_Comida'];
@@ -5925,7 +5931,8 @@ let pantryStock = {
               if (k.includes('Semana 43')) delete window.MEAL_DISH_OVERRIDES[k];
             });
           }
-          if (state.selectedIdx !== undefined && !isNaN(parseInt(state.selectedIdx))) {
+          const todayIso = new Date().toISOString().slice(0, 10);
+          if (state.lastSelectedDate === todayIso && state.selectedIdx !== undefined && !isNaN(parseInt(state.selectedIdx))) {
             selectedIdx = parseInt(state.selectedIdx);
           } else {
             selectedIdx = currentDayNum;
@@ -6011,6 +6018,7 @@ let pantryStock = {
           checkedRows,
           customShopItems,
           selectedIdx,
+          lastSelectedDate: new Date().toISOString().slice(0, 10),
           mealDinersState,
           customDishesState,
           dispatchedMeals,
@@ -6034,12 +6042,13 @@ let pantryStock = {
         };
         if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location) {
           const isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
-          const syncEndpoint = isLocal ? '/api/pantry/save-ssot' : 'http://127.0.0.1:8000/api/pantry/save-ssot';
-          fetch(syncEndpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(ssotPayload)
-          }).catch(() => {});
+          if (isLocal) {
+            fetch('/api/pantry/save-ssot', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(ssotPayload)
+            }).catch(() => {});
+          }
         }
       } catch(e) {
         console.error("Error al guardar localStorage:", e);
@@ -6102,17 +6111,18 @@ let pantryStock = {
         window.LIVE_PANTRY_SSOT = fullSSOT;
 
         let backendSaved = false;
-        if (typeof fetch === 'function') {
+        if (typeof fetch === 'function' && typeof window !== 'undefined' && window.location) {
           const isLocal = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1');
-          const url = isLocal ? '/api/pantry/save-ssot' : 'http://127.0.0.1:8000/api/pantry/save-ssot';
-          try {
-            const res = await fetch(url, {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify(fullSSOT)
-            });
-            if (res && res.ok) backendSaved = true;
-          } catch (_) {}
+          if (isLocal) {
+            try {
+              const res = await fetch('/api/pantry/save-ssot', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(fullSSOT)
+              });
+              if (res && res.ok) backendSaved = true;
+            } catch (_) {}
+          }
         }
 
         if (promptFileSave && !backendSaved) {
