@@ -603,6 +603,245 @@ def compile_s45_dossier() -> Dict[str, Any]:
     }
 
 
+def compile_s46_dossier() -> Dict[str, Any]:
+    with open(os.path.join(WORKSPACE, "semana_42_master.json"), "r", encoding="utf-8") as f:
+        s42 = json.load(f)
+    with open(os.path.join(WORKSPACE, "semana_43_master.json"), "r", encoding="utf-8") as f:
+        s43 = json.load(f)
+    with open(os.path.join(WORKSPACE, "semana_44_master.json"), "r", encoding="utf-8") as f:
+        s44 = json.load(f)
+    with open(os.path.join(WORKSPACE, "semana_45_master.json"), "r", encoding="utf-8") as f:
+        s45 = json.load(f)
+
+    live_ssot = load_live_pantry_ssot()
+    s46 = generate_week_with_tilo_cortex(
+        46,
+        history_weeks=[s45],
+        pantry_stock=live_ssot["auditor_pantry"],
+        farm_harvest=live_ssot["farm_harvest"],
+    )
+    schools_list = sorted(SEVEN_CULINARY_SCHOOLS.values(), key=lambda x: x["school_index"])
+    audit = assert_zero_violations(
+        s46,
+        prev_week_data=s45,
+        pantry_stock=live_ssot["auditor_pantry"],
+        farm_harvest=live_ssot["farm_harvest"],
+    )
+    assert audit["passed"], f"Audit S46 failed: {audit['violations']}"
+
+    s46_path = os.path.join(WORKSPACE, "semana_46_master.json")
+    with open(s46_path, "w", encoding="utf-8") as f:
+        json.dump(s46, f, ensure_ascii=False, indent=2)
+
+    bom_summary = audit["bom_summary"]
+    farm_used = {x["name"]: x for x in bom_summary["farm_harvest_items"]}
+    kitchen_used = {x["name"]: x for x in bom_summary.get("kitchen_prepared_items", [])}
+    pantry_used = {x["name"]: x for x in bom_summary["pantry_covered_items"]}
+    market_used = {x["name"]: x for x in bom_summary["market_purchases"]}
+
+    ing_occurrences: Dict[str, List[Any]] = {}
+    rec_num = 0
+    day_short = ["Dom", "Lun", "Mar", "Mié", "Jue", "Vie", "Sáb"]
+    meal_short = ["Des", "Com", "Cen"]
+
+    for d_idx, day in enumerate(s46["days"]):
+        for m_idx, meal in enumerate(day["meals"]):
+            for role in ["starter", "main", "side"]:
+                rec_num += 1
+                dish = meal[role]
+                for ing in dish["ingredients"]:
+                    nm = ing["name"]
+                    unit = ing["unit"]
+                    amt = float(ing["amount"])
+                    ing_occurrences.setdefault(nm, []).append(
+                        (rec_num, f"R#{rec_num:02d} ({day_short[d_idx]} {meal_short[m_idx]}: {fmt_num(amt)} {unit})", amt, unit)
+                    )
+
+    lines: List[str] = []
+    lines.append("# 🏛️ EXPEDIENTE CLÍNICO Y GASTRONÓMICO INTEGRAL — SEMANA 46 (08 AL 14 DE NOVIEMBRE DE 2026)")
+    lines.append("**Arquitectura Herami — Atelier Culinario T.I.L.O.® | Heptágono Culinario V17.0 Ciclo B & 14 Preparados Funcionales con `33Plus®` (7 Matutinos) y `34Plus®` (7 Nocturnos)**")
+    lines.append("- **Estado del Validador Matemático (`menu_hard_gate_auditor.py` y `auditWeekPlanClientHardGate`):** `PASSED = True` · **`0 Violaciones`**")
+    lines.append("- **Innovación Funcional Semana 46 (`[R8]`):** **14 preparados funcionales cetogénicos 100% distintos** (7 matutinos en `Desayuno · Tiempo 3` con **`33Plus®`** a `5 g/persona` = `30 g/6p` y 7 nocturnos en `Cena · Tiempo 3` con **`34Plus®`** a `5 g/persona` = `30 g/6p`, `0% Teína`).")
+    lines.append("- **Auditoría de Huella Física Inmutable (`[R10-DNA]`):** **0 colisiones de ADN estructural (`compute_dish_structural_dna`)** y **Compuerta de Similitud de Ingredientes de Jaccard (`Jaccard < 0.60`)** verificada contra la ventana móvil de 4 semanas (`Semanas 42, 43, 44 y 45`).")
+    lines.append("- **Inmunidad de Semanas Previas:** `semana_44_master.json` y `semana_45_master.json` permanecen **100% intactos e inmutables**.")
+    lines.append("- **Comensales Base por Servicio:** `6 comensales` en los 21 servicios (`18 Huevos Exactos por Desayuno = 126 Huevos/Semana`).")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    lines.append("## 0. Catálogo Ejecutivo de los 14 Preparados Funcionales Distintos de la Semana 46 (`33Plus®` y `34Plus®`)")
+    lines.append("")
+    lines.append("### ☀️ 0.1 Los 7 Preparados Matutinos (`Desayuno · Tiempo 3` — Exclusivamente con `33Plus®`, `30 g` / `6p`)")
+    lines.append("| Día | Receta | Preparado Funcional Matutino con `33Plus®` | Temperatura | Insumos Clave (6p) |")
+    lines.append("|---|---|---|---|---|")
+    for d_idx, day in enumerate(s46["days"]):
+        r_idx = d_idx * 9 + 3
+        sd_b = day["meals"][0]["side"]
+        ings_b = ", ".join(f"`{i['name']}` (`{fmt_num(float(i['amount']))} {i['unit']}`)" for i in sd_b["ingredients"])
+        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_b['title']}** | `{sd_b.get('serving_temp_c', 4)}°C` | {ings_b} |")
+    lines.append("")
+    lines.append("### 🌙 0.2 Los 7 Preparados Nocturnos (`Cena · Tiempo 3` — Exclusivamente con `34Plus®`, `30 g` / `6p`, `0% Teína`)")
+    lines.append("| Día | Receta | Preparado Funcional Nocturno con `34Plus®` | Temperatura | Insumos Clave (6p) |")
+    lines.append("|---|---|---|---|---|")
+    for d_idx, day in enumerate(s46["days"]):
+        r_idx = d_idx * 9 + 9
+        sd_d = day["meals"][2]["side"]
+        ings_d = ", ".join(f"`{i['name']}` (`{fmt_num(float(i['amount']))} {i['unit']}`)" for i in sd_d["ingredients"])
+        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_d['title']}** | `{sd_d.get('serving_temp_c', 50)}°C` | {ings_d} |")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    lines.append("## 1. Matriz Ejecutiva del Heptágono Culinario T.I.L.O.® — Los 21 Servicios Canónicos de la Semana 46")
+    lines.append("")
+    lines.append("| Día y Fecha | Escuela Culinaria del Día | Servicio | Tiempo 1: Entrada (`starter`) | Tiempo 2: Plato Fuerte (`main`) + `[Arquetipo / ADN]` | Tiempo 3: Acompañamiento / Preparado Funcional (`side`) |")
+    lines.append("|---|---|---|---|---|---|")
+    for d_idx, day in enumerate(s46["days"]):
+        d_title = f"**{day['day']} {day['date_str']}**"
+        school_label = f"**{day.get('culinary_school_name', schools_list[d_idx]['name'])}**"
+        for m_idx, meal in enumerate(day["meals"]):
+            m_type = f"**{meal['meal_type']}**"
+            st_t = meal["starter"]["title"]
+            mn_t = meal["main"]["title"]
+            mn_arch = meal["main"].get("archetype", "")
+            mn_dna = "|".join(compute_dish_structural_dna(meal["main"]))
+            sd_t = meal["side"]["title"]
+            lines.append(f"| {d_title} | {school_label} | {m_type} | {st_t} | **{mn_t}** `[{mn_arch}]` `<{mn_dna}>` | {sd_t} |")
+
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    lines.append("## 2. Recetario Clínico y Gastronómico Detallado (Las 63 Recetas Completas de la Semana 46)")
+    lines.append("")
+
+    rec_counter = 0
+    meal_hours = {"Desayuno": "08:30 hrs", "Comida": "14:30 hrs", "Cena": "20:00 hrs"}
+    meal_icons = {"Desayuno": "🍳", "Comida": "🍲", "Cena": "🍽️"}
+    role_labels = {
+        "starter": "Tiempo 1 — Entrada",
+        "main": "Tiempo 2 — Plato Fuerte",
+        "side": "Tiempo 3 — Acompañamiento / Preparado Funcional",
+    }
+
+    for d_idx, day in enumerate(s46["days"]):
+        school_info = schools_list[d_idx]
+        lines.append(f"### 📅 Día {d_idx + 1}: {day['full_date_title']} (`{day['iso_date']}`) — {school_info['name']} (*{school_info['inspiration']}*)")
+        lines.append("")
+        for m_idx, meal in enumerate(day["meals"]):
+            m_type = meal["meal_type"]
+            m_diners = 6
+            icon = meal_icons.get(m_type, "🍽️")
+            hr = meal_hours.get(m_type, "")
+            fat = float(meal["fat_g"])
+            prot = float(meal["protein_g"])
+            carbs = float(meal["net_carbs_g"])
+            fib = float(meal.get("fiber_g", 6.0))
+            kcal = int(round(fat * 9.0 + prot * 4.0 + carbs * 4.0))
+            lines.append(f"#### {icon} {day['day']} — {m_type} ({hr}) · `👥 6 Comensales` | `{kcal} kcal` · `Grasa: {fat} g` · `Proteína: {prot} g` · `Carbs Netos: {carbs} g` · `Fibra: {fib} g`")
+            lines.append("")
+            for role in ["starter", "main", "side"]:
+                rec_counter += 1
+                dish = meal[role]
+                r_label = role_labels[role]
+                lines.append(f"##### Receta #{rec_counter:02d} [{day['day']} · {m_type} (6p) · {r_label}]: {dish['title']}")
+                lines.append(f"- **Técnica Culinaria:** `{dish['technique']}`")
+                if dish.get("archetype"):
+                    lines.append(f"- **Arquetipo Heptágono V17.0:** `{dish['archetype']}` · **Huella ADN:** `{'|'.join(compute_dish_structural_dna(dish))}`")
+                lines.append(f"- **Nota Organoléptica y Clínica:** {dish['note']}")
+                lines.append("")
+                lines.append("| Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |")
+                lines.append("|---|---|---|---|---|")
+                for ing in dish["ingredients"]:
+                    amt6 = float(ing["amount"])
+                    amt1 = amt6 / 6.0
+                    lines.append(f"| {ing['category']} | **{ing['name']}** | {fmt_num_plain(amt1)} | **{fmt_num(amt6)}** | {ing['unit']} |")
+                lines.append("")
+                lines.append("**Protocolo de Ejecución Paso a Paso:**")
+                for s_i, step_txt in enumerate(dish.get("steps", []), start=1):
+                    lines.append(f"{s_i}. {step_txt}")
+                lines.append("")
+        lines.append("---")
+        lines.append("")
+
+    # Section 3
+    lines.append("## 3. Abastecimiento Tridimensional Exacto — Semana 46 (`6 Comensales`)")
+    lines.append("")
+    lines.append("### 3.1 Cosecha Activa en Granja El Herami (`\\$0.00 MXN`)")
+    lines.append("| # | Cultivo Activo en Granja El Herami | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |")
+    lines.append("|---|---|---|---|---|")
+    for idx_f, f_item in enumerate(bom_summary["farm_harvest_items"], start=1):
+        lines.append(f"| {idx_f} | **{f_item['name']}** | {fmt_num(f_item['required'])} {f_item['unit']} | 🌿 Cosecha Propia Activa (\\$0 Granja El Herami) | **\\$0.00 MXN** |")
+
+    if bom_summary.get("kitchen_prepared_items"):
+        lines.append("")
+        lines.append("#### 3.1.1 Preparaciones Internas de Cocina (Fondos Claros Elaborados en Casa)")
+        lines.append("| # | Preparación Culinaria Interna | Volumen Semanal Requerido (6p) | Origen Operativo | Costo Mercado |")
+        lines.append("|---|---|---|---|---|")
+        for idx_k, k_item in enumerate(bom_summary["kitchen_prepared_items"], start=1):
+            lines.append(f"| {idx_k} | **{k_item['name']}** | {fmt_num(k_item['required'])} {k_item['unit']} | 🍲 Preparación Casera en Cocina (No se compra) | **\\$0.00 MXN** |")
+
+    lines.append("")
+    lines.append("### 3.2 Existencias Consolidadas en Alacena y Refrigerador (`\\$0.00 MXN` de Compra)")
+    lines.append("| # | Insumo Canónico | Stock en Alacena | Demanda Semanal (6p) | Saldo en Alacena | Estado de Cobertura |")
+    lines.append("|---|---|---|---|---|---|")
+    for idx_p, p_item in enumerate(bom_summary["pantry_covered_items"], start=1):
+        lines.append(f"| {idx_p} | **{p_item['name']}** | {fmt_num(p_item['stock'])} {p_item['unit']} | **{fmt_num(p_item['required'])} {p_item['unit']}** | {fmt_num(p_item['remaining_stock'])} {p_item['unit']} | ✅ 100% Cubierto en Alacena (\\$0 Mercado) |")
+
+    lines.append("")
+    lines.append("### 3.3 Lista de Compras Netas de Mercado — Semana 46")
+    lines.append("| # | Categoría en UI (`#v-shop`) | Insumo a Comprar en Mercado | Demanda Total Semanal (6p) | Stock en Alacena | Compra Neta Exacta (`#v-shop`) | Unidad |")
+    lines.append("|---|---|---|---|---|---|---|")
+    for idx_m, m_item in enumerate(bom_summary["market_purchases"], start=1):
+        mcat = get_shop_category(m_item["name"])
+        lines.append(f"| {idx_m} | {mcat} | **{m_item['name']}** | {fmt_num(m_item['required'])} {m_item['unit']} | {fmt_num(m_item['stock'])} {m_item['unit']} | **`{fmt_num_plain(m_item['net_to_buy'])} {m_item['unit']}`** | {m_item['unit']} |")
+
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    lines.append("## 4. Cronograma Biotecnológico `33Plus®` y `34Plus®` (4 Tomas Diarias — `420 g` Semanales por Fórmula)")
+    lines.append("| Toma | Horario / Momento | Fórmula Funcional | Dosis Individual | Demanda Semanal (6p) | Ubicación en Menú |")
+    lines.append("|---|---|---|---|---|---|")
+    lines.append("| **Toma 1** | `07:00 hrs` (Despertar en Agua Pura) | **`33Plus®`** | `5 g` | `210 g` | Protocolo Matutino Extra-Receta |")
+    lines.append("| **Toma 2** | `08:30 hrs` (`Desayuno · Tiempo 3`) | **`33Plus®`** | `5 g` | `210 g` | Incluido en los **7 Preparados Funcionales Matutinos** (`R#03, R#12, R#21, R#30, R#39, R#48, R#57`) |")
+    lines.append("| **Toma 3** | `20:00 hrs` (`Cena · Tiempo 3`) | **`34Plus®`** | `5 g` | `210 g` | Incluido en los **7 Preparados Funcionales Nocturnos** (`R#09, R#18, R#27, R#36, R#45, R#54, R#63`) |")
+    lines.append("| **Toma 4** | `22:30 hrs` (Pre-Sueño Profundo) | **`34Plus®`** | `5 g` | `210 g` | Protocolo Nocturno Extra-Receta |")
+    lines.append("")
+    lines.append("---")
+    lines.append("")
+    lines.append("## 5. Auditoría Forense del Ciclo Móvil de 4 Semanas (`S43`, `S44`, `S45`, `S46` — Cero Colisiones en los 21 Servicios)")
+    lines.append("")
+    lines.append("| Día y Servicio | Semana 43 | Semana 44 | Semana 45 | **Semana 46 — Ciclo B (Entrada / Principal `[Arquetipo]`)** | Estado `[R10-DNA]` |")
+    lines.append("|---|---|---|---|---|---|")
+    for d_idx in range(7):
+        d_name = s46["days"][d_idx]["day"]
+        for m_idx, m_label in enumerate(["Desayuno", "Comida", "Cena"]):
+            def cell_str_s46(w_plan: Dict[str, Any], bold: bool = False) -> str:
+                m_obj = w_plan["days"][d_idx]["meals"][m_idx]
+                st_title = m_obj["starter"]["title"] if isinstance(m_obj.get("starter"), dict) else m_obj.get("starter_name", "")
+                mn_obj = m_obj["main"] if isinstance(m_obj.get("main"), dict) else {}
+                mn_title = mn_obj.get("title") or m_obj.get("main_dish_name", "")
+                if not bold:
+                    st_title = _clean_historical_display_title(st_title)
+                    mn_title = _clean_historical_display_title(mn_title)
+                arch = mn_obj.get("archetype") or mn_obj.get("technique", "")
+                if bold:
+                    return f"**E:** {st_title}<br>**P:** {mn_title} `[{arch}]`"
+                return f"*E:* {st_title}<br>*P:* {mn_title} `[{arch}]`"
+            lines.append(f"| **{d_name} · {m_label}** | {cell_str_s46(s43)} | {cell_str_s46(s44)} | {cell_str_s46(s45)} | {cell_str_s46(s46, bold=True)} | ✅ `0 Colisión` |")
+
+    lines.append("")
+    md_content = "\n".join(lines)
+    ws_md_path = os.path.join(WORKSPACE, "expediente_completo_semana_46.md")
+    with open(ws_md_path, "w", encoding="utf-8") as f:
+        f.write(md_content)
+    return {
+        "s46_path": s46_path,
+        "md_path": ws_md_path,
+        "lines_count": len(lines),
+        "bom_summary": bom_summary,
+    }
+
+
 if __name__ == "__main__":
     res = compile_s45_dossier()
     print(f"Compiled {res['md_path']} ({res['lines_count']} lines) successfully.")
+    res46 = compile_s46_dossier()
+    print(f"Compiled {res46['md_path']} ({res46['lines_count']} lines) successfully.")

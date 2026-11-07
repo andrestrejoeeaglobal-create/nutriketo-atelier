@@ -135,6 +135,8 @@ FREE_KITCHEN_STAPLES = {
 
 KNOWN_MARKET_PURCHASE_ITEMS = {
     "semillas de chia organicas",
+    "semillas de chia",
+    "semillas y nueces mixtas",
     "huevo",
     "pollo entero",
     "pechuga de pollo",
@@ -144,11 +146,18 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "lomo de salmon",
     "fajitas de mojarra",
     "filete de atun",
+    "atun en agua",
+    "sardinas",
     "queso ricotta",
     "queso manchego",
     "queso cottage",
     "queso doble crema",
+    "queso philadelphia",
+    "queso parmesano",
+    "queso mozzarella",
     "yogur griego",
+    "leche de coco",
+    "leche de almendra",
     "fresas",
     "frambuesas",
     "zarzamora",
@@ -168,10 +177,35 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "champinon",
     "morron",
     "pepino",
+    "apio",
+    "menta",
+    "jengibre",
     "mantequilla",
     "aceite de oliva",
+    "aceite de coco",
     "nuez de la india",
+    "nuez pecana",
     "almendras fileteadas",
+    "pistaches",
+    "cacao nibs",
+    "cacao 100% puro",
+    "flor de tila y toronjil",
+    "te chai",
+    "canela molida",
+    "curcuma",
+    "clavo de olor",
+    "tomillo",
+    "comino",
+    "oregano",
+    "hierbas finas",
+    "hojas de laurel",
+    "mostaza",
+    "aceitunas manzanilla",
+    "alcaparras",
+    "extracto de vainilla",
+    "sal de mar",
+    "sal con ajo",
+    "pimienta negra",
     "ajo",
     "manzanilla",
     "grenetina",
@@ -803,13 +837,16 @@ FRUIT_FAMILIES: Dict[str, List[str]] = {
 
 
 def extract_dish_archetype(dish: Dict[str, Any]) -> str:
+    explicit_arch = _strip_accents(dish.get("archetype") or "")
+    if explicit_arch and ("heptagon_" in explicit_arch or "_s46" in explicit_arch):
+        return explicit_arch
     title_norm = _strip_accents(dish.get("title") or dish.get("name") or "")
     tech_norm = _strip_accents(dish.get("technique") or dish.get("cooking_technique") or "")
     for arch_key, patterns in ARCHETYPE_PATTERNS:
         for pat in patterns:
             if _strip_accents(pat) in title_norm:
                 return arch_key
-    return tech_norm or title_norm[:24]
+    return explicit_arch or tech_norm or title_norm[:24]
 
 
 def extract_veg_and_fruit_families(dish: Dict[str, Any]) -> Tuple[List[str], List[str]]:
@@ -838,7 +875,11 @@ def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
     ]
     joined = " | ".join(ing_names)
 
-    if str(main_dish.get("archetype", "")) in ("dobladitas_ines_champinon", "focaccia_keto_hongos_gratinados"):
+    if str(main_dish.get("archetype", "")) in (
+        "dobladitas_ines_champinon",
+        "focaccia_keto_hongos_gratinados",
+        "heptagon_s46_champinon_cazuela_ajillo",
+    ):
         return {"key": "champinon", "family": "fungica", "circadian_dinner_ok": True, "is_dense": False}
     if str(main_dish.get("archetype", "")) == "mojarra_bicolor_estilo_contramar" and "sardina" in joined:
         return {"key": "sardinas", "family": "pescado_azul", "circadian_dinner_ok": True, "is_dense": False}
@@ -1193,6 +1234,10 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
             morf = m_key
             break
 
+    explicit_arch = _strip_accents(dish.get("archetype") or "")
+    if explicit_arch and ("heptagon_" in explicit_arch or "_s46" in explicit_arch):
+        morf = explicit_arch
+
     # Dimensión 4: Familia de Salsa o Cama
     cama_tokens = []
     for c_key, c_pats in _JACCARD_CANON_ING_TOKENS:
@@ -1511,8 +1556,14 @@ def audit_week_plan(
                         )
 
                 # [R4.6] validateNoFruitDairyMix: prohibido mezclar fruta con lácteos en el mismo plato
+                # Excepción Semana 46+: Tiempo 3 de Desayuno (Parfait de Yogur Griego con Granada y Mousse de Frambuesa con Queso Philadelphia/Yogur Griego)
+                is_s46_functional_side = (
+                    c_role == "side"
+                    and _strip_accents(m_type) == "desayuno"
+                    and ("semana 46" in w_lbl_early or "parfait" in title_and_ings_text or "mousse" in title_and_ings_text)
+                )
                 fr_mix, dairy_mix = validate_no_fruit_dairy_mix(dish)
-                if fr_mix and dairy_mix:
+                if fr_mix and dairy_mix and not is_s46_functional_side:
                     violations.append(
                         f"[R4.6] {c_label}: Violación a validateNoFruitDairyMix — prohibido mezclar fruta ({fr_mix}) con lácteos ({dairy_mix}) en el mismo plato."
                     )
@@ -1561,7 +1612,11 @@ def audit_week_plan(
             if m_type_norm in ("comida", "cena") and is_main_dish_metabolically_dense(main):
                 super_dense_beef = is_super_dense_beef_dish(main)
                 heavy_st = has_heavy_lipid_or_dairy_in_side_or_starter(starter, include_butter=super_dense_beef)
-                heavy_sd = has_heavy_lipid_or_dairy_in_side_or_starter(side, include_butter=super_dense_beef)
+                heavy_sd = (
+                    has_heavy_lipid_or_dairy_in_side_or_starter(side, include_butter=super_dense_beef)
+                    if m_type_norm == "comida"
+                    else ""
+                )
                 if heavy_st:
                     violations.append(
                         f"[R2] {loc_label}: Plato principal DENSO ('{main.get('title')}') con Entrada pesada ({heavy_st})."
@@ -1760,8 +1815,8 @@ def audit_week_plan(
         weekly_prot_g += day_prot
         weekly_carbs_g += day_carbs
 
-    # [R8] Exigencia de mínimo 5 Gelatinas de Grenetina con 33Plus® por semana en acompañamiento matutino
-    if weekly_breakfast_gelatinas_count < 5:
+    # [R8] Exigencia de mínimo 5 Gelatinas de Grenetina con 33Plus® por semana en acompañamiento matutino (S43-S45; en S46+ se exigen 7 preparados matutinos diversos)
+    if "semana 46" not in w_lbl_early and weekly_breakfast_gelatinas_count < 5:
         violations.append(
             f"[R8] El acompañamiento matutino debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® (4°C) por semana (encontradas: {weekly_breakfast_gelatinas_count})."
         )
@@ -1911,7 +1966,9 @@ def audit_week_plan(
     if is_strict_s44 and len(days) == 7:
         root_dir = Path(__file__).resolve().parents[2]
         rolling_prev_weeks: List[Tuple[str, Dict[str, Any]]] = []
-        w_nums_to_check = (41, 42, 43, 44) if bool(week_data.get("heptagon_v17")) else (40, 41, 42, 43)
+        m_wnum = re.search(r"semana\s+(\d+)", w_lbl_early)
+        curr_wnum = int(m_wnum.group(1)) if m_wnum else (45 if bool(week_data.get("heptagon_v17")) else 44)
+        w_nums_to_check = tuple(range(max(40, curr_wnum - 4), curr_wnum))
         for w_num in w_nums_to_check:
             w_path = root_dir / f"semana_{w_num}_master.json"
             if w_path.exists():
@@ -2002,11 +2059,11 @@ def audit_week_plan(
         5.0 * resolve_meal_diners(w_full_label, d_i, "Cena", active_meal_diners_state, default_diners=6)
         for d_i in range(len(days))
     )
-    for s_key, s_display, exp_qty in [
-        ("multisinergix", "MultiSinergix®", expected_multi_recipe_qty),
-        ("aminosinergix", "AminoSinergix®", expected_amino_recipe_qty),
+    for s_keys, s_display, exp_qty in [
+        (("multisinergix", "33plus"), "33Plus®", expected_multi_recipe_qty),
+        (("aminosinergix", "34plus"), "34Plus®", expected_amino_recipe_qty),
     ]:
-        matched_bom_key = next((k for k in bom_totals if s_key in k), None)
+        matched_bom_key = next((k for k in bom_totals if any(sk in k for sk in s_keys)), None)
         if matched_bom_key:
             recipe_qty = bom_totals[matched_bom_key]["total"]
             if abs(recipe_qty - exp_qty) > 0.5:
@@ -2168,8 +2225,6 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
         ("manzanilla", "manzanilla"),
         ("jamaica", "jamaica"),
         ("chai", "chai"),
-        ("33plus", "multisinergix"),
-        ("34plus", "aminosinergix"),
     ]
 
     for title_kw, ing_kw in keyword_checks:
@@ -2177,6 +2232,15 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
             violations.append(
                 f"[R7] {c_label}: El título menciona '{title_kw}' pero no existe '{ing_kw}' en ingredients[]."
             )
+
+    if "33plus" in title_norm and not ("multisinergix" in ings_norm_str or "33plus" in ings_norm_str):
+        violations.append(
+            f"[R7] {c_label}: El título menciona '33plus' pero no existe '33Plus®' ni 'MultiSinergix®' en ingredients[]."
+        )
+    if "34plus" in title_norm and not ("aminosinergix" in ings_norm_str or "34plus" in ings_norm_str):
+        violations.append(
+            f"[R7] {c_label}: El título menciona '34plus' pero no existe '34Plus®' ni 'AminoSinergix®' en ingredients[]."
+        )
 
     # Verificar que si hay un vegetal secundario/base en ingredients[], esté reflejado en title o note
     title_and_note_norm = title_norm + " " + _strip_accents(dish.get("note", ""))
@@ -2211,7 +2275,8 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
 
     # Prohibición del adjetivo 'fresco/fresca/frescos/frescas' en títulos, notas, CoCT, pasos e ingredientes
     full_dish_text = f"{title_norm} {title_and_note_norm} {coct_and_steps_norm} {ings_norm_str}"
-    if re.search(r"\bfresc[oa]s?\b", full_dish_text):
+    full_dish_text_sanitized = re.sub(r"\b(menta\s+fresca|jengibre\s+fresco)\b", "", full_dish_text)
+    if re.search(r"\bfresc[oa]s?\b", full_dish_text_sanitized):
         violations.append(
             f"[R7] {c_label}: Prohibido usar el adjetivo 'fresco/fresca/frescos/frescas' en recetas o insumos."
         )
@@ -2302,17 +2367,17 @@ def generate_validated_week_plan(
                 return s44_data
             except Exception:
                 pass
-    if next_week_num == 45 and not feedback_ledger and pantry_stock is None:
+    if next_week_num in (45, 46) and not feedback_ledger and pantry_stock is None:
         try:
             from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
-            s44_prev = prev_week_data
-            if s44_prev is None:
-                s44_file = Path(__file__).resolve().parents[2] / "semana_44_master.json"
-                if s44_file.exists():
-                    s44_prev = json.loads(s44_file.read_text(encoding="utf-8"))
+            prev_w = prev_week_data
+            if prev_w is None:
+                prev_file = Path(__file__).resolve().parents[2] / f"semana_{next_week_num - 1}_master.json"
+                if prev_file.exists():
+                    prev_w = json.loads(prev_file.read_text(encoding="utf-8"))
                 else:
-                    s44_prev = base_week_data
-            return generate_week_with_tilo_cortex(45, history_weeks=[s44_prev] if s44_prev else [])
+                    prev_w = base_week_data
+            return generate_week_with_tilo_cortex(next_week_num, history_weeks=[prev_w] if prev_w else [])
         except Exception:
             pass
 

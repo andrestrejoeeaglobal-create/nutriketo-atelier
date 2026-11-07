@@ -3229,6 +3229,1545 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
     return days_out
 
 
+def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week: int = 46) -> List[Dict[str, Any]]:
+    """
+    Construye los 7 días del Heptágono Culinario T.I.L.O.® (Rotación B: Semanas 46, 50, 54, 58...),
+    asignando 1 Escuela Culinaria por día de la semana (Escuelas 1 a 7), con:
+      - 14 preparaciones funcionales cetogénicas distintas:
+          * 7 matutinas (Desayuno · Tiempo 3) exclusivamente con 33Plus® (30 g / 6p).
+          * 7 nocturnas (Cena · Tiempo 3) exclusivamente con 34Plus® (30 g / 6p, 0% teína).
+      - Cero mención a Super Malla Biológica Tropical.
+      - 126 huevos exactos (18 por desayuno, 0 en comidas y cenas).
+      - 7 vegetales distintos en las 7 guarniciones de Comida ([R4-SIDE] 7/7).
+      - Cero repetición de títulos, arquetipos, ADN estructural 4D ni Jaccard >= 0.60 contra S42-S45.
+      - Frontera Sábado(W-1) -> Domingo(W) validada ([R9]).
+    """
+    days_out: List[Dict[str, Any]] = []
+
+    # =========================================================================
+    # DÍA 0: DOMINGO 08 NOV — 🇲🇽 ESCUELA 1: ANTOJO Y DESAYUNO MEXICANO DE AUTOR (Inspiración Nizú)
+    # Veg families: Desayuno (nopales) | Comida (pepino, calabacitas, coliflor) | Cena (champinon)
+    # =========================================================================
+    d0_b = _meal(
+        "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
+        starter=_course(
+            title="Copa de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            technique="ruby_pomegranate_vanilla_cup_s46",
+            note="Arilos de granada de la granja sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            thermo="Servicio en frío a 6°C.",
+            flavor="Dulzor ácido de granada de la granja con vainilla y nueces.",
+            texture="Arilos jugosos con crocancia de nuez pecana y semillas.",
+            ccp="Cero lácteos en la entrada frutal ([R4.6]) y fruta distinta a la zarzamora de la gelatina ([R4]).",
+            ingredients=[
+                _ing("Granadas", 150, "g", CAT_FRUIT),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Nuez de la India", 60, "g", CAT_FAT),
+                _ing("Nuez pecana", 60, "g", CAT_FAT),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+            ],
+            steps=[
+                "Desgranar las granadas de la granja en copas frías y perfumar con extracto de vainilla.",
+                "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana de la granja.",
+            ],
+        ),
+        main=_course(
+            title="Huevos Divorciados de Autor sobre Pencas de Nopal Asado al Comal (Mitad en Salsa Roja Tatemada de Jitomate y Achiote, Mitad en Salsa Verde de Tomate y Cilantro) con Queso Doble Crema",
+            technique="divorced_eggs_nopal_skillet_s46",
+            note="Escuela 1 (Inspiración Nizú): 3 huevos estrellados por comensal sobre pencas de nopal de la granja asadas al comal, bañados mitad en salsa roja de jitomate y achiote (0% picante [R1]) y mitad en salsa verde de tomate y cilantro con queso doble crema.",
+            thermo="Asado de nopales al comal a 190°C, fritura en aceite de coco a 145°C y salsas a 78°C.",
+            flavor="Doble salsa mexicana tradicional sin capsaicina irritante con queso doble crema desmoronado.",
+            texture="Pencas tiernas de nopal, claras doradas y yemas líquidas.",
+            ccp="Salsas 100% libres de picantes irritantes ([R1]).",
+            archetype="heptagon_s46_huevo_divorciados_nopal",
+            ingredients=[
+                _ing("Huevo", 18, "piezas", CAT_PROT),
+                _ing("Nopales", 480, "g", CAT_VEG),
+                _ing("Jitomate", 2, "piezas", CAT_VEG),
+                _ing("Tomate", 200, "g", CAT_VEG),
+                _ing("Queso doble crema", 150, "g", CAT_DAIRY),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Achiote", 12, "g", CAT_SPICE),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Aceite de coco", 36, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Asar las pencas de nopal de la granja al comal y preparar por separado la salsa roja de jitomate tatemado, ajo y achiote, y la salsa verde de tomate y cilantro.",
+                "Estrellar los 18 huevos en aceite de coco neutro, disponer sobre los nopales, bañar con ambas salsas y espolvorear queso doble crema.",
+            ],
+        ),
+        side=_course(
+            title="Gelatina Artesanal de Zarzamora Viva y Menta Fresca (4°C) con 33Plus®",
+            technique="live_blackberry_mint_collagen_gel_s46",
+            note="Preparado Funcional Matutino 1/7 (Día 1 — 08 Nov): gelatina viva de zarzamora licuada en frío con limón de la granja, hojas de menta fresca, grenetina y 33Plus® integrada a ≤40°C para proteger antocianinas y vitamina C.",
+            thermo="Hidratación de grenetina a 60°C, unión con puré frío a ≤40°C y cuajado a 4°C.",
+            flavor="Zarzamora viva al limón real con notas refrescantes de menta.",
+            texture="Gel firme a 4°C coronado con zarzamoras enteras y hojas de menta.",
+            ccp="Unir la grenetina disuelta con el puré frío de zarzamora para bajar a ≤40°C antes de disolver 33Plus®.",
+            ingredients=[
+                _ing("Zarzamora", 170, "g", CAT_FRUIT),
+                _ing("Grenetina", 16, "g", CAT_SUPP),
+                _ing("Limones", 30, "g", CAT_VEG),
+                _ing("Menta", 10, "g", CAT_SPICE),
+                _ing("Agua purificada", 720, "ml", CAT_SPICE),
+                _ing("33Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Licuar 120 g de zarzamora en frío con agua purificada y jugo de limón de la granja (reservar 50 g de zarzamoras enteras con hojas de menta fresca para decorar).",
+                "Hidratar y disolver la grenetina a 60°C, unir con el puré frío para bajar la temperatura a ≤40°C, disolver 33Plus® (30 g) y cuajar en copas a 4°C.",
+            ],
+        ),
+    )
+
+    d0_l = _meal(
+        "Comida", "14:30", 65.0, 43.0, 4.3, 6.8,
+        starter=_course(
+            title="Tiradito Verde Costero de Pepino Laminado, Alcaparras, Cilantro de la Granja, Limón Real y Aceite de Oliva",
+            technique="coastal_green_cucumber_tiradito_s46",
+            note="Entrada ligera de la Escuela 1 sin lácteos ([R2]) con láminas de pepino y alcaparras en emulsión verde de cilantro y limón de la granja.",
+            thermo="Emulsión en frío a 8°C.",
+            flavor="Acidez cítrica de limón real, alcaparras y cilantro sobre pepino crujiente.",
+            texture="Medias lunas crujientes de pepino.",
+            ccp="Cero picantes irritantes ([R1]) y cero lácteos ([R2]).",
+            ingredients=[
+                _ing("Pepino", 360, "g", CAT_VEG),
+                _ing("Alcaparras", 30, "g", CAT_SPICE),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Limones", 60, "g", CAT_VEG),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Licuar el jugo de limón de la granja con el cilantro, aceite de oliva extra virgen y sal de mar.",
+                "Bañar las láminas de pepino frío y coronar con las alcaparras al momento de servir.",
+            ],
+        ),
+        main=_course(
+            title="Enchiladas Suizas Cetogénicas de Pechuga de Pavo en Láminas de Calabacita Bañadas en Salsa Cremosa de Tomate, Cilantro, Queso Philadelphia y Costra Gratinada de Queso Manchego",
+            technique="keto_swiss_turkey_enchiladas_s46",
+            note="Escuela 1 (Inspiración Nizú): rollos de pechuga de pavo y calabacita bañados en salsa suiza de tomate verde, cilantro y queso Philadelphia, gratinados al horno con queso manchego.",
+            thermo="Horneado y gratinado a 185°C por 8 minutos.",
+            flavor="Salsa suiza cremosa de tomate y queso Philadelphia con gratinado dorado de manchego.",
+            texture="Rollos suaves de pavo bajo costra fundente.",
+            ccp="Centro térmico ≥74°C y 0 huevos en comida ([R12]).",
+            archetype="heptagon_s46_pavo_enchiladas_suizas",
+            ingredients=[
+                _ing("Pechuga de pavo", 700, "g", CAT_PROT),
+                _ing("Calabacitas", 280, "g", CAT_VEG),
+                _ing("Tomate", 220, "g", CAT_VEG),
+                _ing("Queso Philadelphia", 120, "g", CAT_DAIRY),
+                _ing("Queso manchego", 120, "g", CAT_DAIRY),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Ajo", 6, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Sellar las láminas de pechuga de pavo y calabacita en aceite de coco neutro y formar rollos.",
+                "Licuar el tomate cocido con cebolla, ajo, cilantro y queso Philadelphia; bañar los rollos, cubrir con queso manchego y gratinar al horno.",
+            ],
+        ),
+        side=_course(
+            title="Floretes de Coliflor Rostizados al Comal con Limón Real, Orégano y Aceite de Coco Neutro",
+            technique="charred_comal_cauliflower_s46",
+            note="Primera guarnición de Comida ([R4-SIDE] 1/7: coliflor) libre de lácteos ([R2]).",
+            thermo="Rostizado al comal a 185°C por 8 minutos.",
+            flavor="Coliflor tostada con orégano y limón de la granja.",
+            texture="Floretes al dente con bordes dorados.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Coliflor", 360, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Orégano", 3, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Cortar la coliflor en floretes medianos y rostizar en comal caliente con aceite de coco neutro.",
+                "Terminar con jugo de limón real, orégano y sal de mar.",
+            ],
+        ),
+    )
+
+    d0_d = _meal(
+        "Cena", "20:00", 51.0, 35.0, 3.9, 6.1,
+        starter=_course(
+            title="Caldo Tlalpeño Claro de Fondo de Pollo con Cilantro de la Granja, Ajo Tatemado y Limón Real",
+            technique="clear_tlalpeno_broth_s46",
+            note="Caldo reconfortante nocturno sin lácteos ([R2]) con fondo claro de pollo, ajo tatemado y cilantro de la granja.",
+            thermo="Infusión a 90°C por 6 minutos.",
+            flavor="Fondo de ave limpio con notas herbales de cilantro y limón real.",
+            texture="Caldo diáfano y sedoso.",
+            ccp="Servir a 72°C.",
+            ingredients=[
+                _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Ajo", 6, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Hervir el fondo claro de pollo con el ajo tatemado y sal de mar.",
+                "Servir caliente con cilantro de la granja picado, jugo de limón real y aceite de oliva.",
+            ],
+        ),
+        main=_course(
+            title="Cazuelitas de Champiñones al Ajillo y Epazote con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
+            technique="mushroom_garlic_skillet_cottage_s46",
+            note="Escuela 1 (Inspiración Nizú): champiñones salteados al ajillo con hebras de pollo, pasta tersa de queso cottage, queso doble crema y abanico de aguacate Hass ([R5]).",
+            thermo="Salteado en cazuela a 175°C y gratinado suave a 180°C.",
+            flavor="Champiñones al ajillo con cremosidad de cottage procesado, doble crema y aguacate Hass.",
+            texture="Hongos carnosos y jugosos con cubierta láctea.",
+            ccp="Única presencia diaria de aguacate ([R5]).",
+            archetype="heptagon_s46_champinon_cazuela_ajillo",
+            ingredients=[
+                _ing("Champiñón", 450, "g", CAT_VEG),
+                _ing("Pollo entero", 1, "piezas", CAT_PROT),
+                _ing("Queso cottage", 240, "g", CAT_DAIRY),
+                _ing("Queso doble crema", 120, "g", CAT_DAIRY),
+                _ing("Aguacate", 1, "piezas", CAT_FAT),
+                _ing("Ajo", 12, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir el queso cottage 2 minutos y licuar 15 segundos hasta obtener una pasta tersa.",
+                "Saltear los champiñones con ajo laminado y hebras cocidas de pollo en aceite de coco neutro; cubrir con la pasta de cottage y queso doble crema, y coronar con aguacate Hass.",
+            ],
+        ),
+        side=_course(
+            title="Leche Dorada Nocturna (Golden Milk Keto) de Cúrcuma, Leche de Coco, Canela y Pimienta Negra (55°C) con 34Plus®",
+            technique="keto_golden_milk_34plus_s46",
+            note="Preparado Funcional Nocturno 1/7 (Día 1 — 08 Nov, 0% Teína): emulsión antiinflamatoria nocturna de cúrcuma, leche de coco, canela y pizca de pimienta negra (piperina para biodisponibilidad de curcumina) templada a 55°C con 34Plus®.",
+            thermo="Cocción de especias a 85°C por 4 minutos y templado a 55°C.",
+            flavor="Cúrcuma dorada y canela en leche de coco cremosa.",
+            texture="Emulsión tibia, sedosa y espumosa.",
+            ccp="Templar con la leche de coco a 55°C antes de integrar 34Plus® (30 g).",
+            ingredients=[
+                _ing("Cúrcuma", 12, "g", CAT_SPICE),
+                _ing("Leche de coco", 480, "ml", CAT_FAT),
+                _ing("Canela molida", 3, "g", CAT_SPICE),
+                _ing("Pimienta negra", 1, "g", CAT_SPICE),
+                _ing("Agua purificada", 720, "ml", CAT_SPICE),
+                _ing("34Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Calentar el agua purificada con la cúrcuma, la canela molida y la pizca de pimienta negra a 85°C durante 4 minutos.",
+                "Integrar la leche de coco para templar a 55°C, agregar 34Plus® (30 g) y batir hasta obtener una emulsión dorada.",
+            ],
+        ),
+    )
+
+    # =========================================================================
+    # DÍA 1: LUNES 09 NOV — 🇺🇸 ESCUELA 2: BRUNCH & GRILL AMERICANO CLÁSICO (Inspiración IHOP)
+    # Veg families: Desayuno (morron) | Comida (lechuga, champinon, calabacitas) | Cena (espinacas, brocoli)
+    # =========================================================================
+    d1_b = _meal(
+        "Desayuno", "08:30", 49.0, 34.5, 4.1, 6.3,
+        starter=_course(
+            title="Carpaccio de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            technique="citrus_strawberry_carpaccio_s46",
+            note="Fresas laminadas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana de la granja.",
+            thermo="Servicio en frío a 6°C.",
+            flavor="Fresas al limón real con nueces tostadas.",
+            texture="Láminas de fresa con crocancia de semillas.",
+            ccp="Cero lácteos en la entrada frutal ([R4.6]).",
+            ingredients=[
+                _ing("Fresas", 300, "g", CAT_FRUIT),
+                _ing("Limones", 30, "g", CAT_VEG),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Nuez de la India", 60, "g", CAT_FAT),
+                _ing("Nuez pecana", 60, "g", CAT_FAT),
+            ],
+            steps=[
+                "Laminar las fresas y aliñar con gotas de limón real.",
+                "Distribuir las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
+            ],
+        ),
+        main=_course(
+            title="Southwest Scramble Americano de Huevos Cremosísimos al Sartén con Pimiento Morrón Asado, Cebolla, Aguacate Hass y Queso Manchego Fundido",
+            technique="american_southwest_egg_scramble_s46",
+            note="Escuela 2 (Inspiración IHOP): 3 huevos por comensal cocinados a baja temperatura en mantequilla con pimiento morrón asado, cebolla, queso manchego fundido y cubos de aguacate Hass ([R5]).",
+            thermo="Cocción suave en sartén a 135°C para cuajada cremosa.",
+            flavor="Brunch americano clásico con mantequilla, morrón dulce, manchego y aguacate Hass.",
+            texture="Huevos tiernos y aterciopelados.",
+            ccp="Única presencia diaria de aguacate ([R5]).",
+            archetype="heptagon_s46_huevo_southwest_scramble",
+            ingredients=[
+                _ing("Huevo", 18, "piezas", CAT_PROT),
+                _ing("Morrón", 2, "piezas", CAT_VEG),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Queso manchego", 120, "g", CAT_DAIRY),
+                _ing("Aguacate", 1, "piezas", CAT_FAT),
+                _ing("Mantequilla", 54, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Saltear el pimiento morrón y la cebolla en mantequilla hasta suavizar.",
+                "Incorporar los 18 huevos batidos con sal de mar y pimienta negra, fundir el queso manchego y coronar fuera del fuego con aguacate Hass.",
+            ],
+        ),
+        side=_course(
+            title="Chai Latte Espumoso Bulletproof de Canela, Cardamomo, Leche de Almendra y Aceite de Coco (55°C) con 33Plus®",
+            technique="bulletproof_chai_latte_33plus_s46",
+            note="Preparado Funcional Matutino 2/7 (Día 2 — 09 Nov): infusión especiada de té chai con canela molida templada con leche de almendra sin azúcar a 55°C y emulsionada con aceite de coco neutro y 33Plus®.",
+            thermo="Infusión a 85°C por 5 minutos y emulsión a 55°C.",
+            flavor="Especias orientales de té chai y canela en espuma sedosa de almendra y coco.",
+            texture="Latte espumoso tipo barista.",
+            ccp="Templar a 55°C con la leche de almendra antes de emulsionar con 33Plus® (30 g).",
+            ingredients=[
+                _ing("Té chai", 12, "g", CAT_SPICE),
+                _ing("Aceite de coco", 36, "g", CAT_FAT),
+                _ing("Leche de almendra", 300, "ml", CAT_DAIRY),
+                _ing("Canela molida", 3, "g", CAT_SPICE),
+                _ing("Agua purificada", 900, "ml", CAT_SPICE),
+                _ing("33Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Infusionar el té chai y la canela molida en el agua purificada a 85°C durante 5 minutos y colar.",
+                "Templar con la leche de almendra sin azúcar a 55°C, agregar el aceite de coco neutro y 33Plus® (30 g), y emulsionar 15 segundos hasta espumar.",
+            ],
+        ),
+    )
+
+    d1_l = _meal(
+        "Comida", "14:30", 65.0, 43.0, 4.3, 6.7,
+        starter=_course(
+            title="Ensalada Steakhouse de Lechuga Orejona Crujiente, Alcaparras, Limón Real y Vinagreta de Mostaza al Aceite de Oliva",
+            technique="steakhouse_mustard_romaine_salad_s46",
+            note="Ensalada verde obligatoria para corte denso de carne molida ([R2]), libre de lácteos y mantequilla.",
+            thermo="Servicio en frío a 8°C.",
+            flavor="Acidez brillante de mostaza, alcaparras y limón de la granja.",
+            texture="Hojas crujientes de lechuga.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Lechuga", 1, "piezas", CAT_VEG),
+                _ing("Alcaparras", 36, "g", CAT_SPICE),
+                _ing("Mostaza", 18, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Trocear la lechuga desinfectada y disponer con las alcaparras.",
+                "Emulsionar la mostaza con jugo de limón real, aceite de oliva y sal de mar, y aliñar.",
+            ],
+        ),
+        main=_course(
+            title="Garlic Butter Steakhouse Burger de Carne Molida de Res a la Parrilla con Champiñones Salteados, Cebolla Dorada, Ajo Asado y Queso Doble Crema Fundido",
+            technique="garlic_steakhouse_burger_skillet_s46",
+            note="Escuela 2 (Inspiración IHOP): medallones gruesos de carne molida de res sellados a la plancha con ajo asado, champiñones salteados, cebolla dorada y queso doble crema fundido (sin pan, sobre cama de champiñones).",
+            thermo="Sellado a 195°C hasta 71°C internos.",
+            flavor="Jugosidad de res al ajo tostado con champiñones y queso doble crema.",
+            texture="Medallón firme al exterior y jugoso al centro.",
+            ccp="Cocción interna ≥71°C.",
+            archetype="heptagon_s46_res_garlic_burger",
+            ingredients=[
+                _ing("Carne molida", 660, "g", CAT_PROT),
+                _ing("Champiñón", 300, "g", CAT_VEG),
+                _ing("Queso doble crema", 150, "g", CAT_DAIRY),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Ajo", 12, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal con ajo", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Formar 6 medallones de carne molida sazonados con sal con ajo y pimienta negra, y asar a la plancha en aceite de coco neutro.",
+                "Saltear los champiñones con la cebolla y el ajo picado, cubrir los medallones y gratinar con queso doble crema.",
+            ],
+        ),
+        side=_course(
+            title="Bastones de Calabacita Asados a la Parrilla con Hierbas Finas, Limón Real y Aceite de Coco Neutro",
+            technique="grilled_herb_zucchini_spears_s46",
+            note="Segunda guarnición de Comida ([R4-SIDE] 2/7: calabacitas) libre de mantequilla y lácteos ([R2]).",
+            thermo="Asado en parrilla a 185°C por 5 minutos.",
+            flavor="Calabacita asada con hierbas finas y limón real.",
+            texture="Bastones tiernos con marcas de parrilla.",
+            ccp="Cero mantequilla ni lácteos ([R2]).",
+            ingredients=[
+                _ing("Calabacitas", 360, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Hierbas finas", 6, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Cortar las calabacitas en bastones longitudinales y asar en parrilla con aceite de coco neutro.",
+                "Sazonar con hierbas finas, jugo de limón real y sal de mar.",
+            ],
+        ),
+    )
+
+    d1_d = _meal(
+        "Cena", "20:00", 51.0, 35.0, 3.9, 6.1,
+        starter=_course(
+            title="Consomé Americano de Fondo Claro de Pollo con Hojas Tiernas de Espinaca, Tomillo y Limón Real",
+            technique="american_spinach_thyme_broth_s46",
+            note="Consomé digestivo nocturno sin lácteos ([R2]) con hojas de espinaca y tomillo.",
+            thermo="Infusión a 90°C por 4 minutos.",
+            flavor="Fondo de ave al tomillo con espinaca tierna.",
+            texture="Caldo ligero y reconfortante.",
+            ccp="Servir a 72°C.",
+            ingredients=[
+                _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
+                _ing("Espinacas", 240, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Tomillo", 3, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Calentar el fondo claro de pollo con el tomillo y la sal de mar.",
+                "Incorporar las hojas de espinaca por 1 minuto y servir con limón real y aceite de oliva.",
+            ],
+        ),
+        main=_course(
+            title="Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Parmesano y Ajo con Floretes de Brócoli al Vapor",
+            technique="grilled_chicken_broccoli_alfredo_s46",
+            note="Escuela 2 (Inspiración IHOP): fajitas de pechuga de pollo asadas al grill sobre floretes de brócoli al vapor, bañadas en salsa Alfredo al ajo elaborada con pasta tersa de queso cottage y queso parmesano.",
+            thermo="Sellado de ave a 180°C y emulsión Alfredo a 75°C.",
+            flavor="Salsa Alfredo al ajo tostado y parmesano sobre pollo al grill y brócoli.",
+            texture="Tiras jugosas de pechuga y floretes de brócoli al dente.",
+            ccp="No hervir la salsa de queso cottage procesado.",
+            archetype="heptagon_s46_pollo_alfredo_brocoli",
+            ingredients=[
+                _ing("Pechuga de pollo", 660, "g", CAT_PROT),
+                _ing("Brócoli", 420, "g", CAT_VEG),
+                _ing("Queso cottage", 300, "g", CAT_DAIRY),
+                _ing("Queso parmesano", 50, "g", CAT_DAIRY),
+                _ing("Mantequilla", 36, "g", CAT_FAT),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Sal con ajo", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir 2 minutos y procesar 15 segundos hasta lograr una crema lisa.",
+                "Asar las fajitas de pechuga de pollo en mantequilla con el ajo picado, sal con ajo y pimienta negra; mezclar con la crema de cottage y queso parmesano, y servir sobre floretes de brócoli al vapor.",
+            ],
+        ),
+        side=_course(
+            title="Panna Cotta Sedante de Yogur Griego, Leche de Coco, Vainilla e Infusión de Manzanilla (4°C) con 34Plus®",
+            technique="chamomile_yogurt_panna_cotta_34plus_s46",
+            note="Preparado Funcional Nocturno 2/7 (Día 2 — 09 Nov, 0% Teína): postre de cuchara nocturno de yogur griego y leche de coco infusionado con manzanilla y vainilla, gelificado con grenetina y enriquecido a ≤38°C con 34Plus®.",
+            thermo="Infusión de manzanilla a 85°C, disolución de grenetina, templado a ≤38°C y cuajado a 4°C.",
+            flavor="Cremosidad láctea de vainilla y coco con fondo floral de manzanilla.",
+            texture="Panna cotta sedosa y firme a 4°C.",
+            ccp="Integrar 34Plus® (30 g) cuando la mezcla baje a ≤38°C antes de refrigerar.",
+            ingredients=[
+                _ing("Yogur griego", 480, "g", CAT_DAIRY),
+                _ing("Leche de coco", 240, "ml", CAT_FAT),
+                _ing("Grenetina", 16, "g", CAT_SUPP),
+                _ing("Manzanilla", 6, "g", CAT_SPICE),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                _ing("Agua purificada", 240, "ml", CAT_SPICE),
+                _ing("34Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Infusionar la manzanilla en los 240 ml de agua purificada caliente, colar y disolver ahí la grenetina previamente hidratada.",
+                "Integrar la leche de coco, el yogur griego y el extracto de vainilla para bajar la mezcla a ≤38°C; incorporar 34Plus® (30 g), verter en ramekines y refrigerar a 4°C.",
+            ],
+        ),
+    )
+
+    # =========================================================================
+    # DÍA 2: MARTES 10 NOV — 🌴 ESCUELA 3: ALTA COCINA DEL SURESTE YUCATECO-TABASQUEÑO (Inspiración El Teapaneco)
+    # Veg families: Desayuno (acelgas) | Comida (pepino, champinon, ejotes) | Cena (nopales, morron)
+    # =========================================================================
+    d2_b = _meal(
+        "Desayuno", "08:30", 49.0, 34.5, 4.1, 6.4,
+        starter=_course(
+            title="Macerado de Frambuesas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            technique="citrus_raspberry_maceration_s46",
+            note="Frambuesas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana (distinta a la granada del Parfait en Tiempo 3 [R4]).",
+            thermo="Servicio en frío a 6°C.",
+            flavor="Frambuesas al limón real con semillas y nueces.",
+            texture="Bayas enteras con crocancia de nuez pecana.",
+            ccp="Cero lácteos en la entrada ([R4.6]).",
+            ingredients=[
+                _ing("Frambuesas", 180, "g", CAT_FRUIT),
+                _ing("Limones", 30, "g", CAT_VEG),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Nuez de la India", 60, "g", CAT_FAT),
+                _ing("Nuez pecana", 60, "g", CAT_FAT),
+            ],
+            steps=[
+                "Colocar las frambuesas en copas frías y rociar con jugo de limón real.",
+                "Añadir las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
+            ],
+        ),
+        main=_course(
+            title="Tortilla Embarazada Tabasqueña (Omelette Grueso de Huevos en Costra de Queso Manchego Relleno de Hojas de Acelga de la Granja, Cebolla, Achiote y Queso Doble Crema)",
+            technique="tabasco_stuffed_cheese_omelette_s46",
+            note="Escuela 3 (Inspiración El Teapaneco): omelette tabasqueño de 3 huevos por comensal envuelto en costra dorada de queso manchego y relleno de acelgas de la granja salteadas con cebolla, achiote y queso doble crema.",
+            thermo="Costra de manchego a 175°C y cocción del omelette a 145°C.",
+            flavor="Sabor del sureste con achiote suave, acelgas de la granja y doble queso.",
+            texture="Costra crujiente exterior e interior jugoso.",
+            ccp="Achiote 100% libre de capsaicina ([R1]).",
+            archetype="heptagon_s46_huevo_tortilla_embarazada",
+            ingredients=[
+                _ing("Huevo", 18, "piezas", CAT_PROT),
+                _ing("Acelgas", 360, "g", CAT_VEG),
+                _ing("Queso manchego", 120, "g", CAT_DAIRY),
+                _ing("Queso doble crema", 150, "g", CAT_DAIRY),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Achiote", 12, "g", CAT_SPICE),
+                _ing("Aceite de coco", 36, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Saltear las acelgas de la granja con la cebolla picada y el achiote en aceite de coco neutro.",
+                "Dorar el queso manchego en el comal, verter los 18 huevos batidos, rellenar con las acelgas y el queso doble crema, y doblar.",
+            ],
+        ),
+        side=_course(
+            title="Parfait Cremoso de Yogur Griego al Limón Real, Vainilla, Nuez Pecana y Rubíes de Granada de la Granja (6°C) con 33Plus®",
+            technique="greek_yogurt_pomegranate_parfait_33plus_s46",
+            note="Preparado Funcional Matutino 3/7 (Día 3 — 10 Nov): matriz probiótica en frío (6°C) de yogur griego batido con jugo de limón real, extracto de vainilla y 33Plus®, coronada con arilos de granada y nuez pecana de la granja (100% retención enzimática sin calor).",
+            thermo="Emulsión en frío a 6°C (0% impacto térmico).",
+            flavor="Yogur griego cítrico a la vainilla con rubíes de granada y nuez pecana.",
+            texture="Crema espesa con arilos crujientes de granada.",
+            ccp="Batir 33Plus® (30 g) directamente en el yogur frío a 6°C.",
+            ingredients=[
+                _ing("Yogur griego", 480, "g", CAT_DAIRY),
+                _ing("Granadas", 180, "g", CAT_FRUIT),
+                _ing("Limones", 45, "g", CAT_VEG),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                _ing("Nuez pecana", 60, "g", CAT_FAT),
+                _ing("33Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Batir en frío el yogur griego con el jugo de limón real, el extracto de vainilla y los 30 g de 33Plus® hasta obtener una crema homogénea.",
+                "Servir en copas y coronar con los rubíes de granada de la granja y la nuez pecana troceada.",
+            ],
+        ),
+    )
+
+    d2_l = _meal(
+        "Comida", "14:30", 65.0, 43.0, 4.3, 6.7,
+        starter=_course(
+            title="Ensalada del Sureste de Pepino en Cubos, Semillas Mixtas, Cilantro de la Granja, Limón Real y Aceite de Oliva VEVO",
+            technique="southeast_cucumber_cilantro_salad_s46",
+            note="Entrada ligera sin lácteos ([R2]) con semillas y nueces mixtas para acompañar la Sabanita de Flat Steak.",
+            thermo="Servicio en frío a 8°C.",
+            flavor="Pepino al limón real con semillas tostadas y cilantro de la granja.",
+            texture="Cubos crujientes de pepino.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Pepino", 360, "g", CAT_VEG),
+                _ing("Semillas y nueces mixtas", 60, "g", CAT_FAT),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Cortar el pepino en dados y mezclar con el cilantro de la granja picado y las semillas y nueces mixtas.",
+                "Aliñar con jugo de limón real, aceite de oliva extra virgen y sal de mar.",
+            ],
+        ),
+        main=_course(
+            title="Sabanita de Flat Steak Asada al Grill sobre Pipián Verde del Sureste de Semillas y Nueces Mixtas, Tomate, Cilantro de la Granja y Champiñones Salteados",
+            technique="flat_steak_southeast_green_pipian_s46",
+            note="Escuela 3 (Inspiración El Teapaneco): sabanitas de flat steak asadas al grill sobre espejo de pipián verde cetogénico elaborado con semillas y nueces mixtas tostadas, tomate, cilantro de la granja y champiñones.",
+            thermo="Sellado del flat steak a 195°C (65°C al centro) y pipián verde a 82°C.",
+            flavor="Fusión del sureste con pipián verde de semillas, cilantro de la granja y res asada.",
+            texture="Láminas jugosas de res sobre salsa aterciopelada de semillas.",
+            ccp="Cocción rápida de las sabanitas para mantener su jugosidad.",
+            archetype="heptagon_s46_res_sabanita_pipian",
+            ingredients=[
+                _ing("Flat steak", 660, "g", CAT_PROT),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Tomate", 200, "g", CAT_VEG),
+                _ing("Champiñón", 280, "g", CAT_VEG),
+                _ing("Cilantro", 30, "g", CAT_VEG),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Ajo", 6, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Tostar las semillas y nueces mixtas y licuar con el tomate cocido, cebolla, ajo y cilantro de la granja hasta formar el pipián verde.",
+                "Sellar las sabanitas de flat steak y los champiñones en aceite de coco neutro y servir sobre el espejo de pipián caliente.",
+            ],
+        ),
+        side=_course(
+            title="Ejotes Tiernos Salteados al Ajo Tostado, Limón Real y Aceite de Oliva VEVO",
+            technique="garlic_citrus_green_beans_s46",
+            note="Tercera guarnición de Comida ([R4-SIDE] 3/7: ejotes) libre de lácteos ([R2]).",
+            thermo="Vapor corto de 4 minutos y salteado a 165°C.",
+            flavor="Ejotes al ajo tostado con limón de la granja.",
+            texture="Vainas tiernas y crujientes.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Ejotes", 300, "g", CAT_VEG),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Blanquear los ejotes al vapor durante 4 minutos.",
+                "Saltear con ajo fileteado, aceite de oliva extra virgen, jugo de limón real y sal de mar.",
+            ],
+        ),
+    )
+
+    d2_d = _meal(
+        "Cena", "20:00", 51.0, 35.0, 3.9, 6.1,
+        starter=_course(
+            title="Sopa de Lima Yucateca de Fondo Claro de Pollo con Juliana de Pimiento Morrón, Orégano y Cilantro de la Granja",
+            technique="yucatecan_lime_broth_starter_s46",
+            note="Clásica Sopa de Lima del sureste en versión ligera sin totopos de maíz y sin lácteos ([R2]).",
+            thermo="Infusión aromática a 90°C.",
+            flavor="Perfume cítrico yucateco con orégano, morrón y cilantro.",
+            texture="Caldo cristalino con juliana fina de morrón.",
+            ccp="Servir a 72°C.",
+            ingredients=[
+                _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
+                _ing("Morrón", 1, "piezas", CAT_VEG),
+                _ing("Limones", 60, "g", CAT_VEG),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Orégano", 3, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Infusionar el fondo claro de pollo con la juliana de pimiento morrón, orégano y sal de mar por 6 minutos.",
+                "Terminar con jugo de limón de la granja, cilantro de la granja picado y aceite de oliva.",
+            ],
+        ),
+        main=_course(
+            title="Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Naranja-Limón, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
+            technique="pibil_turkey_nopal_platter_s46",
+            note="Escuela 3 (Inspiración El Teapaneco): fajitas de pechuga de pavo marinadas en recado rojo de achiote, jugo de limón real, ajo y orégano, asadas a la plancha sobre pencas de nopal de la granja con aguacate Hass ([R5]).",
+            thermo="Plancha a 180°C hasta 74°C internos.",
+            flavor="Adobo pibil tradicional del sureste 0% irritante con nopal asado y aguacate.",
+            texture="Tiras tiernas de pavo sobre nopal jugoso.",
+            ccp="Única presencia diaria de aguacate ([R5]).",
+            archetype="heptagon_s46_pavo_pibil_nopal",
+            ingredients=[
+                _ing("Pechuga de pavo", 660, "g", CAT_PROT),
+                _ing("Nopales", 420, "g", CAT_VEG),
+                _ing("Aguacate", 1, "piezas", CAT_FAT),
+                _ing("Achiote", 18, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Orégano", 3, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Marinar las fajitas de pechuga de pavo con el achiote disuelto en jugo de limón real, ajo picado, orégano y sal de mar.",
+                "Asar a la plancha en aceite de coco neutro junto con las pencas de nopal de la granja y servir con aguacate Hass.",
+            ],
+        ),
+        side=_course(
+            title="Crema Aterciopelada Tibia de Cacao 100% Puro, Nuez de la India y Canela (52°C) con 34Plus®",
+            technique="warm_cashew_cacao_velvet_34plus_s46",
+            note="Preparado Funcional Nocturno 3/7 (Día 3 — 10 Nov, 0% Teína): bebida espesa estilo chocolate de mesa cetogénico sin lácteos ni azúcar, emulsionando nuez de la India hidratada con cacao 100% puro rico en magnesio, canela, vainilla y 34Plus® a 52°C.",
+            thermo="Emulsión en licuadora de alta velocidad a 52°C.",
+            flavor="Chocolate profundo 100% cacao con canela, vainilla y crema de nuez de la India.",
+            texture="Crema tibia aterciopelada.",
+            ccp="Licuar a 52°C con 34Plus® (30 g) sin superar los 60°C.",
+            ingredients=[
+                _ing("Nuez de la India", 120, "g", CAT_FAT),
+                _ing("Cacao 100% puro en polvo", 24, "g", CAT_SPICE),
+                _ing("Canela molida", 3, "g", CAT_SPICE),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                _ing("34Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Licuar la nuez de la India previamente hidratada con el agua purificada tibia (52°C), el cacao 100% puro en polvo, la canela molida y el extracto de vainilla.",
+                "Agregar 34Plus® (30 g) y emulsionar 20 segundos hasta obtener una crema aterciopelada estilo chocolate de mesa keto.",
+            ],
+        ),
+    )
+
+    # =========================================================================
+    # DÍA 3: MIÉRCOLES 11 NOV — 🇪🇸 ESCUELA 4: ASADOR CASTELLANO Y TAPAS ESPAÑOLAS
+    # Veg families: Desayuno (champinon) | Comida (lechuga, morron, brocoli) | Cena (calabacitas, espinacas)
+    # =========================================================================
+    d3_b = _meal(
+        "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
+        starter=_course(
+            title="Espejo de Zarzamoras al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            technique="spanish_blackberry_citrus_mirror_s46",
+            note="Zarzamoras sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            thermo="Servicio en frío a 6°C.",
+            flavor="Zarzamora ácida con nuez pecana de la granja.",
+            texture="Bayas firmes con nueces.",
+            ccp="Cero lácteos en la entrada frutal ([R4.6]).",
+            ingredients=[
+                _ing("Zarzamora", 170, "g", CAT_FRUIT),
+                _ing("Limones", 30, "g", CAT_VEG),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Nuez de la India", 60, "g", CAT_FAT),
+                _ing("Nuez pecana", 60, "g", CAT_FAT),
+            ],
+            steps=[
+                "Servir las zarzamoras en platos fríos con gotas de limón real.",
+                "Acompañar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
+            ],
+        ),
+        main=_course(
+            title="Huevos Rotos del Mesón Castellano Estrellados sobre Cama de Champiñones Laminados, Cebolla Confitada, Ajo Dorado y Lascas de Queso Manchego",
+            technique="castilian_broken_eggs_mushrooms_s46",
+            note="Escuela 4 (Asador Castellano): 3 huevos estrellados por comensal rotos al momento sobre cama de champiñones laminados, cebolla confitada, ajo dorado y lascas de queso manchego.",
+            thermo="Confitado de cebolla y ajo a 130°C y huevos a la plancha a 145°C.",
+            flavor="Tradición de mesón castellano con ajo dorado, champiñones y queso manchego.",
+            texture="Yemas líquidas que envuelven las láminas de champiñón y cebolla.",
+            ccp="Romper las yemas justo al emplatar sobre los champiñones calientes.",
+            archetype="heptagon_s46_huevo_rotos_castellanos",
+            ingredients=[
+                _ing("Huevo", 18, "piezas", CAT_PROT),
+                _ing("Champiñón", 320, "g", CAT_VEG),
+                _ing("Cebolla", 2, "piezas", CAT_VEG),
+                _ing("Queso manchego", 120, "g", CAT_DAIRY),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Aceite de coco", 36, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Confitar la cebolla fileteada y el ajo con los champiñones en aceite de coco neutro.",
+                "Estrellar los 18 huevos, disponer sobre la cama de champiñones y cebolla, cubrir con lascas de queso manchego y romper las yemas al servir.",
+            ],
+        ),
+        side=_course(
+            title="Pudding Cetogénico de Semillas de Chía, Vainilla y Cacao Nibs en Leche de Coco (4°C) con 33Plus®",
+            technique="keto_chia_cacao_pudding_33plus_s46",
+            note="Preparado Funcional Matutino 4/7 (Día 4 — 11 Nov): gel mucilaginoso en frío (4°C) de semillas de chía orgánicas hidratadas en leche de coco con vainilla, canela y 33Plus®, coronado con cacao nibs (liberación sostenida de energía y saciedad).",
+            thermo="Hidratación en frío a 4°C por mínimo 2 horas.",
+            flavor="Coco, vainilla y canela con notas tostadas de cacao nibs.",
+            texture="Pudding espeso de chía con crocancia de cacao nibs.",
+            ccp="Disolver 33Plus® (30 g) en frío en la leche de coco antes de hidratar la chía.",
+            ingredients=[
+                _ing("Semillas de chía orgánicas", 72, "g", CAT_FAT),
+                _ing("Leche de coco", 600, "ml", CAT_FAT),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                _ing("Canela molida", 3, "g", CAT_SPICE),
+                _ing("Cacao nibs", 30, "g", CAT_FAT),
+                _ing("33Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Mezclar en frío la leche de coco con el extracto de vainilla, la canela molida y los 30 g de 33Plus®.",
+                "Incorporar las semillas de chía orgánicas, refrigerar a 4°C durante mínimo 2 horas hasta formar el gel y coronar con los cacao nibs.",
+            ],
+        ),
+    )
+
+    d3_l = _meal(
+        "Comida", "14:30", 65.0, 43.0, 4.3, 6.7,
+        starter=_course(
+            title="Ensalada Mediterránea del Asador de Lechuga Romana, Aceitunas Manzanilla, Limón Real y Aceite de Oliva VEVO",
+            technique="asador_olive_romaine_salad_s46",
+            note="Ensalada verde ligera para abrir la Comida de la Escuela 4, libre de mantequilla y lácteos ([R2]).",
+            thermo="Servicio en frío a 8°C.",
+            flavor="Lechuga crujiente con aceitunas manzanilla y limón real.",
+            texture="Hojas enteras de lechuga.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Lechuga", 1, "piezas", CAT_VEG),
+                _ing("Aceitunas manzanilla", 60, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Orégano", 3, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Disponer las hojas de lechuga troceadas con las aceitunas manzanilla.",
+                "Aliñar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar.",
+            ],
+        ),
+        main=_course(
+            title="Lomo de Salmón a la Donostiarra Estilo Asador Vasco al Sartén con Ajo Laminado Dorado, Pimiento Morrón Asado, Limón Real y Aguacate Hass",
+            technique="basque_donostiarra_salmon_skillet_s46",
+            note="Escuela 4 (Asador Castellano): lomo de salmón sellado al sartén y bañado en refrito vasco a la Donostiarra de ajo laminado y limón real sobre tiras de pimiento morrón asado con aguacate Hass ([R5]).",
+            thermo="Sellado a 185°C hasta 62°C internos.",
+            flavor="Refrito vasco de ajo dorado y limón real sobre salmón y morrón asado.",
+            texture="Lomo jugoso de salmón con pimientos tiernos.",
+            ccp="Única presencia diaria de aguacate ([R5]).",
+            archetype="heptagon_s46_salmon_donostiarra_vasco",
+            ingredients=[
+                _ing("Lomo de salmón", 780, "g", CAT_PROT),
+                _ing("Morrón", 2, "piezas", CAT_VEG),
+                _ing("Aguacate", 1, "piezas", CAT_FAT),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Ajo", 12, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Sellar los lomos de salmón en aceite de coco neutro con sal de mar y pimienta negra, y reservar sobre tiras de pimiento morrón asado.",
+                "Dorar el ajo laminado, emulsionar con jugo de limón real, verter sobre el salmón y acompañar con aguacate Hass.",
+            ],
+        ),
+        side=_course(
+            title="Floretes de Brócoli al Vapor con Alcaparras, Limón Real y Aceite de Oliva VEVO",
+            technique="steamed_caper_broccoli_florets_s46",
+            note="Cuarta guarnición de Comida ([R4-SIDE] 4/7: brócoli) libre de lácteos y mantequilla ([R2]).",
+            thermo="Vapor a 96°C por 5 minutos.",
+            flavor="Brócoli tierno con toque salino de alcaparras y limón real.",
+            texture="Floretes firmes al dente.",
+            ccp="Cero mantequilla ni lácteos ([R2]).",
+            ingredients=[
+                _ing("Brócoli", 420, "g", CAT_VEG),
+                _ing("Alcaparras", 30, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Cocer los floretes de brócoli al vapor durante 5 minutos.",
+                "Aliñar al servir con aceite de oliva extra virgen, jugo de limón real, alcaparras y sal de mar.",
+            ],
+        ),
+    )
+
+    d3_d = _meal(
+        "Cena", "20:00", 51.0, 35.0, 3.9, 6.1,
+        starter=_course(
+            title="Sopa Castellana de Cebolla Confitada, Ajo Dorado, Hojas de Laurel y Espinaca en Fondo Claro de Pollo",
+            technique="castilian_onion_garlic_soup_s46",
+            note="Sopa castellana reconfortante sin pan ni lácteos ([R2]), con cebolla confitada, ajo y espinaca.",
+            thermo="Confitado a 130°C e infusión a 90°C.",
+            flavor="Dulzor de cebolla confitada con ajo dorado y laurel en fondo de ave.",
+            texture="Caldo sedoso con hebras de cebolla y espinaca.",
+            ccp="Servir a 72°C.",
+            ingredients=[
+                _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Espinacas", 240, "g", CAT_VEG),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Hojas de laurel", 3, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Dorar suavemente la cebolla fileteada y el ajo con hojas de laurel en aceite de oliva.",
+                "Verter el fondo claro de pollo, hervir 6 minutos e integrar las hojas de espinaca antes de servir.",
+            ],
+        ),
+        main=_course(
+            title="Fajitas de Mojarra al Tronco Estilo Asador Español al Sartén con Ajo Laminado, Romero de la Granja, Limón Real y Medallones de Calabacita",
+            technique="spanish_asador_garlic_tilapia_s46",
+            note="Escuela 4 (Asador Castellano): fajitas de mojarra doradas al sartén con refrito español de ajo laminado, romero de la granja y limón real sobre medallones de calabacita.",
+            thermo="Cocción en sartén a 175°C hasta 63°C internos.",
+            flavor="Refrito clásico de asador vasco-castellano con ajo dorado, romero y limón.",
+            texture="Pescado blanco jugoso sobre calabacitas tiernas.",
+            ccp="Dorar el ajo sin quemarlo para evitar amargor.",
+            archetype="heptagon_s46_mojarra_tronco_asador",
+            ingredients=[
+                _ing("Fajitas de mojarra", 840, "g", CAT_PROT),
+                _ing("Calabacitas", 300, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Romero", 6, "g", CAT_VEG),
+                _ing("Ajo", 12, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Dorar los medallones de calabacita y las fajitas de mojarra en aceite de coco neutro con sal de mar y pimienta negra.",
+                "Perfumar con láminas de ajo dorado, romero de la granja y jugo de limón real.",
+            ],
+        ),
+        side=_course(
+            title="Bavarois Nocturno de Queso Cottage Procesado (Caseína Lenta), Limón Real y Manzanilla (6°C) con 34Plus®",
+            technique="cottage_chamomile_bavarois_34plus_s46",
+            note="Preparado Funcional Nocturno 4/7 (Día 4 — 11 Nov, 0% Teína): mousse-gelatina nocturna tipo Bavarois que combina caseína de liberación lenta del queso cottage procesado con infusión de manzanilla, limón real y 34Plus® para sostener la síntesis proteica nocturna.",
+            thermo="Infusión de manzanilla a 85°C, templado a ≤38°C con pasta de cottage y cuajado a 6°C.",
+            flavor="Mousse cítrico de limón real y manzanilla.",
+            texture="Bavarois aireado, terso y cremoso a 6°C.",
+            ccp="Integrar 34Plus® (30 g) a ≤38°C antes de moldear.",
+            ingredients=[
+                _ing("Queso cottage", 360, "g", CAT_DAIRY),
+                _ing("Grenetina", 12, "g", CAT_SUPP),
+                _ing("Manzanilla", 6, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Agua purificada", 360, "ml", CAT_SPICE),
+                _ing("34Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir y licuar los 360 g de queso cottage hasta obtener una pasta tersa.",
+                "Infusionar la manzanilla en el agua purificada, colar, disolver la grenetina hidratada y templar a ≤38°C; licuar con la pasta de queso cottage, el jugo de limón real y 34Plus® (30 g), y refrigerar a 6°C.",
+            ],
+        ),
+    )
+
+    # =========================================================================
+    # DÍA 4: JUEVES 12 NOV — 🇫🇷 ESCUELA 5: BISTRÓ FRANCÉS-EUROPEO Y ALTA PANADERÍA KETO (Inspiración Alda)
+    # Veg families: Desayuno (espinacas) | Comida (pepino, champinon, nopales) | Cena (coliflor, lechuga)
+    # =========================================================================
+    d4_b = _meal(
+        "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
+        starter=_course(
+            title="Macerado Bistró de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            technique="bistro_pomegranate_cinnamon_maceration_s46",
+            note="Granada de la granja sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana (distinta a la frambuesa del Mousse en Tiempo 3 [R4]).",
+            thermo="Servicio en frío a 6°C.",
+            flavor="Granada de la granja a la canela con nuez pecana.",
+            texture="Arilos crujientes con semillas y nueces.",
+            ccp="Cero lácteos en la entrada ([R4.6]).",
+            ingredients=[
+                _ing("Granadas", 150, "g", CAT_FRUIT),
+                _ing("Canela molida", 3, "g", CAT_SPICE),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Nuez de la India", 60, "g", CAT_FAT),
+                _ing("Nuez pecana", 60, "g", CAT_FAT),
+            ],
+            steps=[
+                "Disponer los arilos de granada de la granja en copas frías con un toque de canela molida.",
+                "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
+            ],
+        ),
+        main=_course(
+            title="Galette Bistró sin Harina de Huevos Dorados al Sartén Rellena de Espinacas Tiernas, Cebolla Caramelizada, Queso Manchego y Queso Cottage",
+            technique="bistro_crustless_spinach_galette_s46",
+            note="Escuela 5 (Bistró Europeo): galette francesa sin harina cocinada al sartén con 3 huevos por comensal, espinacas tiernas, cebolla caramelizada, pasta tersa de queso cottage y queso manchego fundido.",
+            thermo="Cocción en sartén de hierro a 145°C.",
+            flavor="Bistró francés con mantequilla, espinaca, cottage y manchego.",
+            texture="Galette dorada al exterior con relleno cremoso.",
+            ccp="Pliegue francés de los bordes sobre el relleno caliente.",
+            archetype="heptagon_s46_huevo_galette_bistro",
+            ingredients=[
+                _ing("Huevo", 18, "piezas", CAT_PROT),
+                _ing("Espinacas", 300, "g", CAT_VEG),
+                _ing("Queso cottage", 240, "g", CAT_DAIRY),
+                _ing("Queso manchego", 120, "g", CAT_DAIRY),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Mantequilla", 48, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir y procesar el queso cottage hasta obtener una pasta tersa.",
+                "Saltear la cebolla y las espinacas en mantequilla; cuajar los 18 huevos batidos en sartén formando galettes, rellenar con la pasta de cottage, espinacas y queso manchego, y doblar los bordes.",
+            ],
+        ),
+        side=_course(
+            title="Mousse Aireado Bistró de Frambuesa Viva, Queso Philadelphia y Yogur Griego (6°C) con 33Plus®",
+            technique="bistro_raspberry_mousse_33plus_s46",
+            note="Preparado Funcional Matutino 5/7 (Día 5 — 12 Nov): mousse aireado en frío de la Escuela 5 batiendo queso Philadelphia suavizado con yogur griego, frambuesas enteras, vainilla y 33Plus® a 6°C.",
+            thermo="Batido y aireado en frío a 6°C.",
+            flavor="Frambuesa ácida sobre mousse de cheesecake francés a la vainilla.",
+            texture="Mousse cremosa y aireada servida en copa bistró.",
+            ccp="Emulsionar en frío (≤10°C) para preservar el 100% de los activos de 33Plus® (30 g).",
+            ingredients=[
+                _ing("Queso Philadelphia", 180, "g", CAT_DAIRY),
+                _ing("Yogur griego", 240, "g", CAT_DAIRY),
+                _ing("Frambuesas", 180, "g", CAT_FRUIT),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                _ing("Agua purificada", 120, "ml", CAT_SPICE),
+                _ing("33Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Batir en frío el queso Philadelphia suavizado con el yogur griego, el agua purificada, el extracto de vainilla y los 30 g de 33Plus®.",
+                "Integrar 120 g de frambuesas trituradas para marmolear el mousse y decorar en copas bistró con los 60 g restantes de frambuesas enteras.",
+            ],
+        ),
+    )
+
+    d4_l = _meal(
+        "Comida", "14:30", 65.0, 43.0, 4.3, 6.7,
+        starter=_course(
+            title="Carpaccio Bistró de Pepino con Vinagreta Francesa de Mostaza, Limón Real, Eneldo/Cilantro y Aceite de Oliva",
+            technique="french_bistro_cucumber_carpaccio_s46",
+            note="Entrada ligera de bistró sin lácteos ([R2]) con vinagreta clásica de mostaza y limón.",
+            thermo="Servicio en frío a 8°C.",
+            flavor="Vinagreta francesa de mostaza y limón sobre láminas finas de pepino.",
+            texture="Rodajas traslúcidas y crujientes.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Pepino", 360, "g", CAT_VEG),
+                _ing("Mostaza", 18, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Cilantro", 18, "g", CAT_VEG),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Laminar el pepino en rodajas muy finas y disponer en abanico.",
+                "Emulsionar la mostaza con el jugo de limón real, aceite de oliva, cilantro picado y sal de mar.",
+            ],
+        ),
+        main=_course(
+            title="Roast Beef de Flat Steak al Sartén en Reducción Francesa de Cebolla Caramelizada, Champiñones, Ajo, Tomillo y Mantequilla de Hierbas",
+            technique="french_bistro_roast_beef_onions_s46",
+            note="Escuela 5 (Bistró Europeo): láminas de flat steak selladas estilo roast beef bistró bañadas en reducción de cebolla caramelizada, champiñones, ajo, tomillo y mantequilla.",
+            thermo="Sellado a 195°C (65°C internos) y caramelizado lento de cebolla a 135°C.",
+            flavor="Umami profundo de bistró parisino con cebolla caramelizada, tomillo y champiñones.",
+            texture="Láminas jugosas de res con cebolla fundente.",
+            ccp="Reposar la carne 4 minutos antes de trinchar.",
+            archetype="heptagon_s46_res_roast_beef_bistro",
+            ingredients=[
+                _ing("Flat steak", 660, "g", CAT_PROT),
+                _ing("Champiñón", 300, "g", CAT_VEG),
+                _ing("Cebolla", 2, "piezas", CAT_VEG),
+                _ing("Mantequilla", 48, "g", CAT_FAT),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Tomillo", 3, "g", CAT_SPICE),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Caramelizar las cebollas fileteadas con los champiñones, ajo y tomillo en la mitad de la mantequilla.",
+                "Sellar el flat steak con sal de mar y pimienta negra, trinchar en láminas y napar con la cebolla caramelizada y el resto de la mantequilla.",
+            ],
+        ),
+        side=_course(
+            title="Pencas de Nopal de la Granja Asadas al Grill con Orégano, Limón Real y Aceite de Oliva VEVO",
+            technique="grilled_farm_nopales_oregano_s46",
+            note="Quinta guarnición de Comida ([R4-SIDE] 5/7: nopales) libre de lácteos y mantequilla ([R2]).",
+            thermo="Asado al grill a 190°C por 5 minutos.",
+            flavor="Nopales de la granja asados al orégano y limón real.",
+            texture="Tiras firmes y jugosas sin baba.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Nopales", 480, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Orégano", 3, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Asar los nopales de la granja en grill seco hasta evaporar su humedad.",
+                "Cortar en tiras y aliñar con aceite de oliva extra virgen, jugo de limón real, orégano y sal de mar.",
+            ],
+        ),
+    )
+
+    d4_d = _meal(
+        "Cena", "20:00", 51.0, 35.0, 3.9, 6.1,
+        starter=_course(
+            title="Consomé Bistró de Fondo Claro de Pollo con Floretes Tiernos de Coliflor al Romero de la Granja y Aceite de Oliva",
+            technique="bistro_cauliflower_rosemary_consomme_s46",
+            note="Caldo claro francés con pequeños floretes de coliflor al dente y romero de la granja sin lácteos ([R2]).",
+            thermo="Infusión a 90°C por 6 minutos.",
+            flavor="Fondo de ave aromático al romero de la granja con coliflor.",
+            texture="Consomé cristalino con floretes tiernos.",
+            ccp="Cero lácteos en la entrada ([R2]).",
+            ingredients=[
+                _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
+                _ing("Coliflor", 300, "g", CAT_VEG),
+                _ing("Romero", 6, "g", CAT_VEG),
+                _ing("Ajo", 6, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Hervir el fondo claro de pollo con el ajo, el romero de la granja y los floretes pequeños de coliflor durante 6 minutos.",
+                "Servir caliente con aceite de oliva extra virgen y sal de mar.",
+            ],
+        ),
+        main=_course(
+            title="Ensalada Asiática Tibia Estilo Alda Bistró de Fajitas de Pechuga de Pollo al Sartén sobre Hojas de Lechuga con Aguacate Hass, Almendras Fileteadas, Semillas Mixtas y Vinagreta de Limón y Aceite de Coco",
+            technique="alda_warm_asian_chicken_salad_s46",
+            note="Escuela 5 (Inspiración Alda Bistró): fajitas tibias de pechuga de pollo doradas al sartén sobre cama de lechuga con abanico de aguacate Hass ([R5]), almendras fileteadas y semillas y nueces mixtas.",
+            thermo="Pollo sellado a 180°C sobre hojas frías a 8°C.",
+            flavor="Contraste térmico bistró con almendras tostadas, aguacate Hass y limón real.",
+            texture="Pollo jugoso con crocancia de almendras y semillas.",
+            ccp="Única presencia diaria de aguacate ([R5]).",
+            archetype="heptagon_s46_pollo_ensalada_alda",
+            ingredients=[
+                _ing("Pechuga de pollo", 660, "g", CAT_PROT),
+                _ing("Lechuga", 2, "piezas", CAT_VEG),
+                _ing("Aguacate", 1, "piezas", CAT_FAT),
+                _ing("Almendras fileteadas", 60, "g", CAT_FAT),
+                _ing("Semillas y nueces mixtas", 60, "g", CAT_FAT),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal con ajo", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Dorar las fajitas de pechuga de pollo en aceite de coco neutro con sal con ajo y tostar ligeramente las almendras fileteadas.",
+                "Servir tibias sobre camas de lechuga con aguacate Hass, semillas y nueces mixtas y jugo de limón real.",
+            ],
+        ),
+        side=_course(
+            title="Infusión Neuro-Sedante de Flor de Tila, Toronjil, Cáscara de Limón Real y Clavo de Olor (58°C) con 34Plus®",
+            technique="neuro_sedative_linden_lemon_balm_34plus_s46",
+            note="Preparado Funcional Nocturno 5/7 (Día 5 — 12 Nov, 0% Teína): tisana herbal neuro-relajante distinta a la manzanilla, infusionando flor de tila, toronjil, cáscara/jugo de limón real y clavo de olor, templada a 58°C con 34Plus®.",
+            thermo="Infusión a 85°C por 5 minutos y templado a 58°C.",
+            flavor="Notas florales y cítricas de tila, toronjil y clavo de olor.",
+            texture="Infusión cristalina y aromática.",
+            ccp="Colar y templar a 58°C antes de disolver 34Plus® (30 g).",
+            ingredients=[
+                _ing("Flor de tila y toronjil", 12, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Clavo de olor", 2, "g", CAT_SPICE),
+                _ing("Agua purificada", 1200, "ml", CAT_SPICE),
+                _ing("34Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Infusionar la flor de tila y toronjil junto con el clavo de olor y los limones en agua purificada a 85°C por 5 minutos.",
+                "Colar, templar a 58°C y disolver 34Plus® (30 g).",
+            ],
+        ),
+    )
+
+    # =========================================================================
+    # DÍA 5: VIERNES 13 NOV — 🇯🇵 ESCUELA 6: PACÍFICO & ORIENTE (Cocina Japonesa, Tailandesa y Costera)
+    # Veg families: Desayuno (calabacitas) | Comida (pepino, lechuga, acelgas) | Cena (espinacas, morron, brocoli)
+    # =========================================================================
+    d5_b = _meal(
+        "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
+        starter=_course(
+            title="Copa Oriental de Fresas en Cuartos con Semillas y Nueces Mixtas, Nuez de la India, Nuez Pecana y Vainilla",
+            technique="oriental_strawberry_nut_cup_s46",
+            note="Fresas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            thermo="Servicio en frío a 6°C.",
+            flavor="Fresas a la vainilla con nuez pecana de la granja.",
+            texture="Cuartos de fresa con crocancia de semillas.",
+            ccp="Cero lácteos en la entrada ([R4.6]).",
+            ingredients=[
+                _ing("Fresas", 300, "g", CAT_FRUIT),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Nuez de la India", 60, "g", CAT_FAT),
+                _ing("Nuez pecana", 60, "g", CAT_FAT),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+            ],
+            steps=[
+                "Perfumar las fresas en cuartos con el extracto de vainilla.",
+                "Servir con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
+            ],
+        ),
+        main=_course(
+            title="Tamagoyaki Imperial Japonés (Rollos Laminados de Huevo al Sartén Rellenos de Queso Philadelphia, Calabacitas en Bastones Finos, Germinado y Cebolla en Aceite de Coco)",
+            technique="imperial_japanese_tamagoyaki_s46",
+            note="Escuela 6 (Pacífico & Oriente): rollos japoneses multicapa de 3 huevos por comensal cocinados en aceite de coco neutro y rellenos de queso Philadelphia, bastones finos de calabacita y germinado.",
+            thermo="Capas sucesivas en sartén a 140°C.",
+            flavor="Suavidad japonesa de huevo y queso Philadelphia con calabacita y germinado.",
+            texture="Capas sedosas enrolladas con centro cremoso.",
+            ccp="Cocinar a fuego medio-bajo para evitar dorado excesivo de las capas.",
+            archetype="heptagon_s46_huevo_tamagoyaki_imperial",
+            ingredients=[
+                _ing("Huevo", 18, "piezas", CAT_PROT),
+                _ing("Calabacitas", 280, "g", CAT_VEG),
+                _ing("Queso Philadelphia", 140, "g", CAT_DAIRY),
+                _ing("Germinado", 180, "g", CAT_VEG),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Aceite de coco", 36, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Saltear brevemente los bastones finos de calabacita, la cebolla y el germinado en aceite de coco neutro.",
+                "Verter capas delgadas de los 18 huevos batidos, untar queso Philadelphia, disponer el salteado y enrollar al estilo Tamagoyaki.",
+            ],
+        ),
+        side=_course(
+            title="Granizado Antioxidante (Slushie) de Flor de Jamaica, Jengibre Fresco, Romero y Limón Real (2°C) con 33Plus®",
+            technique="hibiscus_ginger_slushie_33plus_s46",
+            note="Preparado Funcional Matutino 6/7 (Día 6 — 13 Nov): granizado vivo (2°C) libre de grenetina que combina infusión concentrada de Jamaica de la granja, jengibre fresco y romero enfriada y frapeada con hielo de agua purificada, limón real y 33Plus®.",
+            thermo="Infusión inicial a 85°C, enfriado a ≤25°C y frapeado a 2°C.",
+            flavor="Frescura vibrante de jamaica, jengibre fresco, romero y limón real.",
+            texture="Granizado cristalino tipo slushie a 2°C.",
+            ccp="Enfriar el concentrado a ≤25°C antes de licuar con el hielo y 33Plus® (30 g).",
+            ingredients=[
+                _ing("Jamaica", 30, "g", CAT_SPICE),
+                _ing("Jengibre", 18, "g", CAT_SPICE),
+                _ing("Romero", 6, "g", CAT_VEG),
+                _ing("Limones", 60, "g", CAT_VEG),
+                _ing("Agua purificada", 900, "ml", CAT_SPICE),
+                _ing("33Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Infusionar la flor de jamaica de la granja, el jengibre fresco laminado y el romero en 300 ml de agua purificada caliente; colar y enfriar a ≤25°C.",
+                "Licuar el concentrado frío con los 600 ml restantes de agua purificada congelada en cubos de hielo, el jugo de limón real y los 30 g de 33Plus® hasta punto granizado (2°C).",
+            ],
+        ),
+    )
+
+    d5_l = _meal(
+        "Comida", "14:30", 65.0, 43.0, 4.3, 6.7,
+        starter=_course(
+            title="Ensalada Japonesa Sunomono de Pepino Laminado, Limón Real, Cilantro de la Granja y Aceite de Oliva",
+            technique="pacific_sunomono_cilantro_salad_s46",
+            note="Ensalada oriental refrescante sin lácteos ([R2]) para abrir el servicio de Lettuce Wraps.",
+            thermo="Maceración en frío a 8°C.",
+            flavor="Pepino cítrico al limón real y cilantro.",
+            texture="Cintas crujientes de pepino.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Pepino", 360, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Cortar el pepino en cintas delgadas con pelador.",
+                "Aliñar con jugo de limón de la granja, cilantro picado, aceite de oliva y sal de mar.",
+            ],
+        ),
+        main=_course(
+            title="Lettuce Wraps Orientales al Wok de Carne Molida de Res con Jengibre, Ajo, Germinado, Cebolla, Aguacate Hass y Nuez de la India Tostada en Hojas de Lechuga",
+            technique="oriental_wok_beef_lettuce_wraps_s46",
+            note="Escuela 6 (Pacífico & Oriente): carne molida de res salteada al wok con jengibre, ajo, cebolla, germinado y nuez de la India picada, servida en barquitas de hojas de lechuga con aguacate Hass ([R5]).",
+            thermo="Salteado rápido al wok a 195°C.",
+            flavor="Aroma oriental de jengibre y ajo tostado con crocancia de nuez de la India y germinado.",
+            texture="Tacos crujientes de hoja de lechuga con relleno jugoso.",
+            ccp="Única presencia diaria de aguacate ([R5]).",
+            archetype="heptagon_s46_res_lettuce_wraps",
+            ingredients=[
+                _ing("Carne molida", 660, "g", CAT_PROT),
+                _ing("Lechuga", 2, "piezas", CAT_VEG),
+                _ing("Germinado", 180, "g", CAT_VEG),
+                _ing("Aguacate", 1, "piezas", CAT_FAT),
+                _ing("Nuez de la India", 60, "g", CAT_FAT),
+                _ing("Cebolla", 1, "piezas", CAT_VEG),
+                _ing("Jengibre", 12, "g", CAT_SPICE),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Saltear al wok la carne molida de res en aceite de coco neutro con el ajo, el jengibre rallado y la cebolla picada.",
+                "Integrar el germinado y la nuez de la India tostada, y servir dentro de hojas enteras de lechuga coronadas con aguacate Hass.",
+            ],
+        ),
+        side=_course(
+            title="Acelgas de la Granja Salteadas al Wok con Ajo Dorado, Limón Real y Aceite de Coco Neutro",
+            technique="wok_garlic_farm_chard_s46",
+            note="Sexta guarnición de Comida ([R4-SIDE] 6/7: acelgas) libre de lácteos y mantequilla ([R2]).",
+            thermo="Salteado al wok a 180°C por 3 minutos.",
+            flavor="Acelgas de la granja al ajo dorado y limón real.",
+            texture="Hojas sedosas y tallos al dente.",
+            ccp="Cero mantequilla ni lácteos ([R2]).",
+            ingredients=[
+                _ing("Acelgas", 480, "g", CAT_VEG),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Dorar el ajo laminado en el wok con aceite de coco neutro e incorporar las acelgas de la granja.",
+                "Saltear 3 minutos y terminar con jugo de limón real y sal de mar.",
+            ],
+        ),
+    )
+
+    d5_d = _meal(
+        "Cena", "20:00", 51.0, 35.0, 3.9, 6.1,
+        starter=_course(
+            title="Caldo Claro del Pacífico de Fondo de Pollo con Hojas de Espinaca, Jengibre, Cilantro y Limón Real",
+            technique="pacific_ginger_spinach_broth_s46",
+            note="Caldo oriental nocturno sin lácteos ([R2]) con jengibre, espinaca y cilantro de la granja.",
+            thermo="Infusión a 90°C por 5 minutos.",
+            flavor="Caldo limpio con perfume de jengibre y cilantro.",
+            texture="Consomé sedoso con hojas tiernas de espinaca.",
+            ccp="Servir a 72°C.",
+            ingredients=[
+                _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
+                _ing("Espinacas", 240, "g", CAT_VEG),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Jengibre", 9, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Infusionar el fondo claro de pollo con el jengibre laminado y sal de mar por 5 minutos.",
+                "Agregar las hojas de espinaca, el cilantro de la granja, jugo de limón real y aceite de oliva.",
+            ],
+        ),
+        main=_course(
+            title="Fajitas de Mojarra en Curry Dorado Tailandés de Leche de Coco, Cúrcuma, Ajo y Cilantro con Floretes de Brócoli y Pimiento Morrón al Wok",
+            technique="thai_golden_curry_tilapia_wok_s46",
+            note="Escuela 6 (Pacífico & Oriente): fajitas de mojarra pochadas en salsa tailandesa de leche de coco, cúrcuma, ajo y cilantro de la granja con floretes de brócoli y pimiento morrón.",
+            thermo="Salteado de vegetales a 180°C y pochado en curry de coco a 85°C.",
+            flavor="Curry dorado tailandés aromático y suave (0% picante [R1]) con leche de coco y cúrcuma.",
+            texture="Filetes suaves de mojarra en salsa cremosa de coco con brócoli al dente.",
+            ccp="Cero picantes irritantes ([R1]).",
+            archetype="heptagon_s46_mojarra_curry_tailandes",
+            ingredients=[
+                _ing("Fajitas de mojarra", 840, "g", CAT_PROT),
+                _ing("Leche de coco", 300, "ml", CAT_FAT),
+                _ing("Brócoli", 360, "g", CAT_VEG),
+                _ing("Morrón", 1, "piezas", CAT_VEG),
+                _ing("Cúrcuma", 9, "g", CAT_SPICE),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Saltear al wok los floretes de brócoli, el pimiento morrón y el ajo en aceite de coco neutro.",
+                "Verter la leche de coco con la cúrcuma y sal de mar, incorporar las fajitas de mojarra por 6 minutos y coronar con cilantro de la granja.",
+            ],
+        ),
+        side=_course(
+            title="Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Nuez Moscada (50°C) con 34Plus®",
+            technique="warm_pecan_philadelphia_custard_34plus_s46",
+            note="Preparado Funcional Nocturno 6/7 (Día 6 — 13 Nov, 0% Teína): natilla reconfortante nocturna emulsionando nuez pecana de la granja, semillas y nueces mixtas, queso Philadelphia y canela en agua tibia a 50°C con 34Plus®.",
+            thermo="Emulsión tibia a 50°C.",
+            flavor="Nuez pecana tostada y canela en crema sedosa.",
+            texture="Natilla bebible o de cuchara a 50°C.",
+            ccp="Licuar a 50°C con 34Plus® (30 g) para preservar la integridad de los aminoácidos.",
+            ingredients=[
+                _ing("Nuez pecana", 90, "g", CAT_FAT),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Queso Philadelphia", 80, "g", CAT_DAIRY),
+                _ing("Canela molida", 3, "g", CAT_SPICE),
+                _ing("Agua purificada", 960, "ml", CAT_SPICE),
+                _ing("34Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Licuar la nuez pecana de la granja, las semillas y nueces mixtas, el queso Philadelphia y la canela molida con el agua purificada tibia a 50°C.",
+                "Incorporar 34Plus® (30 g) y batir 15 segundos hasta obtener una natilla tersa.",
+            ],
+        ),
+    )
+
+    # =========================================================================
+    # DÍA 6: SÁBADO 14 NOV — 🇮🇹 ESCUELA 7: MARE NOSTRUM (Alta Trattoria Italiana & Islas Griegas)
+    # Veg families: Desayuno (pepino, espinacas) | Comida (lechuga, calabacitas, champinon) | Cena (acelgas, morron)
+    # =========================================================================
+    d6_b = _meal(
+        "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
+        starter=_course(
+            title="Macerado Helénico de Frambuesas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            technique="hellenic_raspberry_vanilla_maceration_s46",
+            note="Frambuesas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            thermo="Servicio en frío a 6°C.",
+            flavor="Frambuesas a la vainilla con nuez pecana de la granja.",
+            texture="Bayas enteras con crocancia de semillas.",
+            ccp="Cero lácteos en la entrada ([R4.6]).",
+            ingredients=[
+                _ing("Frambuesas", 180, "g", CAT_FRUIT),
+                _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                _ing("Nuez de la India", 60, "g", CAT_FAT),
+                _ing("Nuez pecana", 60, "g", CAT_FAT),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+            ],
+            steps=[
+                "Perfumar las frambuesas con el extracto de vainilla.",
+                "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
+            ],
+        ),
+        main=_course(
+            title="Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Parmesano)",
+            technique="greek_island_strapatsada_eggs_s46",
+            note="Escuela 7 (Mare Nostrum — Islas Griegas): clásico desayuno helénico de 3 huevos por comensal cocinados sobre reducción de jitomate asado, ajo, orégano y aceitunas manzanilla con pasta tersa de queso cottage y queso parmesano.",
+            thermo="Reducción de jitomate a 90°C y cuajado suave a 140°C.",
+            flavor="Sol del Egeo con jitomate asado, orégano, aceitunas manzanilla y queso.",
+            texture="Huevos melosos integrados con el sugo griego.",
+            ccp="Evitar resecar el huevo al integrar con el jitomate.",
+            archetype="heptagon_s46_huevo_strapatsada_griega",
+            ingredients=[
+                _ing("Huevo", 18, "piezas", CAT_PROT),
+                _ing("Jitomate", 2, "piezas", CAT_VEG),
+                _ing("Queso cottage", 240, "g", CAT_DAIRY),
+                _ing("Queso parmesano", 50, "g", CAT_DAIRY),
+                _ing("Aceitunas manzanilla", 45, "g", CAT_SPICE),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Orégano", 3, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir y procesar el queso cottage hasta obtener una pasta tersa.",
+                "Sofreír el ajo y el jitomate rallado con orégano y aceitunas manzanilla; incorporar los 18 huevos batidos en fuego suave y terminar con la pasta de cottage, queso parmesano y aceite de oliva.",
+            ],
+        ),
+        side=_course(
+            title="Elixir Verde Prensado en Frío de Pepino, Apio, Espinaca y Limón Real (8°C) con 33Plus®",
+            technique="cold_pressed_green_elixir_33plus_s46",
+            note="Preparado Funcional Matutino 7/7 (Día 7 — 14 Nov): jugo verde alcalinizante y electrolítico licuado en frío (8°C) con pepino, apio, hojas de espinaca, limón real de la granja y 33Plus®.",
+            thermo="Licuado y filtrado en frío a 8°C (0% calor).",
+            flavor="Frescura vegetal alcalina de pepino, apio y espinaca con limón real.",
+            texture="Elixir verde ligero y refrescante.",
+            ccp="Licuar en frío a 8°C y disolver al instante los 30 g de 33Plus®.",
+            ingredients=[
+                _ing("Pepino", 300, "g", CAT_VEG),
+                _ing("Apio", 180, "g", CAT_VEG),
+                _ing("Espinacas", 120, "g", CAT_VEG),
+                _ing("Limones", 90, "g", CAT_VEG),
+                _ing("Agua purificada", 600, "ml", CAT_SPICE),
+                _ing("33Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Licuar en frío el pepino, el apio, las hojas de espinaca y el jugo de limón real con los 600 ml de agua purificada fría.",
+                "Integrar los 30 g de 33Plus®, batir 5 segundos y servir de inmediato a 8°C.",
+            ],
+        ),
+    )
+
+    d6_l = _meal(
+        "Comida", "14:30", 65.0, 43.0, 4.3, 6.7,
+        starter=_course(
+            title="Ensalada de la Trattoria de Lechuga Romana, Pistaches, Limón Real, Orégano y Aceite de Oliva VEVO",
+            technique="trattoria_pistachio_romaine_salad_s46",
+            note="Ensalada verde italiana sin lácteos ni mantequilla ([R2]) con pistaches tostados.",
+            thermo="Servicio en frío a 8°C.",
+            flavor="Lechuga crujiente con pistaches, orégano y limón real.",
+            texture="Hojas enteras con crocancia de pistache.",
+            ccp="Cero lácteos ni mantequilla ([R2]).",
+            ingredients=[
+                _ing("Lechuga", 1, "piezas", CAT_VEG),
+                _ing("Pistaches", 50, "g", CAT_FAT),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Orégano", 3, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Disponer la lechuga troceada en tazones con los pistaches.",
+                "Aliñar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar.",
+            ],
+        ),
+        main=_course(
+            title="Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Eneldo/Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
+            technique="mediterranean_baked_salmon_capers_s46",
+            note="Escuela 7 (Mare Nostrum): lomo de salmón horneado sobre láminas de calabacita con emulsión mediterránea de pasta tersa de queso cottage, alcaparras, ajo y limón real.",
+            thermo="Horneado a 180°C por 12 minutos (62°C internos).",
+            flavor="Salmón jugoso con acidez de alcaparras y limón en salsa cremosa de cottage.",
+            texture="Lomo tierno de salmón sobre calabacitas asadas.",
+            ccp="No sobrecocinar el salmón.",
+            archetype="heptagon_s46_salmon_mare_nostrum",
+            ingredients=[
+                _ing("Lomo de salmón", 780, "g", CAT_PROT),
+                _ing("Calabacitas", 280, "g", CAT_VEG),
+                _ing("Queso cottage", 240, "g", CAT_DAIRY),
+                _ing("Alcaparras", 36, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Cilantro", 24, "g", CAT_VEG),
+                _ing("Ajo", 9, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir y procesar el queso cottage hasta obtener una crema tersa.",
+                "Hornear el lomo de salmón sobre láminas de calabacita con ajo y sal de mar; servir bañado con la crema tibia de cottage, alcaparras, limón real y aceite de oliva.",
+            ],
+        ),
+        side=_course(
+            title="Champiñones de la Trattoria Asados al Sartén con Romero de la Granja, Ajo Laminado y Aceite de Coco Neutro",
+            technique="trattoria_rosemary_garlic_mushrooms_s46",
+            note="Séptima guarnición de Comida ([R4-SIDE] 7/7: champiñón) libre de mantequilla y lácteos ([R2]).",
+            thermo="Salteado a 180°C por 5 minutos.",
+            flavor="Champiñones dorados al ajo y romero de la granja.",
+            texture="Hongos carnosos y dorados.",
+            ccp="Cero mantequilla ni lácteos ([R2]).",
+            ingredients=[
+                _ing("Champiñón", 300, "g", CAT_VEG),
+                _ing("Ajo", 15, "g", CAT_SPICE),
+                _ing("Romero", 6, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Dorar el ajo laminado y el romero de la granja en aceite de coco neutro.",
+                "Saltear los champiñones en cuartos a fuego vivo y terminar con limón real y sal de mar.",
+            ],
+        ),
+    )
+
+    d6_d = _meal(
+        "Cena", "20:00", 51.0, 35.0, 3.9, 6.1,
+        starter=_course(
+            title="Consomé Mediterráneo de Fondo Claro de Pollo con Hojas de Acelga de la Granja, Ajo y Limón Real",
+            technique="mediterranean_chard_garlic_consomme_s46",
+            note="Caldo italiano nocturno sin lácteos ([R2]) con hojas de acelga de la granja.",
+            thermo="Cocción suave a 90°C por 4 minutos.",
+            flavor="Fondo de ave con acelgas de la granja y limón real.",
+            texture="Caldo limpio con hojas tiernas.",
+            ccp="Servir a 72°C.",
+            ingredients=[
+                _ing("Fondo claro de pollo", 900, "ml", CAT_SPICE),
+                _ing("Acelgas", 300, "g", CAT_VEG),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Ajo", 6, "g", CAT_SPICE),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Hervir el fondo claro de pollo con el ajo y la sal de mar, e incorporar las acelgas de la granja por 1 minuto.",
+                "Terminar con jugo de limón real y aceite de oliva.",
+            ],
+        ),
+        main=_course(
+            title="Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Mozzarella",
+            technique="trattoria_tuna_stuffed_peppers_s46",
+            note="Escuela 7 (Mare Nostrum): mitades de pimiento morrón asadas y rellenas de atún, jitomate, aceitunas manzanilla y ajo con gratinado de queso mozzarella y abanico de aguacate Hass ([R5]).",
+            thermo="Horneado a 185°C por 10 minutos.",
+            flavor="Sabor mediterráneo de atún, aceitunas, morrón asado y mozzarella con aguacate.",
+            texture="Pimiento tierno con relleno jugoso y cubierta fundida.",
+            ccp="Única presencia diaria de aguacate ([R5]).",
+            archetype="heptagon_s46_atun_pimientos_trattoria",
+            ingredients=[
+                _ing("Atún en agua", 700, "g", CAT_PROT),
+                _ing("Morrón", 3, "piezas", CAT_VEG),
+                _ing("Jitomate", 1, "piezas", CAT_VEG),
+                _ing("Queso mozzarella", 105, "g", CAT_DAIRY),
+                _ing("Aguacate", 1, "piezas", CAT_FAT),
+                _ing("Aceitunas manzanilla", 45, "g", CAT_SPICE),
+                _ing("Ajo", 6, "g", CAT_SPICE),
+                _ing("Orégano", 3, "g", CAT_SPICE),
+                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Asar las mitades de pimiento morrón y rellenar con el atún drenado salteado con jitomate, ajo, aceitunas manzanilla y orégano en aceite de coco neutro.",
+                "Gratinar con el queso mozzarella y acompañar al servir con aguacate Hass.",
+            ],
+        ),
+        side=_course(
+            title="Trufas Nocturnas (Fat Bombs) de Nuez de la India, Cacao Puro y Aceite de Coco (14°C) con 34Plus® + Infusión Limpia de Tomillo",
+            technique="cashew_cacao_fat_bombs_thyme_34plus_s46",
+            note="Preparado Funcional Nocturno 7/7 (Día 7 — 14 Nov, 0% Teína): bocado funcional sólido (Fat Bomb) procesando en frío pasta de nuez de la India, aceite de coco neutro, cacao 100% puro, canela y 34Plus® (2 trufas por comensal a 14°C), acompañado de infusión digestiva limpia de tomillo.",
+            thermo="Procesado de trufas en frío a 14°C e infusión limpia de tomillo a 60°C.",
+            flavor="Trufa de cacao puro y nuez de la India con infusión herbal de tomillo.",
+            texture="Bocado fundente de cacao acompañado de infusión cálida.",
+            ccp="Integrar 34Plus® (30 g) en frío en la masa de las trufas (0% degradación térmica).",
+            ingredients=[
+                _ing("Nuez de la India", 120, "g", CAT_FAT),
+                _ing("Aceite de coco", 36, "g", CAT_FAT),
+                _ing("Cacao 100% puro en polvo", 18, "g", CAT_SPICE),
+                _ing("Canela molida", 3, "g", CAT_SPICE),
+                _ing("Tomillo", 3, "g", CAT_SPICE),
+                _ing("Agua purificada", 900, "ml", CAT_SPICE),
+                _ing("34Plus®", 30, "g", CAT_SUPP),
+            ],
+            steps=[
+                "Procesar en frío la nuez de la India con el aceite de coco neutro, el cacao 100% puro en polvo, la canela molida y los 30 g de 34Plus®; formar 12 trufas (2 por comensal) y refrigerar a 14°C.",
+                "Servir las trufas acompañadas de una taza de infusión limpia de tomillo elaborada con los 900 ml de agua purificada.",
+            ],
+        ),
+    )
+
+    base_meals_by_school = [
+        [d0_b, d0_l, d0_d],  # Escuela 1: Nizú
+        [d1_b, d1_l, d1_d],  # Escuela 2: IHOP
+        [d2_b, d2_l, d2_d],  # Escuela 3: El Teapaneco
+        [d3_b, d3_l, d3_d],  # Escuela 4: Asador Castellano
+        [d4_b, d4_l, d4_d],  # Escuela 5: Alda Bistró
+        [d5_b, d5_l, d5_d],  # Escuela 6: Pacífico & Oriente
+        [d6_b, d6_l, d6_d],  # Escuela 7: Mare Nostrum
+    ]
+
+    school_keys = list(SEVEN_CULINARY_SCHOOLS.keys())
+    for idx, d_meta in enumerate(day_entries):
+        d_obj = copy.deepcopy(d_meta)
+        s_key = school_keys[idx % 7]
+        d_obj["culinary_school_id"] = s_key
+        d_obj["culinary_school_name"] = SEVEN_CULINARY_SCHOOLS[s_key]["name"]
+        d_obj["meals"] = copy.deepcopy(base_meals_by_school[idx])
+        days_out.append(d_obj)
+
+    return days_out
+
+
 def export_heptagon_exchange_pool() -> Dict[str, List[Dict[str, Any]]]:
     """
     Exporta el banco de platillos del Heptágono Culinario T.I.L.O.® (7 Escuelas)
@@ -3312,7 +4851,7 @@ def generate_week_with_tilo_cortex(
     elif int(target_week) % 2 == 1:
         days_list = _build_heptagon_cycle_a_days(meta["day_entries"], int(target_week))
     else:
-        days_list = _build_cycle_d_canonical_days(meta["day_entries"])
+        days_list = _build_heptagon_cycle_b_days(meta["day_entries"], int(target_week))
 
     week_plan = {
         "week_name": meta["week_name"],
