@@ -125,6 +125,7 @@ def _course(
     ingredients: List[Dict[str, Any]],
     steps: List[str],
     archetype: Optional[str] = None,
+    serving_temp_c: Optional[str] = None,
 ) -> Dict[str, Any]:
     obj: Dict[str, Any] = {
         "title": title,
@@ -141,6 +142,8 @@ def _course(
     }
     if archetype:
         obj["archetype"] = archetype
+    if serving_temp_c:
+        obj["serving_temp_c"] = serving_temp_c
     return obj
 
 
@@ -3299,6 +3302,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Gelatina Artesanal de Zarzamora Viva y Menta Fresca (4°C) con 33Plus®",
             technique="live_blackberry_mint_collagen_gel_s46",
+            serving_temp_c="4°C",
             note="Preparado Funcional Matutino 1/7 (Día 1 — 08 Nov): gelatina viva de zarzamora licuada en frío con limón de la granja, hojas de menta fresca, grenetina y 33Plus® integrada a ≤40°C para proteger antocianinas y vitamina C.",
             thermo="Hidratación de grenetina a 60°C, unión con puré frío a ≤40°C y cuajado a 4°C.",
             flavor="Zarzamora viva al limón real con notas refrescantes de menta.",
@@ -3414,7 +3418,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Cazuelitas de Champiñones al Ajillo y Epazote con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
+            title="Cazuelitas de Champiñones al Ajillo con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
             technique="mushroom_garlic_skillet_cottage_s46",
             note="Escuela 1 (Inspiración Nizú): champiñones salteados al ajillo con hebras de pollo, pasta tersa de queso cottage, queso doble crema y abanico de aguacate Hass ([R5]).",
             thermo="Salteado en cazuela a 175°C y gratinado suave a 180°C.",
@@ -3441,6 +3445,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Leche Dorada Nocturna (Golden Milk Keto) de Cúrcuma, Leche de Coco, Canela y Pimienta Negra (55°C) con 34Plus®",
             technique="keto_golden_milk_34plus_s46",
+            serving_temp_c="55°C",
             note="Preparado Funcional Nocturno 1/7 (Día 1 — 08 Nov, 0% Teína): emulsión antiinflamatoria nocturna de cúrcuma, leche de coco, canela y pizca de pimienta negra (piperina para biodisponibilidad de curcumina) templada a 55°C con 34Plus®.",
             thermo="Cocción de especias a 85°C por 4 minutos y templado a 55°C.",
             flavor="Cúrcuma dorada y canela en leche de coco cremosa.",
@@ -3512,8 +3517,9 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         side=_course(
-            title="Chai Latte Espumoso Bulletproof de Canela, Cardamomo, Leche de Almendra y Aceite de Coco (55°C) con 33Plus®",
+            title="Chai Latte Espumoso Bulletproof de Canela, Leche de Almendra y Aceite de Coco (55°C) con 33Plus®",
             technique="bulletproof_chai_latte_33plus_s46",
+            serving_temp_c="55°C",
             note="Preparado Funcional Matutino 2/7 (Día 2 — 09 Nov): infusión especiada de té chai con canela molida templada con leche de almendra sin azúcar a 55°C y emulsionada con aceite de coco neutro y 33Plus®.",
             thermo="Infusión a 85°C por 5 minutos y emulsión a 55°C.",
             flavor="Especias orientales de té chai y canela en espuma sedosa de almendra y coco.",
@@ -3653,6 +3659,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Panna Cotta Sedante de Yogur Griego, Leche de Coco, Vainilla e Infusión de Manzanilla (4°C) con 34Plus®",
             technique="chamomile_yogurt_panna_cotta_34plus_s46",
+            serving_temp_c="4°C",
             note="Preparado Funcional Nocturno 2/7 (Día 2 — 09 Nov, 0% Teína): postre de cuchara nocturno de yogur griego y leche de coco infusionado con manzanilla y vainilla, gelificado con grenetina y enriquecido a ≤38°C con 34Plus®.",
             thermo="Infusión de manzanilla a 85°C, disolución de grenetina, templado a ≤38°C y cuajado a 4°C.",
             flavor="Cremosidad láctea de vainilla y coco con fondo floral de manzanilla.",
@@ -3727,6 +3734,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Parfait Cremoso de Yogur Griego al Limón Real, Vainilla, Nuez Pecana y Rubíes de Granada de la Granja (6°C) con 33Plus®",
             technique="greek_yogurt_pomegranate_parfait_33plus_s46",
+            serving_temp_c="6°C",
             note="Preparado Funcional Matutino 3/7 (Día 3 — 10 Nov): matriz probiótica en frío (6°C) de yogur griego batido con jugo de limón real, extracto de vainilla y 33Plus®, coronada con arilos de granada y nuez pecana de la granja (100% retención enzimática sin calor).",
             thermo="Emulsión en frío a 6°C (0% impacto térmico).",
             flavor="Yogur griego cítrico a la vainilla con rubíes de granada y nuez pecana.",
@@ -3842,7 +3850,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Naranja-Limón, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
+            title="Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Limón Real, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
             technique="pibil_turkey_nopal_platter_s46",
             note="Escuela 3 (Inspiración El Teapaneco): fajitas de pechuga de pavo marinadas en recado rojo de achiote, jugo de limón real, ajo y orégano, asadas a la plancha sobre pencas de nopal de la granja con aguacate Hass ([R5]).",
             thermo="Plancha a 180°C hasta 74°C internos.",
@@ -3869,6 +3877,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Crema Aterciopelada Tibia de Cacao 100% Puro, Nuez de la India y Canela (52°C) con 34Plus®",
             technique="warm_cashew_cacao_velvet_34plus_s46",
+            serving_temp_c="52°C",
             note="Preparado Funcional Nocturno 3/7 (Día 3 — 10 Nov, 0% Teína): bebida espesa estilo chocolate de mesa cetogénico sin lácteos ni azúcar, emulsionando nuez de la India hidratada con cacao 100% puro rico en magnesio, canela, vainilla y 34Plus® a 52°C.",
             thermo="Emulsión en licuadora de alta velocidad a 52°C.",
             flavor="Chocolate profundo 100% cacao con canela, vainilla y crema de nuez de la India.",
@@ -3942,6 +3951,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Pudding Cetogénico de Semillas de Chía, Vainilla y Cacao Nibs en Leche de Coco (4°C) con 33Plus®",
             technique="keto_chia_cacao_pudding_33plus_s46",
+            serving_temp_c="4°C",
             note="Preparado Funcional Matutino 4/7 (Día 4 — 11 Nov): gel mucilaginoso en frío (4°C) de semillas de chía orgánicas hidratadas en leche de coco con vainilla, canela y 33Plus®, coronado con cacao nibs (liberación sostenida de energía y saciedad).",
             thermo="Hidratación en frío a 4°C por mínimo 2 horas.",
             flavor="Coco, vainilla y canela con notas tostadas de cacao nibs.",
@@ -4082,6 +4092,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Bavarois Nocturno de Queso Cottage Procesado (Caseína Lenta), Limón Real y Manzanilla (6°C) con 34Plus®",
             technique="cottage_chamomile_bavarois_34plus_s46",
+            serving_temp_c="6°C",
             note="Preparado Funcional Nocturno 4/7 (Día 4 — 11 Nov, 0% Teína): mousse-gelatina nocturna tipo Bavarois que combina caseína de liberación lenta del queso cottage procesado con infusión de manzanilla, limón real y 34Plus® para sostener la síntesis proteica nocturna.",
             thermo="Infusión de manzanilla a 85°C, templado a ≤38°C con pasta de cottage y cuajado a 6°C.",
             flavor="Mousse cítrico de limón real y manzanilla.",
@@ -4155,6 +4166,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Mousse Aireado Bistró de Frambuesa Viva, Queso Philadelphia y Yogur Griego (6°C) con 33Plus®",
             technique="bistro_raspberry_mousse_33plus_s46",
+            serving_temp_c="6°C",
             note="Preparado Funcional Matutino 5/7 (Día 5 — 12 Nov): mousse aireado en frío de la Escuela 5 batiendo queso Philadelphia suavizado con yogur griego, frambuesas enteras, vainilla y 33Plus® a 6°C.",
             thermo="Batido y aireado en frío a 6°C.",
             flavor="Frambuesa ácida sobre mousse de cheesecake francés a la vainilla.",
@@ -4178,7 +4190,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
     d4_l = _meal(
         "Comida", "14:30", 65.0, 43.0, 4.3, 6.7,
         starter=_course(
-            title="Carpaccio Bistró de Pepino con Vinagreta Francesa de Mostaza, Limón Real, Eneldo/Cilantro y Aceite de Oliva",
+            title="Carpaccio Bistró de Pepino con Vinagreta Francesa de Mostaza, Limón Real, Cilantro y Aceite de Oliva",
             technique="french_bistro_cucumber_carpaccio_s46",
             note="Entrada ligera de bistró sin lácteos ([R2]) con vinagreta clásica de mostaza y limón.",
             thermo="Servicio en frío a 8°C.",
@@ -4294,6 +4306,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Infusión Neuro-Sedante de Flor de Tila, Toronjil, Cáscara de Limón Real y Clavo de Olor (58°C) con 34Plus®",
             technique="neuro_sedative_linden_lemon_balm_34plus_s46",
+            serving_temp_c="58°C",
             note="Preparado Funcional Nocturno 5/7 (Día 5 — 12 Nov, 0% Teína): tisana herbal neuro-relajante distinta a la manzanilla, infusionando flor de tila, toronjil, cáscara/jugo de limón real y clavo de olor, templada a 58°C con 34Plus®.",
             thermo="Infusión a 85°C por 5 minutos y templado a 58°C.",
             flavor="Notas florales y cítricas de tila, toronjil y clavo de olor.",
@@ -4366,6 +4379,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Granizado Antioxidante (Slushie) de Flor de Jamaica, Jengibre Fresco, Romero y Limón Real (2°C) con 33Plus®",
             technique="hibiscus_ginger_slushie_33plus_s46",
+            serving_temp_c="2°C",
             note="Preparado Funcional Matutino 6/7 (Día 6 — 13 Nov): granizado vivo (2°C) libre de grenetina que combina infusión concentrada de Jamaica de la granja, jengibre fresco y romero enfriada y frapeada con hielo de agua purificada, limón real y 33Plus®.",
             thermo="Infusión inicial a 85°C, enfriado a ≤25°C y frapeado a 2°C.",
             flavor="Frescura vibrante de jamaica, jengibre fresco, romero y limón real.",
@@ -4506,8 +4520,9 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         side=_course(
-            title="Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Nuez Moscada (50°C) con 34Plus®",
+            title="Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Canela (50°C) con 34Plus®",
             technique="warm_pecan_philadelphia_custard_34plus_s46",
+            serving_temp_c="50°C",
             note="Preparado Funcional Nocturno 6/7 (Día 6 — 13 Nov, 0% Teína): natilla reconfortante nocturna emulsionando nuez pecana de la granja, semillas y nueces mixtas, queso Philadelphia y canela en agua tibia a 50°C con 34Plus®.",
             thermo="Emulsión tibia a 50°C.",
             flavor="Nuez pecana tostada y canela en crema sedosa.",
@@ -4582,6 +4597,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Elixir Verde Prensado en Frío de Pepino, Apio, Espinaca y Limón Real (8°C) con 33Plus®",
             technique="cold_pressed_green_elixir_33plus_s46",
+            serving_temp_c="8°C",
             note="Preparado Funcional Matutino 7/7 (Día 7 — 14 Nov): jugo verde alcalinizante y electrolítico licuado en frío (8°C) con pepino, apio, hojas de espinaca, limón real de la granja y 33Plus®.",
             thermo="Licuado y filtrado en frío a 8°C (0% calor).",
             flavor="Frescura vegetal alcalina de pepino, apio y espinaca con limón real.",
@@ -4626,7 +4642,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Eneldo/Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
+            title="Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
             technique="mediterranean_baked_salmon_capers_s46",
             note="Escuela 7 (Mare Nostrum): lomo de salmón horneado sobre láminas de calabacita con emulsión mediterránea de pasta tersa de queso cottage, alcaparras, ajo y limón real.",
             thermo="Horneado a 180°C por 12 minutos (62°C internos).",
@@ -4725,6 +4741,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
         side=_course(
             title="Trufas Nocturnas (Fat Bombs) de Nuez de la India, Cacao Puro y Aceite de Coco (14°C) con 34Plus® + Infusión Limpia de Tomillo",
             technique="cashew_cacao_fat_bombs_thyme_34plus_s46",
+            serving_temp_c="14°C / 60°C",
             note="Preparado Funcional Nocturno 7/7 (Día 7 — 14 Nov, 0% Teína): bocado funcional sólido (Fat Bomb) procesando en frío pasta de nuez de la India, aceite de coco neutro, cacao 100% puro, canela y 34Plus® (2 trufas por comensal a 14°C), acompañado de infusión digestiva limpia de tomillo.",
             thermo="Procesado de trufas en frío a 14°C e infusión limpia de tomillo a 60°C.",
             flavor="Trufa de cacao puro y nuez de la India con infusión herbal de tomillo.",

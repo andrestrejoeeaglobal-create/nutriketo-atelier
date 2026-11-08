@@ -2225,6 +2225,10 @@ def _check_title_ingredient_coherence(c_label: str, dish: Dict[str, Any], violat
         ("manzanilla", "manzanilla"),
         ("jamaica", "jamaica"),
         ("chai", "chai"),
+        ("epazote", "epazote"),
+        ("cardamomo", "cardamomo"),
+        ("nuez moscada", "nuez moscada"),
+        ("eneldo", "eneldo"),
     ]
 
     for title_kw, ing_kw in keyword_checks:

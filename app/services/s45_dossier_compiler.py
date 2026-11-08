@@ -677,7 +677,10 @@ def compile_s46_dossier() -> Dict[str, Any]:
         r_idx = d_idx * 9 + 3
         sd_b = day["meals"][0]["side"]
         ings_b = ", ".join(f"`{i['name']}` (`{fmt_num(float(i['amount']))} {i['unit']}`)" for i in sd_b["ingredients"])
-        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_b['title']}** | `{sd_b.get('serving_temp_c', 4)}°C` | {ings_b} |")
+        t_val_b = str(sd_b.get("serving_temp_c") or "4°C")
+        if "°C" not in t_val_b:
+            t_val_b = f"{t_val_b}°C"
+        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_b['title']}** | `{t_val_b}` | {ings_b} |")
     lines.append("")
     lines.append("### 🌙 0.2 Los 7 Preparados Nocturnos (`Cena · Tiempo 3` — Exclusivamente con `34Plus®`, `30 g` / `6p`, `0% Teína`)")
     lines.append("| Día | Receta | Preparado Funcional Nocturno con `34Plus®` | Temperatura | Insumos Clave (6p) |")
@@ -686,7 +689,10 @@ def compile_s46_dossier() -> Dict[str, Any]:
         r_idx = d_idx * 9 + 9
         sd_d = day["meals"][2]["side"]
         ings_d = ", ".join(f"`{i['name']}` (`{fmt_num(float(i['amount']))} {i['unit']}`)" for i in sd_d["ingredients"])
-        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_d['title']}** | `{sd_d.get('serving_temp_c', 50)}°C` | {ings_d} |")
+        t_val_d = str(sd_d.get("serving_temp_c") or "50°C")
+        if "°C" not in t_val_d:
+            t_val_d = f"{t_val_d}°C"
+        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_d['title']}** | `{t_val_d}` | {ings_d} |")
     lines.append("")
     lines.append("---")
     lines.append("")

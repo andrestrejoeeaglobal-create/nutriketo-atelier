@@ -234,7 +234,8 @@
             "steps": [
               "Licuar 120 g de zarzamora en frío con agua purificada y jugo de limón de la granja (reservar 50 g de zarzamoras enteras con hojas de menta fresca para decorar).",
               "Hidratar y disolver la grenetina a 60°C, unir con el puré frío para bajar la temperatura a ≤40°C, disolver 33Plus® (30 g) y cuajar en copas a 4°C."
-            ]
+            ],
+            "serving_temp_c": "4°C"
           }
         },
         {
@@ -456,8 +457,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Caldo Tlalpeño Claro de Fondo de Pollo con Cilantro de la Granja, Ajo Tatemado y Limón Real",
-          "main_dish_name": "Cazuelitas de Champiñones al Ajillo y Epazote con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
-          "dish_name": "Cazuelitas de Champiñones al Ajillo y Epazote con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
+          "main_dish_name": "Cazuelitas de Champiñones al Ajillo con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
+          "dish_name": "Cazuelitas de Champiñones al Ajillo con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
           "side_dish_name": "Leche Dorada Nocturna (Golden Milk Keto) de Cúrcuma, Leche de Coco, Canela y Pimienta Negra (55°C) con 34Plus®",
           "starter": {
             "title": "Caldo Tlalpeño Claro de Fondo de Pollo con Cilantro de la Granja, Ajo Tatemado y Limón Real",
@@ -519,7 +520,7 @@
             ]
           },
           "main": {
-            "title": "Cazuelitas de Champiñones al Ajillo y Epazote con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
+            "title": "Cazuelitas de Champiñones al Ajillo con Pollo Deshebrado, Aguacate Hass y Costra de Queso Cottage y Queso Doble Crema",
             "technique": "mushroom_garlic_skillet_cottage_s46",
             "note": "Escuela 1 (Inspiración Nizú): champiñones salteados al ajillo con hebras de pollo, pasta tersa de queso cottage, queso doble crema y abanico de aguacate Hass ([R5]).",
             "coct_reasoning": {
@@ -656,7 +657,8 @@
             "steps": [
               "Calentar el agua purificada con la cúrcuma, la canela molida y la pizca de pimienta negra a 85°C durante 4 minutos.",
               "Integrar la leche de coco para templar a 55°C, agregar 34Plus® (30 g) y batir hasta obtener una emulsión dorada."
-            ]
+            ],
+            "serving_temp_c": "55°C"
           }
         }
       ]
@@ -681,7 +683,7 @@
           "starter_name": "Carpaccio de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Southwest Scramble Americano de Huevos Cremosísimos al Sartén con Pimiento Morrón Asado, Cebolla, Aguacate Hass y Queso Manchego Fundido",
           "dish_name": "Southwest Scramble Americano de Huevos Cremosísimos al Sartén con Pimiento Morrón Asado, Cebolla, Aguacate Hass y Queso Manchego Fundido",
-          "side_dish_name": "Chai Latte Espumoso Bulletproof de Canela, Cardamomo, Leche de Almendra y Aceite de Coco (55°C) con 33Plus®",
+          "side_dish_name": "Chai Latte Espumoso Bulletproof de Canela, Leche de Almendra y Aceite de Coco (55°C) con 33Plus®",
           "starter": {
             "title": "Carpaccio de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "citrus_strawberry_carpaccio_s46",
@@ -809,7 +811,7 @@
             "archetype": "heptagon_s46_huevo_southwest_scramble"
           },
           "side": {
-            "title": "Chai Latte Espumoso Bulletproof de Canela, Cardamomo, Leche de Almendra y Aceite de Coco (55°C) con 33Plus®",
+            "title": "Chai Latte Espumoso Bulletproof de Canela, Leche de Almendra y Aceite de Coco (55°C) con 33Plus®",
             "technique": "bulletproof_chai_latte_33plus_s46",
             "note": "Preparado Funcional Matutino 2/7 (Día 2 — 09 Nov): infusión especiada de té chai con canela molida templada con leche de almendra sin azúcar a 55°C y emulsionada con aceite de coco neutro y 33Plus®.",
             "coct_reasoning": {
@@ -865,7 +867,8 @@
             "steps": [
               "Infusionar el té chai y la canela molida en el agua purificada a 85°C durante 5 minutos y colar.",
               "Templar con la leche de almendra sin azúcar a 55°C, agregar el aceite de coco neutro y 33Plus® (30 g), y emulsionar 15 segundos hasta espumar."
-            ]
+            ],
+            "serving_temp_c": "55°C"
           }
         },
         {
@@ -1273,7 +1276,8 @@
             "steps": [
               "Infusionar la manzanilla en los 240 ml de agua purificada caliente, colar y disolver ahí la grenetina previamente hidratada.",
               "Integrar la leche de coco, el yogur griego y el extracto de vainilla para bajar la mezcla a ≤38°C; incorporar 34Plus® (30 g), verter en ramekines y refrigerar a 4°C."
-            ]
+            ],
+            "serving_temp_c": "4°C"
           }
         }
       ]
@@ -1482,7 +1486,8 @@
             "steps": [
               "Batir en frío el yogur griego con el jugo de limón real, el extracto de vainilla y los 30 g de 33Plus® hasta obtener una crema homogénea.",
               "Servir en copas y coronar con los rubíes de granada de la granja y la nuez pecana troceada."
-            ]
+            ],
+            "serving_temp_c": "6°C"
           }
         },
         {
@@ -1697,8 +1702,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Sopa de Lima Yucateca de Fondo Claro de Pollo con Juliana de Pimiento Morrón, Orégano y Cilantro de la Granja",
-          "main_dish_name": "Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Naranja-Limón, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
-          "dish_name": "Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Naranja-Limón, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
+          "main_dish_name": "Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Limón Real, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
+          "dish_name": "Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Limón Real, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
           "side_dish_name": "Crema Aterciopelada Tibia de Cacao 100% Puro, Nuez de la India y Canela (52°C) con 34Plus®",
           "starter": {
             "title": "Sopa de Lima Yucateca de Fondo Claro de Pollo con Juliana de Pimiento Morrón, Orégano y Cilantro de la Granja",
@@ -1767,7 +1772,7 @@
             ]
           },
           "main": {
-            "title": "Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Naranja-Limón, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
+            "title": "Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Limón Real, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass",
             "technique": "pibil_turkey_nopal_platter_s46",
             "note": "Escuela 3 (Inspiración El Teapaneco): fajitas de pechuga de pavo marinadas en recado rojo de achiote, jugo de limón real, ajo y orégano, asadas a la plancha sobre pencas de nopal de la granja con aguacate Hass ([R5]).",
             "coct_reasoning": {
@@ -1904,7 +1909,8 @@
             "steps": [
               "Licuar la nuez de la India previamente hidratada con el agua purificada tibia (52°C), el cacao 100% puro en polvo, la canela molida y el extracto de vainilla.",
               "Agregar 34Plus® (30 g) y emulsionar 20 segundos hasta obtener una crema aterciopelada estilo chocolate de mesa keto."
-            ]
+            ],
+            "serving_temp_c": "52°C"
           }
         }
       ]
@@ -2113,7 +2119,8 @@
             "steps": [
               "Mezclar en frío la leche de coco con el extracto de vainilla, la canela molida y los 30 g de 33Plus®.",
               "Incorporar las semillas de chía orgánicas, refrigerar a 4°C durante mínimo 2 horas hasta formar el gel y coronar con los cacao nibs."
-            ]
+            ],
+            "serving_temp_c": "4°C"
           }
         },
         {
@@ -2521,7 +2528,8 @@
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir y licuar los 360 g de queso cottage hasta obtener una pasta tersa.",
               "Infusionar la manzanilla en el agua purificada, colar, disolver la grenetina hidratada y templar a ≤38°C; licuar con la pasta de queso cottage, el jugo de limón real y 34Plus® (30 g), y refrigerar a 6°C."
-            ]
+            ],
+            "serving_temp_c": "6°C"
           }
         }
       ]
@@ -2730,7 +2738,8 @@
             "steps": [
               "Batir en frío el queso Philadelphia suavizado con el yogur griego, el agua purificada, el extracto de vainilla y los 30 g de 33Plus®.",
               "Integrar 120 g de frambuesas trituradas para marmolear el mousse y decorar en copas bistró con los 60 g restantes de frambuesas enteras."
-            ]
+            ],
+            "serving_temp_c": "6°C"
           }
         },
         {
@@ -2740,12 +2749,12 @@
           "protein_g": 43.0,
           "net_carbs_g": 4.3,
           "fiber_g": 6.7,
-          "starter_name": "Carpaccio Bistró de Pepino con Vinagreta Francesa de Mostaza, Limón Real, Eneldo/Cilantro y Aceite de Oliva",
+          "starter_name": "Carpaccio Bistró de Pepino con Vinagreta Francesa de Mostaza, Limón Real, Cilantro y Aceite de Oliva",
           "main_dish_name": "Roast Beef de Flat Steak al Sartén en Reducción Francesa de Cebolla Caramelizada, Champiñones, Ajo, Tomillo y Mantequilla de Hierbas",
           "dish_name": "Roast Beef de Flat Steak al Sartén en Reducción Francesa de Cebolla Caramelizada, Champiñones, Ajo, Tomillo y Mantequilla de Hierbas",
           "side_dish_name": "Pencas de Nopal de la Granja Asadas al Grill con Orégano, Limón Real y Aceite de Oliva VEVO",
           "starter": {
-            "title": "Carpaccio Bistró de Pepino con Vinagreta Francesa de Mostaza, Limón Real, Eneldo/Cilantro y Aceite de Oliva",
+            "title": "Carpaccio Bistró de Pepino con Vinagreta Francesa de Mostaza, Limón Real, Cilantro y Aceite de Oliva",
             "technique": "french_bistro_cucumber_carpaccio_s46",
             "note": "Entrada ligera de bistró sin lácteos ([R2]) con vinagreta clásica de mostaza y limón.",
             "coct_reasoning": {
@@ -3124,7 +3133,8 @@
             "steps": [
               "Infusionar la flor de tila y toronjil junto con el clavo de olor y los limones en agua purificada a 85°C por 5 minutos.",
               "Colar, templar a 58°C y disolver 34Plus® (30 g)."
-            ]
+            ],
+            "serving_temp_c": "58°C"
           }
         }
       ]
@@ -3333,7 +3343,8 @@
             "steps": [
               "Infusionar la flor de jamaica de la granja, el jengibre fresco laminado y el romero en 300 ml de agua purificada caliente; colar y enfriar a ≤25°C.",
               "Licuar el concentrado frío con los 600 ml restantes de agua purificada congelada en cubos de hielo, el jugo de limón real y los 30 g de 33Plus® hasta punto granizado (2°C)."
-            ]
+            ],
+            "serving_temp_c": "2°C"
           }
         },
         {
@@ -3550,7 +3561,7 @@
           "starter_name": "Caldo Claro del Pacífico de Fondo de Pollo con Hojas de Espinaca, Jengibre, Cilantro y Limón Real",
           "main_dish_name": "Fajitas de Mojarra en Curry Dorado Tailandés de Leche de Coco, Cúrcuma, Ajo y Cilantro con Floretes de Brócoli y Pimiento Morrón al Wok",
           "dish_name": "Fajitas de Mojarra en Curry Dorado Tailandés de Leche de Coco, Cúrcuma, Ajo y Cilantro con Floretes de Brócoli y Pimiento Morrón al Wok",
-          "side_dish_name": "Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Nuez Moscada (50°C) con 34Plus®",
+          "side_dish_name": "Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Canela (50°C) con 34Plus®",
           "starter": {
             "title": "Caldo Claro del Pacífico de Fondo de Pollo con Hojas de Espinaca, Jengibre, Cilantro y Limón Real",
             "technique": "pacific_ginger_spinach_broth_s46",
@@ -3699,7 +3710,7 @@
             "archetype": "heptagon_s46_mojarra_curry_tailandes"
           },
           "side": {
-            "title": "Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Nuez Moscada (50°C) con 34Plus®",
+            "title": "Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Canela (50°C) con 34Plus®",
             "technique": "warm_pecan_philadelphia_custard_34plus_s46",
             "note": "Preparado Funcional Nocturno 6/7 (Día 6 — 13 Nov, 0% Teína): natilla reconfortante nocturna emulsionando nuez pecana de la granja, semillas y nueces mixtas, queso Philadelphia y canela en agua tibia a 50°C con 34Plus®.",
             "coct_reasoning": {
@@ -3755,7 +3766,8 @@
             "steps": [
               "Licuar la nuez pecana de la granja, las semillas y nueces mixtas, el queso Philadelphia y la canela molida con el agua purificada tibia a 50°C.",
               "Incorporar 34Plus® (30 g) y batir 15 segundos hasta obtener una natilla tersa."
-            ]
+            ],
+            "serving_temp_c": "50°C"
           }
         }
       ]
@@ -3971,7 +3983,8 @@
             "steps": [
               "Licuar en frío el pepino, el apio, las hojas de espinaca y el jugo de limón real con los 600 ml de agua purificada fría.",
               "Integrar los 30 g de 33Plus®, batir 5 segundos y servir de inmediato a 8°C."
-            ]
+            ],
+            "serving_temp_c": "8°C"
           }
         },
         {
@@ -3982,8 +3995,8 @@
           "net_carbs_g": 4.3,
           "fiber_g": 6.7,
           "starter_name": "Ensalada de la Trattoria de Lechuga Romana, Pistaches, Limón Real, Orégano y Aceite de Oliva VEVO",
-          "main_dish_name": "Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Eneldo/Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
-          "dish_name": "Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Eneldo/Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
+          "main_dish_name": "Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
+          "dish_name": "Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
           "side_dish_name": "Champiñones de la Trattoria Asados al Sartén con Romero de la Granja, Ajo Laminado y Aceite de Coco Neutro",
           "starter": {
             "title": "Ensalada de la Trattoria de Lechuga Romana, Pistaches, Limón Real, Orégano y Aceite de Oliva VEVO",
@@ -4045,7 +4058,7 @@
             ]
           },
           "main": {
-            "title": "Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Eneldo/Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
+            "title": "Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita",
             "technique": "mediterranean_baked_salmon_capers_s46",
             "note": "Escuela 7 (Mare Nostrum): lomo de salmón horneado sobre láminas de calabacita con emulsión mediterránea de pasta tersa de queso cottage, alcaparras, ajo y limón real.",
             "coct_reasoning": {
@@ -4407,7 +4420,8 @@
             "steps": [
               "Procesar en frío la nuez de la India con el aceite de coco neutro, el cacao 100% puro en polvo, la canela molida y los 30 g de 34Plus®; formar 12 trufas (2 por comensal) y refrigerar a 14°C.",
               "Servir las trufas acompañadas de una taza de infusión limpia de tomillo elaborada con los 900 ml de agua purificada."
-            ]
+            ],
+            "serving_temp_c": "14°C / 60°C"
           }
         }
       ]
