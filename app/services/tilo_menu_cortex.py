@@ -3633,11 +3633,11 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Parmesano y Ajo con Floretes de Brócoli al Vapor",
+            title="Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Manchego y Ajo con Floretes de Brócoli al Vapor",
             technique="grilled_chicken_broccoli_alfredo_s46",
-            note="Escuela 2 (Inspiración IHOP): fajitas de pechuga de pollo asadas al grill sobre floretes de brócoli al vapor, bañadas en salsa Alfredo al ajo elaborada con pasta tersa de queso cottage y queso parmesano.",
+            note="Escuela 2 (Inspiración IHOP): fajitas de pechuga de pollo asadas al grill sobre floretes de brócoli al vapor, bañadas en salsa Alfredo al ajo elaborada con pasta tersa de queso cottage y queso manchego fundido.",
             thermo="Sellado de ave a 180°C y emulsión Alfredo a 75°C.",
-            flavor="Salsa Alfredo al ajo tostado y parmesano sobre pollo al grill y brócoli.",
+            flavor="Salsa Alfredo al ajo tostado y queso manchego sobre pollo al grill y brócoli.",
             texture="Tiras jugosas de pechuga y floretes de brócoli al dente.",
             ccp="No hervir la salsa de queso cottage procesado.",
             archetype="heptagon_s46_pollo_alfredo_brocoli",
@@ -3645,7 +3645,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Pechuga de pollo", 660, "g", CAT_PROT),
                 _ing("Brócoli", 420, "g", CAT_VEG),
                 _ing("Queso cottage", 300, "g", CAT_DAIRY),
-                _ing("Queso parmesano", 50, "g", CAT_DAIRY),
+                _ing("Queso manchego", 50, "g", CAT_DAIRY),
                 _ing("Mantequilla", 36, "g", CAT_FAT),
                 _ing("Ajo", 9, "g", CAT_SPICE),
                 _ing("Sal con ajo", 6, "g", CAT_SPICE),
@@ -3653,7 +3653,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
             steps=[
                 "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir 2 minutos y procesar 15 segundos hasta lograr una crema lisa.",
-                "Asar las fajitas de pechuga de pollo en mantequilla con el ajo picado, sal con ajo y pimienta negra; mezclar con la crema de cottage y queso parmesano, y servir sobre floretes de brócoli al vapor.",
+                "Asar las fajitas de pechuga de pollo en mantequilla con el ajo picado, sal con ajo y pimienta negra; mezclar con la crema de cottage y queso manchego rallado, y servir sobre floretes de brócoli al vapor.",
             ],
         ),
         side=_course(
@@ -3688,22 +3688,23 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
     d2_b = _meal(
         "Desayuno", "08:30", 49.0, 34.5, 4.1, 6.4,
         starter=_course(
-            title="Macerado de Frambuesas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            title="Macerado de Frambuesas y Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             technique="citrus_raspberry_maceration_s46",
-            note="Frambuesas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana (distinta a la granada del Parfait en Tiempo 3 [R4]).",
+            note="Frambuesas y fresas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana (distinta a la granada del Parfait en Tiempo 3 [R4]).",
             thermo="Servicio en frío a 6°C.",
-            flavor="Frambuesas al limón real con semillas y nueces.",
-            texture="Bayas enteras con crocancia de nuez pecana.",
+            flavor="Frambuesas y fresas al limón real con semillas y nueces.",
+            texture="Bayas enteras y cuartos de fresa con crocancia de nuez pecana.",
             ccp="Cero lácteos en la entrada ([R4.6]).",
             ingredients=[
-                _ing("Frambuesas", 180, "g", CAT_FRUIT),
+                _ing("Frambuesas", 90, "g", CAT_FRUIT),
+                _ing("Fresas", 210, "g", CAT_FRUIT),
                 _ing("Limones", 30, "g", CAT_VEG),
                 _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
                 _ing("Nuez de la India", 60, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
             ],
             steps=[
-                "Colocar las frambuesas en copas frías y rociar con jugo de limón real.",
+                "Colocar las frambuesas y las fresas en copas frías y rociar con jugo de limón real.",
                 "Añadir las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
             ],
         ),
@@ -3905,22 +3906,22 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
     d3_b = _meal(
         "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
         starter=_course(
-            title="Espejo de Zarzamoras al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-            technique="spanish_blackberry_citrus_mirror_s46",
-            note="Zarzamoras sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            title="Espejo de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            technique="spanish_strawberry_citrus_mirror_s46",
+            note="Fresas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
             thermo="Servicio en frío a 6°C.",
-            flavor="Zarzamora ácida con nuez pecana de la granja.",
-            texture="Bayas firmes con nueces.",
+            flavor="Fresa al limón real con nuez pecana de la granja.",
+            texture="Láminas firmes de fresa con nueces.",
             ccp="Cero lácteos en la entrada frutal ([R4.6]).",
             ingredients=[
-                _ing("Zarzamora", 170, "g", CAT_FRUIT),
+                _ing("Fresas", 300, "g", CAT_FRUIT),
                 _ing("Limones", 30, "g", CAT_VEG),
                 _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
                 _ing("Nuez de la India", 60, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
             ],
             steps=[
-                "Servir las zarzamoras en platos fríos con gotas de limón real.",
+                "Servir las fresas laminadas en platos fríos con gotas de limón real.",
                 "Acompañar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
             ],
         ),
@@ -4175,14 +4176,14 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ingredients=[
                 _ing("Queso Philadelphia", 180, "g", CAT_DAIRY),
                 _ing("Yogur griego", 240, "g", CAT_DAIRY),
-                _ing("Frambuesas", 180, "g", CAT_FRUIT),
+                _ing("Frambuesas", 160, "g", CAT_FRUIT),
                 _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
                 _ing("Agua purificada", 120, "ml", CAT_SPICE),
                 _ing("33Plus®", 30, "g", CAT_SUPP),
             ],
             steps=[
                 "Batir en frío el queso Philadelphia suavizado con el yogur griego, el agua purificada, el extracto de vainilla y los 30 g de 33Plus®.",
-                "Integrar 120 g de frambuesas trituradas para marmolear el mousse y decorar en copas bistró con los 60 g restantes de frambuesas enteras.",
+                "Integrar 120 g de frambuesas trituradas para marmolear el mousse y decorar en copas bistró con los 40 g restantes de frambuesas enteras.",
             ],
         ),
     )
@@ -4550,31 +4551,32 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
     d6_b = _meal(
         "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
         starter=_course(
-            title="Macerado Helénico de Frambuesas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            title="Macerado Helénico de Frambuesas y Fresas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             technique="hellenic_raspberry_vanilla_maceration_s46",
-            note="Frambuesas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            note="Frambuesas y fresas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
             thermo="Servicio en frío a 6°C.",
-            flavor="Frambuesas a la vainilla con nuez pecana de la granja.",
-            texture="Bayas enteras con crocancia de semillas.",
+            flavor="Frambuesas y fresas a la vainilla con nuez pecana de la granja.",
+            texture="Bayas enteras y cuartos de fresa con crocancia de semillas.",
             ccp="Cero lácteos en la entrada ([R4.6]).",
             ingredients=[
-                _ing("Frambuesas", 180, "g", CAT_FRUIT),
+                _ing("Frambuesas", 90, "g", CAT_FRUIT),
+                _ing("Fresas", 210, "g", CAT_FRUIT),
                 _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
                 _ing("Nuez de la India", 60, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
                 _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
             ],
             steps=[
-                "Perfumar las frambuesas con el extracto de vainilla.",
+                "Perfumar las frambuesas y las fresas con el extracto de vainilla.",
                 "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
             ],
         ),
         main=_course(
-            title="Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Parmesano)",
+            title="Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Manchego)",
             technique="greek_island_strapatsada_eggs_s46",
-            note="Escuela 7 (Mare Nostrum — Islas Griegas): clásico desayuno helénico de 3 huevos por comensal cocinados sobre reducción de jitomate asado, ajo, orégano y aceitunas manzanilla con pasta tersa de queso cottage y queso parmesano.",
+            note="Escuela 7 (Mare Nostrum — Islas Griegas): clásico desayuno helénico de 3 huevos por comensal cocinados sobre reducción de jitomate asado, ajo, orégano y aceitunas manzanilla con pasta tersa de queso cottage y queso manchego gratinado.",
             thermo="Reducción de jitomate a 90°C y cuajado suave a 140°C.",
-            flavor="Sol del Egeo con jitomate asado, orégano, aceitunas manzanilla y queso.",
+            flavor="Sol del Egeo con jitomate asado, orégano, aceitunas manzanilla y queso manchego.",
             texture="Huevos melosos integrados con el sugo griego.",
             ccp="Evitar resecar el huevo al integrar con el jitomate.",
             archetype="heptagon_s46_huevo_strapatsada_griega",
@@ -4582,7 +4584,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Huevo", 18, "piezas", CAT_PROT),
                 _ing("Jitomate", 2, "piezas", CAT_VEG),
                 _ing("Queso cottage", 240, "g", CAT_DAIRY),
-                _ing("Queso parmesano", 50, "g", CAT_DAIRY),
+                _ing("Queso manchego", 50, "g", CAT_DAIRY),
                 _ing("Aceitunas manzanilla", 45, "g", CAT_SPICE),
                 _ing("Ajo", 9, "g", CAT_SPICE),
                 _ing("Orégano", 3, "g", CAT_SPICE),
@@ -4591,7 +4593,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
             steps=[
                 "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir y procesar el queso cottage hasta obtener una pasta tersa.",
-                "Sofreír el ajo y el jitomate rallado con orégano y aceitunas manzanilla; incorporar los 18 huevos batidos en fuego suave y terminar con la pasta de cottage, queso parmesano y aceite de oliva.",
+                "Sofreír el ajo y el jitomate rallado con orégano y aceitunas manzanilla; incorporar los 18 huevos batidos en fuego suave y terminar con la pasta de cottage, queso manchego rallado y aceite de oliva.",
             ],
         ),
         side=_course(
@@ -4713,11 +4715,11 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Mozzarella",
+            title="Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Manchego",
             technique="trattoria_tuna_stuffed_peppers_s46",
-            note="Escuela 7 (Mare Nostrum): mitades de pimiento morrón asadas y rellenas de atún, jitomate, aceitunas manzanilla y ajo con gratinado de queso mozzarella y abanico de aguacate Hass ([R5]).",
+            note="Escuela 7 (Mare Nostrum): mitades de pimiento morrón asadas y rellenas de atún, jitomate, aceitunas manzanilla y ajo con gratinado de queso manchego y abanico de aguacate Hass ([R5]).",
             thermo="Horneado a 185°C por 10 minutos.",
-            flavor="Sabor mediterráneo de atún, aceitunas, morrón asado y mozzarella con aguacate.",
+            flavor="Sabor mediterráneo de atún, aceitunas, morrón asado y queso manchego fundido con aguacate.",
             texture="Pimiento tierno con relleno jugoso y cubierta fundida.",
             ccp="Única presencia diaria de aguacate ([R5]).",
             archetype="heptagon_s46_atun_pimientos_trattoria",
@@ -4725,7 +4727,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Atún en agua", 700, "g", CAT_PROT),
                 _ing("Morrón", 3, "piezas", CAT_VEG),
                 _ing("Jitomate", 1, "piezas", CAT_VEG),
-                _ing("Queso mozzarella", 105, "g", CAT_DAIRY),
+                _ing("Queso manchego", 105, "g", CAT_DAIRY),
                 _ing("Aguacate", 1, "piezas", CAT_FAT),
                 _ing("Aceitunas manzanilla", 45, "g", CAT_SPICE),
                 _ing("Ajo", 6, "g", CAT_SPICE),
@@ -4735,7 +4737,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
             ],
             steps=[
                 "Asar las mitades de pimiento morrón y rellenar con el atún drenado salteado con jitomate, ajo, aceitunas manzanilla y orégano en aceite de coco neutro.",
-                "Gratinar con el queso mozzarella y acompañar al servir con aguacate Hass.",
+                "Gratinar con el queso manchego rallado y acompañar al servir con aguacate Hass.",
             ],
         ),
         side=_course(
@@ -4752,7 +4754,7 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Aceite de coco", 36, "g", CAT_FAT),
                 _ing("Cacao 100% puro en polvo", 18, "g", CAT_SPICE),
                 _ing("Canela molida", 3, "g", CAT_SPICE),
-                _ing("Tomillo", 3, "g", CAT_SPICE),
+                _ing("Tomillo", 2, "g", CAT_SPICE),
                 _ing("Agua purificada", 900, "ml", CAT_SPICE),
                 _ing("34Plus®", 30, "g", CAT_SUPP),
             ],
@@ -4851,12 +4853,20 @@ def generate_week_with_tilo_cortex(
       (7 Escuelas de Restaurante, 1 Escuela por día de la semana) y ejecuta la Compuerta
       Hard-Gate [R1]–[R12] garantizando 0% de repetición en ventanas móviles de 4 semanas.
     """
-    from app.services.menu_hard_gate_auditor import S43_S44_HISTORICAL_PANTRY_STOCK, load_live_pantry_ssot
+    from app.services.menu_hard_gate_auditor import (
+        S43_S44_HISTORICAL_PANTRY_STOCK,
+        S45_HISTORICAL_PANTRY_STOCK,
+        load_live_pantry_ssot,
+    )
 
-    if int(target_week) >= 45:
+    if int(target_week) >= 46:
         live_ssot = load_live_pantry_ssot()
         harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
         pantry = pantry_stock if pantry_stock is not None else live_ssot["auditor_pantry"]
+    elif int(target_week) == 45:
+        live_ssot = load_live_pantry_ssot()
+        harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
+        pantry = pantry_stock if pantry_stock is not None else S45_HISTORICAL_PANTRY_STOCK
     else:
         harvest = farm_harvest if farm_harvest is not None else DEFAULT_FARM_HARVEST
         pantry = pantry_stock if pantry_stock is not None else S43_S44_HISTORICAL_PANTRY_STOCK

@@ -2800,7 +2800,8 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
   });
 
   const wLabelNormTop = _normTextHardGate(weekPlan.week_name || weekPlan.week_label || '');
-  if (!wLabelNormTop.includes('semana 46') && (window._hgWeeklyGelatinasCount || 0) < 5) {
+  const wNumTop = parseInt((wLabelNormTop.match(/semana\\s*(\\d+)/) || [])[1] || '0', 10);
+  if (wNumTop < 46 && !wLabelNormTop.includes('semana 46') && (window._hgWeeklyGelatinasCount || 0) < 5) {
     violations.push(`[R8] La semana debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® en el desayuno (encontradas: ${window._hgWeeklyGelatinasCount || 0}).`);
   }
   window._hgWeeklyGelatinasCount = 0;
@@ -3968,17 +3969,33 @@ window.PANTRY_STOCK_INVENTORY = {
 
     window.LAST_PANTRY_INTAKE_EVENT = {
       pantry_intake_event: {
-        timestamp: "2026-10-15T18:31:00",
-        source: "Costco Wholesale Queretaro",
-        ticket_id: "9636",
+        timestamp: "2026-11-09T18:00:00",
+        source: "Sam's Club SM Santa Fe",
+        ticket_id: "1569462808300642304",
+        total_mxn: 5127.48,
         items_to_credit: [
-          { sku: "sku-029-pechuga-de-pollo", display_name: "Pechuga de pollo", quantity: 1, commercial_unit: "paquete_pesado", scale_kg: 1.954, base_quantity_g: 1954 },
-          { sku: "sku-039-zarzamora", display_name: "Zarzamora", quantity: 1, commercial_unit: "domo_510", base_quantity_g: 510 },
-          { sku: "sku-003-queso-cottage", display_name: "Queso cottage", quantity: 1, commercial_unit: "bote_comercial", base_quantity_g: 1000 },
-          { sku: "sku-004-yogur-griego", display_name: "Yogur griego", quantity: 1, commercial_unit: "bote_comercial", base_quantity_g: 1000 },
-          { sku: "sku-034-lechuga", display_name: "Lechuga", quantity: 6, commercial_unit: "piezas", base_quantity_pieces: 6 }
+          { sku: "sku-021-flat-steak", display_name: "Flat steak (TOP SIRLOIN 1080G + NEW YORK REB 945G)", quantity: 2, base_quantity_g: 2025 },
+          { sku: "sku-024-carne-molida", display_name: "Carne molida (MM CARNE MOL 1760G)", quantity: 1, base_quantity_g: 1760 },
+          { sku: "sku-023-lomo-de-salmon", display_name: "Lomo de salmón (MM LOMO SALM 1400G)", quantity: 1, base_quantity_g: 1400 },
+          { sku: "sku-025-fajitas-de-mojarra", display_name: "Fajitas de mojarra (2 × MM TILA 1.36)", quantity: 2, base_quantity_g: 2720 },
+          { sku: "sku-318-pechuga-de-pavo", display_name: "Pechuga de pavo (FAJITAS PAVO)", quantity: 1, base_quantity_g: 1400 },
+          { sku: "sku-104-huevo", display_name: "Huevo (180 HUE BLA)", quantity: 1, base_quantity_pieces: 180 },
+          { sku: "sku-008-queso-manchego", display_name: "Queso manchego (QSO MANCH RA)", quantity: 1, base_quantity_g: 1000 },
+          { sku: "sku-003-queso-cottage", display_name: "Queso cottage (3 × 960GR QCOTTA)", quantity: 3, base_quantity_g: 2880 },
+          { sku: "sku-004-yogur-griego", display_name: "Yogur griego (OIKOS PROT 2)", quantity: 1, base_quantity_g: 1800 },
+          { sku: "sku-001-mantequilla", display_name: "Mantequilla (12/90 MANTEQ)", quantity: 1, base_quantity_g: 1080 },
+          { sku: "sku-043-nuez-de-la-india", display_name: "Nuez de la India (MM NUEZ INDI)", quantity: 1, base_quantity_g: 908 },
+          { sku: "sku-045-semillas-y-nueces-mixtas", display_name: "Semillas y nueces mixtas (MIX NUEZ MM)", quantity: 1, base_quantity_g: 908 },
+          { sku: "fresas_frescas_tr04095", display_name: "Fresas (2 × FRESA 907g)", quantity: 2, base_quantity_g: 1814 },
+          { sku: "frambuesas_frescas_organicas", display_name: "Frambuesas (FRAMBUESA)", quantity: 1, base_quantity_g: 340 },
+          { sku: "espinacas_baby_tiernas", display_name: "Espinacas (ESPINACA BAB)", quantity: 1, base_quantity_g: 454 },
+          { sku: "sku-040-champinon", display_name: "Champiñón (CHAMPINON BL)", quantity: 1, base_quantity_g: 700 },
+          { sku: "sku-034-lechuga", display_name: "Lechuga (LECHUGA SWEE)", quantity: 1, base_quantity_pieces: 4 },
+          { sku: "sku-319-germinado", display_name: "Germinado (GERMINADO)", quantity: 1, base_quantity_g: 500 },
+          { sku: "sku-019-botella-de-agua", display_name: "Botella de agua (3 × MM 40/355ML)", quantity: 3, base_quantity_bottles: 120 }
         ],
         excluded_non_food: [
+          { sku: "8_2l_aguamin", display_name: "Agua mineral (8 × 2L AGUAMIN)", reason: "Bloqueada en deletedPantryItems (0 apariciones en recetas)" },
           { sku: "ks_guante_gde_400p", display_name: "Guantes de protección (400 piezas)", reason: "Consumible operativo / Inocuidad de cocina y taller" }
         ]
       }
@@ -4058,69 +4075,69 @@ window.PANTRY_STOCK_INVENTORY = {
     let deletedFarmItems = ["Calabacitas", "Espinacas", "Brócoli", "Espárragos", "Ejotes", "Arúgula", "Coliflor", "Fresas", "Frambuesas", "Zarzamoras", "Arándanos", "Menta", "Epazote"];
     let deletedPantryItems = ["Elote", "Higos", "Nogada", "Zanahoria", "Agua mineral"];
 
-    let activeWeek = "Semana 45 (01 al 07 de Noviembre de 2026)";
+    let activeWeek = "Semana 46 (08 al 14 de Noviembre de 2026)";
     let selectedIdx = 0;
     let activeDiners = 6;
     let selectedHarvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica", "Granadas"];
 let pantryStock = {
-      "Mantequilla": 500,
-      "Mostaza": 120,
-      "Queso cottage": 3840,
-      "Yogur griego": 3000,
-      "Queso Philadelphia": 720,
-      "Crema ácida": 1100,
+      "Mantequilla": 1208,
+      "Mostaza": 0,
+      "Queso cottage": 4840,
+      "Yogur griego": 3640,
+      "Queso Philadelphia": 260,
+      "Crema ácida": 920,
       "Mayonesa": 200,
-      "Queso manchego": 1000,
+      "Queso manchego": 1130,
       "Queso de cabra": 0,
       "Salsa BBQ": 550,
-      "Leche de coco": 480,
+      "Leche de coco": 0,
       "Leche evaporada": 960,
       "Leche": 960,
       "Salsa cátsup": 2600,
-      "Queso mozzarella": 105,
-      "Botella de agua": 150,
-      "Queso parmesano": 100,
-      "Flat steak": 1290,
-      "Lomo de salmón": 980,
-      "Carne molida": 2315,
-      "Fajitas de mojarra": 900,
+      "Queso mozzarella": 0,
+      "Botella de agua": 270,
+      "Queso parmesano": 0,
+      "Flat steak": 2025,
+      "Lomo de salmón": 1780,
+      "Carne molida": 2875,
+      "Fajitas de mojarra": 2720,
       "Filete de atún": 0,
-      "Jitomate": 8,
-      "Morrón": 8,
-      "Pechuga de pollo": 1670,
+      "Jitomate": 0,
+      "Morrón": 0,
+      "Pechuga de pollo": 313.3,
       "Flor de calabaza": 0,
-      "Calabacitas": 1400,
-      "Cebolla": 13,
-      "Lechuga": 7,
-      "Ejotes": 500,
-      "Tomate": 500,
-      "Aguacate": 5,
-      "Zarzamora": 510,
-      "Champiñón": 1000,
+      "Calabacitas": 93.3,
+      "Cebolla": 1,
+      "Lechuga": 4,
+      "Ejotes": 80,
+      "Tomate": 200,
+      "Aguacate": 0,
+      "Zarzamora": 170,
+      "Champiñón": 866.7,
       "Pulpa de arándano": 3840,
-      "Pistaches": 100,
-      "Nuez de la India": 1700,
+      "Pistaches": 0,
+      "Nuez de la India": 2062,
       "Cacahuate enchilado": 1200,
-      "Semillas y nueces mixtas": 1020,
+      "Semillas y nueces mixtas": 1108,
       "Granola": 100,
-      "Té chai": 50,
-      "Hierbas finas": 25,
+      "Té chai": 38,
+      "Hierbas finas": 13,
       "Harina de trigo": 1500,
       "Harina para hot cakes": 500,
       "Cebolla en polvo": 50,
-      "Sal con ajo": 100,
-      "Canela molida": 750,
-      "Alcaparras": 200,
-      "Extracto de vainilla": 400,
+      "Sal con ajo": 52,
+      "Canela molida": 725,
+      "Alcaparras": 44,
+      "Extracto de vainilla": 376,
       "Microdyn": 200,
       "Cerezas": 260,
       "Tajín": 200,
       "Miguelito": 100,
       "Chamoy": 300,
       "Bicarbonato de sodio": 227,
-      "Achiote": 110,
+      "Achiote": 92,
       "Polvo para hornear": 100,
-      "Aceitunas manzanilla": 175,
+      "Aceitunas manzanilla": 5,
       "Chocolate para cobertura": 165,
       "Concentrado de caldo de pollo en polvo": 250,
       "Café colombiano": 100,
@@ -4129,24 +4146,24 @@ let pantryStock = {
       "Salsa inglesa": 200,
       "Salsa de soya": 250,
       "Vinagre de vino tinto": 250,
-      "Aceite de oliva": 400,
+      "Aceite de oliva": 118,
       "Flor de Jamaica molida en polvo": 200,
       "Almendras fileteadas": 100,
-      "Hojas de laurel": 9,
-      "Orégano": 150,
-      "Tomillo": 20,
-      "Pimienta negra": 170,
-      "Comino": 50,
-      "Clavo de olor": 50,
+      "Hojas de laurel": 0,
+      "Orégano": 98,
+      "Tomillo": 8,
+      "Pimienta negra": 124,
+      "Comino": 47,
+      "Clavo de olor": 48,
       "Ajonjolí": 0,
-      "Manzanilla": 50,
-      "Cúrcuma": 100,
-      "Sal de mar": 3000,
+      "Manzanilla": 12,
+      "Cúrcuma": 82,
+      "Sal de mar": 2810,
       "Manteca de cerdo": 0,
-      "Aceite de coco": 1700,
+      "Aceite de coco": 1328,
       "Tang": 104,
-      "Atún en agua": 700,
-      "Sardinas": 860,
+      "Atún en agua": 40,
+      "Sardinas": 0,
       "Rajas de jalapeño": 314,
       "Harina Power Cakes": 1000,
       "Hojuelas de avena": 100,
@@ -4155,28 +4172,28 @@ let pantryStock = {
       "Quinoa": 100,
       "Chile güero": 840,
       "Palomitas para microondas": 600,
-      "Grenetina": 112,
+      "Grenetina": 32,
       "Saborizante para arroz": 48,
-      "Huevo": 170,
-      "MultiSinergix®": 300,
-      "AminoSinergix®": 200,
-      "Espinacas": 150,
+      "Huevo": 224,
+      "MultiSinergix®": 0,
+      "AminoSinergix®": 0,
+      "Espinacas": 454,
       "Espárragos": 0,
-      "Fresas": 907,
-      "Frambuesas": 0,
+      "Fresas": 1821,
+      "Frambuesas": 340,
       "Queso ricotta": 0,
       "Chile chipotle": 1320,
       "Frijol pinto": 1,
-      "Pollo entero": 1,
-      "Pechuga de pavo": 1400,
-      "Germinado": 500,
-      "Coliflor": 500,
-      "Pepino": 2,
-      "Brócoli": 1500,
+      "Pollo entero": 0,
+      "Pechuga de pavo": 1633.3,
+      "Germinado": 640,
+      "Coliflor": 0,
+      "Pepino": 0,
+      "Brócoli": 0,
       "Queso de cabra con arándano": 350,
-      "Queso doble crema": 1000,
-      "Ajo": 120,
-      "Nueces mixtas": 1020
+      "Queso doble crema": 140,
+      "Ajo": 7,
+      "Nueces mixtas": 1108
     };
     let checkedRows = {};
     let mealDinersState = {
@@ -5455,32 +5472,96 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v60_mercado_local_fresco_nov01_sync', 'true');
         }
 
-        // Sincronización V61 Cierre Semana 45: Frambuesas (0 g agotadas en S44 -> Granadas activas en Granja El Herami) y Aceite de coco neutro (1,700 g)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v61_cierre_s45_granada_coco_sync') !== 'true') {
-          pantryStock["Frambuesas"] = 0;
-          pantryStock["Aceite de coco"] = 1700;
-          if (window.pantryCardUnits) {
-            window.pantryCardUnits["Frambuesas"] = "g";
-            window.pantryCardUnits["Aceite de coco"] = "g";
-          }
-          if (window.PANTRY_STOCK_INVENTORY) {
-            if (window.PANTRY_STOCK_INVENTORY["frambuesas_frescas_organicas"]) {
-              window.PANTRY_STOCK_INVENTORY["frambuesas_frescas_organicas"].stock = 0;
-              window.PANTRY_STOCK_INVENTORY["frambuesas_frescas_organicas"].packaging = "0 g";
+        // Sincronización V63: Saldo Real Post-S45 + Ticket Sam's Club SM Santa Fe 09 Nov 2026 (Orden 1569462808300642304 — $5,127.48 MXN) y Activación de Semana 46
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v63_sams_09nov2026_post_s45_sync') !== 'true') {
+          const v63SamsUpdates = {
+            "Flat steak": { stock: 2025, unit: "g", sku: "sku-021-flat-steak" },
+            "Carne molida": { stock: 2875, unit: "g", sku: "sku-024-carne-molida" },
+            "Lomo de salmón": { stock: 1780, unit: "g", sku: "sku-023-lomo-de-salmon" },
+            "Fajitas de mojarra": { stock: 2720, unit: "g", sku: "sku-025-fajitas-de-mojarra" },
+            "Pechuga de pavo": { stock: 1633.3, unit: "g", sku: "sku-318-pechuga-de-pavo" },
+            "Huevo": { stock: 224, unit: "piezas", sku: "sku-104-huevo" },
+            "Pechuga de pollo": { stock: 313.3, unit: "g", sku: "sku-029-pechuga-de-pollo" },
+            "Pollo entero": { stock: 0, unit: "piezas", sku: "pollo-entero" },
+            "Atún en agua": { stock: 40, unit: "g", sku: "sku-092-atun-en-agua" },
+            "Sardinas": { stock: 0, unit: "g", sku: "sku-093-sardinas" },
+            "Queso manchego": { stock: 1130, unit: "g", sku: "sku-008-queso-manchego" },
+            "Queso cottage": { stock: 4840, unit: "g", sku: "sku-003-queso-cottage" },
+            "Yogur griego": { stock: 3640, unit: "g", sku: "sku-004-yogur-griego" },
+            "Mantequilla": { stock: 1208, unit: "g", sku: "sku-001-mantequilla" },
+            "Queso Philadelphia": { stock: 260, unit: "g", sku: "sku-005-queso-philadelphia" },
+            "Queso doble crema": { stock: 140, unit: "g", sku: "sku-321-queso-doble-crema" },
+            "Queso mozzarella": { stock: 0, unit: "g", sku: "sku-015-queso-mozzarella" },
+            "Queso parmesano": { stock: 0, unit: "g", sku: "sku-020-queso-parmesano" },
+            "Queso ricotta": { stock: 0, unit: "g", sku: "queso_ricotta_artesanal" },
+            "Crema ácida": { stock: 920, unit: "g", sku: "sku-006-crema-acida" },
+            "Leche de coco": { stock: 0, unit: "ml", sku: "sku-011-leche-de-coco" },
+            "Nuez de la India": { stock: 2062, unit: "g", sku: "sku-043-nuez-de-la-india" },
+            "Semillas y nueces mixtas": { stock: 1108, unit: "g", sku: "sku-045-semillas-y-nueces-mixtas" },
+            "Fresas": { stock: 1821, unit: "g", sku: "fresas_frescas_tr04095" },
+            "Frambuesas": { stock: 340, unit: "g", sku: "frambuesas_frescas_organicas" },
+            "Zarzamora": { stock: 170, unit: "g", sku: "sku-039-zarzamora" },
+            "Espinacas": { stock: 454, unit: "g", sku: "espinacas_baby_tiernas" },
+            "Champiñón": { stock: 866.7, unit: "g", sku: "sku-040-champinon" },
+            "Lechuga": { stock: 4, unit: "piezas", sku: "sku-034-lechuga" },
+            "Germinado": { stock: 640, unit: "g", sku: "sku-319-germinado" },
+            "Botella de agua": { stock: 270, unit: "botellas (355 ml)", sku: "sku-019-botella-de-agua" },
+            "Calabacitas": { stock: 93.3, unit: "g", sku: "sku-322-calabacitas" },
+            "Ejotes": { stock: 80, unit: "g", sku: "sku-035-ejotes" },
+            "Jitomate": { stock: 0, unit: "piezas", sku: "sku-027-jitomate" },
+            "Tomate": { stock: 200, unit: "g", sku: "sku-036-tomate" },
+            "Cebolla": { stock: 1, unit: "piezas", sku: "sku-033-cebolla" },
+            "Morrón": { stock: 0, unit: "piezas", sku: "sku-028-morron" },
+            "Aguacate": { stock: 0, unit: "piezas", sku: "sku-038-aguacate" },
+            "Brócoli": { stock: 0, unit: "g", sku: "sku-324-brocoli" },
+            "Coliflor": { stock: 0, unit: "g", sku: "sku-325-coliflor" },
+            "Pepino": { stock: 0, unit: "g", sku: "sku-326-pepino" },
+            "Aceite de coco": { stock: 1328, unit: "g", sku: "sku-090-aceite-de-coco" },
+            "Aceite de oliva": { stock: 118, unit: "ml", sku: "sku-073-aceite-de-oliva" },
+            "Almendras fileteadas": { stock: 100, unit: "g", sku: "sku-075-almendras-fileteadas" },
+            "Pistaches": { stock: 0, unit: "g", sku: "sku-042-pistaches" },
+            "Aceitunas manzanilla": { stock: 5, unit: "g", sku: "sku-064-aceitunas-manzanilla" },
+            "Alcaparras": { stock: 44, unit: "g", sku: "sku-054-alcaparras" },
+            "Achiote": { stock: 92, unit: "g", sku: "sku-062-achiote" },
+            "Ajo": { stock: 7, unit: "g", sku: "sku-323-ajo" },
+            "Canela molida": { stock: 725, unit: "g", sku: "sku-053-canela-molida" },
+            "Clavo de olor": { stock: 48, unit: "g", sku: "sku-082-clavo-de-olor" },
+            "Comino": { stock: 47, unit: "g", sku: "sku-081-comino" },
+            "Cúrcuma": { stock: 82, unit: "g", sku: "sku-086-curcuma" },
+            "Extracto de vainilla": { stock: 376, unit: "ml", sku: "sku-055-extracto-de-vainilla" },
+            "Grenetina": { stock: 32, unit: "g", sku: "sku-102-grenetina" },
+            "Hierbas finas": { stock: 13, unit: "g", sku: "sku-048-hierbas-finas" },
+            "Hojas de laurel": { stock: 0, unit: "g", sku: "sku-076-hojas-de-laurel" },
+            "Manzanilla": { stock: 12, unit: "g", sku: "sku-085-manzanilla" },
+            "Mostaza": { stock: 0, unit: "g", sku: "sku-002-mostaza" },
+            "Orégano": { stock: 98, unit: "g", sku: "sku-077-oregano-delgado" },
+            "Pimienta negra": { stock: 124, unit: "g", sku: "sku-080-pimienta-negra" },
+            "Sal con ajo": { stock: 52, unit: "g", sku: "sku-052-sal-con-ajo" },
+            "Sal de mar": { stock: 2810, unit: "g", sku: "sku-087-sal-marina-de-grano" },
+            "Té chai": { stock: 38, unit: "g", sku: "sku-047-te-chai" },
+            "Tomillo": { stock: 8, unit: "g", sku: "sku-079-tomillo" },
+            "MultiSinergix®": { stock: 0, unit: "g", sku: "sku-105-multisinergix" },
+            "AminoSinergix®": { stock: 0, unit: "g", sku: "sku-106-aminosinergix" }
+          };
+          Object.keys(v63SamsUpdates).forEach(itemName => {
+            const up = v63SamsUpdates[itemName];
+            pantryStock[itemName] = up.stock;
+            if (window.pantryCardUnits) {
+              window.pantryCardUnits[itemName] = up.unit;
             }
-            if (window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"]) {
-              window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].stock = 1700;
-              window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].unit = "g";
-              window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].packaging = "1700 g";
+            if (window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[up.sku]) {
+              window.PANTRY_STOCK_INVENTORY[up.sku].stock = up.stock;
+              window.PANTRY_STOCK_INVENTORY[up.sku].unit = up.unit;
+              window.PANTRY_STOCK_INVENTORY[up.sku].packaging = `${up.stock} ${up.unit}`;
             }
+          });
+          if (Array.isArray(deletedPantryItems) && !deletedPantryItems.some(d => /agua\\s*mineral/i.test(String(d)))) {
+            deletedPantryItems.push("Agua mineral");
           }
-          if (Array.isArray(deletedFarmItems)) {
-            deletedFarmItems = deletedFarmItems.filter(d => !/granada/i.test(String(d)));
+          if (typeof CANONICAL_WEEK_46_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_46_TITLE]) {
+            activeWeek = CANONICAL_WEEK_46_TITLE;
           }
-          if (Array.isArray(selectedHarvest) && !selectedHarvest.some(h => /granada/i.test(String(h)))) {
-            selectedHarvest.push("Granadas");
-          }
-          localStorage.setItem('nutriketo_v61_cierre_s45_granada_coco_sync', 'true');
+          localStorage.setItem('nutriketo_v63_sams_09nov2026_post_s45_sync', 'true');
         }
 
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
@@ -5692,27 +5773,37 @@ let pantryStock = {
 
     function ensureCanonicalTicketIntakesApplied() {
       try {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v62_s45_mercado_cierre_applied') !== 'true') {
-          const s45SyncedStocks = {
-            "Mantequilla": 500, "Mostaza": 120, "Queso cottage": 3840, "Yogur griego": 3000,
-            "Queso Philadelphia": 720, "Crema ácida": 1100, "Mayonesa": 200, "Queso manchego": 1000,
-            "Leche de coco": 480, "Queso mozzarella": 105, "Botella de agua": 150, "Queso parmesano": 100,
-            "Flat steak": 1290, "Lomo de salmón": 980, "Carne molida": 2315, "Fajitas de mojarra": 900,
-            "Jitomate": 8, "Morrón": 8, "Pechuga de pollo": 1670, "Calabacitas": 1400, "Cebolla": 13,
-            "Lechuga": 7, "Ejotes": 500, "Tomate": 500, "Aguacate": 5, "Zarzamora": 510,
-            "Champiñón": 1000, "Nuez de la India": 1700, "Semillas y nueces mixtas": 1020,
-            "Té chai": 50, "Aceite de oliva": 400, "Almendras fileteadas": 100, "Hojas de laurel": 9,
-            "Pimienta negra": 170, "Manteca de cerdo": 0, "Aceite de coco": 1700, "Sardinas": 860,
-            "Huevo": 170, "Espinacas": 150, "Espárragos": 0, "Fresas": 907, "Frambuesas": 0,
-            "Queso ricotta": 0, "Pollo entero": 1, "Pechuga de pavo": 1400, "Germinado": 500,
-            "Coliflor": 500, "Pepino": 2, "Brócoli": 1500, "Queso de cabra con arándano": 350,
-            "Queso doble crema": 1000, "Ajo": 120, "Nueces mixtas": 1020
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v63_sams_09nov2026_applied') !== 'true') {
+          const s46SyncedStocks = {
+            "Mantequilla": 1208, "Mostaza": 0, "Queso cottage": 4840, "Yogur griego": 3640,
+            "Queso Philadelphia": 260, "Crema ácida": 920, "Mayonesa": 200, "Queso manchego": 1130,
+            "Leche de coco": 0, "Queso mozzarella": 0, "Botella de agua": 270, "Queso parmesano": 0,
+            "Flat steak": 2025, "Lomo de salmón": 1780, "Carne molida": 2875, "Fajitas de mojarra": 2720,
+            "Jitomate": 0, "Morrón": 0, "Pechuga de pollo": 313.3, "Calabacitas": 93.3, "Cebolla": 1,
+            "Lechuga": 4, "Ejotes": 80, "Tomate": 200, "Aguacate": 0, "Zarzamora": 170,
+            "Champiñón": 866.7, "Nuez de la India": 2062, "Semillas y nueces mixtas": 1108,
+            "Té chai": 38, "Aceite de oliva": 118, "Almendras fileteadas": 100, "Hojas de laurel": 0,
+            "Pimienta negra": 124, "Manteca de cerdo": 0, "Aceite de coco": 1328, "Atún en agua": 40,
+            "Sardinas": 0, "Huevo": 224, "MultiSinergix®": 0, "AminoSinergix®": 0,
+            "Espinacas": 454, "Espárragos": 0, "Fresas": 1821, "Frambuesas": 340,
+            "Queso ricotta": 0, "Pollo entero": 0, "Pechuga de pavo": 1633.3, "Germinado": 640,
+            "Coliflor": 0, "Pepino": 0, "Brócoli": 0, "Queso de cabra con arándano": 350,
+            "Queso doble crema": 140, "Ajo": 7, "Nueces mixtas": 1108, "Pistaches": 0,
+            "Aceitunas manzanilla": 5, "Alcaparras": 44, "Achiote": 92, "Canela molida": 725,
+            "Clavo de olor": 48, "Comino": 47, "Cúrcuma": 82, "Extracto de vainilla": 376,
+            "Grenetina": 32, "Hierbas finas": 13, "Manzanilla": 12, "Orégano": 98,
+            "Sal con ajo": 52, "Sal de mar": 2810, "Tomillo": 8
           };
-          pantryStock = Object.assign(pantryStock || {}, s45SyncedStocks);
+          pantryStock = Object.assign(pantryStock || {}, s46SyncedStocks);
           if (window.pantryCardUnits && typeof window.pantryCardUnits === 'object') {
             window.pantryCardUnits["Sardinas"] = "g";
+            window.pantryCardUnits["Pepino"] = "g";
+          }
+          if (typeof CANONICAL_WEEK_46_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_46_TITLE]) {
+            activeWeek = CANONICAL_WEEK_46_TITLE;
           }
           localStorage.setItem('nutriketo_v62_s45_mercado_cierre_applied', 'true');
+          localStorage.setItem('nutriketo_v63_sams_09nov2026_applied', 'true');
         }
         consolidateAndPurgePantryInventory();
         if (typeof localStorage !== 'undefined') {
@@ -6053,6 +6144,7 @@ let pantryStock = {
           v58_tickets_sams_costco_nov01_sync: true,
           v60_mercado_local_fresco_nov01_sync: true,
           v61_cierre_s45_granada_coco_sync: true,
+          v63_sams_09nov2026_post_s45_sync: true,
           checkedRows,
           customShopItems,
           selectedIdx,
@@ -11774,16 +11866,16 @@ function renderRecipes(day, activeDiners) {
         if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
         if (typeof ensureSundayServiceDispatched === 'function') ensureSundayServiceDispatched();
 
-        // Enforce today's calendar date detection to select and highlight green on boot (unless viewing Semana 45+ or a generated week)
+        // Enforce today's calendar date detection to select and highlight green on boot (unless viewing Semana 46+ or a generated week)
         if (typeof findTodayWeekAndDayIndex === 'function') {
           const todayMatch = findTodayWeekAndDayIndex();
           const curWNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(activeWeek) : null;
-          const isViewingFutureOrCustomWeek = (curWNum !== null && curWNum >= 45) || (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks && window.customGeneratedWeeks[activeWeek]);
+          const isViewingFutureOrCustomWeek = (curWNum !== null && curWNum > 46) || (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks && window.customGeneratedWeeks[activeWeek]);
           if (todayMatch && !isViewingFutureOrCustomWeek) {
             activeWeek = todayMatch.weekKey;
             selectedIdx = todayMatch.dayIndex;
           } else if (!activeWeek || !datasets[activeWeek]) {
-            activeWeek = "Semana 45 (01 al 07 de Noviembre de 2026)";
+            activeWeek = "Semana 46 (08 al 14 de Noviembre de 2026)";
             selectedIdx = 0;
           }
         }

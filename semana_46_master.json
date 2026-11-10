@@ -1076,8 +1076,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Consomé Americano de Fondo Claro de Pollo con Hojas Tiernas de Espinaca, Tomillo y Limón Real",
-          "main_dish_name": "Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Parmesano y Ajo con Floretes de Brócoli al Vapor",
-          "dish_name": "Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Parmesano y Ajo con Floretes de Brócoli al Vapor",
+          "main_dish_name": "Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Manchego y Ajo con Floretes de Brócoli al Vapor",
+          "dish_name": "Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Manchego y Ajo con Floretes de Brócoli al Vapor",
           "side_dish_name": "Panna Cotta Sedante de Yogur Griego, Leche de Coco, Vainilla e Infusión de Manzanilla (4°C) con 34Plus®",
           "starter": {
             "title": "Consomé Americano de Fondo Claro de Pollo con Hojas Tiernas de Espinaca, Tomillo y Limón Real",
@@ -1139,12 +1139,12 @@
             ]
           },
           "main": {
-            "title": "Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Parmesano y Ajo con Floretes de Brócoli al Vapor",
+            "title": "Fajitas de Pechuga de Pollo al Grill en Salsa Alfredo Ligera de Queso Cottage Procesado, Queso Manchego y Ajo con Floretes de Brócoli al Vapor",
             "technique": "grilled_chicken_broccoli_alfredo_s46",
-            "note": "Escuela 2 (Inspiración IHOP): fajitas de pechuga de pollo asadas al grill sobre floretes de brócoli al vapor, bañadas en salsa Alfredo al ajo elaborada con pasta tersa de queso cottage y queso parmesano.",
+            "note": "Escuela 2 (Inspiración IHOP): fajitas de pechuga de pollo asadas al grill sobre floretes de brócoli al vapor, bañadas en salsa Alfredo al ajo elaborada con pasta tersa de queso cottage y queso manchego fundido.",
             "coct_reasoning": {
               "thermodynamics": "Sellado de ave a 180°C y emulsión Alfredo a 75°C.",
-              "flavor_and_aromatics": "Salsa Alfredo al ajo tostado y parmesano sobre pollo al grill y brócoli.",
+              "flavor_and_aromatics": "Salsa Alfredo al ajo tostado y queso manchego sobre pollo al grill y brócoli.",
               "textural_architecture": "Tiras jugosas de pechuga y floretes de brócoli al dente.",
               "critical_control_points": "No hervir la salsa de queso cottage procesado."
             },
@@ -1172,7 +1172,7 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso parmesano",
+                "name": "Queso manchego",
                 "per_guest": 8.3333,
                 "amount": 50,
                 "unit": "g"
@@ -1208,7 +1208,7 @@
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir 2 minutos y procesar 15 segundos hasta lograr una crema lisa.",
-              "Asar las fajitas de pechuga de pollo en mantequilla con el ajo picado, sal con ajo y pimienta negra; mezclar con la crema de cottage y queso parmesano, y servir sobre floretes de brócoli al vapor."
+              "Asar las fajitas de pechuga de pollo en mantequilla con el ajo picado, sal con ajo y pimienta negra; mezclar con la crema de cottage y queso manchego rallado, y servir sobre floretes de brócoli al vapor."
             ],
             "archetype": "heptagon_s46_pollo_alfredo_brocoli"
           },
@@ -1299,26 +1299,33 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.1,
           "fiber_g": 6.4,
-          "starter_name": "Macerado de Frambuesas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "starter_name": "Macerado de Frambuesas y Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Tortilla Embarazada Tabasqueña (Omelette Grueso de Huevos en Costra de Queso Manchego Relleno de Hojas de Acelga de la Granja, Cebolla, Achiote y Queso Doble Crema)",
           "dish_name": "Tortilla Embarazada Tabasqueña (Omelette Grueso de Huevos en Costra de Queso Manchego Relleno de Hojas de Acelga de la Granja, Cebolla, Achiote y Queso Doble Crema)",
           "side_dish_name": "Parfait Cremoso de Yogur Griego al Limón Real, Vainilla, Nuez Pecana y Rubíes de Granada de la Granja (6°C) con 33Plus®",
           "starter": {
-            "title": "Macerado de Frambuesas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "title": "Macerado de Frambuesas y Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "citrus_raspberry_maceration_s46",
-            "note": "Frambuesas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana (distinta a la granada del Parfait en Tiempo 3 [R4]).",
+            "note": "Frambuesas y fresas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana (distinta a la granada del Parfait en Tiempo 3 [R4]).",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 6°C.",
-              "flavor_and_aromatics": "Frambuesas al limón real con semillas y nueces.",
-              "textural_architecture": "Bayas enteras con crocancia de nuez pecana.",
+              "flavor_and_aromatics": "Frambuesas y fresas al limón real con semillas y nueces.",
+              "textural_architecture": "Bayas enteras y cuartos de fresa con crocancia de nuez pecana.",
               "critical_control_points": "Cero lácteos en la entrada ([R4.6])."
             },
             "ingredients": [
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Frambuesas",
-                "per_guest": 30,
-                "amount": 180,
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 35,
+                "amount": 210,
                 "unit": "g"
               },
               {
@@ -1351,7 +1358,7 @@
               }
             ],
             "steps": [
-              "Colocar las frambuesas en copas frías y rociar con jugo de limón real.",
+              "Colocar las frambuesas y las fresas en copas frías y rociar con jugo de limón real.",
               "Añadir las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
@@ -1932,26 +1939,26 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
-          "starter_name": "Espejo de Zarzamoras al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "starter_name": "Espejo de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Huevos Rotos del Mesón Castellano Estrellados sobre Cama de Champiñones Laminados, Cebolla Confitada, Ajo Dorado y Lascas de Queso Manchego",
           "dish_name": "Huevos Rotos del Mesón Castellano Estrellados sobre Cama de Champiñones Laminados, Cebolla Confitada, Ajo Dorado y Lascas de Queso Manchego",
           "side_dish_name": "Pudding Cetogénico de Semillas de Chía, Vainilla y Cacao Nibs en Leche de Coco (4°C) con 33Plus®",
           "starter": {
-            "title": "Espejo de Zarzamoras al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-            "technique": "spanish_blackberry_citrus_mirror_s46",
-            "note": "Zarzamoras sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            "title": "Espejo de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "technique": "spanish_strawberry_citrus_mirror_s46",
+            "note": "Fresas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 6°C.",
-              "flavor_and_aromatics": "Zarzamora ácida con nuez pecana de la granja.",
-              "textural_architecture": "Bayas firmes con nueces.",
+              "flavor_and_aromatics": "Fresa al limón real con nuez pecana de la granja.",
+              "textural_architecture": "Láminas firmes de fresa con nueces.",
               "critical_control_points": "Cero lácteos en la entrada frutal ([R4.6])."
             },
             "ingredients": [
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
-                "name": "Zarzamora",
-                "per_guest": 28.3333,
-                "amount": 170,
+                "name": "Fresas",
+                "per_guest": 50,
+                "amount": 300,
                 "unit": "g"
               },
               {
@@ -1984,7 +1991,7 @@
               }
             ],
             "steps": [
-              "Servir las zarzamoras en platos fríos con gotas de limón real.",
+              "Servir las fresas laminadas en platos fríos con gotas de limón real.",
               "Acompañar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
@@ -2709,8 +2716,8 @@
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Frambuesas",
-                "per_guest": 30,
-                "amount": 180,
+                "per_guest": 26.6667,
+                "amount": 160,
                 "unit": "g"
               },
               {
@@ -2737,7 +2744,7 @@
             ],
             "steps": [
               "Batir en frío el queso Philadelphia suavizado con el yogur griego, el agua purificada, el extracto de vainilla y los 30 g de 33Plus®.",
-              "Integrar 120 g de frambuesas trituradas para marmolear el mousse y decorar en copas bistró con los 60 g restantes de frambuesas enteras."
+              "Integrar 120 g de frambuesas trituradas para marmolear el mousse y decorar en copas bistró con los 40 g restantes de frambuesas enteras."
             ],
             "serving_temp_c": "6°C"
           }
@@ -3789,26 +3796,33 @@
           "protein_g": 34.5,
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
-          "starter_name": "Macerado Helénico de Frambuesas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-          "main_dish_name": "Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Parmesano)",
-          "dish_name": "Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Parmesano)",
+          "starter_name": "Macerado Helénico de Frambuesas y Fresas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+          "main_dish_name": "Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Manchego)",
+          "dish_name": "Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Manchego)",
           "side_dish_name": "Elixir Verde Prensado en Frío de Pepino, Apio, Espinaca y Limón Real (8°C) con 33Plus®",
           "starter": {
-            "title": "Macerado Helénico de Frambuesas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
+            "title": "Macerado Helénico de Frambuesas y Fresas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "hellenic_raspberry_vanilla_maceration_s46",
-            "note": "Frambuesas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
+            "note": "Frambuesas y fresas sin lácteos ([R4.6]) con semillas y nueces mixtas, nuez de la India y nuez pecana.",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 6°C.",
-              "flavor_and_aromatics": "Frambuesas a la vainilla con nuez pecana de la granja.",
-              "textural_architecture": "Bayas enteras con crocancia de semillas.",
+              "flavor_and_aromatics": "Frambuesas y fresas a la vainilla con nuez pecana de la granja.",
+              "textural_architecture": "Bayas enteras y cuartos de fresa con crocancia de semillas.",
               "critical_control_points": "Cero lácteos en la entrada ([R4.6])."
             },
             "ingredients": [
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
                 "name": "Frambuesas",
-                "per_guest": 30,
-                "amount": 180,
+                "per_guest": 15,
+                "amount": 90,
+                "unit": "g"
+              },
+              {
+                "category": "🍓 Frutas de Bajo Índice Glucémico",
+                "name": "Fresas",
+                "per_guest": 35,
+                "amount": 210,
                 "unit": "g"
               },
               {
@@ -3841,17 +3855,17 @@
               }
             ],
             "steps": [
-              "Perfumar las frambuesas con el extracto de vainilla.",
+              "Perfumar las frambuesas y las fresas con el extracto de vainilla.",
               "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
             ]
           },
           "main": {
-            "title": "Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Parmesano)",
+            "title": "Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Manchego)",
             "technique": "greek_island_strapatsada_eggs_s46",
-            "note": "Escuela 7 (Mare Nostrum — Islas Griegas): clásico desayuno helénico de 3 huevos por comensal cocinados sobre reducción de jitomate asado, ajo, orégano y aceitunas manzanilla con pasta tersa de queso cottage y queso parmesano.",
+            "note": "Escuela 7 (Mare Nostrum — Islas Griegas): clásico desayuno helénico de 3 huevos por comensal cocinados sobre reducción de jitomate asado, ajo, orégano y aceitunas manzanilla con pasta tersa de queso cottage y queso manchego gratinado.",
             "coct_reasoning": {
               "thermodynamics": "Reducción de jitomate a 90°C y cuajado suave a 140°C.",
-              "flavor_and_aromatics": "Sol del Egeo con jitomate asado, orégano, aceitunas manzanilla y queso.",
+              "flavor_and_aromatics": "Sol del Egeo con jitomate asado, orégano, aceitunas manzanilla y queso manchego.",
               "textural_architecture": "Huevos melosos integrados con el sugo griego.",
               "critical_control_points": "Evitar resecar el huevo al integrar con el jitomate."
             },
@@ -3879,7 +3893,7 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso parmesano",
+                "name": "Queso manchego",
                 "per_guest": 8.3333,
                 "amount": 50,
                 "unit": "g"
@@ -3922,7 +3936,7 @@
             ],
             "steps": [
               "🥣 Preparación del Queso Cottage (Textura Pasta Tipo Ricotta): Escurrir y procesar el queso cottage hasta obtener una pasta tersa.",
-              "Sofreír el ajo y el jitomate rallado con orégano y aceitunas manzanilla; incorporar los 18 huevos batidos en fuego suave y terminar con la pasta de cottage, queso parmesano y aceite de oliva."
+              "Sofreír el ajo y el jitomate rallado con orégano y aceitunas manzanilla; incorporar los 18 huevos batidos en fuego suave y terminar con la pasta de cottage, queso manchego rallado y aceite de oliva."
             ],
             "archetype": "heptagon_s46_huevo_strapatsada_griega"
           },
@@ -4206,8 +4220,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Consomé Mediterráneo de Fondo Claro de Pollo con Hojas de Acelga de la Granja, Ajo y Limón Real",
-          "main_dish_name": "Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Mozzarella",
-          "dish_name": "Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Mozzarella",
+          "main_dish_name": "Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Manchego",
+          "dish_name": "Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Manchego",
           "side_dish_name": "Trufas Nocturnas (Fat Bombs) de Nuez de la India, Cacao Puro y Aceite de Coco (14°C) con 34Plus® + Infusión Limpia de Tomillo",
           "starter": {
             "title": "Consomé Mediterráneo de Fondo Claro de Pollo con Hojas de Acelga de la Granja, Ajo y Limón Real",
@@ -4269,12 +4283,12 @@
             ]
           },
           "main": {
-            "title": "Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Mozzarella",
+            "title": "Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Manchego",
             "technique": "trattoria_tuna_stuffed_peppers_s46",
-            "note": "Escuela 7 (Mare Nostrum): mitades de pimiento morrón asadas y rellenas de atún, jitomate, aceitunas manzanilla y ajo con gratinado de queso mozzarella y abanico de aguacate Hass ([R5]).",
+            "note": "Escuela 7 (Mare Nostrum): mitades de pimiento morrón asadas y rellenas de atún, jitomate, aceitunas manzanilla y ajo con gratinado de queso manchego y abanico de aguacate Hass ([R5]).",
             "coct_reasoning": {
               "thermodynamics": "Horneado a 185°C por 10 minutos.",
-              "flavor_and_aromatics": "Sabor mediterráneo de atún, aceitunas, morrón asado y mozzarella con aguacate.",
+              "flavor_and_aromatics": "Sabor mediterráneo de atún, aceitunas, morrón asado y queso manchego fundido con aguacate.",
               "textural_architecture": "Pimiento tierno con relleno jugoso y cubierta fundida.",
               "critical_control_points": "Única presencia diaria de aguacate ([R5])."
             },
@@ -4302,7 +4316,7 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso mozzarella",
+                "name": "Queso manchego",
                 "per_guest": 17.5,
                 "amount": 105,
                 "unit": "g"
@@ -4352,7 +4366,7 @@
             ],
             "steps": [
               "Asar las mitades de pimiento morrón y rellenar con el atún drenado salteado con jitomate, ajo, aceitunas manzanilla y orégano en aceite de coco neutro.",
-              "Gratinar con el queso mozzarella y acompañar al servir con aguacate Hass."
+              "Gratinar con el queso manchego rallado y acompañar al servir con aguacate Hass."
             ],
             "archetype": "heptagon_s46_atun_pimientos_trattoria"
           },
@@ -4398,8 +4412,8 @@
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Tomillo",
-                "per_guest": 0.5,
-                "amount": 3,
+                "per_guest": 0.3333,
+                "amount": 2,
                 "unit": "g"
               },
               {
@@ -4512,36 +4526,15 @@
         {
           "name": "Aceite de coco",
           "required": 486.0,
-          "stock": 1700.0,
-          "remaining_stock": 1214.0,
-          "unit": "g"
-        },
-        {
-          "name": "Aceite de oliva",
-          "required": 342.0,
-          "stock": 400.0,
-          "remaining_stock": 58.0,
-          "unit": "ml"
-        },
-        {
-          "name": "Aceitunas manzanilla",
-          "required": 150.0,
-          "stock": 175.0,
-          "remaining_stock": 25.0,
+          "stock": 1328.0,
+          "remaining_stock": 842.0,
           "unit": "g"
         },
         {
           "name": "Achiote",
           "required": 42.0,
-          "stock": 110.0,
-          "remaining_stock": 68.0,
-          "unit": "g"
-        },
-        {
-          "name": "Alcaparras",
-          "required": 132.0,
-          "stock": 200.0,
-          "remaining_stock": 68.0,
+          "stock": 92.0,
+          "remaining_stock": 50.0,
           "unit": "g"
         },
         {
@@ -4552,276 +4545,199 @@
           "unit": "g"
         },
         {
-          "name": "Atún en agua",
-          "required": 700.0,
-          "stock": 700.0,
-          "remaining_stock": 0.0,
-          "unit": "g"
-        },
-        {
           "name": "Canela molida",
           "required": 21.0,
-          "stock": 750.0,
-          "remaining_stock": 729.0,
+          "stock": 725.0,
+          "remaining_stock": 704.0,
           "unit": "g"
         },
         {
           "name": "Carne molida",
           "required": 1320.0,
-          "stock": 2315.0,
-          "remaining_stock": 995.0,
+          "stock": 2875.0,
+          "remaining_stock": 1555.0,
           "unit": "g"
-        },
-        {
-          "name": "Cebolla",
-          "required": 13.0,
-          "stock": 13.0,
-          "remaining_stock": 0.0,
-          "unit": "piezas"
         },
         {
           "name": "Clavo de olor",
           "required": 2.0,
-          "stock": 50.0,
-          "remaining_stock": 48.0,
+          "stock": 48.0,
+          "remaining_stock": 46.0,
           "unit": "g"
         },
         {
           "name": "Cúrcuma",
           "required": 21.0,
-          "stock": 100.0,
-          "remaining_stock": 79.0,
-          "unit": "g"
-        },
-        {
-          "name": "Ejotes",
-          "required": 300.0,
-          "stock": 500.0,
-          "remaining_stock": 200.0,
+          "stock": 82.0,
+          "remaining_stock": 61.0,
           "unit": "g"
         },
         {
           "name": "Extracto de vainilla",
           "required": 48.0,
-          "stock": 400.0,
-          "remaining_stock": 352.0,
+          "stock": 376.0,
+          "remaining_stock": 328.0,
           "unit": "ml"
         },
         {
+          "name": "Fajitas de mojarra",
+          "required": 1680.0,
+          "stock": 2720.0,
+          "remaining_stock": 1040.0,
+          "unit": "g"
+        },
+        {
+          "name": "Flat steak",
+          "required": 1320.0,
+          "stock": 2025.0,
+          "remaining_stock": 705.0,
+          "unit": "g"
+        },
+        {
+          "name": "Frambuesas",
+          "required": 340.0,
+          "stock": 340.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
           "name": "Fresas",
-          "required": 600.0,
-          "stock": 907.0,
-          "remaining_stock": 307.0,
+          "required": 1320.0,
+          "stock": 1821.0,
+          "remaining_stock": 501.0,
           "unit": "g"
         },
         {
           "name": "Germinado",
           "required": 360.0,
-          "stock": 500.0,
-          "remaining_stock": 140.0,
-          "unit": "g"
-        },
-        {
-          "name": "Grenetina",
-          "required": 44.0,
-          "stock": 112.0,
-          "remaining_stock": 68.0,
+          "stock": 640.0,
+          "remaining_stock": 280.0,
           "unit": "g"
         },
         {
           "name": "Hierbas finas",
           "required": 6.0,
-          "stock": 25.0,
-          "remaining_stock": 19.0,
-          "unit": "g"
-        },
-        {
-          "name": "Hojas de laurel",
-          "required": 3.0,
-          "stock": 9.0,
-          "remaining_stock": 6.0,
+          "stock": 13.0,
+          "remaining_stock": 7.0,
           "unit": "g"
         },
         {
           "name": "Huevo",
           "required": 126.0,
-          "stock": 170.0,
-          "remaining_stock": 44.0,
+          "stock": 224.0,
+          "remaining_stock": 98.0,
           "unit": "piezas"
         },
         {
-          "name": "Jitomate",
-          "required": 5.0,
-          "stock": 8.0,
-          "remaining_stock": 3.0,
-          "unit": "piezas"
-        },
-        {
-          "name": "Lechuga",
-          "required": 7.0,
-          "stock": 7.0,
-          "remaining_stock": 0.0,
-          "unit": "piezas"
+          "name": "Lomo de salmón",
+          "required": 1560.0,
+          "stock": 1780.0,
+          "remaining_stock": 220.0,
+          "unit": "g"
         },
         {
           "name": "Mantequilla",
           "required": 186.0,
-          "stock": 500.0,
-          "remaining_stock": 314.0,
+          "stock": 1208.0,
+          "remaining_stock": 1022.0,
           "unit": "g"
         },
         {
           "name": "Manzanilla",
           "required": 12.0,
-          "stock": 50.0,
-          "remaining_stock": 38.0,
-          "unit": "g"
-        },
-        {
-          "name": "Mostaza",
-          "required": 36.0,
-          "stock": 120.0,
-          "remaining_stock": 84.0,
+          "stock": 12.0,
+          "remaining_stock": 0.0,
           "unit": "g"
         },
         {
           "name": "Nuez de la India",
           "required": 720.0,
-          "stock": 1700.0,
-          "remaining_stock": 980.0,
+          "stock": 2062.0,
+          "remaining_stock": 1342.0,
           "unit": "g"
         },
         {
           "name": "Orégano",
           "required": 24.0,
-          "stock": 150.0,
-          "remaining_stock": 126.0,
+          "stock": 98.0,
+          "remaining_stock": 74.0,
           "unit": "g"
         },
         {
           "name": "Pechuga de pavo",
           "required": 1360.0,
-          "stock": 1400.0,
-          "remaining_stock": 40.0,
-          "unit": "g"
-        },
-        {
-          "name": "Pechuga de pollo",
-          "required": 1320.0,
-          "stock": 1670.0,
-          "remaining_stock": 350.0,
+          "stock": 1633.3,
+          "remaining_stock": 273.3,
           "unit": "g"
         },
         {
           "name": "Pimienta negra",
           "required": 31.0,
-          "stock": 170.0,
-          "remaining_stock": 139.0,
+          "stock": 124.0,
+          "remaining_stock": 93.0,
           "unit": "g"
-        },
-        {
-          "name": "Pistaches",
-          "required": 50.0,
-          "stock": 100.0,
-          "remaining_stock": 50.0,
-          "unit": "g"
-        },
-        {
-          "name": "Pollo entero",
-          "required": 1.0,
-          "stock": 1.0,
-          "remaining_stock": 0.0,
-          "unit": "piezas"
         },
         {
           "name": "Queso cottage",
           "required": 1620.0,
-          "stock": 3840.0,
-          "remaining_stock": 2220.0,
-          "unit": "g"
-        },
-        {
-          "name": "Queso doble crema",
-          "required": 570.0,
-          "stock": 1000.0,
-          "remaining_stock": 430.0,
+          "stock": 4840.0,
+          "remaining_stock": 3220.0,
           "unit": "g"
         },
         {
           "name": "Queso manchego",
-          "required": 600.0,
-          "stock": 1000.0,
-          "remaining_stock": 400.0,
-          "unit": "g"
-        },
-        {
-          "name": "Queso mozzarella",
-          "required": 105.0,
-          "stock": 105.0,
-          "remaining_stock": 0.0,
-          "unit": "g"
-        },
-        {
-          "name": "Queso parmesano",
-          "required": 100.0,
-          "stock": 100.0,
-          "remaining_stock": 0.0,
-          "unit": "g"
-        },
-        {
-          "name": "Queso Philadelphia",
-          "required": 520.0,
-          "stock": 720.0,
-          "remaining_stock": 200.0,
+          "required": 805.0,
+          "stock": 1130.0,
+          "remaining_stock": 325.0,
           "unit": "g"
         },
         {
           "name": "Sal con ajo",
           "required": 18.0,
-          "stock": 100.0,
-          "remaining_stock": 82.0,
+          "stock": 52.0,
+          "remaining_stock": 34.0,
           "unit": "g"
         },
         {
           "name": "Sal de mar",
           "required": 234.0,
-          "stock": 3000.0,
-          "remaining_stock": 2766.0,
+          "stock": 2810.0,
+          "remaining_stock": 2576.0,
           "unit": "g"
         },
         {
           "name": "Semillas y nueces mixtas",
           "required": 930.0,
-          "stock": 1020.0,
-          "remaining_stock": 90.0,
+          "stock": 1108.0,
+          "remaining_stock": 178.0,
           "unit": "g"
         },
         {
           "name": "Té chai",
           "required": 12.0,
-          "stock": 50.0,
-          "remaining_stock": 38.0,
+          "stock": 38.0,
+          "remaining_stock": 26.0,
           "unit": "g"
         },
         {
           "name": "Tomillo",
-          "required": 9.0,
-          "stock": 20.0,
-          "remaining_stock": 11.0,
+          "required": 8.0,
+          "stock": 8.0,
+          "remaining_stock": 0.0,
           "unit": "g"
         },
         {
           "name": "Yogur griego",
           "required": 1200.0,
-          "stock": 3000.0,
-          "remaining_stock": 1800.0,
+          "stock": 3640.0,
+          "remaining_stock": 2440.0,
           "unit": "g"
         },
         {
           "name": "Zarzamora",
-          "required": 340.0,
-          "stock": 510.0,
-          "remaining_stock": 170.0,
+          "required": 170.0,
+          "stock": 170.0,
+          "remaining_stock": 0.0,
           "unit": "g"
         }
       ],
@@ -4841,17 +4757,38 @@
           "unit": "g"
         },
         {
+          "name": "Aceite de oliva",
+          "required": 342.0,
+          "stock": 118.0,
+          "net_to_buy": 224.0,
+          "unit": "ml"
+        },
+        {
+          "name": "Aceitunas manzanilla",
+          "required": 150.0,
+          "stock": 5.0,
+          "net_to_buy": 145.0,
+          "unit": "g"
+        },
+        {
           "name": "Aguacate",
           "required": 7.0,
-          "stock": 5.0,
-          "net_to_buy": 2.0,
+          "stock": 0.0,
+          "net_to_buy": 7.0,
           "unit": "piezas"
         },
         {
           "name": "Ajo",
           "required": 207.0,
-          "stock": 120.0,
-          "net_to_buy": 87.0,
+          "stock": 7.0,
+          "net_to_buy": 200.0,
+          "unit": "g"
+        },
+        {
+          "name": "Alcaparras",
+          "required": 132.0,
+          "stock": 44.0,
+          "net_to_buy": 88.0,
           "unit": "g"
         },
         {
@@ -4862,10 +4799,17 @@
           "unit": "g"
         },
         {
+          "name": "Atún en agua",
+          "required": 700.0,
+          "stock": 40.0,
+          "net_to_buy": 660.0,
+          "unit": "g"
+        },
+        {
           "name": "Brócoli",
           "required": 1200.0,
-          "stock": 1000.0,
-          "net_to_buy": 200.0,
+          "stock": 0.0,
+          "net_to_buy": 1200.0,
           "unit": "g"
         },
         {
@@ -4885,43 +4829,43 @@
         {
           "name": "Calabacitas",
           "required": 1500.0,
-          "stock": 1400.0,
-          "net_to_buy": 100.0,
+          "stock": 93.3,
+          "net_to_buy": 1406.7,
           "unit": "g"
+        },
+        {
+          "name": "Cebolla",
+          "required": 13.0,
+          "stock": 1.0,
+          "net_to_buy": 12.0,
+          "unit": "piezas"
         },
         {
           "name": "Champiñón",
           "required": 1950.0,
-          "stock": 1000.0,
-          "net_to_buy": 950.0,
+          "stock": 866.7,
+          "net_to_buy": 1083.3,
           "unit": "g"
         },
         {
           "name": "Coliflor",
           "required": 660.0,
-          "stock": 500.0,
-          "net_to_buy": 160.0,
+          "stock": 0.0,
+          "net_to_buy": 660.0,
+          "unit": "g"
+        },
+        {
+          "name": "Ejotes",
+          "required": 300.0,
+          "stock": 80.0,
+          "net_to_buy": 220.0,
           "unit": "g"
         },
         {
           "name": "Espinacas",
           "required": 1140.0,
-          "stock": 150.0,
-          "net_to_buy": 990.0,
-          "unit": "g"
-        },
-        {
-          "name": "Fajitas de mojarra",
-          "required": 1680.0,
-          "stock": 900.0,
-          "net_to_buy": 780.0,
-          "unit": "g"
-        },
-        {
-          "name": "Flat steak",
-          "required": 1320.0,
-          "stock": 1290.0,
-          "net_to_buy": 30.0,
+          "stock": 454.0,
+          "net_to_buy": 686.0,
           "unit": "g"
         },
         {
@@ -4932,10 +4876,17 @@
           "unit": "g"
         },
         {
-          "name": "Frambuesas",
-          "required": 540.0,
+          "name": "Grenetina",
+          "required": 44.0,
+          "stock": 32.0,
+          "net_to_buy": 12.0,
+          "unit": "g"
+        },
+        {
+          "name": "Hojas de laurel",
+          "required": 3.0,
           "stock": 0.0,
-          "net_to_buy": 540.0,
+          "net_to_buy": 3.0,
           "unit": "g"
         },
         {
@@ -4944,6 +4895,13 @@
           "stock": 0.0,
           "net_to_buy": 39.0,
           "unit": "g"
+        },
+        {
+          "name": "Jitomate",
+          "required": 5.0,
+          "stock": 0.0,
+          "net_to_buy": 5.0,
+          "unit": "piezas"
         },
         {
           "name": "Leche de almendra",
@@ -4955,16 +4913,16 @@
         {
           "name": "Leche de coco",
           "required": 1620.0,
-          "stock": 480.0,
-          "net_to_buy": 1140.0,
+          "stock": 0.0,
+          "net_to_buy": 1620.0,
           "unit": "ml"
         },
         {
-          "name": "Lomo de salmón",
-          "required": 1560.0,
-          "stock": 980.0,
-          "net_to_buy": 580.0,
-          "unit": "g"
+          "name": "Lechuga",
+          "required": 7.0,
+          "stock": 4.0,
+          "net_to_buy": 3.0,
+          "unit": "piezas"
         },
         {
           "name": "Menta",
@@ -4976,15 +4934,57 @@
         {
           "name": "Morrón",
           "required": 9.0,
-          "stock": 8.0,
-          "net_to_buy": 1.0,
+          "stock": 0.0,
+          "net_to_buy": 9.0,
           "unit": "piezas"
+        },
+        {
+          "name": "Mostaza",
+          "required": 36.0,
+          "stock": 0.0,
+          "net_to_buy": 36.0,
+          "unit": "g"
+        },
+        {
+          "name": "Pechuga de pollo",
+          "required": 1320.0,
+          "stock": 313.3,
+          "net_to_buy": 1006.7,
+          "unit": "g"
         },
         {
           "name": "Pepino",
           "required": 1740.0,
-          "stock": 2.0,
-          "net_to_buy": 1738.0,
+          "stock": 0.0,
+          "net_to_buy": 1740.0,
+          "unit": "g"
+        },
+        {
+          "name": "Pistaches",
+          "required": 50.0,
+          "stock": 0.0,
+          "net_to_buy": 50.0,
+          "unit": "g"
+        },
+        {
+          "name": "Pollo entero",
+          "required": 1.0,
+          "stock": 0.0,
+          "net_to_buy": 1.0,
+          "unit": "piezas"
+        },
+        {
+          "name": "Queso doble crema",
+          "required": 570.0,
+          "stock": 140.0,
+          "net_to_buy": 430.0,
+          "unit": "g"
+        },
+        {
+          "name": "Queso Philadelphia",
+          "required": 520.0,
+          "stock": 260.0,
+          "net_to_buy": 260.0,
           "unit": "g"
         },
         {
@@ -4997,8 +4997,8 @@
         {
           "name": "Tomate",
           "required": 620.0,
-          "stock": 500.0,
-          "net_to_buy": 120.0,
+          "stock": 200.0,
+          "net_to_buy": 420.0,
           "unit": "g"
         }
       ],

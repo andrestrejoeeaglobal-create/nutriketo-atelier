@@ -1805,3 +1805,83 @@ def test_cook_mode_vs_auditor_mode_toggle_in_atelier_html():
         assert "cook-mode-panel" in html
         assert "auditor-mode-panel" in html
 
+
+def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
+    """
+    Valida la Orden de Alta de Inventario SSOT del Lunes 09 Nov 2026
+    (Sam's Club SM Santa Fe, Orden 1569462808300642304 — $5,127.48 MXN) sobre saldos reales post-S45:
+    1. Consolidación exacta en `pantry_live_state.json` (Flat steak 2025g, Carne molida 2875g, Lomo de salmón 1780g,
+       Fajitas de mojarra 2720g, Pechuga de pavo 1633.3g, Huevo 224 pzas, Queso manchego 1130g, Queso cottage 4840g,
+       Yogur griego 3640g, Mantequilla 1208g, Nuez de la India 2062g, Semillas y nueces mixtas 1108g, Fresas 1821g,
+       Frambuesas 340g, Espinacas 454g, Champiñón 866.7g, Lechuga 4 pzas, Germinado 640g, Botella de agua 270,
+       Agua mineral en deletedPantryItems).
+    2. Cero insumos fantasma (Epazote, Cardamomo, Nuez Moscada, Eneldo) y cero Queso mozzarella / parmesano en S46.
+    3. 0 g de compra de frutos rojos en S46 (Frambuesas 340g exactos, Zarzamora 170g exactos, Fresas 1320g <= 1821g).
+    """
+    import json
+    from pathlib import Path
+    from app.services.menu_hard_gate_auditor import assert_zero_violations, load_live_pantry_ssot
+
+    root = Path(__file__).resolve().parents[1]
+    ssot = json.loads((root / "pantry_live_state.json").read_text(encoding="utf-8"))
+    ps = ssot["pantryStock"]
+
+    expected_stocks = {
+        "Flat steak": 2025,
+        "Carne molida": 2875,
+        "Lomo de salmón": 1780,
+        "Fajitas de mojarra": 2720,
+        "Pechuga de pavo": 1633.3,
+        "Huevo": 224,
+        "Pechuga de pollo": 313.3,
+        "Pollo entero": 0,
+        "Atún en agua": 40,
+        "Queso manchego": 1130,
+        "Queso cottage": 4840,
+        "Yogur griego": 3640,
+        "Mantequilla": 1208,
+        "Queso Philadelphia": 260,
+        "Queso doble crema": 140,
+        "Queso mozzarella": 0,
+        "Queso parmesano": 0,
+        "Nuez de la India": 2062,
+        "Semillas y nueces mixtas": 1108,
+        "Fresas": 1821,
+        "Frambuesas": 340,
+        "Zarzamora": 170,
+        "Espinacas": 454,
+        "Champiñón": 866.7,
+        "Lechuga": 4,
+        "Germinado": 640,
+        "Botella de agua": 270,
+    }
+    for k, v in expected_stocks.items():
+        assert abs(float(ps[k]) - float(v)) < 1e-4, f"Stock incorrecto para {k}: {ps[k]} != {v}"
+    assert "Agua mineral" in ssot["deletedPantryItems"]
+
+    s45 = json.loads((root / "semana_45_master.json").read_text(encoding="utf-8"))
+    s46 = json.loads((root / "semana_46_master.json").read_text(encoding="utf-8"))
+    live = load_live_pantry_ssot()
+    rep = assert_zero_violations(s46, prev_week_data=s45, pantry_stock=live["auditor_pantry"], farm_harvest=live["farm_harvest"])
+    assert rep["passed"] is True
+    assert rep["violations_count"] == 0
+
+    market_names = {x["name"] for x in rep["bom_summary"]["market_purchases"]}
+    for covered_item in [
+        "Flat steak", "Carne molida", "Lomo de salmón", "Fajitas de mojarra", "Pechuga de pavo", "Huevo",
+        "Queso manchego", "Queso cottage", "Yogur griego", "Mantequilla",
+        "Nuez de la India", "Semillas y nueces mixtas", "Fresas", "Frambuesas", "Zarzamora", "Germinado",
+        "Queso mozzarella", "Queso parmesano",
+    ]:
+        assert covered_item not in market_names, f"{covered_item} no debe aparecer en compras de mercado S46"
+
+    all_titles = " | ".join(
+        m[r]["title"]
+        for d in s46["days"]
+        for m in d["meals"]
+        for r in ("starter", "main", "side")
+    ).lower()
+    for ghost in ("epazote", "cardamomo", "nuez moscada", "eneldo", "mozzarella", "parmesano"):
+        assert ghost not in all_titles, f"Insumo fantasma/eliminado '{ghost}' presente en títulos S46"
+
+

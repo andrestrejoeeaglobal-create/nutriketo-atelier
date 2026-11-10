@@ -852,6 +852,65 @@ def compile_s46_dossier() -> Dict[str, Any]:
     # Section 3
     lines.append("## 3. Abastecimiento Tridimensional Exacto — Semana 46 (`6 Comensales`)")
     lines.append("")
+    lines.append("### 3.0 Consolidación Exacta en Alacena (`pantry_live_state.json`): Saldo Real Post-S45 + Ticket Sam's Club SM Santa Fe del Lunes 09 Nov 2026 (`Orden 1569462808300642304` — `\\$5,127.48 MXN`)")
+    lines.append("| # | Concepto en Ticket Sam's Club (09 Nov 2026) / Origen | Insumo Canónico (SSOT) | Saldo Real Post-S45 | Alta Sam's 09 Nov | Stock Consolidado S46 | Demanda S46 (6p) | Saldo Post-S46 | Compra Neta (`#v-shop`) |")
+    lines.append("|---|---|---|---|---|---|---|---|---|")
+    sams_09nov_manifest = [
+        ("`TOP SIRLOIN 1080G` + `NEW YORK REB 945G` (2 arts.)", "Flat steak", 0.0, 2025.0, "g"),
+        ("`MM CARNE MOL 1760G`", "Carne molida", 1115.0, 1760.0, "g"),
+        ("`MM LOMO SALM 1400G`", "Lomo de salmón", 380.0, 1400.0, "g"),
+        ("`MM TILA 1.36` × 2 bolsas (Tilapia)", "Fajitas de mojarra", 0.0, 2720.0, "g"),
+        ("`FAJITAS PAVO` × 1 paquete", "Pechuga de pavo", 233.3, 1400.0, "g"),
+        ("`180 HUE BLA` × 1 caja", "Huevo", 44.0, 180.0, "piezas"),
+        ("`QSO MANCH RA` × 1 pza", "Queso manchego", 130.0, 1000.0, "g"),
+        ("`960GR QCOTTA` × 3 botes", "Queso cottage", 1960.0, 2880.0, "g"),
+        ("`OIKOS PROT 2` × 1 pack", "Yogur griego", 1840.0, 1800.0, "g"),
+        ("`12/90 MANTEQ` × 1 caja", "Mantequilla", 128.0, 1080.0, "g"),
+        ("`MM NUEZ INDI` × 1 bote", "Nuez de la India", 1154.0, 908.0, "g"),
+        ("`MIX NUEZ MM` × 1 bote", "Semillas y nueces mixtas", 200.0, 908.0, "g"),
+        ("`FRESA` × 2 domos", "Fresas", 7.0, 1814.0, "g"),
+        ("`FRAMBUESA` × 1 domo", "Frambuesas", 0.0, 340.0, "g"),
+        ("`ESPINACA BAB` × 1 domo", "Espinacas", 0.0, 454.0, "g"),
+        ("`CHAMPINON BL` × 1 charola", "Champiñón", 166.7, 700.0, "g"),
+        ("`LECHUGA SWEE` × 1 pack", "Lechuga", 0.0, 4.0, "piezas"),
+        ("`GERMINADO` × 1 domo", "Germinado", 140.0, 500.0, "g"),
+        ("`MM 40/355ML` × 3 packs (Reserva portátil)", "Botella de agua", 150.0, 120.0, "botellas (355 ml)"),
+        ("`8 2L AGUAMIN` (Bloqueada en `deletedPantryItems`)", "Agua mineral", 0.0, 0.0, "bloqueado"),
+        ("*Saldo Real Post-S45 (Sin compra hoy en Sam's)*", "Pechuga de pollo", 313.3, 0.0, "g"),
+        ("*Saldo Real Post-S45 (Sin compra hoy en Sam's)*", "Pollo entero", 0.0, 0.0, "piezas"),
+        ("*Saldo Real Post-S45 (Sin compra hoy en Sam's)*", "Atún en agua", 40.0, 0.0, "g"),
+        ("*Saldo Real Post-S45 (Sin compra hoy en Sam's)*", "Queso Philadelphia", 260.0, 0.0, "g"),
+        ("*Saldo Real Post-S45 (Sin compra hoy en Sam's)*", "Queso doble crema", 140.0, 0.0, "g"),
+        ("*Saldo Real Post-S45 (Sustituido por Manchego)*", "Queso mozzarella", 0.0, 0.0, "g"),
+        ("*Saldo Real Post-S45 (Sustituido por Manchego)*", "Queso parmesano", 0.0, 0.0, "g"),
+        ("*Saldo Real Post-S45 (Cubierto 100% en R#03)*", "Zarzamora", 170.0, 0.0, "g"),
+    ]
+    for idx_t, (t_desc, c_nm, post_s45, added_sams, u_t) in enumerate(sams_09nov_manifest, start=1):
+        if u_t == "bloqueado":
+            lines.append(f"| {idx_t} | {t_desc} | **{c_nm}** | Bloqueado | Bloqueado | **0 (Excluido)** | 0 | 0 | **0 (Excluido)** |")
+            continue
+        cons_stock = round(post_s45 + added_sams, 2)
+        if c_nm == "Botella de agua":
+            lines.append(f"| {idx_t} | {t_desc} | **{c_nm}** | {fmt_num(post_s45)} {u_t} | **+{fmt_num(added_sams)} {u_t}** | **{fmt_num(cons_stock)} {u_t}** | Reserva Hidratación | {fmt_num(cons_stock)} {u_t} | **0 (\\$0.00)** |")
+            continue
+        if c_nm in pantry_used:
+            req_v = pantry_used[c_nm]["required"]
+            rem_v = pantry_used[c_nm]["remaining_stock"]
+            net_str = "**0 (\\$0.00)**"
+        elif c_nm in market_used:
+            req_v = market_used[c_nm]["required"]
+            rem_v = 0.0
+            net_str = f"**`{fmt_num_plain(market_used[c_nm]['net_to_buy'])} {u_t}`** (Mercado)"
+        else:
+            req_v = 0.0
+            rem_v = cons_stock
+            net_str = "**0 (\\$0.00)**"
+        add_str = f"**+{fmt_num(added_sams)} {u_t}**" if added_sams > 0 else f"0 {u_t}"
+        lines.append(
+            f"| {idx_t} | {t_desc} | **{c_nm}** | {fmt_num(post_s45)} {u_t} | {add_str} | **{fmt_num(cons_stock)} {u_t}** | {fmt_num(req_v)} {u_t} | {fmt_num(rem_v)} {u_t} | {net_str} |"
+        )
+
+    lines.append("")
     lines.append("### 3.1 Cosecha Activa en Granja El Herami (`\\$0.00 MXN`)")
     lines.append("| # | Cultivo Activo en Granja El Herami | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |")
     lines.append("|---|---|---|---|---|")

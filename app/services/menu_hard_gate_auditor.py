@@ -267,6 +267,82 @@ DEFAULT_PANTRY_STOCK.update(
     }
 )
 
+S45_HISTORICAL_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
+
+# Actualizar DEFAULT_PANTRY_STOCK con Saldo Real Post-S45 + Ticket Sam's Club SM Santa Fe 09 Nov 2026 (Orden 1569462808300642304 — $5,127.48 MXN)
+DEFAULT_PANTRY_STOCK.update(
+    {
+        "Flat steak": (2025.0, "g"),
+        "Carne molida": (2875.0, "g"),
+        "Lomo de salmón": (1780.0, "g"),
+        "Fajitas de mojarra": (2720.0, "g"),
+        "Pechuga de pavo": (1633.3, "g"),
+        "Huevo": (224.0, "piezas"),
+        "Pechuga de pollo": (313.3, "g"),
+        "Pollo entero": (0.0, "piezas"),
+        "Atún en agua": (40.0, "g"),
+        "Sardinas": (0.0, "g"),
+        "Queso manchego": (1130.0, "g"),
+        "Queso cottage": (4840.0, "g"),
+        "Yogur griego": (3640.0, "g"),
+        "Mantequilla": (1208.0, "g"),
+        "Queso Philadelphia": (260.0, "g"),
+        "Queso doble crema": (140.0, "g"),
+        "Queso mozzarella": (0.0, "g"),
+        "Queso parmesano": (0.0, "g"),
+        "Queso ricotta": (0.0, "g"),
+        "Crema ácida": (920.0, "g"),
+        "Leche de coco": (0.0, "ml"),
+        "Nuez de la India": (2062.0, "g"),
+        "Semillas y nueces mixtas": (1108.0, "g"),
+        "Nueces mixtas": (1108.0, "g"),
+        "Fresas": (1821.0, "g"),
+        "Frambuesas": (340.0, "g"),
+        "Zarzamora": (170.0, "g"),
+        "Espinacas": (454.0, "g"),
+        "Champiñón": (866.7, "g"),
+        "Lechuga": (4.0, "piezas"),
+        "Germinado": (640.0, "g"),
+        "Botella de agua": (270.0, "botellas (355 ml)"),
+        "Calabacitas": (93.3, "g"),
+        "Ejotes": (80.0, "g"),
+        "Jitomate": (0.0, "piezas"),
+        "Tomate": (200.0, "g"),
+        "Cebolla": (1.0, "piezas"),
+        "Morrón": (0.0, "piezas"),
+        "Aguacate": (0.0, "piezas"),
+        "Brócoli": (0.0, "g"),
+        "Coliflor": (0.0, "g"),
+        "Pepino": (0.0, "g"),
+        "Aceite de coco": (1328.0, "g"),
+        "Aceite de oliva": (118.0, "ml"),
+        "Almendras fileteadas": (100.0, "g"),
+        "Pistaches": (0.0, "g"),
+        "Aceitunas manzanilla": (5.0, "g"),
+        "Alcaparras": (44.0, "g"),
+        "Achiote": (92.0, "g"),
+        "Ajo": (7.0, "g"),
+        "Canela molida": (725.0, "g"),
+        "Clavo de olor": (48.0, "g"),
+        "Comino": (47.0, "g"),
+        "Cúrcuma": (82.0, "g"),
+        "Extracto de vainilla": (376.0, "ml"),
+        "Grenetina": (32.0, "g"),
+        "Hierbas finas": (13.0, "g"),
+        "Hojas de laurel": (0.0, "g"),
+        "Manzanilla": (12.0, "g"),
+        "Mostaza": (0.0, "g"),
+        "Orégano": (98.0, "g"),
+        "Pimienta negra": (124.0, "g"),
+        "Sal con ajo": (52.0, "g"),
+        "Sal de mar": (2810.0, "g"),
+        "Té chai": (38.0, "g"),
+        "Tomillo": (8.0, "g"),
+        "MultiSinergix®": (0.0, "g"),
+        "AminoSinergix®": (0.0, "g"),
+    }
+)
+
 LIVE_PANTRY_SSOT_PATH: Path = Path(__file__).resolve().parents[2] / "pantry_live_state.json"
 
 
@@ -1435,6 +1511,8 @@ def audit_week_plan(
     live_ssot_loaded = load_live_pantry_ssot() if is_s45_or_later else None
     if pantry_stock is not None:
         pantry = pantry_stock
+    elif "semana 45" in w_lbl_early:
+        pantry = S45_HISTORICAL_PANTRY_STOCK
     elif is_s45_or_later and live_ssot_loaded is not None:
         pantry = live_ssot_loaded["auditor_pantry"]
     else:
