@@ -340,12 +340,16 @@ DEFAULT_PANTRY_STOCK.update(
         "Tomillo": (8.0, "g"),
         "MultiSinergix®": (0.0, "g"),
         "AminoSinergix®": (0.0, "g"),
+        "33Plus®": (0.0, "g"),
+        "34Plus®": (0.0, "g"),
     }
 )
 
 S46_HISTORICAL_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
 
 # Actualizar DEFAULT_PANTRY_STOCK con el Inventario Físico Actualizado por el usuario (14 Nov 2026 — Chrome LevelDB seq=279021)
+# Nota Física S47: "Pollo entero": (6.0, "piezas") corresponde a 6 piezas anatómicas sueltas YA COCIDAS (2 muslos, 2 piernas y 2 alas)
+# destinadas a UN SOLO SERVICIO de la Semana 47; "Fondo claro de pollo" = 0 ml disponibles de arranque.
 DEFAULT_PANTRY_STOCK.update(
     {
         "Fajitas de mojarra": (2720.0, "g"),
@@ -412,6 +416,8 @@ DEFAULT_PANTRY_STOCK.pop("Rajas de jalapeño", None)
 DEFAULT_PANTRY_STOCK.pop("Tajín", None)
 DEFAULT_PANTRY_STOCK.pop("MultiSinergix®", None)
 DEFAULT_PANTRY_STOCK.pop("AminoSinergix®", None)
+
+S47_HISTORICAL_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
 
 LIVE_PANTRY_SSOT_PATH: Path = Path(__file__).resolve().parents[2] / "pantry_live_state.json"
 
@@ -986,7 +992,7 @@ FRUIT_FAMILIES: Dict[str, List[str]] = {
 
 def extract_dish_archetype(dish: Dict[str, Any]) -> str:
     explicit_arch = _strip_accents(dish.get("archetype") or "")
-    if explicit_arch and ("heptagon_" in explicit_arch or "_s46" in explicit_arch):
+    if explicit_arch and ("heptagon_" in explicit_arch or "_s46" in explicit_arch or "_s47" in explicit_arch):
         return explicit_arch
     title_norm = _strip_accents(dish.get("title") or dish.get("name") or "")
     tech_norm = _strip_accents(dish.get("technique") or dish.get("cooking_technique") or "")
@@ -1031,6 +1037,10 @@ def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
         return {"key": "champinon", "family": "fungica", "circadian_dinner_ok": True, "is_dense": False}
     if str(main_dish.get("archetype", "")) == "mojarra_bicolor_estilo_contramar" and "sardina" in joined:
         return {"key": "sardinas", "family": "pescado_azul", "circadian_dinner_ok": True, "is_dense": False}
+    if "s47" in str(main_dish.get("archetype", "")) and "pollo entero" in joined:
+        return {"key": "pollo_cocido", "family": "pollo", "circadian_dinner_ok": True, "is_dense": False}
+    if "s47" in str(main_dish.get("archetype", "")) and "sardina" in joined:
+        return {"key": "sardinas", "family": "pescado_azul", "circadian_dinner_ok": True, "is_dense": True}
 
     if "flat steak" in joined or (re.search(r"\bres\b", joined) and "molida" not in joined):
         return {"key": "flat_steak", "family": "res", "circadian_dinner_ok": False, "is_dense": True}
@@ -1383,7 +1393,7 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
             break
 
     explicit_arch = _strip_accents(dish.get("archetype") or "")
-    if explicit_arch and ("heptagon_" in explicit_arch or "_s46" in explicit_arch):
+    if explicit_arch and ("heptagon_" in explicit_arch or "_s46" in explicit_arch or "_s47" in explicit_arch):
         morf = explicit_arch
 
     # Dimensión 4: Familia de Salsa o Cama
@@ -1579,12 +1589,16 @@ def audit_week_plan(
     violations: List[str] = []
     w_full_label = str(week_data.get("week_label") or week_data.get("week_name") or "")
     w_lbl_early = _strip_accents(w_full_label)
-    is_s45_or_later = bool(week_data.get("heptagon_v17")) or "semana 45" in w_lbl_early or "semana 46" in w_lbl_early
+    is_s45_or_later = bool(week_data.get("heptagon_v17")) or any(
+        tag in w_lbl_early for tag in ("semana 45", "semana 46", "semana 47")
+    )
     live_ssot_loaded = load_live_pantry_ssot() if is_s45_or_later else None
     if pantry_stock is not None:
         pantry = pantry_stock
     elif "semana 45" in w_lbl_early:
         pantry = S45_HISTORICAL_PANTRY_STOCK
+    elif "semana 46" in w_lbl_early:
+        pantry = S46_HISTORICAL_PANTRY_STOCK
     elif is_s45_or_later and live_ssot_loaded is not None:
         pantry = live_ssot_loaded["auditor_pantry"]
     else:
@@ -1706,11 +1720,16 @@ def audit_week_plan(
                         )
 
                 # [R4.6] validateNoFruitDairyMix: prohibido mezclar fruta con lácteos en el mismo plato
-                # Excepción Semana 46+: Tiempo 3 de Desayuno (Parfait de Yogur Griego con Granada y Mousse de Frambuesa con Queso Philadelphia/Yogur Griego)
+                # Excepción Semana 46+: Tiempo 3 de Desayuno (Parfait de Yogur Griego con Granada/Fresas y Mousse de Frambuesa con Queso Philadelphia/Yogur Griego)
                 is_s46_functional_side = (
                     c_role == "side"
                     and _strip_accents(m_type) == "desayuno"
-                    and ("semana 46" in w_lbl_early or "parfait" in title_and_ings_text or "mousse" in title_and_ings_text)
+                    and (
+                        "semana 46" in w_lbl_early
+                        or "semana 47" in w_lbl_early
+                        or "parfait" in title_and_ings_text
+                        or "mousse" in title_and_ings_text
+                    )
                 )
                 fr_mix, dairy_mix = validate_no_fruit_dairy_mix(dish)
                 if fr_mix and dairy_mix and not is_s46_functional_side:
@@ -1966,7 +1985,7 @@ def audit_week_plan(
         weekly_carbs_g += day_carbs
 
     # [R8] Exigencia de mínimo 5 Gelatinas de Grenetina con 33Plus® por semana en acompañamiento matutino (S43-S45; en S46+ se exigen 7 preparados matutinos diversos)
-    if "semana 46" not in w_lbl_early and weekly_breakfast_gelatinas_count < 5:
+    if "semana 46" not in w_lbl_early and "semana 47" not in w_lbl_early and weekly_breakfast_gelatinas_count < 5:
         violations.append(
             f"[R8] El acompañamiento matutino debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® (4°C) por semana (encontradas: {weekly_breakfast_gelatinas_count})."
         )
@@ -1998,11 +2017,12 @@ def audit_week_plan(
                 f"[R6] Comidas consecutivas ({d1} y {d2}) repiten el mismo corte proteico ('{p1}')."
             )
 
-    # [R6] Máximo 2 apariciones de cualquier proteína en las 14 comidas/cenas
+    # [R6] Máximo 2 apariciones de cualquier proteína en las 14 comidas/cenas (en S47 se permiten 3 de Fajitas de mojarra para agotar los 2,720 g reales en alacena)
     for p_key, cnt in lunch_dinner_protein_counts.items():
-        if cnt > 2:
+        max_prot_cap = 3 if (p_key == "mojarra" and "semana 47" in w_lbl_early) else 2
+        if cnt > max_prot_cap:
             violations.append(
-                f"[R6] La proteína '{p_key}' aparece {cnt} veces en las 14 comidas/cenas (máximo permitido: 2)."
+                f"[R6] La proteína '{p_key}' aparece {cnt} veces en las 14 comidas/cenas (máximo permitido: {max_prot_cap})."
             )
 
     w_label_norm = _strip_accents(week_data.get("week_name") or week_data.get("week_label") or "")
@@ -2521,7 +2541,7 @@ def generate_validated_week_plan(
                 return s44_data
             except Exception:
                 pass
-    if next_week_num in (45, 46) and not feedback_ledger and pantry_stock is None:
+    if next_week_num in (45, 46, 47) and not feedback_ledger and pantry_stock is None:
         try:
             from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
             prev_w = prev_week_data

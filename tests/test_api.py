@@ -1914,3 +1914,76 @@ def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
         assert ghost not in all_titles, f"Insumo fantasma/eliminado '{ghost}' presente en títulos S46"
 
 
+def test_s47_master_architecture_and_physical_pantry_rules():
+    """
+    Valida la Orden Maestra de Arquitectura y Compilación — Semana 47 (15 al 21 de Noviembre de 2026):
+    1. Pollo entero: 6 piezas anatómicas cocidas empleadas en UN SOLO SERVICIO (R#08) -> 0 piezas saldo, $0 compra.
+    2. Fondo claro de pollo: 0 ml disponibles de arranque -> ninguna receta en S47 usa 'Fondo claro de pollo'.
+    3. Vaciado prioritario de Alacena al 100% (Fajitas de mojarra 2,720 g en 3 servicios, Pechuga de pavo 700 g,
+       Atún en agua 560 g, Sardinas 260 g, Yogur griego 2,000 g, Queso manchego 1,000 g, Mantequilla 720 g,
+       Leche de coco 500 ml, Queso Philadelphia 360 g, Queso de cabra 200 g, Queso parmesano 100 g,
+       Nuez de la India 1,000 g, Semillas y nueces mixtas 600 g, Almendras fileteadas 100 g, Pistaches 50 g,
+       Frambuesas 220 g, Fresas 200 g, Apio 500 g, Espinacas 260 g, Germinado 100 g, Jitomate 1 pieza,
+       Ajo 100 g, Alcaparras 44 g, Grenetina 32 g, Manzanilla 12 g, Tomillo 8 g, Aceitunas manzanilla 5 g).
+    4. 14 preparados funcionales distintos (7 matutinos con 33Plus® y 7 nocturnos con 34Plus®), sin Super Malla Biológica Tropical.
+    5. 0 violaciones en menu_hard_gate_auditor frente a S46, S45, S44 y S43.
+    """
+    import json
+    from pathlib import Path
+    from app.services.menu_hard_gate_auditor import assert_zero_violations, load_live_pantry_ssot
+
+    root = Path(__file__).resolve().parents[1]
+    s46 = json.loads((root / "semana_46_master.json").read_text(encoding="utf-8"))
+    s47 = json.loads((root / "semana_47_master.json").read_text(encoding="utf-8"))
+    live = load_live_pantry_ssot()
+
+    rep_s47 = assert_zero_violations(
+        s47,
+        prev_week_data=s46,
+        pantry_stock=live["auditor_pantry"],
+        farm_harvest=live["farm_harvest"],
+    )
+    assert rep_s47["passed"] is True
+    assert rep_s47["violations_count"] == 0
+
+    pollo_entero_services = 0
+    pollo_entero_total = 0.0
+    fondo_pollo_occurrences = 0
+    morning_preps = set()
+    night_preps = set()
+
+    for d in s47["days"]:
+        for m_idx, m in enumerate(d["meals"]):
+            if m_idx == 0:
+                morning_preps.add(m["side"]["title"])
+            elif m_idx == 2:
+                night_preps.add(m["side"]["title"])
+            for r in ("starter", "main", "side"):
+                dish = m[r]
+                assert "super malla" not in dish["title"].lower()
+                for ing in dish["ingredients"]:
+                    nm = ing["name"].lower()
+                    assert "fondo claro de pollo" not in nm and "caldo de pollo" not in nm
+                    if "pollo entero" in nm:
+                        pollo_entero_services += 1
+                        pollo_entero_total += float(ing["amount"])
+
+    assert pollo_entero_services == 1, f"Pollo entero cocido debe usarse en 1 solo servicio (encontrado en {pollo_entero_services})"
+    assert abs(pollo_entero_total - 6.0) < 1e-6
+    assert fondo_pollo_occurrences == 0
+    assert len(morning_preps) == 7, "Deben existir 7 preparados matutinos distintos con 33Plus®"
+    assert len(night_preps) == 7, "Deben existir 7 preparados nocturnos distintos con 34Plus®"
+
+    market_names = {x["name"] for x in rep_s47["bom_summary"]["market_purchases"]}
+    for zero_buy_item in [
+        "Fajitas de mojarra", "Pechuga de pavo", "Pollo entero", "Atún en agua", "Sardinas", "Huevo",
+        "Yogur griego", "Queso manchego", "Mantequilla", "Leche de coco", "Queso Philadelphia",
+        "Queso de cabra", "Queso parmesano", "Nuez de la India", "Semillas y nueces mixtas",
+        "Almendras fileteadas", "Pistaches", "Frambuesas", "Fresas", "Apio", "Espinacas",
+        "Germinado", "Jitomate", "Ajo", "Alcaparras", "Grenetina", "Manzanilla", "Tomillo",
+        "Aceitunas manzanilla",
+    ]:
+        assert zero_buy_item not in market_names, f"{zero_buy_item} debe cubrirse al 100% en Alacena ($0 compra en S47)"
+
+
+

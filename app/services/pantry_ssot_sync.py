@@ -85,6 +85,7 @@ V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Carne molida": (300.0, "g"),
     "Sardinas": (260.0, "g"),
     "Huevo": (180.0, "piezas"),
+    # Pollo entero: 6 piezas anatómicas sueltas YA COCIDAS (2 muslos, 2 piernas y 2 alas; ~450-500 g netos, 0 ml caldo disponible)
     "Pollo entero": (6.0, "piezas"),
     "Flat steak": (0.0, "g"),
     "Lomo de salmón": (0.0, "g"),

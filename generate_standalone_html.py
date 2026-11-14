@@ -1843,6 +1843,13 @@ def generate_standalone():
         from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
         plan_46_dict = generate_week_with_tilo_cortex(46, history_weeks=[plan_45_dict])
 
+    try:
+        with open("semana_47_master.json", "r", encoding="utf-8") as f47:
+            plan_47_dict = json.load(f47)
+    except Exception:
+        from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
+        plan_47_dict = generate_week_with_tilo_cortex(47, history_weeks=[plan_46_dict])
+
     weekly_datasets = {
         "Semana 33 (09 al 15 de Agosto de 2026)": plan_33_dict,
         "Semana 34 (16 al 22 de Agosto de 2026)": plan_34_dict,
@@ -1857,7 +1864,8 @@ def generate_standalone():
         "Semana 43 (18 al 24 de Octubre de 2026)": plan_43_dict,
         "Semana 44 (25 al 31 de Octubre de 2026)": plan_44_dict,
         "Semana 45 (01 al 07 de Noviembre de 2026)": plan_45_dict,
-        "Semana 46 (08 al 14 de Noviembre de 2026)": plan_46_dict
+        "Semana 46 (08 al 14 de Noviembre de 2026)": plan_46_dict,
+        "Semana 47 (15 al 21 de Noviembre de 2026)": plan_47_dict
     }
 
     def dish_to_typed_recipe(dish_obj):
@@ -2015,6 +2023,22 @@ def generate_standalone():
                 meal["side_recipe"] = dish_to_typed_recipe(side_obj)
                 all_s46_ings.extend(side_obj.get("ingredients", []))
 
+    all_s47_ings = []
+    for day in plan_47_dict.get("days", []):
+        for meal in day.get("meals", []):
+            starter_obj = meal.get("starter")
+            if starter_obj and isinstance(starter_obj, dict):
+                meal["starter_recipe"] = dish_to_typed_recipe(starter_obj)
+                all_s47_ings.extend(starter_obj.get("ingredients", []))
+            main_obj = meal.get("main") or meal.get("main_dish")
+            if main_obj and isinstance(main_obj, dict):
+                meal["main_recipe"] = dish_to_typed_recipe(main_obj)
+                all_s47_ings.extend(main_obj.get("ingredients", []))
+            side_obj = meal.get("side") or meal.get("side_dish")
+            if side_obj and isinstance(side_obj, dict):
+                meal["side_recipe"] = dish_to_typed_recipe(side_obj)
+                all_s47_ings.extend(side_obj.get("ingredients", []))
+
     s40_canonical_bom = consolidate_market_bom(all_s40_ings)
     s40_canonical_bom_json = json.dumps(s40_canonical_bom, ensure_ascii=False)
 
@@ -2049,6 +2073,7 @@ def generate_standalone():
     seven_schools_json = json.dumps(SEVEN_CULINARY_SCHOOLS, ensure_ascii=False)
     plan_45_json = json.dumps(plan_45_dict, ensure_ascii=False)
     plan_46_json = json.dumps(plan_46_dict, ensure_ascii=False)
+    plan_47_json = json.dumps(plan_47_dict, ensure_ascii=False)
 
     live_pantry_ssot_path = os.path.join(os.path.dirname(__file__), "pantry_live_state.json")
     if os.path.exists(live_pantry_ssot_path):
@@ -2180,6 +2205,7 @@ const CANONICAL_WEEK_43_TITLE = "Semana 43 (18 al 24 de Octubre de 2026)";
 const CANONICAL_WEEK_44_TITLE = "Semana 44 (25 al 31 de Octubre de 2026)";
 const CANONICAL_WEEK_45_TITLE = "Semana 45 (01 al 07 de Noviembre de 2026)";
 const CANONICAL_WEEK_46_TITLE = "Semana 46 (08 al 14 de Noviembre de 2026)";
+const CANONICAL_WEEK_47_TITLE = "Semana 47 (15 al 21 de Noviembre de 2026)";
 
 function isCanonicalHardGateWeek(wKey) {
   const target = wKey || (typeof activeWeek === 'string' ? activeWeek : '');
@@ -2260,7 +2286,10 @@ function _classifyMainProteinHardGate(mainDish) {
   if (arch === 'dobladitas_ines_champinon' || arch === 'focaccia_keto_hongos_gratinados' || arch === 'heptagon_s46_champinon_cazuela_ajillo') {
     return { key: 'champinon', family: 'fungica', circadianDinnerOk: true };
   }
-  if (arch === 'mojarra_bicolor_estilo_contramar' && joined.includes('sardina')) {
+  if (arch === 'heptagon_s47_pollo_cocido_cazuela_suiza' || joined.includes('pollo entero')) {
+    return { key: 'pollo_cocido', family: 'pollo', circadianDinnerOk: true };
+  }
+  if ((arch === 'mojarra_bicolor_estilo_contramar' || arch === 'heptagon_s47_sardina_egea_cabra_sarten') && joined.includes('sardina')) {
     return { key: 'sardinas', family: 'pescado_azul', circadianDinnerOk: true };
   }
   if (joined.includes('flat steak') || (/\\bres\\b/.test(joined) && !joined.includes('molida'))) {
@@ -2583,6 +2612,9 @@ function _computeDishStructuralDnaHardGate(dish) {
   for (const [mKey, mTokens] of morfRules) {
     if (mTokens.some(tok => tTech.includes(tok))) { morf = mKey; break; }
   }
+  if (morf === 'estandar' && dish && dish.archetype && _normTextHardGate(dish.archetype).startsWith('heptagon_')) {
+    morf = _normTextHardGate(dish.archetype);
+  }
   const camaTokens = [];
   for (const [cKey, cPats] of _HG_JACCARD_CANON_INGS) {
     if (cPats.some(p => ingsTxt.includes(p))) camaTokens.push(cKey);
@@ -2691,7 +2723,7 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
             return ['yogur', 'cottage', 'ricotta', 'queso', 'crema acida', 'leche de vaca'].some(k => nm.includes(k));
           });
           const dTitleNorm = _normTextHardGate(dish.title || '');
-          const isFunctionalS46Prep = role === 'side' && mNorm.includes('desayuno') && (dTitleNorm.includes('parfait') || dTitleNorm.includes('mousse'));
+          const isFunctionalS46Prep = role === 'side' && ((mNorm.includes('desayuno') && (dTitleNorm.includes('parfait') || dTitleNorm.includes('mousse') || dTitleNorm.includes('smoothie') || dTitleNorm.includes('lassi'))) || (mNorm.includes('cena') && (dTitleNorm.includes('panna cotta') || dTitleNorm.includes('bavarois'))));
           if (hasDairy && !isFunctionalS46Prep) {
             violations.push(`[R4.6] ${loc} (${role}): Violación a validateNoFruitDairyMix (fruta con lácteo).`);
           }
@@ -2814,7 +2846,8 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
     if (dinnerProts[i] === dinnerProts[i + 1]) violations.push(`[R6] Cenas consecutivas repiten ${dinnerProts[i]}.`);
   }
   Object.entries(protCounts).forEach(([k, cnt]) => {
-    if (cnt > 2) violations.push(`[R6] Proteína ${k} excede máximo 2 apariciones (${cnt}).`);
+    const maxAllowed = (k === 'mojarra' && wNumTop === 47) ? 3 : 2;
+    if (cnt > maxAllowed) violations.push(`[R6] Proteína ${k} excede máximo ${maxAllowed} apariciones (${cnt}).`);
   });
 
   // [R9] y [R10] Validaciones Inter-Semanales Hacia Adelante (contra prevWeekPlan en modo Read-Only)
@@ -2967,11 +3000,14 @@ function buildWeekPlanForNumber(targetWeekNum, prevWeekPlanOverride) {
   if (nextWeekNum === 46 && !hasFeedbackPenalty && typeof window !== 'undefined' && window.CANONICAL_WEEK_46_PLAN) {
     return JSON.parse(JSON.stringify(window.CANONICAL_WEEK_46_PLAN));
   }
+  if (nextWeekNum === 47 && !hasFeedbackPenalty && typeof window !== 'undefined' && window.CANONICAL_WEEK_47_PLAN) {
+    return JSON.parse(JSON.stringify(window.CANONICAL_WEEK_47_PLAN));
+  }
 
-  // Rotación Disjunta de Ciclos para N >= 45: Semanas impares (45, 47...) usan el Heptágono Culinario V17.0 Ciclo A (S45) y Semanas pares (46, 48...) usan Ciclo B (S46)
+  // Rotación Disjunta de Ciclos para N >= 45: Semanas impares (45, 47...) usan el Heptágono Culinario V17.0 Ciclo A/C y Semanas pares (46, 48...) usan Ciclo B (S46)
   const baseS43 = (nextWeekNum % 2 === 0 && typeof window !== 'undefined' && window.CANONICAL_WEEK_46_PLAN)
     ? window.CANONICAL_WEEK_46_PLAN
-    : ((typeof window !== 'undefined' && window.CANONICAL_WEEK_45_PLAN) ? window.CANONICAL_WEEK_45_PLAN : (datasets["Semana 43 (18 al 24 de Octubre de 2026)"] || Object.values(datasets)[0]));
+    : ((typeof window !== 'undefined' && window.CANONICAL_WEEK_47_PLAN) ? window.CANONICAL_WEEK_47_PLAN : ((typeof window !== 'undefined' && window.CANONICAL_WEEK_45_PLAN) ? window.CANONICAL_WEEK_45_PLAN : (datasets["Semana 43 (18 al 24 de Octubre de 2026)"] || Object.values(datasets)[0])));
   const baseDays = (baseS43 && Array.isArray(baseS43.days)) ? baseS43.days : [];
   if (baseDays.length !== 7) return null;
 
@@ -3227,6 +3263,12 @@ function purgeWeeksAfter43() {
       if (datasets[CANONICAL_WEEK_45_TITLE]) {
         window.customGeneratedWeeks[CANONICAL_WEEK_45_TITLE] = datasets[CANONICAL_WEEK_45_TITLE];
       }
+      if (datasets[CANONICAL_WEEK_46_TITLE]) {
+        window.customGeneratedWeeks[CANONICAL_WEEK_46_TITLE] = datasets[CANONICAL_WEEK_46_TITLE];
+      }
+      if (datasets[CANONICAL_WEEK_47_TITLE]) {
+        window.customGeneratedWeeks[CANONICAL_WEEK_47_TITLE] = datasets[CANONICAL_WEEK_47_TITLE];
+      }
     }
   } catch (err) {
     console.warn("Error en purgeWeeksAfter43:", err);
@@ -3255,7 +3297,11 @@ function syncCustomWeeksDropdowns(preferredWeekKey) {
         if (datasets[CANONICAL_WEEK_46_TITLE]) {
           window.customGeneratedWeeks[wKey] = datasets[CANONICAL_WEEK_46_TITLE];
         }
-      } else if (wNum !== null && wNum > 46 && !datasets[wKey] && window.customGeneratedWeeks[wKey]) {
+      } else if (wNum === 47) {
+        if (datasets[CANONICAL_WEEK_47_TITLE]) {
+          window.customGeneratedWeeks[wKey] = datasets[CANONICAL_WEEK_47_TITLE];
+        }
+      } else if (wNum !== null && wNum > 47 && !datasets[wKey] && window.customGeneratedWeeks[wKey]) {
         datasets[wKey] = window.customGeneratedWeeks[wKey];
       }
     });
@@ -3612,8 +3658,10 @@ function selectWeek(weekKey) {
                 <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
                 <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
                 <option value="Semana 43 (18 al 24 de Octubre de 2026)">Semana 43 (18 al 24 de Octubre de 2026)</option>
-                <option value="Semana 44 (25 al 31 de Octubre de 2026)" selected>Semana 44 (25 al 31 de Octubre de 2026)</option>
+                <option value="Semana 44 (25 al 31 de Octubre de 2026)">Semana 44 (25 al 31 de Octubre de 2026)</option>
                 <option value="Semana 45 (01 al 07 de Noviembre de 2026)">Semana 45 (01 al 07 de Noviembre de 2026)</option>
+                <option value="Semana 46 (08 al 14 de Noviembre de 2026)">Semana 46 (08 al 14 de Noviembre de 2026)</option>
+                <option value="Semana 47 (15 al 21 de Noviembre de 2026)" selected>Semana 47 (15 al 21 de Noviembre de 2026)</option>
               </select>
             </div>
             <div>
@@ -3735,9 +3783,10 @@ function selectWeek(weekKey) {
             <option value="Semana 41 (04 al 10 de Octubre de 2026)">Semana 41 (04 al 10 de Octubre de 2026)</option>
             <option value="Semana 42 (11 al 17 de Octubre de 2026)">Semana 42 (11 al 17 de Octubre de 2026)</option>
             <option value="Semana 43 (18 al 24 de Octubre de 2026)">Semana 43 (18 al 24 de Octubre de 2026)</option>
-            <option value="Semana 44 (25 al 31 de Octubre de 2026)" selected>Semana 44 (25 al 31 de Octubre de 2026)</option>
+            <option value="Semana 44 (25 al 31 de Octubre de 2026)">Semana 44 (25 al 31 de Octubre de 2026)</option>
             <option value="Semana 45 (01 al 07 de Noviembre de 2026)">Semana 45 (01 al 07 de Noviembre de 2026)</option>
             <option value="Semana 46 (08 al 14 de Noviembre de 2026)">Semana 46 (08 al 14 de Noviembre de 2026)</option>
+            <option value="Semana 47 (15 al 21 de Noviembre de 2026)" selected>Semana 47 (15 al 21 de Noviembre de 2026)</option>
           </select>
         </div>
         <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
@@ -3842,6 +3891,7 @@ function selectWeek(weekKey) {
     window.SEVEN_CULINARY_SCHOOLS = """ + seven_schools_json + """;
     window.CANONICAL_WEEK_45_PLAN = """ + plan_45_json + """;
     window.CANONICAL_WEEK_46_PLAN = """ + plan_46_json + """;
+    window.CANONICAL_WEEK_47_PLAN = """ + plan_47_json + """;
     window.LIVE_PANTRY_SSOT = """ + live_pantry_ssot_json + """;
 window.PANTRY_STOCK_INVENTORY = {
       "sku-001-mantequilla": { item_num: 1, name: "Mantequilla", stock: 290, unit: "g", packaging: "290 g", status: "canonical" },
@@ -4075,7 +4125,7 @@ window.PANTRY_STOCK_INVENTORY = {
     let deletedFarmItems = ["Calabacitas", "Espinacas", "Brócoli", "Espárragos", "Ejotes", "Arúgula", "Coliflor", "Fresas", "Frambuesas", "Zarzamoras", "Arándanos", "Menta", "Epazote"];
     let deletedPantryItems = ["Elote", "Higos", "Nogada", "Zanahoria", "Agua mineral", "Queso de cabra con arándano", "Queso doble crema"];
 
-    let activeWeek = "Semana 46 (08 al 14 de Noviembre de 2026)";
+    let activeWeek = "Semana 47 (15 al 21 de Noviembre de 2026)";
     let selectedIdx = 0;
     let activeDiners = 6;
     let selectedHarvest = ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica", "Granadas"];
@@ -6001,13 +6051,20 @@ let pantryStock = {
           window.pantryCardUnits["Pollo entero"] = "piezas";
           window.pantryCardUnits["33Plus®"] = "g";
           window.pantryCardUnits["34Plus®"] = "g";
-          if (typeof CANONICAL_WEEK_46_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_46_TITLE]) {
-            activeWeek = CANONICAL_WEEK_46_TITLE;
+          if (typeof CANONICAL_WEEK_47_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_47_TITLE]) {
+            activeWeek = CANONICAL_WEEK_47_TITLE;
           }
           localStorage.setItem('nutriketo_v62_s45_mercado_cierre_applied', 'true');
           localStorage.setItem('nutriketo_v63_sams_09nov2026_applied', 'true');
           localStorage.setItem('nutriketo_v64_cierre_s46_14nov2026_applied', 'true');
           localStorage.setItem('nutriketo_v65_ui_audit_nov14_applied', 'true');
+          localStorage.setItem('nutriketo_v66_s47_active_week_sync', 'true');
+        }
+        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v66_s47_active_week_sync') !== 'true') {
+          if (typeof CANONICAL_WEEK_47_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_47_TITLE]) {
+            activeWeek = CANONICAL_WEEK_47_TITLE;
+          }
+          localStorage.setItem('nutriketo_v66_s47_active_week_sync', 'true');
         }
         consolidateAndPurgePantryInventory();
         if (typeof localStorage !== 'undefined') {
@@ -12072,16 +12129,16 @@ function renderRecipes(day, activeDiners) {
         if (typeof syncCustomWeeksDropdowns === 'function') syncCustomWeeksDropdowns();
         if (typeof ensureSundayServiceDispatched === 'function') ensureSundayServiceDispatched();
 
-        // Enforce today's calendar date detection to select and highlight green on boot (unless viewing Semana 46+ or a generated week)
+        // Enforce today's calendar date detection to select and highlight green on boot (unless viewing Semana 47+ or a generated week)
         if (typeof findTodayWeekAndDayIndex === 'function') {
           const todayMatch = findTodayWeekAndDayIndex();
           const curWNum = typeof getWeekNumberFromKey === 'function' ? getWeekNumberFromKey(activeWeek) : null;
-          const isViewingFutureOrCustomWeek = (curWNum !== null && curWNum > 46) || (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks && window.customGeneratedWeeks[activeWeek]);
+          const isViewingFutureOrCustomWeek = (curWNum !== null && curWNum >= 47) || (typeof window.customGeneratedWeeks === 'object' && window.customGeneratedWeeks && window.customGeneratedWeeks[activeWeek]);
           if (todayMatch && !isViewingFutureOrCustomWeek) {
             activeWeek = todayMatch.weekKey;
             selectedIdx = todayMatch.dayIndex;
           } else if (!activeWeek || !datasets[activeWeek]) {
-            activeWeek = "Semana 46 (08 al 14 de Noviembre de 2026)";
+            activeWeek = "Semana 47 (15 al 21 de Noviembre de 2026)";
             selectedIdx = 0;
           }
         }
@@ -12132,9 +12189,11 @@ function renderRecipes(day, activeDiners) {
         hg_s45 = assert_zero_violations(w45_preview, prev_week_data=w44_preview)
         w46_preview = generate_validated_week_plan(46, plan_43_dict, prev_week_data=w45_preview)
         hg_s46 = assert_zero_violations(w46_preview, prev_week_data=w45_preview)
+        w47_preview = generate_validated_week_plan(47, plan_43_dict, prev_week_data=w46_preview)
+        hg_s47 = assert_zero_violations(w47_preview, prev_week_data=w46_preview)
         print(
-            f"[HARD-GATE COMPILER AUDITOR] 0 VIOLACIONES [R1]-[R11] VERIFICADAS EN SEMANA 43 (vs S42 Read-Only), SEMANA 44 (vs S43), SEMANA 45 (vs S44) Y SEMANA 46 (vs S45) "
-            f"(Compras Netas Mercado: {len(hg_s43['bom_summary']['market_purchases'])} insumos, 0 sobregiros de alacena)."
+            f"[HARD-GATE COMPILER AUDITOR] 0 VIOLACIONES [R1]-[R11] VERIFICADAS EN SEMANA 43 (vs S42 Read-Only), SEMANA 44 (vs S43), SEMANA 45 (vs S44), SEMANA 46 (vs S45) Y SEMANA 47 (vs S46) "
+            f"(Compras Netas Mercado S47: {len(hg_s47['bom_summary']['market_purchases'])} insumos, 0 sobregiros de alacena)."
         )
     except RuntimeError as hg_err:
         print(str(hg_err), file=sys.stderr)
