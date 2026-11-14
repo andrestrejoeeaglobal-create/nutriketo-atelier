@@ -1,14 +1,15 @@
 {
-  "ssot_version": "v64_cierre_s46_14nov2026_synced",
+  "ssot_version": "v65_ui_audit_nov14_synced",
   "v63_sams_09nov2026_post_s45_sync": true,
   "v64_cierre_s46_14nov2026_sync": true,
+  "v65_ui_audit_nov14_sync": true,
   "sams_ticket_order": "1569462808300642304",
   "sams_ticket_date": "2026-11-09",
   "sams_ticket_store": "Sam's Club SM Santa Fe",
   "sams_ticket_total_mxn": 5127.48,
   "extracted_from": "Google Chrome LocalStorage LevelDB (016645.ldb, seq=279021)",
   "leveldb_seq": 279021,
-  "updated_at": "2026-11-14T10:53:52.424199",
+  "updated_at": "2026-11-14T11:38:06.727976",
   "activeWeek": "Semana 46 (08 al 14 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
@@ -43,7 +44,9 @@
     "Higos",
     "Nogada",
     "Zanahoria",
-    "Agua mineral"
+    "Agua mineral",
+    "Queso de cabra con arándano",
+    "Queso doble crema"
   ],
   "pantryStock": {
     "Mantequilla": 720,
@@ -141,8 +144,8 @@
     "Grenetina": 32,
     "Saborizante para arroz": 48,
     "Huevo": 180,
-    "MultiSinergix®": 0,
-    "AminoSinergix®": 0,
+    "33Plus®": 0,
+    "34Plus®": 0,
     "Espinacas": 260,
     "Espárragos": 0,
     "Fresas": 200,
@@ -156,8 +159,7 @@
     "Coliflor": 0,
     "Pepino": 0,
     "Brócoli": 0,
-    "Queso de cabra con arándano": 350,
-    "Queso doble crema": 140,
+    "Queso doble crema": 0,
     "Ajo": 100,
     "Nueces mixtas": 600,
     "Apio": 500
@@ -178,7 +180,7 @@
     "Leche": "ml",
     "Salsa cátsup": "g",
     "Queso mozzarella": "g",
-    "Botella de agua": "botellas (355 ml)",
+    "Botella de agua": "piezas",
     "Queso parmesano": "g",
     "Flat steak": "g",
     "Lomo de salmón": "g",
@@ -258,8 +260,8 @@
     "Grenetina": "g",
     "Saborizante para arroz": "g",
     "Huevo": "piezas",
-    "MultiSinergix®": "g",
-    "AminoSinergix®": "g",
+    "33Plus®": "g",
+    "34Plus®": "g",
     "Espinacas": "g",
     "Espárragos": "g",
     "Fresas": "g",
@@ -273,7 +275,6 @@
     "Coliflor": "g",
     "Pepino": "g",
     "Brócoli": "g",
-    "Queso de cabra con arándano": "g",
     "Queso doble crema": "g",
     "Ajo": "g",
     "Nueces mixtas": "g",
@@ -326,7 +327,7 @@
     ],
     "Botella de agua": [
       140.0,
-      "botellas (355 ml)"
+      "piezas"
     ],
     "Queso parmesano": [
       100.0,
@@ -444,10 +445,6 @@
       200.0,
       "ml"
     ],
-    "Tajín": [
-      200.0,
-      "g"
-    ],
     "Bicarbonato de sodio": [
       227.0,
       "g"
@@ -540,10 +537,6 @@
       260.0,
       "g"
     ],
-    "Rajas de jalapeño": [
-      314.0,
-      "g"
-    ],
     "Chile güero": [
       0.0,
       "g"
@@ -556,11 +549,11 @@
       180.0,
       "piezas"
     ],
-    "MultiSinergix®": [
+    "33Plus®": [
       0.0,
       "g"
     ],
-    "AminoSinergix®": [
+    "34Plus®": [
       0.0,
       "g"
     ],
@@ -609,7 +602,7 @@
       "g"
     ],
     "Queso doble crema": [
-      140.0,
+      0.0,
       "g"
     ],
     "Ajo": [
@@ -730,8 +723,20 @@
     },
     "Manteca de cerdo": {
       "packaging": "0 g",
-      "reason": "Derivado porcino proscrito por regla clínica [R3].",
+      "reason": "Derivado porcino proscrito por Regla 0 Cerdo [R3].",
       "stock": 0,
+      "unit": "g"
+    },
+    "Rajas de jalapeño": {
+      "packaging": "314 g",
+      "reason": "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 0 Picante).",
+      "stock": 314,
+      "unit": "g"
+    },
+    "Tajín": {
+      "packaging": "200 g",
+      "reason": "Sazonador con chile e irritantes de mucosa gástrica (Excluido por Regla 0 Picante).",
+      "stock": 200,
       "unit": "g"
     },
     "Tang": {
@@ -793,12 +798,6 @@
       "reason": "Almidón / Leguminosa fuera de protocolo cetogénico.",
       "stock": 1,
       "unit": "costal / bolsa institucional"
-    },
-    "Queso de cabra con arándano": {
-      "packaging": "350 g",
-      "reason": "Cubierta de arándano azucarado; fuera de protocolo cetogénico estricto.",
-      "stock": 350,
-      "unit": "g"
     }
   },
   "dispatchedMeals": {

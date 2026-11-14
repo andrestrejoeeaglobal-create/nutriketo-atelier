@@ -54,7 +54,9 @@ PROHIBITED_ITEMS: Dict[str, Tuple[str, str]] = {
     "Café colombiano": ("100 g", "Excluido de recetas culinarias por regla clínica [R3]."),
     "Vinagre balsámico": ("200 ml", "Vinagre con reducción de mosto concentrado en azúcares simples residuales."),
     "Jugo Maggi": ("200 ml", "Ultraprocesado con trigo hidrolizado, colorante caramelo y glutamato monosódico."),
-    "Manteca de cerdo": ("0 g", "Derivado porcino proscrito por regla clínica [R3]."),
+    "Manteca de cerdo": ("0 g", "Derivado porcino proscrito por Regla 0 Cerdo [R3]."),
+    "Rajas de jalapeño": ("314 g", "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 0 Picante)."),
+    "Tajín": ("200 g", "Sazonador con chile e irritantes de mucosa gástrica (Excluido por Regla 0 Picante)."),
     "Tang": ("104 g", "Polvo industrial para bebidas con azúcar y aditivos sintéticos no cetogénicos."),
     "Harina Power Cakes": ("1000 g", "Mezcla para panqueques con carbohidratos de rápida absorción; fuera de cetosis."),
     "Hojuelas de avena": ("100 g", "Cereal alto en carbohidratos netos y almidones; rompe cetosis."),
@@ -65,11 +67,14 @@ PROHIBITED_ITEMS: Dict[str, Tuple[str, str]] = {
     "Saborizante para arroz": ("48 g", "Sazonador industrial con maltodextrina y almidones para cereales."),
     "Chile chipotle": ("1320 g", "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)."),
     "Frijol pinto": ("1 costal / bolsa institucional", "Almidón / Leguminosa fuera de protocolo cetogénico."),
-    "Queso de cabra con arándano": ("350 g", "Cubierta de arándano azucarado; fuera de protocolo cetogénico estricto."),
 }
 
 CANONICAL_NAME_FIX: Dict[str, str] = {
     "Brocoli": "Brócoli",
+    "MultiSinergix®": "33Plus®",
+    "MultiSinergix": "33Plus®",
+    "AminoSinergix®": "34Plus®",
+    "AminoSinergix": "34Plus®",
 }
 
 V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
@@ -92,7 +97,7 @@ V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Leche de coco": (500.0, "ml"),
     "Queso Philadelphia": (360.0, "g"),
     "Queso de cabra": (200.0, "g"),
-    "Queso doble crema": (140.0, "g"),
+    "Queso doble crema": (0.0, "g"),
     "Queso parmesano": (100.0, "g"),
     "Queso cottage": (0.0, "g"),
     "Crema ácida": (0.0, "g"),
@@ -141,7 +146,7 @@ V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Microdyn": (200.0, "ml"),
     "Salsa inglesa": (200.0, "ml"),
     "Tajín": (200.0, "g"),
-    "Botella de agua": (140.0, "botellas (355 ml)"),
+    "Botella de agua": (140.0, "piezas"),
     "Pimienta negra": (124.0, "g"),
     "Ajo": (100.0, "g"),
     "Polvo para hornear": (100.0, "g"),
@@ -162,8 +167,8 @@ V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Chile güero": (0.0, "g"),
     "Hojas de laurel": (0.0, "g"),
     "Mostaza": (0.0, "g"),
-    "MultiSinergix®": (0.0, "g"),
-    "AminoSinergix®": (0.0, "g"),
+    "33Plus®": (0.0, "g"),
+    "34Plus®": (0.0, "g"),
 }
 V64_USER_INVENTORY_NOV14_OVERRIDES = V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES
 V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES = V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES
@@ -504,7 +509,13 @@ def build_ssot_document_from_ui_state(
     ui_pantry_units: Dict[str, str] = {}
 
     for k, val in raw_ps.items():
-        if k in ("Fondo claro de pollo", "Fondo de res", "Caldo de pollo", "Caldo de res"):
+        if k in (
+            "Fondo claro de pollo",
+            "Fondo de res",
+            "Caldo de pollo",
+            "Caldo de res",
+            "Queso de cabra con arándano",
+        ):
             continue
         c_name = CANONICAL_NAME_FIX.get(k, k)
         if isinstance(val, dict):
@@ -517,10 +528,15 @@ def build_ssot_document_from_ui_state(
             qty = float(val) if isinstance(val, (int, float)) else 0.0
             u = str(raw_pcu.get(k, "g"))
 
-        if c_name in ("Coliflor", "Apio") and u == "kg" and qty >= 50.0:
+        if c_name == "Queso doble crema":
+            qty = 0.0
+            u = "g"
+        if c_name in ("Coliflor", "Apio"):
             u = "g"
         if c_name == "Aceite de coco":
             u = "g"
+        if c_name == "Botella de agua":
+            u = "piezas"
 
         ui_pantry_stock[c_name] = qty if qty != int(qty) else int(qty)
         ui_pantry_units[c_name] = u
@@ -542,7 +558,27 @@ def build_ssot_document_from_ui_state(
         for t_name, (t_qty, t_unit) in V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES.items():
             ui_pantry_stock[t_name] = int(t_qty) if t_qty == int(t_qty) else t_qty
             ui_pantry_units[t_name] = t_unit
-            canonical_pantry_for_auditor[t_name] = [float(t_qty), t_unit]
+            if t_name not in PROHIBITED_ITEMS:
+                canonical_pantry_for_auditor[t_name] = [float(t_qty), t_unit]
+
+    ui_pantry_stock["Queso doble crema"] = 0
+    ui_pantry_units["Queso doble crema"] = "g"
+    canonical_pantry_for_auditor["Queso doble crema"] = [0.0, "g"]
+    ui_pantry_stock.pop("Queso de cabra con arándano", None)
+    ui_pantry_units.pop("Queso de cabra con arándano", None)
+    canonical_pantry_for_auditor.pop("Queso de cabra con arándano", None)
+    ui_pantry_stock.pop("MultiSinergix®", None)
+    ui_pantry_units.pop("MultiSinergix®", None)
+    canonical_pantry_for_auditor.pop("MultiSinergix®", None)
+    ui_pantry_stock.pop("AminoSinergix®", None)
+    ui_pantry_units.pop("AminoSinergix®", None)
+    canonical_pantry_for_auditor.pop("AminoSinergix®", None)
+    ui_pantry_stock.setdefault("33Plus®", 0)
+    ui_pantry_units["33Plus®"] = "g"
+    canonical_pantry_for_auditor.setdefault("33Plus®", [0.0, "g"])
+    ui_pantry_stock.setdefault("34Plus®", 0)
+    ui_pantry_units["34Plus®"] = "g"
+    canonical_pantry_for_auditor.setdefault("34Plus®", [0.0, "g"])
 
     if "Semillas y nueces mixtas" in ui_pantry_stock:
         mix_val = ui_pantry_stock["Semillas y nueces mixtas"]
@@ -551,18 +587,16 @@ def build_ssot_document_from_ui_state(
         ui_pantry_units["Nueces mixtas"] = mix_u
         canonical_pantry_for_auditor["Nueces mixtas"] = [float(mix_val), mix_u]
 
-    ui_pantry_stock["Queso de cabra con arándano"] = 350
-    ui_pantry_units["Queso de cabra con arándano"] = "g"
-
     del_pantry = list(dict.fromkeys(
         ui_state.get("deletedPantryItems", ["Elote", "Higos", "Nogada", "Zanahoria", "Agua mineral"])
-        + ["Agua mineral"]
+        + ["Agua mineral", "Queso de cabra con arándano", "Queso doble crema"]
     ))
 
     return {
-        "ssot_version": "v64_cierre_s46_14nov2026_synced",
+        "ssot_version": "v65_ui_audit_nov14_synced",
         "v63_sams_09nov2026_post_s45_sync": True,
         "v64_cierre_s46_14nov2026_sync": True,
+        "v65_ui_audit_nov14_sync": True,
         "sams_ticket_order": "1569462808300642304",
         "sams_ticket_date": "2026-11-09",
         "sams_ticket_store": "Sam's Club SM Santa Fe",

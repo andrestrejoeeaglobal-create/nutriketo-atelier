@@ -1841,7 +1841,7 @@ def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
         "Leche de coco": 500,
         "Queso Philadelphia": 360,
         "Queso de cabra": 200,
-        "Queso doble crema": 140,
+        "Queso doble crema": 0,
         "Queso parmesano": 100,
         "Queso cottage": 0,
         "Crema ácida": 0,
@@ -1873,7 +1873,17 @@ def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
     for k, v in expected_live_stocks_nov14.items():
         assert abs(float(ps[k]) - float(v)) < 1e-4, f"Stock en vivo incorrecto para {k}: {ps[k]} != {v}"
     assert ssot["pantryCardUnits"].get("Apio") == "g"
+    assert ssot["pantryCardUnits"].get("Aceite de coco") == "g"
+    assert ssot["pantryCardUnits"].get("Botella de agua") == "piezas"
     assert "Agua mineral" in ssot["deletedPantryItems"]
+    assert "Queso de cabra con arándano" in ssot["deletedPantryItems"]
+    assert "Queso doble crema" in ssot["deletedPantryItems"]
+    assert "Queso de cabra con arándano" not in ssot["quarantineItems"]
+    assert "Queso de cabra con arándano" not in ps
+    for q_item in ("Manteca de cerdo", "Rajas de jalapeño", "Tajín", "Café colombiano"):
+        assert q_item in ssot["quarantineItems"], f"{q_item} debe estar en quarantineItems"
+    assert "33Plus®" in ps and "34Plus®" in ps
+    assert "MultiSinergix®" not in ps and "AminoSinergix®" not in ps
 
     s45 = json.loads((root / "semana_45_master.json").read_text(encoding="utf-8"))
     s46 = json.loads((root / "semana_46_master.json").read_text(encoding="utf-8"))

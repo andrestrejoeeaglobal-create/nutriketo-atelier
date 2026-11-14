@@ -365,7 +365,7 @@ DEFAULT_PANTRY_STOCK.update(
         "Leche de coco": (500.0, "ml"),
         "Queso Philadelphia": (360.0, "g"),
         "Queso de cabra": (200.0, "g"),
-        "Queso doble crema": (140.0, "g"),
+        "Queso doble crema": (0.0, "g"),
         "Queso parmesano": (100.0, "g"),
         "Queso cottage": (0.0, "g"),
         "Crema ácida": (0.0, "g"),
@@ -402,10 +402,16 @@ DEFAULT_PANTRY_STOCK.update(
         "Flor de calabaza": (0.0, "manojo"),
         "Sal de mar": (1000.0, "g"),
         "Ajo": (100.0, "g"),
-        "Botella de agua": (140.0, "botellas (355 ml)"),
+        "Botella de agua": (140.0, "piezas"),
         "Chile güero": (0.0, "g"),
+        "33Plus®": (0.0, "g"),
+        "34Plus®": (0.0, "g"),
     }
 )
+DEFAULT_PANTRY_STOCK.pop("Rajas de jalapeño", None)
+DEFAULT_PANTRY_STOCK.pop("Tajín", None)
+DEFAULT_PANTRY_STOCK.pop("MultiSinergix®", None)
+DEFAULT_PANTRY_STOCK.pop("AminoSinergix®", None)
 
 LIVE_PANTRY_SSOT_PATH: Path = Path(__file__).resolve().parents[2] / "pantry_live_state.json"
 
@@ -450,8 +456,10 @@ def load_live_pantry_ssot() -> Dict[str, Any]:
                 if c_name == "Sardinas" and "lata" in u_str.lower():
                     q_num = q_num * 425.0
                     u_str = "g"
-                elif c_name in ("Coliflor", "Apio") and u_str == "kg" and q_num >= 50.0:
+                elif c_name in ("Coliflor", "Apio", "Aceite de coco"):
                     u_str = "g"
+                elif c_name == "Botella de agua":
+                    u_str = "piezas"
                 elif c_name == "Champiñón" and q_num < 1.0:
                     q_num = 0.0
                     u_str = "g"

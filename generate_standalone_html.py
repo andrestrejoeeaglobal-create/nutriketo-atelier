@@ -3859,7 +3859,7 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-013-leche": { item_num: 13, name: "Leche", stock: 960, unit: "ml", packaging: "960 ml", status: "prohibited", reason: "Lactosa no cetogénica (~12g carbs netos por porción); eleva glucemia." },
       "sku-014-salsa-catsup": { item_num: 14, name: "Salsa cátsup", stock: 2600, unit: "g", packaging: "2 envases de 1300 g", status: "prohibited", reason: "Elevado aporte de azúcar añadida y jarabe de fructosa; fuera de protocolo keto." },
       "sku-015-queso-mozzarella": { item_num: 15, name: "Queso mozzarella", stock: 105, unit: "g", packaging: "105 g", status: "canonical" },
-      "sku-019-botella-de-agua": { item_num: 19, name: "Botella de agua", stock: 30, unit: "botellas (355 ml)", packaging: "30 botellas (355 ml)", status: "canonical" },
+      "sku-019-botella-de-agua": { item_num: 19, name: "Botella de agua", stock: 140, unit: "piezas", packaging: "140 piezas", status: "canonical" },
       "sku-020-queso-parmesano": { item_num: 20, name: "Queso parmesano", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
       "sku-021-flat-steak": { item_num: 21, name: "Flat steak", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
       "sku-023-lomo-de-salmon": { item_num: 23, name: "Lomo de salmón", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
@@ -3895,7 +3895,7 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-055-extracto-de-vainilla": { item_num: 55, name: "Extracto de vainilla", stock: 400, unit: "ml", packaging: "2 envases de 200 ml", status: "canonical" },
       "sku-056-microdyn": { item_num: 56, name: "Microdyn", stock: 200, unit: "ml", packaging: "2 envases de 100 ml", status: "canonical" },
       "sku-057-cerezas": { item_num: 57, name: "Cerezas", stock: 260, unit: "g", packaging: "260 g", status: "prohibited", reason: "Fruta con alto contenido de fructosa y azúcares simples; proscrita en inducción keto." },
-      "sku-058-tajin": { item_num: 58, name: "Tajín", stock: 200, unit: "g", packaging: "2 envases de 100 g", status: "canonical" },
+      "sku-058-tajin": { item_num: 58, name: "Tajín", stock: 200, unit: "g", packaging: "2 envases de 100 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Sazonador con chile e irritantes de mucosa gástrica (Excluido por Regla 0 Picante)." },
       "sku-059-miguelito": { item_num: 59, name: "Miguelito", stock: 100, unit: "g", packaging: "100 g", status: "prohibited", reason: "Dulce en polvo compuesto por azúcar pura y chile; eleva glucosa de inmediato." },
       "sku-060-chamoy": { item_num: 60, name: "Chamoy", stock: 300, unit: "ml", packaging: "300 ml", status: "prohibited", reason: "Salsa agridulce ultraprocesada con azúcar, almidón y jarabe de maíz." },
       "sku-061-bicarbonato-de-sodio": { item_num: 61, name: "Bicarbonato de sodio", stock: 227, unit: "g", packaging: "227 g", status: "canonical" },
@@ -3904,7 +3904,7 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-064-aceitunas-manzanilla": { item_num: 64, name: "Aceitunas manzanilla", stock: 175, unit: "g", packaging: "175 g", status: "canonical" },
       "sku-065-chocolate-para-cobertura": { item_num: 65, name: "Chocolate para cobertura", stock: 165, unit: "g", packaging: "165 g", status: "prohibited", reason: "Chocolate comercial con alto contenido de sacarosa y grasas vegetales hidrogenadas." },
       "sku-066-concentrado-de-caldo-de-pollo-en-polvo": { item_num: 66, name: "Concentrado de caldo de pollo en polvo", stock: 250, unit: "g", packaging: "250 g", status: "prohibited", reason: "Sazonador industrial con maltodextrina, glutamato monosódico y almidones." },
-      "sku-067-cafe-colombiano": { item_num: 67, name: "Café colombiano", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
+      "sku-067-cafe-colombiano": { item_num: 67, name: "Café colombiano", stock: 100, unit: "g", packaging: "100 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Excluido de recetas culinarias por regla clínica [R3]." },
       "sku-068-vinagre-balsamico": { item_num: 68, name: "Vinagre balsámico", stock: 200, unit: "ml", packaging: "2 envases de 100 ml", status: "prohibited", reason: "Vinagre con reducción de mosto concentrado en azúcares simples residuales." },
       "sku-069-jugo-maggi": { item_num: 69, name: "Jugo Maggi", stock: 200, unit: "ml", packaging: "200 ml", status: "prohibited", reason: "Ultraprocesado con trigo hidrolizado, colorante caramelo y glutamato monosódico." },
       "sku-070-salsa-inglesa": { item_num: 70, name: "Salsa inglesa", stock: 200, unit: "ml", packaging: "200 ml", status: "canonical" },
@@ -3923,12 +3923,12 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-085-manzanilla": { item_num: 85, name: "Manzanilla", stock: 50, unit: "g", packaging: "50 g", status: "canonical" },
       "sku-086-curcuma": { item_num: 86, name: "Cúrcuma", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
       "sku-087-sal-marina-de-grano": { item_num: 87, name: "Sal de mar", stock: 3000, unit: "g", packaging: "3,000 g", status: "canonical" },
-      "sku-089-manteca-de-cerdo": { item_num: 89, name: "Manteca de cerdo", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
-      "sku-090-aceite-de-coco": { item_num: 90, name: "Aceite de coco", stock: 500, unit: "g", packaging: "500 g", status: "canonical" },
+      "sku-089-manteca-de-cerdo": { item_num: 89, name: "Manteca de cerdo", stock: 0, unit: "g", packaging: "0 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Derivado porcino proscrito por Regla 0 Cerdo [R3]." },
+      "sku-090-aceite-de-coco": { item_num: 90, name: "Aceite de coco", stock: 1000, unit: "g", packaging: "1000 g", status: "canonical" },
       "sku-091-tang": { item_num: 91, name: "Tang", stock: 104, unit: "g", packaging: "8 envases de 13 g", status: "prohibited", reason: "Polvo industrial para bebidas con azúcar y aditivos sintéticos no cetogénicos." },
       "sku-092-atun-en-agua": { item_num: 92, name: "Atún en agua", stock: 700, unit: "g", packaging: "7 envases de 100 g", status: "canonical" },
       "sku-093-sardinas": { item_num: 93, name: "Sardinas", stock: 4, unit: "latas de 425 g", packaging: "4 latas de 425 g (1,700 g)", status: "canonical" },
-      "sku-094-rajas-de-jalapeno": { item_num: 94, name: "Rajas de jalapeño", stock: 314, unit: "g", packaging: "2 envases de 157 g", status: "canonical" },
+      "sku-094-rajas-de-jalapeno": { item_num: 94, name: "Rajas de jalapeño", stock: 314, unit: "g", packaging: "2 envases de 157 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 0 Picante)." },
       "sku-095-harina-power-cakes": { item_num: 95, name: "Harina Power Cakes", stock: 1000, unit: "g", packaging: "1000 g", status: "prohibited", reason: "Mezcla para panqueques con carbohidratos de rápida absorción; fuera de cetosis." },
       "sku-096-hojuelas-de-avena": { item_num: 96, name: "Hojuelas de avena", stock: 100, unit: "g", packaging: "100 g", status: "prohibited", reason: "Cereal alto en carbohidratos netos y almidones; rompe cetosis." },
       "sku-097-maiz-palomero": { item_num: 97, name: "Maíz palomero", stock: 100, unit: "g", packaging: "100 g", status: "prohibited", reason: "Grano de maíz entero con elevada carga glucémica amilácea." },
@@ -3939,8 +3939,8 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-102-grenetina": { item_num: 102, name: "Grenetina", stock: 112, unit: "g", packaging: "4 envases de 28 g", status: "canonical" },
       "sku-103-saborizante-para-arroz": { item_num: 103, name: "Saborizante para arroz", stock: 48, unit: "g", packaging: "4 envases de 12 g", status: "prohibited", reason: "Sazonador industrial con maltodextrina y almidones para cereales." },
       "sku-104-huevo": { item_num: 104, name: "Huevo", stock: 26, unit: "piezas", packaging: "26 piezas", status: "canonical" },
-      "sku-105-multisinergix": { item_num: 105, name: "MultiSinergix®", stock: 300, unit: "g", packaging: "300 g", status: "canonical" },
-      "sku-106-aminosinergix": { item_num: 106, name: "AminoSinergix®", stock: 200, unit: "g", packaging: "200 g", status: "canonical" },
+      "sku-105-multisinergix": { item_num: 105, name: "33Plus®", stock: 0, unit: "g", packaging: "0 g", category: "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA", status: "canonical" },
+      "sku-106-aminosinergix": { item_num: 106, name: "34Plus®", stock: 0, unit: "g", packaging: "0 g", category: "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA", status: "canonical" },
       // --- INSUMOS ADICIONALES CONSOLIDADOS EN UN SOLO NOMBRE CANÓNICO SIN VARIACIONES ---
       "espinacas_baby_tiernas": { item_num: 107, sku_code: "981023610", ticket_desc: "ESPINACA BAB", name: "Espinacas", stock: 0, quantity_commercial: 0, commercial_unit: "domo_500", unit: "g", packaging: "0 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
       "esparragos_verdes_frescos": { item_num: 109, sku_code: "71235", ticket_desc: "ESPARRAGO", name: "Espárragos", stock: 0, quantity_commercial: 0, commercial_unit: "manojo_comercial", unit: "g", packaging: "0 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical" },
@@ -3949,10 +3949,10 @@ window.PANTRY_STOCK_INVENTORY = {
       "queso_ricotta_artesanal": { item_num: 112, sku_code: "256038", ticket_desc: "960GR QCOTTA", name: "Queso ricotta", stock: 1920, quantity_commercial: 2, commercial_unit: "bote_960g", unit: "g", packaging: "1,920 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical" },
       "chiles_chipotles_adobados": { item_num: 113, sku_code: "34553", ticket_desc: "6/220G CHIPO", name: "Chile chipotle", stock: 1320, quantity_commercial: 1, commercial_unit: "pack_6", unit: "g", packaging: "1,320 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)" },
       "frijol_pinto": { item_num: 115, sku_code: "115359", ticket_desc: "FRIJOL PINTO", name: "Frijol pinto", stock: 1, quantity_commercial: 1, commercial_unit: "costal / bolsa institucional", unit: "costal / bolsa institucional", packaging: "1 costal / bolsa institucional", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Almidón / Leguminosa fuera de protocolo cetogénico" },
-      "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 1, unit: "piezas", packaging: "1 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null },
-      "sku-321-queso-doble-crema": { item_num: 321, name: "Queso doble crema", stock: 1000, unit: "g", packaging: "1,000 g", category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)", status: "canonical", reason: null },
-      "sku-322-calabacitas": { item_num: 322, name: "Calabacitas", stock: 1400, unit: "g", packaging: "1,400 g (7 piezas)", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", reason: null },
-      "sku-323-ajo": { item_num: 323, name: "Ajo", stock: 120, unit: "g", packaging: "120 g (2 cabezas)", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
+      "pollo-entero": { item_num: 316, name: "Pollo entero", stock: 6, unit: "piezas", packaging: "6 piezas", category: "🥩 Carnes, Pescados y Proteínas", status: "canonical", reason: null },
+      "sku-322-calabacitas": { item_num: 322, name: "Calabacitas", stock: 0, unit: "g", packaging: "0 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", reason: null },
+      "sku-323-ajo": { item_num: 323, name: "Ajo", stock: 100, unit: "g", packaging: "100 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
+      "sku-327-apio": { item_num: 327, name: "Apio", stock: 500, unit: "g", packaging: "500 g", category: "🥬 Verduras, Hortalizas y Frescos", status: "canonical", reason: null },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada", stock: 0, unit: "g", status: "canonical" },
@@ -3960,10 +3960,10 @@ window.PANTRY_STOCK_INVENTORY = {
       "frambuesas-frescas": { name: "Frambuesas", stock: 0, unit: "g", status: "canonical" },
       "arandanos-frescos": { name: "Arándanos", stock: 0, unit: "g", status: "canonical" },
       "pitaya-fresca": { name: "Pitaya", stock: 0, unit: "g", status: "canonical" },
-      "multisinergix": { name: "MultiSinergix®", stock: 0, unit: "g", status: "canonical" },
-      "aminosinergix": { name: "AminoSinergix®", stock: 0, unit: "g", status: "canonical" },
-      "33plus": { name: "MultiSinergix®", stock: 0, unit: "g", status: "canonical" },
-      "34plus": { name: "AminoSinergix®", stock: 0, unit: "g", status: "canonical" },
+      "multisinergix": { name: "33Plus®", stock: 0, unit: "g", status: "canonical" },
+      "aminosinergix": { name: "34Plus®", stock: 0, unit: "g", status: "canonical" },
+      "33plus": { name: "33Plus®", stock: 0, unit: "g", status: "canonical" },
+      "34plus": { name: "34Plus®", stock: 0, unit: "g", status: "canonical" },
       "ajo-fresco": { name: "Ajo", stock: 0, unit: "g", status: "canonical" }
     };
 
@@ -4073,7 +4073,7 @@ window.PANTRY_STOCK_INVENTORY = {
     ];
     let customFarmItems = [];
     let deletedFarmItems = ["Calabacitas", "Espinacas", "Brócoli", "Espárragos", "Ejotes", "Arúgula", "Coliflor", "Fresas", "Frambuesas", "Zarzamoras", "Arándanos", "Menta", "Epazote"];
-    let deletedPantryItems = ["Elote", "Higos", "Nogada", "Zanahoria", "Agua mineral"];
+    let deletedPantryItems = ["Elote", "Higos", "Nogada", "Zanahoria", "Agua mineral", "Queso de cabra con arándano", "Queso doble crema"];
 
     let activeWeek = "Semana 46 (08 al 14 de Noviembre de 2026)";
     let selectedIdx = 0;
@@ -4095,30 +4095,30 @@ let pantryStock = {
       "Leche": 960,
       "Salsa cátsup": 2600,
       "Queso mozzarella": 0,
-      "Botella de agua": 270,
-      "Queso parmesano": 0,
-      "Flat steak": 2025,
-      "Lomo de salmón": 1780,
-      "Carne molida": 2875,
+      "Botella de agua": 140,
+      "Queso parmesano": 100,
+      "Flat steak": 0,
+      "Lomo de salmón": 0,
+      "Carne molida": 300,
       "Fajitas de mojarra": 2720,
       "Filete de atún": 0,
-      "Jitomate": 0,
+      "Jitomate": 1,
       "Morrón": 0,
-      "Pechuga de pollo": 313.3,
+      "Pechuga de pollo": 0,
       "Flor de calabaza": 0,
-      "Calabacitas": 93.3,
-      "Cebolla": 1,
-      "Lechuga": 4,
-      "Ejotes": 80,
-      "Tomate": 200,
+      "Calabacitas": 0,
+      "Cebolla": 0,
+      "Lechuga": 0,
+      "Ejotes": 0,
+      "Tomate": 0,
       "Aguacate": 0,
-      "Zarzamora": 170,
-      "Champiñón": 866.7,
+      "Zarzamora": 0,
+      "Champiñón": 0,
       "Pulpa de arándano": 3840,
-      "Pistaches": 0,
-      "Nuez de la India": 2062,
+      "Pistaches": 50,
+      "Nuez de la India": 1000,
       "Cacahuate enchilado": 1200,
-      "Semillas y nueces mixtas": 1108,
+      "Semillas y nueces mixtas": 600,
       "Granola": 100,
       "Té chai": 38,
       "Hierbas finas": 13,
@@ -4146,7 +4146,7 @@ let pantryStock = {
       "Salsa inglesa": 200,
       "Salsa de soya": 250,
       "Vinagre de vino tinto": 250,
-      "Aceite de oliva": 118,
+      "Aceite de oliva": 0,
       "Flor de Jamaica molida en polvo": 200,
       "Almendras fileteadas": 100,
       "Hojas de laurel": 0,
@@ -4158,42 +4158,41 @@ let pantryStock = {
       "Ajonjolí": 0,
       "Manzanilla": 12,
       "Cúrcuma": 82,
-      "Sal de mar": 2810,
+      "Sal de mar": 1000,
       "Manteca de cerdo": 0,
-      "Aceite de coco": 1328,
+      "Aceite de coco": 1000,
       "Tang": 104,
-      "Atún en agua": 40,
-      "Sardinas": 0,
+      "Atún en agua": 560,
+      "Sardinas": 260,
       "Rajas de jalapeño": 314,
       "Harina Power Cakes": 1000,
       "Hojuelas de avena": 100,
       "Maíz palomero": 100,
       "Lentejas": 100,
       "Quinoa": 100,
-      "Chile güero": 840,
+      "Chile güero": 0,
       "Palomitas para microondas": 600,
       "Grenetina": 32,
       "Saborizante para arroz": 48,
-      "Huevo": 224,
-      "MultiSinergix®": 0,
-      "AminoSinergix®": 0,
-      "Espinacas": 454,
+      "Huevo": 180,
+      "33Plus®": 0,
+      "34Plus®": 0,
+      "Espinacas": 260,
       "Espárragos": 0,
-      "Fresas": 1821,
-      "Frambuesas": 340,
+      "Fresas": 200,
+      "Frambuesas": 220,
       "Queso ricotta": 0,
       "Chile chipotle": 1320,
       "Frijol pinto": 1,
-      "Pollo entero": 0,
-      "Pechuga de pavo": 1633.3,
-      "Germinado": 640,
+      "Pollo entero": 6,
+      "Pechuga de pavo": 700,
+      "Germinado": 100,
       "Coliflor": 0,
       "Pepino": 0,
       "Brócoli": 0,
-      "Queso de cabra con arándano": 350,
-      "Queso doble crema": 140,
-      "Ajo": 7,
-      "Nueces mixtas": 1108
+      "Apio": 500,
+      "Ajo": 100,
+      "Nueces mixtas": 600
     };
     let checkedRows = {};
     let mealDinersState = {
@@ -4248,8 +4247,8 @@ let pantryStock = {
       if (!rawName) return '';
       const lower = rawName.toLowerCase().trim();
 
-      if (/multi sinergix|multisinergix|33plus|fórmula nootrópica|formula nootropica/i.test(lower)) return 'MultiSinergix®';
-      if (/amino sinergix|aminosinergix|34plus|fórmula reparadora|formula reparadora/i.test(lower)) return 'AminoSinergix®';
+      if (/multi sinergix|multisinergix|33plus|fórmula nootrópica|formula nootropica/i.test(lower)) return '33Plus®';
+      if (/amino sinergix|aminosinergix|34plus|fórmula reparadora|formula reparadora/i.test(lower)) return '34Plus®';
 
       if (/café|cafe legal|café de grano|café en grano/i.test(lower)) return 'Café en grano — molido';
 
@@ -4466,8 +4465,8 @@ let pantryStock = {
       else if (/\\boregano\\b/.test(norm)) out = 'Orégano';
       else if (/\\bpimienta (negra|molida)\\b/.test(norm)) out = 'Pimienta negra';
       else if (/\\b(sal marina de grano|sal fina|sal de mar|sal mineral|sal de colima)\\b/.test(norm) || norm === 'sal') out = 'Sal de mar';
-      else if (/\\b(multi\\s*sinergix|33\\s*plus|formula nootropica)\\b/.test(norm)) out = 'MultiSinergix®';
-      else if (/\\b(amino\\s*sinergix|34\\s*plus|formula reparadora)\\b/.test(norm)) out = 'AminoSinergix®';
+      else if (/\\b(multi\\s*sinergix|33\\s*plus|formula nootropica)\\b/.test(norm)) out = '33Plus®';
+      else if (/\\b(amino\\s*sinergix|34\\s*plus|formula reparadora)\\b/.test(norm)) out = '34Plus®';
       else {
         const cleaned = trimmed.replace(/\\s*\\((?:costco|kirkland|sams|sam's|qcotta|pack|paquete|\\d+\\s*(?:botellas?|pzas|piezas|g|kg|ml))[^)]*\\)/gi, '').trim();
         out = cleaned || trimmed;
@@ -4687,6 +4686,7 @@ let pantryStock = {
       }
       if (/\bagua\b/i.test(name) && !/aguacate/i.test(name)) {
         return [
+          { id: 'piezas', label: 'Piezas (pzas)', multiplier: 1, unit: 'piezas', type: 'count' },
           { id: 'botellas de 355 ml', label: 'Botella (355 ml)', multiplier: 355, unit: 'ml', type: 'vol' },
           { id: 'litros', label: 'Litros (L)', multiplier: 1000, unit: 'ml', type: 'vol' },
           { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' }
@@ -4708,6 +4708,14 @@ let pantryStock = {
           { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
+      if (/aceite.*coco/i.test(name)) {
+        return [
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
+          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' },
+          { id: 'kg', label: 'Kilo (1,000 g)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'frasco_500', label: 'Frasco (500 g)', multiplier: 500, unit: 'g', type: 'mass' }
+        ];
+      }
       if (/aceite.*oliva|vevo/i.test(name)) {
         return [
           { id: 'botella_vevo', label: 'Botella (750 ml)', multiplier: 750, unit: 'ml', type: 'vol' },
@@ -4720,7 +4728,8 @@ let pantryStock = {
         return [
           { id: 'frasco_500', label: 'Botella (500 ml)', multiplier: 500, unit: 'ml', type: 'vol' },
           { id: 'frasco_250', label: 'Frasco (250 ml)', multiplier: 250, unit: 'ml', type: 'vol' },
-          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' }
+          { id: 'ml', label: 'Mililitros (ml)', multiplier: 1, unit: 'ml', type: 'vol' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
         ];
       }
 
@@ -4849,9 +4858,9 @@ let pantryStock = {
       }
       if (qty >= 500) {
         return [
-          { id: 'kg', label: 'Kilos (kg)', multiplier: 1000, unit: 'g', type: 'mass' },
+          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' },
           { id: 'paquete_500', label: 'Paquete (500 g)', multiplier: 500, unit: 'g', type: 'mass' },
-          { id: 'g', label: 'Gramos (g)', multiplier: 1, unit: 'g', type: 'mass' }
+          { id: 'kg', label: 'Kilos (kg)', multiplier: 1000, unit: 'g', type: 'mass' }
         ];
       }
 
@@ -5037,14 +5046,20 @@ let pantryStock = {
 
       const name = (itemName || '').toLowerCase().trim();
 
-      // 0.0 Inmunidad Taxonómica Estricta: Aceites vegetales, VEVO, ajonjolí, mantequilla, manteca y ghee son grasas puras (NUNCA lácteos ni quesos)
-      if (/aceite|vevo|ajonjolí|ajonjoli|mantequilla|manteca|ghee/i.test(name)) {
+      // 0.0 Inmunidad Taxonómica Estricta: Aceites vegetales, VEVO, ajonjolí, mantequilla y ghee son grasas puras (NUNCA lácteos ni quesos; manteca de cerdo va a Cuarentena)
+      if (/aceite|vevo|ajonjolí|ajonjoli|mantequilla|ghee/i.test(name) && !/aceite vegetal mixto/i.test(name)) {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
       // 0.0 Prioridad Taxonómica Estricta: Leche de coco -> Grasas, Aceites y Semillas (NUNCA Cuarentena)
       if (/leche de coco/i.test(name)) {
         return '🥑 Grasas, Aceites y Semillas';
+      }
+
+      // 0.02 Prioridad Taxonómica Estricta: Insumos Prohibidos / Cuarentena (Reglas 0 Cerdo, 0 Picante, [R3] Café y ultraprocesados)
+      if ((explicitCategory && (explicitCategory.includes('cuarentena') || explicitCategory.includes('prohibited') || explicitCategory.includes('Cuarentena') || explicitCategory.includes('🛑'))) ||
+          /manteca de cerdo|\bmanteca\b|rajas de jalapeño|rajas de jalapeno|tajín|tajin|café colombiano|cafe colombiano|chile chipotle|chipotle|salsa bbq|salsa cátsup|salsa catsup|chamoy|miguelito|tang|jugo maggi|vinagre balsámico|vinagre balsamico|chocolate para cobertura|harina power cakes|hojuelas de avena|maíz palomero|maiz palomero|palomitas para microondas|saborizante para arroz|cacahuate enchilado|granola|harina para hot cakes|pulpa de arándano|pulpa de arandano|leche evaporada|\bleche\b|durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca|higo|higos|papa|papas|lenteja|lentejas|garbanzo|garbanzos|frijol|frijoles|arroz|concentrado de caldo|caldo de pollo en polvo/i.test(name)) {
+        return '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)';
       }
 
       // 0.05 Prioridad Taxonómica Estricta: Hongos y Setas (NUNCA Grasas, NUNCA Carnes; evita falso positivo con 'piñón' en 'champiñón')
@@ -5159,6 +5174,8 @@ let pantryStock = {
           "sku-078-oregano-grueso",
           "sku-083-pimienta-molida",
           "sku-088-sal-fina",
+          "sku-320-cabrarandano",
+          "sku-321-queso-doble-crema",
           "ks_guante_gde_400p",
           "miel-pura",
           "duraznos-frescos",
@@ -5196,6 +5213,10 @@ let pantryStock = {
           "Guantes de protección (400 piezas)",
           "MultiSinergix",
           "AminoSinergix",
+          "MultiSinergix®",
+          "AminoSinergix®",
+          "Queso de cabra con arándano",
+          "Queso doble crema",
           "Fórmula Nootrópica 33Plus®",
           "Fórmula Reparadora 34Plus®",
           "Fondo claro de pollo",
@@ -5336,7 +5357,6 @@ let pantryStock = {
           { row: 7, ticket_desc: "960GR QCOTTA", qty_ticket: 2, price: 212.00, name: "Queso ricotta", add_qty: 1920, target_stock: 3840, unit: "g", sku: "queso_ricotta_artesanal", item_num: 112, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
           { row: 8, ticket_desc: "LALA MANCHE", qty_ticket: 1, price: 265.00, name: "Queso manchego", add_qty: 1000, target_stock: 1000, unit: "g", sku: "sku-008-queso-manchego", item_num: 8, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
           { row: 9, ticket_desc: "OIKOS PROT (2 pcs)", qty_ticket: 1, price: 182.00, name: "Yogur griego", add_qty: 1800, target_stock: 5680, unit: "g", sku: "sku-004-yogur-griego", item_num: 4, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
-          { row: 10, ticket_desc: "CABRARANDANO", qty_ticket: 1, price: 176.00, name: "Queso de cabra con arándano", add_qty: 350, target_stock: 350, unit: "g", sku: "sku-320-cabrarandano", item_num: 320, category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Cubierta de arándano azucarado; fuera de protocolo cetogénico estricto" },
           { row: 11, ticket_desc: "12/90 MANTEQ", qty_ticket: 1, price: 251.00, name: "Mantequilla", add_qty: 1080, target_stock: 1370, unit: "g", sku: "sku-001-mantequilla", item_num: 1, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
           { row: 12, ticket_desc: "MM NUEZ INDI", qty_ticket: 1, price: 350.00, name: "Nuez de la India", add_qty: 907, target_stock: 907, unit: "g", sku: "sku-043-nuez-de-la-india", item_num: 43, category: "🥑 Grasas, Aceites y Semillas" },
           { row: 13, ticket_desc: "MM ACEITE CO", qty_ticket: 1, price: 235.00, name: "Aceite de coco", add_qty: 1500, target_stock: 2000, unit: "g", sku: "sku-090-aceite-de-coco", item_num: 90, category: "🥑 Grasas, Aceites y Semillas" },
@@ -5619,9 +5639,11 @@ let pantryStock = {
             "Espárragos": { stock: 0, unit: "g", sku: "esparragos_verdes_frescos" },
             "Flor de calabaza": { stock: 0, unit: "manojo", sku: "sku-031-flor-de-calabaza" },
             "Sal de mar": { stock: 1000, unit: "g", sku: "sku-087-sal-marina-de-grano" },
-            "Botella de agua": { stock: 140, unit: "botellas (355 ml)", sku: "sku-019-botella-de-agua" },
+            "Botella de agua": { stock: 140, unit: "piezas", sku: "sku-019-botella-de-agua" },
             "Ajo": { stock: 100, unit: "g", sku: "sku-323-ajo" },
-            "Chile güero": { stock: 0, unit: "g", sku: "sku-069-chile-guero" }
+            "Chile güero": { stock: 0, unit: "g", sku: "sku-069-chile-guero" },
+            "33Plus®": { stock: 0, unit: "g", sku: "sku-105-multisinergix" },
+            "34Plus®": { stock: 0, unit: "g", sku: "sku-106-aminosinergix" }
           };
           Object.keys(v64InventoryUpdates).forEach(itemName => {
             const up = v64InventoryUpdates[itemName];
@@ -5649,6 +5671,99 @@ let pantryStock = {
             }
           });
           localStorage.setItem('nutriketo_v64_cierre_s46_14nov2026_sync', 'true');
+        }
+
+        // Sincronización V65 AUDITORÍA VISUAL UI vs REPORTE (seq=279021):
+        // 1. Normalizar unidades: Apio -> g (500), Aceite de coco -> g (1000), Botella de agua -> piezas (140)
+        // 2. Eliminar fantasmas: Queso doble crema (0 g) y Queso de cabra con arándano
+        // 3. Mover a Cuarentena: Manteca de cerdo (0 g), Rajas de jalapeño (314 g), Tajín (200 g), Café colombiano (100 g)
+        // 4. Renombrar MultiSinergix® -> 33Plus® y AminoSinergix® -> 34Plus®
+        if (!window.pantryCardUnits || typeof window.pantryCardUnits !== 'object') {
+          window.pantryCardUnits = {};
+        }
+        window.pantryCardUnits["Apio"] = "g";
+        window.pantryCardUnits["Aceite de coco"] = "g";
+        window.pantryCardUnits["Botella de agua"] = "piezas";
+        window.pantryCardUnits["33Plus®"] = "g";
+        window.pantryCardUnits["34Plus®"] = "g";
+        ["Queso de cabra con arándano", "Queso doble crema"].forEach(ghostItem => {
+          if (!deletedPantryItems.some(d => String(d).toLowerCase().trim() === ghostItem.toLowerCase())) {
+            deletedPantryItems.push(ghostItem);
+          }
+          delete pantryStock[ghostItem];
+          if (window.pantryCardUnits) delete window.pantryCardUnits[ghostItem];
+        });
+        delete pantryStock["MultiSinergix®"];
+        delete pantryStock["AminoSinergix®"];
+        if (window.pantryCardUnits) {
+          delete window.pantryCardUnits["MultiSinergix®"];
+          delete window.pantryCardUnits["AminoSinergix®"];
+        }
+        if (pantryStock["33Plus®"] === undefined) pantryStock["33Plus®"] = 0;
+        if (pantryStock["34Plus®"] === undefined) pantryStock["34Plus®"] = 0;
+        if (window.PANTRY_STOCK_INVENTORY) {
+          delete window.PANTRY_STOCK_INVENTORY["sku-320-cabrarandano"];
+          delete window.PANTRY_STOCK_INVENTORY["sku-321-queso-doble-crema"];
+          if (window.PANTRY_STOCK_INVENTORY["sku-019-botella-de-agua"]) {
+            window.PANTRY_STOCK_INVENTORY["sku-019-botella-de-agua"].unit = "piezas";
+            window.PANTRY_STOCK_INVENTORY["sku-019-botella-de-agua"].packaging = `${window.PANTRY_STOCK_INVENTORY["sku-019-botella-de-agua"].stock} piezas`;
+          }
+          if (window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"]) {
+            window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].unit = "g";
+            window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].packaging = `${window.PANTRY_STOCK_INVENTORY["sku-090-aceite-de-coco"].stock} g`;
+          }
+          if (!window.PANTRY_STOCK_INVENTORY["sku-327-apio"]) {
+            window.PANTRY_STOCK_INVENTORY["sku-327-apio"] = {
+              item_num: 327,
+              name: "Apio",
+              stock: pantryStock["Apio"] !== undefined ? pantryStock["Apio"] : 500,
+              unit: "g",
+              packaging: "500 g",
+              category: "🥬 Verduras, Hortalizas y Frescos",
+              status: "canonical",
+              reason: null
+            };
+          } else {
+            window.PANTRY_STOCK_INVENTORY["sku-327-apio"].unit = "g";
+            window.PANTRY_STOCK_INVENTORY["sku-327-apio"].packaging = `${window.PANTRY_STOCK_INVENTORY["sku-327-apio"].stock} g`;
+          }
+          const quarantineFixes = {
+            "sku-089-manteca-de-cerdo": { name: "Manteca de cerdo", stock: 0, unit: "g", reason: "Derivado porcino proscrito por Regla 0 Cerdo [R3]." },
+            "sku-094-rajas-de-jalapeno": { name: "Rajas de jalapeño", stock: 314, unit: "g", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 0 Picante)." },
+            "sku-058-tajin": { name: "Tajín", stock: 200, unit: "g", reason: "Sazonador con chile e irritantes de mucosa gástrica (Excluido por Regla 0 Picante)." },
+            "sku-067-cafe-colombiano": { name: "Café colombiano", stock: 100, unit: "g", reason: "Excluido de recetas culinarias por regla clínica [R3]." }
+          };
+          Object.keys(quarantineFixes).forEach(qSku => {
+            const qInfo = quarantineFixes[qSku];
+            if (window.PANTRY_STOCK_INVENTORY[qSku]) {
+              window.PANTRY_STOCK_INVENTORY[qSku].name = qInfo.name;
+              window.PANTRY_STOCK_INVENTORY[qSku].stock = qInfo.stock;
+              window.PANTRY_STOCK_INVENTORY[qSku].unit = qInfo.unit;
+              window.PANTRY_STOCK_INVENTORY[qSku].status = "prohibited";
+              window.PANTRY_STOCK_INVENTORY[qSku].category = "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)";
+              window.PANTRY_STOCK_INVENTORY[qSku].reason = qInfo.reason;
+            }
+            pantryStock[qInfo.name] = qInfo.stock;
+          });
+          if (window.PANTRY_STOCK_INVENTORY["sku-105-multisinergix"]) {
+            window.PANTRY_STOCK_INVENTORY["sku-105-multisinergix"].name = "33Plus®";
+            window.PANTRY_STOCK_INVENTORY["sku-105-multisinergix"].stock = pantryStock["33Plus®"] || 0;
+            window.PANTRY_STOCK_INVENTORY["sku-105-multisinergix"].unit = "g";
+            window.PANTRY_STOCK_INVENTORY["sku-105-multisinergix"].packaging = `${pantryStock["33Plus®"] || 0} g`;
+            window.PANTRY_STOCK_INVENTORY["sku-105-multisinergix"].category = "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA";
+            window.PANTRY_STOCK_INVENTORY["sku-105-multisinergix"].status = "canonical";
+          }
+          if (window.PANTRY_STOCK_INVENTORY["sku-106-aminosinergix"]) {
+            window.PANTRY_STOCK_INVENTORY["sku-106-aminosinergix"].name = "34Plus®";
+            window.PANTRY_STOCK_INVENTORY["sku-106-aminosinergix"].stock = pantryStock["34Plus®"] || 0;
+            window.PANTRY_STOCK_INVENTORY["sku-106-aminosinergix"].unit = "g";
+            window.PANTRY_STOCK_INVENTORY["sku-106-aminosinergix"].packaging = `${pantryStock["34Plus®"] || 0} g`;
+            window.PANTRY_STOCK_INVENTORY["sku-106-aminosinergix"].category = "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA";
+            window.PANTRY_STOCK_INVENTORY["sku-106-aminosinergix"].status = "canonical";
+          }
+        }
+        if (typeof localStorage !== 'undefined') {
+          localStorage.setItem('nutriketo_v65_ui_audit_nov14_sync', 'true');
         }
 
         // Garantizar integridad de SKUs que no deben colisionar léxicamente (Leche vs Leche de coco, Semillas y nueces mixtas vs Nuez de la India)
@@ -5698,19 +5813,6 @@ let pantryStock = {
             unit: "g",
             packaging: `${pavoStock} g`,
             category: "🥩 Carnes, Pescados y Proteínas",
-            status: "canonical",
-            reason: null
-          };
-        }
-        if (!isPantryItemDeleted("Queso doble crema") && !isPantryItemDeleted("sku-321-queso-doble-crema") && !window.PANTRY_STOCK_INVENTORY["sku-321-queso-doble-crema"]) {
-          const dcStock = pantryStock["Queso doble crema"] !== undefined ? pantryStock["Queso doble crema"] : 1000;
-          window.PANTRY_STOCK_INVENTORY["sku-321-queso-doble-crema"] = {
-            item_num: 321,
-            name: "Queso doble crema",
-            stock: dcStock,
-            unit: "g",
-            packaging: `${dcStock} g`,
-            category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
             status: "canonical",
             reason: null
           };
@@ -5860,7 +5962,7 @@ let pantryStock = {
 
     function ensureCanonicalTicketIntakesApplied() {
       try {
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v64_cierre_s46_14nov2026_applied') !== 'true') {
+        if (typeof localStorage !== 'undefined' && (localStorage.getItem('nutriketo_v64_cierre_s46_14nov2026_applied') !== 'true' || localStorage.getItem('nutriketo_v65_ui_audit_nov14_applied') !== 'true')) {
           const s46SyncedStocks = {
             "Mantequilla": 720, "Mostaza": 0, "Queso cottage": 0, "Yogur griego": 2000,
             "Queso Philadelphia": 360, "Crema ácida": 0, "Mayonesa": 200, "Queso manchego": 1000,
@@ -5871,30 +5973,41 @@ let pantryStock = {
             "Champiñón": 0, "Nuez de la India": 1000, "Semillas y nueces mixtas": 600,
             "Té chai": 38, "Aceite de oliva": 0, "Almendras fileteadas": 100, "Hojas de laurel": 0,
             "Pimienta negra": 124, "Manteca de cerdo": 0, "Aceite de coco": 1000, "Atún en agua": 560,
-            "Sardinas": 260, "Huevo": 180, "MultiSinergix®": 0, "AminoSinergix®": 0,
+            "Sardinas": 260, "Huevo": 180, "33Plus®": 0, "34Plus®": 0,
             "Espinacas": 260, "Espárragos": 0, "Fresas": 200, "Frambuesas": 220,
             "Queso ricotta": 0, "Pollo entero": 6, "Pechuga de pavo": 700, "Germinado": 100,
-            "Coliflor": 0, "Pepino": 0, "Brócoli": 0, "Apio": 500, "Queso de cabra con arándano": 350,
-            "Queso doble crema": 140, "Ajo": 100, "Nueces mixtas": 600, "Pistaches": 50,
+            "Coliflor": 0, "Pepino": 0, "Brócoli": 0, "Apio": 500,
+            "Ajo": 100, "Nueces mixtas": 600, "Pistaches": 50,
             "Aceitunas manzanilla": 5, "Alcaparras": 44, "Achiote": 92, "Canela molida": 725,
             "Clavo de olor": 48, "Comino": 47, "Cúrcuma": 82, "Extracto de vainilla": 376,
             "Grenetina": 32, "Hierbas finas": 13, "Manzanilla": 12, "Orégano": 98,
-            "Sal con ajo": 52, "Sal de mar": 1000, "Tomillo": 8, "Chile güero": 0
+            "Sal con ajo": 52, "Sal de mar": 1000, "Tomillo": 8, "Chile güero": 0,
+            "Rajas de jalapeño": 314, "Tajín": 200, "Café colombiano": 100
           };
           pantryStock = Object.assign(pantryStock || {}, s46SyncedStocks);
-          if (window.pantryCardUnits && typeof window.pantryCardUnits === 'object') {
-            window.pantryCardUnits["Sardinas"] = "g";
-            window.pantryCardUnits["Pepino"] = "g";
-            window.pantryCardUnits["Apio"] = "g";
-            window.pantryCardUnits["Queso de cabra"] = "g";
-            window.pantryCardUnits["Pollo entero"] = "piezas";
+          delete pantryStock["Queso doble crema"];
+          delete pantryStock["Queso de cabra con arándano"];
+          delete pantryStock["MultiSinergix®"];
+          delete pantryStock["AminoSinergix®"];
+          if (!window.pantryCardUnits || typeof window.pantryCardUnits !== 'object') {
+            window.pantryCardUnits = {};
           }
+          window.pantryCardUnits["Sardinas"] = "g";
+          window.pantryCardUnits["Pepino"] = "g";
+          window.pantryCardUnits["Apio"] = "g";
+          window.pantryCardUnits["Aceite de coco"] = "g";
+          window.pantryCardUnits["Botella de agua"] = "piezas";
+          window.pantryCardUnits["Queso de cabra"] = "g";
+          window.pantryCardUnits["Pollo entero"] = "piezas";
+          window.pantryCardUnits["33Plus®"] = "g";
+          window.pantryCardUnits["34Plus®"] = "g";
           if (typeof CANONICAL_WEEK_46_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_46_TITLE]) {
             activeWeek = CANONICAL_WEEK_46_TITLE;
           }
           localStorage.setItem('nutriketo_v62_s45_mercado_cierre_applied', 'true');
           localStorage.setItem('nutriketo_v63_sams_09nov2026_applied', 'true');
           localStorage.setItem('nutriketo_v64_cierre_s46_14nov2026_applied', 'true');
+          localStorage.setItem('nutriketo_v65_ui_audit_nov14_applied', 'true');
         }
         consolidateAndPurgePantryInventory();
         if (typeof localStorage !== 'undefined') {
@@ -6875,7 +6988,7 @@ let pantryStock = {
                 }
               }
             }
-            if (!currentUnit && options.length > 0) {
+            if (options.length > 0 && (!currentUnit || !options.some(opt => opt.id === currentUnit))) {
               currentUnit = options[0].id;
             }
             window.pantryCardUnits[i.item_name] = currentUnit;
@@ -8251,13 +8364,14 @@ function calculateActiveMenuBOM(weekKey, diners) {
       });
     });
 
-  // Contabilidad integral de las 4 tomas diarias de Sinergix® (Toma 1 en ayunas + Toma 4 antes de dormir)
+  // Contabilidad integral de las 4 tomas diarias de 33Plus® y 34Plus® (Toma 1 en ayunas + Toma 4 antes de dormir)
   const wTarget = weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : '');
   if (wTarget && isCanonicalHardGateWeek(wTarget)) {
     const extraDoseQty = 5 * numDiners * 7; // 210 g para 6 comensales
-    ['MultiSinergix®', 'AminoSinergix®'].forEach(suppName => {
+    ['33Plus®', '34Plus®'].forEach(suppName => {
       const sSlug = normalizeToCanonicalSlug(suppName);
       if (bomMap[sSlug]) {
+        bomMap[sSlug].item_name = suppName;
         bomMap[sSlug].quantity += extraDoseQty;
       } else {
         bomMap[sSlug] = {
@@ -11775,7 +11889,7 @@ function renderRecipes(day, activeDiners) {
 
         <div>
           <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-1.5 font-brand-title">
-            🌿 3. Acompañamiento / Elixir Bioactivo (MultiSinergix® Desayuno / AminoSinergix® Cena):
+            🌿 3. Acompañamiento / Elixir Bioactivo (33Plus® Desayuno / 34Plus® Cena):
           </label>
           <select id="neg-side-select" onchange="onDishSelectChange()" class="w-full bg-slate-50 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-900 dark:text-white font-medium rounded-lg p-2.5 text-sm focus:ring-2 focus:ring-[#3AAA35] focus:outline-none">
           </select>
@@ -11827,7 +11941,7 @@ function renderRecipes(day, activeDiners) {
           <span style="font-size:0.72rem; font-weight:800; background:var(--color-34plus); color:#fff; padding:0.2rem 0.55rem; border-radius:999px;">SSOT 100% Canónico</span>
         </div>
         <div style="font-size:0.76rem; color:var(--text-muted); line-height:1.4; margin-bottom:0.65rem;">
-          Incluye: <strong>Flat steak</strong> (+2,200 g), <strong>Carne molida</strong> (+1,360 g), <strong>Lomo de salmón</strong> (+1,250 g), <strong>Fajitas de mojarra</strong> (+2,000 g), <strong>Pechuga de pavo</strong> (+1,000 g), <strong>Huevo</strong> (+180 pzas &rarr; 206 pzas), <strong>Queso ricotta</strong> (+1,920 g &rarr; 3,840 g), <strong>Queso manchego</strong> (+1,000 g), <strong>Yogur griego</strong> (+1,800 g &rarr; 5,680 g), <strong>Queso de cabra con arándano</strong> (+350 g en Cuarentena), <strong>Mantequilla</strong> (+1,080 g &rarr; 1,370 g), <strong>Nuez de la India</strong> (+907 g), <strong>Aceite de coco</strong> (+1,500 g &rarr; 2,000 g), <strong>Frambuesas</strong> (+340 g), <strong>Zarzamora</strong> (+340 g), <strong>Espárragos</strong> (+907 g), <strong>Germinado</strong> (+500 g) y <strong>Botella de agua</strong> (+120 botellas &rarr; 150 botellas).
+          Incluye: <strong>Flat steak</strong> (+2,200 g), <strong>Carne molida</strong> (+1,360 g), <strong>Lomo de salmón</strong> (+1,250 g), <strong>Fajitas de mojarra</strong> (+2,000 g), <strong>Pechuga de pavo</strong> (+1,000 g), <strong>Huevo</strong> (+180 pzas &rarr; 206 pzas), <strong>Queso ricotta</strong> (+1,920 g &rarr; 3,840 g), <strong>Queso manchego</strong> (+1,000 g), <strong>Yogur griego</strong> (+1,800 g &rarr; 5,680 g), <strong>Mantequilla</strong> (+1,080 g &rarr; 1,370 g), <strong>Nuez de la India</strong> (+907 g), <strong>Aceite de coco</strong> (+1,500 g &rarr; 2,000 g), <strong>Frambuesas</strong> (+340 g), <strong>Zarzamora</strong> (+340 g), <strong>Espárragos</strong> (+907 g), <strong>Germinado</strong> (+500 g) y <strong>Botella de agua</strong> (+120 piezas &rarr; 140 piezas).
         </div>
         <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
           <button type="button" onclick="applySamsScanAndGoTicketBatch('target')" style="flex:1; background:var(--color-34plus); color:#fff; border:none; padding:0.55rem 0.9rem; border-radius:8px; font-weight:800; font-size:0.8rem; cursor:pointer; min-height:42px;">
