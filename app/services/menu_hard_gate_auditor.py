@@ -406,6 +406,7 @@ DEFAULT_PANTRY_STOCK.update(
         "Flor de calabaza": (0.0, "manojo"),
         "Sal de mar": (1000.0, "g"),
         "Ajo": (100.0, "g"),
+        "Aceitunas manzanilla": (0.0, "g"),
         "Botella de agua": (140.0, "piezas"),
         "Chile güero": (0.0, "g"),
         "33Plus®": (0.0, "g"),
@@ -414,6 +415,7 @@ DEFAULT_PANTRY_STOCK.update(
 )
 DEFAULT_PANTRY_STOCK.pop("Rajas de jalapeño", None)
 DEFAULT_PANTRY_STOCK.pop("Tajín", None)
+DEFAULT_PANTRY_STOCK.pop("Salsa inglesa", None)
 DEFAULT_PANTRY_STOCK.pop("MultiSinergix®", None)
 DEFAULT_PANTRY_STOCK.pop("AminoSinergix®", None)
 
@@ -1060,6 +1062,14 @@ def classify_main_protein(main_dish: Dict[str, Any]) -> Dict[str, Any]:
         return {"key": "atun_agua", "family": "atun", "circadian_dinner_ok": True, "is_dense": False}
     if "filete de atun" in joined or re.search(r"\batun\b", joined):
         return {"key": "filete_atun", "family": "atun", "circadian_dinner_ok": True, "is_dense": False}
+    if "huevo" in joined and (
+        "huevo" in _strip_accents(main_dish.get("archetype", ""))
+        or any(
+            k in _strip_accents(main_dish.get("title", ""))
+            for k in ("huevo", "omelette", "galette", "frittata", "crepa", "tamagoyaki", "motulenos", "purgatorio")
+        )
+    ):
+        return {"key": "huevo", "family": "huevo", "circadian_dinner_ok": True, "is_dense": False}
     if "champinon" in joined or "portobello" in joined:
         return {"key": "champinon", "family": "fungica", "circadian_dinner_ok": True, "is_dense": False}
     if "huevo" in joined:
@@ -1278,7 +1288,7 @@ def compute_dish_structural_dna(dish: Dict[str, Any]) -> Tuple[str, str, str, st
         metodo = "licuado_emulsion"
     elif any(w in t_tech for w in ("consome", "caldo", "sopa", "potaje", "potage", "broth")):
         metodo = "caldo_hervido"
-    elif any(w in t_tech for w in ("sarten", "saltead", "dorad", "meuniere", "sellad", "skillet", "sear", "pan")):
+    elif any(w in t_tech for w in ("sarten", "comal", "saltead", "dorad", "meuniere", "sellad", "skillet", "sear", "pan")):
         metodo = "sarten"
     else:
         metodo = "frio_ensamblaje"

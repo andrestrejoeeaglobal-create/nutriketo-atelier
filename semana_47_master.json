@@ -177,8 +177,8 @@
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Yogur griego",
-                "per_guest": 60,
-                "amount": 360,
+                "per_guest": 80,
+                "amount": 480,
                 "unit": "g"
               },
               {
@@ -218,7 +218,7 @@
               }
             ],
             "steps": [
-              "Licuar en frío el yogur griego con los tallos de apio troceados, el jugo de limón real, el agua purificada fría y los 30 g de 33Plus® hasta obtener una crema esmeralda.",
+              "Licuar en frío los 480 g de yogur griego con los tallos de apio troceados, el jugo de limón real, el agua purificada fría y los 30 g de 33Plus® hasta obtener una crema esmeralda.",
               "Servir en tazones a 6°C y coronar con la nuez pecana de la granja picada."
             ],
             "serving_temp_c": "6°C"
@@ -494,10 +494,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -508,7 +508,7 @@
               }
             ],
             "steps": [
-              "Tatemar el ajo en el aceite de oliva y verter los 960 ml de agua purificada de la granja con el orégano y la sal de mar; hervir suavemente 8 minutos.",
+              "Tatemar el ajo en el aceite de coco neutro y verter los 960 ml de agua purificada de la granja con el orégano y la sal de mar; hervir suavemente 8 minutos.",
               "Perfumar al apagar con las ramas de cilantro de la granja y el jugo de limón real."
             ]
           },
@@ -989,10 +989,10 @@
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Salsa inglesa",
-                "per_guest": 3,
-                "amount": 18,
-                "unit": "ml"
+                "name": "Orégano",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -1024,7 +1024,7 @@
               }
             ],
             "steps": [
-              "Dorar la carne molida de res en sartén de hierro con aceite de coco neutro, ajo, salsa inglesa, sal con ajo y pimienta negra.",
+              "Dorar la carne molida de res en sartén de hierro con aceite de coco neutro, ajo, orégano, sal con ajo y pimienta negra.",
               "Incorporar las julianas de pimiento morrón y cebolla caramelizada, cubrir con el queso manchego rallado y tapar 2 minutos para fundir."
             ],
             "archetype": "heptagon_s47_res_philly_skillet_molida"
@@ -1141,10 +1141,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -1155,7 +1155,7 @@
               }
             ],
             "steps": [
-              "Rehogar el apio en brunoise y el ajo en el aceite de oliva con el tomillo durante 2 minutos.",
+              "Rehogar el apio en brunoise y el ajo en el aceite de coco neutro con el tomillo durante 2 minutos.",
               "Verter los 960 ml de agua purificada de la granja con sal de mar, hervir 8 minutos y servir con jugo de limón real."
             ]
           },
@@ -1774,10 +1774,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -1788,7 +1788,7 @@
               }
             ],
             "steps": [
-              "Dorar suavemente el ajo en el aceite de oliva con el orégano y verter los 960 ml de agua purificada con sal de mar; hervir 8 minutos.",
+              "Dorar suavemente el ajo en el aceite de coco neutro con el orégano y verter los 960 ml de agua purificada con sal de mar; hervir 8 minutos.",
               "Perfumar fuera del fuego con jugo de limón real y cilantro de la granja picado."
             ]
           },
@@ -2154,7 +2154,7 @@
           "starter_name": "Ensalada del Mesón Castellano de Pepino en Láminas, Orégano, Limón Real y Aceite de Oliva VEVO",
           "main_dish_name": "Pechuga de Pollo al Ajillo Castellano Dorada en Mantequilla con Champiñones Laminados, Romero de la Granja, Limón Real y Aguacate Hass",
           "dish_name": "Pechuga de Pollo al Ajillo Castellano Dorada en Mantequilla con Champiñones Laminados, Romero de la Granja, Limón Real y Aguacate Hass",
-          "side_dish_name": "Hojas de Espinaca Salteadas al Ajo Dorado, Limón Real y Aceite de Oliva VEVO",
+          "side_dish_name": "Hojas de Espinaca Salteadas al Ajo Dorado, Limón Real y Aceite de Coco Neutro",
           "starter": {
             "title": "Ensalada del Mesón Castellano de Pepino en Láminas, Orégano, Limón Real y Aceite de Oliva VEVO",
             "technique": "castilian_cucumber_oregano_salad_s47",
@@ -2289,8 +2289,8 @@
             "archetype": "heptagon_s47_pollo_ajillo_castellano"
           },
           "side": {
-            "title": "Hojas de Espinaca Salteadas al Ajo Dorado, Limón Real y Aceite de Oliva VEVO",
-            "technique": "garlic_olive_oil_spinach_side_s47",
+            "title": "Hojas de Espinaca Salteadas al Ajo Dorado, Limón Real y Aceite de Coco Neutro",
+            "technique": "garlic_coconut_oil_spinach_side_s47",
             "note": "Cuarta guarnición de Comida ([R4-SIDE] 4/7: espinacas) que agota exactamente los 260 g de espinacas en alacena ($0.00 MXN compra), libre de mantequilla y lácteos ([R2]).",
             "coct_reasoning": {
               "thermodynamics": "Salteado corto a 165°C por 2 minutos.",
@@ -2322,10 +2322,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2336,7 +2336,7 @@
               }
             ],
             "steps": [
-              "Dorar el ajo laminado en el aceite de oliva extra virgen.",
+              "Dorar el ajo laminado en el aceite de coco neutro.",
               "Incorporar los 260 g de espinacas de alacena por 2 minutos y sazonar con jugo de limón real y sal de mar."
             ]
           }
@@ -2349,8 +2349,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Sopa Castellana de Cebolla Confitada, Ajo Dorado y Romero de la Granja en Infusión de Agua Purificada",
-          "main_dish_name": "Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Salsa Cremosa de Yogur Griego, Cilantro, Comino y Queso Manchego Fundido",
-          "dish_name": "Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Salsa Cremosa de Yogur Griego, Cilantro, Comino y Queso Manchego Fundido",
+          "main_dish_name": "Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Emulsión Cremosa de Mayonesa al Limón, Cilantro, Comino y Queso Manchego Fundido",
+          "dish_name": "Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Emulsión Cremosa de Mayonesa al Limón, Cilantro, Comino y Queso Manchego Fundido",
           "side_dish_name": "Panna Cotta Nocturna de Yogur Griego, Manzanilla y Vainilla (4°C) con 34Plus®",
           "starter": {
             "title": "Sopa Castellana de Cebolla Confitada, Ajo Dorado y Romero de la Granja en Infusión de Agua Purificada",
@@ -2393,10 +2393,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -2407,19 +2407,19 @@
               }
             ],
             "steps": [
-              "Confitar la cebolla fileteada con el ajo y el romero de la granja en aceite de oliva durante 6 minutos.",
+              "Confitar la cebolla fileteada con el ajo y el romero de la granja en aceite de coco neutro durante 6 minutos.",
               "Verter los 960 ml de agua purificada y sal de mar, hervir suavemente 10 minutos y servir caliente."
             ]
           },
           "main": {
-            "title": "Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Salsa Cremosa de Yogur Griego, Cilantro, Comino y Queso Manchego Fundido",
+            "title": "Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Emulsión Cremosa de Mayonesa al Limón, Cilantro, Comino y Queso Manchego Fundido",
             "technique": "murcian_roasted_pepper_tuna_skillet_s47",
-            "note": "Escuela 4 (Asador Castellano): agotamiento exacto de los 560 g de atún en agua de alacena ($0.00 MXN), complementados para 6 comensales con 240 g de yogur griego y 120 g de queso manchego fundido al sartén sobre pimientos morrones asados con cilantro y comino.",
+            "note": "Escuela 4 (Asador Castellano): agotamiento exacto de los 560 g de atún en agua y de los 200 g de mayonesa de alacena ($0.00 MXN), complementados para 6 comensales con 120 g de queso manchego fundido al sartén sobre pimientos morrones asados con cilantro y comino.",
             "coct_reasoning": {
-              "thermodynamics": "Salteado y fundido en sartén de hierro a 170°C.",
-              "flavor_and_aromatics": "Tapa española de pimientos asados con atún, cilantro, comino, yogur griego y queso manchego fundido.",
-              "textural_architecture": "Tiras dulces de morrón con relleno cremoso.",
-              "critical_control_points": "Agota al 100% los 560 g de Atún en agua de alacena (0 g saldo)."
+              "thermodynamics": "Salteado en sartén de hierro a 170°C, ligado fuera del fuego con la mayonesa y gratinado corto de manchego.",
+              "flavor_and_aromatics": "Tapa española de pimientos asados con atún, cilantro, comino, emulsión de mayonesa al limón real y queso manchego fundido.",
+              "textural_architecture": "Tiras dulces de morrón con relleno cremoso sin corte térmico.",
+              "critical_control_points": "Agota al 100% los 560 g de Atún en agua y los 200 g de Mayonesa de alacena (0 g saldo)."
             },
             "ingredients": [
               {
@@ -2438,9 +2438,9 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Yogur griego",
-                "per_guest": 40,
-                "amount": 240,
+                "name": "Mayonesa",
+                "per_guest": 33.3333,
+                "amount": 200,
                 "unit": "g"
               },
               {
@@ -2495,9 +2495,9 @@
             ],
             "steps": [
               "Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con el ajo, el comino y el aceite de coco neutro.",
-              "Incorporar los 560 g de atún drenado ligados con los 240 g de yogur griego, cilantro de la granja y jugo de limón real, cubrir con los 120 g de queso manchego rallado y tapar el sartén 2 minutos para fundir."
+              "Retirar un instante del fuego para integrar los 560 g de atún drenado ligados con los 200 g de mayonesa de alacena, cilantro de la granja y jugo de limón real; cubrir con los 120 g de queso manchego rallado y tapar el sartén 2 minutos para fundir."
             ],
-            "archetype": "heptagon_s47_atun_cazuela_murciana_yogur"
+            "archetype": "heptagon_s47_atun_cazuela_murciana_mayonesa"
           },
           "side": {
             "title": "Panna Cotta Nocturna de Yogur Griego, Manzanilla y Vainilla (4°C) con 34Plus®",
@@ -3019,10 +3019,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -3033,7 +3033,7 @@
               }
             ],
             "steps": [
-              "Dorar el ajo y el romero de la granja en aceite de oliva y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.",
+              "Dorar el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.",
               "Incorporar las cintas de acelga de la granja por 2 minutos y servir con jugo de limón real."
             ]
           },
@@ -3192,8 +3192,8 @@
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
           "starter_name": "Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-          "main_dish_name": "Tamagoyaki Costero de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
-          "dish_name": "Tamagoyaki Costero de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
+          "main_dish_name": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
+          "dish_name": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
           "side_dish_name": "Lassi Dorado Probiótico de Yogur Griego, Cúrcuma, Canela y Limón Real (8°C) con 33Plus®",
           "starter": {
             "title": "Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
@@ -3248,9 +3248,9 @@
             ]
           },
           "main": {
-            "title": "Tamagoyaki Costero de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
+            "title": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
             "technique": "coastal_nopal_goat_cheese_tamagoyaki_s47",
-            "note": "Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso de cabra de alacena.",
+            "note": "Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado al sartén en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso de cabra de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Laminado en capas en sartén a 140°C.",
               "flavor_and_aromatics": "Fusión Pacífico-Japón con mantequilla, nopal asado y cremosidad de queso de cabra.",
@@ -3310,14 +3310,14 @@
             ],
             "steps": [
               "Asar la juliana de nopal de la granja con cilantro picado.",
-              "Cuajar los 18 huevos batidos en capas sucesivas con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki."
+              "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki."
             ],
             "archetype": "heptagon_s47_huevo_tamagoyaki_nopal_cabra"
           },
           "side": {
             "title": "Lassi Dorado Probiótico de Yogur Griego, Cúrcuma, Canela y Limón Real (8°C) con 33Plus®",
             "technique": "golden_turmeric_yogurt_lassi_33plus_s47",
-            "note": "Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov): bebida probiótica oriental tipo Lassi que agota exactamente los últimos 360 g de yogur griego de alacena (total semanal = 2,000 g -> 0 g saldo), batidos en frío con cúrcuma, canela, limón real y 33Plus®.",
+            "note": "Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov): bebida probiótica oriental tipo Lassi que agota exactamente los últimos 480 g de yogur griego de alacena (total semanal = 2,000 g -> 0 g saldo), batidos en frío con cúrcuma, canela, limón real y 33Plus®.",
             "coct_reasoning": {
               "thermodynamics": "Emulsión en frío a 8°C.",
               "flavor_and_aromatics": "Lassi hindú-oriental de yogur griego, cúrcuma, canela y limón real.",
@@ -3328,8 +3328,8 @@
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
                 "name": "Yogur griego",
-                "per_guest": 60,
-                "amount": 360,
+                "per_guest": 80,
+                "amount": 480,
                 "unit": "g"
               },
               {
@@ -3369,7 +3369,7 @@
               }
             ],
             "steps": [
-              "Licuar en frío los 360 g de yogur griego con el agua purificada fría, la cúrcuma, la canela molida y el jugo de limón real.",
+              "Licuar en frío los 480 g de yogur griego con el agua purificada fría, la cúrcuma, la canela molida y el jugo de limón real.",
               "Incorporar los 30 g de 33Plus®, batir 10 segundos y servir a 8°C."
             ],
             "serving_temp_c": "8°C"
@@ -3624,10 +3624,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -3638,7 +3638,7 @@
               }
             ],
             "steps": [
-              "Dorar el ajo laminado en el aceite de oliva y verter los 960 ml de agua purificada con sal de mar; hervir 7 minutos.",
+              "Dorar el ajo laminado en el aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 7 minutos.",
               "Añadir al momento de servir el cilantro de la granja y el jugo de limón real."
             ]
           },
@@ -4199,8 +4199,8 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada",
-          "main_dish_name": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Aceitunas Manzanilla, Queso de Cabra y Queso Parmesano",
-          "dish_name": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Aceitunas Manzanilla, Queso de Cabra y Queso Parmesano",
+          "main_dish_name": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano",
+          "dish_name": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano",
           "side_dish_name": "Trufas Nocturnas (Fat Bombs) de Nuez de la India, Nuez Pecana, Canela y Aceite de Coco (14°C) con 34Plus® + Infusión Digestiva de Tomillo",
           "starter": {
             "title": "Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada",
@@ -4250,10 +4250,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de oliva",
+                "name": "Aceite de coco",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "ml"
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -4264,26 +4264,26 @@
               }
             ],
             "steps": [
-              "Dorar los últimos 5 g de ajo con el romero de la granja y el orégano en el aceite de oliva.",
+              "Dorar los últimos 5 g de ajo con el romero de la granja y el orégano en el aceite de coco neutro.",
               "Verter los 960 ml de agua purificada con sal de mar, hervir 8 minutos y terminar con jugo de limón real."
             ]
           },
           "main": {
-            "title": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Aceitunas Manzanilla, Queso de Cabra y Queso Parmesano",
+            "title": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano",
             "technique": "aegean_sardine_goat_cheese_pepper_skillet_s47",
-            "note": "Escuela 7 (Mare Nostrum): cazuela mediterránea al sartén (sin horno) que agota exactamente los 260 g de sardinas, los últimos 120 g de queso de cabra (total = 200 g), los últimos 60 g de queso parmesano (total = 100 g) y los 5 g de aceitunas manzanilla de alacena ($0.00 MXN).",
+            "note": "Escuela 7 (Mare Nostrum): cazuela mediterránea al sartén (sin horno) con 660 g de lomos de sardina para 6 comensales (agotando los 260 g de alacena + 400 g de mercado = 110 g/comensal), los últimos 120 g de queso de cabra (total = 200 g) y los últimos 60 g de queso parmesano (total = 100 g) de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Salteado en sartén de hierro a 170°C.",
-              "flavor_and_aromatics": "Sabor de las Islas Griegas con sardinas, pimiento morrón asado, queso de cabra, parmesano y aceitunas manzanilla.",
+              "flavor_and_aromatics": "Sabor de las Islas Griegas con lomos de sardina, pimiento morrón asado, orégano, queso de cabra y parmesano.",
               "textural_architecture": "Lomos jugosos con pimientos tiernos y medallones cremosos de queso de cabra.",
-              "critical_control_points": "Agota al 100% Sardinas (260 g), Queso de cabra (200 g), Queso parmesano (100 g) y Aceitunas manzanilla (5 g) en alacena."
+              "critical_control_points": "Descuenta al 100% las Sardinas de alacena (260 g -> 0 g saldo) y agota Queso de cabra (200 g) y Queso parmesano (100 g)."
             },
             "ingredients": [
               {
                 "category": "🥩 Carnes, Pescados y Proteínas",
                 "name": "Sardinas",
-                "per_guest": 43.3333,
-                "amount": 260,
+                "per_guest": 110,
+                "amount": 660,
                 "unit": "g"
               },
               {
@@ -4306,13 +4306,6 @@
                 "per_guest": 0.5,
                 "amount": 3,
                 "unit": "piezas"
-              },
-              {
-                "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Aceitunas manzanilla",
-                "per_guest": 0.8333,
-                "amount": 5,
-                "unit": "g"
               },
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
@@ -4344,8 +4337,8 @@
               }
             ],
             "steps": [
-              "Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con aceite de coco neutro, orégano y los 260 g de lomos de sardina de alacena.",
-              "Coronar en el sartén caliente con los últimos 120 g de queso de cabra, los 60 g de queso parmesano, los 5 g de aceitunas manzanilla picadas y jugo de limón real."
+              "Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con aceite de coco neutro, orégano y los 660 g de lomos de sardina.",
+              "Coronar en el sartén caliente con los últimos 120 g de queso de cabra, los 60 g de queso parmesano y jugo de limón real."
             ],
             "archetype": "heptagon_s47_sardina_egea_cabra_sarten"
           },
@@ -4504,16 +4497,9 @@
       "pantry_covered_items": [
         {
           "name": "Aceite de coco",
-          "required": 390.0,
+          "required": 534.0,
           "stock": 1000.0,
-          "remaining_stock": 610.0,
-          "unit": "g"
-        },
-        {
-          "name": "Aceitunas manzanilla",
-          "required": 5.0,
-          "stock": 5.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 466.0,
           "unit": "g"
         },
         {
@@ -4678,6 +4664,13 @@
           "unit": "g"
         },
         {
+          "name": "Mayonesa",
+          "required": 200.0,
+          "stock": 200.0,
+          "remaining_stock": 0.0,
+          "unit": "g"
+        },
+        {
           "name": "Nuez de la India",
           "required": 1000.0,
           "stock": 1000.0,
@@ -4686,9 +4679,9 @@
         },
         {
           "name": "Orégano",
-          "required": 36.0,
+          "required": 39.0,
           "stock": 98.0,
-          "remaining_stock": 62.0,
+          "remaining_stock": 59.0,
           "unit": "g"
         },
         {
@@ -4769,20 +4762,6 @@
           "unit": "ml"
         },
         {
-          "name": "Salsa inglesa",
-          "required": 18.0,
-          "stock": 200.0,
-          "remaining_stock": 182.0,
-          "unit": "ml"
-        },
-        {
-          "name": "Sardinas",
-          "required": 260.0,
-          "stock": 260.0,
-          "remaining_stock": 0.0,
-          "unit": "g"
-        },
-        {
           "name": "Semillas y nueces mixtas",
           "required": 600.0,
           "stock": 600.0,
@@ -4835,9 +4814,9 @@
         },
         {
           "name": "Aceite de oliva",
-          "required": 306.0,
+          "required": 162.0,
           "stock": 0.0,
-          "net_to_buy": 306.0,
+          "net_to_buy": 162.0,
           "unit": "ml"
         },
         {
@@ -4936,6 +4915,13 @@
           "required": 1320.0,
           "stock": 0.0,
           "net_to_buy": 1320.0,
+          "unit": "g"
+        },
+        {
+          "name": "Sardinas",
+          "required": 660.0,
+          "stock": 260.0,
+          "net_to_buy": 400.0,
           "unit": "g"
         },
         {

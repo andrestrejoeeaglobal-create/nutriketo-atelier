@@ -1880,8 +1880,9 @@ def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
     assert "Queso doble crema" in ssot["deletedPantryItems"]
     assert "Queso de cabra con arándano" not in ssot["quarantineItems"]
     assert "Queso de cabra con arándano" not in ps
-    for q_item in ("Manteca de cerdo", "Rajas de jalapeño", "Tajín", "Café colombiano"):
+    for q_item in ("Manteca de cerdo", "Rajas de jalapeño", "Tajín", "Café colombiano", "Salsa inglesa"):
         assert q_item in ssot["quarantineItems"], f"{q_item} debe estar en quarantineItems"
+    assert abs(float(ps["Aceitunas manzanilla"]) - 0.0) < 1e-4
     assert "33Plus®" in ps and "34Plus®" in ps
     assert "MultiSinergix®" not in ps and "AminoSinergix®" not in ps
 
@@ -1974,16 +1975,19 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     assert len(morning_preps) == 7, "Deben existir 7 preparados matutinos distintos con 33Plus®"
     assert len(night_preps) == 7, "Deben existir 7 preparados nocturnos distintos con 34Plus®"
 
-    market_names = {x["name"] for x in rep_s47["bom_summary"]["market_purchases"]}
+    market_map = {x["name"]: x for x in rep_s47["bom_summary"]["market_purchases"]}
+    market_names = set(market_map.keys())
     for zero_buy_item in [
-        "Fajitas de mojarra", "Pechuga de pavo", "Pollo entero", "Atún en agua", "Sardinas", "Huevo",
+        "Fajitas de mojarra", "Pechuga de pavo", "Pollo entero", "Atún en agua", "Huevo",
         "Yogur griego", "Queso manchego", "Mantequilla", "Leche de coco", "Queso Philadelphia",
-        "Queso de cabra", "Queso parmesano", "Nuez de la India", "Semillas y nueces mixtas",
+        "Queso de cabra", "Queso parmesano", "Mayonesa", "Nuez de la India", "Semillas y nueces mixtas",
         "Almendras fileteadas", "Pistaches", "Frambuesas", "Fresas", "Apio", "Espinacas",
         "Germinado", "Jitomate", "Ajo", "Alcaparras", "Grenetina", "Manzanilla", "Tomillo",
         "Aceitunas manzanilla",
     ]:
         assert zero_buy_item not in market_names, f"{zero_buy_item} debe cubrirse al 100% en Alacena ($0 compra en S47)"
+    assert abs(float(market_map["Aceite de oliva"]["net_to_buy"]) - 162.0) < 1e-6
+    assert abs(float(market_map["Sardinas"]["net_to_buy"]) - 400.0) < 1e-6
 
 
 

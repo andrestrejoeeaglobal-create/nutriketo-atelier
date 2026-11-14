@@ -2305,6 +2305,10 @@ function _classifyMainProteinHardGate(mainDish) {
   }
   if (joined.includes('atun en agua')) return { key: 'atun_agua', family: 'atun', circadianDinnerOk: true };
   if (joined.includes('filete de atun') || /\\batun\\b/.test(joined)) return { key: 'filete_atun', family: 'atun', circadianDinnerOk: true };
+  const tNormMain = _normTextHardGate((mainDish && mainDish.title) || '');
+  if (joined.includes('huevo') && (arch.includes('huevo') || ['huevo', 'omelette', 'galette', 'frittata', 'crepa', 'tamagoyaki', 'motulenos', 'purgatorio'].some(k => tNormMain.includes(k)))) {
+    return { key: 'huevo', family: 'huevo', circadianDinnerOk: true };
+  }
   if (joined.includes('champinon') || joined.includes('portobello')) return { key: 'champinon', family: 'fungica', circadianDinnerOk: true };
   if (joined.includes('queso cottage')) return { key: 'queso_cottage', family: 'lactea_ligera', circadianDinnerOk: true };
   if (joined.includes('huevo')) return { key: 'huevo', family: 'huevo', circadianDinnerOk: true };
@@ -2522,7 +2526,7 @@ function _computeDishStructuralDnaHardGate(dish) {
   else if (tTech.includes('wok')) metodo = 'wok';
   else if (['crema', 'veloute', 'cappuccino', 'gazpacho', 'emulsified'].some(w => tTech.includes(w))) metodo = 'licuado_emulsion';
   else if (['consome', 'caldo', 'sopa', 'potaje', 'potage', 'broth'].some(w => tTech.includes(w))) metodo = 'caldo_hervido';
-  else if (['sarten', 'saltead', 'dorad', 'meuniere', 'sellad', 'skillet', 'sear', 'pan'].some(w => tTech.includes(w))) metodo = 'sarten';
+  else if (['sarten', 'comal', 'saltead', 'dorad', 'meuniere', 'sellad', 'skillet', 'sear', 'pan'].some(w => tTech.includes(w))) metodo = 'sarten';
 
   let morf = 'estandar';
   const morfRules = [
@@ -3951,13 +3955,13 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-061-bicarbonato-de-sodio": { item_num: 61, name: "Bicarbonato de sodio", stock: 227, unit: "g", packaging: "227 g", status: "canonical" },
       "sku-062-achiote": { item_num: 62, name: "Achiote", stock: 110, unit: "g", packaging: "110 g", status: "canonical" },
       "sku-063-polvo-para-hornear": { item_num: 63, name: "Polvo para hornear", stock: 100, unit: "g", packaging: "100 g", status: "canonical" },
-      "sku-064-aceitunas-manzanilla": { item_num: 64, name: "Aceitunas manzanilla", stock: 175, unit: "g", packaging: "175 g", status: "canonical" },
+      "sku-064-aceitunas-manzanilla": { item_num: 64, name: "Aceitunas manzanilla", stock: 0, unit: "g", packaging: "0 g", status: "canonical" },
       "sku-065-chocolate-para-cobertura": { item_num: 65, name: "Chocolate para cobertura", stock: 165, unit: "g", packaging: "165 g", status: "prohibited", reason: "Chocolate comercial con alto contenido de sacarosa y grasas vegetales hidrogenadas." },
       "sku-066-concentrado-de-caldo-de-pollo-en-polvo": { item_num: 66, name: "Concentrado de caldo de pollo en polvo", stock: 250, unit: "g", packaging: "250 g", status: "prohibited", reason: "Sazonador industrial con maltodextrina, glutamato monosódico y almidones." },
       "sku-067-cafe-colombiano": { item_num: 67, name: "Café colombiano", stock: 100, unit: "g", packaging: "100 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Excluido de recetas culinarias por regla clínica [R3]." },
       "sku-068-vinagre-balsamico": { item_num: 68, name: "Vinagre balsámico", stock: 200, unit: "ml", packaging: "2 envases de 100 ml", status: "prohibited", reason: "Vinagre con reducción de mosto concentrado en azúcares simples residuales." },
       "sku-069-jugo-maggi": { item_num: 69, name: "Jugo Maggi", stock: 200, unit: "ml", packaging: "200 ml", status: "prohibited", reason: "Ultraprocesado con trigo hidrolizado, colorante caramelo y glutamato monosódico." },
-      "sku-070-salsa-inglesa": { item_num: 70, name: "Salsa inglesa", stock: 200, unit: "ml", packaging: "200 ml", status: "canonical" },
+      "sku-070-salsa-inglesa": { item_num: 70, name: "Salsa inglesa", stock: 200, unit: "ml", packaging: "200 ml", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Contiene melaza, jarabe de maíz, azúcar añadida y colorante caramelo; fuera de protocolo cetogénico NOM-004." },
       "sku-071-salsa-de-soya": { item_num: 71, name: "Salsa de soya", stock: 250, unit: "ml", packaging: "250 ml", status: "canonical" },
       "sku-072-vinagre-de-vino-tinto": { item_num: 72, name: "Vinagre de vino tinto", stock: 250, unit: "ml", packaging: "250 ml", status: "canonical" },
       "sku-073-aceite-de-oliva": { item_num: 73, name: "Aceite de oliva", stock: 400, unit: "ml", packaging: "400 ml", status: "canonical" },
@@ -5781,7 +5785,8 @@ let pantryStock = {
             "sku-089-manteca-de-cerdo": { name: "Manteca de cerdo", stock: 0, unit: "g", reason: "Derivado porcino proscrito por Regla 0 Cerdo [R3]." },
             "sku-094-rajas-de-jalapeno": { name: "Rajas de jalapeño", stock: 314, unit: "g", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 0 Picante)." },
             "sku-058-tajin": { name: "Tajín", stock: 200, unit: "g", reason: "Sazonador con chile e irritantes de mucosa gástrica (Excluido por Regla 0 Picante)." },
-            "sku-067-cafe-colombiano": { name: "Café colombiano", stock: 100, unit: "g", reason: "Excluido de recetas culinarias por regla clínica [R3]." }
+            "sku-067-cafe-colombiano": { name: "Café colombiano", stock: 100, unit: "g", reason: "Excluido de recetas culinarias por regla clínica [R3]." },
+            "sku-070-salsa-inglesa": { name: "Salsa inglesa", stock: 200, unit: "ml", reason: "Contiene melaza, jarabe de maíz, azúcar añadida y colorante caramelo; fuera de protocolo cetogénico NOM-004." }
           };
           Object.keys(quarantineFixes).forEach(qSku => {
             const qInfo = quarantineFixes[qSku];
@@ -6012,7 +6017,7 @@ let pantryStock = {
 
     function ensureCanonicalTicketIntakesApplied() {
       try {
-        if (typeof localStorage !== 'undefined' && (localStorage.getItem('nutriketo_v64_cierre_s46_14nov2026_applied') !== 'true' || localStorage.getItem('nutriketo_v65_ui_audit_nov14_applied') !== 'true')) {
+        if (typeof localStorage !== 'undefined' && (localStorage.getItem('nutriketo_v64_cierre_s46_14nov2026_applied') !== 'true' || localStorage.getItem('nutriketo_v65_ui_audit_nov14_applied') !== 'true' || localStorage.getItem('nutriketo_v67_s47_forensic_polish_applied') !== 'true')) {
           const s46SyncedStocks = {
             "Mantequilla": 720, "Mostaza": 0, "Queso cottage": 0, "Yogur griego": 2000,
             "Queso Philadelphia": 360, "Crema ácida": 0, "Mayonesa": 200, "Queso manchego": 1000,
@@ -6028,11 +6033,11 @@ let pantryStock = {
             "Queso ricotta": 0, "Pollo entero": 6, "Pechuga de pavo": 700, "Germinado": 100,
             "Coliflor": 0, "Pepino": 0, "Brócoli": 0, "Apio": 500,
             "Ajo": 100, "Nueces mixtas": 600, "Pistaches": 50,
-            "Aceitunas manzanilla": 5, "Alcaparras": 44, "Achiote": 92, "Canela molida": 725,
+            "Aceitunas manzanilla": 0, "Alcaparras": 44, "Achiote": 92, "Canela molida": 725,
             "Clavo de olor": 48, "Comino": 47, "Cúrcuma": 82, "Extracto de vainilla": 376,
             "Grenetina": 32, "Hierbas finas": 13, "Manzanilla": 12, "Orégano": 98,
             "Sal con ajo": 52, "Sal de mar": 1000, "Tomillo": 8, "Chile güero": 0,
-            "Rajas de jalapeño": 314, "Tajín": 200, "Café colombiano": 100
+            "Rajas de jalapeño": 314, "Tajín": 200, "Café colombiano": 100, "Salsa inglesa": 200
           };
           pantryStock = Object.assign(pantryStock || {}, s46SyncedStocks);
           delete pantryStock["Queso doble crema"];
@@ -6059,6 +6064,7 @@ let pantryStock = {
           localStorage.setItem('nutriketo_v64_cierre_s46_14nov2026_applied', 'true');
           localStorage.setItem('nutriketo_v65_ui_audit_nov14_applied', 'true');
           localStorage.setItem('nutriketo_v66_s47_active_week_sync', 'true');
+          localStorage.setItem('nutriketo_v67_s47_forensic_polish_applied', 'true');
         }
         if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v66_s47_active_week_sync') !== 'true') {
           if (typeof CANONICAL_WEEK_47_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_47_TITLE]) {

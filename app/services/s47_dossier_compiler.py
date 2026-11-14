@@ -281,7 +281,7 @@ def compile_s47_dossier() -> Dict[str, Any]:
         ("🥩 Proteína Alacena (1 Servicio completo)", "Pechuga de pavo", 700.0, "g"),
         ("🍗 **6 Piezas Anatómicas Sueltas YA COCIDAS (2 muslos, 2 piernas, 2 alas — 1 Servicio R#08, 0 ml caldo)**", "Pollo entero", 6.0, "piezas"),
         ("🥩 Proteína Alacena (1 Servicio nocturno R#35)", "Atún en agua", 560.0, "g"),
-        ("🥩 Proteína Alacena (1 Servicio nocturno R#62)", "Sardinas", 260.0, "g"),
+        ("🥩 Proteína Alacena (Descontada en R#62 de `660 g`)", "Sardinas", 260.0, "g"),
         ("🥩 Proteína Alacena (Descontada en R#14 de `660 g`)", "Carne molida", 300.0, "g"),
         ("🥚 Huevo en Alacena (`18 × 7 = 126 pzas`)", "Huevo", 180.0, "piezas"),
         ("🥩 Proteína Mercado (2 Servicios: R#05 y R#41)", "Flat steak", 0.0, "g"),
@@ -310,7 +310,7 @@ def compile_s47_dossier() -> Dict[str, Any]:
         ("💊 Gelificante Alacena (2 Gelificados × `16 g`)", "Grenetina", 32.0, "g"),
         ("🌼 Infusión Alacena (Vaciado Exacto 100%)", "Manzanilla", 12.0, "g"),
         ("🌿 Especia Alacena (Vaciado Exacto 100%)", "Tomillo", 8.0, "g"),
-        ("🫒 Condimento Alacena (Vaciado Exacto 100%)", "Aceitunas manzanilla", 5.0, "g"),
+        ("🥚 Emulsión Alacena (Vaciado Exacto 100% en R#35)", "Mayonesa", 200.0, "g"),
     ]
     for idx_t, (cat_desc, c_nm, st_init, u_t) in enumerate(s47_manifest, start=1):
         if c_nm in pantry_used:
@@ -376,7 +376,7 @@ def compile_s47_dossier() -> Dict[str, Any]:
     lines.append("### 3.4 Registro de Cuarentena Normativa y Exclusión Activa (`NOM-004` / `deletedPantryItems` / `deletedFarmItems`)")
     lines.append("| Origen | Insumos Excluidos / Bloqueados en Cuarentena | Estado en las 63 Recetas |")
     lines.append("|---|---|---|")
-    lines.append("| **Cuarentena Normativa (`NOM-004`, `status: prohibited`)** | `Manteca de cerdo` (`0 g` — Regla 0 Cerdo), `Rajas de jalapeño` (`314 g` — Regla 0 Picante), `Tajín` (`200 g` — Regla 0 Picante), `Café colombiano` (`100 g` — Regla `[R3]`), `Concentrado de caldo de pollo en polvo` (`250 g` — maltodextrina y glutamato), `Chile chipotle` (`1,320 g` — irritante de mucosa gástrica), `Frijol pinto` (`1 costal` — almidón), `Salsa BBQ`, `Salsa cátsup`, `Harina de trigo`, `Harina para hot cakes`, `Granola`, `Cerezas`, `Miguelito`, `Chamoy`, `Cacahuate enchilado`, `Chocolate para cobertura`, `Jugo Maggi`, `Pulpa de arándano`, `Vinagre balsámico` | 🚫 **0.00 g / 0 apariciones** (Bloqueados en Cuarentena Estricta) |")
+    lines.append("| **Cuarentena Normativa (`NOM-004`, `status: prohibited`)** | `Manteca de cerdo` (`0 g` — Regla 0 Cerdo), `Rajas de jalapeño` (`314 g` — Regla 0 Picante), `Tajín` (`200 g` — Regla 0 Picante), `Café colombiano` (`100 g` — Regla `[R3]`), `Salsa inglesa` (`200 ml` — melaza y azúcares añadidos), `Concentrado de caldo de pollo en polvo` (`250 g` — maltodextrina y glutamato), `Chile chipotle` (`1,320 g` — irritante de mucosa gástrica), `Frijol pinto` (`1 costal` — almidón), `Salsa BBQ`, `Salsa cátsup`, `Harina de trigo`, `Harina para hot cakes`, `Granola`, `Cerezas`, `Miguelito`, `Chamoy`, `Cacahuate enchilado`, `Chocolate para cobertura`, `Jugo Maggi`, `Pulpa de arándano`, `Vinagre balsámico` | 🚫 **0.00 g / 0 apariciones** (Bloqueados en Cuarentena Estricta) |")
     lines.append("| **Alacena (`deletedPantryItems`)** | `Elote`, `Higos`, `Nogada`, `Zanahoria`, `Agua mineral`, `Queso de cabra con arándano`, `Queso doble crema` | 🚫 **0.00 g / 0 apariciones** (Erradicados al 100%) |")
     lines.append("| **Granja (`deletedFarmItems`)** | `Zarzamoras`, `Frambuesas`, `Fresas`, `Menta`, `Arándanos`, `Epazote`, `Calabacitas`, `Coliflor`, `Espinacas`, `Ejotes`, `Espárragos`, `Arúgula`, `Brócoli` | 🔄 **Reclasificados de Granja a Alacena/Mercado** según disponibilidad real |")
     lines.append("")

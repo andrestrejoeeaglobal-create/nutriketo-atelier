@@ -16,12 +16,12 @@
 ### ☀️ 0.1 Los 7 Preparados Matutinos (`Desayuno · Tiempo 3` — Exclusivamente con `33Plus®`, `30 g` / `6p`)
 | Día | Receta | Preparado Funcional Matutino con `33Plus®` | Temperatura | Insumos Clave (6p) |
 |---|---|---|---|---|
-| **Domingo 15 Nov** | `R#03` | **Smoothie Bowl Esmeralda de Apio, Yogur Griego, Limón Real y Nuez Pecana de la Granja (6°C) con 33Plus®** | `6°C` | `Yogur griego` (`360 g`), `Apio` (`160 g`), `Limones` (`60 g`), `Nuez pecana` (`60 g`), `Agua purificada` (`360 ml`), `33Plus®` (`30 g`) |
+| **Domingo 15 Nov** | `R#03` | **Smoothie Bowl Esmeralda de Apio, Yogur Griego, Limón Real y Nuez Pecana de la Granja (6°C) con 33Plus®** | `6°C` | `Yogur griego` (`480 g`), `Apio` (`160 g`), `Limones` (`60 g`), `Nuez pecana` (`60 g`), `Agua purificada` (`360 ml`), `33Plus®` (`30 g`) |
 | **Lunes 16 Nov** | `R#12` | **Chai Latte Imperial de Té Chai, Crema de Nuez de la India, Aceite de Coco y Canela (55°C) con 33Plus®** | `55°C` | `Té chai` (`18 g`), `Nuez de la India` (`90 g`), `Aceite de coco` (`30 g`), `Canela molida` (`3 g`), `Agua purificada` (`900 ml`), `33Plus®` (`30 g`) |
 | **Martes 17 Nov** | `R#21` | **Parfait Cítrico de Yogur Griego, Fresas en Brunoise, Limón Real y Extracto de Vainilla (6°C) con 33Plus®** | `6°C` | `Yogur griego` (`400 g`), `Fresas` (`100 g`), `Limones` (`45 g`), `Extracto de vainilla` (`6 ml`), `Nuez pecana` (`60 g`), `33Plus®` (`30 g`) |
 | **Miércoles 18 Nov** | `R#30` | **Gelatina Rubí de Flor de Jamaica de la Granja, Romero y Limón Real (4°C) con 33Plus®** | `4°C` | `Jamaica` (`36 g`), `Grenetina` (`16 g`), `Romero` (`6 g`), `Limones` (`48 g`), `Agua purificada` (`720 ml`), `33Plus®` (`30 g`) |
 | **Jueves 19 Nov** | `R#39` | **Mousse Bistró en Frío de Frambuesas Vivas, Queso Philadelphia y Vainilla (6°C) con 33Plus®** | `6°C` | `Frambuesas` (`120 g`), `Queso Philadelphia` (`120 g`), `Limones` (`30 g`), `Extracto de vainilla` (`6 ml`), `Agua purificada` (`180 ml`), `33Plus®` (`30 g`) |
-| **Viernes 20 Nov** | `R#48` | **Lassi Dorado Probiótico de Yogur Griego, Cúrcuma, Canela y Limón Real (8°C) con 33Plus®** | `8°C` | `Yogur griego` (`360 g`), `Cúrcuma` (`12 g`), `Canela molida` (`3 g`), `Limones` (`45 g`), `Agua purificada` (`480 ml`), `33Plus®` (`30 g`) |
+| **Viernes 20 Nov** | `R#48` | **Lassi Dorado Probiótico de Yogur Griego, Cúrcuma, Canela y Limón Real (8°C) con 33Plus®** | `8°C` | `Yogur griego` (`480 g`), `Cúrcuma` (`12 g`), `Canela molida` (`3 g`), `Limones` (`45 g`), `Agua purificada` (`480 ml`), `33Plus®` (`30 g`) |
 | **Sábado 21 Nov** | `R#57` | **Elixir Verde Alcalino Prensado en Frío de Apio, Pepino, Cilantro y Limón Real (8°C) con 33Plus®** | `8°C` | `Apio` (`160 g`), `Pepino` (`240 g`), `Cilantro` (`24 g`), `Limones` (`60 g`), `Agua purificada` (`600 ml`), `33Plus®` (`30 g`) |
 
 ### 🌙 0.2 Los 7 Preparados Nocturnos (`Cena · Tiempo 3` — Exclusivamente con `34Plus®`, `30 g` / `6p`, `0% Teína`)
@@ -42,26 +42,26 @@
 | Día y Fecha | Escuela Culinaria del Día | Servicio | Tiempo 1: Entrada (`starter`) | Tiempo 2: Plato Fuerte (`main`) + `[Arquetipo / ADN]` | Tiempo 3: Acompañamiento / Preparado Funcional (`side`) |
 |---|---|---|---|---|---|
 | **Domingo 15 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Desayuno** | Copa de Rubíes de Granada de la Granja al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Crepas Doradas sin Harina de Huevos Rellenas de Hojas de Acelga de la Granja Salteadas al Ajo, Cilantro y Costra Fundente de Queso Manchego a la Mantequilla** `[heptagon_s47_huevo_crepa_acelga_nizu]` `<huevo|sarten|heptagon_s47_huevo_crepa_acelga_nizu|acelgas+cilantro+mantequilla+queso_manchego>` | Smoothie Bowl Esmeralda de Apio, Yogur Griego, Limón Real y Nuez Pecana de la Granja (6°C) con 33Plus® |
-| **Domingo 15 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Comida** | Ensalada Verde Mexicana de Lechuga Orejona, Cilantro de la Granja, Limón Real y Vinagreta al Orégano | **Fajitas de Flat Steak Asadas al Comal en Adobo Rojo de Achiote, Pimiento Morrón, Cebolla Asada y Guacamole de Aguacate Hass** `[heptagon_s47_res_fajitas_achiote_comal]` `<flat_steak|frio_ensamblaje|heptagon_s47_res_fajitas_achiote_comal|aceite_coco+aguacate+cebolla+comino>` | Pencas de Nopal de la Granja Asadas al Comal con Romero, Limón Real y Aceite de Coco Neutro |
+| **Domingo 15 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Comida** | Ensalada Verde Mexicana de Lechuga Orejona, Cilantro de la Granja, Limón Real y Vinagreta al Orégano | **Fajitas de Flat Steak Asadas al Comal en Adobo Rojo de Achiote, Pimiento Morrón, Cebolla Asada y Guacamole de Aguacate Hass** `[heptagon_s47_res_fajitas_achiote_comal]` `<flat_steak|sarten|heptagon_s47_res_fajitas_achiote_comal|aceite_coco+aguacate+cebolla+comino>` | Pencas de Nopal de la Granja Asadas al Comal con Romero, Limón Real y Aceite de Coco Neutro |
 | **Domingo 15 Nov** | **🇲🇽 Escuela 1: Antojo y Desayuno Mexicano de Autor** | **Cena** | Caldo Tlalpeño Aromático de Infusión de Ajo Tatemado, Cilantro de la Granja, Orégano y Limón Real en Agua Purificada | **Cazuela Suiza Gratinada de las 6 Piezas de Pollo Cocido Deshebrado (2 Muslos, 2 Piernas y 2 Alas) sobre Láminas de Calabacita en Salsa Verde de Tomate, Queso Philadelphia y Queso Manchego** `[heptagon_s47_pollo_cocido_cazuela_suiza]` `<pollo_cocido|horno|heptagon_s47_pollo_cocido_cazuela_suiza|aceite_coco+calabacitas+cebolla+cilantro>` | Leche Dorada Nocturna de Cúrcuma, Leche de Coco, Canela y Pimienta Negra (55°C) con 34Plus® |
-| **Lunes 16 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Desayuno** | Copa Bicolor de Frambuesas y Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Omelette Steakhouse Americano de Huevos a la Mantequilla con Champiñones Salteados al Ajo, Cebolla y Queso Manchego Fundido** `[heptagon_s47_huevo_omelette_steakhouse]` `<champinon|sarten|heptagon_s47_huevo_omelette_steakhouse|cebolla+champinon+mantequilla+queso_manchego>` | Chai Latte Imperial de Té Chai, Crema de Nuez de la India, Aceite de Coco y Canela (55°C) con 33Plus® |
-| **Lunes 16 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Comida** | Ensalada Verde Americana de Pepino en Rodajas, Cilantro de la Granja, Limón Real y Vinagreta al Vino Tinto | **Philly Skillet de Carne Molida de Res al Sartén de Hierro con Tiras de Pimiento Morrón Asado, Cebolla Caramelizada y Costra de Queso Manchego** `[heptagon_s47_res_philly_skillet_molida]` `<carne_molida|sarten|heptagon_s47_res_philly_skillet_molida|aceite_coco+cebolla+morron+queso_manchego>` | Ejotes Tiernos al Vapor Salteados con Ajo Dorado, Limón Real y Aceite de Coco Neutro |
+| **Lunes 16 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Desayuno** | Copa Bicolor de Frambuesas y Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Omelette Steakhouse Americano de Huevos a la Mantequilla con Champiñones Salteados al Ajo, Cebolla y Queso Manchego Fundido** `[heptagon_s47_huevo_omelette_steakhouse]` `<huevo|sarten|heptagon_s47_huevo_omelette_steakhouse|cebolla+champinon+mantequilla+queso_manchego>` | Chai Latte Imperial de Té Chai, Crema de Nuez de la India, Aceite de Coco y Canela (55°C) con 33Plus® |
+| **Lunes 16 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Comida** | Ensalada Verde Americana de Pepino en Rodajas, Cilantro de la Granja, Limón Real y Vinagreta al Vino Tinto | **Philly Skillet de Carne Molida de Res al Sartén de Hierro con Tiras de Pimiento Morrón Asado, Cebolla Caramelizada y Costra de Queso Manchego** `[heptagon_s47_res_philly_skillet_molida]` `<carne_molida|sarten|heptagon_s47_res_philly_skillet_molida|aceite_coco+cebolla+morron+oregano>` | Ejotes Tiernos al Vapor Salteados con Ajo Dorado, Limón Real y Aceite de Coco Neutro |
 | **Lunes 16 Nov** | **🇺🇸 Escuela 2: Brunch & Grill Americano Clásico** | **Cena** | Consomé Americano de Infusión de Apio en Brunoise, Ajo Dorado, Tomillo y Limón Real en Agua Purificada | **Fajitas de Pechuga de Pavo al Grill a la Mantequilla de Hierbas Finas y Ajo sobre Zoodles de Calabacita y Abanico de Aguacate Hass** `[heptagon_s47_pavo_zoodles_mantequilla_hierbas]` `<pavo|parrilla_plancha|heptagon_s47_pavo_zoodles_mantequilla_hierbas|aguacate+calabacitas+hierbas_finas+mantequilla>` | Elixir Sedante de Manzanilla, Canela, Vainilla y Emulsión Ligera de Aceite de Coco (52°C) con 34Plus® |
-| **Martes 17 Nov** | **🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño** | **Desayuno** | Macerado del Sureste de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Huevos Motuleños Cetogénicos sobre Pencas de Nopal de la Granja Asadas al Comal en Costra de Queso Manchego y Recado Rojo de Achiote y Cebolla** `[heptagon_s47_huevo_motulenos_nopal]` `<huevo|frio_ensamblaje|heptagon_s47_huevo_motulenos_nopal|aceite_coco+cebolla+cilantro+nopales>` | Parfait Cítrico de Yogur Griego, Fresas en Brunoise, Limón Real y Extracto de Vainilla (6°C) con 33Plus® |
+| **Martes 17 Nov** | **🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño** | **Desayuno** | Macerado del Sureste de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Huevos Motuleños Cetogénicos sobre Pencas de Nopal de la Granja Asadas al Comal en Costra de Queso Manchego y Recado Rojo de Achiote y Cebolla** `[heptagon_s47_huevo_motulenos_nopal]` `<huevo|sarten|heptagon_s47_huevo_motulenos_nopal|aceite_coco+cebolla+cilantro+nopales>` | Parfait Cítrico de Yogur Griego, Fresas en Brunoise, Limón Real y Extracto de Vainilla (6°C) con 33Plus® |
 | **Martes 17 Nov** | **🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño** | **Comida** | Ensalada Costera del Sureste de Lechuga Romana, Cilantro de la Granja, Limón Real y Aceite de Oliva VEVO | **Lomo de Salmón Estilo Tikin Xic Yucateco al Sartén en Adobo Suave de Achiote, Limón Real, Orégano, Mantequilla y Juliana de Pimiento Morrón** `[heptagon_s47_salmon_tikin_xic_sureste]` `<salmon|sarten|heptagon_s47_salmon_tikin_xic_sureste|cebolla+mantequilla+morron+oregano>` | Hojas de Acelga de la Granja Salteadas al Ajo Dorado, Limón Real y Aceite de Coco Neutro |
 | **Martes 17 Nov** | **🌴 Escuela 3: Alta Cocina del Sureste Yucateco-Tabasqueño** | **Cena** | Sopa de Lima Yucateca en Infusión de Agua Purificada con Ajo Dorado, Orégano, Cilantro de la Granja y Limón Real | **Fajitas de Mojarra Tabasqueñas al Horno en Salsa Cremosa de Yogur Griego, Cilantro de la Granja y Comino sobre Medallones de Calabacita con Aguacate Hass** `[heptagon_s47_mojarra_horno_yogur_tabasco]` `<mojarra|horno|heptagon_s47_mojarra_horno_yogur_tabasco|aceite_coco+aguacate+calabacitas+cilantro>` | Horchata Cetogénica Tibia de Nuez de la India, Canela y Vainilla (50°C) con 34Plus® |
 | **Miércoles 18 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Desayuno** | Espejo Castellano de Fresas y Rubíes de Granada de la Granja al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Frittata Castellana al Sartén de Huevos a la Mantequilla con Medallones de Calabacita Confitada, Cebolla, Orégano y Queso Manchego** `[heptagon_s47_huevo_frittata_castellana]` `<huevo|sarten|heptagon_s47_huevo_frittata_castellana|calabacitas+cebolla+mantequilla+oregano>` | Gelatina Rubí de Flor de Jamaica de la Granja, Romero y Limón Real (4°C) con 33Plus® |
-| **Miércoles 18 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Comida** | Ensalada del Mesón Castellano de Pepino en Láminas, Orégano, Limón Real y Aceite de Oliva VEVO | **Pechuga de Pollo al Ajillo Castellano Dorada en Mantequilla con Champiñones Laminados, Romero de la Granja, Limón Real y Aguacate Hass** `[heptagon_s47_pollo_ajillo_castellano]` `<pechuga_pollo|sarten|heptagon_s47_pollo_ajillo_castellano|aguacate+champinon+mantequilla+romero>` | Hojas de Espinaca Salteadas al Ajo Dorado, Limón Real y Aceite de Oliva VEVO |
-| **Miércoles 18 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Cena** | Sopa Castellana de Cebolla Confitada, Ajo Dorado y Romero de la Granja en Infusión de Agua Purificada | **Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Salsa Cremosa de Yogur Griego, Cilantro, Comino y Queso Manchego Fundido** `[heptagon_s47_atun_cazuela_murciana_yogur]` `<atun_agua|horno|heptagon_s47_atun_cazuela_murciana_yogur|aceite_coco+cilantro+comino+morron>` | Panna Cotta Nocturna de Yogur Griego, Manzanilla y Vainilla (4°C) con 34Plus® |
-| **Jueves 19 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Desayuno** | Copa Bistró de Rubíes de Granada de la Granja con Almendras Fileteadas, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Galette Bistró sin Harina de Huevos a la Mantequilla Rellena de Duxelles de Champiñones, Cebolla, Hierbas Finas y Queso Manchego** `[heptagon_s47_huevo_galette_duxelles_bistro]` `<champinon|frio_ensamblaje|heptagon_s47_huevo_galette_duxelles_bistro|cebolla+champinon+hierbas_finas+mantequilla>` | Mousse Bistró en Frío de Frambuesas Vivas, Queso Philadelphia y Vainilla (6°C) con 33Plus® |
+| **Miércoles 18 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Comida** | Ensalada del Mesón Castellano de Pepino en Láminas, Orégano, Limón Real y Aceite de Oliva VEVO | **Pechuga de Pollo al Ajillo Castellano Dorada en Mantequilla con Champiñones Laminados, Romero de la Granja, Limón Real y Aguacate Hass** `[heptagon_s47_pollo_ajillo_castellano]` `<pechuga_pollo|sarten|heptagon_s47_pollo_ajillo_castellano|aguacate+champinon+mantequilla+romero>` | Hojas de Espinaca Salteadas al Ajo Dorado, Limón Real y Aceite de Coco Neutro |
+| **Miércoles 18 Nov** | **🇪🇸 Escuela 4: Asador Español y Tapas de Cazuela** | **Cena** | Sopa Castellana de Cebolla Confitada, Ajo Dorado y Romero de la Granja en Infusión de Agua Purificada | **Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Emulsión Cremosa de Mayonesa al Limón, Cilantro, Comino y Queso Manchego Fundido** `[heptagon_s47_atun_cazuela_murciana_mayonesa]` `<atun_agua|horno|heptagon_s47_atun_cazuela_murciana_mayonesa|aceite_coco+cilantro+comino+mayonesa>` | Panna Cotta Nocturna de Yogur Griego, Manzanilla y Vainilla (4°C) con 34Plus® |
+| **Jueves 19 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Desayuno** | Copa Bistró de Rubíes de Granada de la Granja con Almendras Fileteadas, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Galette Bistró sin Harina de Huevos a la Mantequilla Rellena de Duxelles de Champiñones, Cebolla, Hierbas Finas y Queso Manchego** `[heptagon_s47_huevo_galette_duxelles_bistro]` `<huevo|frio_ensamblaje|heptagon_s47_huevo_galette_duxelles_bistro|cebolla+champinon+hierbas_finas+mantequilla>` | Mousse Bistró en Frío de Frambuesas Vivas, Queso Philadelphia y Vainilla (6°C) con 33Plus® |
 | **Jueves 19 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Comida** | Ensalada Bistró de Lechuga Romana, Vinagre de Vino Tinto, Limón Real y Aceite de Oliva VEVO | **Medallones de Flat Steak al Sartén Bistró con Mantequilla de Tomillo, Cebolla Caramelizada y Ejotes Franceses** `[heptagon_s47_res_medallones_tomillo_bistro]` `<flat_steak|sarten|heptagon_s47_res_medallones_tomillo_bistro|cebolla+ejotes+mantequilla+tomillo>` | Floretes de Brócoli al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO |
 | **Jueves 19 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Cena** | Consomé Bistró de Infusión de Hojas de Acelga de la Granja, Ajo Dorado y Romero en Agua Purificada | **Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass** `[heptagon_s47_mojarra_grenobloise_bistro]` `<mojarra|sarten|heptagon_s47_mojarra_grenobloise_bistro|aguacate+alcaparras+calabacitas+mantequilla>` | Natilla Tibia Bistró de Queso Philadelphia, Nuez Pecana de la Granja, Vainilla y Canela (50°C) con 34Plus® |
-| **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Desayuno** | Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Tamagoyaki Costero de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso** `[heptagon_s47_huevo_tamagoyaki_nopal_cabra]` `<huevo|frio_ensamblaje|heptagon_s47_huevo_tamagoyaki_nopal_cabra|cilantro+mantequilla+nopales+queso_cabra>` | Lassi Dorado Probiótico de Yogur Griego, Cúrcuma, Canela y Limón Real (8°C) con 33Plus® |
+| **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Desayuno** | Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso** `[heptagon_s47_huevo_tamagoyaki_nopal_cabra]` `<huevo|sarten|heptagon_s47_huevo_tamagoyaki_nopal_cabra|cilantro+mantequilla+nopales+queso_cabra>` | Lassi Dorado Probiótico de Yogur Griego, Cúrcuma, Canela y Limón Real (8°C) con 33Plus® |
 | **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Comida** | Ensalada Oriental Sunomono de Pepino en Cintas, Cilantro de la Granja, Limón Real y Aceite de Oliva VEVO | **Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass** `[heptagon_s47_salmon_veloute_coco_brocoli]` `<salmon|licuado_emulsion|heptagon_s47_salmon_veloute_coco_brocoli|aceite_coco+aguacate+brocoli+cilantro>` | Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Coco Neutro |
 | **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Cena** | Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real | **Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Almendras Fileteadas Tostadas y Salsa de Soya** `[heptagon_s47_pollo_teppanyaki_almendras]` `<pechuga_pollo|wok|heptagon_s47_pollo_teppanyaki_almendras|aceite_coco+almendras+germinado+morron>` | Crema Nocturna de Semillas y Nueces Mixtas, Nuez de la India, Canela y Clavo de Olor (52°C) con 34Plus® |
 | **Sábado 21 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Desayuno** | Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)** `[heptagon_s47_huevo_purgatorio_parmesano]` `<huevo|sarten|heptagon_s47_huevo_purgatorio_parmesano|acelgas+jitomate+mantequilla+oregano>` | Elixir Verde Alcalino Prensado en Frío de Apio, Pepino, Cilantro y Limón Real (8°C) con 33Plus® |
 | **Sábado 21 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Comida** | Ensalada de la Trattoria de Lechuga Romana, Pistaches Tostados, Limón Real, Orégano y Aceite de Oliva VEVO | **Fajitas de Mojarra al Limone de la Trattoria Doradas en Mantequilla con Champiñones, Alcaparras y Aguacate Hass** `[heptagon_s47_mojarra_piccata_limone]` `<mojarra|sarten|heptagon_s47_mojarra_piccata_limone|aguacate+alcaparras+champinon+mantequilla>` | Medallones de Calabacita Asados a la Parrilla con Romero de la Granja, Limón Real y Aceite de Oliva VEVO |
-| **Sábado 21 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Cena** | Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada | **Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Aceitunas Manzanilla, Queso de Cabra y Queso Parmesano** `[heptagon_s47_sardina_egea_cabra_sarten]` `<sardinas|sarten|heptagon_s47_sardina_egea_cabra_sarten|aceite_coco+aceitunas+morron+oregano>` | Trufas Nocturnas (Fat Bombs) de Nuez de la India, Nuez Pecana, Canela y Aceite de Coco (14°C) con 34Plus® + Infusión Digestiva de Tomillo |
+| **Sábado 21 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Cena** | Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada | **Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano** `[heptagon_s47_sardina_egea_cabra_sarten]` `<sardinas|sarten|heptagon_s47_sardina_egea_cabra_sarten|aceite_coco+morron+oregano+queso_cabra>` | Trufas Nocturnas (Fat Bombs) de Nuez de la India, Nuez Pecana, Canela y Aceite de Coco (14°C) con 34Plus® + Infusión Digestiva de Tomillo |
 
 ---
 
@@ -87,13 +87,13 @@
 | **Ajo** | **`4 g`** | 4 g en Plato Fuerte |
 | **Sal de mar** | **`6 g`** | 6 g en Plato Fuerte |
 | **Pimienta negra** | **`3 g`** | 3 g en Plato Fuerte |
-| **Yogur griego** | **`360 g`** | 360 g en Guarnición/Bebida |
+| **Yogur griego** | **`480 g`** | 480 g en Guarnición/Bebida |
 | **Apio** | **`160 g`** | 160 g en Guarnición/Bebida |
 | **Agua purificada** | **`360 ml`** | 360 ml en Guarnición/Bebida |
 | **33Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Desgranar las granadas de la granja en copas frías y rociar con jugo de limón real. | *Guarnición/Bebida:* Licuar en frío el yogur griego con los tallos de apio troceados, el jugo de limón real, el agua purificada fría y los 30 g de 33Plus® hasta obtener una crema esmeralda.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Desgranar las granadas de la granja en copas frías y rociar con jugo de limón real. | *Guarnición/Bebida:* Licuar en frío los 480 g de yogur griego con los tallos de apio troceados, el jugo de limón real, el agua purificada fría y los 30 g de 33Plus® hasta obtener una crema esmeralda.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Batir los 18 huevos con sal de mar y pimienta negra y formar 12 crepas delgadas en sartén con la mitad de la mantequilla. | *Cierre de Entrada:* Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana de la granja.
 3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Saltear las acelgas de la granja con el ajo y el cilantro en el resto de la mantequilla, rellenar las crepas con el queso manchego rallado y doblar al comal. | *Fuego Lateral / Templado:* Servir en tazones a 6°C y coronar con la nuez pecana de la granja picada.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
@@ -155,7 +155,7 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Yogur griego** | 60 | **360** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Yogur griego** | 80 | **480** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Apio** | 26.67 | **160** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 10 | **60** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 10 | **60** | g |
@@ -163,7 +163,7 @@
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **33Plus®** | 5 | **30** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Licuar en frío el yogur griego con los tallos de apio troceados, el jugo de limón real, el agua purificada fría y los 30 g de 33Plus® hasta obtener una crema esmeralda.
+1. Licuar en frío los 480 g de yogur griego con los tallos de apio troceados, el jugo de limón real, el agua purificada fría y los 30 g de 33Plus® hasta obtener una crema esmeralda.
 2. Servir en tazones a 6°C y coronar con la nuez pecana de la granja picada.
 
 #### 🍲 Domingo — Comida (14:30 hrs) · `👥 6 Comensales` | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.8 g`
@@ -218,7 +218,7 @@
 
 ##### Receta #05 [Domingo · Comida (6p) · Tiempo 2 — Plato Fuerte]: Fajitas de Flat Steak Asadas al Comal en Adobo Rojo de Achiote, Pimiento Morrón, Cebolla Asada y Guacamole de Aguacate Hass
 - **Técnica Culinaria:** `comal_achiote_flat_steak_fajitas_s47`
-- **Arquetipo Heptágono V17.0:** `heptagon_s47_res_fajitas_achiote_comal` · **Huella ADN:** `flat_steak|frio_ensamblaje|heptagon_s47_res_fajitas_achiote_comal|aceite_coco+aguacate+cebolla+comino`
+- **Arquetipo Heptágono V17.0:** `heptagon_s47_res_fajitas_achiote_comal` · **Huella ADN:** `flat_steak|sarten|heptagon_s47_res_fajitas_achiote_comal|aceite_coco+aguacate+cebolla+comino`
 - **Nota Organoléptica y Clínica:** Escuela 1 (Inspiración Nizú): tiras de flat steak marinadas en achiote suave, ajo y comino, selladas al comal con pimiento morrón, cebolla asada y guacamole de aguacate Hass ([R5]).
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Sellado en comal de hierro a 195°C (65°C al centro).
@@ -266,7 +266,7 @@
 
 #### 🍽️ Domingo — Cena (20:00 hrs) · `👥 6 Comensales` | `615 kcal` · `Grasa: 51.0 g` · `Proteína: 35.0 g` · `Carbs Netos: 3.9 g` · `Fibra: 6.1 g`
 
-##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Domingo · Cena · 6 Comensales · `4 insumos unificados en 1 solo pesaje`)
+##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Domingo · Cena · 6 Comensales · `5 insumos unificados en 1 solo pesaje`)
 | Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |
 |---|---|---|
 | **Agua purificada** | **`1,680 ml`** | ⚖️ **Dividir:** 960 ml en Entrada + 720 ml en Guarnición/Bebida |
@@ -274,7 +274,7 @@
 | **Limones** | **`48 g`** | 48 g en Entrada |
 | **Ajo** | **`8 g`** | ⚖️ **Dividir:** 4 g en Entrada + 4 g en Plato Fuerte |
 | **Orégano** | **`3 g`** | 3 g en Entrada |
-| **Aceite de oliva** | **`18 ml`** | 18 ml en Entrada |
+| **Aceite de coco** | **`42 g`** | ⚖️ **Dividir:** 18 g en Entrada + 24 g en Plato Fuerte |
 | **Sal de mar** | **`12 g`** | ⚖️ **Dividir:** 6 g en Entrada + 6 g en Plato Fuerte |
 | **Pollo entero** | **`6 piezas`** | 6 piezas en Plato Fuerte |
 | **Queso manchego** | **`160 g`** | 160 g en Plato Fuerte |
@@ -282,7 +282,6 @@
 | **Calabacitas** | **`360 g`** | 360 g en Plato Fuerte |
 | **Tomate** | **`240 g`** | 240 g en Plato Fuerte |
 | **Cebolla** | **`1 piezas`** | 1 piezas en Plato Fuerte |
-| **Aceite de coco** | **`24 g`** | 24 g en Plato Fuerte |
 | **Leche de coco** | **`260 ml`** | 260 ml en Guarnición/Bebida |
 | **Cúrcuma** | **`12 g`** | 12 g en Guarnición/Bebida |
 | **Canela molida** | **`3 g`** | 3 g en Guarnición/Bebida |
@@ -290,7 +289,7 @@
 | **34Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Tatemar el ajo en el aceite de oliva y verter los 960 ml de agua purificada de la granja con el orégano y la sal de mar; hervir suavemente 8 minutos. | *Guarnición/Bebida:* Infusionar la cúrcuma, la canela molida y la pizca de pimienta negra en el agua purificada a 85°C por 4 minutos.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Tatemar el ajo en el aceite de coco neutro y verter los 960 ml de agua purificada de la granja con el orégano y la sal de mar; hervir suavemente 8 minutos. | *Guarnición/Bebida:* Infusionar la cúrcuma, la canela molida y la pizca de pimienta negra en el agua purificada a 85°C por 4 minutos.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Deshebrar en limpio la carne de las 6 piezas anatómicas de pollo ya cocidas (2 muslos, 2 piernas y 2 alas) y dorarla ligeramente en sartén con aceite de coco neutro y láminas de calabacita. | *Cierre de Entrada:* Perfumar al apagar con las ramas de cilantro de la granja y el jugo de limón real.
 3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Licuar el tomate cocido con cebolla, ajo, cilantro de la granja y los 120 g de queso Philadelphia; bañar la cazuela de pollo y calabacitas, cubrir con los 160 g de queso manchego rallado y gratinar al horno. | *Fuego Lateral / Templado:* Templar con los 260 ml de leche de coco a 55°C, incorporar los 30 g de 34Plus® y emulsionar 15 segundos.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
@@ -311,11 +310,11 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 8 | **48** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.67 | **4** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Orégano** | 0.5 | **3** | g |
-| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 3 | **18** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Tatemar el ajo en el aceite de oliva y verter los 960 ml de agua purificada de la granja con el orégano y la sal de mar; hervir suavemente 8 minutos.
+1. Tatemar el ajo en el aceite de coco neutro y verter los 960 ml de agua purificada de la granja con el orégano y la sal de mar; hervir suavemente 8 minutos.
 2. Perfumar al apagar con las ramas de cilantro de la granja y el jugo de limón real.
 
 ##### Receta #08 [Domingo · Cena (6p) · Tiempo 2 — Plato Fuerte]: Cazuela Suiza Gratinada de las 6 Piezas de Pollo Cocido Deshebrado (2 Muslos, 2 Piernas y 2 Alas) sobre Láminas de Calabacita en Salsa Verde de Tomate, Queso Philadelphia y Queso Manchego
@@ -426,7 +425,7 @@
 
 ##### Receta #11 [Lunes · Desayuno (6p) · Tiempo 2 — Plato Fuerte]: Omelette Steakhouse Americano de Huevos a la Mantequilla con Champiñones Salteados al Ajo, Cebolla y Queso Manchego Fundido
 - **Técnica Culinaria:** `american_steakhouse_mushroom_omelette_s47`
-- **Arquetipo Heptágono V17.0:** `heptagon_s47_huevo_omelette_steakhouse` · **Huella ADN:** `champinon|sarten|heptagon_s47_huevo_omelette_steakhouse|cebolla+champinon+mantequilla+queso_manchego`
+- **Arquetipo Heptágono V17.0:** `heptagon_s47_huevo_omelette_steakhouse` · **Huella ADN:** `huevo|sarten|heptagon_s47_huevo_omelette_steakhouse|cebolla+champinon+mantequilla+queso_manchego`
 - **Nota Organoléptica y Clínica:** Escuela 2 (Inspiración IHOP): omelette americano de 3 huevos por comensal cocinado en mantequilla con champiñones laminados al ajo, cebolla y queso manchego de alacena.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Salteado de champiñones a 175°C y cocción del omelette en mantequilla a 140°C.
@@ -486,7 +485,7 @@
 | **Morrón** | **`2 piezas`** | 2 piezas en Plato Fuerte |
 | **Cebolla** | **`1 piezas`** | 1 piezas en Plato Fuerte |
 | **Queso manchego** | **`120 g`** | 120 g en Plato Fuerte |
-| **Salsa inglesa** | **`18 ml`** | 18 ml en Plato Fuerte |
+| **Orégano** | **`3 g`** | 3 g en Plato Fuerte |
 | **Ajo** | **`8 g`** | ⚖️ **Dividir:** 4 g en Plato Fuerte + 4 g en Guarnición/Bebida |
 | **Aceite de coco** | **`42 g`** | ⚖️ **Dividir:** 24 g en Plato Fuerte + 18 g en Guarnición/Bebida |
 | **Sal con ajo** | **`6 g`** | 6 g en Plato Fuerte |
@@ -495,7 +494,7 @@
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
 1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Cortar el pepino en rodajas y disponer con hojas de cilantro de la granja. | *Guarnición/Bebida:* Cocer los ejotes al vapor durante 4 minutos.
-2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Dorar la carne molida de res en sartén de hierro con aceite de coco neutro, ajo, salsa inglesa, sal con ajo y pimienta negra. | *Cierre de Entrada:* Emulsionar el vinagre de vino tinto con jugo de limón real, aceite de oliva y sal de mar, y aliñar.
+2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Dorar la carne molida de res en sartén de hierro con aceite de coco neutro, ajo, orégano, sal con ajo y pimienta negra. | *Cierre de Entrada:* Emulsionar el vinagre de vino tinto con jugo de limón real, aceite de oliva y sal de mar, y aliñar.
 3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Incorporar las julianas de pimiento morrón y cebolla caramelizada, cubrir con el queso manchego rallado y tapar 2 minutos para fundir. | *Fuego Lateral / Templado:* Saltear en aceite de coco neutro con el ajo picado, jugo de limón real y sal de mar.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
 
@@ -523,7 +522,7 @@
 
 ##### Receta #14 [Lunes · Comida (6p) · Tiempo 2 — Plato Fuerte]: Philly Skillet de Carne Molida de Res al Sartén de Hierro con Tiras de Pimiento Morrón Asado, Cebolla Caramelizada y Costra de Queso Manchego
 - **Técnica Culinaria:** `philly_ground_beef_pepper_skillet_s47`
-- **Arquetipo Heptágono V17.0:** `heptagon_s47_res_philly_skillet_molida` · **Huella ADN:** `carne_molida|sarten|heptagon_s47_res_philly_skillet_molida|aceite_coco+cebolla+morron+queso_manchego`
+- **Arquetipo Heptágono V17.0:** `heptagon_s47_res_philly_skillet_molida` · **Huella ADN:** `carne_molida|sarten|heptagon_s47_res_philly_skillet_molida|aceite_coco+cebolla+morron+oregano`
 - **Nota Organoléptica y Clínica:** Escuela 2 (Inspiración IHOP): salteado estilo Philly en sartén de hierro con 660 g de carne molida de res (agotando los 300 g de alacena + 360 g de mercado), pimiento morrón asado, cebolla caramelizada y queso manchego fundido.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Dorado en sartén de hierro a 190°C y fundido de manchego a 175°C.
@@ -537,14 +536,14 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.33 | **2** | piezas |
 | 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.17 | **1** | piezas |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 20 | **120** | g |
-| 🧂 Condimentos, Especias e Infusiones | **Salsa inglesa** | 3 | **18** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Orégano** | 0.5 | **3** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.67 | **4** | g |
 | 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 4 | **24** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal con ajo** | 1 | **6** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Pimienta negra** | 0.5 | **3** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Dorar la carne molida de res en sartén de hierro con aceite de coco neutro, ajo, salsa inglesa, sal con ajo y pimienta negra.
+1. Dorar la carne molida de res en sartén de hierro con aceite de coco neutro, ajo, orégano, sal con ajo y pimienta negra.
 2. Incorporar las julianas de pimiento morrón y cebolla caramelizada, cubrir con el queso manchego rallado y tapar 2 minutos para fundir.
 
 ##### Receta #15 [Lunes · Comida (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Ejotes Tiernos al Vapor Salteados con Ajo Dorado, Limón Real y Aceite de Coco Neutro
@@ -570,7 +569,7 @@
 
 #### 🍽️ Lunes — Cena (20:00 hrs) · `👥 6 Comensales` | `615 kcal` · `Grasa: 51.0 g` · `Proteína: 35.0 g` · `Carbs Netos: 3.9 g` · `Fibra: 6.1 g`
 
-##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Lunes · Cena · 6 Comensales · `4 insumos unificados en 1 solo pesaje`)
+##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Lunes · Cena · 6 Comensales · `5 insumos unificados en 1 solo pesaje`)
 | Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |
 |---|---|---|
 | **Agua purificada** | **`1,920 ml`** | ⚖️ **Dividir:** 960 ml en Entrada + 960 ml en Guarnición/Bebida |
@@ -578,7 +577,7 @@
 | **Limones** | **`96 g`** | ⚖️ **Dividir:** 48 g en Entrada + 48 g en Plato Fuerte |
 | **Ajo** | **`8 g`** | ⚖️ **Dividir:** 4 g en Entrada + 4 g en Plato Fuerte |
 | **Tomillo** | **`3 g`** | 3 g en Entrada |
-| **Aceite de oliva** | **`18 ml`** | 18 ml en Entrada |
+| **Aceite de coco** | **`42 g`** | ⚖️ **Dividir:** 18 g en Entrada + 24 g en Guarnición/Bebida |
 | **Sal de mar** | **`12 g`** | ⚖️ **Dividir:** 6 g en Entrada + 6 g en Plato Fuerte |
 | **Pechuga de pavo** | **`700 g`** | 700 g en Plato Fuerte |
 | **Calabacitas** | **`360 g`** | 360 g en Plato Fuerte |
@@ -587,13 +586,12 @@
 | **Hierbas finas** | **`6 g`** | 6 g en Plato Fuerte |
 | **Pimienta negra** | **`3 g`** | 3 g en Plato Fuerte |
 | **Manzanilla** | **`6 g`** | 6 g en Guarnición/Bebida |
-| **Aceite de coco** | **`24 g`** | 24 g en Guarnición/Bebida |
 | **Canela molida** | **`3 g`** | 3 g en Guarnición/Bebida |
 | **Extracto de vainilla** | **`6 ml`** | 6 ml en Guarnición/Bebida |
 | **34Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Rehogar el apio en brunoise y el ajo en el aceite de oliva con el tomillo durante 2 minutos. | *Guarnición/Bebida:* Infusionar los 6 g de manzanilla y la canela molida en el agua purificada a 85°C por 5 minutos y colar.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Rehogar el apio en brunoise y el ajo en el aceite de coco neutro con el tomillo durante 2 minutos. | *Guarnición/Bebida:* Infusionar los 6 g de manzanilla y la canela molida en el agua purificada a 85°C por 5 minutos y colar.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Sellar los 700 g de fajitas de pechuga de pavo en la mitad de la mantequilla con ajo, hierbas finas, sal de mar y pimienta negra. | *Cierre de Entrada:* Verter los 960 ml de agua purificada de la granja con sal de mar, hervir 8 minutos y servir con jugo de limón real.
 3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Saltear los zoodles de calabacita 2 minutos con el resto de la mantequilla y jugo de limón real, montar el pavo encima y coronar con aguacate Hass. | *Fuego Lateral / Templado:* Templar a 52°C, añadir el extracto de vainilla, el aceite de coco neutro y los 30 g de 34Plus®, y batir 10 segundos.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
@@ -614,11 +612,11 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 8 | **48** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.67 | **4** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Tomillo** | 0.5 | **3** | g |
-| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 3 | **18** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Rehogar el apio en brunoise y el ajo en el aceite de oliva con el tomillo durante 2 minutos.
+1. Rehogar el apio en brunoise y el ajo en el aceite de coco neutro con el tomillo durante 2 minutos.
 2. Verter los 960 ml de agua purificada de la granja con sal de mar, hervir 8 minutos y servir con jugo de limón real.
 
 ##### Receta #17 [Lunes · Cena (6p) · Tiempo 2 — Plato Fuerte]: Fajitas de Pechuga de Pavo al Grill a la Mantequilla de Hierbas Finas y Ajo sobre Zoodles de Calabacita y Abanico de Aguacate Hass
@@ -726,7 +724,7 @@
 
 ##### Receta #20 [Martes · Desayuno (6p) · Tiempo 2 — Plato Fuerte]: Huevos Motuleños Cetogénicos sobre Pencas de Nopal de la Granja Asadas al Comal en Costra de Queso Manchego y Recado Rojo de Achiote y Cebolla
 - **Técnica Culinaria:** `keto_motulenos_nopal_achiote_s47`
-- **Arquetipo Heptágono V17.0:** `heptagon_s47_huevo_motulenos_nopal` · **Huella ADN:** `huevo|frio_ensamblaje|heptagon_s47_huevo_motulenos_nopal|aceite_coco+cebolla+cilantro+nopales`
+- **Arquetipo Heptágono V17.0:** `heptagon_s47_huevo_motulenos_nopal` · **Huella ADN:** `huevo|sarten|heptagon_s47_huevo_motulenos_nopal|aceite_coco+cebolla+cilantro+nopales`
 - **Nota Organoléptica y Clínica:** Escuela 3 (Inspiración El Teapaneco): 3 huevos por comensal al comal sobre penca de nopal de la granja con costra dorada de queso manchego y reducción yucateca de cebolla y achiote.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Asado de nopal y costra de manchego a 180°C y huevos al comal a 145°C.
@@ -868,7 +866,7 @@
 
 #### 🍽️ Martes — Cena (20:00 hrs) · `👥 6 Comensales` | `615 kcal` · `Grasa: 51.0 g` · `Proteína: 35.0 g` · `Carbs Netos: 3.9 g` · `Fibra: 6.1 g`
 
-##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Martes · Cena · 6 Comensales · `4 insumos unificados en 1 solo pesaje`)
+##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Martes · Cena · 6 Comensales · `5 insumos unificados en 1 solo pesaje`)
 | Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |
 |---|---|---|
 | **Agua purificada** | **`1,920 ml`** | ⚖️ **Dividir:** 960 ml en Entrada + 960 ml en Guarnición/Bebida |
@@ -876,21 +874,20 @@
 | **Cilantro** | **`54 g`** | ⚖️ **Dividir:** 24 g en Entrada + 30 g en Plato Fuerte |
 | **Ajo** | **`4 g`** | 4 g en Entrada |
 | **Orégano** | **`3 g`** | 3 g en Entrada |
-| **Aceite de oliva** | **`18 ml`** | 18 ml en Entrada |
+| **Aceite de coco** | **`42 g`** | ⚖️ **Dividir:** 18 g en Entrada + 24 g en Plato Fuerte |
 | **Sal de mar** | **`12 g`** | ⚖️ **Dividir:** 6 g en Entrada + 6 g en Plato Fuerte |
 | **Fajitas de mojarra** | **`900 g`** | 900 g en Plato Fuerte |
 | **Calabacitas** | **`360 g`** | 360 g en Plato Fuerte |
 | **Yogur griego** | **`240 g`** | 240 g en Plato Fuerte |
 | **Aguacate** | **`1 piezas`** | 1 piezas en Plato Fuerte |
 | **Comino** | **`3 g`** | 3 g en Plato Fuerte |
-| **Aceite de coco** | **`24 g`** | 24 g en Plato Fuerte |
 | **Nuez de la India** | **`110 g`** | 110 g en Guarnición/Bebida |
 | **Canela molida** | **`4 g`** | 4 g en Guarnición/Bebida |
 | **Extracto de vainilla** | **`6 ml`** | 6 ml en Guarnición/Bebida |
 | **34Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar suavemente el ajo en el aceite de oliva con el orégano y verter los 960 ml de agua purificada con sal de mar; hervir 8 minutos. | *Guarnición/Bebida:* Licuar los 110 g de nuez de la India con los 960 ml de agua purificada tibia (50°C), la canela molida y el extracto de vainilla hasta obtener una leche tersa.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar suavemente el ajo en el aceite de coco neutro con el orégano y verter los 960 ml de agua purificada con sal de mar; hervir 8 minutos. | *Guarnición/Bebida:* Licuar los 110 g de nuez de la India con los 960 ml de agua purificada tibia (50°C), la canela molida y el extracto de vainilla hasta obtener una leche tersa.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Disponer los 900 g de fajitas de mojarra sobre medallones de calabacita con aceite de coco neutro, comino y sal de mar, y hornear 12 minutos a 180°C. | *Cierre de Entrada:* Perfumar fuera del fuego con jugo de limón real y cilantro de la granja picado.
 3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Emulsionar los 240 g de yogur griego con el cilantro de la granja y el jugo de limón real; napar el pescado al salir del horno y acompañar con aguacate Hass. | *Fuego Lateral / Templado:* Incorporar los 30 g de 34Plus® y batir 10 segundos.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
@@ -911,11 +908,11 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 4 | **24** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.67 | **4** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Orégano** | 0.5 | **3** | g |
-| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 3 | **18** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Dorar suavemente el ajo en el aceite de oliva con el orégano y verter los 960 ml de agua purificada con sal de mar; hervir 8 minutos.
+1. Dorar suavemente el ajo en el aceite de coco neutro con el orégano y verter los 960 ml de agua purificada con sal de mar; hervir 8 minutos.
 2. Perfumar fuera del fuego con jugo de limón real y cilantro de la granja picado.
 
 ##### Receta #26 [Martes · Cena (6p) · Tiempo 2 — Plato Fuerte]: Fajitas de Mojarra Tabasqueñas al Horno en Salsa Cremosa de Yogur Griego, Cilantro de la Granja y Comino sobre Medallones de Calabacita con Aguacate Hass
@@ -1071,13 +1068,13 @@
 
 #### 🍲 Miércoles — Comida (14:30 hrs) · `👥 6 Comensales` | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.7 g`
 
-##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Miércoles · Comida · 6 Comensales · `4 insumos unificados en 1 solo pesaje`)
+##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Miércoles · Comida · 6 Comensales · `3 insumos unificados en 1 solo pesaje`)
 | Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |
 |---|---|---|
 | **Pepino** | **`360 g`** | 360 g en Entrada |
 | **Limones** | **`144 g`** | ⚖️ **Dividir:** 48 g en Entrada + 48 g en Plato Fuerte + 48 g en Guarnición/Bebida |
 | **Orégano** | **`3 g`** | 3 g en Entrada |
-| **Aceite de oliva** | **`36 ml`** | ⚖️ **Dividir:** 18 ml en Entrada + 18 ml en Guarnición/Bebida |
+| **Aceite de oliva** | **`18 ml`** | 18 ml en Entrada |
 | **Sal de mar** | **`18 g`** | ⚖️ **Dividir:** 6 g en Entrada + 6 g en Plato Fuerte + 6 g en Guarnición/Bebida |
 | **Pechuga de pollo** | **`660 g`** | 660 g en Plato Fuerte |
 | **Champiñón** | **`300 g`** | 300 g en Plato Fuerte |
@@ -1087,9 +1084,10 @@
 | **Romero** | **`6 g`** | 6 g en Plato Fuerte |
 | **Pimienta negra** | **`3 g`** | 3 g en Plato Fuerte |
 | **Espinacas** | **`260 g`** | 260 g en Guarnición/Bebida |
+| **Aceite de coco** | **`18 g`** | 18 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Cortar el pepino en láminas delgadas y disponer en platos fríos. | *Guarnición/Bebida:* Dorar el ajo laminado en el aceite de oliva extra virgen.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Cortar el pepino en láminas delgadas y disponer en platos fríos. | *Guarnición/Bebida:* Dorar el ajo laminado en el aceite de coco neutro.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Dorar el ajo laminado y el romero de la granja en los 60 g de mantequilla e incorporar la pechuga de pollo y los champiñones. | *Cierre de Entrada:* Aliñar con jugo de limón real, aceite de oliva extra virgen, orégano y sal de mar.
 3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Terminar con jugo de limón real y servir acompañado de aguacate Hass. | *Fuego Lateral / Templado:* Incorporar los 260 g de espinacas de alacena por 2 minutos y sazonar con jugo de limón real y sal de mar.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
@@ -1141,8 +1139,8 @@
 1. Dorar el ajo laminado y el romero de la granja en los 60 g de mantequilla e incorporar la pechuga de pollo y los champiñones.
 2. Terminar con jugo de limón real y servir acompañado de aguacate Hass.
 
-##### Receta #33 [Miércoles · Comida (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Hojas de Espinaca Salteadas al Ajo Dorado, Limón Real y Aceite de Oliva VEVO
-- **Técnica Culinaria:** `garlic_olive_oil_spinach_side_s47`
+##### Receta #33 [Miércoles · Comida (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Hojas de Espinaca Salteadas al Ajo Dorado, Limón Real y Aceite de Coco Neutro
+- **Técnica Culinaria:** `garlic_coconut_oil_spinach_side_s47`
 - **Nota Organoléptica y Clínica:** Cuarta guarnición de Comida ([R4-SIDE] 4/7: espinacas) que agota exactamente los 260 g de espinacas en alacena ($0.00 MXN compra), libre de mantequilla y lácteos ([R2]).
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Salteado corto a 165°C por 2 minutos.
@@ -1155,11 +1153,11 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Espinacas** | 43.33 | **260** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 8 | **48** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.67 | **4** | g |
-| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 3 | **18** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Dorar el ajo laminado en el aceite de oliva extra virgen.
+1. Dorar el ajo laminado en el aceite de coco neutro.
 2. Incorporar los 260 g de espinacas de alacena por 2 minutos y sazonar con jugo de limón real y sal de mar.
 
 #### 🍽️ Miércoles — Cena (20:00 hrs) · `👥 6 Comensales` | `615 kcal` · `Grasa: 51.0 g` · `Proteína: 35.0 g` · `Carbs Netos: 3.9 g` · `Fibra: 6.1 g`
@@ -1171,25 +1169,25 @@
 | **Cebolla** | **`1 piezas`** | 1 piezas en Entrada |
 | **Ajo** | **`8 g`** | ⚖️ **Dividir:** 4 g en Entrada + 4 g en Plato Fuerte |
 | **Romero** | **`6 g`** | 6 g en Entrada |
-| **Aceite de oliva** | **`18 ml`** | 18 ml en Entrada |
+| **Aceite de coco** | **`42 g`** | ⚖️ **Dividir:** 18 g en Entrada + 24 g en Plato Fuerte |
 | **Sal de mar** | **`12 g`** | ⚖️ **Dividir:** 6 g en Entrada + 6 g en Plato Fuerte |
 | **Atún en agua** | **`560 g`** | 560 g en Plato Fuerte |
 | **Morrón** | **`3 piezas`** | 3 piezas en Plato Fuerte |
-| **Yogur griego** | **`640 g`** | ⚖️ **Dividir:** 240 g en Plato Fuerte + 400 g en Guarnición/Bebida |
+| **Mayonesa** | **`200 g`** | 200 g en Plato Fuerte |
 | **Queso manchego** | **`120 g`** | 120 g en Plato Fuerte |
 | **Cilantro** | **`24 g`** | 24 g en Plato Fuerte |
 | **Limones** | **`48 g`** | 48 g en Plato Fuerte |
 | **Comino** | **`3 g`** | 3 g en Plato Fuerte |
-| **Aceite de coco** | **`24 g`** | 24 g en Plato Fuerte |
+| **Yogur griego** | **`400 g`** | 400 g en Guarnición/Bebida |
 | **Grenetina** | **`16 g`** | 16 g en Guarnición/Bebida |
 | **Manzanilla** | **`6 g`** | 6 g en Guarnición/Bebida |
 | **Extracto de vainilla** | **`6 ml`** | 6 ml en Guarnición/Bebida |
 | **34Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Confitar la cebolla fileteada con el ajo y el romero de la granja en aceite de oliva durante 6 minutos. | *Guarnición/Bebida:* Infusionar los 6 g restantes de manzanilla en el agua purificada caliente, colar y disolver ahí los 16 g restantes de grenetina hidratada.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Confitar la cebolla fileteada con el ajo y el romero de la granja en aceite de coco neutro durante 6 minutos. | *Guarnición/Bebida:* Infusionar los 6 g restantes de manzanilla en el agua purificada caliente, colar y disolver ahí los 16 g restantes de grenetina hidratada.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con el ajo, el comino y el aceite de coco neutro. | *Cierre de Entrada:* Verter los 960 ml de agua purificada y sal de mar, hervir suavemente 10 minutos y servir caliente.
-3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Incorporar los 560 g de atún drenado ligados con los 240 g de yogur griego, cilantro de la granja y jugo de limón real, cubrir con los 120 g de queso manchego rallado y tapar el sartén 2 minutos para fundir. | *Fuego Lateral / Templado:* Integrar los 400 g de yogur griego y el extracto de vainilla para templar a ≤38°C, disolver 34Plus® (30 g) y refrigerar en ramekines a 4°C.
+3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Retirar un instante del fuego para integrar los 560 g de atún drenado ligados con los 200 g de mayonesa de alacena, cilantro de la granja y jugo de limón real; cubrir con los 120 g de queso manchego rallado y tapar el sartén 2 minutos para fundir. | *Fuego Lateral / Templado:* Integrar los 400 g de yogur griego y el extracto de vainilla para templar a ≤38°C, disolver 34Plus® (30 g) y refrigerar en ramekines a 4°C.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
 
 ##### Receta #34 [Miércoles · Cena (6p) · Tiempo 1 — Entrada]: Sopa Castellana de Cebolla Confitada, Ajo Dorado y Romero de la Granja en Infusión de Agua Purificada
@@ -1207,28 +1205,28 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Cebolla** | 0.17 | **1** | piezas |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.67 | **4** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Romero** | 1 | **6** | g |
-| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 3 | **18** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Confitar la cebolla fileteada con el ajo y el romero de la granja en aceite de oliva durante 6 minutos.
+1. Confitar la cebolla fileteada con el ajo y el romero de la granja en aceite de coco neutro durante 6 minutos.
 2. Verter los 960 ml de agua purificada y sal de mar, hervir suavemente 10 minutos y servir caliente.
 
-##### Receta #35 [Miércoles · Cena (6p) · Tiempo 2 — Plato Fuerte]: Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Salsa Cremosa de Yogur Griego, Cilantro, Comino y Queso Manchego Fundido
+##### Receta #35 [Miércoles · Cena (6p) · Tiempo 2 — Plato Fuerte]: Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Emulsión Cremosa de Mayonesa al Limón, Cilantro, Comino y Queso Manchego Fundido
 - **Técnica Culinaria:** `murcian_roasted_pepper_tuna_skillet_s47`
-- **Arquetipo Heptágono V17.0:** `heptagon_s47_atun_cazuela_murciana_yogur` · **Huella ADN:** `atun_agua|horno|heptagon_s47_atun_cazuela_murciana_yogur|aceite_coco+cilantro+comino+morron`
-- **Nota Organoléptica y Clínica:** Escuela 4 (Asador Castellano): agotamiento exacto de los 560 g de atún en agua de alacena ($0.00 MXN), complementados para 6 comensales con 240 g de yogur griego y 120 g de queso manchego fundido al sartén sobre pimientos morrones asados con cilantro y comino.
+- **Arquetipo Heptágono V17.0:** `heptagon_s47_atun_cazuela_murciana_mayonesa` · **Huella ADN:** `atun_agua|horno|heptagon_s47_atun_cazuela_murciana_mayonesa|aceite_coco+cilantro+comino+mayonesa`
+- **Nota Organoléptica y Clínica:** Escuela 4 (Asador Castellano): agotamiento exacto de los 560 g de atún en agua y de los 200 g de mayonesa de alacena ($0.00 MXN), complementados para 6 comensales con 120 g de queso manchego fundido al sartén sobre pimientos morrones asados con cilantro y comino.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
-  - *Termodinámica:* Salteado y fundido en sartén de hierro a 170°C.
-  - *Aromática y Sabor:* Tapa española de pimientos asados con atún, cilantro, comino, yogur griego y queso manchego fundido.
-  - *Arquitectura Textural:* Tiras dulces de morrón con relleno cremoso.
-  - *Punto Crítico de Control:* Agota al 100% los 560 g de Atún en agua de alacena (0 g saldo).
+  - *Termodinámica:* Salteado en sartén de hierro a 170°C, ligado fuera del fuego con la mayonesa y gratinado corto de manchego.
+  - *Aromática y Sabor:* Tapa española de pimientos asados con atún, cilantro, comino, emulsión de mayonesa al limón real y queso manchego fundido.
+  - *Arquitectura Textural:* Tiras dulces de morrón con relleno cremoso sin corte térmico.
+  - *Punto Crítico de Control:* Agota al 100% los 560 g de Atún en agua y los 200 g de Mayonesa de alacena (0 g saldo).
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
 | 🥩 Carnes, Pescados y Proteínas | **Atún en agua** | 93.33 | **560** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.5 | **3** | piezas |
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Yogur griego** | 40 | **240** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Mayonesa** | 33.33 | **200** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso manchego** | 20 | **120** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 4 | **24** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 8 | **48** | g |
@@ -1239,7 +1237,7 @@
 
 **Protocolo de Ejecución Paso a Paso:**
 1. Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con el ajo, el comino y el aceite de coco neutro.
-2. Incorporar los 560 g de atún drenado ligados con los 240 g de yogur griego, cilantro de la granja y jugo de limón real, cubrir con los 120 g de queso manchego rallado y tapar el sartén 2 minutos para fundir.
+2. Retirar un instante del fuego para integrar los 560 g de atún drenado ligados con los 200 g de mayonesa de alacena, cilantro de la granja y jugo de limón real; cubrir con los 120 g de queso manchego rallado y tapar el sartén 2 minutos para fundir.
 
 ##### Receta #36 [Miércoles · Cena (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Panna Cotta Nocturna de Yogur Griego, Manzanilla y Vainilla (4°C) con 34Plus®
 - **Técnica Culinaria:** `night_yogurt_chamomile_panna_cotta_34plus_s47`
@@ -1321,7 +1319,7 @@
 
 ##### Receta #38 [Jueves · Desayuno (6p) · Tiempo 2 — Plato Fuerte]: Galette Bistró sin Harina de Huevos a la Mantequilla Rellena de Duxelles de Champiñones, Cebolla, Hierbas Finas y Queso Manchego
 - **Técnica Culinaria:** `bistro_mushroom_duxelles_egg_galette_s47`
-- **Arquetipo Heptágono V17.0:** `heptagon_s47_huevo_galette_duxelles_bistro` · **Huella ADN:** `champinon|frio_ensamblaje|heptagon_s47_huevo_galette_duxelles_bistro|cebolla+champinon+hierbas_finas+mantequilla`
+- **Arquetipo Heptágono V17.0:** `heptagon_s47_huevo_galette_duxelles_bistro` · **Huella ADN:** `huevo|frio_ensamblaje|heptagon_s47_huevo_galette_duxelles_bistro|cebolla+champinon+hierbas_finas+mantequilla`
 - **Nota Organoléptica y Clínica:** Escuela 5 (Bistró Europeo): galette francesa al sartén con 3 huevos por comensal, mantequilla, duxelles de champiñones, hierbas finas y los últimos 120 g de queso manchego de alacena (total semanal = 1,000 g -> 0 g saldo).
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Cocción en sartén a 140°C.
@@ -1469,7 +1467,7 @@
 | **Limones** | **`96 g`** | ⚖️ **Dividir:** 48 g en Entrada + 48 g en Plato Fuerte |
 | **Romero** | **`6 g`** | 6 g en Entrada |
 | **Ajo** | **`4 g`** | 4 g en Entrada |
-| **Aceite de oliva** | **`18 ml`** | 18 ml en Entrada |
+| **Aceite de coco** | **`18 g`** | 18 g en Entrada |
 | **Sal de mar** | **`12 g`** | ⚖️ **Dividir:** 6 g en Entrada + 6 g en Plato Fuerte |
 | **Fajitas de mojarra** | **`900 g`** | 900 g en Plato Fuerte |
 | **Calabacitas** | **`360 g`** | 360 g en Plato Fuerte |
@@ -1484,7 +1482,7 @@
 | **34Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar el ajo y el romero de la granja en aceite de oliva y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos. | *Guarnición/Bebida:* Licuar los 120 g de queso Philadelphia con la nuez pecana de la granja, la canela molida, el extracto de vainilla y el agua purificada tibia a 50°C.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos. | *Guarnición/Bebida:* Licuar los 120 g de queso Philadelphia con la nuez pecana de la granja, la canela molida, el extracto de vainilla y el agua purificada tibia a 50°C.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Dorar los 900 g de fajitas de mojarra y las cintas de calabacita en la mitad de la mantequilla con sal de mar y pimienta negra. | *Cierre de Entrada:* Incorporar las cintas de acelga de la granja por 2 minutos y servir con jugo de limón real.
 3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Fundir el resto de la mantequilla con las 24 g de alcaparras y el jugo de limón real, bañar el pescado y acompañar con aguacate Hass. | *Fuego Lateral / Templado:* Incorporar los 30 g de 34Plus® y emulsionar 15 segundos.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
@@ -1505,11 +1503,11 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 8 | **48** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Romero** | 1 | **6** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.67 | **4** | g |
-| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 3 | **18** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Dorar el ajo y el romero de la granja en aceite de oliva y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.
+1. Dorar el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.
 2. Incorporar las cintas de acelga de la granja por 2 minutos y servir con jugo de limón real.
 
 ##### Receta #44 [Jueves · Cena (6p) · Tiempo 2 — Plato Fuerte]: Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass
@@ -1580,7 +1578,7 @@
 | **Cilantro** | **`24 g`** | 24 g en Plato Fuerte |
 | **Sal de mar** | **`6 g`** | 6 g en Plato Fuerte |
 | **Pimienta negra** | **`3 g`** | 3 g en Plato Fuerte |
-| **Yogur griego** | **`360 g`** | 360 g en Guarnición/Bebida |
+| **Yogur griego** | **`480 g`** | 480 g en Guarnición/Bebida |
 | **Cúrcuma** | **`12 g`** | 12 g en Guarnición/Bebida |
 | **Canela molida** | **`3 g`** | 3 g en Guarnición/Bebida |
 | **Limones** | **`45 g`** | 45 g en Guarnición/Bebida |
@@ -1588,9 +1586,9 @@
 | **33Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Perfumar los arilos de granada de la granja con el extracto de vainilla. | *Guarnición/Bebida:* Licuar en frío los 360 g de yogur griego con el agua purificada fría, la cúrcuma, la canela molida y el jugo de limón real.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Perfumar los arilos de granada de la granja con el extracto de vainilla. | *Guarnición/Bebida:* Licuar en frío los 480 g de yogur griego con el agua purificada fría, la cúrcuma, la canela molida y el jugo de limón real.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Asar la juliana de nopal de la granja con cilantro picado. | *Cierre de Entrada:* Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.
-3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Cuajar los 18 huevos batidos en capas sucesivas con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki. | *Fuego Lateral / Templado:* Incorporar los 30 g de 33Plus®, batir 10 segundos y servir a 8°C.
+3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki. | *Fuego Lateral / Templado:* Incorporar los 30 g de 33Plus®, batir 10 segundos y servir a 8°C.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
 
 ##### Receta #46 [Viernes · Desayuno (6p) · Tiempo 1 — Entrada]: Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana
@@ -1614,10 +1612,10 @@
 1. Perfumar los arilos de granada de la granja con el extracto de vainilla.
 2. Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.
 
-##### Receta #47 [Viernes · Desayuno (6p) · Tiempo 2 — Plato Fuerte]: Tamagoyaki Costero de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso
+##### Receta #47 [Viernes · Desayuno (6p) · Tiempo 2 — Plato Fuerte]: Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso
 - **Técnica Culinaria:** `coastal_nopal_goat_cheese_tamagoyaki_s47`
-- **Arquetipo Heptágono V17.0:** `heptagon_s47_huevo_tamagoyaki_nopal_cabra` · **Huella ADN:** `huevo|frio_ensamblaje|heptagon_s47_huevo_tamagoyaki_nopal_cabra|cilantro+mantequilla+nopales+queso_cabra`
-- **Nota Organoléptica y Clínica:** Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso de cabra de alacena.
+- **Arquetipo Heptágono V17.0:** `heptagon_s47_huevo_tamagoyaki_nopal_cabra` · **Huella ADN:** `huevo|sarten|heptagon_s47_huevo_tamagoyaki_nopal_cabra|cilantro+mantequilla+nopales+queso_cabra`
+- **Nota Organoléptica y Clínica:** Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado al sartén en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso de cabra de alacena.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Laminado en capas en sartén a 140°C.
   - *Aromática y Sabor:* Fusión Pacífico-Japón con mantequilla, nopal asado y cremosidad de queso de cabra.
@@ -1636,11 +1634,11 @@
 
 **Protocolo de Ejecución Paso a Paso:**
 1. Asar la juliana de nopal de la granja con cilantro picado.
-2. Cuajar los 18 huevos batidos en capas sucesivas con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki.
+2. Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki.
 
 ##### Receta #48 [Viernes · Desayuno (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Lassi Dorado Probiótico de Yogur Griego, Cúrcuma, Canela y Limón Real (8°C) con 33Plus®
 - **Técnica Culinaria:** `golden_turmeric_yogurt_lassi_33plus_s47`
-- **Nota Organoléptica y Clínica:** Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov): bebida probiótica oriental tipo Lassi que agota exactamente los últimos 360 g de yogur griego de alacena (total semanal = 2,000 g -> 0 g saldo), batidos en frío con cúrcuma, canela, limón real y 33Plus®.
+- **Nota Organoléptica y Clínica:** Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov): bebida probiótica oriental tipo Lassi que agota exactamente los últimos 480 g de yogur griego de alacena (total semanal = 2,000 g -> 0 g saldo), batidos en frío con cúrcuma, canela, limón real y 33Plus®.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Emulsión en frío a 8°C.
   - *Aromática y Sabor:* Lassi hindú-oriental de yogur griego, cúrcuma, canela y limón real.
@@ -1649,7 +1647,7 @@
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Yogur griego** | 60 | **360** | g |
+| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Yogur griego** | 80 | **480** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Cúrcuma** | 2 | **12** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Canela molida** | 0.5 | **3** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 7.5 | **45** | g |
@@ -1657,7 +1655,7 @@
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **33Plus®** | 5 | **30** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Licuar en frío los 360 g de yogur griego con el agua purificada fría, la cúrcuma, la canela molida y el jugo de limón real.
+1. Licuar en frío los 480 g de yogur griego con el agua purificada fría, la cúrcuma, la canela molida y el jugo de limón real.
 2. Incorporar los 30 g de 33Plus®, batir 10 segundos y servir a 8°C.
 
 #### 🍲 Viernes — Comida (14:30 hrs) · `👥 6 Comensales` | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.7 g`
@@ -1755,21 +1753,20 @@
 
 #### 🍽️ Viernes — Cena (20:00 hrs) · `👥 6 Comensales` | `615 kcal` · `Grasa: 51.0 g` · `Proteína: 35.0 g` · `Carbs Netos: 3.9 g` · `Fibra: 6.1 g`
 
-##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Viernes · Cena · 6 Comensales · `2 insumos unificados en 1 solo pesaje`)
+##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Viernes · Cena · 6 Comensales · `3 insumos unificados en 1 solo pesaje`)
 | Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |
 |---|---|---|
 | **Agua purificada** | **`1,920 ml`** | ⚖️ **Dividir:** 960 ml en Entrada + 960 ml en Guarnición/Bebida |
 | **Cilantro** | **`30 g`** | 30 g en Entrada |
 | **Limones** | **`48 g`** | 48 g en Entrada |
 | **Ajo** | **`8 g`** | ⚖️ **Dividir:** 4 g en Entrada + 4 g en Plato Fuerte |
-| **Aceite de oliva** | **`18 ml`** | 18 ml en Entrada |
+| **Aceite de coco** | **`42 g`** | ⚖️ **Dividir:** 18 g en Entrada + 24 g en Plato Fuerte |
 | **Sal de mar** | **`6 g`** | 6 g en Entrada |
 | **Pechuga de pollo** | **`660 g`** | 660 g en Plato Fuerte |
 | **Germinado** | **`100 g`** | 100 g en Plato Fuerte |
 | **Morrón** | **`2 piezas`** | 2 piezas en Plato Fuerte |
 | **Almendras fileteadas** | **`50 g`** | 50 g en Plato Fuerte |
 | **Salsa de soya** | **`24 ml`** | 24 ml en Plato Fuerte |
-| **Aceite de coco** | **`24 g`** | 24 g en Plato Fuerte |
 | **Pimienta negra** | **`3 g`** | 3 g en Plato Fuerte |
 | **Semillas y nueces mixtas** | **`60 g`** | 60 g en Guarnición/Bebida |
 | **Nuez de la India** | **`80 g`** | 80 g en Guarnición/Bebida |
@@ -1778,7 +1775,7 @@
 | **34Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar el ajo laminado en el aceite de oliva y verter los 960 ml de agua purificada con sal de mar; hervir 7 minutos. | *Guarnición/Bebida:* Infusionar el clavo de olor y la canela molida en el agua purificada caliente, colar y templar a 52°C.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar el ajo laminado en el aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 7 minutos. | *Guarnición/Bebida:* Infusionar el clavo de olor y la canela molida en el agua purificada caliente, colar y templar a 52°C.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Saltear las tiras de pechuga de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo. | *Cierre de Entrada:* Añadir al momento de servir el cilantro de la granja y el jugo de limón real.
 3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Incorporar los 100 g de germinado de alacena, la salsa de soya y los últimos 50 g de almendras fileteadas tostadas. | *Fuego Lateral / Templado:* Licuar con los 60 g de semillas y nueces mixtas, los 80 g de nuez de la India y los 30 g de 34Plus® hasta obtener una crema tersa.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
@@ -1798,11 +1795,11 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Cilantro** | 5 | **30** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 8 | **48** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.67 | **4** | g |
-| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 3 | **18** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Dorar el ajo laminado en el aceite de oliva y verter los 960 ml de agua purificada con sal de mar; hervir 7 minutos.
+1. Dorar el ajo laminado en el aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 7 minutos.
 2. Añadir al momento de servir el cilantro de la granja y el jugo de limón real.
 
 ##### Receta #53 [Viernes · Cena (6p) · Tiempo 2 — Plato Fuerte]: Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Almendras Fileteadas Tostadas y Salsa de Soya
@@ -2061,14 +2058,12 @@
 | **Limones** | **`96 g`** | ⚖️ **Dividir:** 48 g en Entrada + 48 g en Plato Fuerte |
 | **Ajo** | **`5 g`** | 5 g en Entrada |
 | **Orégano** | **`6 g`** | ⚖️ **Dividir:** 3 g en Entrada + 3 g en Plato Fuerte |
-| **Aceite de oliva** | **`18 ml`** | 18 ml en Entrada |
+| **Aceite de coco** | **`78 g`** | ⚖️ **Dividir:** 18 g en Entrada + 24 g en Plato Fuerte + 36 g en Guarnición/Bebida |
 | **Sal de mar** | **`12 g`** | ⚖️ **Dividir:** 6 g en Entrada + 6 g en Plato Fuerte |
-| **Sardinas** | **`260 g`** | 260 g en Plato Fuerte |
+| **Sardinas** | **`660 g`** | 660 g en Plato Fuerte |
 | **Queso de cabra** | **`120 g`** | 120 g en Plato Fuerte |
 | **Queso parmesano** | **`60 g`** | 60 g en Plato Fuerte |
 | **Morrón** | **`3 piezas`** | 3 piezas en Plato Fuerte |
-| **Aceitunas manzanilla** | **`5 g`** | 5 g en Plato Fuerte |
-| **Aceite de coco** | **`60 g`** | ⚖️ **Dividir:** 24 g en Plato Fuerte + 36 g en Guarnición/Bebida |
 | **Nuez de la India** | **`120 g`** | 120 g en Guarnición/Bebida |
 | **Nuez pecana** | **`60 g`** | 60 g en Guarnición/Bebida |
 | **Canela molida** | **`3 g`** | 3 g en Guarnición/Bebida |
@@ -2076,9 +2071,9 @@
 | **34Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar los últimos 5 g de ajo con el romero de la granja y el orégano en el aceite de oliva. | *Guarnición/Bebida:* Procesar en frío los últimos 120 g de nuez de la India con la nuez pecana de la granja, el aceite de coco neutro, la canela molida y los 30 g de 34Plus®; formar 12 trufas y refrigerar a 14°C.
-2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con aceite de coco neutro, orégano y los 260 g de lomos de sardina de alacena. | *Cierre de Entrada:* Verter los 960 ml de agua purificada con sal de mar, hervir 8 minutos y terminar con jugo de limón real.
-3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Coronar en el sartén caliente con los últimos 120 g de queso de cabra, los 60 g de queso parmesano, los 5 g de aceitunas manzanilla picadas y jugo de limón real. | *Fuego Lateral / Templado:* Servir las trufas acompañadas de una infusión digestiva elaborada a 58°C con los últimos 2 g de tomillo de alacena y los 900 ml de agua purificada.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar los últimos 5 g de ajo con el romero de la granja y el orégano en el aceite de coco neutro. | *Guarnición/Bebida:* Procesar en frío los últimos 120 g de nuez de la India con la nuez pecana de la granja, el aceite de coco neutro, la canela molida y los 30 g de 34Plus®; formar 12 trufas y refrigerar a 14°C.
+2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con aceite de coco neutro, orégano y los 660 g de lomos de sardina. | *Cierre de Entrada:* Verter los 960 ml de agua purificada con sal de mar, hervir 8 minutos y terminar con jugo de limón real.
+3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Coronar en el sartén caliente con los últimos 120 g de queso de cabra, los 60 g de queso parmesano y jugo de limón real. | *Fuego Lateral / Templado:* Servir las trufas acompañadas de una infusión digestiva elaborada a 58°C con los últimos 2 g de tomillo de alacena y los 900 ml de agua purificada.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
 
 ##### Receta #61 [Sábado · Cena (6p) · Tiempo 1 — Entrada]: Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada
@@ -2097,38 +2092,37 @@
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 8 | **48** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Ajo** | 0.83 | **5** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Orégano** | 0.5 | **3** | g |
-| 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 3 | **18** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 3 | **18** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Dorar los últimos 5 g de ajo con el romero de la granja y el orégano en el aceite de oliva.
+1. Dorar los últimos 5 g de ajo con el romero de la granja y el orégano en el aceite de coco neutro.
 2. Verter los 960 ml de agua purificada con sal de mar, hervir 8 minutos y terminar con jugo de limón real.
 
-##### Receta #62 [Sábado · Cena (6p) · Tiempo 2 — Plato Fuerte]: Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Aceitunas Manzanilla, Queso de Cabra y Queso Parmesano
+##### Receta #62 [Sábado · Cena (6p) · Tiempo 2 — Plato Fuerte]: Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano
 - **Técnica Culinaria:** `aegean_sardine_goat_cheese_pepper_skillet_s47`
-- **Arquetipo Heptágono V17.0:** `heptagon_s47_sardina_egea_cabra_sarten` · **Huella ADN:** `sardinas|sarten|heptagon_s47_sardina_egea_cabra_sarten|aceite_coco+aceitunas+morron+oregano`
-- **Nota Organoléptica y Clínica:** Escuela 7 (Mare Nostrum): cazuela mediterránea al sartén (sin horno) que agota exactamente los 260 g de sardinas, los últimos 120 g de queso de cabra (total = 200 g), los últimos 60 g de queso parmesano (total = 100 g) y los 5 g de aceitunas manzanilla de alacena ($0.00 MXN).
+- **Arquetipo Heptágono V17.0:** `heptagon_s47_sardina_egea_cabra_sarten` · **Huella ADN:** `sardinas|sarten|heptagon_s47_sardina_egea_cabra_sarten|aceite_coco+morron+oregano+queso_cabra`
+- **Nota Organoléptica y Clínica:** Escuela 7 (Mare Nostrum): cazuela mediterránea al sartén (sin horno) con 660 g de lomos de sardina para 6 comensales (agotando los 260 g de alacena + 400 g de mercado = 110 g/comensal), los últimos 120 g de queso de cabra (total = 200 g) y los últimos 60 g de queso parmesano (total = 100 g) de alacena.
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
   - *Termodinámica:* Salteado en sartén de hierro a 170°C.
-  - *Aromática y Sabor:* Sabor de las Islas Griegas con sardinas, pimiento morrón asado, queso de cabra, parmesano y aceitunas manzanilla.
+  - *Aromática y Sabor:* Sabor de las Islas Griegas con lomos de sardina, pimiento morrón asado, orégano, queso de cabra y parmesano.
   - *Arquitectura Textural:* Lomos jugosos con pimientos tiernos y medallones cremosos de queso de cabra.
-  - *Punto Crítico de Control:* Agota al 100% Sardinas (260 g), Queso de cabra (200 g), Queso parmesano (100 g) y Aceitunas manzanilla (5 g) en alacena.
+  - *Punto Crítico de Control:* Descuenta al 100% las Sardinas de alacena (260 g -> 0 g saldo) y agota Queso de cabra (200 g) y Queso parmesano (100 g).
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🥩 Carnes, Pescados y Proteínas | **Sardinas** | 43.33 | **260** | g |
+| 🥩 Carnes, Pescados y Proteínas | **Sardinas** | 110 | **660** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso de cabra** | 20 | **120** | g |
 | 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Queso parmesano** | 10 | **60** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Morrón** | 0.5 | **3** | piezas |
-| 🧂 Condimentos, Especias e Infusiones | **Aceitunas manzanilla** | 0.83 | **5** | g |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 8 | **48** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Orégano** | 0.5 | **3** | g |
 | 🥑 Grasas, Aceites y Semillas | **Aceite de coco** | 4 | **24** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Sal de mar** | 1 | **6** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con aceite de coco neutro, orégano y los 260 g de lomos de sardina de alacena.
-2. Coronar en el sartén caliente con los últimos 120 g de queso de cabra, los 60 g de queso parmesano, los 5 g de aceitunas manzanilla picadas y jugo de limón real.
+1. Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con aceite de coco neutro, orégano y los 660 g de lomos de sardina.
+2. Coronar en el sartén caliente con los últimos 120 g de queso de cabra, los 60 g de queso parmesano y jugo de limón real.
 
 ##### Receta #63 [Sábado · Cena (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Trufas Nocturnas (Fat Bombs) de Nuez de la India, Nuez Pecana, Canela y Aceite de Coco (14°C) con 34Plus® + Infusión Digestiva de Tomillo
 - **Técnica Culinaria:** `cashew_pecan_fat_bombs_thyme_34plus_s47`
@@ -2164,7 +2158,7 @@
 | 2 | 🥩 Proteína Alacena (1 Servicio completo) | **Pechuga de pavo** | 700 g | **700 g** | 0 g | **0 (\$0.00)** |
 | 3 | 🍗 **6 Piezas Anatómicas Sueltas YA COCIDAS (2 muslos, 2 piernas, 2 alas — 1 Servicio R#08, 0 ml caldo)** | **Pollo entero** | 6 piezas | **6 piezas** | 0 piezas | **0 (\$0.00)** |
 | 4 | 🥩 Proteína Alacena (1 Servicio nocturno R#35) | **Atún en agua** | 560 g | **560 g** | 0 g | **0 (\$0.00)** |
-| 5 | 🥩 Proteína Alacena (1 Servicio nocturno R#62) | **Sardinas** | 260 g | **260 g** | 0 g | **0 (\$0.00)** |
+| 5 | 🥩 Proteína Alacena (Descontada en R#62 de `660 g`) | **Sardinas** | 260 g | **660 g** | 0 g | **`400 g`** (Mercado) |
 | 6 | 🥩 Proteína Alacena (Descontada en R#14 de `660 g`) | **Carne molida** | 300 g | **660 g** | 0 g | **`360 g`** (Mercado) |
 | 7 | 🥚 Huevo en Alacena (`18 × 7 = 126 pzas`) | **Huevo** | 180 piezas | **126 piezas** | 54 piezas | **0 (\$0.00)** |
 | 8 | 🥩 Proteína Mercado (2 Servicios: R#05 y R#41) | **Flat steak** | 0 g | **1,320 g** | 0 g | **`1320 g`** (Mercado) |
@@ -2177,7 +2171,7 @@
 | 15 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Queso Philadelphia** | 360 g | **360 g** | 0 g | **0 (\$0.00)** |
 | 16 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Queso de cabra** | 200 g | **200 g** | 0 g | **0 (\$0.00)** |
 | 17 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Queso parmesano** | 100 g | **100 g** | 0 g | **0 (\$0.00)** |
-| 18 | 🥥 Grasa Cocción Caliente en Alacena | **Aceite de coco** | 1,000 g | **390 g** | 610 g | **0 (\$0.00)** |
+| 18 | 🥥 Grasa Cocción Caliente en Alacena | **Aceite de coco** | 1,000 g | **534 g** | 466 g | **0 (\$0.00)** |
 | 19 | 🥜 Fruto Seco Alacena (Vaciado Exacto 100%) | **Nuez de la India** | 1,000 g | **1,000 g** | 0 g | **0 (\$0.00)** |
 | 20 | 🥜 Semillas Alacena (Vaciado Exacto 100%) | **Semillas y nueces mixtas** | 600 g | **600 g** | 0 g | **0 (\$0.00)** |
 | 21 | 🥜 Fruto Seco Alacena (Vaciado Exacto 100%) | **Almendras fileteadas** | 100 g | **100 g** | 0 g | **0 (\$0.00)** |
@@ -2193,7 +2187,7 @@
 | 31 | 💊 Gelificante Alacena (2 Gelificados × `16 g`) | **Grenetina** | 32 g | **32 g** | 0 g | **0 (\$0.00)** |
 | 32 | 🌼 Infusión Alacena (Vaciado Exacto 100%) | **Manzanilla** | 12 g | **12 g** | 0 g | **0 (\$0.00)** |
 | 33 | 🌿 Especia Alacena (Vaciado Exacto 100%) | **Tomillo** | 8 g | **8 g** | 0 g | **0 (\$0.00)** |
-| 34 | 🫒 Condimento Alacena (Vaciado Exacto 100%) | **Aceitunas manzanilla** | 5 g | **5 g** | 0 g | **0 (\$0.00)** |
+| 34 | 🥚 Emulsión Alacena (Vaciado Exacto 100% en R#35) | **Mayonesa** | 200 g | **200 g** | 0 g | **0 (\$0.00)** |
 
 ### 3.1 Cosecha Activa en Granja El Herami (`\$0.00 MXN`)
 | # | Cultivo Activo en Granja El Herami | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |
@@ -2211,33 +2205,33 @@
 ### 3.2 Existencias Consolidadas en Alacena y Refrigerador (`\$0.00 MXN` de Compra)
 | # | Insumo Canónico | Stock en Alacena | Demanda Semanal (6p) | Saldo en Alacena | Estado de Cobertura |
 |---|---|---|---|---|---|
-| 1 | **Aceite de coco** | 1,000 g | **390 g** | 610 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 2 | **Aceitunas manzanilla** | 5 g | **5 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 3 | **Achiote** | 92 g | **48 g** | 44 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 4 | **Ajo** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 5 | **Alcaparras** | 44 g | **44 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 6 | **Almendras fileteadas** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 7 | **Apio** | 500 g | **500 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 8 | **Atún en agua** | 560 g | **560 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 9 | **Canela molida** | 725 g | **31 g** | 694 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 10 | **Clavo de olor** | 48 g | **2 g** | 46 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 11 | **Comino** | 47 g | **9 g** | 38 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 12 | **Cúrcuma** | 82 g | **42 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 13 | **Espinacas** | 260 g | **260 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 14 | **Extracto de vainilla** | 376 ml | **48 ml** | 328 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 15 | **Fajitas de mojarra** | 2,720 g | **2,720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 16 | **Frambuesas** | 220 g | **220 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 17 | **Fresas** | 200 g | **200 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 18 | **Germinado** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 19 | **Grenetina** | 32 g | **32 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 20 | **Hierbas finas** | 13 g | **13 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 21 | **Huevo** | 180 piezas | **126 piezas** | 54 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 22 | **Jitomate** | 1 piezas | **1 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 23 | **Leche de coco** | 500 ml | **500 ml** | 0 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 24 | **Mantequilla** | 720 g | **720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 25 | **Manzanilla** | 12 g | **12 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 1 | **Aceite de coco** | 1,000 g | **534 g** | 466 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 2 | **Achiote** | 92 g | **48 g** | 44 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 3 | **Ajo** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 4 | **Alcaparras** | 44 g | **44 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 5 | **Almendras fileteadas** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 6 | **Apio** | 500 g | **500 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 7 | **Atún en agua** | 560 g | **560 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 8 | **Canela molida** | 725 g | **31 g** | 694 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 9 | **Clavo de olor** | 48 g | **2 g** | 46 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 10 | **Comino** | 47 g | **9 g** | 38 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 11 | **Cúrcuma** | 82 g | **42 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 12 | **Espinacas** | 260 g | **260 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 13 | **Extracto de vainilla** | 376 ml | **48 ml** | 328 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 14 | **Fajitas de mojarra** | 2,720 g | **2,720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 15 | **Frambuesas** | 220 g | **220 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 16 | **Fresas** | 200 g | **200 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 17 | **Germinado** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 18 | **Grenetina** | 32 g | **32 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 19 | **Hierbas finas** | 13 g | **13 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 20 | **Huevo** | 180 piezas | **126 piezas** | 54 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 21 | **Jitomate** | 1 piezas | **1 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 22 | **Leche de coco** | 500 ml | **500 ml** | 0 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 23 | **Mantequilla** | 720 g | **720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 24 | **Manzanilla** | 12 g | **12 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 25 | **Mayonesa** | 200 g | **200 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 26 | **Nuez de la India** | 1,000 g | **1,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 27 | **Orégano** | 98 g | **36 g** | 62 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 27 | **Orégano** | 98 g | **39 g** | 59 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 28 | **Pechuga de pavo** | 700 g | **700 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 29 | **Pimienta negra** | 124 g | **37 g** | 87 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 30 | **Pistaches** | 50 g | **50 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
@@ -2249,20 +2243,18 @@
 | 36 | **Sal con ajo** | 52 g | **6 g** | 46 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 37 | **Sal de mar** | 1,000 g | **240 g** | 760 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 38 | **Salsa de soya** | 250 ml | **24 ml** | 226 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 39 | **Salsa inglesa** | 200 ml | **18 ml** | 182 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 40 | **Sardinas** | 260 g | **260 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 41 | **Semillas y nueces mixtas** | 600 g | **600 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 42 | **Té chai** | 38 g | **18 g** | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 43 | **Tomillo** | 8 g | **8 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 44 | **Vinagre de vino tinto** | 250 ml | **36 ml** | 214 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 45 | **Yogur griego** | 2,000 g | **2,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 39 | **Semillas y nueces mixtas** | 600 g | **600 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 40 | **Té chai** | 38 g | **18 g** | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 41 | **Tomillo** | 8 g | **8 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 42 | **Vinagre de vino tinto** | 250 ml | **36 ml** | 214 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 43 | **Yogur griego** | 2,000 g | **2,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 
 ### 3.3 Lista de Compras Netas de Mercado — Semana 47
 | # | Categoría en UI (`#v-shop`) | Insumo a Comprar en Mercado | Demanda Total Semanal (6p) | Stock en Alacena | Compra Neta Exacta (`#v-shop`) | Unidad |
 |---|---|---|---|---|---|---|
 | 1 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **33Plus®** | 420 g | 0 g | **`420 g`** | g |
 | 2 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **34Plus®** | 420 g | 0 g | **`420 g`** | g |
-| 3 | 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 306 ml | 0 ml | **`306 ml`** | ml |
+| 3 | 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 162 ml | 0 ml | **`162 ml`** | ml |
 | 4 | 🥑 Grasas, Aceites y Semillas | **Aguacate** | 7 piezas | 0 piezas | **`7 piezas`** | piezas |
 | 5 | 🥬 Verduras, Hortalizas y Frescos | **Brócoli** | 780 g | 0 g | **`780 g`** | g |
 | 6 | 🥬 Verduras, Hortalizas y Frescos | **Calabacitas** | 2,120 g | 0 g | **`2120 g`** | g |
@@ -2277,20 +2269,21 @@
 | 15 | 🥬 Verduras, Hortalizas y Frescos | **Morrón** | 14 piezas | 0 piezas | **`14 piezas`** | piezas |
 | 16 | 🥩 Carnes, Pescados y Proteínas | **Pechuga de pollo** | 1,320 g | 0 g | **`1320 g`** | g |
 | 17 | 🥬 Verduras, Hortalizas y Frescos | **Pepino** | 1,320 g | 0 g | **`1320 g`** | g |
-| 18 | 🥬 Verduras, Hortalizas y Frescos | **Tomate** | 240 g | 0 g | **`240 g`** | g |
+| 18 | 🥩 Carnes, Pescados y Proteínas | **Sardinas** | 660 g | 260 g | **`400 g`** | g |
+| 19 | 🥬 Verduras, Hortalizas y Frescos | **Tomate** | 240 g | 0 g | **`240 g`** | g |
 
 #### 3.3.1 Espejo Exacto por Tarjeta de Categoría en el DOM Real de `#v-shop` (`render3DShoppingList()`)
 | Categoría Renderizada en `#v-shop` | Badge de Conteo en UI | Ítems Renderizados Carácter por Carácter en Pantalla |
 |---|---|---|
 | **💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA** | **`2 POR COMPRAR`** | • **33Plus®**: `420 g`<br>• **34Plus®**: `420 g` |
-| **🥑 Grasas, Aceites y Semillas** | **`2 POR COMPRAR`** | • **Aceite de oliva**: `306 ml`<br>• **Aguacate**: `7 piezas` |
-| **🥩 Carnes, Pescados y Proteínas** | **`4 POR COMPRAR`** | • **Carne molida**: `360 g` *(Alacena: 300 g | Bruto: 660 g)*<br>• **Flat steak**: `1320 g`<br>• **Lomo de salmón**: `1440 g`<br>• **Pechuga de pollo**: `1320 g` |
+| **🥑 Grasas, Aceites y Semillas** | **`2 POR COMPRAR`** | • **Aceite de oliva**: `162 ml`<br>• **Aguacate**: `7 piezas` |
+| **🥩 Carnes, Pescados y Proteínas** | **`5 POR COMPRAR`** | • **Carne molida**: `360 g` *(Alacena: 300 g | Bruto: 660 g)*<br>• **Flat steak**: `1320 g`<br>• **Lomo de salmón**: `1440 g`<br>• **Pechuga de pollo**: `1320 g`<br>• **Sardinas**: `400 g` *(Alacena: 260 g | Bruto: 660 g)* |
 | **🥬 Verduras, Hortalizas y Frescos** | **`10 POR COMPRAR`** | • **Brócoli**: `780 g`<br>• **Calabacitas**: `2120 g`<br>• **Cebolla**: `10 piezas`<br>• **Champiñón**: `1200 g`<br>• **Coliflor**: `360 g`<br>• **Ejotes**: `660 g`<br>• **Lechuga**: `4 piezas`<br>• **Morrón**: `14 piezas`<br>• **Pepino**: `1320 g`<br>• **Tomate**: `240 g` |
 
 ### 3.4 Registro de Cuarentena Normativa y Exclusión Activa (`NOM-004` / `deletedPantryItems` / `deletedFarmItems`)
 | Origen | Insumos Excluidos / Bloqueados en Cuarentena | Estado en las 63 Recetas |
 |---|---|---|
-| **Cuarentena Normativa (`NOM-004`, `status: prohibited`)** | `Manteca de cerdo` (`0 g` — Regla 0 Cerdo), `Rajas de jalapeño` (`314 g` — Regla 0 Picante), `Tajín` (`200 g` — Regla 0 Picante), `Café colombiano` (`100 g` — Regla `[R3]`), `Concentrado de caldo de pollo en polvo` (`250 g` — maltodextrina y glutamato), `Chile chipotle` (`1,320 g` — irritante de mucosa gástrica), `Frijol pinto` (`1 costal` — almidón), `Salsa BBQ`, `Salsa cátsup`, `Harina de trigo`, `Harina para hot cakes`, `Granola`, `Cerezas`, `Miguelito`, `Chamoy`, `Cacahuate enchilado`, `Chocolate para cobertura`, `Jugo Maggi`, `Pulpa de arándano`, `Vinagre balsámico` | 🚫 **0.00 g / 0 apariciones** (Bloqueados en Cuarentena Estricta) |
+| **Cuarentena Normativa (`NOM-004`, `status: prohibited`)** | `Manteca de cerdo` (`0 g` — Regla 0 Cerdo), `Rajas de jalapeño` (`314 g` — Regla 0 Picante), `Tajín` (`200 g` — Regla 0 Picante), `Café colombiano` (`100 g` — Regla `[R3]`), `Salsa inglesa` (`200 ml` — melaza y azúcares añadidos), `Concentrado de caldo de pollo en polvo` (`250 g` — maltodextrina y glutamato), `Chile chipotle` (`1,320 g` — irritante de mucosa gástrica), `Frijol pinto` (`1 costal` — almidón), `Salsa BBQ`, `Salsa cátsup`, `Harina de trigo`, `Harina para hot cakes`, `Granola`, `Cerezas`, `Miguelito`, `Chamoy`, `Cacahuate enchilado`, `Chocolate para cobertura`, `Jugo Maggi`, `Pulpa de arándano`, `Vinagre balsámico` | 🚫 **0.00 g / 0 apariciones** (Bloqueados en Cuarentena Estricta) |
 | **Alacena (`deletedPantryItems`)** | `Elote`, `Higos`, `Nogada`, `Zanahoria`, `Agua mineral`, `Queso de cabra con arándano`, `Queso doble crema` | 🚫 **0.00 g / 0 apariciones** (Erradicados al 100%) |
 | **Granja (`deletedFarmItems`)** | `Zarzamoras`, `Frambuesas`, `Fresas`, `Menta`, `Arándanos`, `Epazote`, `Calabacitas`, `Coliflor`, `Espinacas`, `Ejotes`, `Espárragos`, `Arúgula`, `Brócoli` | 🔄 **Reclasificados de Granja a Alacena/Mercado** según disponibilidad real |
 
@@ -2338,7 +2331,7 @@
 |---|---|---|---|---|---|---|
 | **Desayuno** | Frittata Castellana al Sartén de Huevos a la Mantequilla con Medallones de Calabacita Confitada, Cebolla, Orégano y Queso Manchego | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
 | **Comida** | Pechuga de Pollo al Ajillo Castellano Dorada en Mantequilla con Champiñones Laminados, Romero de la Granja, Limón Real y Aguacate Hass | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.7 g |
-| **Cena** | Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Salsa Cremosa de Yogur Griego, Cilantro, Comino y Queso Manchego Fundido | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
+| **Cena** | Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Emulsión Cremosa de Mayonesa al Limón, Cilantro, Comino y Queso Manchego Fundido | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
 
 #### 📊 Jueves 19 Nov de 2026 — 🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
@@ -2350,7 +2343,7 @@
 #### 📊 Viernes 20 Nov de 2026 — 🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)
 | Servicio | Platillo Principal (`main.title`) | Calorías | Grasas | Proteína | Carbs Netos | Fibra |
 |---|---|---|---|---|---|---|
-| **Desayuno** | Tamagoyaki Costero de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
+| **Desayuno** | Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
 | **Comida** | Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.7 g |
 | **Cena** | Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Almendras Fileteadas Tostadas y Salsa de Soya | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
 
@@ -2359,7 +2352,7 @@
 |---|---|---|---|---|---|---|
 | **Desayuno** | Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano) | 596 kcal | 49.0 g | 34.5 g | 4.2 g | 6.4 g |
 | **Comida** | Fajitas de Mojarra al Limone de la Trattoria Doradas en Mantequilla con Champiñones, Alcaparras y Aguacate Hass | 774 kcal | 65.0 g | 43.0 g | 4.3 g | 6.7 g |
-| **Cena** | Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Aceitunas Manzanilla, Queso de Cabra y Queso Parmesano | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
+| **Cena** | Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano | 615 kcal | 51.0 g | 35.0 g | 3.9 g | 6.1 g |
 
 ### 4.3 Cronograma Biotecnológico `33Plus®` y `34Plus®` (4 Tomas Diarias — `420 g` Semanales por Fórmula)
 | Toma | Horario / Momento | Fórmula Funcional | Dosis Individual | Demanda Semanal (6p) | Ubicación en Menú |
@@ -2386,16 +2379,16 @@
 | **Martes · Cena** | *E:* Caldo Clarificado de Acelgas de la Granja, Tomate y Hojas de Laurel<br>*P:* Cazuela de Champiñones Salteados al Ajillo y Hierbas Finas en Fondue Cremoso de Queso Manchego y Queso Ricotta al Sartén `[champinon_fondue_manchego_ricotta]` | *E:* Sopa de Lima Yucateca en Fondo Claro de Pollo con Jitomate, Ajo Asado, Hojas de Laurel, Cilantro de la Granja y Limón Real<br>*P:* Milanesa de Pechuga de Pollo en Costra Crujiente de Nuez Pecana, Nuez de la India y Semillas y Nueces Mixtas al Horno sobre Cama de Espinacas y Floretes de Brócoli al Aceite de Coco `[pollo_milanesa_costra_nuez]` | *E:* Sopa de Lima Yucateca de Fondo Claro de Pollo con Juliana de Pimiento Morrón, Orégano y Cilantro de la Granja<br>*P:* Fajitas de Pechuga de Pavo al Pibil Suave (Achiote, Limón Real, Orégano y Ajo) sobre Pencas de Nopal Asado y Abanico de Aguacate Hass `[heptagon_s46_pavo_pibil_nopal]` | **E:** Sopa de Lima Yucateca en Infusión de Agua Purificada con Ajo Dorado, Orégano, Cilantro de la Granja y Limón Real<br>**P:** Fajitas de Mojarra Tabasqueñas al Horno en Salsa Cremosa de Yogur Griego, Cilantro de la Granja y Comino sobre Medallones de Calabacita con Aguacate Hass `[heptagon_s47_mojarra_horno_yogur_tabasco]` | ✅ `0 Colisión` |
 | **Miércoles · Desayuno** | *E:* Reducción Templada de Zarzamoras al Sartén con Semillas de Chía, Nuez Pecana de la Granja y Extracto de Vainilla<br>*P:* Huevos al Plato (Oeufs sur le Plat) Cuajados a Fuego Lento en Crema de Queso Philadelphia, Queso Ricotta, Ejotes Tiernos y Hierbas Finas `[huevo_al_plato_philadelphia_ricotta]` | *E:* Tartar de Zarzamora a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>*P:* Tortilla Española Cetogénica al Sartén de Huevos de Granja Rellena de Nopales Tiernos de la Granja y Triple Cebolla Confitada en Aceite de Coco Neutro `[huevo_tortilla_espanola_calabacita]` | *E:* Espejo de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>*P:* Huevos Rotos del Mesón Castellano Estrellados sobre Cama de Champiñones Laminados, Cebolla Confitada, Ajo Dorado y Lascas de Queso Manchego `[heptagon_s46_huevo_rotos_castellanos]` | **E:** Espejo Castellano de Fresas y Rubíes de Granada de la Granja al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>**P:** Frittata Castellana al Sartén de Huevos a la Mantequilla con Medallones de Calabacita Confitada, Cebolla, Orégano y Queso Manchego `[heptagon_s47_huevo_frittata_castellana]` | ✅ `0 Colisión` |
 | **Miércoles · Comida** | *E:* Ensalada Griega de Lechuga Romana, Germinado de Alfalfa y Cilantro de la Granja al Limón Real<br>*P:* Kefta Árabe de Carne Molida de Res Estofada al Sartén con Tzatziki de Yogur Griego, Pepino y Cilantro de la Granja `[res_kofta_tzatziki]` | *E:* Sopa Castellana de Cebolla Caramelizada y Ajo en Fondo de Res con Hojas de Laurel, Tomillo y Aceite de Coco Neutro<br>*P:* Fajitas de Mojarra a la Murciana en Cazuela de Jitomate Asado, Ajo, Alcaparras, Aceitunas Manzanilla, Orégano y Aceite de Coco Neutro `[pescado_a_la_murciana_cazuela]` | *E:* Ensalada Mediterránea del Asador de Lechuga Romana, Aceitunas Manzanilla, Limón Real y Aceite de Oliva VEVO<br>*P:* Lomo de Salmón a la Donostiarra Estilo Asador Vasco al Sartén con Ajo Laminado Dorado, Pimiento Morrón Asado, Limón Real y Aguacate Hass `[heptagon_s46_salmon_donostiarra_vasco]` | **E:** Ensalada del Mesón Castellano de Pepino en Láminas, Orégano, Limón Real y Aceite de Oliva VEVO<br>**P:** Pechuga de Pollo al Ajillo Castellano Dorada en Mantequilla con Champiñones Laminados, Romero de la Granja, Limón Real y Aguacate Hass `[heptagon_s47_pollo_ajillo_castellano]` | ✅ `0 Colisión` |
-| **Miércoles · Cena** | *E:* Cazuelita Tibia de Espinacas Salteadas con Dados de Aguacate Hass, Queso Ricotta y Nuez Pecana de la Granja<br>*P:* Blanquette Francesa de Fajitas de Mojarra Pochadas en Mantequilla, Cilantro de la Granja, Pimiento Morrón, Finas Hierbas y Limón Real `[mojarra_blanquette_limon]` | *E:* Ensalada de Lechuga Romana y Hojas de Acelgas de la Granja con Limón Real, Orégano y Aceite de Oliva<br>*P:* Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno y Gajos de Aguacate Hass `[atun_pimientos_rellenos_gratinados]` | *E:* Sopa Castellana de Cebolla Confitada, Ajo Dorado, Hojas de Laurel y Espinaca en Fondo Claro de Pollo<br>*P:* Fajitas de Mojarra al Tronco Estilo Asador Español al Sartén con Ajo Laminado, Romero de la Granja, Limón Real y Medallones de Calabacita `[heptagon_s46_mojarra_tronco_asador]` | **E:** Sopa Castellana de Cebolla Confitada, Ajo Dorado y Romero de la Granja en Infusión de Agua Purificada<br>**P:** Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Salsa Cremosa de Yogur Griego, Cilantro, Comino y Queso Manchego Fundido `[heptagon_s47_atun_cazuela_murciana_yogur]` | ✅ `0 Colisión` |
+| **Miércoles · Cena** | *E:* Cazuelita Tibia de Espinacas Salteadas con Dados de Aguacate Hass, Queso Ricotta y Nuez Pecana de la Granja<br>*P:* Blanquette Francesa de Fajitas de Mojarra Pochadas en Mantequilla, Cilantro de la Granja, Pimiento Morrón, Finas Hierbas y Limón Real `[mojarra_blanquette_limon]` | *E:* Ensalada de Lechuga Romana y Hojas de Acelgas de la Granja con Limón Real, Orégano y Aceite de Oliva<br>*P:* Pimientos Morrones Asados Rellenos de Atún en Agua, Queso Cottage, Yogur Griego y Cebolla con Costra Gratinada de Queso Manchego al Horno y Gajos de Aguacate Hass `[atun_pimientos_rellenos_gratinados]` | *E:* Sopa Castellana de Cebolla Confitada, Ajo Dorado, Hojas de Laurel y Espinaca en Fondo Claro de Pollo<br>*P:* Fajitas de Mojarra al Tronco Estilo Asador Español al Sartén con Ajo Laminado, Romero de la Granja, Limón Real y Medallones de Calabacita `[heptagon_s46_mojarra_tronco_asador]` | **E:** Sopa Castellana de Cebolla Confitada, Ajo Dorado y Romero de la Granja en Infusión de Agua Purificada<br>**P:** Cazuela Murciana al Sartén de Pimientos Morrones Asados y Atún en Emulsión Cremosa de Mayonesa al Limón, Cilantro, Comino y Queso Manchego Fundido `[heptagon_s47_atun_cazuela_murciana_mayonesa]` | ✅ `0 Colisión` |
 | **Jueves · Desayuno** | *E:* Coulis Tibio de Frambuesas a la Canela con Semillas de Chía, Nuez de la India y Nuez Pecana<br>*P:* Huevos Nube al Horno con Claras Montadas, Yema Líquida, Queso Manchego y Espárragos `[huevo_nube_montado]` | *E:* Compota Fría de Granadas de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>*P:* Focaccia Keto Horneada de Coliflor y 4 Quesos (Queso Manchego, Queso Cottage, Queso Doble Crema y Queso Philadelphia) Gratinada con Queso Mozzarella, Huevos al Plato y Romero de la Granja `[focaccia_keto_tres_quesos_esparragos]` | *E:* Macerado Bistró de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>*P:* Galette Bistró sin Harina de Huevos Dorados al Sartén Rellena de Espinacas Tiernas, Cebolla Caramelizada, Queso Manchego y Queso Cottage `[heptagon_s46_huevo_galette_bistro]` | **E:** Copa Bistró de Rubíes de Granada de la Granja con Almendras Fileteadas, Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>**P:** Galette Bistró sin Harina de Huevos a la Mantequilla Rellena de Duxelles de Champiñones, Cebolla, Hierbas Finas y Queso Manchego `[heptagon_s47_huevo_galette_duxelles_bistro]` | ✅ `0 Colisión` |
 | **Jueves · Comida** | *E:* Tiradito Templado de Floretes de Brócoli al Vapor con Emulsión de Aceite de Oliva, Hojas de Laurel y Cilantro de la Granja<br>*P:* Terrina Caliente de Lomos de Sardina en Salsa Espesa de Nuez de la India, Tomate Asado, Comino y Cilantro de la Granja `[sardina_pipian_nuez_india]` | *E:* Ensalada Bistró de Lechuga Romana, Pepino y Pistaches Tostados con Vinagreta Francesa de Mostaza, Limón Real, Orégano y Aceite de Oliva<br>*P:* Cazuela de Queso Relleno Yucateco (Queso Manchego, Queso Doble Crema y Queso Cottage Fundidos) con Picadillo de Carne Molida de Res al Ajo, Aceitunas Manzanilla, Alcaparras, Pimiento Morrón y Abanico de Aguacate Hass en Caldo K'ool de Jitomate `[res_queso_relleno_yucateco]` | *E:* Carpaccio Bistró de Pepino con Vinagreta Francesa de Mostaza, Limón Real, Cilantro y Aceite de Oliva<br>*P:* Roast Beef de Flat Steak al Sartén en Reducción Francesa de Cebolla Caramelizada, Champiñones, Ajo, Tomillo y Mantequilla de Hierbas `[heptagon_s46_res_roast_beef_bistro]` | **E:** Ensalada Bistró de Lechuga Romana, Vinagre de Vino Tinto, Limón Real y Aceite de Oliva VEVO<br>**P:** Medallones de Flat Steak al Sartén Bistró con Mantequilla de Tomillo, Cebolla Caramelizada y Ejotes Franceses `[heptagon_s47_res_medallones_tomillo_bistro]` | ✅ `0 Colisión` |
 | **Jueves · Cena** | *E:* Mosaico Templado de Ejotes Tiernos al Vapor con Dados de Aguacate Hass y Nuez de la India al Limón Real<br>*P:* Piezas de Pollo Entero Braseadas a la Cazadora (Pechuga, Muslo y Pierna) con Jitomate, Champiñones, Pimiento Morrón, Hojas de Laurel y Tomillo `[pollo_cacciatora_cazadora]` | *E:* Consomé Bistró de Fondo Claro de Pollo al Tomillo y Limón Real<br>*P:* Focaccia Keto de Pollo Entero en Piezas Deshebradas (Pechuga, Muslo y Pierna), Champiñones Salteados, Espinacas, Queso Cottage, Queso Doble Crema, Queso Manchego y Queso Mozzarella Dorada al Sartén de Hierro con Romero `[focaccia_keto_hongos_gratinados]` | *E:* Consomé Bistró de Fondo Claro de Pollo con Floretes Tiernos de Coliflor al Romero de la Granja y Aceite de Oliva<br>*P:* Ensalada Asiática Tibia Estilo Alda Bistró de Fajitas de Pechuga de Pollo al Sartén sobre Hojas de Lechuga con Aguacate Hass, Almendras Fileteadas, Semillas Mixtas y Vinagreta de Limón y Aceite de Coco `[heptagon_s46_pollo_ensalada_alda]` | **E:** Consomé Bistró de Infusión de Hojas de Acelga de la Granja, Ajo Dorado y Romero en Agua Purificada<br>**P:** Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass `[heptagon_s47_mojarra_grenobloise_bistro]` | ✅ `0 Colisión` |
-| **Viernes · Desayuno** | *E:* Fresas Glaseadas al Sartén a la Canela con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Crepas Sin Harina de Huevo al Sartén Rellenas de Acelgas de la Granja Salteadas en Crema Ácida y Queso Ricotta `[huevo_crepa_rellena_acelgas]` | *E:* Coulis Rústico de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>*P:* Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla, Aceite de Coco y Emulsión de Curry Dorado con Leche de Coco y Cúrcuma) `[huevo_omurice_keto_coliflor]` | *E:* Copa Oriental de Fresas en Cuartos con Semillas y Nueces Mixtas, Nuez de la India, Nuez Pecana y Vainilla<br>*P:* Tamagoyaki Imperial Japonés (Rollos Laminados de Huevo al Sartén Rellenos de Queso Philadelphia, Calabacitas en Bastones Finos, Germinado y Cebolla en Aceite de Coco) `[heptagon_s46_huevo_tamagoyaki_imperial]` | **E:** Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>**P:** Tamagoyaki Costero de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso `[heptagon_s47_huevo_tamagoyaki_nopal_cabra]` | ✅ `0 Colisión` |
+| **Viernes · Desayuno** | *E:* Fresas Glaseadas al Sartén a la Canela con Semillas de Chía y Nuez Pecana de la Granja<br>*P:* Crepas Sin Harina de Huevo al Sartén Rellenas de Acelgas de la Granja Salteadas en Crema Ácida y Queso Ricotta `[huevo_crepa_rellena_acelgas]` | *E:* Coulis Rústico de Fresas al Limón Real con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>*P:* Omurice Keto Japonés (Omelette Terso de Huevos Relleno de Grano Fino de Coliflor Salteado al Wok con Germinado, Cebolla, Aceite de Coco y Emulsión de Curry Dorado con Leche de Coco y Cúrcuma) `[huevo_omurice_keto_coliflor]` | *E:* Copa Oriental de Fresas en Cuartos con Semillas y Nueces Mixtas, Nuez de la India, Nuez Pecana y Vainilla<br>*P:* Tamagoyaki Imperial Japonés (Rollos Laminados de Huevo al Sartén Rellenos de Queso Philadelphia, Calabacitas en Bastones Finos, Germinado y Cebolla en Aceite de Coco) `[heptagon_s46_huevo_tamagoyaki_imperial]` | **E:** Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>**P:** Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso `[heptagon_s47_huevo_tamagoyaki_nopal_cabra]` | ✅ `0 Colisión` |
 | **Viernes · Comida** | *E:* Ensalada Mediterránea de Cogollos de Lechuga Romana, Jitomate y Cilantro de la Granja al Limón Real<br>*P:* Pastel de Carne Molida de Res al Horno Gratinado con Queso Manchego, Queso Ricotta y Corazón de Espinacas `[res_pastel_horno_manchego]` | *E:* Ensalada Oriental Sunomono de Pepino en Láminas con Nuez de la India, Limón Real y Aceite de Oliva<br>*P:* Teppanyaki de Flat Steak a la Plancha con Floretes de Brócoli al Wok, Pimiento Morrón, Cebolla Asada, Ajo y Germinado en Aceite de Coco `[res_teppanyaki_plancha_germinado]` | *E:* Ensalada Japonesa Sunomono de Pepino Laminado, Limón Real, Cilantro de la Granja y Aceite de Oliva<br>*P:* Lettuce Wraps Orientales al Wok de Carne Molida de Res con Jengibre, Ajo, Germinado, Cebolla, Aguacate Hass y Nuez de la India Tostada en Hojas de Lechuga `[heptagon_s46_res_lettuce_wraps]` | **E:** Ensalada Oriental Sunomono de Pepino en Cintas, Cilantro de la Granja, Limón Real y Aceite de Oliva VEVO<br>**P:** Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass `[heptagon_s47_salmon_veloute_coco_brocoli]` | ✅ `0 Colisión` |
 | **Viernes · Cena** | *E:* Medallones de Calabacita Tierna Braseados en Caldo de Leche de Coco y Romero de la Granja<br>*P:* Croquetas Doradas de Lomo de Atún y Queso Ricotta al Sartén en Aceite de Coco con Nuez Pecana sobre Pepino al Limón Real `[atun_croquetas_ricotta_sarten]` | *E:* Caldo Oriental al Curry Dorado de Fondo de Pollo, Leche de Coco, Cúrcuma, Cilantro de la Granja y Limón Real<br>*P:* Lomos de Sardina Bicolor a las Brasas Estilo Contramar (Mitad en Adobo Rojo de Achiote y Jitomate, Mitad en Emulsión Verde de Cilantro, Tomate y Aguacate Hass) sobre Calabacitas `[mojarra_bicolor_estilo_contramar]` | *E:* Caldo Claro del Pacífico de Fondo de Pollo con Hojas de Espinaca, Jengibre, Cilantro y Limón Real<br>*P:* Fajitas de Mojarra en Curry Dorado Tailandés de Leche de Coco, Cúrcuma, Ajo y Cilantro con Floretes de Brócoli y Pimiento Morrón al Wok `[heptagon_s46_mojarra_curry_tailandes]` | **E:** Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real<br>**P:** Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Almendras Fileteadas Tostadas y Salsa de Soya `[heptagon_s47_pollo_teppanyaki_almendras]` | ✅ `0 Colisión` |
 | **Sábado · Desayuno** | *E:* Macerado de Fresas en Brunoise a la Vainilla con Semillas de Chía, Nuez de la India y Nuez Pecana<br>*P:* Flan Salado de Huevos al Baño María Gratinado con Queso Manchego y Calabacitas Tiernas `[huevo_souffle_gratinado]` | *E:* Macerado Mediterráneo de Fresas con Semillas y Nueces Mixtas, Nuez de la India, Nuez Pecana y Vainilla<br>*P:* Uova in Purgatorio de la Trattoria Napolitana (Huevos Escalfados en Salsa Rústica de Jitomate Asado, Ajo, Queso Cottage, Queso Parmesano, Hierbas Finas y Aceite de Oliva) `[huevo_uova_in_purgatorio]` | *E:* Macerado Helénico de Frambuesas y Fresas a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>*P:* Strapatsada de las Islas Griegas (Huevos Cuajados al Sartén en Sugo de Jitomate Asado, Orégano, Ajo, Aceitunas Manzanilla y Rosetones de Queso Cottage y Queso Manchego) `[heptagon_s46_huevo_strapatsada_griega]` | **E:** Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana<br>**P:** Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano) `[heptagon_s47_huevo_purgatorio_parmesano]` | ✅ `0 Colisión` |
 | **Sábado · Comida** | *E:* Ensalada de Corazones de Lechuga Romana a la Plancha con Alcaparras y Limón Real al Aceite de Oliva<br>*P:* Rollos Involtini de Flat Steak Rellenos de Espinacas Tiernas, Romero de la Granja y Sal con Ajo Braseados en Mantequilla al Sartén `[res_involtini_braseado]` | *E:* Ensalada Mare Nostrum de Lechuga Romana, Aceitunas Manzanilla, Pistaches, Orégano y Limón Real al Aceite de Oliva<br>*P:* Moussaka Griega al Horno en Capas de Calabacitas Asadas, Ragú de Carne Molida de Res al Ajo, Hojas de Laurel y Canela, y Gratinado de Yogur Griego, Queso Cottage, Queso Manchego y Queso Parmesano `[res_moussaka_griega_horno]` | *E:* Ensalada de la Trattoria de Lechuga Romana, Pistaches, Limón Real, Orégano y Aceite de Oliva VEVO<br>*P:* Lomo de Salmón Mediterráneo al Horno en Salsa Cremosa de Cilantro, Alcaparras, Queso Cottage y Limón Real sobre Láminas de Calabacita `[heptagon_s46_salmon_mare_nostrum]` | **E:** Ensalada de la Trattoria de Lechuga Romana, Pistaches Tostados, Limón Real, Orégano y Aceite de Oliva VEVO<br>**P:** Fajitas de Mojarra al Limone de la Trattoria Doradas en Mantequilla con Champiñones, Alcaparras y Aguacate Hass `[heptagon_s47_mojarra_piccata_limone]` | ✅ `0 Colisión` |
-| **Sábado · Cena** | *E:* Potaje Templado de Floretes de Coliflor Enteros y Cebolla en Caldo de Leche de Coco al Orégano<br>*P:* Quenelles Templadas de Queso Ricotta y Queso Cottage al Orégano sobre Espejo de Yogur Griego con Nuez Pecana, Germinado y Aceite de Oliva `[quenelles_ricotta_cottage_espejo_yogur]` | *E:* Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Acelgas de la Granja, Limón Real y Orégano<br>*P:* Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Ajo, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino `[pavo_shawarma_griego_tzatziki]` | *E:* Consomé Mediterráneo de Fondo Claro de Pollo con Hojas de Acelga de la Granja, Ajo y Limón Real<br>*P:* Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Manchego `[heptagon_s46_atun_pimientos_trattoria]` | **E:** Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada<br>**P:** Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Aceitunas Manzanilla, Queso de Cabra y Queso Parmesano `[heptagon_s47_sardina_egea_cabra_sarten]` | ✅ `0 Colisión` |
+| **Sábado · Cena** | *E:* Potaje Templado de Floretes de Coliflor Enteros y Cebolla en Caldo de Leche de Coco al Orégano<br>*P:* Quenelles Templadas de Queso Ricotta y Queso Cottage al Orégano sobre Espejo de Yogur Griego con Nuez Pecana, Germinado y Aceite de Oliva `[quenelles_ricotta_cottage_espejo_yogur]` | *E:* Caldo Claro de la Trattoria de Fondo de Pollo con Hojas de Acelgas de la Granja, Limón Real y Orégano<br>*P:* Shawarma Griego de Fajitas de Pechuga de Pollo Maridado al Limón Real, Ajo, Comino y Orégano con Salsa Tzatziki de Yogur Griego y Pepino `[pavo_shawarma_griego_tzatziki]` | *E:* Consomé Mediterráneo de Fondo Claro de Pollo con Hojas de Acelga de la Granja, Ajo y Limón Real<br>*P:* Pimientos Morrones Asados de la Trattoria Rellenos de Lomo de Atún, Aceitunas Manzanilla, Jitomate, Ajo, Aguacate Hass y Gratinado de Queso Manchego `[heptagon_s46_atun_pimientos_trattoria]` | **E:** Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada<br>**P:** Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano `[heptagon_s47_sardina_egea_cabra_sarten]` | ✅ `0 Colisión` |
 
 ---
 
@@ -2405,54 +2398,54 @@
 |---|---|---|---|---|---|---|---|
 | 1 | **33Plus®** | **210 g** | 210 g | **420 g** | Tabla 3.3 (Mercado — Comprar: 420 g) | **`0.00`** ✅ | R#03 (Dom Des: 30 g); R#12 (Lun Des: 30 g); R#21 (Mar Des: 30 g); R#30 (Mié Des: 30 g); R#39 (Jue Des: 30 g); R#48 (Vie Des: 30 g); R#57 (Sáb Des: 30 g) |
 | 2 | **34Plus®** | **210 g** | 210 g | **420 g** | Tabla 3.3 (Mercado — Comprar: 420 g) | **`0.00`** ✅ | R#09 (Dom Cen: 30 g); R#18 (Lun Cen: 30 g); R#27 (Mar Cen: 30 g); R#36 (Mié Cen: 30 g); R#45 (Jue Cen: 30 g); R#54 (Vie Cen: 30 g); R#63 (Sáb Cen: 30 g) |
-| 3 | **Aceite de coco** | **390 g** | 0 g | **390 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#05 (Dom Com: 24 g); R#06 (Dom Com: 18 g); R#08 (Dom Cen: 24 g); R#12 (Lun Des: 30 g); R#14 (Lun Com: 24 g); R#15 (Lun Com: 18 g); R#18 (Lun Cen: 24 g); R#20 (Mar Des: 36 g); R#24 (Mar Com: 18 g); R#26 (Mar Cen: 24 g); R#35 (Mié Cen: 24 g); R#50 (Vie Com: 24 g); R#51 (Vie Com: 18 g); R#53 (Vie Cen: 24 g); R#62 (Sáb Cen: 24 g); R#63 (Sáb Cen: 36 g) |
-| 4 | **Aceite de oliva** | **306 ml** | 0 ml | **306 ml** | Tabla 3.3 (Mercado — Comprar: 306 ml) | **`0.00`** ✅ | R#04 (Dom Com: 18 ml); R#07 (Dom Cen: 18 ml); R#13 (Lun Com: 18 ml); R#16 (Lun Cen: 18 ml); R#22 (Mar Com: 18 ml); R#25 (Mar Cen: 18 ml); R#31 (Mié Com: 18 ml); R#33 (Mié Com: 18 ml); R#34 (Mié Cen: 18 ml); R#40 (Jue Com: 18 ml); R#42 (Jue Com: 18 ml); R#43 (Jue Cen: 18 ml); R#49 (Vie Com: 18 ml); R#52 (Vie Cen: 18 ml); R#58 (Sáb Com: 18 ml); R#60 (Sáb Com: 18 ml); R#61 (Sáb Cen: 18 ml) |
-| 5 | **Aceitunas manzanilla** | **5 g** | 0 g | **5 g** | Tabla 3.2 (Alacena \$0 — Stock: 5 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 5 g) |
-| 6 | **Acelgas** | **1,500 g** | 0 g | **1,500 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#02 (Dom Des: 360 g); R#24 (Mar Com: 480 g); R#43 (Jue Cen: 300 g); R#56 (Sáb Des: 360 g) |
-| 7 | **Achiote** | **48 g** | 0 g | **48 g** | Tabla 3.2 (Alacena \$0 — Stock: 92 g) | **`0.00`** ✅ | R#05 (Dom Com: 18 g); R#20 (Mar Des: 12 g); R#23 (Mar Com: 18 g) |
-| 8 | **Agua purificada** | **15,720 ml** | 0 ml | **15,720 ml** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#03 (Dom Des: 360 ml); R#07 (Dom Cen: 960 ml); R#09 (Dom Cen: 720 ml); R#12 (Lun Des: 900 ml); R#16 (Lun Cen: 960 ml); R#18 (Lun Cen: 960 ml); R#25 (Mar Cen: 960 ml); R#27 (Mar Cen: 960 ml); R#30 (Mié Des: 720 ml); R#34 (Mié Cen: 960 ml); R#36 (Mié Cen: 360 ml); R#39 (Jue Des: 180 ml); R#43 (Jue Cen: 960 ml); R#45 (Jue Cen: 900 ml); R#48 (Vie Des: 480 ml); R#52 (Vie Cen: 960 ml); R#54 (Vie Cen: 960 ml); R#57 (Sáb Des: 600 ml); R#61 (Sáb Cen: 960 ml); R#63 (Sáb Cen: 900 ml) |
-| 9 | **Aguacate** | **7 piezas** | 0 piezas | **7 piezas** | Tabla 3.3 (Mercado — Comprar: 7 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas); R#17 (Lun Cen: 1 piezas); R#26 (Mar Cen: 1 piezas); R#32 (Mié Com: 1 piezas); R#44 (Jue Cen: 1 piezas); R#50 (Vie Com: 1 piezas); R#59 (Sáb Com: 1 piezas) |
-| 10 | **Ajo** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#02 (Dom Des: 4 g); R#05 (Dom Com: 4 g); R#07 (Dom Cen: 4 g); R#08 (Dom Cen: 4 g); R#11 (Lun Des: 4 g); R#14 (Lun Com: 4 g); R#15 (Lun Com: 4 g); R#16 (Lun Cen: 4 g); R#17 (Lun Cen: 4 g); R#23 (Mar Com: 4 g); R#24 (Mar Com: 4 g); R#25 (Mar Cen: 4 g); R#32 (Mié Com: 5 g); R#33 (Mié Com: 4 g); R#34 (Mié Cen: 4 g); R#35 (Mié Cen: 4 g); R#41 (Jue Com: 4 g); R#43 (Jue Cen: 4 g); R#50 (Vie Com: 4 g); R#52 (Vie Cen: 4 g); R#53 (Vie Cen: 4 g); R#56 (Sáb Des: 5 g); R#59 (Sáb Com: 5 g); R#61 (Sáb Cen: 5 g) |
-| 11 | **Alcaparras** | **44 g** | 0 g | **44 g** | Tabla 3.2 (Alacena \$0 — Stock: 44 g) | **`0.00`** ✅ | R#44 (Jue Cen: 24 g); R#59 (Sáb Com: 20 g) |
-| 12 | **Almendras fileteadas** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#37 (Jue Des: 50 g); R#53 (Vie Cen: 50 g) |
-| 13 | **Apio** | **500 g** | 0 g | **500 g** | Tabla 3.2 (Alacena \$0 — Stock: 500 g) | **`0.00`** ✅ | R#03 (Dom Des: 160 g); R#16 (Lun Cen: 180 g); R#57 (Sáb Des: 160 g) |
-| 14 | **Atún en agua** | **560 g** | 0 g | **560 g** | Tabla 3.2 (Alacena \$0 — Stock: 560 g) | **`0.00`** ✅ | R#35 (Mié Cen: 560 g) |
-| 15 | **Brócoli** | **780 g** | 0 g | **780 g** | Tabla 3.3 (Mercado — Comprar: 780 g) | **`0.00`** ✅ | R#42 (Jue Com: 420 g); R#50 (Vie Com: 360 g) |
-| 16 | **Calabacitas** | **2,120 g** | 0 g | **2,120 g** | Tabla 3.3 (Mercado — Comprar: 2,120 g) | **`0.00`** ✅ | R#08 (Dom Cen: 360 g); R#17 (Lun Cen: 360 g); R#26 (Mar Cen: 360 g); R#29 (Mié Des: 320 g); R#44 (Jue Cen: 360 g); R#60 (Sáb Com: 360 g) |
-| 17 | **Canela molida** | **31 g** | 0 g | **31 g** | Tabla 3.2 (Alacena \$0 — Stock: 725 g) | **`0.00`** ✅ | R#09 (Dom Cen: 3 g); R#12 (Lun Des: 3 g); R#18 (Lun Cen: 3 g); R#19 (Mar Des: 3 g); R#27 (Mar Cen: 4 g); R#45 (Jue Cen: 3 g); R#48 (Vie Des: 3 g); R#54 (Vie Cen: 3 g); R#55 (Sáb Des: 3 g); R#63 (Sáb Cen: 3 g) |
-| 18 | **Carne molida** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#14 (Lun Com: 660 g) |
-| 19 | **Cebolla** | **10 piezas** | 0 piezas | **10 piezas** | Tabla 3.3 (Mercado — Comprar: 10 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas); R#08 (Dom Cen: 1 piezas); R#11 (Lun Des: 1 piezas); R#14 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#23 (Mar Com: 1 piezas); R#29 (Mié Des: 1 piezas); R#34 (Mié Cen: 1 piezas); R#38 (Jue Des: 1 piezas); R#41 (Jue Com: 1 piezas) |
-| 20 | **Champiñón** | **1,200 g** | 0 g | **1,200 g** | Tabla 3.3 (Mercado — Comprar: 1,200 g) | **`0.00`** ✅ | R#11 (Lun Des: 300 g); R#32 (Mié Com: 300 g); R#38 (Jue Des: 300 g); R#59 (Sáb Com: 300 g) |
-| 21 | **Cilantro** | **378 g** | 0 g | **378 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#02 (Dom Des: 24 g); R#04 (Dom Com: 24 g); R#07 (Dom Cen: 30 g); R#08 (Dom Cen: 24 g); R#13 (Lun Com: 24 g); R#20 (Mar Des: 24 g); R#22 (Mar Com: 24 g); R#25 (Mar Cen: 24 g); R#26 (Mar Cen: 30 g); R#35 (Mié Cen: 24 g); R#47 (Vie Des: 24 g); R#49 (Vie Com: 24 g); R#50 (Vie Com: 24 g); R#52 (Vie Cen: 30 g); R#57 (Sáb Des: 24 g) |
-| 22 | **Clavo de olor** | **2 g** | 0 g | **2 g** | Tabla 3.2 (Alacena \$0 — Stock: 48 g) | **`0.00`** ✅ | R#54 (Vie Cen: 2 g) |
-| 23 | **Coliflor** | **360 g** | 0 g | **360 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#51 (Vie Com: 360 g) |
-| 24 | **Comino** | **9 g** | 0 g | **9 g** | Tabla 3.2 (Alacena \$0 — Stock: 47 g) | **`0.00`** ✅ | R#05 (Dom Com: 3 g); R#26 (Mar Cen: 3 g); R#35 (Mié Cen: 3 g) |
-| 25 | **Cúrcuma** | **42 g** | 0 g | **42 g** | Tabla 3.2 (Alacena \$0 — Stock: 82 g) | **`0.00`** ✅ | R#09 (Dom Cen: 12 g); R#48 (Vie Des: 12 g); R#50 (Vie Com: 12 g); R#51 (Vie Com: 6 g) |
-| 26 | **Ejotes** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 660 g) | **`0.00`** ✅ | R#15 (Lun Com: 360 g); R#41 (Jue Com: 300 g) |
-| 27 | **Espinacas** | **260 g** | 0 g | **260 g** | Tabla 3.2 (Alacena \$0 — Stock: 260 g) | **`0.00`** ✅ | R#33 (Mié Com: 260 g) |
-| 28 | **Extracto de vainilla** | **48 ml** | 0 ml | **48 ml** | Tabla 3.2 (Alacena \$0 — Stock: 376 ml) | **`0.00`** ✅ | R#10 (Lun Des: 6 ml); R#18 (Lun Cen: 6 ml); R#21 (Mar Des: 6 ml); R#27 (Mar Cen: 6 ml); R#36 (Mié Cen: 6 ml); R#39 (Jue Des: 6 ml); R#45 (Jue Cen: 6 ml); R#46 (Vie Des: 6 ml) |
-| 29 | **Fajitas de mojarra** | **2,720 g** | 0 g | **2,720 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,720 g) | **`0.00`** ✅ | R#26 (Mar Cen: 900 g); R#44 (Jue Cen: 900 g); R#59 (Sáb Com: 920 g) |
-| 30 | **Flat steak** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#05 (Dom Com: 660 g); R#41 (Jue Com: 660 g) |
-| 31 | **Frambuesas** | **220 g** | 0 g | **220 g** | Tabla 3.2 (Alacena \$0 — Stock: 220 g) | **`0.00`** ✅ | R#10 (Lun Des: 100 g); R#39 (Jue Des: 120 g) |
-| 32 | **Fresas** | **200 g** | 0 g | **200 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#21 (Mar Des: 100 g); R#28 (Mié Des: 100 g) |
-| 33 | **Germinado** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#53 (Vie Cen: 100 g) |
-| 34 | **Granadas** | **1,140 g** | 0 g | **1,140 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 180 g); R#10 (Lun Des: 120 g); R#19 (Mar Des: 180 g); R#28 (Mié Des: 120 g); R#37 (Jue Des: 180 g); R#46 (Vie Des: 180 g); R#55 (Sáb Des: 180 g) |
-| 35 | **Grenetina** | **32 g** | 0 g | **32 g** | Tabla 3.2 (Alacena \$0 — Stock: 32 g) | **`0.00`** ✅ | R#30 (Mié Des: 16 g); R#36 (Mié Cen: 16 g) |
-| 36 | **Hierbas finas** | **13 g** | 0 g | **13 g** | Tabla 3.2 (Alacena \$0 — Stock: 13 g) | **`0.00`** ✅ | R#17 (Lun Cen: 6 g); R#38 (Jue Des: 7 g) |
-| 37 | **Huevo** | **126 piezas** | 0 piezas | **126 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 180 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 18 piezas); R#11 (Lun Des: 18 piezas); R#20 (Mar Des: 18 piezas); R#29 (Mié Des: 18 piezas); R#38 (Jue Des: 18 piezas); R#47 (Vie Des: 18 piezas); R#56 (Sáb Des: 18 piezas) |
-| 38 | **Jamaica** | **36 g** | 0 g | **36 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#30 (Mié Des: 36 g) |
-| 39 | **Jitomate** | **1 piezas** | 0 piezas | **1 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 1 piezas) | **`0.00`** ✅ | R#56 (Sáb Des: 1 piezas) |
-| 40 | **Leche de coco** | **500 ml** | 0 ml | **500 ml** | Tabla 3.2 (Alacena \$0 — Stock: 500 ml) | **`0.00`** ✅ | R#09 (Dom Cen: 260 ml); R#50 (Vie Com: 240 ml) |
-| 41 | **Lechuga** | **4 piezas** | 0 piezas | **4 piezas** | Tabla 3.3 (Mercado — Comprar: 4 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#22 (Mar Com: 1 piezas); R#40 (Jue Com: 1 piezas); R#58 (Sáb Com: 1 piezas) |
-| 42 | **Limones** | **1,752 g** | 0 g | **1,752 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 30 g); R#03 (Dom Des: 60 g); R#04 (Dom Com: 48 g); R#05 (Dom Com: 48 g); R#06 (Dom Com: 48 g); R#07 (Dom Cen: 48 g); R#13 (Lun Com: 48 g); R#15 (Lun Com: 48 g); R#16 (Lun Cen: 48 g); R#17 (Lun Cen: 48 g); R#21 (Mar Des: 45 g); R#22 (Mar Com: 48 g); R#23 (Mar Com: 48 g); R#24 (Mar Com: 48 g); R#25 (Mar Cen: 60 g); R#26 (Mar Cen: 48 g); R#28 (Mié Des: 30 g); R#30 (Mié Des: 48 g); R#31 (Mié Com: 48 g); R#32 (Mié Com: 48 g); R#33 (Mié Com: 48 g); R#35 (Mié Cen: 48 g); R#39 (Jue Des: 30 g); R#40 (Jue Com: 48 g); R#42 (Jue Com: 48 g); R#43 (Jue Cen: 48 g); R#44 (Jue Cen: 48 g); R#48 (Vie Des: 45 g); R#49 (Vie Com: 48 g); R#51 (Vie Com: 48 g); R#52 (Vie Cen: 48 g); R#57 (Sáb Des: 60 g); R#58 (Sáb Com: 48 g); R#59 (Sáb Com: 48 g); R#60 (Sáb Com: 48 g); R#61 (Sáb Cen: 48 g); R#62 (Sáb Cen: 48 g) |
-| 43 | **Lomo de salmón** | **1,440 g** | 0 g | **1,440 g** | Tabla 3.3 (Mercado — Comprar: 1,440 g) | **`0.00`** ✅ | R#23 (Mar Com: 720 g); R#50 (Vie Com: 720 g) |
-| 44 | **Mantequilla** | **720 g** | 0 g | **720 g** | Tabla 3.2 (Alacena \$0 — Stock: 720 g) | **`0.00`** ✅ | R#02 (Dom Des: 60 g); R#11 (Lun Des: 60 g); R#17 (Lun Cen: 60 g); R#23 (Mar Com: 60 g); R#29 (Mié Des: 60 g); R#32 (Mié Com: 60 g); R#38 (Jue Des: 60 g); R#41 (Jue Com: 60 g); R#44 (Jue Cen: 60 g); R#47 (Vie Des: 60 g); R#56 (Sáb Des: 60 g); R#59 (Sáb Com: 60 g) |
-| 45 | **Manzanilla** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 12 g) | **`0.00`** ✅ | R#18 (Lun Cen: 6 g); R#36 (Mié Cen: 6 g) |
+| 3 | **Aceite de coco** | **534 g** | 0 g | **534 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#05 (Dom Com: 24 g); R#06 (Dom Com: 18 g); R#07 (Dom Cen: 18 g); R#08 (Dom Cen: 24 g); R#12 (Lun Des: 30 g); R#14 (Lun Com: 24 g); R#15 (Lun Com: 18 g); R#16 (Lun Cen: 18 g); R#18 (Lun Cen: 24 g); R#20 (Mar Des: 36 g); R#24 (Mar Com: 18 g); R#25 (Mar Cen: 18 g); R#26 (Mar Cen: 24 g); R#33 (Mié Com: 18 g); R#34 (Mié Cen: 18 g); R#35 (Mié Cen: 24 g); R#43 (Jue Cen: 18 g); R#50 (Vie Com: 24 g); R#51 (Vie Com: 18 g); R#52 (Vie Cen: 18 g); R#53 (Vie Cen: 24 g); R#61 (Sáb Cen: 18 g); R#62 (Sáb Cen: 24 g); R#63 (Sáb Cen: 36 g) |
+| 4 | **Aceite de oliva** | **162 ml** | 0 ml | **162 ml** | Tabla 3.3 (Mercado — Comprar: 162 ml) | **`0.00`** ✅ | R#04 (Dom Com: 18 ml); R#13 (Lun Com: 18 ml); R#22 (Mar Com: 18 ml); R#31 (Mié Com: 18 ml); R#40 (Jue Com: 18 ml); R#42 (Jue Com: 18 ml); R#49 (Vie Com: 18 ml); R#58 (Sáb Com: 18 ml); R#60 (Sáb Com: 18 ml) |
+| 5 | **Acelgas** | **1,500 g** | 0 g | **1,500 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#02 (Dom Des: 360 g); R#24 (Mar Com: 480 g); R#43 (Jue Cen: 300 g); R#56 (Sáb Des: 360 g) |
+| 6 | **Achiote** | **48 g** | 0 g | **48 g** | Tabla 3.2 (Alacena \$0 — Stock: 92 g) | **`0.00`** ✅ | R#05 (Dom Com: 18 g); R#20 (Mar Des: 12 g); R#23 (Mar Com: 18 g) |
+| 7 | **Agua purificada** | **15,720 ml** | 0 ml | **15,720 ml** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#03 (Dom Des: 360 ml); R#07 (Dom Cen: 960 ml); R#09 (Dom Cen: 720 ml); R#12 (Lun Des: 900 ml); R#16 (Lun Cen: 960 ml); R#18 (Lun Cen: 960 ml); R#25 (Mar Cen: 960 ml); R#27 (Mar Cen: 960 ml); R#30 (Mié Des: 720 ml); R#34 (Mié Cen: 960 ml); R#36 (Mié Cen: 360 ml); R#39 (Jue Des: 180 ml); R#43 (Jue Cen: 960 ml); R#45 (Jue Cen: 900 ml); R#48 (Vie Des: 480 ml); R#52 (Vie Cen: 960 ml); R#54 (Vie Cen: 960 ml); R#57 (Sáb Des: 600 ml); R#61 (Sáb Cen: 960 ml); R#63 (Sáb Cen: 900 ml) |
+| 8 | **Aguacate** | **7 piezas** | 0 piezas | **7 piezas** | Tabla 3.3 (Mercado — Comprar: 7 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas); R#17 (Lun Cen: 1 piezas); R#26 (Mar Cen: 1 piezas); R#32 (Mié Com: 1 piezas); R#44 (Jue Cen: 1 piezas); R#50 (Vie Com: 1 piezas); R#59 (Sáb Com: 1 piezas) |
+| 9 | **Ajo** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#02 (Dom Des: 4 g); R#05 (Dom Com: 4 g); R#07 (Dom Cen: 4 g); R#08 (Dom Cen: 4 g); R#11 (Lun Des: 4 g); R#14 (Lun Com: 4 g); R#15 (Lun Com: 4 g); R#16 (Lun Cen: 4 g); R#17 (Lun Cen: 4 g); R#23 (Mar Com: 4 g); R#24 (Mar Com: 4 g); R#25 (Mar Cen: 4 g); R#32 (Mié Com: 5 g); R#33 (Mié Com: 4 g); R#34 (Mié Cen: 4 g); R#35 (Mié Cen: 4 g); R#41 (Jue Com: 4 g); R#43 (Jue Cen: 4 g); R#50 (Vie Com: 4 g); R#52 (Vie Cen: 4 g); R#53 (Vie Cen: 4 g); R#56 (Sáb Des: 5 g); R#59 (Sáb Com: 5 g); R#61 (Sáb Cen: 5 g) |
+| 10 | **Alcaparras** | **44 g** | 0 g | **44 g** | Tabla 3.2 (Alacena \$0 — Stock: 44 g) | **`0.00`** ✅ | R#44 (Jue Cen: 24 g); R#59 (Sáb Com: 20 g) |
+| 11 | **Almendras fileteadas** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#37 (Jue Des: 50 g); R#53 (Vie Cen: 50 g) |
+| 12 | **Apio** | **500 g** | 0 g | **500 g** | Tabla 3.2 (Alacena \$0 — Stock: 500 g) | **`0.00`** ✅ | R#03 (Dom Des: 160 g); R#16 (Lun Cen: 180 g); R#57 (Sáb Des: 160 g) |
+| 13 | **Atún en agua** | **560 g** | 0 g | **560 g** | Tabla 3.2 (Alacena \$0 — Stock: 560 g) | **`0.00`** ✅ | R#35 (Mié Cen: 560 g) |
+| 14 | **Brócoli** | **780 g** | 0 g | **780 g** | Tabla 3.3 (Mercado — Comprar: 780 g) | **`0.00`** ✅ | R#42 (Jue Com: 420 g); R#50 (Vie Com: 360 g) |
+| 15 | **Calabacitas** | **2,120 g** | 0 g | **2,120 g** | Tabla 3.3 (Mercado — Comprar: 2,120 g) | **`0.00`** ✅ | R#08 (Dom Cen: 360 g); R#17 (Lun Cen: 360 g); R#26 (Mar Cen: 360 g); R#29 (Mié Des: 320 g); R#44 (Jue Cen: 360 g); R#60 (Sáb Com: 360 g) |
+| 16 | **Canela molida** | **31 g** | 0 g | **31 g** | Tabla 3.2 (Alacena \$0 — Stock: 725 g) | **`0.00`** ✅ | R#09 (Dom Cen: 3 g); R#12 (Lun Des: 3 g); R#18 (Lun Cen: 3 g); R#19 (Mar Des: 3 g); R#27 (Mar Cen: 4 g); R#45 (Jue Cen: 3 g); R#48 (Vie Des: 3 g); R#54 (Vie Cen: 3 g); R#55 (Sáb Des: 3 g); R#63 (Sáb Cen: 3 g) |
+| 17 | **Carne molida** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#14 (Lun Com: 660 g) |
+| 18 | **Cebolla** | **10 piezas** | 0 piezas | **10 piezas** | Tabla 3.3 (Mercado — Comprar: 10 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas); R#08 (Dom Cen: 1 piezas); R#11 (Lun Des: 1 piezas); R#14 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#23 (Mar Com: 1 piezas); R#29 (Mié Des: 1 piezas); R#34 (Mié Cen: 1 piezas); R#38 (Jue Des: 1 piezas); R#41 (Jue Com: 1 piezas) |
+| 19 | **Champiñón** | **1,200 g** | 0 g | **1,200 g** | Tabla 3.3 (Mercado — Comprar: 1,200 g) | **`0.00`** ✅ | R#11 (Lun Des: 300 g); R#32 (Mié Com: 300 g); R#38 (Jue Des: 300 g); R#59 (Sáb Com: 300 g) |
+| 20 | **Cilantro** | **378 g** | 0 g | **378 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#02 (Dom Des: 24 g); R#04 (Dom Com: 24 g); R#07 (Dom Cen: 30 g); R#08 (Dom Cen: 24 g); R#13 (Lun Com: 24 g); R#20 (Mar Des: 24 g); R#22 (Mar Com: 24 g); R#25 (Mar Cen: 24 g); R#26 (Mar Cen: 30 g); R#35 (Mié Cen: 24 g); R#47 (Vie Des: 24 g); R#49 (Vie Com: 24 g); R#50 (Vie Com: 24 g); R#52 (Vie Cen: 30 g); R#57 (Sáb Des: 24 g) |
+| 21 | **Clavo de olor** | **2 g** | 0 g | **2 g** | Tabla 3.2 (Alacena \$0 — Stock: 48 g) | **`0.00`** ✅ | R#54 (Vie Cen: 2 g) |
+| 22 | **Coliflor** | **360 g** | 0 g | **360 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#51 (Vie Com: 360 g) |
+| 23 | **Comino** | **9 g** | 0 g | **9 g** | Tabla 3.2 (Alacena \$0 — Stock: 47 g) | **`0.00`** ✅ | R#05 (Dom Com: 3 g); R#26 (Mar Cen: 3 g); R#35 (Mié Cen: 3 g) |
+| 24 | **Cúrcuma** | **42 g** | 0 g | **42 g** | Tabla 3.2 (Alacena \$0 — Stock: 82 g) | **`0.00`** ✅ | R#09 (Dom Cen: 12 g); R#48 (Vie Des: 12 g); R#50 (Vie Com: 12 g); R#51 (Vie Com: 6 g) |
+| 25 | **Ejotes** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 660 g) | **`0.00`** ✅ | R#15 (Lun Com: 360 g); R#41 (Jue Com: 300 g) |
+| 26 | **Espinacas** | **260 g** | 0 g | **260 g** | Tabla 3.2 (Alacena \$0 — Stock: 260 g) | **`0.00`** ✅ | R#33 (Mié Com: 260 g) |
+| 27 | **Extracto de vainilla** | **48 ml** | 0 ml | **48 ml** | Tabla 3.2 (Alacena \$0 — Stock: 376 ml) | **`0.00`** ✅ | R#10 (Lun Des: 6 ml); R#18 (Lun Cen: 6 ml); R#21 (Mar Des: 6 ml); R#27 (Mar Cen: 6 ml); R#36 (Mié Cen: 6 ml); R#39 (Jue Des: 6 ml); R#45 (Jue Cen: 6 ml); R#46 (Vie Des: 6 ml) |
+| 28 | **Fajitas de mojarra** | **2,720 g** | 0 g | **2,720 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,720 g) | **`0.00`** ✅ | R#26 (Mar Cen: 900 g); R#44 (Jue Cen: 900 g); R#59 (Sáb Com: 920 g) |
+| 29 | **Flat steak** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#05 (Dom Com: 660 g); R#41 (Jue Com: 660 g) |
+| 30 | **Frambuesas** | **220 g** | 0 g | **220 g** | Tabla 3.2 (Alacena \$0 — Stock: 220 g) | **`0.00`** ✅ | R#10 (Lun Des: 100 g); R#39 (Jue Des: 120 g) |
+| 31 | **Fresas** | **200 g** | 0 g | **200 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#21 (Mar Des: 100 g); R#28 (Mié Des: 100 g) |
+| 32 | **Germinado** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#53 (Vie Cen: 100 g) |
+| 33 | **Granadas** | **1,140 g** | 0 g | **1,140 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 180 g); R#10 (Lun Des: 120 g); R#19 (Mar Des: 180 g); R#28 (Mié Des: 120 g); R#37 (Jue Des: 180 g); R#46 (Vie Des: 180 g); R#55 (Sáb Des: 180 g) |
+| 34 | **Grenetina** | **32 g** | 0 g | **32 g** | Tabla 3.2 (Alacena \$0 — Stock: 32 g) | **`0.00`** ✅ | R#30 (Mié Des: 16 g); R#36 (Mié Cen: 16 g) |
+| 35 | **Hierbas finas** | **13 g** | 0 g | **13 g** | Tabla 3.2 (Alacena \$0 — Stock: 13 g) | **`0.00`** ✅ | R#17 (Lun Cen: 6 g); R#38 (Jue Des: 7 g) |
+| 36 | **Huevo** | **126 piezas** | 0 piezas | **126 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 180 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 18 piezas); R#11 (Lun Des: 18 piezas); R#20 (Mar Des: 18 piezas); R#29 (Mié Des: 18 piezas); R#38 (Jue Des: 18 piezas); R#47 (Vie Des: 18 piezas); R#56 (Sáb Des: 18 piezas) |
+| 37 | **Jamaica** | **36 g** | 0 g | **36 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#30 (Mié Des: 36 g) |
+| 38 | **Jitomate** | **1 piezas** | 0 piezas | **1 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 1 piezas) | **`0.00`** ✅ | R#56 (Sáb Des: 1 piezas) |
+| 39 | **Leche de coco** | **500 ml** | 0 ml | **500 ml** | Tabla 3.2 (Alacena \$0 — Stock: 500 ml) | **`0.00`** ✅ | R#09 (Dom Cen: 260 ml); R#50 (Vie Com: 240 ml) |
+| 40 | **Lechuga** | **4 piezas** | 0 piezas | **4 piezas** | Tabla 3.3 (Mercado — Comprar: 4 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#22 (Mar Com: 1 piezas); R#40 (Jue Com: 1 piezas); R#58 (Sáb Com: 1 piezas) |
+| 41 | **Limones** | **1,752 g** | 0 g | **1,752 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 30 g); R#03 (Dom Des: 60 g); R#04 (Dom Com: 48 g); R#05 (Dom Com: 48 g); R#06 (Dom Com: 48 g); R#07 (Dom Cen: 48 g); R#13 (Lun Com: 48 g); R#15 (Lun Com: 48 g); R#16 (Lun Cen: 48 g); R#17 (Lun Cen: 48 g); R#21 (Mar Des: 45 g); R#22 (Mar Com: 48 g); R#23 (Mar Com: 48 g); R#24 (Mar Com: 48 g); R#25 (Mar Cen: 60 g); R#26 (Mar Cen: 48 g); R#28 (Mié Des: 30 g); R#30 (Mié Des: 48 g); R#31 (Mié Com: 48 g); R#32 (Mié Com: 48 g); R#33 (Mié Com: 48 g); R#35 (Mié Cen: 48 g); R#39 (Jue Des: 30 g); R#40 (Jue Com: 48 g); R#42 (Jue Com: 48 g); R#43 (Jue Cen: 48 g); R#44 (Jue Cen: 48 g); R#48 (Vie Des: 45 g); R#49 (Vie Com: 48 g); R#51 (Vie Com: 48 g); R#52 (Vie Cen: 48 g); R#57 (Sáb Des: 60 g); R#58 (Sáb Com: 48 g); R#59 (Sáb Com: 48 g); R#60 (Sáb Com: 48 g); R#61 (Sáb Cen: 48 g); R#62 (Sáb Cen: 48 g) |
+| 42 | **Lomo de salmón** | **1,440 g** | 0 g | **1,440 g** | Tabla 3.3 (Mercado — Comprar: 1,440 g) | **`0.00`** ✅ | R#23 (Mar Com: 720 g); R#50 (Vie Com: 720 g) |
+| 43 | **Mantequilla** | **720 g** | 0 g | **720 g** | Tabla 3.2 (Alacena \$0 — Stock: 720 g) | **`0.00`** ✅ | R#02 (Dom Des: 60 g); R#11 (Lun Des: 60 g); R#17 (Lun Cen: 60 g); R#23 (Mar Com: 60 g); R#29 (Mié Des: 60 g); R#32 (Mié Com: 60 g); R#38 (Jue Des: 60 g); R#41 (Jue Com: 60 g); R#44 (Jue Cen: 60 g); R#47 (Vie Des: 60 g); R#56 (Sáb Des: 60 g); R#59 (Sáb Com: 60 g) |
+| 44 | **Manzanilla** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 12 g) | **`0.00`** ✅ | R#18 (Lun Cen: 6 g); R#36 (Mié Cen: 6 g) |
+| 45 | **Mayonesa** | **200 g** | 0 g | **200 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#35 (Mié Cen: 200 g) |
 | 46 | **Morrón** | **14 piezas** | 0 piezas | **14 piezas** | Tabla 3.3 (Mercado — Comprar: 14 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 2 piezas); R#14 (Lun Com: 2 piezas); R#23 (Mar Com: 2 piezas); R#35 (Mié Cen: 3 piezas); R#53 (Vie Cen: 2 piezas); R#62 (Sáb Cen: 3 piezas) |
 | 47 | **Nopales** | **1,260 g** | 0 g | **1,260 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#06 (Dom Com: 480 g); R#20 (Mar Des: 420 g); R#47 (Vie Des: 360 g) |
 | 48 | **Nuez de la India** | **1,000 g** | 0 g | **1,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#01 (Dom Des: 80 g); R#10 (Lun Des: 80 g); R#12 (Lun Des: 90 g); R#19 (Mar Des: 120 g); R#27 (Mar Cen: 110 g); R#28 (Mié Des: 80 g); R#37 (Jue Des: 80 g); R#46 (Vie Des: 80 g); R#54 (Vie Cen: 80 g); R#55 (Sáb Des: 80 g); R#63 (Sáb Cen: 120 g) |
 | 49 | **Nuez pecana** | **690 g** | 0 g | **690 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 60 g); R#03 (Dom Des: 60 g); R#10 (Lun Des: 60 g); R#19 (Mar Des: 60 g); R#21 (Mar Des: 60 g); R#28 (Mié Des: 60 g); R#37 (Jue Des: 60 g); R#45 (Jue Cen: 90 g); R#46 (Vie Des: 60 g); R#55 (Sáb Des: 60 g); R#63 (Sáb Cen: 60 g) |
-| 50 | **Orégano** | **36 g** | 0 g | **36 g** | Tabla 3.2 (Alacena \$0 — Stock: 98 g) | **`0.00`** ✅ | R#04 (Dom Com: 3 g); R#07 (Dom Cen: 3 g); R#22 (Mar Com: 3 g); R#23 (Mar Com: 3 g); R#25 (Mar Cen: 3 g); R#29 (Mié Des: 3 g); R#31 (Mié Com: 3 g); R#42 (Jue Com: 3 g); R#56 (Sáb Des: 3 g); R#58 (Sáb Com: 3 g); R#61 (Sáb Cen: 3 g); R#62 (Sáb Cen: 3 g) |
+| 50 | **Orégano** | **39 g** | 0 g | **39 g** | Tabla 3.2 (Alacena \$0 — Stock: 98 g) | **`0.00`** ✅ | R#04 (Dom Com: 3 g); R#07 (Dom Cen: 3 g); R#14 (Lun Com: 3 g); R#22 (Mar Com: 3 g); R#23 (Mar Com: 3 g); R#25 (Mar Cen: 3 g); R#29 (Mié Des: 3 g); R#31 (Mié Com: 3 g); R#42 (Jue Com: 3 g); R#56 (Sáb Des: 3 g); R#58 (Sáb Com: 3 g); R#61 (Sáb Cen: 3 g); R#62 (Sáb Cen: 3 g) |
 | 51 | **Pechuga de pavo** | **700 g** | 0 g | **700 g** | Tabla 3.2 (Alacena \$0 — Stock: 700 g) | **`0.00`** ✅ | R#17 (Lun Cen: 700 g) |
 | 52 | **Pechuga de pollo** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#32 (Mié Com: 660 g); R#53 (Vie Cen: 660 g) |
 | 53 | **Pepino** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#13 (Lun Com: 360 g); R#31 (Mié Com: 360 g); R#49 (Vie Com: 360 g); R#57 (Sáb Des: 240 g) |
@@ -2467,11 +2460,10 @@
 | 62 | **Sal con ajo** | **6 g** | 0 g | **6 g** | Tabla 3.2 (Alacena \$0 — Stock: 52 g) | **`0.00`** ✅ | R#14 (Lun Com: 6 g) |
 | 63 | **Sal de mar** | **240 g** | 0 g | **240 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 6 g); R#04 (Dom Com: 6 g); R#05 (Dom Com: 6 g); R#06 (Dom Com: 6 g); R#07 (Dom Cen: 6 g); R#08 (Dom Cen: 6 g); R#11 (Lun Des: 6 g); R#13 (Lun Com: 6 g); R#15 (Lun Com: 6 g); R#16 (Lun Cen: 6 g); R#17 (Lun Cen: 6 g); R#20 (Mar Des: 6 g); R#22 (Mar Com: 6 g); R#23 (Mar Com: 6 g); R#24 (Mar Com: 6 g); R#25 (Mar Cen: 6 g); R#26 (Mar Cen: 6 g); R#29 (Mié Des: 6 g); R#31 (Mié Com: 6 g); R#32 (Mié Com: 6 g); R#33 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#35 (Mié Cen: 6 g); R#38 (Jue Des: 6 g); R#40 (Jue Com: 6 g); R#41 (Jue Com: 6 g); R#42 (Jue Com: 6 g); R#43 (Jue Cen: 6 g); R#44 (Jue Cen: 6 g); R#47 (Vie Des: 6 g); R#49 (Vie Com: 6 g); R#50 (Vie Com: 6 g); R#51 (Vie Com: 6 g); R#52 (Vie Cen: 6 g); R#56 (Sáb Des: 6 g); R#58 (Sáb Com: 6 g); R#59 (Sáb Com: 6 g); R#60 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g); R#62 (Sáb Cen: 6 g) |
 | 64 | **Salsa de soya** | **24 ml** | 0 ml | **24 ml** | Tabla 3.2 (Alacena \$0 — Stock: 250 ml) | **`0.00`** ✅ | R#53 (Vie Cen: 24 ml) |
-| 65 | **Salsa inglesa** | **18 ml** | 0 ml | **18 ml** | Tabla 3.2 (Alacena \$0 — Stock: 200 ml) | **`0.00`** ✅ | R#14 (Lun Com: 18 ml) |
-| 66 | **Sardinas** | **260 g** | 0 g | **260 g** | Tabla 3.2 (Alacena \$0 — Stock: 260 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 260 g) |
-| 67 | **Semillas y nueces mixtas** | **600 g** | 0 g | **600 g** | Tabla 3.2 (Alacena \$0 — Stock: 600 g) | **`0.00`** ✅ | R#01 (Dom Des: 80 g); R#10 (Lun Des: 80 g); R#19 (Mar Des: 80 g); R#28 (Mié Des: 80 g); R#37 (Jue Des: 80 g); R#46 (Vie Des: 80 g); R#54 (Vie Cen: 60 g); R#55 (Sáb Des: 60 g) |
-| 68 | **Tomate** | **240 g** | 0 g | **240 g** | Tabla 3.3 (Mercado — Comprar: 240 g) | **`0.00`** ✅ | R#08 (Dom Cen: 240 g) |
-| 69 | **Tomillo** | **8 g** | 0 g | **8 g** | Tabla 3.2 (Alacena \$0 — Stock: 8 g) | **`0.00`** ✅ | R#16 (Lun Cen: 3 g); R#41 (Jue Com: 3 g); R#63 (Sáb Cen: 2 g) |
-| 70 | **Té chai** | **18 g** | 0 g | **18 g** | Tabla 3.2 (Alacena \$0 — Stock: 38 g) | **`0.00`** ✅ | R#12 (Lun Des: 18 g) |
-| 71 | **Vinagre de vino tinto** | **36 ml** | 0 ml | **36 ml** | Tabla 3.2 (Alacena \$0 — Stock: 250 ml) | **`0.00`** ✅ | R#13 (Lun Com: 18 ml); R#40 (Jue Com: 18 ml) |
-| 72 | **Yogur griego** | **2,000 g** | 0 g | **2,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,000 g) | **`0.00`** ✅ | R#03 (Dom Des: 360 g); R#21 (Mar Des: 400 g); R#26 (Mar Cen: 240 g); R#35 (Mié Cen: 240 g); R#36 (Mié Cen: 400 g); R#48 (Vie Des: 360 g) |
+| 65 | **Sardinas** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 400 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 660 g) |
+| 66 | **Semillas y nueces mixtas** | **600 g** | 0 g | **600 g** | Tabla 3.2 (Alacena \$0 — Stock: 600 g) | **`0.00`** ✅ | R#01 (Dom Des: 80 g); R#10 (Lun Des: 80 g); R#19 (Mar Des: 80 g); R#28 (Mié Des: 80 g); R#37 (Jue Des: 80 g); R#46 (Vie Des: 80 g); R#54 (Vie Cen: 60 g); R#55 (Sáb Des: 60 g) |
+| 67 | **Tomate** | **240 g** | 0 g | **240 g** | Tabla 3.3 (Mercado — Comprar: 240 g) | **`0.00`** ✅ | R#08 (Dom Cen: 240 g) |
+| 68 | **Tomillo** | **8 g** | 0 g | **8 g** | Tabla 3.2 (Alacena \$0 — Stock: 8 g) | **`0.00`** ✅ | R#16 (Lun Cen: 3 g); R#41 (Jue Com: 3 g); R#63 (Sáb Cen: 2 g) |
+| 69 | **Té chai** | **18 g** | 0 g | **18 g** | Tabla 3.2 (Alacena \$0 — Stock: 38 g) | **`0.00`** ✅ | R#12 (Lun Des: 18 g) |
+| 70 | **Vinagre de vino tinto** | **36 ml** | 0 ml | **36 ml** | Tabla 3.2 (Alacena \$0 — Stock: 250 ml) | **`0.00`** ✅ | R#13 (Lun Com: 18 ml); R#40 (Jue Com: 18 ml) |
+| 71 | **Yogur griego** | **2,000 g** | 0 g | **2,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,000 g) | **`0.00`** ✅ | R#03 (Dom Des: 480 g); R#21 (Mar Des: 400 g); R#26 (Mar Cen: 240 g); R#36 (Mié Cen: 400 g); R#48 (Vie Des: 480 g) |

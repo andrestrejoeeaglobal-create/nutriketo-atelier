@@ -106,7 +106,7 @@
     "Bicarbonato de sodio": 227,
     "Achiote": 92,
     "Polvo para hornear": 100,
-    "Aceitunas manzanilla": 5,
+    "Aceitunas manzanilla": 0,
     "Chocolate para cobertura": 165,
     "Concentrado de caldo de pollo en polvo": 250,
     "Café colombiano": 100,
@@ -458,12 +458,8 @@
       "g"
     ],
     "Aceitunas manzanilla": [
-      5.0,
+      0.0,
       "g"
-    ],
-    "Salsa inglesa": [
-      200.0,
-      "ml"
     ],
     "Salsa de soya": [
       250.0,
@@ -718,6 +714,12 @@
     "Jugo Maggi": {
       "packaging": "200 ml",
       "reason": "Ultraprocesado con trigo hidrolizado, colorante caramelo y glutamato monosódico.",
+      "stock": 200,
+      "unit": "ml"
+    },
+    "Salsa inglesa": {
+      "packaging": "200 ml",
+      "reason": "Contiene melaza, jarabe de maíz, azúcar añadida y colorante caramelo; fuera de protocolo cetogénico NOM-004.",
       "stock": 200,
       "unit": "ml"
     },
