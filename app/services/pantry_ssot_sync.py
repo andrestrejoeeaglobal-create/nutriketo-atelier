@@ -73,82 +73,99 @@ CANONICAL_NAME_FIX: Dict[str, str] = {
 }
 
 V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
-    # 1. Carnes, Pescados, Aves y Huevos (Saldo Real Post-S45 + Sam's Club 09 Nov 2026 Orden 1569462808300642304)
-    "Flat steak": (2025.0, "g"),           # 0 g post-S45 + 2,025 g (TOP SIRLOIN 1080G + NEW YORK REB 945G)
-    "Carne molida": (2875.0, "g"),         # 1,115 g post-S45 + 1,760 g (MM CARNE MOL 1760G)
-    "Lomo de salmón": (1780.0, "g"),       # 380 g post-S45 + 1,400 g (MM LOMO SALM 1400G)
-    "Fajitas de mojarra": (2720.0, "g"),   # 0 g post-S45 + 2,720 g (2 × MM TILA 1.36)
-    "Pechuga de pavo": (1633.3, "g"),      # 233.3 g post-S45 + 1,400 g (FAJITAS PAVO)
-    "Huevo": (224.0, "piezas"),            # 44 pzas post-S45 + 180 pzas (180 HUE BLA)
-    "Pechuga de pollo": (313.3, "g"),      # Saldo real post-S45
-    "Pollo entero": (0.0, "piezas"),       # Saldo real post-S45
-    "Atún en agua": (40.0, "g"),           # Saldo real post-S45
-    "Sardinas": (0.0, "g"),                # Saldo real post-S45
+    # 1. Carnes, Pescados, Aves y Huevos (Inventario Físico Actualizado 14 Nov 2026 — Chrome LevelDB seq=279021)
+    "Fajitas de mojarra": (2720.0, "g"),
+    "Pechuga de pavo": (700.0, "g"),
+    "Atún en agua": (560.0, "g"),
+    "Carne molida": (300.0, "g"),
+    "Sardinas": (260.0, "g"),
+    "Huevo": (180.0, "piezas"),
+    "Pollo entero": (6.0, "piezas"),
+    "Flat steak": (0.0, "g"),
+    "Lomo de salmón": (0.0, "g"),
+    "Pechuga de pollo": (0.0, "g"),
     "Filete de atún": (0.0, "g"),
     # 2. Lácteos, Quesos y Mantequilla
-    "Queso manchego": (1130.0, "g"),       # 130 g post-S45 + 1,000 g (QSO MANCH RA)
-    "Queso cottage": (4840.0, "g"),        # 1,960 g post-S45 + 2,880 g (3 × 960GR QCOTTA)
-    "Yogur griego": (3640.0, "g"),         # 1,840 g post-S45 + 1,800 g (OIKOS PROT 2)
-    "Mantequilla": (1208.0, "g"),          # 128 g post-S45 + 1,080 g (12/90 MANTEQ)
-    "Queso Philadelphia": (260.0, "g"),    # Saldo real post-S45
-    "Queso doble crema": (140.0, "g"),     # Saldo real post-S45
-    "Queso mozzarella": (0.0, "g"),        # Saldo real post-S45
-    "Queso parmesano": (0.0, "g"),         # Saldo real post-S45
-    "Queso ricotta": (0.0, "g"),           # Saldo real post-S45
-    "Queso de cabra": (0.0, "g"),
-    "Crema ácida": (920.0, "g"),           # Saldo real post-S45
-    "Leche de coco": (0.0, "ml"),          # Saldo real post-S45
-    # 3. Frutos Secos, Frutas y Hortalizas Frescas
-    "Nuez de la India": (2062.0, "g"),     # 1,154 g post-S45 + 908 g (MM NUEZ INDI)
-    "Semillas y nueces mixtas": (1108.0, "g"),  # 200 g post-S45 + 908 g (MIX NUEZ MM)
-    "Nueces mixtas": (1108.0, "g"),
-    "Fresas": (1821.0, "g"),               # 7 g post-S45 + 1,814 g (2 × FRESA 907g)
-    "Frambuesas": (340.0, "g"),            # 0 g post-S45 + 340 g (FRAMBUESA)
-    "Zarzamora": (170.0, "g"),             # Saldo real post-S45
-    "Espinacas": (454.0, "g"),             # 0 g post-S45 + 454 g (ESPINACA BAB)
-    "Champiñón": (866.7, "g"),             # 166.7 g post-S45 + 700 g (CHAMPINON BL)
-    "Lechuga": (4.0, "piezas"),            # 0 pzas post-S45 + 4 pzas (LECHUGA SWEE)
-    "Germinado": (640.0, "g"),             # 140 g post-S45 + 500 g (GERMINADO)
-    "Botella de agua": (270.0, "botellas (355 ml)"),  # 150 + 120 (3 × MM 40/355ML)
-    # 4. Resto de Saldos Reales Post-S45 en Alacena y Refrigerador
-    "Calabacitas": (93.3, "g"),
-    "Ejotes": (80.0, "g"),
-    "Jitomate": (0.0, "piezas"),
-    "Tomate": (200.0, "g"),
-    "Cebolla": (1.0, "piezas"),
+    "Yogur griego": (2000.0, "g"),
+    "Queso manchego": (1000.0, "g"),
+    "Mantequilla": (720.0, "g"),
+    "Leche de coco": (500.0, "ml"),
+    "Queso Philadelphia": (360.0, "g"),
+    "Queso de cabra": (200.0, "g"),
+    "Queso doble crema": (140.0, "g"),
+    "Queso parmesano": (100.0, "g"),
+    "Queso cottage": (0.0, "g"),
+    "Crema ácida": (0.0, "g"),
+    "Queso mozzarella": (0.0, "g"),
+    "Queso ricotta": (0.0, "g"),
+    # 3. Grasas, Aceites, Frutos Secos y Semillas
+    "Aceite de coco": (1000.0, "g"),
+    "Nuez de la India": (1000.0, "g"),
+    "Semillas y nueces mixtas": (600.0, "g"),
+    "Nueces mixtas": (600.0, "g"),
+    "Mayonesa": (200.0, "g"),
+    "Almendras fileteadas": (100.0, "g"),
+    "Pistaches": (50.0, "g"),
+    "Aceite de oliva": (0.0, "ml"),
+    "Ajonjolí": (0.0, "g"),
+    # 4. Frutas de Bajo Índice Glucémico y Hortalizas Frescas
+    "Frambuesas": (220.0, "g"),
+    "Fresas": (200.0, "g"),
+    "Zarzamora": (0.0, "g"),
+    "Apio": (500.0, "g"),
+    "Espinacas": (260.0, "g"),
+    "Germinado": (100.0, "g"),
+    "Jitomate": (1.0, "piezas"),
+    "Calabacitas": (0.0, "g"),
+    "Cebolla": (0.0, "piezas"),
+    "Champiñón": (0.0, "g"),
+    "Ejotes": (0.0, "g"),
+    "Lechuga": (0.0, "piezas"),
+    "Tomate": (0.0, "g"),
     "Morrón": (0.0, "piezas"),
     "Aguacate": (0.0, "piezas"),
     "Brócoli": (0.0, "g"),
     "Coliflor": (0.0, "g"),
     "Pepino": (0.0, "g"),
     "Espárragos": (0.0, "g"),
-    "Aceite de coco": (1328.0, "g"),
-    "Aceite de oliva": (118.0, "ml"),
-    "Almendras fileteadas": (100.0, "g"),
-    "Pistaches": (0.0, "g"),
-    "Aceitunas manzanilla": (5.0, "g"),
-    "Alcaparras": (44.0, "g"),
-    "Achiote": (92.0, "g"),
-    "Ajo": (7.0, "g"),
+    "Flor de calabaza": (0.0, "manojo"),
+    # 5. Condimentos, Especias, Infusiones y Hidratación
+    "Sal de mar": (1000.0, "g"),
     "Canela molida": (725.0, "g"),
+    "Extracto de vainilla": (376.0, "ml"),
+    "Rajas de jalapeño": (314.0, "g"),
+    "Salsa de soya": (250.0, "ml"),
+    "Vinagre de vino tinto": (250.0, "ml"),
+    "Bicarbonato de sodio": (227.0, "g"),
+    "Flor de Jamaica molida en polvo": (200.0, "g"),
+    "Microdyn": (200.0, "ml"),
+    "Salsa inglesa": (200.0, "ml"),
+    "Tajín": (200.0, "g"),
+    "Botella de agua": (140.0, "botellas (355 ml)"),
+    "Pimienta negra": (124.0, "g"),
+    "Ajo": (100.0, "g"),
+    "Polvo para hornear": (100.0, "g"),
+    "Orégano": (98.0, "g"),
+    "Achiote": (92.0, "g"),
+    "Cúrcuma": (82.0, "g"),
+    "Sal con ajo": (52.0, "g"),
+    "Cebolla en polvo": (50.0, "g"),
     "Clavo de olor": (48.0, "g"),
     "Comino": (47.0, "g"),
-    "Cúrcuma": (82.0, "g"),
-    "Extracto de vainilla": (376.0, "ml"),
+    "Alcaparras": (44.0, "g"),
+    "Té chai": (38.0, "g"),
     "Grenetina": (32.0, "g"),
     "Hierbas finas": (13.0, "g"),
-    "Hojas de laurel": (0.0, "g"),
     "Manzanilla": (12.0, "g"),
-    "Mostaza": (0.0, "g"),
-    "Orégano": (98.0, "g"),
-    "Pimienta negra": (124.0, "g"),
-    "Sal con ajo": (52.0, "g"),
-    "Sal de mar": (2810.0, "g"),
-    "Té chai": (38.0, "g"),
     "Tomillo": (8.0, "g"),
+    "Aceitunas manzanilla": (5.0, "g"),
+    "Chile güero": (0.0, "g"),
+    "Hojas de laurel": (0.0, "g"),
+    "Mostaza": (0.0, "g"),
     "MultiSinergix®": (0.0, "g"),
     "AminoSinergix®": (0.0, "g"),
 }
+V64_USER_INVENTORY_NOV14_OVERRIDES = V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES
 V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES = V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES
 
 
@@ -500,9 +517,7 @@ def build_ssot_document_from_ui_state(
             qty = float(val) if isinstance(val, (int, float)) else 0.0
             u = str(raw_pcu.get(k, "g"))
 
-        if c_name == "Queso de cabra":
-            qty = 0.0
-        if c_name == "Coliflor" and u == "kg" and qty == 500.0:
+        if c_name in ("Coliflor", "Apio") and u == "kg" and qty >= 50.0:
             u = "g"
         if c_name == "Aceite de coco":
             u = "g"
@@ -529,6 +544,13 @@ def build_ssot_document_from_ui_state(
             ui_pantry_units[t_name] = t_unit
             canonical_pantry_for_auditor[t_name] = [float(t_qty), t_unit]
 
+    if "Semillas y nueces mixtas" in ui_pantry_stock:
+        mix_val = ui_pantry_stock["Semillas y nueces mixtas"]
+        mix_u = ui_pantry_units.get("Semillas y nueces mixtas", "g")
+        ui_pantry_stock["Nueces mixtas"] = mix_val
+        ui_pantry_units["Nueces mixtas"] = mix_u
+        canonical_pantry_for_auditor["Nueces mixtas"] = [float(mix_val), mix_u]
+
     ui_pantry_stock["Queso de cabra con arándano"] = 350
     ui_pantry_units["Queso de cabra con arándano"] = "g"
 
@@ -538,17 +560,18 @@ def build_ssot_document_from_ui_state(
     ))
 
     return {
-        "ssot_version": "v63_sams_09nov2026_post_s45_synced",
+        "ssot_version": "v64_cierre_s46_14nov2026_synced",
         "v63_sams_09nov2026_post_s45_sync": True,
+        "v64_cierre_s46_14nov2026_sync": True,
         "sams_ticket_order": "1569462808300642304",
         "sams_ticket_date": "2026-11-09",
         "sams_ticket_store": "Sam's Club SM Santa Fe",
         "sams_ticket_total_mxn": 5127.48,
         "extracted_from": meta.get(
             "extracted_from",
-            "Saldo Real Post-S45 + Ticket Sam's Club SM Santa Fe 09 Nov 2026 (Orden 1569462808300642304 — $5,127.48 MXN)",
+            "Google Chrome LocalStorage LevelDB (016645.ldb, seq=279021 — Inventario Físico Actualizado 14 Nov 2026)",
         ),
-        "leveldb_seq": int(meta.get("leveldb_seq", 274828)),
+        "leveldb_seq": int(meta.get("leveldb_seq", 279021)),
         "updated_at": datetime.now().isoformat(),
         "activeWeek": "Semana 46 (08 al 14 de Noviembre de 2026)",
         "activeDiners": ui_state.get("activeDiners", 6),

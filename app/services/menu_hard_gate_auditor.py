@@ -343,6 +343,70 @@ DEFAULT_PANTRY_STOCK.update(
     }
 )
 
+S46_HISTORICAL_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
+
+# Actualizar DEFAULT_PANTRY_STOCK con el Inventario Físico Actualizado por el usuario (14 Nov 2026 — Chrome LevelDB seq=279021)
+DEFAULT_PANTRY_STOCK.update(
+    {
+        "Fajitas de mojarra": (2720.0, "g"),
+        "Pechuga de pavo": (700.0, "g"),
+        "Atún en agua": (560.0, "g"),
+        "Carne molida": (300.0, "g"),
+        "Sardinas": (260.0, "g"),
+        "Huevo": (180.0, "piezas"),
+        "Pollo entero": (6.0, "piezas"),
+        "Flat steak": (0.0, "g"),
+        "Lomo de salmón": (0.0, "g"),
+        "Pechuga de pollo": (0.0, "g"),
+        "Filete de atún": (0.0, "g"),
+        "Yogur griego": (2000.0, "g"),
+        "Queso manchego": (1000.0, "g"),
+        "Mantequilla": (720.0, "g"),
+        "Leche de coco": (500.0, "ml"),
+        "Queso Philadelphia": (360.0, "g"),
+        "Queso de cabra": (200.0, "g"),
+        "Queso doble crema": (140.0, "g"),
+        "Queso parmesano": (100.0, "g"),
+        "Queso cottage": (0.0, "g"),
+        "Crema ácida": (0.0, "g"),
+        "Queso mozzarella": (0.0, "g"),
+        "Queso ricotta": (0.0, "g"),
+        "Aceite de coco": (1000.0, "g"),
+        "Nuez de la India": (1000.0, "g"),
+        "Semillas y nueces mixtas": (600.0, "g"),
+        "Nueces mixtas": (600.0, "g"),
+        "Mayonesa": (200.0, "g"),
+        "Almendras fileteadas": (100.0, "g"),
+        "Pistaches": (50.0, "g"),
+        "Aceite de oliva": (0.0, "ml"),
+        "Ajonjolí": (0.0, "g"),
+        "Frambuesas": (220.0, "g"),
+        "Fresas": (200.0, "g"),
+        "Zarzamora": (0.0, "g"),
+        "Apio": (500.0, "g"),
+        "Espinacas": (260.0, "g"),
+        "Germinado": (100.0, "g"),
+        "Jitomate": (1.0, "piezas"),
+        "Calabacitas": (0.0, "g"),
+        "Cebolla": (0.0, "piezas"),
+        "Champiñón": (0.0, "g"),
+        "Ejotes": (0.0, "g"),
+        "Lechuga": (0.0, "piezas"),
+        "Tomate": (0.0, "g"),
+        "Morrón": (0.0, "piezas"),
+        "Aguacate": (0.0, "piezas"),
+        "Brócoli": (0.0, "g"),
+        "Coliflor": (0.0, "g"),
+        "Pepino": (0.0, "g"),
+        "Espárragos": (0.0, "g"),
+        "Flor de calabaza": (0.0, "manojo"),
+        "Sal de mar": (1000.0, "g"),
+        "Ajo": (100.0, "g"),
+        "Botella de agua": (140.0, "botellas (355 ml)"),
+        "Chile güero": (0.0, "g"),
+    }
+)
+
 LIVE_PANTRY_SSOT_PATH: Path = Path(__file__).resolve().parents[2] / "pantry_live_state.json"
 
 
@@ -386,7 +450,7 @@ def load_live_pantry_ssot() -> Dict[str, Any]:
                 if c_name == "Sardinas" and "lata" in u_str.lower():
                     q_num = q_num * 425.0
                     u_str = "g"
-                elif c_name == "Coliflor" and u_str == "kg" and q_num == 500.0:
+                elif c_name in ("Coliflor", "Apio") and u_str == "kg" and q_num >= 50.0:
                     u_str = "g"
                 elif c_name == "Champiñón" and q_num < 1.0:
                     q_num = 0.0
