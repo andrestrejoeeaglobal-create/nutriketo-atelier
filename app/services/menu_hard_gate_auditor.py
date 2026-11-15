@@ -190,6 +190,25 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "cacao nibs",
     "cacao 100% puro",
     "flor de tila y toronjil",
+    "te matcha",
+    "albahaca",
+    "rooibos rojo",
+    "anis estrella",
+    "corazones de canamo",
+    "linaza dorada molida",
+    "mora azul",
+    "cardamomo verde",
+    "pulpa de maracuya sin azucar",
+    "pulpa de maracuya",
+    "hierbabuena",
+    "flor de lavanda y pasiflora",
+    "agua de azahar",
+    "tahini de ajonjoli",
+    "cedron e hinojo",
+    "semilla de calabaza sin sal",
+    "semilla de calabaza",
+    "coco rallado sin azucar",
+    "coco rallado",
     "te chai",
     "canela molida",
     "curcuma",
@@ -1446,6 +1465,194 @@ def compute_dish_jaccard_similarity(dish_a: Dict[str, Any], dish_b: Dict[str, An
     return len(fa & fb) / float(union_len)
 
 
+def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
+    """
+    [R10-DNA] Calcula la huella física de 3 dimensiones de un Preparado Funcional
+    (`Desayuno · Tiempo 3` con `33Plus®` o `Cena · Tiempo 3` con `34Plus®`):
+    `(formato_vehiculo, ingrediente_base_principal, botanico_dominante)`.
+    """
+    t = _strip_accents(course.get("title") or course.get("name") or "")
+    tech = _strip_accents(course.get("technique") or course.get("cooking_technique") or "")
+    ings_txt = " | ".join(_strip_accents(i.get("name") or "") for i in (course.get("ingredients") or []))
+    t_tech = f"{t} {tech}"
+    full = f"{t_tech} {ings_txt}"
+
+    # 1. Formato / Vehículo
+    if any(w in t_tech for w in ("sorbete", "nice-cream", "nice cream")):
+        fmt = "sorbete_nice_cream"
+    elif "iced matcha" in t_tech or ("matcha" in full and "espuma" in t_tech):
+        fmt = "iced_matcha_espuma"
+    elif any(w in t_tech for w in ("batido", "smoothie")):
+        fmt = "batido_smoothie"
+    elif any(w in t_tech for w in ("porridge", "no-oats")):
+        fmt = "porridge_no_oats"
+    elif "lassi" in t_tech:
+        fmt = "lassi"
+    elif "agua botanica" in t_tech:
+        fmt = "agua_botanica_espumosa"
+    elif "horchata" in t_tech:
+        fmt = "horchata"
+    elif "leche persa" in t_tech:
+        fmt = "leche_persa"
+    elif "halva" in t_tech or "crema helada" in t_tech:
+        fmt = "crema_helada_halva"
+    elif "atole" in t_tech:
+        fmt = "atole"
+    elif "cheesecake" in t_tech:
+        fmt = "cheesecake_deconstruido"
+    elif "trufa" in t_tech or "fat bomb" in t_tech:
+        fmt = "trufas_fat_bombs"
+    elif "panna cotta" in t_tech:
+        fmt = "panna_cotta"
+    elif "bavarois" in t_tech:
+        fmt = "bavarois"
+    elif "mousse" in t_tech:
+        fmt = "mousse"
+    elif "parfait" in t_tech:
+        fmt = "parfait"
+    elif "pudding" in t_tech:
+        fmt = "pudding_chia"
+    elif "natilla" in t_tech:
+        fmt = "natilla"
+    elif "granizado" in t_tech or "slushie" in t_tech:
+        fmt = "granizado_slushie"
+    elif "elixir verde" in t_tech or "prensado en frio" in t_tech:
+        fmt = "elixir_verde"
+    elif "leche dorada" in t_tech or "golden milk" in t_tech:
+        fmt = "leche_dorada"
+    elif "chai latte" in t_tech:
+        fmt = "chai_latte"
+    elif "crema" in t_tech:
+        fmt = "crema_tibia"
+    elif "gelatina" in t_tech or "grenetina" in ings_txt:
+        fmt = "gelatina"
+    elif any(w in t_tech for w in ("tisana", "infusion", "elixir")):
+        fmt = "tisana_infusion"
+    else:
+        fmt = "funcional_estandar"
+
+    # 2. Ingrediente Base Principal
+    base = "agua_botanica"
+    for b_key, b_pats in [
+        ("te_matcha", ["matcha"]),
+        ("rooibos_rojo", ["rooibos"]),
+        ("corazones_canamo_linaza", ["canamo", "linaza"]),
+        ("pulpa_maracuya", ["maracuya"]),
+        ("lavanda_pasiflora", ["lavanda"]),
+        ("hojas_higo", ["hojas de higo", "hoja de higo"]),
+        ("semilla_calabaza", ["semilla de calabaza", "pepita"]),
+        ("tahini_ajonjoli", ["tahini"]),
+        ("mora_azul", ["mora azul", "blueberry"]),
+        ("aguacate", ["aguacate"]),
+        ("pistaches", ["pistache"]),
+        ("almendras_fileteadas", ["almendras fileteadas", "almendra fileteada"]),
+        ("flor_tila_toronjil", ["tila", "toronjil"]),
+        ("cacao", ["cacao"]),
+        ("semillas_chia", ["chia"]),
+        ("queso_cottage", ["cottage"]),
+        ("queso_philadelphia", ["philadelphia"]),
+        ("yogur_griego", ["yogur"]),
+        ("nuez_india", ["nuez de la india"]),
+        ("nuez_pecana", ["nuez pecana"]),
+        ("frambuesas", ["frambuesa"]),
+        ("zarzamora", ["zarzamora"]),
+        ("fresas", ["fresa"]),
+        ("jamaica", ["jamaica"]),
+        ("te_chai", ["chai"]),
+        ("manzanilla", ["manzanilla"]),
+        ("curcuma", ["curcuma"]),
+        ("apio_pepino", ["apio", "pepino"]),
+        ("limon", ["limon"]),
+    ]:
+        if any(p in full for p in b_pats):
+            base = b_key
+            break
+
+    # 3. Botánico / Aromático Dominante
+    bot = "neutro"
+    for bot_key, bot_pats in [
+        ("albahaca", ["albahaca"]),
+        ("anis_estrella", ["anis estrella", "anis"]),
+        ("cardamomo_verde", ["cardamomo"]),
+        ("hierbabuena", ["hierbabuena"]),
+        ("pasiflora", ["pasiflora"]),
+        ("agua_azahar", ["azahar"]),
+        ("cedron_hinojo", ["cedron", "hinojo"]),
+        ("coco_rallado", ["coco rallado"]),
+        ("leche_coco", ["leche de coco"]),
+        ("leche_almendra", ["leche de almendra"]),
+        ("menta", ["menta"]),
+        ("jengibre", ["jengibre"]),
+        ("tomillo", ["tomillo"]),
+        ("romero", ["romero"]),
+        ("clavo", ["clavo"]),
+        ("oregano", ["oregano"]),
+        ("hierbas_finas", ["hierbas finas"]),
+        ("canela", ["canela"]),
+        ("vainilla", ["vainilla"]),
+        ("limon", ["limon"]),
+    ]:
+        if any(p in full for p in bot_pats) and bot_key != base:
+            bot = bot_key
+            break
+
+    return (fmt, base, bot)
+
+
+def compute_functional_prep_jaccard_features(course: Dict[str, Any]) -> Set[str]:
+    """
+    [R10-DNA] Extrae el conjunto de características culinarias y estructurales de un
+    preparado funcional (excluyendo el vehículo universal `Agua purificada`, las fórmulas
+    `33Plus®`/`34Plus®`/`MultiSinergix®`/`AminoSinergix®` y los micro-aromáticos universales
+    `Extracto de vainilla`, `Limones` y `Pimienta negra` cuando ya existen ingredientes base propios).
+    """
+    dna = compute_functional_prep_dna(course)
+    feats: Set[str] = {
+        f"fmt:{dna[0]}",
+        f"base:{dna[1]}",
+        f"bot:{dna[2]}",
+    }
+    raw_ings = [
+        _strip_accents(i.get("name") or "")
+        for i in (course.get("ingredients") or [])
+    ]
+    ignored_universal = {
+        "agua purificada",
+        "33plus®",
+        "34plus®",
+        "33plus",
+        "34plus",
+        "multisinergix®",
+        "aminosinergix®",
+        "multisinergix",
+        "aminosinergix",
+        "extracto de vainilla",
+        "pimienta negra",
+    }
+    primary_ings = [
+        nm for nm in raw_ings
+        if nm and nm not in ignored_universal and not any(u in nm for u in ("33plus", "34plus", "sinergix", "agua purificada"))
+    ]
+    non_citrus_ings = [nm for nm in primary_ings if nm not in ("limones", "limon", "canela molida")]
+    for nm in (non_citrus_ings if len(non_citrus_ings) >= 1 else primary_ings):
+        feats.add(f"ing:{nm}")
+    return feats
+
+
+def compute_functional_prep_jaccard_similarity(course_a: Dict[str, Any], course_b: Dict[str, Any]) -> float:
+    """
+    Calcula la similitud de Jaccard [0.0, 1.0] entre dos preparados funcionales (`Desayuno · side` o `Cena · side`).
+    """
+    fa = compute_functional_prep_jaccard_features(course_a)
+    fb = compute_functional_prep_jaccard_features(course_b)
+    if not fa or not fb:
+        return 0.0
+    union_len = len(fa | fb)
+    if union_len == 0:
+        return 0.0
+    return len(fa & fb) / float(union_len)
+
+
 def extract_structural_signature(dish: Dict[str, Any]) -> Optional[str]:
     """
     [R10] Wrapper de compatibilidad hacia atrás que retorna la firma si el platillo
@@ -1629,6 +1836,8 @@ def audit_week_plan(
         hn = _strip_accents(h)
         harvest_norm_set.add(hn)
         harvest_norm_set.add(re.sub(r"\s*\bfresc[oa]s?\b", "", hn).strip())
+    harvest_norm_set.add("hojas de higo")
+    harvest_norm_set.add("hoja de higo")
 
     pantry_norm_map: Dict[str, Tuple[str, float, str]] = {
         _strip_accents(k): (k, float(v[0]), v[1]) for k, v in pantry.items()
@@ -1723,8 +1932,13 @@ def audit_week_plan(
                 title_and_ings_text = _strip_accents(dish.get("title", "")) + " " + " ".join(
                     _strip_accents(i.get("name", "")) for i in ings
                 )
+                title_and_ings_for_forbidden = re.sub(
+                    r"\b(sin\s+azucar|hojas?\s+de\s+higo)\b",
+                    "",
+                    title_and_ings_text,
+                )
                 for forbidden in FORBIDDEN_INGREDIENT_TOKENS:
-                    if _strip_accents(forbidden) in title_and_ings_text:
+                    if _strip_accents(forbidden) in title_and_ings_for_forbidden:
                         violations.append(
                             f"[R1/R3.4] {c_label}: Detectado insumo prohibido o picante irritante '{forbidden}'."
                         )
@@ -2219,6 +2433,61 @@ def audit_week_plan(
                                                 violations.append(
                                                     f"[R10-DNA] Violación de Compuerta Jaccard en Entrada (J={jac_s:.2f} >= 0.60) en {d_label} {m_label} ('{c_starter.get('title')}') contra {w_tag} {pd_name} {pm_type} ('{p_st.get('title')}')."
                                                 )
+
+        # [R10-DNA] Extensión del Candado de Ventana Móvil de 4 Semanas a los 14 Preparados Funcionales (`Desayuno · Tiempo 3` y `Cena · Tiempo 3`)
+        if curr_wnum >= 46:
+            seen_func_dnas_intra: Dict[Tuple[str, str, str], str] = {}
+            seen_func_courses_intra: List[Tuple[str, Dict[str, Any]]] = []
+            func_prev_weeks = [
+                (w_tag, pw_data)
+                for (w_tag, pw_data) in rolling_prev_weeks
+                if int(re.sub(r"\D", "", w_tag) or 0) >= max(44, curr_wnum - 3)
+            ]
+            for d_idx in range(7):
+                d_label = days[d_idx].get("day", f"Día {d_idx + 1}")
+                c_meals = days[d_idx].get("meals", [])
+                if len(c_meals) == 3:
+                    for m_idx, m_label in [(0, "Desayuno"), (2, "Cena")]:
+                        c_side = c_meals[m_idx].get("side") or {}
+                        f_dna_c = compute_functional_prep_dna(c_side)
+                        loc_f = f"{d_label} {m_label}"
+                        if f_dna_c in seen_func_dnas_intra:
+                            violations.append(
+                                f"[R10-DNA] Colisión Intra-Semanal de Preparado Funcional {f_dna_c} en {loc_f} ('{c_side.get('title')}') ya usado en {seen_func_dnas_intra[f_dna_c]}."
+                            )
+                        else:
+                            seen_func_dnas_intra[f_dna_c] = loc_f
+
+                        if curr_wnum >= 47:
+                            for prev_loc_f, prev_course_intra in seen_func_courses_intra:
+                                jac_intra = compute_functional_prep_jaccard_similarity(c_side, prev_course_intra)
+                                if jac_intra >= 0.45:
+                                    violations.append(
+                                        f"[R10-DNA] Similitud Intra-Semanal de Preparado Funcional (J={jac_intra:.2f} >= 0.45) en {loc_f} ('{c_side.get('title')}') contra {prev_loc_f} ('{prev_course_intra.get('title')}')."
+                                    )
+                            seen_func_courses_intra.append((loc_f, c_side))
+
+                            for w_tag, pw_data in func_prev_weeks:
+                                for pd_obj in pw_data.get("days", []):
+                                    pd_name = pd_obj.get("day", "")
+                                    p_meals_list = pd_obj.get("meals", [])
+                                    if len(p_meals_list) == 3:
+                                        for pm_idx, pm_label in [(0, "Desayuno"), (2, "Cena")]:
+                                            p_side = p_meals_list[pm_idx].get("side") or {}
+                                            f_dna_p = compute_functional_prep_dna(p_side)
+                                            if f_dna_c == f_dna_p or (
+                                                f_dna_c[0] == f_dna_p[0]
+                                                and f_dna_c[0] not in ("tisana_infusion", "gelatina")
+                                            ):
+                                                violations.append(
+                                                    f"[R10-DNA] Colisión de Preparado Funcional en Ventana de 4 Semanas {f_dna_c} en {loc_f} ('{c_side.get('title')}') contra {w_tag} {pd_name} {pm_label} ('{p_side.get('title')}' {f_dna_p})."
+                                                )
+                                            else:
+                                                jac_f = compute_functional_prep_jaccard_similarity(c_side, p_side)
+                                                if jac_f >= 0.45:
+                                                    violations.append(
+                                                        f"[R10-DNA] Violación de Similitud Jaccard en Preparado Funcional (J={jac_f:.2f} >= 0.45) en {loc_f} ('{c_side.get('title')}') contra {w_tag} {pd_name} {pm_label} ('{p_side.get('title')}')."
+                                                    )
 
     # [R12] Compuerta de Invariante Estricta de 126 Huevos Semanales (7 desayunos x 18 huevos; 0 en comida/cena)
     total_weekly_eggs = bom_totals.get("huevo", {}).get("total", 0.0)

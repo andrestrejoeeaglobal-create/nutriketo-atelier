@@ -556,8 +556,8 @@ def build_ssot_document_from_ui_state(
             canonical_pantry_for_auditor[c_name] = [aud_qty, aud_unit]
 
     meta = source_meta or {}
-    if not ui_state.get("v63_sams_09nov2026_post_s45_sync"):
-        for t_name, (t_qty, t_unit) in V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES.items():
+    for t_name, (t_qty, t_unit) in V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES.items():
+        if not ui_state.get("v63_sams_09nov2026_post_s45_sync") or t_name not in ui_pantry_stock:
             ui_pantry_stock[t_name] = int(t_qty) if t_qty == int(t_qty) else t_qty
             ui_pantry_units[t_name] = t_unit
             if t_name not in PROHIBITED_ITEMS:

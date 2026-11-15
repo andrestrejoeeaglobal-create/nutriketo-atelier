@@ -45,17 +45,17 @@ def _clean_historical_display_title(title: str) -> str:
 
 def get_shop_category(name: str, raw_cat: str = "") -> str:
     n = name.lower()
-    if any(k in n for k in ["fresa", "frambuesa", "zarzamora", "mora", "arandano", "arándano", "granada", "pitaya"]):
+    if any(k in n for k in ["fresa", "frambuesa", "zarzamora", "mora", "arandano", "arándano", "granada", "pitaya", "maracuy"]):
         return "🍓 Frutas de Bajo Índice Glucémico"
-    if any(k in n for k in ["aceite", "mantequilla", "aguacate", "nuez", "chía", "chia", "leche de coco", "aceituna", "pistache", "almendra", "ajonjoli", "ajonjolí"]):
+    if any(k in n for k in ["aceite", "mantequilla", "aguacate", "nuez", "chía", "chia", "leche de coco", "aceituna", "pistache", "almendra", "ajonjoli", "ajonjolí", "cáñamo", "canamo", "linaza", "tahini", "semilla de calabaza", "coco rallado"]):
         return "🥑 Grasas, Aceites y Semillas"
     if any(k in n for k in ["sinergix", "33plus", "34plus", "grenetina"]):
         return "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA"
-    if any(k in n for k in ["queso", "yogur", "crema"]):
+    if any(k in n for k in ["queso", "yogur", "crema", "leche de almendra"]):
         return "🧀 Lácteos y Quesos (Sin Gluten — Keto)"
     if any(k in n for k in ["steak", "res", "carne", "salmon", "salmón", "mojarra", "pavo", "pollo", "sardina", "atun", "atún", "huevo"]):
         return "🥩 Carnes, Pescados y Proteínas"
-    if any(k in n for k in ["brocoli", "brócoli", "calabacita", "cebolla", "champiñ", "champin", "coliflor", "espinaca", "esparrago", "espárrago", "ejote", "germinado", "jitomate", "tomate", "lechuga", "morrón", "morron", "nopal", "pepino", "acelga", "cilantro"]):
+    if any(k in n for k in ["brocoli", "brócoli", "calabacita", "cebolla", "champiñ", "champin", "coliflor", "espinaca", "esparrago", "espárrago", "ejote", "germinado", "jitomate", "tomate", "lechuga", "morrón", "morron", "nopal", "pepino", "acelga", "cilantro", "albahaca", "hierbabuena"]):
         return "🥬 Verduras, Hortalizas y Frescos"
     return "🌶️ Chiles, Condimentos e Infusiones"
 

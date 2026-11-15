@@ -1920,20 +1920,30 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     Valida la Orden Maestra de Arquitectura y Compilación — Semana 47 (15 al 21 de Noviembre de 2026):
     1. Pollo entero: 6 piezas anatómicas cocidas empleadas en UN SOLO SERVICIO (R#08) -> 0 piezas saldo, $0 compra.
     2. Fondo claro de pollo: 0 ml disponibles de arranque -> ninguna receta en S47 usa 'Fondo claro de pollo'.
-    3. Vaciado prioritario de Alacena al 100% (Fajitas de mojarra 2,720 g en 3 servicios, Pechuga de pavo 700 g,
-       Atún en agua 560 g, Sardinas 260 g, Yogur griego 2,000 g, Queso manchego 1,000 g, Mantequilla 720 g,
-       Leche de coco 500 ml, Queso Philadelphia 360 g, Queso de cabra 200 g, Queso parmesano 100 g,
-       Nuez de la India 1,000 g, Semillas y nueces mixtas 600 g, Almendras fileteadas 100 g, Pistaches 50 g,
-       Frambuesas 220 g, Fresas 200 g, Apio 500 g, Espinacas 260 g, Germinado 100 g, Jitomate 1 pieza,
-       Ajo 100 g, Alcaparras 44 g, Grenetina 32 g, Manzanilla 12 g, Tomillo 8 g, Aceitunas manzanilla 5 g).
-    4. 14 preparados funcionales distintos (7 matutinos con 33Plus® y 7 nocturnos con 34Plus®), sin Super Malla Biológica Tropical.
+    3. Separación de Perecederos vs. Especias/Secos de Anaquel:
+       - Vaciado al 100% de perecederos (Fajitas de mojarra 2,720 g, Pechuga de pavo 700 g, Atún en agua 560 g,
+         Yogur griego 2,000 g, Queso manchego 1,000 g, Mantequilla 720 g, Leche de coco 500 ml,
+         Queso Philadelphia 360 g, Queso de cabra 200 g, Queso parmesano 100 g, Mayonesa 200 g,
+         Frambuesas 220 g, Fresas 200 g, Apio 500 g, Espinacas 260 g, Germinado 100 g, Jitomate 1 pieza).
+       - Conservación de especias y secos de larga duración en su saldo natural (Grenetina 32 g, Manzanilla 12 g, Tomillo 2 g saldo).
+    4. Regla Estricta de 4 Semanas sin Repetir ([R10-DNA]) en los 14 Preparados Funcionales (33Plus® y 34Plus®):
+       0 colisiones de `compute_functional_prep_dna` y `Jaccard < 0.45` contra Semanas 44, 45 y 46.
     5. 0 violaciones en menu_hard_gate_auditor frente a S46, S45, S44 y S43.
     """
+    import copy
     import json
     from pathlib import Path
-    from app.services.menu_hard_gate_auditor import assert_zero_violations, load_live_pantry_ssot
+    from app.services.menu_hard_gate_auditor import (
+        assert_zero_violations,
+        audit_week_plan,
+        compute_functional_prep_dna,
+        compute_functional_prep_jaccard_similarity,
+        load_live_pantry_ssot,
+    )
 
     root = Path(__file__).resolve().parents[1]
+    s44 = json.loads((root / "semana_44_master.json").read_text(encoding="utf-8"))
+    s45 = json.loads((root / "semana_45_master.json").read_text(encoding="utf-8"))
     s46 = json.loads((root / "semana_46_master.json").read_text(encoding="utf-8"))
     s47 = json.loads((root / "semana_47_master.json").read_text(encoding="utf-8"))
     live = load_live_pantry_ssot()
@@ -1952,13 +1962,32 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     fondo_pollo_occurrences = 0
     morning_preps = set()
     night_preps = set()
+    s47_func_dnas = set()
+    hist_func_courses = []
+    for hw in (s44, s45, s46):
+        for hd in hw["days"]:
+            hist_func_courses.append(hd["meals"][0]["side"])
+            hist_func_courses.append(hd["meals"][2]["side"])
+    hist_func_dnas = {compute_functional_prep_dna(c) for c in hist_func_courses}
 
     for d in s47["days"]:
         for m_idx, m in enumerate(d["meals"]):
             if m_idx == 0:
                 morning_preps.add(m["side"]["title"])
+                dna_b = compute_functional_prep_dna(m["side"])
+                assert dna_b not in s47_func_dnas
+                assert dna_b not in hist_func_dnas, f"Colisión ADN funcional matutino {dna_b} con S44-S46"
+                s47_func_dnas.add(dna_b)
+                for hc in hist_func_courses:
+                    assert compute_functional_prep_jaccard_similarity(m["side"], hc) < 0.45
             elif m_idx == 2:
                 night_preps.add(m["side"]["title"])
+                dna_d = compute_functional_prep_dna(m["side"])
+                assert dna_d not in s47_func_dnas
+                assert dna_d not in hist_func_dnas, f"Colisión ADN funcional nocturno {dna_d} con S44-S46"
+                s47_func_dnas.add(dna_d)
+                for hc in hist_func_courses:
+                    assert compute_functional_prep_jaccard_similarity(m["side"], hc) < 0.45
             for r in ("starter", "main", "side"):
                 dish = m[r]
                 assert "super malla" not in dish["title"].lower()
@@ -1975,19 +2004,27 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     assert len(morning_preps) == 7, "Deben existir 7 preparados matutinos distintos con 33Plus®"
     assert len(night_preps) == 7, "Deben existir 7 preparados nocturnos distintos con 34Plus®"
 
+    # Verificar que clonar un preparado funcional de S46 en S47 dispara VIOLACIÓN DURA [R10-DNA]
+    s47_mut = copy.deepcopy(s47)
+    s47_mut["days"][0]["meals"][0]["side"] = copy.deepcopy(s46["days"][2]["meals"][0]["side"])
+    rep_mut = audit_week_plan(s47_mut, prev_week_data=s46, pantry_stock=live["auditor_pantry"], farm_harvest=live["farm_harvest"])
+    assert rep_mut["passed"] is False
+    assert any("Colisión de Preparado Funcional en Ventana de 4 Semanas" in v for v in rep_mut["violations"])
+
     market_map = {x["name"]: x for x in rep_s47["bom_summary"]["market_purchases"]}
     market_names = set(market_map.keys())
     for zero_buy_item in [
         "Fajitas de mojarra", "Pechuga de pavo", "Pollo entero", "Atún en agua", "Huevo",
         "Yogur griego", "Queso manchego", "Mantequilla", "Leche de coco", "Queso Philadelphia",
         "Queso de cabra", "Queso parmesano", "Mayonesa", "Nuez de la India", "Semillas y nueces mixtas",
-        "Almendras fileteadas", "Pistaches", "Frambuesas", "Fresas", "Apio", "Espinacas",
+        "Almendras fileteadas", "Frambuesas", "Fresas", "Apio", "Espinacas",
         "Germinado", "Jitomate", "Ajo", "Alcaparras", "Grenetina", "Manzanilla", "Tomillo",
         "Aceitunas manzanilla",
     ]:
         assert zero_buy_item not in market_names, f"{zero_buy_item} debe cubrirse al 100% en Alacena ($0 compra en S47)"
     assert abs(float(market_map["Aceite de oliva"]["net_to_buy"]) - 162.0) < 1e-6
     assert abs(float(market_map["Sardinas"]["net_to_buy"]) - 400.0) < 1e-6
+    assert abs(float(market_map["Pistaches"]["net_to_buy"]) - 70.0) < 1e-6
 
 
 

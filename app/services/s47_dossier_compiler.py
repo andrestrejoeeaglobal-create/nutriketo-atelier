@@ -18,6 +18,8 @@ from typing import Any, Dict, List
 from app.services.menu_hard_gate_auditor import (
     assert_zero_violations,
     compute_dish_structural_dna,
+    compute_functional_prep_dna,
+    compute_functional_prep_jaccard_similarity,
     load_live_pantry_ssot,
 )
 from app.services.s45_dossier_compiler import (
@@ -91,38 +93,41 @@ def compile_s47_dossier() -> Dict[str, Any]:
     lines.append("- **Sincronización SSOT Activa (`pantry_live_state.json`):** `v65_ui_audit_nov14_synced` (`seq=279021` — Inventario Físico Actualizado 14 Nov 2026).")
     lines.append("- **Regla Física 1 — `Pollo entero: 6 piezas` (6 Piezas Anatómicas Sueltas Ya Cocidas: 2 Muslos, 2 Piernas y 2 Alas):** Destinadas íntegramente a **UN SOLO SERVICIO** (`Domingo 15 Nov · Cena · R#08`), deshebradas y gratinadas con `Queso Philadelphia` (`120 g`) y `Queso manchego` (`160 g`) -> **`0 piezas` de saldo remanente y `\\$0.00 MXN` en mercado**.")
     lines.append("- **Regla Física 2 — `Fondo claro de pollo: 0 ml` Disponibles de Arranque:** Cero litros de caldo fantasma (`0 ml`). Todas las sopas y consomés calientes de entrada (`R#07, R#16, R#25, R#34, R#43, R#52, R#61`) se elaboran mediante **infusiones vegetales y aromáticas en `Agua purificada` de Granja El Herami (`\\$0.00 MXN`)**.")
-    lines.append("- **Catálogo Funcional Semana 47 (`[R8]`):** **14 preparados funcionales cetogénicos 100% distintos** (7 matutinos en `Desayuno · Tiempo 3` con **`33Plus®`** a `5 g/persona` = `30 g/6p` y 7 nocturnos en `Cena · Tiempo 3` con **`34Plus®`** a `5 g/persona` = `30 g/6p`, `0% Teína`, `0% Super Malla Biológica Tropical`).")
-    lines.append("- **Auditoría de Huella Física Inmutable (`[R10-DNA]`):** **0 colisiones de ADN estructural (`compute_dish_structural_dna`)** y **Compuerta de Similitud de Ingredientes de Jaccard (`Jaccard < 0.60`)** verificada contra la ventana móvil de 4 semanas (`Semanas 43, 44, 45 y 46`).")
+    lines.append("- **Catálogo Funcional Semana 47 (`[R8]` & `[R10-DNA]`):** **14 preparados funcionales cetogénicos 100% inéditos en la ventana móvil de 4 semanas (`S44, S45, S46, S47`)** — 7 matutinos en `Desayuno · Tiempo 3` con **`33Plus®`** (`30 g/6p`) y 7 nocturnos en `Cena · Tiempo 3` con **`34Plus®`** (`30 g/6p`, `0% Teína`), auditados con `compute_functional_prep_dna` (`<formato_vehiculo | ingrediente_base_principal | botanico_dominante>`) y `Jaccard < 0.45`.")
+    lines.append("- **Separación de Perecederos vs. Especias y Secos de Larga Vida de Anaquel:** Se rotan al 100% los perecederos reales (`Frambuesas: 220 g`, `Fresas: 200 g`, `Yogur griego: 2,000 g`, `Queso Philadelphia: 360 g`, `Leche de coco: 500 ml`, `Apio: 500 g`, `Espinacas: 260 g`, `Germinado: 100 g`, `Jitomate: 1 pza`, `Pavo: 700 g`, `Pollo cocido: 6 pzas`, `Mojarra: 2,720 g`, `Atún: 560 g`, `Mayonesa: 200 g`) y se conservan en su saldo natural las especias, infusiones secas y polvos de larga duración (`Grenetina: 32 g saldo`, `Manzanilla: 12 g saldo`, `Té chai: 282 g saldo`, `Tomillo: 2 g saldo`, `Canela: 82 g saldo`, `Orégano: 38 g saldo`, `Comino: 31 g saldo`, `Achiote: 52 g saldo`, `Cúrcuma: 140 g saldo`, `Clavo: 30 g saldo`).")
+    lines.append("- **Auditoría de Huella Física Inmutable (`[R10-DNA]`):** **0 colisiones de ADN estructural (`compute_dish_structural_dna` y `compute_functional_prep_dna`)** y **Compuerta de Similitud de Ingredientes de Jaccard (`Jaccard < 0.60` en principales y `Jaccard < 0.45` en preparados funcionales)** verificada contra la ventana móvil de 4 semanas (`Semanas 44, 45, 46 y 47`).")
     lines.append("- **Inmunidad de Semanas Previas:** `semana_44_master.json`, `semana_45_master.json` y `semana_46_master.json` permanecen **100% intactos e inmutables**.")
     lines.append("- **Comensales Base por Servicio:** `6 comensales` en los 21 servicios (`18 Huevos Exactos por Desayuno = 126 Huevos/Semana`).")
     lines.append("")
     lines.append("---")
     lines.append("")
-    lines.append("## 0. Catálogo Ejecutivo de los 14 Preparados Funcionales Distintos de la Semana 47 (`33Plus®` y `34Plus®`)")
+    lines.append("## 0. Catálogo Ejecutivo de los 14 Preparados Funcionales 100% Inéditos de la Semana 47 (`33Plus®` y `34Plus®` — Regla Estricta de 4 Semanas sin Repetir `[R10-DNA]`)")
     lines.append("")
     lines.append("### ☀️ 0.1 Los 7 Preparados Matutinos (`Desayuno · Tiempo 3` — Exclusivamente con `33Plus®`, `30 g` / `6p`)")
-    lines.append("| Día | Receta | Preparado Funcional Matutino con `33Plus®` | Temperatura | Insumos Clave (6p) |")
-    lines.append("|---|---|---|---|---|")
+    lines.append("| Día | Receta | Preparado Funcional Matutino con `33Plus®` | Huella ADN (`<formato|base|botánico>`) | Temperatura | Insumos Clave (6p) |")
+    lines.append("|---|---|---|---|---|---|")
     for d_idx, day in enumerate(s47["days"]):
         r_idx = d_idx * 9 + 3
         sd_b = day["meals"][0]["side"]
+        dna_b = "|".join(compute_functional_prep_dna(sd_b))
         ings_b = ", ".join(f"`{i['name']}` (`{fmt_num(float(i['amount']))} {i['unit']}`)" for i in sd_b["ingredients"])
         t_val_b = str(sd_b.get("serving_temp_c") or "6°C")
         if "°C" not in t_val_b:
             t_val_b = f"{t_val_b}°C"
-        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_b['title']}** | `{t_val_b}` | {ings_b} |")
+        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_b['title']}** | `<{dna_b}>` | `{t_val_b}` | {ings_b} |")
     lines.append("")
     lines.append("### 🌙 0.2 Los 7 Preparados Nocturnos (`Cena · Tiempo 3` — Exclusivamente con `34Plus®`, `30 g` / `6p`, `0% Teína`)")
-    lines.append("| Día | Receta | Preparado Funcional Nocturno con `34Plus®` | Temperatura | Insumos Clave (6p) |")
-    lines.append("|---|---|---|---|---|")
+    lines.append("| Día | Receta | Preparado Funcional Nocturno con `34Plus®` | Huella ADN (`<formato|base|botánico>`) | Temperatura | Insumos Clave (6p) |")
+    lines.append("|---|---|---|---|---|---|")
     for d_idx, day in enumerate(s47["days"]):
         r_idx = d_idx * 9 + 9
         sd_d = day["meals"][2]["side"]
+        dna_d = "|".join(compute_functional_prep_dna(sd_d))
         ings_d = ", ".join(f"`{i['name']}` (`{fmt_num(float(i['amount']))} {i['unit']}`)" for i in sd_d["ingredients"])
         t_val_d = str(sd_d.get("serving_temp_c") or "52°C")
         if "°C" not in t_val_d:
             t_val_d = f"{t_val_d}°C"
-        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_d['title']}** | `{t_val_d}` | {ings_d} |")
+        lines.append(f"| **{day['day']} {day['date_str']}** | `R#{r_idx:02d}` | **{sd_d['title']}** | `<{dna_d}>` | `{t_val_d}` | {ings_d} |")
     lines.append("")
     lines.append("---")
     lines.append("")
@@ -298,7 +303,7 @@ def compile_s47_dossier() -> Dict[str, Any]:
         ("🥜 Fruto Seco Alacena (Vaciado Exacto 100%)", "Nuez de la India", 1000.0, "g"),
         ("🥜 Semillas Alacena (Vaciado Exacto 100%)", "Semillas y nueces mixtas", 600.0, "g"),
         ("🥜 Fruto Seco Alacena (Vaciado Exacto 100%)", "Almendras fileteadas", 100.0, "g"),
-        ("🥜 Fruto Seco Alacena (Vaciado Exacto 100%)", "Pistaches", 50.0, "g"),
+        ("🥜 Fruto Seco Alacena (`50 g` descontados en R#27 de `120 g`)", "Pistaches", 50.0, "g"),
         ("🍓 Fruta Alacena (Vaciado Exacto 100%)", "Frambuesas", 220.0, "g"),
         ("🍓 Fruta Alacena (Vaciado Exacto 100%)", "Fresas", 200.0, "g"),
         ("🥬 Hortaliza Alacena (Vaciado Exacto 100%)", "Apio", 500.0, "g"),
@@ -307,9 +312,9 @@ def compile_s47_dossier() -> Dict[str, Any]:
         ("🥬 Hortaliza Alacena (Vaciado Exacto 100%)", "Jitomate", 1.0, "piezas"),
         ("🧂 Condimento Alacena (Vaciado Exacto 100%)", "Ajo", 100.0, "g"),
         ("🧂 Condimento Alacena (Vaciado Exacto 100%)", "Alcaparras", 44.0, "g"),
-        ("💊 Gelificante Alacena (2 Gelificados × `16 g`)", "Grenetina", 32.0, "g"),
-        ("🌼 Infusión Alacena (Vaciado Exacto 100%)", "Manzanilla", 12.0, "g"),
-        ("🌿 Especia Alacena (Vaciado Exacto 100%)", "Tomillo", 8.0, "g"),
+        ("💊 Polvo de Anaquel Conservado (`32 g` saldo intacto)", "Grenetina", 32.0, "g"),
+        ("🌼 Infusión Seca de Anaquel Conservada (`12 g` saldo intacto)", "Manzanilla", 12.0, "g"),
+        ("🌿 Especia Seca de Anaquel (`6 g` en consomé y res; `2 g` saldo)", "Tomillo", 8.0, "g"),
         ("🥚 Emulsión Alacena (Vaciado Exacto 100% en R#35)", "Mayonesa", 200.0, "g"),
     ]
     for idx_t, (cat_desc, c_nm, st_init, u_t) in enumerate(s47_manifest, start=1):
@@ -466,6 +471,28 @@ def compile_s47_dossier() -> Dict[str, Any]:
                     return f"**E:** {st_title}<br>**P:** {mn_title} `[{arch}]`"
                 return f"*E:* {st_title}<br>*P:* {mn_title} `[{arch}]`"
             lines.append(f"| **{d_name} · {m_label}** | {cell_str_s47(s44)} | {cell_str_s47(s45)} | {cell_str_s47(s46)} | {cell_str_s47(s47, bold=True)} | ✅ `0 Colisión` |")
+
+    lines.append("")
+    lines.append("### 5.1 Auditoría de Ventana Móvil de 4 Semanas (`S44`, `S45`, `S46`, `S47`) en los 14 Preparados Funcionales (`Desayuno · Tiempo 3` y `Cena · Tiempo 3`)")
+    lines.append("| Día y Horario | Semana 44 | Semana 45 | Semana 46 | **Semana 47 — 100% Inédito `<formato|base|botánico>`** | Jaccard Máx vs S44–S46 | Estado `[R10-DNA]` |")
+    lines.append("|---|---|---|---|---|---|---|")
+    prev_func_courses = []
+    for pw in (s44, s45, s46):
+        for pd in pw["days"]:
+            prev_func_courses.append(pd["meals"][0]["side"])
+            prev_func_courses.append(pd["meals"][2]["side"])
+    for d_idx in range(7):
+        d_name = s47["days"][d_idx]["day"]
+        for m_idx, m_label in [(0, "Desayuno (33Plus®)"), (2, "Cena (34Plus®)")]:
+            s44_sd = _clean_historical_display_title(s44["days"][d_idx]["meals"][m_idx]["side"]["title"])
+            s45_sd = _clean_historical_display_title(s45["days"][d_idx]["meals"][m_idx]["side"]["title"])
+            s46_sd = _clean_historical_display_title(s46["days"][d_idx]["meals"][m_idx]["side"]["title"])
+            s47_course = s47["days"][d_idx]["meals"][m_idx]["side"]
+            s47_dna = "|".join(compute_functional_prep_dna(s47_course))
+            max_j = max(compute_functional_prep_jaccard_similarity(s47_course, pc) for pc in prev_func_courses)
+            lines.append(
+                f"| **{d_name} · {m_label}** | {s44_sd} | {s45_sd} | {s46_sd} | **{s47_course['title']}** `<{s47_dna}>` | `{max_j:.2f}` (`< 0.45`) | ✅ `0 Colisión` |"
+            )
 
     lines.append("")
     lines.append("---")

@@ -2648,6 +2648,137 @@ function _computeDishJaccardSimilarityHardGate(dishA, dishB) {
   return union > 0 ? inter / union : 0.0;
 }
 
+const _HG_FUNCTIONAL_PREP_FORMATS = [
+  ['nice_cream_sorbete', ['sorbete', 'nice-cream', 'nice cream', 'helado']],
+  ['porridge_no_oats', ['porridge', 'no-oats', 'no oats']],
+  ['cheesecake_crumble', ['cheesecake', 'deconstruido', 'crumble']],
+  ['crema_halva', ['halva', 'tahini']],
+  ['atole_pepita', ['atole']],
+  ['trufa_fat_bomb', ['trufa', 'trufas', 'fat bomb', 'fat bombs', 'bocado']],
+  ['panna_cotta_bavarois', ['panna cotta', 'bavarois']],
+  ['mousse_batido_queso', ['mousse']],
+  ['parfait_cuchara', ['parfait']],
+  ['natilla_tibia', ['natilla', 'custard']],
+  ['gelatina_colageno', ['gelatina', 'aspic']],
+  ['lassi_probiotico', ['lassi']],
+  ['horchata_vegetal', ['horchata']],
+  ['leche_dorada', ['leche dorada', 'golden milk']],
+  ['leche_tibia_nueces', ['leche persa', 'leche tibia', 'crema nocturna', 'emulsion tibia']],
+  ['chai_latte', ['chai latte', 'chai']],
+  ['iced_matcha_latte', ['matcha']],
+  ['batido_smoothie', ['batido', 'smoothie']],
+  ['agua_botanica_fria', ['agua botanica', 'elixir verde', 'prensado en frio']],
+  ['infusion_tisana', ['infusion', 'tisana', 'elixir sedante', 'te ']]
+];
+
+const _HG_FUNCTIONAL_PREP_BASES = [
+  ['semilla_calabaza', ['semilla de calabaza', 'pepita']],
+  ['tahini_ajonjoli', ['tahini', 'ajonjoli']],
+  ['canamo_linaza', ['canamo', 'linaza']],
+  ['pistache', ['pistache']],
+  ['almendra_fileteada', ['almendras fileteadas', 'almendra fileteada']],
+  ['aguacate', ['aguacate']],
+  ['maracuya', ['maracuya']],
+  ['mora_azul', ['mora azul', 'blueberry']],
+  ['frambuesa', ['frambuesa']],
+  ['fresa', ['fresa']],
+  ['queso_philadelphia', ['philadelphia']],
+  ['queso_ricotta', ['ricotta']],
+  ['yogur_griego', ['yogur griego', 'yogur']],
+  ['leche_almendra', ['leche de almendra']],
+  ['leche_coco', ['leche de coco']],
+  ['nuez_india', ['nuez de la india']],
+  ['nuez_pecana', ['nuez pecana']],
+  ['semillas_mixtas', ['semillas y nueces mixtas']],
+  ['chia', ['chia']],
+  ['apio_pepino', ['apio', 'pepino']],
+  ['agua_infusion', ['agua purificada']]
+];
+
+const _HG_FUNCTIONAL_PREP_BOTANICALS = [
+  ['lavanda_pasiflora', ['lavanda', 'pasiflora']],
+  ['hoja_higo_cedron', ['hojas de higo', 'hoja de higo', 'cedron', 'hinojo']],
+  ['rooibos_anis', ['rooibos', 'anis estrella']],
+  ['matcha', ['matcha']],
+  ['albahaca', ['albahaca']],
+  ['hierbabuena', ['hierbabuena']],
+  ['azahar', ['azahar']],
+  ['cardamomo', ['cardamomo']],
+  ['te_chai', ['te chai', 'chai']],
+  ['curcuma', ['curcuma']],
+  ['manzanilla', ['manzanilla']],
+  ['jamaica', ['jamaica']],
+  ['toronjil', ['toronjil']],
+  ['menta', ['menta']],
+  ['romero', ['romero']],
+  ['tomillo', ['tomillo']],
+  ['clavo', ['clavo']],
+  ['canela', ['canela']],
+  ['vainilla', ['vainilla']],
+  ['limon', ['limon']]
+];
+
+function computeFunctionalPrepDna(course) {
+  const c = course || {};
+  const titleNorm = _normTextHardGate(c.title || '');
+  const techNorm = _normTextHardGate(c.technique || '');
+  const ingsNorm = (c.ingredients || []).map(i => _normTextHardGate(i.name || '')).filter(Boolean);
+  const fullTxt = `${titleNorm} | ${techNorm} | ${ingsNorm.join(' | ')}`;
+  const ingsTxt = ingsNorm.join(' | ');
+
+  let fmt = 'preparado_funcional';
+  for (const [fKey, fPats] of _HG_FUNCTIONAL_PREP_FORMATS) {
+    if (fPats.some(p => fullTxt.includes(p))) { fmt = fKey; break; }
+  }
+  let base = 'agua_infusion';
+  for (const [bKey, bPats] of _HG_FUNCTIONAL_PREP_BASES) {
+    if (bPats.some(p => ingsTxt.includes(p) || titleNorm.includes(p))) { base = bKey; break; }
+  }
+  let bot = 'neutro';
+  for (const [btKey, btPats] of _HG_FUNCTIONAL_PREP_BOTANICALS) {
+    if (btPats.some(p => ingsTxt.includes(p) || titleNorm.includes(p))) { bot = btKey; break; }
+  }
+  return `${fmt}|${base}|${bot}`;
+}
+const _computeFunctionalPrepDnaHardGate = computeFunctionalPrepDna;
+
+function _computeFunctionalPrepJaccardSimilarityHardGate(courseA, courseB) {
+  const getFeats = (c) => {
+    const s = new Set();
+    const dna = computeFunctionalPrepDna(c).split('|');
+    s.add('fmt:' + dna[0]);
+    s.add('base:' + dna[1]);
+    s.add('bot:' + dna[2]);
+    const ingsNorm = ((c && c.ingredients) || []).map(i => _normTextHardGate(i.name || '')).filter(Boolean);
+    const ignore = new Set(['agua purificada', '33plus', '34plus', 'multisinergix', 'aminosinergix', 'sal de mar']);
+    ingsNorm.forEach(ing => {
+      if (ignore.has(ing) || ing.includes('33plus') || ing.includes('34plus') || ing.includes('sinergix')) return;
+      let matched = false;
+      for (const [bKey, bPats] of _HG_FUNCTIONAL_PREP_BASES) {
+        if (bKey !== 'agua_infusion' && bPats.some(p => ing.includes(p))) {
+          s.add('ing:' + bKey);
+          matched = true;
+        }
+      }
+      for (const [btKey, btPats] of _HG_FUNCTIONAL_PREP_BOTANICALS) {
+        if (btPats.some(p => ing.includes(p))) {
+          s.add('ing:' + btKey);
+          matched = true;
+        }
+      }
+      if (!matched) s.add('ing:' + ing);
+    });
+    return s;
+  };
+  const fa = getFeats(courseA);
+  const fb = getFeats(courseB);
+  if (!fa.size || !fb.size) return 0.0;
+  let inter = 0;
+  fa.forEach(x => { if (fb.has(x)) inter++; });
+  const union = fa.size + fb.size - inter;
+  return union > 0 ? inter / union : 0.0;
+}
+
 function _getFeedbackWeightModifierForDish(dishTitle) {
   const normTarget = _normTextHardGate(dishTitle);
   if (!normTarget) return 1.0;
@@ -2727,7 +2858,7 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
             return ['yogur', 'cottage', 'ricotta', 'queso', 'crema acida', 'leche de vaca'].some(k => nm.includes(k));
           });
           const dTitleNorm = _normTextHardGate(dish.title || '');
-          const isFunctionalS46Prep = role === 'side' && ((mNorm.includes('desayuno') && (dTitleNorm.includes('parfait') || dTitleNorm.includes('mousse') || dTitleNorm.includes('smoothie') || dTitleNorm.includes('lassi'))) || (mNorm.includes('cena') && (dTitleNorm.includes('panna cotta') || dTitleNorm.includes('bavarois'))));
+          const isFunctionalS46Prep = role === 'side' && ((mNorm.includes('desayuno') && (dTitleNorm.includes('parfait') || dTitleNorm.includes('mousse') || dTitleNorm.includes('smoothie') || dTitleNorm.includes('lassi') || dTitleNorm.includes('sorbete') || dTitleNorm.includes('nice-cream') || dTitleNorm.includes('porridge'))) || (mNorm.includes('cena') && (dTitleNorm.includes('panna cotta') || dTitleNorm.includes('bavarois') || dTitleNorm.includes('cheesecake'))));
           if (hasDairy && !isFunctionalS46Prep) {
             violations.push(`[R4.6] ${loc} (${role}): Violación a validateNoFruitDairyMix (fruta con lácteo).`);
           }
@@ -2948,6 +3079,71 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
         });
       }
     }
+  }
+
+  // [R10-DNA FUNCIONAL] Ventana Móvil de 4 Semanas en los 14 Preparados Funcionales (Desayuno · side y Cena · side) para N >= 47
+  if (wNumTop >= 47) {
+    const rollingPrevWeeks = [];
+    for (let histW = Math.max(44, wNumTop - 3); histW < wNumTop; histW++) {
+      let hwPlan = null;
+      if (histW === wNumTop - 1 && prevWeekPlan && Array.isArray(prevWeekPlan.days) && prevWeekPlan.days.length === 7) {
+        hwPlan = prevWeekPlan;
+      } else if (typeof datasets === 'object' && datasets) {
+        const hk = Object.keys(datasets).find(k => k.startsWith(`Semana ${histW} (`));
+        if (hk) hwPlan = datasets[hk];
+      }
+      if (!hwPlan && typeof window !== 'undefined') {
+        if (histW === 45 && window.CANONICAL_WEEK_45_PLAN) hwPlan = window.CANONICAL_WEEK_45_PLAN;
+        if (histW === 46 && window.CANONICAL_WEEK_46_PLAN) hwPlan = window.CANONICAL_WEEK_46_PLAN;
+      }
+      if (hwPlan && Array.isArray(hwPlan.days) && hwPlan.days.length === 7) {
+        rollingPrevWeeks.push([`S${histW}`, hwPlan]);
+      }
+    }
+    const currFuncSeen = [];
+    weekPlan.days.forEach((cDay, cdIdx) => {
+      const cdLabel = cDay.day || `Día ${cdIdx + 1}`;
+      const cMeals = cDay.meals || [];
+      [[0, 'Desayuno'], [2, 'Cena']].forEach(([mIdx, mLabel]) => {
+        if (mIdx >= cMeals.length) return;
+        const cSide = (cMeals[mIdx] || {}).side || {};
+        const cTitle = cSide.title || '';
+        const cDna = computeFunctionalPrepDna(cSide);
+        const cFmt = cDna.split('|')[0];
+        const cSlot = `${cdLabel} (${mLabel} · Tiempo 3)`;
+
+        currFuncSeen.forEach(([prevSlot, prevTitle, prevDna, prevSide]) => {
+          const pFmt = prevDna.split('|')[0];
+          const jIntra = _computeFunctionalPrepJaccardSimilarityHardGate(cSide, prevSide);
+          if (cDna === prevDna || (cFmt === pFmt && cFmt !== 'infusion_tisana') || jIntra >= 0.45) {
+            violations.push(`[R10-DNA FUNCIONAL INTRA-SEMANA] ${cSlot} ('${cTitle}', ADN=<${cDna}>) repite formato/ADN o supera similitud Jaccard (${jIntra.toFixed(2)} >= 0.45) contra ${prevSlot} ('${prevTitle}').`);
+          }
+        });
+        currFuncSeen.push([cSlot, cTitle, cDna, cSide]);
+
+        rollingPrevWeeks.forEach(([hwTag, hwPlan]) => {
+          (hwPlan.days || []).forEach((hDay, hdIdx) => {
+            const hdLabel = hDay.day || `Día ${hdIdx + 1}`;
+            const hMeals = hDay.meals || [];
+            [[0, 'Desayuno'], [2, 'Cena']].forEach(([hmIdx, hmLabel]) => {
+              if (hmIdx >= hMeals.length) return;
+              const hSide = (hMeals[hmIdx] || {}).side || {};
+              const hTitle = hSide.title || '';
+              const hDna = computeFunctionalPrepDna(hSide);
+              const hFmt = hDna.split('|')[0];
+              const jHist = _computeFunctionalPrepJaccardSimilarityHardGate(cSide, hSide);
+              if (cDna === hDna) {
+                violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}', ADN=<${cDna}>) repite huella funcional contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
+              } else if (cFmt === hFmt && !['infusion_tisana', 'lassi_probiotico', 'horchata_vegetal', 'batido_smoothie'].includes(cFmt)) {
+                violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}') repite formato/arquetipo '${cFmt}' contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
+              } else if (jHist >= 0.45) {
+                violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}') presenta similitud Jaccard=${jHist.toFixed(2)} (>= 0.45) contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
+              }
+            });
+          });
+        });
+      });
+    });
   }
 
   let totalWeeklyEggs = 0;
@@ -4098,6 +4294,7 @@ window.PANTRY_STOCK_INVENTORY = {
       if (/\\btoronjil\\b/.test(norm)) return 'Toronjil';
       if (/\\bmanzanilla\\b/.test(norm) && !norm.includes('aceituna')) return 'Manzanilla';
       if (/\\b(jamaica|flor de jamaica)\\b/.test(norm)) return 'Jamaica';
+      if (/\\bhojas? de higo\\b/.test(norm)) return 'Hojas de higo';
       if (/\\bromero\\b/.test(norm)) return 'Romero';
       if (/\\bepazote\\b/.test(norm)) return 'Epazote';
       if (/\\bagua purificada\\b/.test(norm)) return 'Agua purificada';
@@ -4512,6 +4709,7 @@ let pantryStock = {
       else if (/\\bespinacas?\\b/.test(norm)) out = 'Espinacas';
       else if (/\\besparragos?\\b/.test(norm)) out = 'Espárragos';
       else if (/\\bchipotles?\\b/.test(norm)) out = 'Chile chipotle';
+      else if (/\\bhojas? de higo\\b/.test(norm)) out = 'Hojas de higo';
       else if (/\\bhigos?\\b/.test(norm)) out = 'Higos';
       else if (/\\bfrijol pinto\\b/.test(norm)) out = 'Frijol pinto';
       else if (/\\bagua mineral\\b/.test(norm)) out = 'Agua mineral';
@@ -5149,14 +5347,15 @@ let pantryStock = {
         return '🥩 Carnes, Pescados y Proteínas';
       }
 
-      // 0.3 Prioridad Taxonómica Estricta: Frutas de Bajo Índice Glucémico (Moras, Frambuesas, Arándanos, Granada, Pitaya, Zarzamora, Fresas)
-      if (!name.includes('cebolla') && /mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|pitahaya|pitahayas|pitaya|pitayas|arilos|zarzamora|zarzamoras/i.test(name)) {
+      // 0.3 Prioridad Taxonómica Estricta: Frutas de Bajo Índice Glucémico (Moras, Frambuesas, Arándanos, Granada, Pitaya, Zarzamora, Fresas, Maracuyá)
+      if (!name.includes('cebolla') && /mora|moras|frambuesa|frambuesas|fresa|fresas|arándano|arandano|arándanos|arandanos|granada|granadas|pitahaya|pitahayas|pitaya|pitayas|arilos|zarzamora|zarzamoras|maracuy/i.test(name)) {
         return '🍓 Frutas de Bajo Índice Glucémico';
       }
 
       // 0.4 Prioridad Taxonómica Estricta: Insumos No Sugeridos / Cuarentena
+      const nameNoSafeTokens = name.replace(/sin\\s+az[uú]car/gi, '').replace(/hojas?\\s+de\\s+higo/gi, '');
       if ((explicitCategory && (explicitCategory.includes('cuarentena') || explicitCategory.includes('prohibited') || explicitCategory.includes('Cuarentena') || explicitCategory.includes('🛑'))) ||
-          /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca|higo|higos|papa|papas|lenteja|lentejas|garbanzo|garbanzos|frijol|frijoles|arroz|concentrado de caldo|caldo de pollo en polvo/i.test(name)) {
+          /durazno|duraznos|miel|harina de trigo|harina refinada|aceite vegetal mixto|azúcar|azucar|quinoa|cereza|cerezas|leche de vaca|higo|higos|papa|papas|lenteja|lentejas|garbanzo|garbanzos|frijol|frijoles|arroz|concentrado de caldo|caldo de pollo en polvo/i.test(nameNoSafeTokens)) {
         return '🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)';
       }
 
@@ -5176,7 +5375,7 @@ let pantryStock = {
       }
 
       // 3. Grasas, Aceites y Semillas
-      if (/aceite|mct|leche de coco|mantequilla|manteca|ghee|aguacate|aguacates|aceituna|aceitunas|nuez|nueces|pistache|pistaches|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|\\bpiñón|\\bpiñones|pepita|pepitas|ajonjolí|ajonjoli|mayonesa/i.test(name)) {
+      if (/aceite|mct|leche de coco|coco rallado|mantequilla|manteca|ghee|aguacate|aguacates|aceituna|aceitunas|nuez|nueces|pistache|pistaches|almendra|almendras|chía|chia|girasol|macadamia|macadamias|semilla|semillas|linaza|cáñamo|canamo|tahini|\\bpiñón|\\bpiñones|pepita|pepitas|ajonjolí|ajonjoli|mayonesa/i.test(name)) {
         return '🥑 Grasas, Aceites y Semillas';
       }
 
@@ -5191,12 +5390,12 @@ let pantryStock = {
       }
 
       // 6. Chiles, Condimentos e Infusiones
-      if (/\\bsal\\b|\\bsal de\\b|\\bsal mineral\\b|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|especias|condimento|condimentos|chile|chiles|chipotle|chipotles|jalapeño|jalapeno|pimienta|epazote|albahaca|mostaza|alcaparra|alcaparras|jengibre|agua|infusión|infusion|\\bté\\b|\\bte\\b|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
+      if (/\\bsal\\b|\\bsal de\\b|\\bsal mineral\\b|eneldo|romero|tomillo|comino|orégano|oregano|canela|menta|toronjil|manzanilla|jamaica|azahar|matcha|rooibos|anís|anis|cardamomo|lavanda|pasiflora|cedrón|cedron|hojas de higo|especias|condimento|condimentos|chile|chiles|chipotle|chipotles|jalapeño|jalapeno|pimienta|epazote|mostaza|alcaparra|alcaparras|jengibre|agua|infusión|infusion|\\bté\\b|\\bte\\b|base líquida|base liquida|aderezo|bbq|café|cafe|cobertura de chocolate|salsa|tamari|soya|achiote/i.test(name)) {
         return '🌶️ Chiles, Condimentos e Infusiones';
       }
 
       // 7. Verduras, Hortalizas y Frescos
-      if (/apio|arúgula|arugula|brócoli|brocoli|calabacita|calabacitas|\\bcalabaza\\b|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espárrago|esparrago|esparragos|espárragos|espinaca|espinacas|flor de calabaza|hinojo|jitomate|jitomates|morrón|morron|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|\\bajo\\b|dientes de ajo|champiñones|champinon|champinones|champiñón|portobello|setas/i.test(name)) {
+      if (/apio|arúgula|arugula|albahaca|hierbabuena|brócoli|brocoli|calabacita|calabacitas|\\bcalabaza\\b|chayote|chayotes|cilantro|coliflor|ejote|ejotes|espárrago|esparrago|esparragos|espárragos|espinaca|espinacas|flor de calabaza|hinojo|jitomate|jitomates|morrón|morron|nopal|nopales|pepino|pepinos|pimiento|pimientos|tomate|zucchini|lechuga|col|cebolla|\\bajo\\b|dientes de ajo|champiñones|champinon|champinones|champiñón|portobello|setas/i.test(name)) {
         return '🥬 Verduras, Hortalizas y Frescos';
       }
 
@@ -8357,7 +8556,7 @@ function calculateActiveMenuBOM(weekKey, diners) {
               const rawName = ing.name || ing.item_name || '';
               if (!rawName) return;
 
-              const cleanLower = rawName.toLowerCase();
+              const cleanLower = rawName.toLowerCase().replace(/sin\s+az[uú]car/gi, '').replace(/hojas?\s+de\s+higo/gi, '');
               if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLower)) {
                 return;
               }
@@ -8501,7 +8700,7 @@ function calculateNetShoppingList(diners) {
   let rawItemsToProcess = isFromActiveBOM
     ? activeBOMItems 
     : (typeof rawShopBase !== 'undefined' && Array.isArray(rawShopBase) ? rawShopBase.filter(i => {
-        const cleanLower = (i.item_name || '').toLowerCase();
+        const cleanLower = (i.item_name || '').toLowerCase().replace(/sin\s+az[uú]car/gi, '').replace(/hojas?\s+de\s+higo/gi, '');
         return !/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLower);
       }) : []);
 
@@ -8601,8 +8800,9 @@ function calculateNetShoppingList(diners) {
     if (!item || !item.item_name) return;
     const cleanName = item.item_name.strip ? item.item_name.strip() : item.item_name;
     const cleanLower = cleanName.toLowerCase();
+    const cleanLowerNoSafe = cleanLower.replace(/sin\s+az[uú]car/gi, '').replace(/hojas?\s+de\s+higo/gi, '');
 
-    if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLower)) {
+    if (/quinoa|cereza|leche de vaca|azúcar|azucar|miel|durazno|higo|frijol/i.test(cleanLowerNoSafe)) {
       return;
     }
 
@@ -8634,7 +8834,7 @@ function calculateNetShoppingList(diners) {
       return areInsumosEquivalent(hStr, cleanName);
     });
 
-    const isHarvest = isHarvestInList;
+    const isHarvest = isHarvestInList || /\bhojas?\s+de\s+higo\b/i.test(cleanLower);
 
     if (isHarvest) {
       const pureFarmName = getPureCanonicalFarmName(item.item_name) || item.item_name;
