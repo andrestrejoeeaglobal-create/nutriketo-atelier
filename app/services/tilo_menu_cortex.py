@@ -7953,13 +7953,18 @@ def generate_week_with_tilo_cortex(
         S43_S44_HISTORICAL_PANTRY_STOCK,
         S45_HISTORICAL_PANTRY_STOCK,
         S46_HISTORICAL_PANTRY_STOCK,
+        S47_HISTORICAL_PANTRY_STOCK,
         load_live_pantry_ssot,
     )
 
-    if int(target_week) >= 47:
+    if int(target_week) >= 48:
         live_ssot = load_live_pantry_ssot()
         harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
         pantry = pantry_stock if pantry_stock is not None else live_ssot["auditor_pantry"]
+    elif int(target_week) == 47:
+        live_ssot = load_live_pantry_ssot()
+        harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
+        pantry = pantry_stock if pantry_stock is not None else S47_HISTORICAL_PANTRY_STOCK
     elif int(target_week) == 46:
         live_ssot = load_live_pantry_ssot()
         harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]

@@ -155,6 +155,10 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "queso philadelphia",
     "queso parmesano",
     "queso mozzarella",
+    "queso de cabra",
+    "crema acida",
+    "mayonesa",
+    "ajonjoli",
     "yogur griego",
     "leche de coco",
     "leche de almendra",
@@ -440,6 +444,104 @@ DEFAULT_PANTRY_STOCK.pop("AminoSinergix®", None)
 
 S47_HISTORICAL_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
 
+# Actualizar DEFAULT_PANTRY_STOCK con la Orden de Alta Consolidada del Jueves 19 Nov 2026
+# (Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local sobre saldo vivo Chrome LevelDB seq=286761).
+# Nota Crítica de Semántica: "Pollo entero": (1.0, "piezas") restaura el estándar de 1 ave cruda completa (~1,800 g),
+# habilitando nuevamente la elaboración casera de "Fondo claro de pollo" a $0.00 MXN (FREE_KITCHEN_STAPLES).
+DEFAULT_PANTRY_STOCK.update(
+    {
+        "Flat steak": (1930.0, "g"),
+        "Lomo de salmón": (1470.0, "g"),
+        "Huevo": (210.0, "piezas"),
+        "Pechuga de pavo": (1400.0, "g"),
+        "Atún en agua": (1400.0, "g"),
+        "Pollo entero": (1.0, "piezas"),
+        "Fajitas de mojarra": (2000.0, "g"),
+        "Sardinas": (1600.0, "g"),
+        "Carne molida": (400.0, "g"),
+        "Pechuga de pollo": (0.0, "g"),
+        "Filete de atún": (0.0, "g"),
+        "Queso cottage": (5760.0, "g"),
+        "Queso mozzarella": (2260.0, "g"),
+        "Yogur griego": (2300.0, "g"),
+        "Queso Philadelphia": (900.0, "g"),
+        "Crema ácida": (900.0, "g"),
+        "Mantequilla": (450.0, "g"),
+        "Leche de coco": (500.0, "ml"),
+        "Queso manchego": (400.0, "g"),
+        "Queso parmesano": (100.0, "g"),
+        "Queso de cabra": (0.0, "g"),
+        "Queso ricotta": (0.0, "g"),
+        "Queso doble crema": (0.0, "g"),
+        "Fresas": (1814.0, "g"),
+        "Zarzamora": (510.0, "g"),
+        "Frambuesas": (0.0, "g"),
+        "Champiñón": (700.0, "g"),
+        "Germinado": (500.0, "g"),
+        "Lechuga": (4.0, "piezas"),
+        "Tomate": (1000.0, "g"),
+        "Ejotes": (500.0, "g"),
+        "Jitomate": (13.0, "piezas"),
+        "Morrón": (9.0, "piezas"),
+        "Calabacitas": (1200.0, "g"),
+        "Cebolla": (9.0, "piezas"),
+        "Aguacate": (6.0, "piezas"),
+        "Pepino": (1200.0, "g"),
+        "Brócoli": (1000.0, "g"),
+        "Coliflor": (600.0, "g"),
+        "Apio": (200.0, "g"),
+        "Albahaca fresca": (100.0, "g"),
+        "Manzanilla": (112.0, "g"),
+        "Espinacas": (0.0, "g"),
+        "Espárragos": (0.0, "g"),
+        "Flor de calabaza": (0.0, "manojo"),
+        "Mayonesa": (1100.0, "g"),
+        "Grenetina": (168.0, "g"),
+        "Coco rallado": (300.0, "g"),
+        "Ajonjolí": (200.0, "g"),
+        "Anís estrella": (50.0, "g"),
+        "Botella de agua": (160.0, "piezas"),
+        "Nuez de la India": (1000.0, "g"),
+        "Aceite de coco": (800.0, "g"),
+        "Semillas y nueces mixtas": (400.0, "g"),
+        "Nueces mixtas": (400.0, "g"),
+        "Almendras fileteadas": (100.0, "g"),
+        "Pistaches": (50.0, "g"),
+        "Aceite de oliva": (0.0, "ml"),
+        "Sal de mar": (1000.0, "g"),
+        "Canela molida": (725.0, "g"),
+        "Extracto de vainilla": (376.0, "ml"),
+        "Salsa de soya": (250.0, "ml"),
+        "Vinagre de vino tinto": (250.0, "ml"),
+        "Bicarbonato de sodio": (227.0, "g"),
+        "Flor de Jamaica molida en polvo": (200.0, "g"),
+        "Microdyn": (200.0, "ml"),
+        "Aceitunas manzanilla": (175.0, "g"),
+        "Ajo": (150.0, "g"),
+        "Pimienta negra": (124.0, "g"),
+        "Alcaparras": (110.0, "g"),
+        "Polvo para hornear": (100.0, "g"),
+        "Orégano": (98.0, "g"),
+        "Cúrcuma": (82.0, "g"),
+        "Achiote": (75.0, "g"),
+        "Sal con ajo": (52.0, "g"),
+        "Cebolla en polvo": (50.0, "g"),
+        "Clavo de olor": (48.0, "g"),
+        "Comino": (47.0, "g"),
+        "Té chai": (38.0, "g"),
+        "Hierbas finas": (13.0, "g"),
+        "Tomillo": (8.0, "g"),
+        "Chile güero": (0.0, "g"),
+        "Hojas de laurel": (0.0, "g"),
+        "Mostaza": (0.0, "g"),
+        "33Plus®": (100.0, "g"),
+        "34Plus®": (100.0, "g"),
+    }
+)
+DEFAULT_PANTRY_STOCK.pop("Chile serrano", None)
+
+S48_CONSOLIDATED_NOV19_PANTRY_STOCK: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
+
 LIVE_PANTRY_SSOT_PATH: Path = Path(__file__).resolve().parents[2] / "pantry_live_state.json"
 
 
@@ -464,17 +566,24 @@ def load_live_pantry_ssot() -> Dict[str, Any]:
         }
     try:
         raw_state = json.loads(LIVE_PANTRY_SSOT_PATH.read_text(encoding="utf-8"))
+        quarantine_keys = set((raw_state.get("quarantineItems") or {}).keys()) | {"Chile serrano", "Rajas de jalapeño", "Tajín", "Chile chipotle"}
         aud_map: Dict[str, Tuple[float, str]] = dict(DEFAULT_PANTRY_STOCK)
         if isinstance(raw_state.get("auditorPantryStock"), dict):
             for k, val in raw_state["auditorPantryStock"].items():
+                if k in quarantine_keys:
+                    aud_map.pop(k, None)
+                    continue
                 if isinstance(val, (list, tuple)) and len(val) >= 2:
                     aud_map[k] = (float(val[0]), str(val[1]))
         elif isinstance(raw_state.get("pantryStock"), dict):
             units_map = raw_state.get("pantryCardUnits") or {}
             for k, qty_val in raw_state["pantryStock"].items():
-                if k in ("Fondo claro de pollo", "Fondo de res", "Caldo de pollo", "Caldo de res"):
+                if k in ("Fondo claro de pollo", "Fondo de res", "Caldo de pollo", "Caldo de res", "Agua mineral"):
                     continue
                 c_name = "Brócoli" if k == "Brocoli" else k
+                if c_name in quarantine_keys:
+                    aud_map.pop(c_name, None)
+                    continue
                 u_str = str(units_map.get(k) or aud_map.get(c_name, (0.0, "g"))[1])
                 try:
                     q_num = float(qty_val)
@@ -483,7 +592,11 @@ def load_live_pantry_ssot() -> Dict[str, Any]:
                 if c_name == "Sardinas" and "lata" in u_str.lower():
                     q_num = q_num * 425.0
                     u_str = "g"
-                elif c_name in ("Coliflor", "Apio", "Aceite de coco"):
+                elif c_name == "Pepino":
+                    if "pieza" in u_str.lower() and q_num > 0:
+                        q_num = q_num * 300.0
+                    u_str = "g"
+                elif c_name in ("Coliflor", "Brócoli", "Calabacitas", "Apio", "Aceite de coco", "Albahaca fresca", "Coco rallado", "Anís estrella"):
                     u_str = "g"
                 elif c_name == "Botella de agua":
                     u_str = "piezas"
@@ -491,6 +604,8 @@ def load_live_pantry_ssot() -> Dict[str, Any]:
                     q_num = 0.0
                     u_str = "g"
                 aud_map[c_name] = (q_num, u_str)
+        for qk in quarantine_keys:
+            aud_map.pop(qk, None)
         harvest_list = raw_state.get("selectedHarvest")
         if isinstance(harvest_list, list) and len(harvest_list) > 0:
             DEFAULT_FARM_HARVEST.clear()
@@ -543,19 +658,23 @@ def save_live_pantry_ssot(payload: Dict[str, Any]) -> Dict[str, Any]:
         if key in payload and payload[key] is not None:
             merged[key] = payload[key]
 
-    merged["ssot_version"] = "v56_live_ui_ssot"
+    merged["ssot_version"] = "v68_consolidated_nov19_2026_synced"
+    merged["v68_consolidated_19nov2026_sync"] = True
     merged["updated_at"] = datetime.now().isoformat()
 
     # Reconstruir auditorPantryStock limpio desde pantryStock
     ps = merged.get("pantryStock") or {}
     pcu = merged.get("pantryCardUnits") or {}
-    quarantine_names = set((merged.get("quarantineItems") or {}).keys())
+    quarantine_names = set((merged.get("quarantineItems") or {}).keys()) | {"Chile serrano", "Rajas de jalapeño", "Tajín", "Chile chipotle"}
     aud_stock: Dict[str, List[Any]] = dict(merged.get("auditorPantryStock") or {})
+    for q_del in quarantine_names:
+        aud_stock.pop(q_del, None)
     for k, val in ps.items():
-        if k in ("Fondo claro de pollo", "Fondo de res", "Caldo de pollo", "Caldo de res"):
+        if k in ("Fondo claro de pollo", "Fondo de res", "Caldo de pollo", "Caldo de res", "Agua mineral"):
             continue
         c_name = "Brócoli" if k == "Brocoli" else k
         if c_name in quarantine_names:
+            aud_stock.pop(c_name, None)
             continue
         u = str(pcu.get(k) or (aud_stock.get(c_name, [0.0, "g"])[1]))
         try:
@@ -564,12 +683,24 @@ def save_live_pantry_ssot(payload: Dict[str, Any]) -> Dict[str, Any]:
             q = 0.0
         if c_name == "Sardinas" and "lata" in u.lower():
             aud_stock[c_name] = [q * 425.0, "g"]
+        elif c_name == "Pepino":
+            if "pieza" in u.lower() and q > 0:
+                q = q * 300.0
+            aud_stock[c_name] = [q, "g"]
+            pcu["Pepino"] = "g"
         elif c_name == "Coliflor" and u == "kg" and q == 500.0:
             aud_stock[c_name] = [500.0, "g"]
+        elif c_name in ("Coliflor", "Brócoli", "Calabacitas", "Apio", "Aceite de coco", "Albahaca fresca", "Coco rallado", "Anís estrella"):
+            aud_stock[c_name] = [q, "g"]
+            pcu[c_name] = "g"
+        elif c_name == "Botella de agua":
+            aud_stock[c_name] = [q, "piezas"]
+            pcu["Botella de agua"] = "piezas"
         elif c_name == "Champiñón" and q < 1.0:
             aud_stock[c_name] = [0.0, "g"]
         else:
             aud_stock[c_name] = [q, u]
+    merged["pantryCardUnits"] = pcu
     merged["auditorPantryStock"] = aud_stock
 
     LIVE_PANTRY_SSOT_PATH.write_text(json.dumps(merged, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -1816,6 +1947,8 @@ def audit_week_plan(
         pantry = S45_HISTORICAL_PANTRY_STOCK
     elif "semana 46" in w_lbl_early:
         pantry = S46_HISTORICAL_PANTRY_STOCK
+    elif "semana 47" in w_lbl_early:
+        pantry = S47_HISTORICAL_PANTRY_STOCK
     elif is_s45_or_later and live_ssot_loaded is not None:
         pantry = live_ssot_loaded["auditor_pantry"]
     else:
@@ -1842,6 +1975,12 @@ def audit_week_plan(
     pantry_norm_map: Dict[str, Tuple[str, float, str]] = {
         _strip_accents(k): (k, float(v[0]), v[1]) for k, v in pantry.items()
     }
+    if "albahaca fresca" in pantry_norm_map and "albahaca" not in pantry_norm_map:
+        _, alb_q, alb_u = pantry_norm_map["albahaca fresca"]
+        pantry_norm_map["albahaca"] = ("Albahaca", alb_q, alb_u)
+    if "coco rallado" in pantry_norm_map and "coco rallado sin azucar" not in pantry_norm_map:
+        _, coco_q, coco_u = pantry_norm_map["coco rallado"]
+        pantry_norm_map["coco rallado sin azucar"] = ("Coco rallado sin azúcar", coco_q, coco_u)
 
     days = week_data.get("days", [])
     if len(days) != 7:

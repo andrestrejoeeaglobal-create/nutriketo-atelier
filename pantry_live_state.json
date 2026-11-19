@@ -1,15 +1,16 @@
 {
-  "ssot_version": "v65_ui_audit_nov14_synced",
+  "ssot_version": "v68_consolidated_nov19_2026_synced",
   "v63_sams_09nov2026_post_s45_sync": true,
   "v64_cierre_s46_14nov2026_sync": true,
   "v65_ui_audit_nov14_sync": true,
-  "sams_ticket_order": "1569462808300642304",
-  "sams_ticket_date": "2026-11-09",
-  "sams_ticket_store": "Sam's Club SM Santa Fe",
+  "v68_consolidated_19nov2026_sync": true,
+  "sams_ticket_order": "1569462808300642304 + Consolidado 19-Nov-2026",
+  "sams_ticket_date": "2026-11-19",
+  "sams_ticket_store": "Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local",
   "sams_ticket_total_mxn": 5127.48,
-  "extracted_from": "Google Chrome LocalStorage LevelDB (016645.ldb, seq=279021)",
-  "leveldb_seq": 279021,
-  "updated_at": "2026-11-14T11:38:06.727976",
+  "extracted_from": "Google Chrome LocalStorage LevelDB (017105.ldb, seq=286761)",
+  "leveldb_seq": 286761,
+  "updated_at": "2026-11-19T12:10:42.005544",
   "activeWeek": "Semana 47 (15 al 21 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
@@ -49,45 +50,42 @@
     "Queso doble crema"
   ],
   "pantryStock": {
-    "Mantequilla": 720,
+    "Mantequilla": 450,
     "Mostaza": 0,
-    "Queso cottage": 0,
-    "Yogur griego": 2000,
-    "Queso Philadelphia": 360,
-    "Crema ácida": 0,
-    "Mayonesa": 200,
-    "Queso manchego": 1000,
-    "Queso de cabra": 200,
+    "Queso cottage": 5760,
+    "Yogur griego": 2300,
+    "Queso Philadelphia": 900,
+    "Mayonesa": 1100,
+    "Queso manchego": 400,
     "Salsa BBQ": 550,
     "Leche de coco": 500,
     "Leche evaporada": 960,
     "Leche": 960,
     "Salsa cátsup": 2600,
-    "Queso mozzarella": 0,
-    "Botella de agua": 140,
+    "Queso mozzarella": 2260,
+    "Botella de agua": 160,
     "Queso parmesano": 100,
-    "Flat steak": 0,
-    "Lomo de salmón": 0,
-    "Carne molida": 300,
-    "Fajitas de mojarra": 2720,
+    "Flat steak": 1930,
+    "Lomo de salmón": 1470,
+    "Carne molida": 400,
+    "Fajitas de mojarra": 2000,
     "Filete de atún": 0,
-    "Jitomate": 1,
-    "Morrón": 0,
+    "Jitomate": 13,
+    "Morrón": 9,
     "Pechuga de pollo": 0,
     "Flor de calabaza": 0,
-    "Calabacitas": 0,
-    "Cebolla": 0,
-    "Lechuga": 0,
-    "Ejotes": 0,
-    "Tomate": 0,
-    "Aguacate": 0,
-    "Zarzamora": 0,
-    "Champiñón": 0,
-    "Pulpa de arándano": 3840,
+    "Calabacitas": 1200,
+    "Cebolla": 9,
+    "Lechuga": 4,
+    "Ejotes": 500,
+    "Tomate": 1000,
+    "Aguacate": 6,
+    "Zarzamora": 510,
+    "Champiñón": 700,
     "Pistaches": 50,
     "Nuez de la India": 1000,
     "Cacahuate enchilado": 1200,
-    "Semillas y nueces mixtas": 600,
+    "Semillas y nueces mixtas": 400,
     "Granola": 100,
     "Té chai": 38,
     "Hierbas finas": 13,
@@ -96,7 +94,7 @@
     "Cebolla en polvo": 50,
     "Sal con ajo": 52,
     "Canela molida": 725,
-    "Alcaparras": 44,
+    "Alcaparras": 110,
     "Extracto de vainilla": 376,
     "Microdyn": 200,
     "Cerezas": 260,
@@ -104,9 +102,9 @@
     "Miguelito": 100,
     "Chamoy": 300,
     "Bicarbonato de sodio": 227,
-    "Achiote": 92,
+    "Achiote": 75,
     "Polvo para hornear": 100,
-    "Aceitunas manzanilla": 0,
+    "Aceitunas manzanilla": 175,
     "Chocolate para cobertura": 165,
     "Concentrado de caldo de pollo en polvo": 250,
     "Café colombiano": 100,
@@ -124,15 +122,15 @@
     "Pimienta negra": 124,
     "Comino": 47,
     "Clavo de olor": 48,
-    "Ajonjolí": 0,
-    "Manzanilla": 12,
+    "Ajonjolí": 200,
+    "Manzanilla": 112,
     "Cúrcuma": 82,
     "Sal de mar": 1000,
     "Manteca de cerdo": 0,
-    "Aceite de coco": 1000,
+    "Aceite de coco": 800,
     "Tang": 104,
-    "Atún en agua": 560,
-    "Sardinas": 260,
+    "Atún en agua": 1400,
+    "Sardinas": 1600,
     "Rajas de jalapeño": 314,
     "Harina Power Cakes": 1000,
     "Hojuelas de avena": 100,
@@ -141,28 +139,34 @@
     "Quinoa": 100,
     "Chile güero": 0,
     "Palomitas para microondas": 600,
-    "Grenetina": 32,
+    "Grenetina": 168,
     "Saborizante para arroz": 48,
-    "Huevo": 180,
-    "33Plus®": 0,
-    "34Plus®": 0,
-    "Espinacas": 260,
+    "Huevo": 210,
+    "Espinacas": 0,
     "Espárragos": 0,
-    "Fresas": 200,
-    "Frambuesas": 220,
+    "Fresas": 1814,
+    "Frambuesas": 0,
     "Queso ricotta": 0,
     "Chile chipotle": 1320,
     "Frijol pinto": 1,
-    "Pollo entero": 6,
-    "Pechuga de pavo": 700,
-    "Germinado": 100,
-    "Coliflor": 0,
-    "Pepino": 0,
-    "Brócoli": 0,
+    "Pollo entero": 1,
+    "Pechuga de pavo": 1400,
+    "Germinado": 500,
+    "Coliflor": 600,
+    "Pepino": 1200,
+    "Brócoli": 1000,
+    "Ajo": 150,
+    "Nueces mixtas": 400,
+    "Apio": 200,
+    "33Plus®": 100,
+    "34Plus®": 100,
+    "Crema ácida": 900,
+    "Queso de cabra": 0,
     "Queso doble crema": 0,
-    "Ajo": 100,
-    "Nueces mixtas": 600,
-    "Apio": 500
+    "Albahaca fresca": 100,
+    "Coco rallado": 300,
+    "Anís estrella": 50,
+    "Chile serrano": 250
   },
   "pantryCardUnits": {
     "Mantequilla": "g",
@@ -170,10 +174,8 @@
     "Queso cottage": "g",
     "Yogur griego": "g",
     "Queso Philadelphia": "g",
-    "Crema ácida": "g",
     "Mayonesa": "g",
     "Queso manchego": "g",
-    "Queso de cabra": "g",
     "Salsa BBQ": "g",
     "Leche de coco": "ml",
     "Leche evaporada": "ml",
@@ -199,7 +201,6 @@
     "Aguacate": "piezas",
     "Zarzamora": "g",
     "Champiñón": "g",
-    "Pulpa de arándano": "g",
     "Pistaches": "g",
     "Nuez de la India": "g",
     "Cacahuate enchilado": "g",
@@ -260,8 +261,6 @@
     "Grenetina": "g",
     "Saborizante para arroz": "g",
     "Huevo": "piezas",
-    "33Plus®": "g",
-    "34Plus®": "g",
     "Espinacas": "g",
     "Espárragos": "g",
     "Fresas": "g",
@@ -275,14 +274,22 @@
     "Coliflor": "g",
     "Pepino": "g",
     "Brócoli": "g",
-    "Queso doble crema": "g",
     "Ajo": "g",
     "Nueces mixtas": "g",
-    "Apio": "g"
+    "Apio": "g",
+    "33Plus®": "g",
+    "34Plus®": "g",
+    "Crema ácida": "g",
+    "Queso de cabra": "g",
+    "Queso doble crema": "g",
+    "Albahaca fresca": "g",
+    "Coco rallado": "g",
+    "Anís estrella": "g",
+    "Chile serrano": "g"
   },
   "auditorPantryStock": {
     "Mantequilla": [
-      720.0,
+      450.0,
       "g"
     ],
     "Mostaza": [
@@ -290,31 +297,23 @@
       "g"
     ],
     "Queso cottage": [
-      0.0,
+      5760.0,
       "g"
     ],
     "Yogur griego": [
-      2000.0,
+      2300.0,
       "g"
     ],
     "Queso Philadelphia": [
-      360.0,
-      "g"
-    ],
-    "Crema ácida": [
-      0.0,
+      900.0,
       "g"
     ],
     "Mayonesa": [
-      200.0,
+      1100.0,
       "g"
     ],
     "Queso manchego": [
-      1000.0,
-      "g"
-    ],
-    "Queso de cabra": [
-      200.0,
+      400.0,
       "g"
     ],
     "Leche de coco": [
@@ -322,11 +321,11 @@
       "ml"
     ],
     "Queso mozzarella": [
-      0.0,
+      2260.0,
       "g"
     ],
     "Botella de agua": [
-      140.0,
+      160.0,
       "piezas"
     ],
     "Queso parmesano": [
@@ -334,19 +333,19 @@
       "g"
     ],
     "Flat steak": [
-      0.0,
+      1930.0,
       "g"
     ],
     "Lomo de salmón": [
-      0.0,
+      1470.0,
       "g"
     ],
     "Carne molida": [
-      300.0,
+      400.0,
       "g"
     ],
     "Fajitas de mojarra": [
-      2720.0,
+      2000.0,
       "g"
     ],
     "Filete de atún": [
@@ -354,11 +353,11 @@
       "g"
     ],
     "Jitomate": [
-      1.0,
+      13.0,
       "piezas"
     ],
     "Morrón": [
-      0.0,
+      9.0,
       "piezas"
     ],
     "Pechuga de pollo": [
@@ -370,35 +369,35 @@
       "manojo"
     ],
     "Calabacitas": [
-      0.0,
+      1200.0,
       "g"
     ],
     "Cebolla": [
-      0.0,
+      9.0,
       "piezas"
     ],
     "Lechuga": [
-      0.0,
+      4.0,
       "piezas"
     ],
     "Ejotes": [
-      0.0,
+      500.0,
       "g"
     ],
     "Tomate": [
-      0.0,
+      1000.0,
       "g"
     ],
     "Aguacate": [
-      0.0,
+      6.0,
       "piezas"
     ],
     "Zarzamora": [
-      0.0,
+      510.0,
       "g"
     ],
     "Champiñón": [
-      0.0,
+      700.0,
       "g"
     ],
     "Pistaches": [
@@ -410,7 +409,7 @@
       "g"
     ],
     "Semillas y nueces mixtas": [
-      600.0,
+      400.0,
       "g"
     ],
     "Té chai": [
@@ -434,7 +433,7 @@
       "g"
     ],
     "Alcaparras": [
-      44.0,
+      110.0,
       "g"
     ],
     "Extracto de vainilla": [
@@ -450,7 +449,7 @@
       "g"
     ],
     "Achiote": [
-      92.0,
+      75.0,
       "g"
     ],
     "Polvo para hornear": [
@@ -458,7 +457,7 @@
       "g"
     ],
     "Aceitunas manzanilla": [
-      0.0,
+      175.0,
       "g"
     ],
     "Salsa de soya": [
@@ -506,11 +505,11 @@
       "g"
     ],
     "Ajonjolí": [
-      0.0,
+      200.0,
       "g"
     ],
     "Manzanilla": [
-      12.0,
+      112.0,
       "g"
     ],
     "Cúrcuma": [
@@ -522,15 +521,15 @@
       "g"
     ],
     "Aceite de coco": [
-      1000.0,
+      800.0,
       "g"
     ],
     "Atún en agua": [
-      560.0,
+      1400.0,
       "g"
     ],
     "Sardinas": [
-      260.0,
+      1600.0,
       "g"
     ],
     "Chile güero": [
@@ -538,23 +537,15 @@
       "g"
     ],
     "Grenetina": [
-      32.0,
+      168.0,
       "g"
     ],
     "Huevo": [
-      180.0,
+      210.0,
       "piezas"
     ],
-    "33Plus®": [
-      0.0,
-      "g"
-    ],
-    "34Plus®": [
-      0.0,
-      "g"
-    ],
     "Espinacas": [
-      260.0,
+      0.0,
       "g"
     ],
     "Espárragos": [
@@ -562,11 +553,11 @@
       "g"
     ],
     "Fresas": [
-      200.0,
+      1814.0,
       "g"
     ],
     "Frambuesas": [
-      220.0,
+      0.0,
       "g"
     ],
     "Queso ricotta": [
@@ -574,26 +565,54 @@
       "g"
     ],
     "Pollo entero": [
-      6.0,
+      1.0,
       "piezas"
     ],
     "Pechuga de pavo": [
-      700.0,
+      1400.0,
       "g"
     ],
     "Germinado": [
-      100.0,
+      500.0,
       "g"
     ],
     "Coliflor": [
-      0.0,
+      600.0,
       "g"
     ],
     "Pepino": [
-      0.0,
+      1200.0,
       "g"
     ],
     "Brócoli": [
+      1000.0,
+      "g"
+    ],
+    "Ajo": [
+      150.0,
+      "g"
+    ],
+    "Nueces mixtas": [
+      400.0,
+      "g"
+    ],
+    "Apio": [
+      200.0,
+      "g"
+    ],
+    "33Plus®": [
+      100.0,
+      "g"
+    ],
+    "34Plus®": [
+      100.0,
+      "g"
+    ],
+    "Crema ácida": [
+      900.0,
+      "g"
+    ],
+    "Queso de cabra": [
       0.0,
       "g"
     ],
@@ -601,16 +620,16 @@
       0.0,
       "g"
     ],
-    "Ajo": [
+    "Albahaca fresca": [
       100.0,
       "g"
     ],
-    "Nueces mixtas": [
-      600.0,
+    "Coco rallado": [
+      300.0,
       "g"
     ],
-    "Apio": [
-      500.0,
+    "Anís estrella": [
+      50.0,
       "g"
     ]
   },
@@ -642,7 +661,7 @@
     "Pulpa de arándano": {
       "packaging": "3840 g",
       "reason": "Concentrado de fruta con azúcar añadida y alta fructosa; rompe cetosis.",
-      "stock": 3840,
+      "stock": 0,
       "unit": "g"
     },
     "Cacahuate enchilado": {
@@ -793,6 +812,12 @@
       "packaging": "1320 g",
       "reason": "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4).",
       "stock": 1320,
+      "unit": "g"
+    },
+    "Chile serrano": {
+      "packaging": "250 g",
+      "reason": "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla Inmutable 0 Picante [R1]).",
+      "stock": 250,
       "unit": "g"
     },
     "Frijol pinto": {

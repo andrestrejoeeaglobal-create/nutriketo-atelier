@@ -67,6 +67,7 @@ PROHIBITED_ITEMS: Dict[str, Tuple[str, str]] = {
     "Palomitas para microondas": ("600 g", "Maíz procesado con grasas de palma y carbohidratos de alto impacto glucémico."),
     "Saborizante para arroz": ("48 g", "Sazonador industrial con maltodextrina y almidones para cereales."),
     "Chile chipotle": ("1320 g", "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla 3.4)."),
+    "Chile serrano": ("250 g", "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla Inmutable 0 Picante [R1])."),
     "Frijol pinto": ("1 costal / bolsa institucional", "Almidón / Leguminosa fuera de protocolo cetogénico."),
 }
 
@@ -78,15 +79,29 @@ CANONICAL_NAME_FIX: Dict[str, str] = {
     "AminoSinergix": "34Plus®",
 }
 
+EXCLUDED_NON_FOOD_KEYWORDS = (
+    "rollo termico",
+    "rollos termicos",
+    "papel higienico",
+    "jabon",
+    "detergente",
+    "cloro",
+    "servilleta",
+    "toalla",
+    "guante",
+    "bolsa basura",
+    "aluminio",
+    "playo",
+)
+
 V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
-    # 1. Carnes, Pescados, Aves y Huevos (Inventario Físico Actualizado 14 Nov 2026 — Chrome LevelDB seq=279021)
+    # 1. Carnes, Pescados, Aves y Huevos (Inventario Físico Histórico 14 Nov 2026 — Chrome LevelDB seq=279021)
     "Fajitas de mojarra": (2720.0, "g"),
     "Pechuga de pavo": (700.0, "g"),
     "Atún en agua": (560.0, "g"),
     "Carne molida": (300.0, "g"),
     "Sardinas": (260.0, "g"),
     "Huevo": (180.0, "piezas"),
-    # Pollo entero: 6 piezas anatómicas sueltas YA COCIDAS (2 muslos, 2 piernas y 2 alas; ~450-500 g netos, 0 ml caldo disponible)
     "Pollo entero": (6.0, "piezas"),
     "Flat steak": (0.0, "g"),
     "Lomo de salmón": (0.0, "g"),
@@ -174,6 +189,109 @@ V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
 }
 V64_USER_INVENTORY_NOV14_OVERRIDES = V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES
 V58_SAMS_COSTCO_TICKETS_STOCK_OVERRIDES = V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES
+
+# Alta Consolidada Jueves 19 Nov 2026 (Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local)
+# sumada exactamente sobre el saldo vivo real de Chrome LevelDB seq=286761:
+V68_CONSOLIDATED_NOV19_2026_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
+    # 1. Proteínas, Carnes, Pescados y Huevos
+    "Flat steak": (1930.0, "g"),          # 0 + 1,930 g (Rib Eye Rebanado Sam's 1.930 kg)
+    "Lomo de salmón": (1470.0, "g"),      # 0 + 1,470 g
+    "Huevo": (210.0, "piezas"),           # 120 + 90 piezas
+    "Pechuga de pavo": (1400.0, "g"),     # 0 + 1,400 g (Milanesa de pavo Sam's)
+    "Atún en agua": (1400.0, "g"),        # 560 + 840 g (ATUNSUNA CEN Sam's masa drenada)
+    # Pollo entero: restaura semántica estándar = 1 ave cruda completa (~1,800 g); habilita Fondo claro de pollo ($0.00 MXN)
+    "Pollo entero": (1.0, "piezas"),      # 0 (6 pzas cocidas agotadas Dom 15 Nov R#08) + 1 pieza cruda (~1,800 g)
+    "Fajitas de mojarra": (2000.0, "g"),
+    "Sardinas": (1600.0, "g"),
+    "Carne molida": (400.0, "g"),
+    "Pechuga de pollo": (0.0, "g"),
+    "Filete de atún": (0.0, "g"),
+    # 2. Lácteos y Refrigerados (Keto — Sin Gluten)
+    "Queso cottage": (5760.0, "g"),       # 0 + 5,760 g (6 botes x 960 g)
+    "Queso mozzarella": (2260.0, "g"),    # 0 + 2,260 g (1 paq x 2.26 kg)
+    "Yogur griego": (2300.0, "g"),        # 500 + 1,800 g (Oikos Proteína 2 x 900 g)
+    "Queso Philadelphia": (900.0, "g"),   # 180 + 720 g (4 x 180 g)
+    "Crema ácida": (900.0, "g"),          # 0 + 900 g (1 bote Sam's)
+    "Mantequilla": (450.0, "g"),          # 90 + 360 g (Gloria Aurrera 4 x 90 g)
+    "Leche de coco": (500.0, "ml"),
+    "Queso manchego": (400.0, "g"),
+    "Queso parmesano": (100.0, "g"),
+    "Queso de cabra": (0.0, "g"),
+    "Queso ricotta": (0.0, "g"),
+    "Queso doble crema": (0.0, "g"),
+    # 3. Frutas, Verduras y Hierbas Frescas
+    "Fresas": (1814.0, "g"),              # 0 + 1,814 g (2 charolas x 907 g)
+    "Zarzamora": (510.0, "g"),            # 0 + 510 g (1 charola Sam's)
+    "Frambuesas": (0.0, "g"),
+    "Champiñón": (700.0, "g"),            # 0 + 700 g (1 charola Sam's)
+    "Germinado": (500.0, "g"),            # 0 + 500 g (1 domo Sam's)
+    "Lechuga": (4.0, "piezas"),           # 1 + 3 piezas (romana Sam's)
+    "Tomate": (1000.0, "g"),              # 0 + 1,000 g (tomate verde mercado)
+    "Ejotes": (500.0, "g"),               # 0 + 500 g
+    "Jitomate": (13.0, "piezas"),         # 5 + 8 piezas
+    "Morrón": (9.0, "piezas"),            # 3 + 6 piezas
+    "Calabacitas": (1200.0, "g"),         # 200 + 1,000 g (5 piezas mercado ~200 g c/u)
+    "Cebolla": (9.0, "piezas"),           # 4 + 5 piezas
+    "Aguacate": (6.0, "piezas"),          # 1 + 5 piezas
+    "Pepino": (1200.0, "g"),              # 300 (1 pza en vivo) + 900 g (3 piezas grandes ~300 g c/u, unidad forzada "g")
+    "Brócoli": (1000.0, "g"),             # 0 + 1,000 g (2 piezas mercado ~500 g c/u)
+    "Coliflor": (600.0, "g"),             # 0 + 600 g (1 pieza mediana ~600 g)
+    "Apio": (200.0, "g"),
+    "Albahaca fresca": (100.0, "g"),      # 0 + 100 g
+    "Manzanilla": (112.0, "g"),           # 12 + 100 g
+    "Espinacas": (0.0, "g"),
+    "Espárragos": (0.0, "g"),
+    "Flor de calabaza": (0.0, "manojo"),
+    # 4. Abarrotes, Semillas, Gelificantes, Especias e Hidratación
+    "Mayonesa": (1100.0, "g"),            # 50 + 1,050 g (Mayonesa con limón Sam's)
+    "Grenetina": (168.0, "g"),            # 56 + 112 g (4 cajas x 28 g Aurrera)
+    "Coco rallado": (300.0, "g"),         # 0 + 300 g
+    "Ajonjolí": (200.0, "g"),             # 0 + 200 g
+    "Anís estrella": (50.0, "g"),         # 0 + 50 g
+    "Botella de agua": (160.0, "piezas"), # 80 + 80 piezas (2 packs x 40 botellas 355 ml)
+    "Nuez de la India": (1000.0, "g"),
+    "Aceite de coco": (800.0, "g"),
+    "Semillas y nueces mixtas": (400.0, "g"),
+    "Nueces mixtas": (400.0, "g"),
+    "Almendras fileteadas": (100.0, "g"),
+    "Pistaches": (50.0, "g"),
+    "Aceite de oliva": (0.0, "ml"),
+    "Sal de mar": (1000.0, "g"),
+    "Canela molida": (725.0, "g"),
+    "Extracto de vainilla": (376.0, "ml"),
+    "Salsa de soya": (250.0, "ml"),
+    "Vinagre de vino tinto": (250.0, "ml"),
+    "Bicarbonato de sodio": (227.0, "g"),
+    "Flor de Jamaica molida en polvo": (200.0, "g"),
+    "Microdyn": (200.0, "ml"),
+    "Aceitunas manzanilla": (175.0, "g"),
+    "Ajo": (150.0, "g"),
+    "Pimienta negra": (124.0, "g"),
+    "Alcaparras": (110.0, "g"),
+    "Polvo para hornear": (100.0, "g"),
+    "Orégano": (98.0, "g"),
+    "Cúrcuma": (82.0, "g"),
+    "Achiote": (75.0, "g"),
+    "Sal con ajo": (52.0, "g"),
+    "Cebolla en polvo": (50.0, "g"),
+    "Clavo de olor": (48.0, "g"),
+    "Comino": (47.0, "g"),
+    "Té chai": (38.0, "g"),
+    "Hierbas finas": (13.0, "g"),
+    "Tomillo": (8.0, "g"),
+    "Chile güero": (0.0, "g"),
+    "Hojas de laurel": (0.0, "g"),
+    "Mostaza": (0.0, "g"),
+    "33Plus®": (100.0, "g"),
+    "34Plus®": (100.0, "g"),
+    # 5. Cuarentena (Excluidos 100% de auditorPantryStock / 0.00 g en menús)
+    "Chile serrano": (250.0, "g"),
+    "Rajas de jalapeño": (314.0, "g"),
+    "Tajín": (200.0, "g"),
+    "Salsa inglesa": (200.0, "ml"),
+    "Café colombiano": (100.0, "g"),
+    "Manteca de cerdo": (0.0, "g"),
+}
 
 
 def _win32_shared_read_bytes(src_path: str) -> bytes:
@@ -517,7 +635,11 @@ def build_ssot_document_from_ui_state(
             "Caldo de pollo",
             "Caldo de res",
             "Queso de cabra con arándano",
+            "Agua mineral",
         ):
+            continue
+        k_norm_ascii = k.lower().replace("é", "e").replace("á", "a").replace("í", "i").replace("ó", "o").replace("ú", "u")
+        if any(non_food in k_norm_ascii for non_food in EXCLUDED_NON_FOOD_KEYWORDS):
             continue
         c_name = CANONICAL_NAME_FIX.get(k, k)
         if isinstance(val, dict):
@@ -533,11 +655,29 @@ def build_ssot_document_from_ui_state(
         if c_name == "Queso doble crema":
             qty = 0.0
             u = "g"
-        if c_name in ("Coliflor", "Apio"):
+        if c_name == "Pepino":
+            if "pieza" in u.lower() and qty > 0:
+                qty = qty * 300.0
             u = "g"
-        if c_name == "Aceite de coco":
+        if c_name in (
+            "Coliflor",
+            "Brócoli",
+            "Calabacitas",
+            "Apio",
+            "Aceite de coco",
+            "Albahaca fresca",
+            "Coco rallado",
+            "Anís estrella",
+            "Manzanilla",
+            "Grenetina",
+            "Mayonesa",
+            "Ajonjolí",
+            "Chile serrano",
+        ):
             u = "g"
         if c_name == "Botella de agua":
+            u = "piezas"
+        if c_name == "Pollo entero":
             u = "piezas"
 
         ui_pantry_stock[c_name] = qty if qty != int(qty) else int(qty)
@@ -556,12 +696,17 @@ def build_ssot_document_from_ui_state(
             canonical_pantry_for_auditor[c_name] = [aud_qty, aud_unit]
 
     meta = source_meta or {}
-    for t_name, (t_qty, t_unit) in V63_SAMS_NOV09_POST_S45_STOCK_OVERRIDES.items():
-        if not ui_state.get("v63_sams_09nov2026_post_s45_sync") or t_name not in ui_pantry_stock:
+    for t_name, (t_qty, t_unit) in V68_CONSOLIDATED_NOV19_2026_STOCK_OVERRIDES.items():
+        if not ui_state.get("v68_consolidated_19nov2026_sync") or t_name not in ui_pantry_stock:
             ui_pantry_stock[t_name] = int(t_qty) if t_qty == int(t_qty) else t_qty
             ui_pantry_units[t_name] = t_unit
             if t_name not in PROHIBITED_ITEMS:
                 canonical_pantry_for_auditor[t_name] = [float(t_qty), t_unit]
+            else:
+                canonical_pantry_for_auditor.pop(t_name, None)
+
+    for p_prohib in PROHIBITED_ITEMS:
+        canonical_pantry_for_auditor.pop(p_prohib, None)
 
     ui_pantry_stock["Queso doble crema"] = 0
     ui_pantry_units["Queso doble crema"] = "g"
@@ -569,18 +714,21 @@ def build_ssot_document_from_ui_state(
     ui_pantry_stock.pop("Queso de cabra con arándano", None)
     ui_pantry_units.pop("Queso de cabra con arándano", None)
     canonical_pantry_for_auditor.pop("Queso de cabra con arándano", None)
+    ui_pantry_stock.pop("Agua mineral", None)
+    ui_pantry_units.pop("Agua mineral", None)
+    canonical_pantry_for_auditor.pop("Agua mineral", None)
     ui_pantry_stock.pop("MultiSinergix®", None)
     ui_pantry_units.pop("MultiSinergix®", None)
     canonical_pantry_for_auditor.pop("MultiSinergix®", None)
     ui_pantry_stock.pop("AminoSinergix®", None)
     ui_pantry_units.pop("AminoSinergix®", None)
     canonical_pantry_for_auditor.pop("AminoSinergix®", None)
-    ui_pantry_stock.setdefault("33Plus®", 0)
+    ui_pantry_stock.setdefault("33Plus®", 100)
     ui_pantry_units["33Plus®"] = "g"
-    canonical_pantry_for_auditor.setdefault("33Plus®", [0.0, "g"])
-    ui_pantry_stock.setdefault("34Plus®", 0)
+    canonical_pantry_for_auditor.setdefault("33Plus®", [100.0, "g"])
+    ui_pantry_stock.setdefault("34Plus®", 100)
     ui_pantry_units["34Plus®"] = "g"
-    canonical_pantry_for_auditor.setdefault("34Plus®", [0.0, "g"])
+    canonical_pantry_for_auditor.setdefault("34Plus®", [100.0, "g"])
 
     if "Semillas y nueces mixtas" in ui_pantry_stock:
         mix_val = ui_pantry_stock["Semillas y nueces mixtas"]
@@ -595,21 +743,22 @@ def build_ssot_document_from_ui_state(
     ))
 
     return {
-        "ssot_version": "v65_ui_audit_nov14_synced",
+        "ssot_version": "v68_consolidated_nov19_2026_synced",
         "v63_sams_09nov2026_post_s45_sync": True,
         "v64_cierre_s46_14nov2026_sync": True,
         "v65_ui_audit_nov14_sync": True,
-        "sams_ticket_order": "1569462808300642304",
-        "sams_ticket_date": "2026-11-09",
-        "sams_ticket_store": "Sam's Club SM Santa Fe",
+        "v68_consolidated_19nov2026_sync": True,
+        "sams_ticket_order": "1569462808300642304 + Consolidado 19-Nov-2026",
+        "sams_ticket_date": "2026-11-19",
+        "sams_ticket_store": "Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local",
         "sams_ticket_total_mxn": 5127.48,
         "extracted_from": meta.get(
             "extracted_from",
-            "Google Chrome LocalStorage LevelDB (016645.ldb, seq=279021 — Inventario Físico Actualizado 14 Nov 2026)",
+            "Google Chrome LocalStorage LevelDB (017105.ldb, seq=286761) + Alta Consolidada 19 Nov 2026",
         ),
-        "leveldb_seq": int(meta.get("leveldb_seq", 279021)),
+        "leveldb_seq": int(meta.get("leveldb_seq", 286761)),
         "updated_at": datetime.now().isoformat(),
-        "activeWeek": "Semana 46 (08 al 14 de Noviembre de 2026)",
+        "activeWeek": ui_state.get("activeWeek", "Semana 47 (15 al 21 de Noviembre de 2026)"),
         "activeDiners": ui_state.get("activeDiners", 6),
         "selectedHarvest": list(dict.fromkeys(ui_state.get(
             "selectedHarvest",
@@ -664,7 +813,8 @@ def sync_pantry_ssot_from_chrome(force: bool = False) -> Optional[Dict[str, Any]
     Sincroniza `pantry_live_state.json` desde el perfil de Chrome local si:
       - `pantry_live_state.json` aún no existe, o
       - `force=True`, o
-      - El número de secuencia (`leveldb_seq`) en Chrome es mayor que el registrado en disco.
+      - El número de secuencia (`leveldb_seq`) en Chrome es mayor que el registrado en disco
+        y ya incluye la migración activa (`v68_consolidated_19nov2026_sync`).
     """
     existing: Optional[Dict[str, Any]] = None
     if os.path.exists(PANTRY_LIVE_STATE_PATH):
@@ -678,13 +828,13 @@ def sync_pantry_ssot_from_chrome(force: bool = False) -> Optional[Dict[str, Any]
     if not extracted:
         return existing
 
-    existing_seq = int((existing or {}).get("leveldb_seq", 270423) or 270423)
+    existing_seq = int((existing or {}).get("leveldb_seq", 286761) or 286761)
     new_seq = int(extracted.get("leveldb_seq", 0) or 0)
-    existing_is_v63 = bool((existing or {}).get("v63_sams_09nov2026_post_s45_sync"))
-    chrome_is_v63 = bool((extracted.get("state") or {}).get("v63_sams_09nov2026_post_s45_sync"))
+    existing_is_v68 = bool((existing or {}).get("v68_consolidated_19nov2026_sync"))
+    chrome_is_v68 = bool((extracted.get("state") or {}).get("v68_consolidated_19nov2026_sync"))
 
-    # No permitir que un estado antiguo de Chrome previo a V63 sobrescriba el alta de Sam's Club 09 Nov 2026
-    if existing_is_v63 and not chrome_is_v63 and not force:
+    # No permitir que un estado de Chrome previo a V68 sobrescriba el Alta Consolidada del 19 Nov 2026
+    if existing_is_v68 and not chrome_is_v68 and not force:
         return existing
 
     if existing is None or force or new_seq > existing_seq:

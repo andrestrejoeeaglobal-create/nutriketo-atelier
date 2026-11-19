@@ -1810,12 +1810,13 @@ def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
     """
     Valida:
     1. El registro histórico del Alta de Sam's Club 09 Nov 2026 (`S46_HISTORICAL_PANTRY_STOCK`) y 0 g de compra de frutos rojos / quesos eliminados en Semana 46.
-    2. La sincronización en vivo de `pantry_live_state.json` con la captura física del usuario del 14 Nov 2026 (`leveldb_seq >= 279021`).
+    2. El registro histórico de la captura física del 14 Nov 2026 (`S47_HISTORICAL_PANTRY_STOCK`) y la validez actual de `pantry_live_state.json`.
     """
     import json
     from pathlib import Path
     from app.services.menu_hard_gate_auditor import (
         S46_HISTORICAL_PANTRY_STOCK,
+        S47_HISTORICAL_PANTRY_STOCK,
         assert_zero_violations,
         load_live_pantry_ssot,
     )
@@ -1824,7 +1825,7 @@ def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
     ssot = json.loads((root / "pantry_live_state.json").read_text(encoding="utf-8"))
     ps = ssot["pantryStock"]
 
-    expected_live_stocks_nov14 = {
+    expected_hist_stocks_nov14 = {
         "Fajitas de mojarra": 2720,
         "Pechuga de pavo": 700,
         "Atún en agua": 560,
@@ -1870,8 +1871,10 @@ def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
         "Botella de agua": 140,
         "Chile güero": 0,
     }
-    for k, v in expected_live_stocks_nov14.items():
-        assert abs(float(ps[k]) - float(v)) < 1e-4, f"Stock en vivo incorrecto para {k}: {ps[k]} != {v}"
+    for k, v in expected_hist_stocks_nov14.items():
+        assert abs(float(S47_HISTORICAL_PANTRY_STOCK[k][0]) - float(v)) < 1e-4, (
+            f"Stock histórico Nov 14 incorrecto para {k}: {S47_HISTORICAL_PANTRY_STOCK[k][0]} != {v}"
+        )
     assert ssot["pantryCardUnits"].get("Apio") == "g"
     assert ssot["pantryCardUnits"].get("Aceite de coco") == "g"
     assert ssot["pantryCardUnits"].get("Botella de agua") == "piezas"
@@ -1880,9 +1883,8 @@ def test_s46_sams_nov09_intake_and_zero_berry_cheese_purchases():
     assert "Queso doble crema" in ssot["deletedPantryItems"]
     assert "Queso de cabra con arándano" not in ssot["quarantineItems"]
     assert "Queso de cabra con arándano" not in ps
-    for q_item in ("Manteca de cerdo", "Rajas de jalapeño", "Tajín", "Café colombiano", "Salsa inglesa"):
+    for q_item in ("Manteca de cerdo", "Rajas de jalapeño", "Tajín", "Café colombiano", "Salsa inglesa", "Chile serrano"):
         assert q_item in ssot["quarantineItems"], f"{q_item} debe estar en quarantineItems"
-    assert abs(float(ps["Aceitunas manzanilla"]) - 0.0) < 1e-4
     assert "33Plus®" in ps and "34Plus®" in ps
     assert "MultiSinergix®" not in ps and "AminoSinergix®" not in ps
 
@@ -1934,6 +1936,7 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     import json
     from pathlib import Path
     from app.services.menu_hard_gate_auditor import (
+        S47_HISTORICAL_PANTRY_STOCK,
         assert_zero_violations,
         audit_week_plan,
         compute_functional_prep_dna,
@@ -1948,10 +1951,19 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     s47 = json.loads((root / "semana_47_master.json").read_text(encoding="utf-8"))
     live = load_live_pantry_ssot()
 
-    rep_s47 = assert_zero_violations(
+    rep_s47_live = assert_zero_violations(
         s47,
         prev_week_data=s46,
         pantry_stock=live["auditor_pantry"],
+        farm_harvest=live["farm_harvest"],
+    )
+    assert rep_s47_live["passed"] is True
+    assert rep_s47_live["violations_count"] == 0
+
+    rep_s47 = assert_zero_violations(
+        s47,
+        prev_week_data=s46,
+        pantry_stock=S47_HISTORICAL_PANTRY_STOCK,
         farm_harvest=live["farm_harvest"],
     )
     assert rep_s47["passed"] is True
@@ -2025,6 +2037,110 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     assert abs(float(market_map["Aceite de oliva"]["net_to_buy"]) - 162.0) < 1e-6
     assert abs(float(market_map["Sardinas"]["net_to_buy"]) - 400.0) < 1e-6
     assert abs(float(market_map["Pistaches"]["net_to_buy"]) - 70.0) < 1e-6
+
+
+def test_nov19_2026_consolidated_intake_ssot_quarantine_and_ui_sync():
+    """
+    Valida la Orden de Alta Consolidada del Jueves 19 Nov 2026
+    (Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local sobre saldo vivo Chrome seq=286761):
+    1. Sumatoria exacta de los 35 insumos activos y restauración de `Pollo entero = 1 pieza` cruda (~1,800 g).
+    2. Unidades canónicas forzadas (`Pepino = g`, `Botella de agua = piezas`, `Albahaca fresca = g`, `Coco rallado = g`, `Anís estrella = g`).
+    3. `Chile serrano` (250 g) confinado estrictamente en `quarantineItems` (`0.00 g` disponible en `auditorPantryStock`).
+    4. `Agua mineral` bloqueada en `deletedPantryItems` y 0 insumos operativos/papelería (`Rollos térmicos`).
+    5. Confidencialidad pública estricta (`33Plus®` y `34Plus®` únicamente) y sincronización v68 en `atelier.html` e `index.html`.
+    """
+    import json
+    from pathlib import Path
+    from app.services.menu_hard_gate_auditor import load_live_pantry_ssot
+
+    root = Path(__file__).resolve().parents[1]
+    ssot = json.loads((root / "pantry_live_state.json").read_text(encoding="utf-8"))
+    ps = ssot["pantryStock"]
+    pcu = ssot["pantryCardUnits"]
+    aud = ssot["auditorPantryStock"]
+    quar = ssot["quarantineItems"]
+
+    expected_consolidated_nov19 = {
+        "Flat steak": 1930,
+        "Lomo de salmón": 1470,
+        "Huevo": 210,
+        "Pechuga de pavo": 1400,
+        "Atún en agua": 1400,
+        "Pollo entero": 1,
+        "Fajitas de mojarra": 2000,
+        "Sardinas": 1600,
+        "Carne molida": 400,
+        "Queso cottage": 5760,
+        "Queso mozzarella": 2260,
+        "Yogur griego": 2300,
+        "Queso Philadelphia": 900,
+        "Mantequilla": 450,
+        "Crema ácida": 900,
+        "Leche de coco": 500,
+        "Queso manchego": 400,
+        "Queso parmesano": 100,
+        "Fresas": 1814,
+        "Zarzamora": 510,
+        "Champiñón": 700,
+        "Germinado": 500,
+        "Lechuga": 4,
+        "Tomate": 1000,
+        "Ejotes": 500,
+        "Jitomate": 13,
+        "Morrón": 9,
+        "Calabacitas": 1200,
+        "Cebolla": 9,
+        "Aguacate": 6,
+        "Pepino": 1200,
+        "Brócoli": 1000,
+        "Coliflor": 600,
+        "Albahaca fresca": 100,
+        "Manzanilla": 112,
+        "Apio": 200,
+        "Mayonesa": 1100,
+        "Grenetina": 168,
+        "Coco rallado": 300,
+        "Ajonjolí": 200,
+        "Anís estrella": 50,
+        "Botella de agua": 160,
+        "33Plus®": 100,
+        "34Plus®": 100,
+    }
+    for k, v in expected_consolidated_nov19.items():
+        assert abs(float(ps[k]) - float(v)) < 1e-4, f"Saldo consolidado Nov 19 incorrecto para {k}: {ps.get(k)} != {v}"
+        assert abs(float(aud[k][0]) - float(v)) < 1e-4, f"auditorPantryStock incorrecto para {k}: {aud.get(k)} != {v}"
+
+    assert pcu["Pepino"] == "g"
+    assert pcu["Botella de agua"] == "piezas"
+    assert pcu["Pollo entero"] == "piezas"
+    assert pcu["Albahaca fresca"] == "g"
+    assert pcu["Coco rallado"] == "g"
+    assert pcu["Anís estrella"] == "g"
+
+    assert "Chile serrano" in quar
+    assert quar["Chile serrano"]["stock"] == 250
+    assert "Chile serrano" not in aud
+    live_loaded = load_live_pantry_ssot()
+    assert "Chile serrano" not in live_loaded["auditor_pantry"]
+
+    assert "Agua mineral" in ssot["deletedPantryItems"]
+    assert "Agua mineral" not in ps
+    assert "Agua mineral" not in aud
+    for k_name in list(ps.keys()) + list(aud.keys()) + list(quar.keys()):
+        assert "rollo" not in k_name.lower() and "térmico" not in k_name.lower() and "termico" not in k_name.lower()
+
+    assert "MultiSinergix®" not in ps and "AminoSinergix®" not in ps
+    assert "MultiSinergix®" not in aud and "AminoSinergix®" not in aud
+
+    for html_name in ("atelier.html", "index.html"):
+        html_text = (root / html_name).read_text(encoding="utf-8")
+        assert "nutriketo_v68_consolidated_19nov2026_applied" in html_text
+        assert "sku-328-albahaca-fresca" in html_text
+        assert "sku-329-coco-rallado" in html_text
+        assert "sku-330-anis-estrella" in html_text
+        assert "sku-331-chile-serrano" in html_text
+        assert "if (/pollo entero/i.test(n)) return 1800;" in html_text
+
 
 
 
