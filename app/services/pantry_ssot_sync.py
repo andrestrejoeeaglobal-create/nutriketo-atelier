@@ -246,6 +246,8 @@ V68_CONSOLIDATED_NOV19_2026_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Mayonesa": (1100.0, "g"),            # 50 + 1,050 g (Mayonesa con limón Sam's)
     "Grenetina": (168.0, "g"),            # 56 + 112 g (4 cajas x 28 g Aurrera)
     "Coco rallado": (300.0, "g"),         # 0 + 300 g
+    "Manzana deshidratada": (300.0, "g"), # Reserva aromática Ponche Navideño 33Plus®
+    "Mezcla navideña molida de manzana deshidratada y especias": (300.0, "g"), # Premezcla en polvo (manzana, canela, anís estrella, clavo y pimienta negra)
     "Ajonjolí": (200.0, "g"),             # 0 + 200 g
     "Anís estrella": (50.0, "g"),         # 0 + 50 g
     "Botella de agua": (160.0, "piezas"), # 80 + 80 piezas (2 packs x 40 botellas 355 ml)
@@ -729,6 +731,14 @@ def build_ssot_document_from_ui_state(
     ui_pantry_stock.setdefault("34Plus®", 100)
     ui_pantry_units["34Plus®"] = "g"
     canonical_pantry_for_auditor.setdefault("34Plus®", [100.0, "g"])
+    if not ui_state.get("v69_ponche_navideno_33plus_sync") or "Manzana deshidratada" not in ui_pantry_stock:
+        ui_pantry_stock["Manzana deshidratada"] = 300
+        ui_pantry_units["Manzana deshidratada"] = "g"
+        canonical_pantry_for_auditor["Manzana deshidratada"] = [300.0, "g"]
+    if not ui_state.get("v69_ponche_navideno_33plus_sync") or "Mezcla navideña molida de manzana deshidratada y especias" not in ui_pantry_stock:
+        ui_pantry_stock["Mezcla navideña molida de manzana deshidratada y especias"] = 300
+        ui_pantry_units["Mezcla navideña molida de manzana deshidratada y especias"] = "g"
+        canonical_pantry_for_auditor["Mezcla navideña molida de manzana deshidratada y especias"] = [300.0, "g"]
 
     if "Semillas y nueces mixtas" in ui_pantry_stock:
         mix_val = ui_pantry_stock["Semillas y nueces mixtas"]
@@ -743,11 +753,12 @@ def build_ssot_document_from_ui_state(
     ))
 
     return {
-        "ssot_version": "v68_consolidated_nov19_2026_synced",
+        "ssot_version": "v69_ponche_navideno_33plus_synced",
         "v63_sams_09nov2026_post_s45_sync": True,
         "v64_cierre_s46_14nov2026_sync": True,
         "v65_ui_audit_nov14_sync": True,
         "v68_consolidated_19nov2026_sync": True,
+        "v69_ponche_navideno_33plus_sync": True,
         "sams_ticket_order": "1569462808300642304 + Consolidado 19-Nov-2026",
         "sams_ticket_date": "2026-11-19",
         "sams_ticket_store": "Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local",
@@ -797,6 +808,28 @@ def build_ssot_document_from_ui_state(
             for k, v in PROHIBITED_ITEMS.items()
         },
         "dispatchedMeals": ui_state.get("dispatchedMeals", {}),
+        "checkedInMeals": ui_state.get(
+            "checkedInMeals",
+            {
+                "Semana 47 (15 al 21 de Noviembre de 2026)": {
+                    m_id: True for m_id in S47_ACCRUED_13_MEAL_IDS
+                }
+            },
+        ),
+        "deductedMealIds": ui_state.get(
+            "deductedMealIds",
+            {
+                "Semana 47 (15 al 21 de Noviembre de 2026)": {
+                    m_id: {
+                        "diners": 6,
+                        "timestamp": "2026-11-19T09:30:00-06:00",
+                        "preAccounted": True,
+                        "items": [],
+                    }
+                    for m_id in S47_ACCRUED_13_MEAL_IDS
+                }
+            },
+        ),
         "mealDinersState": ui_state.get(
             "mealDinersState",
             {
@@ -805,6 +838,266 @@ def build_ssot_document_from_ui_state(
                 "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Cena": 2,
             },
         ),
+    }
+
+
+S47_ACCRUED_13_MEAL_IDS: List[str] = [
+    "day_0_Desayuno", "day_0_Comida", "day_0_Cena",
+    "day_1_Desayuno", "day_1_Comida", "day_1_Cena",
+    "day_2_Desayuno", "day_2_Comida", "day_2_Cena",
+    "day_3_Desayuno", "day_3_Comida", "day_3_Cena",
+    "day_4_Desayuno",
+]
+
+S47_PENDING_8_MEAL_IDS: List[str] = [
+    "day_4_Comida", "day_4_Cena",
+    "day_5_Desayuno", "day_5_Comida", "day_5_Cena",
+    "day_6_Desayuno", "day_6_Comida", "day_6_Cena",
+]
+
+
+def _normalize_meal_id_token(raw_token: Any) -> Optional[str]:
+    if isinstance(raw_token, (tuple, list)) and len(raw_token) >= 2:
+        return f"day_{int(raw_token[0])}_{raw_token[1]}"
+    s = str(raw_token or "").strip()
+    if not s:
+        return None
+    import re
+    m = re.search(r"day_(\d+)_(Desayuno|Comida|Cena)", s, re.IGNORECASE)
+    if m:
+        m_type = m.group(2).capitalize()
+        return f"day_{int(m.group(1))}_{m_type}"
+    m2 = re.search(r"^(\d+)_(Desayuno|Comida|Cena)$", s, re.IGNORECASE)
+    if m2:
+        return f"day_{int(m2.group(1))}_{m2.group(2).capitalize()}"
+    return s
+
+
+def compute_projected_week_closing_stock(
+    live_state: Optional[Dict[str, Any]] = None,
+    week_plan: Optional[Dict[str, Any]] = None,
+    pending_meal_ids: Optional[List[Any]] = None,
+) -> Dict[str, Any]:
+    """
+    Motor Python de Proyección de Cierre Semanal (Projected EOD Rollover — Protocolo EGM):
+    Calcula exactamente `max(0, Stock_Vivo_v68 - Demanda_Pendiente_R40_a_R63)` más la regla
+    de despiece anatómico contable de `Pollo entero (1 pza ~1,800 g)` en `R#53`:
+      - Cubre los `660 g` de pollo de `R#53` (`500 g` pechuga limpia + `160 g` muslos deshuesados)
+        descontando `Pollo entero: 1 -> 0 piezas` (`$0.00 MXN` compra de `Pechuga de pollo`).
+      - Mantiene `Pechuga de pavo` 100% intacta en `1,400 g`.
+      - Registra como subproductos reales disponibles para el arranque de Semana 48:
+        * `piernas_pollo_despiece`: `220.0` g (`2 piezas` de piernas limpias)
+        * `fondo_claro_pollo_habilitado`: `True` (`4,500 a 6,300 ml` a `$0.00 MXN`).
+    """
+    import unicodedata
+
+    def _norm(txt: str) -> str:
+        nfd = unicodedata.normalize("NFD", str(txt or ""))
+        return "".join(ch for ch in nfd if unicodedata.category(ch) != "Mn").lower().strip()
+
+    if live_state is None:
+        if os.path.exists(PANTRY_LIVE_STATE_PATH):
+            with open(PANTRY_LIVE_STATE_PATH, "r", encoding="utf-8") as f:
+                live_state = json.load(f)
+        else:
+            live_state = build_ssot_document_from_ui_state({})
+
+    if week_plan is None:
+        s47_path = os.path.join(PROJECT_ROOT, "semana_47_master.json")
+        if os.path.exists(s47_path):
+            with open(s47_path, "r", encoding="utf-8") as f:
+                week_plan = json.load(f)
+        else:
+            week_plan = {"days": []}
+
+    w_label = str(week_plan.get("week_label") or week_plan.get("week_name") or "Semana 47 (15 al 21 de Noviembre de 2026)")
+
+    if pending_meal_ids is None:
+        checked_map = (live_state.get("checkedInMeals") or {}).get(w_label)
+        if isinstance(checked_map, dict) and len(checked_map) > 0:
+            all_ids = [
+                f"day_{d_i}_{m_t}"
+                for d_i in range(7)
+                for m_t in ("Desayuno", "Comida", "Cena")
+            ]
+            pending_set = {m_id for m_id in all_ids if not checked_map.get(m_id)}
+        else:
+            pending_set = set(S47_PENDING_8_MEAL_IDS)
+    else:
+        pending_set = {
+            tok for tok in (_normalize_meal_id_token(x) for x in pending_meal_ids) if tok
+        }
+
+    raw_pantry = dict(live_state.get("pantryStock") or {})
+    raw_units = dict(live_state.get("pantryCardUnits") or {})
+    aud_pantry = dict(live_state.get("auditorPantryStock") or {})
+    harvest_list = list(
+        live_state.get(
+            "selectedHarvest",
+            ["Nopales", "Cilantro", "Limones", "Nuez pecana", "Acelgas", "Romero", "Agua purificada", "Jamaica", "Granadas"],
+        )
+    )
+    harvest_norm = {_norm(h) for h in harvest_list} | {"hojas de higo", "hoja de higo"}
+    meal_diners_map = dict(live_state.get("mealDinersState") or {})
+    default_diners = int(live_state.get("activeDiners", 6) or 6)
+
+    # Construir mapa normalizado de stock canónico inicial
+    stock_by_canon: Dict[str, float] = {}
+    unit_by_canon: Dict[str, str] = {}
+    norm_to_canon: Dict[str, str] = {}
+
+    for k, val in raw_pantry.items():
+        if k in PROHIBITED_ITEMS or k in ("Agua mineral", "Queso de cabra con arándano"):
+            continue
+        try:
+            q_f = float(val)
+        except Exception:
+            q_f = 0.0
+        u_s = str(raw_units.get(k) or (aud_pantry.get(k, [q_f, "g"])[1] if k in aud_pantry else "g"))
+        stock_by_canon[k] = q_f
+        unit_by_canon[k] = u_s
+        norm_to_canon[_norm(k)] = k
+
+    # Alias canónicos para evitar falsos faltantes por redacción culinaria
+    alias_pairs = [
+        ("coco rallado sin azucar", "Coco rallado"),
+        ("albahaca", "Albahaca fresca"),
+        ("multisinergix®", "33Plus®"),
+        ("multisinergix", "33Plus®"),
+        ("aminosinergix®", "34Plus®"),
+        ("aminosinergix", "34Plus®"),
+    ]
+    for a_norm, target_c in alias_pairs:
+        if target_c in stock_by_canon:
+            norm_to_canon[a_norm] = target_c
+
+    pending_demand: Dict[str, Dict[str, Any]] = {}
+    pending_b_diners_sum = 0
+    pending_d_diners_sum = 0
+
+    days = week_plan.get("days") or []
+    for d_idx, day in enumerate(days):
+        for meal in day.get("meals") or []:
+            m_type = str(meal.get("meal_type") or "")
+            meal_id = f"day_{d_idx}_{m_type}"
+            if meal_id not in pending_set:
+                continue
+            d_key = f"{w_label}_day_{d_idx}_{m_type}"
+            m_diners = int(meal_diners_map.get(d_key, default_diners) or default_diners)
+            scale = m_diners / 6.0
+            if _norm(m_type) == "desayuno":
+                pending_b_diners_sum += m_diners
+            elif _norm(m_type) == "cena":
+                pending_d_diners_sum += m_diners
+
+            for role in ("starter", "main", "side"):
+                dish = meal.get(role) or {}
+                for ing in dish.get("ingredients") or []:
+                    ing_name = str(ing.get("name") or "").strip()
+                    if not ing_name:
+                        continue
+                    ing_norm = _norm(ing_name)
+                    if ing_norm in harvest_norm or "fondo claro" in ing_norm or "caldo claro" in ing_norm:
+                        continue
+                    amt6 = float(ing.get("amount", 0.0) or 0.0)
+                    u_ing = str(ing.get("unit") or "g").strip()
+                    scaled_amt = round(amt6 * scale, 2)
+                    if "piez" in u_ing.lower() or "manojo" in u_ing.lower():
+                        import math
+                        scaled_amt = float(math.ceil(scaled_amt - 1e-6))
+                    canon_key = norm_to_canon.get(ing_norm, ing_name)
+                    entry = pending_demand.setdefault(
+                        canon_key,
+                        {"name": canon_key, "required": 0.0, "unit": unit_by_canon.get(canon_key, u_ing)},
+                    )
+                    entry["required"] = round(entry["required"] + scaled_amt, 2)
+
+    projected_stock = dict(stock_by_canon)
+    chicken_breakdown_applied = False
+    market_purchases_egm: List[Dict[str, Any]] = []
+
+    # Regla 3: Despiece Anatómico Contable de Pollo entero (1 pza cruda ~1,800 g -> 500 g pechuga + 160 g muslos = 660 g)
+    pechuga_req = float((pending_demand.get("Pechuga de pollo") or {}).get("required", 0.0))
+    pechuga_stock = float(projected_stock.get("Pechuga de pollo", 0.0))
+    pollo_entero_stock = float(projected_stock.get("Pollo entero", 0.0))
+    if pechuga_req > pechuga_stock and pollo_entero_stock >= 1.0 and (pechuga_req - pechuga_stock) <= 660.0 + 1e-6:
+        chicken_breakdown_applied = True
+        projected_stock["Pollo entero"] = max(0.0, round(pollo_entero_stock - 1.0, 2))
+        projected_stock["Pechuga de pollo"] = 0.0
+
+    for c_key, d_info in sorted(pending_demand.items()):
+        if c_key == "Pechuga de pollo" and chicken_breakdown_applied:
+            continue
+        req_q = float(d_info["required"])
+        st_q = float(projected_stock.get(c_key, 0.0))
+        if req_q > st_q + 1e-6:
+            market_purchases_egm.append({
+                "name": c_key,
+                "required": req_q,
+                "stock": st_q,
+                "net_to_buy": round(req_q - st_q, 2),
+                "unit": d_info["unit"],
+            })
+        projected_stock[c_key] = max(0.0, round(st_q - req_q, 2))
+
+    # Contabilizar tomas extra-receta pendientes de 33Plus® (Toma 1) y 34Plus® (Toma 4) para #v-shop EGM
+    for supp_key, extra_diners in (("33Plus®", pending_b_diners_sum), ("34Plus®", pending_d_diners_sum)):
+        rec_req = float((pending_demand.get(supp_key) or {}).get("required", 0.0))
+        extra_req = round(5.0 * extra_diners, 2)
+        tot_supp_req = round(rec_req + extra_req, 2)
+        st_supp = float(stock_by_canon.get(supp_key, 0.0))
+        projected_stock[supp_key] = max(0.0, round(st_supp - tot_supp_req, 2))
+        market_purchases_egm = [m for m in market_purchases_egm if m["name"] != supp_key]
+        if tot_supp_req > st_supp + 1e-6:
+            market_purchases_egm.append({
+                "name": supp_key,
+                "required": tot_supp_req,
+                "stock": st_supp,
+                "net_to_buy": round(tot_supp_req - st_supp, 2),
+                "unit": "g",
+            })
+
+    if "Semillas y nueces mixtas" in projected_stock:
+        projected_stock["Nueces mixtas"] = projected_stock["Semillas y nueces mixtas"]
+
+    projected_auditor_pantry: Dict[str, Tuple[float, str]] = {
+        k: (float(v), unit_by_canon.get(k, "g"))
+        for k, v in projected_stock.items()
+        if k not in PROHIBITED_ITEMS
+    }
+    if chicken_breakdown_applied:
+        projected_auditor_pantry["Piernas de pollo"] = (220.0, "g")
+        projected_stock["Piernas de pollo"] = 220.0
+        unit_by_canon["Piernas de pollo"] = "g"
+
+    clean_int_or_float_stock: Dict[str, Any] = {
+        k: (int(round(v)) if abs(v - round(v)) < 1e-6 else round(v, 2))
+        for k, v in projected_stock.items()
+    }
+
+    return {
+        "pantryStock": clean_int_or_float_stock,
+        "projected_pantry_stock": clean_int_or_float_stock,
+        "auditorPantryStock": projected_auditor_pantry,
+        "projected_auditor_pantry": projected_auditor_pantry,
+        "pending_meal_ids": sorted(pending_set),
+        "pending_demand": pending_demand,
+        "market_purchases_egm": market_purchases_egm,
+        "chicken_anatomical_breakdown": {
+            "applied": chicken_breakdown_applied,
+            "pollo_entero_remaining_pieces": int(projected_stock.get("Pollo entero", 0)),
+            "pechuga_limpia_g": 500.0 if chicken_breakdown_applied else 0.0,
+            "muslos_deshuesados_g": 160.0 if chicken_breakdown_applied else 0.0,
+            "total_usado_r53_g": 660.0 if chicken_breakdown_applied else 0.0,
+            "piernas_pollo_despiece": 220.0 if chicken_breakdown_applied else 0.0,
+            "piernas_pollo_piezas": 2 if chicken_breakdown_applied else 0,
+            "fondo_claro_pollo_habilitado": bool(chicken_breakdown_applied),
+            "fondo_claro_pollo_rango_ml": [4500, 6300] if chicken_breakdown_applied else [0, 0],
+        },
+        "piernas_pollo_despiece": 220.0 if chicken_breakdown_applied else 0.0,
+        "piernas_pollo_piezas": 2 if chicken_breakdown_applied else 0,
+        "fondo_claro_pollo_habilitado": bool(chicken_breakdown_applied),
+        "fondo_claro_pollo_rango_ml": [4500, 6300] if chicken_breakdown_applied else [0, 0],
     }
 
 
@@ -832,9 +1125,11 @@ def sync_pantry_ssot_from_chrome(force: bool = False) -> Optional[Dict[str, Any]
     new_seq = int(extracted.get("leveldb_seq", 0) or 0)
     existing_is_v68 = bool((existing or {}).get("v68_consolidated_19nov2026_sync"))
     chrome_is_v68 = bool((extracted.get("state") or {}).get("v68_consolidated_19nov2026_sync"))
+    existing_is_v69 = bool((existing or {}).get("v69_ponche_navideno_33plus_sync"))
+    chrome_is_v69 = bool((extracted.get("state") or {}).get("v69_ponche_navideno_33plus_sync"))
 
-    # No permitir que un estado de Chrome previo a V68 sobrescriba el Alta Consolidada del 19 Nov 2026
-    if existing_is_v68 and not chrome_is_v68 and not force:
+    # No permitir que un estado de Chrome previo a V68/V69 sobrescriba la Fuente Única de Verdad vigente
+    if ((existing_is_v68 and not chrome_is_v68) or (existing_is_v69 and not chrome_is_v69)) and not force:
         return existing
 
     if existing is None or force or new_seq > existing_seq:

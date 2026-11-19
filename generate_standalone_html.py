@@ -2066,6 +2066,7 @@ def generate_standalone():
     # CONSTRUCCIÓN DEL CATÁLOGO CANÓNICO DE PLATILLOS (DISH_EXCHANGE_POOL)
     from app.services.tilo_menu_cortex import (
         SEVEN_CULINARY_SCHOOLS,
+        _build_holiday_apple_punch_33plus_course,
         export_heptagon_exchange_pool,
         generate_week_with_tilo_cortex,
     )
@@ -2074,6 +2075,22 @@ def generate_standalone():
     plan_45_json = json.dumps(plan_45_dict, ensure_ascii=False)
     plan_46_json = json.dumps(plan_46_dict, ensure_ascii=False)
     plan_47_json = json.dumps(plan_47_dict, ensure_ascii=False)
+
+    future_canonical_weeks = {}
+    _hist_chain = [plan_45_dict, plan_46_dict, plan_47_dict]
+    for _fw_num in range(48, 54):
+        _fw_plan = generate_week_with_tilo_cortex(_fw_num, history_weeks=_hist_chain)
+        for _fday in _fw_plan.get("days", []):
+            for _fmeal in _fday.get("meals", []):
+                if isinstance(_fmeal.get("starter"), dict):
+                    _fmeal["starter_recipe"] = dish_to_typed_recipe(_fmeal["starter"])
+                if isinstance(_fmeal.get("main"), dict):
+                    _fmeal["main_recipe"] = dish_to_typed_recipe(_fmeal["main"])
+                if isinstance(_fmeal.get("side"), dict):
+                    _fmeal["side_recipe"] = dish_to_typed_recipe(_fmeal["side"])
+        future_canonical_weeks[str(_fw_num)] = _fw_plan
+        _hist_chain.append(_fw_plan)
+    future_weeks_json = json.dumps(future_canonical_weeks, ensure_ascii=False)
 
     live_pantry_ssot_path = os.path.join(os.path.dirname(__file__), "pantry_live_state.json")
     if os.path.exists(live_pantry_ssot_path):
@@ -2109,6 +2126,15 @@ def generate_standalone():
                 **sd_item,
                 "recipe": dish_to_typed_recipe(sd_item.get("recipe")) or sd_item.get("recipe"),
             }
+    _punch_course_obj = _build_holiday_apple_punch_33plus_course()
+    sides_map[_punch_course_obj["title"]] = {
+        "name": _punch_course_obj["title"],
+        "category": "side",
+        "meal_type": "Desayuno",
+        "culinary_school": "Edición Especial Navideña",
+        "macros": {"kcal": 55.0, "fat_g": 4.2, "protein_g": 0.9, "net_carbs_g": 1.6},
+        "recipe": dish_to_typed_recipe(_punch_course_obj) or _punch_course_obj,
+    }
 
     for day in plan_38_dict.get("days", []):
         for meal in day.get("meals", []):
@@ -2649,9 +2675,22 @@ function _computeDishJaccardSimilarityHardGate(dishA, dishB) {
 }
 
 const _HG_FUNCTIONAL_PREP_FORMATS = [
+  ['ponche_navideno', ['ponche navideno', 'holiday_clarified_apple_clove_punch']],
   ['nice_cream_sorbete', ['sorbete', 'nice-cream', 'nice cream', 'helado']],
   ['porridge_no_oats', ['porridge', 'no-oats', 'no oats']],
   ['cheesecake_crumble', ['cheesecake', 'deconstruido', 'crumble']],
+  ['crema_catalana_keto', ['crema catalana']],
+  ['bombones_frios', ['bombones helados']],
+  ['cappuccino_vegetal', ['cappuccino vegetal', 'cappuccino']],
+  ['tonic_botanico', ['tonico botanico', 'tonic botanico']],
+  ['flan_frio_colageno', ['flan frio']],
+  ['tiramisu_keto', ['tiramisu']],
+  ['espuma_fria_frutal', ['espuma fria']],
+  ['emulsion_ajonjoli', ['emulsion de ajonjoli', 'emulsion ajonjoli']],
+  ['nectar_prensado', ['nectar prensado']],
+  ['copa_semillas_crocante', ['copa crocante']],
+  ['veloute_dulce_nuez', ['veloute dulce']],
+  ['granita_cristalina', ['granita cristalina']],
   ['crema_halva', ['halva', 'tahini']],
   ['atole_pepita', ['atole']],
   ['trufa_fat_bomb', ['trufa', 'trufas', 'fat bomb', 'fat bombs', 'bocado']],
@@ -2672,6 +2711,7 @@ const _HG_FUNCTIONAL_PREP_FORMATS = [
 ];
 
 const _HG_FUNCTIONAL_PREP_BASES = [
+  ['manzana_deshidratada', ['manzana deshidratada', 'mezcla navidena']],
   ['semilla_calabaza', ['semilla de calabaza', 'pepita']],
   ['tahini_ajonjoli', ['tahini', 'ajonjoli']],
   ['canamo_linaza', ['canamo', 'linaza']],
@@ -2681,12 +2721,16 @@ const _HG_FUNCTIONAL_PREP_BASES = [
   ['maracuya', ['maracuya']],
   ['mora_azul', ['mora azul', 'blueberry']],
   ['frambuesa', ['frambuesa']],
+  ['zarzamora', ['zarzamora']],
   ['fresa', ['fresa']],
+  ['granada', ['granada']],
+  ['queso_cottage', ['cottage']],
   ['queso_philadelphia', ['philadelphia']],
   ['queso_ricotta', ['ricotta']],
   ['yogur_griego', ['yogur griego', 'yogur']],
   ['leche_almendra', ['leche de almendra']],
   ['leche_coco', ['leche de coco']],
+  ['coco_rallado', ['coco rallado']],
   ['nuez_india', ['nuez de la india']],
   ['nuez_pecana', ['nuez pecana']],
   ['semillas_mixtas', ['semillas y nueces mixtas']],
@@ -2694,6 +2738,16 @@ const _HG_FUNCTIONAL_PREP_BASES = [
   ['apio_pepino', ['apio', 'pepino']],
   ['agua_infusion', ['agua purificada']]
 ];
+
+function isHolidayChristmasPunchExempt(course, wNum) {
+  if (!course || typeof course !== 'object') return false;
+  const wn = parseInt(wNum, 10) || 0;
+  if (wn < 47 || wn > 52) return false;
+  const tech = _normTextHardGate(course.technique || course.cooking_technique || '');
+  if (tech === 'holiday_clarified_apple_clove_punch_33plus') return true;
+  const titleN = _normTextHardGate(course.title || course.name || '');
+  return titleN.includes('ponche navideno');
+}
 
 const _HG_FUNCTIONAL_PREP_BOTANICALS = [
   ['lavanda_pasiflora', ['lavanda', 'pasiflora']],
@@ -3043,12 +3097,14 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
           const cmSt = _normTextHardGate((cMeals[mIdx].starter || {}).title || '');
           const pmSd = _normTextHardGate((pMeals[mIdx].side || {}).title || '');
           const cmSd = _normTextHardGate((cMeals[mIdx].side || {}).title || '');
+          const punchExemptR10 = isHolidayChristmasPunchExempt(cMeals[mIdx].side || {}, wNumTop);
+          const sameSideR10 = Boolean(pmSd && pmSd === cmSd && !punchExemptR10);
           const sameMainTitle = Boolean(pmTitle && pmTitle === cmTitle);
-          const sameArchAndCourse = Boolean(pmArch && pmArch === cmArch && (pmSt === cmSt || pmSd === cmSd));
+          const sameArchAndCourse = Boolean(pmArch && pmArch === cmArch && (pmSt === cmSt || sameSideR10));
           if (sameMainTitle || sameArchAndCourse) {
             violations.push(`[R10] Anti-Clonación Inter-Semanal (${dLabel} - ${mLabel}): Repite plato o arquetipo el mismo día de la semana.`);
           }
-          if (pmSt && pmSd && pmSt === cmSt && pmSd === cmSd) {
+          if (pmSt && sameSideR10 && pmSt === cmSt) {
             violations.push(`[R10] Anti-Clonación Inter-Semanal (${dLabel} - ${mLabel}): Repite combinación Entrada+Guarnición el mismo día de la semana.`);
           }
           if (cmTitle && prevAllMainTitles[cmTitle]) {
@@ -3121,27 +3177,29 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
         });
         currFuncSeen.push([cSlot, cTitle, cDna, cSide]);
 
-        rollingPrevWeeks.forEach(([hwTag, hwPlan]) => {
-          (hwPlan.days || []).forEach((hDay, hdIdx) => {
-            const hdLabel = hDay.day || `Día ${hdIdx + 1}`;
-            const hMeals = hDay.meals || [];
-            [[0, 'Desayuno'], [2, 'Cena']].forEach(([hmIdx, hmLabel]) => {
-              if (hmIdx >= hMeals.length) return;
-              const hSide = (hMeals[hmIdx] || {}).side || {};
-              const hTitle = hSide.title || '';
-              const hDna = computeFunctionalPrepDna(hSide);
-              const hFmt = hDna.split('|')[0];
-              const jHist = _computeFunctionalPrepJaccardSimilarityHardGate(cSide, hSide);
-              if (cDna === hDna) {
-                violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}', ADN=<${cDna}>) repite huella funcional contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
-              } else if (cFmt === hFmt && !['infusion_tisana', 'lassi_probiotico', 'horchata_vegetal', 'batido_smoothie'].includes(cFmt)) {
-                violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}') repite formato/arquetipo '${cFmt}' contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
-              } else if (jHist >= 0.45) {
-                violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}') presenta similitud Jaccard=${jHist.toFixed(2)} (>= 0.45) contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
-              }
+        if (!isHolidayChristmasPunchExempt(cSide, wNumTop)) {
+          rollingPrevWeeks.forEach(([hwTag, hwPlan]) => {
+            (hwPlan.days || []).forEach((hDay, hdIdx) => {
+              const hdLabel = hDay.day || `Día ${hdIdx + 1}`;
+              const hMeals = hDay.meals || [];
+              [[0, 'Desayuno'], [2, 'Cena']].forEach(([hmIdx, hmLabel]) => {
+                if (hmIdx >= hMeals.length) return;
+                const hSide = (hMeals[hmIdx] || {}).side || {};
+                const hTitle = hSide.title || '';
+                const hDna = computeFunctionalPrepDna(hSide);
+                const hFmt = hDna.split('|')[0];
+                const jHist = _computeFunctionalPrepJaccardSimilarityHardGate(cSide, hSide);
+                if (cDna === hDna) {
+                  violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}', ADN=<${cDna}>) repite huella funcional contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
+                } else if (cFmt === hFmt && !['infusion_tisana', 'gelatina_colageno', 'lassi_probiotico', 'horchata_vegetal', 'batido_smoothie'].includes(cFmt)) {
+                  violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}') repite formato/arquetipo '${cFmt}' contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
+                } else if (jHist >= 0.45) {
+                  violations.push(`[R10-DNA FUNCIONAL 4 SEMANAS] ${cSlot} ('${cTitle}') presenta similitud Jaccard=${jHist.toFixed(2)} (>= 0.45) contra ${hwTag} ${hdLabel} (${hmLabel}): '${hTitle}'.`);
+                }
+              });
             });
           });
-        });
+        }
       });
     });
   }
@@ -3202,6 +3260,9 @@ function buildWeekPlanForNumber(targetWeekNum, prevWeekPlanOverride) {
   }
   if (nextWeekNum === 47 && !hasFeedbackPenalty && typeof window !== 'undefined' && window.CANONICAL_WEEK_47_PLAN) {
     return JSON.parse(JSON.stringify(window.CANONICAL_WEEK_47_PLAN));
+  }
+  if (nextWeekNum >= 48 && !hasFeedbackPenalty && typeof window !== 'undefined' && window.CANONICAL_FUTURE_WEEKS && window.CANONICAL_FUTURE_WEEKS[String(nextWeekNum)]) {
+    return JSON.parse(JSON.stringify(window.CANONICAL_FUTURE_WEEKS[String(nextWeekNum)]));
   }
 
   // Rotación Disjunta de Ciclos para N >= 45: Semanas impares (45, 47...) usan el Heptágono Culinario V17.0 Ciclo A/C y Semanas pares (46, 48...) usan Ciclo B (S46)
@@ -4086,12 +4147,13 @@ function selectWeek(weekKey) {
     const ACTIVE_WEEK_CANONICAL_BOM = """ + canonical_bom_json + """;
     const ACTIVE_WEEK_40_CANONICAL_BOM = """ + s40_canonical_bom_json + """;
     const ACTIVE_WEEK_40_WEEKEND_BOM = """ + s40_weekend_bom_json + """;
-    window.shoppingListDayFilter = 'all'; // Canónico por defecto: Ciclo Completo (7 Días)
+    window.shoppingListDayFilter = 'pending_egm'; // Modo Cierre EGM activo por defecto cuando la semana está en curso
     window.DISH_EXCHANGE_POOL = """ + dish_exchange_pool_json + """;
     window.SEVEN_CULINARY_SCHOOLS = """ + seven_schools_json + """;
     window.CANONICAL_WEEK_45_PLAN = """ + plan_45_json + """;
     window.CANONICAL_WEEK_46_PLAN = """ + plan_46_json + """;
     window.CANONICAL_WEEK_47_PLAN = """ + plan_47_json + """;
+    window.CANONICAL_FUTURE_WEEKS = """ + future_weeks_json + """;
     window.LIVE_PANTRY_SSOT = """ + live_pantry_ssot_json + """;
 window.PANTRY_STOCK_INVENTORY = {
       "sku-001-mantequilla": { item_num: 1, name: "Mantequilla", stock: 290, unit: "g", packaging: "290 g", status: "canonical" },
@@ -4210,6 +4272,8 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-329-coco-rallado": { item_num: 329, name: "Coco rallado", stock: 300, unit: "g", packaging: "300 g", category: "🥑 Grasas, Aceites y Semillas", status: "canonical", reason: null },
       "sku-330-anis-estrella": { item_num: 330, name: "Anís estrella", stock: 50, unit: "g", packaging: "50 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
       "sku-331-chile-serrano": { item_num: 331, name: "Chile serrano", stock: 250, unit: "g", packaging: "250 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla Inmutable 0 Picante [R1])." },
+      "sku-332-mezcla-navidena-molida": { item_num: 332, name: "Mezcla navideña molida de manzana deshidratada y especias", stock: 300, unit: "g", packaging: "300 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
+      "sku-333-manzana-deshidratada": { item_num: 333, name: "Manzana deshidratada", stock: 300, unit: "g", packaging: "300 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", reason: null },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada", stock: 0, unit: "g", status: "canonical" },
@@ -4470,6 +4534,8 @@ let pantryStock = {
       "Albahaca fresca": 100,
       "Coco rallado": 300,
       "Anís estrella": 50,
+      "Manzana deshidratada": 300,
+      "Mezcla navideña molida de manzana deshidratada y especias": 300,
       "Apio": 200,
       "Ajo": 150,
       "Nueces mixtas": 400
@@ -4480,7 +4546,24 @@ let pantryStock = {
       "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Comida": 4,
       "Semana 45 (01 al 07 de Noviembre de 2026)_day_0_Cena": 2
     };
+    const S47_ACCRUED_13_MEAL_IDS = [
+      "day_0_Desayuno", "day_0_Comida", "day_0_Cena",
+      "day_1_Desayuno", "day_1_Comida", "day_1_Cena",
+      "day_2_Desayuno", "day_2_Comida", "day_2_Cena",
+      "day_3_Desayuno", "day_3_Comida", "day_3_Cena",
+      "day_4_Desayuno"
+    ];
+    const S47_PENDING_8_MEAL_IDS = [
+      "day_4_Comida", "day_4_Cena",
+      "day_5_Desayuno", "day_5_Comida", "day_5_Cena",
+      "day_6_Desayuno", "day_6_Comida", "day_6_Cena"
+    ];
     let dispatchedMeals = {};
+    let checkedInMeals = {};
+    let deductedMealIds = {};
+    window.CHECKED_IN_MEALS = checkedInMeals;
+    window.DEDUCTED_MEAL_IDS = deductedMealIds;
+    window.__V69_CANONICAL_SYNCED = true;
     let customDishesState = {};
     let mealFeedbackLedger = [];
     window.MEAL_FEEDBACK_LEDGER = mealFeedbackLedger;
@@ -4648,6 +4731,8 @@ let pantryStock = {
       { stem: 'eneldo', aliases: ['eneldo', 'eneldo fresco', 'eneldo fresco de la granja', 'hojas de eneldo', 'ramitas de eneldo'] },
       { stem: 'albahaca', aliases: ['albahaca', 'albahaca fresca', 'albahaca fresca de la granja', 'hojas de albahaca'] },
       { stem: 'anis-estrella', aliases: ['anis estrella', 'anis estrellado'] },
+      { stem: 'mezcla-navidena-molida', aliases: ['mezcla navidena molida de manzana deshidratada y especias', 'mezcla navidena molida', 'mezcla navidena en polvo'] },
+      { stem: 'manzana-deshidratada', aliases: ['manzana deshidratada'], exclude: ['mezcla navidena'] },
       { stem: 'hierbas-botanicas', aliases: ['hierbas botanicas', 'hierbas botanicas (toronjil y menta)', 'hierbas botanicas toronjil y menta', 'toronjil y menta'] }
     ];
 
@@ -5523,8 +5608,8 @@ let pantryStock = {
           "Caldo de huesos"
         ];
 
-        // Migración única V43: unificar variaciones en un solo insumo canónico y purgar el duplicado de Costco 907g
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v43_canonical_dedup_ready') !== 'true') {
+        // Migración única V43–V64 (congelada tras consolidación maestra V68/V69)
+        if (!window.__V69_CANONICAL_SYNCED && typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v43_canonical_dedup_ready') !== 'true') {
           deletedPantryItems = deletedPantryItems.filter(d => {
             const s = (typeof d === 'string' ? d : '').toLowerCase().trim();
             return s !== 'fresas frescas' &&
@@ -5570,7 +5655,7 @@ let pantryStock = {
         }
 
         // Sincronización V51: inventario actualizado por el usuario (Pollo entero 1 pieza, Fondo claro de pollo 2,000 ml, Queso cottage 500g, Cebolla 8, Jitomate 7, Lechuga 3, Huevo 26, Agua mineral eliminada, Granja 8 ítems)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v51_user_inventory_sync') !== 'true') {
+        if (!window.__V69_CANONICAL_SYNCED && typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v51_user_inventory_sync') !== 'true') {
           const v49Edits = {
             "Fresas": { stock: 0, unit: "g", sku: "fresas_frescas_tr04095" },
             "Frambuesas": { stock: 0, unit: "g", sku: "frambuesas_frescas_organicas" },
@@ -5662,7 +5747,7 @@ let pantryStock = {
           { row: 18, ticket_desc: "MM 40/355ML", qty_ticket: 3, price: 282.00, name: "Botella de agua", add_qty: 120, target_stock: 150, unit: "botellas (355 ml)", sku: "sku-019-botella-de-agua", item_num: 19, category: "🌶️ Chiles, Condimentos e Infusiones" }
         ];
 
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v55_broth_prepared_and_sams_consolidated_sync') !== 'true') {
+        if (!window.__V69_CANONICAL_SYNCED && typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v55_broth_prepared_and_sams_consolidated_sync') !== 'true') {
           delete pantryStock["Fondo claro de pollo"];
           delete pantryStock["Fondo de res"];
           delete pantryStock["Caldo claro de pollo"];
@@ -5680,7 +5765,7 @@ let pantryStock = {
         }
 
         // Sincronización V56 ZERO LOST WORK: Restaurar el inventario físico real capturado por el usuario en Chrome (LevelDB seq #270082 -> pantry_live_state.json)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v56_restore_chrome_user_ssot') !== 'true' && window.LIVE_PANTRY_SSOT && typeof window.LIVE_PANTRY_SSOT === 'object') {
+        if (!window.__V69_CANONICAL_SYNCED && typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v56_restore_chrome_user_ssot') !== 'true' && window.LIVE_PANTRY_SSOT && typeof window.LIVE_PANTRY_SSOT === 'object') {
           const ssot = window.LIVE_PANTRY_SSOT;
           if (ssot.pantryStock && typeof ssot.pantryStock === 'object') {
             pantryStock = Object.assign({}, ssot.pantryStock);
@@ -5707,7 +5792,7 @@ let pantryStock = {
         }
 
         // Sincronización V59: Alta de 2 Tickets de Compra Reales (Sam's Club Orden 1566264040064745472 + Costco Ticket 4362) con Queso cottage (3,840 g = 4 × 960GR QCOTTA) y Queso ricotta (0 g)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v59_cottage_3840_sams_costco_sync') !== 'true') {
+        if (!window.__V69_CANONICAL_SYNCED && typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v59_cottage_3840_sams_costco_sync') !== 'true') {
           const v59TicketUpdates = {
             "Queso manchego": { stock: 1000, unit: "g", sku: "sku-008-queso-manchego" },
             "Queso cottage": { stock: 3840, unit: "g", sku: "sku-003-queso-cottage" },
@@ -5744,7 +5829,7 @@ let pantryStock = {
         }
 
         // Sincronización V60: Alta de Mercado Local Fresco (Pollo entero 1 pza, Queso doble crema 1000g, Aguacate 5 pzas, Champiñón 1000g, Ejotes 500g, Calabacitas 1400g, Jitomate 8 pzas, Tomate 500g, Cebolla 13 pzas, Morrón 8 pzas, Ajo 120g, Pimienta negra 170g)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v60_mercado_local_fresco_nov01_sync') !== 'true') {
+        if (!window.__V69_CANONICAL_SYNCED && typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v60_mercado_local_fresco_nov01_sync') !== 'true') {
           const v60MercadoUpdates = {
             "Pollo entero": { stock: 1, unit: "piezas", sku: "pollo-entero", item_num: 316, category: "🥩 Carnes, Pescados y Proteínas" },
             "Queso doble crema": { stock: 1000, unit: "g", sku: "sku-321-queso-doble-crema", item_num: 321, category: "🧀 Lácteos y Quesos (Sin Gluten — Keto)" },
@@ -5788,7 +5873,7 @@ let pantryStock = {
         }
 
         // Sincronización V63: Saldo Real Post-S45 + Ticket Sam's Club SM Santa Fe 09 Nov 2026 (Orden 1569462808300642304 — $5,127.48 MXN) y Activación de Semana 46
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v63_sams_09nov2026_post_s45_sync') !== 'true') {
+        if (!window.__V69_CANONICAL_SYNCED && typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v63_sams_09nov2026_post_s45_sync') !== 'true') {
           const v63SamsUpdates = {
             "Flat steak": { stock: 2025, unit: "g", sku: "sku-021-flat-steak" },
             "Carne molida": { stock: 2875, unit: "g", sku: "sku-024-carne-molida" },
@@ -5880,7 +5965,7 @@ let pantryStock = {
         }
 
         // Sincronización V64: Inventario Físico Actualizado por el usuario (14 Nov 2026 — Chrome LevelDB seq=279021)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v64_cierre_s46_14nov2026_sync') !== 'true') {
+        if (!window.__V69_CANONICAL_SYNCED && typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v64_cierre_s46_14nov2026_sync') !== 'true') {
           const v64InventoryUpdates = {
             "Fajitas de mojarra": { stock: 2720, unit: "g", sku: "sku-025-fajitas-de-mojarra" },
             "Pechuga de pavo": { stock: 700, unit: "g", sku: "sku-318-pechuga-de-pavo" },
@@ -6373,8 +6458,16 @@ let pantryStock = {
           }
           localStorage.setItem('nutriketo_v66_s47_active_week_sync', 'true');
         }
-        // Sincronización V68: Alta Consolidada Jueves 19 Nov 2026 (Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local)
-        if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v68_consolidated_19nov2026_applied') !== 'true') {
+        // Sincronización V68 + V69 (rev25): Alta Consolidada Jueves 19 Nov 2026 + Protocolo EGM Unificado
+        let needsV68V69CleanBoot = !window.__V69_EGM_BOOTED_IN_MEMORY;
+        try {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v69_egm_clean_boot_rev25') === 'true') {
+            needsV68V69CleanBoot = false;
+          }
+        } catch (_) {}
+
+        if (needsV68V69CleanBoot) {
+          window.__V69_EGM_BOOTED_IN_MEMORY = true;
           const v68ConsolidatedStocks = {
             "Flat steak": 1930, "Lomo de salmón": 1470, "Huevo": 210, "Pechuga de pavo": 1400,
             "Atún en agua": 1400, "Pollo entero": 1, "Fajitas de mojarra": 2000, "Sardinas": 1600,
@@ -6390,7 +6483,9 @@ let pantryStock = {
             "Albahaca fresca": 100, "Manzanilla": 112, "Apio": 200,
             "Espinacas": 0, "Espárragos": 0, "Flor de calabaza": 0,
             "Mayonesa": 1100, "Grenetina": 168, "Coco rallado": 300, "Ajonjolí": 200,
-            "Anís estrella": 50, "Botella de agua": 160,
+            "Anís estrella": 50, "Manzana deshidratada": 300,
+            "Mezcla navideña molida de manzana deshidratada y especias": 300,
+            "Botella de agua": 160,
             "Nuez de la India": 1000, "Aceite de coco": 800, "Semillas y nueces mixtas": 400,
             "Nueces mixtas": 400, "Almendras fileteadas": 100, "Pistaches": 50,
             "Aceite de oliva": 0, "Sal de mar": 1000, "Canela molida": 725,
@@ -6412,10 +6507,9 @@ let pantryStock = {
           delete pantryStock["MultiSinergix®"];
           delete pantryStock["AminoSinergix®"];
           if (!Array.isArray(deletedPantryItems)) deletedPantryItems = [];
-          if (!deletedPantryItems.some(d => /agua\\s*mineral/i.test(String(d)))) {
+          if (!deletedPantryItems.some(d => /agua\s*mineral/i.test(String(d)))) {
             deletedPantryItems.push("Agua mineral");
           }
-          // Eliminar cualquier marca vieja de compra para los insumos recién abastecidos en #v-shop
           checkedRows = {};
           if (!window.pantryCardUnits || typeof window.pantryCardUnits !== 'object') {
             window.pantryCardUnits = {};
@@ -6429,12 +6523,16 @@ let pantryStock = {
             "Morrón": "piezas", "Calabacitas": "g", "Cebolla": "piezas", "Aguacate": "piezas",
             "Pepino": "g", "Brócoli": "g", "Coliflor": "g", "Albahaca fresca": "g", "Manzanilla": "g",
             "Mayonesa": "g", "Grenetina": "g", "Coco rallado": "g", "Ajonjolí": "g",
-            "Anís estrella": "g", "Botella de agua": "piezas", "Chile serrano": "g",
+            "Anís estrella": "g", "Manzana deshidratada": "g",
+            "Mezcla navideña molida de manzana deshidratada y especias": "g",
+            "Botella de agua": "piezas", "Chile serrano": "g",
             "Apio": "g", "Aceite de coco": "g", "Sardinas": "g", "33Plus®": "g", "34Plus®": "g"
           });
           if (window.PANTRY_STOCK_INVENTORY && typeof window.PANTRY_STOCK_INVENTORY === 'object') {
             delete window.PANTRY_STOCK_INVENTORY["pepino"];
             delete window.PANTRY_STOCK_INVENTORY["brocoli"];
+            window.PANTRY_STOCK_INVENTORY["sku-332-mezcla-navidena-molida"] = { item_num: 332, name: "Mezcla navideña molida de manzana deshidratada y especias", stock: 300, unit: "g", packaging: "300 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null };
+            window.PANTRY_STOCK_INVENTORY["sku-333-manzana-deshidratada"] = { item_num: 333, name: "Manzana deshidratada", stock: 300, unit: "g", packaging: "300 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", reason: null };
             Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
               const p = window.PANTRY_STOCK_INVENTORY[k];
               if (p && p.name && v68ConsolidatedStocks[p.name] !== undefined && !["zarzamoras-frescas", "fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "multisinergix", "aminosinergix", "33plus", "34plus", "ajo-fresco"].includes(k)) {
@@ -6445,9 +6543,24 @@ let pantryStock = {
               }
             });
           }
-          localStorage.setItem('nutriketo_v68_consolidated_19nov2026_sync', 'true');
-          localStorage.setItem('nutriketo_v68_consolidated_19nov2026_applied', 'true');
+          if (typeof CANONICAL_WEEK_47_TITLE !== 'undefined' && datasets && datasets[CANONICAL_WEEK_47_TITLE]) {
+            activeWeek = CANONICAL_WEEK_47_TITLE;
+          }
+          window.shoppingListDayFilter = 'pending_egm';
+          try {
+            if (typeof localStorage !== 'undefined') {
+              localStorage.setItem('nutriketo_v63_sams_09nov2026_post_s45_sync', 'true');
+              localStorage.setItem('nutriketo_v64_cierre_s46_14nov2026_sync', 'true');
+              localStorage.setItem('nutriketo_v65_ui_audit_nov14_sync', 'true');
+              localStorage.setItem('nutriketo_v68_consolidated_19nov2026_sync', 'true');
+              localStorage.setItem('nutriketo_v68_consolidated_19nov2026_applied', 'true');
+              localStorage.setItem('nutriketo_v69_ponche_navideno_33plus_sync', 'true');
+              localStorage.setItem('nutriketo_v69_egm_pending_rollover_applied', 'true');
+              localStorage.setItem('nutriketo_v69_egm_clean_boot_rev25', 'true');
+            }
+          } catch (_) {}
         }
+        ensureEgmS47TemporalStateInitialized();
         consolidateAndPurgePantryInventory();
         if (typeof localStorage !== 'undefined') {
           localStorage.setItem('nutriketo_intake_tr04095_applied', 'true');
@@ -6459,6 +6572,127 @@ let pantryStock = {
       } catch (err) {
         console.warn('Error en ensureCanonicalTicketIntakesApplied:', err);
       }
+    }
+
+    function ensureEgmS47TemporalStateInitialized() {
+      try {
+        const s47Key = (typeof CANONICAL_WEEK_47_TITLE !== 'undefined') ? CANONICAL_WEEK_47_TITLE : "Semana 47 (15 al 21 de Noviembre de 2026)";
+        if (!checkedInMeals || typeof checkedInMeals !== 'object') checkedInMeals = {};
+        if (!deductedMealIds || typeof deductedMealIds !== 'object') deductedMealIds = {};
+        if (!dispatchedMeals || typeof dispatchedMeals !== 'object') dispatchedMeals = {};
+
+        try {
+          if (typeof localStorage !== 'undefined') {
+            const rawDeducted = localStorage.getItem('nutriketo_deducted_meal_ids_v69');
+            if (rawDeducted) {
+              const parsedDed = JSON.parse(rawDeducted);
+              if (parsedDed && typeof parsedDed === 'object') {
+                deductedMealIds = Object.assign({}, parsedDed, deductedMealIds);
+              }
+            }
+            const rawChecked = localStorage.getItem('nutriketo_checked_in_meals_v69');
+            if (rawChecked) {
+              const parsedChk = JSON.parse(rawChecked);
+              if (parsedChk && typeof parsedChk === 'object') {
+                checkedInMeals = Object.assign({}, parsedChk, checkedInMeals);
+              }
+            }
+          }
+        } catch (_) {}
+
+        if (!checkedInMeals[s47Key] || typeof checkedInMeals[s47Key] !== 'object') {
+          checkedInMeals[s47Key] = {};
+        }
+        if (!deductedMealIds[s47Key] || typeof deductedMealIds[s47Key] !== 'object') {
+          deductedMealIds[s47Key] = {};
+        }
+
+        // Inicializar los 13 primeros servicios (Dom Desayuno R#01 a Jue Desayuno R#39) como pre-contabilizados sin volver a restar de v68
+        S47_ACCRUED_13_MEAL_IDS.forEach(mealId => {
+          checkedInMeals[s47Key][mealId] = true;
+          if (!deductedMealIds[s47Key][mealId]) {
+            deductedMealIds[s47Key][mealId] = {
+              diners: 6,
+              timestamp: '2026-11-19T09:30:00-06:00',
+              preAccounted: true,
+              items: []
+            };
+          }
+          const fullDispKey = `${s47Key}_${mealId}`;
+          if (!dispatchedMeals[fullDispKey]) {
+            const parts = mealId.split('_');
+            dispatchedMeals[fullDispKey] = {
+              dispatchedAt: '19/11/2026 09:30',
+              dayIdx: parseInt(parts[1], 10) || 0,
+              mealType: parts[2] || 'Desayuno',
+              headcount: 6,
+              ratingStars: 5,
+              digestionTolerance: 'optima',
+              sensoryTags: ['✨ Sabor Excelente'],
+              notes: 'Turno histórico devengado y pre-contabilizado en el inventario vivo v68 (19-Nov).',
+              repeatWeightModifier: 1.0,
+              preAccountedInV68: true,
+              itemsDeducted: []
+            };
+          }
+        });
+
+        window.CHECKED_IN_MEALS = checkedInMeals;
+        window.DEDUCTED_MEAL_IDS = deductedMealIds;
+        window.DISPATCHED_MEALS = dispatchedMeals;
+
+        try {
+          if (typeof localStorage !== 'undefined') {
+            localStorage.setItem('nutriketo_deducted_meal_ids_v69', JSON.stringify(deductedMealIds));
+            localStorage.setItem('nutriketo_checked_in_meals_v69', JSON.stringify(checkedInMeals));
+          }
+        } catch (_) {}
+      } catch (err) {
+        console.warn('Error defensivo en ensureEgmS47TemporalStateInitialized:', err);
+      }
+    }
+
+    function isMealCheckedIn(weekKey, dayIdx, mealType) {
+      const wKey = weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : '');
+      const mealId = `day_${dayIdx}_${mealType}`;
+      if (checkedInMeals && checkedInMeals[wKey] && checkedInMeals[wKey][mealId]) return true;
+      const dispKey = `${wKey}_${mealId}`;
+      if (dispatchedMeals && dispatchedMeals[dispKey]) return true;
+      return false;
+    }
+
+    function getWeekPendingStats(weekKey) {
+      const wKey = weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : '');
+      const plan = (typeof getPlanForWeek === 'function') ? getPlanForWeek(wKey) : null;
+      if (!plan || !Array.isArray(plan.days)) {
+        return { totalMeals: 21, checkedCount: 0, pendingCount: 21, firstPendingRec: 1, lastPendingRec: 63 };
+      }
+      let checkedCount = 0;
+      let pendingCount = 0;
+      let firstPendingRec = null;
+      let lastPendingRec = null;
+      let mealCounter = 0;
+      plan.days.forEach((d, dIdx) => {
+        (d.meals || []).forEach(m => {
+          mealCounter++;
+          const recStart = (mealCounter - 1) * 3 + 1;
+          const recEnd = mealCounter * 3;
+          if (isMealCheckedIn(wKey, dIdx, m.meal_type)) {
+            checkedCount++;
+          } else {
+            pendingCount++;
+            if (firstPendingRec === null) firstPendingRec = recStart;
+            lastPendingRec = recEnd;
+          }
+        });
+      });
+      return {
+        totalMeals: mealCounter || 21,
+        checkedCount,
+        pendingCount,
+        firstPendingRec: firstPendingRec || 1,
+        lastPendingRec: lastPendingRec || 63
+      };
     }
 
     function sanitizeAndDeduplicateFarmHarvestState() {
@@ -6672,6 +6906,13 @@ let pantryStock = {
           } else {
             dispatchedMeals = {};
           }
+          if (state.checkedInMeals && typeof state.checkedInMeals === 'object') {
+            checkedInMeals = state.checkedInMeals;
+          }
+          if (state.deductedMealIds && typeof state.deductedMealIds === 'object') {
+            deductedMealIds = state.deductedMealIds;
+          }
+          ensureEgmS47TemporalStateInitialized();
           window.DISPATCHED_MEALS = dispatchedMeals;
           if (Array.isArray(state.mealFeedbackLedger)) {
             mealFeedbackLedger = state.mealFeedbackLedger;
@@ -6687,6 +6928,12 @@ let pantryStock = {
             Object.keys(customDishesState).forEach(k => {
               if (k.includes('Semana 43')) delete customDishesState[k];
             });
+            if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v69_s47_canonical_egm_clean') !== 'true') {
+              Object.keys(customDishesState).forEach(k => {
+                if (k.includes('47')) delete customDishesState[k];
+              });
+              localStorage.setItem('nutriketo_v69_s47_canonical_egm_clean', 'true');
+            }
             if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v63_s45_salmon_tuesday_swap') !== 'true') {
               Object.keys(customDishesState).forEach(k => {
                 if (k.includes('Semana 45')) delete customDishesState[k];
@@ -6754,6 +7001,7 @@ let pantryStock = {
           return true;
         }
         ensureCanonicalTicketIntakesApplied();
+        ensureEgmS47TemporalStateInitialized();
         saveAppState();
       } catch(e) {
         console.error("Error al cargar localStorage:", e);
@@ -6791,6 +7039,7 @@ let pantryStock = {
           v64_cierre_s46_14nov2026_sync: true,
           v65_ui_audit_nov14_sync: true,
           v68_consolidated_19nov2026_sync: true,
+          v69_ponche_navideno_33plus_sync: true,
           checkedRows,
           customShopItems,
           selectedIdx,
@@ -6798,8 +7047,14 @@ let pantryStock = {
           mealDinersState,
           customDishesState,
           dispatchedMeals,
+          checkedInMeals: window.CHECKED_IN_MEALS || checkedInMeals || {},
+          deductedMealIds: window.DEDUCTED_MEAL_IDS || deductedMealIds || {},
           mealFeedbackLedger: window.MEAL_FEEDBACK_LEDGER || mealFeedbackLedger
         };
+        try {
+          localStorage.setItem('nutriketo_deducted_meal_ids_v69', JSON.stringify(state.deductedMealIds));
+          localStorage.setItem('nutriketo_checked_in_meals_v69', JSON.stringify(state.checkedInMeals));
+        } catch (_) {}
         localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(state));
         localStorage.setItem('nutriketo_app_version', CURRENT_APP_VERSION);
         const ssotPayload = {
@@ -8715,15 +8970,24 @@ function calculateActiveMenuBOM(weekKey, diners) {
     }
   }
 
-  const activePlan = getPlanForWeek(weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40'));
+  const wTargetActive = weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : 'Semana 40');
+  const activePlan = getPlanForWeek(wTargetActive);
   if (!activePlan || !activePlan.days) return [];
 
+  const isPendingEgmMode = (typeof window.shoppingListDayFilter !== 'undefined' && window.shoppingListDayFilter === 'pending_egm');
   const bomMap = {};
+  let pendingBreakfastDinersSum = 0;
+  let pendingDinnerDinersSum = 0;
 
   activePlan.days.forEach((day, dayIdx) => {
     (day.meals || []).forEach(rawMeal => {
       const activeMeal = typeof getMealObj === 'function' ? getMealObj(dayIdx, rawMeal) : rawMeal;
+      if (isPendingEgmMode && typeof isMealCheckedIn === 'function' && isMealCheckedIn(wTargetActive, dayIdx, activeMeal.meal_type)) {
+        return;
+      }
       const mealDiners = typeof getMealDiners === 'function' ? getMealDiners(dayIdx, activeMeal.meal_type) : numDiners;
+      if ((activeMeal.meal_type || '').toLowerCase().includes('desayuno')) pendingBreakfastDinersSum += mealDiners;
+      if ((activeMeal.meal_type || '').toLowerCase().includes('cena')) pendingDinnerDinersSum += mealDiners;
 
       const sRecipe = activeMeal.starter_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.starter_name, 'starter', activeMeal.meal_type) : null);
       const mRecipe = activeMeal.main_recipe || (typeof getDishRecipeFromPool === 'function' ? getDishRecipeFromPool(activeMeal.main_dish_name || activeMeal.dish_name, 'main', activeMeal.meal_type) : null);
@@ -8809,13 +9073,15 @@ function calculateActiveMenuBOM(weekKey, diners) {
   // Contabilidad integral de las 4 tomas diarias de 33Plus® y 34Plus® (Toma 1 en ayunas + Toma 4 antes de dormir)
   const wTarget = weekKey || (typeof activeWeek !== 'undefined' ? activeWeek : '');
   if (wTarget && isCanonicalHardGateWeek(wTarget)) {
-    const extraDoseQty = 5 * numDiners * 7; // 210 g para 6 comensales
-    ['33Plus®', '34Plus®'].forEach(suppName => {
+    [
+      ['33Plus®', isPendingEgmMode ? (5 * pendingBreakfastDinersSum) : (5 * numDiners * 7)],
+      ['34Plus®', isPendingEgmMode ? (5 * pendingDinnerDinersSum) : (5 * numDiners * 7)]
+    ].forEach(([suppName, extraDoseQty]) => {
       const sSlug = normalizeToCanonicalSlug(suppName);
       if (bomMap[sSlug]) {
         bomMap[sSlug].item_name = suppName;
         bomMap[sSlug].quantity += extraDoseQty;
-      } else {
+      } else if (extraDoseQty > 0) {
         bomMap[sSlug] = {
           id: `bought_v36_${sSlug}`,
           slug: sSlug,
@@ -9132,11 +9398,28 @@ function calculateNetShoppingList(diners) {
       });
     }
 
+    // Regla 3 EGM: Despiece Anatómico Contable de Pollo entero crudo (1 pza ~1,800 g -> 500 g pechuga limpia + 160 g muslos deshuesados = 660 g exactos para R#53)
+    let coveredByWholeChickenBreakdown = false;
+    if (/^pechuga\s+de\s+pollo$/i.test(cleanName) && stockInBase < baseInfo.val) {
+      const rawWholeChickenCount = (typeof pantryStock !== 'undefined' && pantryStock && parseFloat(pantryStock['Pollo entero']) >= 1)
+        ? parseFloat(pantryStock['Pollo entero'])
+        : ((typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY['pollo-entero'])
+            ? (parseFloat(window.PANTRY_STOCK_INVENTORY['pollo-entero'].stock) || 0)
+            : 0);
+      const isPendingFilter = (typeof window.shoppingListDayFilter !== 'undefined' && window.shoppingListDayFilter === 'pending_egm');
+      if (rawWholeChickenCount >= 1 && (isPendingFilter || (baseInfo.val - stockInBase) <= 660.0 + 1e-6)) {
+        stockInBase += 660.0;
+        coveredByWholeChickenBreakdown = true;
+      }
+    }
+
     const netInBase = Math.max(0, baseInfo.val - stockInBase);
 
     if (netInBase <= 0) {
       pantryFullyCoveredCount++;
-      let coveredReason = `🧀 Cubierto por Alacena (${formatBaseQuantity(stockInBase, baseInfo.type, item.unit)} disponibles)`;
+      let coveredReason = coveredByWholeChickenBreakdown
+        ? `🍗 Cubierto por Despiece Anatómico de Pollo entero (1 pza cruda ~1,800 g → 500 g pechuga + 160 g muslos deshuesados = 660 g; habilita 2 piernas ~220 g + Fondo claro casero $0)`
+        : `🧀 Cubierto por Alacena (${formatBaseQuantity(stockInBase, baseInfo.type, item.unit)} disponibles)`;
       if (matchedPantryObj && matchedPantryObj.packaging) {
         coveredReason = `🧀 Cubierto por Alacena (${matchedPantryObj.packaging} / ~${formatBaseQuantity(stockInBase, baseInfo.type, item.unit)} disponibles)`;
       } else if (matchedPantryObj && (matchedPantryObj.unit === 'piezas' || matchedPantryObj.unit === 'manojo')) {
@@ -9265,6 +9548,8 @@ function render3DShoppingList() {
     const marketNetCount = netData.marketNetCount || 48;
 
     const isWeekend = (typeof window.shoppingListDayFilter !== 'undefined' && window.shoppingListDayFilter === 'weekend');
+    const isPendingEgm = (typeof window.shoppingListDayFilter !== 'undefined' && window.shoppingListDayFilter === 'pending_egm');
+    const pendingStats = (typeof getWeekPendingStats === 'function') ? getWeekPendingStats(weekKey) : { totalMeals: 21, checkedCount: 13, pendingCount: 8, firstPendingRec: 40, lastPendingRec: 63 };
 
     let html = `
       <div class="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-6 font-brand-body">
@@ -9274,16 +9559,42 @@ function render3DShoppingList() {
           <div>
             <h3 class="text-xl font-bold font-brand-title text-slate-900 dark:text-slate-100 flex items-center gap-2" style="margin:0;">
               <svg class="icon-svg-md text-[#1C75BC]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              <span>Abastecimiento Neto de Mercado (SSOT V36.6 REV3)</span>
+              <span>Abastecimiento Neto de Mercado (SSOT V36.6 · Protocolo EGM)</span>
             </h3>
             <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
-              Matriz de Mando Tridimensional de 4 Cuadrantes para ${numDiners} comensales. Sincronización Canónica Determinista.
+              Matriz de Mando Tridimensional de 4 Cuadrantes para ${numDiners} comensales. Conciencia Temporal de Servicios Devengados vs. Pendientes.
             </p>
           </div>
-          <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/40 text-[#3AAA35] border border-emerald-200 dark:border-emerald-800">
-            👨‍🍳 ${numDiners} comensales activos
-          </span>
+          <div class="flex items-center gap-2 flex-wrap">
+            <div class="egm-shop-mode-selector inline-flex items-center p-1 rounded-xl bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 gap-1" role="group" aria-label="Modo temporal de abastecimiento">
+              <button type="button"
+                      id="btn-shop-filter-egm"
+                      onclick="setShoppingListDayFilter('pending_egm')"
+                      class="px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer min-h-[44px] flex items-center gap-1.5 ${isPendingEgm ? 'bg-[#1C75BC] text-white shadow-sm' : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'}">
+                <span>⏳ Cierre EGM: Solo Turnos Pendientes</span>
+                <span class="px-1.5 py-0.5 rounded-full text-[10px] font-mono ${isPendingEgm ? 'bg-white/20 text-white' : 'bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300'}">${pendingStats.pendingCount}/${pendingStats.totalMeals}</span>
+              </button>
+              <button type="button"
+                      id="btn-shop-filter-all"
+                      onclick="setShoppingListDayFilter('all')"
+                      class="px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer min-h-[44px] flex items-center gap-1.5 ${!isPendingEgm ? 'bg-[#1C75BC] text-white shadow-sm' : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'}">
+                <span>📅 Semana Completa (21 Servicios)</span>
+              </button>
+            </div>
+            <span class="px-3 py-1 rounded-full text-xs font-bold bg-emerald-50 dark:bg-emerald-950/40 text-[#3AAA35] border border-emerald-200 dark:border-emerald-800 min-h-[36px] flex items-center">
+              👨‍🍳 ${numDiners} comensales activos
+            </span>
+          </div>
         </div>
+
+        ${isPendingEgm ? `
+        <div class="mb-5 p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-700 border-l-4 border-l-[#1C75BC] flex items-start justify-between gap-3 flex-wrap">
+          <div class="text-xs text-slate-700 dark:text-slate-300 leading-relaxed">
+            <strong class="text-[#1C75BC] font-brand-title">⏳ Modo Cierre EGM Activo (${pendingStats.pendingCount} servicios pendientes · R#${String(pendingStats.firstPendingRec).padStart(2, '0')}–R#${String(pendingStats.lastPendingRec).padStart(2, '0')}):</strong>
+            Usted visualiza la Demanda Bruta y la Compra Neta descontando su inventario vivo actual exclusivamente contra los turnos aún pendientes de Check-in (${pendingStats.checkedCount} servicios devengados omitidos sin doble conteo). Incluye el despiece anatómico contable de <strong>Pollo entero (1 pza → 660 g en R#53 + 2 piernas ~220 g + Fondo claro casero $0)</strong>.
+          </div>
+        </div>
+        ` : ''}
 
         <!-- MATRIZ DE MANDO DE 4 CUADRANTES -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -9789,6 +10100,16 @@ function compileFullMealRecipes(meal, diners) {
     function openServiceCheckinModal(dayIdx, mealType, isEdit = false) {
       const plan = getPlanForWeek(activeWeek);
       if (!plan || !plan.days || !plan.days[dayIdx]) return;
+      const mealId = `day_${dayIdx}_${mealType}`;
+      const existingDeducted = (typeof deductedMealIds !== 'undefined' && deductedMealIds && deductedMealIds[activeWeek])
+        ? deductedMealIds[activeWeek][mealId]
+        : null;
+      if (existingDeducted && existingDeducted.preAccounted === true) {
+        if (typeof showToast === 'function') {
+          showToast(`ℹ️ Este turno histórico ya está pre-contabilizado en su inventario vivo v68 y protegido contra doble descuento.`);
+        }
+        return;
+      }
       const day = plan.days[dayIdx];
       const rawM = day.meals.find(m => m.meal_type === mealType) || { meal_type: mealType };
       const mObj = getMealObj(dayIdx, rawM);
@@ -9832,15 +10153,24 @@ function compileFullMealRecipes(meal, diners) {
         const slug = normalizeToCanonicalSlug(item.name);
         let avail = 0;
         let hasPantryKey = false;
-        const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+        const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug || areInsumosEquivalent(k, item.name));
         if (matchedKey !== undefined) {
           avail = Math.max(0, parseFloat(pantryStock[matchedKey]) || 0);
           hasPantryKey = true;
         } else if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
-          const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, item.name));
+          const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => window.PANTRY_STOCK_INVENTORY[k] && areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, item.name));
           if (invKey) {
             avail = Math.max(0, parseFloat(window.PANTRY_STOCK_INVENTORY[invKey].stock) || 0);
             hasPantryKey = true;
+          }
+        }
+        // Regla 3 EGM: Cobertura de Pechuga de pollo (660 g) mediante Despiece Anatómico de Pollo entero (1 pza cruda)
+        if (/^pechuga\s+de\s+pollo$/i.test(item.name) && avail <= 0) {
+          const rawWholeChicken = Math.max(0, parseFloat(pantryStock['Pollo entero']) || 0);
+          if (rawWholeChicken >= 1) {
+            avail = 660;
+            hasPantryKey = true;
+            item.coveredByWholeChicken = true;
           }
         }
         item.availableStock = avail;
@@ -10181,25 +10511,61 @@ function compileFullMealRecipes(meal, diners) {
       }
     }
 
+    function _restoreDeductedItemsListToPantry(itemsArr) {
+      if (!Array.isArray(itemsArr)) return;
+      itemsArr.forEach(item => {
+        if (!item || item.isFarm || !(parseFloat(item.realQty) > 0)) return;
+        const slug = normalizeToCanonicalSlug(item.name);
+        let matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug || areInsumosEquivalent(k, item.name));
+        if (matchedKey !== undefined) {
+          const restoredVal = roundTwo((parseFloat(pantryStock[matchedKey]) || 0) + (parseFloat(item.realQty) || 0));
+          pantryStock[matchedKey] = restoredVal;
+          if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
+            Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(invKey => {
+              const pObj = window.PANTRY_STOCK_INVENTORY[invKey];
+              if (pObj && pObj.status === 'canonical' && (invKey === slug || areInsumosEquivalent(pObj.name || invKey, matchedKey))) {
+                pObj.stock = restoredVal;
+                pObj.packaging = `${restoredVal} ${pObj.unit || item.unit || 'g'}`;
+              }
+            });
+          }
+        } else {
+          const shopMatch = rawShopBase.find(i => normalizeToCanonicalSlug(i.item_name) === slug);
+          const canonicalName = shopMatch ? shopMatch.item_name : item.name;
+          pantryStock[canonicalName] = roundTwo(parseFloat(item.realQty) || 0);
+        }
+      });
+    }
+
     function confirmServiceCheckin() {
       const stateObj = currentCheckinState;
       const dayIdx = stateObj.dayIdx;
       const mealType = stateObj.mealType;
+      const mealId = `day_${dayIdx}_${mealType}`;
       const dispatchKey = `${activeWeek}_day_${dayIdx}_${mealType}`;
 
-      // 1. Si ya estaba despachado (edición/re-ajuste), restituir el stock previo antes de aplicar el nuevo descuento
-      if (dispatchedMeals[dispatchKey] && Array.isArray(dispatchedMeals[dispatchKey].itemsDeducted)) {
-        dispatchedMeals[dispatchKey].itemsDeducted.forEach(item => {
-          if (item.isFarm) return; // Cosecha propia no altera Alacena
-          const slug = normalizeToCanonicalSlug(item.name);
-          const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
-          if (matchedKey !== undefined) {
-            pantryStock[matchedKey] = roundTwo((pantryStock[matchedKey] || 0) + item.realQty);
-            if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[slug]) {
-              window.PANTRY_STOCK_INVENTORY[slug].stock = pantryStock[matchedKey];
-            }
-          }
-        });
+      if (!checkedInMeals || typeof checkedInMeals !== 'object') checkedInMeals = {};
+      if (!deductedMealIds || typeof deductedMealIds !== 'object') deductedMealIds = {};
+      if (!checkedInMeals[activeWeek]) checkedInMeals[activeWeek] = {};
+      if (!deductedMealIds[activeWeek]) deductedMealIds[activeWeek] = {};
+
+      const prevLedgerEntry = deductedMealIds[activeWeek][mealId];
+      if (prevLedgerEntry && prevLedgerEntry.preAccounted === true) {
+        closeDispatchModal();
+        if (typeof showToast === 'function') {
+          showToast(`ℹ️ Turno histórico pre-contabilizado en v68: protegido contra doble descuento.`);
+        }
+        return;
+      }
+
+      // 1. Idempotencia estricta: si ya existía un registro en deductedMealIds o dispatchedMeals, restituir primero antes de aplicar
+      const priorItems = (prevLedgerEntry && Array.isArray(prevLedgerEntry.items))
+        ? prevLedgerEntry.items
+        : ((dispatchedMeals[dispatchKey] && Array.isArray(dispatchedMeals[dispatchKey].itemsDeducted))
+            ? dispatchedMeals[dispatchKey].itemsDeducted
+            : null);
+      if (priorItems) {
+        _restoreDeductedItemsListToPantry(priorItems);
       }
 
       // 2. Extraer notas del input si el usuario escribió en él
@@ -10210,6 +10576,30 @@ function compileFullMealRecipes(meal, diners) {
       const itemsDeducted = [];
       stateObj.itemsList.forEach(item => {
         const consumedQty = roundTwo(item.realQty);
+
+        // Regla 3 EGM: Despiece Anatómico Contable de Pollo entero (1 pza -> 0 pzas al despachar Pechuga de pollo en R#53)
+        if (!item.isFarm && /^pechuga\s+de\s+pollo$/i.test(item.name) && consumedQty > 0) {
+          const directBreast = Math.max(0, parseFloat(pantryStock['Pechuga de pollo']) || 0);
+          const rawWholeChicken = Math.max(0, parseFloat(pantryStock['Pollo entero']) || 0);
+          if (directBreast <= 0 && rawWholeChicken >= 1) {
+            const newWhole = Math.max(0, roundTwo(rawWholeChicken - 1));
+            pantryStock['Pollo entero'] = newWhole;
+            if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY['pollo-entero']) {
+              window.PANTRY_STOCK_INVENTORY['pollo-entero'].stock = newWhole;
+              window.PANTRY_STOCK_INVENTORY['pollo-entero'].packaging = `${newWhole} piezas`;
+            }
+            itemsDeducted.push({
+              name: 'Pollo entero',
+              theoreticalQty: 1,
+              realQty: 1,
+              unit: 'piezas',
+              isFarm: false,
+              anatomicalBreakdownFor: `${item.name} (${consumedQty} ${item.unit})`
+            });
+            return;
+          }
+        }
+
         itemsDeducted.push({
           name: item.name,
           theoreticalQty: item.theoreticalQty,
@@ -10222,7 +10612,7 @@ function compileFullMealRecipes(meal, diners) {
         let actualDeducted = 0;
         if (!item.isFarm) {
           const slug = normalizeToCanonicalSlug(item.name);
-          let matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
+          let matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug || areInsumosEquivalent(k, item.name));
           let currentStock = 0;
           let stockFound = false;
 
@@ -10230,9 +10620,9 @@ function compileFullMealRecipes(meal, diners) {
             currentStock = Math.max(0, parseFloat(pantryStock[matchedKey]) || 0);
             stockFound = true;
           } else if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
-            const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, item.name));
+            const invKey = Object.keys(window.PANTRY_STOCK_INVENTORY).find(k => window.PANTRY_STOCK_INVENTORY[k] && areInsumosEquivalent(window.PANTRY_STOCK_INVENTORY[k].name, item.name));
             if (invKey) {
-              matchedKey = invKey;
+              matchedKey = window.PANTRY_STOCK_INVENTORY[invKey].name || invKey;
               currentStock = Math.max(0, parseFloat(window.PANTRY_STOCK_INVENTORY[invKey].stock) || 0);
               stockFound = true;
             }
@@ -10244,8 +10634,13 @@ function compileFullMealRecipes(meal, diners) {
             const newStock = Math.max(0, roundTwo(currentStock - actualDeducted));
             pantryStock[matchedKey] = newStock;
             if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY) {
-              if (window.PANTRY_STOCK_INVENTORY[matchedKey]) window.PANTRY_STOCK_INVENTORY[matchedKey].stock = newStock;
-              if (window.PANTRY_STOCK_INVENTORY[slug]) window.PANTRY_STOCK_INVENTORY[slug].stock = newStock;
+              Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(invKey => {
+                const pObj = window.PANTRY_STOCK_INVENTORY[invKey];
+                if (pObj && pObj.status === 'canonical' && (invKey === matchedKey || invKey === slug || areInsumosEquivalent(pObj.name || invKey, matchedKey))) {
+                  pObj.stock = newStock;
+                  pObj.packaging = `${newStock} ${pObj.unit || item.unit || 'g'}`;
+                }
+              });
             }
             itemsDeducted[itemsDeducted.length - 1].realQty = actualDeducted;
           }
@@ -10283,7 +10678,17 @@ function compileFullMealRecipes(meal, diners) {
       }
       window.MEAL_FEEDBACK_LEDGER = mealFeedbackLedger;
 
-      // 5. Registro en dispatchedMeals
+      // 5. Registro idempotente en checkedInMeals, deductedMealIds y dispatchedMeals
+      checkedInMeals[activeWeek][mealId] = true;
+      deductedMealIds[activeWeek][mealId] = {
+        diners: stateObj.headcount,
+        timestamp: now.toISOString(),
+        preAccounted: false,
+        items: itemsDeducted
+      };
+      window.CHECKED_IN_MEALS = checkedInMeals;
+      window.DEDUCTED_MEAL_IDS = deductedMealIds;
+
       dispatchedMeals[dispatchKey] = {
         dispatchedAt: timeStr,
         dayIdx: dayIdx,
@@ -10294,13 +10699,19 @@ function compileFullMealRecipes(meal, diners) {
         sensoryTags: stateObj.sensoryTags,
         notes: stateObj.notes,
         repeatWeightModifier: repeatWeightMod,
+        preAccountedInV68: false,
         itemsDeducted: itemsDeducted
       };
       window.DISPATCHED_MEALS = dispatchedMeals;
 
-      // 6. Persistencia y renderizado
-      saveAppState();
+      // 6. Persistencia defensiva (try/catch) y renderizado integral
+      try {
+        saveAppState();
+      } catch (storageErr) {
+        console.warn('Persistencia defensiva en confirmServiceCheckin:', storageErr);
+      }
       closeDispatchModal();
+      if (typeof initSetupPanel === 'function') initSetupPanel();
       renderDay(selectedIdx);
 
       if (typeof render3DShoppingList === 'function') {
@@ -10308,40 +10719,44 @@ function compileFullMealRecipes(meal, diners) {
       }
 
       if (typeof showToast === 'function') {
-        showToast(`✓ Check-in de '${mealType}' concluido (${stateObj.headcount} comensales, ${stateObj.ratingStars}★). Inventario amortizado.`);
+        showToast(`✓ Check-in de '${mealType}' aplicado (${stateObj.headcount} comensales, ${stateObj.ratingStars}★). Su inventario fue actualizado sin doble conteo.`);
       }
     }
 
     const confirmRecipeDispatch = confirmServiceCheckin;
 
-    function confirmRevertDispatch(dayIdx, mealType) {
+    function confirmRevertDispatch(dayIdx, mealType, skipConfirm = false) {
+      const mealId = `day_${dayIdx}_${mealType}`;
       const dispatchKey = `${activeWeek}_day_${dayIdx}_${mealType}`;
+      const ledgerEntry = (deductedMealIds && deductedMealIds[activeWeek]) ? deductedMealIds[activeWeek][mealId] : null;
       const dispatchInfo = dispatchedMeals[dispatchKey];
-      if (!dispatchInfo) return;
 
-      if (!confirm(`¿Deseas desmarcar el servicio de '${mealType}' y reintegrar los insumos al inventario de Alacena?`)) {
+      if ((ledgerEntry && ledgerEntry.preAccounted === true) || (dispatchInfo && dispatchInfo.preAccountedInV68 === true)) {
+        if (typeof showToast === 'function') {
+          showToast(`ℹ️ Este turno histórico ya se encuentra pre-contabilizado en v68 y no requiere reversión.`);
+        }
+        return;
+      }
+      if (!ledgerEntry && !dispatchInfo) return;
+
+      if (!skipConfirm && !confirm(`¿Desea usted revertir el Check-in de '${mealType}' y reintegrar los insumos exactos a su inventario de Alacena?`)) {
         return;
       }
 
-      if (Array.isArray(dispatchInfo.itemsDeducted)) {
-        dispatchInfo.itemsDeducted.forEach(item => {
-          if (item.isFarm) return; // Cosecha propia no altera Alacena
-          const slug = normalizeToCanonicalSlug(item.name);
-          const matchedKey = Object.keys(pantryStock).find(k => normalizeToCanonicalSlug(k) === slug);
-          if (matchedKey !== undefined) {
-            pantryStock[matchedKey] = roundTwo((pantryStock[matchedKey] || 0) + item.realQty);
-            if (typeof window.PANTRY_STOCK_INVENTORY !== 'undefined' && window.PANTRY_STOCK_INVENTORY && window.PANTRY_STOCK_INVENTORY[slug]) {
-              window.PANTRY_STOCK_INVENTORY[slug].stock = pantryStock[matchedKey];
-            }
-          } else {
-            const shopMatch = rawShopBase.find(i => normalizeToCanonicalSlug(i.item_name) === slug);
-            const canonicalName = shopMatch ? shopMatch.item_name : item.name;
-            pantryStock[canonicalName] = roundTwo(item.realQty);
-          }
-        });
-      }
+      const itemsToRestore = (ledgerEntry && Array.isArray(ledgerEntry.items))
+        ? ledgerEntry.items
+        : (dispatchInfo && Array.isArray(dispatchInfo.itemsDeducted) ? dispatchInfo.itemsDeducted : []);
+      _restoreDeductedItemsListToPantry(itemsToRestore);
 
+      if (deductedMealIds && deductedMealIds[activeWeek]) {
+        delete deductedMealIds[activeWeek][mealId];
+      }
+      if (checkedInMeals && checkedInMeals[activeWeek]) {
+        delete checkedInMeals[activeWeek][mealId];
+      }
       delete dispatchedMeals[dispatchKey];
+      window.DEDUCTED_MEAL_IDS = deductedMealIds;
+      window.CHECKED_IN_MEALS = checkedInMeals;
       window.DISPATCHED_MEALS = dispatchedMeals;
 
       if (Array.isArray(mealFeedbackLedger)) {
@@ -10350,7 +10765,12 @@ function compileFullMealRecipes(meal, diners) {
         window.MEAL_FEEDBACK_LEDGER = mealFeedbackLedger;
       }
 
-      saveAppState();
+      try {
+        saveAppState();
+      } catch (storageErr) {
+        console.warn('Persistencia defensiva en confirmRevertDispatch:', storageErr);
+      }
+      if (typeof initSetupPanel === 'function') initSetupPanel();
       renderDay(selectedIdx);
 
       if (typeof render3DShoppingList === 'function') {
@@ -10358,9 +10778,10 @@ function compileFullMealRecipes(meal, diners) {
       }
 
       if (typeof showToast === 'function') {
-        showToast(`↺ Servicio de '${mealType}' revertido. Insumos reintegrados a Alacena.`);
+        showToast(`↺ Check-in de '${mealType}' revertido. Sus insumos han sido reintegrados a Alacena.`);
       }
     }
+    const revertServiceCheckin = function(dayIdx, mealType) { return confirmRevertDispatch(dayIdx, mealType, true); };
 
     function ensureSundayServiceDispatched() {
       if (typeof activeWeek === 'undefined' || isCanonicalHardGateWeek(String(activeWeek))) return;
@@ -10824,18 +11245,36 @@ function renderRecipes(day, activeDiners) {
     const mealCard = document.createElement('div');
     mealCard.className = 'bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 p-6 shadow-clinical-md mb-8 font-brand-body';
 
+    const recipeMealId = `day_${selectedIdx}_${m.meal_type}`;
     const recipeDispatchKey = `${activeWeek}_day_${selectedIdx}_${m.meal_type}`;
+    const recipeLedgerInfo = (typeof deductedMealIds !== 'undefined' && deductedMealIds && deductedMealIds[activeWeek]) ? deductedMealIds[activeWeek][recipeMealId] : null;
     const recipeDispatchInfo = (typeof dispatchedMeals !== 'undefined' && dispatchedMeals[recipeDispatchKey]) ? dispatchedMeals[recipeDispatchKey] : null;
+    const isRecipePreAccounted = !!(recipeLedgerInfo && recipeLedgerInfo.preAccounted) || !!(recipeDispatchInfo && recipeDispatchInfo.preAccountedInV68);
 
     let recipeDispatchHtml = '';
-    if (recipeDispatchInfo) {
-      const starsStr = '★'.repeat(recipeDispatchInfo.ratingStars || 5);
+    if (isRecipePreAccounted) {
       recipeDispatchHtml = `
-        <div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700 rounded-full px-3.5 py-1 text-xs text-emerald-800 dark:text-emerald-200 select-none min-h-[44px]">
-          <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-sm">✓</span>
-          <span class="font-extrabold text-emerald-800 dark:text-emerald-200">Descargo de inventario y encuesta realizado</span>
-          <span class="text-amber-500 font-bold">${starsStr}</span>
-          <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">(${recipeDispatchInfo.headcount || 2}p)</span>
+        <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-full px-3.5 py-1 text-xs text-slate-700 dark:text-slate-300 select-none min-h-[44px]" title="Turno histórico devengado (Dom 15 Nov a Jue 19 Nov Desayuno) ya contabilizado en su inventario vivo v68.">
+          <span class="text-[#1C75BC] font-extrabold text-sm">✓</span>
+          <span class="font-bold">Turno Devengado (Pre-contabilizado v68)</span>
+        </div>
+      `;
+    } else if (recipeDispatchInfo || isMealCheckedIn(activeWeek, selectedIdx, m.meal_type)) {
+      const starsStr = '★'.repeat((recipeDispatchInfo && recipeDispatchInfo.ratingStars) || 5);
+      const hc = (recipeDispatchInfo && recipeDispatchInfo.headcount) || (recipeLedgerInfo && recipeLedgerInfo.diners) || 6;
+      recipeDispatchHtml = `
+        <div class="flex items-center gap-2 flex-wrap">
+          <div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700 rounded-full px-3.5 py-1 text-xs text-emerald-800 dark:text-emerald-200 select-none min-h-[44px]">
+            <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-sm">✓</span>
+            <span class="font-extrabold text-emerald-800 dark:text-emerald-200">Check-in Aplicado</span>
+            <span class="text-amber-500 font-bold">${starsStr}</span>
+            <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">(${hc}p)</span>
+          </div>
+          <button type="button" onclick="confirmRevertDispatch(${selectedIdx}, '${m.meal_type}')"
+                  class="flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-600 transition-all cursor-pointer min-h-[44px]"
+                  title="Revertir Check-in y reintegrar insumos exactos a Alacena">
+            <span>↺</span> <span>Revertir</span>
+          </button>
         </div>
       `;
     } else {
@@ -11010,18 +11449,36 @@ function renderRecipes(day, activeDiners) {
 
             const kcal = (m.fat_g * 9 + m.protein_g * 4 + m.net_carbs_g * 4).toFixed(0);
 
+            const menuMealId = `day_${safeIdx}_${m.meal_type}`;
             const menuDispatchKey = `${activeWeek}_day_${safeIdx}_${m.meal_type}`;
+            const menuLedgerInfo = (typeof deductedMealIds !== 'undefined' && deductedMealIds && deductedMealIds[activeWeek]) ? deductedMealIds[activeWeek][menuMealId] : null;
             const menuDispatchInfo = (typeof dispatchedMeals !== 'undefined' && dispatchedMeals[menuDispatchKey]) ? dispatchedMeals[menuDispatchKey] : null;
+            const isMenuPreAccounted = !!(menuLedgerInfo && menuLedgerInfo.preAccounted) || !!(menuDispatchInfo && menuDispatchInfo.preAccountedInV68);
 
             let menuDispatchHtml = '';
-            if (menuDispatchInfo) {
-              const starsStr = '★'.repeat(menuDispatchInfo.ratingStars || 5);
+            if (isMenuPreAccounted) {
               menuDispatchHtml = `
-                <div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700 rounded-full px-3.5 py-1 text-xs text-emerald-800 dark:text-emerald-200 select-none min-h-[44px]">
-                  <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-sm">✓</span>
-                  <span class="font-extrabold text-emerald-800 dark:text-emerald-200">Descargo de inventario y encuesta realizado</span>
-                  <span class="text-amber-500 font-bold">${starsStr}</span>
-                  <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">(${menuDispatchInfo.headcount || 2}p)</span>
+                <div class="flex items-center gap-2 bg-slate-100 dark:bg-slate-900 border border-slate-300 dark:border-slate-700 rounded-full px-3.5 py-1 text-xs text-slate-700 dark:text-slate-300 select-none min-h-[44px]" title="Turno histórico devengado (Dom 15 Nov a Jue 19 Nov Desayuno) ya contabilizado en su inventario vivo v68.">
+                  <span class="text-[#1C75BC] font-extrabold text-sm">✓</span>
+                  <span class="font-bold">Turno Devengado (Pre-contabilizado v68)</span>
+                </div>
+              `;
+            } else if (menuDispatchInfo || isMealCheckedIn(activeWeek, safeIdx, m.meal_type)) {
+              const starsStr = '★'.repeat((menuDispatchInfo && menuDispatchInfo.ratingStars) || 5);
+              const hc = (menuDispatchInfo && menuDispatchInfo.headcount) || (menuLedgerInfo && menuLedgerInfo.diners) || 6;
+              menuDispatchHtml = `
+                <div class="flex items-center gap-2 flex-wrap">
+                  <div class="flex items-center gap-2 bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-300 dark:border-emerald-700 rounded-full px-3.5 py-1 text-xs text-emerald-800 dark:text-emerald-200 select-none min-h-[44px]">
+                    <span class="text-emerald-600 dark:text-emerald-400 font-extrabold text-sm">✓</span>
+                    <span class="font-extrabold text-emerald-800 dark:text-emerald-200">Check-in Aplicado</span>
+                    <span class="text-amber-500 font-bold">${starsStr}</span>
+                    <span class="text-[11px] font-semibold text-slate-500 dark:text-slate-400">(${hc}p)</span>
+                  </div>
+                  <button type="button" onclick="confirmRevertDispatch(${safeIdx}, '${m.meal_type}')"
+                          class="flex items-center gap-1 px-3 py-1.5 rounded-full text-xs font-bold text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 border border-slate-300 dark:border-slate-600 transition-all cursor-pointer min-h-[44px]"
+                          title="Revertir Check-in y reintegrar insumos exactos a Alacena">
+                    <span>↺</span> <span>Revertir</span>
+                  </button>
                 </div>
               `;
             } else {
@@ -12502,7 +12959,7 @@ function renderRecipes(day, activeDiners) {
       <script>
     document.addEventListener('DOMContentLoaded', () => {
       try {
-        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev24-nov19-consolidated-ssot';
+        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev25-egm-pending-rollover';
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => caches.delete(k).catch(() => {}));

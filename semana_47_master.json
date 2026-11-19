@@ -2900,16 +2900,16 @@
           "starter_name": "Consomé Bistró de Infusión de Tallos de Apio, Hojas de Acelga de la Granja, Ajo Dorado y Romero en Agua Purificada",
           "main_dish_name": "Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass",
           "dish_name": "Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass",
-          "side_dish_name": "Tisana del Huerto de Hojas de Higo de la Granja, Cedrón e Hinojo Dulce (58°C) con 34Plus®",
+          "side_dish_name": "Crema Catalana Cetogénica Tibia Bistró de Queso Philadelphia, Anís Estrella, Albahaca y Ralladura de Limón Real (52°C) con 34Plus®",
           "starter": {
             "title": "Consomé Bistró de Infusión de Tallos de Apio, Hojas de Acelga de la Granja, Ajo Dorado y Romero en Agua Purificada",
             "technique": "bistro_celery_chard_rosemary_water_consomme_s47",
-            "note": "Caldo francés nocturno que agota exactamente los últimos 240 g de apio de alacena (260+240 g = 500 g -> 0 g saldo) con acelgas y romero de la granja en agua purificada (0 ml de fondo de pollo fantasma), libre de lácteos ([R2]).",
+            "note": "Caldo francés nocturno que utiliza exactamente los 200 g de apio disponibles en alacena ($0.00 MXN) con acelgas y romero de la granja en agua purificada (0 ml de fondo de pollo fantasma), libre de lácteos ([R2]).",
             "coct_reasoning": {
               "thermodynamics": "Infusión a 92°C por 7 minutos.",
               "flavor_and_aromatics": "Apio, acelgas tiernas y romero de la granja con ajo dorado.",
               "textural_architecture": "Caldo limpio con brunoise de apio y cintas de acelga.",
-              "critical_control_points": "Agota al 100% los 500 g de Apio en alacena (0 g saldo, $0.00 MXN) y 100% infusión vegetal en Agua purificada."
+              "critical_control_points": "Cubre al 100% los 200 g de Apio desde alacena ($0.00 MXN) y 100% infusión vegetal en Agua purificada."
             },
             "ingredients": [
               {
@@ -2922,8 +2922,8 @@
               {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Apio",
-                "per_guest": 40,
-                "amount": 240,
+                "per_guest": 33.3333,
+                "amount": 200,
                 "unit": "g"
               },
               {
@@ -2970,14 +2970,14 @@
               }
             ],
             "steps": [
-              "Rehogar los últimos 240 g de apio en brunoise con el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.",
+              "Rehogar los 200 g de apio en brunoise con el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.",
               "Incorporar las cintas de acelga de la granja por 2 minutos y servir con jugo de limón real."
             ]
           },
           "main": {
             "title": "Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass",
             "technique": "french_grenobloise_caper_tilapia_s47",
-            "note": "Escuela 5 (Bistró Europeo): segundo servicio de fajitas de mojarra de alacena (900 g de 2,720 g = $0.00 MXN) doradas al sartén en mantequilla noisette con 24 g de alcaparras de alacena, limón real, calabacitas y aguacate Hass ([R5]).",
+            "note": "Escuela 5 (Bistró Europeo): segundo servicio de fajitas de mojarra de alacena (900 g = $0.00 MXN) doradas al sartén en mantequilla noisette con 24 g de alcaparras de alacena, limón real, calabacitas y aguacate Hass ([R5]).",
             "coct_reasoning": {
               "thermodynamics": "Cocción en sartén a 175°C hasta 63°C internos.",
               "flavor_and_aromatics": "Clásica salsa francesa Grenobloise de mantequilla, alcaparras y limón real.",
@@ -3049,35 +3049,56 @@
             "archetype": "heptagon_s47_mojarra_grenobloise_bistro"
           },
           "side": {
-            "title": "Tisana del Huerto de Hojas de Higo de la Granja, Cedrón e Hinojo Dulce (58°C) con 34Plus®",
-            "technique": "farm_fig_leaf_lemon_verbena_fennel_tisane_34plus_s47",
-            "note": "Preparado Funcional Nocturno 5/7 (Día 5 — 19 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): tisana digestiva y sedante con hojas aromáticas de higuera de Granja El Herami ($0.00 MXN — 0% fruto de higo), cedrón e hinojo dulce a 58°C con 34Plus®.",
+            "title": "Crema Catalana Cetogénica Tibia Bistró de Queso Philadelphia, Anís Estrella, Albahaca y Ralladura de Limón Real (52°C) con 34Plus®",
+            "technique": "bistro_keto_crema_catalana_philadelphia_anise_basil_34plus_s47",
+            "note": "Preparado Funcional Nocturno 5/7 (Día 5 — 19 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): crema catalana cetogénica tibia emulsionada a 52°C con 120 g de queso Philadelphia de alacena ($0.00 MXN), infusión de anís estrella y hojas de albahaca de alacena, ralladura de limón real de Granja El Herami y 34Plus®.",
             "coct_reasoning": {
-              "thermodynamics": "Infusión herbal a 88°C por 5 minutos y templado a 58°C.",
-              "flavor_and_aromatics": "Perfume avainillado-coco natural de la hoja de higo con notas cítricas de cedrón y anisadas de hinojo.",
-              "textural_architecture": "Tisana cristalina y aromática a 58°C.",
-              "critical_control_points": "Uso exclusivo de hoja aromática de higuera en infusión (0 g de fruto ni azúcares) y 34Plus® (30 g) a 58°C."
+              "thermodynamics": "Infusión aromática a 88°C y emulsión sedosa a 52°C (<= 55°C).",
+              "flavor_and_aromatics": "Notas mediterráneas de crema catalana al anís estrella, albahaca aromática y ralladura cítrica de limón real.",
+              "textural_architecture": "Crema aterciopelada y reconfortante a 52°C.",
+              "critical_control_points": "Emplea 120 g de Queso Philadelphia de alacena (consumo pendiente total = 120+80+120 = 320 g -> 580 g saldo S48) y 34Plus® (30 g) a 52°C."
             },
             "ingredients": [
               {
+                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
+                "name": "Queso Philadelphia",
+                "per_guest": 20,
+                "amount": 120,
+                "unit": "g"
+              },
+              {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Hojas de higo",
+                "name": "Anís estrella",
+                "per_guest": 0.5,
+                "amount": 3,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Albahaca",
                 "per_guest": 2,
                 "amount": 12,
                 "unit": "g"
               },
               {
-                "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Cedrón e hinojo",
-                "per_guest": 2,
-                "amount": 12,
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 6,
+                "amount": 36,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Extracto de vainilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "ml"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Agua purificada",
-                "per_guest": 180,
-                "amount": 1080,
+                "per_guest": 150,
+                "amount": 900,
                 "unit": "ml"
               },
               {
@@ -3089,10 +3110,10 @@
               }
             ],
             "steps": [
-              "Infusionar los 12 g de hojas de higo de la granja junto con los 12 g de cedrón e hinojo dulce en los 1,080 ml de agua purificada caliente durante 5 minutos y colar.",
-              "Dejar templar a 58°C y disolver los 30 g de 34Plus®."
+              "Infusionar los 3 g de anís estrella y los 12 g de hojas de albahaca en los 900 ml de agua purificada caliente por 4 minutos, colar y enfriar a 52°C; licuar con los 120 g de queso Philadelphia, la ralladura de limón real y el extracto de vainilla.",
+              "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C."
             ],
-            "serving_temp_c": "58°C"
+            "serving_temp_c": "52°C"
           }
         }
       ]
@@ -3115,9 +3136,9 @@
           "net_carbs_g": 4.2,
           "fiber_g": 6.4,
           "starter_name": "Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
-          "main_dish_name": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
-          "dish_name": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
-          "side_dish_name": "Lassi Líquido de Mora Azul (Blueberry), Cardamomo Verde y Yogur Griego (6°C) con 33Plus®",
+          "main_dish_name": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso",
+          "dish_name": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso",
+          "side_dish_name": "Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
           "starter": {
             "title": "Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "pacific_pomegranate_vanilla_cup_s47",
@@ -3171,14 +3192,14 @@
             ]
           },
           "main": {
-            "title": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
-            "technique": "coastal_nopal_goat_cheese_tamagoyaki_s47",
-            "note": "Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado al sartén en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso de cabra de alacena.",
+            "title": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso",
+            "technique": "coastal_nopal_philadelphia_tamagoyaki_s47",
+            "note": "Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado al sartén en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso Philadelphia de alacena (relevo quirúrgico de queso de cabra -> $0.00 MXN).",
             "coct_reasoning": {
               "thermodynamics": "Laminado en capas en sartén a 140°C.",
-              "flavor_and_aromatics": "Fusión Pacífico-Japón con mantequilla, nopal asado y cremosidad de queso de cabra.",
+              "flavor_and_aromatics": "Fusión Pacífico-Japón con mantequilla, nopal asado y cremosidad fundente de queso Philadelphia.",
               "textural_architecture": "Rollo multicapa esponjoso con centro cremoso.",
-              "critical_control_points": "Uso de 80 g de los 200 g de Queso de cabra de alacena."
+              "critical_control_points": "Relevo quirúrgico EGM: 80 g de Queso Philadelphia de alacena ($0.00 MXN compra)."
             },
             "ingredients": [
               {
@@ -3197,7 +3218,7 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso de cabra",
+                "name": "Queso Philadelphia",
                 "per_guest": 13.3333,
                 "amount": 80,
                 "unit": "g"
@@ -3233,19 +3254,19 @@
             ],
             "steps": [
               "Asar la juliana de nopal de la granja con cilantro picado.",
-              "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki."
+              "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso Philadelphia, y enrollar estilo Tamagoyaki."
             ],
             "archetype": "heptagon_s47_huevo_tamagoyaki_nopal_cabra"
           },
           "side": {
-            "title": "Lassi Líquido de Mora Azul (Blueberry), Cardamomo Verde y Yogur Griego (6°C) con 33Plus®",
-            "technique": "blueberry_cardamom_yogurt_lassi_33plus_s47",
-            "note": "Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica hindú tipo Lassi batida en frío con 480 g de yogur griego de alacena, mora azul (blueberry) rica en antocianinas, cardamomo verde y 33Plus® a 6°C.",
+            "title": "Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
+            "technique": "blackberry_star_anise_probiotic_lassi_33plus_s47",
+            "note": "Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con 480 g de yogur griego de alacena (saldo proyectado S48 = 1,820 g), zarzamora antioxidante de alacena ($0.00 MXN), anís estrella, vainilla y 33Plus® a 6°C.",
             "coct_reasoning": {
               "thermodynamics": "Emulsión en frío a 6°C (0% calor).",
-              "flavor_and_aromatics": "Mora azul vibrante y cardamomo verde aromático en yogur griego.",
-              "textural_architecture": "Lassi líquido aterciopelado color violeta a 6°C.",
-              "critical_control_points": "Integrar 33Plus® (30 g) en frío."
+              "flavor_and_aromatics": "Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.",
+              "textural_architecture": "Lassi líquido aterciopelado color púrpura a 6°C.",
+              "critical_control_points": "100% cubierto en alacena (Yogur griego 480 g -> 1,820 g saldo; Zarzamora 180 g -> 330 g saldo) y 33Plus® (30 g) en frío."
             },
             "ingredients": [
               {
@@ -3257,17 +3278,24 @@
               },
               {
                 "category": "🍓 Frutas de Bajo Índice Glucémico",
-                "name": "Mora azul",
+                "name": "Zarzamora",
                 "per_guest": 30,
                 "amount": 180,
                 "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Cardamomo verde",
+                "name": "Anís estrella",
                 "per_guest": 0.5,
                 "amount": 3,
                 "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Extracto de vainilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "ml"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -3285,8 +3313,8 @@
               }
             ],
             "steps": [
-              "Licuar en frío los 480 g de yogur griego con los 180 g de mora azul, los 3 g de cardamomo verde y los 420 ml de agua purificada fría.",
-              "Incorporar los 30 g de 33Plus®, batir 10 segundos y servir a 6°C."
+              "Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.",
+              "Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C."
             ],
             "serving_temp_c": "6°C"
           }
@@ -3301,7 +3329,7 @@
           "starter_name": "Ensalada Oriental Sunomono de Pepino en Cintas, Cilantro de la Granja, Limón Real y Aceite de Oliva VEVO",
           "main_dish_name": "Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass",
           "dish_name": "Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass",
-          "side_dish_name": "Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Coco Neutro",
+          "side_dish_name": "Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Oliva VEVO",
           "starter": {
             "title": "Ensalada Oriental Sunomono de Pepino en Cintas, Cilantro de la Granja, Limón Real y Aceite de Oliva VEVO",
             "technique": "oriental_cucumber_sunomono_salad_s47",
@@ -3357,12 +3385,12 @@
           "main": {
             "title": "Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass",
             "technique": "thai_coconut_turmeric_salmon_broccoli_s47",
-            "note": "Escuela 6 (Pacífico & Oriente): lomo de salmón sellado al sartén y bañado con los últimos 240 ml de leche de coco de alacena (total semanal = 500 ml -> 0 ml saldo), cúrcuma y cilantro sobre brócoli con aguacate Hass ([R5]).",
+            "note": "Escuela 6 (Pacífico & Oriente): lomo de salmón sellado al sartén (720 g de 1,470 g -> 750 g saldo S48) y bañado con 240 ml de leche de coco de alacena ($0.00 MXN), cúrcuma y cilantro sobre brócoli con aguacate Hass ([R5]).",
             "coct_reasoning": {
               "thermodynamics": "Sellado a 180°C y reducción de leche de coco a 85°C.",
               "flavor_and_aromatics": "Salsa tailandesa de leche de coco y cúrcuma sin picante con salmón y aguacate.",
               "textural_architecture": "Lomo jugoso con floretes de brócoli al dente.",
-              "critical_control_points": "Agota al 100% los 500 ml de Leche de coco en alacena (0 ml saldo) y única presencia diaria de aguacate ([R5])."
+              "critical_control_points": "100% cubierto en alacena y única presencia diaria de aguacate ([R5])."
             },
             "ingredients": [
               {
@@ -3436,12 +3464,12 @@
             "archetype": "heptagon_s47_salmon_veloute_coco_brocoli"
           },
           "side": {
-            "title": "Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Coco Neutro",
+            "title": "Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Oliva VEVO",
             "technique": "wok_turmeric_roasted_cauliflower_s47",
             "note": "Sexta guarnición de Comida ([R4-SIDE] 6/7: coliflor) libre de mantequilla y lácteos ([R2]).",
             "coct_reasoning": {
               "thermodynamics": "Rostizado al wok a 185°C por 7 minutos.",
-              "flavor_and_aromatics": "Coliflor dorada a la cúrcuma y limón real.",
+              "flavor_and_aromatics": "Coliflor dorada a la cúrcuma, aceite de oliva y limón real.",
               "textural_architecture": "Floretes firmes con bordes tostados.",
               "critical_control_points": "Cero mantequilla ni lácteos ([R2])."
             },
@@ -3469,10 +3497,10 @@
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Aceite de coco",
+                "name": "Aceite de oliva",
                 "per_guest": 3,
                 "amount": 18,
-                "unit": "g"
+                "unit": "ml"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -3483,8 +3511,8 @@
               }
             ],
             "steps": [
-              "Saltear los floretes de coliflor en el wok caliente con aceite de coco neutro y cúrcuma.",
-              "Terminar con jugo de limón real y sal de mar."
+              "Saltear los floretes de coliflor en el wok caliente con cúrcuma y sal de mar.",
+              "Terminar fuera del fuego con aceite de oliva extra virgen y jugo de limón real."
             ]
           }
         },
@@ -3496,9 +3524,9 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real",
-          "main_dish_name": "Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
-          "dish_name": "Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
-          "side_dish_name": "Atole Cetogénico Tibio de Semilla de Calabaza (Pepita Verde rica en Magnesio), Canela y Vainilla (52°C) con 34Plus®",
+          "main_dish_name": "Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
+          "dish_name": "Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
+          "side_dish_name": "Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®",
           "starter": {
             "title": "Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real",
             "technique": "pacific_garlic_cilantro_water_broth_s47",
@@ -3559,14 +3587,14 @@
             ]
           },
           "main": {
-            "title": "Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
+            "title": "Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
             "technique": "teppanyaki_chicken_sprouts_cashews_wok_s47",
-            "note": "Escuela 6 (Pacífico & Oriente): pechuga de pollo salteada al wok teppanyaki que agota exactamente los 100 g de germinado y 120 g de nuez de la India de alacena ($0.00 MXN), con pimiento morrón y salsa de soya.",
+            "note": "Escuela 6 (Pacífico & Oriente — Despiece Anatómico Contable EGM): cubre los 660 g de pollo mediante el despiece en cocina del Pollo entero crudo de alacena (1 pieza ~1,800 g -> 500 g de pechuga limpia sin hueso + 160 g de pulpa deshuesada de los 2 muslos = 660 g exactos, $0.00 MXN compra), reservando las 2 piernas (~220 g netos) y el huacal/rabadilla/alas para elaborar 4,500–6,300 ml de Fondo claro de pollo casero ($0.00 MXN) rumbo a la Semana 48.",
             "coct_reasoning": {
               "thermodynamics": "Salteado al wok a 190°C.",
               "flavor_and_aromatics": "Umami japonés de salsa de soya y ajo con crocancia de nuez de la India tostada y germinado.",
-              "textural_architecture": "Tiras jugosas de pechuga con vegetales crujientes.",
-              "critical_control_points": "Agota al 100% el Germinado (100 g) en alacena (0 g saldo)."
+              "textural_architecture": "Tiras jugosas de pechuga y muslo deshuesado con vegetales crujientes.",
+              "critical_control_points": "Despiece anatómico de Pollo entero (1 -> 0 piezas; Pechuga de pavo intacta en 1,400 g; habilita 2 piernas ~220 g y Fondo claro de pollo 4.5–6.3 L para S48)."
             },
             "ingredients": [
               {
@@ -3627,27 +3655,34 @@
               }
             ],
             "steps": [
-              "Saltear las tiras de pechuga de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo.",
-              "Incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada."
+              "Despiezar en cocina el pollo entero crudo (~1,800 g): extraer la pechuga limpia sin hueso (~500 g) y deshuesar los 2 muslos (~160 g) para obtener exactamente 660 g de fajitas; reservar en refrigeración las 2 piernas (~220 g) y destinar huacal, rabadilla, huesos y las 2 alas a la olla de fondo claro casero.",
+              "Saltear los 660 g de tiras de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo; incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada."
             ],
             "archetype": "heptagon_s47_pollo_teppanyaki_nuez_india"
           },
           "side": {
-            "title": "Atole Cetogénico Tibio de Semilla de Calabaza (Pepita Verde rica en Magnesio), Canela y Vainilla (52°C) con 34Plus®",
-            "technique": "warm_keto_pumpkin_seed_atole_34plus_s47",
-            "note": "Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con semilla de calabaza sin sal (pepita verde rica en magnesio y triptófano), canela molida, vainilla y 34Plus® a 52°C.",
+            "title": "Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®",
+            "technique": "warm_toasted_sesame_coconut_keto_atole_34plus_s47",
+            "note": "Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con ajonjolí tostado y coco rallado de alacena ($0.00 MXN), canela molida, vainilla y 34Plus® a 52°C.",
             "coct_reasoning": {
-              "thermodynamics": "Emulsión en licuadora con agua tibia a 52°C.",
-              "flavor_and_aromatics": "Pepita verde tostada con notas tradicionales de canela y vainilla.",
-              "textural_architecture": "Atole sedoso, reconfortante y rico en magnesio a 52°C.",
-              "critical_control_points": "Licuar a 52°C con 34Plus® (30 g)."
+              "thermodynamics": "Tostado aromático en seco y emulsión en licuadora con agua tibia a 52°C.",
+              "flavor_and_aromatics": "Ajonjolí dorado y coco tostado con notas tradicionales de canela y vainilla.",
+              "textural_architecture": "Atole sedoso, reconfortante y rico en calcio y magnesio a 52°C.",
+              "critical_control_points": "100% cubierto en alacena (Ajonjolí 120 g -> 80 g saldo; Coco rallado 60 g) y 34Plus® (30 g) a 52°C."
             },
             "ingredients": [
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Semilla de calabaza sin sal",
+                "name": "Ajonjolí",
                 "per_guest": 20,
                 "amount": 120,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Coco rallado",
+                "per_guest": 10,
+                "amount": 60,
                 "unit": "g"
               },
               {
@@ -3680,8 +3715,8 @@
               }
             ],
             "steps": [
-              "Licuar los 120 g de semilla de calabaza sin sal con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla hasta obtener un atole terso.",
-              "Incorporar los 30 g de 34Plus® y batir 10 segundos."
+              "Tostar ligeramente en sartén seco los 120 g de ajonjolí y los 60 g de coco rallado durante 2 minutos y licuar a alta potencia con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla.",
+              "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C."
             ],
             "serving_temp_c": "52°C"
           }
@@ -3708,16 +3743,16 @@
           "starter_name": "Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)",
           "dish_name": "Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)",
-          "side_dish_name": "Agua Botánica Espumosa de Pulpa de Maracuyá, Hierbabuena y Limón Real (4°C) con 33Plus®",
+          "side_dish_name": "Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®",
           "starter": {
             "title": "Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "mare_nostrum_pomegranate_nut_cup_s47",
-            "note": "Agota exactamente los últimos 80 g de semillas y nueces mixtas (total semanal = 600 g -> 0 g saldo) y los últimos 120 g de nuez de la India (total semanal = 1,000 g -> 0 g saldo) de alacena con granada de la granja, sin lácteos ([R4.6]).",
+            "note": "Arilos de granada de la granja con semillas y nueces mixtas, nuez de la India y nuez pecana ($0.00 MXN), sin lácteos ([R4.6]).",
             "coct_reasoning": {
               "thermodynamics": "Servicio en frío a 6°C.",
               "flavor_and_aromatics": "Granada de la granja a la canela con nueces.",
               "textural_architecture": "Arilos crujientes con semillas.",
-              "critical_control_points": "Agota al 100% los 600 g de Semillas y nueces mixtas y los 1,000 g de Nuez de la India en alacena (0 g saldo)."
+              "critical_control_points": "Cero lácteos en la entrada frutal ([R4.6])."
             },
             "ingredients": [
               {
@@ -3758,18 +3793,18 @@
             ],
             "steps": [
               "Disponer los arilos de granada de la granja con canela molida en copas frías.",
-              "Coronar con los últimos 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana."
+              "Coronar con los 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana."
             ]
           },
           "main": {
             "title": "Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)",
             "technique": "trattoria_chard_parmesan_eggs_skillet_s47",
-            "note": "Escuela 7 (Mare Nostrum): 3 huevos por comensal cuajados al sartén en mantequilla con la única pieza de jitomate de alacena (1 pieza -> 0 piezas saldo), acelgas de la granja, orégano y 40 g de queso parmesano de alacena.",
+            "note": "Escuela 7 (Mare Nostrum): 3 huevos por comensal cuajados al sartén en mantequilla con jitomate asado de alacena, acelgas de la granja, orégano y 40 g de queso parmesano de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Cocción suave en sartén a 140°C (sin horno).",
               "flavor_and_aromatics": "Trattoria italiana con jitomate asado, mantequilla, acelgas y queso parmesano.",
               "textural_architecture": "Huevos tiernos sobre cama de acelgas y jitomate.",
-              "critical_control_points": "Agota la pieza única de Jitomate en alacena (0 piezas saldo)."
+              "critical_control_points": "100% cubierto en alacena y granja."
             },
             "ingredients": [
               {
@@ -3836,43 +3871,57 @@
             "archetype": "heptagon_s47_huevo_purgatorio_parmesano"
           },
           "side": {
-            "title": "Agua Botánica Espumosa de Pulpa de Maracuyá, Hierbabuena y Limón Real (4°C) con 33Plus®",
-            "technique": "sparkling_passionfruit_mint_botanical_water_33plus_s47",
-            "note": "Preparado Funcional Matutino 7/7 (Día 7 — 21 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): agua botánica espumosa de pulpa de maracuyá sin azúcar (bajo índice glucémico), hojas de hierbabuena y limón real de la granja batida en frío con 33Plus® a 4°C.",
+            "title": "Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®",
+            "technique": "holiday_clarified_apple_clove_punch_33plus",
+            "note": "Edición Especial de Temporada Navideña (1 entrega semanal autorizada hasta Navidad): técnica de doble temperatura diseñada para la premezcla molida de manzana deshidratada, canela, anís estrella, clavo de olor y pimienta negra (27 g), infusionada a 88°C–90°C con flor de jamaica y piel de limón real de Granja El Herami, filtrada por malla fina / manta de cielo, templada por choque térmico a 50°C–52°C con agua purificada fría y vainilla antes de emulsionar 33Plus®, y servida sobre nuez pecana tostada de la granja.",
             "coct_reasoning": {
-              "thermodynamics": "Emulsión en frío a 4°C (0% calor).",
-              "flavor_and_aromatics": "Acidez exótica de maracuyá con frescura mentolada de hierbabuena y limón real.",
-              "textural_architecture": "Agua botánica ligera con espuma fina a 4°C.",
-              "critical_control_points": "Pulpa 100% pura sin azúcar añadido y 33Plus® (30 g) en frío."
+              "thermodynamics": "Infusión aromática fuera del fuego a 88°C–90°C en 1,100 ml por 7 min, filtrado ultrafino y choque térmico controlado (+400 ml de agua fría) a 50°C–52°C antes de integrar 33Plus®.",
+              "flavor_and_aromatics": "Elixir rubí profundo de ponche tradicional donde la acidez floral de la jamaica equilibra el dulzor natural de la manzana molida, con anís estrella, clavo, canela, destello de piperina, vainilla y el perfil frutal rojo de 33Plus®.",
+              "textural_architecture": "Caldo aterciopelado por la pectina natural de la manzana y libre de sedimento arenoso, coronado con crocancia de nuez pecana tostada en taza.",
+              "critical_control_points": "No tostar en seco el polvo con manzana para evitar amargor por pirólisis de fructosa; filtrar en manta de cielo o malla ultrafina y verificar <= 52°C mediante choque térmico antes de batir 33Plus® (30 g)."
             },
             "ingredients": [
               {
-                "category": "🍓 Frutas de Bajo Índice Glucémico",
-                "name": "Pulpa de maracuyá sin azúcar",
-                "per_guest": 30,
-                "amount": 180,
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Mezcla navideña molida de manzana deshidratada y especias",
+                "per_guest": 4.5,
+                "amount": 27,
                 "unit": "g"
               },
               {
-                "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Hierbabuena",
-                "per_guest": 2,
-                "amount": 12,
-                "unit": "g"
-              },
-              {
-                "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Limones",
-                "per_guest": 7.5,
-                "amount": 45,
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Jamaica",
+                "per_guest": 4.1667,
+                "amount": 25,
                 "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Agua purificada",
-                "per_guest": 150,
-                "amount": 900,
+                "per_guest": 250,
+                "amount": 1500,
                 "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Extracto de vainilla",
+                "per_guest": 1,
+                "amount": 6,
+                "unit": "ml"
+              },
+              {
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
               },
               {
                 "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
@@ -3883,10 +3932,11 @@
               }
             ],
             "steps": [
-              "Licuar brevemente en frío los 180 g de pulpa de maracuyá sin azúcar con las hojas de hierbabuena, el jugo de limón real y los 900 ml de agua purificada helada.",
-              "Integrar los 30 g de 33Plus®, batir 5 segundos para espumar y servir a 4°C."
+              "Calentar 1,100 ml de agua purificada con los 25 g de flor de jamaica de la granja y tiras anchas de piel de limón real (sin parte blanca); al romper el hervor apagar el fuego, incorporar los 27 g de mezcla navideña molida de manzana deshidratada y especias (canela, anís estrella, clavo y pimienta negra), tapar e infusionar 7 minutos a 88°C–90°C.",
+              "Clarificar pasando la infusión por colador de malla fina o manta de cielo para retener cualquier sedimento ultrafino, y aplicar choque térmico vertiendo de inmediato los 400 ml restantes de agua purificada fría junto con los 6 ml de extracto de vainilla para situar la mezcla exactamente entre 50°C y 52°C.",
+              "Agregar los 30 g de 33Plus® y batir con globo o espumador durante 12 segundos hasta formar corona rosada; disponer en el fondo de las 6 tazas los 60 g de nuez pecana tostada y servir encima a 50°C."
             ],
-            "serving_temp_c": "4°C"
+            "serving_temp_c": "50°C"
           }
         },
         {
@@ -4101,9 +4151,9 @@
           "net_carbs_g": 3.9,
           "fiber_g": 6.1,
           "starter_name": "Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada",
-          "main_dish_name": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano",
-          "dish_name": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano",
-          "side_dish_name": "Vaso Cheesecake Deconstruido al Limón Real sobre Crumble Tostado de Coco y Nuez Pecana (6°C) con 34Plus®",
+          "main_dish_name": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso Philadelphia y Queso Parmesano",
+          "dish_name": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso Philadelphia y Queso Parmesano",
+          "side_dish_name": "Bombones Helados Mediterráneos de Coco Rallado, Nuez Pecana, Vainilla y Aceite de Coco (6°C) con 34Plus® + Infusión Limpia de Tomillo",
           "starter": {
             "title": "Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada",
             "technique": "mediterranean_rosemary_garlic_water_broth_s47",
@@ -4171,14 +4221,14 @@
             ]
           },
           "main": {
-            "title": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano",
-            "technique": "aegean_sardine_goat_cheese_pepper_skillet_s47",
-            "note": "Escuela 7 (Mare Nostrum): cazuela mediterránea al sartén (sin horno) con 660 g de lomos de sardina para 6 comensales (agotando los 260 g de alacena + 400 g de mercado = 110 g/comensal), los últimos 120 g de queso de cabra (total = 200 g) y los últimos 60 g de queso parmesano (total = 100 g) de alacena.",
+            "title": "Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso Philadelphia y Queso Parmesano",
+            "technique": "aegean_sardine_philadelphia_pepper_skillet_s47",
+            "note": "Escuela 7 (Mare Nostrum): cazuela mediterránea al sartén (sin horno) con 660 g de lomos de sardina para 6 comensales (1,600 g en alacena -> 940 g saldo S48), 120 g de queso Philadelphia (relevo quirúrgico EGM de queso de cabra -> consumo pendiente total 320 g y 580 g saldo S48) y los últimos 60 g de queso parmesano (total pendiente = 100 g -> 0 g saldo S48) de alacena.",
             "coct_reasoning": {
               "thermodynamics": "Salteado en sartén de hierro a 170°C.",
-              "flavor_and_aromatics": "Sabor de las Islas Griegas con lomos de sardina, pimiento morrón asado, orégano, queso de cabra y parmesano.",
-              "textural_architecture": "Lomos jugosos con pimientos tiernos y medallones cremosos de queso de cabra.",
-              "critical_control_points": "Descuenta al 100% las Sardinas de alacena (260 g -> 0 g saldo) y agota Queso de cabra (200 g) y Queso parmesano (100 g)."
+              "flavor_and_aromatics": "Sabor de las Islas Griegas con lomos de sardina, pimiento morrón asado, orégano, queso Philadelphia y parmesano.",
+              "textural_architecture": "Lomos jugosos con pimientos tiernos y medallones cremosos de queso Philadelphia.",
+              "critical_control_points": "Cubre al 100% desde alacena Sardinas (660 g -> 940 g saldo), Queso Philadelphia (120 g -> 580 g saldo) y Queso parmesano (60 g -> 0 g saldo)."
             },
             "ingredients": [
               {
@@ -4190,7 +4240,7 @@
               },
               {
                 "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso de cabra",
+                "name": "Queso Philadelphia",
                 "per_guest": 20,
                 "amount": 120,
                 "unit": "g"
@@ -4240,54 +4290,40 @@
             ],
             "steps": [
               "Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con aceite de coco neutro, orégano y los 660 g de lomos de sardina.",
-              "Coronar en el sartén caliente con los últimos 120 g de queso de cabra, los 60 g de queso parmesano y jugo de limón real."
+              "Coronar en el sartén caliente con los 120 g de queso Philadelphia, los 60 g de queso parmesano y jugo de limón real."
             ],
             "archetype": "heptagon_s47_sardina_egea_cabra_sarten"
           },
           "side": {
-            "title": "Vaso Cheesecake Deconstruido al Limón Real sobre Crumble Tostado de Coco y Nuez Pecana (6°C) con 34Plus®",
-            "technique": "deconstructed_lemon_cheesecake_coconut_pecan_crumble_34plus_s47",
-            "note": "Preparado Funcional Nocturno 7/7 (Día 7 — 21 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): vaso cheesecake nocturno deconstruido en frío que agota exactamente los últimos 240 g de queso Philadelphia (120+240 g = 360 g -> 0 g saldo) y los últimos 240 g de yogur griego (total semanal = 2,000 g -> 0 g saldo) sobre crumble tostado de coco rallado sin azúcar y nuez pecana de la granja con 34Plus®.",
+            "title": "Bombones Helados Mediterráneos de Coco Rallado, Nuez Pecana, Vainilla y Aceite de Coco (6°C) con 34Plus® + Infusión Limpia de Tomillo",
+            "technique": "chilled_coconut_pecan_bonbons_thyme_34plus_s47",
+            "note": "Preparado Funcional Nocturno 7/7 (Día 7 — 21 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bombones helados mediterráneos emulsionados en frío con 120 g de coco rallado de alacena, nuez pecana tostada de la granja, 30 g de aceite de coco neutro (saldo proyectado S48 = 644 g), vainilla y 34Plus®, acompañados de infusión digestiva limpia de tomillo.",
             "coct_reasoning": {
-              "thermodynamics": "Crumble tostado en seco y crema batida en frío a 6°C.",
-              "flavor_and_aromatics": "Cheesecake cítrico al limón real y vainilla sobre base tostada de coco y nuez pecana.",
-              "textural_architecture": "Contraste de crema sedosa de cheesecake con crumble crujiente a 6°C.",
-              "critical_control_points": "Agota al 100% el Queso Philadelphia (360 g) y el Yogur griego (2,000 g) en alacena (0 g saldo, $0.00 MXN)."
+              "thermodynamics": "Moldeado en frío a 6°C (0% degradación térmica) con infusión limpia de tomillo a 58°C.",
+              "flavor_and_aromatics": "Bombón fundente de coco tostado, nuez pecana y vainilla con eco herbal de tomillo.",
+              "textural_architecture": "Bocado sedoso y crujiente a 6°C acompañado de infusión cálida.",
+              "critical_control_points": "100% cubierto en alacena (Coco rallado 120 g; Aceite de coco 30 g -> 644 g saldo S48; Tomillo 2 g) y 34Plus® (30 g) en frío."
             },
             "ingredients": [
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Queso Philadelphia",
-                "per_guest": 40,
-                "amount": 240,
-                "unit": "g"
-              },
-              {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Yogur griego",
-                "per_guest": 40,
-                "amount": 240,
-                "unit": "g"
-              },
-              {
                 "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Coco rallado sin azúcar",
-                "per_guest": 10,
-                "amount": 60,
+                "name": "Coco rallado",
+                "per_guest": 20,
+                "amount": 120,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Nuez pecana",
-                "per_guest": 10,
-                "amount": 60,
+                "per_guest": 15,
+                "amount": 90,
                 "unit": "g"
               },
               {
-                "category": "🥦 Hortalizas, Vegetales y Hongos",
-                "name": "Limones",
-                "per_guest": 8,
-                "amount": 48,
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Aceite de coco",
+                "per_guest": 5,
+                "amount": 30,
                 "unit": "g"
               },
               {
@@ -4295,6 +4331,20 @@
                 "name": "Extracto de vainilla",
                 "per_guest": 1,
                 "amount": 6,
+                "unit": "ml"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Tomillo",
+                "per_guest": 0.3333,
+                "amount": 2,
+                "unit": "g"
+              },
+              {
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 150,
+                "amount": 900,
                 "unit": "ml"
               },
               {
@@ -4306,10 +4356,10 @@
               }
             ],
             "steps": [
-              "Tostar ligeramente en sartén seco los 60 g de coco rallado sin azúcar con los 60 g de nuez pecana de la granja picada para formar la base de crumble en el fondo de 6 vasos.",
-              "Batir en frío los últimos 240 g de queso Philadelphia con los últimos 240 g de yogur griego, el jugo y ralladura de limón real, el extracto de vainilla y los 30 g de 34Plus®; montar sobre el crumble y refrigerar a 6°C."
+              "Tostar ligeramente los 90 g de nuez pecana de la granja picada con los 120 g de coco rallado, emulsionar con los 30 g de aceite de coco neutro, el extracto de vainilla y los 30 g de 34Plus®, formar 12 bombones y refrigerar a 6°C.",
+              "Servir los bombones helados acompañados de una infusión limpia de tomillo elaborada con los 2 g de tomillo en los 900 ml de agua purificada."
             ],
-            "serving_temp_c": "6°C"
+            "serving_temp_c": "6°C / 58°C"
           }
         }
       ]
@@ -4341,7 +4391,7 @@
         },
         {
           "name": "Agua purificada",
-          "required": 14640.0,
+          "required": 15960.0,
           "unit": "ml",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4361,15 +4411,15 @@
           "net_to_buy": 0.0
         },
         {
-          "name": "Hojas de higo",
-          "required": 12.0,
+          "name": "Jamaica",
+          "required": 25.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
         },
         {
           "name": "Limones",
-          "required": 1716.0,
+          "required": 1689.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4383,7 +4433,7 @@
         },
         {
           "name": "Nuez pecana",
-          "required": 540.0,
+          "required": 630.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4399,9 +4449,9 @@
       "pantry_covered_items": [
         {
           "name": "Aceite de coco",
-          "required": 444.0,
+          "required": 456.0,
           "stock": 1000.0,
-          "remaining_stock": 556.0,
+          "remaining_stock": 544.0,
           "unit": "g"
         },
         {
@@ -4434,9 +4484,9 @@
         },
         {
           "name": "Apio",
-          "required": 500.0,
+          "required": 460.0,
           "stock": 500.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 40.0,
           "unit": "g"
         },
         {
@@ -4476,9 +4526,9 @@
         },
         {
           "name": "Extracto de vainilla",
-          "required": 60.0,
+          "required": 78.0,
           "stock": 376.0,
-          "remaining_stock": 316.0,
+          "remaining_stock": 298.0,
           "unit": "ml"
         },
         {
@@ -4552,6 +4602,13 @@
           "unit": "g"
         },
         {
+          "name": "Mezcla navideña molida de manzana deshidratada y especias",
+          "required": 27.0,
+          "stock": 300.0,
+          "remaining_stock": 273.0,
+          "unit": "g"
+        },
+        {
           "name": "Nuez de la India",
           "required": 1000.0,
           "stock": 1000.0,
@@ -4587,13 +4644,6 @@
           "unit": "piezas"
         },
         {
-          "name": "Queso de cabra",
-          "required": 200.0,
-          "stock": 200.0,
-          "remaining_stock": 0.0,
-          "unit": "g"
-        },
-        {
           "name": "Queso manchego",
           "required": 1000.0,
           "stock": 1000.0,
@@ -4604,13 +4654,6 @@
           "name": "Queso parmesano",
           "required": 100.0,
           "stock": 100.0,
-          "remaining_stock": 0.0,
-          "unit": "g"
-        },
-        {
-          "name": "Queso Philadelphia",
-          "required": 360.0,
-          "stock": 360.0,
           "remaining_stock": 0.0,
           "unit": "g"
         },
@@ -4644,9 +4687,9 @@
         },
         {
           "name": "Tomillo",
-          "required": 6.0,
+          "required": 8.0,
           "stock": 8.0,
-          "remaining_stock": 2.0,
+          "remaining_stock": 0.0,
           "unit": "g"
         },
         {
@@ -4658,9 +4701,9 @@
         },
         {
           "name": "Yogur griego",
-          "required": 2000.0,
+          "required": 1760.0,
           "stock": 2000.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 240.0,
           "unit": "g"
         }
       ],
@@ -4681,9 +4724,9 @@
         },
         {
           "name": "Aceite de oliva",
-          "required": 162.0,
+          "required": 180.0,
           "stock": 0.0,
-          "net_to_buy": 162.0,
+          "net_to_buy": 180.0,
           "unit": "ml"
         },
         {
@@ -4701,17 +4744,24 @@
           "unit": "piezas"
         },
         {
-          "name": "Albahaca",
-          "required": 18.0,
+          "name": "Ajonjolí",
+          "required": 120.0,
           "stock": 0.0,
-          "net_to_buy": 18.0,
+          "net_to_buy": 120.0,
+          "unit": "g"
+        },
+        {
+          "name": "Albahaca",
+          "required": 30.0,
+          "stock": 0.0,
+          "net_to_buy": 30.0,
           "unit": "g"
         },
         {
           "name": "Anís estrella",
-          "required": 3.0,
+          "required": 9.0,
           "stock": 0.0,
-          "net_to_buy": 3.0,
+          "net_to_buy": 9.0,
           "unit": "g"
         },
         {
@@ -4730,9 +4780,9 @@
         },
         {
           "name": "Cardamomo verde",
-          "required": 5.0,
+          "required": 2.0,
           "stock": 0.0,
-          "net_to_buy": 5.0,
+          "net_to_buy": 2.0,
           "unit": "g"
         },
         {
@@ -4750,13 +4800,6 @@
           "unit": "piezas"
         },
         {
-          "name": "Cedrón e hinojo",
-          "required": 12.0,
-          "stock": 0.0,
-          "net_to_buy": 12.0,
-          "unit": "g"
-        },
-        {
           "name": "Champiñón",
           "required": 1200.0,
           "stock": 0.0,
@@ -4764,10 +4807,10 @@
           "unit": "g"
         },
         {
-          "name": "Coco rallado sin azúcar",
-          "required": 60.0,
+          "name": "Coco rallado",
+          "required": 180.0,
           "stock": 0.0,
-          "net_to_buy": 60.0,
+          "net_to_buy": 180.0,
           "unit": "g"
         },
         {
@@ -4806,13 +4849,6 @@
           "unit": "g"
         },
         {
-          "name": "Hierbabuena",
-          "required": 12.0,
-          "stock": 0.0,
-          "net_to_buy": 12.0,
-          "unit": "g"
-        },
-        {
           "name": "Leche de almendra",
           "required": 1560.0,
           "stock": 0.0,
@@ -4838,13 +4874,6 @@
           "required": 1440.0,
           "stock": 0.0,
           "net_to_buy": 1440.0,
-          "unit": "g"
-        },
-        {
-          "name": "Mora azul",
-          "required": 180.0,
-          "stock": 0.0,
-          "net_to_buy": 180.0,
           "unit": "g"
         },
         {
@@ -4876,10 +4905,10 @@
           "unit": "g"
         },
         {
-          "name": "Pulpa de maracuyá sin azúcar",
-          "required": 180.0,
-          "stock": 0.0,
-          "net_to_buy": 180.0,
+          "name": "Queso Philadelphia",
+          "required": 440.0,
+          "stock": 360.0,
+          "net_to_buy": 80.0,
           "unit": "g"
         },
         {
@@ -4894,13 +4923,6 @@
           "required": 660.0,
           "stock": 260.0,
           "net_to_buy": 400.0,
-          "unit": "g"
-        },
-        {
-          "name": "Semilla de calabaza sin sal",
-          "required": 120.0,
-          "stock": 0.0,
-          "net_to_buy": 120.0,
           "unit": "g"
         },
         {
@@ -4922,6 +4944,13 @@
           "required": 240.0,
           "stock": 0.0,
           "net_to_buy": 240.0,
+          "unit": "g"
+        },
+        {
+          "name": "Zarzamora",
+          "required": 180.0,
+          "stock": 0.0,
+          "net_to_buy": 180.0,
           "unit": "g"
         }
       ]

@@ -2027,16 +2027,23 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     market_names = set(market_map.keys())
     for zero_buy_item in [
         "Fajitas de mojarra", "Pechuga de pavo", "Pollo entero", "Atún en agua", "Huevo",
-        "Yogur griego", "Queso manchego", "Mantequilla", "Leche de coco", "Queso Philadelphia",
+        "Queso manchego", "Mantequilla", "Leche de coco",
         "Queso de cabra", "Queso parmesano", "Mayonesa", "Nuez de la India", "Semillas y nueces mixtas",
         "Almendras fileteadas", "Frambuesas", "Fresas", "Apio", "Espinacas",
         "Germinado", "Jitomate", "Ajo", "Alcaparras", "Grenetina", "Manzanilla", "Tomillo",
         "Aceitunas manzanilla",
     ]:
-        assert zero_buy_item not in market_names, f"{zero_buy_item} debe cubrirse al 100% en Alacena ($0 compra en S47)"
-    assert abs(float(market_map["Aceite de oliva"]["net_to_buy"]) - 162.0) < 1e-6
+        assert zero_buy_item not in market_names, f"{zero_buy_item} debe cubrirse al 100% en Alacena histórica ($0 compra en S47)"
+    assert abs(float(market_map["Aceite de oliva"]["net_to_buy"]) - 180.0) < 1e-6
     assert abs(float(market_map["Sardinas"]["net_to_buy"]) - 400.0) < 1e-6
     assert abs(float(market_map["Pistaches"]["net_to_buy"]) - 70.0) < 1e-6
+
+    live_market_names = {x["name"] for x in rep_s47_live["bom_summary"]["market_purchases"]}
+    for covered_live_item in [
+        "Queso Philadelphia", "Queso de cabra", "Yogur griego", "Zarzamora",
+        "Coco rallado", "Ajonjolí", "Anís estrella", "Mezcla navideña molida de manzana deshidratada y especias",
+    ]:
+        assert covered_live_item not in live_market_names, f"{covered_live_item} debe cubrirse al 100% en Alacena viva v68/v69"
 
 
 def test_nov19_2026_consolidated_intake_ssot_quarantine_and_ui_sync():
@@ -2140,6 +2147,150 @@ def test_nov19_2026_consolidated_intake_ssot_quarantine_and_ui_sync():
         assert "sku-330-anis-estrella" in html_text
         assert "sku-331-chile-serrano" in html_text
         assert "if (/pollo entero/i.test(n)) return 1800;" in html_text
+
+
+def test_egm_pending_meals_chicken_breakdown_and_s48_rollover():
+    """
+    Certifica el Protocolo EGM Unificado + Despiece Anatómico de Pollo Entero + Rollover S48 + Ponche Navideño 33Plus®:
+    1. Modo EGM de Turnos Pendientes: 13 servicios devengados (R#01-R#39) pre-contabilizados y 8 pendientes (R#40-R#63).
+    2. Relevo quirúrgico de Queso de cabra (0 g en R#40-R#63) por Queso Philadelphia (320 g total pendiente -> 580 g saldo S48).
+    3. Despiece anatómico de Pollo entero (1 pza cruda -> 660 g en R#53; Pechuga de pavo intacta en 1,400 g; Pollo entero -> 0 pzas;
+       piernas_pollo_despiece == 220.0 g y fondo_claro_pollo_habilitado == True).
+    4. Exactitud matemática de los 18 saldos proyectados al cierre del sábado (`compute_projected_week_closing_stock`) y
+       compras EGM de mercado estrictamente acotadas a Aceite de oliva (108 ml) + 33Plus® (20 g) + 34Plus® (80 g).
+    5. Excepción única del Ponche Navideño Rubí de Autor con 33Plus® (1x/semana en S47-S52, Viernes 25 Dic en S52, 0x en S53,
+       rechazo intra-semanal si se duplica en la misma semana).
+    """
+    import copy
+    import json
+    from pathlib import Path
+    from app.services.menu_hard_gate_auditor import (
+        HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE,
+        audit_week_plan,
+        is_holiday_christmas_punch_exempt,
+        load_live_pantry_ssot,
+    )
+    from app.services.pantry_ssot_sync import (
+        S47_ACCRUED_13_MEAL_IDS,
+        S47_PENDING_8_MEAL_IDS,
+        compute_projected_week_closing_stock,
+    )
+    from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
+
+    root = Path(__file__).resolve().parents[1]
+    s44 = json.loads((root / "semana_44_master.json").read_text(encoding="utf-8"))
+    s45 = json.loads((root / "semana_45_master.json").read_text(encoding="utf-8"))
+    s46 = json.loads((root / "semana_46_master.json").read_text(encoding="utf-8"))
+    s47 = json.loads((root / "semana_47_master.json").read_text(encoding="utf-8"))
+    ssot = json.loads((root / "pantry_live_state.json").read_text(encoding="utf-8"))
+
+    assert len(S47_ACCRUED_13_MEAL_IDS) == 13
+    assert len(S47_PENDING_8_MEAL_IDS) == 8
+
+    # Verificar relevo de Queso de cabra -> Queso Philadelphia y despiece en R#40-R#63
+    pending_philadelphia = 0.0
+    pending_goat_cheese = 0.0
+    r53_chicken_g = 0.0
+    for d_idx, day in enumerate(s47["days"]):
+        for m in day["meals"]:
+            meal_id = f"day_{d_idx}_{m['meal_type']}"
+            if meal_id not in S47_PENDING_8_MEAL_IDS:
+                continue
+            for role in ("starter", "main", "side"):
+                for ing in m[role]["ingredients"]:
+                    if ing["name"] == "Queso Philadelphia":
+                        pending_philadelphia += float(ing["amount"])
+                    elif ing["name"] == "Queso de cabra":
+                        pending_goat_cheese += float(ing["amount"])
+                    elif d_idx == 5 and m["meal_type"] == "Cena" and ing["name"] == "Pechuga de pollo":
+                        r53_chicken_g += float(ing["amount"])
+
+    assert pending_goat_cheese == 0.0, "Cero Queso de cabra en los 8 turnos pendientes R#40-R#63"
+    assert abs(pending_philadelphia - 320.0) < 1e-6, f"Queso Philadelphia pendiente esperado 320 g, obtenido {pending_philadelphia}"
+    assert abs(r53_chicken_g - 660.0) < 1e-6, f"R#53 debe emplear 660 g del despiece de Pollo entero, obtenido {r53_chicken_g}"
+
+    # Verificar los 18 saldos exactos de cierre proyectado S48 y subproductos anatómicos
+    rollover = compute_projected_week_closing_stock(live_state=ssot, week_plan=s47)
+    closing = rollover["pantryStock"]
+    expected_18_balances = {
+        "Pechuga de pavo": 1400.0,
+        "Flat steak": 1270.0,
+        "Sardinas": 940.0,
+        "Lomo de salmón": 750.0,
+        "Fajitas de mojarra": 180.0,
+        "Atún en agua": 1400.0,
+        "Carne molida": 400.0,
+        "Pollo entero": 0.0,
+        "Huevo": 174.0,
+        "Queso cottage": 5760.0,
+        "Queso mozzarella": 2260.0,
+        "Yogur griego": 1820.0,
+        "Crema ácida": 900.0,
+        "Queso Philadelphia": 580.0,
+        "Queso manchego": 400.0,
+        "Queso parmesano": 0.0,
+        "Mantequilla": 150.0,
+        "Aceite de coco": 644.0,
+    }
+    for item_name, expected_val in expected_18_balances.items():
+        actual_val = float(closing.get(item_name, -1))
+        assert abs(actual_val - expected_val) < 1e-4, (
+            f"Saldo proyectado S48 incorrecto para '{item_name}': obtenido {actual_val}, esperado {expected_val}"
+        )
+
+    assert abs(float(rollover["piernas_pollo_despiece"]) - 220.0) < 1e-6
+    assert rollover["fondo_claro_pollo_habilitado"] is True
+    assert rollover["chicken_anatomical_breakdown"]["applied"] is True
+    assert rollover["chicken_anatomical_breakdown"]["pollo_entero_remaining_pieces"] == 0
+
+    # Verificar compras netas EGM en #v-shop (únicamente Aceite de oliva 108 ml + reposición de planta 33Plus®/34Plus®)
+    egm_buys = {x["name"]: x for x in rollover["market_purchases_egm"]}
+    assert set(egm_buys.keys()) == {"Aceite de oliva", "33Plus®", "34Plus®"}, (
+        f"En Modo EGM solo deben listarse Aceite de oliva, 33Plus® y 34Plus®, obtenido: {list(egm_buys.keys())}"
+    )
+    assert abs(float(egm_buys["Aceite de oliva"]["net_to_buy"]) - 108.0) < 1e-6
+
+    # Verificar entrega semanal 1x/semana del Ponche Navideño de S47 a S52 (y 0x en S53)
+    s47_punch = s47["days"][6]["meals"][0]["side"]
+    assert s47_punch["technique"] == HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE
+    assert is_holiday_christmas_punch_exempt(s47_punch, 47) is True
+    assert is_holiday_christmas_punch_exempt(s47_punch, 53) is False
+
+    # Rechazo intra-semanal: 2 apariciones en la misma semana siguen bloqueadas por [R10-DNA]
+    s47_dup = copy.deepcopy(s47)
+    s47_dup["days"][4]["meals"][0]["side"] = copy.deepcopy(s47_punch)
+    live = load_live_pantry_ssot()
+    rep_dup = audit_week_plan(s47_dup, prev_week_data=s46, pantry_stock=live["auditor_pantry"], farm_harvest=live["farm_harvest"])
+    assert rep_dup["passed"] is False
+
+    rolling_history = [s44, s45, s46, s47]
+    for w_num in range(48, 54):
+        hist_window = rolling_history[-3:]
+        wp = generate_week_with_tilo_cortex(w_num, history_weeks=hist_window)
+        assert wp["hard_gate_audit"]["passed"] is True
+        punch_hits = [
+            (d_i, d["date_str"])
+            for d_i, d in enumerate(wp["days"])
+            for m in d["meals"]
+            if m["side"].get("technique") == HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE
+        ]
+        if w_num <= 52:
+            assert len(punch_hits) == 1, f"Semana {w_num} debe incluir exactamente 1 Ponche Navideño"
+            if w_num == 52:
+                assert punch_hits[0] == (5, "25 Dic"), "En Semana 52 debe entregarse el Viernes 25 de Diciembre (Navidad)"
+        else:
+            assert len(punch_hits) == 0, "A partir de Semana 53 expira la excepción navideña (0 apariciones)"
+        rolling_history.append(wp)
+
+    # Verificar controles UI en atelier.html e index.html
+    for html_name in ("atelier.html", "index.html"):
+        html_text = (root / html_name).read_text(encoding="utf-8")
+        assert "nutriketo-v36-6-rev25-egm-pending-rollover" in html_text
+        assert "Cierre EGM: Solo Turnos Pendientes" in html_text
+        assert "deductedMealIds" in html_text
+        assert "checkedInMeals" in html_text
+        assert "sku-332-mezcla-navidena-molida" in html_text
+
 
 
 

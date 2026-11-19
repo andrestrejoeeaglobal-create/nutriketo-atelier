@@ -16,12 +16,14 @@ import os
 from typing import Any, Dict, List
 
 from app.services.menu_hard_gate_auditor import (
+    S47_HISTORICAL_PANTRY_STOCK,
     assert_zero_violations,
     compute_dish_structural_dna,
     compute_functional_prep_dna,
     compute_functional_prep_jaccard_similarity,
     load_live_pantry_ssot,
 )
+from app.services.pantry_ssot_sync import compute_projected_week_closing_stock
 from app.services.s45_dossier_compiler import (
     WORKSPACE,
     _clean_historical_display_title,
@@ -46,14 +48,14 @@ def compile_s47_dossier() -> Dict[str, Any]:
     s47 = generate_week_with_tilo_cortex(
         47,
         history_weeks=[s46],
-        pantry_stock=live_ssot["auditor_pantry"],
+        pantry_stock=S47_HISTORICAL_PANTRY_STOCK,
         farm_harvest=live_ssot["farm_harvest"],
     )
     schools_list = sorted(SEVEN_CULINARY_SCHOOLS.values(), key=lambda x: x["school_index"])
     audit = assert_zero_violations(
         s47,
         prev_week_data=s46,
-        pantry_stock=live_ssot["auditor_pantry"],
+        pantry_stock=S47_HISTORICAL_PANTRY_STOCK,
         farm_harvest=live_ssot["farm_harvest"],
     )
     assert audit["passed"], f"Audit S47 failed: {audit['violations']}"
@@ -332,6 +334,48 @@ def compile_s47_dossier() -> Dict[str, Any]:
             net_str = "**0 (\\$0.00)**"
         lines.append(
             f"| {idx_t} | {cat_desc} | **{c_nm}** | {fmt_num(st_init)} {u_t} | **{fmt_num(req_v)} {u_t}** | {fmt_num(rem_v)} {u_t} | {net_str} |"
+        )
+
+    proj_egm = compute_projected_week_closing_stock(live_state=live_ssot.get("raw_state"), week_plan=s47)
+    lines.append("")
+    lines.append("### 3.0.1 Cierre EGM de Turnos Pendientes (`R#40`–`R#63` | Jueves 19 Nov Comida a Sábado 21 Nov Cena) y Proyección de Cierre rumbo a Semana 48 (`Projected EOD Rollover`)")
+    lines.append("- **Servicios Devengados Pre-Contabilizados (`R#01`–`R#39`, 13 turnos):** Domingo 15 Nov Desayuno a Jueves 19 Nov Desayuno (`preAccounted = True`, cero doble resta sobre `v68`).")
+    lines.append("- **Despiece Anatómico Contable en `R#53` (*Viernes 20 Nov · Cena*):** `Pollo entero (1 pza cruda ~1,800 g)` cubre los **`660 g`** de pollo (`500 g` pechuga limpia + `160 g` muslos deshuesados = **`\\$0.00 MXN`** compra de `Pechuga de pollo`), dejando **`Pechuga de pavo: 1,400 g`** intacta, **`Pollo entero: 0 piezas`**, **`Piernas de pollo: 220 g` (`2 piezas`)** y **`Fondo claro de pollo` casero habilitado (`4,500–6,300 ml` a `\\$0.00 MXN`)** para el arranque de Semana 48.")
+    lines.append("- **Relevo Quirúrgico en `R#47` y `R#62`:** `Queso de cabra (0 g)` sustituido por **`Queso Philadelphia`** (`80 g` en `R#47` + `120 g` en `R#62` + `120 g` en `R#45` = **`320 g`** pendientes -> **`580 g` saldo proyectado S48**, **`\\$0.00 MXN`** compra).")
+    lines.append("")
+    lines.append("| Insumo Clave Auditado | Stock Vivo `v68` (`19 Nov`) | Demanda Pendiente (`R#40`–`R#63`) | Saldo Proyectado Cierre Sábado (`S48 Rollover`) | Compra Neta `#v-shop` (Modo EGM) |")
+    lines.append("|---|---|---|---|---|")
+    egm_summary_rows = [
+        ("Pechuga de pavo", 1400, "g"),
+        ("Flat steak", 1930, "g"),
+        ("Sardinas", 1600, "g"),
+        ("Lomo de salmón", 1470, "g"),
+        ("Fajitas de mojarra", 2000, "g"),
+        ("Atún en agua", 1400, "g"),
+        ("Carne molida", 400, "g"),
+        ("Pollo entero", 1, "piezas"),
+        ("Huevo", 210, "piezas"),
+        ("Queso cottage", 5760, "g"),
+        ("Queso mozzarella", 2260, "g"),
+        ("Yogur griego", 2300, "g"),
+        ("Crema ácida", 900, "g"),
+        ("Queso Philadelphia", 900, "g"),
+        ("Queso manchego", 400, "g"),
+        ("Queso parmesano", 100, "g"),
+        ("Mantequilla", 450, "g"),
+        ("Aceite de coco", 800, "g"),
+        ("Aceite de oliva", 0, "ml"),
+    ]
+    egm_buy_map = {m["name"]: m for m in proj_egm["market_purchases_egm"]}
+    for item_k, st_v68, u_egm in egm_summary_rows:
+        if item_k == "Pollo entero":
+            req_egm = 1.0
+        else:
+            req_egm = float((proj_egm["pending_demand"].get(item_k) or {}).get("required", 0.0))
+        rem_egm = proj_egm["pantryStock"].get(item_k, 0)
+        buy_egm = f"**`{fmt_num_plain(egm_buy_map[item_k]['net_to_buy'])} {u_egm}`**" if item_k in egm_buy_map else "**0 (\\$0.00)**"
+        lines.append(
+            f"| **{item_k}** | {fmt_num(float(st_v68))} {u_egm} | **{fmt_num(req_egm)} {u_egm}** | **`{fmt_num(float(rem_egm))} {u_egm}`** | {buy_egm} |"
         )
 
     lines.append("")

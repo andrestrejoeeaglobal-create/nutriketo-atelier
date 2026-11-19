@@ -3232,6 +3232,38 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
     return days_out
 
 
+def _build_holiday_apple_punch_33plus_course() -> Dict[str, Any]:
+    """
+    Receta Oficial de Temporada Navideña (Excepción Única Semanas 47 a 52: 15 Nov al 25 Dic 2026):
+    Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®.
+    Escalada exactamente para 6 comensales (1,500 ml = 1,100 ml infusión caliente + 400 ml choque térmico, 30 g de 33Plus®).
+    """
+    return _course(
+        title="Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®",
+        technique="holiday_clarified_apple_clove_punch_33plus",
+        serving_temp_c="50°C",
+        note="Edición Especial de Temporada Navideña (1 entrega semanal autorizada hasta Navidad): técnica de doble temperatura diseñada para la premezcla molida de manzana deshidratada, canela, anís estrella, clavo de olor y pimienta negra (27 g), infusionada a 88°C–90°C con flor de jamaica y piel de limón real de Granja El Herami, filtrada por malla fina / manta de cielo, templada por choque térmico a 50°C–52°C con agua purificada fría y vainilla antes de emulsionar 33Plus®, y servida sobre nuez pecana tostada de la granja.",
+        thermo="Infusión aromática fuera del fuego a 88°C–90°C en 1,100 ml por 7 min, filtrado ultrafino y choque térmico controlado (+400 ml de agua fría) a 50°C–52°C antes de integrar 33Plus®.",
+        flavor="Elixir rubí profundo de ponche tradicional donde la acidez floral de la jamaica equilibra el dulzor natural de la manzana molida, con anís estrella, clavo, canela, destello de piperina, vainilla y el perfil frutal rojo de 33Plus®.",
+        texture="Caldo aterciopelado por la pectina natural de la manzana y libre de sedimento arenoso, coronado con crocancia de nuez pecana tostada en taza.",
+        ccp="No tostar en seco el polvo con manzana para evitar amargor por pirólisis de fructosa; filtrar en manta de cielo o malla ultrafina y verificar <= 52°C mediante choque térmico antes de batir 33Plus® (30 g).",
+        ingredients=[
+            _ing("Mezcla navideña molida de manzana deshidratada y especias", 27, "g", CAT_SPICE),
+            _ing("Jamaica", 25, "g", CAT_SPICE),
+            _ing("Agua purificada", 1500, "ml", CAT_SPICE),
+            _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+            _ing("Limones", 30, "g", CAT_VEG),
+            _ing("Nuez pecana", 60, "g", CAT_FAT),
+            _ing("33Plus®", 30, "g", CAT_SUPP),
+        ],
+        steps=[
+            "Calentar 1,100 ml de agua purificada con los 25 g de flor de jamaica de la granja y tiras anchas de piel de limón real (sin parte blanca); al romper el hervor apagar el fuego, incorporar los 27 g de mezcla navideña molida de manzana deshidratada y especias (canela, anís estrella, clavo y pimienta negra), tapar e infusionar 7 minutos a 88°C–90°C.",
+            "Clarificar pasando la infusión por colador de malla fina o manta de cielo para retener cualquier sedimento ultrafino, y aplicar choque térmico vertiendo de inmediato los 400 ml restantes de agua purificada fría junto con los 6 ml de extracto de vainilla para situar la mezcla exactamente entre 50°C y 52°C.",
+            "Agregar los 30 g de 33Plus® y batir con globo o espumador durante 12 segundos hasta formar corona rosada; disponer en el fondo de las 6 tazas los 60 g de nuez pecana tostada y servir encima a 50°C.",
+        ],
+    )
+
+
 def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week: int = 47) -> List[Dict[str, Any]]:
     """
     Construye los 7 días del Heptágono Culinario T.I.L.O.® (Rotación C: Semana 47 — 15 al 21 de Noviembre de 2026),
@@ -4265,14 +4297,14 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
         starter=_course(
             title="Consomé Bistró de Infusión de Tallos de Apio, Hojas de Acelga de la Granja, Ajo Dorado y Romero en Agua Purificada",
             technique="bistro_celery_chard_rosemary_water_consomme_s47",
-            note="Caldo francés nocturno que agota exactamente los últimos 240 g de apio de alacena (260+240 g = 500 g -> 0 g saldo) con acelgas y romero de la granja en agua purificada (0 ml de fondo de pollo fantasma), libre de lácteos ([R2]).",
+            note="Caldo francés nocturno que utiliza exactamente los 200 g de apio disponibles en alacena ($0.00 MXN) con acelgas y romero de la granja en agua purificada (0 ml de fondo de pollo fantasma), libre de lácteos ([R2]).",
             thermo="Infusión a 92°C por 7 minutos.",
             flavor="Apio, acelgas tiernas y romero de la granja con ajo dorado.",
             texture="Caldo limpio con brunoise de apio y cintas de acelga.",
-            ccp="Agota al 100% los 500 g de Apio en alacena (0 g saldo, $0.00 MXN) y 100% infusión vegetal en Agua purificada.",
+            ccp="Cubre al 100% los 200 g de Apio desde alacena ($0.00 MXN) y 100% infusión vegetal en Agua purificada.",
             ingredients=[
                 _ing("Agua purificada", 960, "ml", CAT_SPICE),
-                _ing("Apio", 240, "g", CAT_VEG),
+                _ing("Apio", 200, "g", CAT_VEG),
                 _ing("Acelgas", 300, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Romero", 6, "g", CAT_VEG),
@@ -4281,14 +4313,14 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
-                "Rehogar los últimos 240 g de apio en brunoise con el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.",
+                "Rehogar los 200 g de apio en brunoise con el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.",
                 "Incorporar las cintas de acelga de la granja por 2 minutos y servir con jugo de limón real.",
             ],
         ),
         main=_course(
             title="Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass",
             technique="french_grenobloise_caper_tilapia_s47",
-            note="Escuela 5 (Bistró Europeo): segundo servicio de fajitas de mojarra de alacena (900 g de 2,720 g = $0.00 MXN) doradas al sartén en mantequilla noisette con 24 g de alcaparras de alacena, limón real, calabacitas y aguacate Hass ([R5]).",
+            note="Escuela 5 (Bistró Europeo): segundo servicio de fajitas de mojarra de alacena (900 g = $0.00 MXN) doradas al sartén en mantequilla noisette con 24 g de alcaparras de alacena, limón real, calabacitas y aguacate Hass ([R5]).",
             thermo="Cocción en sartén a 175°C hasta 63°C internos.",
             flavor="Clásica salsa francesa Grenobloise de mantequilla, alcaparras y limón real.",
             texture="Filetes suaves de mojarra con cintas de calabacita y aguacate.",
@@ -4310,23 +4342,26 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         side=_course(
-            title="Tisana del Huerto de Hojas de Higo de la Granja, Cedrón e Hinojo Dulce (58°C) con 34Plus®",
-            technique="farm_fig_leaf_lemon_verbena_fennel_tisane_34plus_s47",
-            serving_temp_c="58°C",
-            note="Preparado Funcional Nocturno 5/7 (Día 5 — 19 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): tisana digestiva y sedante con hojas aromáticas de higuera de Granja El Herami ($0.00 MXN — 0% fruto de higo), cedrón e hinojo dulce a 58°C con 34Plus®.",
-            thermo="Infusión herbal a 88°C por 5 minutos y templado a 58°C.",
-            flavor="Perfume avainillado-coco natural de la hoja de higo con notas cítricas de cedrón y anisadas de hinojo.",
-            texture="Tisana cristalina y aromática a 58°C.",
-            ccp="Uso exclusivo de hoja aromática de higuera en infusión (0 g de fruto ni azúcares) y 34Plus® (30 g) a 58°C.",
+            title="Crema Catalana Cetogénica Tibia Bistró de Queso Philadelphia, Anís Estrella, Albahaca y Ralladura de Limón Real (52°C) con 34Plus®",
+            technique="bistro_keto_crema_catalana_philadelphia_anise_basil_34plus_s47",
+            serving_temp_c="52°C",
+            note="Preparado Funcional Nocturno 5/7 (Día 5 — 19 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): crema catalana cetogénica tibia emulsionada a 52°C con 120 g de queso Philadelphia de alacena ($0.00 MXN), infusión de anís estrella y hojas de albahaca de alacena, ralladura de limón real de Granja El Herami y 34Plus®.",
+            thermo="Infusión aromática a 88°C y emulsión sedosa a 52°C (<= 55°C).",
+            flavor="Notas mediterráneas de crema catalana al anís estrella, albahaca aromática y ralladura cítrica de limón real.",
+            texture="Crema aterciopelada y reconfortante a 52°C.",
+            ccp="Emplea 120 g de Queso Philadelphia de alacena (consumo pendiente total = 120+80+120 = 320 g -> 580 g saldo S48) y 34Plus® (30 g) a 52°C.",
             ingredients=[
-                _ing("Hojas de higo", 12, "g", CAT_SPICE),
-                _ing("Cedrón e hinojo", 12, "g", CAT_SPICE),
-                _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                _ing("Queso Philadelphia", 120, "g", CAT_DAIRY),
+                _ing("Anís estrella", 3, "g", CAT_SPICE),
+                _ing("Albahaca", 12, "g", CAT_SPICE),
+                _ing("Limones", 36, "g", CAT_VEG),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                _ing("Agua purificada", 900, "ml", CAT_SPICE),
                 _ing("34Plus®", 30, "g", CAT_SUPP),
             ],
             steps=[
-                "Infusionar los 12 g de hojas de higo de la granja junto con los 12 g de cedrón e hinojo dulce en los 1,080 ml de agua purificada caliente durante 5 minutos y colar.",
-                "Dejar templar a 58°C y disolver los 30 g de 34Plus®.",
+                "Infusionar los 3 g de anís estrella y los 12 g de hojas de albahaca en los 900 ml de agua purificada caliente por 4 minutos, colar y enfriar a 52°C; licuar con los 120 g de queso Philadelphia, la ralladura de limón real y el extracto de vainilla.",
+                "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C.",
             ],
         ),
     )
@@ -4358,18 +4393,18 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
-            technique="coastal_nopal_goat_cheese_tamagoyaki_s47",
-            note="Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado al sartén en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso de cabra de alacena.",
+            title="Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso",
+            technique="coastal_nopal_philadelphia_tamagoyaki_s47",
+            note="Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado al sartén en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso Philadelphia de alacena (relevo quirúrgico de queso de cabra -> $0.00 MXN).",
             thermo="Laminado en capas en sartén a 140°C.",
-            flavor="Fusión Pacífico-Japón con mantequilla, nopal asado y cremosidad de queso de cabra.",
+            flavor="Fusión Pacífico-Japón con mantequilla, nopal asado y cremosidad fundente de queso Philadelphia.",
             texture="Rollo multicapa esponjoso con centro cremoso.",
-            ccp="Uso de 80 g de los 200 g de Queso de cabra de alacena.",
+            ccp="Relevo quirúrgico EGM: 80 g de Queso Philadelphia de alacena ($0.00 MXN compra).",
             archetype="heptagon_s47_huevo_tamagoyaki_nopal_cabra",
             ingredients=[
                 _ing("Huevo", 18, "piezas", CAT_PROT),
                 _ing("Nopales", 360, "g", CAT_VEG),
-                _ing("Queso de cabra", 80, "g", CAT_DAIRY),
+                _ing("Queso Philadelphia", 80, "g", CAT_DAIRY),
                 _ing("Mantequilla", 60, "g", CAT_FAT),
                 _ing("Cilantro", 24, "g", CAT_VEG),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
@@ -4377,28 +4412,29 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
             steps=[
                 "Asar la juliana de nopal de la granja con cilantro picado.",
-                "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki.",
+                "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso Philadelphia, y enrollar estilo Tamagoyaki.",
             ],
         ),
         side=_course(
-            title="Lassi Líquido de Mora Azul (Blueberry), Cardamomo Verde y Yogur Griego (6°C) con 33Plus®",
-            technique="blueberry_cardamom_yogurt_lassi_33plus_s47",
+            title="Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
+            technique="blackberry_star_anise_probiotic_lassi_33plus_s47",
             serving_temp_c="6°C",
-            note="Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica hindú tipo Lassi batida en frío con 480 g de yogur griego de alacena, mora azul (blueberry) rica en antocianinas, cardamomo verde y 33Plus® a 6°C.",
+            note="Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con 480 g de yogur griego de alacena (saldo proyectado S48 = 1,820 g), zarzamora antioxidante de alacena ($0.00 MXN), anís estrella, vainilla y 33Plus® a 6°C.",
             thermo="Emulsión en frío a 6°C (0% calor).",
-            flavor="Mora azul vibrante y cardamomo verde aromático en yogur griego.",
-            texture="Lassi líquido aterciopelado color violeta a 6°C.",
-            ccp="Integrar 33Plus® (30 g) en frío.",
+            flavor="Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.",
+            texture="Lassi líquido aterciopelado color púrpura a 6°C.",
+            ccp="100% cubierto en alacena (Yogur griego 480 g -> 1,820 g saldo; Zarzamora 180 g -> 330 g saldo) y 33Plus® (30 g) en frío.",
             ingredients=[
                 _ing("Yogur griego", 480, "g", CAT_DAIRY),
-                _ing("Mora azul", 180, "g", CAT_FRUIT),
-                _ing("Cardamomo verde", 3, "g", CAT_SPICE),
+                _ing("Zarzamora", 180, "g", CAT_FRUIT),
+                _ing("Anís estrella", 3, "g", CAT_SPICE),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
                 _ing("Agua purificada", 420, "ml", CAT_SPICE),
                 _ing("33Plus®", 30, "g", CAT_SUPP),
             ],
             steps=[
-                "Licuar en frío los 480 g de yogur griego con los 180 g de mora azul, los 3 g de cardamomo verde y los 420 ml de agua purificada fría.",
-                "Incorporar los 30 g de 33Plus®, batir 10 segundos y servir a 6°C.",
+                "Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.",
+                "Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C.",
             ],
         ),
     )
@@ -4428,11 +4464,11 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
         main=_course(
             title="Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass",
             technique="thai_coconut_turmeric_salmon_broccoli_s47",
-            note="Escuela 6 (Pacífico & Oriente): lomo de salmón sellado al sartén y bañado con los últimos 240 ml de leche de coco de alacena (total semanal = 500 ml -> 0 ml saldo), cúrcuma y cilantro sobre brócoli con aguacate Hass ([R5]).",
+            note="Escuela 6 (Pacífico & Oriente): lomo de salmón sellado al sartén (720 g de 1,470 g -> 750 g saldo S48) y bañado con 240 ml de leche de coco de alacena ($0.00 MXN), cúrcuma y cilantro sobre brócoli con aguacate Hass ([R5]).",
             thermo="Sellado a 180°C y reducción de leche de coco a 85°C.",
             flavor="Salsa tailandesa de leche de coco y cúrcuma sin picante con salmón y aguacate.",
             texture="Lomo jugoso con floretes de brócoli al dente.",
-            ccp="Agota al 100% los 500 ml de Leche de coco en alacena (0 ml saldo) y única presencia diaria de aguacate ([R5]).",
+            ccp="100% cubierto en alacena y única presencia diaria de aguacate ([R5]).",
             archetype="heptagon_s47_salmon_veloute_coco_brocoli",
             ingredients=[
                 _ing("Lomo de salmón", 720, "g", CAT_PROT),
@@ -4451,23 +4487,23 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         side=_course(
-            title="Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Coco Neutro",
+            title="Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Oliva VEVO",
             technique="wok_turmeric_roasted_cauliflower_s47",
             note="Sexta guarnición de Comida ([R4-SIDE] 6/7: coliflor) libre de mantequilla y lácteos ([R2]).",
             thermo="Rostizado al wok a 185°C por 7 minutos.",
-            flavor="Coliflor dorada a la cúrcuma y limón real.",
+            flavor="Coliflor dorada a la cúrcuma, aceite de oliva y limón real.",
             texture="Floretes firmes con bordes tostados.",
             ccp="Cero mantequilla ni lácteos ([R2]).",
             ingredients=[
                 _ing("Coliflor", 360, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Cúrcuma", 6, "g", CAT_SPICE),
-                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
-                "Saltear los floretes de coliflor en el wok caliente con aceite de coco neutro y cúrcuma.",
-                "Terminar con jugo de limón real y sal de mar.",
+                "Saltear los floretes de coliflor en el wok caliente con cúrcuma y sal de mar.",
+                "Terminar fuera del fuego con aceite de oliva extra virgen y jugo de limón real.",
             ],
         ),
     )
@@ -4496,16 +4532,16 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
+            title="Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
             technique="teppanyaki_chicken_sprouts_cashews_wok_s47",
-            note="Escuela 6 (Pacífico & Oriente): pechuga de pollo salteada al wok teppanyaki que agota exactamente los 100 g de germinado y 120 g de nuez de la India de alacena ($0.00 MXN), con pimiento morrón y salsa de soya.",
+            note="Escuela 6 (Pacífico & Oriente — Despiece Anatómico Contable EGM): cubre los 660 g de pollo mediante el despiece en cocina del Pollo entero crudo de alacena (1 pieza ~1,800 g -> 500 g de pechuga limpia sin hueso + 160 g de pulpa deshuesada de los 2 muslos = 660 g exactos, $0.00 MXN compra), reservando las 2 piernas (~220 g netos) y el huacal/rabadilla/alas para elaborar 4,500–6,300 ml de Fondo claro de pollo casero ($0.00 MXN) rumbo a la Semana 48.",
             thermo="Salteado al wok a 190°C.",
             flavor="Umami japonés de salsa de soya y ajo con crocancia de nuez de la India tostada y germinado.",
-            texture="Tiras jugosas de pechuga con vegetales crujientes.",
-            ccp="Agota al 100% el Germinado (100 g) en alacena (0 g saldo).",
+            texture="Tiras jugosas de pechuga y muslo deshuesado con vegetales crujientes.",
+            ccp="Despiece anatómico de Pollo entero (1 -> 0 piezas; Pechuga de pavo intacta en 1,400 g; habilita 2 piernas ~220 g y Fondo claro de pollo 4.5–6.3 L para S48).",
             archetype="heptagon_s47_pollo_teppanyaki_nuez_india",
             ingredients=[
-                _ing("Pechuga de pollo", 660, "g", CAT_PROT),
+                _ing("Pechuga de pollo" if int(target_week) == 47 else "Pechuga de pollo", 660, "g", CAT_PROT),
                 _ing("Germinado", 100, "g", CAT_VEG),
                 _ing("Morrón", 2, "piezas", CAT_VEG),
                 _ing("Nuez de la India", 120, "g", CAT_FAT),
@@ -4515,47 +4551,48 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Pimienta negra", 3, "g", CAT_SPICE),
             ],
             steps=[
-                "Saltear las tiras de pechuga de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo.",
-                "Incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada.",
+                "Despiezar en cocina el pollo entero crudo (~1,800 g): extraer la pechuga limpia sin hueso (~500 g) y deshuesar los 2 muslos (~160 g) para obtener exactamente 660 g de fajitas; reservar en refrigeración las 2 piernas (~220 g) y destinar huacal, rabadilla, huesos y las 2 alas a la olla de fondo claro casero.",
+                "Saltear los 660 g de tiras de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo; incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada.",
             ],
         ),
         side=_course(
-            title="Atole Cetogénico Tibio de Semilla de Calabaza (Pepita Verde rica en Magnesio), Canela y Vainilla (52°C) con 34Plus®",
-            technique="warm_keto_pumpkin_seed_atole_34plus_s47",
+            title="Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®",
+            technique="warm_toasted_sesame_coconut_keto_atole_34plus_s47",
             serving_temp_c="52°C",
-            note="Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con semilla de calabaza sin sal (pepita verde rica en magnesio y triptófano), canela molida, vainilla y 34Plus® a 52°C.",
-            thermo="Emulsión en licuadora con agua tibia a 52°C.",
-            flavor="Pepita verde tostada con notas tradicionales de canela y vainilla.",
-            texture="Atole sedoso, reconfortante y rico en magnesio a 52°C.",
-            ccp="Licuar a 52°C con 34Plus® (30 g).",
+            note="Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con ajonjolí tostado y coco rallado de alacena ($0.00 MXN), canela molida, vainilla y 34Plus® a 52°C.",
+            thermo="Tostado aromático en seco y emulsión en licuadora con agua tibia a 52°C.",
+            flavor="Ajonjolí dorado y coco tostado con notas tradicionales de canela y vainilla.",
+            texture="Atole sedoso, reconfortante y rico en calcio y magnesio a 52°C.",
+            ccp="100% cubierto en alacena (Ajonjolí 120 g -> 80 g saldo; Coco rallado 60 g) y 34Plus® (30 g) a 52°C.",
             ingredients=[
-                _ing("Semilla de calabaza sin sal", 120, "g", CAT_FAT),
+                _ing("Ajonjolí", 120, "g", CAT_FAT),
+                _ing("Coco rallado", 60, "g", CAT_FAT),
                 _ing("Canela molida", 3, "g", CAT_SPICE),
                 _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
                 _ing("Agua purificada", 960, "ml", CAT_SPICE),
                 _ing("34Plus®", 30, "g", CAT_SUPP),
             ],
             steps=[
-                "Licuar los 120 g de semilla de calabaza sin sal con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla hasta obtener un atole terso.",
-                "Incorporar los 30 g de 34Plus® y batir 10 segundos.",
+                "Tostar ligeramente en sartén seco los 120 g de ajonjolí y los 60 g de coco rallado durante 2 minutos y licuar a alta potencia con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla.",
+                "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C.",
             ],
         ),
     )
 
     # =========================================================================
     # DÍA 6: SÁBADO 21 NOV — 🇮🇹 ESCUELA 7: MARE NOSTRUM (Alta Trattoria Italiana & Islas Griegas)
-    # Veg families: Desayuno (acelgas, pepino) | Comida (lechuga, champinon, calabacitas) | Cena (morron)
+    # Veg families: Desayuno (acelgas) | Comida (lechuga, champinon, calabacitas) | Cena (morron)
     # =========================================================================
     d6_b = _meal(
         "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
         starter=_course(
             title="Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             technique="mare_nostrum_pomegranate_nut_cup_s47",
-            note="Agota exactamente los últimos 80 g de semillas y nueces mixtas (total semanal = 600 g -> 0 g saldo) y los últimos 120 g de nuez de la India (total semanal = 1,000 g -> 0 g saldo) de alacena con granada de la granja, sin lácteos ([R4.6]).",
+            note="Arilos de granada de la granja con semillas y nueces mixtas, nuez de la India y nuez pecana ($0.00 MXN), sin lácteos ([R4.6]).",
             thermo="Servicio en frío a 6°C.",
             flavor="Granada de la granja a la canela con nueces.",
             texture="Arilos crujientes con semillas.",
-            ccp="Agota al 100% los 600 g de Semillas y nueces mixtas y los 1,000 g de Nuez de la India en alacena (0 g saldo).",
+            ccp="Cero lácteos en la entrada frutal ([R4.6]).",
             ingredients=[
                 _ing("Granadas", 180, "g", CAT_FRUIT),
                 _ing("Canela molida", 3, "g", CAT_SPICE),
@@ -4565,17 +4602,17 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
             steps=[
                 "Disponer los arilos de granada de la granja con canela molida en copas frías.",
-                "Coronar con los últimos 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana.",
+                "Coronar con los 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana.",
             ],
         ),
         main=_course(
             title="Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)",
             technique="trattoria_chard_parmesan_eggs_skillet_s47",
-            note="Escuela 7 (Mare Nostrum): 3 huevos por comensal cuajados al sartén en mantequilla con la única pieza de jitomate de alacena (1 pieza -> 0 piezas saldo), acelgas de la granja, orégano y 40 g de queso parmesano de alacena.",
+            note="Escuela 7 (Mare Nostrum): 3 huevos por comensal cuajados al sartén en mantequilla con jitomate asado de alacena, acelgas de la granja, orégano y 40 g de queso parmesano de alacena.",
             thermo="Cocción suave en sartén a 140°C (sin horno).",
             flavor="Trattoria italiana con jitomate asado, mantequilla, acelgas y queso parmesano.",
             texture="Huevos tiernos sobre cama de acelgas y jitomate.",
-            ccp="Agota la pieza única de Jitomate en alacena (0 piezas saldo).",
+            ccp="100% cubierto en alacena y granja.",
             archetype="heptagon_s47_huevo_purgatorio_parmesano",
             ingredients=[
                 _ing("Huevo", 18, "piezas", CAT_PROT),
@@ -4592,26 +4629,30 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 "Cascar los 18 huevos sobre la cama caliente en el sartén, tapar 4 minutos y espolvorear los 40 g de queso parmesano.",
             ],
         ),
-        side=_course(
-            title="Agua Botánica Espumosa de Pulpa de Maracuyá, Hierbabuena y Limón Real (4°C) con 33Plus®",
-            technique="sparkling_passionfruit_mint_botanical_water_33plus_s47",
-            serving_temp_c="4°C",
-            note="Preparado Funcional Matutino 7/7 (Día 7 — 21 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): agua botánica espumosa de pulpa de maracuyá sin azúcar (bajo índice glucémico), hojas de hierbabuena y limón real de la granja batida en frío con 33Plus® a 4°C.",
-            thermo="Emulsión en frío a 4°C (0% calor).",
-            flavor="Acidez exótica de maracuyá con frescura mentolada de hierbabuena y limón real.",
-            texture="Agua botánica ligera con espuma fina a 4°C.",
-            ccp="Pulpa 100% pura sin azúcar añadido y 33Plus® (30 g) en frío.",
-            ingredients=[
-                _ing("Pulpa de maracuyá sin azúcar", 180, "g", CAT_FRUIT),
-                _ing("Hierbabuena", 12, "g", CAT_VEG),
-                _ing("Limones", 45, "g", CAT_VEG),
-                _ing("Agua purificada", 900, "ml", CAT_SPICE),
-                _ing("33Plus®", 30, "g", CAT_SUPP),
-            ],
-            steps=[
-                "Licuar brevemente en frío los 180 g de pulpa de maracuyá sin azúcar con las hojas de hierbabuena, el jugo de limón real y los 900 ml de agua purificada helada.",
-                "Integrar los 30 g de 33Plus®, batir 5 segundos para espumar y servir a 4°C.",
-            ],
+        side=(
+            _build_holiday_apple_punch_33plus_course()
+            if 47 <= int(target_week) <= 52
+            else _course(
+                title="Agua Botánica Espumosa de Pulpa de Maracuyá, Hierbabuena y Limón Real (4°C) con 33Plus®",
+                technique="sparkling_passionfruit_mint_botanical_water_33plus_s47",
+                serving_temp_c="4°C",
+                note="Preparado Funcional Matutino 7/7 (100% Inédito en Ventana de 4 Semanas [R10-DNA]): agua botánica espumosa de pulpa de maracuyá, hojas de hierbabuena y limón real de la granja batida en frío con 33Plus® a 4°C.",
+                thermo="Emulsión en frío a 4°C (0% calor).",
+                flavor="Acidez exótica de maracuyá con hierbabuena y limón real.",
+                texture="Agua botánica ligera con espuma fina a 4°C.",
+                ccp="Pulpa 100% pura y 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Pulpa de maracuyá sin azúcar", 180, "g", CAT_FRUIT),
+                    _ing("Hierbabuena", 12, "g", CAT_VEG),
+                    _ing("Limones", 45, "g", CAT_VEG),
+                    _ing("Agua purificada", 900, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar brevemente en frío los 180 g de pulpa de maracuyá sin azúcar con las hojas de hierbabuena, el jugo de limón real y los 900 ml de agua purificada helada.",
+                    "Integrar los 30 g de 33Plus®, batir 5 segundos para espumar y servir a 4°C.",
+                ],
+            )
         ),
     )
 
@@ -6335,6 +6376,38 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
     return days_out
 
 
+def _build_holiday_apple_punch_33plus_course() -> Dict[str, Any]:
+    """
+    Receta Oficial de Temporada Navideña (Excepción Única Semanas 47 a 52: 15 Nov al 25 Dic 2026):
+    Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®.
+    Escalada exactamente para 6 comensales (1,500 ml = 1,100 ml infusión caliente + 400 ml choque térmico, 30 g de 33Plus®).
+    """
+    return _course(
+        title="Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®",
+        technique="holiday_clarified_apple_clove_punch_33plus",
+        serving_temp_c="50°C",
+        note="Edición Especial de Temporada Navideña (1 entrega semanal autorizada hasta Navidad): técnica de doble temperatura diseñada para la premezcla molida de manzana deshidratada, canela, anís estrella, clavo de olor y pimienta negra (27 g), infusionada a 88°C–90°C con flor de jamaica y piel de limón real de Granja El Herami, filtrada por malla fina / manta de cielo, templada por choque térmico a 50°C–52°C con agua purificada fría y vainilla antes de emulsionar 33Plus®, y servida sobre nuez pecana tostada de la granja.",
+        thermo="Infusión aromática fuera del fuego a 88°C–90°C en 1,100 ml por 7 min, filtrado ultrafino y choque térmico controlado (+400 ml de agua fría) a 50°C–52°C antes de integrar 33Plus®.",
+        flavor="Elixir rubí profundo de ponche tradicional donde la acidez floral de la jamaica equilibra el dulzor natural de la manzana molida, con anís estrella, clavo, canela, destello de piperina, vainilla y el perfil frutal rojo de 33Plus®.",
+        texture="Caldo aterciopelado por la pectina natural de la manzana y libre de sedimento arenoso, coronado con crocancia de nuez pecana tostada en taza.",
+        ccp="No tostar en seco el polvo con manzana para evitar amargor por pirólisis de fructosa; filtrar en manta de cielo o malla ultrafina y verificar <= 52°C mediante choque térmico antes de batir 33Plus® (30 g).",
+        ingredients=[
+            _ing("Mezcla navideña molida de manzana deshidratada y especias", 27, "g", CAT_SPICE),
+            _ing("Jamaica", 25, "g", CAT_SPICE),
+            _ing("Agua purificada", 1500, "ml", CAT_SPICE),
+            _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+            _ing("Limones", 30, "g", CAT_VEG),
+            _ing("Nuez pecana", 60, "g", CAT_FAT),
+            _ing("33Plus®", 30, "g", CAT_SUPP),
+        ],
+        steps=[
+            "Calentar 1,100 ml de agua purificada con los 25 g de flor de jamaica de la granja y tiras anchas de piel de limón real (sin parte blanca); al romper el hervor apagar el fuego, incorporar los 27 g de mezcla navideña molida de manzana deshidratada y especias (canela, anís estrella, clavo y pimienta negra), tapar e infusionar 7 minutos a 88°C–90°C.",
+            "Clarificar pasando la infusión por colador de malla fina o manta de cielo para retener cualquier sedimento ultrafino, y aplicar choque térmico vertiendo de inmediato los 400 ml restantes de agua purificada fría junto con los 6 ml de extracto de vainilla para situar la mezcla exactamente entre 50°C y 52°C.",
+            "Agregar los 30 g de 33Plus® y batir con globo o espumador durante 12 segundos hasta formar corona rosada; disponer en el fondo de las 6 tazas los 60 g de nuez pecana tostada y servir encima a 50°C.",
+        ],
+    )
+
+
 def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week: int = 47) -> List[Dict[str, Any]]:
     """
     Construye los 7 días del Heptágono Culinario T.I.L.O.® (Rotación C: Semana 47 — 15 al 21 de Noviembre de 2026),
@@ -7368,14 +7441,14 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
         starter=_course(
             title="Consomé Bistró de Infusión de Tallos de Apio, Hojas de Acelga de la Granja, Ajo Dorado y Romero en Agua Purificada",
             technique="bistro_celery_chard_rosemary_water_consomme_s47",
-            note="Caldo francés nocturno que agota exactamente los últimos 240 g de apio de alacena (260+240 g = 500 g -> 0 g saldo) con acelgas y romero de la granja en agua purificada (0 ml de fondo de pollo fantasma), libre de lácteos ([R2]).",
+            note="Caldo francés nocturno que utiliza exactamente los 200 g de apio disponibles en alacena ($0.00 MXN) con acelgas y romero de la granja en agua purificada (0 ml de fondo de pollo fantasma), libre de lácteos ([R2]).",
             thermo="Infusión a 92°C por 7 minutos.",
             flavor="Apio, acelgas tiernas y romero de la granja con ajo dorado.",
             texture="Caldo limpio con brunoise de apio y cintas de acelga.",
-            ccp="Agota al 100% los 500 g de Apio en alacena (0 g saldo, $0.00 MXN) y 100% infusión vegetal en Agua purificada.",
+            ccp="Cubre al 100% los 200 g de Apio desde alacena ($0.00 MXN) y 100% infusión vegetal en Agua purificada.",
             ingredients=[
                 _ing("Agua purificada", 960, "ml", CAT_SPICE),
-                _ing("Apio", 240, "g", CAT_VEG),
+                _ing("Apio", 200, "g", CAT_VEG),
                 _ing("Acelgas", 300, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Romero", 6, "g", CAT_VEG),
@@ -7384,14 +7457,14 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
-                "Rehogar los últimos 240 g de apio en brunoise con el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.",
+                "Rehogar los 200 g de apio en brunoise con el ajo y el romero de la granja en aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 5 minutos.",
                 "Incorporar las cintas de acelga de la granja por 2 minutos y servir con jugo de limón real.",
             ],
         ),
         main=_course(
             title="Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass",
             technique="french_grenobloise_caper_tilapia_s47",
-            note="Escuela 5 (Bistró Europeo): segundo servicio de fajitas de mojarra de alacena (900 g de 2,720 g = $0.00 MXN) doradas al sartén en mantequilla noisette con 24 g de alcaparras de alacena, limón real, calabacitas y aguacate Hass ([R5]).",
+            note="Escuela 5 (Bistró Europeo): segundo servicio de fajitas de mojarra de alacena (900 g = $0.00 MXN) doradas al sartén en mantequilla noisette con 24 g de alcaparras de alacena, limón real, calabacitas y aguacate Hass ([R5]).",
             thermo="Cocción en sartén a 175°C hasta 63°C internos.",
             flavor="Clásica salsa francesa Grenobloise de mantequilla, alcaparras y limón real.",
             texture="Filetes suaves de mojarra con cintas de calabacita y aguacate.",
@@ -7413,23 +7486,26 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         side=_course(
-            title="Tisana del Huerto de Hojas de Higo de la Granja, Cedrón e Hinojo Dulce (58°C) con 34Plus®",
-            technique="farm_fig_leaf_lemon_verbena_fennel_tisane_34plus_s47",
-            serving_temp_c="58°C",
-            note="Preparado Funcional Nocturno 5/7 (Día 5 — 19 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): tisana digestiva y sedante con hojas aromáticas de higuera de Granja El Herami ($0.00 MXN — 0% fruto de higo), cedrón e hinojo dulce a 58°C con 34Plus®.",
-            thermo="Infusión herbal a 88°C por 5 minutos y templado a 58°C.",
-            flavor="Perfume avainillado-coco natural de la hoja de higo con notas cítricas de cedrón y anisadas de hinojo.",
-            texture="Tisana cristalina y aromática a 58°C.",
-            ccp="Uso exclusivo de hoja aromática de higuera en infusión (0 g de fruto ni azúcares) y 34Plus® (30 g) a 58°C.",
+            title="Crema Catalana Cetogénica Tibia Bistró de Queso Philadelphia, Anís Estrella, Albahaca y Ralladura de Limón Real (52°C) con 34Plus®",
+            technique="bistro_keto_crema_catalana_philadelphia_anise_basil_34plus_s47",
+            serving_temp_c="52°C",
+            note="Preparado Funcional Nocturno 5/7 (Día 5 — 19 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): crema catalana cetogénica tibia emulsionada a 52°C con 120 g de queso Philadelphia de alacena ($0.00 MXN), infusión de anís estrella y hojas de albahaca de alacena, ralladura de limón real de Granja El Herami y 34Plus®.",
+            thermo="Infusión aromática a 88°C y emulsión sedosa a 52°C (<= 55°C).",
+            flavor="Notas mediterráneas de crema catalana al anís estrella, albahaca aromática y ralladura cítrica de limón real.",
+            texture="Crema aterciopelada y reconfortante a 52°C.",
+            ccp="Emplea 120 g de Queso Philadelphia de alacena (consumo pendiente total = 120+80+120 = 320 g -> 580 g saldo S48) y 34Plus® (30 g) a 52°C.",
             ingredients=[
-                _ing("Hojas de higo", 12, "g", CAT_SPICE),
-                _ing("Cedrón e hinojo", 12, "g", CAT_SPICE),
-                _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                _ing("Queso Philadelphia", 120, "g", CAT_DAIRY),
+                _ing("Anís estrella", 3, "g", CAT_SPICE),
+                _ing("Albahaca", 12, "g", CAT_SPICE),
+                _ing("Limones", 36, "g", CAT_VEG),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                _ing("Agua purificada", 900, "ml", CAT_SPICE),
                 _ing("34Plus®", 30, "g", CAT_SUPP),
             ],
             steps=[
-                "Infusionar los 12 g de hojas de higo de la granja junto con los 12 g de cedrón e hinojo dulce en los 1,080 ml de agua purificada caliente durante 5 minutos y colar.",
-                "Dejar templar a 58°C y disolver los 30 g de 34Plus®.",
+                "Infusionar los 3 g de anís estrella y los 12 g de hojas de albahaca en los 900 ml de agua purificada caliente por 4 minutos, colar y enfriar a 52°C; licuar con los 120 g de queso Philadelphia, la ralladura de limón real y el extracto de vainilla.",
+                "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C.",
             ],
         ),
     )
@@ -7461,18 +7537,18 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso de Cabra Cremoso",
-            technique="coastal_nopal_goat_cheese_tamagoyaki_s47",
-            note="Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado al sartén en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso de cabra de alacena.",
+            title="Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso",
+            technique="coastal_nopal_philadelphia_tamagoyaki_s47",
+            note="Escuela 6 (Pacífico & Oriente): rollo japonés Tamagoyaki de 3 huevos por comensal dorado al sartén en mantequilla y relleno de juliana de nopal de la granja, cilantro y 80 g de queso Philadelphia de alacena (relevo quirúrgico de queso de cabra -> $0.00 MXN).",
             thermo="Laminado en capas en sartén a 140°C.",
-            flavor="Fusión Pacífico-Japón con mantequilla, nopal asado y cremosidad de queso de cabra.",
+            flavor="Fusión Pacífico-Japón con mantequilla, nopal asado y cremosidad fundente de queso Philadelphia.",
             texture="Rollo multicapa esponjoso con centro cremoso.",
-            ccp="Uso de 80 g de los 200 g de Queso de cabra de alacena.",
+            ccp="Relevo quirúrgico EGM: 80 g de Queso Philadelphia de alacena ($0.00 MXN compra).",
             archetype="heptagon_s47_huevo_tamagoyaki_nopal_cabra",
             ingredients=[
                 _ing("Huevo", 18, "piezas", CAT_PROT),
                 _ing("Nopales", 360, "g", CAT_VEG),
-                _ing("Queso de cabra", 80, "g", CAT_DAIRY),
+                _ing("Queso Philadelphia", 80, "g", CAT_DAIRY),
                 _ing("Mantequilla", 60, "g", CAT_FAT),
                 _ing("Cilantro", 24, "g", CAT_VEG),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
@@ -7480,28 +7556,29 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
             steps=[
                 "Asar la juliana de nopal de la granja con cilantro picado.",
-                "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso de cabra, y enrollar estilo Tamagoyaki.",
+                "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso Philadelphia, y enrollar estilo Tamagoyaki.",
             ],
         ),
         side=_course(
-            title="Lassi Líquido de Mora Azul (Blueberry), Cardamomo Verde y Yogur Griego (6°C) con 33Plus®",
-            technique="blueberry_cardamom_yogurt_lassi_33plus_s47",
+            title="Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
+            technique="blackberry_star_anise_probiotic_lassi_33plus_s47",
             serving_temp_c="6°C",
-            note="Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica hindú tipo Lassi batida en frío con 480 g de yogur griego de alacena, mora azul (blueberry) rica en antocianinas, cardamomo verde y 33Plus® a 6°C.",
+            note="Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con 480 g de yogur griego de alacena (saldo proyectado S48 = 1,820 g), zarzamora antioxidante de alacena ($0.00 MXN), anís estrella, vainilla y 33Plus® a 6°C.",
             thermo="Emulsión en frío a 6°C (0% calor).",
-            flavor="Mora azul vibrante y cardamomo verde aromático en yogur griego.",
-            texture="Lassi líquido aterciopelado color violeta a 6°C.",
-            ccp="Integrar 33Plus® (30 g) en frío.",
+            flavor="Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.",
+            texture="Lassi líquido aterciopelado color púrpura a 6°C.",
+            ccp="100% cubierto en alacena (Yogur griego 480 g -> 1,820 g saldo; Zarzamora 180 g -> 330 g saldo) y 33Plus® (30 g) en frío.",
             ingredients=[
                 _ing("Yogur griego", 480, "g", CAT_DAIRY),
-                _ing("Mora azul", 180, "g", CAT_FRUIT),
-                _ing("Cardamomo verde", 3, "g", CAT_SPICE),
+                _ing("Zarzamora", 180, "g", CAT_FRUIT),
+                _ing("Anís estrella", 3, "g", CAT_SPICE),
+                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
                 _ing("Agua purificada", 420, "ml", CAT_SPICE),
                 _ing("33Plus®", 30, "g", CAT_SUPP),
             ],
             steps=[
-                "Licuar en frío los 480 g de yogur griego con los 180 g de mora azul, los 3 g de cardamomo verde y los 420 ml de agua purificada fría.",
-                "Incorporar los 30 g de 33Plus®, batir 10 segundos y servir a 6°C.",
+                "Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.",
+                "Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C.",
             ],
         ),
     )
@@ -7531,11 +7608,11 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
         main=_course(
             title="Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass",
             technique="thai_coconut_turmeric_salmon_broccoli_s47",
-            note="Escuela 6 (Pacífico & Oriente): lomo de salmón sellado al sartén y bañado con los últimos 240 ml de leche de coco de alacena (total semanal = 500 ml -> 0 ml saldo), cúrcuma y cilantro sobre brócoli con aguacate Hass ([R5]).",
+            note="Escuela 6 (Pacífico & Oriente): lomo de salmón sellado al sartén (720 g de 1,470 g -> 750 g saldo S48) y bañado con 240 ml de leche de coco de alacena ($0.00 MXN), cúrcuma y cilantro sobre brócoli con aguacate Hass ([R5]).",
             thermo="Sellado a 180°C y reducción de leche de coco a 85°C.",
             flavor="Salsa tailandesa de leche de coco y cúrcuma sin picante con salmón y aguacate.",
             texture="Lomo jugoso con floretes de brócoli al dente.",
-            ccp="Agota al 100% los 500 ml de Leche de coco en alacena (0 ml saldo) y única presencia diaria de aguacate ([R5]).",
+            ccp="100% cubierto en alacena y única presencia diaria de aguacate ([R5]).",
             archetype="heptagon_s47_salmon_veloute_coco_brocoli",
             ingredients=[
                 _ing("Lomo de salmón", 720, "g", CAT_PROT),
@@ -7554,23 +7631,23 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         side=_course(
-            title="Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Coco Neutro",
+            title="Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Oliva VEVO",
             technique="wok_turmeric_roasted_cauliflower_s47",
             note="Sexta guarnición de Comida ([R4-SIDE] 6/7: coliflor) libre de mantequilla y lácteos ([R2]).",
             thermo="Rostizado al wok a 185°C por 7 minutos.",
-            flavor="Coliflor dorada a la cúrcuma y limón real.",
+            flavor="Coliflor dorada a la cúrcuma, aceite de oliva y limón real.",
             texture="Floretes firmes con bordes tostados.",
             ccp="Cero mantequilla ni lácteos ([R2]).",
             ingredients=[
                 _ing("Coliflor", 360, "g", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
                 _ing("Cúrcuma", 6, "g", CAT_SPICE),
-                _ing("Aceite de coco", 18, "g", CAT_FAT),
+                _ing("Aceite de oliva", 18, "ml", CAT_FAT),
                 _ing("Sal de mar", 6, "g", CAT_SPICE),
             ],
             steps=[
-                "Saltear los floretes de coliflor en el wok caliente con aceite de coco neutro y cúrcuma.",
-                "Terminar con jugo de limón real y sal de mar.",
+                "Saltear los floretes de coliflor en el wok caliente con cúrcuma y sal de mar.",
+                "Terminar fuera del fuego con aceite de oliva extra virgen y jugo de limón real.",
             ],
         ),
     )
@@ -7599,16 +7676,16 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Teppanyaki Oriental al Wok de Pechuga de Pollo con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
+            title="Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
             technique="teppanyaki_chicken_sprouts_cashews_wok_s47",
-            note="Escuela 6 (Pacífico & Oriente): pechuga de pollo salteada al wok teppanyaki que agota exactamente los 100 g de germinado y 120 g de nuez de la India de alacena ($0.00 MXN), con pimiento morrón y salsa de soya.",
+            note="Escuela 6 (Pacífico & Oriente — Despiece Anatómico Contable EGM): cubre los 660 g de pollo mediante el despiece en cocina del Pollo entero crudo de alacena (1 pieza ~1,800 g -> 500 g de pechuga limpia sin hueso + 160 g de pulpa deshuesada de los 2 muslos = 660 g exactos, $0.00 MXN compra), reservando las 2 piernas (~220 g netos) y el huacal/rabadilla/alas para elaborar 4,500–6,300 ml de Fondo claro de pollo casero ($0.00 MXN) rumbo a la Semana 48.",
             thermo="Salteado al wok a 190°C.",
             flavor="Umami japonés de salsa de soya y ajo con crocancia de nuez de la India tostada y germinado.",
-            texture="Tiras jugosas de pechuga con vegetales crujientes.",
-            ccp="Agota al 100% el Germinado (100 g) en alacena (0 g saldo).",
+            texture="Tiras jugosas de pechuga y muslo deshuesado con vegetales crujientes.",
+            ccp="Despiece anatómico de Pollo entero (1 -> 0 piezas; Pechuga de pavo intacta en 1,400 g; habilita 2 piernas ~220 g y Fondo claro de pollo 4.5–6.3 L para S48).",
             archetype="heptagon_s47_pollo_teppanyaki_nuez_india",
             ingredients=[
-                _ing("Pechuga de pollo", 660, "g", CAT_PROT),
+                _ing("Pechuga de pollo" if int(target_week) == 47 else "Pechuga de pollo", 660, "g", CAT_PROT),
                 _ing("Germinado", 100, "g", CAT_VEG),
                 _ing("Morrón", 2, "piezas", CAT_VEG),
                 _ing("Nuez de la India", 120, "g", CAT_FAT),
@@ -7618,47 +7695,48 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 _ing("Pimienta negra", 3, "g", CAT_SPICE),
             ],
             steps=[
-                "Saltear las tiras de pechuga de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo.",
-                "Incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada.",
+                "Despiezar en cocina el pollo entero crudo (~1,800 g): extraer la pechuga limpia sin hueso (~500 g) y deshuesar los 2 muslos (~160 g) para obtener exactamente 660 g de fajitas; reservar en refrigeración las 2 piernas (~220 g) y destinar huacal, rabadilla, huesos y las 2 alas a la olla de fondo claro casero.",
+                "Saltear los 660 g de tiras de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo; incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada.",
             ],
         ),
         side=_course(
-            title="Atole Cetogénico Tibio de Semilla de Calabaza (Pepita Verde rica en Magnesio), Canela y Vainilla (52°C) con 34Plus®",
-            technique="warm_keto_pumpkin_seed_atole_34plus_s47",
+            title="Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®",
+            technique="warm_toasted_sesame_coconut_keto_atole_34plus_s47",
             serving_temp_c="52°C",
-            note="Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con semilla de calabaza sin sal (pepita verde rica en magnesio y triptófano), canela molida, vainilla y 34Plus® a 52°C.",
-            thermo="Emulsión en licuadora con agua tibia a 52°C.",
-            flavor="Pepita verde tostada con notas tradicionales de canela y vainilla.",
-            texture="Atole sedoso, reconfortante y rico en magnesio a 52°C.",
-            ccp="Licuar a 52°C con 34Plus® (30 g).",
+            note="Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con ajonjolí tostado y coco rallado de alacena ($0.00 MXN), canela molida, vainilla y 34Plus® a 52°C.",
+            thermo="Tostado aromático en seco y emulsión en licuadora con agua tibia a 52°C.",
+            flavor="Ajonjolí dorado y coco tostado con notas tradicionales de canela y vainilla.",
+            texture="Atole sedoso, reconfortante y rico en calcio y magnesio a 52°C.",
+            ccp="100% cubierto en alacena (Ajonjolí 120 g -> 80 g saldo; Coco rallado 60 g) y 34Plus® (30 g) a 52°C.",
             ingredients=[
-                _ing("Semilla de calabaza sin sal", 120, "g", CAT_FAT),
+                _ing("Ajonjolí", 120, "g", CAT_FAT),
+                _ing("Coco rallado", 60, "g", CAT_FAT),
                 _ing("Canela molida", 3, "g", CAT_SPICE),
                 _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
                 _ing("Agua purificada", 960, "ml", CAT_SPICE),
                 _ing("34Plus®", 30, "g", CAT_SUPP),
             ],
             steps=[
-                "Licuar los 120 g de semilla de calabaza sin sal con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla hasta obtener un atole terso.",
-                "Incorporar los 30 g de 34Plus® y batir 10 segundos.",
+                "Tostar ligeramente en sartén seco los 120 g de ajonjolí y los 60 g de coco rallado durante 2 minutos y licuar a alta potencia con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla.",
+                "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C.",
             ],
         ),
     )
 
     # =========================================================================
     # DÍA 6: SÁBADO 21 NOV — 🇮🇹 ESCUELA 7: MARE NOSTRUM (Alta Trattoria Italiana & Islas Griegas)
-    # Veg families: Desayuno (acelgas, pepino) | Comida (lechuga, champinon, calabacitas) | Cena (morron)
+    # Veg families: Desayuno (acelgas) | Comida (lechuga, champinon, calabacitas) | Cena (morron)
     # =========================================================================
     d6_b = _meal(
         "Desayuno", "08:30", 49.0, 34.5, 4.2, 6.4,
         starter=_course(
             title="Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             technique="mare_nostrum_pomegranate_nut_cup_s47",
-            note="Agota exactamente los últimos 80 g de semillas y nueces mixtas (total semanal = 600 g -> 0 g saldo) y los últimos 120 g de nuez de la India (total semanal = 1,000 g -> 0 g saldo) de alacena con granada de la granja, sin lácteos ([R4.6]).",
+            note="Arilos de granada de la granja con semillas y nueces mixtas, nuez de la India y nuez pecana ($0.00 MXN), sin lácteos ([R4.6]).",
             thermo="Servicio en frío a 6°C.",
             flavor="Granada de la granja a la canela con nueces.",
             texture="Arilos crujientes con semillas.",
-            ccp="Agota al 100% los 600 g de Semillas y nueces mixtas y los 1,000 g de Nuez de la India en alacena (0 g saldo).",
+            ccp="Cero lácteos en la entrada frutal ([R4.6]).",
             ingredients=[
                 _ing("Granadas", 180, "g", CAT_FRUIT),
                 _ing("Canela molida", 3, "g", CAT_SPICE),
@@ -7668,17 +7746,17 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
             steps=[
                 "Disponer los arilos de granada de la granja con canela molida en copas frías.",
-                "Coronar con los últimos 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana.",
+                "Coronar con los 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana.",
             ],
         ),
         main=_course(
             title="Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)",
             technique="trattoria_chard_parmesan_eggs_skillet_s47",
-            note="Escuela 7 (Mare Nostrum): 3 huevos por comensal cuajados al sartén en mantequilla con la única pieza de jitomate de alacena (1 pieza -> 0 piezas saldo), acelgas de la granja, orégano y 40 g de queso parmesano de alacena.",
+            note="Escuela 7 (Mare Nostrum): 3 huevos por comensal cuajados al sartén en mantequilla con jitomate asado de alacena, acelgas de la granja, orégano y 40 g de queso parmesano de alacena.",
             thermo="Cocción suave en sartén a 140°C (sin horno).",
             flavor="Trattoria italiana con jitomate asado, mantequilla, acelgas y queso parmesano.",
             texture="Huevos tiernos sobre cama de acelgas y jitomate.",
-            ccp="Agota la pieza única de Jitomate en alacena (0 piezas saldo).",
+            ccp="100% cubierto en alacena y granja.",
             archetype="heptagon_s47_huevo_purgatorio_parmesano",
             ingredients=[
                 _ing("Huevo", 18, "piezas", CAT_PROT),
@@ -7695,26 +7773,30 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 "Cascar los 18 huevos sobre la cama caliente en el sartén, tapar 4 minutos y espolvorear los 40 g de queso parmesano.",
             ],
         ),
-        side=_course(
-            title="Agua Botánica Espumosa de Pulpa de Maracuyá, Hierbabuena y Limón Real (4°C) con 33Plus®",
-            technique="sparkling_passionfruit_mint_botanical_water_33plus_s47",
-            serving_temp_c="4°C",
-            note="Preparado Funcional Matutino 7/7 (Día 7 — 21 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): agua botánica espumosa de pulpa de maracuyá sin azúcar (bajo índice glucémico), hojas de hierbabuena y limón real de la granja batida en frío con 33Plus® a 4°C.",
-            thermo="Emulsión en frío a 4°C (0% calor).",
-            flavor="Acidez exótica de maracuyá con frescura mentolada de hierbabuena y limón real.",
-            texture="Agua botánica ligera con espuma fina a 4°C.",
-            ccp="Pulpa 100% pura sin azúcar añadido y 33Plus® (30 g) en frío.",
-            ingredients=[
-                _ing("Pulpa de maracuyá sin azúcar", 180, "g", CAT_FRUIT),
-                _ing("Hierbabuena", 12, "g", CAT_VEG),
-                _ing("Limones", 45, "g", CAT_VEG),
-                _ing("Agua purificada", 900, "ml", CAT_SPICE),
-                _ing("33Plus®", 30, "g", CAT_SUPP),
-            ],
-            steps=[
-                "Licuar brevemente en frío los 180 g de pulpa de maracuyá sin azúcar con las hojas de hierbabuena, el jugo de limón real y los 900 ml de agua purificada helada.",
-                "Integrar los 30 g de 33Plus®, batir 5 segundos para espumar y servir a 4°C.",
-            ],
+        side=(
+            _build_holiday_apple_punch_33plus_course()
+            if 47 <= int(target_week) <= 52
+            else _course(
+                title="Agua Botánica Espumosa de Pulpa de Maracuyá, Hierbabuena y Limón Real (4°C) con 33Plus®",
+                technique="sparkling_passionfruit_mint_botanical_water_33plus_s47",
+                serving_temp_c="4°C",
+                note="Preparado Funcional Matutino 7/7 (100% Inédito en Ventana de 4 Semanas [R10-DNA]): agua botánica espumosa de pulpa de maracuyá, hojas de hierbabuena y limón real de la granja batida en frío con 33Plus® a 4°C.",
+                thermo="Emulsión en frío a 4°C (0% calor).",
+                flavor="Acidez exótica de maracuyá con hierbabuena y limón real.",
+                texture="Agua botánica ligera con espuma fina a 4°C.",
+                ccp="Pulpa 100% pura y 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Pulpa de maracuyá sin azúcar", 180, "g", CAT_FRUIT),
+                    _ing("Hierbabuena", 12, "g", CAT_VEG),
+                    _ing("Limones", 45, "g", CAT_VEG),
+                    _ing("Agua purificada", 900, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar brevemente en frío los 180 g de pulpa de maracuyá sin azúcar con las hojas de hierbabuena, el jugo de limón real y los 900 ml de agua purificada helada.",
+                    "Integrar los 30 g de 33Plus®, batir 5 segundos para espumar y servir a 4°C.",
+                ],
+            )
         ),
     )
 
@@ -7813,17 +7895,17 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
         ),
         main=_course(
-            title="Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso de Cabra y Queso Parmesano",
-            technique="aegean_sardine_goat_cheese_pepper_skillet_s47",
-            note="Escuela 7 (Mare Nostrum): cazuela mediterránea al sartén (sin horno) con 660 g de lomos de sardina para 6 comensales (agotando los 260 g de alacena + 400 g de mercado = 110 g/comensal), los últimos 120 g de queso de cabra (total = 200 g) y los últimos 60 g de queso parmesano (total = 100 g) de alacena.",
+            title="Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso Philadelphia y Queso Parmesano",
+            technique="aegean_sardine_philadelphia_pepper_skillet_s47",
+            note="Escuela 7 (Mare Nostrum): cazuela mediterránea al sartén (sin horno) con 660 g de lomos de sardina para 6 comensales (1,600 g en alacena -> 940 g saldo S48), 120 g de queso Philadelphia (relevo quirúrgico EGM de queso de cabra -> consumo pendiente total 320 g y 580 g saldo S48) y los últimos 60 g de queso parmesano (total pendiente = 100 g -> 0 g saldo S48) de alacena.",
             thermo="Salteado en sartén de hierro a 170°C.",
-            flavor="Sabor de las Islas Griegas con lomos de sardina, pimiento morrón asado, orégano, queso de cabra y parmesano.",
-            texture="Lomos jugosos con pimientos tiernos y medallones cremosos de queso de cabra.",
-            ccp="Descuenta al 100% las Sardinas de alacena (260 g -> 0 g saldo) y agota Queso de cabra (200 g) y Queso parmesano (100 g).",
+            flavor="Sabor de las Islas Griegas con lomos de sardina, pimiento morrón asado, orégano, queso Philadelphia y parmesano.",
+            texture="Lomos jugosos con pimientos tiernos y medallones cremosos de queso Philadelphia.",
+            ccp="Cubre al 100% desde alacena Sardinas (660 g -> 940 g saldo), Queso Philadelphia (120 g -> 580 g saldo) y Queso parmesano (60 g -> 0 g saldo).",
             archetype="heptagon_s47_sardina_egea_cabra_sarten",
             ingredients=[
                 _ing("Sardinas", 660, "g", CAT_PROT),
-                _ing("Queso de cabra", 120, "g", CAT_DAIRY),
+                _ing("Queso Philadelphia", 120, "g", CAT_DAIRY),
                 _ing("Queso parmesano", 60, "g", CAT_DAIRY),
                 _ing("Morrón", 3, "piezas", CAT_VEG),
                 _ing("Limones", 48, "g", CAT_VEG),
@@ -7833,33 +7915,66 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ],
             steps=[
                 "Asar y cortar en tiras los pimientos morrones y saltearlos en sartén con aceite de coco neutro, orégano y los 660 g de lomos de sardina.",
-                "Coronar en el sartén caliente con los últimos 120 g de queso de cabra, los 60 g de queso parmesano y jugo de limón real.",
+                "Coronar en el sartén caliente con los 120 g de queso Philadelphia, los 60 g de queso parmesano y jugo de limón real.",
             ],
         ),
         side=_course(
-            title="Vaso Cheesecake Deconstruido al Limón Real sobre Crumble Tostado de Coco y Nuez Pecana (6°C) con 34Plus®",
-            technique="deconstructed_lemon_cheesecake_coconut_pecan_crumble_34plus_s47",
-            serving_temp_c="6°C",
-            note="Preparado Funcional Nocturno 7/7 (Día 7 — 21 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): vaso cheesecake nocturno deconstruido en frío que agota exactamente los últimos 240 g de queso Philadelphia (120+240 g = 360 g -> 0 g saldo) y los últimos 240 g de yogur griego (total semanal = 2,000 g -> 0 g saldo) sobre crumble tostado de coco rallado sin azúcar y nuez pecana de la granja con 34Plus®.",
-            thermo="Crumble tostado en seco y crema batida en frío a 6°C.",
-            flavor="Cheesecake cítrico al limón real y vainilla sobre base tostada de coco y nuez pecana.",
-            texture="Contraste de crema sedosa de cheesecake con crumble crujiente a 6°C.",
-            ccp="Agota al 100% el Queso Philadelphia (360 g) y el Yogur griego (2,000 g) en alacena (0 g saldo, $0.00 MXN).",
+            title="Bombones Helados Mediterráneos de Coco Rallado, Nuez Pecana, Vainilla y Aceite de Coco (6°C) con 34Plus® + Infusión Limpia de Tomillo",
+            technique="chilled_coconut_pecan_bonbons_thyme_34plus_s47",
+            serving_temp_c="6°C / 58°C",
+            note="Preparado Funcional Nocturno 7/7 (Día 7 — 21 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bombones helados mediterráneos emulsionados en frío con 120 g de coco rallado de alacena, nuez pecana tostada de la granja, 30 g de aceite de coco neutro (saldo proyectado S48 = 644 g), vainilla y 34Plus®, acompañados de infusión digestiva limpia de tomillo.",
+            thermo="Moldeado en frío a 6°C (0% degradación térmica) con infusión limpia de tomillo a 58°C.",
+            flavor="Bombón fundente de coco tostado, nuez pecana y vainilla con eco herbal de tomillo.",
+            texture="Bocado sedoso y crujiente a 6°C acompañado de infusión cálida.",
+            ccp="100% cubierto en alacena (Coco rallado 120 g; Aceite de coco 30 g -> 644 g saldo S48; Tomillo 2 g) y 34Plus® (30 g) en frío.",
             ingredients=[
-                _ing("Queso Philadelphia", 240, "g", CAT_DAIRY),
-                _ing("Yogur griego", 240, "g", CAT_DAIRY),
-                _ing("Coco rallado sin azúcar", 60, "g", CAT_FAT),
-                _ing("Nuez pecana", 60, "g", CAT_FAT),
-                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Coco rallado", 120, "g", CAT_FAT),
+                _ing("Nuez pecana", 90, "g", CAT_FAT),
+                _ing("Aceite de coco", 30, "g", CAT_FAT),
                 _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                _ing("Tomillo", 2, "g", CAT_SPICE),
+                _ing("Agua purificada", 900, "ml", CAT_SPICE),
                 _ing("34Plus®", 30, "g", CAT_SUPP),
             ],
             steps=[
-                "Tostar ligeramente en sartén seco los 60 g de coco rallado sin azúcar con los 60 g de nuez pecana de la granja picada para formar la base de crumble en el fondo de 6 vasos.",
-                "Batir en frío los últimos 240 g de queso Philadelphia con los últimos 240 g de yogur griego, el jugo y ralladura de limón real, el extracto de vainilla y los 30 g de 34Plus®; montar sobre el crumble y refrigerar a 6°C.",
+                "Tostar ligeramente los 90 g de nuez pecana de la granja picada con los 120 g de coco rallado, emulsionar con los 30 g de aceite de coco neutro, el extracto de vainilla y los 30 g de 34Plus®, formar 12 bombones y refrigerar a 6°C.",
+                "Servir los bombones helados acompañados de una infusión limpia de tomillo elaborada con los 2 g de tomillo en los 900 ml de agua purificada.",
             ],
         ),
     )
+
+    if int(target_week) >= 51:
+        # En Semanas >= 51 (Ciclo C recurrente post-S47), restaurar Pollo entero = 1 pieza cruda y límite <= 2 servicios de mojarra ([R6])
+        for ing_d0 in d0_d["main"]["ingredients"]:
+            if ing_d0["name"] == "Pollo entero":
+                ing_d0["amount"] = 1
+                ing_d0["per_guest"] = round(1.0 / 6.0, 4)
+        d6_l["main"] = _course(
+            title="Pechuga de Pavo al Limone de la Trattoria Dorada en Mantequilla con Champiñones, Alcaparras y Aguacate Hass",
+            technique="trattoria_piccata_limone_turkey_s51",
+            note="Escuela 7 (Mare Nostrum): pechuga de pavo dorada en mantequilla al limón real con champiñones, alcaparras y aguacate Hass ([R5]).",
+            thermo="Dorado al sartén en mantequilla a 175°C.",
+            flavor="Piccata italiana al limón real con mantequilla, alcaparras y champiñones.",
+            texture="Medallones jugosos con champiñones dorados y aguacate.",
+            ccp="Cumple tope proteico semanal ([R6]) y única presencia diaria de aguacate ([R5]).",
+            archetype="heptagon_s51_pavo_piccata_limone",
+            ingredients=[
+                _ing("Pechuga de pavo", 900, "g", CAT_PROT),
+                _ing("Champiñón", 300, "g", CAT_VEG),
+                _ing("Aguacate", 1, "piezas", CAT_FAT),
+                _ing("Mantequilla", 60, "g", CAT_FAT),
+                _ing("Alcaparras", 20, "g", CAT_SPICE),
+                _ing("Limones", 48, "g", CAT_VEG),
+                _ing("Ajo", 5, "g", CAT_SPICE),
+                _ing("Sal de mar", 6, "g", CAT_SPICE),
+                _ing("Pimienta negra", 3, "g", CAT_SPICE),
+            ],
+            steps=[
+                "Dorar los 900 g de pechuga de pavo y los champiñones laminados en los 60 g de mantequilla con el ajo.",
+                "Integrar los 20 g de alcaparras y el jugo de limón real, y servir con abanico de aguacate Hass.",
+            ],
+        )
+        d6_l["main_dish_name"] = d6_l["main"]["title"]
 
     base_meals_by_school = [
         [d0_b, d0_l, d0_d],  # Escuela 1: Nizú
@@ -7933,6 +8048,652 @@ def export_heptagon_exchange_pool() -> Dict[str, List[Dict[str, Any]]]:
     return {"starters": starters, "mains": mains, "sides": sides}
 
 
+def _apply_future_heptagon_cycle_adjustments(
+    days_list: List[Dict[str, Any]],
+    cycle_id: str,
+    target_week: int,
+) -> List[Dict[str, Any]]:
+    """
+    Aplica para Semanas >= 48:
+      1. Bancos diversos de 14 preparados funcionales (7 × 33Plus® matutinos + 7 × 34Plus® nocturnos)
+         en los ciclos D (48, 52, 56...) y A (49, 53, 57...), preservando intactas S44 y S45.
+      2. Excepción única autorizada (Semanas 47 a 52 inclusive): entrega 1 vez por semana del
+         Ponche Navideño Clarificado de Manzana Deshidratada, Clavo de Olor, Canela Molida y Pimienta Negra (54°C) con 33Plus®
+         (programado exactamente el Viernes 25 de Diciembre en Semana 52 y cada Sábado en S47–S51; 0 apariciones en S53+).
+    """
+    tw = int(target_week)
+    CAT_SUPP = "💊 Suplementación Biotecnológica (4 Tomas Diarias)"
+    CAT_SPICE = "🧂 Condimentos, Especias e Infusiones"
+    CAT_FAT = "🥑 Grasas, Aceites y Semillas"
+    CAT_DAIRY = "🧀 Lácteos y Quesos (Sin Gluten — Keto)"
+    CAT_FRUIT = "🍓 Frutas de Bajo Índice Glucémico"
+    CAT_VEG = "🥬 Hortalizas y Verduras Cetogénicas"
+
+    if cycle_id == "D" and tw >= 48:
+        morning_d = [
+            _course(
+                title="Cappuccino Vegetal Frío de Coco Rallado, Canela y Vainilla (8°C) con 33Plus®",
+                technique="cold_coconut_cappuccino_33plus_s48",
+                serving_temp_c="8°C",
+                note="Preparado funcional matutino 1/7 con espuma fría de coco rallado y 33Plus®.",
+                thermo="Emulsión en frío a 8°C.",
+                flavor="Coco tostado, canela y vainilla.",
+                texture="Espuma aterciopelada a 8°C.",
+                ccp="Integrar 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Coco rallado", 90, "g", CAT_FAT),
+                    _ing("Canela molida", 3, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 900, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar el coco rallado con el agua purificada fría, la canela y la vainilla.",
+                    "Integrar los 30 g de 33Plus®, espumar 10 segundos y servir a 8°C.",
+                ],
+            ),
+            _course(
+                title="Tónico Botánico Frío de Flor de Jamaica, Anís Estrella y Romero de la Granja (6°C) con 33Plus®",
+                technique="hibiscus_star_anise_tonic_33plus_s48",
+                serving_temp_c="6°C",
+                note="Preparado funcional matutino 2/7 antioxidante en frío con 33Plus®.",
+                thermo="Infusión previa enfriada a 6°C.",
+                flavor="Jamaica rubí con anís estrella y romero.",
+                texture="Tónico cristalino a 6°C.",
+                ccp="Integrar 33Plus® (30 g) a 6°C.",
+                ingredients=[
+                    _ing("Flor de Jamaica molida en polvo", 24, "g", CAT_SPICE),
+                    _ing("Anís estrella", 3, "g", CAT_SPICE),
+                    _ing("Romero", 6, "g", CAT_VEG),
+                    _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar la jamaica con el anís estrella y el romero, colar y enfriar a 6°C.",
+                    "Disolver los 30 g de 33Plus® en frío y servir.",
+                ],
+            ),
+            _course(
+                title="Espuma Fría Frutal de Rubíes de Granada de la Granja, Albahaca y Limón Real (6°C) con 33Plus®",
+                technique="pomegranate_basil_cold_foam_33plus_s48",
+                serving_temp_c="6°C",
+                note="Preparado funcional matutino 3/7 aireado en frío con 33Plus®.",
+                thermo="Batido en frío a 6°C.",
+                flavor="Granada de la granja con hojas de albahaca.",
+                texture="Espuma ligera color rubí.",
+                ccp="Cero lácteos y 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Granadas", 180, "g", CAT_FRUIT),
+                    _ing("Albahaca", 12, "g", CAT_SPICE),
+                    _ing("Limones", 36, "g", CAT_VEG),
+                    _ing("Agua purificada", 720, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar brevemente los arilos de granada con la albahaca, el jugo de limón real y el agua purificada helada; colar semilla.",
+                    "Emulsionar los 30 g de 33Plus® hasta espumar a 6°C.",
+                ],
+            ),
+            _course(
+                title="Copa Crocante Matutina de Semillas Mixtas, Ajonjolí Tostado y Leche de Coco (8°C) con 33Plus®",
+                technique="crunchy_mixed_seeds_coconut_cup_33plus_s48",
+                serving_temp_c="8°C",
+                note="Preparado funcional matutino 4/7 de cuchara con semillas y 33Plus®.",
+                thermo="Servicio en frío a 8°C.",
+                flavor="Semillas mixtas y ajonjolí tostado en leche de coco.",
+                texture="Cremoso con crocancia de semillas.",
+                ccp="Integrar 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                    _ing("Ajonjolí", 30, "g", CAT_FAT),
+                    _ing("Leche de coco", 240, "ml", CAT_FAT),
+                    _ing("Agua purificada", 360, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Batir la leche de coco con el agua purificada fría y los 30 g de 33Plus®.",
+                    "Servir en copas a 8°C coronando con las semillas mixtas y el ajonjolí tostado.",
+                ],
+            ),
+            _course(
+                title="Granita Cristalina Cítrica de Limón Real de la Granja, Albahaca y Vainilla (2°C) con 33Plus®",
+                technique="citrus_basil_crystalline_granita_33plus_s48",
+                serving_temp_c="2°C",
+                note="Preparado funcional matutino 5/7 escarchado a 2°C con 33Plus®.",
+                thermo="Escarchado en frío a 2°C.",
+                flavor="Limón real de la granja y albahaca.",
+                texture="Cristales finos refrescantes.",
+                ccp="Integrar 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Limones", 90, "g", CAT_VEG),
+                    _ing("Albahaca", 12, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 900, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar el jugo de limón real con las hojas de albahaca, la vainilla y el agua helada.",
+                    "Incorporar los 30 g de 33Plus® y servir escarchado a 2°C.",
+                ],
+            ),
+            _course(
+                title="Infusión Matutina de Té Chai Especiado, Clavo de Olor y Canela (54°C) con 33Plus®",
+                technique="morning_chai_clove_infusion_33plus_s48",
+                serving_temp_c="54°C",
+                note="Preparado funcional matutino 6/7 especiado a 54°C con 33Plus®.",
+                thermo="Infusión a 90°C y templado a 54°C.",
+                flavor="Té chai, clavo de olor y canela.",
+                texture="Infusión aromática limpia.",
+                ccp="Templar a 54°C antes de disolver 33Plus® (30 g).",
+                ingredients=[
+                    _ing("Té chai", 12, "g", CAT_SPICE),
+                    _ing("Clavo de olor", 2, "g", CAT_SPICE),
+                    _ing("Canela molida", 3, "g", CAT_SPICE),
+                    _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el té chai con el clavo de olor y la canela en el agua purificada por 5 minutos y colar.",
+                    "Atemperar a 54°C e integrar los 30 g de 33Plus®.",
+                ],
+            ),
+            _course(
+                title="Gelatina Matutina de Frambuesas, Romero de la Granja y Limón Real (4°C) con 33Plus®",
+                technique="raspberry_rosemary_gelatin_33plus_s48",
+                serving_temp_c="4°C",
+                note="Preparado funcional matutino 7/7 en gel de colágeno a 4°C con 33Plus®.",
+                thermo="Disolución de grenetina y templado < 40°C antes de integrar 33Plus®.",
+                flavor="Frambuesas con romero de la granja.",
+                texture="Gel firme a 4°C.",
+                ccp="Integrar 33Plus® (30 g) por debajo de 40°C y refrigerar a 4°C.",
+                ingredients=[
+                    _ing("Frambuesas", 180, "g", CAT_FRUIT),
+                    _ing("Grenetina", 18, "g", CAT_SPICE),
+                    _ing("Romero", 4, "g", CAT_VEG),
+                    _ing("Agua purificada", 720, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Hidratar y fundir la grenetina en una fracción tibia de agua infusionada con romero; licuar el resto en frío con las frambuesas.",
+                    "Atemperar por debajo de 40°C, disolver los 30 g de 33Plus® y cuajar en copas a 4°C.",
+                ],
+            ),
+        ]
+        evening_d = [
+            _course(
+                title="Flan Frío Nocturno de Colágeno, Queso Cottage, Vainilla y Canela (6°C) con 34Plus®",
+                technique="cold_collagen_cottage_flan_34plus_s48",
+                serving_temp_c="6°C",
+                note="Preparado funcional nocturno 1/7 (0% Teína) rico en caseína lenta con 34Plus®.",
+                thermo="Cuajado en frío a 6°C.",
+                flavor="Queso cottage sedoso a la vainilla y canela.",
+                texture="Flan cremoso de cuchara a 6°C.",
+                ccp="Integrar 34Plus® (30 g) bajo 40°C.",
+                ingredients=[
+                    _ing("Queso cottage", 360, "g", CAT_DAIRY),
+                    _ing("Grenetina", 16, "g", CAT_SPICE),
+                    _ing("Canela molida", 3, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 480, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar el queso cottage hasta punto de seda con el agua purificada, la vainilla, la canela y la grenetina previamente hidratada y templada.",
+                    "Integrar los 30 g de 34Plus® y refrigerar en flaneras a 6°C.",
+                ],
+            ),
+            _course(
+                title="Tiramisú Cetogénico Deconstruido Nocturno de Queso Philadelphia, Nuez de la India y Cacao Puro (6°C) con 34Plus®",
+                technique="keto_caffeine_free_tiramisu_cup_34plus_s48",
+                serving_temp_c="6°C",
+                note="Preparado funcional nocturno 2/7 (0% Café, 0% Teína) con 34Plus®.",
+                thermo="Montaje en frío a 6°C.",
+                flavor="Crema mascarpone-estilo Philadelphia con nuez tostada y velo ligero de cacao puro.",
+                texture="Crema aireada sobre base de nuez a 6°C.",
+                ccp="0% café y 34Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Queso Philadelphia", 180, "g", CAT_DAIRY),
+                    _ing("Nuez de la India", 90, "g", CAT_FAT),
+                    _ing("Cacao 100% puro en polvo", 12, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 300, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Tostar y picar la nuez de la India como base en 6 copas.",
+                    "Batir en frío el queso Philadelphia con el agua purificada, la vainilla y los 30 g de 34Plus®; montar y espolvorear cacao puro.",
+                ],
+            ),
+            _course(
+                title="Emulsión de Ajonjolí Dorado, Nuez Pecana de la Granja y Anís Estrella (52°C) con 34Plus®",
+                technique="warm_sesame_pecan_anise_emulsion_34plus_s48",
+                serving_temp_c="52°C",
+                note="Preparado funcional nocturno 3/7 (0% Teína) tibio a 52°C con 34Plus®.",
+                thermo="Emulsión tibia a 52°C.",
+                flavor="Ajonjolí dorado, nuez pecana y anís estrella.",
+                texture="Bebida cremosa a 52°C.",
+                ccp="Templar a 52°C antes de integrar 34Plus® (30 g).",
+                ingredients=[
+                    _ing("Ajonjolí", 90, "g", CAT_FAT),
+                    _ing("Nuez pecana", 60, "g", CAT_FAT),
+                    _ing("Anís estrella", 3, "g", CAT_SPICE),
+                    _ing("Agua purificada", 960, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el anís estrella en agua purificada, colar a 52°C y licuar con el ajonjolí tostado y la nuez pecana.",
+                    "Integrar los 30 g de 34Plus® y servir a 52°C.",
+                ],
+            ),
+            _course(
+                title="Velouté Dulce Nocturno de Nuez de la India, Manzanilla y Vainilla (52°C) con 34Plus®",
+                technique="sweet_cashew_chamomile_veloute_34plus_s48",
+                serving_temp_c="52°C",
+                note="Preparado funcional nocturno 4/7 (0% Teína) sedante con manzanilla y 34Plus®.",
+                thermo="Infusión de manzanilla templada a 52°C.",
+                flavor="Nuez de la India sedosa con flor de manzanilla.",
+                texture="Velouté tibio ligero a 52°C.",
+                ccp="Templar a 52°C antes de disolver 34Plus® (30 g).",
+                ingredients=[
+                    _ing("Nuez de la India", 120, "g", CAT_FAT),
+                    _ing("Manzanilla", 12, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 960, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar la manzanilla en el agua purificada caliente por 5 minutos, colar y enfriar a 52°C.",
+                    "Licuar con la nuez de la India, la vainilla y los 30 g de 34Plus®.",
+                ],
+            ),
+            _course(
+                title="Horchata Nocturna de Coco Rallado, Almendra Fileteada y Clavo de Olor (8°C) con 34Plus®",
+                technique="coconut_almond_clove_horchata_34plus_s48",
+                serving_temp_c="8°C",
+                note="Preparado funcional nocturno 5/7 (0% Teína) refrescante a 8°C con 34Plus®.",
+                thermo="Licuado en frío a 8°C.",
+                flavor="Coco rallado, almendra y clavo de olor.",
+                texture="Horchata sedosa a 8°C.",
+                ccp="Integrar 34Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Coco rallado", 90, "g", CAT_FAT),
+                    _ing("Almendras fileteadas", 60, "g", CAT_FAT),
+                    _ing("Clavo de olor", 2, "g", CAT_SPICE),
+                    _ing("Agua purificada", 960, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el clavo de olor en 150 ml de agua, colar y mezclar con el resto del agua fría; licuar con coco rallado y almendras.",
+                    "Incorporar los 30 g de 34Plus® y servir a 8°C.",
+                ],
+            ),
+            _course(
+                title="Tisana Sedante Nocturna de Manzanilla, Anís Estrella y Romero de la Granja (55°C) con 34Plus®",
+                technique="chamomile_anise_rosemary_night_tisane_34plus_s48",
+                serving_temp_c="55°C",
+                note="Preparado funcional nocturno 6/7 (0% Teína) digestivo a 55°C con 34Plus®.",
+                thermo="Infusión herbal y templado a 55°C.",
+                flavor="Manzanilla, anís estrella y romero.",
+                texture="Infusión diáfana a 55°C.",
+                ccp="Templar a 55°C antes de integrar 34Plus® (30 g).",
+                ingredients=[
+                    _ing("Manzanilla", 12, "g", CAT_SPICE),
+                    _ing("Anís estrella", 3, "g", CAT_SPICE),
+                    _ing("Romero", 6, "g", CAT_VEG),
+                    _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar la manzanilla, el anís estrella y el romero en agua purificada por 5 minutos y colar.",
+                    "Atemperar a 55°C y disolver los 30 g de 34Plus®.",
+                ],
+            ),
+            _course(
+                title="Lassi Nocturno Sedante de Yogur Griego, Cúrcuma y Tomillo (8°C) con 34Plus®",
+                technique="night_yogurt_turmeric_thyme_lassi_34plus_s48",
+                serving_temp_c="8°C",
+                note="Preparado funcional nocturno 7/7 (0% Teína) probiótico con 34Plus®.",
+                thermo="Batido en frío a 8°C.",
+                flavor="Yogur griego, cúrcuma suave y tomillo.",
+                texture="Lassi cremoso a 8°C.",
+                ccp="Integrar 34Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Yogur griego", 420, "g", CAT_DAIRY),
+                    _ing("Cúrcuma", 6, "g", CAT_SPICE),
+                    _ing("Tomillo", 2, "g", CAT_SPICE),
+                    _ing("Agua purificada", 420, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el tomillo en 120 ml de agua, colar y enfriar; licuar con el yogur griego, la cúrcuma y el agua restante.",
+                    "Integrar los 30 g de 34Plus® y servir a 8°C.",
+                ],
+            ),
+        ]
+        for idx_d in range(7):
+            days_list[idx_d]["meals"][0]["side"] = copy.deepcopy(morning_d[idx_d])
+            days_list[idx_d]["meals"][0]["side_dish_name"] = morning_d[idx_d]["title"]
+            days_list[idx_d]["meals"][2]["side"] = copy.deepcopy(evening_d[idx_d])
+            days_list[idx_d]["meals"][2]["side_dish_name"] = evening_d[idx_d]["title"]
+
+    elif cycle_id == "A" and tw >= 49:
+        morning_a = [
+            _course(
+                title="Néctar Prensado en Frío de Fresas, Albahaca y Limón Real (6°C) con 33Plus®",
+                technique="cold_pressed_strawberry_basil_nectar_33plus_s49",
+                serving_temp_c="6°C",
+                note="Preparado funcional matutino 1/7 en frío con fresas, albahaca y 33Plus®.",
+                thermo="Prensado y licuado en frío a 6°C.",
+                flavor="Fresas, albahaca y limón real.",
+                texture="Néctar sedoso en frío.",
+                ccp="Integrar 33Plus® (30 g) a 6°C.",
+                ingredients=[
+                    _ing("Fresas", 180, "g", CAT_FRUIT),
+                    _ing("Albahaca", 12, "g", CAT_SPICE),
+                    _ing("Limones", 36, "g", CAT_VEG),
+                    _ing("Agua purificada", 780, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar en frío las fresas con las hojas de albahaca, el jugo de limón real y el agua purificada helada.",
+                    "Integrar los 30 g de 33Plus® y servir a 6°C.",
+                ],
+            ),
+            _course(
+                title="Batido Matutino de Nuez Pecana de la Granja, Leche de Coco y Canela (8°C) con 33Plus®",
+                technique="pecan_coconut_morning_smoothie_33plus_s49",
+                serving_temp_c="8°C",
+                note="Preparado funcional matutino 2/7 energético cetogénico con 33Plus®.",
+                thermo="Licuado en frío a 8°C.",
+                flavor="Nuez pecana tostada y leche de coco a la canela.",
+                texture="Batido cremoso a 8°C.",
+                ccp="Integrar 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Nuez pecana", 90, "g", CAT_FAT),
+                    _ing("Leche de coco", 240, "ml", CAT_FAT),
+                    _ing("Canela molida", 3, "g", CAT_SPICE),
+                    _ing("Agua purificada", 540, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar la nuez pecana tostada con la leche de coco fría, el agua purificada y la canela.",
+                    "Integrar los 30 g de 33Plus® y servir a 8°C.",
+                ],
+            ),
+            _course(
+                title="Gelatina Rubí de Rubíes de Granada de la Granja y Anís Estrella (4°C) con 33Plus®",
+                technique="pomegranate_star_anise_gelatin_33plus_s49",
+                serving_temp_c="4°C",
+                note="Preparado funcional matutino 3/7 de colágeno con 33Plus®.",
+                thermo="Cuajado a 4°C tras integrar 33Plus® bajo 40°C.",
+                flavor="Granada de la granja y anís estrella.",
+                texture="Gel cristalino a 4°C.",
+                ccp="Integrar 33Plus® (30 g) bajo 40°C.",
+                ingredients=[
+                    _ing("Granadas", 180, "g", CAT_FRUIT),
+                    _ing("Grenetina", 18, "g", CAT_SPICE),
+                    _ing("Anís estrella", 3, "g", CAT_SPICE),
+                    _ing("Agua purificada", 720, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el anís estrella, colar, disolver la grenetina hidratada y atemperar bajo 40°C.",
+                    "Integrar los 30 g de 33Plus®, disponer los arilos de granada en copas y refrigerar a 4°C.",
+                ],
+            ),
+            _course(
+                title="Lassi Matutino de Fresas, Yogur Griego y Romero de la Granja (6°C) con 33Plus®",
+                technique="strawberry_rosemary_yogurt_lassi_33plus_s49",
+                serving_temp_c="6°C",
+                note="Preparado funcional matutino 4/7 probiótico con 33Plus®.",
+                thermo="Emulsión en frío a 6°C.",
+                flavor="Fresas, yogur griego y eco herbal de romero.",
+                texture="Lassi cremoso a 6°C.",
+                ccp="Integrar 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Yogur griego", 420, "g", CAT_DAIRY),
+                    _ing("Fresas", 180, "g", CAT_FRUIT),
+                    _ing("Romero", 4, "g", CAT_VEG),
+                    _ing("Agua purificada", 420, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el romero en 100 ml de agua, colar y enfriar; licuar con el yogur griego, las fresas y el agua fría restante.",
+                    "Integrar los 30 g de 33Plus® y servir a 6°C.",
+                ],
+            ),
+            _course(
+                title="Horchata Matutina de Nuez de la India, Té Chai y Vainilla (8°C) con 33Plus®",
+                technique="cashew_chai_morning_horchata_33plus_s49",
+                serving_temp_c="8°C",
+                note="Preparado funcional matutino 5/7 especiado en frío con 33Plus®.",
+                thermo="Licuado en frío a 8°C.",
+                flavor="Nuez de la India con infusión fría de té chai.",
+                texture="Horchata aterciopelada a 8°C.",
+                ccp="Integrar 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Nuez de la India", 90, "g", CAT_FAT),
+                    _ing("Té chai", 10, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 900, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el té chai en 200 ml de agua caliente, colar y enfriar con los 700 ml restantes; licuar con la nuez de la India y vainilla.",
+                    "Integrar los 30 g de 33Plus® y servir a 8°C.",
+                ],
+            ),
+            _course(
+                title="Infusión Matutina de Flor de Jamaica, Clavo de Olor y Limón Real (54°C) con 33Plus®",
+                technique="hibiscus_clove_citrus_infusion_33plus_s49",
+                serving_temp_c="54°C",
+                note="Preparado funcional matutino 6/7 antioxidante tibio a 54°C con 33Plus®.",
+                thermo="Infusión y templado a 54°C.",
+                flavor="Jamaica rubí, clavo de olor y limón real.",
+                texture="Infusión limpia a 54°C.",
+                ccp="Templar a 54°C antes de integrar 33Plus® (30 g).",
+                ingredients=[
+                    _ing("Flor de Jamaica molida en polvo", 24, "g", CAT_SPICE),
+                    _ing("Clavo de olor", 2, "g", CAT_SPICE),
+                    _ing("Limones", 45, "g", CAT_VEG),
+                    _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar la jamaica y el clavo de olor en agua purificada, colar y atemperar a 54°C.",
+                    "Añadir jugo de limón real e integrar los 30 g de 33Plus®.",
+                ],
+            ),
+            _course(
+                title="Batido Esmeralda de Pistaches, Coco Rallado y Albahaca (6°C) con 33Plus®",
+                technique="pistachio_coconut_basil_smoothie_33plus_s49",
+                serving_temp_c="6°C",
+                note="Preparado funcional matutino 7/7 en frío con pistaches y 33Plus®.",
+                thermo="Licuado en frío a 6°C.",
+                flavor="Pistache tostado, coco y albahaca.",
+                texture="Batido sedoso a 6°C.",
+                ccp="Integrar 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Pistaches", 50, "g", CAT_FAT),
+                    _ing("Coco rallado", 60, "g", CAT_FAT),
+                    _ing("Albahaca", 10, "g", CAT_SPICE),
+                    _ing("Agua purificada", 840, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar en frío los pistaches con el coco rallado, las hojas de albahaca y el agua purificada.",
+                    "Integrar los 30 g de 33Plus® y servir a 6°C.",
+                ],
+            ),
+        ]
+        evening_a = [
+            _course(
+                title="Gelatina Nocturna Sedante de Manzanilla, Limón Real y Vainilla (4°C) con 34Plus®",
+                technique="chamomile_vanilla_night_gelatin_34plus_s49",
+                serving_temp_c="4°C",
+                note="Preparado funcional nocturno 1/7 (0% Teína) en gel de colágeno con 34Plus®.",
+                thermo="Cuajado a 4°C tras templar bajo 40°C.",
+                flavor="Flor de manzanilla, limón real y vainilla.",
+                texture="Gel suave a 4°C.",
+                ccp="Integrar 34Plus® (30 g) bajo 40°C.",
+                ingredients=[
+                    _ing("Manzanilla", 12, "g", CAT_SPICE),
+                    _ing("Grenetina", 18, "g", CAT_SPICE),
+                    _ing("Limones", 36, "g", CAT_VEG),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 840, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar la manzanilla, colar, fundir la grenetina hidratada y enfriar bajo 40°C con vainilla y jugo de limón.",
+                    "Disolver los 30 g de 34Plus® y refrigerar a 4°C.",
+                ],
+            ),
+            _course(
+                title="Batido Nocturno de Queso Cottage, Almendra Fileteada y Canela (8°C) con 34Plus®",
+                technique="cottage_almond_cinnamon_night_smoothie_34plus_s49",
+                serving_temp_c="8°C",
+                note="Preparado funcional nocturno 2/7 (0% Teína) de caseína lenta con 34Plus®.",
+                thermo="Licuado en frío a 8°C.",
+                flavor="Queso cottage sedoso, almendra tostada y canela.",
+                texture="Batido espeso a 8°C.",
+                ccp="Integrar 34Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Queso cottage", 360, "g", CAT_DAIRY),
+                    _ing("Almendras fileteadas", 50, "g", CAT_FAT),
+                    _ing("Canela molida", 3, "g", CAT_SPICE),
+                    _ing("Agua purificada", 480, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Licuar en frío el queso cottage con las almendras fileteadas, la canela y el agua purificada.",
+                    "Integrar los 30 g de 34Plus® y servir a 8°C.",
+                ],
+            ),
+            _course(
+                title="Horchata Tibia Nocturna de Semillas Mixtas, Anís Estrella y Vainilla (52°C) con 34Plus®",
+                technique="warm_mixed_seeds_anise_horchata_34plus_s49",
+                serving_temp_c="52°C",
+                note="Preparado funcional nocturno 3/7 (0% Teína) tibio a 52°C con 34Plus®.",
+                thermo="Emulsión a 52°C.",
+                flavor="Semillas mixtas con anís estrella y vainilla.",
+                texture="Horchata tibia reconfortante.",
+                ccp="Templar a 52°C antes de integrar 34Plus® (30 g).",
+                ingredients=[
+                    _ing("Semillas y nueces mixtas", 90, "g", CAT_FAT),
+                    _ing("Anís estrella", 3, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 960, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el anís estrella, colar a 52°C y licuar con las semillas y nueces mixtas y la vainilla.",
+                    "Integrar los 30 g de 34Plus® y servir a 52°C.",
+                ],
+            ),
+            _course(
+                title="Lassi Nocturno de Queso Philadelphia, Yogur Griego y Orégano Suave (8°C) con 34Plus®",
+                technique="philadelphia_yogurt_herb_night_lassi_34plus_s49",
+                serving_temp_c="8°C",
+                note="Preparado funcional nocturno 4/7 (0% Teína) cremoso en frío con 34Plus®.",
+                thermo="Batido en frío a 8°C.",
+                flavor="Queso Philadelphia y yogur griego con infusión suave de orégano y limón real.",
+                texture="Lassi sedoso a 8°C.",
+                ccp="Integrar 34Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Queso Philadelphia", 120, "g", CAT_DAIRY),
+                    _ing("Yogur griego", 240, "g", CAT_DAIRY),
+                    _ing("Orégano", 2, "g", CAT_SPICE),
+                    _ing("Limones", 30, "g", CAT_VEG),
+                    _ing("Agua purificada", 420, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el orégano en 100 ml de agua, colar y enfriar; licuar con el queso Philadelphia, el yogur griego, el limón y el agua restante.",
+                    "Integrar los 30 g de 34Plus® y servir a 8°C.",
+                ],
+            ),
+            _course(
+                title="Tisana Nocturna de Hojas de Albahaca, Clavo de Olor y Canela (54°C) con 34Plus®",
+                technique="basil_clove_cinnamon_night_tisane_34plus_s49",
+                serving_temp_c="54°C",
+                note="Preparado funcional nocturno 5/7 (0% Teína) relajante a 54°C con 34Plus®.",
+                thermo="Infusión herbal y templado a 54°C.",
+                flavor="Albahaca aromática, clavo de olor y canela.",
+                texture="Tisana limpia a 54°C.",
+                ccp="Templar a 54°C antes de integrar 34Plus® (30 g).",
+                ingredients=[
+                    _ing("Albahaca", 12, "g", CAT_SPICE),
+                    _ing("Clavo de olor", 2, "g", CAT_SPICE),
+                    _ing("Canela molida", 3, "g", CAT_SPICE),
+                    _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar las hojas de albahaca con el clavo de olor y la canela por 5 minutos y colar.",
+                    "Atemperar a 54°C y disolver los 30 g de 34Plus®.",
+                ],
+            ),
+            _course(
+                title="Tisana Nocturna del Bosque de Romero de la Granja, Tomillo y Cúrcuma (55°C) con 34Plus®",
+                technique="rosemary_thyme_turmeric_night_tisane_34plus_s49",
+                serving_temp_c="55°C",
+                note="Preparado funcional nocturno 6/7 (0% Teína) antiinflamatorio a 55°C con 34Plus®.",
+                thermo="Infusión herbal y templado a 55°C.",
+                flavor="Romero, tomillo y cúrcuma dorada.",
+                texture="Infusión cálida a 55°C.",
+                ccp="Templar a 55°C antes de integrar 34Plus® (30 g).",
+                ingredients=[
+                    _ing("Cúrcuma", 6, "g", CAT_SPICE),
+                    _ing("Romero", 6, "g", CAT_VEG),
+                    _ing("Tomillo", 2, "g", CAT_SPICE),
+                    _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar el romero y el tomillo con la cúrcuma en agua purificada por 5 minutos y colar.",
+                    "Atemperar a 55°C y disolver los 30 g de 34Plus®.",
+                ],
+            ),
+            _course(
+                title="Tisana Nocturna Mediterránea de Manzanilla, Hierbas Finas y Vainilla (54°C) con 34Plus®",
+                technique="chamomile_fine_herbs_vanilla_night_tisane_34plus_s49",
+                serving_temp_c="54°C",
+                note="Preparado funcional nocturno 7/7 (0% Teína) sedante a 54°C con 34Plus®.",
+                thermo="Infusión herbal y templado a 54°C.",
+                flavor="Manzanilla, hierbas finas y vainilla.",
+                texture="Infusión diáfana a 54°C.",
+                ccp="Templar a 54°C antes de integrar 34Plus® (30 g).",
+                ingredients=[
+                    _ing("Manzanilla", 12, "g", CAT_SPICE),
+                    _ing("Hierbas finas", 4, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 1080, "ml", CAT_SPICE),
+                    _ing("34Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar la manzanilla y las hierbas finas en agua purificada por 5 minutos, colar y atemperar a 54°C.",
+                    "Incorporar el extracto de vainilla y los 30 g de 34Plus®.",
+                ],
+            ),
+        ]
+        for idx_a in range(7):
+            days_list[idx_a]["meals"][0]["side"] = copy.deepcopy(morning_a[idx_a])
+            days_list[idx_a]["meals"][0]["side_dish_name"] = morning_a[idx_a]["title"]
+            days_list[idx_a]["meals"][2]["side"] = copy.deepcopy(evening_a[idx_a])
+            days_list[idx_a]["meals"][2]["side_dish_name"] = evening_a[idx_a]["title"]
+
+    # Programación semanal del Ponche Navideño 33Plus® (1x/semana de Semana 47 a Semana 52 inclusive)
+    if 48 <= tw <= 52:
+        # En Semana 52 (20 al 26 de Diciembre de 2026), d_idx=5 es Viernes 25 de Diciembre (Día de Navidad)
+        punch_day_idx = 5 if tw == 52 else 6
+        punch_course = _build_holiday_apple_punch_33plus_course()
+        days_list[punch_day_idx]["meals"][0]["side"] = punch_course
+        days_list[punch_day_idx]["meals"][0]["side_dish_name"] = punch_course["title"]
+
+    return days_list
+
+
 def generate_week_with_tilo_cortex(
     target_week: int,
     farm_harvest: Optional[List[str]] = None,
@@ -7957,40 +8718,51 @@ def generate_week_with_tilo_cortex(
         load_live_pantry_ssot,
     )
 
-    if int(target_week) >= 48:
+    tw = int(target_week)
+    if tw == 48:
+        live_ssot = load_live_pantry_ssot()
+        harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
+        if pantry_stock is not None:
+            pantry = pantry_stock
+        else:
+            from app.services.pantry_ssot_sync import compute_projected_week_closing_stock
+            proj_s47 = compute_projected_week_closing_stock(live_state=live_ssot.get("raw_state"))
+            pantry = proj_s47["auditorPantryStock"]
+    elif tw > 48:
         live_ssot = load_live_pantry_ssot()
         harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
         pantry = pantry_stock if pantry_stock is not None else live_ssot["auditor_pantry"]
-    elif int(target_week) == 47:
+    elif tw == 47:
         live_ssot = load_live_pantry_ssot()
         harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
         pantry = pantry_stock if pantry_stock is not None else S47_HISTORICAL_PANTRY_STOCK
-    elif int(target_week) == 46:
+    elif tw == 46:
         live_ssot = load_live_pantry_ssot()
         harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
         pantry = pantry_stock if pantry_stock is not None else S46_HISTORICAL_PANTRY_STOCK
-    elif int(target_week) == 45:
+    elif tw == 45:
         live_ssot = load_live_pantry_ssot()
         harvest = farm_harvest if farm_harvest is not None else live_ssot["farm_harvest"]
         pantry = pantry_stock if pantry_stock is not None else S45_HISTORICAL_PANTRY_STOCK
     else:
         harvest = farm_harvest if farm_harvest is not None else DEFAULT_FARM_HARVEST
         pantry = pantry_stock if pantry_stock is not None else S43_S44_HISTORICAL_PANTRY_STOCK
-    meta = compute_week_dates(target_week)
-    cycle_id = get_cycle_id_for_week(target_week)
+    meta = compute_week_dates(tw)
+    cycle_id = get_cycle_id_for_week(tw)
 
-    if int(target_week) <= 44:
+    if tw <= 44:
         days_list = _build_cycle_d_canonical_days(meta["day_entries"])
-    elif int(target_week) == 45:
-        days_list = _build_heptagon_cycle_a_days(meta["day_entries"], int(target_week))
-    elif int(target_week) == 46:
-        days_list = _build_heptagon_cycle_b_days(meta["day_entries"], int(target_week))
-    elif int(target_week) >= 47 and (int(target_week) - 45) % 3 == 2:
-        days_list = _build_heptagon_cycle_c_days(meta["day_entries"], int(target_week))
-    elif int(target_week) % 2 == 1:
-        days_list = _build_heptagon_cycle_a_days(meta["day_entries"], int(target_week))
+    elif cycle_id == "A":
+        days_list = _build_heptagon_cycle_a_days(meta["day_entries"], tw)
+    elif cycle_id == "B":
+        days_list = _build_heptagon_cycle_b_days(meta["day_entries"], tw)
+    elif cycle_id == "C":
+        days_list = _build_heptagon_cycle_c_days(meta["day_entries"], tw)
     else:
-        days_list = _build_heptagon_cycle_b_days(meta["day_entries"], int(target_week))
+        days_list = _build_cycle_d_canonical_days(meta["day_entries"])
+
+    if tw >= 48:
+        days_list = _apply_future_heptagon_cycle_adjustments(days_list, cycle_id, tw)
 
     week_plan = {
         "week_name": meta["week_name"],
@@ -7999,8 +8771,8 @@ def generate_week_with_tilo_cortex(
         "date_range": meta["date_range"],
         "diners_count": diners_count,
         "cycle_id": cycle_id,
-        "heptagon_v17": int(target_week) >= 45,
-        "culinary_schools": list(SEVEN_CULINARY_SCHOOLS.keys()) if int(target_week) >= 45 else [],
+        "heptagon_v17": tw >= 45,
+        "culinary_schools": list(SEVEN_CULINARY_SCHOOLS.keys()) if tw >= 45 else [],
         "days": days_list,
         "selected_harvest": list(harvest),
     }
@@ -8012,6 +8784,7 @@ def generate_week_with_tilo_cortex(
         farm_harvest=harvest,
         enforce_pantry_overdraft=True,
         prev_week_data=prev_week,
+        history_weeks=history_weeks,
     )
     week_plan["hard_gate_audit"] = report
     return week_plan

@@ -1,16 +1,17 @@
 {
-  "ssot_version": "v68_consolidated_nov19_2026_synced",
+  "ssot_version": "v69_ponche_navideno_33plus_synced",
   "v63_sams_09nov2026_post_s45_sync": true,
   "v64_cierre_s46_14nov2026_sync": true,
   "v65_ui_audit_nov14_sync": true,
   "v68_consolidated_19nov2026_sync": true,
+  "v69_ponche_navideno_33plus_sync": true,
   "sams_ticket_order": "1569462808300642304 + Consolidado 19-Nov-2026",
   "sams_ticket_date": "2026-11-19",
   "sams_ticket_store": "Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local",
   "sams_ticket_total_mxn": 5127.48,
-  "extracted_from": "Google Chrome LocalStorage LevelDB (017105.ldb, seq=286761)",
+  "extracted_from": "Google Chrome LocalStorage LevelDB (017115.ldb, seq=286761)",
   "leveldb_seq": 286761,
-  "updated_at": "2026-11-19T12:10:42.005544",
+  "updated_at": "2026-11-19T15:05:25.260501",
   "activeWeek": "Semana 47 (15 al 21 de Noviembre de 2026)",
   "activeDiners": 6,
   "selectedHarvest": [
@@ -165,6 +166,8 @@
     "Queso doble crema": 0,
     "Albahaca fresca": 100,
     "Coco rallado": 300,
+    "Manzana deshidratada": 300,
+    "Mezcla navideña molida de manzana deshidratada y especias": 300,
     "Anís estrella": 50,
     "Chile serrano": 250
   },
@@ -284,6 +287,8 @@
     "Queso doble crema": "g",
     "Albahaca fresca": "g",
     "Coco rallado": "g",
+    "Manzana deshidratada": "g",
+    "Mezcla navideña molida de manzana deshidratada y especias": "g",
     "Anís estrella": "g",
     "Chile serrano": "g"
   },
@@ -625,6 +630,14 @@
       "g"
     ],
     "Coco rallado": [
+      300.0,
+      "g"
+    ],
+    "Manzana deshidratada": [
+      300.0,
+      "g"
+    ],
+    "Mezcla navideña molida de manzana deshidratada y especias": [
       300.0,
       "g"
     ],
@@ -1400,6 +1413,105 @@
           "isFarm": false
         }
       ]
+    }
+  },
+  "checkedInMeals": {
+    "Semana 47 (15 al 21 de Noviembre de 2026)": {
+      "day_0_Desayuno": true,
+      "day_0_Comida": true,
+      "day_0_Cena": true,
+      "day_1_Desayuno": true,
+      "day_1_Comida": true,
+      "day_1_Cena": true,
+      "day_2_Desayuno": true,
+      "day_2_Comida": true,
+      "day_2_Cena": true,
+      "day_3_Desayuno": true,
+      "day_3_Comida": true,
+      "day_3_Cena": true,
+      "day_4_Desayuno": true
+    }
+  },
+  "deductedMealIds": {
+    "Semana 47 (15 al 21 de Noviembre de 2026)": {
+      "day_0_Desayuno": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_0_Comida": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_0_Cena": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_1_Desayuno": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_1_Comida": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_1_Cena": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_2_Desayuno": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_2_Comida": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_2_Cena": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_3_Desayuno": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_3_Comida": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_3_Cena": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      },
+      "day_4_Desayuno": {
+        "diners": 6,
+        "timestamp": "2026-11-19T09:30:00-06:00",
+        "preAccounted": true,
+        "items": []
+      }
     }
   },
   "mealDinersState": {

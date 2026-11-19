@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Lightweight Pass-Through & Legacy Cache Cleanup
-const CACHE_NAME = 'nutriketo-v36-6-rev24-nov19-consolidated-ssot';
+const CACHE_NAME = 'nutriketo-v36-6-rev25-egm-pending-rollover';
 
 self.addEventListener('install', () => {
   self.skipWaiting();

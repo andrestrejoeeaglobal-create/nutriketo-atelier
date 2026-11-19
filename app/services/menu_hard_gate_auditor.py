@@ -189,6 +189,9 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "aceite de coco",
     "nuez de la india",
     "nuez pecana",
+    "semillas y nueces mixtas",
+    "nueces mixtas",
+    "piernas de pollo",
     "almendras fileteadas",
     "pistaches",
     "cacao nibs",
@@ -213,6 +216,8 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "semilla de calabaza",
     "coco rallado sin azucar",
     "coco rallado",
+    "manzana deshidratada",
+    "mezcla navidena molida",
     "te chai",
     "canela molida",
     "curcuma",
@@ -432,6 +437,8 @@ DEFAULT_PANTRY_STOCK.update(
         "Aceitunas manzanilla": (0.0, "g"),
         "Botella de agua": (140.0, "piezas"),
         "Chile güero": (0.0, "g"),
+        "Manzana deshidratada": (300.0, "g"),
+        "Mezcla navideña molida de manzana deshidratada y especias": (300.0, "g"),
         "33Plus®": (0.0, "g"),
         "34Plus®": (0.0, "g"),
     }
@@ -498,6 +505,8 @@ DEFAULT_PANTRY_STOCK.update(
         "Mayonesa": (1100.0, "g"),
         "Grenetina": (168.0, "g"),
         "Coco rallado": (300.0, "g"),
+        "Manzana deshidratada": (300.0, "g"),
+        "Mezcla navideña molida de manzana deshidratada y especias": (300.0, "g"),
         "Ajonjolí": (200.0, "g"),
         "Anís estrella": (50.0, "g"),
         "Botella de agua": (160.0, "piezas"),
@@ -658,8 +667,9 @@ def save_live_pantry_ssot(payload: Dict[str, Any]) -> Dict[str, Any]:
         if key in payload and payload[key] is not None:
             merged[key] = payload[key]
 
-    merged["ssot_version"] = "v68_consolidated_nov19_2026_synced"
+    merged["ssot_version"] = "v69_ponche_navideno_33plus_synced"
     merged["v68_consolidated_19nov2026_sync"] = True
+    merged["v69_ponche_navideno_33plus_sync"] = True
     merged["updated_at"] = datetime.now().isoformat()
 
     # Reconstruir auditorPantryStock limpio desde pantryStock
@@ -690,7 +700,7 @@ def save_live_pantry_ssot(payload: Dict[str, Any]) -> Dict[str, Any]:
             pcu["Pepino"] = "g"
         elif c_name == "Coliflor" and u == "kg" and q == 500.0:
             aud_stock[c_name] = [500.0, "g"]
-        elif c_name in ("Coliflor", "Brócoli", "Calabacitas", "Apio", "Aceite de coco", "Albahaca fresca", "Coco rallado", "Anís estrella"):
+        elif c_name in ("Coliflor", "Brócoli", "Calabacitas", "Apio", "Aceite de coco", "Albahaca fresca", "Coco rallado", "Anís estrella", "Manzana deshidratada"):
             aud_stock[c_name] = [q, "g"]
             pcu[c_name] = "g"
         elif c_name == "Botella de agua":
@@ -1596,6 +1606,30 @@ def compute_dish_jaccard_similarity(dish_a: Dict[str, Any], dish_b: Dict[str, An
     return len(fa & fb) / float(union_len)
 
 
+HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE = "holiday_clarified_apple_clove_punch_33plus"
+
+
+def is_holiday_christmas_punch_exempt(course: Optional[Dict[str, Any]], curr_wnum: int) -> bool:
+    """
+    Excepción única autorizada por el usuario (19 Nov 2026):
+    El 'Ponche Navideño Clarificado de Manzana Deshidratada, Clavo de Olor, Canela Molida y Pimienta Negra (54°C) con 33Plus®'
+    puede entregarse UNA VEZ POR SEMANA de aquí a Navidad (Semanas 47 a 52 inclusive: 15 Nov al 26 Dic 2026),
+    omitiendo la regla inter-semanal de no repetición exclusivamente para esta receta.
+    - Mantiene estricta la no-repetición intra-semanal (máximo 1 vez por semana).
+    - Expira automáticamente a partir de la Semana 53 (27 Dic 2026 en adelante).
+    """
+    if not course or not isinstance(course, dict):
+        return False
+    if not (47 <= int(curr_wnum) <= 52):
+        return False
+    tech = _strip_accents(course.get("technique") or course.get("cooking_technique") or "")
+    if tech == HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE:
+        return True
+    title_n = _strip_accents(course.get("title") or course.get("name") or "")
+    ings_n = " | ".join(_strip_accents(i.get("name") or "") for i in (course.get("ingredients") or []))
+    return "ponche navideno" in title_n and "manzana deshidratada" in ings_n
+
+
 def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
     """
     [R10-DNA] Calcula la huella física de 3 dimensiones de un Preparado Funcional
@@ -1609,10 +1643,36 @@ def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
     full = f"{t_tech} {ings_txt}"
 
     # 1. Formato / Vehículo
-    if any(w in t_tech for w in ("sorbete", "nice-cream", "nice cream")):
+    if "ponche navideno" in t_tech or HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE in tech:
+        fmt = "ponche_navideno"
+    elif any(w in t_tech for w in ("sorbete", "nice-cream", "nice cream")):
         fmt = "sorbete_nice_cream"
     elif "iced matcha" in t_tech or ("matcha" in full and "espuma" in t_tech):
         fmt = "iced_matcha_espuma"
+    elif "cappuccino vegetal" in t_tech or "cappuccino" in t_tech:
+        fmt = "cappuccino_vegetal"
+    elif "tonic botanico" in t_tech or "tonico botanico" in t_tech:
+        fmt = "tonic_botanico"
+    elif "flan frio" in t_tech:
+        fmt = "flan_frio_colageno"
+    elif "tiramisu" in t_tech:
+        fmt = "tiramisu_keto"
+    elif "crema catalana" in t_tech:
+        fmt = "crema_catalana_keto"
+    elif "espuma fria" in t_tech:
+        fmt = "espuma_fria_frutal"
+    elif "emulsion de ajonjoli" in t_tech or "emulsion ajonjoli" in t_tech:
+        fmt = "emulsion_ajonjoli"
+    elif "nectar prensado" in t_tech:
+        fmt = "nectar_prensado"
+    elif "copa crocante" in t_tech:
+        fmt = "copa_semillas_crocante"
+    elif "veloute dulce" in t_tech:
+        fmt = "veloute_dulce_nuez"
+    elif "granita cristalina" in t_tech:
+        fmt = "granita_cristalina"
+    elif "bombones helados" in t_tech:
+        fmt = "bombones_frios"
     elif any(w in t_tech for w in ("batido", "smoothie")):
         fmt = "batido_smoothie"
     elif any(w in t_tech for w in ("porridge", "no-oats")):
@@ -1665,6 +1725,7 @@ def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
     # 2. Ingrediente Base Principal
     base = "agua_botanica"
     for b_key, b_pats in [
+        ("manzana_deshidratada", ["manzana deshidratada"]),
         ("te_matcha", ["matcha"]),
         ("rooibos_rojo", ["rooibos"]),
         ("corazones_canamo_linaza", ["canamo", "linaza"]),
@@ -1673,6 +1734,7 @@ def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
         ("hojas_higo", ["hojas de higo", "hoja de higo"]),
         ("semilla_calabaza", ["semilla de calabaza", "pepita"]),
         ("tahini_ajonjoli", ["tahini"]),
+        ("ajonjoli", ["ajonjoli"]),
         ("mora_azul", ["mora azul", "blueberry"]),
         ("aguacate", ["aguacate"]),
         ("pistaches", ["pistache"]),
@@ -1685,6 +1747,9 @@ def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
         ("yogur_griego", ["yogur"]),
         ("nuez_india", ["nuez de la india"]),
         ("nuez_pecana", ["nuez pecana"]),
+        ("semillas_mixtas", ["semillas y nueces mixtas", "nueces mixtas"]),
+        ("coco_rallado", ["coco rallado"]),
+        ("granada", ["granada"]),
         ("frambuesas", ["frambuesa"]),
         ("zarzamora", ["zarzamora"]),
         ("fresas", ["fresa"]),
@@ -1924,6 +1989,7 @@ def audit_week_plan(
     prev_week_data: Optional[Dict[str, Any]] = None,
     feedback_ledger: Optional[List[Dict[str, Any]]] = None,
     meal_diners_state: Optional[Dict[str, Any]] = None,
+    history_weeks: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """
     Ejecuta la auditoría forense completa [R1]–[R11] sobre `week_data`.
@@ -1937,9 +2003,9 @@ def audit_week_plan(
     violations: List[str] = []
     w_full_label = str(week_data.get("week_label") or week_data.get("week_name") or "")
     w_lbl_early = _strip_accents(w_full_label)
-    is_s45_or_later = bool(week_data.get("heptagon_v17")) or any(
-        tag in w_lbl_early for tag in ("semana 45", "semana 46", "semana 47")
-    )
+    m_wnum_early = re.search(r"semana\s+(\d+)", w_lbl_early)
+    curr_wnum_early = int(m_wnum_early.group(1)) if m_wnum_early else (45 if bool(week_data.get("heptagon_v17")) else 44)
+    is_s45_or_later = bool(week_data.get("heptagon_v17")) or curr_wnum_early >= 45
     live_ssot_loaded = load_live_pantry_ssot() if is_s45_or_later else None
     if pantry_stock is not None:
         pantry = pantry_stock
@@ -2088,8 +2154,7 @@ def audit_week_plan(
                     c_role == "side"
                     and _strip_accents(m_type) == "desayuno"
                     and (
-                        "semana 46" in w_lbl_early
-                        or "semana 47" in w_lbl_early
+                        curr_wnum_early >= 46
                         or "parfait" in title_and_ings_text
                         or "mousse" in title_and_ings_text
                     )
@@ -2348,7 +2413,7 @@ def audit_week_plan(
         weekly_carbs_g += day_carbs
 
     # [R8] Exigencia de mínimo 5 Gelatinas de Grenetina con 33Plus® por semana en acompañamiento matutino (S43-S45; en S46+ se exigen 7 preparados matutinos diversos)
-    if "semana 46" not in w_lbl_early and "semana 47" not in w_lbl_early and weekly_breakfast_gelatinas_count < 5:
+    if curr_wnum_early < 46 and weekly_breakfast_gelatinas_count < 5:
         violations.append(
             f"[R8] El acompañamiento matutino debe incluir mínimo 5 Gelatinas Artesanales de Grenetina con 33Plus® (4°C) por semana (encontradas: {weekly_breakfast_gelatinas_count})."
         )
@@ -2468,15 +2533,17 @@ def audit_week_plan(
                         cm_st = _strip_accents((cm.get("starter") or {}).get("title") or "")
                         pm_sd = _strip_accents((pm.get("side") or {}).get("title") or "")
                         cm_sd = _strip_accents((cm.get("side") or {}).get("title") or "")
+                        punch_exempt_r10 = is_holiday_christmas_punch_exempt(cm.get("side") or {}, curr_wnum_early)
+                        same_side_r10 = bool(pm_sd and pm_sd == cm_sd and not punch_exempt_r10)
                         same_main_title = bool(pm_title and pm_title == cm_title)
                         same_arch_on_same_weekday = bool(
-                            pm_arch and pm_arch == cm_arch and (is_week_44_plus or pm_st == cm_st or pm_sd == cm_sd)
+                            pm_arch and pm_arch == cm_arch and (is_week_44_plus or pm_st == cm_st or same_side_r10)
                         )
                         if same_main_title or same_arch_on_same_weekday:
                             violations.append(
                                 f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite el mismo plato fuerte o arquetipo ('{cm_main.get('title')}') en el mismo día de la semana que en la semana inmediata anterior."
                             )
-                        if pm_st and pm_sd and pm_st == cm_st and pm_sd == cm_sd:
+                        if pm_st and same_side_r10 and pm_st == cm_st:
                             violations.append(
                                 f"[R10] Anti-Clonación Inter-Semanal ({d_label} - {m_label}): Repite el misma combinación Entrada+Guarnición en el mismo día de la semana que en la semana inmediata anterior."
                             )
@@ -2501,8 +2568,21 @@ def audit_week_plan(
         rolling_prev_weeks: List[Tuple[str, Dict[str, Any]]] = []
         m_wnum = re.search(r"semana\s+(\d+)", w_lbl_early)
         curr_wnum = int(m_wnum.group(1)) if m_wnum else (45 if bool(week_data.get("heptagon_v17")) else 44)
-        w_nums_to_check = tuple(range(max(40, curr_wnum - 4), curr_wnum))
+        if curr_wnum <= 47:
+            w_nums_to_check = tuple(range(max(40, curr_wnum - 4), curr_wnum))
+        else:
+            w_nums_to_check = tuple(range(max(44, curr_wnum - 3), curr_wnum))
+        in_mem_by_num: Dict[int, Dict[str, Any]] = {}
+        for hw_cand in list(history_weeks or []) + ([prev_week_data] if isinstance(prev_week_data, dict) else []):
+            if isinstance(hw_cand, dict):
+                hw_lbl = _strip_accents(str(hw_cand.get("week_label") or hw_cand.get("week_name") or ""))
+                m_hw = re.search(r"semana\s+(\d+)", hw_lbl)
+                if m_hw:
+                    in_mem_by_num[int(m_hw.group(1))] = hw_cand
         for w_num in w_nums_to_check:
+            if w_num in in_mem_by_num:
+                rolling_prev_weeks.append((f"S{w_num}", in_mem_by_num[w_num]))
+                continue
             w_path = root_dir / f"semana_{w_num}_master.json"
             if w_path.exists():
                 try:
@@ -2606,27 +2686,29 @@ def audit_week_plan(
                                     )
                             seen_func_courses_intra.append((loc_f, c_side))
 
-                            for w_tag, pw_data in func_prev_weeks:
-                                for pd_obj in pw_data.get("days", []):
-                                    pd_name = pd_obj.get("day", "")
-                                    p_meals_list = pd_obj.get("meals", [])
-                                    if len(p_meals_list) == 3:
-                                        for pm_idx, pm_label in [(0, "Desayuno"), (2, "Cena")]:
-                                            p_side = p_meals_list[pm_idx].get("side") or {}
-                                            f_dna_p = compute_functional_prep_dna(p_side)
-                                            if f_dna_c == f_dna_p or (
-                                                f_dna_c[0] == f_dna_p[0]
-                                                and f_dna_c[0] not in ("tisana_infusion", "gelatina")
-                                            ):
-                                                violations.append(
-                                                    f"[R10-DNA] Colisión de Preparado Funcional en Ventana de 4 Semanas {f_dna_c} en {loc_f} ('{c_side.get('title')}') contra {w_tag} {pd_name} {pm_label} ('{p_side.get('title')}' {f_dna_p})."
-                                                )
-                                            else:
-                                                jac_f = compute_functional_prep_jaccard_similarity(c_side, p_side)
-                                                if jac_f >= 0.45:
+                            # Excepción única autorizada: Ponche Navideño 33Plus® (1x/semana en S47–S52 hasta Navidad)
+                            if not is_holiday_christmas_punch_exempt(c_side, curr_wnum):
+                                for w_tag, pw_data in func_prev_weeks:
+                                    for pd_obj in pw_data.get("days", []):
+                                        pd_name = pd_obj.get("day", "")
+                                        p_meals_list = pd_obj.get("meals", [])
+                                        if len(p_meals_list) == 3:
+                                            for pm_idx, pm_label in [(0, "Desayuno"), (2, "Cena")]:
+                                                p_side = p_meals_list[pm_idx].get("side") or {}
+                                                f_dna_p = compute_functional_prep_dna(p_side)
+                                                if f_dna_c == f_dna_p or (
+                                                    f_dna_c[0] == f_dna_p[0]
+                                                    and f_dna_c[0] not in ("tisana_infusion", "gelatina", "lassi", "horchata", "batido_smoothie")
+                                                ):
                                                     violations.append(
-                                                        f"[R10-DNA] Violación de Similitud Jaccard en Preparado Funcional (J={jac_f:.2f} >= 0.45) en {loc_f} ('{c_side.get('title')}') contra {w_tag} {pd_name} {pm_label} ('{p_side.get('title')}')."
+                                                        f"[R10-DNA] Colisión de Preparado Funcional en Ventana de 4 Semanas {f_dna_c} en {loc_f} ('{c_side.get('title')}') contra {w_tag} {pd_name} {pm_label} ('{p_side.get('title')}' {f_dna_p})."
                                                     )
+                                                else:
+                                                    jac_f = compute_functional_prep_jaccard_similarity(c_side, p_side)
+                                                    if jac_f >= 0.45:
+                                                        violations.append(
+                                                            f"[R10-DNA] Violación de Similitud Jaccard en Preparado Funcional (J={jac_f:.2f} >= 0.45) en {loc_f} ('{c_side.get('title')}') contra {w_tag} {pd_name} {pm_label} ('{p_side.get('title')}')."
+                                                        )
 
     # [R12] Compuerta de Invariante Estricta de 126 Huevos Semanales (7 desayunos x 18 huevos; 0 en comida/cena)
     total_weekly_eggs = bom_totals.get("huevo", {}).get("total", 0.0)
@@ -2884,6 +2966,7 @@ def assert_zero_violations(
     prev_week_data: Optional[Dict[str, Any]] = None,
     feedback_ledger: Optional[List[Dict[str, Any]]] = None,
     meal_diners_state: Optional[Dict[str, Any]] = None,
+    history_weeks: Optional[List[Dict[str, Any]]] = None,
 ) -> Dict[str, Any]:
     """
     Compuerta Dura (Hard-Gate) de Compilación:
@@ -2897,6 +2980,7 @@ def assert_zero_violations(
         prev_week_data=prev_week_data,
         feedback_ledger=feedback_ledger,
         meal_diners_state=meal_diners_state,
+        history_weeks=history_weeks,
     )
     if not report["passed"]:
         w_label = week_data.get("week_label") or week_data.get("week_name") or "Semana Desconocida"
@@ -2959,7 +3043,7 @@ def generate_validated_week_plan(
                 return s44_data
             except Exception:
                 pass
-    if next_week_num in (45, 46, 47) and not feedback_ledger and pantry_stock is None:
+    if next_week_num >= 45 and not feedback_ledger and pantry_stock is None:
         try:
             from app.services.tilo_menu_cortex import generate_week_with_tilo_cortex
             prev_w = prev_week_data
@@ -2967,6 +3051,8 @@ def generate_validated_week_plan(
                 prev_file = Path(__file__).resolve().parents[2] / f"semana_{next_week_num - 1}_master.json"
                 if prev_file.exists():
                     prev_w = json.loads(prev_file.read_text(encoding="utf-8"))
+                elif next_week_num > 45:
+                    prev_w = generate_week_with_tilo_cortex(next_week_num - 1)
                 else:
                     prev_w = base_week_data
             return generate_week_with_tilo_cortex(next_week_num, history_weeks=[prev_w] if prev_w else [])
