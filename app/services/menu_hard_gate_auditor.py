@@ -216,6 +216,8 @@ KNOWN_MARKET_PURCHASE_ITEMS = {
     "semilla de calabaza",
     "coco rallado sin azucar",
     "coco rallado",
+    "premezcla navidena de manzana y especias",
+    "premezcla navidena",
     "manzana deshidratada",
     "mezcla navidena molida",
     "te chai",
@@ -437,8 +439,7 @@ DEFAULT_PANTRY_STOCK.update(
         "Aceitunas manzanilla": (0.0, "g"),
         "Botella de agua": (140.0, "piezas"),
         "Chile güero": (0.0, "g"),
-        "Manzana deshidratada": (300.0, "g"),
-        "Mezcla navideña molida de manzana deshidratada y especias": (300.0, "g"),
+        "Premezcla navideña de manzana y especias": (250.0, "g"),
         "33Plus®": (0.0, "g"),
         "34Plus®": (0.0, "g"),
     }
@@ -505,8 +506,7 @@ DEFAULT_PANTRY_STOCK.update(
         "Mayonesa": (1100.0, "g"),
         "Grenetina": (168.0, "g"),
         "Coco rallado": (300.0, "g"),
-        "Manzana deshidratada": (300.0, "g"),
-        "Mezcla navideña molida de manzana deshidratada y especias": (300.0, "g"),
+        "Premezcla navideña de manzana y especias": (250.0, "g"),
         "Ajonjolí": (200.0, "g"),
         "Anís estrella": (50.0, "g"),
         "Botella de agua": (160.0, "piezas"),
@@ -1606,16 +1606,20 @@ def compute_dish_jaccard_similarity(dish_a: Dict[str, Any], dish_b: Dict[str, An
     return len(fa & fb) / float(union_len)
 
 
-HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE = "holiday_clarified_apple_clove_punch_33plus"
+HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE = "ruby_christmas_apple_punch_33plus_s47"
+HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUES = {
+    "ruby_christmas_apple_punch_33plus_s47",
+    "holiday_clarified_apple_clove_punch_33plus",
+}
 
 
 def is_holiday_christmas_punch_exempt(course: Optional[Dict[str, Any]], curr_wnum: int) -> bool:
     """
-    Excepción única autorizada por el usuario (19 Nov 2026):
-    El 'Ponche Navideño Clarificado de Manzana Deshidratada, Clavo de Olor, Canela Molida y Pimienta Negra (54°C) con 33Plus®'
+    Excepción única autorizada por el usuario (19–20 Nov 2026):
+    El 'Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®'
     puede entregarse UNA VEZ POR SEMANA de aquí a Navidad (Semanas 47 a 52 inclusive: 15 Nov al 26 Dic 2026),
-    omitiendo la regla inter-semanal de no repetición exclusivamente para esta receta.
-    - Mantiene estricta la no-repetición intra-semanal (máximo 1 vez por semana).
+    omitiendo la regla inter-semanal de no repetición exclusivamente para esta receta, más la cata
+    organoléptica autorizada Viernes 20 Nov (`R#48`) + Sábado 21 Nov (`R#57`) únicamente en Semana 47.
     - Expira automáticamente a partir de la Semana 53 (27 Dic 2026 en adelante).
     """
     if not course or not isinstance(course, dict):
@@ -1623,11 +1627,11 @@ def is_holiday_christmas_punch_exempt(course: Optional[Dict[str, Any]], curr_wnu
     if not (47 <= int(curr_wnum) <= 52):
         return False
     tech = _strip_accents(course.get("technique") or course.get("cooking_technique") or "")
-    if tech == HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE:
+    if tech in HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUES:
         return True
     title_n = _strip_accents(course.get("title") or course.get("name") or "")
     ings_n = " | ".join(_strip_accents(i.get("name") or "") for i in (course.get("ingredients") or []))
-    return "ponche navideno" in title_n and "manzana deshidratada" in ings_n
+    return "ponche navideno" in title_n and ("premezcla navidena" in ings_n or "manzana deshidratada" in ings_n)
 
 
 def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
@@ -1643,7 +1647,9 @@ def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
     full = f"{t_tech} {ings_txt}"
 
     # 1. Formato / Vehículo
-    if "ponche navideno" in t_tech or HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUE in tech:
+    if "ponche cremoso invernal" in t_tech or "winter_coconut_apple_punch_34plus" in tech:
+        fmt = "ponche_cremoso_invernal"
+    elif "ponche navideno" in t_tech or any(pt in tech for pt in HOLIDAY_CHRISTMAS_PUNCH_TECHNIQUES):
         fmt = "ponche_navideno"
     elif any(w in t_tech for w in ("sorbete", "nice-cream", "nice cream")):
         fmt = "sorbete_nice_cream"
@@ -1725,7 +1731,8 @@ def compute_functional_prep_dna(course: Dict[str, Any]) -> Tuple[str, str, str]:
     # 2. Ingrediente Base Principal
     base = "agua_botanica"
     for b_key, b_pats in [
-        ("manzana_deshidratada", ["manzana deshidratada"]),
+        ("leche_coco_invernal", ["winter_coconut_apple_punch", "ponche cremoso invernal"]),
+        ("premezcla_manzana_especias", ["premezcla navidena", "manzana deshidratada"]),
         ("te_matcha", ["matcha"]),
         ("rooibos_rojo", ["rooibos"]),
         ("corazones_canamo_linaza", ["canamo", "linaza"]),
@@ -2670,15 +2677,24 @@ def audit_week_plan(
                         c_side = c_meals[m_idx].get("side") or {}
                         f_dna_c = compute_functional_prep_dna(c_side)
                         loc_f = f"{d_label} {m_label}"
-                        if f_dna_c in seen_func_dnas_intra:
+                        is_authorized_s47_fri_sat_tasting = (
+                            curr_wnum == 47
+                            and d_idx == 6
+                            and m_idx == 0
+                            and is_holiday_christmas_punch_exempt(c_side, curr_wnum)
+                            and _strip_accents(seen_func_dnas_intra.get(f_dna_c, "")) == "viernes desayuno"
+                        )
+                        if f_dna_c in seen_func_dnas_intra and not is_authorized_s47_fri_sat_tasting:
                             violations.append(
                                 f"[R10-DNA] Colisión Intra-Semanal de Preparado Funcional {f_dna_c} en {loc_f} ('{c_side.get('title')}') ya usado en {seen_func_dnas_intra[f_dna_c]}."
                             )
-                        else:
+                        elif f_dna_c not in seen_func_dnas_intra:
                             seen_func_dnas_intra[f_dna_c] = loc_f
 
                         if curr_wnum >= 47:
                             for prev_loc_f, prev_course_intra in seen_func_courses_intra:
+                                if is_authorized_s47_fri_sat_tasting and _strip_accents(prev_loc_f) == "viernes desayuno":
+                                    continue
                                 jac_intra = compute_functional_prep_jaccard_similarity(c_side, prev_course_intra)
                                 if jac_intra >= 0.45:
                                     violations.append(

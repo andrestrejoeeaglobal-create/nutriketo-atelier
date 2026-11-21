@@ -3138,7 +3138,7 @@
           "starter_name": "Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso",
           "dish_name": "Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso",
-          "side_dish_name": "Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
+          "side_dish_name": "Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®",
           "starter": {
             "title": "Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "pacific_pomegranate_vanilla_cup_s47",
@@ -3167,15 +3167,15 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 13.3333,
-                "amount": 80,
+                "per_guest": 11.6667,
+                "amount": 70,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Nuez de la India",
-                "per_guest": 20,
-                "amount": 120,
+                "per_guest": 13.3333,
+                "amount": 80,
                 "unit": "g"
               },
               {
@@ -3188,7 +3188,7 @@
             ],
             "steps": [
               "Perfumar los arilos de granada de la granja con el extracto de vainilla.",
-              "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana."
+              "Coronar con los 70 g de semillas y nueces mixtas, los 80 g de nuez de la India y los 60 g de nuez pecana."
             ]
           },
           "main": {
@@ -3259,49 +3259,42 @@
             "archetype": "heptagon_s47_huevo_tamagoyaki_nopal_cabra"
           },
           "side": {
-            "title": "Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
-            "technique": "blackberry_star_anise_probiotic_lassi_33plus_s47",
-            "note": "Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con 480 g de yogur griego de alacena (saldo proyectado S48 = 1,820 g), zarzamora antioxidante de alacena ($0.00 MXN), anís estrella, vainilla y 33Plus® a 6°C.",
+            "title": "Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®",
+            "technique": "ruby_christmas_apple_punch_33plus_s47",
+            "note": "Cata Organoléptica Matutina Navideña con 33Plus®: técnica de doble temperatura (<= 52°C) elaborada con los 27 g de premezcla navideña de manzana y especias en polvo de alacena ($0.00 MXN), flor de jamaica y tiras de cáscara de limón real de Granja El Herami ($0.00 MXN) en agua purificada, diseñada con cero colisiones intra-servicio [R4].",
             "coct_reasoning": {
-              "thermodynamics": "Emulsión en frío a 6°C (0% calor).",
-              "flavor_and_aromatics": "Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.",
-              "textural_architecture": "Lassi líquido aterciopelado color púrpura a 6°C.",
-              "critical_control_points": "100% cubierto en alacena (Yogur griego 480 g -> 1,820 g saldo; Zarzamora 180 g -> 330 g saldo) y 33Plus® (30 g) en frío."
+              "thermodynamics": "Infusión aromática a 88–90°C en 1,100 ml de agua purificada durante 7 minutos, clarificado en malla fina y choque térmico con 400 ml de agua purificada fría para estabilizar en 50–52°C antes de integrar 33Plus®.",
+              "flavor_and_aromatics": "Elixir rubí profundo donde la acidez floral de la jamaica y los aceites esenciales de la cáscara de limón real equilibran el dulzor natural de la manzana especiada (canela, clavo, pimienta negra y anís estrella) con el perfil frutal rojo de 33Plus®.",
+              "textural_architecture": "Caldo clarificado aterciopelado por la pectina natural de la manzana con corona espumada ligera a 50°C.",
+              "critical_control_points": "Filtrar en malla fina tras los 7 minutos de infusión y verificar <= 52°C mediante choque térmico con 400 ml de agua fría antes de espumar los 30 g de 33Plus®."
             },
             "ingredients": [
               {
-                "category": "🧀 Lácteos y Quesos (Sin Gluten — Keto)",
-                "name": "Yogur griego",
-                "per_guest": 80,
-                "amount": 480,
-                "unit": "g"
-              },
-              {
-                "category": "🍓 Frutas de Bajo Índice Glucémico",
-                "name": "Zarzamora",
-                "per_guest": 30,
-                "amount": 180,
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Premezcla navideña de manzana y especias",
+                "per_guest": 4.5,
+                "amount": 27,
                 "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Anís estrella",
-                "per_guest": 0.5,
-                "amount": 3,
+                "name": "Jamaica",
+                "per_guest": 4.1667,
+                "amount": 25,
                 "unit": "g"
               },
               {
-                "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Extracto de vainilla",
-                "per_guest": 1,
-                "amount": 6,
-                "unit": "ml"
+                "category": "🥦 Hortalizas, Vegetales y Hongos",
+                "name": "Limones",
+                "per_guest": 5,
+                "amount": 30,
+                "unit": "g"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Agua purificada",
-                "per_guest": 70,
-                "amount": 420,
+                "per_guest": 250,
+                "amount": 1500,
                 "unit": "ml"
               },
               {
@@ -3313,10 +3306,10 @@
               }
             ],
             "steps": [
-              "Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.",
-              "Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C."
+              "Infusionar la flor de jamaica (25 g), las tiras de cáscara de limón real sin parte blanca (30 g) y los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos; filtrar en malla fina para clarificar.",
+              "Aplicar choque térmico con los 400 ml restantes de agua purificada fría para bajar a 50–52°C, incorporar los 30 g de 33Plus®, espumar 15 segundos y servir al momento."
             ],
-            "serving_temp_c": "6°C"
+            "serving_temp_c": "50°C"
           }
         },
         {
@@ -3526,7 +3519,7 @@
           "starter_name": "Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real",
           "main_dish_name": "Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
           "dish_name": "Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya",
-          "side_dish_name": "Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®",
+          "side_dish_name": "Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®",
           "starter": {
             "title": "Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real",
             "technique": "pacific_garlic_cilantro_water_broth_s47",
@@ -3661,36 +3654,29 @@
             "archetype": "heptagon_s47_pollo_teppanyaki_nuez_india"
           },
           "side": {
-            "title": "Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®",
-            "technique": "warm_toasted_sesame_coconut_keto_atole_34plus_s47",
-            "note": "Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con ajonjolí tostado y coco rallado de alacena ($0.00 MXN), canela molida, vainilla y 34Plus® a 52°C.",
+            "title": "Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®",
+            "technique": "winter_coconut_apple_punch_34plus_s47",
+            "note": "Cata Organoléptica Nocturna Invernal (0% Teína) con 34Plus®: ponche sedoso templado a 50–52°C que infusiona 27 g de premezcla navideña de manzana y especias de alacena ($0.00 MXN), emulsionado con 100 ml de leche de coco de alacena (saldo proyectado S48 = 160 ml) y vainilla, servido sobre nuez pecana tostada de Granja El Herami ($0.00 MXN).",
             "coct_reasoning": {
-              "thermodynamics": "Tostado aromático en seco y emulsión en licuadora con agua tibia a 52°C.",
-              "flavor_and_aromatics": "Ajonjolí dorado y coco tostado con notas tradicionales de canela y vainilla.",
-              "textural_architecture": "Atole sedoso, reconfortante y rico en calcio y magnesio a 52°C.",
-              "critical_control_points": "100% cubierto en alacena (Ajonjolí 120 g -> 80 g saldo; Coco rallado 60 g) y 34Plus® (30 g) a 52°C."
+              "thermodynamics": "Infusión especiada a 88–90°C en 1,100 ml de agua purificada por 7 minutos, filtrado fino y templado térmico con 300 ml de agua fría + 100 ml de leche de coco hasta 50–52°C.",
+              "flavor_and_aromatics": "Abrazo invernal cremoso de manzana especiada, vainilla y leche de coco con fondo tostado de nuez pecana y el perfil reparador nocturno de 34Plus®.",
+              "textural_architecture": "Emulsión tibia aterciopelada a 50°C con contraste crujiente de 10 g de nuez pecana tostada en el fondo de cada taza.",
+              "critical_control_points": "0% teína y 0% jamaica nocturna ([R6]); templar estrictamente a 50–52°C antes de emulsionar 15 segundos los 30 g de 34Plus®."
             },
             "ingredients": [
               {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Ajonjolí",
-                "per_guest": 20,
-                "amount": 120,
-                "unit": "g"
-              },
-              {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Coco rallado",
-                "per_guest": 10,
-                "amount": 60,
-                "unit": "g"
-              },
-              {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Canela molida",
-                "per_guest": 0.5,
-                "amount": 3,
+                "name": "Premezcla navideña de manzana y especias",
+                "per_guest": 4.5,
+                "amount": 27,
                 "unit": "g"
+              },
+              {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Leche de coco",
+                "per_guest": 16.6667,
+                "amount": 100,
+                "unit": "ml"
               },
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
@@ -3700,10 +3686,17 @@
                 "unit": "ml"
               },
               {
+                "category": "🥑 Grasas, Aceites y Semillas",
+                "name": "Nuez pecana",
+                "per_guest": 10,
+                "amount": 60,
+                "unit": "g"
+              },
+              {
                 "category": "🧂 Condimentos, Especias e Infusiones",
                 "name": "Agua purificada",
-                "per_guest": 160,
-                "amount": 960,
+                "per_guest": 233.3333,
+                "amount": 1400,
                 "unit": "ml"
               },
               {
@@ -3715,10 +3708,10 @@
               }
             ],
             "steps": [
-              "Tostar ligeramente en sartén seco los 120 g de ajonjolí y los 60 g de coco rallado durante 2 minutos y licuar a alta potencia con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla.",
-              "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C."
+              "Infusionar los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos y filtrar en malla fina.",
+              "Templar con los 300 ml de agua purificada fría, los 100 ml de leche de coco y los 6 ml de extracto de vainilla hasta 50–52°C, emulsionar 15 segundos con los 30 g de 34Plus® y servir sobre 10 g de nuez pecana tostada y troceada por taza (60 g totales)."
             ],
-            "serving_temp_c": "52°C"
+            "serving_temp_c": "50°C"
           }
         }
       ]
@@ -3743,7 +3736,7 @@
           "starter_name": "Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
           "main_dish_name": "Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)",
           "dish_name": "Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)",
-          "side_dish_name": "Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®",
+          "side_dish_name": "Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®",
           "starter": {
             "title": "Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana",
             "technique": "mare_nostrum_pomegranate_nut_cup_s47",
@@ -3772,15 +3765,15 @@
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Semillas y nueces mixtas",
-                "per_guest": 13.3333,
-                "amount": 80,
+                "per_guest": 11.6667,
+                "amount": 70,
                 "unit": "g"
               },
               {
                 "category": "🥑 Grasas, Aceites y Semillas",
                 "name": "Nuez de la India",
-                "per_guest": 20,
-                "amount": 120,
+                "per_guest": 13.3333,
+                "amount": 80,
                 "unit": "g"
               },
               {
@@ -3793,7 +3786,7 @@
             ],
             "steps": [
               "Disponer los arilos de granada de la granja con canela molida en copas frías.",
-              "Coronar con los 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana."
+              "Coronar con los 70 g de semillas y nueces mixtas, 80 g de nuez de la India y 60 g de nuez pecana."
             ]
           },
           "main": {
@@ -3871,19 +3864,19 @@
             "archetype": "heptagon_s47_huevo_purgatorio_parmesano"
           },
           "side": {
-            "title": "Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®",
-            "technique": "holiday_clarified_apple_clove_punch_33plus",
-            "note": "Edición Especial de Temporada Navideña (1 entrega semanal autorizada hasta Navidad): técnica de doble temperatura diseñada para la premezcla molida de manzana deshidratada, canela, anís estrella, clavo de olor y pimienta negra (27 g), infusionada a 88°C–90°C con flor de jamaica y piel de limón real de Granja El Herami, filtrada por malla fina / manta de cielo, templada por choque térmico a 50°C–52°C con agua purificada fría y vainilla antes de emulsionar 33Plus®, y servida sobre nuez pecana tostada de la granja.",
+            "title": "Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®",
+            "technique": "ruby_christmas_apple_punch_33plus_s47",
+            "note": "Cata Organoléptica Matutina Navideña con 33Plus®: técnica de doble temperatura (<= 52°C) elaborada con los 27 g de premezcla navideña de manzana y especias en polvo de alacena ($0.00 MXN), flor de jamaica y tiras de cáscara de limón real de Granja El Herami ($0.00 MXN) en agua purificada, diseñada con cero colisiones intra-servicio [R4].",
             "coct_reasoning": {
-              "thermodynamics": "Infusión aromática fuera del fuego a 88°C–90°C en 1,100 ml por 7 min, filtrado ultrafino y choque térmico controlado (+400 ml de agua fría) a 50°C–52°C antes de integrar 33Plus®.",
-              "flavor_and_aromatics": "Elixir rubí profundo de ponche tradicional donde la acidez floral de la jamaica equilibra el dulzor natural de la manzana molida, con anís estrella, clavo, canela, destello de piperina, vainilla y el perfil frutal rojo de 33Plus®.",
-              "textural_architecture": "Caldo aterciopelado por la pectina natural de la manzana y libre de sedimento arenoso, coronado con crocancia de nuez pecana tostada en taza.",
-              "critical_control_points": "No tostar en seco el polvo con manzana para evitar amargor por pirólisis de fructosa; filtrar en manta de cielo o malla ultrafina y verificar <= 52°C mediante choque térmico antes de batir 33Plus® (30 g)."
+              "thermodynamics": "Infusión aromática a 88–90°C en 1,100 ml de agua purificada durante 7 minutos, clarificado en malla fina y choque térmico con 400 ml de agua purificada fría para estabilizar en 50–52°C antes de integrar 33Plus®.",
+              "flavor_and_aromatics": "Elixir rubí profundo donde la acidez floral de la jamaica y los aceites esenciales de la cáscara de limón real equilibran el dulzor natural de la manzana especiada (canela, clavo, pimienta negra y anís estrella) con el perfil frutal rojo de 33Plus®.",
+              "textural_architecture": "Caldo clarificado aterciopelado por la pectina natural de la manzana con corona espumada ligera a 50°C.",
+              "critical_control_points": "Filtrar en malla fina tras los 7 minutos de infusión y verificar <= 52°C mediante choque térmico con 400 ml de agua fría antes de espumar los 30 g de 33Plus®."
             },
             "ingredients": [
               {
                 "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Mezcla navideña molida de manzana deshidratada y especias",
+                "name": "Premezcla navideña de manzana y especias",
                 "per_guest": 4.5,
                 "amount": 27,
                 "unit": "g"
@@ -3896,20 +3889,6 @@
                 "unit": "g"
               },
               {
-                "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Agua purificada",
-                "per_guest": 250,
-                "amount": 1500,
-                "unit": "ml"
-              },
-              {
-                "category": "🧂 Condimentos, Especias e Infusiones",
-                "name": "Extracto de vainilla",
-                "per_guest": 1,
-                "amount": 6,
-                "unit": "ml"
-              },
-              {
                 "category": "🥦 Hortalizas, Vegetales y Hongos",
                 "name": "Limones",
                 "per_guest": 5,
@@ -3917,11 +3896,11 @@
                 "unit": "g"
               },
               {
-                "category": "🥑 Grasas, Aceites y Semillas",
-                "name": "Nuez pecana",
-                "per_guest": 10,
-                "amount": 60,
-                "unit": "g"
+                "category": "🧂 Condimentos, Especias e Infusiones",
+                "name": "Agua purificada",
+                "per_guest": 250,
+                "amount": 1500,
+                "unit": "ml"
               },
               {
                 "category": "💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA",
@@ -3932,9 +3911,8 @@
               }
             ],
             "steps": [
-              "Calentar 1,100 ml de agua purificada con los 25 g de flor de jamaica de la granja y tiras anchas de piel de limón real (sin parte blanca); al romper el hervor apagar el fuego, incorporar los 27 g de mezcla navideña molida de manzana deshidratada y especias (canela, anís estrella, clavo y pimienta negra), tapar e infusionar 7 minutos a 88°C–90°C.",
-              "Clarificar pasando la infusión por colador de malla fina o manta de cielo para retener cualquier sedimento ultrafino, y aplicar choque térmico vertiendo de inmediato los 400 ml restantes de agua purificada fría junto con los 6 ml de extracto de vainilla para situar la mezcla exactamente entre 50°C y 52°C.",
-              "Agregar los 30 g de 33Plus® y batir con globo o espumador durante 12 segundos hasta formar corona rosada; disponer en el fondo de las 6 tazas los 60 g de nuez pecana tostada y servir encima a 50°C."
+              "Infusionar la flor de jamaica (25 g), las tiras de cáscara de limón real sin parte blanca (30 g) y los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos; filtrar en malla fina para clarificar.",
+              "Aplicar choque térmico con los 400 ml restantes de agua purificada fría para bajar a 50–52°C, incorporar los 30 g de 33Plus®, espumar 15 segundos y servir al momento."
             ],
             "serving_temp_c": "50°C"
           }
@@ -4391,7 +4369,7 @@
         },
         {
           "name": "Agua purificada",
-          "required": 15960.0,
+          "required": 17480.0,
           "unit": "ml",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4412,14 +4390,14 @@
         },
         {
           "name": "Jamaica",
-          "required": 25.0,
+          "required": 50.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
         },
         {
           "name": "Limones",
-          "required": 1689.0,
+          "required": 1719.0,
           "unit": "g",
           "source": "Granja El Herami ($0)",
           "net_to_buy": 0.0
@@ -4498,9 +4476,9 @@
         },
         {
           "name": "Canela molida",
-          "required": 12.0,
+          "required": 9.0,
           "stock": 725.0,
-          "remaining_stock": 713.0,
+          "remaining_stock": 716.0,
           "unit": "g"
         },
         {
@@ -4526,9 +4504,9 @@
         },
         {
           "name": "Extracto de vainilla",
-          "required": 78.0,
+          "required": 66.0,
           "stock": 376.0,
-          "remaining_stock": 298.0,
+          "remaining_stock": 310.0,
           "unit": "ml"
         },
         {
@@ -4581,13 +4559,6 @@
           "unit": "piezas"
         },
         {
-          "name": "Leche de coco",
-          "required": 500.0,
-          "stock": 500.0,
-          "remaining_stock": 0.0,
-          "unit": "ml"
-        },
-        {
           "name": "Mantequilla",
           "required": 720.0,
           "stock": 720.0,
@@ -4602,17 +4573,10 @@
           "unit": "g"
         },
         {
-          "name": "Mezcla navideña molida de manzana deshidratada y especias",
-          "required": 27.0,
-          "stock": 300.0,
-          "remaining_stock": 273.0,
-          "unit": "g"
-        },
-        {
           "name": "Nuez de la India",
-          "required": 1000.0,
+          "required": 920.0,
           "stock": 1000.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 80.0,
           "unit": "g"
         },
         {
@@ -4642,6 +4606,13 @@
           "stock": 6.0,
           "remaining_stock": 0.0,
           "unit": "piezas"
+        },
+        {
+          "name": "Premezcla navideña de manzana y especias",
+          "required": 81.0,
+          "stock": 250.0,
+          "remaining_stock": 169.0,
+          "unit": "g"
         },
         {
           "name": "Queso manchego",
@@ -4680,9 +4651,9 @@
         },
         {
           "name": "Semillas y nueces mixtas",
-          "required": 600.0,
+          "required": 580.0,
           "stock": 600.0,
-          "remaining_stock": 0.0,
+          "remaining_stock": 20.0,
           "unit": "g"
         },
         {
@@ -4701,9 +4672,9 @@
         },
         {
           "name": "Yogur griego",
-          "required": 1760.0,
+          "required": 1280.0,
           "stock": 2000.0,
-          "remaining_stock": 240.0,
+          "remaining_stock": 720.0,
           "unit": "g"
         }
       ],
@@ -4744,13 +4715,6 @@
           "unit": "piezas"
         },
         {
-          "name": "Ajonjolí",
-          "required": 120.0,
-          "stock": 0.0,
-          "net_to_buy": 120.0,
-          "unit": "g"
-        },
-        {
           "name": "Albahaca",
           "required": 30.0,
           "stock": 0.0,
@@ -4759,9 +4723,9 @@
         },
         {
           "name": "Anís estrella",
-          "required": 9.0,
+          "required": 6.0,
           "stock": 0.0,
-          "net_to_buy": 9.0,
+          "net_to_buy": 6.0,
           "unit": "g"
         },
         {
@@ -4808,9 +4772,9 @@
         },
         {
           "name": "Coco rallado",
-          "required": 180.0,
+          "required": 120.0,
           "stock": 0.0,
-          "net_to_buy": 180.0,
+          "net_to_buy": 120.0,
           "unit": "g"
         },
         {
@@ -4853,6 +4817,13 @@
           "required": 1560.0,
           "stock": 0.0,
           "net_to_buy": 1560.0,
+          "unit": "ml"
+        },
+        {
+          "name": "Leche de coco",
+          "required": 600.0,
+          "stock": 500.0,
+          "net_to_buy": 100.0,
           "unit": "ml"
         },
         {
@@ -4944,13 +4915,6 @@
           "required": 240.0,
           "stock": 0.0,
           "net_to_buy": 240.0,
-          "unit": "g"
-        },
-        {
-          "name": "Zarzamora",
-          "required": 180.0,
-          "stock": 0.0,
-          "net_to_buy": 180.0,
           "unit": "g"
         }
       ]

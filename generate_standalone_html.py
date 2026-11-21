@@ -2067,6 +2067,7 @@ def generate_standalone():
     from app.services.tilo_menu_cortex import (
         SEVEN_CULINARY_SCHOOLS,
         _build_holiday_apple_punch_33plus_course,
+        _build_winter_coconut_apple_punch_34plus_course,
         export_heptagon_exchange_pool,
         generate_week_with_tilo_cortex,
     )
@@ -2132,8 +2133,17 @@ def generate_standalone():
         "category": "side",
         "meal_type": "Desayuno",
         "culinary_school": "Edición Especial Navideña",
-        "macros": {"kcal": 55.0, "fat_g": 4.2, "protein_g": 0.9, "net_carbs_g": 1.6},
+        "macros": {"kcal": 35.0, "fat_g": 0.4, "protein_g": 0.6, "net_carbs_g": 1.6},
         "recipe": dish_to_typed_recipe(_punch_course_obj) or _punch_course_obj,
+    }
+    _winter_punch_obj = _build_winter_coconut_apple_punch_34plus_course()
+    sides_map[_winter_punch_obj["title"]] = {
+        "name": _winter_punch_obj["title"],
+        "category": "side",
+        "meal_type": "Cena",
+        "culinary_school": "Edición Especial Navideña",
+        "macros": {"kcal": 95.0, "fat_g": 9.8, "protein_g": 1.2, "net_carbs_g": 1.8},
+        "recipe": dish_to_typed_recipe(_winter_punch_obj) or _winter_punch_obj,
     }
 
     for day in plan_38_dict.get("days", []):
@@ -2675,7 +2685,8 @@ function _computeDishJaccardSimilarityHardGate(dishA, dishB) {
 }
 
 const _HG_FUNCTIONAL_PREP_FORMATS = [
-  ['ponche_navideno', ['ponche navideno', 'holiday_clarified_apple_clove_punch']],
+  ['ponche_cremoso_invernal', ['ponche cremoso invernal', 'winter_coconut_apple_punch_34plus']],
+  ['ponche_navideno', ['ponche navideno', 'ruby_christmas_apple_punch_33plus', 'holiday_clarified_apple_clove_punch']],
   ['nice_cream_sorbete', ['sorbete', 'nice-cream', 'nice cream', 'helado']],
   ['porridge_no_oats', ['porridge', 'no-oats', 'no oats']],
   ['cheesecake_crumble', ['cheesecake', 'deconstruido', 'crumble']],
@@ -2711,7 +2722,8 @@ const _HG_FUNCTIONAL_PREP_FORMATS = [
 ];
 
 const _HG_FUNCTIONAL_PREP_BASES = [
-  ['manzana_deshidratada', ['manzana deshidratada', 'mezcla navidena']],
+  ['leche_coco_invernal', ['ponche cremoso invernal', 'winter_coconut_apple_punch_34plus']],
+  ['premezcla_manzana_especias', ['premezcla navidena', 'manzana deshidratada', 'mezcla navidena']],
   ['semilla_calabaza', ['semilla de calabaza', 'pepita']],
   ['tahini_ajonjoli', ['tahini', 'ajonjoli']],
   ['canamo_linaza', ['canamo', 'linaza']],
@@ -2744,7 +2756,7 @@ function isHolidayChristmasPunchExempt(course, wNum) {
   const wn = parseInt(wNum, 10) || 0;
   if (wn < 47 || wn > 52) return false;
   const tech = _normTextHardGate(course.technique || course.cooking_technique || '');
-  if (tech === 'holiday_clarified_apple_clove_punch_33plus') return true;
+  if (tech === 'ruby_christmas_apple_punch_33plus_s47' || tech === 'holiday_clarified_apple_clove_punch_33plus') return true;
   const titleN = _normTextHardGate(course.title || course.name || '');
   return titleN.includes('ponche navideno');
 }
@@ -3169,6 +3181,14 @@ function auditWeekPlanClientHardGate(weekPlan, prevWeekPlan) {
         const cSlot = `${cdLabel} (${mLabel} · Tiempo 3)`;
 
         currFuncSeen.forEach(([prevSlot, prevTitle, prevDna, prevSide]) => {
+          const isAuthorizedS47FriSatTasting = (
+            wNumTop === 47 &&
+            cdIdx === 6 &&
+            mIdx === 0 &&
+            isHolidayChristmasPunchExempt(cSide, wNumTop) &&
+            _normTextHardGate(prevSlot).startsWith('viernes (desayuno')
+          );
+          if (isAuthorizedS47FriSatTasting) return;
           const pFmt = prevDna.split('|')[0];
           const jIntra = _computeFunctionalPrepJaccardSimilarityHardGate(cSide, prevSide);
           if (cDna === prevDna || (cFmt === pFmt && cFmt !== 'infusion_tisana') || jIntra >= 0.45) {
@@ -4272,8 +4292,7 @@ window.PANTRY_STOCK_INVENTORY = {
       "sku-329-coco-rallado": { item_num: 329, name: "Coco rallado", stock: 300, unit: "g", packaging: "300 g", category: "🥑 Grasas, Aceites y Semillas", status: "canonical", reason: null },
       "sku-330-anis-estrella": { item_num: 330, name: "Anís estrella", stock: 50, unit: "g", packaging: "50 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
       "sku-331-chile-serrano": { item_num: 331, name: "Chile serrano", stock: 250, unit: "g", packaging: "250 g", category: "🛑 Insumos No Sugeridos / Cuarentena (No usar en Protocolo Cetogénico)", status: "prohibited", reason: "Picante irritante de mucosa gástrica / Capsaicina (Excluido por Regla Inmutable 0 Picante [R1])." },
-      "sku-332-mezcla-navidena-molida": { item_num: 332, name: "Mezcla navideña molida de manzana deshidratada y especias", stock: 300, unit: "g", packaging: "300 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
-      "sku-333-manzana-deshidratada": { item_num: 333, name: "Manzana deshidratada", stock: 300, unit: "g", packaging: "300 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", reason: null },
+      "sku-332-premezcla-ponche-manzana": { item_num: 332, name: "Premezcla navideña de manzana y especias", stock: 250, unit: "g", packaging: "250 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null },
       "zarzamoras-frescas": { name: "Zarzamora", stock: 0, unit: "g", status: "canonical" },
       "fresas-frescas": { name: "Fresas", stock: 0, unit: "g", status: "canonical" },
       "arilos-granada": { name: "Arilos de granada", stock: 0, unit: "g", status: "canonical" },
@@ -4534,8 +4553,7 @@ let pantryStock = {
       "Albahaca fresca": 100,
       "Coco rallado": 300,
       "Anís estrella": 50,
-      "Manzana deshidratada": 300,
-      "Mezcla navideña molida de manzana deshidratada y especias": 300,
+      "Premezcla navideña de manzana y especias": 250,
       "Apio": 200,
       "Ajo": 150,
       "Nueces mixtas": 400
@@ -4731,8 +4749,8 @@ let pantryStock = {
       { stem: 'eneldo', aliases: ['eneldo', 'eneldo fresco', 'eneldo fresco de la granja', 'hojas de eneldo', 'ramitas de eneldo'] },
       { stem: 'albahaca', aliases: ['albahaca', 'albahaca fresca', 'albahaca fresca de la granja', 'hojas de albahaca'] },
       { stem: 'anis-estrella', aliases: ['anis estrella', 'anis estrellado'] },
-      { stem: 'mezcla-navidena-molida', aliases: ['mezcla navidena molida de manzana deshidratada y especias', 'mezcla navidena molida', 'mezcla navidena en polvo'] },
-      { stem: 'manzana-deshidratada', aliases: ['manzana deshidratada'], exclude: ['mezcla navidena'] },
+      { stem: 'premezcla-ponche-manzana', aliases: ['premezcla navidena de manzana y especias', 'premezcla navidena', 'mezcla navidena molida de manzana deshidratada y especias', 'mezcla navidena molida', 'mezcla navidena en polvo'] },
+      { stem: 'manzana-deshidratada', aliases: ['manzana deshidratada'], exclude: ['premezcla navidena', 'mezcla navidena'] },
       { stem: 'hierbas-botanicas', aliases: ['hierbas botanicas', 'hierbas botanicas (toronjil y menta)', 'hierbas botanicas toronjil y menta', 'toronjil y menta'] }
     ];
 
@@ -6458,10 +6476,10 @@ let pantryStock = {
           }
           localStorage.setItem('nutriketo_v66_s47_active_week_sync', 'true');
         }
-        // Sincronización V68 + V69 (rev25): Alta Consolidada Jueves 19 Nov 2026 + Protocolo EGM Unificado
+        // Sincronización V68 + V69 (rev26): Alta Consolidada + Protocolo EGM + Cata Doble Ponches Navideños Viernes 20 Nov
         let needsV68V69CleanBoot = !window.__V69_EGM_BOOTED_IN_MEMORY;
         try {
-          if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v69_egm_clean_boot_rev25') === 'true') {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v69_friday_double_punch_rev26') === 'true') {
             needsV68V69CleanBoot = false;
           }
         } catch (_) {}
@@ -6483,8 +6501,8 @@ let pantryStock = {
             "Albahaca fresca": 100, "Manzanilla": 112, "Apio": 200,
             "Espinacas": 0, "Espárragos": 0, "Flor de calabaza": 0,
             "Mayonesa": 1100, "Grenetina": 168, "Coco rallado": 300, "Ajonjolí": 200,
-            "Anís estrella": 50, "Manzana deshidratada": 300,
-            "Mezcla navideña molida de manzana deshidratada y especias": 300,
+            "Anís estrella": 50,
+            "Premezcla navideña de manzana y especias": 250,
             "Botella de agua": 160,
             "Nuez de la India": 1000, "Aceite de coco": 800, "Semillas y nueces mixtas": 400,
             "Nueces mixtas": 400, "Almendras fileteadas": 100, "Pistaches": 50,
@@ -6506,14 +6524,18 @@ let pantryStock = {
           delete pantryStock["Queso de cabra con arándano"];
           delete pantryStock["MultiSinergix®"];
           delete pantryStock["AminoSinergix®"];
+          delete pantryStock["Manzana deshidratada"];
+          delete pantryStock["Mezcla navideña molida de manzana deshidratada y especias"];
           if (!Array.isArray(deletedPantryItems)) deletedPantryItems = [];
-          if (!deletedPantryItems.some(d => /agua\s*mineral/i.test(String(d)))) {
+          if (!deletedPantryItems.some(d => /agua\\s*mineral/i.test(String(d)))) {
             deletedPantryItems.push("Agua mineral");
           }
           checkedRows = {};
           if (!window.pantryCardUnits || typeof window.pantryCardUnits !== 'object') {
             window.pantryCardUnits = {};
           }
+          delete window.pantryCardUnits["Manzana deshidratada"];
+          delete window.pantryCardUnits["Mezcla navideña molida de manzana deshidratada y especias"];
           Object.assign(window.pantryCardUnits, {
             "Flat steak": "g", "Lomo de salmón": "g", "Huevo": "piezas", "Pechuga de pavo": "g",
             "Atún en agua": "g", "Pollo entero": "piezas", "Queso cottage": "g", "Queso mozzarella": "g",
@@ -6523,16 +6545,17 @@ let pantryStock = {
             "Morrón": "piezas", "Calabacitas": "g", "Cebolla": "piezas", "Aguacate": "piezas",
             "Pepino": "g", "Brócoli": "g", "Coliflor": "g", "Albahaca fresca": "g", "Manzanilla": "g",
             "Mayonesa": "g", "Grenetina": "g", "Coco rallado": "g", "Ajonjolí": "g",
-            "Anís estrella": "g", "Manzana deshidratada": "g",
-            "Mezcla navideña molida de manzana deshidratada y especias": "g",
+            "Anís estrella": "g",
+            "Premezcla navideña de manzana y especias": "g",
             "Botella de agua": "piezas", "Chile serrano": "g",
             "Apio": "g", "Aceite de coco": "g", "Sardinas": "g", "33Plus®": "g", "34Plus®": "g"
           });
           if (window.PANTRY_STOCK_INVENTORY && typeof window.PANTRY_STOCK_INVENTORY === 'object') {
             delete window.PANTRY_STOCK_INVENTORY["pepino"];
             delete window.PANTRY_STOCK_INVENTORY["brocoli"];
-            window.PANTRY_STOCK_INVENTORY["sku-332-mezcla-navidena-molida"] = { item_num: 332, name: "Mezcla navideña molida de manzana deshidratada y especias", stock: 300, unit: "g", packaging: "300 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null };
-            window.PANTRY_STOCK_INVENTORY["sku-333-manzana-deshidratada"] = { item_num: 333, name: "Manzana deshidratada", stock: 300, unit: "g", packaging: "300 g", category: "🍓 Frutas de Bajo Índice Glucémico", status: "canonical", reason: null };
+            delete window.PANTRY_STOCK_INVENTORY["sku-332-mezcla-navidena-molida"];
+            delete window.PANTRY_STOCK_INVENTORY["sku-333-manzana-deshidratada"];
+            window.PANTRY_STOCK_INVENTORY["sku-332-premezcla-ponche-manzana"] = { item_num: 332, name: "Premezcla navideña de manzana y especias", stock: 250, unit: "g", packaging: "250 g", category: "🌶️ Chiles, Condimentos e Infusiones", status: "canonical", reason: null };
             Object.keys(window.PANTRY_STOCK_INVENTORY).forEach(k => {
               const p = window.PANTRY_STOCK_INVENTORY[k];
               if (p && p.name && v68ConsolidatedStocks[p.name] !== undefined && !["zarzamoras-frescas", "fresas-frescas", "arilos-granada", "moras-frescas", "frambuesas-frescas", "arandanos-frescos", "pitaya-fresca", "multisinergix", "aminosinergix", "33plus", "34plus", "ajo-fresco"].includes(k)) {
@@ -6555,8 +6578,10 @@ let pantryStock = {
               localStorage.setItem('nutriketo_v68_consolidated_19nov2026_sync', 'true');
               localStorage.setItem('nutriketo_v68_consolidated_19nov2026_applied', 'true');
               localStorage.setItem('nutriketo_v69_ponche_navideno_33plus_sync', 'true');
+              localStorage.setItem('nutriketo_v69_ponche_navideno_double_tasting_sync', 'true');
               localStorage.setItem('nutriketo_v69_egm_pending_rollover_applied', 'true');
               localStorage.setItem('nutriketo_v69_egm_clean_boot_rev25', 'true');
+              localStorage.setItem('nutriketo_v69_friday_double_punch_rev26', 'true');
             }
           } catch (_) {}
         }
@@ -6928,11 +6953,11 @@ let pantryStock = {
             Object.keys(customDishesState).forEach(k => {
               if (k.includes('Semana 43')) delete customDishesState[k];
             });
-            if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v69_s47_canonical_egm_clean') !== 'true') {
+            if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v69_s47_double_punch_clean_rev26') !== 'true') {
               Object.keys(customDishesState).forEach(k => {
                 if (k.includes('47')) delete customDishesState[k];
               });
-              localStorage.setItem('nutriketo_v69_s47_canonical_egm_clean', 'true');
+              try { localStorage.setItem('nutriketo_v69_s47_double_punch_clean_rev26', 'true'); } catch (_) {}
             }
             if (typeof localStorage !== 'undefined' && localStorage.getItem('nutriketo_v63_s45_salmon_tuesday_swap') !== 'true') {
               Object.keys(customDishesState).forEach(k => {
@@ -7040,6 +7065,7 @@ let pantryStock = {
           v65_ui_audit_nov14_sync: true,
           v68_consolidated_19nov2026_sync: true,
           v69_ponche_navideno_33plus_sync: true,
+          v69_ponche_navideno_double_tasting_sync: true,
           checkedRows,
           customShopItems,
           selectedIdx,
@@ -11527,7 +11553,7 @@ function renderRecipes(day, activeDiners) {
                   <div class="font-semibold text-slate-900 dark:text-slate-100">${mainName}</div>
                 </div>
                 <div class="bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 p-3.5 rounded-xl">
-                  <div class="font-bold text-amber-600 dark:text-amber-400 font-brand-title mb-1 uppercase">🌿 Acompañamiento</div>
+                  <div class="font-bold ${sideName.includes('33Plus') ? 'text-[#EF4444]' : (sideName.includes('34Plus') ? 'text-[#10B981]' : 'text-slate-600 dark:text-slate-300')} font-brand-title mb-1 uppercase">${sideName.includes('33Plus') ? '🔴 Preparado Diurno · 33Plus®' : (sideName.includes('34Plus') ? '🟢 Preparado Nocturno · 34Plus®' : '🌿 Acompañamiento')}</div>
                   <div class="font-semibold text-slate-900 dark:text-slate-100">${sideName}</div>
                 </div>
               </div>
@@ -12959,7 +12985,7 @@ function renderRecipes(day, activeDiners) {
       <script>
     document.addEventListener('DOMContentLoaded', () => {
       try {
-        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev25-egm-pending-rollover';
+        const ACTIVE_SW_REV = 'nutriketo-v36-6-rev26-friday-double-punch-tasting';
         if ('caches' in window) {
           caches.keys().then((keys) => {
             keys.forEach((k) => caches.delete(k).catch(() => {}));

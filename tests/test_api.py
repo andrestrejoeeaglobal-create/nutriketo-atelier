@@ -1982,12 +1982,13 @@ def test_s47_master_architecture_and_physical_pantry_rules():
             hist_func_courses.append(hd["meals"][2]["side"])
     hist_func_dnas = {compute_functional_prep_dna(c) for c in hist_func_courses}
 
-    for d in s47["days"]:
+    for d_idx, d in enumerate(s47["days"]):
         for m_idx, m in enumerate(d["meals"]):
             if m_idx == 0:
                 morning_preps.add(m["side"]["title"])
                 dna_b = compute_functional_prep_dna(m["side"])
-                assert dna_b not in s47_func_dnas
+                is_auth_fri_sat_punch = (d_idx == 6 and m["side"].get("technique") == "ruby_christmas_apple_punch_33plus_s47")
+                assert dna_b not in s47_func_dnas or is_auth_fri_sat_punch
                 assert dna_b not in hist_func_dnas, f"Colisión ADN funcional matutino {dna_b} con S44-S46"
                 s47_func_dnas.add(dna_b)
                 for hc in hist_func_courses:
@@ -2013,7 +2014,7 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     assert pollo_entero_services == 1, f"Pollo entero cocido debe usarse en 1 solo servicio (encontrado en {pollo_entero_services})"
     assert abs(pollo_entero_total - 6.0) < 1e-6
     assert fondo_pollo_occurrences == 0
-    assert len(morning_preps) == 7, "Deben existir 7 preparados matutinos distintos con 33Plus®"
+    assert len(morning_preps) == 6, "Deben existir 6 preparados matutinos únicos en S47 (cata doble autorizada Vie R#48 + Sáb R#57)"
     assert len(night_preps) == 7, "Deben existir 7 preparados nocturnos distintos con 34Plus®"
 
     # Verificar que clonar un preparado funcional de S46 en S47 dispara VIOLACIÓN DURA [R10-DNA]
@@ -2027,7 +2028,7 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     market_names = set(market_map.keys())
     for zero_buy_item in [
         "Fajitas de mojarra", "Pechuga de pavo", "Pollo entero", "Atún en agua", "Huevo",
-        "Queso manchego", "Mantequilla", "Leche de coco",
+        "Queso manchego", "Mantequilla",
         "Queso de cabra", "Queso parmesano", "Mayonesa", "Nuez de la India", "Semillas y nueces mixtas",
         "Almendras fileteadas", "Frambuesas", "Fresas", "Apio", "Espinacas",
         "Germinado", "Jitomate", "Ajo", "Alcaparras", "Grenetina", "Manzanilla", "Tomillo",
@@ -2041,7 +2042,7 @@ def test_s47_master_architecture_and_physical_pantry_rules():
     live_market_names = {x["name"] for x in rep_s47_live["bom_summary"]["market_purchases"]}
     for covered_live_item in [
         "Queso Philadelphia", "Queso de cabra", "Yogur griego", "Zarzamora",
-        "Coco rallado", "Ajonjolí", "Anís estrella", "Mezcla navideña molida de manzana deshidratada y especias",
+        "Coco rallado", "Ajonjolí", "Anís estrella", "Premezcla navideña de manzana y especias",
     ]:
         assert covered_live_item not in live_market_names, f"{covered_live_item} debe cubrirse al 100% en Alacena viva v68/v69"
 
@@ -2209,10 +2210,14 @@ def test_egm_pending_meals_chicken_breakdown_and_s48_rollover():
     assert abs(pending_philadelphia - 320.0) < 1e-6, f"Queso Philadelphia pendiente esperado 320 g, obtenido {pending_philadelphia}"
     assert abs(r53_chicken_g - 660.0) < 1e-6, f"R#53 debe emplear 660 g del despiece de Pollo entero, obtenido {r53_chicken_g}"
 
-    # Verificar los 18 saldos exactos de cierre proyectado S48 y subproductos anatómicos
+    # Verificar los 22 saldos exactos de cierre proyectado S48 (incluyendo cata doble Viernes 20 Nov R#48 + R#54 + Sábado R#57)
+    assert s47["days"][5]["meals"][0]["side"]["technique"] == "ruby_christmas_apple_punch_33plus_s47"
+    assert s47["days"][5]["meals"][2]["side"]["technique"] == "winter_coconut_apple_punch_34plus_s47"
+    assert s47["days"][6]["meals"][0]["side"]["technique"] == "ruby_christmas_apple_punch_33plus_s47"
+
     rollover = compute_projected_week_closing_stock(live_state=ssot, week_plan=s47)
     closing = rollover["pantryStock"]
-    expected_18_balances = {
+    expected_22_balances = {
         "Pechuga de pavo": 1400.0,
         "Flat steak": 1270.0,
         "Sardinas": 940.0,
@@ -2224,15 +2229,19 @@ def test_egm_pending_meals_chicken_breakdown_and_s48_rollover():
         "Huevo": 174.0,
         "Queso cottage": 5760.0,
         "Queso mozzarella": 2260.0,
-        "Yogur griego": 1820.0,
+        "Yogur griego": 2300.0,
         "Crema ácida": 900.0,
         "Queso Philadelphia": 580.0,
         "Queso manchego": 400.0,
         "Queso parmesano": 0.0,
         "Mantequilla": 150.0,
         "Aceite de coco": 644.0,
+        "Leche de coco": 160.0,
+        "Nuez de la India": 720.0,
+        "Semillas y nueces mixtas": 260.0,
+        "Premezcla navideña de manzana y especias": 169.0,
     }
-    for item_name, expected_val in expected_18_balances.items():
+    for item_name, expected_val in expected_22_balances.items():
         actual_val = float(closing.get(item_name, -1))
         assert abs(actual_val - expected_val) < 1e-4, (
             f"Saldo proyectado S48 incorrecto para '{item_name}': obtenido {actual_val}, esperado {expected_val}"
@@ -2285,11 +2294,13 @@ def test_egm_pending_meals_chicken_breakdown_and_s48_rollover():
     # Verificar controles UI en atelier.html e index.html
     for html_name in ("atelier.html", "index.html"):
         html_text = (root / html_name).read_text(encoding="utf-8")
-        assert "nutriketo-v36-6-rev25-egm-pending-rollover" in html_text
+        assert "nutriketo-v36-6-rev26-friday-double-punch-tasting" in html_text
         assert "Cierre EGM: Solo Turnos Pendientes" in html_text
         assert "deductedMealIds" in html_text
         assert "checkedInMeals" in html_text
-        assert "sku-332-mezcla-navidena-molida" in html_text
+        assert "sku-332-premezcla-ponche-manzana" in html_text
+        assert "Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®" in html_text
+        assert "Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®" in html_text
 
 
 

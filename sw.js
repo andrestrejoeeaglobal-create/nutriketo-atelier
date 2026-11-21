@@ -1,5 +1,5 @@
 // NutriKeto Atelier Service Worker - Lightweight Pass-Through & Legacy Cache Cleanup
-const CACHE_NAME = 'nutriketo-v36-6-rev25-egm-pending-rollover';
+const CACHE_NAME = 'nutriketo-v36-6-rev26-friday-double-punch-tasting';
 
 self.addEventListener('install', () => {
   self.skipWaiting();

@@ -364,6 +364,10 @@ def compile_s47_dossier() -> Dict[str, Any]:
         ("Queso parmesano", 100, "g"),
         ("Mantequilla", 450, "g"),
         ("Aceite de coco", 800, "g"),
+        ("Leche de coco", 500, "ml"),
+        ("Nuez de la India", 1000, "g"),
+        ("Semillas y nueces mixtas", 400, "g"),
+        ("Premezcla navideña de manzana y especias", 250, "g"),
         ("Aceite de oliva", 0, "ml"),
     ]
     egm_buy_map = {m["name"]: m for m in proj_egm["market_purchases_egm"]}

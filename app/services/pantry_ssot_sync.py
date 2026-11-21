@@ -246,8 +246,7 @@ V68_CONSOLIDATED_NOV19_2026_STOCK_OVERRIDES: Dict[str, Tuple[float, str]] = {
     "Mayonesa": (1100.0, "g"),            # 50 + 1,050 g (Mayonesa con limón Sam's)
     "Grenetina": (168.0, "g"),            # 56 + 112 g (4 cajas x 28 g Aurrera)
     "Coco rallado": (300.0, "g"),         # 0 + 300 g
-    "Manzana deshidratada": (300.0, "g"), # Reserva aromática Ponche Navideño 33Plus®
-    "Mezcla navideña molida de manzana deshidratada y especias": (300.0, "g"), # Premezcla en polvo (manzana, canela, anís estrella, clavo y pimienta negra)
+    "Premezcla navideña de manzana y especias": (250.0, "g"), # sku-332-premezcla-ponche-manzana (manzana deshidratada, canela, clavo, pimienta negra y anís estrella en un solo polvo)
     "Ajonjolí": (200.0, "g"),             # 0 + 200 g
     "Anís estrella": (50.0, "g"),         # 0 + 50 g
     "Botella de agua": (160.0, "piezas"), # 80 + 80 piezas (2 packs x 40 botellas 355 ml)
@@ -731,14 +730,16 @@ def build_ssot_document_from_ui_state(
     ui_pantry_stock.setdefault("34Plus®", 100)
     ui_pantry_units["34Plus®"] = "g"
     canonical_pantry_for_auditor.setdefault("34Plus®", [100.0, "g"])
-    if not ui_state.get("v69_ponche_navideno_33plus_sync") or "Manzana deshidratada" not in ui_pantry_stock:
-        ui_pantry_stock["Manzana deshidratada"] = 300
-        ui_pantry_units["Manzana deshidratada"] = "g"
-        canonical_pantry_for_auditor["Manzana deshidratada"] = [300.0, "g"]
-    if not ui_state.get("v69_ponche_navideno_33plus_sync") or "Mezcla navideña molida de manzana deshidratada y especias" not in ui_pantry_stock:
-        ui_pantry_stock["Mezcla navideña molida de manzana deshidratada y especias"] = 300
-        ui_pantry_units["Mezcla navideña molida de manzana deshidratada y especias"] = "g"
-        canonical_pantry_for_auditor["Mezcla navideña molida de manzana deshidratada y especias"] = [300.0, "g"]
+    ui_pantry_stock.pop("Mezcla navideña molida de manzana deshidratada y especias", None)
+    ui_pantry_units.pop("Mezcla navideña molida de manzana deshidratada y especias", None)
+    canonical_pantry_for_auditor.pop("Mezcla navideña molida de manzana deshidratada y especias", None)
+    ui_pantry_stock.pop("Manzana deshidratada", None)
+    ui_pantry_units.pop("Manzana deshidratada", None)
+    canonical_pantry_for_auditor.pop("Manzana deshidratada", None)
+    if not ui_state.get("v69_ponche_navideno_double_tasting_sync") or "Premezcla navideña de manzana y especias" not in ui_pantry_stock:
+        ui_pantry_stock["Premezcla navideña de manzana y especias"] = 250
+        ui_pantry_units["Premezcla navideña de manzana y especias"] = "g"
+        canonical_pantry_for_auditor["Premezcla navideña de manzana y especias"] = [250.0, "g"]
 
     if "Semillas y nueces mixtas" in ui_pantry_stock:
         mix_val = ui_pantry_stock["Semillas y nueces mixtas"]
@@ -752,13 +753,29 @@ def build_ssot_document_from_ui_state(
         + ["Agua mineral", "Queso de cabra con arándano", "Queso doble crema"]
     ))
 
+    ui_inv = dict(ui_state.get("pantryStockInventory") or {})
+    ui_inv.pop("sku-332-mezcla-navidena-molida", None)
+    ui_inv.pop("sku-333-manzana-deshidratada", None)
+    ui_inv["sku-332-premezcla-ponche-manzana"] = {
+        "item_num": 332,
+        "name": "Premezcla navideña de manzana y especias",
+        "stock": int(ui_pantry_stock["Premezcla navideña de manzana y especias"]) if float(ui_pantry_stock["Premezcla navideña de manzana y especias"]).is_integer() else ui_pantry_stock["Premezcla navideña de manzana y especias"],
+        "unit": "g",
+        "packaging": f"{ui_pantry_stock['Premezcla navideña de manzana y especias']} g",
+        "category": "🌶️ Chiles, Condimentos e Infusiones",
+        "status": "canonical",
+        "reason": None,
+    }
+    ui_state["pantryStockInventory"] = ui_inv
+
     return {
-        "ssot_version": "v69_ponche_navideno_33plus_synced",
+        "ssot_version": "v69_ponche_navideno_double_tasting_synced",
         "v63_sams_09nov2026_post_s45_sync": True,
         "v64_cierre_s46_14nov2026_sync": True,
         "v65_ui_audit_nov14_sync": True,
         "v68_consolidated_19nov2026_sync": True,
         "v69_ponche_navideno_33plus_sync": True,
+        "v69_ponche_navideno_double_tasting_sync": True,
         "sams_ticket_order": "1569462808300642304 + Consolidado 19-Nov-2026",
         "sams_ticket_date": "2026-11-19",
         "sams_ticket_store": "Sam's Club Querétaro + Bodega Aurrera Tasquillo + Mercado Local",
@@ -797,6 +814,7 @@ def build_ssot_document_from_ui_state(
         "deletedPantryItems": del_pantry,
         "pantryStock": ui_pantry_stock,
         "pantryCardUnits": ui_pantry_units,
+        "pantryStockInventory": ui_inv,
         "auditorPantryStock": canonical_pantry_for_auditor,
         "quarantineItems": {
             k: {
@@ -962,6 +980,8 @@ def compute_projected_week_closing_stock(
     alias_pairs = [
         ("coco rallado sin azucar", "Coco rallado"),
         ("albahaca", "Albahaca fresca"),
+        ("mezcla navidena molida de manzana deshidratada y especias", "Premezcla navideña de manzana y especias"),
+        ("premezcla navidena de manzana y especias", "Premezcla navideña de manzana y especias"),
         ("multisinergix®", "33Plus®"),
         ("multisinergix", "33Plus®"),
         ("aminosinergix®", "34Plus®"),
@@ -1125,8 +1145,8 @@ def sync_pantry_ssot_from_chrome(force: bool = False) -> Optional[Dict[str, Any]
     new_seq = int(extracted.get("leveldb_seq", 0) or 0)
     existing_is_v68 = bool((existing or {}).get("v68_consolidated_19nov2026_sync"))
     chrome_is_v68 = bool((extracted.get("state") or {}).get("v68_consolidated_19nov2026_sync"))
-    existing_is_v69 = bool((existing or {}).get("v69_ponche_navideno_33plus_sync"))
-    chrome_is_v69 = bool((extracted.get("state") or {}).get("v69_ponche_navideno_33plus_sync"))
+    existing_is_v69 = bool((existing or {}).get("v69_ponche_navideno_double_tasting_sync") or (existing or {}).get("v69_ponche_navideno_33plus_sync"))
+    chrome_is_v69 = bool((extracted.get("state") or {}).get("v69_ponche_navideno_double_tasting_sync"))
 
     # No permitir que un estado de Chrome previo a V68/V69 sobrescriba la Fuente Única de Verdad vigente
     if ((existing_is_v68 and not chrome_is_v68) or (existing_is_v69 and not chrome_is_v69)) and not force:

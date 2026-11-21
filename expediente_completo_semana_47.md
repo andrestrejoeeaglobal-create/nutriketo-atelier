@@ -22,8 +22,8 @@
 | **Martes 17 Nov** | `R#21` | **Batido Californiano de Aguacate Hass, Hojas de Albahaca, Leche de Almendra y Limón Real (6°C) con 33Plus®** | `<batido_smoothie|aguacate|albahaca>` | `6°C` | `Aguacate` (`1 piezas`), `Albahaca` (`18 g`), `Leche de almendra` (`480 ml`), `Limones` (`48 g`), `Agua purificada` (`240 ml`), `33Plus®` (`30 g`) |
 | **Miércoles 18 Nov** | `R#30` | **Infusión Tónica de Rooibos Rojo Sudafricano, Anís Estrella y Limón Real (55°C) con 33Plus®** | `<tisana_infusion|rooibos_rojo|anis_estrella>` | `55°C` | `Rooibos rojo` (`18 g`), `Anís estrella` (`3 g`), `Limones` (`45 g`), `Agua purificada` (`1,080 ml`), `33Plus®` (`30 g`) |
 | **Jueves 19 Nov** | `R#39` | **Porridge Frío Cetogénico (No-Oats) de Corazones de Cáñamo, Linaza Dorada, Fresas y Leche de Almendra (6°C) con 33Plus®** | `<porridge_no_oats|corazones_canamo_linaza|leche_almendra>` | `6°C` | `Corazones de cáñamo` (`90 g`), `Linaza dorada molida` (`60 g`), `Fresas` (`200 g`), `Leche de almendra` (`480 ml`), `Extracto de vainilla` (`6 ml`), `33Plus®` (`30 g`) |
-| **Viernes 20 Nov** | `R#48` | **Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®** | `<lassi|yogur_griego|anis_estrella>` | `6°C` | `Yogur griego` (`480 g`), `Zarzamora` (`180 g`), `Anís estrella` (`3 g`), `Extracto de vainilla` (`6 ml`), `Agua purificada` (`420 ml`), `33Plus®` (`30 g`) |
-| **Sábado 21 Nov** | `R#57` | **Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®** | `<ponche_navideno|manzana_deshidratada|vainilla>` | `50°C` | `Mezcla navideña molida de manzana deshidratada y especias` (`27 g`), `Jamaica` (`25 g`), `Agua purificada` (`1,500 ml`), `Extracto de vainilla` (`6 ml`), `Limones` (`30 g`), `Nuez pecana` (`60 g`), `33Plus®` (`30 g`) |
+| **Viernes 20 Nov** | `R#48` | **Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®** | `<ponche_navideno|premezcla_manzana_especias|limon>` | `50°C` | `Premezcla navideña de manzana y especias` (`27 g`), `Jamaica` (`25 g`), `Limones` (`30 g`), `Agua purificada` (`1,500 ml`), `33Plus®` (`30 g`) |
+| **Sábado 21 Nov** | `R#57` | **Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®** | `<ponche_navideno|premezcla_manzana_especias|limon>` | `50°C` | `Premezcla navideña de manzana y especias` (`27 g`), `Jamaica` (`25 g`), `Limones` (`30 g`), `Agua purificada` (`1,500 ml`), `33Plus®` (`30 g`) |
 
 ### 🌙 0.2 Los 7 Preparados Nocturnos (`Cena · Tiempo 3` — Exclusivamente con `34Plus®`, `30 g` / `6p`, `0% Teína`)
 | Día | Receta | Preparado Funcional Nocturno con `34Plus®` | Huella ADN (`<formato|base|botánico>`) | Temperatura | Insumos Clave (6p) |
@@ -33,7 +33,7 @@
 | **Martes 17 Nov** | `R#27` | **Leche Persa Tibia de Pistache, Cardamomo Verde y Vainilla (52°C) con 34Plus®** | `<leche_persa|pistaches|cardamomo_verde>` | `52°C` | `Pistaches` (`120 g`), `Cardamomo verde` (`2 g`), `Extracto de vainilla` (`6 ml`), `Agua purificada` (`960 ml`), `34Plus®` (`30 g`) |
 | **Miércoles 18 Nov** | `R#36` | **Crema Helada Mediterránea Estilo Halva de Yogur Griego, Tahini de Ajonjolí y Canela (6°C) con 34Plus®** | `<crema_helada_halva|tahini_ajonjoli|canela>` | `6°C` | `Yogur griego` (`480 g`), `Tahini de ajonjolí` (`60 g`), `Canela molida` (`3 g`), `Extracto de vainilla` (`6 ml`), `34Plus®` (`30 g`) |
 | **Jueves 19 Nov** | `R#45` | **Crema Catalana Cetogénica Tibia Bistró de Queso Philadelphia, Anís Estrella, Albahaca y Ralladura de Limón Real (52°C) con 34Plus®** | `<crema_catalana_keto|queso_philadelphia|albahaca>` | `52°C` | `Queso Philadelphia` (`120 g`), `Anís estrella` (`3 g`), `Albahaca` (`12 g`), `Limones` (`36 g`), `Extracto de vainilla` (`6 ml`), `Agua purificada` (`900 ml`), `34Plus®` (`30 g`) |
-| **Viernes 20 Nov** | `R#54` | **Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®** | `<atole|ajonjoli|coco_rallado>` | `52°C` | `Ajonjolí` (`120 g`), `Coco rallado` (`60 g`), `Canela molida` (`3 g`), `Extracto de vainilla` (`6 ml`), `Agua purificada` (`960 ml`), `34Plus®` (`30 g`) |
+| **Viernes 20 Nov** | `R#54` | **Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®** | `<ponche_cremoso_invernal|leche_coco_invernal|leche_coco>` | `50°C` | `Premezcla navideña de manzana y especias` (`27 g`), `Leche de coco` (`100 ml`), `Extracto de vainilla` (`6 ml`), `Nuez pecana` (`60 g`), `Agua purificada` (`1,400 ml`), `34Plus®` (`30 g`) |
 | **Sábado 21 Nov** | `R#63` | **Bombones Helados Mediterráneos de Coco Rallado, Nuez Pecana, Vainilla y Aceite de Coco (6°C) con 34Plus® + Infusión Limpia de Tomillo** | `<bombones_frios|nuez_pecana|coco_rallado>` | `6°C / 58°C` | `Coco rallado` (`120 g`), `Nuez pecana` (`90 g`), `Aceite de coco` (`30 g`), `Extracto de vainilla` (`6 ml`), `Tomillo` (`2 g`), `Agua purificada` (`900 ml`), `34Plus®` (`30 g`) |
 
 ---
@@ -57,10 +57,10 @@
 | **Jueves 19 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Desayuno** | Copa Bistró de Rubíes de Granada de la Granja con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Galette Bistró sin Harina de Huevos a la Mantequilla Rellena de Duxelles de Champiñones, Cebolla, Hierbas Finas y Queso Manchego** `[heptagon_s47_huevo_galette_duxelles_bistro]` `<huevo|frio_ensamblaje|heptagon_s47_huevo_galette_duxelles_bistro|cebolla+champinon+hierbas_finas+mantequilla>` | Porridge Frío Cetogénico (No-Oats) de Corazones de Cáñamo, Linaza Dorada, Fresas y Leche de Almendra (6°C) con 33Plus® |
 | **Jueves 19 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Comida** | Ensalada Bistró de Lechuga Romana, Vinagre de Vino Tinto, Limón Real y Aceite de Oliva VEVO | **Medallones de Flat Steak al Sartén Bistró con Mantequilla de Tomillo, Cebolla Caramelizada y Ejotes Franceses** `[heptagon_s47_res_medallones_tomillo_bistro]` `<flat_steak|sarten|heptagon_s47_res_medallones_tomillo_bistro|cebolla+ejotes+mantequilla+tomillo>` | Floretes de Brócoli al Vapor con Limón Real, Orégano y Aceite de Oliva VEVO |
 | **Jueves 19 Nov** | **🇫🇷 Escuela 5: Bistró Europeo de Focaccias Keto y Ensaladas** | **Cena** | Consomé Bistró de Infusión de Tallos de Apio, Hojas de Acelga de la Granja, Ajo Dorado y Romero en Agua Purificada | **Fajitas de Mojarra a la Grenobloise Bistró Doradas en Mantequilla de Alcaparras y Limón Real sobre Cintas de Calabacita y Aguacate Hass** `[heptagon_s47_mojarra_grenobloise_bistro]` `<mojarra|sarten|heptagon_s47_mojarra_grenobloise_bistro|aguacate+alcaparras+calabacitas+mantequilla>` | Crema Catalana Cetogénica Tibia Bistró de Queso Philadelphia, Anís Estrella, Albahaca y Ralladura de Limón Real (52°C) con 34Plus® |
-| **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Desayuno** | Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso** `[heptagon_s47_huevo_tamagoyaki_nopal_cabra]` `<huevo|sarten|heptagon_s47_huevo_tamagoyaki_nopal_cabra|cilantro+mantequilla+nopales+queso_philadelphia>` | Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus® |
+| **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Desayuno** | Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso** `[heptagon_s47_huevo_tamagoyaki_nopal_cabra]` `<huevo|sarten|heptagon_s47_huevo_tamagoyaki_nopal_cabra|cilantro+mantequilla+nopales+queso_philadelphia>` | Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus® |
 | **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Comida** | Ensalada Oriental Sunomono de Pepino en Cintas, Cilantro de la Granja, Limón Real y Aceite de Oliva VEVO | **Lomo de Salmón del Pacífico al Sartén en Velouté Tailandés de Leche de Coco, Cúrcuma y Cilantro con Floretes de Brócoli y Aguacate Hass** `[heptagon_s47_salmon_veloute_coco_brocoli]` `<salmon|licuado_emulsion|heptagon_s47_salmon_veloute_coco_brocoli|aceite_coco+aguacate+brocoli+cilantro>` | Floretes de Coliflor Rostizados al Wok con Cúrcuma, Limón Real y Aceite de Oliva VEVO |
-| **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Cena** | Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real | **Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya** `[heptagon_s47_pollo_teppanyaki_nuez_india]` `<pechuga_pollo|wok|heptagon_s47_pollo_teppanyaki_nuez_india|aceite_coco+germinado+morron+nuez_india>` | Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus® |
-| **Sábado 21 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Desayuno** | Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)** `[heptagon_s47_huevo_purgatorio_parmesano]` `<huevo|sarten|heptagon_s47_huevo_purgatorio_parmesano|acelgas+jitomate+mantequilla+oregano>` | Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus® |
+| **Viernes 20 Nov** | **🌊 Escuela 6: Pacífico & Oriente (Costa Mexicana, Teppanyaki & Curry Dorado)** | **Cena** | Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real | **Teppanyaki Oriental al Wok de Pechuga de Pollo de Despiece con Germinado, Pimiento Morrón, Nuez de la India Tostada y Salsa de Soya** `[heptagon_s47_pollo_teppanyaki_nuez_india]` `<pechuga_pollo|wok|heptagon_s47_pollo_teppanyaki_nuez_india|aceite_coco+germinado+morron+nuez_india>` | Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus® |
+| **Sábado 21 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Desayuno** | Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana | **Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)** `[heptagon_s47_huevo_purgatorio_parmesano]` `<huevo|sarten|heptagon_s47_huevo_purgatorio_parmesano|acelgas+jitomate+mantequilla+oregano>` | Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus® |
 | **Sábado 21 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Comida** | Ensalada de la Trattoria de Lechuga Romana, Nuez Pecana Tostada de la Granja, Limón Real, Orégano y Aceite de Oliva VEVO | **Fajitas de Mojarra al Limone de la Trattoria Doradas en Mantequilla con Champiñones, Alcaparras y Aguacate Hass** `[heptagon_s47_mojarra_piccata_limone]` `<mojarra|sarten|heptagon_s47_mojarra_piccata_limone|aguacate+alcaparras+champinon+mantequilla>` | Medallones de Calabacita Asados a la Parrilla con Romero de la Granja, Limón Real y Aceite de Oliva VEVO |
 | **Sábado 21 Nov** | **🇮🇹 Escuela 7: Mare Nostrum (Alta Trattoria Italiana & Islas Griegas)** | **Cena** | Consomé Mediterráneo de Infusión de Romero de la Granja, Ajo Dorado, Orégano y Limón Real en Agua Purificada | **Cazuela Egea al Sartén de Lomos de Sardina, Pimientos Morrones Asados, Orégano, Queso Philadelphia y Queso Parmesano** `[heptagon_s47_sardina_egea_cabra_sarten]` `<sardinas|sarten|heptagon_s47_sardina_egea_cabra_sarten|aceite_coco+morron+oregano+queso_parmesano>` | Bombones Helados Mediterráneos de Coco Rallado, Nuez Pecana, Vainilla y Aceite de Coco (6°C) con 34Plus® + Infusión Limpia de Tomillo |
 
@@ -1550,13 +1550,13 @@
 
 #### 🍳 Viernes — Desayuno (08:30 hrs) · `👥 6 Comensales` | `596 kcal` · `Grasa: 49.0 g` · `Proteína: 34.5 g` · `Carbs Netos: 4.2 g` · `Fibra: 6.4 g`
 
-##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Viernes · Desayuno · 6 Comensales · `1 insumos unificados en 1 solo pesaje`)
+##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Viernes · Desayuno · 6 Comensales · `0 insumos unificados en 1 solo pesaje`)
 | Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |
 |---|---|---|
 | **Granadas** | **`180 g`** | 180 g en Entrada |
-| **Extracto de vainilla** | **`12 ml`** | ⚖️ **Dividir:** 6 ml en Entrada + 6 ml en Guarnición/Bebida |
-| **Semillas y nueces mixtas** | **`80 g`** | 80 g en Entrada |
-| **Nuez de la India** | **`120 g`** | 120 g en Entrada |
+| **Extracto de vainilla** | **`6 ml`** | 6 ml en Entrada |
+| **Semillas y nueces mixtas** | **`70 g`** | 70 g en Entrada |
+| **Nuez de la India** | **`80 g`** | 80 g en Entrada |
 | **Nuez pecana** | **`60 g`** | 60 g en Entrada |
 | **Huevo** | **`18 piezas`** | 18 piezas en Plato Fuerte |
 | **Nopales** | **`360 g`** | 360 g en Plato Fuerte |
@@ -1565,16 +1565,16 @@
 | **Cilantro** | **`24 g`** | 24 g en Plato Fuerte |
 | **Sal de mar** | **`6 g`** | 6 g en Plato Fuerte |
 | **Pimienta negra** | **`3 g`** | 3 g en Plato Fuerte |
-| **Yogur griego** | **`480 g`** | 480 g en Guarnición/Bebida |
-| **Zarzamora** | **`180 g`** | 180 g en Guarnición/Bebida |
-| **Anís estrella** | **`3 g`** | 3 g en Guarnición/Bebida |
-| **Agua purificada** | **`420 ml`** | 420 ml en Guarnición/Bebida |
+| **Premezcla navideña de manzana y especias** | **`27 g`** | 27 g en Guarnición/Bebida |
+| **Jamaica** | **`25 g`** | 25 g en Guarnición/Bebida |
+| **Limones** | **`30 g`** | 30 g en Guarnición/Bebida |
+| **Agua purificada** | **`1,500 ml`** | 1500 ml en Guarnición/Bebida |
 | **33Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Perfumar los arilos de granada de la granja con el extracto de vainilla. | *Guarnición/Bebida:* Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.
-2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Asar la juliana de nopal de la granja con cilantro picado. | *Cierre de Entrada:* Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.
-3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso Philadelphia, y enrollar estilo Tamagoyaki. | *Fuego Lateral / Templado:* Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Perfumar los arilos de granada de la granja con el extracto de vainilla. | *Guarnición/Bebida:* Infusionar la flor de jamaica (25 g), las tiras de cáscara de limón real sin parte blanca (30 g) y los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos; filtrar en malla fina para clarificar.
+2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Asar la juliana de nopal de la granja con cilantro picado. | *Cierre de Entrada:* Coronar con los 70 g de semillas y nueces mixtas, los 80 g de nuez de la India y los 60 g de nuez pecana.
+3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso Philadelphia, y enrollar estilo Tamagoyaki. | *Fuego Lateral / Templado:* Aplicar choque térmico con los 400 ml restantes de agua purificada fría para bajar a 50–52°C, incorporar los 30 g de 33Plus®, espumar 15 segundos y servir al momento.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
 
 ##### Receta #46 [Viernes · Desayuno (6p) · Tiempo 1 — Entrada]: Copa del Pacífico de Rubíes de Granada de la Granja a la Vainilla con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana
@@ -1590,13 +1590,13 @@
 |---|---|---|---|---|
 | 🍓 Frutas de Bajo Índice Glucémico | **Granadas** | 30 | **180** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Extracto de vainilla** | 1 | **6** | ml |
-| 🥑 Grasas, Aceites y Semillas | **Semillas y nueces mixtas** | 13.33 | **80** | g |
-| 🥑 Grasas, Aceites y Semillas | **Nuez de la India** | 20 | **120** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas y nueces mixtas** | 11.67 | **70** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez de la India** | 13.33 | **80** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 10 | **60** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
 1. Perfumar los arilos de granada de la granja con el extracto de vainilla.
-2. Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.
+2. Coronar con los 70 g de semillas y nueces mixtas, los 80 g de nuez de la India y los 60 g de nuez pecana.
 
 ##### Receta #47 [Viernes · Desayuno (6p) · Tiempo 2 — Plato Fuerte]: Tamagoyaki Costero al Sartén de Huevos a la Mantequilla Relleno de Juliana de Nopal de la Granja, Cilantro y Queso Philadelphia Cremoso
 - **Técnica Culinaria:** `coastal_nopal_philadelphia_tamagoyaki_s47`
@@ -1622,27 +1622,26 @@
 1. Asar la juliana de nopal de la granja con cilantro picado.
 2. Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso Philadelphia, y enrollar estilo Tamagoyaki.
 
-##### Receta #48 [Viernes · Desayuno (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®
-- **Técnica Culinaria:** `blackberry_star_anise_probiotic_lassi_33plus_s47`
-- **Nota Organoléptica y Clínica:** Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con 480 g de yogur griego de alacena (saldo proyectado S48 = 1,820 g), zarzamora antioxidante de alacena ($0.00 MXN), anís estrella, vainilla y 33Plus® a 6°C.
+##### Receta #48 [Viernes · Desayuno (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®
+- **Técnica Culinaria:** `ruby_christmas_apple_punch_33plus_s47`
+- **Nota Organoléptica y Clínica:** Cata Organoléptica Matutina Navideña con 33Plus®: técnica de doble temperatura (<= 52°C) elaborada con los 27 g de premezcla navideña de manzana y especias en polvo de alacena ($0.00 MXN), flor de jamaica y tiras de cáscara de limón real de Granja El Herami ($0.00 MXN) en agua purificada, diseñada con cero colisiones intra-servicio [R4].
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
-  - *Termodinámica:* Emulsión en frío a 6°C (0% calor).
-  - *Aromática y Sabor:* Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.
-  - *Arquitectura Textural:* Lassi líquido aterciopelado color púrpura a 6°C.
-  - *Punto Crítico de Control:* 100% cubierto en alacena (Yogur griego 480 g -> 1,820 g saldo; Zarzamora 180 g -> 330 g saldo) y 33Plus® (30 g) en frío.
+  - *Termodinámica:* Infusión aromática a 88–90°C en 1,100 ml de agua purificada durante 7 minutos, clarificado en malla fina y choque térmico con 400 ml de agua purificada fría para estabilizar en 50–52°C antes de integrar 33Plus®.
+  - *Aromática y Sabor:* Elixir rubí profundo donde la acidez floral de la jamaica y los aceites esenciales de la cáscara de limón real equilibran el dulzor natural de la manzana especiada (canela, clavo, pimienta negra y anís estrella) con el perfil frutal rojo de 33Plus®.
+  - *Arquitectura Textural:* Caldo clarificado aterciopelado por la pectina natural de la manzana con corona espumada ligera a 50°C.
+  - *Punto Crítico de Control:* Filtrar en malla fina tras los 7 minutos de infusión y verificar <= 52°C mediante choque térmico con 400 ml de agua fría antes de espumar los 30 g de 33Plus®.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🧀 Lácteos y Quesos (Sin Gluten — Keto) | **Yogur griego** | 80 | **480** | g |
-| 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 30 | **180** | g |
-| 🧂 Condimentos, Especias e Infusiones | **Anís estrella** | 0.5 | **3** | g |
-| 🧂 Condimentos, Especias e Infusiones | **Extracto de vainilla** | 1 | **6** | ml |
-| 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 70 | **420** | ml |
+| 🧂 Condimentos, Especias e Infusiones | **Premezcla navideña de manzana y especias** | 4.5 | **27** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Jamaica** | 4.17 | **25** | g |
+| 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 5 | **30** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 250 | **1,500** | ml |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **33Plus®** | 5 | **30** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.
-2. Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C.
+1. Infusionar la flor de jamaica (25 g), las tiras de cáscara de limón real sin parte blanca (30 g) y los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos; filtrar en malla fina para clarificar.
+2. Aplicar choque térmico con los 400 ml restantes de agua purificada fría para bajar a 50–52°C, incorporar los 30 g de 33Plus®, espumar 15 segundos y servir al momento.
 
 #### 🍲 Viernes — Comida (14:30 hrs) · `👥 6 Comensales` | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.7 g`
 
@@ -1742,7 +1741,7 @@
 ##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Viernes · Cena · 6 Comensales · `3 insumos unificados en 1 solo pesaje`)
 | Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |
 |---|---|---|
-| **Agua purificada** | **`1,920 ml`** | ⚖️ **Dividir:** 960 ml en Entrada + 960 ml en Guarnición/Bebida |
+| **Agua purificada** | **`2,360 ml`** | ⚖️ **Dividir:** 960 ml en Entrada + 1400 ml en Guarnición/Bebida |
 | **Cilantro** | **`30 g`** | 30 g en Entrada |
 | **Limones** | **`48 g`** | 48 g en Entrada |
 | **Ajo** | **`8 g`** | ⚖️ **Dividir:** 4 g en Entrada + 4 g en Plato Fuerte |
@@ -1754,16 +1753,16 @@
 | **Nuez de la India** | **`120 g`** | 120 g en Plato Fuerte |
 | **Salsa de soya** | **`24 ml`** | 24 ml en Plato Fuerte |
 | **Pimienta negra** | **`3 g`** | 3 g en Plato Fuerte |
-| **Ajonjolí** | **`120 g`** | 120 g en Guarnición/Bebida |
-| **Coco rallado** | **`60 g`** | 60 g en Guarnición/Bebida |
-| **Canela molida** | **`3 g`** | 3 g en Guarnición/Bebida |
+| **Premezcla navideña de manzana y especias** | **`27 g`** | 27 g en Guarnición/Bebida |
+| **Leche de coco** | **`100 ml`** | 100 ml en Guarnición/Bebida |
 | **Extracto de vainilla** | **`6 ml`** | 6 ml en Guarnición/Bebida |
+| **Nuez pecana** | **`60 g`** | 60 g en Guarnición/Bebida |
 | **34Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar el ajo laminado en el aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 7 minutos. | *Guarnición/Bebida:* Tostar ligeramente en sartén seco los 120 g de ajonjolí y los 60 g de coco rallado durante 2 minutos y licuar a alta potencia con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Dorar el ajo laminado en el aceite de coco neutro y verter los 960 ml de agua purificada con sal de mar; hervir 7 minutos. | *Guarnición/Bebida:* Infusionar los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos y filtrar en malla fina.
 2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Despiezar en cocina el pollo entero crudo (~1,800 g): extraer la pechuga limpia sin hueso (~500 g) y deshuesar los 2 muslos (~160 g) para obtener exactamente 660 g de fajitas; reservar en refrigeración las 2 piernas (~220 g) y destinar huacal, rabadilla, huesos y las 2 alas a la olla de fondo claro casero. | *Cierre de Entrada:* Añadir al momento de servir el cilantro de la granja y el jugo de limón real.
-3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Saltear los 660 g de tiras de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo; incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada. | *Fuego Lateral / Templado:* Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C.
+3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Saltear los 660 g de tiras de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo; incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada. | *Fuego Lateral / Templado:* Templar con los 300 ml de agua purificada fría, los 100 ml de leche de coco y los 6 ml de extracto de vainilla hasta 50–52°C, emulsionar 15 segundos con los 30 g de 34Plus® y servir sobre 10 g de nuez pecana tostada y troceada por taza (60 g totales).
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
 
 ##### Receta #52 [Viernes · Cena (6p) · Tiempo 1 — Entrada]: Caldo Claro del Pacífico en Infusión de Agua Purificada con Ajo Dorado, Cilantro de la Granja y Limón Real
@@ -1813,27 +1812,27 @@
 1. Despiezar en cocina el pollo entero crudo (~1,800 g): extraer la pechuga limpia sin hueso (~500 g) y deshuesar los 2 muslos (~160 g) para obtener exactamente 660 g de fajitas; reservar en refrigeración las 2 piernas (~220 g) y destinar huacal, rabadilla, huesos y las 2 alas a la olla de fondo claro casero.
 2. Saltear los 660 g de tiras de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo; incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada.
 
-##### Receta #54 [Viernes · Cena (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®
-- **Técnica Culinaria:** `warm_toasted_sesame_coconut_keto_atole_34plus_s47`
-- **Nota Organoléptica y Clínica:** Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con ajonjolí tostado y coco rallado de alacena ($0.00 MXN), canela molida, vainilla y 34Plus® a 52°C.
+##### Receta #54 [Viernes · Cena (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®
+- **Técnica Culinaria:** `winter_coconut_apple_punch_34plus_s47`
+- **Nota Organoléptica y Clínica:** Cata Organoléptica Nocturna Invernal (0% Teína) con 34Plus®: ponche sedoso templado a 50–52°C que infusiona 27 g de premezcla navideña de manzana y especias de alacena ($0.00 MXN), emulsionado con 100 ml de leche de coco de alacena (saldo proyectado S48 = 160 ml) y vainilla, servido sobre nuez pecana tostada de Granja El Herami ($0.00 MXN).
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
-  - *Termodinámica:* Tostado aromático en seco y emulsión en licuadora con agua tibia a 52°C.
-  - *Aromática y Sabor:* Ajonjolí dorado y coco tostado con notas tradicionales de canela y vainilla.
-  - *Arquitectura Textural:* Atole sedoso, reconfortante y rico en calcio y magnesio a 52°C.
-  - *Punto Crítico de Control:* 100% cubierto en alacena (Ajonjolí 120 g -> 80 g saldo; Coco rallado 60 g) y 34Plus® (30 g) a 52°C.
+  - *Termodinámica:* Infusión especiada a 88–90°C en 1,100 ml de agua purificada por 7 minutos, filtrado fino y templado térmico con 300 ml de agua fría + 100 ml de leche de coco hasta 50–52°C.
+  - *Aromática y Sabor:* Abrazo invernal cremoso de manzana especiada, vainilla y leche de coco con fondo tostado de nuez pecana y el perfil reparador nocturno de 34Plus®.
+  - *Arquitectura Textural:* Emulsión tibia aterciopelada a 50°C con contraste crujiente de 10 g de nuez pecana tostada en el fondo de cada taza.
+  - *Punto Crítico de Control:* 0% teína y 0% jamaica nocturna ([R6]); templar estrictamente a 50–52°C antes de emulsionar 15 segundos los 30 g de 34Plus®.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🥑 Grasas, Aceites y Semillas | **Ajonjolí** | 20 | **120** | g |
-| 🥑 Grasas, Aceites y Semillas | **Coco rallado** | 10 | **60** | g |
-| 🧂 Condimentos, Especias e Infusiones | **Canela molida** | 0.5 | **3** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Premezcla navideña de manzana y especias** | 4.5 | **27** | g |
+| 🥑 Grasas, Aceites y Semillas | **Leche de coco** | 16.67 | **100** | ml |
 | 🧂 Condimentos, Especias e Infusiones | **Extracto de vainilla** | 1 | **6** | ml |
-| 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 160 | **960** | ml |
+| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 233.33 | **1,400** | ml |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **34Plus®** | 5 | **30** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Tostar ligeramente en sartén seco los 120 g de ajonjolí y los 60 g de coco rallado durante 2 minutos y licuar a alta potencia con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla.
-2. Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C.
+1. Infusionar los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos y filtrar en malla fina.
+2. Templar con los 300 ml de agua purificada fría, los 100 ml de leche de coco y los 6 ml de extracto de vainilla hasta 50–52°C, emulsionar 15 segundos con los 30 g de 34Plus® y servir sobre 10 g de nuez pecana tostada y troceada por taza (60 g totales).
 
 ---
 
@@ -1841,14 +1840,14 @@
 
 #### 🍳 Sábado — Desayuno (08:30 hrs) · `👥 6 Comensales` | `596 kcal` · `Grasa: 49.0 g` · `Proteína: 34.5 g` · `Carbs Netos: 4.2 g` · `Fibra: 6.4 g`
 
-##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Sábado · Desayuno · 6 Comensales · `1 insumos unificados en 1 solo pesaje`)
+##### 👩‍🍳 Modo Cocinero — Comanda Práctica Unificada (Sábado · Desayuno · 6 Comensales · `0 insumos unificados en 1 solo pesaje`)
 | Insumo Unificado en Barra (Pesar 1 Sola Vez) | Cantidad Total Servicio (6p) | Distribución por Tiempo (Mise en Place) |
 |---|---|---|
 | **Granadas** | **`180 g`** | 180 g en Entrada |
 | **Canela molida** | **`3 g`** | 3 g en Entrada |
-| **Semillas y nueces mixtas** | **`80 g`** | 80 g en Entrada |
-| **Nuez de la India** | **`120 g`** | 120 g en Entrada |
-| **Nuez pecana** | **`120 g`** | ⚖️ **Dividir:** 60 g en Entrada + 60 g en Guarnición/Bebida |
+| **Semillas y nueces mixtas** | **`70 g`** | 70 g en Entrada |
+| **Nuez de la India** | **`80 g`** | 80 g en Entrada |
+| **Nuez pecana** | **`60 g`** | 60 g en Entrada |
 | **Huevo** | **`18 piezas`** | 18 piezas en Plato Fuerte |
 | **Acelgas** | **`360 g`** | 360 g en Plato Fuerte |
 | **Jitomate** | **`1 piezas`** | 1 piezas en Plato Fuerte |
@@ -1857,17 +1856,16 @@
 | **Orégano** | **`3 g`** | 3 g en Plato Fuerte |
 | **Ajo** | **`5 g`** | 5 g en Plato Fuerte |
 | **Sal de mar** | **`6 g`** | 6 g en Plato Fuerte |
-| **Mezcla navideña molida de manzana deshidratada y especias** | **`27 g`** | 27 g en Guarnición/Bebida |
+| **Premezcla navideña de manzana y especias** | **`27 g`** | 27 g en Guarnición/Bebida |
 | **Jamaica** | **`25 g`** | 25 g en Guarnición/Bebida |
-| **Agua purificada** | **`1,500 ml`** | 1500 ml en Guarnición/Bebida |
-| **Extracto de vainilla** | **`6 ml`** | 6 ml en Guarnición/Bebida |
 | **Limones** | **`30 g`** | 30 g en Guarnición/Bebida |
+| **Agua purificada** | **`1,500 ml`** | 1500 ml en Guarnición/Bebida |
 | **33Plus®** | **`30 g`** | 30 g en Guarnición/Bebida |
 
 **🔥 Orden Sincronizado de Fuegos (4 Fases para Servir los 3 Tiempos a Tiempo):**
-1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Disponer los arilos de granada de la granja con canela molida en copas frías. | *Guarnición/Bebida:* Calentar 1,100 ml de agua purificada con los 25 g de flor de jamaica de la granja y tiras anchas de piel de limón real (sin parte blanca); al romper el hervor apagar el fuego, incorporar los 27 g de mezcla navideña molida de manzana deshidratada y especias (canela, anís estrella, clavo y pimienta negra), tapar e infusionar 7 minutos a 88°C–90°C.
-2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Saltear en sartén el jitomate picado, el ajo y las acelgas de la granja en los 60 g de mantequilla con orégano. | *Cierre de Entrada:* Coronar con los 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana.
-3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Cascar los 18 huevos sobre la cama caliente en el sartén, tapar 4 minutos y espolvorear los 40 g de queso parmesano. | *Fuego Lateral / Templado:* Clarificar pasando la infusión por colador de malla fina o manta de cielo para retener cualquier sedimento ultrafino, y aplicar choque térmico vertiendo de inmediato los 400 ml restantes de agua purificada fría junto con los 6 ml de extracto de vainilla para situar la mezcla exactamente entre 50°C y 52°C.
+1. **Fase 1 — Adelantos, Fríos e Infusiones:** *Entrada:* Disponer los arilos de granada de la granja con canela molida en copas frías. | *Guarnición/Bebida:* Infusionar la flor de jamaica (25 g), las tiras de cáscara de limón real sin parte blanca (30 g) y los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos; filtrar en malla fina para clarificar.
+2. **Fase 2 — Base Caliente y Salsas:** *Base Principal:* Saltear en sartén el jitomate picado, el ajo y las acelgas de la granja en los 60 g de mantequilla con orégano. | *Cierre de Entrada:* Coronar con los 70 g de semillas y nueces mixtas, 80 g de nuez de la India y 60 g de nuez pecana.
+3. **Fase 3 — Cocción Principal al Momento:** *Fuego Principal:* Cascar los 18 huevos sobre la cama caliente en el sartén, tapar 4 minutos y espolvorear los 40 g de queso parmesano. | *Fuego Lateral / Templado:* Aplicar choque térmico con los 400 ml restantes de agua purificada fría para bajar a 50–52°C, incorporar los 30 g de 33Plus®, espumar 15 segundos y servir al momento.
 4. **Fase 4 — Pase simultáneo a Mesa:** Emplatar la Entrada, presentar el Plato Fuerte caliente al centro y servir con el Acompañamiento/Bebida.
 
 ##### Receta #55 [Sábado · Desayuno (6p) · Tiempo 1 — Entrada]: Copa Mare Nostrum de Rubíes de Granada de la Granja y Canela con Semillas y Nueces Mixtas, Nuez de la India y Nuez Pecana
@@ -1883,13 +1881,13 @@
 |---|---|---|---|---|
 | 🍓 Frutas de Bajo Índice Glucémico | **Granadas** | 30 | **180** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Canela molida** | 0.5 | **3** | g |
-| 🥑 Grasas, Aceites y Semillas | **Semillas y nueces mixtas** | 13.33 | **80** | g |
-| 🥑 Grasas, Aceites y Semillas | **Nuez de la India** | 20 | **120** | g |
+| 🥑 Grasas, Aceites y Semillas | **Semillas y nueces mixtas** | 11.67 | **70** | g |
+| 🥑 Grasas, Aceites y Semillas | **Nuez de la India** | 13.33 | **80** | g |
 | 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 10 | **60** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
 1. Disponer los arilos de granada de la granja con canela molida en copas frías.
-2. Coronar con los 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana.
+2. Coronar con los 70 g de semillas y nueces mixtas, 80 g de nuez de la India y 60 g de nuez pecana.
 
 ##### Receta #56 [Sábado · Desayuno (6p) · Tiempo 2 — Plato Fuerte]: Uova in Purgatorio de la Trattoria (Huevos Cuajados al Sartén en Mantequilla, Jitomate Asado, Hojas de Acelga de la Granja, Orégano y Queso Parmesano)
 - **Técnica Culinaria:** `trattoria_chard_parmesan_eggs_skillet_s47`
@@ -1916,29 +1914,26 @@
 1. Saltear en sartén el jitomate picado, el ajo y las acelgas de la granja en los 60 g de mantequilla con orégano.
 2. Cascar los 18 huevos sobre la cama caliente en el sartén, tapar 4 minutos y espolvorear los 40 g de queso parmesano.
 
-##### Receta #57 [Sábado · Desayuno (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®
-- **Técnica Culinaria:** `holiday_clarified_apple_clove_punch_33plus`
-- **Nota Organoléptica y Clínica:** Edición Especial de Temporada Navideña (1 entrega semanal autorizada hasta Navidad): técnica de doble temperatura diseñada para la premezcla molida de manzana deshidratada, canela, anís estrella, clavo de olor y pimienta negra (27 g), infusionada a 88°C–90°C con flor de jamaica y piel de limón real de Granja El Herami, filtrada por malla fina / manta de cielo, templada por choque térmico a 50°C–52°C con agua purificada fría y vainilla antes de emulsionar 33Plus®, y servida sobre nuez pecana tostada de la granja.
+##### Receta #57 [Sábado · Desayuno (6p) · Tiempo 3 — Acompañamiento / Preparado Funcional]: Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®
+- **Técnica Culinaria:** `ruby_christmas_apple_punch_33plus_s47`
+- **Nota Organoléptica y Clínica:** Cata Organoléptica Matutina Navideña con 33Plus®: técnica de doble temperatura (<= 52°C) elaborada con los 27 g de premezcla navideña de manzana y especias en polvo de alacena ($0.00 MXN), flor de jamaica y tiras de cáscara de limón real de Granja El Herami ($0.00 MXN) en agua purificada, diseñada con cero colisiones intra-servicio [R4].
 - **Razonamiento CoCT (Chain-of-Culinary-Thought):**
-  - *Termodinámica:* Infusión aromática fuera del fuego a 88°C–90°C en 1,100 ml por 7 min, filtrado ultrafino y choque térmico controlado (+400 ml de agua fría) a 50°C–52°C antes de integrar 33Plus®.
-  - *Aromática y Sabor:* Elixir rubí profundo de ponche tradicional donde la acidez floral de la jamaica equilibra el dulzor natural de la manzana molida, con anís estrella, clavo, canela, destello de piperina, vainilla y el perfil frutal rojo de 33Plus®.
-  - *Arquitectura Textural:* Caldo aterciopelado por la pectina natural de la manzana y libre de sedimento arenoso, coronado con crocancia de nuez pecana tostada en taza.
-  - *Punto Crítico de Control:* No tostar en seco el polvo con manzana para evitar amargor por pirólisis de fructosa; filtrar en manta de cielo o malla ultrafina y verificar <= 52°C mediante choque térmico antes de batir 33Plus® (30 g).
+  - *Termodinámica:* Infusión aromática a 88–90°C en 1,100 ml de agua purificada durante 7 minutos, clarificado en malla fina y choque térmico con 400 ml de agua purificada fría para estabilizar en 50–52°C antes de integrar 33Plus®.
+  - *Aromática y Sabor:* Elixir rubí profundo donde la acidez floral de la jamaica y los aceites esenciales de la cáscara de limón real equilibran el dulzor natural de la manzana especiada (canela, clavo, pimienta negra y anís estrella) con el perfil frutal rojo de 33Plus®.
+  - *Arquitectura Textural:* Caldo clarificado aterciopelado por la pectina natural de la manzana con corona espumada ligera a 50°C.
+  - *Punto Crítico de Control:* Filtrar en malla fina tras los 7 minutos de infusión y verificar <= 52°C mediante choque térmico con 400 ml de agua fría antes de espumar los 30 g de 33Plus®.
 
 | Categoría Clínica | Insumo Canónico | Dosis / Comensal (1p) | Total Servicio (6p) | Unidad |
 |---|---|---|---|---|
-| 🧂 Condimentos, Especias e Infusiones | **Mezcla navideña molida de manzana deshidratada y especias** | 4.5 | **27** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Premezcla navideña de manzana y especias** | 4.5 | **27** | g |
 | 🧂 Condimentos, Especias e Infusiones | **Jamaica** | 4.17 | **25** | g |
-| 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 250 | **1,500** | ml |
-| 🧂 Condimentos, Especias e Infusiones | **Extracto de vainilla** | 1 | **6** | ml |
 | 🥦 Hortalizas, Vegetales y Hongos | **Limones** | 5 | **30** | g |
-| 🥑 Grasas, Aceites y Semillas | **Nuez pecana** | 10 | **60** | g |
+| 🧂 Condimentos, Especias e Infusiones | **Agua purificada** | 250 | **1,500** | ml |
 | 💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA | **33Plus®** | 5 | **30** | g |
 
 **Protocolo de Ejecución Paso a Paso:**
-1. Calentar 1,100 ml de agua purificada con los 25 g de flor de jamaica de la granja y tiras anchas de piel de limón real (sin parte blanca); al romper el hervor apagar el fuego, incorporar los 27 g de mezcla navideña molida de manzana deshidratada y especias (canela, anís estrella, clavo y pimienta negra), tapar e infusionar 7 minutos a 88°C–90°C.
-2. Clarificar pasando la infusión por colador de malla fina o manta de cielo para retener cualquier sedimento ultrafino, y aplicar choque térmico vertiendo de inmediato los 400 ml restantes de agua purificada fría junto con los 6 ml de extracto de vainilla para situar la mezcla exactamente entre 50°C y 52°C.
-3. Agregar los 30 g de 33Plus® y batir con globo o espumador durante 12 segundos hasta formar corona rosada; disponer en el fondo de las 6 tazas los 60 g de nuez pecana tostada y servir encima a 50°C.
+1. Infusionar la flor de jamaica (25 g), las tiras de cáscara de limón real sin parte blanca (30 g) y los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos; filtrar en malla fina para clarificar.
+2. Aplicar choque térmico con los 400 ml restantes de agua purificada fría para bajar a 50–52°C, incorporar los 30 g de 33Plus®, espumar 15 segundos y servir al momento.
 
 #### 🍲 Sábado — Comida (14:30 hrs) · `👥 6 Comensales` | `774 kcal` · `Grasa: 65.0 g` · `Proteína: 43.0 g` · `Carbs Netos: 4.3 g` · `Fibra: 6.7 g`
 
@@ -2152,16 +2147,16 @@
 | 8 | 🥩 Proteína Mercado (2 Servicios: R#05 y R#41) | **Flat steak** | 0 g | **1,320 g** | 0 g | **`1320 g`** (Mercado) |
 | 9 | 🥩 Proteína Mercado (2 Servicios: R#23 y R#50) | **Lomo de salmón** | 0 g | **1,440 g** | 0 g | **`1440 g`** (Mercado) |
 | 10 | 🥩 Proteína Mercado (2 Servicios: R#32 y R#53) | **Pechuga de pollo** | 0 g | **1,320 g** | 0 g | **`1320 g`** (Mercado) |
-| 11 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Yogur griego** | 2,000 g | **1,760 g** | 240 g | **0 (\$0.00)** |
+| 11 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Yogur griego** | 2,000 g | **1,280 g** | 720 g | **0 (\$0.00)** |
 | 12 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Queso manchego** | 1,000 g | **1,000 g** | 0 g | **0 (\$0.00)** |
 | 13 | 🧈 Grasa Láctea Alacena (Vaciado Exacto 100%) | **Mantequilla** | 720 g | **720 g** | 0 g | **0 (\$0.00)** |
-| 14 | 🥥 Grasa/Lácteo Alacena (Vaciado Exacto 100%) | **Leche de coco** | 500 ml | **500 ml** | 0 ml | **0 (\$0.00)** |
+| 14 | 🥥 Grasa/Lácteo Alacena (Vaciado Exacto 100%) | **Leche de coco** | 500 ml | **600 ml** | 0 ml | **`100 ml`** (Mercado) |
 | 15 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Queso Philadelphia** | 360 g | **440 g** | 0 g | **`80 g`** (Mercado) |
 | 16 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Queso de cabra** | 200 g | **0 g** | 200 g | **0 (\$0.00)** |
 | 17 | 🧀 Lácteo Alacena (Vaciado Exacto 100%) | **Queso parmesano** | 100 g | **100 g** | 0 g | **0 (\$0.00)** |
 | 18 | 🥥 Grasa Cocción Caliente en Alacena | **Aceite de coco** | 1,000 g | **456 g** | 544 g | **0 (\$0.00)** |
-| 19 | 🥜 Fruto Seco Alacena (Vaciado Exacto 100%) | **Nuez de la India** | 1,000 g | **1,000 g** | 0 g | **0 (\$0.00)** |
-| 20 | 🥜 Semillas Alacena (Vaciado Exacto 100%) | **Semillas y nueces mixtas** | 600 g | **600 g** | 0 g | **0 (\$0.00)** |
+| 19 | 🥜 Fruto Seco Alacena (Vaciado Exacto 100%) | **Nuez de la India** | 1,000 g | **920 g** | 80 g | **0 (\$0.00)** |
+| 20 | 🥜 Semillas Alacena (Vaciado Exacto 100%) | **Semillas y nueces mixtas** | 600 g | **580 g** | 20 g | **0 (\$0.00)** |
 | 21 | 🥜 Fruto Seco Alacena (Vaciado Exacto 100%) | **Almendras fileteadas** | 100 g | **100 g** | 0 g | **0 (\$0.00)** |
 | 22 | 🥜 Fruto Seco Alacena (`50 g` descontados en R#27 de `120 g`) | **Pistaches** | 50 g | **120 g** | 0 g | **`70 g`** (Mercado) |
 | 23 | 🍓 Fruta Alacena (Vaciado Exacto 100%) | **Frambuesas** | 220 g | **220 g** | 0 g | **0 (\$0.00)** |
@@ -2195,24 +2190,28 @@
 | **Huevo** | 210 piezas | **36 piezas** | **`174 piezas`** | **0 (\$0.00)** |
 | **Queso cottage** | 5,760 g | **0 g** | **`5,760 g`** | **0 (\$0.00)** |
 | **Queso mozzarella** | 2,260 g | **0 g** | **`2,260 g`** | **0 (\$0.00)** |
-| **Yogur griego** | 2,300 g | **480 g** | **`1,820 g`** | **0 (\$0.00)** |
+| **Yogur griego** | 2,300 g | **0 g** | **`2,300 g`** | **0 (\$0.00)** |
 | **Crema ácida** | 900 g | **0 g** | **`900 g`** | **0 (\$0.00)** |
 | **Queso Philadelphia** | 900 g | **320 g** | **`580 g`** | **0 (\$0.00)** |
 | **Queso manchego** | 400 g | **0 g** | **`400 g`** | **0 (\$0.00)** |
 | **Queso parmesano** | 100 g | **100 g** | **`0 g`** | **0 (\$0.00)** |
 | **Mantequilla** | 450 g | **300 g** | **`150 g`** | **0 (\$0.00)** |
 | **Aceite de coco** | 800 g | **156 g** | **`644 g`** | **0 (\$0.00)** |
+| **Leche de coco** | 500 ml | **340 ml** | **`160 ml`** | **0 (\$0.00)** |
+| **Nuez de la India** | 1,000 g | **280 g** | **`720 g`** | **0 (\$0.00)** |
+| **Semillas y nueces mixtas** | 400 g | **140 g** | **`260 g`** | **0 (\$0.00)** |
+| **Premezcla navideña de manzana y especias** | 250 g | **81 g** | **`169 g`** | **0 (\$0.00)** |
 | **Aceite de oliva** | 0 ml | **108 ml** | **`0 ml`** | **`108 ml`** |
 
 ### 3.1 Cosecha Activa en Granja El Herami (`\$0.00 MXN`)
 | # | Cultivo Activo en Granja El Herami | Demanda Semanal en Menú (6p) | Estado Operativo | Costo Mercado |
 |---|---|---|---|---|
 | 1 | **Acelgas** | 1,500 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 2 | **Agua purificada** | 15,960 ml | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 2 | **Agua purificada** | 17,480 ml | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 3 | **Cilantro** | 354 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 4 | **Granadas** | 1,260 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 5 | **Jamaica** | 25 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
-| 6 | **Limones** | 1,689 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 5 | **Jamaica** | 50 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
+| 6 | **Limones** | 1,719 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 7 | **Nopales** | 1,260 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 8 | **Nuez pecana** | 630 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
 | 9 | **Romero** | 36 g | 🌿 Cosecha Propia Activa (\$0 Granja El Herami) | **\$0.00 MXN** |
@@ -2227,11 +2226,11 @@
 | 5 | **Almendras fileteadas** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 6 | **Apio** | 500 g | **460 g** | 40 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 7 | **Atún en agua** | 560 g | **560 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 8 | **Canela molida** | 725 g | **12 g** | 713 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 8 | **Canela molida** | 725 g | **9 g** | 716 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 9 | **Comino** | 47 g | **9 g** | 38 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 10 | **Cúrcuma** | 82 g | **18 g** | 64 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 11 | **Espinacas** | 260 g | **260 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 12 | **Extracto de vainilla** | 376 ml | **78 ml** | 298 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 12 | **Extracto de vainilla** | 376 ml | **66 ml** | 310 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 13 | **Fajitas de mojarra** | 2,720 g | **2,720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 14 | **Frambuesas** | 220 g | **220 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 15 | **Fresas** | 200 g | **200 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
@@ -2239,24 +2238,23 @@
 | 17 | **Hierbas finas** | 13 g | **13 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 18 | **Huevo** | 180 piezas | **126 piezas** | 54 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 | 19 | **Jitomate** | 1 piezas | **1 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 20 | **Leche de coco** | 500 ml | **500 ml** | 0 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 21 | **Mantequilla** | 720 g | **720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 22 | **Mayonesa** | 200 g | **200 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 23 | **Mezcla navideña molida de manzana deshidratada y especias** | 300 g | **27 g** | 273 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 24 | **Nuez de la India** | 1,000 g | **1,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 25 | **Orégano** | 98 g | **39 g** | 59 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 26 | **Pechuga de pavo** | 700 g | **700 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 27 | **Pimienta negra** | 124 g | **36 g** | 88 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 28 | **Pollo entero** | 6 piezas | **6 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 29 | **Queso manchego** | 1,000 g | **1,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 30 | **Queso parmesano** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 31 | **Sal con ajo** | 52 g | **6 g** | 46 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 32 | **Sal de mar** | 1,000 g | **240 g** | 760 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 33 | **Salsa de soya** | 250 ml | **24 ml** | 226 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 34 | **Semillas y nueces mixtas** | 600 g | **600 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 35 | **Tomillo** | 8 g | **8 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 36 | **Vinagre de vino tinto** | 250 ml | **36 ml** | 214 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
-| 37 | **Yogur griego** | 2,000 g | **1,760 g** | 240 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 20 | **Mantequilla** | 720 g | **720 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 21 | **Mayonesa** | 200 g | **200 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 22 | **Nuez de la India** | 1,000 g | **920 g** | 80 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 23 | **Orégano** | 98 g | **39 g** | 59 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 24 | **Pechuga de pavo** | 700 g | **700 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 25 | **Pimienta negra** | 124 g | **36 g** | 88 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 26 | **Pollo entero** | 6 piezas | **6 piezas** | 0 piezas | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 27 | **Premezcla navideña de manzana y especias** | 250 g | **81 g** | 169 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 28 | **Queso manchego** | 1,000 g | **1,000 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 29 | **Queso parmesano** | 100 g | **100 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 30 | **Sal con ajo** | 52 g | **6 g** | 46 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 31 | **Sal de mar** | 1,000 g | **240 g** | 760 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 32 | **Salsa de soya** | 250 ml | **24 ml** | 226 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 33 | **Semillas y nueces mixtas** | 600 g | **580 g** | 20 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 34 | **Tomillo** | 8 g | **8 g** | 0 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 35 | **Vinagre de vino tinto** | 250 ml | **36 ml** | 214 ml | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
+| 36 | **Yogur griego** | 2,000 g | **1,280 g** | 720 g | ✅ 100% Cubierto en Alacena (\$0 Mercado) |
 
 ### 3.3 Lista de Compras Netas de Mercado — Semana 47
 | # | Categoría en UI (`#v-shop`) | Insumo a Comprar en Mercado | Demanda Total Semanal (6p) | Stock en Alacena | Compra Neta Exacta (`#v-shop`) | Unidad |
@@ -2266,22 +2264,22 @@
 | 3 | 🥑 Grasas, Aceites y Semillas | **Aceite de oliva** | 180 ml | 0 ml | **`180 ml`** | ml |
 | 4 | 🌶️ Chiles, Condimentos e Infusiones | **Agua de azahar** | 12 ml | 0 ml | **`12 ml`** | ml |
 | 5 | 🥑 Grasas, Aceites y Semillas | **Aguacate** | 7 piezas | 0 piezas | **`7 piezas`** | piezas |
-| 6 | 🥑 Grasas, Aceites y Semillas | **Ajonjolí** | 120 g | 0 g | **`120 g`** | g |
-| 7 | 🥬 Verduras, Hortalizas y Frescos | **Albahaca** | 30 g | 0 g | **`30 g`** | g |
-| 8 | 🌶️ Chiles, Condimentos e Infusiones | **Anís estrella** | 9 g | 0 g | **`9 g`** | g |
-| 9 | 🥬 Verduras, Hortalizas y Frescos | **Brócoli** | 780 g | 0 g | **`780 g`** | g |
-| 10 | 🥬 Verduras, Hortalizas y Frescos | **Calabacitas** | 2,120 g | 0 g | **`2120 g`** | g |
-| 11 | 🌶️ Chiles, Condimentos e Infusiones | **Cardamomo verde** | 2 g | 0 g | **`2 g`** | g |
-| 12 | 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 660 g | 300 g | **`360 g`** | g |
-| 13 | 🥬 Verduras, Hortalizas y Frescos | **Cebolla** | 10 piezas | 0 piezas | **`10 piezas`** | piezas |
-| 14 | 🥬 Verduras, Hortalizas y Frescos | **Champiñón** | 1,200 g | 0 g | **`1200 g`** | g |
-| 15 | 🥑 Grasas, Aceites y Semillas | **Coco rallado** | 180 g | 0 g | **`180 g`** | g |
-| 16 | 🥬 Verduras, Hortalizas y Frescos | **Coliflor** | 360 g | 0 g | **`360 g`** | g |
-| 17 | 🥑 Grasas, Aceites y Semillas | **Corazones de cáñamo** | 90 g | 0 g | **`90 g`** | g |
-| 18 | 🥬 Verduras, Hortalizas y Frescos | **Ejotes** | 660 g | 0 g | **`660 g`** | g |
-| 19 | 🥩 Carnes, Pescados y Proteínas | **Flat steak** | 1,320 g | 0 g | **`1320 g`** | g |
-| 20 | 🌶️ Chiles, Condimentos e Infusiones | **Flor de lavanda y pasiflora** | 12 g | 0 g | **`12 g`** | g |
-| 21 | 🥑 Grasas, Aceites y Semillas | **Leche de almendra** | 1,560 ml | 0 ml | **`1560 ml`** | ml |
+| 6 | 🥬 Verduras, Hortalizas y Frescos | **Albahaca** | 30 g | 0 g | **`30 g`** | g |
+| 7 | 🌶️ Chiles, Condimentos e Infusiones | **Anís estrella** | 6 g | 0 g | **`6 g`** | g |
+| 8 | 🥬 Verduras, Hortalizas y Frescos | **Brócoli** | 780 g | 0 g | **`780 g`** | g |
+| 9 | 🥬 Verduras, Hortalizas y Frescos | **Calabacitas** | 2,120 g | 0 g | **`2120 g`** | g |
+| 10 | 🌶️ Chiles, Condimentos e Infusiones | **Cardamomo verde** | 2 g | 0 g | **`2 g`** | g |
+| 11 | 🥩 Carnes, Pescados y Proteínas | **Carne molida** | 660 g | 300 g | **`360 g`** | g |
+| 12 | 🥬 Verduras, Hortalizas y Frescos | **Cebolla** | 10 piezas | 0 piezas | **`10 piezas`** | piezas |
+| 13 | 🥬 Verduras, Hortalizas y Frescos | **Champiñón** | 1,200 g | 0 g | **`1200 g`** | g |
+| 14 | 🥑 Grasas, Aceites y Semillas | **Coco rallado** | 120 g | 0 g | **`120 g`** | g |
+| 15 | 🥬 Verduras, Hortalizas y Frescos | **Coliflor** | 360 g | 0 g | **`360 g`** | g |
+| 16 | 🥑 Grasas, Aceites y Semillas | **Corazones de cáñamo** | 90 g | 0 g | **`90 g`** | g |
+| 17 | 🥬 Verduras, Hortalizas y Frescos | **Ejotes** | 660 g | 0 g | **`660 g`** | g |
+| 18 | 🥩 Carnes, Pescados y Proteínas | **Flat steak** | 1,320 g | 0 g | **`1320 g`** | g |
+| 19 | 🌶️ Chiles, Condimentos e Infusiones | **Flor de lavanda y pasiflora** | 12 g | 0 g | **`12 g`** | g |
+| 20 | 🥑 Grasas, Aceites y Semillas | **Leche de almendra** | 1,560 ml | 0 ml | **`1560 ml`** | ml |
+| 21 | 🥑 Grasas, Aceites y Semillas | **Leche de coco** | 600 ml | 500 ml | **`100 ml`** | ml |
 | 22 | 🥬 Verduras, Hortalizas y Frescos | **Lechuga** | 4 piezas | 0 piezas | **`4 piezas`** | piezas |
 | 23 | 🥑 Grasas, Aceites y Semillas | **Linaza dorada molida** | 60 g | 0 g | **`60 g`** | g |
 | 24 | 🥩 Carnes, Pescados y Proteínas | **Lomo de salmón** | 1,440 g | 0 g | **`1440 g`** | g |
@@ -2295,15 +2293,13 @@
 | 32 | 🥑 Grasas, Aceites y Semillas | **Tahini de ajonjolí** | 60 g | 0 g | **`60 g`** | g |
 | 33 | 🌶️ Chiles, Condimentos e Infusiones | **Té matcha** | 12 g | 0 g | **`12 g`** | g |
 | 34 | 🥬 Verduras, Hortalizas y Frescos | **Tomate** | 240 g | 0 g | **`240 g`** | g |
-| 35 | 🍓 Frutas de Bajo Índice Glucémico | **Zarzamora** | 180 g | 0 g | **`180 g`** | g |
 
 #### 3.3.1 Espejo Exacto por Tarjeta de Categoría en el DOM Real de `#v-shop` (`render3DShoppingList()`)
 | Categoría Renderizada en `#v-shop` | Badge de Conteo en UI | Ítems Renderizados Carácter por Carácter en Pantalla |
 |---|---|---|
-| **🌶️ Chiles, Condimentos e Infusiones** | **`6 POR COMPRAR`** | • **Agua de azahar**: `12 ml`<br>• **Anís estrella**: `9 g`<br>• **Cardamomo verde**: `2 g`<br>• **Flor de lavanda y pasiflora**: `12 g`<br>• **Rooibos rojo**: `18 g`<br>• **Té matcha**: `12 g` |
-| **🍓 Frutas de Bajo Índice Glucémico** | **`1 POR COMPRAR`** | • **Zarzamora**: `180 g` |
+| **🌶️ Chiles, Condimentos e Infusiones** | **`6 POR COMPRAR`** | • **Agua de azahar**: `12 ml`<br>• **Anís estrella**: `6 g`<br>• **Cardamomo verde**: `2 g`<br>• **Flor de lavanda y pasiflora**: `12 g`<br>• **Rooibos rojo**: `18 g`<br>• **Té matcha**: `12 g` |
 | **💊 SUPLEMENTACIÓN CELULAR — BIOTECNOLOGÍA** | **`2 POR COMPRAR`** | • **33Plus®**: `420 g`<br>• **34Plus®**: `420 g` |
-| **🥑 Grasas, Aceites y Semillas** | **`9 POR COMPRAR`** | • **Aceite de oliva**: `180 ml`<br>• **Aguacate**: `7 piezas`<br>• **Ajonjolí**: `120 g`<br>• **Coco rallado**: `180 g`<br>• **Corazones de cáñamo**: `90 g`<br>• **Leche de almendra**: `1560 ml`<br>• **Linaza dorada molida**: `60 g`<br>• **Pistaches**: `70 g` *(Alacena: 50 g | Bruto: 120 g)*<br>• **Tahini de ajonjolí**: `60 g` |
+| **🥑 Grasas, Aceites y Semillas** | **`9 POR COMPRAR`** | • **Aceite de oliva**: `180 ml`<br>• **Aguacate**: `7 piezas`<br>• **Coco rallado**: `120 g`<br>• **Corazones de cáñamo**: `90 g`<br>• **Leche de almendra**: `1560 ml`<br>• **Leche de coco**: `100 ml` *(Alacena: 500 ml | Bruto: 600 ml)*<br>• **Linaza dorada molida**: `60 g`<br>• **Pistaches**: `70 g` *(Alacena: 50 g | Bruto: 120 g)*<br>• **Tahini de ajonjolí**: `60 g` |
 | **🥩 Carnes, Pescados y Proteínas** | **`5 POR COMPRAR`** | • **Carne molida**: `360 g` *(Alacena: 300 g | Bruto: 660 g)*<br>• **Flat steak**: `1320 g`<br>• **Lomo de salmón**: `1440 g`<br>• **Pechuga de pollo**: `1320 g`<br>• **Sardinas**: `400 g` *(Alacena: 260 g | Bruto: 660 g)* |
 | **🥬 Verduras, Hortalizas y Frescos** | **`11 POR COMPRAR`** | • **Albahaca**: `30 g`<br>• **Brócoli**: `780 g`<br>• **Calabacitas**: `2120 g`<br>• **Cebolla**: `10 piezas`<br>• **Champiñón**: `1200 g`<br>• **Coliflor**: `360 g`<br>• **Ejotes**: `660 g`<br>• **Lechuga**: `4 piezas`<br>• **Morrón**: `14 piezas`<br>• **Pepino**: `1080 g`<br>• **Tomate**: `240 g` |
 | **🧀 Lácteos y Quesos (Sin Gluten — Keto)** | **`1 POR COMPRAR`** | • **Queso Philadelphia**: `80 g` *(Alacena: 360 g | Bruto: 440 g)* |
@@ -2431,9 +2427,9 @@
 | **Miércoles · Cena (34Plus®)** | Tisana Relajante de Manzanilla, Clavo de Olor y Limón (≤60°C) con Fórmula Reparadora 34Plus® | Tisana Nocturna de Manzanilla, Canela y Limón Real (≤60°C) con Fórmula Reparadora 34Plus® | Bavarois Nocturno de Queso Cottage Procesado (Caseína Lenta), Limón Real y Manzanilla (6°C) con 34Plus® | **Crema Helada Mediterránea Estilo Halva de Yogur Griego, Tahini de Ajonjolí y Canela (6°C) con 34Plus®** `<crema_helada_halva|tahini_ajonjoli|canela>` | `0.12` (`< 0.45`) | ✅ `0 Colisión` |
 | **Jueves · Desayuno (33Plus®)** | Gelatina Imperial de Flor de Jamaica de la Granja (4°C) con Fórmula Nootrópica 33Plus® | Infusión Matutina de Té Chai, Canela y Aceite de Coco (≤60°C) con Fórmula Nootrópica 33Plus® | Mousse Aireado Bistró de Frambuesa Viva, Queso Philadelphia y Yogur Griego (6°C) con 33Plus® | **Porridge Frío Cetogénico (No-Oats) de Corazones de Cáñamo, Linaza Dorada, Fresas y Leche de Almendra (6°C) con 33Plus®** `<porridge_no_oats|corazones_canamo_linaza|leche_almendra>` | `0.18` (`< 0.45`) | ✅ `0 Colisión` |
 | **Jueves · Cena (34Plus®)** | Tisana Nocturna de Manzanilla y Tomillo (≤60°C) con Fórmula Reparadora 34Plus® | Tisana Nocturna de Manzanilla y Orégano (≤60°C) con Fórmula Reparadora 34Plus® | Infusión Neuro-Sedante de Flor de Tila, Toronjil, Cáscara de Limón Real y Clavo de Olor (58°C) con 34Plus® | **Crema Catalana Cetogénica Tibia Bistró de Queso Philadelphia, Anís Estrella, Albahaca y Ralladura de Limón Real (52°C) con 34Plus®** `<crema_catalana_keto|queso_philadelphia|albahaca>` | `0.20` (`< 0.45`) | ✅ `0 Colisión` |
-| **Viernes · Desayuno (33Plus®)** | Infusión Templada de Flor de Jamaica y Romero de la Granja (≤60°C) con Fórmula Nootrópica 33Plus® | Gelatina de Flor de Jamaica y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus® | Granizado Antioxidante (Slushie) de Flor de Jamaica, Jengibre Fresco, Romero y Limón Real (2°C) con 33Plus® | **Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®** `<lassi|yogur_griego|anis_estrella>` | `0.20` (`< 0.45`) | ✅ `0 Colisión` |
-| **Viernes · Cena (34Plus®)** | Tisana Nocturna de Manzanilla, Canela y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus® | Tisana Nocturna de Manzanilla y Canela Molida (≤60°C) con Fórmula Reparadora 34Plus® | Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Canela (50°C) con 34Plus® | **Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®** `<atole|ajonjoli|coco_rallado>` | `0.00` (`< 0.45`) | ✅ `0 Colisión` |
-| **Sábado · Desayuno (33Plus®)** | Gelatina Cítrica de Limón Real de la Granja y Canela (4°C) con Fórmula Nootrópica 33Plus® | Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus® | Elixir Verde Prensado en Frío de Pepino, Apio, Espinaca y Limón Real (8°C) con 33Plus® | **Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®** `<ponche_navideno|manzana_deshidratada|vainilla>` | `0.20` (`< 0.45`) | ✅ `0 Colisión` |
+| **Viernes · Desayuno (33Plus®)** | Infusión Templada de Flor de Jamaica y Romero de la Granja (≤60°C) con Fórmula Nootrópica 33Plus® | Gelatina de Flor de Jamaica y Romero de la Granja (4°C) con Fórmula Nootrópica 33Plus® | Granizado Antioxidante (Slushie) de Flor de Jamaica, Jengibre Fresco, Romero y Limón Real (2°C) con 33Plus® | **Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®** `<ponche_navideno|premezcla_manzana_especias|limon>` | `0.25` (`< 0.45`) | ✅ `0 Colisión` |
+| **Viernes · Cena (34Plus®)** | Tisana Nocturna de Manzanilla, Canela y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus® | Tisana Nocturna de Manzanilla y Canela Molida (≤60°C) con Fórmula Reparadora 34Plus® | Natilla Tibia de Nuez Pecana, Semillas Mixtas, Queso Philadelphia y Canela (50°C) con 34Plus® | **Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®** `<ponche_cremoso_invernal|leche_coco_invernal|leche_coco>` | `0.22` (`< 0.45`) | ✅ `0 Colisión` |
+| **Sábado · Desayuno (33Plus®)** | Gelatina Cítrica de Limón Real de la Granja y Canela (4°C) con Fórmula Nootrópica 33Plus® | Infusión Templada de Flor de Jamaica, Canela y Limón Real (≤60°C) con Fórmula Nootrópica 33Plus® | Elixir Verde Prensado en Frío de Pepino, Apio, Espinaca y Limón Real (8°C) con 33Plus® | **Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®** `<ponche_navideno|premezcla_manzana_especias|limon>` | `0.25` (`< 0.45`) | ✅ `0 Colisión` |
 | **Sábado · Cena (34Plus®)** | Tisana Nocturna de Manzanilla, Hierbas Finas y Limón de la Granja (≤60°C) con Fórmula Reparadora 34Plus® | Tisana Nocturna de Manzanilla, Tomillo y Limón Real (≤60°C) con Fórmula Reparadora 34Plus® | Trufas Nocturnas (Fat Bombs) de Nuez de la India, Cacao Puro y Aceite de Coco (14°C) con 34Plus® + Infusión Limpia de Tomillo | **Bombones Helados Mediterráneos de Coco Rallado, Nuez Pecana, Vainilla y Aceite de Coco (6°C) con 34Plus® + Infusión Limpia de Tomillo** `<bombones_frios|nuez_pecana|coco_rallado>` | `0.17` (`< 0.45`) | ✅ `0 Colisión` |
 
 ---
@@ -2449,77 +2445,75 @@
 | 5 | **Acelgas** | **1,500 g** | 0 g | **1,500 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#02 (Dom Des: 360 g); R#24 (Mar Com: 480 g); R#43 (Jue Cen: 300 g); R#56 (Sáb Des: 360 g) |
 | 6 | **Achiote** | **48 g** | 0 g | **48 g** | Tabla 3.2 (Alacena \$0 — Stock: 92 g) | **`0.00`** ✅ | R#05 (Dom Com: 18 g); R#20 (Mar Des: 12 g); R#23 (Mar Com: 18 g) |
 | 7 | **Agua de azahar** | **12 ml** | 0 ml | **12 ml** | Tabla 3.3 (Mercado — Comprar: 12 ml) | **`0.00`** ✅ | R#18 (Lun Cen: 12 ml) |
-| 8 | **Agua purificada** | **15,960 ml** | 0 ml | **15,960 ml** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#07 (Dom Cen: 960 ml); R#09 (Dom Cen: 1,080 ml); R#12 (Lun Des: 300 ml); R#16 (Lun Cen: 960 ml); R#18 (Lun Cen: 900 ml); R#21 (Mar Des: 240 ml); R#25 (Mar Cen: 960 ml); R#27 (Mar Cen: 960 ml); R#30 (Mié Des: 1,080 ml); R#34 (Mié Cen: 960 ml); R#43 (Jue Cen: 960 ml); R#45 (Jue Cen: 900 ml); R#48 (Vie Des: 420 ml); R#52 (Vie Cen: 960 ml); R#54 (Vie Cen: 960 ml); R#57 (Sáb Des: 1,500 ml); R#61 (Sáb Cen: 960 ml); R#63 (Sáb Cen: 900 ml) |
+| 8 | **Agua purificada** | **17,480 ml** | 0 ml | **17,480 ml** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#07 (Dom Cen: 960 ml); R#09 (Dom Cen: 1,080 ml); R#12 (Lun Des: 300 ml); R#16 (Lun Cen: 960 ml); R#18 (Lun Cen: 900 ml); R#21 (Mar Des: 240 ml); R#25 (Mar Cen: 960 ml); R#27 (Mar Cen: 960 ml); R#30 (Mié Des: 1,080 ml); R#34 (Mié Cen: 960 ml); R#43 (Jue Cen: 960 ml); R#45 (Jue Cen: 900 ml); R#48 (Vie Des: 1,500 ml); R#52 (Vie Cen: 960 ml); R#54 (Vie Cen: 1,400 ml); R#57 (Sáb Des: 1,500 ml); R#61 (Sáb Cen: 960 ml); R#63 (Sáb Cen: 900 ml) |
 | 9 | **Aguacate** | **7 piezas** | 0 piezas | **7 piezas** | Tabla 3.3 (Mercado — Comprar: 7 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas); R#17 (Lun Cen: 1 piezas); R#21 (Mar Des: 1 piezas); R#32 (Mié Com: 1 piezas); R#44 (Jue Cen: 1 piezas); R#50 (Vie Com: 1 piezas); R#59 (Sáb Com: 1 piezas) |
 | 10 | **Ajo** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#02 (Dom Des: 4 g); R#05 (Dom Com: 4 g); R#07 (Dom Cen: 4 g); R#08 (Dom Cen: 4 g); R#11 (Lun Des: 4 g); R#14 (Lun Com: 4 g); R#15 (Lun Com: 4 g); R#16 (Lun Cen: 4 g); R#17 (Lun Cen: 4 g); R#23 (Mar Com: 4 g); R#24 (Mar Com: 4 g); R#25 (Mar Cen: 4 g); R#32 (Mié Com: 5 g); R#33 (Mié Com: 4 g); R#34 (Mié Cen: 4 g); R#35 (Mié Cen: 4 g); R#41 (Jue Com: 4 g); R#43 (Jue Cen: 4 g); R#50 (Vie Com: 4 g); R#52 (Vie Cen: 4 g); R#53 (Vie Cen: 4 g); R#56 (Sáb Des: 5 g); R#59 (Sáb Com: 5 g); R#61 (Sáb Cen: 5 g) |
-| 11 | **Ajonjolí** | **120 g** | 0 g | **120 g** | Tabla 3.3 (Mercado — Comprar: 120 g) | **`0.00`** ✅ | R#54 (Vie Cen: 120 g) |
-| 12 | **Albahaca** | **30 g** | 0 g | **30 g** | Tabla 3.3 (Mercado — Comprar: 30 g) | **`0.00`** ✅ | R#21 (Mar Des: 18 g); R#45 (Jue Cen: 12 g) |
-| 13 | **Alcaparras** | **44 g** | 0 g | **44 g** | Tabla 3.2 (Alacena \$0 — Stock: 44 g) | **`0.00`** ✅ | R#44 (Jue Cen: 24 g); R#59 (Sáb Com: 20 g) |
-| 14 | **Almendras fileteadas** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#18 (Lun Cen: 100 g) |
-| 15 | **Anís estrella** | **9 g** | 0 g | **9 g** | Tabla 3.3 (Mercado — Comprar: 9 g) | **`0.00`** ✅ | R#30 (Mié Des: 3 g); R#45 (Jue Cen: 3 g); R#48 (Vie Des: 3 g) |
-| 16 | **Apio** | **460 g** | 0 g | **460 g** | Tabla 3.2 (Alacena \$0 — Stock: 500 g) | **`0.00`** ✅ | R#16 (Lun Cen: 260 g); R#43 (Jue Cen: 200 g) |
-| 17 | **Atún en agua** | **560 g** | 0 g | **560 g** | Tabla 3.2 (Alacena \$0 — Stock: 560 g) | **`0.00`** ✅ | R#35 (Mié Cen: 560 g) |
-| 18 | **Brócoli** | **780 g** | 0 g | **780 g** | Tabla 3.3 (Mercado — Comprar: 780 g) | **`0.00`** ✅ | R#42 (Jue Com: 420 g); R#50 (Vie Com: 360 g) |
-| 19 | **Calabacitas** | **2,120 g** | 0 g | **2,120 g** | Tabla 3.3 (Mercado — Comprar: 2,120 g) | **`0.00`** ✅ | R#08 (Dom Cen: 360 g); R#17 (Lun Cen: 360 g); R#26 (Mar Cen: 360 g); R#29 (Mié Des: 320 g); R#44 (Jue Cen: 360 g); R#60 (Sáb Com: 360 g) |
-| 20 | **Canela molida** | **12 g** | 0 g | **12 g** | Tabla 3.2 (Alacena \$0 — Stock: 725 g) | **`0.00`** ✅ | R#19 (Mar Des: 3 g); R#36 (Mié Cen: 3 g); R#54 (Vie Cen: 3 g); R#55 (Sáb Des: 3 g) |
-| 21 | **Cardamomo verde** | **2 g** | 0 g | **2 g** | Tabla 3.3 (Mercado — Comprar: 2 g) | **`0.00`** ✅ | R#27 (Mar Cen: 2 g) |
-| 22 | **Carne molida** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#14 (Lun Com: 660 g) |
-| 23 | **Cebolla** | **10 piezas** | 0 piezas | **10 piezas** | Tabla 3.3 (Mercado — Comprar: 10 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas); R#08 (Dom Cen: 1 piezas); R#11 (Lun Des: 1 piezas); R#14 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#23 (Mar Com: 1 piezas); R#29 (Mié Des: 1 piezas); R#34 (Mié Cen: 1 piezas); R#38 (Jue Des: 1 piezas); R#41 (Jue Com: 1 piezas) |
-| 24 | **Champiñón** | **1,200 g** | 0 g | **1,200 g** | Tabla 3.3 (Mercado — Comprar: 1,200 g) | **`0.00`** ✅ | R#11 (Lun Des: 300 g); R#32 (Mié Com: 300 g); R#38 (Jue Des: 300 g); R#59 (Sáb Com: 300 g) |
-| 25 | **Cilantro** | **354 g** | 0 g | **354 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#02 (Dom Des: 24 g); R#04 (Dom Com: 24 g); R#07 (Dom Cen: 30 g); R#08 (Dom Cen: 24 g); R#13 (Lun Com: 24 g); R#20 (Mar Des: 24 g); R#22 (Mar Com: 24 g); R#25 (Mar Cen: 24 g); R#26 (Mar Cen: 30 g); R#35 (Mié Cen: 24 g); R#47 (Vie Des: 24 g); R#49 (Vie Com: 24 g); R#50 (Vie Com: 24 g); R#52 (Vie Cen: 30 g) |
-| 26 | **Coco rallado** | **180 g** | 0 g | **180 g** | Tabla 3.3 (Mercado — Comprar: 180 g) | **`0.00`** ✅ | R#54 (Vie Cen: 60 g); R#63 (Sáb Cen: 120 g) |
-| 27 | **Coliflor** | **360 g** | 0 g | **360 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#51 (Vie Com: 360 g) |
-| 28 | **Comino** | **9 g** | 0 g | **9 g** | Tabla 3.2 (Alacena \$0 — Stock: 47 g) | **`0.00`** ✅ | R#05 (Dom Com: 3 g); R#26 (Mar Cen: 3 g); R#35 (Mié Cen: 3 g) |
-| 29 | **Corazones de cáñamo** | **90 g** | 0 g | **90 g** | Tabla 3.3 (Mercado — Comprar: 90 g) | **`0.00`** ✅ | R#39 (Jue Des: 90 g) |
-| 30 | **Cúrcuma** | **18 g** | 0 g | **18 g** | Tabla 3.2 (Alacena \$0 — Stock: 82 g) | **`0.00`** ✅ | R#50 (Vie Com: 12 g); R#51 (Vie Com: 6 g) |
-| 31 | **Ejotes** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 660 g) | **`0.00`** ✅ | R#15 (Lun Com: 360 g); R#41 (Jue Com: 300 g) |
-| 32 | **Espinacas** | **260 g** | 0 g | **260 g** | Tabla 3.2 (Alacena \$0 — Stock: 260 g) | **`0.00`** ✅ | R#33 (Mié Com: 260 g) |
-| 33 | **Extracto de vainilla** | **78 ml** | 0 ml | **78 ml** | Tabla 3.2 (Alacena \$0 — Stock: 376 ml) | **`0.00`** ✅ | R#03 (Dom Des: 6 ml); R#10 (Lun Des: 6 ml); R#12 (Lun Des: 6 ml); R#18 (Lun Cen: 6 ml); R#27 (Mar Cen: 6 ml); R#36 (Mié Cen: 6 ml); R#39 (Jue Des: 6 ml); R#45 (Jue Cen: 6 ml); R#46 (Vie Des: 6 ml); R#48 (Vie Des: 6 ml); R#54 (Vie Cen: 6 ml); R#57 (Sáb Des: 6 ml); R#63 (Sáb Cen: 6 ml) |
-| 34 | **Fajitas de mojarra** | **2,720 g** | 0 g | **2,720 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,720 g) | **`0.00`** ✅ | R#26 (Mar Cen: 900 g); R#44 (Jue Cen: 900 g); R#59 (Sáb Com: 920 g) |
-| 35 | **Flat steak** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#05 (Dom Com: 660 g); R#41 (Jue Com: 660 g) |
-| 36 | **Flor de lavanda y pasiflora** | **12 g** | 0 g | **12 g** | Tabla 3.3 (Mercado — Comprar: 12 g) | **`0.00`** ✅ | R#09 (Dom Cen: 12 g) |
-| 37 | **Frambuesas** | **220 g** | 0 g | **220 g** | Tabla 3.2 (Alacena \$0 — Stock: 220 g) | **`0.00`** ✅ | R#03 (Dom Des: 220 g) |
-| 38 | **Fresas** | **200 g** | 0 g | **200 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#39 (Jue Des: 200 g) |
-| 39 | **Germinado** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#53 (Vie Cen: 100 g) |
-| 40 | **Granadas** | **1,260 g** | 0 g | **1,260 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 180 g); R#10 (Lun Des: 180 g); R#19 (Mar Des: 180 g); R#28 (Mié Des: 180 g); R#37 (Jue Des: 180 g); R#46 (Vie Des: 180 g); R#55 (Sáb Des: 180 g) |
-| 41 | **Hierbas finas** | **13 g** | 0 g | **13 g** | Tabla 3.2 (Alacena \$0 — Stock: 13 g) | **`0.00`** ✅ | R#17 (Lun Cen: 6 g); R#38 (Jue Des: 7 g) |
-| 42 | **Huevo** | **126 piezas** | 0 piezas | **126 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 180 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 18 piezas); R#11 (Lun Des: 18 piezas); R#20 (Mar Des: 18 piezas); R#29 (Mié Des: 18 piezas); R#38 (Jue Des: 18 piezas); R#47 (Vie Des: 18 piezas); R#56 (Sáb Des: 18 piezas) |
-| 43 | **Jamaica** | **25 g** | 0 g | **25 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#57 (Sáb Des: 25 g) |
-| 44 | **Jitomate** | **1 piezas** | 0 piezas | **1 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 1 piezas) | **`0.00`** ✅ | R#56 (Sáb Des: 1 piezas) |
-| 45 | **Leche de almendra** | **1,560 ml** | 0 ml | **1,560 ml** | Tabla 3.3 (Mercado — Comprar: 1,560 ml) | **`0.00`** ✅ | R#12 (Lun Des: 600 ml); R#21 (Mar Des: 480 ml); R#39 (Jue Des: 480 ml) |
-| 46 | **Leche de coco** | **500 ml** | 0 ml | **500 ml** | Tabla 3.2 (Alacena \$0 — Stock: 500 ml) | **`0.00`** ✅ | R#03 (Dom Des: 260 ml); R#50 (Vie Com: 240 ml) |
-| 47 | **Lechuga** | **4 piezas** | 0 piezas | **4 piezas** | Tabla 3.3 (Mercado — Comprar: 4 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#22 (Mar Com: 1 piezas); R#40 (Jue Com: 1 piezas); R#58 (Sáb Com: 1 piezas) |
-| 48 | **Limones** | **1,689 g** | 0 g | **1,689 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 30 g); R#03 (Dom Des: 30 g); R#04 (Dom Com: 48 g); R#05 (Dom Com: 48 g); R#06 (Dom Com: 48 g); R#07 (Dom Cen: 48 g); R#09 (Dom Cen: 36 g); R#13 (Lun Com: 48 g); R#15 (Lun Com: 48 g); R#16 (Lun Cen: 48 g); R#17 (Lun Cen: 48 g); R#21 (Mar Des: 48 g); R#22 (Mar Com: 48 g); R#23 (Mar Com: 48 g); R#24 (Mar Com: 48 g); R#25 (Mar Cen: 60 g); R#26 (Mar Cen: 48 g); R#28 (Mié Des: 30 g); R#30 (Mié Des: 45 g); R#31 (Mié Com: 48 g); R#32 (Mié Com: 48 g); R#33 (Mié Com: 48 g); R#35 (Mié Cen: 48 g); R#40 (Jue Com: 48 g); R#42 (Jue Com: 48 g); R#43 (Jue Cen: 48 g); R#44 (Jue Cen: 48 g); R#45 (Jue Cen: 36 g); R#49 (Vie Com: 48 g); R#51 (Vie Com: 48 g); R#52 (Vie Cen: 48 g); R#57 (Sáb Des: 30 g); R#58 (Sáb Com: 48 g); R#59 (Sáb Com: 48 g); R#60 (Sáb Com: 48 g); R#61 (Sáb Cen: 48 g); R#62 (Sáb Cen: 48 g) |
-| 49 | **Linaza dorada molida** | **60 g** | 0 g | **60 g** | Tabla 3.3 (Mercado — Comprar: 60 g) | **`0.00`** ✅ | R#39 (Jue Des: 60 g) |
-| 50 | **Lomo de salmón** | **1,440 g** | 0 g | **1,440 g** | Tabla 3.3 (Mercado — Comprar: 1,440 g) | **`0.00`** ✅ | R#23 (Mar Com: 720 g); R#50 (Vie Com: 720 g) |
-| 51 | **Mantequilla** | **720 g** | 0 g | **720 g** | Tabla 3.2 (Alacena \$0 — Stock: 720 g) | **`0.00`** ✅ | R#02 (Dom Des: 60 g); R#11 (Lun Des: 60 g); R#17 (Lun Cen: 60 g); R#23 (Mar Com: 60 g); R#29 (Mié Des: 60 g); R#32 (Mié Com: 60 g); R#38 (Jue Des: 60 g); R#41 (Jue Com: 60 g); R#44 (Jue Cen: 60 g); R#47 (Vie Des: 60 g); R#56 (Sáb Des: 60 g); R#59 (Sáb Com: 60 g) |
-| 52 | **Mayonesa** | **200 g** | 0 g | **200 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#35 (Mié Cen: 200 g) |
-| 53 | **Mezcla navideña molida de manzana deshidratada y especias** | **27 g** | 0 g | **27 g** | Tabla 3.2 (Alacena \$0 — Stock: 300 g) | **`0.00`** ✅ | R#57 (Sáb Des: 27 g) |
-| 54 | **Morrón** | **14 piezas** | 0 piezas | **14 piezas** | Tabla 3.3 (Mercado — Comprar: 14 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 2 piezas); R#14 (Lun Com: 2 piezas); R#23 (Mar Com: 2 piezas); R#35 (Mié Cen: 3 piezas); R#53 (Vie Cen: 2 piezas); R#62 (Sáb Cen: 3 piezas) |
-| 55 | **Nopales** | **1,260 g** | 0 g | **1,260 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#06 (Dom Com: 480 g); R#20 (Mar Des: 420 g); R#47 (Vie Des: 360 g) |
-| 56 | **Nuez de la India** | **1,000 g** | 0 g | **1,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#01 (Dom Des: 120 g); R#10 (Lun Des: 120 g); R#19 (Mar Des: 160 g); R#28 (Mié Des: 120 g); R#37 (Jue Des: 120 g); R#46 (Vie Des: 120 g); R#53 (Vie Cen: 120 g); R#55 (Sáb Des: 120 g) |
-| 57 | **Nuez pecana** | **630 g** | 0 g | **630 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 60 g); R#10 (Lun Des: 60 g); R#19 (Mar Des: 60 g); R#28 (Mié Des: 60 g); R#37 (Jue Des: 60 g); R#46 (Vie Des: 60 g); R#55 (Sáb Des: 60 g); R#57 (Sáb Des: 60 g); R#58 (Sáb Com: 60 g); R#63 (Sáb Cen: 90 g) |
-| 58 | **Orégano** | **39 g** | 0 g | **39 g** | Tabla 3.2 (Alacena \$0 — Stock: 98 g) | **`0.00`** ✅ | R#04 (Dom Com: 3 g); R#07 (Dom Cen: 3 g); R#14 (Lun Com: 3 g); R#22 (Mar Com: 3 g); R#23 (Mar Com: 3 g); R#25 (Mar Cen: 3 g); R#29 (Mié Des: 3 g); R#31 (Mié Com: 3 g); R#42 (Jue Com: 3 g); R#56 (Sáb Des: 3 g); R#58 (Sáb Com: 3 g); R#61 (Sáb Cen: 3 g); R#62 (Sáb Cen: 3 g) |
-| 59 | **Pechuga de pavo** | **700 g** | 0 g | **700 g** | Tabla 3.2 (Alacena \$0 — Stock: 700 g) | **`0.00`** ✅ | R#17 (Lun Cen: 700 g) |
-| 60 | **Pechuga de pollo** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#32 (Mié Com: 660 g); R#53 (Vie Cen: 660 g) |
-| 61 | **Pepino** | **1,080 g** | 0 g | **1,080 g** | Tabla 3.3 (Mercado — Comprar: 1,080 g) | **`0.00`** ✅ | R#13 (Lun Com: 360 g); R#31 (Mié Com: 360 g); R#49 (Vie Com: 360 g) |
-| 62 | **Pimienta negra** | **36 g** | 0 g | **36 g** | Tabla 3.2 (Alacena \$0 — Stock: 124 g) | **`0.00`** ✅ | R#02 (Dom Des: 3 g); R#11 (Lun Des: 3 g); R#14 (Lun Com: 3 g); R#17 (Lun Cen: 3 g); R#29 (Mié Des: 3 g); R#32 (Mié Com: 3 g); R#38 (Jue Des: 3 g); R#41 (Jue Com: 3 g); R#44 (Jue Cen: 3 g); R#47 (Vie Des: 3 g); R#53 (Vie Cen: 3 g); R#59 (Sáb Com: 3 g) |
-| 63 | **Pistaches** | **120 g** | 0 g | **120 g** | Tabla 3.3 (Mercado — Comprar: 70 g) | **`0.00`** ✅ | R#27 (Mar Cen: 120 g) |
-| 64 | **Pollo entero** | **6 piezas** | 0 piezas | **6 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 6 piezas) | **`0.00`** ✅ | R#08 (Dom Cen: 6 piezas) |
-| 65 | **Queso Philadelphia** | **440 g** | 0 g | **440 g** | Tabla 3.3 (Mercado — Comprar: 80 g) | **`0.00`** ✅ | R#08 (Dom Cen: 120 g); R#45 (Jue Cen: 120 g); R#47 (Vie Des: 80 g); R#62 (Sáb Cen: 120 g) |
-| 66 | **Queso manchego** | **1,000 g** | 0 g | **1,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 120 g); R#08 (Dom Cen: 160 g); R#11 (Lun Des: 120 g); R#14 (Lun Com: 120 g); R#20 (Mar Des: 120 g); R#29 (Mié Des: 120 g); R#35 (Mié Cen: 120 g); R#38 (Jue Des: 120 g) |
-| 67 | **Queso parmesano** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#56 (Sáb Des: 40 g); R#62 (Sáb Cen: 60 g) |
-| 68 | **Romero** | **36 g** | 0 g | **36 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#06 (Dom Com: 6 g); R#32 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#43 (Jue Cen: 6 g); R#60 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g) |
-| 69 | **Rooibos rojo** | **18 g** | 0 g | **18 g** | Tabla 3.3 (Mercado — Comprar: 18 g) | **`0.00`** ✅ | R#30 (Mié Des: 18 g) |
-| 70 | **Sal con ajo** | **6 g** | 0 g | **6 g** | Tabla 3.2 (Alacena \$0 — Stock: 52 g) | **`0.00`** ✅ | R#14 (Lun Com: 6 g) |
-| 71 | **Sal de mar** | **240 g** | 0 g | **240 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 6 g); R#04 (Dom Com: 6 g); R#05 (Dom Com: 6 g); R#06 (Dom Com: 6 g); R#07 (Dom Cen: 6 g); R#08 (Dom Cen: 6 g); R#11 (Lun Des: 6 g); R#13 (Lun Com: 6 g); R#15 (Lun Com: 6 g); R#16 (Lun Cen: 6 g); R#17 (Lun Cen: 6 g); R#20 (Mar Des: 6 g); R#22 (Mar Com: 6 g); R#23 (Mar Com: 6 g); R#24 (Mar Com: 6 g); R#25 (Mar Cen: 6 g); R#26 (Mar Cen: 6 g); R#29 (Mié Des: 6 g); R#31 (Mié Com: 6 g); R#32 (Mié Com: 6 g); R#33 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#35 (Mié Cen: 6 g); R#38 (Jue Des: 6 g); R#40 (Jue Com: 6 g); R#41 (Jue Com: 6 g); R#42 (Jue Com: 6 g); R#43 (Jue Cen: 6 g); R#44 (Jue Cen: 6 g); R#47 (Vie Des: 6 g); R#49 (Vie Com: 6 g); R#50 (Vie Com: 6 g); R#51 (Vie Com: 6 g); R#52 (Vie Cen: 6 g); R#56 (Sáb Des: 6 g); R#58 (Sáb Com: 6 g); R#59 (Sáb Com: 6 g); R#60 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g); R#62 (Sáb Cen: 6 g) |
-| 72 | **Salsa de soya** | **24 ml** | 0 ml | **24 ml** | Tabla 3.2 (Alacena \$0 — Stock: 250 ml) | **`0.00`** ✅ | R#53 (Vie Cen: 24 ml) |
-| 73 | **Sardinas** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 400 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 660 g) |
-| 74 | **Semillas y nueces mixtas** | **600 g** | 0 g | **600 g** | Tabla 3.2 (Alacena \$0 — Stock: 600 g) | **`0.00`** ✅ | R#01 (Dom Des: 90 g); R#10 (Lun Des: 90 g); R#19 (Mar Des: 90 g); R#28 (Mié Des: 90 g); R#37 (Jue Des: 80 g); R#46 (Vie Des: 80 g); R#55 (Sáb Des: 80 g) |
-| 75 | **Tahini de ajonjolí** | **60 g** | 0 g | **60 g** | Tabla 3.3 (Mercado — Comprar: 60 g) | **`0.00`** ✅ | R#36 (Mié Cen: 60 g) |
-| 76 | **Tomate** | **240 g** | 0 g | **240 g** | Tabla 3.3 (Mercado — Comprar: 240 g) | **`0.00`** ✅ | R#08 (Dom Cen: 240 g) |
-| 77 | **Tomillo** | **8 g** | 0 g | **8 g** | Tabla 3.2 (Alacena \$0 — Stock: 8 g) | **`0.00`** ✅ | R#16 (Lun Cen: 3 g); R#41 (Jue Com: 3 g); R#63 (Sáb Cen: 2 g) |
-| 78 | **Té matcha** | **12 g** | 0 g | **12 g** | Tabla 3.3 (Mercado — Comprar: 12 g) | **`0.00`** ✅ | R#12 (Lun Des: 12 g) |
-| 79 | **Vinagre de vino tinto** | **36 ml** | 0 ml | **36 ml** | Tabla 3.2 (Alacena \$0 — Stock: 250 ml) | **`0.00`** ✅ | R#13 (Lun Com: 18 ml); R#40 (Jue Com: 18 ml) |
-| 80 | **Yogur griego** | **1,760 g** | 0 g | **1,760 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,000 g) | **`0.00`** ✅ | R#08 (Dom Cen: 360 g); R#26 (Mar Cen: 440 g); R#36 (Mié Cen: 480 g); R#48 (Vie Des: 480 g) |
-| 81 | **Zarzamora** | **180 g** | 0 g | **180 g** | Tabla 3.3 (Mercado — Comprar: 180 g) | **`0.00`** ✅ | R#48 (Vie Des: 180 g) |
+| 11 | **Albahaca** | **30 g** | 0 g | **30 g** | Tabla 3.3 (Mercado — Comprar: 30 g) | **`0.00`** ✅ | R#21 (Mar Des: 18 g); R#45 (Jue Cen: 12 g) |
+| 12 | **Alcaparras** | **44 g** | 0 g | **44 g** | Tabla 3.2 (Alacena \$0 — Stock: 44 g) | **`0.00`** ✅ | R#44 (Jue Cen: 24 g); R#59 (Sáb Com: 20 g) |
+| 13 | **Almendras fileteadas** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#18 (Lun Cen: 100 g) |
+| 14 | **Anís estrella** | **6 g** | 0 g | **6 g** | Tabla 3.3 (Mercado — Comprar: 6 g) | **`0.00`** ✅ | R#30 (Mié Des: 3 g); R#45 (Jue Cen: 3 g) |
+| 15 | **Apio** | **460 g** | 0 g | **460 g** | Tabla 3.2 (Alacena \$0 — Stock: 500 g) | **`0.00`** ✅ | R#16 (Lun Cen: 260 g); R#43 (Jue Cen: 200 g) |
+| 16 | **Atún en agua** | **560 g** | 0 g | **560 g** | Tabla 3.2 (Alacena \$0 — Stock: 560 g) | **`0.00`** ✅ | R#35 (Mié Cen: 560 g) |
+| 17 | **Brócoli** | **780 g** | 0 g | **780 g** | Tabla 3.3 (Mercado — Comprar: 780 g) | **`0.00`** ✅ | R#42 (Jue Com: 420 g); R#50 (Vie Com: 360 g) |
+| 18 | **Calabacitas** | **2,120 g** | 0 g | **2,120 g** | Tabla 3.3 (Mercado — Comprar: 2,120 g) | **`0.00`** ✅ | R#08 (Dom Cen: 360 g); R#17 (Lun Cen: 360 g); R#26 (Mar Cen: 360 g); R#29 (Mié Des: 320 g); R#44 (Jue Cen: 360 g); R#60 (Sáb Com: 360 g) |
+| 19 | **Canela molida** | **9 g** | 0 g | **9 g** | Tabla 3.2 (Alacena \$0 — Stock: 725 g) | **`0.00`** ✅ | R#19 (Mar Des: 3 g); R#36 (Mié Cen: 3 g); R#55 (Sáb Des: 3 g) |
+| 20 | **Cardamomo verde** | **2 g** | 0 g | **2 g** | Tabla 3.3 (Mercado — Comprar: 2 g) | **`0.00`** ✅ | R#27 (Mar Cen: 2 g) |
+| 21 | **Carne molida** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#14 (Lun Com: 660 g) |
+| 22 | **Cebolla** | **10 piezas** | 0 piezas | **10 piezas** | Tabla 3.3 (Mercado — Comprar: 10 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 1 piezas); R#08 (Dom Cen: 1 piezas); R#11 (Lun Des: 1 piezas); R#14 (Lun Com: 1 piezas); R#20 (Mar Des: 1 piezas); R#23 (Mar Com: 1 piezas); R#29 (Mié Des: 1 piezas); R#34 (Mié Cen: 1 piezas); R#38 (Jue Des: 1 piezas); R#41 (Jue Com: 1 piezas) |
+| 23 | **Champiñón** | **1,200 g** | 0 g | **1,200 g** | Tabla 3.3 (Mercado — Comprar: 1,200 g) | **`0.00`** ✅ | R#11 (Lun Des: 300 g); R#32 (Mié Com: 300 g); R#38 (Jue Des: 300 g); R#59 (Sáb Com: 300 g) |
+| 24 | **Cilantro** | **354 g** | 0 g | **354 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#02 (Dom Des: 24 g); R#04 (Dom Com: 24 g); R#07 (Dom Cen: 30 g); R#08 (Dom Cen: 24 g); R#13 (Lun Com: 24 g); R#20 (Mar Des: 24 g); R#22 (Mar Com: 24 g); R#25 (Mar Cen: 24 g); R#26 (Mar Cen: 30 g); R#35 (Mié Cen: 24 g); R#47 (Vie Des: 24 g); R#49 (Vie Com: 24 g); R#50 (Vie Com: 24 g); R#52 (Vie Cen: 30 g) |
+| 25 | **Coco rallado** | **120 g** | 0 g | **120 g** | Tabla 3.3 (Mercado — Comprar: 120 g) | **`0.00`** ✅ | R#63 (Sáb Cen: 120 g) |
+| 26 | **Coliflor** | **360 g** | 0 g | **360 g** | Tabla 3.3 (Mercado — Comprar: 360 g) | **`0.00`** ✅ | R#51 (Vie Com: 360 g) |
+| 27 | **Comino** | **9 g** | 0 g | **9 g** | Tabla 3.2 (Alacena \$0 — Stock: 47 g) | **`0.00`** ✅ | R#05 (Dom Com: 3 g); R#26 (Mar Cen: 3 g); R#35 (Mié Cen: 3 g) |
+| 28 | **Corazones de cáñamo** | **90 g** | 0 g | **90 g** | Tabla 3.3 (Mercado — Comprar: 90 g) | **`0.00`** ✅ | R#39 (Jue Des: 90 g) |
+| 29 | **Cúrcuma** | **18 g** | 0 g | **18 g** | Tabla 3.2 (Alacena \$0 — Stock: 82 g) | **`0.00`** ✅ | R#50 (Vie Com: 12 g); R#51 (Vie Com: 6 g) |
+| 30 | **Ejotes** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 660 g) | **`0.00`** ✅ | R#15 (Lun Com: 360 g); R#41 (Jue Com: 300 g) |
+| 31 | **Espinacas** | **260 g** | 0 g | **260 g** | Tabla 3.2 (Alacena \$0 — Stock: 260 g) | **`0.00`** ✅ | R#33 (Mié Com: 260 g) |
+| 32 | **Extracto de vainilla** | **66 ml** | 0 ml | **66 ml** | Tabla 3.2 (Alacena \$0 — Stock: 376 ml) | **`0.00`** ✅ | R#03 (Dom Des: 6 ml); R#10 (Lun Des: 6 ml); R#12 (Lun Des: 6 ml); R#18 (Lun Cen: 6 ml); R#27 (Mar Cen: 6 ml); R#36 (Mié Cen: 6 ml); R#39 (Jue Des: 6 ml); R#45 (Jue Cen: 6 ml); R#46 (Vie Des: 6 ml); R#54 (Vie Cen: 6 ml); R#63 (Sáb Cen: 6 ml) |
+| 33 | **Fajitas de mojarra** | **2,720 g** | 0 g | **2,720 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,720 g) | **`0.00`** ✅ | R#26 (Mar Cen: 900 g); R#44 (Jue Cen: 900 g); R#59 (Sáb Com: 920 g) |
+| 34 | **Flat steak** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#05 (Dom Com: 660 g); R#41 (Jue Com: 660 g) |
+| 35 | **Flor de lavanda y pasiflora** | **12 g** | 0 g | **12 g** | Tabla 3.3 (Mercado — Comprar: 12 g) | **`0.00`** ✅ | R#09 (Dom Cen: 12 g) |
+| 36 | **Frambuesas** | **220 g** | 0 g | **220 g** | Tabla 3.2 (Alacena \$0 — Stock: 220 g) | **`0.00`** ✅ | R#03 (Dom Des: 220 g) |
+| 37 | **Fresas** | **200 g** | 0 g | **200 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#39 (Jue Des: 200 g) |
+| 38 | **Germinado** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#53 (Vie Cen: 100 g) |
+| 39 | **Granadas** | **1,260 g** | 0 g | **1,260 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 180 g); R#10 (Lun Des: 180 g); R#19 (Mar Des: 180 g); R#28 (Mié Des: 180 g); R#37 (Jue Des: 180 g); R#46 (Vie Des: 180 g); R#55 (Sáb Des: 180 g) |
+| 40 | **Hierbas finas** | **13 g** | 0 g | **13 g** | Tabla 3.2 (Alacena \$0 — Stock: 13 g) | **`0.00`** ✅ | R#17 (Lun Cen: 6 g); R#38 (Jue Des: 7 g) |
+| 41 | **Huevo** | **126 piezas** | 0 piezas | **126 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 180 piezas) | **`0.00`** ✅ | R#02 (Dom Des: 18 piezas); R#11 (Lun Des: 18 piezas); R#20 (Mar Des: 18 piezas); R#29 (Mié Des: 18 piezas); R#38 (Jue Des: 18 piezas); R#47 (Vie Des: 18 piezas); R#56 (Sáb Des: 18 piezas) |
+| 42 | **Jamaica** | **50 g** | 0 g | **50 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#48 (Vie Des: 25 g); R#57 (Sáb Des: 25 g) |
+| 43 | **Jitomate** | **1 piezas** | 0 piezas | **1 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 1 piezas) | **`0.00`** ✅ | R#56 (Sáb Des: 1 piezas) |
+| 44 | **Leche de almendra** | **1,560 ml** | 0 ml | **1,560 ml** | Tabla 3.3 (Mercado — Comprar: 1,560 ml) | **`0.00`** ✅ | R#12 (Lun Des: 600 ml); R#21 (Mar Des: 480 ml); R#39 (Jue Des: 480 ml) |
+| 45 | **Leche de coco** | **600 ml** | 0 ml | **600 ml** | Tabla 3.3 (Mercado — Comprar: 100 ml) | **`0.00`** ✅ | R#03 (Dom Des: 260 ml); R#50 (Vie Com: 240 ml); R#54 (Vie Cen: 100 ml) |
+| 46 | **Lechuga** | **4 piezas** | 0 piezas | **4 piezas** | Tabla 3.3 (Mercado — Comprar: 4 piezas) | **`0.00`** ✅ | R#04 (Dom Com: 1 piezas); R#22 (Mar Com: 1 piezas); R#40 (Jue Com: 1 piezas); R#58 (Sáb Com: 1 piezas) |
+| 47 | **Limones** | **1,719 g** | 0 g | **1,719 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 30 g); R#03 (Dom Des: 30 g); R#04 (Dom Com: 48 g); R#05 (Dom Com: 48 g); R#06 (Dom Com: 48 g); R#07 (Dom Cen: 48 g); R#09 (Dom Cen: 36 g); R#13 (Lun Com: 48 g); R#15 (Lun Com: 48 g); R#16 (Lun Cen: 48 g); R#17 (Lun Cen: 48 g); R#21 (Mar Des: 48 g); R#22 (Mar Com: 48 g); R#23 (Mar Com: 48 g); R#24 (Mar Com: 48 g); R#25 (Mar Cen: 60 g); R#26 (Mar Cen: 48 g); R#28 (Mié Des: 30 g); R#30 (Mié Des: 45 g); R#31 (Mié Com: 48 g); R#32 (Mié Com: 48 g); R#33 (Mié Com: 48 g); R#35 (Mié Cen: 48 g); R#40 (Jue Com: 48 g); R#42 (Jue Com: 48 g); R#43 (Jue Cen: 48 g); R#44 (Jue Cen: 48 g); R#45 (Jue Cen: 36 g); R#48 (Vie Des: 30 g); R#49 (Vie Com: 48 g); R#51 (Vie Com: 48 g); R#52 (Vie Cen: 48 g); R#57 (Sáb Des: 30 g); R#58 (Sáb Com: 48 g); R#59 (Sáb Com: 48 g); R#60 (Sáb Com: 48 g); R#61 (Sáb Cen: 48 g); R#62 (Sáb Cen: 48 g) |
+| 48 | **Linaza dorada molida** | **60 g** | 0 g | **60 g** | Tabla 3.3 (Mercado — Comprar: 60 g) | **`0.00`** ✅ | R#39 (Jue Des: 60 g) |
+| 49 | **Lomo de salmón** | **1,440 g** | 0 g | **1,440 g** | Tabla 3.3 (Mercado — Comprar: 1,440 g) | **`0.00`** ✅ | R#23 (Mar Com: 720 g); R#50 (Vie Com: 720 g) |
+| 50 | **Mantequilla** | **720 g** | 0 g | **720 g** | Tabla 3.2 (Alacena \$0 — Stock: 720 g) | **`0.00`** ✅ | R#02 (Dom Des: 60 g); R#11 (Lun Des: 60 g); R#17 (Lun Cen: 60 g); R#23 (Mar Com: 60 g); R#29 (Mié Des: 60 g); R#32 (Mié Com: 60 g); R#38 (Jue Des: 60 g); R#41 (Jue Com: 60 g); R#44 (Jue Cen: 60 g); R#47 (Vie Des: 60 g); R#56 (Sáb Des: 60 g); R#59 (Sáb Com: 60 g) |
+| 51 | **Mayonesa** | **200 g** | 0 g | **200 g** | Tabla 3.2 (Alacena \$0 — Stock: 200 g) | **`0.00`** ✅ | R#35 (Mié Cen: 200 g) |
+| 52 | **Morrón** | **14 piezas** | 0 piezas | **14 piezas** | Tabla 3.3 (Mercado — Comprar: 14 piezas) | **`0.00`** ✅ | R#05 (Dom Com: 2 piezas); R#14 (Lun Com: 2 piezas); R#23 (Mar Com: 2 piezas); R#35 (Mié Cen: 3 piezas); R#53 (Vie Cen: 2 piezas); R#62 (Sáb Cen: 3 piezas) |
+| 53 | **Nopales** | **1,260 g** | 0 g | **1,260 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#06 (Dom Com: 480 g); R#20 (Mar Des: 420 g); R#47 (Vie Des: 360 g) |
+| 54 | **Nuez de la India** | **920 g** | 0 g | **920 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#01 (Dom Des: 120 g); R#10 (Lun Des: 120 g); R#19 (Mar Des: 160 g); R#28 (Mié Des: 120 g); R#37 (Jue Des: 120 g); R#46 (Vie Des: 80 g); R#53 (Vie Cen: 120 g); R#55 (Sáb Des: 80 g) |
+| 55 | **Nuez pecana** | **630 g** | 0 g | **630 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#01 (Dom Des: 60 g); R#10 (Lun Des: 60 g); R#19 (Mar Des: 60 g); R#28 (Mié Des: 60 g); R#37 (Jue Des: 60 g); R#46 (Vie Des: 60 g); R#54 (Vie Cen: 60 g); R#55 (Sáb Des: 60 g); R#58 (Sáb Com: 60 g); R#63 (Sáb Cen: 90 g) |
+| 56 | **Orégano** | **39 g** | 0 g | **39 g** | Tabla 3.2 (Alacena \$0 — Stock: 98 g) | **`0.00`** ✅ | R#04 (Dom Com: 3 g); R#07 (Dom Cen: 3 g); R#14 (Lun Com: 3 g); R#22 (Mar Com: 3 g); R#23 (Mar Com: 3 g); R#25 (Mar Cen: 3 g); R#29 (Mié Des: 3 g); R#31 (Mié Com: 3 g); R#42 (Jue Com: 3 g); R#56 (Sáb Des: 3 g); R#58 (Sáb Com: 3 g); R#61 (Sáb Cen: 3 g); R#62 (Sáb Cen: 3 g) |
+| 57 | **Pechuga de pavo** | **700 g** | 0 g | **700 g** | Tabla 3.2 (Alacena \$0 — Stock: 700 g) | **`0.00`** ✅ | R#17 (Lun Cen: 700 g) |
+| 58 | **Pechuga de pollo** | **1,320 g** | 0 g | **1,320 g** | Tabla 3.3 (Mercado — Comprar: 1,320 g) | **`0.00`** ✅ | R#32 (Mié Com: 660 g); R#53 (Vie Cen: 660 g) |
+| 59 | **Pepino** | **1,080 g** | 0 g | **1,080 g** | Tabla 3.3 (Mercado — Comprar: 1,080 g) | **`0.00`** ✅ | R#13 (Lun Com: 360 g); R#31 (Mié Com: 360 g); R#49 (Vie Com: 360 g) |
+| 60 | **Pimienta negra** | **36 g** | 0 g | **36 g** | Tabla 3.2 (Alacena \$0 — Stock: 124 g) | **`0.00`** ✅ | R#02 (Dom Des: 3 g); R#11 (Lun Des: 3 g); R#14 (Lun Com: 3 g); R#17 (Lun Cen: 3 g); R#29 (Mié Des: 3 g); R#32 (Mié Com: 3 g); R#38 (Jue Des: 3 g); R#41 (Jue Com: 3 g); R#44 (Jue Cen: 3 g); R#47 (Vie Des: 3 g); R#53 (Vie Cen: 3 g); R#59 (Sáb Com: 3 g) |
+| 61 | **Pistaches** | **120 g** | 0 g | **120 g** | Tabla 3.3 (Mercado — Comprar: 70 g) | **`0.00`** ✅ | R#27 (Mar Cen: 120 g) |
+| 62 | **Pollo entero** | **6 piezas** | 0 piezas | **6 piezas** | Tabla 3.2 (Alacena \$0 — Stock: 6 piezas) | **`0.00`** ✅ | R#08 (Dom Cen: 6 piezas) |
+| 63 | **Premezcla navideña de manzana y especias** | **81 g** | 0 g | **81 g** | Tabla 3.2 (Alacena \$0 — Stock: 250 g) | **`0.00`** ✅ | R#48 (Vie Des: 27 g); R#54 (Vie Cen: 27 g); R#57 (Sáb Des: 27 g) |
+| 64 | **Queso Philadelphia** | **440 g** | 0 g | **440 g** | Tabla 3.3 (Mercado — Comprar: 80 g) | **`0.00`** ✅ | R#08 (Dom Cen: 120 g); R#45 (Jue Cen: 120 g); R#47 (Vie Des: 80 g); R#62 (Sáb Cen: 120 g) |
+| 65 | **Queso manchego** | **1,000 g** | 0 g | **1,000 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 120 g); R#08 (Dom Cen: 160 g); R#11 (Lun Des: 120 g); R#14 (Lun Com: 120 g); R#20 (Mar Des: 120 g); R#29 (Mié Des: 120 g); R#35 (Mié Cen: 120 g); R#38 (Jue Des: 120 g) |
+| 66 | **Queso parmesano** | **100 g** | 0 g | **100 g** | Tabla 3.2 (Alacena \$0 — Stock: 100 g) | **`0.00`** ✅ | R#56 (Sáb Des: 40 g); R#62 (Sáb Cen: 60 g) |
+| 67 | **Romero** | **36 g** | 0 g | **36 g** | Tabla 3.1 (Granja El Herami \$0) | **`0.00`** ✅ | R#06 (Dom Com: 6 g); R#32 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#43 (Jue Cen: 6 g); R#60 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g) |
+| 68 | **Rooibos rojo** | **18 g** | 0 g | **18 g** | Tabla 3.3 (Mercado — Comprar: 18 g) | **`0.00`** ✅ | R#30 (Mié Des: 18 g) |
+| 69 | **Sal con ajo** | **6 g** | 0 g | **6 g** | Tabla 3.2 (Alacena \$0 — Stock: 52 g) | **`0.00`** ✅ | R#14 (Lun Com: 6 g) |
+| 70 | **Sal de mar** | **240 g** | 0 g | **240 g** | Tabla 3.2 (Alacena \$0 — Stock: 1,000 g) | **`0.00`** ✅ | R#02 (Dom Des: 6 g); R#04 (Dom Com: 6 g); R#05 (Dom Com: 6 g); R#06 (Dom Com: 6 g); R#07 (Dom Cen: 6 g); R#08 (Dom Cen: 6 g); R#11 (Lun Des: 6 g); R#13 (Lun Com: 6 g); R#15 (Lun Com: 6 g); R#16 (Lun Cen: 6 g); R#17 (Lun Cen: 6 g); R#20 (Mar Des: 6 g); R#22 (Mar Com: 6 g); R#23 (Mar Com: 6 g); R#24 (Mar Com: 6 g); R#25 (Mar Cen: 6 g); R#26 (Mar Cen: 6 g); R#29 (Mié Des: 6 g); R#31 (Mié Com: 6 g); R#32 (Mié Com: 6 g); R#33 (Mié Com: 6 g); R#34 (Mié Cen: 6 g); R#35 (Mié Cen: 6 g); R#38 (Jue Des: 6 g); R#40 (Jue Com: 6 g); R#41 (Jue Com: 6 g); R#42 (Jue Com: 6 g); R#43 (Jue Cen: 6 g); R#44 (Jue Cen: 6 g); R#47 (Vie Des: 6 g); R#49 (Vie Com: 6 g); R#50 (Vie Com: 6 g); R#51 (Vie Com: 6 g); R#52 (Vie Cen: 6 g); R#56 (Sáb Des: 6 g); R#58 (Sáb Com: 6 g); R#59 (Sáb Com: 6 g); R#60 (Sáb Com: 6 g); R#61 (Sáb Cen: 6 g); R#62 (Sáb Cen: 6 g) |
+| 71 | **Salsa de soya** | **24 ml** | 0 ml | **24 ml** | Tabla 3.2 (Alacena \$0 — Stock: 250 ml) | **`0.00`** ✅ | R#53 (Vie Cen: 24 ml) |
+| 72 | **Sardinas** | **660 g** | 0 g | **660 g** | Tabla 3.3 (Mercado — Comprar: 400 g) | **`0.00`** ✅ | R#62 (Sáb Cen: 660 g) |
+| 73 | **Semillas y nueces mixtas** | **580 g** | 0 g | **580 g** | Tabla 3.2 (Alacena \$0 — Stock: 600 g) | **`0.00`** ✅ | R#01 (Dom Des: 90 g); R#10 (Lun Des: 90 g); R#19 (Mar Des: 90 g); R#28 (Mié Des: 90 g); R#37 (Jue Des: 80 g); R#46 (Vie Des: 70 g); R#55 (Sáb Des: 70 g) |
+| 74 | **Tahini de ajonjolí** | **60 g** | 0 g | **60 g** | Tabla 3.3 (Mercado — Comprar: 60 g) | **`0.00`** ✅ | R#36 (Mié Cen: 60 g) |
+| 75 | **Tomate** | **240 g** | 0 g | **240 g** | Tabla 3.3 (Mercado — Comprar: 240 g) | **`0.00`** ✅ | R#08 (Dom Cen: 240 g) |
+| 76 | **Tomillo** | **8 g** | 0 g | **8 g** | Tabla 3.2 (Alacena \$0 — Stock: 8 g) | **`0.00`** ✅ | R#16 (Lun Cen: 3 g); R#41 (Jue Com: 3 g); R#63 (Sáb Cen: 2 g) |
+| 77 | **Té matcha** | **12 g** | 0 g | **12 g** | Tabla 3.3 (Mercado — Comprar: 12 g) | **`0.00`** ✅ | R#12 (Lun Des: 12 g) |
+| 78 | **Vinagre de vino tinto** | **36 ml** | 0 ml | **36 ml** | Tabla 3.2 (Alacena \$0 — Stock: 250 ml) | **`0.00`** ✅ | R#13 (Lun Com: 18 ml); R#40 (Jue Com: 18 ml) |
+| 79 | **Yogur griego** | **1,280 g** | 0 g | **1,280 g** | Tabla 3.2 (Alacena \$0 — Stock: 2,000 g) | **`0.00`** ✅ | R#08 (Dom Cen: 360 g); R#26 (Mar Cen: 440 g); R#36 (Mié Cen: 480 g) |

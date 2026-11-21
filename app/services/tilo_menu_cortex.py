@@ -3234,32 +3234,59 @@ def _build_heptagon_cycle_a_days(day_entries: List[Dict[str, Any]], target_week:
 
 def _build_holiday_apple_punch_33plus_course() -> Dict[str, Any]:
     """
-    Receta Oficial de Temporada Navideña (Excepción Única Semanas 47 a 52: 15 Nov al 25 Dic 2026):
-    Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®.
-    Escalada exactamente para 6 comensales (1,500 ml = 1,100 ml infusión caliente + 400 ml choque térmico, 30 g de 33Plus®).
+    Receta Oficial Matutina de Temporada Navideña (Excepción Semanas 47 a 52: 15 Nov al 25 Dic 2026 + Cata Viernes 20 Nov R#48 y Sábado 21 Nov R#57):
+    Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®.
+    Escalada exactamente para 6 comensales (1,500 ml = 1,100 ml calientes + 400 ml fríos, 30 g de 33Plus®).
     """
     return _course(
-        title="Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®",
-        technique="holiday_clarified_apple_clove_punch_33plus",
+        title="Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®",
+        technique="ruby_christmas_apple_punch_33plus_s47",
         serving_temp_c="50°C",
-        note="Edición Especial de Temporada Navideña (1 entrega semanal autorizada hasta Navidad): técnica de doble temperatura diseñada para la premezcla molida de manzana deshidratada, canela, anís estrella, clavo de olor y pimienta negra (27 g), infusionada a 88°C–90°C con flor de jamaica y piel de limón real de Granja El Herami, filtrada por malla fina / manta de cielo, templada por choque térmico a 50°C–52°C con agua purificada fría y vainilla antes de emulsionar 33Plus®, y servida sobre nuez pecana tostada de la granja.",
-        thermo="Infusión aromática fuera del fuego a 88°C–90°C en 1,100 ml por 7 min, filtrado ultrafino y choque térmico controlado (+400 ml de agua fría) a 50°C–52°C antes de integrar 33Plus®.",
-        flavor="Elixir rubí profundo de ponche tradicional donde la acidez floral de la jamaica equilibra el dulzor natural de la manzana molida, con anís estrella, clavo, canela, destello de piperina, vainilla y el perfil frutal rojo de 33Plus®.",
-        texture="Caldo aterciopelado por la pectina natural de la manzana y libre de sedimento arenoso, coronado con crocancia de nuez pecana tostada en taza.",
-        ccp="No tostar en seco el polvo con manzana para evitar amargor por pirólisis de fructosa; filtrar en manta de cielo o malla ultrafina y verificar <= 52°C mediante choque térmico antes de batir 33Plus® (30 g).",
+        note="Cata Organoléptica Matutina Navideña con 33Plus®: técnica de doble temperatura (<= 52°C) elaborada con los 27 g de premezcla navideña de manzana y especias en polvo de alacena ($0.00 MXN), flor de jamaica y tiras de cáscara de limón real de Granja El Herami ($0.00 MXN) en agua purificada, diseñada con cero colisiones intra-servicio [R4].",
+        thermo="Infusión aromática a 88–90°C en 1,100 ml de agua purificada durante 7 minutos, clarificado en malla fina y choque térmico con 400 ml de agua purificada fría para estabilizar en 50–52°C antes de integrar 33Plus®.",
+        flavor="Elixir rubí profundo donde la acidez floral de la jamaica y los aceites esenciales de la cáscara de limón real equilibran el dulzor natural de la manzana especiada (canela, clavo, pimienta negra y anís estrella) con el perfil frutal rojo de 33Plus®.",
+        texture="Caldo clarificado aterciopelado por la pectina natural de la manzana con corona espumada ligera a 50°C.",
+        ccp="Filtrar en malla fina tras los 7 minutos de infusión y verificar <= 52°C mediante choque térmico con 400 ml de agua fría antes de espumar los 30 g de 33Plus®.",
         ingredients=[
-            _ing("Mezcla navideña molida de manzana deshidratada y especias", 27, "g", CAT_SPICE),
+            _ing("Premezcla navideña de manzana y especias", 27, "g", CAT_SPICE),
             _ing("Jamaica", 25, "g", CAT_SPICE),
-            _ing("Agua purificada", 1500, "ml", CAT_SPICE),
-            _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
             _ing("Limones", 30, "g", CAT_VEG),
-            _ing("Nuez pecana", 60, "g", CAT_FAT),
+            _ing("Agua purificada", 1500, "ml", CAT_SPICE),
             _ing("33Plus®", 30, "g", CAT_SUPP),
         ],
         steps=[
-            "Calentar 1,100 ml de agua purificada con los 25 g de flor de jamaica de la granja y tiras anchas de piel de limón real (sin parte blanca); al romper el hervor apagar el fuego, incorporar los 27 g de mezcla navideña molida de manzana deshidratada y especias (canela, anís estrella, clavo y pimienta negra), tapar e infusionar 7 minutos a 88°C–90°C.",
-            "Clarificar pasando la infusión por colador de malla fina o manta de cielo para retener cualquier sedimento ultrafino, y aplicar choque térmico vertiendo de inmediato los 400 ml restantes de agua purificada fría junto con los 6 ml de extracto de vainilla para situar la mezcla exactamente entre 50°C y 52°C.",
-            "Agregar los 30 g de 33Plus® y batir con globo o espumador durante 12 segundos hasta formar corona rosada; disponer en el fondo de las 6 tazas los 60 g de nuez pecana tostada y servir encima a 50°C.",
+            "Infusionar la flor de jamaica (25 g), las tiras de cáscara de limón real sin parte blanca (30 g) y los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos; filtrar en malla fina para clarificar.",
+            "Aplicar choque térmico con los 400 ml restantes de agua purificada fría para bajar a 50–52°C, incorporar los 30 g de 33Plus®, espumar 15 segundos y servir al momento.",
+        ],
+    )
+
+
+def _build_winter_coconut_apple_punch_34plus_course() -> Dict[str, Any]:
+    """
+    Receta Oficial Nocturna de Cata Invernal (Día 6 — 20 Nov · Cena · Tiempo 3 · R#54, 0% Teína):
+    Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®.
+    Escalada exactamente para 6 comensales (1,400 ml agua purificada + 100 ml leche de coco, 30 g de 34Plus®).
+    """
+    return _course(
+        title="Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®",
+        technique="winter_coconut_apple_punch_34plus_s47",
+        serving_temp_c="50°C",
+        note="Cata Organoléptica Nocturna Invernal (0% Teína) con 34Plus®: ponche sedoso templado a 50–52°C que infusiona 27 g de premezcla navideña de manzana y especias de alacena ($0.00 MXN), emulsionado con 100 ml de leche de coco de alacena (saldo proyectado S48 = 160 ml) y vainilla, servido sobre nuez pecana tostada de Granja El Herami ($0.00 MXN).",
+        thermo="Infusión especiada a 88–90°C en 1,100 ml de agua purificada por 7 minutos, filtrado fino y templado térmico con 300 ml de agua fría + 100 ml de leche de coco hasta 50–52°C.",
+        flavor="Abrazo invernal cremoso de manzana especiada, vainilla y leche de coco con fondo tostado de nuez pecana y el perfil reparador nocturno de 34Plus®.",
+        texture="Emulsión tibia aterciopelada a 50°C con contraste crujiente de 10 g de nuez pecana tostada en el fondo de cada taza.",
+        ccp="0% teína y 0% jamaica nocturna ([R6]); templar estrictamente a 50–52°C antes de emulsionar 15 segundos los 30 g de 34Plus®.",
+        ingredients=[
+            _ing("Premezcla navideña de manzana y especias", 27, "g", CAT_SPICE),
+            _ing("Leche de coco", 100, "ml", CAT_FAT),
+            _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+            _ing("Nuez pecana", 60, "g", CAT_FAT),
+            _ing("Agua purificada", 1400, "ml", CAT_SPICE),
+            _ing("34Plus®", 30, "g", CAT_SUPP),
+        ],
+        steps=[
+            "Infusionar los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos y filtrar en malla fina.",
+            "Templar con los 300 ml de agua purificada fría, los 100 ml de leche de coco y los 6 ml de extracto de vainilla hasta 50–52°C, emulsionar 15 segundos con los 30 g de 34Plus® y servir sobre 10 g de nuez pecana tostada y troceada por taza (60 g totales).",
         ],
     )
 
@@ -4383,13 +4410,13 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ingredients=[
                 _ing("Granadas", 180, "g", CAT_FRUIT),
                 _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
-                _ing("Semillas y nueces mixtas", 80, "g", CAT_FAT),
-                _ing("Nuez de la India", 120, "g", CAT_FAT),
+                _ing("Semillas y nueces mixtas", 70, "g", CAT_FAT),
+                _ing("Nuez de la India", 80, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
             ],
             steps=[
                 "Perfumar los arilos de granada de la granja con el extracto de vainilla.",
-                "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
+                "Coronar con los 70 g de semillas y nueces mixtas, los 80 g de nuez de la India y los 60 g de nuez pecana.",
             ],
         ),
         main=_course(
@@ -4415,27 +4442,31 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso Philadelphia, y enrollar estilo Tamagoyaki.",
             ],
         ),
-        side=_course(
-            title="Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
-            technique="blackberry_star_anise_probiotic_lassi_33plus_s47",
-            serving_temp_c="6°C",
-            note="Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con 480 g de yogur griego de alacena (saldo proyectado S48 = 1,820 g), zarzamora antioxidante de alacena ($0.00 MXN), anís estrella, vainilla y 33Plus® a 6°C.",
-            thermo="Emulsión en frío a 6°C (0% calor).",
-            flavor="Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.",
-            texture="Lassi líquido aterciopelado color púrpura a 6°C.",
-            ccp="100% cubierto en alacena (Yogur griego 480 g -> 1,820 g saldo; Zarzamora 180 g -> 330 g saldo) y 33Plus® (30 g) en frío.",
-            ingredients=[
-                _ing("Yogur griego", 480, "g", CAT_DAIRY),
-                _ing("Zarzamora", 180, "g", CAT_FRUIT),
-                _ing("Anís estrella", 3, "g", CAT_SPICE),
-                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
-                _ing("Agua purificada", 420, "ml", CAT_SPICE),
-                _ing("33Plus®", 30, "g", CAT_SUPP),
-            ],
-            steps=[
-                "Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.",
-                "Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C.",
-            ],
+        side=(
+            _build_holiday_apple_punch_33plus_course()
+            if int(target_week) == 47
+            else _course(
+                title="Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
+                technique="blackberry_star_anise_probiotic_lassi_33plus_s47",
+                serving_temp_c="6°C",
+                note="Preparado Funcional Matutino 6/7 (100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con yogur griego, zarzamora antioxidante, anís estrella, vainilla y 33Plus® a 6°C.",
+                thermo="Emulsión en frío a 6°C (0% calor).",
+                flavor="Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.",
+                texture="Lassi líquido aterciopelado color púrpura a 6°C.",
+                ccp="100% cubierto en alacena y 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Yogur griego", 480, "g", CAT_DAIRY),
+                    _ing("Zarzamora", 180, "g", CAT_FRUIT),
+                    _ing("Anís estrella", 3, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 420, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.",
+                    "Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C.",
+                ],
+            )
         ),
     )
 
@@ -4555,28 +4586,7 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 "Saltear los 660 g de tiras de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo; incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada.",
             ],
         ),
-        side=_course(
-            title="Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®",
-            technique="warm_toasted_sesame_coconut_keto_atole_34plus_s47",
-            serving_temp_c="52°C",
-            note="Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con ajonjolí tostado y coco rallado de alacena ($0.00 MXN), canela molida, vainilla y 34Plus® a 52°C.",
-            thermo="Tostado aromático en seco y emulsión en licuadora con agua tibia a 52°C.",
-            flavor="Ajonjolí dorado y coco tostado con notas tradicionales de canela y vainilla.",
-            texture="Atole sedoso, reconfortante y rico en calcio y magnesio a 52°C.",
-            ccp="100% cubierto en alacena (Ajonjolí 120 g -> 80 g saldo; Coco rallado 60 g) y 34Plus® (30 g) a 52°C.",
-            ingredients=[
-                _ing("Ajonjolí", 120, "g", CAT_FAT),
-                _ing("Coco rallado", 60, "g", CAT_FAT),
-                _ing("Canela molida", 3, "g", CAT_SPICE),
-                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
-                _ing("Agua purificada", 960, "ml", CAT_SPICE),
-                _ing("34Plus®", 30, "g", CAT_SUPP),
-            ],
-            steps=[
-                "Tostar ligeramente en sartén seco los 120 g de ajonjolí y los 60 g de coco rallado durante 2 minutos y licuar a alta potencia con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla.",
-                "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C.",
-            ],
-        ),
+        side=_build_winter_coconut_apple_punch_34plus_course(),
     )
 
     # =========================================================================
@@ -4596,13 +4606,13 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ingredients=[
                 _ing("Granadas", 180, "g", CAT_FRUIT),
                 _ing("Canela molida", 3, "g", CAT_SPICE),
-                _ing("Semillas y nueces mixtas", 80, "g", CAT_FAT),
-                _ing("Nuez de la India", 120, "g", CAT_FAT),
+                _ing("Semillas y nueces mixtas", 70, "g", CAT_FAT),
+                _ing("Nuez de la India", 80, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
             ],
             steps=[
                 "Disponer los arilos de granada de la granja con canela molida en copas frías.",
-                "Coronar con los 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana.",
+                "Coronar con los 70 g de semillas y nueces mixtas, 80 g de nuez de la India y 60 g de nuez pecana.",
             ],
         ),
         main=_course(
@@ -6378,32 +6388,59 @@ def _build_heptagon_cycle_b_days(day_entries: List[Dict[str, Any]], target_week:
 
 def _build_holiday_apple_punch_33plus_course() -> Dict[str, Any]:
     """
-    Receta Oficial de Temporada Navideña (Excepción Única Semanas 47 a 52: 15 Nov al 25 Dic 2026):
-    Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®.
-    Escalada exactamente para 6 comensales (1,500 ml = 1,100 ml infusión caliente + 400 ml choque térmico, 30 g de 33Plus®).
+    Receta Oficial Matutina de Temporada Navideña (Excepción Semanas 47 a 52: 15 Nov al 25 Dic 2026 + Cata Viernes 20 Nov R#48 y Sábado 21 Nov R#57):
+    Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®.
+    Escalada exactamente para 6 comensales (1,500 ml = 1,100 ml calientes + 400 ml fríos, 30 g de 33Plus®).
     """
     return _course(
-        title="Ponche Navideño Rubí de Autor de Mezcla Molida de Manzana Deshidratada y Especias, Flor de Jamaica, Limón Real, Vainilla y Nuez Pecana (50°C) con 33Plus®",
-        technique="holiday_clarified_apple_clove_punch_33plus",
+        title="Ponche Navideño Rubí de Autor de Manzana Especiada y Flor de Jamaica (50°C) con 33Plus®",
+        technique="ruby_christmas_apple_punch_33plus_s47",
         serving_temp_c="50°C",
-        note="Edición Especial de Temporada Navideña (1 entrega semanal autorizada hasta Navidad): técnica de doble temperatura diseñada para la premezcla molida de manzana deshidratada, canela, anís estrella, clavo de olor y pimienta negra (27 g), infusionada a 88°C–90°C con flor de jamaica y piel de limón real de Granja El Herami, filtrada por malla fina / manta de cielo, templada por choque térmico a 50°C–52°C con agua purificada fría y vainilla antes de emulsionar 33Plus®, y servida sobre nuez pecana tostada de la granja.",
-        thermo="Infusión aromática fuera del fuego a 88°C–90°C en 1,100 ml por 7 min, filtrado ultrafino y choque térmico controlado (+400 ml de agua fría) a 50°C–52°C antes de integrar 33Plus®.",
-        flavor="Elixir rubí profundo de ponche tradicional donde la acidez floral de la jamaica equilibra el dulzor natural de la manzana molida, con anís estrella, clavo, canela, destello de piperina, vainilla y el perfil frutal rojo de 33Plus®.",
-        texture="Caldo aterciopelado por la pectina natural de la manzana y libre de sedimento arenoso, coronado con crocancia de nuez pecana tostada en taza.",
-        ccp="No tostar en seco el polvo con manzana para evitar amargor por pirólisis de fructosa; filtrar en manta de cielo o malla ultrafina y verificar <= 52°C mediante choque térmico antes de batir 33Plus® (30 g).",
+        note="Cata Organoléptica Matutina Navideña con 33Plus®: técnica de doble temperatura (<= 52°C) elaborada con los 27 g de premezcla navideña de manzana y especias en polvo de alacena ($0.00 MXN), flor de jamaica y tiras de cáscara de limón real de Granja El Herami ($0.00 MXN) en agua purificada, diseñada con cero colisiones intra-servicio [R4].",
+        thermo="Infusión aromática a 88–90°C en 1,100 ml de agua purificada durante 7 minutos, clarificado en malla fina y choque térmico con 400 ml de agua purificada fría para estabilizar en 50–52°C antes de integrar 33Plus®.",
+        flavor="Elixir rubí profundo donde la acidez floral de la jamaica y los aceites esenciales de la cáscara de limón real equilibran el dulzor natural de la manzana especiada (canela, clavo, pimienta negra y anís estrella) con el perfil frutal rojo de 33Plus®.",
+        texture="Caldo clarificado aterciopelado por la pectina natural de la manzana con corona espumada ligera a 50°C.",
+        ccp="Filtrar en malla fina tras los 7 minutos de infusión y verificar <= 52°C mediante choque térmico con 400 ml de agua fría antes de espumar los 30 g de 33Plus®.",
         ingredients=[
-            _ing("Mezcla navideña molida de manzana deshidratada y especias", 27, "g", CAT_SPICE),
+            _ing("Premezcla navideña de manzana y especias", 27, "g", CAT_SPICE),
             _ing("Jamaica", 25, "g", CAT_SPICE),
-            _ing("Agua purificada", 1500, "ml", CAT_SPICE),
-            _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
             _ing("Limones", 30, "g", CAT_VEG),
-            _ing("Nuez pecana", 60, "g", CAT_FAT),
+            _ing("Agua purificada", 1500, "ml", CAT_SPICE),
             _ing("33Plus®", 30, "g", CAT_SUPP),
         ],
         steps=[
-            "Calentar 1,100 ml de agua purificada con los 25 g de flor de jamaica de la granja y tiras anchas de piel de limón real (sin parte blanca); al romper el hervor apagar el fuego, incorporar los 27 g de mezcla navideña molida de manzana deshidratada y especias (canela, anís estrella, clavo y pimienta negra), tapar e infusionar 7 minutos a 88°C–90°C.",
-            "Clarificar pasando la infusión por colador de malla fina o manta de cielo para retener cualquier sedimento ultrafino, y aplicar choque térmico vertiendo de inmediato los 400 ml restantes de agua purificada fría junto con los 6 ml de extracto de vainilla para situar la mezcla exactamente entre 50°C y 52°C.",
-            "Agregar los 30 g de 33Plus® y batir con globo o espumador durante 12 segundos hasta formar corona rosada; disponer en el fondo de las 6 tazas los 60 g de nuez pecana tostada y servir encima a 50°C.",
+            "Infusionar la flor de jamaica (25 g), las tiras de cáscara de limón real sin parte blanca (30 g) y los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos; filtrar en malla fina para clarificar.",
+            "Aplicar choque térmico con los 400 ml restantes de agua purificada fría para bajar a 50–52°C, incorporar los 30 g de 33Plus®, espumar 15 segundos y servir al momento.",
+        ],
+    )
+
+
+def _build_winter_coconut_apple_punch_34plus_course() -> Dict[str, Any]:
+    """
+    Receta Oficial Nocturna de Cata Invernal (Día 6 — 20 Nov · Cena · Tiempo 3 · R#54, 0% Teína):
+    Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®.
+    Escalada exactamente para 6 comensales (1,400 ml agua purificada + 100 ml leche de coco, 30 g de 34Plus®).
+    """
+    return _course(
+        title="Ponche Cremoso Invernal de Manzana Especiada, Leche de Coco y Nuez Pecana (50°C) con 34Plus®",
+        technique="winter_coconut_apple_punch_34plus_s47",
+        serving_temp_c="50°C",
+        note="Cata Organoléptica Nocturna Invernal (0% Teína) con 34Plus®: ponche sedoso templado a 50–52°C que infusiona 27 g de premezcla navideña de manzana y especias de alacena ($0.00 MXN), emulsionado con 100 ml de leche de coco de alacena (saldo proyectado S48 = 160 ml) y vainilla, servido sobre nuez pecana tostada de Granja El Herami ($0.00 MXN).",
+        thermo="Infusión especiada a 88–90°C en 1,100 ml de agua purificada por 7 minutos, filtrado fino y templado térmico con 300 ml de agua fría + 100 ml de leche de coco hasta 50–52°C.",
+        flavor="Abrazo invernal cremoso de manzana especiada, vainilla y leche de coco con fondo tostado de nuez pecana y el perfil reparador nocturno de 34Plus®.",
+        texture="Emulsión tibia aterciopelada a 50°C con contraste crujiente de 10 g de nuez pecana tostada en el fondo de cada taza.",
+        ccp="0% teína y 0% jamaica nocturna ([R6]); templar estrictamente a 50–52°C antes de emulsionar 15 segundos los 30 g de 34Plus®.",
+        ingredients=[
+            _ing("Premezcla navideña de manzana y especias", 27, "g", CAT_SPICE),
+            _ing("Leche de coco", 100, "ml", CAT_FAT),
+            _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+            _ing("Nuez pecana", 60, "g", CAT_FAT),
+            _ing("Agua purificada", 1400, "ml", CAT_SPICE),
+            _ing("34Plus®", 30, "g", CAT_SUPP),
+        ],
+        steps=[
+            "Infusionar los 27 g de premezcla navideña de manzana y especias en 1,100 ml de agua purificada a 88–90°C durante 7 minutos y filtrar en malla fina.",
+            "Templar con los 300 ml de agua purificada fría, los 100 ml de leche de coco y los 6 ml de extracto de vainilla hasta 50–52°C, emulsionar 15 segundos con los 30 g de 34Plus® y servir sobre 10 g de nuez pecana tostada y troceada por taza (60 g totales).",
         ],
     )
 
@@ -7527,13 +7564,13 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ingredients=[
                 _ing("Granadas", 180, "g", CAT_FRUIT),
                 _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
-                _ing("Semillas y nueces mixtas", 80, "g", CAT_FAT),
-                _ing("Nuez de la India", 120, "g", CAT_FAT),
+                _ing("Semillas y nueces mixtas", 70, "g", CAT_FAT),
+                _ing("Nuez de la India", 80, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
             ],
             steps=[
                 "Perfumar los arilos de granada de la granja con el extracto de vainilla.",
-                "Coronar con las semillas y nueces mixtas, la nuez de la India y la nuez pecana.",
+                "Coronar con los 70 g de semillas y nueces mixtas, los 80 g de nuez de la India y los 60 g de nuez pecana.",
             ],
         ),
         main=_course(
@@ -7559,27 +7596,31 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 "Cuajar los 18 huevos batidos en capas sucesivas en el sartén con los 60 g de mantequilla, rellenar con los nopales y los 80 g de queso Philadelphia, y enrollar estilo Tamagoyaki.",
             ],
         ),
-        side=_course(
-            title="Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
-            technique="blackberry_star_anise_probiotic_lassi_33plus_s47",
-            serving_temp_c="6°C",
-            note="Preparado Funcional Matutino 6/7 (Día 6 — 20 Nov, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con 480 g de yogur griego de alacena (saldo proyectado S48 = 1,820 g), zarzamora antioxidante de alacena ($0.00 MXN), anís estrella, vainilla y 33Plus® a 6°C.",
-            thermo="Emulsión en frío a 6°C (0% calor).",
-            flavor="Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.",
-            texture="Lassi líquido aterciopelado color púrpura a 6°C.",
-            ccp="100% cubierto en alacena (Yogur griego 480 g -> 1,820 g saldo; Zarzamora 180 g -> 330 g saldo) y 33Plus® (30 g) en frío.",
-            ingredients=[
-                _ing("Yogur griego", 480, "g", CAT_DAIRY),
-                _ing("Zarzamora", 180, "g", CAT_FRUIT),
-                _ing("Anís estrella", 3, "g", CAT_SPICE),
-                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
-                _ing("Agua purificada", 420, "ml", CAT_SPICE),
-                _ing("33Plus®", 30, "g", CAT_SUPP),
-            ],
-            steps=[
-                "Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.",
-                "Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C.",
-            ],
+        side=(
+            _build_holiday_apple_punch_33plus_course()
+            if int(target_week) == 47
+            else _course(
+                title="Lassi Purpúreo Probiótico de Zarzamora, Yogur Griego, Anís Estrella y Vainilla (6°C) con 33Plus®",
+                technique="blackberry_star_anise_probiotic_lassi_33plus_s47",
+                serving_temp_c="6°C",
+                note="Preparado Funcional Matutino 6/7 (100% Inédito en Ventana de 4 Semanas [R10-DNA]): bebida probiótica tipo Lassi batida en frío con yogur griego, zarzamora antioxidante, anís estrella, vainilla y 33Plus® a 6°C.",
+                thermo="Emulsión en frío a 6°C (0% calor).",
+                flavor="Zarzamora vibrante con eco especiado de anís estrella y vainilla en yogur griego.",
+                texture="Lassi líquido aterciopelado color púrpura a 6°C.",
+                ccp="100% cubierto en alacena y 33Plus® (30 g) en frío.",
+                ingredients=[
+                    _ing("Yogur griego", 480, "g", CAT_DAIRY),
+                    _ing("Zarzamora", 180, "g", CAT_FRUIT),
+                    _ing("Anís estrella", 3, "g", CAT_SPICE),
+                    _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
+                    _ing("Agua purificada", 420, "ml", CAT_SPICE),
+                    _ing("33Plus®", 30, "g", CAT_SUPP),
+                ],
+                steps=[
+                    "Infusionar los 3 g de anís estrella en 120 ml de agua purificada caliente por 4 minutos, colar y enfriar en hielo con los 300 ml restantes de agua purificada.",
+                    "Licuar en frío los 480 g de yogur griego con los 180 g de zarzamora de alacena, el extracto de vainilla, la infusión fría de anís estrella y los 30 g de 33Plus®; servir a 6°C.",
+                ],
+            )
         ),
     )
 
@@ -7699,28 +7740,7 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
                 "Saltear los 660 g de tiras de pollo y el pimiento morrón en el wok con aceite de coco neutro y ajo; incorporar los 100 g de germinado de alacena, la salsa de soya y los 120 g de nuez de la India tostada.",
             ],
         ),
-        side=_course(
-            title="Atole Cetogénico Tibio de Ajonjolí Tostado, Coco Rallado, Canela y Vainilla (52°C) con 34Plus®",
-            technique="warm_toasted_sesame_coconut_keto_atole_34plus_s47",
-            serving_temp_c="52°C",
-            note="Preparado Funcional Nocturno 6/7 (Día 6 — 20 Nov, 0% Teína, 100% Inédito en Ventana de 4 Semanas [R10-DNA]): atole cetogénico sin maíz elaborado con ajonjolí tostado y coco rallado de alacena ($0.00 MXN), canela molida, vainilla y 34Plus® a 52°C.",
-            thermo="Tostado aromático en seco y emulsión en licuadora con agua tibia a 52°C.",
-            flavor="Ajonjolí dorado y coco tostado con notas tradicionales de canela y vainilla.",
-            texture="Atole sedoso, reconfortante y rico en calcio y magnesio a 52°C.",
-            ccp="100% cubierto en alacena (Ajonjolí 120 g -> 80 g saldo; Coco rallado 60 g) y 34Plus® (30 g) a 52°C.",
-            ingredients=[
-                _ing("Ajonjolí", 120, "g", CAT_FAT),
-                _ing("Coco rallado", 60, "g", CAT_FAT),
-                _ing("Canela molida", 3, "g", CAT_SPICE),
-                _ing("Extracto de vainilla", 6, "ml", CAT_SPICE),
-                _ing("Agua purificada", 960, "ml", CAT_SPICE),
-                _ing("34Plus®", 30, "g", CAT_SUPP),
-            ],
-            steps=[
-                "Tostar ligeramente en sartén seco los 120 g de ajonjolí y los 60 g de coco rallado durante 2 minutos y licuar a alta potencia con los 960 ml de agua purificada tibia (52°C), la canela molida y el extracto de vainilla.",
-                "Incorporar los 30 g de 34Plus®, batir 10 segundos y servir tibio a 52°C.",
-            ],
-        ),
+        side=_build_winter_coconut_apple_punch_34plus_course(),
     )
 
     # =========================================================================
@@ -7740,13 +7760,13 @@ def _build_heptagon_cycle_c_days(day_entries: List[Dict[str, Any]], target_week:
             ingredients=[
                 _ing("Granadas", 180, "g", CAT_FRUIT),
                 _ing("Canela molida", 3, "g", CAT_SPICE),
-                _ing("Semillas y nueces mixtas", 80, "g", CAT_FAT),
-                _ing("Nuez de la India", 120, "g", CAT_FAT),
+                _ing("Semillas y nueces mixtas", 70, "g", CAT_FAT),
+                _ing("Nuez de la India", 80, "g", CAT_FAT),
                 _ing("Nuez pecana", 60, "g", CAT_FAT),
             ],
             steps=[
                 "Disponer los arilos de granada de la granja con canela molida en copas frías.",
-                "Coronar con los 80 g de semillas y nueces mixtas, 120 g de nuez de la India y 60 g de nuez pecana.",
+                "Coronar con los 70 g de semillas y nueces mixtas, 80 g de nuez de la India y 60 g de nuez pecana.",
             ],
         ),
         main=_course(
